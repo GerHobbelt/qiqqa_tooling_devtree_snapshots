@@ -664,9 +664,11 @@ EOF
 cat > utils/tmp.bat  <<EOF
 @echo on
 
-robocopy Z:\lib\tooling\qiqqa\MuPDF Qiqqa/MuPDF * /LEV:6 /S /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE /XD obj bin b tmp research node_modules packages owemdjee downloads ~ .circleci  /XF *.obj *.user *.psd cef_binary* files *.tags *.training_text *.traineddata *.wordlist *.bigrams *.unicharset *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules 
+robocopy Z:\lib\tooling\qiqqa\MuPDF Qiqqa/MuPDF * /LOG:snapshot.log /LEV:6 /S /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE /XD obj bin b tmp research node_modules packages owemdjee downloads ~ .circleci  /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules 
 
-FOR /F %f IN ( utils\tmp.lst ) DO IF NOT %f == # robocopy Z:\lib\tooling\qiqqa\MuPDF\thirdparty\owemdjee\%f Qiqqa/MuPDF\thirdparty\owmedjee\%f * /LEV:4 /S /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE /XD obj bin b tmp research node_modules packages owemdjee downloads ~ .circleci 3rd thirdparty third_party 3rdparty 3rd_party  /XF *.obj *.user *.psd cef_binary* files *.tags *.training_text *.traineddata *.wordlist *.bigrams *.unicharset *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules 
+FOR %f IN ( tessconfigs tessdata tessdata_best tessdata_contrib tessdata_fast tessdoc tesseract_docs tesseract_langdata tesseract_ocr_test tesstrain ) DO robocopy Z:\lib\tooling\qiqqa\MuPDF\thirdparty\%f Qiqqa/MuPDF\thirdparty\%f * /LOG+:snapshot.log /LEV:6 /S /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE /XD obj bin b tmp research node_modules packages .circleci 3rd thirdparty third_party 3rdparty 3rd_party  /XF  *fuzz* .git .gitmodules 
+
+FOR /F %f IN ( utils\tmp.lst ) DO IF NOT %f == # robocopy Z:\lib\tooling\qiqqa\MuPDF\thirdparty\owemdjee\%f Qiqqa/MuPDF\thirdparty\owmedjee\%f * /LOG:snapshot.log /LEV:4 /S /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE /XD obj bin b tmp research node_modules packages owemdjee downloads ~ .circleci 3rd thirdparty third_party 3rdparty 3rd_party  /XF *.obj *.user *.psd cef_binary* files *.tags *.training_text *.traineddata *.wordlist *.bigrams *.unicharset *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules 
 
 EOF
 cat utils/tmp.bat | cmd
