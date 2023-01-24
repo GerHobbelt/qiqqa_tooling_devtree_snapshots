@@ -1,7 +1,23 @@
-# Prerequisites
-*.d
 
-# Compiled Object files
+# Generated files:
+cscope.*
+node_modules
+
+# Editor and file browser turds:
+*~
+.*.swp
+.DS_Store
+\#*\#
+
+# Editor settings:
+.exrc
+.vimrc
+*.xcworkspace
+*.xcuserdatad
+
+# Temporary and build files:
+*.class
+*.jar
 *.slo
 *.lo
 *.o
@@ -15,10 +31,54 @@
 *.so
 *.dylib
 *.dll
+DerivedData
 
-# Fortran module files
-*.mod
-*.smod
+platform/java/local.properties
+*.ncb
+*.suo
+platform/win32/Debug-*/
+platform/win32/DebugOpenssl
+platform/win32/Profile
+platform/win32/Release-*/
+platform/win32/ReleaseOpenssl
+platform/win32/Memento
+platform/win32/DebugJava-32
+.vs
+bin
+obj
+Browse.VC.*
+Solution.VC.*
+UpgradeLog.htm
+*.diagsession
+
+scripts/__pycache__
+
+# Scratch and research stuff
+tmp/
+
+platform/win32/nuke-all-build-directories-exec.sh
+platform/win32/packages/
+
+# libxml2 test fixtures copied here via Pre-Build Step in the libxml2 project:
+platform/win32/test/
+
+# ignore Intel Vtune profiler report cache
+VTune Profiler Results/
+GPUCache/
+
+# Obsidian Vault - personal settings
+.obsidian/workspace
+.obsidian/appearance.json
+.obsidian/core-plugins.json
+.obsidian/hotkeys.json
+
+*.cache
+*.user
+
+.obsidian/workspace.json
+
+tmp.lst
+tmp.bat
 
 # Compiled Static libraries
 *.lai
