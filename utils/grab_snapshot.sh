@@ -18,7 +18,7 @@ cat > utils/tmp.lst  <<EOF
 # arangodb
 # argparse
 # arrayfire
-# asio
+asio
 # asyncplusplus
 # asynqro
 # b2xtranslator
@@ -39,7 +39,7 @@ boost
 # boost-url
 # BoxFort
 # breakpad
-# brotli
+brotli
 # c-blosc2
 # CacheLib
 # caches
@@ -63,7 +63,7 @@ boost
 # CLBlast
 # cld2-language-detect
 cli11
-# clipp
+clipp
 # cmph-hasher
 # comdb2-bdb
 # compact_enc_det
@@ -149,7 +149,7 @@ gbenchmark
 gflags
 # gibbs-lda
 # glib2
-# glob
+glob
 glog
 # GMM-HMM-kMeans
 # GMMreg
@@ -167,7 +167,7 @@ googletest
 # harbour-core
 # HDiffPatch
 # hedley
-# highway
+highway
 # highwayhash
 # hikyuu
 # hmm-scalable
@@ -302,18 +302,18 @@ libwebp
 # libwil
 # libwildmatch
 libxml2
-# libxslt
+libxslt
 # libyaml
 # libyaml-examples
 # libzip
 # libzmq
-# libzopfli
-# lib_nas_lockfile
+libzopfli
+lib_nas_lockfile
 # LightGBM
 # LightLDA
 # Lightning.NET
 # ligra-graph
-# linenoise
+linenoise
 # line_detector
 # lmdb
 # lmdb-safe
@@ -323,7 +323,7 @@ libxml2
 # lmdbxx
 # localmemcache
 # lrucache11
-# lz4
+lz4
 # mace
 # magic_enum
 # mammut
@@ -407,7 +407,7 @@ nanosvg
 # pcg-c-random
 # pcg-cpp-random
 # pcm
-# pcre
+pcre
 # pdf2htmlEX
 # pdfgrep
 # pdfium
@@ -447,8 +447,8 @@ pthread-win32
 # QCBOR
 # qlever
 QuickJS
-# QuickJS-C++-Wrapper
-# QuickJS-C++-Wrapper2
+QuickJS-C++-Wrapper
+QuickJS-C++-Wrapper2
 # randen
 # random
 # rapidJSON
@@ -544,7 +544,7 @@ svg-charter
 # ThreadPool
 # thunderSVM
 # ticpp
-# tidy-html5
+tidy-html5
 # tink
 # tinn
 # tiny-process-library
@@ -659,16 +659,23 @@ zstd
 __docs
 __docs_src
 
+
+jpeg-xl\third_party\lodepng
+jpeg-xl\third_party\highway
+
+
 EOF
 
 cat > utils/tmp.bat  <<EOF
 @echo on
 
-robocopy Z:\lib\tooling\qiqqa\MuPDF Qiqqa/MuPDF * /LOG:snapshot.log /LEV:6 /S /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE /XD obj bin b tmp research node_modules packages owemdjee downloads ~ .circleci  /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules 
+robocopy Z:\lib\tooling\qiqqa\MuPDF Qiqqa/MuPDF * /LOG:snapshot.log /LEV:8 /S /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE /XD .vs obj bin b tmp research node_modules packages owemdjee downloads ~ .circleci  /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules 
 
-FOR %f IN ( tessconfigs tessdata tessdata_best tessdata_contrib tessdata_fast tessdoc tesseract_docs tesseract_langdata tesseract_ocr_test tesstrain ) DO robocopy Z:\lib\tooling\qiqqa\MuPDF\thirdparty\%f Qiqqa/MuPDF\thirdparty\%f * /LOG+:snapshot.log /LEV:6 /S /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE /XD obj bin b tmp research node_modules packages .circleci 3rd thirdparty third_party 3rdparty 3rd_party  /XF  *fuzz* .git .gitmodules 
+FOR %f IN ( langdata_LSTM tessconfigs tessdata tessdata_best tessdata_contrib tessdata_fast tessdoc tesseract_docs tesseract_langdata tesseract_ocr_test tesstrain ) DO robocopy Z:\lib\tooling\qiqqa\MuPDF\thirdparty\%f Qiqqa/MuPDF\thirdparty\%f * /LOG+:snapshot.log /LEV:8 /S /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE /XD .vs obj b tmp research node_modules packages .circleci 3rd thirdparty third_party 3rdparty 3rd_party  /XF  *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules 
 
-FOR /F %f IN ( utils\tmp.lst ) DO IF NOT %f == # robocopy Z:\lib\tooling\qiqqa\MuPDF\thirdparty\owemdjee\%f Qiqqa/MuPDF\thirdparty\owmedjee\%f * /LOG:snapshot.log /LEV:4 /S /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE /XD obj bin b tmp research node_modules packages owemdjee downloads ~ .circleci 3rd thirdparty third_party 3rdparty 3rd_party  /XF *.obj *.user *.psd cef_binary* files *.tags *.training_text *.traineddata *.wordlist *.bigrams *.unicharset *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules 
+robocopy Z:\lib\tooling\qiqqa\MuPDF\thirdparty\owemdjee\boost Qiqqa/MuPDF\thirdparty\owemdjee\boost * /LOG+:snapshot.log /LEV:20 /S /COPY:DAT /DCOPY:DAT /IM      /W:1 /R:3 /PURGE /XD .vs obj b tmp research node_modules packages owemdjee downloads ~ .circleci 3rd thirdparty third_party 3rdparty 3rd_party  /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules 
+
+FOR /F %f IN ( utils\tmp.lst ) DO IF NOT %f == # robocopy Z:\lib\tooling\qiqqa\MuPDF\thirdparty\owemdjee\%f Qiqqa/MuPDF\thirdparty\owemdjee\%f * /LOG+:snapshot.log /LEV:8 /S /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE /XD .vs obj b tmp research node_modules packages owemdjee downloads ~ .circleci 3rd thirdparty third_party 3rdparty 3rd_party  /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules 
 
 EOF
 cat utils/tmp.bat | cmd

@@ -36,6 +36,9 @@ DerivedData
 platform/java/local.properties
 *.ncb
 *.suo
+
+Qiqqa/MuPDF/platform/win32/bin
+
 platform/win32/Debug-*/
 platform/win32/DebugOpenssl
 platform/win32/Profile
@@ -90,3 +93,4 @@ tmp.bat
 *.exe
 *.out
 *.app
+snapshot.log
