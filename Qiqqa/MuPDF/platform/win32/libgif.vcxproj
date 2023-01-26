@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>libgif</ProjectName>
+    <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FFDDD6BE}</ProjectGuid>
+    <RootNamespace>libgif</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project.props" Label="SolutionWideSettings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.28307.799</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+<ItemDefinitionGroup>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <BrowseInformation>false</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <DisableSpecificWarnings>4018;4100;4127;4180;4206;4244;4267;5105;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <SDLCheck>false</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <ConformanceMode>true</ConformanceMode>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableUnitySupport>true</EnableUnitySupport>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+</ItemDefinitionGroup>
+<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGIF;GIF_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGIF;GIF_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGIF;GIF_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGIF;GIF_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGIF;GIF_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGIF;GIF_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGIF;GIF_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGIF;GIF_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGIF;GIF_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGIF;GIF_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGIF;GIF_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGIF;GIF_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/libgif/dgif_lib.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libgif/egif_lib.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libgif/getarg.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libgif/gif2rgb.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libgif/gif_err.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libgif/gif_font.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libgif/gif_hash.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libgif/gifalloc.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libgif/gifbg.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libgif/gifbuild.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libgif/gifclrmp.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libgif/gifcolor.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libgif/gifecho.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libgif/giffilter.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libgif/giffix.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libgif/gifhisto.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libgif/gifinto.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libgif/gifsponge.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libgif/giftext.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libgif/giftool.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libgif/gifwedge.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libgif/openbsd-reallocarray.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libgif/qprintf.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libgif/quantize.c" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgif/getarg.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgif/gif_hash.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgif/gif_lib.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgif/gif_lib_private.h" />
+    <Image Include="../../thirdparty/owemdjee/libgif/doc/gifstandard/gif-1over100.png" />
+    <Image Include="../../thirdparty/owemdjee/libgif/doc/gifstandard/gif-1over64.png" />
+    <Image Include="../../thirdparty/owemdjee/libgif/doc/gifstandard/gif-aspectratio.png" />
+    <Image Include="../../thirdparty/owemdjee/libgif/doc/whatsinagif/comment_ext.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/doc/whatsinagif/gif_file_stream.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/doc/whatsinagif/global_color_table.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/doc/whatsinagif/graphic_control_ext.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/doc/whatsinagif/header_block.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/doc/whatsinagif/highlight_green.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/doc/whatsinagif/highlight_purple.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/doc/whatsinagif/image_data_block.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/doc/whatsinagif/image_descriptor_block.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/doc/whatsinagif/logical_screen_desc_block.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/doc/whatsinagif/lzw_decoding_bytes.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/doc/whatsinagif/lzw_encoding_codes.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/doc/whatsinagif/sample_1.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/doc/whatsinagif/sample_1_enlarged.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/doc/whatsinagif/sample_1_trans.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/doc/whatsinagif/sample_1_trans_blue.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/doc/whatsinagif/sample_1_trans_red.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/doc/whatsinagif/sample_2_animation_green.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/doc/whatsinagif/sample_2_animation_red.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/doc/whatsinagif/sample_2_animation_yellow.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/doc/whatsinagif/sample_2_green_large.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/doc/whatsinagif/sample_2_green_yellow_diff.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/doc/whatsinagif/sample_2_yellow_large.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/doc/whatsinagif/trailer_block.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/pic/fire.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/pic/gifgrid.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/pic/porsche.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/pic/sample.ico" />
+    <Image Include="../../thirdparty/owemdjee/libgif/pic/solid2.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/pic/treescap-interlaced.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/pic/treescap.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/pic/welcome2.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/pic/x-trans.gif" />
+    <Image Include="../../thirdparty/owemdjee/libgif/tests/foobar.ico" />
+    <Image Include="../../thirdparty/owemdjee/libgif/tests/giffixed.ico" />
+    <Image Include="../../thirdparty/owemdjee/libgif/tests/gifgrid.ico" />
+    <Image Include="../../thirdparty/owemdjee/libgif/tests/treescap.ico" />
+    <Image Include="../../thirdparty/owemdjee/libgif/tests/wedge.gif" />
+    <Text Include="../../thirdparty/owemdjee/libgif/ChangeLog" />
+    <Text Include="../../thirdparty/owemdjee/libgif/NEWS" />
+    <Text Include="../../thirdparty/owemdjee/libgif/README.md" />
+    <Text Include="../../thirdparty/owemdjee/libgif/TODO" />
+    <Text Include="../../thirdparty/owemdjee/libgif/doc/00README" />
+    <Text Include="../../thirdparty/owemdjee/libgif/doc/gifstandard/gif87.txt" />
+    <Text Include="../../thirdparty/owemdjee/libgif/doc/gifstandard/gif89.txt" />
+    <Text Include="../../thirdparty/owemdjee/libgif/doc/gifstandard/gif89a.js" />
+    <Text Include="../../thirdparty/owemdjee/libgif/doc/index.html.in" />
+    <Xml Include="../../thirdparty/owemdjee/libgif/doc/gif2rgb.xml" />
+    <Xml Include="../../thirdparty/owemdjee/libgif/doc/gif_lib.xml" />
+    <Xml Include="../../thirdparty/owemdjee/libgif/doc/gifbg.xml" />
+    <Xml Include="../../thirdparty/owemdjee/libgif/doc/gifbuild.xml" />
+    <Xml Include="../../thirdparty/owemdjee/libgif/doc/gifclrmp.xml" />
+    <Xml Include="../../thirdparty/owemdjee/libgif/doc/gifcolor.xml" />
+    <Xml Include="../../thirdparty/owemdjee/libgif/doc/gifecho.xml" />
+    <Xml Include="../../thirdparty/owemdjee/libgif/doc/giffix.xml" />
+    <Xml Include="../../thirdparty/owemdjee/libgif/doc/gifhisto.xml" />
+    <Xml Include="../../thirdparty/owemdjee/libgif/doc/gifinto.xml" />
+    <Xml Include="../../thirdparty/owemdjee/libgif/doc/giflib.xml" />
+    <Xml Include="../../thirdparty/owemdjee/libgif/doc/giftext.xml" />
+    <Xml Include="../../thirdparty/owemdjee/libgif/doc/giftool.xml" />
+    <Xml Include="../../thirdparty/owemdjee/libgif/doc/gifwedge.xml" />
+    <Xml Include="../../thirdparty/owemdjee/libgif/doc/intro.xml" />
+  </ItemGroup>
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />
+  </ImportGroup>
+</Project>
+  

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<!-- Server: sfs-forge-6 -->
+
+<!--[if lt IE 7]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]>-->
+<html lang="en" class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+    <title>bibutils / Home / history_version6</title>
+
+    <meta name="viewport" content="width=1100" />
+
+    <link
+      rel="icon"
+      sizes="180x180"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/images/sandiego/logo-180x180.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      sizes="any"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/images/sandiego/svg/originals/sf-icon-orange-no_sf.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/images/sandiego/logo-180x180.png"
+    />
+    <link
+      rel="mask-icon"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/images/sandiego/svg/originals/sf-icon-orange-no_sf.svg"
+      color="#FF6600"
+    />
+
+    <!--[if lt IE 7]>
+      <script src="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/js/sftheme/vendor/dd_belatedpng.js"></script>
+      <script>
+        DD_belatedPNG.fix("img, .png_bg"); //fix any <img> or .png_bg background-images
+      </script>
+    <![endif]-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700"
+      rel="stylesheet"
+    />
+    <script>
+      if (!window.SF) {
+        window.SF = {};
+      }
+      SF.sandiego = false;
+      SF.sandiego_chrome = true;
+      SF.cdn = "https://a.fsdn.com/con";
+    </script>
+
+    <!-- ew:head_css -->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/allura/css/forge/hilite.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/tool/wiki/css/wiki.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/_slim/css?href=allura%2Fcss%2Fforge%2Ftooltipster.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/allura/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/css/forge.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/css/simplemde.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/_slim/css?href=css%2Fmarkitup_sf.css%3Bcss%2Fshow-hint.css"
+    />
+
+    <style>
+      div.moderate {
+        color: grey;
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/_slim/css?href=css%2Fpage_list.css%3Bcss%2Fjquery.tagsinput.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/css/sftheme/sandiego/cmp.css"
+    />
+
+    <!-- /ew:head_css -->
+
+    <!-- ew:head_js -->
+
+    <script
+      type="text/javascript"
+      src="https://a.fsdn.com/allura/nf/1589309844/_ew_/_slim/js?href=allura%2Fjs%2Fjquery-base.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Fpromise.polyfill.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fcmp2.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Fmodernizr.3.3.1.custom.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fshared_head.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Ftypescript%2Fcompliance.js"
+    ></script>
+
+    <!-- /ew:head_js -->
+
+    <style type="text/css">
+      /* make URL & Project custom fields in support tickets not get hidden as much */
+      .project-forge.mountpoint-site-support .view_holder .grid-4:nth-child(5),
+      .project-forge.mountpoint-site-support .view_holder .grid-4:nth-child(6) {
+        overflow: visible;
+        font-size: 22px;
+        width: 340px;
+        line-height: 1;
+        margin-bottom: 5px;
+      }
+      .project-forge.mountpoint-site-support
+        .view_holder
+        .grid-4:nth-child(5)
+        label,
+      .project-forge.mountpoint-site-support
+        .view_holder
+        .grid-4:nth-child(6)
+        label {
+        font-size: 14px;
+      }
+    </style>
+
+    <style>
+      .hidden {
+        display: none;
+      }
+      a.notfound {
+        color: #f00;
+      }
+    </style>
+
+    <style>
+      .XcxXDhHLCsMOVwoeKKOhwYmwfCrFhXYsKm {
+        display: none;
+      }
+    </style>
+
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Page RSS"
+      href="feed.rss"
+    />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Page Atom"
+      href="feed.atom"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Wiki RSS"
+      href="../feed.rss"
+    />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Wiki Atom"
+      href="../feed.atom"
+    />
+
+    <script type="text/javascript"></script>
+
+    <script>
+      window.bizx.cmp.init({}, "consentmanager.net");
+    </script>
+
+    <script>
+      function initPiwik() {
+        var _paq = (window._paq = window._paq || []);
+        _paq.push([
+          "trackPageView",
+          document.title,
+          {
+            dimension1: "bibutils",
+            dimension2: "wiki",
+          },
+        ]);
+        _paq.push(["enableLinkTracking"]);
+        (function () {
+          var u = "//analytics.slashdotmedia.com/";
+          _paq.push(["setTrackerUrl", u + "sf.php"]);
+          _paq.push(["setSiteId", 39]);
+          var d = document,
+            g = d.createElement("script"),
+            s = d.getElementsByTagName("script")[0];
+          g.type = "text/javascript";
+          g.async = true;
+          g.defer = true;
+          g.src = u + "sf.js";
+          s.parentNode.insertBefore(g, s);
+        })();
+      }
+      bizx.cmp.ifConsent("publisher", ["storage", "measurement"], initPiwik);
+    </script>
+  </head>
+
+  <body>
+    <div id="content_base">
+      <div class="grid-24 pad">
+        <h2 class="dark title">
+          history_version6
+          <!-- actions -->
+          <small>
+            <a class="icon" href="history.html" title="History"
+              ><i class="fa fa-calendar"></i
+            ></a>
+
+            <a class="icon" href="feed" title="RSS"
+              ><i class="fa fa-rss"></i
+            ></a>
+            <a class="icon" href="../search.html" title="Search"
+              ><i class="fa fa-search"></i
+            ></a>
+          </small>
+          <!-- /actions -->
+        </h2>
+
+        <div class="editbox">
+          <div class="grid-9 gravatar sm">
+            <label class="simple">Authors: </label>
+
+            <a href="https://sourceforge.net/u/cdputnam/">
+              <img
+                src="https://secure.gravatar.com/avatar/f12e8bce72883cb9e8a165cc2e312289?r=pg&amp;d=https%3A%2F%2Fa.fsdn.com%2Fallura%2Fnf%2F1589309844%2F_ew_%2Ftheme%2Fsftheme%2Fimages%2Fsandiego%2Ficons%2Fdefault-avatar.png&s=16"
+                srcset="
+                  https://secure.gravatar.com/avatar/f12e8bce72883cb9e8a165cc2e312289?r=pg&amp;d=https%3A%2F%2Fa.fsdn.com%2Fallura%2Fnf%2F1589309844%2F_ew_%2Ftheme%2Fsftheme%2Fimages%2Fsandiego%2Ficons%2Fdefault-avatar.png&s=24.0 1.5x,
+                  https://secure.gravatar.com/avatar/f12e8bce72883cb9e8a165cc2e312289?r=pg&amp;d=https%3A%2F%2Fa.fsdn.com%2Fallura%2Fnf%2F1589309844%2F_ew_%2Ftheme%2Fsftheme%2Fimages%2Fsandiego%2Ficons%2Fdefault-avatar.png&s=32   2x
+                "
+                width="16"
+                height="16"
+                alt="Chris Putnam"
+                title="Chris Putnam"
+                class="emboss x16"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <div class="markdown_content">
+              <h2 id="610">6.10</h2>
+              <p>3/23/20</p>
+              <ul>
+                <li>Fix build errors in 6.9</li>
+              </ul>
+              <h2 id="69">6.9</h2>
+              <p>3/17/20</p>
+              <ul>
+                <li>Add xml2biblatex converter</li>
+                <li>
+                  Fix bug where --no-latex/-nl isn't respected when outputting
+                  names
+                </li>
+                <li>Replace latex parser</li>
+                <li>xml2isi - add publisher address to output</li>
+                <li>Cleanups to converter core</li>
+                <li>Fixes to some fuzzer-identified bugs</li>
+              </ul>
+              <h2 id="68">6.8</h2>
+              <p>8/27/19</p>
+              <ul>
+                <li>Improve ISI output</li>
+                <li>Lots of cleanups</li>
+              </ul>
+              <h2 id="67">6.7</h2>
+              <p>8/31/2018</p>
+              <ul>
+                <li>
+                  Remove exit() calls from library and fully implement error
+                  tracking in struct str (requested by Vasiliy Glazov)
+                </li>
+                <li>
+                  Add "DOI:" to doi entries in xml2ads (reported by Richard
+                  Mathar)
+                </li>
+                <li>
+                  Eliminate duplication of doi information in xml2ads (reported
+                  by Richard Mathar)
+                </li>
+                <li>
+                  Improve handling of non-ascii letters for ADS %R tags (patch
+                  from Richard Mathar)
+                </li>
+                <li>
+                  Suppress warnings on Windows compilers with 32 bit longs
+                  (reported by Vaclav Haisman)
+                </li>
+              </ul>
+              <h2 id="66">6.6</h2>
+              <p>7/02/2018</p>
+              <ul>
+                <li>
+                  Allow distros to inject LDFLAGS via LDFLAGIN into bibutils
+                  builds (reported by Jens-Ulrik Petersen)
+                </li>
+                <li>Add xml2nbib converter</li>
+              </ul>
+              <h2 id="65">6.5</h2>
+              <p>6/12/2018</p>
+              <ul>
+                <li>
+                  Handle both genres "unpublished" and "manuscript" (reported by
+                  Chip Maguire)
+                </li>
+                <li>
+                  Recognize all MARC role abbreviations (reported by Chip
+                  Maguire)
+                </li>
+                <li>Handle Licentiate theses (reported by Chip Maguire)</li>
+                <li>Fix bug in nbib2xml (reported by Vaclav Haisman)</li>
+                <li>
+                  Fix hangs in bib2xml/biblatex2xml found by american-fuzzy-lop
+                </li>
+              </ul>
+              <h2 id="64">6.4</h2>
+              <p>6/05/18</p>
+              <ul>
+                <li>
+                  Add missing return in bibtexout.c (reported by Vaclav Haisman)
+                </li>
+                <li>
+                  Fix accidentally deleted extern in xml.h to fix hs-bibutils
+                  build (reported<br />
+                  by Vaclav Haisman)
+                </li>
+              </ul>
+              <h2 id="63">6.3</h2>
+              <p>6/04/18</p>
+              <ul>
+                <li>Add bibdiff program</li>
+                <li>
+                  Fix header guards in iso639_1.h and iso639_3.h (reported by
+                  Vaclav Haisman)
+                </li>
+                <li>
+                  Fix nbib support for bibutils as a library (reported by Vaclav
+                  Haisman)
+                </li>
+                <li>
+                  Add authority="bibutilsgt" for bibutils-recognized genres not
+                  in MARC authority
+                </li>
+                <li>
+                  Switch from GENRE/NGENRE/UGENRE to
+                  GENRE:MARC/GENRE:BIBUTILS/GENRE:UNKNOWN
+                </li>
+                <li>General cleanups and fixes to cppcheck/clang warnings</li>
+                <li>Fix CVE-2018-10773, CVE-2018-10774, CVE-2018-10775</li>
+              </ul>
+              <h2 id="62">6.2</h2>
+              <p>8/09/17</p>
+              <p>DOI</p>
+              <ul>
+                <li>
+                  Output as url in addition to doi for ads, bibtex, and ris
+                  formats
+                </li>
+              </ul>
+              <h2 id="61">6.1</h2>
+              <p>7/31/17</p>
+              <p>BUILD</p>
+              <ul>
+                <li>
+                  Fix recognition of Linux ppc64le machines (reported by
+                  Michaela Buchanan)
+                </li>
+              </ul>
+              <p>GLOBAL</p>
+              <ul>
+                <li>
+                  Handle new crossref URL for DOI's
+                  <a href="https://doi.org/" rel="nofollow">https://doi.org/</a>
+                  (reported by Murali Raju)
+                </li>
+              </ul>
+              <p>RISIN</p>
+              <ul>
+                <li>
+                  Handle mangled RIS sources that have three spaces in the tag
+                  instead of two (reported by Vaclav Haisman)
+                </li>
+              </ul>
+              <h2 id="60">6.0</h2>
+              <p>7/4/17</p>
+              <p>GLOBAL</p>
+              <ul>
+                <li>Switch newstr/list to str/slist</li>
+                <li>Fix build problems</li>
+              </ul>
+              <p>RISIN</p>
+              <ul>
+                <li>Fix parsing bug in RIS (patch from Vaclav Haisman)</li>
+              </ul>
+              <p>BIBTEXIN/OUT</p>
+              <ul>
+                <li>
+                  Improve handling of eprintClass/primaryClass for arXiv
+                  references (reported by Chris Karakas)
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            id="create_wiki_page_holder"
+            title="Create New Page"
+            style="display: none;"
+          >
+            <form>
+              <label class="grid-2">Name</label>
+              <div class="grid-7"><input type="text" name="name" /></div>
+            </form>
+          </div>
+        </div>
+
+        <hr style="margin-top: 1em; margin-bottom: 2em; clear: both;" />
+
+        <div id="lightbox_confirm" class="modal" style="display: none;">
+          <a class="icon close" href="index.html@version=10.html#" title="Close"
+            ><i class="fa fa-close"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

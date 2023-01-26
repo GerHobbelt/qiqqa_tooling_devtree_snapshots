@@ -1,0 +1,7 @@
+#include "rad/version.h"
+
+static constexpr const char* VERSION = "@wxFormBuilder_VERSION@";
+
+const char* getVersion() {
+    return VERSION;
+}

@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>libxtensor</ProjectName>
+    <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FFC62FD2}</ProjectGuid>
+    <RootNamespace>libxtensor</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project.props" Label="SolutionWideSettings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.28307.799</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+<ItemDefinitionGroup>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <BrowseInformation>false</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <DisableSpecificWarnings>4018;4100;4127;4180;4206;4244;4267;5105;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <SDLCheck>false</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <ConformanceMode>true</ConformanceMode>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableUnitySupport>true</EnableUnitySupport>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+</ItemDefinitionGroup>
+<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_adapter.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_assign.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_builder.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_container.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_creation.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_increment_stepper.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_lambda_expressions.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_math.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_random.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_reducer.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_view_access.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_view_adapt.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_view_assignment.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_views.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_xshape.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_extended_broadcast_view.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_extended_xhistogram.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_extended_xmath_interp.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_extended_xmath_reducers.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_extended_xsort.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_sfinae.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xaccumulator.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xadapt.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xadaptor_semantic.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xarray.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xarray_adaptor.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xassign.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xaxis_iterator.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xaxis_slice_iterator.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xblockwise_reducer.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xbroadcast.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xbuffer_adaptor.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xbuilder.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xchunked_array.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xchunked_view.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xcomplex.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xcontainer_semantic.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xcsv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xdatesupport.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xdynamic_view.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xeval.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xexception.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xexpression.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xexpression_holder.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xexpression_traits.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xfixed.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xfunc_on_xexpression.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xfunction.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xfunctor_adaptor.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xhistogram.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xindex_view.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xinfo.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xio.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xiterator.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xjson.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xlayout.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xmanipulation.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xmasked_view.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xmath.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xmath_result_type.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xmime.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xmultiindex_iterator.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xnan_functions.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xnoalias.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xnorm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xnpy.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xoperation.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xoptional.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xoptional_assembly.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xoptional_assembly_adaptor.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xoptional_assembly_storage.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xpad.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xrandom.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xreducer.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xrepeat.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xscalar.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xscalar_semantic.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xset_operation.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xshape.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xsimd.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xsimd8.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xsort.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xstorage.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xstrided_view.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xstrides.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xtensor.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xtensor_adaptor.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xtensor_semantic.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xutils.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xvectorize.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xview.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xview_semantic.cpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xaccessible.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xaccumulator.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xadapt.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xarray.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xassign.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xaxis_iterator.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xaxis_slice_iterator.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xblockwise_reducer.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xblockwise_reducer_functors.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xbroadcast.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xbuffer_adaptor.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xbuilder.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xchunked_array.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xchunked_assign.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xchunked_view.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xcomplex.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xcontainer.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xcsv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xdynamic_view.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xeval.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xexception.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xexpression.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xexpression_holder.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xexpression_traits.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xfixed.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xfunction.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xfunctor_view.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xgenerator.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xhistogram.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xindex_view.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xinfo.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xio.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xiterable.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xiterator.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xjson.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xlayout.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xmanipulation.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xmasked_view.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xmath.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xmime.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xmultiindex_iterator.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xnoalias.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xnorm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xnpy.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xoffset_view.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xoperation.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xoptional.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xoptional_assembly.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xoptional_assembly_base.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xoptional_assembly_storage.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xpad.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xrandom.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xreducer.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xrepeat.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xscalar.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xsemantic.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xset_operation.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xshape.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xslice.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xsort.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xstorage.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xstrided_view.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xstrided_view_base.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xstrides.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xtensor.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xtensor_config.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xtensor_forward.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xtensor_simd.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xutils.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xvectorize.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xview.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xview_utils.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/test/test_common.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/test/test_common_macros.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/test/test_utils.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/test/test_xsemantic.hpp" />
+    <Image Include="../../thirdparty/owemdjee/xtensor/docs/source/xeus-cling-screenshot.png" />
+    <Image Include="../../thirdparty/owemdjee/xtensor/notebooks/images/xtensor-blas.png" />
+    <Image Include="../../thirdparty/owemdjee/xtensor/notebooks/images/xtensor.png" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/README.md" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/benchmark/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/benchmark/copyGBenchmark.cmake.in" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/benchmark/downloadGBenchmark.cmake.in" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/make.bat" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/_static/goatcounter.js" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/adaptor.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/accumulating_functions.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/basic_functions.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/chunked_array.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/classif_functions.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/container_index.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/error_functions.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/exponential_functions.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/expression_index.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/function_index.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/hyperbolic_functions.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/index_related.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/io_index.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/iterator_index.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/nan_functions.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/nearint_operations.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/operators.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/power_functions.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/reducing_functions.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/trigonometric_functions.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xaccumulator.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xarray.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xarray_adaptor.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xaxis_iterator.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xaxis_slice_iterator.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xbroadcast.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xbuilder.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xcontainer.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xcontainer_semantic.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xcsv.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xeval.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xexpression.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xfixed.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xfunction.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xfunctor_view.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xgenerator.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xhistogram.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xindex_view.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xio.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xiterable.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xjson.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xmanipulation.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xmasked_view.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xmath.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xnpy.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xoptional_assembly.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xoptional_assembly_adaptor.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xoptional_assembly_base.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xpad.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xrandom.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xreducer.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xrepeat.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xsemantic_base.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xset_operation.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xshape.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xsort.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xstrided_view.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xstrides.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xtensor.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xtensor_adaptor.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xview.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xview_semantic.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/bindings.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/build-options.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/builder.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/changelog.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/closure-semantics.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/compilers.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/conf.py" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/container.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/dev-build-options.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/assignment.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/concepts.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/expression_tree.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/implementation_classes.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/iterating_expression.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/xtensor_internals.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/expression.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/external-structures.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/file_loading.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/getting_started.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/histogram.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/index.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/indices.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/installation.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/missing.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/numpy-differences.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/numpy.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/operator.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/pitfall.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/quickref/basic.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/quickref/builder.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/quickref/chunked_arrays.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/quickref/iterator.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/quickref/manipulation.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/quickref/math.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/quickref/operator.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/quickref/reducer.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/random.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/rank.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/related.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/releasing.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/scalar.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/view.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/generate.py" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/preprocess.py" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/big_exp.txt" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/bool_fn.txt" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/complex_numbers.txt" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/complex_zero_erasing.txt" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/custom_formatter_result.txt" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/cut_4d.txt" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/cut_both.txt" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/cut_high.txt" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/cut_long.txt" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/float_leading_zero.txt" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/long_strings.txt" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/precision.txt" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/print_options_result.txt" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/random_nan_inf.txt" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/random_strings.txt" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/threed_double.txt" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/twod_double.txt" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/tools/check_circular.py" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/xtensor.pc.in" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/xtensorConfig.cmake.in" />
+  </ItemGroup>
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />
+  </ImportGroup>
+</Project>
+  

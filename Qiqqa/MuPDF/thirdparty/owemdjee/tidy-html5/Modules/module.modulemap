@@ -1,0 +1,5 @@
+module tidyhtml5 [system] {
+    header "../../Headers/tidy-html5-Bridging-Header.h"
+    link "tidy-html5"
+    export *
+}

@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{00811970-815B-4F64-BC9D-21907877E16D}</ProjectGuid>
+    <RootNamespace>UIforETW</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project.props" Label="SolutionWideSettings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.28307.799</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+<ItemDefinitionGroup>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <BrowseInformation>false</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <DisableSpecificWarnings>4018;4100;4127;4180;4206;4244;4267;5105;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <SDLCheck>false</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <ConformanceMode>true</ConformanceMode>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableUnitySupport>true</EnableUnitySupport>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+</ItemDefinitionGroup>
+<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_UIFORETW;UIFORETW_STATICLIB;FZ_DLL_CLIENT;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <Profile>true</Profile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
+      <MapExports>true</MapExports>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_UIFORETW;UIFORETW_STATICLIB;FZ_DLL_CLIENT;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <TargetMachine>MachineX64</TargetMachine>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <Profile>true</Profile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
+      <MapExports>true</MapExports>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_UIFORETW;UIFORETW_STATICLIB;FZ_DLL_CLIENT;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <Profile>true</Profile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
+      <MapExports>true</MapExports>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_UIFORETW;UIFORETW_STATICLIB;FZ_DLL_CLIENT;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX64</TargetMachine>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <Profile>true</Profile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
+      <MapExports>true</MapExports>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="MuPDFLib.vcxproj">
+      <Project>{c21b464f-7799-4b39-8ca6-67ce0468966c}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/DelayedCreateProcess/DelayedCreateProcess.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/DummyChrome/DummyChrome.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/DummyChrome/dllmain.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/DummyChrome/stdafx.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/ETWEventDemo/ETWEventDemo.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/ETWEventDemo/stdafx.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/base/child_process.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/base/command_line.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/base/error_string.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/base/file.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/base/logging.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/base/numeric_conversions.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/base/string_utils.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/etw_reader/etw_reader.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/etw_reader/generate_history_from_trace.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/etw_reader/system_history.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/flame_graph/clean_stack.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/flame_graph/flame_graph.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/flame_graph/main.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/ETWProviders/ETWProviders.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/ETWProviders/dllmain.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/ETWProviders/etwprof.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/ETWProviders/stdafx.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/EventEmitter/EventEmitter.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/EventEmitter/stdafx.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/LabScripts/ETWPMCDemo/ConditionalCount/ConditionalCount.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/LabScripts/ETWPMCDemo/ConditionalCount/OtherFile.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/PowerMon/PowerMon.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/PowerMon/PowerStatus.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/PowerMon/stdafx.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/RetrieveSymbols/RetrieveSymbols.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/UIforETW/CPUFrequency.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/UIforETW/ChildProcess.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/UIforETW/DirectoryMonitor.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/UIforETW/KeyLoggerThread.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/UIforETW/PowerStatus.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/UIforETW/ProcessChecks.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/UIforETW/Settings.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/UIforETW/Support.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/UIforETW/TraceLoggingSupport.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/UIforETW/UIforETW.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/UIforETW/UIforETWDlg.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/UIforETW/Utility.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/UIforETW/VersionChecker.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/UIforETW/WorkingSet.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/UIforETW/UIforETW/stdafx.cpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/DummyChrome/stdafx.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/ETWEventDemo/stdafx.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/ETWEventDemo/targetver.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/base/base.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/base/binary_search.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/base/child_process.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/base/command_line.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/base/error_string.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/base/file.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/base/history.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/base/logging.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/base/numeric_conversions.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/base/string_utils.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/base/types.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/etw_reader/etw_reader.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/etw_reader/generate_history_from_trace.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/etw_reader/stack.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/etw_reader/system_history.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/etw_reader/thread_history.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/flame_graph/clean_stack.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/flame_graph/flame_graph.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/ETWProviders/resource.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/ETWProviders/stdafx.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/ETWProviders/targetver.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/EventEmitter/EventEmitter.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/EventEmitter/Resource.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/EventEmitter/stdafx.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/EventEmitter/targetver.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/PowerMon/PowerStatus.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/PowerMon/stdafx.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/PowerMon/targetver.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/UIforETW/About.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/UIforETW/CPUFrequency.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/UIforETW/ChildProcess.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/UIforETW/DirectoryMonitor.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/UIforETW/KeyLoggerThread.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/UIforETW/PowerStatus.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/UIforETW/Resource.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/UIforETW/Settings.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/UIforETW/TraceLoggingSupport.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/UIforETW/UIforETW.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/UIforETW/UIforETWDlg.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/UIforETW/Utility.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/UIforETW/Version.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/UIforETW/VersionChecker.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/UIforETW/VersionCopy.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/UIforETW/WorkingSet.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/UIforETW/stdafx.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/UIforETW/targetver.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/UIforETW/include/ETWProviders/etwprof.h" />
+    <Image Include="../../thirdparty/owemdjee/UIforETW/EventEmitter/EventEmitter.ico" />
+    <Image Include="../../thirdparty/owemdjee/UIforETW/EventEmitter/small.ico" />
+    <Image Include="../../thirdparty/owemdjee/UIforETW/UIforETW/res/UIforETW.ico" />
+    <MASM Include="../../thirdparty/owemdjee/UIforETW/UIforETW/SpinALot32.asm" />
+    <MASM Include="../../thirdparty/owemdjee/UIforETW/UIforETW/SpinALot64.asm" />
+    <ResourceCompile Include="../../thirdparty/owemdjee/UIforETW/ETWProviders/ETWProviders.rc" />
+    <ResourceCompile Include="../../thirdparty/owemdjee/UIforETW/EventEmitter/EventEmitter.rc" />
+    <ResourceCompile Include="../../thirdparty/owemdjee/UIforETW/UIforETW/UIforETW.rc" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/CONTRIBUTORS" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/DelayedCreateProcess/make.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/DummyChrome/ReadMe.md" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/ETWEventDemo/ReadMe.txt" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/ETWInsights/README.md" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/ETWProviders/ReadMe.txt" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/EventEmitter/ReadMe.txt" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/LabScripts/ETWPMCDemo/ConditionalCount/ReadMe.txt" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/LabScripts/ETWPMCDemo/etwpmc_parser.py" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/LabScripts/ETWPMCDemo/etwpmc_record.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/LabScripts/GPUTracing/ReadMe.txt" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/LabScripts/GPUTracing/start_tracing.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/LabScripts/GPUTracing/stop_tracing.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/LabScripts/GeneralTracing/CreateExporterConfig.py" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/LabScripts/GeneralTracing/ReadMe.txt" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/LabScripts/GeneralTracing/SummarizeData.py" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/LabScripts/GeneralTracing/set_vars.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/LabScripts/GeneralTracing/start_tracing.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/LabScripts/GeneralTracing/stop_tracing.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/README" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/RetrieveSymbols/ReadMe.txt" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/SignBinaries.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/TraceProcessors/VideoConfCPUCounters/etwpmc_record.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/UIforETW/ReadMe.md" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/UIforETW/StackWalkFlags.txt" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/UIforETW/build_static.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/CPUByCommandLine.py" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/ETWPackSymbols.py" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/ETWTimeBuild2005.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/ETWTimeBuild2010.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/FindRandomasciiProfilePresets.py" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/IdentifyChromeProcesses.py" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/StripChromeSymbols.py" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/TestIdentifyChromeProcesses.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/VirtualFreeStacks.py" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/XperfProcessParentage.py" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/etw_cpuusage_longterm.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/etw_gdi_longterm.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/etw_handles_longterm.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/etw_processes_longterm.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/etwcirc.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/etwcommonsettings.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/etwheap.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/etwheapsnapshot.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/etwpmc_parser.py" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/etwpmc_record.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/etwrecord.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/etwregister.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/etwsamplefast.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/etwsamplenormal.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/etwsampleslow.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/metatrace.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/readme.txt" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/summarize_timer_intervals.py" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/trace_timer_intervals.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/bin/xperf_to_collapsedstacks.py" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/excludecopy.txt" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/make_zip_file.py" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/package_etw.bat" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/rename_to_version.py" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/third_party/license.txt" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/third_party/redist.txt" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/third_party/x64/redist.txt" />
+    <Text Include="../../thirdparty/owemdjee/UIforETW/vs-chromium-project.txt" />
+    <Xml Include="../../thirdparty/owemdjee/UIforETW/bin/chrome_regions_of_interest.xml" />
+  </ItemGroup>
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />
+  </ImportGroup>
+</Project>
+  

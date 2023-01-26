@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03fd328}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{42f0fc98-34f6-4567-b3cf-de13e74a89ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{b1798409-2031-413d-9df7-70b0202ddd98}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files\arch">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\arch\arm">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\arch\generic">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\arch\power">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\arch\s390">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\arch\x86">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\test\benchmarks">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\wx">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0009}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\arch">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0011}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\arch\arm">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0010}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\arch\generic">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\arch\power">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0013}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\arch\s390">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0014}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\arch\x86">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0015}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\b">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0016}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\b\CMakeFiles">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\b\CMakeFiles\3.22.0-rc1">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\b\_deps">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0020}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\b\_deps\googletest-subbuild">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0019}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\b\_deps\googletest-subbuild\CMakeFiles">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\b\_deps\googletest-subbuild\CMakeFiles\3.22.0-rc1">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\b\_deps\googletest-subbuild\CMakeFiles\googletest-populate.dir">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\doc">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\CVE-2018-25032">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\GH-361">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\GH-751">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\add-subdirectory-project">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0029}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\benchmarks">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0030}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\data">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0031}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\fuzz">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0032}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\pigz">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0033}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\win32">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0034}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0035}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0037}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\data">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0036}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\win32">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0038}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\arch">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0040}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\arch\arm">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0039}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\arch\power">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0041}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\arch\s390">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0042}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\arch\x86">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0043}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\b">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0047}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\b\CMakeFiles">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0046}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\b\CMakeFiles\3.22.0-rc1">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0045}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\b\CMakeFiles\3.22.0-rc1\CompilerIdC">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0044}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\b\CMakeFiles\3.22.0-rc1\CompilerIdCXX">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0048}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\b\CMakeFiles\CheckTypeSize">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0049}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cmake">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0050}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0051}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test\add-subdirectory-project">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0052}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test\benchmarks">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0053}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test\fuzz">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0054}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tools">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0055}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/zlib/adler32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/adler32_fold.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/arm/adler32_neon.c">
+      <Filter>Source Files\arch\arm</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/arm/arm_features.c">
+      <Filter>Source Files\arch\arm</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/arm/chunkset_neon.c">
+      <Filter>Source Files\arch\arm</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/arm/compare256_neon.c">
+      <Filter>Source Files\arch\arm</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/arm/crc32_acle.c">
+      <Filter>Source Files\arch\arm</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/arm/insert_string_acle.c">
+      <Filter>Source Files\arch\arm</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/arm/slide_hash_neon.c">
+      <Filter>Source Files\arch\arm</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/power/adler32_power8.c">
+      <Filter>Source Files\arch\power</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/power/adler32_vmx.c">
+      <Filter>Source Files\arch\power</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/power/chunkset_power8.c">
+      <Filter>Source Files\arch\power</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/power/compare256_power9.c">
+      <Filter>Source Files\arch\power</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/power/crc32_power8.c">
+      <Filter>Source Files\arch\power</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/power/power_features.c">
+      <Filter>Source Files\arch\power</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/power/slide_hash_power8.c">
+      <Filter>Source Files\arch\power</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/power/slide_hash_vmx.c">
+      <Filter>Source Files\arch\power</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/s390/crc32-vx.c">
+      <Filter>Source Files\arch\s390</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/s390/dfltcc_common.c">
+      <Filter>Source Files\arch\s390</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/s390/dfltcc_deflate.c">
+      <Filter>Source Files\arch\s390</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/s390/dfltcc_inflate.c">
+      <Filter>Source Files\arch\s390</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/s390/s390_features.c">
+      <Filter>Source Files\arch\s390</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/x86/adler32_avx2.c">
+      <Filter>Source Files\arch\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/x86/adler32_avx512.c">
+      <Filter>Source Files\arch\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/x86/adler32_avx512_vnni.c">
+      <Filter>Source Files\arch\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/x86/adler32_sse42.c">
+      <Filter>Source Files\arch\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/x86/adler32_ssse3.c">
+      <Filter>Source Files\arch\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/x86/chunkset_avx.c">
+      <Filter>Source Files\arch\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/x86/chunkset_sse2.c">
+      <Filter>Source Files\arch\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/x86/chunkset_sse41.c">
+      <Filter>Source Files\arch\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/x86/compare256_avx2.c">
+      <Filter>Source Files\arch\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/x86/compare256_sse2.c">
+      <Filter>Source Files\arch\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/x86/crc32_fold_pclmulqdq.c">
+      <Filter>Source Files\arch\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/x86/crc32_fold_vpclmulqdq.c">
+      <Filter>Source Files\arch\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/x86/insert_string_sse42.c">
+      <Filter>Source Files\arch\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/x86/slide_hash_avx2.c">
+      <Filter>Source Files\arch\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/x86/slide_hash_sse2.c">
+      <Filter>Source Files\arch\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/arch/x86/x86_features.c">
+      <Filter>Source Files\arch\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/b/CMakeFiles/3.22.0-rc1/CompilerIdC/CMakeCCompilerId.c">
+      <Filter>Source Files\b\CMakeFiles\3.22.0-rc1\CompilerIdC</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/b/CMakeFiles/3.22.0-rc1/CompilerIdCXX/CMakeCXXCompilerId.cpp">
+      <Filter>Source Files\b\CMakeFiles\3.22.0-rc1\CompilerIdCXX</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/b/CMakeFiles/CheckTypeSize/OFF64_T.c">
+      <Filter>Source Files\b\CMakeFiles\CheckTypeSize</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/b/CMakeFiles/CheckTypeSize/_OFF64_T.c">
+      <Filter>Source Files\b\CMakeFiles\CheckTypeSize</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/b/CMakeFiles/CheckTypeSize/__OFF64_T.c">
+      <Filter>Source Files\b\CMakeFiles\CheckTypeSize</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/chunkset.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/cmake/detect-arch.c">
+      <Filter>Source Files\cmake</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/compare256.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/compress.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/cpu_features.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/crc32_braid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/crc32_braid_comb.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/crc32_fold.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/deflate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/deflate_fast.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/deflate_huff.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/deflate_medium.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/deflate_quick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/deflate_rle.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/deflate_slow.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/deflate_stored.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/functable.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/gzlib.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/gzread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/gzwrite.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/infback.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/inffast.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/inflate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/inftrees.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/insert_string.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/insert_string_roll.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/slide_hash.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/add-subdirectory-project/main.c">
+      <Filter>Source Files\test\add-subdirectory-project</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/benchmarks/benchmark_adler32.cc">
+      <Filter>Source Files\test\benchmarks</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/benchmarks/benchmark_adler32_copy.cc">
+      <Filter>Source Files\test\benchmarks</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/benchmarks/benchmark_compare256.cc">
+      <Filter>Source Files\test\benchmarks</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/benchmarks/benchmark_crc32.cc">
+      <Filter>Source Files\test\benchmarks</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/benchmarks/benchmark_main.cc">
+      <Filter>Source Files\test\benchmarks</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/benchmarks/benchmark_png_decode.cc">
+      <Filter>Source Files\test\benchmarks</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/benchmarks/benchmark_png_encode.cc">
+      <Filter>Source Files\test\benchmarks</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/benchmarks/benchmark_slidehash.cc">
+      <Filter>Source Files\test\benchmarks</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/example.c">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/fuzz/fuzzer_checksum.c">
+      <Filter>Source Files\test\fuzz</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/fuzz/fuzzer_compress.c">
+      <Filter>Source Files\test\fuzz</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/fuzz/fuzzer_example_dict.c">
+      <Filter>Source Files\test\fuzz</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/fuzz/fuzzer_example_flush.c">
+      <Filter>Source Files\test\fuzz</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/fuzz/fuzzer_example_large.c">
+      <Filter>Source Files\test\fuzz</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/fuzz/fuzzer_example_small.c">
+      <Filter>Source Files\test\fuzz</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/fuzz/fuzzer_minigzip.c">
+      <Filter>Source Files\test\fuzz</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/fuzz/standalone_fuzz_target_runner.c">
+      <Filter>Source Files\test\fuzz</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/gh1235.c">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/infcover.c">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/minideflate.c">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/minigzip.c">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/monolithic_main.c">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/switchlevels.c">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/test_adler32.cc">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/test_aligned_alloc.cc">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/test_compare256.cc">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/test_compress.cc">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/test_compress_bound.cc">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/test_compress_dual.cc">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/test_crc32.cc">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/test_cve-2003-0107.cc">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/test_deflate_bound.cc">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/test_deflate_concurrency.cc">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/test_deflate_copy.cc">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/test_deflate_dict.cc">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/test_deflate_hash_head_0.cc">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/test_deflate_header.cc">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/test_deflate_params.cc">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/test_deflate_pending.cc">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/test_deflate_prime.cc">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/test_deflate_quick_bi_valid.cc">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/test_deflate_quick_block_open.cc">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/test_deflate_tune.cc">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/test_dict.cc">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/test_gzio.cc">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/test_inflate_adler32.cc">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/test_inflate_sync.cc">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/test_large_buffers.cc">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/test_main.cc">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/test_small_buffers.cc">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/test/test_version.cc">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/tools/makecrct.c">
+      <Filter>Source Files\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/tools/makefixed.c">
+      <Filter>Source Files\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/tools/maketrees.c">
+      <Filter>Source Files\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/trees.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/uncompr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/zlib/zutil.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClInclude Include="../../thirdparty/zlib/adler32_fold.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/adler32_p.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/arch/arm/arm_features.h">
+      <Filter>Header Files\arch\arm</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/arch/arm/ctzl.h">
+      <Filter>Header Files\arch\arm</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/arch/arm/neon_intrins.h">
+      <Filter>Header Files\arch\arm</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/arch/generic/chunk_permute_table.h">
+      <Filter>Header Files\arch\generic</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/arch/power/crc32_constants.h">
+      <Filter>Header Files\arch\power</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/arch/power/fallback_builtins.h">
+      <Filter>Header Files\arch\power</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/arch/power/power_features.h">
+      <Filter>Header Files\arch\power</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/arch/power/slide_ppc_tpl.h">
+      <Filter>Header Files\arch\power</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/arch/s390/dfltcc_common.h">
+      <Filter>Header Files\arch\s390</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/arch/s390/dfltcc_deflate.h">
+      <Filter>Header Files\arch\s390</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/arch/s390/dfltcc_detail.h">
+      <Filter>Header Files\arch\s390</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/arch/s390/dfltcc_inflate.h">
+      <Filter>Header Files\arch\s390</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/arch/s390/s390_features.h">
+      <Filter>Header Files\arch\s390</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/arch/x86/adler32_avx2_p.h">
+      <Filter>Header Files\arch\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/arch/x86/adler32_avx2_tpl.h">
+      <Filter>Header Files\arch\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/arch/x86/adler32_avx512_p.h">
+      <Filter>Header Files\arch\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/arch/x86/adler32_avx512_tpl.h">
+      <Filter>Header Files\arch\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/arch/x86/adler32_ssse3_p.h">
+      <Filter>Header Files\arch\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/arch/x86/crc32_fold_pclmulqdq_tpl.h">
+      <Filter>Header Files\arch\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/arch/x86/crc32_fold_vpclmulqdq_tpl.h">
+      <Filter>Header Files\arch\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/arch/x86/x86_features.h">
+      <Filter>Header Files\arch\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/chunkset_tpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/cpu_features.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/crc32_braid_comb_p.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/crc32_braid_p.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/crc32_braid_tbl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/crc32_fold.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/deflate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/deflate_p.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/fallback_builtins.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/functable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/gzguts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/inffast.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/inffixed_tbl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/inflate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/inflate_p.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/inftrees.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/insert_string_tpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/match_tpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/test/benchmarks/benchmark_png_shared.h">
+      <Filter>Header Files\test\benchmarks</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/test/monolithic_examples.h">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/test/test_shared.h">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/test/test_shared_ng.h">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/trees.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/trees_emit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/trees_tbl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/wx/zlib_name_mangling-ng.h">
+      <Filter>Header Files\wx</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/zbuild.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/zendian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/zutil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/zlib/zutil_p.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <Image Include="../../thirdparty/zlib/test/data/fireworks.jpg">
+      <Filter>Resource Files\test\data</Filter>
+    </Image>
+    <ResourceCompile Include="../../thirdparty/zlib/win32/zlib-ng1.rc">
+      <Filter>Resource Files\win32</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="../../thirdparty/zlib/win32/zlib1.rc">
+      <Filter>Resource Files\win32</Filter>
+    </ResourceCompile>
+    <Text Include="../../thirdparty/zlib/CMakeLists.txt">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/INDEX.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/LICENSE.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/Makefile.in">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/PORTING.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/README.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/arch/arm/Makefile.in">
+      <Filter>Misc Files\arch\arm</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/arch/generic/Makefile.in">
+      <Filter>Misc Files\arch\generic</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/arch/power/Makefile.in">
+      <Filter>Misc Files\arch\power</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/arch/s390/Makefile.in">
+      <Filter>Misc Files\arch\s390</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/arch/s390/README.md">
+      <Filter>Misc Files\arch\s390</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/arch/x86/Makefile.in">
+      <Filter>Misc Files\arch\x86</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/b/CMakeCache.txt">
+      <Filter>Misc Files\b</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/b/CMakeFiles/3.22.0-rc1/VCTargetsPath.txt">
+      <Filter>Misc Files\b\CMakeFiles\3.22.0-rc1</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/b/CMakeFiles/TargetDirectories.txt">
+      <Filter>Misc Files\b\CMakeFiles</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/b/_deps/googletest-subbuild/CMakeCache.txt">
+      <Filter>Misc Files\b\_deps\googletest-subbuild</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/b/_deps/googletest-subbuild/CMakeFiles/3.22.0-rc1/VCTargetsPath.txt">
+      <Filter>Misc Files\b\_deps\googletest-subbuild\CMakeFiles\3.22.0-rc1</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/b/_deps/googletest-subbuild/CMakeFiles/TargetDirectories.txt">
+      <Filter>Misc Files\b\_deps\googletest-subbuild\CMakeFiles</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/b/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/Labels.json">
+      <Filter>Misc Files\b\_deps\googletest-subbuild\CMakeFiles\googletest-populate.dir</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/b/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/Labels.txt">
+      <Filter>Misc Files\b\_deps\googletest-subbuild\CMakeFiles\googletest-populate.dir</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/doc/algorithm.txt">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/doc/rfc1950.txt">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/doc/rfc1951.txt">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/doc/rfc1952.txt">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/doc/txtvsbin.txt">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/gzread.c.in">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/run_cmake.sh">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/test/CMakeLists.txt">
+      <Filter>Misc Files\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/test/CVE-2018-25032/default.txt">
+      <Filter>Misc Files\test\CVE-2018-25032</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/test/CVE-2018-25032/fixed.txt">
+      <Filter>Misc Files\test\CVE-2018-25032</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/test/GH-361/test.txt">
+      <Filter>Misc Files\test\GH-361</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/test/GH-751/test.txt">
+      <Filter>Misc Files\test\GH-751</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/test/Makefile.in">
+      <Filter>Misc Files\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/test/README.md">
+      <Filter>Misc Files\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/test/abicheck.md">
+      <Filter>Misc Files\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/test/abicheck.sh">
+      <Filter>Misc Files\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/test/add-subdirectory-project/CMakeLists.txt">
+      <Filter>Misc Files\test\add-subdirectory-project</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/test/benchmarks/CMakeLists.txt">
+      <Filter>Misc Files\test\benchmarks</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/test/benchmarks/README.md">
+      <Filter>Misc Files\test\benchmarks</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/test/data/lcet10.txt">
+      <Filter>Misc Files\test\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/test/fuzz/CMakeLists.txt">
+      <Filter>Misc Files\test\fuzz</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/test/pigz/CMakeLists.txt">
+      <Filter>Misc Files\test\pigz</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/test/pkgcheck.sh">
+      <Filter>Misc Files\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/win32/Makefile.msc">
+      <Filter>Misc Files\win32</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/win32/zlib-ng.def.in">
+      <Filter>Misc Files\win32</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/win32/zlib.def.in">
+      <Filter>Misc Files\win32</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/win32/zlibcompat.def.in">
+      <Filter>Misc Files\win32</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/zconf-ng.h.in">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/zconf.h.in">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/zlib-ng.h.in">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/zlib.h.in">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/zlib.pc.in">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/zlib_name_mangling-ng.h.in">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/zlib/zlib_name_mangling.h.in">
+      <Filter>Misc Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
+    

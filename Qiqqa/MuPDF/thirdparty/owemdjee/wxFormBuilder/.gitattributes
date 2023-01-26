@@ -1,0 +1,18 @@
+* text=auto !eol
+
+*.bat eol=crlf
+*.cmd eol=crlf
+*.iss eol=crlf
+*.sln eol=crlf
+*.vcproj eol=crlf
+*.vcxproj eol=crlf
+
+*.sh eol=lf
+*.make eol=lf
+Makefile eol=lf
+
+/docs/internal export-ignore
+/.github export-ignore
+/.git* export-ignore
+
+/.git-properties export-subst -export-ignore

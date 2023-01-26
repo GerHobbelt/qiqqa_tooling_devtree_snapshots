@@ -1,0 +1,8 @@
+build/
+.vscode/
+*~
+.o
+.vs/
+/VisualStudio/2019/Debug-*/
+/VisualStudio/2019/Release-*/
+*.user

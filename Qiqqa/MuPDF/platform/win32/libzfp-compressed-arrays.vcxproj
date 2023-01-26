@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>libzfp-compressed-arrays</ProjectName>
+    <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FFD8D3D4}</ProjectGuid>
+    <RootNamespace>libzfp-compressed-arrays</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project.props" Label="SolutionWideSettings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.28307.799</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+<ItemDefinitionGroup>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <BrowseInformation>false</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <DisableSpecificWarnings>4018;4100;4127;4180;4206;4244;4267;5105;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <SDLCheck>false</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <ConformanceMode>true</ConformanceMode>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableUnitySupport>true</EnableUnitySupport>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+</ItemDefinitionGroup>
+<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZFP_COMPRESSED_ARRAYS;ZFP_COMPRESSED_ARRAYS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZFP_COMPRESSED_ARRAYS;ZFP_COMPRESSED_ARRAYS_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZFP_COMPRESSED_ARRAYS;ZFP_COMPRESSED_ARRAYS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZFP_COMPRESSED_ARRAYS;ZFP_COMPRESSED_ARRAYS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZFP_COMPRESSED_ARRAYS;ZFP_COMPRESSED_ARRAYS_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZFP_COMPRESSED_ARRAYS;ZFP_COMPRESSED_ARRAYS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZFP_COMPRESSED_ARRAYS;ZFP_COMPRESSED_ARRAYS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZFP_COMPRESSED_ARRAYS;ZFP_COMPRESSED_ARRAYS_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZFP_COMPRESSED_ARRAYS;ZFP_COMPRESSED_ARRAYS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZFP_COMPRESSED_ARRAYS;ZFP_COMPRESSED_ARRAYS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZFP_COMPRESSED_ARRAYS;ZFP_COMPRESSED_ARRAYS_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZFP_COMPRESSED_ARRAYS;ZFP_COMPRESSED_ARRAYS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/cfp/cfp.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/cfp/cfparray1d.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/cfp/cfparray1f.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/cfp/cfparray2d.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/cfp/cfparray2f.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/cfp/cfparray3d.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/cfp/cfparray3f.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/cfp/cfparray4d.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/cfp/cfparray4f.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/cfp/cfpheader.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/cfp/template/cfparray.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/cfp/template/cfparray1.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/cfp/template/cfparray2.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/cfp/template/cfparray3.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/cfp/template/cfparray4.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/cfp/template/cfpheader.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/examples/array.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/examples/diffusion.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/examples/diffusionC.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/examples/inplace.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/examples/iterator.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/examples/iteratorC.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/examples/pgm.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/examples/ppm.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/examples/simple.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/examples/speed.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/bitstream.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/decode1d.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/decode1f.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/decode1i.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/decode1l.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/decode2d.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/decode2f.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/decode2i.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/decode2l.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/decode3d.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/decode3f.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/decode3i.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/decode3l.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/decode4d.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/decode4f.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/decode4i.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/decode4l.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/encode1d.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/encode1f.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/encode1i.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/encode1l.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/encode2d.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/encode2f.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/encode2i.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/encode2l.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/encode3d.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/encode3f.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/encode3i.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/encode3l.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/encode4d.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/encode4f.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/encode4i.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/encode4l.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/share/omp.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/share/parallel.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/codec.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/codec1.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/codec2.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/codec3.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/codec4.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/codecf.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/compress.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/cudacompress.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/cudadecompress.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/decode.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/decode1.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/decode2.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/decode3.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/decode4.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/decodef.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/decodei.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/decompress.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/encode.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/encode1.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/encode2.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/encode3.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/encode4.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/encodef.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/encodei.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/ompcompress.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/revcodecf.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/revdecode.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/revdecode1.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/revdecode2.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/revdecode3.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/revdecode4.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/revdecodef.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/revencode.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/revencode1.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/revencode2.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/revencode3.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/revencode4.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/revencodef.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/zfp.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray1Base.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray1ItersBase.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray1RefsBase.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray1ViewsBase.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray1d.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray1dIters.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray1dPtrs.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray1dRefs.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray1dViewIters.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray1dViewPtrs.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray1dViews.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray1f.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray1fIters.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray1fPtrs.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray1fRefs.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray1fViewIters.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray1fViewPtrs.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray1fViews.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray2Base.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray2ItersBase.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray2PtrsBase.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray2RefsBase.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray2ViewsBase.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray2d.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray2dIters.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray2dPtrs.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray2dRefs.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray2dViewIters.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray2dViewPtrs.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray2dViews.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray2f.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray2fIters.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray2fPtrs.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray2fRefs.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray2fViewIters.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray2fViewPtrs.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray2fViews.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray3Base.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray3ItersBase.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray3PtrsBase.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray3RefsBase.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray3ViewsBase.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray3d.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray3dIters.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray3dPtrs.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray3dRefs.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray3dViewIters.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray3dViewPtrs.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray3dViews.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray3f.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray3fIters.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray3fPtrs.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray3fRefs.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray3fViewIters.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray3fViewPtrs.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray3fViews.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray4Base.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray4ItersBase.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray4PtrsBase.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray4RefsBase.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray4ViewsBase.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray4d.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray4dIters.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray4dPtrs.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray4dRefs.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray4dViewIters.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray4dViewPtrs.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray4dViews.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray4f.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray4fIters.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray4fPtrs.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray4fRefs.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray4fViewIters.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray4fViewPtrs.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArray4fViews.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArrayBase.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArrayItersBase.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArrayPtrsBase.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArrayRefsBase.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArrayViewItersBase.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArrayViewPtrsBase.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testArrayViewsBase.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/testConstruct.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/constArray/testConstArray1Base.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/constArray/testConstArray1d.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/constArray/testConstArray1f.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/constArray/testConstArray2Base.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/constArray/testConstArray2d.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/constArray/testConstArray2f.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/constArray/testConstArray3Base.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/constArray/testConstArray3d.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/constArray/testConstArray3f.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/constArray/testConstArray4Base.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/constArray/testConstArray4d.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/constArray/testConstArray4f.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/constArray/testConstArrayBase.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/decode/testTemplatedDecode1d.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/decode/testTemplatedDecode1f.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/decode/testTemplatedDecode2d.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/decode/testTemplatedDecode2f.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/decode/testTemplatedDecode3d.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/decode/testTemplatedDecode3f.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/decode/testTemplatedDecode4d.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/decode/testTemplatedDecode4f.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/decode/testTemplatedDecodeBase.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/encode/testTemplatedEncode1d.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/encode/testTemplatedEncode1f.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/encode/testTemplatedEncode2d.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/encode/testTemplatedEncode2f.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/encode/testTemplatedEncode3d.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/encode/testTemplatedEncode3f.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/encode/testTemplatedEncode4d.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/encode/testTemplatedEncode4f.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/encode/testTemplatedEncodeBase.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/zfp/testAlignedMemory.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/cfp/testCfpArray1_source.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/cfp/testCfpArray1d.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/cfp/testCfpArray1f.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/cfp/testCfpArray2_source.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/cfp/testCfpArray2d.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/cfp/testCfpArray2f.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/cfp/testCfpArray3_source.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/cfp/testCfpArray3d.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/cfp/testCfpArray3f.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/cfp/testCfpArray4_source.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/cfp/testCfpArray4d.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/cfp/testCfpArray4f.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/cfp/testCfpArray_source.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/cfp/testCfpNamespace.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlock1dDouble.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlock1dFloat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlock1dInt32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlock1dInt64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlock2dDouble.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlock2dFloat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlock2dInt32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlock2dInt64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlock3dDouble.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlock3dFloat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlock3dInt32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlock3dInt64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlock4dDouble.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlock4dFloat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlock4dInt32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlock4dInt64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlockStrided1dDouble.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlockStrided1dFloat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlockStrided1dInt32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlockStrided1dInt64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlockStrided2dDouble.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlockStrided2dFloat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlockStrided2dInt32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlockStrided2dInt64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlockStrided3dDouble.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlockStrided3dFloat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlockStrided3dInt32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlockStrided3dInt64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlockStrided4dDouble.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlockStrided4dFloat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlockStrided4dInt32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testZfpDecodeBlockStrided4dInt64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testcases/block.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/testcases/blockStrided.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/zfpDecodeBlockBase.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/zfpDecodeBlockStridedBase.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlock1dDouble.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlock1dFloat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlock1dInt32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlock1dInt64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlock2dDouble.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlock2dFloat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlock2dInt32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlock2dInt64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlock3dDouble.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlock3dFloat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlock3dInt32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlock3dInt64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlock4dDouble.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlock4dFloat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlock4dInt32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlock4dInt64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlockStrided1dDouble.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlockStrided1dFloat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlockStrided1dInt32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlockStrided1dInt64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlockStrided2dDouble.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlockStrided2dFloat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlockStrided2dInt32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlockStrided2dInt64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlockStrided3dDouble.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlockStrided3dFloat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlockStrided3dInt32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlockStrided3dInt64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlockStrided4dDouble.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlockStrided4dFloat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlockStrided4dInt32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testZfpEncodeBlockStrided4dInt64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testcases/block.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/testcases/blockStrided.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/zfpEncodeBlockBase.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/zfpEncodeBlockStridedBase.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/cudaExecBase.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/ompExecBase.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/serialExecBase.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpCuda1dDouble.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpCuda1dFloat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpCuda1dInt32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpCuda1dInt64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpCuda2dDouble.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpCuda2dFloat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpCuda2dInt32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpCuda2dInt64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpCuda3dDouble.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpCuda3dFloat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpCuda3dInt32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpCuda3dInt64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpCuda4dDouble.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpCuda4dFloat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpCuda4dInt32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpCuda4dInt64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpOmp1dDouble.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpOmp1dFloat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpOmp1dInt32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpOmp1dInt64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpOmp2dDouble.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpOmp2dFloat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpOmp2dInt32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpOmp2dInt64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpOmp3dDouble.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpOmp3dFloat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpOmp3dInt32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpOmp3dInt64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpOmp4dDouble.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpOmp4dFloat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpOmp4dInt32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpOmp4dInt64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpSerial1dDouble.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpSerial1dFloat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpSerial1dInt32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpSerial1dInt64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpSerial2dDouble.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpSerial2dFloat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpSerial2dInt32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpSerial2dInt64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpSerial3dDouble.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpSerial3dFloat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpSerial3dInt32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpSerial3dInt64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpSerial4dDouble.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpSerial4dFloat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpSerial4dInt32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testZfpSerial4dInt64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testcases/cuda.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testcases/omp.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/testcases/serial.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/zfpEndtoendBase.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/execPolicy/testCuda.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/execPolicy/testOmp.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/execPolicy/testOmpInternal.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/inline/testBitstream.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/inline/testBitstreamSmallWsize.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/inline/testBitstreamStrided.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/misc/testZfpField1d.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/misc/testZfpField1f.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/misc/testZfpField2d.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/misc/testZfpField2f.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/misc/testZfpField3d.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/misc/testZfpField3f.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/misc/testZfpField4d.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/misc/testZfpField4f.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/misc/testZfpHeader.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/misc/testZfpPromote.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/misc/testZfpStream.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/misc/zfpFieldBase.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/testviews.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/testzfp.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/utils/fixedpoint96.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/utils/genSmoothRandNums.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/utils/rand32.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/utils/rand64.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/utils/stridedOperations.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/utils/zfpChecksums.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/utils/zfpCompressionParams.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/utils/zfpHash.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/utils/zfpTimer.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zfp-compressed-arrays/utils/zfp.c" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/caching.inc" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/codec.inc" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/disclaimer.inc" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/index.inc" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/iterators.inc" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/pointers.inc" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/references.inc" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/serialization.inc" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/views.inc" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/examples/array2d.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/array.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/array1.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/array2.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/array3.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/array4.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/bitstream.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/cfp.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/codec/generic.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/codec/zfpcodec.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/constarray1.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/constarray2.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/constarray3.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/constarray4.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/factory.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/index.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/cache.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/cache1.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/cache2.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/cache3.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/cache4.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/exception.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/genheader.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/handle1.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/handle2.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/handle3.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/handle4.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/header.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/iterator1.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/iterator2.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/iterator3.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/iterator4.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/memory.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/pointer1.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/pointer2.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/pointer3.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/pointer4.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/reference1.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/reference2.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/reference3.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/reference4.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/store.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/store1.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/store2.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/store3.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/store4.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/traits.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/view1.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/view2.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/view3.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/view4.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/array/zfpheader.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/cfp/array1d.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/cfp/array1f.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/cfp/array2d.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/cfp/array2f.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/cfp/array3d.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/cfp/array3f.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/cfp/array4d.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/cfp/array4f.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/cfp/header.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/zfp/inline.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/zfp/macros.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/zfp/system.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/internal/zfp/types.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/include/zfp/version.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/block1.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/block2.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/block3.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/block4.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/cuda_zfp/ErrorCheck.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/cuda_zfp/constants.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/cuda_zfp/cuZFP.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/cuda_zfp/shared.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/codec.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/template/template.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/traitsd.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/traitsf.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/traitsi.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/traitsl.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/utils/commonMacros.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/utils/gtest1dTest.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/utils/gtest1fTest.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/utils/gtest2dTest.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/utils/gtest2fTest.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/utils/gtest3dTest.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/utils/gtest3fTest.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/utils/gtest4dTest.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/utils/gtest4fTest.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/utils/gtestBaseFixture.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/utils/gtestCApiTest.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/utils/gtestDoubleEnv.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/utils/gtestFloatEnv.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/utils/gtestSingleFixture.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/utils/gtestTestEnv.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/utils/predicates.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/1dDouble.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/1dFloat.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/1dInt32.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/1dInt64.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/2dDouble.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/2dFloat.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/2dInt32.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/2dInt64.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/3dDouble.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/3dFloat.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/3dInt32.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/3dInt64.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/4dDouble.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/4dFloat.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/4dInt32.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/4dInt64.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/checksums/1dDouble.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/checksums/1dFloat.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/checksums/1dInt32.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/checksums/1dInt64.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/checksums/2dDouble.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/checksums/2dFloat.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/checksums/2dInt32.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/checksums/2dInt64.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/checksums/3dDouble.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/checksums/3dFloat.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/checksums/3dInt32.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/checksums/3dInt64.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/checksums/4dDouble.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/checksums/4dFloat.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/checksums/4dInt32.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/checksums/4dInt64.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/doubleConsts.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/floatConsts.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/int32Consts.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/int64Consts.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/constants/universalConsts.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/utils/fixedpoint96.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/utils/genSmoothRandNums.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/utils/rand32.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/utils/rand64.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/utils/stridedOperations.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/utils/testMacros.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/utils/zfpChecksums.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/utils/zfpCompressionParams.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/utils/zfpHash.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/utils/zfpTimer.h" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/CHANGELOG.md" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/CONTRIBUTING.md" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/README.md" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/SUPPORT.md" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/appveyor.sh" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/cfp/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/make.bat" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/algorithm.rst" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/arrays.rst" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/bit-stream.rst" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/cfp.rst" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/conf.py" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/contributors.rst" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/defs.rst" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/directions.rst" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/examples.rst" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/execution.rst" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/faq.rst" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/high-level-api.rst" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/index.rst" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/installation.rst" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/introduction.rst" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/issues.rst" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/license.rst" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/limitations.rst" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/low-level-api.rst" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/modes.rst" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/python.rst" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/requirements.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/setup.py" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/testing.rst" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/tutorial.rst" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/versions.rst" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/zforp.rst" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/docs/source/zfpcmd.rst" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/examples/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/fortran/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/python/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/python/requirements.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/setup.py" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/src/cuda_zfp/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/CMakeLists.txt.in" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/array/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/constArray/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/decode/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/encode/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/array/zfp/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/cfp/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/ci-utils/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/fortran/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/python/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/python/test_numpy.py" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/decode/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/encode/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/endtoend/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/execPolicy/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/inline/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/src/misc/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/utils/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/tests/utils/genChecksums.sh" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/utils/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/zfp-config-version.cmake.in" />
+    <Text Include="../../thirdparty/owemdjee/zfp-compressed-arrays/zfp-config.cmake.in" />
+  </ItemGroup>
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />
+  </ImportGroup>
+</Project>
+  

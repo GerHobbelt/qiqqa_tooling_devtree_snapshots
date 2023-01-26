@@ -1,0 +1,1870 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>libmlpack</ProjectName>
+    <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF2DB4ED}</ProjectGuid>
+    <RootNamespace>libmlpack</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project.props" Label="SolutionWideSettings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.28307.799</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+<ItemDefinitionGroup>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <BrowseInformation>false</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <DisableSpecificWarnings>4018;4100;4127;4180;4206;4244;4267;5105;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <SDLCheck>false</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <ConformanceMode>true</ConformanceMode>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableUnitySupport>true</EnableUnitySupport>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+</ItemDefinitionGroup>
+<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMLPACK;MLPACK_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/mlpack/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMLPACK;MLPACK_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMLPACK;MLPACK_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/mlpack/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMLPACK;MLPACK_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/mlpack/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMLPACK;MLPACK_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMLPACK;MLPACK_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/mlpack/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMLPACK;MLPACK_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/mlpack/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMLPACK;MLPACK_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMLPACK;MLPACK_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/mlpack/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMLPACK;MLPACK_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/mlpack/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMLPACK;MLPACK_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMLPACK;MLPACK_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/mlpack/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/doc/examples/sample-ml-app/sample-ml-app/sample-ml-app.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/doc/examples/sample-ml-app/sample-ml-app/stdafx.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/mlpack/src/r_util.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/print_R.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/tests/test_r_binding_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/mlpack/capi/arma_util.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/mlpack/capi/io_util.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/print_go.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/tests/test_go_binding_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/julia_util.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/print_jl.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/tests/test_julia_binding_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/binding_info.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/print_docs.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/print_param_table.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/print_pyx.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/print_wrapper_py.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/tests/test_python_binding_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/tests/clean_memory.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/tests/test_function_map.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/adaboost/adaboost_classify_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/adaboost/adaboost_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/adaboost/adaboost_probabilities_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/adaboost/adaboost_train_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/approx_kfn/approx_kfn_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/bayesian_linear_regression/bayesian_linear_regression_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/cf_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/dbscan/dbscan_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/decision_tree/decision_tree_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/det/det_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/emst/emst_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/fastmks/fastmks_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/gmm/gmm_generate_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/gmm/gmm_probability_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/gmm/gmm_train_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hmm/hmm_generate_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hmm/hmm_loglik_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hmm/hmm_train_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hmm/hmm_viterbi_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hoeffding_trees/hoeffding_tree_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kde/kde_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kernel_pca/kernel_pca_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans/kmeans_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/lars/lars_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/linear_regression/linear_regression_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/linear_regression/linear_regression_predict_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/linear_regression/linear_regression_train_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/linear_svm/linear_svm_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/lmnn/lmnn_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/local_coordinate_coding/local_coordinate_coding_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/logistic_regression/logistic_regression_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/lsh/lsh_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/mean_shift/mean_shift_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/naive_bayes/nbc_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/nca/nca_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/neighbor_search/kfn_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/neighbor_search/knn_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/nmf/nmf_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/pca/pca_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/perceptron/perceptron_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/preprocess/image_converter_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/preprocess/preprocess_binarize_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/preprocess/preprocess_describe_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/preprocess/preprocess_imputer_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/preprocess/preprocess_one_hot_encoding_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/preprocess/preprocess_scale_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/preprocess/preprocess_split_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/radical/radical_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/random_forest/random_forest_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/range_search/range_search_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/rann/krann_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/softmax_regression/softmax_regression_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/sparse_coding/sparse_coding_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/adaboost_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/akfn_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/aknn_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/activation_functions_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/ann_dist_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/ann_regularizer_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/async_learning_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/augmented_rnns_tasks_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/convolution_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/convolutional_network_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/feedforward_network_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/init_rules_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/ksinit_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/layer/adaptive_max_pooling.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/layer/adaptive_mean_pooling.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/layer/add_merge.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/layer/alpha_dropout.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/layer/batch_norm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/layer/convolution.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/layer/dropout.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/layer/grouped_convolution.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/layer/identity.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/layer/linear3d.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/layer/linear_no_bias.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/layer/log_softmax.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/layer/max_pooling.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/layer/mean_pooling.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/layer/padding.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/layer/softmax.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/layer_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/loss_functions_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/not_adapted/activation_functions_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/not_adapted/ann_layer_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/not_adapted/dcgan_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/not_adapted/feedforward_network_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/not_adapted/gan_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/not_adapted/rbm_network_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/not_adapted/recurrent_network_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/not_adapted/rnn_reber_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/not_adapted/wgan_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/recurrent_network_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/reward_clipping_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/rl_components_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/arma_extend_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/armadillo_svd_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/bayesian_linear_regression_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/bias_svd_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/binarize_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/block_krylov_svd_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/callback_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/cf_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/cli_binding_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/cosine_tree_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/cv_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/dbscan_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/decision_tree_regressor_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/decision_tree_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/det_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/digamma_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/distribution_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/drusilla_select_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/emst_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/facilities_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/fastmks_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/gmm_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/hmm_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/hoeffding_tree_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/hpt_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/hyperplane_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/image_load_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/imputation_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/io_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/kde_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/kernel_pca_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/kernel_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/kernel_traits_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/kfn_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/kmeans_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/knn_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/krann_search_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/lars_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/lin_alg_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/linear_regression_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/linear_svm_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/lmnn_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/load_save_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/local_coordinate_coding_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/log_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/logistic_regression_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/lsh_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/adaboost_classify_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/adaboost_probabilities_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/adaboost_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/adaboost_train_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/approx_kfn_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/bayesian_linear_regression_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/cf_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/dbscan_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/decision_tree_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/det_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/emst_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/fastmks_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/gmm_generate_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/gmm_probability_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/gmm_train_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/hmm_generate_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/hmm_loglik_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/hmm_train_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/hmm_viterbi_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/hoeffding_tree_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/image_converter_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/kde_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/kernel_pca_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/kfn_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/kmeans_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/knn_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/krann_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/linear_regression_predict_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/linear_regression_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/linear_regression_train_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/linear_svm_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/lmnn_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/local_coordinate_coding_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/logistic_regression_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/lsh_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/mean_shift_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/nbc_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/nca_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/nmf_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/pca_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/perceptron_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/preprocess_binarize_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/preprocess_imputer_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/preprocess_one_hot_encode_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/preprocess_scale_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/preprocess_split_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/radical_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/random_forest_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/range_search_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/softmax_regression_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/sparse_coding_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/math_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/matrix_completion_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/maximal_inputs_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/mean_shift_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/metric_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/nbc_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/nca_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/nmf_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/nystroem_method_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/octree_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/one_hot_encoding_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/pca_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/perceptron_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/prefixedoutstream_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/python_binding_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/q_learning_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/qdafn_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/quic_svd_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/radical_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/random_forest_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/random_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/randomized_svd_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/range_search_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/rectangle_tree_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/regularized_svd_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/scaling_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/serialization.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/serialization_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/sfinae_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/size_checks_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/softmax_regression_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/sort_policy_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/sparse_autoencoder_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/sparse_coding_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/spill_tree_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/split_data_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/string_encoding_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/sumtree_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/svd_batch_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/svd_incremental_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/svdplusplus_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/termination_policy_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/timer_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/tree_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/tree_traits_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/trigamma_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ub_tree_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/union_find_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/vantage_point_tree_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/xgboost_test.cpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/CMake/stb/a.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/CMake/stb/b.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/doc/examples/sample-ml-app/sample-ml-app/stdafx.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/doc/examples/sample-ml-app/sample-ml-app/targetver.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/base.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/R_option.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/default_param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/default_param_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/get_param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/get_printable_param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/get_printable_type.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/get_printable_type_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/get_r_type.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/get_type.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/mlpack/src/rcpp_mlpack.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/mlpack_main.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/print_R.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/print_doc.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/print_doc_functions.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/print_doc_functions_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/print_input_param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/print_input_processing.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/print_output_processing.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/print_serialize_util.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/print_type_doc.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/print_type_doc_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/add_to_cli11.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/cli_option.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/default_param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/default_param_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/delete_allocated_memory.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/end_program.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/get_allocated_memory.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/get_param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/get_printable_param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/get_printable_param_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/get_printable_param_name.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/get_printable_param_name_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/get_printable_param_value.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/get_printable_param_value_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/get_printable_type.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/get_printable_type_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/get_raw_param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/in_place_copy.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/map_parameter_name.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/mlpack_main.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/output_param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/output_param_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/parameter_type.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/parse_command_line.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/print_doc_functions.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/print_doc_functions_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/print_help.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/print_help_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/print_type_doc.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/print_type_doc_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/set_param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/string_type_param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/string_type_param_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/third_party/CLI/CLI11.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/default_param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/default_param_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/get_go_type.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/get_param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/get_printable_param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/get_printable_type.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/get_printable_type_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/get_type.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/go_option.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/mlpack/capi/arma_util.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/mlpack/capi/arma_util.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/mlpack/capi/io_util.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/mlpack/capi/io_util.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/mlpack_main.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/print_defn_input.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/print_defn_output.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/print_doc.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/print_doc_functions.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/print_doc_functions_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/print_go.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/print_input_processing.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/print_method_config.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/print_method_init.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/print_output_processing.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/print_type_doc.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/print_type_doc_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/strip_type.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/default_param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/default_param_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/get_julia_type.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/get_param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/get_printable_param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/get_printable_type.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/get_printable_type_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/julia_option.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/julia_util.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/mlpack_main.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/print_doc.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/print_doc_functions.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/print_doc_functions_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/print_input_param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/print_input_processing.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/print_input_processing_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/print_jl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/print_model_type_import.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/print_output_processing.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/print_output_processing_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/print_param_defn.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/print_type_doc.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/print_type_doc_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/binding_info.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/default_param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/get_param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/get_printable_param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/get_printable_param_name.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/get_printable_param_name_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/get_printable_param_value.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/get_printable_param_value_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/get_printable_type.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/is_serializable.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/md_option.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/mlpack_main.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/print_doc_functions.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/print_doc_functions_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/print_docs.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/print_param_table.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/print_type_doc.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/program_doc_wrapper.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/replace_all_copy.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/default_param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/default_param_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/get_arma_type.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/get_cython_type.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/get_numpy_type.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/get_numpy_type_char.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/get_param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/get_printable_param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/get_printable_type.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/get_printable_type_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/import_decl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/is_serializable.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/mlpack/arma_util.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/mlpack/io_util.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/mlpack/serialization.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/mlpack_main.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/print_class_defn.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/print_defn.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/print_doc.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/print_doc_functions.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/print_doc_functions_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/print_input_processing.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/print_output_processing.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/print_pyx.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/print_type_doc.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/print_type_doc_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/print_wrapper_py.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/py_option.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/strip_type.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/wrapper_functions.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/wrapper_functions_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/tests/clean_memory.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/tests/delete_allocated_memory.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/tests/get_allocated_memory.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/tests/get_param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/tests/get_printable_param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/tests/get_printable_param_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/tests/ignore_check.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/tests/mlpack_main.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/tests/test_function_map.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/tests/test_option.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/util/camel_case.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/util/strip_type.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/arma_extend/Mat_extra_bones.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/arma_extend/SpMat_extra_bones.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/arma_extend/arma_extend.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/arma_extend/serialize_armadillo.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cereal/array_wrapper.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cereal/is_loading.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cereal/is_saving.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cereal/pair_associative_container.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cereal/pointer_vector_wrapper.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cereal/pointer_wrapper.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cereal/unordered_map.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cv/cv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cv/cv_base.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cv/cv_base_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cv/k_fold_cv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cv/k_fold_cv_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cv/meta_info_extractor.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cv/metrics/accuracy.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cv/metrics/accuracy_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cv/metrics/average_strategy.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cv/metrics/f1.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cv/metrics/f1_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cv/metrics/facilities.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cv/metrics/metrics.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cv/metrics/mse.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cv/metrics/mse_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cv/metrics/precision.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cv/metrics/precision_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cv/metrics/r2_score.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cv/metrics/r2_score_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cv/metrics/recall.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cv/metrics/recall_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cv/metrics/roc_auc_score.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cv/metrics/roc_auc_score_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cv/metrics/silhouette_score.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cv/metrics/silhouette_score_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cv/simple_cv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/cv/simple_cv_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/binarize.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/check_categorical_param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/confusion_matrix.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/confusion_matrix_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/data.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/dataset_mapper.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/dataset_mapper_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/detect_file_type.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/detect_file_type_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/extension.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/format.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/has_serialize.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/image_info.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/image_info_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/imputation_methods/custom_imputation.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/imputation_methods/imputation_methods.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/imputation_methods/listwise_deletion.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/imputation_methods/mean_imputation.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/imputation_methods/median_imputation.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/imputer.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/is_naninf.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/load.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/load_arff.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/load_arff_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/load_categorical_csv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/load_csv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/load_image.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/load_image_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/load_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/load_model_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/load_numeric_csv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/load_vec_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/map_policies/datatype.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/map_policies/increment_policy.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/map_policies/map_policies.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/map_policies/missing_policy.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/normalize_labels.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/normalize_labels_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/one_hot_encoding.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/one_hot_encoding_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/save.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/save_image.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/save_image_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/save_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/scaler_methods/max_abs_scaler.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/scaler_methods/mean_normalization.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/scaler_methods/min_max_scaler.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/scaler_methods/pca_whitening.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/scaler_methods/scaler_methods.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/scaler_methods/standard_scaler.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/scaler_methods/zca_whitening.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/split_data.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/string_algorithms.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/string_encoding.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/string_encoding_dictionary.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/string_encoding_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/string_encoding_policies/bag_of_words_encoding_policy.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/string_encoding_policies/dictionary_encoding_policy.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/string_encoding_policies/policy_traits.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/string_encoding_policies/string_encoding_policies.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/string_encoding_policies/tf_idf_encoding_policy.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/tokenizers/char_extract.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/tokenizers/split_by_any_of.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/tokenizers/tokenizers.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/types.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/data/types_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/dists/diagonal_gaussian_distribution.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/dists/diagonal_gaussian_distribution_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/dists/discrete_distribution.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/dists/discrete_distribution_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/dists/dists.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/dists/gamma_distribution.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/dists/gamma_distribution_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/dists/gaussian_distribution.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/dists/gaussian_distribution_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/dists/laplace_distribution.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/dists/laplace_distribution_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/dists/regression_distribution.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/dists/regression_distribution_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/hpt/cv_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/hpt/cv_function_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/hpt/deduce_hp_types.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/hpt/fixed.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/hpt/hpt.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/hpt/hpt_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/kernels/cauchy_kernel.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/kernels/cosine_distance.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/kernels/cosine_distance_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/kernels/epanechnikov_kernel.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/kernels/epanechnikov_kernel_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/kernels/example_kernel.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/kernels/gaussian_kernel.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/kernels/hyperbolic_tangent_kernel.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/kernels/kernel_traits.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/kernels/kernels.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/kernels/laplacian_kernel.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/kernels/linear_kernel.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/kernels/polynomial_kernel.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/kernels/pspectrum_string_kernel.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/kernels/pspectrum_string_kernel_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/kernels/spherical_kernel.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/kernels/triangular_kernel.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/math/ccov.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/math/ccov_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/math/clamp.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/math/columns_to_blocks.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/math/columns_to_blocks_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/math/digamma.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/math/lin_alg.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/math/lin_alg_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/math/log_add.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/math/log_add_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/math/make_alias.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/math/math.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/math/multiply_slices.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/math/multiply_slices_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/math/quantile.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/math/random.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/math/random_basis.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/math/random_basis_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/math/range.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/math/range_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/math/round.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/math/shuffle_data.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/math/trigamma.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/metrics/bleu.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/metrics/bleu_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/metrics/iou_metric.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/metrics/iou_metric_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/metrics/ip_metric.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/metrics/ip_metric_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/metrics/lmetric.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/metrics/lmetric_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/metrics/mahalanobis_distance.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/metrics/mahalanobis_distance_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/metrics/metrics.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/metrics/non_maximal_suppression.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/metrics/non_maximal_suppression_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/std_backport/algorithm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/std_backport/any.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/std_backport/functional.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/std_backport/internal.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/std_backport/iterator.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/std_backport/meta.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/std_backport/range.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/std_backport/string_view.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/std_backport/type_traits.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/std_backport/typeinfo.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/std_backport/utility.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/address.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/ballbound.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/ballbound_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/binary_space_tree.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/binary_space_tree/binary_space_tree.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/binary_space_tree/binary_space_tree_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/binary_space_tree/breadth_first_dual_tree_traverser.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/binary_space_tree/breadth_first_dual_tree_traverser_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/binary_space_tree/dual_tree_traverser.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/binary_space_tree/dual_tree_traverser_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/binary_space_tree/mean_split.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/binary_space_tree/mean_split_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/binary_space_tree/midpoint_split.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/binary_space_tree/midpoint_split_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/binary_space_tree/rp_tree_max_split.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/binary_space_tree/rp_tree_max_split_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/binary_space_tree/rp_tree_mean_split.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/binary_space_tree/rp_tree_mean_split_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/binary_space_tree/single_tree_traverser.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/binary_space_tree/single_tree_traverser_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/binary_space_tree/traits.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/binary_space_tree/typedef.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/binary_space_tree/ub_tree_split.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/binary_space_tree/ub_tree_split_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/binary_space_tree/vantage_point_split.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/binary_space_tree/vantage_point_split_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/bound_traits.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/bounds.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/build_tree.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/cellbound.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/cellbound_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/cosine_tree/cosine_tree.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/cosine_tree/cosine_tree_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/cover_tree.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/cover_tree/cover_tree.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/cover_tree/cover_tree_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/cover_tree/dual_tree_traverser.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/cover_tree/dual_tree_traverser_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/cover_tree/first_point_is_root.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/cover_tree/single_tree_traverser.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/cover_tree/single_tree_traverser_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/cover_tree/traits.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/cover_tree/typedef.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/enumerate_tree.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/example_tree.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/greedy_single_tree_traverser.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/greedy_single_tree_traverser_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/hollow_ball_bound.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/hollow_ball_bound_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/hrectbound.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/hrectbound_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/octree.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/octree/dual_tree_traverser.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/octree/dual_tree_traverser_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/octree/octree.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/octree/octree_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/octree/single_tree_traverser.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/octree/single_tree_traverser_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/octree/traits.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/perform_split.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/discrete_hilbert_value.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/discrete_hilbert_value_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/dual_tree_traverser.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/dual_tree_traverser_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/hilbert_r_tree_auxiliary_information.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/hilbert_r_tree_auxiliary_information_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/hilbert_r_tree_descent_heuristic.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/hilbert_r_tree_descent_heuristic_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/hilbert_r_tree_split.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/hilbert_r_tree_split_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/minimal_coverage_sweep.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/minimal_coverage_sweep_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/minimal_splits_number_sweep.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/minimal_splits_number_sweep_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/no_auxiliary_information.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/r_plus_plus_tree_auxiliary_information.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/r_plus_plus_tree_auxiliary_information_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/r_plus_plus_tree_descent_heuristic.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/r_plus_plus_tree_descent_heuristic_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/r_plus_plus_tree_split_policy.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/r_plus_tree_descent_heuristic.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/r_plus_tree_descent_heuristic_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/r_plus_tree_split.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/r_plus_tree_split_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/r_plus_tree_split_policy.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/r_star_tree_descent_heuristic.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/r_star_tree_descent_heuristic_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/r_star_tree_split.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/r_star_tree_split_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/r_tree_descent_heuristic.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/r_tree_descent_heuristic_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/r_tree_split.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/r_tree_split_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/rectangle_tree.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/rectangle_tree_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/single_tree_traverser.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/single_tree_traverser_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/traits.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/typedef.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/x_tree_auxiliary_information.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/x_tree_split.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/rectangle_tree/x_tree_split_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/space_split/hyperplane.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/space_split/mean_space_split.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/space_split/mean_space_split_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/space_split/midpoint_space_split.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/space_split/midpoint_space_split_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/space_split/projection_vector.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/space_split/space_split.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/space_split/space_split_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/spill_tree.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/spill_tree/is_spill_tree.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/spill_tree/spill_dual_tree_traverser.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/spill_tree/spill_dual_tree_traverser_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/spill_tree/spill_single_tree_traverser.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/spill_tree/spill_single_tree_traverser_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/spill_tree/spill_tree.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/spill_tree/spill_tree_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/spill_tree/traits.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/spill_tree/typedef.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/statistic.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/traversal_info.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/tree.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/tree/tree_traits.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/arma_traits.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/backtrace.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/backtrace_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/binding_details.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/deprecated.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/forward.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/hyphenate_string.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/io.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/io_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/is_std_vector.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/log.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/log_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/mlpack_main.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/nulloutstream.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/param_checks.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/param_checks_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/param_data.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/params.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/params_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/prefixedoutstream.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/prefixedoutstream_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/program_doc.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/program_doc_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/sfinae_utility.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/size_checks.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/timers.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/timers_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/to_lower.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/version.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/util/version_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/adaboost.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/adaboost/adaboost.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/adaboost/adaboost_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/adaboost/adaboost_model.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/adaboost/adaboost_model_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/amf.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/amf/amf.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/amf/amf_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/amf/init_rules/average_init.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/amf/init_rules/given_init.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/amf/init_rules/init_rules.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/amf/init_rules/merge_init.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/amf/init_rules/random_acol_init.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/amf/init_rules/random_init.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/amf/termination_policies/complete_incremental_termination.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/amf/termination_policies/incomplete_incremental_termination.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/amf/termination_policies/max_iteration_termination.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/amf/termination_policies/simple_residue_termination.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/amf/termination_policies/simple_tolerance_termination.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/amf/termination_policies/termination_policies.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/amf/termination_policies/validation_rmse_termination.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/amf/update_rules/nmf_als.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/amf/update_rules/nmf_mult_dist.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/amf/update_rules/nmf_mult_div.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/amf/update_rules/svd_batch_learning.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/amf/update_rules/svd_complete_incremental_learning.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/amf/update_rules/svd_incomplete_incremental_learning.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/amf/update_rules/update_rules.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/activation_functions/activation_functions.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/activation_functions/elish_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/activation_functions/elliot_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/activation_functions/gaussian_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/activation_functions/gelu_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/activation_functions/hard_sigmoid_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/activation_functions/hard_swish_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/activation_functions/identity_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/activation_functions/inverse_quadratic_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/activation_functions/lisht_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/activation_functions/logistic_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/activation_functions/mish_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/activation_functions/multi_quadratic_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/activation_functions/poisson1_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/activation_functions/quadratic_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/activation_functions/rectifier_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/activation_functions/silu_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/activation_functions/softplus_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/activation_functions/softsign_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/activation_functions/spline_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/activation_functions/swish_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/activation_functions/tanh_exponential_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/activation_functions/tanh_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/ann.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/augmented/augmented.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/augmented/tasks/add.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/augmented/tasks/add_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/augmented/tasks/copy.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/augmented/tasks/copy_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/augmented/tasks/score.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/augmented/tasks/score_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/augmented/tasks/sort.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/augmented/tasks/sort_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/augmented/tasks/tasks.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/convolution_rules/border_modes.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/convolution_rules/convolution_rules.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/convolution_rules/fft_convolution.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/convolution_rules/naive_convolution.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/convolution_rules/svd_convolution.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/dists/bernoulli_distribution.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/dists/bernoulli_distribution_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/dists/dists.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/dists/normal_distribution.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/dists/normal_distribution_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/ffn.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/ffn_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/forward_decls.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/init_rules/const_init.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/init_rules/gaussian_init.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/init_rules/glorot_init.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/init_rules/he_init.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/init_rules/init_rules.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/init_rules/init_rules_traits.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/init_rules/kathirvalavakumar_subavathi_init.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/init_rules/lecun_normal_init.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/init_rules/network_init.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/init_rules/nguyen_widrow_init.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/init_rules/oivs_init.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/init_rules/orthogonal_init.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/init_rules/random_init.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/adaptive_max_pooling.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/adaptive_max_pooling_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/adaptive_mean_pooling.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/adaptive_mean_pooling_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/add.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/add_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/add_merge.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/add_merge_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/alpha_dropout.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/alpha_dropout_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/base_layer.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/batch_norm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/batch_norm_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/celu.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/celu_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/concat.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/concat_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/concatenate.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/concatenate_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/convolution.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/convolution_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/dropconnect.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/dropconnect_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/dropout.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/dropout_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/elu.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/elu_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/grouped_convolution.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/grouped_convolution_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/identity.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/identity_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/layer.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/layer_types.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/leaky_relu.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/leaky_relu_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/linear.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/linear3d.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/linear3d_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/linear_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/linear_no_bias.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/linear_no_bias_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/log_softmax.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/log_softmax_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/lstm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/lstm_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/max_pooling.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/max_pooling_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/mean_pooling.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/mean_pooling_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/multi_layer.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/multi_layer_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/noisylinear.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/noisylinear_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/atrous_convolution.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/atrous_convolution_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/bicubic_interpolation.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/bicubic_interpolation_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/bilinear_interpolation.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/bilinear_interpolation_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/c_relu.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/c_relu_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/channel_shuffle.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/channel_shuffle_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/concat_performance.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/concat_performance_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/constant.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/constant_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/fast_lstm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/fast_lstm_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/flatten_t_swish.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/flatten_t_swish_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/flexible_relu.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/flexible_relu_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/glimpse.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/glimpse_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/group_norm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/group_norm_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/gru.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/gru_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/hard_tanh.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/hard_tanh_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/hardshrink.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/hardshrink_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/highway.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/highway_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/instance_norm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/instance_norm_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/isrlu.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/isrlu_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/join.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/join_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/layer_norm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/layer_norm_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/lookup.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/lookup_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/lp_pooling.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/lp_pooling_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/minibatch_discrimination.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/minibatch_discrimination_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/multihead_attention.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/multihead_attention_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/multiply_constant.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/multiply_constant_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/multiply_merge.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/multiply_merge_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/nearest_interpolation.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/nearest_interpolation_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/parametric_relu.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/parametric_relu_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/pixel_shuffle.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/pixel_shuffle_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/positional_encoding.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/positional_encoding_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/recurrent.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/recurrent_attention.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/recurrent_attention_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/recurrent_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/reinforce_normal.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/reinforce_normal_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/relu6.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/relu6_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/reparametrization.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/reparametrization_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/select.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/select_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/sequential.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/sequential_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/softmin.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/softmin_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/softshrink.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/softshrink_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/spatial_dropout.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/spatial_dropout_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/subview.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/transposed_convolution.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/transposed_convolution_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/virtual_batch_norm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/virtual_batch_norm_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/weight_norm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/weight_norm_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/padding.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/padding_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/radial_basis_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/radial_basis_function_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/recurrent_layer.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/recurrent_layer_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/serialization.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/softmax.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/softmax_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/binary_cross_entropy_loss.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/binary_cross_entropy_loss_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/cosine_embedding_loss.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/cosine_embedding_loss_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/dice_loss.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/dice_loss_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/earth_mover_distance.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/earth_mover_distance_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/empty_loss.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/empty_loss_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/hinge_embedding_loss.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/hinge_embedding_loss_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/hinge_loss.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/hinge_loss_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/huber_loss.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/huber_loss_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/kl_divergence.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/kl_divergence_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/l1_loss.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/l1_loss_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/log_cosh_loss.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/log_cosh_loss_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/loss_functions.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/margin_ranking_loss.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/margin_ranking_loss_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/mean_absolute_percentage_error.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/mean_absolute_percentage_error_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/mean_bias_error.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/mean_bias_error_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/mean_squared_error.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/mean_squared_error_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/mean_squared_logarithmic_error.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/mean_squared_logarithmic_error_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/multilabel_softmargin_loss.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/multilabel_softmargin_loss_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/negative_log_likelihood.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/negative_log_likelihood_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/poisson_nll_loss.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/poisson_nll_loss_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/reconstruction_loss.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/reconstruction_loss_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/sigmoid_cross_entropy_error.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/sigmoid_cross_entropy_error_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/soft_margin_loss.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/soft_margin_loss_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/triplet_margin_loss.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/triplet_margin_loss_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/vr_class_reward.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/loss_functions/vr_class_reward_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/make_alias.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/not_adapted/brnn.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/not_adapted/brnn_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/not_adapted/gan/gan.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/not_adapted/gan/gan_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/not_adapted/gan/gan_policies.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/not_adapted/gan/metrics/inception_score.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/not_adapted/gan/metrics/inception_score_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/not_adapted/gan/wgan_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/not_adapted/gan/wgangp_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/not_adapted/rbm/rbm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/not_adapted/rbm/rbm_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/not_adapted/rbm/rbm_policies.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/not_adapted/rbm/spike_slab_rbm_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/regularizer/lregularizer.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/regularizer/lregularizer_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/regularizer/no_regularizer.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/regularizer/orthogonal_regularizer.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/regularizer/orthogonal_regularizer_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/regularizer/regularizer.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/rnn.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/rnn_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/approx_kfn.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/approx_kfn/approx_kfn.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/approx_kfn/drusilla_select.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/approx_kfn/drusilla_select_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/approx_kfn/qdafn.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/approx_kfn/qdafn_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/bayesian_linear_regression.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/bayesian_linear_regression/bayesian_linear_regression.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/bayesian_linear_regression/bayesian_linear_regression_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/bias_svd.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/bias_svd/bias_svd.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/bias_svd/bias_svd_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/bias_svd/bias_svd_function_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/bias_svd/bias_svd_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/block_krylov_svd.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/block_krylov_svd/block_krylov_svd.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/block_krylov_svd/randomized_block_krylov_svd.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/block_krylov_svd/randomized_block_krylov_svd_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/cf.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/cf_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/cf_model.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/cf_model_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/decomposition_policies/batch_svd_method.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/decomposition_policies/bias_svd_method.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/decomposition_policies/decomposition_policies.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/decomposition_policies/nmf_method.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/decomposition_policies/randomized_svd_method.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/decomposition_policies/regularized_svd_method.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/decomposition_policies/svd_complete_method.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/decomposition_policies/svd_incomplete_method.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/decomposition_policies/svdplusplus_method.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/interpolation_policies/average_interpolation.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/interpolation_policies/interpolation_policies.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/interpolation_policies/regression_interpolation.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/interpolation_policies/similarity_interpolation.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/neighbor_search_policies/cosine_search.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/neighbor_search_policies/lmetric_search.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/neighbor_search_policies/neighbor_search_policies.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/neighbor_search_policies/pearson_search.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/normalization/combined_normalization.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/normalization/item_mean_normalization.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/normalization/no_normalization.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/normalization/normalization.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/normalization/overall_mean_normalization.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/normalization/user_mean_normalization.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/normalization/z_score_normalization.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/svd_wrapper.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/cf/svd_wrapper_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/dbscan.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/dbscan/dbscan.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/dbscan/dbscan_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/dbscan/ordered_point_selection.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/dbscan/random_point_selection.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/decision_tree.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/decision_tree/all_categorical_split.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/decision_tree/all_categorical_split_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/decision_tree/all_dimension_select.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/decision_tree/best_binary_numeric_split.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/decision_tree/best_binary_numeric_split_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/decision_tree/decision_tree.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/decision_tree/decision_tree_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/decision_tree/decision_tree_regressor.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/decision_tree/decision_tree_regressor_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/decision_tree/gini_gain.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/decision_tree/information_gain.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/decision_tree/mad_gain.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/decision_tree/mse_gain.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/decision_tree/multiple_random_dimension_select.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/decision_tree/random_binary_numeric_split.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/decision_tree/random_binary_numeric_split_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/decision_tree/random_dimension_select.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/decision_tree/utils.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/det.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/det/det.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/det/dt_utils.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/det/dt_utils_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/det/dtree.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/det/dtree_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/emst.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/emst/dtb.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/emst/dtb_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/emst/dtb_rules.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/emst/dtb_rules_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/emst/dtb_stat.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/emst/edge_pair.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/emst/emst.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/emst/union_find.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/fastmks.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/fastmks/fastmks.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/fastmks/fastmks_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/fastmks/fastmks_model.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/fastmks/fastmks_model_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/fastmks/fastmks_rules.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/fastmks/fastmks_rules_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/fastmks/fastmks_stat.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/gmm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/gmm/diagonal_constraint.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/gmm/diagonal_gmm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/gmm/diagonal_gmm_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/gmm/eigenvalue_ratio_constraint.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/gmm/em_fit.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/gmm/em_fit_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/gmm/gmm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/gmm/gmm_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/gmm/no_constraint.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/gmm/positive_definite_constraint.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hmm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hmm/hmm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hmm/hmm_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hmm/hmm_model.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hmm/hmm_util.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hmm/hmm_util_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hoeffding_trees.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hoeffding_trees/binary_numeric_split.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hoeffding_trees/binary_numeric_split_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hoeffding_trees/binary_numeric_split_info.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hoeffding_trees/categorical_split_info.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hoeffding_trees/gini_impurity.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hoeffding_trees/hoeffding_categorical_split.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hoeffding_trees/hoeffding_categorical_split_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hoeffding_trees/hoeffding_numeric_split.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hoeffding_trees/hoeffding_numeric_split_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hoeffding_trees/hoeffding_tree.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hoeffding_trees/hoeffding_tree_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hoeffding_trees/hoeffding_tree_model.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hoeffding_trees/hoeffding_tree_model_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hoeffding_trees/hoeffding_trees.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hoeffding_trees/information_gain.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hoeffding_trees/numeric_split_info.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/hoeffding_trees/typedef.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kde.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kde/kde.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kde/kde_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kde/kde_model.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kde/kde_model_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kde/kde_rules.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kde/kde_rules_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kde/kde_stat.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kernel_pca.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kernel_pca/kernel_pca.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kernel_pca/kernel_pca_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kernel_pca/kernel_rules/naive_method.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kernel_pca/kernel_rules/nystroem_method.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans/allow_empty_clusters.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans/dual_tree_kmeans.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans/dual_tree_kmeans_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans/dual_tree_kmeans_rules.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans/dual_tree_kmeans_rules_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans/dual_tree_kmeans_statistic.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans/elkan_kmeans.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans/elkan_kmeans_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans/hamerly_kmeans.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans/hamerly_kmeans_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans/kill_empty_clusters.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans/kmeans.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans/kmeans_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans/kmeans_plus_plus_initialization.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans/max_variance_new_cluster.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans/max_variance_new_cluster_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans/naive_kmeans.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans/naive_kmeans_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans/pelleg_moore_kmeans.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans/pelleg_moore_kmeans_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans/pelleg_moore_kmeans_rules.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans/pelleg_moore_kmeans_rules_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans/pelleg_moore_kmeans_statistic.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans/random_partition.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans/refined_start.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans/refined_start_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/kmeans/sample_initialization.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/lars.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/lars/lars.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/lars/lars_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/linear_regression.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/linear_regression/linear_regression.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/linear_regression/linear_regression_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/linear_svm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/linear_svm/linear_svm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/linear_svm/linear_svm_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/linear_svm/linear_svm_function_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/linear_svm/linear_svm_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/lmnn.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/lmnn/constraints.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/lmnn/constraints_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/lmnn/lmnn.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/lmnn/lmnn_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/lmnn/lmnn_function_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/lmnn/lmnn_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/local_coordinate_coding.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/local_coordinate_coding/lcc.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/local_coordinate_coding/lcc_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/local_coordinate_coding/local_coordinate_coding.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/logistic_regression.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/logistic_regression/logistic_regression.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/logistic_regression/logistic_regression_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/logistic_regression/logistic_regression_function_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/logistic_regression/logistic_regression_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/lsh.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/lsh/lsh.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/lsh/lsh_search.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/lsh/lsh_search_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/matrix_completion.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/matrix_completion/matrix_completion.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/matrix_completion/matrix_completion_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/mean_shift.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/mean_shift/mean_shift.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/mean_shift/mean_shift_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/naive_bayes.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/naive_bayes/naive_bayes.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/naive_bayes/naive_bayes_classifier.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/naive_bayes/naive_bayes_classifier_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/nca.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/nca/nca.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/nca/nca_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/nca/nca_softmax_error_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/nca/nca_softmax_error_function_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/neighbor_search.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/neighbor_search/neighbor_search.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/neighbor_search/neighbor_search_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/neighbor_search/neighbor_search_rules.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/neighbor_search/neighbor_search_rules_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/neighbor_search/neighbor_search_stat.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/neighbor_search/ns_model.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/neighbor_search/ns_model_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/neighbor_search/sort_policies/furthest_neighbor_sort.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/neighbor_search/sort_policies/furthest_neighbor_sort_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/neighbor_search/sort_policies/nearest_neighbor_sort.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/neighbor_search/sort_policies/nearest_neighbor_sort_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/neighbor_search/typedef.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/neighbor_search/unmap.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/neighbor_search/unmap_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/nmf.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/nmf/nmf.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/nystroem_method.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/nystroem_method/kmeans_selection.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/nystroem_method/nystroem_method.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/nystroem_method/nystroem_method_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/nystroem_method/ordered_selection.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/nystroem_method/random_selection.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/pca.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/pca/decomposition_policies/decomposition_policies.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/pca/decomposition_policies/exact_svd_method.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/pca/decomposition_policies/quic_svd_method.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/pca/decomposition_policies/randomized_block_krylov_method.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/pca/decomposition_policies/randomized_svd_method.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/pca/pca.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/pca/pca_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/perceptron.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/perceptron/initialization_methods/initialization_methods.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/perceptron/initialization_methods/random_init.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/perceptron/initialization_methods/zero_init.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/perceptron/learning_policies/learning_policies.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/perceptron/learning_policies/simple_weight_update.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/perceptron/perceptron.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/perceptron/perceptron_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/preprocess.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/preprocess/scaling_model.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/preprocess/scaling_model_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/quic_svd.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/quic_svd/quic_svd.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/quic_svd/quic_svd_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/radical.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/radical/radical.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/radical/radical_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/random_forest.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/random_forest/bootstrap.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/random_forest/random_forest.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/random_forest/random_forest_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/randomized_svd.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/randomized_svd/randomized_svd.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/randomized_svd/randomized_svd_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/range_search.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/range_search/range_search.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/range_search/range_search_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/range_search/range_search_rules.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/range_search/range_search_rules_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/range_search/range_search_stat.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/range_search/rs_model.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/range_search/rs_model_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/rann.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/rann/ra_model.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/rann/ra_model_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/rann/ra_query_stat.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/rann/ra_search.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/rann/ra_search_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/rann/ra_search_rules.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/rann/ra_search_rules_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/rann/ra_typedef.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/rann/ra_util.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/rann/ra_util_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/rann/rann.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/regularized_svd.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/regularized_svd/regularized_svd.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/regularized_svd/regularized_svd_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/regularized_svd/regularized_svd_function_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/regularized_svd/regularized_svd_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/async_learning.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/async_learning_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/environment/acrobot.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/environment/cart_pole.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/environment/continuous_double_pole_cart.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/environment/continuous_mountain_car.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/environment/double_pole_cart.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/environment/env_type.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/environment/environment.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/environment/ftn.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/environment/ftn_param.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/environment/mountain_car.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/environment/pendulum.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/environment/reward_clipping.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/policy/aggregated_policy.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/policy/greedy_policy.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/policy/policy.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/q_learning.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/q_learning_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/q_networks/categorical_dqn.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/q_networks/dueling_dqn.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/q_networks/q_networks.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/q_networks/simple_dqn.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/reinforcement_learning.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/replay/prioritized_replay.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/replay/random_replay.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/replay/replay.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/replay/sumtree.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/sac.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/sac_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/training_config.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/worker/n_step_q_learning_worker.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/worker/one_step_q_learning_worker.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/worker/one_step_sarsa_worker.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/reinforcement_learning/worker/worker.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/softmax_regression.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/softmax_regression/softmax_regression.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/softmax_regression/softmax_regression_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/softmax_regression/softmax_regression_function_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/softmax_regression/softmax_regression_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/sparse_autoencoder.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/sparse_autoencoder/maximal_inputs.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/sparse_autoencoder/maximal_inputs_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/sparse_autoencoder/sparse_autoencoder.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/sparse_autoencoder/sparse_autoencoder_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/sparse_autoencoder/sparse_autoencoder_function_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/sparse_autoencoder/sparse_autoencoder_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/sparse_coding.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/sparse_coding/data_dependent_random_initializer.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/sparse_coding/nothing_initializer.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/sparse_coding/random_initializer.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/sparse_coding/sparse_coding.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/sparse_coding/sparse_coding_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/svdplusplus.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/svdplusplus/svdplusplus.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/svdplusplus/svdplusplus_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/svdplusplus/svdplusplus_function_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/svdplusplus/svdplusplus_impl.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/xgboost/loss_functions/sse_loss.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/namespace_compat.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/prereqs.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/ann_test_tools.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/ann/custom_layer.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/catch.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/hmm_test_utils.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/main_test_fixture.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/main_tests/range_search_utils.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/mock_categorical_data.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/serialization.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/test_catch_tools.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/test_function_tools.hpp" />
+    <Image Include="../../thirdparty/owemdjee/mlpack/dist/win-installer/res/banner.jpg" />
+    <Image Include="../../thirdparty/owemdjee/mlpack/dist/win-installer/res/dialog_white.jpg" />
+    <Image Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/res/menu_bg.png" />
+    <Image Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/test_image.png" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/Autodownload.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/LICENSE.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/allexec2man.sh" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/exec2man.sh" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/mlpack-config.cmake.in" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/mlpack.pc.in" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CODE_OF_CONDUCT.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CONTRIBUTING.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/COPYRIGHT.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/GOVERNANCE.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/HISTORY.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/LICENSE.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/README.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/UPDATING.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/dist/win-installer/staging/LICENSE.rtf" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/developer/bindings.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/developer/elemtype.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/developer/iodoc.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/developer/kernels.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/developer/metrics.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/developer/timer.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/developer/trees.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/developer/version.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/examples/sample-ml-app/README.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/joss_paper/paper.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/quickstart/R.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/quickstart/cli.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/quickstart/cpp.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/quickstart/go.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/quickstart/julia.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/quickstart/python.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/tutorials/README.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/tutorials/amf.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/tutorials/ann.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/tutorials/approx_kfn.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/tutorials/cf.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/tutorials/datasetmapper.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/tutorials/det.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/tutorials/emst.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/tutorials/fastmks.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/tutorials/image.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/tutorials/kmeans.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/tutorials/linear_regression.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/tutorials/neighbor_search.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/tutorials/range_search.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/tutorials/reinforcement_learning.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/user/build_windows.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/user/cv.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/user/formats.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/user/hpt.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/user/matrices.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/doc/user/sample_ml_app.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/scripts/release-mlpack.sh" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/scripts/update-website-after-release.sh" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/generate_R.cpp.in" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/mlpack/DESCRIPTION.in" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/mlpack/LICENSE.in" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/mlpack/inst/include/mlpack.h.in" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/r_method.cpp.in" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/tests/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/generate_go.cpp.in" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/go_method.cpp.in" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/go_method.h.in" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/tests/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/generate_jl.cpp.in" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/julia_method.cpp.in" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/julia_method.h.in" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/mlpack/Project.toml.in" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/mlpack/mlpack.jl.in" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/mlpack/params.jl.in" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/julia/tests/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/generate_markdown.binding.cpp.in" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/generate_markdown.binding.hpp.in" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/generate_markdown.cpp.in" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/res/change_language.js" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/copy_artifacts.py" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/generate_py_wrapper.cpp.in" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/generate_pyx.cpp.in" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/mlpack/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/mlpack/matrix_utils.py" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/mlpack/preprocess_json_params.py" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/print_python_version.py" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/setup.py.in" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/setup_readme.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/tests/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/tests/dataset_info_test.py" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/tests/test_python_binding.py" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/tests/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/util/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/std_backport/LICENSE.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/core/std_backport/README.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/methods/ann/layer/not_adapted/README.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/README.md" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/GroupLensSmall.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/boston_housing_price.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/boston_housing_price_responses.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/braziltourism_labels.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/completion_X.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/completion_indices.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/corrupt-observations-1.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/corrupt-observations-2.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/data_3d_ind.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/data_3d_mixed.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/digamma_data.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/digamma_neg_data.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/digamma_root_data.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/digamma_small_data.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/erdosrenyi-n100.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/fake.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/german.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/hmm_train_lab.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/hmm_train_obs.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/iris.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/iris_labels.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/iris_test.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/iris_test_labels.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/iris_train.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/iris_train_labels.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/johnson8-4-4.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/keller4.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/lab1.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/lab1_corrupt.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/lab2.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/lab3.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/labels.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/lars_dependent_x.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/lars_dependent_y.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/nbc_high_dim_test.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/nbc_high_dim_test_labels.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/nbc_high_dim_train.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/nbc_high_dim_train_labels.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/obs1.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/obs2.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/obs3.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/obs4.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/observations.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/preprocess_imputer_test.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/r10.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/rann_test_q_3_100.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/rann_test_qr_ranks.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/rann_test_r_3_900.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/sensing_A.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/sensing_X.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/testRes.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/testResProbs.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/testSet.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/test_data_3_1000.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/test_labels_nonlinsep.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/test_nonlinsep.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/thyroid_test.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/thyroid_train.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/trainRes.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/trainSet.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/train_labels_nonlinsep.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/train_nonlinsep.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/trigamma_data.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/vc2.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/vc2_labels.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/vc2_test.csv" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/vc2_test_labels.txt" />
+  </ItemGroup>
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />
+  </ImportGroup>
+</Project>
+  

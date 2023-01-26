@@ -1,0 +1,20 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cvt.js",
+  "scripts": {
+    "html2md": "bash -c 'for f in *.html **/*.html ; do node cvt.js $f ; done' ",
+    "prettier": "prettier --write cvt.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "GPL2",
+  "devDependencies": {
+    "@gerhobbelt/nomnom": "1.8.4-30",
+    "prettier": "2.0.5",
+    "sanitize-html": "1.23.0",
+    "turndown": "6.0.0",
+    "turndown-plugin-gfm": "^1.0.2"
+  }
+}

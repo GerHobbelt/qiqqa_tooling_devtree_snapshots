@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03fd328}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{42f0fc98-34f6-4567-b3cf-de13e74a89ab}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files\benchmarks">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\benchmarks\htmlparser">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0060}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\benchmarks">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\benchmarks\htmlparser">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0061}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/wxWidgets/tests/benchmarks/graphics.cpp">
+      <Filter>Source Files\benchmarks</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/wxWidgets/tests/benchmarks/htmlparser/htmlpars.cpp">
+      <Filter>Source Files\benchmarks\htmlparser</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/wxWidgets/tests/benchmarks/htmlparser/htmltag.cpp">
+      <Filter>Source Files\benchmarks\htmlparser</Filter>
+    </ClCompile>
+    <ClInclude Include="../../thirdparty/owemdjee/wxWidgets/tests/benchmarks/bench.h">
+      <Filter>Header Files\benchmarks</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/wxWidgets/tests/benchmarks/htmlparser/htmlpars.h">
+      <Filter>Header Files\benchmarks\htmlparser</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/wxWidgets/tests/benchmarks/htmlparser/htmltag.h">
+      <Filter>Header Files\benchmarks\htmlparser</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

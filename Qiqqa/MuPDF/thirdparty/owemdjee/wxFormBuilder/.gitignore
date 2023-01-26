@@ -1,0 +1,10 @@
+/.vscode/
+/_build*/
+/_install*/
+/build*/
+/install*/
+/data/packaging/linux/flatpak/.flatpak-builder/
+/data/packaging/linux/flatpak/build/
+/data/packaging/linux/flatpak/repo/
+/data/packaging/linux/flatpak/*.flatpak
+/debian/

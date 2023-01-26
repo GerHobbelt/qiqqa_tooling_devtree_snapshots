@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03fd328}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{42f0fc98-34f6-4567-b3cf-de13e74a89ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{b1798409-2031-413d-9df7-70b0202ddd98}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\rc">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0002}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/custclas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/derivdlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/myframe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/objrefdlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/xrcdemo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClInclude Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/custclas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/derivdlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/myframe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/objrefdlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/xrcdemo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <Image Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/fileopen.gif">
+      <Filter>Resource Files\rc</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/filesave.gif">
+      <Filter>Resource Files\rc</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/fuzzy.gif">
+      <Filter>Resource Files\rc</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/quotes.gif">
+      <Filter>Resource Files\rc</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/throbber.gif">
+      <Filter>Resource Files\rc</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/update.gif">
+      <Filter>Resource Files\rc</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/wxbanner.gif">
+      <Filter>Resource Files\rc</Filter>
+    </Image>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/Makefile.in">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/makefile.gcc">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/makefile.unx">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/makefile.vc">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/artprov.xpm">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/artprov.xrc">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/aui.xpm">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/aui.xrc">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/basicdlg.xpm">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/basicdlg.xrc">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/basicdlg2.xpm">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/controls.xpm">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/controls.xrc">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/custclas.xpm">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/custclas.xrc">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/custclas2.xpm">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/derivdlg.xpm">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/derivdlg.xrc">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/derivdlg2.xpm">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/frame.xrc">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/menu.xrc">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/objref.xrc">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/objrefdlg.xpm">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/platform.xpm">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/platform.xrc">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/resource.xrc">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/stop.xpm">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/stop_2x.xpm">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/toolbar.xrc">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/uncenter.xpm">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/uncenter.xrc">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/uncenter2.xpm">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/variable.xpm">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/variable.xrc">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/variants.xpm">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/rc/variants.xrc">
+      <Filter>Resource Files\rc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/xrc/xrcdemo.bkl">
+      <Filter>Misc Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
+    

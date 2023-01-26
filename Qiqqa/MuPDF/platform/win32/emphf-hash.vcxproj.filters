@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03fd328}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{42f0fc98-34f6-4567-b3cf-de13e74a89ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{b1798409-2031-413d-9df7-70b0202ddd98}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/emphf-hash/compute_mphf_hem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/emphf-hash/compute_mphf_scan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/emphf-hash/compute_mphf_scan_mmap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/emphf-hash/compute_mphf_seq.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/emphf-hash/gen_synthetic_data.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/emphf-hash/test_mphf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/emphf-hash/test_mphf_hem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClInclude Include="../../thirdparty/owemdjee/emphf-hash/base_hash.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/emphf-hash/bitpair_vector.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/emphf-hash/bitstream.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/emphf-hash/common.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/emphf-hash/compute_mphf_generic.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/emphf-hash/hypergraph.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/emphf-hash/hypergraph_sorter_scan.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/emphf-hash/hypergraph_sorter_seq.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/emphf-hash/internal_memory_model.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/emphf-hash/mmap_memory_model.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/emphf-hash/mphf.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/emphf-hash/mphf_hem.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/emphf-hash/packed_edge_list.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/emphf-hash/packed_vector.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/emphf-hash/perfutils.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/emphf-hash/ranked_bitpair_vector.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/emphf-hash/test_mphf_generic.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <Text Include="../../thirdparty/owemdjee/emphf-hash/CMakeLists.txt">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/emphf-hash/README.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/emphf-hash/emphf_config.hpp.in">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/emphf-hash/test_all.py">
+      <Filter>Misc Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
+    

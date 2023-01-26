@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03fd328}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{42f0fc98-34f6-4567-b3cf-de13e74a89ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{b1798409-2031-413d-9df7-70b0202ddd98}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Misc Files\xml">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\icons">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0003}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/icons/animation.xpm">
+      <Filter>Resource Files\icons</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/icons/auitoolbar.xpm">
+      <Filter>Resource Files\icons</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/icons/bitmap_button.xpm">
+      <Filter>Resource Files\icons</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/icons/button.xpm">
+      <Filter>Resource Files\icons</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/icons/button16x16.xpm">
+      <Filter>Resource Files\icons</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/icons/checkbox.xpm">
+      <Filter>Resource Files\icons</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/icons/choice.xpm">
+      <Filter>Resource Files\icons</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/icons/combo_box.xpm">
+      <Filter>Resource Files\icons</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/icons/gauge.xpm">
+      <Filter>Resource Files\icons</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/icons/infobar.xpm">
+      <Filter>Resource Files\icons</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/icons/list_box.xpm">
+      <Filter>Resource Files\icons</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/icons/list_ctrl.xpm">
+      <Filter>Resource Files\icons</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/icons/menu.xpm">
+      <Filter>Resource Files\icons</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/icons/menubar.xpm">
+      <Filter>Resource Files\icons</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/icons/menuitem.xpm">
+      <Filter>Resource Files\icons</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/icons/radio_box.xpm">
+      <Filter>Resource Files\icons</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/icons/radio_button.xpm">
+      <Filter>Resource Files\icons</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/icons/separator.xpm">
+      <Filter>Resource Files\icons</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/icons/slider.xpm">
+      <Filter>Resource Files\icons</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/icons/static_bitmap.xpm">
+      <Filter>Resource Files\icons</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/icons/static_line.xpm">
+      <Filter>Resource Files\icons</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/icons/static_text.xpm">
+      <Filter>Resource Files\icons</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/icons/statusbar.xpm">
+      <Filter>Resource Files\icons</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/icons/submenu.xpm">
+      <Filter>Resource Files\icons</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/icons/text_ctrl.xpm">
+      <Filter>Resource Files\icons</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/icons/tool.xpm">
+      <Filter>Resource Files\icons</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/icons/toolSeparator.xpm">
+      <Filter>Resource Files\icons</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/icons/toolbar.xpm">
+      <Filter>Resource Files\icons</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/xml/common.cppcode">
+      <Filter>Misc Files\xml</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/xml/common.luacode">
+      <Filter>Misc Files\xml</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/xml/common.phpcode">
+      <Filter>Misc Files\xml</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/xml/common.pythoncode">
+      <Filter>Misc Files\xml</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/xml/menutoolbar.cppcode">
+      <Filter>Misc Files\xml</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/xml/menutoolbar.luacode">
+      <Filter>Misc Files\xml</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/xml/menutoolbar.phpcode">
+      <Filter>Misc Files\xml</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/xml/menutoolbar.pythoncode">
+      <Filter>Misc Files\xml</Filter>
+    </Text>
+    <Xml Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/xml/common.xml">
+      <Filter>Misc Files\xml</Filter>
+    </Xml>
+    <Xml Include="../../thirdparty/owemdjee/wxFormBuilder/plugins/common/xml/menutoolbar.xml">
+      <Filter>Misc Files\xml</Filter>
+    </Xml>
+  </ItemGroup>
+</Project>
+    

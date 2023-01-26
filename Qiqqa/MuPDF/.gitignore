@@ -1,0 +1,86 @@
+
+# Generated files:
+build
+generated/resources/fonts/droid
+generated/resources/fonts/han
+generated/resources/fonts/noto
+generated/resources/fonts/sil
+tags
+cscope.*
+node_modules
+
+# Editor and file browser turds:
+*~
+.*.swp
+.DS_Store
+\#*\#
+
+# Editor settings:
+.exrc
+.vimrc
+*.xcworkspace
+*.xcuserdatad
+user.make
+guide
+
+# Temporary and build files:
+*.class
+*.jar
+*.o
+*.so
+*.dll
+DerivedData
+
+platform/java/local.properties
+platform/win32/*.user
+platform/win32/*.ncb
+platform/win32/*.suo
+platform/win32/Debug-*/
+platform/win32/DebugOpenssl
+platform/win32/Profile
+platform/win32/Release-*/
+platform/win32/ReleaseOpenssl
+platform/win32/Memento
+platform/win32/DebugJava-32
+MupdfSharp/*.user
+.vs
+bin
+obj
+Browse.VC.*
+Solution.VC.*
+UpgradeLog.htm
+*.diagsession
+
+scripts/__pycache__
+/platform/win32/DebugJava-32/javaviewer/*.cache
+/platform/win32/ReleaseJava-32/javaviewer/*.cache
+/platform/win32/DebugJava-64/javaviewer/*.cache
+/platform/win32/ReleaseJava-64/javaviewer/*.cache
+
+# Scratch and research stuff
+/tmp/
+
+/platform/win32/nuke-all-build-directories-exec.sh
+/platform/win32/packages/
+
+# libxml2 test fixtures copied here via Pre-Build Step in the libxml2 project:
+/platform/win32/test/
+
+# ignore Intel Vtune profiler report cache
+/platform/win32/VTune Profiler Results/
+/platform/win32/GPUCache/
+
+# Obsidian Vault - personal settings
+/docs/Notes/.obsidian/workspace
+/docs/Notes/.obsidian/appearance.json
+/docs/Notes/.obsidian/core-plugins.json
+/docs/Notes/.obsidian/hotkeys.json
+
+/platform/win32/__build_target/x64/Debug/*.cache
+/platform/win32/__build_target/*.user
+
+/scripts/wxWidgets/webview2/
+
+/docs/Notes/.obsidian/workspace.json
+
+*.psd

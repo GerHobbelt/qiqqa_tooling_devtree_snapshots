@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>libtypesense</ProjectName>
+    <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF732035}</ProjectGuid>
+    <RootNamespace>libtypesense</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project.props" Label="SolutionWideSettings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.28307.799</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+<ItemDefinitionGroup>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <BrowseInformation>false</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <DisableSpecificWarnings>4018;4100;4127;4180;4206;4244;4267;5105;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <SDLCheck>false</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <ConformanceMode>true</ConformanceMode>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableUnitySupport>true</EnableUnitySupport>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+</ItemDefinitionGroup>
+<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTYPESENSE;TYPESENSE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTYPESENSE;TYPESENSE_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTYPESENSE;TYPESENSE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTYPESENSE;TYPESENSE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTYPESENSE;TYPESENSE_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTYPESENSE;TYPESENSE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTYPESENSE;TYPESENSE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTYPESENSE;TYPESENSE_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTYPESENSE;TYPESENSE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTYPESENSE;TYPESENSE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTYPESENSE;TYPESENSE_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTYPESENSE;TYPESENSE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/adi_tree.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/app_metrics.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/array.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/array_base.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/array_utils.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/art.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/auth_manager.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/batched_indexer.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/collection.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/collection_manager.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/core_api.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/core_api_utils.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/cvt.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/field.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/file_utils.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/http_client.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/http_server.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/id_list.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/ids_t.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/index.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/japanese_localizer.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/main/benchmark.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/main/main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/main/typesense_server.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/num_tree.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/or_iterator.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/posting.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/posting_list.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/raft_server.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/sorted_array.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/string_utils.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/synonym_index.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/system_metrics.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/thread_local_vars.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/tokenizer.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/typesense_server_utils.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/adi_tree_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/app_metrics_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/array_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/array_utils_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/art_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/auth_manager_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/collection_all_fields_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/collection_faceting_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/collection_filtering_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/collection_grouping_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/collection_infix_search_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/collection_locale_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/collection_manager_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/collection_override_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/collection_schema_change_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/collection_sorting_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/collection_specific_more_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/collection_specific_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/collection_synonyms_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/collection_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/config_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/core_api_utils_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/cvt_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/index_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/match_score_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/num_tree_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/or_iterator_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/posting_list_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/raft_server_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/sorted_array_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/store_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/string_utils_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/system_metrics_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/tokenizer_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/topster_test.cpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/INIReader.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/adi_tree.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/app_metrics.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/array.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/array_base.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/array_utils.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/art.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/auth_manager.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/backward.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/batched_indexer.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/cmdline.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/collection.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/collection_manager.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/config.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/core_api.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/core_api_utils.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/cvt.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/exectime.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/field.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/file_utils.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/http_client.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/http_data.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/http_server.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/id_list.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/ids_t.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/index.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/japanese_localizer.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/json.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/logger.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/magic_enum.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/match_score.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/num_tree.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/number.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/option.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/or_iterator.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/parasort.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/posting.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/posting_list.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/raft_server.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/sorted_array.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/sparsepp.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/sse2neon.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/stackprinter.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/store.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/string_utils.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/synonym_index.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/system_metrics.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/thread_local_vars.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/threadpool.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/timsort.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/tokenizer.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/topster.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/tsl/array-hash/array_growth_policy.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/tsl/array-hash/array_hash.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/tsl/array-hash/array_map.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/tsl/array-hash/array_set.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/tsl/htrie_hash.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/tsl/htrie_map.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/tsl/htrie_set.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/typesense_server_utils.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/wyhash_v5.h" />
+    <Image Include="../../thirdparty/owemdjee/typesense/assets/typesense_books_demo.gif" />
+    <Image Include="../../thirdparty/owemdjee/typesense/assets/typesense_medium.png" />
+    <Text Include="../../thirdparty/owemdjee/typesense/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/typesense/CONTRIBUTING.md" />
+    <Text Include="../../thirdparty/owemdjee/typesense/DESIGN.md" />
+    <Text Include="../../thirdparty/owemdjee/typesense/LICENSE.txt" />
+    <Text Include="../../thirdparty/owemdjee/typesense/README.md" />
+    <Text Include="../../thirdparty/owemdjee/typesense/SECURITY.md" />
+    <Text Include="../../thirdparty/owemdjee/typesense/SHOWCASE.md" />
+    <Text Include="../../thirdparty/owemdjee/typesense/TODO.md" />
+    <Text Include="../../thirdparty/owemdjee/typesense/build.sh" />
+    <Text Include="../../thirdparty/owemdjee/typesense/debian-pkg/generate_deb_rpm.sh" />
+    <Text Include="../../thirdparty/owemdjee/typesense/docker-build.sh" />
+    <Text Include="../../thirdparty/owemdjee/typesense/docker/patches/braft_cmakelists.txt" />
+    <Text Include="../../thirdparty/owemdjee/typesense/docker/patches/brpc_cmakelists.txt" />
+    <Text Include="../../thirdparty/owemdjee/typesense/publish_release.sh" />
+    <Text Include="../../thirdparty/owemdjee/typesense/test/ids.txt" />
+    <Text Include="../../thirdparty/owemdjee/typesense/test/ill.txt" />
+    <Text Include="../../thirdparty/owemdjee/typesense/test/resources/common100_english.txt" />
+    <Text Include="../../thirdparty/owemdjee/typesense/test/resources/proc_net_dev.txt" />
+    <Text Include="../../thirdparty/owemdjee/typesense/test/resources/record_values.txt" />
+    <Text Include="../../thirdparty/owemdjee/typesense/test/skus.txt" />
+    <Text Include="../../thirdparty/owemdjee/typesense/test/words.txt" />
+  </ItemGroup>
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />
+  </ImportGroup>
+</Project>
+  

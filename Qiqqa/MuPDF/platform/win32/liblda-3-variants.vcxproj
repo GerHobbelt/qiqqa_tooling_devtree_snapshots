@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>liblda-3-variants</ProjectName>
+    <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FFD366FE}</ProjectGuid>
+    <RootNamespace>liblda-3-variants</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project.props" Label="SolutionWideSettings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.28307.799</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+<ItemDefinitionGroup>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <BrowseInformation>false</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <DisableSpecificWarnings>4018;4100;4127;4180;4206;4244;4267;5105;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <SDLCheck>false</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <ConformanceMode>true</ConformanceMode>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableUnitySupport>true</EnableUnitySupport>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+</ItemDefinitionGroup>
+<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLDA_3_VARIANTS;LDA_3_VARIANTS_STATICLIB;CHM_NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLDA_3_VARIANTS;LDA_3_VARIANTS_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLDA_3_VARIANTS;LDA_3_VARIANTS_STATICLIB;CHM_NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLDA_3_VARIANTS;LDA_3_VARIANTS_STATICLIB;CHM__DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLDA_3_VARIANTS;LDA_3_VARIANTS_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLDA_3_VARIANTS;LDA_3_VARIANTS_STATICLIB;CHM__DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLDA_3_VARIANTS;LDA_3_VARIANTS_STATICLIB;CHM_NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLDA_3_VARIANTS;LDA_3_VARIANTS_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLDA_3_VARIANTS;LDA_3_VARIANTS_STATICLIB;CHM_NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLDA_3_VARIANTS;LDA_3_VARIANTS_STATICLIB;CHM__DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLDA_3_VARIANTS;LDA_3_VARIANTS_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLDA_3_VARIANTS;LDA_3_VARIANTS_STATICLIB;CHM__DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/lda-3-variants/GibbsLDA++/src/dataset.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/lda-3-variants/GibbsLDA++/src/lda.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/lda-3-variants/GibbsLDA++/src/model.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/lda-3-variants/GibbsLDA++/src/strtokenizer.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/lda-3-variants/GibbsLDA++/src/utils.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/lda-3-variants/ompi_lda/accumulative_model.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/lda-3-variants/ompi_lda/cmd_flags.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/lda-3-variants/ompi_lda/common.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/lda-3-variants/ompi_lda/document.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/lda-3-variants/ompi_lda/infer.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/lda-3-variants/ompi_lda/lda.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/lda-3-variants/ompi_lda/model.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/lda-3-variants/ompi_lda/mpi_lda.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/lda-3-variants/ompi_lda/sampler.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/lda-3-variants/research/gibbs-lda/src/dataset.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/lda-3-variants/research/gibbs-lda/src/lda.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/lda-3-variants/research/gibbs-lda/src/model.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/lda-3-variants/research/gibbs-lda/src/strtokenizer.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/lda-3-variants/research/gibbs-lda/src/utils.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/lda-3-variants/research/ompi-lda/accumulative_model.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/lda-3-variants/research/ompi-lda/cmd_flags.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/lda-3-variants/research/ompi-lda/common.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/lda-3-variants/research/ompi-lda/document.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/lda-3-variants/research/ompi-lda/infer.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/lda-3-variants/research/ompi-lda/lda.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/lda-3-variants/research/ompi-lda/model.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/lda-3-variants/research/ompi-lda/mpi_lda.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/lda-3-variants/research/ompi-lda/sampler.cc" />
+    <ClInclude Include="../../thirdparty/owemdjee/lda-3-variants/GibbsLDA++/src/constants.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/lda-3-variants/GibbsLDA++/src/dataset.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/lda-3-variants/GibbsLDA++/src/model.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/lda-3-variants/GibbsLDA++/src/strtokenizer.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/lda-3-variants/GibbsLDA++/src/utils.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/lda-3-variants/ompi_lda/accumulative_model.hh" />
+    <ClInclude Include="../../thirdparty/owemdjee/lda-3-variants/ompi_lda/cmd_flags.hh" />
+    <ClInclude Include="../../thirdparty/owemdjee/lda-3-variants/ompi_lda/common.hh" />
+    <ClInclude Include="../../thirdparty/owemdjee/lda-3-variants/ompi_lda/document.hh" />
+    <ClInclude Include="../../thirdparty/owemdjee/lda-3-variants/ompi_lda/model.hh" />
+    <ClInclude Include="../../thirdparty/owemdjee/lda-3-variants/ompi_lda/sampler.hh" />
+    <ClInclude Include="../../thirdparty/owemdjee/lda-3-variants/research/gibbs-lda/include/constants.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/lda-3-variants/research/gibbs-lda/include/dataset.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/lda-3-variants/research/gibbs-lda/include/model.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/lda-3-variants/research/gibbs-lda/include/strtokenizer.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/lda-3-variants/research/gibbs-lda/include/utils.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/lda-3-variants/research/ompi-lda/accumulative_model.hh" />
+    <ClInclude Include="../../thirdparty/owemdjee/lda-3-variants/research/ompi-lda/cmd_flags.hh" />
+    <ClInclude Include="../../thirdparty/owemdjee/lda-3-variants/research/ompi-lda/common.hh" />
+    <ClInclude Include="../../thirdparty/owemdjee/lda-3-variants/research/ompi-lda/document.hh" />
+    <ClInclude Include="../../thirdparty/owemdjee/lda-3-variants/research/ompi-lda/model.hh" />
+    <ClInclude Include="../../thirdparty/owemdjee/lda-3-variants/research/ompi-lda/sampler.hh" />
+    <Text Include="../../thirdparty/owemdjee/lda-3-variants/GibbsLDA++/README" />
+    <Text Include="../../thirdparty/owemdjee/lda-3-variants/GibbsLDA++/models/casestudy/wordmap.txt" />
+    <Text Include="../../thirdparty/owemdjee/lda-3-variants/README.md" />
+    <Text Include="../../thirdparty/owemdjee/lda-3-variants/ompi_lda/LICENSE-2.0.txt" />
+    <Text Include="../../thirdparty/owemdjee/lda-3-variants/ompi_lda/README.txt" />
+    <Text Include="../../thirdparty/owemdjee/lda-3-variants/ompi_lda/testdata/test_data.txt" />
+    <Text Include="../../thirdparty/owemdjee/lda-3-variants/ompi_lda/testdata/tiny-expanded.txt" />
+    <Text Include="../../thirdparty/owemdjee/lda-3-variants/ompi_lda/testdata/tiny.txt" />
+    <Text Include="../../thirdparty/owemdjee/lda-3-variants/online_twitter_lda/README.md" />
+    <Text Include="../../thirdparty/owemdjee/lda-3-variants/online_twitter_lda/lda.py" />
+    <Text Include="../../thirdparty/owemdjee/lda-3-variants/online_twitter_lda/run_lda.sh" />
+    <Text Include="../../thirdparty/owemdjee/lda-3-variants/online_twitter_lda/stopwords.txt" />
+    <Text Include="../../thirdparty/owemdjee/lda-3-variants/online_twitter_lda/vocabulary.py" />
+    <Text Include="../../thirdparty/owemdjee/lda-3-variants/research/gibbs-lda/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/lda-3-variants/research/gibbs-lda/GPL-LICENSE.txt" />
+    <Text Include="../../thirdparty/owemdjee/lda-3-variants/research/gibbs-lda/README.md" />
+    <Text Include="../../thirdparty/owemdjee/lda-3-variants/research/gibbs-lda/models/casestudy/wordmap.txt" />
+    <Text Include="../../thirdparty/owemdjee/lda-3-variants/research/gibbs-lda/src/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/lda-3-variants/research/gibbs-lda/src/README.md" />
+    <Text Include="../../thirdparty/owemdjee/lda-3-variants/research/ompi-lda/LICENSE-2.0.txt" />
+    <Text Include="../../thirdparty/owemdjee/lda-3-variants/research/ompi-lda/README" />
+    <Text Include="../../thirdparty/owemdjee/lda-3-variants/research/ompi-lda/testdata/test_data.txt" />
+  </ItemGroup>
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />
+  </ImportGroup>
+</Project>
+  

@@ -1,0 +1,30 @@
+
+mutool test/debug command lines:
+
+bulktest -v -smt -T G:\Qiqqa\evil-base\text_extract_pdf_files.bulktest    G:\Qiqqa\evil-base\text_extract_pdf_files.info-test.tsv
+--> run bulktest script 
+
+
+draw -smtf -F stext -r 300 -j content    "Z:\lib\tooling\qiqqa\Qiqqa\bin\blub-blob\Guest\documents\3\3752B65FCBD0A227B0A19673F03D3D7D52B58A.pdf" 41,42,43,44,45,46,47,48,49,50,51,52,53,54 -o tmp.tmp
+--> text extraction (debugging qiqqa issue)
+
+crow_mustache
+--> crash
+
+cwebp
+--> unicode error
+
+
+
+draw -smtf -F html  -j content -x reference-images=yes,mediabox-clip=no,preserve-spans=yes,reuse-images=yes,preserve-images=yes,preserve-whitespace=yes,preserve-ligatures=yes, -o tmp.html   "Z:\lib\tooling\qiqqa\Qiqqa\bin\blub-blob\Guest\documents\3\3752B65FCBD0A227B0A19673F03D3D7D52B58A.pdf"  
+
+
+
+mediabox-clip=no,preserve-spans=yes,reuse-images=yes,preserve-images=yes,preserve-whitespace=yes,preserve-ligatures=yes,
+
+fz_new_output_with_path()
+fz_new_output()
+
+
+
+

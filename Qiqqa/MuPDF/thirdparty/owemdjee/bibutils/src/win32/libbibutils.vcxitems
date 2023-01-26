@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{b53a050e-c74b-4cd2-ad81-0a7fe794e56b}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\adsout.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\bibcore.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\bibl.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\biblatexin.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\biblatexout.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\bibtexin.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\bibtexout.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\bibtextypes.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\bibutils.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\bltypes.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\bu_auth.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\charsets.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\copacin.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\copactypes.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\ebiin.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\endin.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\endout.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\endtypes.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\endxmlin.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\entities.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\fields.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\gb18030.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\generic.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\intlist.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\isiin.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\isiout.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\isitypes.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\iso639_1.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\iso639_2.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\iso639_3.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\is_ws.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\latex.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\latex_parse.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\marc_auth.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\medin.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\modsin.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\modsout.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\modstypes.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\mycvout.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\name.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\nbibin.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\nbibout.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\nbibtypes.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\notes.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\pages.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\reftypes.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\risin.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\risout.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\ristypes.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\serialno.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\slist.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\str.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\strsearch.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\str_conv.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\title.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\type.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\unicode.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\url.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\utf8.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\vplist.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\wordin.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\wordout.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\xml.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\lib\xml_encoding.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\adsout_journals.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\bibdefs.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\bibformats.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\bibl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\bibtypes.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\bibutils.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\bltypes.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\bu_auth.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\charsets.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\copactypes.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\endin.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\endtypes.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\entities.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\fields.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\gb18030.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\gb18030_enumeration.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\generic.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\intlist.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\isitypes.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\iso639_1.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\iso639_2.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\iso639_3.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\is_ws.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\latex.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\latex_parse.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\marc_auth.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\modstypes.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\name.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\nbibtypes.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\notes.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\pages.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\reftypes.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\reftypes_internals.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\ristypes.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\serialno.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\slist.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\str.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\strsearch.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\str_conv.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\title.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\type.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\unicode.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\url.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\utf8.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\vplist.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\xml.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\lib\xml_encoding.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)config.h" />
+  </ItemGroup>
+</Project>

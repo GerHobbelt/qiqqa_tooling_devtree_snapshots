@@ -1,0 +1,82 @@
+///////////////////////////////////////////////////////////////////////
+// File:        lstmeval.cpp
+// Description: Evaluation program for LSTM-based networks.
+// Author:      Ray Smith
+//
+// (C) Copyright 2016, Google Inc.
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+// http://www.apache.org/licenses/LICENSE-2.0
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+///////////////////////////////////////////////////////////////////////
+
+#include <tesseract/debugheap.h>
+
+#include "common/commontraining.h"
+#include "unicharset/lstmtester.h"
+#include "tprintf.h"
+
+using namespace tesseract;
+
+FZ_HEAPDBG_TRACKER_SECTION_START_MARKER(_)
+
+static STRING_PARAM_FLAG(model, "", "Name of model file (training or recognition)");
+static STRING_PARAM_FLAG(traineddata, "",
+                         "If model is a training checkpoint, then traineddata must "
+                         "be the traineddata file that was given to the trainer");
+static STRING_PARAM_FLAG(eval_listfile, "", "File listing sample files in lstmf training format.");
+static INT_PARAM_FLAG(max_image_MB, 2000, "Max memory to use for images.");
+static INT_PARAM_FLAG(verbosity, 1, "Amount of diagnosting information to output (0-2).");
+
+FZ_HEAPDBG_TRACKER_SECTION_END_MARKER(_)
+
+#if defined(TESSERACT_STANDALONE) && !defined(BUILD_MONOLITHIC)
+extern "C" int main(int argc, const char** argv)
+#else
+extern "C" int tesseract_lstm_eval_main(int argc, const char** argv)
+#endif
+{
+  tesseract::CheckSharedLibraryVersion();
+  ParseArguments(&argc, &argv);
+  if (FLAGS_model.empty()) {
+    tprintf("ERROR: Must provide a --model!\n");
+    return EXIT_FAILURE;
+  }
+  if (FLAGS_eval_listfile.empty()) {
+    tprintf("ERROR: Must provide a --eval_listfile!\n");
+    return EXIT_FAILURE;
+  }
+  tesseract::TessdataManager mgr;
+  if (!mgr.Init(FLAGS_model.c_str())) {
+    if (FLAGS_traineddata.empty()) {
+      tprintf("ERROR: Must supply --traineddata to eval a training checkpoint!\n");
+      return EXIT_FAILURE;
+    }
+    tprintf("WARNING: {} is not a recognition model, trying training checkpoint...\n", FLAGS_model.c_str());
+    if (!mgr.Init(FLAGS_traineddata.c_str())) {
+      tprintf("ERROR: Failed to load language model from {}!\n", FLAGS_traineddata.c_str());
+      return EXIT_FAILURE;
+    }
+    std::vector<char> model_data;
+    if (!tesseract::LoadDataFromFile(FLAGS_model.c_str(), &model_data)) {
+      tprintf("ERROR: Failed to load model from: {}\n", FLAGS_model.c_str());
+      return EXIT_FAILURE;
+    }
+    mgr.OverwriteEntry(tesseract::TESSDATA_LSTM, &model_data[0], model_data.size());
+  }
+  tesseract::LSTMTester tester(static_cast<int64_t>(FLAGS_max_image_MB) * 1048576);
+  if (!tester.LoadAllEvalData(FLAGS_eval_listfile.c_str())) {
+    tprintf("ERROR: Failed to load eval data from: {}\n", FLAGS_eval_listfile.c_str());
+    return EXIT_FAILURE;
+  }
+  double errs = 0.0;
+  std::string result = tester.RunEvalSync(0, &errs, mgr,
+                                          /*training_stage (irrelevant)*/ 0, FLAGS_verbosity);
+  tprintf("{}\n", result);
+  return EXIT_SUCCESS;
+} /* main */

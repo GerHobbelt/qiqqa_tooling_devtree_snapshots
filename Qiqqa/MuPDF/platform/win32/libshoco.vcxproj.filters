@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03fd328}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{42f0fc98-34f6-4567-b3cf-de13e74a89ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{b1798409-2031-413d-9df7-70b0202ddd98}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files\models">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\training_data">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0002}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/shoco/shoco-bin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/shoco/shoco.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/shoco/test_input.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/shoco/tests.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClInclude Include="../../thirdparty/owemdjee/shoco/models/dictionary.h">
+      <Filter>Header Files\models</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/shoco/models/filepaths.h">
+      <Filter>Header Files\models</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/shoco/models/text_en.h">
+      <Filter>Header Files\models</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/shoco/models/words_en.h">
+      <Filter>Header Files\models</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/shoco/shoco.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/shoco/shoco_model.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/shoco/shoco_table.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <Text Include="../../thirdparty/owemdjee/shoco/README.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/shoco/generate_compressor_model.py">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/shoco/pre.js">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/shoco/shoco.js">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/shoco/training_data/dorian_gray.txt">
+      <Filter>Misc Files\training_data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/shoco/training_data/metamorphosis.txt">
+      <Filter>Misc Files\training_data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/shoco/training_data/pride_and_prejudice.txt">
+      <Filter>Misc Files\training_data</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
+    

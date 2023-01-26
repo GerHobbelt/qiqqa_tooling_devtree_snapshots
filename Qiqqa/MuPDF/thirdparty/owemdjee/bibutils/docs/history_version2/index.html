@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<!-- Server: sfs-forge-5 -->
+
+<!--[if lt IE 7]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]>-->
+<html lang="en" class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+    <title>bibutils / Home / history_version2</title>
+
+    <meta name="viewport" content="width=1100" />
+
+    <link
+      rel="icon"
+      sizes="180x180"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/images/sandiego/logo-180x180.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      sizes="any"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/images/sandiego/svg/originals/sf-icon-orange-no_sf.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/images/sandiego/logo-180x180.png"
+    />
+    <link
+      rel="mask-icon"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/images/sandiego/svg/originals/sf-icon-orange-no_sf.svg"
+      color="#FF6600"
+    />
+
+    <!--[if lt IE 7]>
+      <script src="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/js/sftheme/vendor/dd_belatedpng.js"></script>
+      <script>
+        DD_belatedPNG.fix("img, .png_bg"); //fix any <img> or .png_bg background-images
+      </script>
+    <![endif]-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700"
+      rel="stylesheet"
+    />
+    <script>
+      if (!window.SF) {
+        window.SF = {};
+      }
+      SF.sandiego = false;
+      SF.sandiego_chrome = true;
+      SF.cdn = "https://a.fsdn.com/con";
+    </script>
+
+    <!-- ew:head_css -->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/allura/css/forge/hilite.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/tool/wiki/css/wiki.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/_slim/css?href=allura%2Fcss%2Fforge%2Ftooltipster.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/allura/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/css/forge.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/css/simplemde.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/_slim/css?href=css%2Fmarkitup_sf.css%3Bcss%2Fshow-hint.css"
+    />
+
+    <style>
+      div.moderate {
+        color: grey;
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/_slim/css?href=css%2Fpage_list.css%3Bcss%2Fjquery.tagsinput.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/css/sftheme/sandiego/cmp.css"
+    />
+
+    <!-- /ew:head_css -->
+
+    <!-- ew:head_js -->
+
+    <script
+      type="text/javascript"
+      src="https://a.fsdn.com/allura/nf/1589309844/_ew_/_slim/js?href=allura%2Fjs%2Fjquery-base.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Fpromise.polyfill.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fcmp2.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Fmodernizr.3.3.1.custom.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fshared_head.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Ftypescript%2Fcompliance.js"
+    ></script>
+
+    <!-- /ew:head_js -->
+
+    <style type="text/css">
+      /* make URL & Project custom fields in support tickets not get hidden as much */
+      .project-forge.mountpoint-site-support .view_holder .grid-4:nth-child(5),
+      .project-forge.mountpoint-site-support .view_holder .grid-4:nth-child(6) {
+        overflow: visible;
+        font-size: 22px;
+        width: 340px;
+        line-height: 1;
+        margin-bottom: 5px;
+      }
+      .project-forge.mountpoint-site-support
+        .view_holder
+        .grid-4:nth-child(5)
+        label,
+      .project-forge.mountpoint-site-support
+        .view_holder
+        .grid-4:nth-child(6)
+        label {
+        font-size: 14px;
+      }
+    </style>
+
+    <style>
+      .hidden {
+        display: none;
+      }
+      a.notfound {
+        color: #f00;
+      }
+    </style>
+
+    <style>
+      .XQFUJwpBwwrjCgTGwqnCpOVLErDgsOwLDhbDlg {
+        display: none;
+      }
+    </style>
+
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Page RSS"
+      href="feed.rss"
+    />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Page Atom"
+      href="feed.atom"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Wiki RSS"
+      href="../feed.rss"
+    />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Wiki Atom"
+      href="../feed.atom"
+    />
+
+    <script type="text/javascript"></script>
+
+    <script>
+      window.bizx.cmp.init({}, "consentmanager.net");
+    </script>
+
+    <script>
+      function initPiwik() {
+        var _paq = (window._paq = window._paq || []);
+        _paq.push([
+          "trackPageView",
+          document.title,
+          {
+            dimension1: "bibutils",
+            dimension2: "wiki",
+          },
+        ]);
+        _paq.push(["enableLinkTracking"]);
+        (function () {
+          var u = "//analytics.slashdotmedia.com/";
+          _paq.push(["setTrackerUrl", u + "sf.php"]);
+          _paq.push(["setSiteId", 39]);
+          var d = document,
+            g = d.createElement("script"),
+            s = d.getElementsByTagName("script")[0];
+          g.type = "text/javascript";
+          g.async = true;
+          g.defer = true;
+          g.src = u + "sf.js";
+          s.parentNode.insertBefore(g, s);
+        })();
+      }
+      bizx.cmp.ifConsent("publisher", ["storage", "measurement"], initPiwik);
+    </script>
+  </head>
+
+  <body>
+    <div id="content_base">
+      <div class="grid-24 pad">
+        <h2 class="dark title">
+          history_version2
+          <!-- actions -->
+          <small>
+            <a class="icon" href="history.html" title="History"
+              ><i class="fa fa-calendar"></i
+            ></a>
+
+            <a class="icon" href="feed" title="RSS"
+              ><i class="fa fa-rss"></i
+            ></a>
+            <a class="icon" href="../search.html" title="Search"
+              ><i class="fa fa-search"></i
+            ></a>
+          </small>
+          <!-- /actions -->
+        </h2>
+
+        <div class="editbox">
+          <div class="grid-9 gravatar sm">
+            <label class="simple">Authors: </label>
+
+            <a href="https://sourceforge.net/u/cdputnam/">
+              <img
+                src="https://secure.gravatar.com/avatar/f12e8bce72883cb9e8a165cc2e312289?r=pg&amp;d=https%3A%2F%2Fa.fsdn.com%2Fallura%2Fnf%2F1589309844%2F_ew_%2Ftheme%2Fsftheme%2Fimages%2Fsandiego%2Ficons%2Fdefault-avatar.png&s=16"
+                srcset="
+                  https://secure.gravatar.com/avatar/f12e8bce72883cb9e8a165cc2e312289?r=pg&amp;d=https%3A%2F%2Fa.fsdn.com%2Fallura%2Fnf%2F1589309844%2F_ew_%2Ftheme%2Fsftheme%2Fimages%2Fsandiego%2Ficons%2Fdefault-avatar.png&s=24.0 1.5x,
+                  https://secure.gravatar.com/avatar/f12e8bce72883cb9e8a165cc2e312289?r=pg&amp;d=https%3A%2F%2Fa.fsdn.com%2Fallura%2Fnf%2F1589309844%2F_ew_%2Ftheme%2Fsftheme%2Fimages%2Fsandiego%2Ficons%2Fdefault-avatar.png&s=32   2x
+                "
+                width="16"
+                height="16"
+                alt="Chris Putnam"
+                title="Chris Putnam"
+                class="emboss x16"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <div class="markdown_content">
+              <h2 id="218">2.18</h2>
+              <p>7/23/2004</p>
+              <p>XML2BIB</p>
+              <ul>
+                <li>
+                  ensure that there's no spaces or tabs in the auto-generated
+                  bibtex<br />
+                  keys
+                </li>
+                <li>bump version number to 1.9</li>
+              </ul>
+              <h2 id="217">2.17</h2>
+              <p>7/19/2004</p>
+              <p>BIB2XML</p>
+              <ul>
+                <li>
+                  fix bug where stdin input didn't write XML and REFERENCES
+                  wrappers
+                </li>
+                <li>fix up some name handling</li>
+                <li>lots of cleanups</li>
+                <li>add --verbose flag</li>
+                <li>add @STRING{} support to bibtex files</li>
+                <li>bump version number to 1.8</li>
+              </ul>
+              <p>ISI2XML</p>
+              <ul>
+                <li>fix bug in adding periods after initials of first names</li>
+                <li>
+                  fix bug where stdin input didn't write XML and REFERENCES
+                  wrappers
+                </li>
+                <li>convert isi2xml to use fields package</li>
+                <li>lots of cleanups</li>
+                <li>bump version number to 1.2</li>
+              </ul>
+              <p>RIS2XML</p>
+              <ul>
+                <li>fix bug in adding periods after initials of first names</li>
+                <li>
+                  fix bug causing last reference to be missed with corrupted
+                  end-of-record tag
+                </li>
+                <li>
+                  fix bug where stdin input didn't write XML and REFERENCES
+                  wrappers
+                </li>
+                <li>convert ris2xml to use fields package</li>
+                <li>lots of cleanups</li>
+                <li>bump version number to 1.12</li>
+              </ul>
+              <p>FIELDS</p>
+              <ul>
+                <li>bug fixes in field memory allocation from version 3</li>
+              </ul>
+              <h2 id="216">2.16</h2>
+              <p>4/26/2004</p>
+              <p>BIB2XML</p>
+              <ul>
+                <li>use fields_init()</li>
+                <li>version number 1.7</li>
+              </ul>
+              <p>END2XML</p>
+              <ul>
+                <li>
+                  fix restriction in which %0 tag was expected to begin all
+                  references
+                </li>
+                <li>use fields_init()</li>
+                <li>remove dead code</li>
+                <li>version number 1.3</li>
+              </ul>
+              <p>ISI2XML</p>
+              <ul>
+                <li>add periods after initials of first names</li>
+                <li>version number 1.1</li>
+              </ul>
+              <p>RIS2XML</p>
+              <ul>
+                <li>add periods after initials of first names</li>
+                <li>version number 1.11</li>
+              </ul>
+              <p>FIELDS</p>
+              <ul>
+                <li>
+                  bug fixes in field memory allocation error paths from version
+                  3
+                </li>
+                <li>add fields_init() function</li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>
+                  fix bug where non-numeric MONTH tags always output as January
+                </li>
+                <li>ensure no spaces are put into the bibtex reference key</li>
+                <li>version number 1.8</li>
+              </ul>
+              <h2 id="215">2.15</h2>
+              <p>2/19/2004</p>
+              <p>ISI2XML</p>
+              <ul>
+                <li>write program, version number 1.0</li>
+              </ul>
+              <h2 id="214">2.14</h2>
+              <p>12/03/2003</p>
+              <p>END2XML</p>
+              <ul>
+                <li>
+                  fix bug when non-endnote references are seen, get coredump
+                </li>
+                <li>bump version number to 1.2</li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>
+                  add -b, --brackets flag to allow data elements to be placed<br />
+                  in output instead of quotations
+                </li>
+                <li>
+                  add -w, --whitespace flag to include beautifying whitespace<br />
+                  in output
+                </li>
+                <li>clean up code a bit</li>
+                <li>bump version number to 1.7</li>
+              </ul>
+              <p>XMLREPLACE</p>
+              <ul>
+                <li>fix bug introduced when newstring library was upgraded</li>
+                <li>
+                  fix bug where it tried to add empty field/find/replace
+                  elements<br />
+                  on blank lines in the rule file
+                </li>
+                <li>use dynamic allocation for subnodes</li>
+                <li>clean up code a bit</li>
+                <li>bump version number to 1.1</li>
+              </ul>
+              <h2 id="213">2.13</h2>
+              <p>11/28/2003</p>
+              <p>BIB2XML</p>
+              <ul>
+                <li>
+                  fix bug where whitespace in long input lines was clobbered
+                </li>
+                <li>clean dead code</li>
+                <li>bump version number to 1.6</li>
+              </ul>
+              <h2 id="212">2.12</h2>
+              <p>11/07/2003</p>
+              <p>END2XML</p>
+              <ul>
+                <li>fix bug where input line buffer isn't cleared initially</li>
+                <li>
+                  fix initialization of fields that can core dump on
+                  non-endnote<br />
+                  input files
+                </li>
+                <li>bump version number to 1.1</li>
+              </ul>
+              <p>RIS2XML</p>
+              <ul>
+                <li>fix core dump in output_type() when no type exists</li>
+                <li>
+                  prevent empty references from being output with stray "ER
+                  -"<br />
+                  tags
+                </li>
+                <li>fix bug where input line buffer isn't cleared initially</li>
+                <li>bump version number to 1.10</li>
+              </ul>
+              <h2 id="211">2.11</h2>
+              <p>11/03/2003</p>
+              <p>GENERAL</p>
+              <ul>
+                <li>
+                  fix processing of HTML entities so that they don't require<br />
+                  xml entity definitions
+                </li>
+                <li>
+                  fix output of Latin-1 encoded elements so they don't put<br />
+                  bad characters into the XML
+                </li>
+                <li>extract is_ws() function for general use</li>
+              </ul>
+              <p>BIB2XML</p>
+              <ul>
+                <li>fix xml processing for first names</li>
+                <li>bump version number to 1.5</li>
+              </ul>
+              <p>END2XML</p>
+              <ul>
+                <li>
+                  new program (backported from bibutils 3.0 alpha), version
+                  number 1.0
+                </li>
+              </ul>
+              <p>RIS2XML</p>
+              <ul>
+                <li>
+                  fix core dumping if ris2xml doesn't see any RIS tags in a file
+                </li>
+                <li>
+                  use a more sophisticated line extractor to more cleanly
+                  handle<br />
+                  mac/dos/unix end-of-line differences in text files
+                  (backport<br />
+                  from bibutils 3.0 alpha)
+                </li>
+                <li>bump version number to 1.9</li>
+              </ul>
+              <p>MED2XML</p>
+              <ul>
+                <li>bump version number to 1.7</li>
+              </ul>
+              <h2 id="210">2.10</h2>
+              <p>11/01/2003</p>
+              <p>GENERAL</p>
+              <ul>
+                <li>
+                  ensure that quotations, less-than, greater-than, and
+                  ampersand<br />
+                  characters are recoded as proper xml and then decoded back
+                  to<br />
+                  normal characters afterwards
+                </li>
+              </ul>
+              <p>BIB2XML</p>
+              <ul>
+                <li>
+                  fix bug in which tags for entire list surround output for<br />
+                  each file rather than for one set around output from all files
+                </li>
+                <li>fix core dump when no references are recognized</li>
+                <li>bump version number to 1.4</li>
+              </ul>
+              <p>MED2XML</p>
+              <ul>
+                <li>
+                  fix bug where working groups (separated from author list by<br />
+                  a semi-colon) wasn't being properly removed and would<br />
+                  garble the last author
+                </li>
+                <li>
+                  fix bug where translated titles in brackets were garbled by<br />
+                  the parser
+                </li>
+                <li>
+                  fix bug in which tags for entire list surround output for<br />
+                  each file rather than for one set around output from all files
+                </li>
+                <li>remove used function output_abstract()</li>
+                <li>
+                  reduce unnecessary malloc'ing and free'ing of newstrings by<br />
+                  using newstr_empty() instead of newstr_free() for each<br />
+                  reference
+                </li>
+                <li>various cleanups</li>
+                <li>bump version number to 1.6</li>
+              </ul>
+              <p>RIS2XML</p>
+              <ul>
+                <li>
+                  fix bug in which tags for entire list surround output for<br />
+                  each file rather than for one set around output from all files
+                </li>
+                <li>bump version number to 1.8</li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>
+                  add -sd, --singledash command line option so page ranges can
+                  be<br />
+                  set to have a single dash between them (instead of the "--"
+                  default<br />
+                  which looks good in latex)
+                </li>
+                <li>bump version number to 1.6</li>
+              </ul>
+              <p>XML2EN</p>
+              <ul>
+                <li>bump version number to 1.2</li>
+              </ul>
+              <p>XML2RIS</p>
+              <ul>
+                <li>add number field output</li>
+                <li>bump version number to 1.3</li>
+              </ul>
+              <h2 id="29">2.9</h2>
+              <p>10/20/2003</p>
+              <p>BIB2XML</p>
+              <ul>
+                <li>
+                  fix problem where tex-encoded quotations weren't being ignored
+                </li>
+                <li>bump version number to 1.3</li>
+              </ul>
+              <p>RIS2XML</p>
+              <ul>
+                <li>
+                  fix problems in identification of tags with Mac-end of
+                  lines<br />
+                  with multi-line tagged fields
+                </li>
+                <li>bump version number to 1.7</li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>
+                  fix missing commas before ISSN, ISBN, and serial number<br />
+                  output
+                </li>
+                <li>
+                  add -fc or --finalcomma flag so that a final unnecessary<br />
+                  comma is added to the bibtex output for those that want it
+                </li>
+                <li>bump version number to 1.5</li>
+              </ul>
+              <h2 id="28">2.8</h2>
+              <p>10/16/2003</p>
+              <p>MED2XML</p>
+              <ul>
+                <li>fix bug in pages output</li>
+                <li>crush core dump</li>
+                <li>add number output for journals</li>
+                <li>bump version number to 1.5</li>
+              </ul>
+              <p>RIS2XML</p>
+              <ul>
+                <li>fix extra spaces in tag output</li>
+                <li>bump version number to 1.6</li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>
+                  have output distinguish between ISSN and ISBN and
+                  unidentifiable<br />
+                  serial number
+                </li>
+                <li>bump version number to 1.4</li>
+              </ul>
+              <h2 id="27">2.7</h2>
+              <p>9/02/2003</p>
+              <p>BIB2XML</p>
+              <ul>
+                <li>
+                  have Report and TechReport types be outputted as "REPORT" type
+                </li>
+              </ul>
+              <p>XML2EN</p>
+              <ul>
+                <li>output REPORT type as report</li>
+              </ul>
+              <h2 id="26">2.6</h2>
+              <p>8/29/2003</p>
+              <p>BIB2XML</p>
+              <ul>
+                <li>
+                  rename process_article() to more accurate process_cite()
+                </li>
+                <li>
+                  fix parsing code for bibtex files generated by pybliographer
+                </li>
+                <li>
+                  have all unrecognized tags outputed into xml file rather
+                  than<br />
+                  being silently dropped
+                </li>
+                <li>bump version number 1.2</li>
+              </ul>
+              <h2 id="25">2.5</h2>
+              <p>5/23/2003</p>
+              <p>UNIQBIB</p>
+              <ul>
+                <li>fix bug introduced by newstring library changes in 2.3</li>
+                <li>clean code a bit</li>
+                <li>bump version number 1.1</li>
+              </ul>
+              <h2 id="24">2.4</h2>
+              <p>4/02/2003</p>
+              <p>NEWSTR</p>
+              <ul>
+                <li>add newstr_empty() prototype</li>
+              </ul>
+              <p>RIS2XML</p>
+              <ul>
+                <li>
+                  fix core dump due to uninitialized variables (thanks Lukasz
+                  Helcyznski)
+                </li>
+                <li>bump version numer 1.5</li>
+              </ul>
+              <h2 id="23">2.3</h2>
+              <p>3/27/2003</p>
+              <p>NEWSTR</p>
+              <ul>
+                <li>
+                  dramatically increase the speed of the string library by
+                  tracking<br />
+                  string length and eliminate a number of N-squared algorithms
+                  that<br />
+                  looked for string terminators
+                </li>
+              </ul>
+              <p>RIS2XML</p>
+              <ul>
+                <li>
+                  ensure that null strings are not written out (from IEEE "RIS"
+                  format)
+                </li>
+                <li>if ABSTRACT is output, do NOTES2 as well</li>
+                <li>don't add spaces or tabs that lead data after tag</li>
+                <li>fix REFNUM naming from name/year with multiauthor names</li>
+                <li>
+                  fix incorrect appending of line to values in scidirect ris
+                  output
+                </li>
+                <li>change "error" about bad tags to "warning"</li>
+                <li>
+                  move all tags/values allocation/reallocation into addtag()
+                </li>
+                <li>
+                  fix bug that wouldn't initialize tags/values added after
+                  reallocation
+                </li>
+                <li>bump version number to 1.4</li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>ensure NOTES2 gets passed through</li>
+                <li>bump version number to 1.3</li>
+              </ul>
+              <h2 id="22">2.2</h2>
+              <p>2/16/2003</p>
+              <p>NEWSTR</p>
+              <ul>
+                <li>change name from newstr_clear() to newstr_free()</li>
+                <li>
+                  fix int/unsigned long issues in newstr_realloc() so that
+                  truncation<br />
+                  in string length does not occur by stuffing sizes down to ints
+                </li>
+                <li>fix incorrect fprintf() format for unsigned long value</li>
+                <li>
+                  similar int/unsigned long and unsigned int/unsigned long
+                  fixes<br />
+                  everywhere in the internal core of newstr.c
+                </li>
+                <li>create newstr_empty() to blank strings</li>
+              </ul>
+              <p>XML</p>
+              <ul>
+                <li>
+                  fix xml_extractdata() to return the end of the string if the
+                  tagged<br />
+                  information cannot be found rather than NULL
+                </li>
+                <li>switch to newstr_empty() in xml_readrefs()</li>
+              </ul>
+              <p>RIS2XML</p>
+              <ul>
+                <li>
+                  fix potential infinite loop in SUFF recognition for names
+                </li>
+                <li>handle multiple keywords separated by semi-colons</li>
+                <li>handle multiple authors separated by semi-colons</li>
+                <li>handle items like abstracts that can go multi-line</li>
+                <li>bump version to 1.3</li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>
+                  month now uses three letter month abbreviation, not number
+                </li>
+                <li>
+                  add KEYWORDS, SERIALNUM (ISBN), ISSUE (NUMBER), NOTES
+                  (NOTE),<br />
+                  REPRINTSTATUS, SECONDARYTITLE
+                </li>
+                <li>bump version to 1.2</li>
+              </ul>
+              <p>XML2RIS</p>
+              <ul>
+                <li>generalize author output to person output</li>
+                <li>handle suffix output</li>
+                <li>add proper editor output</li>
+                <li>remove process_authors()</li>
+                <li>add seriesauthors output</li>
+                <li>bump version to 1.2</li>
+              </ul>
+              <p>XMLREPLACE</p>
+              <ul>
+                <li>remove redefined TRUE/FALSE macros</li>
+              </ul>
+              <h2 id="21">2.1</h2>
+              <p>2/10/2003</p>
+              <p>GENERAL</p>
+              <ul>
+                <li>fix build process so easier on MacOSX's</li>
+                <li>add bibutils suite version stamp</li>
+              </ul>
+              <p>XML</p>
+              <ul>
+                <li>
+                  change name space: find_xmlstartdata() to
+                  xml_findstartdata(),<br />
+                  find_xmlenddata() to xml_findenddata(),<br />
+                  extract_xmldata() to xml_extractdata()
+                </li>
+                <li>
+                  xml_extractdata() no longer takes pointers to newstrings
+                  and<br />
+                  does not allocate them
+                </li>
+                <li>
+                  make sure xml_extractdata() clears the output string so that
+                  an<br />
+                  empty output indicates no tag
+                </li>
+                <li>
+                  clean-up xml_readrefs() and move to library xml.c--it's
+                  getting<br />
+                  replicated in xml2bib, xml2ris, xml2en anyway
+                </li>
+              </ul>
+              <p>NEWSTR</p>
+              <ul>
+                <li>
+                  add newstring_segcat() and newstring_segcpy() to ease copying
+                  sections<br />
+                  out of other strings
+                </li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>fix xml2bib's usage of xml_extractdata()</li>
+                <li>
+                  xml2bib now passes a newstring of the extracted reference
+                  rather than a<br />
+                  bare string
+                </li>
+                <li>
+                  change bibtex output to use braces around each reference
+                  rather than<br />
+                  parentheses (bibtex takes both, but WinEdt v5.3 is far more
+                  useful<br />
+                  to the user if braces are used).
+                </li>
+                <li>remove dead code, switch to xml_readref()</li>
+                <li>
+                  in process_article() tags were used for both xml and bibtex,
+                  which worked<br />
+                  due to the way I set up the xml stuff, but is very difficult
+                  to ensure,<br />
+                  so setup xmltags[] and bibtextags[] so they can be different
+                </li>
+                <li>handle URL items</li>
+                <li>
+                  handle editors like authors and generalize process_authors()
+                  to <br />
+                  process_people()
+                </li>
+                <li>handle name suffixes in process_people()</li>
+                <li>add -h/--help -v/--version flags</li>
+                <li>add month/day support to bibtex</li>
+              </ul>
+              <p>XML2RIS</p>
+              <ul>
+                <li>fix xml2ris's usage of xml_extractdata()</li>
+                <li>
+                  legal tags can have uppercase letter <em>or</em> digit at
+                  second position, a<br />
+                  change from the older (circa 1996) documentation
+                </li>
+                <li>
+                  process_article() gets newstring rather than a bare string
+                </li>
+                <li>
+                  remove #define for number of fields in process_article()
+                </li>
+                <li>
+                  every tagged line must end in carrige return/line feed
+                  combination<br />
+                  (ASCII 13 10), another change from the circa 1996 docs -- fix
+                </li>
+                <li>
+                  REFNUM in the XML should map to the ID tag, not the KW
+                  (keyword) tag
+                </li>
+                <li>add NOTES/N1, SERIALNUM/SN, ISSUE/IS, URL/UR</li>
+                <li>remove dead code, switch to xml_readref()</li>
+                <li>fix year output to handle year/month/day/other format</li>
+                <li>add -h/--help -v/--version flags</li>
+              </ul>
+              <p>XML2EN</p>
+              <ul>
+                <li>fix xml2en's usage of xml_extractdata()</li>
+                <li>
+                  process_article() gets newstring rather than a bare string
+                </li>
+                <li>
+                  remove #define for number of fields in process_article()
+                </li>
+                <li>remove dead code, migrate to central xml_readref()</li>
+                <li>add -h/--help -v/--version flags</li>
+                <li>
+                  switch from the tab-deliminated format to the "Tagged EndNote
+                  Import"<br />
+                  format
+                </li>
+              </ul>
+              <p>RIS2XML</p>
+              <ul>
+                <li>
+                  update tag definition so that second character can be
+                  either<br />
+                  uppercase letter or digit
+                </li>
+                <li>
+                  handle all journal tags: JO/JA/JF, picking the abbreviated
+                  forms<br />
+                  (user-defined J1/J2 then standard JO/JA) over the full form
+                  (JF) if present
+                </li>
+                <li>
+                  handle all primary title tags T1/TI/CT, secondary title T2,
+                  series title<br />
+                  T3, and booktitle BT
+                </li>
+                <li>
+                  take REFNUM from ID first, or build from author/year if ID
+                  absent
+                </li>
+                <li>handle N1 - notes, N2/AB -abstract, UR - URL</li>
+                <li>
+                  handle AU/A1 - primary authors, A2/ED - editors, A3 - series
+                  authors
+                </li>
+                <li>handle KW - keywords</li>
+                <li>add suffix support to name format</li>
+                <li>handle date format year/month/day/other fields</li>
+                <li>add -h/--help -v/--version flags</li>
+              </ul>
+              <p>MED2XML</p>
+              <ul>
+                <li>add -h/--help -v/--version flags</li>
+                <li>add month and day parsing</li>
+              </ul>
+              <p>BIB2XML</p>
+              <ul>
+                <li>remove dead code</li>
+                <li>add -h/--help -v/--version flags</li>
+                <li>add month and day support</li>
+              </ul>
+              <p>XMLREPLACE</p>
+              <ul>
+                <li>write program</li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            id="create_wiki_page_holder"
+            title="Create New Page"
+            style="display: none;"
+          >
+            <form>
+              <label class="grid-2">Name</label>
+              <div class="grid-7"><input type="text" name="name" /></div>
+            </form>
+          </div>
+        </div>
+
+        <hr style="margin-top: 1em; margin-bottom: 2em; clear: both;" />
+
+        <div id="lightbox_confirm" class="modal" style="display: none;">
+          <a class="icon close" href="index.html@version=3.html#" title="Close"
+            ><i class="fa fa-close"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

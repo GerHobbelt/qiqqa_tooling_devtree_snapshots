@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>libzstd_examples</ProjectName>
+    <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518F4FEB6E4}</ProjectGuid>
+    <RootNamespace>libzstd_examples</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project.props" Label="SolutionWideSettings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.28307.799</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+<ItemDefinitionGroup>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <BrowseInformation>false</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <DisableSpecificWarnings>4018;4100;4127;4180;4206;4244;4267;5105;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <SDLCheck>false</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <ConformanceMode>true</ConformanceMode>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableUnitySupport>true</EnableUnitySupport>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+</ItemDefinitionGroup>
+<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZSTD;ZSTD_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/zstd/lib/common;..\..\thirdparty\owemdjee\zstd\zlibWrapper;../../thirdparty/owemdjee/zstd/contrib/seekable_format;..\..\thirdparty\owemdjee\zstd\programs;..\..\thirdparty\owemdjee\pthread-win32;..\..\thirdparty\zlib;..\..\scripts\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZSTD_NOBENCH;BUILD_MONOLITHIC;BUILDING_LIBZSTD;ZSTD_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZSTD;ZSTD_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/zstd/lib/common;..\..\thirdparty\owemdjee\zstd\zlibWrapper;../../thirdparty/owemdjee/zstd/contrib/seekable_format;..\..\thirdparty\owemdjee\zstd\programs;..\..\thirdparty\owemdjee\pthread-win32;..\..\thirdparty\zlib;..\..\scripts\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZSTD;ZSTD_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/zstd/lib/common;..\..\thirdparty\owemdjee\zstd\zlibWrapper;../../thirdparty/owemdjee/zstd/contrib/seekable_format;..\..\thirdparty\owemdjee\zstd\programs;..\..\thirdparty\owemdjee\pthread-win32;..\..\thirdparty\zlib;..\..\scripts\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZSTD_NOBENCH;BUILD_MONOLITHIC;BUILDING_LIBZSTD;ZSTD_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZSTD;ZSTD_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/zstd/lib/common;..\..\thirdparty\owemdjee\zstd\zlibWrapper;../../thirdparty/owemdjee/zstd/contrib/seekable_format;..\..\thirdparty\owemdjee\zstd\programs;..\..\thirdparty\owemdjee\pthread-win32;..\..\thirdparty\zlib;..\..\scripts\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZSTD;ZSTD_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/zstd/lib/common;..\..\thirdparty\owemdjee\zstd\zlibWrapper;../../thirdparty/owemdjee/zstd/contrib/seekable_format;..\..\thirdparty\owemdjee\zstd\programs;..\..\thirdparty\owemdjee\pthread-win32;..\..\thirdparty\zlib;..\..\scripts\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZSTD_NOBENCH;BUILD_MONOLITHIC;BUILDING_LIBZSTD;ZSTD_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZSTD;ZSTD_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/zstd/lib/common;..\..\thirdparty\owemdjee\zstd\zlibWrapper;../../thirdparty/owemdjee/zstd/contrib/seekable_format;..\..\thirdparty\owemdjee\zstd\programs;..\..\thirdparty\owemdjee\pthread-win32;..\..\thirdparty\zlib;..\..\scripts\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZSTD;ZSTD_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/zstd/lib/common;..\..\thirdparty\owemdjee\zstd\zlibWrapper;../../thirdparty/owemdjee/zstd/contrib/seekable_format;..\..\thirdparty\owemdjee\zstd\programs;..\..\thirdparty\owemdjee\pthread-win32;..\..\thirdparty\zlib;..\..\scripts\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZSTD_NOBENCH;BUILD_MONOLITHIC;BUILDING_LIBZSTD;ZSTD_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZSTD;ZSTD_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/zstd/lib/common;..\..\thirdparty\owemdjee\zstd\zlibWrapper;../../thirdparty/owemdjee/zstd/contrib/seekable_format;..\..\thirdparty\owemdjee\zstd\programs;..\..\thirdparty\owemdjee\pthread-win32;..\..\thirdparty\zlib;..\..\scripts\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/contrib/diagnose_corruption/check_flipped_bits.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/contrib/gen_html/gen_html.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/contrib/largeNbDicts/largeNbDicts.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/contrib/match_finders/zstd_edist.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/contrib/pzstd/Options.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/contrib/pzstd/Pzstd.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/contrib/pzstd/SkippableFrame.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/contrib/pzstd/main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/contrib/recovery/recover_directory.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/contrib/seekable_format/examples/parallel_compression.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/contrib/seekable_format/examples/parallel_processing.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/contrib/seekable_format/examples/seekable_compression.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/contrib/seekable_format/examples/seekable_decompression.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/contrib/seekable_format/examples/seekable_decompression_mem.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/contrib/seekable_format/tests/seekable_tests.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/contrib/seekable_format/zstdseek_compress.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/contrib/seekable_format/zstdseek_decompress.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/examples/dictionary_compression.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/examples/dictionary_decompression.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/examples/multiple_simple_compression.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/examples/multiple_streaming_compression.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/examples/simple_compression.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/examples/simple_decompression.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/examples/streaming_compression.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/examples/streaming_compression_thread_pool.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/examples/streaming_decompression.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/examples/streaming_memory_usage.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/common/debug.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/common/entropy_common.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/common/error_private.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/common/fse_decompress.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/common/pool.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/common/threading.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/common/xxhash.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/common/zstd_common.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/compress/fse_compress.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/compress/hist.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/compress/huf_compress.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/compress/zstd_compress.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/compress/zstd_compress_literals.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/compress/zstd_compress_sequences.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/compress/zstd_compress_superblock.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/compress/zstd_double_fast.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/compress/zstd_fast.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/compress/zstd_lazy.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/compress/zstd_ldm.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/compress/zstd_opt.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/compress/zstdmt_compress.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/decompress/huf_decompress.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/decompress/zstd_ddict.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/decompress/zstd_decompress.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/decompress/zstd_decompress_block.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/deprecated/zbuff_common.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/deprecated/zbuff_compress.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/deprecated/zbuff_decompress.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/dictBuilder/cover.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/dictBuilder/divsufsort.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/dictBuilder/fastcover.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/dictBuilder/zdict.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/legacy/zstd_v01.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/legacy/zstd_v02.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/legacy/zstd_v03.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/legacy/zstd_v04.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/legacy/zstd_v05.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/legacy/zstd_v06.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/lib/legacy/zstd_v07.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/programs/benchfn.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/programs/benchzstd.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/programs/datagen.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/programs/dibio.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/programs/fileio.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/programs/fileio_asyncio.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/programs/timefn.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/programs/util.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/programs/zstdcli.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/programs/zstdcli_trace.c" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/contrib/match_finders/zstd_edist.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/contrib/pzstd/ErrorHolder.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/contrib/pzstd/Logging.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/contrib/pzstd/Options.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/contrib/pzstd/Pzstd.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/contrib/pzstd/SkippableFrame.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/contrib/pzstd/test/RoundTrip.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/contrib/pzstd/utils/Buffer.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/contrib/pzstd/utils/FileSystem.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/contrib/pzstd/utils/Likely.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/contrib/pzstd/utils/Range.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/contrib/pzstd/utils/ResourcePool.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/contrib/pzstd/utils/ScopeGuard.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/contrib/pzstd/utils/ThreadPool.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/contrib/pzstd/utils/WorkQueue.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/contrib/seekable_format/zstd_seekable.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/doc/educational_decoder/zstd_decompress.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/examples/common.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/common/bits.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/common/bitstream.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/common/compiler.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/common/cpu.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/common/debug.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/common/error_private.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/common/fse.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/common/huf.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/common/mem.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/common/pool.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/common/portability_macros.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/common/threading.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/common/xxhash.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/common/zstd_deps.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/common/zstd_internal.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/common/zstd_trace.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/compress/clevels.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/compress/hist.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/compress/zstd_compress_internal.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/compress/zstd_compress_literals.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/compress/zstd_compress_sequences.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/compress/zstd_compress_superblock.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/compress/zstd_cwksp.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/compress/zstd_double_fast.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/compress/zstd_fast.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/compress/zstd_lazy.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/compress/zstd_ldm.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/compress/zstd_ldm_geartab.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/compress/zstd_opt.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/compress/zstdmt_compress.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/decompress/zstd_ddict.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/decompress/zstd_decompress_block.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/decompress/zstd_decompress_internal.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/deprecated/zbuff.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/dictBuilder/cover.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/dictBuilder/divsufsort.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/legacy/zstd_legacy.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/legacy/zstd_v01.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/legacy/zstd_v02.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/legacy/zstd_v03.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/legacy/zstd_v04.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/legacy/zstd_v05.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/legacy/zstd_v06.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/legacy/zstd_v07.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/zdict.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/zstd.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/lib/zstd_errors.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/programs/benchfn.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/programs/benchzstd.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/programs/datagen.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/programs/dibio.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/programs/fileio.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/programs/fileio_asyncio.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/programs/fileio_common.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/programs/fileio_types.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/programs/monolithic_examples.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/programs/platform.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/programs/timefn.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/programs/util.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/programs/windres/verrsrc.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/zstd/programs/zstdcli_trace.h" />
+    <Image Include="../../thirdparty/owemdjee/zstd/build/single_file_libs/examples/testcard.png" />
+    <Image Include="../../thirdparty/owemdjee/zstd/contrib/pzstd/images/Cspeed.png" />
+    <Image Include="../../thirdparty/owemdjee/zstd/contrib/pzstd/images/Dspeed.png" />
+    <Image Include="../../thirdparty/owemdjee/zstd/doc/images/CSpeed2.png" />
+    <Image Include="../../thirdparty/owemdjee/zstd/doc/images/DCspeed5.png" />
+    <Image Include="../../thirdparty/owemdjee/zstd/doc/images/DSpeed3.png" />
+    <Image Include="../../thirdparty/owemdjee/zstd/doc/images/cdict_v136.png" />
+    <Image Include="../../thirdparty/owemdjee/zstd/doc/images/dict-cr.png" />
+    <Image Include="../../thirdparty/owemdjee/zstd/doc/images/dict-cs.png" />
+    <Image Include="../../thirdparty/owemdjee/zstd/doc/images/dict-ds.png" />
+    <Image Include="../../thirdparty/owemdjee/zstd/doc/images/zstd_cdict_v1_3_5.png" />
+    <Image Include="../../thirdparty/owemdjee/zstd/doc/images/zstd_logo86.png" />
+    <Text Include="../../thirdparty/owemdjee/zstd/CHANGELOG" />
+    <Text Include="../../thirdparty/owemdjee/zstd/CODE_OF_CONDUCT.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/CONTRIBUTING.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/README.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/TESTING.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/README.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/VS_scripts/README.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/VS_scripts/build.VS2010.cmd" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/VS_scripts/build.VS2012.cmd" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/VS_scripts/build.VS2013.cmd" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/VS_scripts/build.VS2015.cmd" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/VS_scripts/build.VS2017.cmd" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/VS_scripts/build.VS2017Community.cmd" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/VS_scripts/build.VS2017Enterprise.cmd" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/VS_scripts/build.VS2017Professional.cmd" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/VS_scripts/build.generic.cmd" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/cmake/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/cmake/README.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/cmake/contrib/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/cmake/contrib/gen_html/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/cmake/contrib/pzstd/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/cmake/lib/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/cmake/lib/cmake_uninstall.cmake.in" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/cmake/programs/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/cmake/tests/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/meson/GetZstdLibraryVersion.py" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/meson/InstallSymlink.py" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/meson/README.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/meson/meson_options.txt" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/meson/tests/valgrindTest.py" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/single_file_libs/README.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/single_file_libs/build_decoder_test.sh" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/single_file_libs/build_library_test.sh" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/single_file_libs/combine.py" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/single_file_libs/combine.sh" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/single_file_libs/create_single_file_decoder.sh" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/single_file_libs/create_single_file_library.sh" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/single_file_libs/examples/README.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/contrib/VS2005/README.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/contrib/docker/README.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/contrib/freestanding_lib/freestanding.py" />
+    <Text Include="../../thirdparty/owemdjee/zstd/contrib/gen_html/README.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/contrib/gen_html/gen-zstd-manual.sh" />
+    <Text Include="../../thirdparty/owemdjee/zstd/contrib/largeNbDicts/README.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/contrib/linux-kernel/README.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/contrib/linux-kernel/btrfs-benchmark.sh" />
+    <Text Include="../../thirdparty/owemdjee/zstd/contrib/linux-kernel/btrfs-extract-benchmark.sh" />
+    <Text Include="../../thirdparty/owemdjee/zstd/contrib/linux-kernel/squashfs-benchmark.sh" />
+    <Text Include="../../thirdparty/owemdjee/zstd/contrib/linux-kernel/test/macro-test.sh" />
+    <Text Include="../../thirdparty/owemdjee/zstd/contrib/match_finders/README.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/contrib/premake/premake4.lua" />
+    <Text Include="../../thirdparty/owemdjee/zstd/contrib/premake/zstd.lua" />
+    <Text Include="../../thirdparty/owemdjee/zstd/contrib/pzstd/README.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/contrib/seekable_format/zstd_seekable_compression_format.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/doc/README.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/doc/decompressor_errata.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/doc/educational_decoder/README.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/doc/zstd_compression_format.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/examples/README.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/lib/README.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/lib/decompress/huf_decompress_amd64.S" />
+    <Text Include="../../thirdparty/owemdjee/zstd/lib/dll/example/README.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/lib/dll/example/build_package.bat" />
+    <Text Include="../../thirdparty/owemdjee/zstd/lib/libzstd.pc.in" />
+    <Text Include="../../thirdparty/owemdjee/zstd/programs/README.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/programs/zstd.1.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/programs/zstdgrep.1.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/programs/zstdless.1.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/tests/DEPRECATED-test-zstd-speed.py" />
+    <Text Include="../../thirdparty/owemdjee/zstd/tests/README.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/zlibWrapper/README.md" />
+  </ItemGroup>
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />
+  </ImportGroup>
+</Project>
+  

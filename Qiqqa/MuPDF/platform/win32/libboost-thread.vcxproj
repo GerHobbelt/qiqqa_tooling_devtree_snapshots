@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>libboost-thread</ProjectName>
+    <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FFA68975}</ProjectGuid>
+    <RootNamespace>libboost-thread</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project.props" Label="SolutionWideSettings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.28307.799</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+<ItemDefinitionGroup>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <BrowseInformation>false</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <DisableSpecificWarnings>4018;4100;4127;4180;4206;4244;4267;5105;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <SDLCheck>false</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <ConformanceMode>true</ConformanceMode>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableUnitySupport>true</EnableUnitySupport>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+</ItemDefinitionGroup>
+<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBBOOST;BOOST_STATICLIB;CHM_NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/boost;../../thirdparty/owemdjee/boost/libs/accumulators/include;../../thirdparty/owemdjee/boost/libs/algorithm/include;../../thirdparty/owemdjee/boost/libs/align/include;../../thirdparty/owemdjee/boost/libs/any/include;../../thirdparty/owemdjee/boost/libs/array/include;../../thirdparty/owemdjee/boost/libs/asio/include;../../thirdparty/owemdjee/boost/libs/assert/include;../../thirdparty/owemdjee/boost/libs/assign/include;../../thirdparty/owemdjee/boost/libs/atomic/include;../../thirdparty/owemdjee/boost/libs/beast/include;../../thirdparty/owemdjee/boost/libs/beast/test/extras/include;../../thirdparty/owemdjee/boost/libs/bimap/include;../../thirdparty/owemdjee/boost/libs/bind/include;../../thirdparty/owemdjee/boost/libs/callable_traits/include;../../thirdparty/owemdjee/boost/libs/chrono/include;../../thirdparty/owemdjee/boost/libs/circular_buffer/include;../../thirdparty/owemdjee/boost/libs/compatibility/include;../../thirdparty/owemdjee/boost/libs/compute/include;../../thirdparty/owemdjee/boost/libs/concept_check/include;../../thirdparty/owemdjee/boost/libs/config/include;../../thirdparty/owemdjee/boost/libs/container/include;../../thirdparty/owemdjee/boost/libs/container_hash/include;../../thirdparty/owemdjee/boost/libs/context/include;../../thirdparty/owemdjee/boost/libs/contract/include;../../thirdparty/owemdjee/boost/libs/conversion/include;../../thirdparty/owemdjee/boost/libs/convert/include;../../thirdparty/owemdjee/boost/libs/core/include;../../thirdparty/owemdjee/boost/libs/coroutine/include;../../thirdparty/owemdjee/boost/libs/coroutine2/include;../../thirdparty/owemdjee/boost/libs/crc/include;../../thirdparty/owemdjee/boost/libs/date_time/include;../../thirdparty/owemdjee/boost/libs/describe/include;../../thirdparty/owemdjee/boost/libs/detail/include;../../thirdparty/owemdjee/boost/libs/dll/include;../../thirdparty/owemdjee/boost/libs/dynamic_bitset/include;../../thirdparty/owemdjee/boost/libs/endian/include;../../thirdparty/owemdjee/boost/libs/exception/include;../../thirdparty/owemdjee/boost/libs/fiber/include;../../thirdparty/owemdjee/boost/libs/filesystem/include;../../thirdparty/owemdjee/boost/libs/flyweight/include;../../thirdparty/owemdjee/boost/libs/foreach/include;../../thirdparty/owemdjee/boost/libs/format/include;../../thirdparty/owemdjee/boost/libs/function/include;../../thirdparty/owemdjee/boost/libs/functional/include;../../thirdparty/owemdjee/boost/libs/function_types/include;../../thirdparty/owemdjee/boost/libs/fusion/include;../../thirdparty/owemdjee/boost/libs/geometry/include;../../thirdparty/owemdjee/boost/libs/gil/include;../../thirdparty/owemdjee/boost/libs/graph/include;../../thirdparty/owemdjee/boost/libs/graph_parallel/include;../../thirdparty/owemdjee/boost/libs/hana/include;../../thirdparty/owemdjee/boost/libs/heap/include;../../thirdparty/owemdjee/boost/libs/histogram/include;../../thirdparty/owemdjee/boost/libs/hof/include;../../thirdparty/owemdjee/boost/libs/icl/include;../../thirdparty/owemdjee/boost/libs/integer/include;../../thirdparty/owemdjee/boost/libs/interprocess/include;../../thirdparty/owemdjee/boost/libs/intrusive/include;../../thirdparty/owemdjee/boost/libs/io/include;../../thirdparty/owemdjee/boost/libs/iostreams/include;../../thirdparty/owemdjee/boost/libs/iterator/include;../../thirdparty/owemdjee/boost/libs/json/include;../../thirdparty/owemdjee/boost/libs/lambda/include;../../thirdparty/owemdjee/boost/libs/lambda2/include;../../thirdparty/owemdjee/boost/libs/leaf/include;../../thirdparty/owemdjee/boost/libs/lexical_cast/include;../../thirdparty/owemdjee/boost/libs/locale/include;../../thirdparty/owemdjee/boost/libs/local_function/include;../../thirdparty/owemdjee/boost/libs/lockfree/include;../../thirdparty/owemdjee/boost/libs/log/include;../../thirdparty/owemdjee/boost/libs/logic/include;../../thirdparty/owemdjee/boost/libs/math/include;../../thirdparty/owemdjee/boost/libs/metaparse/include;../../thirdparty/owemdjee/boost/libs/move/include;../../thirdparty/owemdjee/boost/libs/mp11/include;../../thirdparty/owemdjee/boost/libs/mpi/include;../../thirdparty/owemdjee/boost/libs/mpl/include;../../thirdparty/owemdjee/boost/libs/msm/include;../../thirdparty/owemdjee/boost/libs/multiprecision/include;../../thirdparty/owemdjee/boost/libs/multi_array/include;../../thirdparty/owemdjee/boost/libs/multi_index/include;../../thirdparty/owemdjee/boost/libs/nowide/include;../../thirdparty/owemdjee/boost/libs/numeric/conversion/include;../../thirdparty/owemdjee/boost/libs/numeric/interval/include;../../thirdparty/owemdjee/boost/libs/numeric/odeint/include;../../thirdparty/owemdjee/boost/libs/numeric/ublas/include;../../thirdparty/owemdjee/boost/libs/optional/include;../../thirdparty/owemdjee/boost/libs/outcome/include;../../thirdparty/owemdjee/boost/libs/parameter/include;../../thirdparty/owemdjee/boost/libs/parameter_python/include;../../thirdparty/owemdjee/boost/libs/pfr/include;../../thirdparty/owemdjee/boost/libs/phoenix/include;../../thirdparty/owemdjee/boost/libs/polygon/include;../../thirdparty/owemdjee/boost/libs/poly_collection/include;../../thirdparty/owemdjee/boost/libs/pool/include;../../thirdparty/owemdjee/boost/libs/predef/include;../../thirdparty/owemdjee/boost/libs/preprocessor/include;../../thirdparty/owemdjee/boost/libs/process/include;../../thirdparty/owemdjee/boost/libs/program_options/include;../../thirdparty/owemdjee/boost/libs/property_map/include;../../thirdparty/owemdjee/boost/libs/property_map_parallel/include;../../thirdparty/owemdjee/boost/libs/property_tree/include;../../thirdparty/owemdjee/boost/libs/proto/include;../../thirdparty/owemdjee/boost/libs/ptr_container/include;../../thirdparty/owemdjee/boost/libs/python/include;../../thirdparty/owemdjee/boost/libs/qvm/include;../../thirdparty/owemdjee/boost/libs/random/include;../../thirdparty/owemdjee/boost/libs/range/include;../../thirdparty/owemdjee/boost/libs/ratio/include;../../thirdparty/owemdjee/boost/libs/rational/include;../../thirdparty/owemdjee/boost/libs/regex/include;../../thirdparty/owemdjee/boost/libs/safe_numerics/include;../../thirdparty/owemdjee/boost/libs/scope_exit/include;../../thirdparty/owemdjee/boost/libs/serialization/include;../../thirdparty/owemdjee/boost/libs/signals2/include;../../thirdparty/owemdjee/boost/libs/smart_ptr/include;../../thirdparty/owemdjee/boost/libs/sort/include;../../thirdparty/owemdjee/boost/libs/spirit/include;../../thirdparty/owemdjee/boost/libs/stacktrace/include;../../thirdparty/owemdjee/boost/libs/statechart/include;../../thirdparty/owemdjee/boost/libs/static_assert/include;../../thirdparty/owemdjee/boost/libs/static_string/include;../../thirdparty/owemdjee/boost/libs/stl_interfaces/include;../../thirdparty/owemdjee/boost/libs/system/include;../../thirdparty/owemdjee/boost/libs/test/include;../../thirdparty/owemdjee/boost/libs/thread/include;../../thirdparty/owemdjee/boost/libs/throw_exception/include;../../thirdparty/owemdjee/boost/libs/timer/include;../../thirdparty/owemdjee/boost/libs/tokenizer/include;../../thirdparty/owemdjee/boost/libs/tti/include;../../thirdparty/owemdjee/boost/libs/tuple/include;../../thirdparty/owemdjee/boost/libs/typeof/include;../../thirdparty/owemdjee/boost/libs/type_erasure/include;../../thirdparty/owemdjee/boost/libs/type_index/include;../../thirdparty/owemdjee/boost/libs/type_traits/include;../../thirdparty/owemdjee/boost/libs/units/include;../../thirdparty/owemdjee/boost/libs/unordered/include;../../thirdparty/owemdjee/boost/libs/utility/include;../../thirdparty/owemdjee/boost/libs/uuid/include;../../thirdparty/owemdjee/boost/libs/variant/include;../../thirdparty/owemdjee/boost/libs/variant2/include;../../thirdparty/owemdjee/boost/libs/vmd/include;../../thirdparty/owemdjee/boost/libs/wave/include;../../thirdparty/owemdjee/boost/libs/winapi/include;../../thirdparty/owemdjee/boost/libs/xpressive/include;../../thirdparty/owemdjee/boost/libs/yap/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBBOOST;BOOST_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBBOOST;BOOST_STATICLIB;CHM_NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/boost;../../thirdparty/owemdjee/boost/libs/accumulators/include;../../thirdparty/owemdjee/boost/libs/algorithm/include;../../thirdparty/owemdjee/boost/libs/align/include;../../thirdparty/owemdjee/boost/libs/any/include;../../thirdparty/owemdjee/boost/libs/array/include;../../thirdparty/owemdjee/boost/libs/asio/include;../../thirdparty/owemdjee/boost/libs/assert/include;../../thirdparty/owemdjee/boost/libs/assign/include;../../thirdparty/owemdjee/boost/libs/atomic/include;../../thirdparty/owemdjee/boost/libs/beast/include;../../thirdparty/owemdjee/boost/libs/beast/test/extras/include;../../thirdparty/owemdjee/boost/libs/bimap/include;../../thirdparty/owemdjee/boost/libs/bind/include;../../thirdparty/owemdjee/boost/libs/callable_traits/include;../../thirdparty/owemdjee/boost/libs/chrono/include;../../thirdparty/owemdjee/boost/libs/circular_buffer/include;../../thirdparty/owemdjee/boost/libs/compatibility/include;../../thirdparty/owemdjee/boost/libs/compute/include;../../thirdparty/owemdjee/boost/libs/concept_check/include;../../thirdparty/owemdjee/boost/libs/config/include;../../thirdparty/owemdjee/boost/libs/container/include;../../thirdparty/owemdjee/boost/libs/container_hash/include;../../thirdparty/owemdjee/boost/libs/context/include;../../thirdparty/owemdjee/boost/libs/contract/include;../../thirdparty/owemdjee/boost/libs/conversion/include;../../thirdparty/owemdjee/boost/libs/convert/include;../../thirdparty/owemdjee/boost/libs/core/include;../../thirdparty/owemdjee/boost/libs/coroutine/include;../../thirdparty/owemdjee/boost/libs/coroutine2/include;../../thirdparty/owemdjee/boost/libs/crc/include;../../thirdparty/owemdjee/boost/libs/date_time/include;../../thirdparty/owemdjee/boost/libs/describe/include;../../thirdparty/owemdjee/boost/libs/detail/include;../../thirdparty/owemdjee/boost/libs/dll/include;../../thirdparty/owemdjee/boost/libs/dynamic_bitset/include;../../thirdparty/owemdjee/boost/libs/endian/include;../../thirdparty/owemdjee/boost/libs/exception/include;../../thirdparty/owemdjee/boost/libs/fiber/include;../../thirdparty/owemdjee/boost/libs/filesystem/include;../../thirdparty/owemdjee/boost/libs/flyweight/include;../../thirdparty/owemdjee/boost/libs/foreach/include;../../thirdparty/owemdjee/boost/libs/format/include;../../thirdparty/owemdjee/boost/libs/function/include;../../thirdparty/owemdjee/boost/libs/functional/include;../../thirdparty/owemdjee/boost/libs/function_types/include;../../thirdparty/owemdjee/boost/libs/fusion/include;../../thirdparty/owemdjee/boost/libs/geometry/include;../../thirdparty/owemdjee/boost/libs/gil/include;../../thirdparty/owemdjee/boost/libs/graph/include;../../thirdparty/owemdjee/boost/libs/graph_parallel/include;../../thirdparty/owemdjee/boost/libs/hana/include;../../thirdparty/owemdjee/boost/libs/heap/include;../../thirdparty/owemdjee/boost/libs/histogram/include;../../thirdparty/owemdjee/boost/libs/hof/include;../../thirdparty/owemdjee/boost/libs/icl/include;../../thirdparty/owemdjee/boost/libs/integer/include;../../thirdparty/owemdjee/boost/libs/interprocess/include;../../thirdparty/owemdjee/boost/libs/intrusive/include;../../thirdparty/owemdjee/boost/libs/io/include;../../thirdparty/owemdjee/boost/libs/iostreams/include;../../thirdparty/owemdjee/boost/libs/iterator/include;../../thirdparty/owemdjee/boost/libs/json/include;../../thirdparty/owemdjee/boost/libs/lambda/include;../../thirdparty/owemdjee/boost/libs/lambda2/include;../../thirdparty/owemdjee/boost/libs/leaf/include;../../thirdparty/owemdjee/boost/libs/lexical_cast/include;../../thirdparty/owemdjee/boost/libs/locale/include;../../thirdparty/owemdjee/boost/libs/local_function/include;../../thirdparty/owemdjee/boost/libs/lockfree/include;../../thirdparty/owemdjee/boost/libs/log/include;../../thirdparty/owemdjee/boost/libs/logic/include;../../thirdparty/owemdjee/boost/libs/math/include;../../thirdparty/owemdjee/boost/libs/metaparse/include;../../thirdparty/owemdjee/boost/libs/move/include;../../thirdparty/owemdjee/boost/libs/mp11/include;../../thirdparty/owemdjee/boost/libs/mpi/include;../../thirdparty/owemdjee/boost/libs/mpl/include;../../thirdparty/owemdjee/boost/libs/msm/include;../../thirdparty/owemdjee/boost/libs/multiprecision/include;../../thirdparty/owemdjee/boost/libs/multi_array/include;../../thirdparty/owemdjee/boost/libs/multi_index/include;../../thirdparty/owemdjee/boost/libs/nowide/include;../../thirdparty/owemdjee/boost/libs/numeric/conversion/include;../../thirdparty/owemdjee/boost/libs/numeric/interval/include;../../thirdparty/owemdjee/boost/libs/numeric/odeint/include;../../thirdparty/owemdjee/boost/libs/numeric/ublas/include;../../thirdparty/owemdjee/boost/libs/optional/include;../../thirdparty/owemdjee/boost/libs/outcome/include;../../thirdparty/owemdjee/boost/libs/parameter/include;../../thirdparty/owemdjee/boost/libs/parameter_python/include;../../thirdparty/owemdjee/boost/libs/pfr/include;../../thirdparty/owemdjee/boost/libs/phoenix/include;../../thirdparty/owemdjee/boost/libs/polygon/include;../../thirdparty/owemdjee/boost/libs/poly_collection/include;../../thirdparty/owemdjee/boost/libs/pool/include;../../thirdparty/owemdjee/boost/libs/predef/include;../../thirdparty/owemdjee/boost/libs/preprocessor/include;../../thirdparty/owemdjee/boost/libs/process/include;../../thirdparty/owemdjee/boost/libs/program_options/include;../../thirdparty/owemdjee/boost/libs/property_map/include;../../thirdparty/owemdjee/boost/libs/property_map_parallel/include;../../thirdparty/owemdjee/boost/libs/property_tree/include;../../thirdparty/owemdjee/boost/libs/proto/include;../../thirdparty/owemdjee/boost/libs/ptr_container/include;../../thirdparty/owemdjee/boost/libs/python/include;../../thirdparty/owemdjee/boost/libs/qvm/include;../../thirdparty/owemdjee/boost/libs/random/include;../../thirdparty/owemdjee/boost/libs/range/include;../../thirdparty/owemdjee/boost/libs/ratio/include;../../thirdparty/owemdjee/boost/libs/rational/include;../../thirdparty/owemdjee/boost/libs/regex/include;../../thirdparty/owemdjee/boost/libs/safe_numerics/include;../../thirdparty/owemdjee/boost/libs/scope_exit/include;../../thirdparty/owemdjee/boost/libs/serialization/include;../../thirdparty/owemdjee/boost/libs/signals2/include;../../thirdparty/owemdjee/boost/libs/smart_ptr/include;../../thirdparty/owemdjee/boost/libs/sort/include;../../thirdparty/owemdjee/boost/libs/spirit/include;../../thirdparty/owemdjee/boost/libs/stacktrace/include;../../thirdparty/owemdjee/boost/libs/statechart/include;../../thirdparty/owemdjee/boost/libs/static_assert/include;../../thirdparty/owemdjee/boost/libs/static_string/include;../../thirdparty/owemdjee/boost/libs/stl_interfaces/include;../../thirdparty/owemdjee/boost/libs/system/include;../../thirdparty/owemdjee/boost/libs/test/include;../../thirdparty/owemdjee/boost/libs/thread/include;../../thirdparty/owemdjee/boost/libs/throw_exception/include;../../thirdparty/owemdjee/boost/libs/timer/include;../../thirdparty/owemdjee/boost/libs/tokenizer/include;../../thirdparty/owemdjee/boost/libs/tti/include;../../thirdparty/owemdjee/boost/libs/tuple/include;../../thirdparty/owemdjee/boost/libs/typeof/include;../../thirdparty/owemdjee/boost/libs/type_erasure/include;../../thirdparty/owemdjee/boost/libs/type_index/include;../../thirdparty/owemdjee/boost/libs/type_traits/include;../../thirdparty/owemdjee/boost/libs/units/include;../../thirdparty/owemdjee/boost/libs/unordered/include;../../thirdparty/owemdjee/boost/libs/utility/include;../../thirdparty/owemdjee/boost/libs/uuid/include;../../thirdparty/owemdjee/boost/libs/variant/include;../../thirdparty/owemdjee/boost/libs/variant2/include;../../thirdparty/owemdjee/boost/libs/vmd/include;../../thirdparty/owemdjee/boost/libs/wave/include;../../thirdparty/owemdjee/boost/libs/winapi/include;../../thirdparty/owemdjee/boost/libs/xpressive/include;../../thirdparty/owemdjee/boost/libs/yap/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBBOOST;BOOST_STATICLIB;CHM__DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/boost;../../thirdparty/owemdjee/boost/libs/accumulators/include;../../thirdparty/owemdjee/boost/libs/algorithm/include;../../thirdparty/owemdjee/boost/libs/align/include;../../thirdparty/owemdjee/boost/libs/any/include;../../thirdparty/owemdjee/boost/libs/array/include;../../thirdparty/owemdjee/boost/libs/asio/include;../../thirdparty/owemdjee/boost/libs/assert/include;../../thirdparty/owemdjee/boost/libs/assign/include;../../thirdparty/owemdjee/boost/libs/atomic/include;../../thirdparty/owemdjee/boost/libs/beast/include;../../thirdparty/owemdjee/boost/libs/beast/test/extras/include;../../thirdparty/owemdjee/boost/libs/bimap/include;../../thirdparty/owemdjee/boost/libs/bind/include;../../thirdparty/owemdjee/boost/libs/callable_traits/include;../../thirdparty/owemdjee/boost/libs/chrono/include;../../thirdparty/owemdjee/boost/libs/circular_buffer/include;../../thirdparty/owemdjee/boost/libs/compatibility/include;../../thirdparty/owemdjee/boost/libs/compute/include;../../thirdparty/owemdjee/boost/libs/concept_check/include;../../thirdparty/owemdjee/boost/libs/config/include;../../thirdparty/owemdjee/boost/libs/container/include;../../thirdparty/owemdjee/boost/libs/container_hash/include;../../thirdparty/owemdjee/boost/libs/context/include;../../thirdparty/owemdjee/boost/libs/contract/include;../../thirdparty/owemdjee/boost/libs/conversion/include;../../thirdparty/owemdjee/boost/libs/convert/include;../../thirdparty/owemdjee/boost/libs/core/include;../../thirdparty/owemdjee/boost/libs/coroutine/include;../../thirdparty/owemdjee/boost/libs/coroutine2/include;../../thirdparty/owemdjee/boost/libs/crc/include;../../thirdparty/owemdjee/boost/libs/date_time/include;../../thirdparty/owemdjee/boost/libs/describe/include;../../thirdparty/owemdjee/boost/libs/detail/include;../../thirdparty/owemdjee/boost/libs/dll/include;../../thirdparty/owemdjee/boost/libs/dynamic_bitset/include;../../thirdparty/owemdjee/boost/libs/endian/include;../../thirdparty/owemdjee/boost/libs/exception/include;../../thirdparty/owemdjee/boost/libs/fiber/include;../../thirdparty/owemdjee/boost/libs/filesystem/include;../../thirdparty/owemdjee/boost/libs/flyweight/include;../../thirdparty/owemdjee/boost/libs/foreach/include;../../thirdparty/owemdjee/boost/libs/format/include;../../thirdparty/owemdjee/boost/libs/function/include;../../thirdparty/owemdjee/boost/libs/functional/include;../../thirdparty/owemdjee/boost/libs/function_types/include;../../thirdparty/owemdjee/boost/libs/fusion/include;../../thirdparty/owemdjee/boost/libs/geometry/include;../../thirdparty/owemdjee/boost/libs/gil/include;../../thirdparty/owemdjee/boost/libs/graph/include;../../thirdparty/owemdjee/boost/libs/graph_parallel/include;../../thirdparty/owemdjee/boost/libs/hana/include;../../thirdparty/owemdjee/boost/libs/heap/include;../../thirdparty/owemdjee/boost/libs/histogram/include;../../thirdparty/owemdjee/boost/libs/hof/include;../../thirdparty/owemdjee/boost/libs/icl/include;../../thirdparty/owemdjee/boost/libs/integer/include;../../thirdparty/owemdjee/boost/libs/interprocess/include;../../thirdparty/owemdjee/boost/libs/intrusive/include;../../thirdparty/owemdjee/boost/libs/io/include;../../thirdparty/owemdjee/boost/libs/iostreams/include;../../thirdparty/owemdjee/boost/libs/iterator/include;../../thirdparty/owemdjee/boost/libs/json/include;../../thirdparty/owemdjee/boost/libs/lambda/include;../../thirdparty/owemdjee/boost/libs/lambda2/include;../../thirdparty/owemdjee/boost/libs/leaf/include;../../thirdparty/owemdjee/boost/libs/lexical_cast/include;../../thirdparty/owemdjee/boost/libs/locale/include;../../thirdparty/owemdjee/boost/libs/local_function/include;../../thirdparty/owemdjee/boost/libs/lockfree/include;../../thirdparty/owemdjee/boost/libs/log/include;../../thirdparty/owemdjee/boost/libs/logic/include;../../thirdparty/owemdjee/boost/libs/math/include;../../thirdparty/owemdjee/boost/libs/metaparse/include;../../thirdparty/owemdjee/boost/libs/move/include;../../thirdparty/owemdjee/boost/libs/mp11/include;../../thirdparty/owemdjee/boost/libs/mpi/include;../../thirdparty/owemdjee/boost/libs/mpl/include;../../thirdparty/owemdjee/boost/libs/msm/include;../../thirdparty/owemdjee/boost/libs/multiprecision/include;../../thirdparty/owemdjee/boost/libs/multi_array/include;../../thirdparty/owemdjee/boost/libs/multi_index/include;../../thirdparty/owemdjee/boost/libs/nowide/include;../../thirdparty/owemdjee/boost/libs/numeric/conversion/include;../../thirdparty/owemdjee/boost/libs/numeric/interval/include;../../thirdparty/owemdjee/boost/libs/numeric/odeint/include;../../thirdparty/owemdjee/boost/libs/numeric/ublas/include;../../thirdparty/owemdjee/boost/libs/optional/include;../../thirdparty/owemdjee/boost/libs/outcome/include;../../thirdparty/owemdjee/boost/libs/parameter/include;../../thirdparty/owemdjee/boost/libs/parameter_python/include;../../thirdparty/owemdjee/boost/libs/pfr/include;../../thirdparty/owemdjee/boost/libs/phoenix/include;../../thirdparty/owemdjee/boost/libs/polygon/include;../../thirdparty/owemdjee/boost/libs/poly_collection/include;../../thirdparty/owemdjee/boost/libs/pool/include;../../thirdparty/owemdjee/boost/libs/predef/include;../../thirdparty/owemdjee/boost/libs/preprocessor/include;../../thirdparty/owemdjee/boost/libs/process/include;../../thirdparty/owemdjee/boost/libs/program_options/include;../../thirdparty/owemdjee/boost/libs/property_map/include;../../thirdparty/owemdjee/boost/libs/property_map_parallel/include;../../thirdparty/owemdjee/boost/libs/property_tree/include;../../thirdparty/owemdjee/boost/libs/proto/include;../../thirdparty/owemdjee/boost/libs/ptr_container/include;../../thirdparty/owemdjee/boost/libs/python/include;../../thirdparty/owemdjee/boost/libs/qvm/include;../../thirdparty/owemdjee/boost/libs/random/include;../../thirdparty/owemdjee/boost/libs/range/include;../../thirdparty/owemdjee/boost/libs/ratio/include;../../thirdparty/owemdjee/boost/libs/rational/include;../../thirdparty/owemdjee/boost/libs/regex/include;../../thirdparty/owemdjee/boost/libs/safe_numerics/include;../../thirdparty/owemdjee/boost/libs/scope_exit/include;../../thirdparty/owemdjee/boost/libs/serialization/include;../../thirdparty/owemdjee/boost/libs/signals2/include;../../thirdparty/owemdjee/boost/libs/smart_ptr/include;../../thirdparty/owemdjee/boost/libs/sort/include;../../thirdparty/owemdjee/boost/libs/spirit/include;../../thirdparty/owemdjee/boost/libs/stacktrace/include;../../thirdparty/owemdjee/boost/libs/statechart/include;../../thirdparty/owemdjee/boost/libs/static_assert/include;../../thirdparty/owemdjee/boost/libs/static_string/include;../../thirdparty/owemdjee/boost/libs/stl_interfaces/include;../../thirdparty/owemdjee/boost/libs/system/include;../../thirdparty/owemdjee/boost/libs/test/include;../../thirdparty/owemdjee/boost/libs/thread/include;../../thirdparty/owemdjee/boost/libs/throw_exception/include;../../thirdparty/owemdjee/boost/libs/timer/include;../../thirdparty/owemdjee/boost/libs/tokenizer/include;../../thirdparty/owemdjee/boost/libs/tti/include;../../thirdparty/owemdjee/boost/libs/tuple/include;../../thirdparty/owemdjee/boost/libs/typeof/include;../../thirdparty/owemdjee/boost/libs/type_erasure/include;../../thirdparty/owemdjee/boost/libs/type_index/include;../../thirdparty/owemdjee/boost/libs/type_traits/include;../../thirdparty/owemdjee/boost/libs/units/include;../../thirdparty/owemdjee/boost/libs/unordered/include;../../thirdparty/owemdjee/boost/libs/utility/include;../../thirdparty/owemdjee/boost/libs/uuid/include;../../thirdparty/owemdjee/boost/libs/variant/include;../../thirdparty/owemdjee/boost/libs/variant2/include;../../thirdparty/owemdjee/boost/libs/vmd/include;../../thirdparty/owemdjee/boost/libs/wave/include;../../thirdparty/owemdjee/boost/libs/winapi/include;../../thirdparty/owemdjee/boost/libs/xpressive/include;../../thirdparty/owemdjee/boost/libs/yap/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBBOOST;BOOST_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBBOOST;BOOST_STATICLIB;CHM__DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/boost;../../thirdparty/owemdjee/boost/libs/accumulators/include;../../thirdparty/owemdjee/boost/libs/algorithm/include;../../thirdparty/owemdjee/boost/libs/align/include;../../thirdparty/owemdjee/boost/libs/any/include;../../thirdparty/owemdjee/boost/libs/array/include;../../thirdparty/owemdjee/boost/libs/asio/include;../../thirdparty/owemdjee/boost/libs/assert/include;../../thirdparty/owemdjee/boost/libs/assign/include;../../thirdparty/owemdjee/boost/libs/atomic/include;../../thirdparty/owemdjee/boost/libs/beast/include;../../thirdparty/owemdjee/boost/libs/beast/test/extras/include;../../thirdparty/owemdjee/boost/libs/bimap/include;../../thirdparty/owemdjee/boost/libs/bind/include;../../thirdparty/owemdjee/boost/libs/callable_traits/include;../../thirdparty/owemdjee/boost/libs/chrono/include;../../thirdparty/owemdjee/boost/libs/circular_buffer/include;../../thirdparty/owemdjee/boost/libs/compatibility/include;../../thirdparty/owemdjee/boost/libs/compute/include;../../thirdparty/owemdjee/boost/libs/concept_check/include;../../thirdparty/owemdjee/boost/libs/config/include;../../thirdparty/owemdjee/boost/libs/container/include;../../thirdparty/owemdjee/boost/libs/container_hash/include;../../thirdparty/owemdjee/boost/libs/context/include;../../thirdparty/owemdjee/boost/libs/contract/include;../../thirdparty/owemdjee/boost/libs/conversion/include;../../thirdparty/owemdjee/boost/libs/convert/include;../../thirdparty/owemdjee/boost/libs/core/include;../../thirdparty/owemdjee/boost/libs/coroutine/include;../../thirdparty/owemdjee/boost/libs/coroutine2/include;../../thirdparty/owemdjee/boost/libs/crc/include;../../thirdparty/owemdjee/boost/libs/date_time/include;../../thirdparty/owemdjee/boost/libs/describe/include;../../thirdparty/owemdjee/boost/libs/detail/include;../../thirdparty/owemdjee/boost/libs/dll/include;../../thirdparty/owemdjee/boost/libs/dynamic_bitset/include;../../thirdparty/owemdjee/boost/libs/endian/include;../../thirdparty/owemdjee/boost/libs/exception/include;../../thirdparty/owemdjee/boost/libs/fiber/include;../../thirdparty/owemdjee/boost/libs/filesystem/include;../../thirdparty/owemdjee/boost/libs/flyweight/include;../../thirdparty/owemdjee/boost/libs/foreach/include;../../thirdparty/owemdjee/boost/libs/format/include;../../thirdparty/owemdjee/boost/libs/function/include;../../thirdparty/owemdjee/boost/libs/functional/include;../../thirdparty/owemdjee/boost/libs/function_types/include;../../thirdparty/owemdjee/boost/libs/fusion/include;../../thirdparty/owemdjee/boost/libs/geometry/include;../../thirdparty/owemdjee/boost/libs/gil/include;../../thirdparty/owemdjee/boost/libs/graph/include;../../thirdparty/owemdjee/boost/libs/graph_parallel/include;../../thirdparty/owemdjee/boost/libs/hana/include;../../thirdparty/owemdjee/boost/libs/heap/include;../../thirdparty/owemdjee/boost/libs/histogram/include;../../thirdparty/owemdjee/boost/libs/hof/include;../../thirdparty/owemdjee/boost/libs/icl/include;../../thirdparty/owemdjee/boost/libs/integer/include;../../thirdparty/owemdjee/boost/libs/interprocess/include;../../thirdparty/owemdjee/boost/libs/intrusive/include;../../thirdparty/owemdjee/boost/libs/io/include;../../thirdparty/owemdjee/boost/libs/iostreams/include;../../thirdparty/owemdjee/boost/libs/iterator/include;../../thirdparty/owemdjee/boost/libs/json/include;../../thirdparty/owemdjee/boost/libs/lambda/include;../../thirdparty/owemdjee/boost/libs/lambda2/include;../../thirdparty/owemdjee/boost/libs/leaf/include;../../thirdparty/owemdjee/boost/libs/lexical_cast/include;../../thirdparty/owemdjee/boost/libs/locale/include;../../thirdparty/owemdjee/boost/libs/local_function/include;../../thirdparty/owemdjee/boost/libs/lockfree/include;../../thirdparty/owemdjee/boost/libs/log/include;../../thirdparty/owemdjee/boost/libs/logic/include;../../thirdparty/owemdjee/boost/libs/math/include;../../thirdparty/owemdjee/boost/libs/metaparse/include;../../thirdparty/owemdjee/boost/libs/move/include;../../thirdparty/owemdjee/boost/libs/mp11/include;../../thirdparty/owemdjee/boost/libs/mpi/include;../../thirdparty/owemdjee/boost/libs/mpl/include;../../thirdparty/owemdjee/boost/libs/msm/include;../../thirdparty/owemdjee/boost/libs/multiprecision/include;../../thirdparty/owemdjee/boost/libs/multi_array/include;../../thirdparty/owemdjee/boost/libs/multi_index/include;../../thirdparty/owemdjee/boost/libs/nowide/include;../../thirdparty/owemdjee/boost/libs/numeric/conversion/include;../../thirdparty/owemdjee/boost/libs/numeric/interval/include;../../thirdparty/owemdjee/boost/libs/numeric/odeint/include;../../thirdparty/owemdjee/boost/libs/numeric/ublas/include;../../thirdparty/owemdjee/boost/libs/optional/include;../../thirdparty/owemdjee/boost/libs/outcome/include;../../thirdparty/owemdjee/boost/libs/parameter/include;../../thirdparty/owemdjee/boost/libs/parameter_python/include;../../thirdparty/owemdjee/boost/libs/pfr/include;../../thirdparty/owemdjee/boost/libs/phoenix/include;../../thirdparty/owemdjee/boost/libs/polygon/include;../../thirdparty/owemdjee/boost/libs/poly_collection/include;../../thirdparty/owemdjee/boost/libs/pool/include;../../thirdparty/owemdjee/boost/libs/predef/include;../../thirdparty/owemdjee/boost/libs/preprocessor/include;../../thirdparty/owemdjee/boost/libs/process/include;../../thirdparty/owemdjee/boost/libs/program_options/include;../../thirdparty/owemdjee/boost/libs/property_map/include;../../thirdparty/owemdjee/boost/libs/property_map_parallel/include;../../thirdparty/owemdjee/boost/libs/property_tree/include;../../thirdparty/owemdjee/boost/libs/proto/include;../../thirdparty/owemdjee/boost/libs/ptr_container/include;../../thirdparty/owemdjee/boost/libs/python/include;../../thirdparty/owemdjee/boost/libs/qvm/include;../../thirdparty/owemdjee/boost/libs/random/include;../../thirdparty/owemdjee/boost/libs/range/include;../../thirdparty/owemdjee/boost/libs/ratio/include;../../thirdparty/owemdjee/boost/libs/rational/include;../../thirdparty/owemdjee/boost/libs/regex/include;../../thirdparty/owemdjee/boost/libs/safe_numerics/include;../../thirdparty/owemdjee/boost/libs/scope_exit/include;../../thirdparty/owemdjee/boost/libs/serialization/include;../../thirdparty/owemdjee/boost/libs/signals2/include;../../thirdparty/owemdjee/boost/libs/smart_ptr/include;../../thirdparty/owemdjee/boost/libs/sort/include;../../thirdparty/owemdjee/boost/libs/spirit/include;../../thirdparty/owemdjee/boost/libs/stacktrace/include;../../thirdparty/owemdjee/boost/libs/statechart/include;../../thirdparty/owemdjee/boost/libs/static_assert/include;../../thirdparty/owemdjee/boost/libs/static_string/include;../../thirdparty/owemdjee/boost/libs/stl_interfaces/include;../../thirdparty/owemdjee/boost/libs/system/include;../../thirdparty/owemdjee/boost/libs/test/include;../../thirdparty/owemdjee/boost/libs/thread/include;../../thirdparty/owemdjee/boost/libs/throw_exception/include;../../thirdparty/owemdjee/boost/libs/timer/include;../../thirdparty/owemdjee/boost/libs/tokenizer/include;../../thirdparty/owemdjee/boost/libs/tti/include;../../thirdparty/owemdjee/boost/libs/tuple/include;../../thirdparty/owemdjee/boost/libs/typeof/include;../../thirdparty/owemdjee/boost/libs/type_erasure/include;../../thirdparty/owemdjee/boost/libs/type_index/include;../../thirdparty/owemdjee/boost/libs/type_traits/include;../../thirdparty/owemdjee/boost/libs/units/include;../../thirdparty/owemdjee/boost/libs/unordered/include;../../thirdparty/owemdjee/boost/libs/utility/include;../../thirdparty/owemdjee/boost/libs/uuid/include;../../thirdparty/owemdjee/boost/libs/variant/include;../../thirdparty/owemdjee/boost/libs/variant2/include;../../thirdparty/owemdjee/boost/libs/vmd/include;../../thirdparty/owemdjee/boost/libs/wave/include;../../thirdparty/owemdjee/boost/libs/winapi/include;../../thirdparty/owemdjee/boost/libs/xpressive/include;../../thirdparty/owemdjee/boost/libs/yap/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBBOOST;BOOST_STATICLIB;CHM_NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/boost;../../thirdparty/owemdjee/boost/libs/accumulators/include;../../thirdparty/owemdjee/boost/libs/algorithm/include;../../thirdparty/owemdjee/boost/libs/align/include;../../thirdparty/owemdjee/boost/libs/any/include;../../thirdparty/owemdjee/boost/libs/array/include;../../thirdparty/owemdjee/boost/libs/asio/include;../../thirdparty/owemdjee/boost/libs/assert/include;../../thirdparty/owemdjee/boost/libs/assign/include;../../thirdparty/owemdjee/boost/libs/atomic/include;../../thirdparty/owemdjee/boost/libs/beast/include;../../thirdparty/owemdjee/boost/libs/beast/test/extras/include;../../thirdparty/owemdjee/boost/libs/bimap/include;../../thirdparty/owemdjee/boost/libs/bind/include;../../thirdparty/owemdjee/boost/libs/callable_traits/include;../../thirdparty/owemdjee/boost/libs/chrono/include;../../thirdparty/owemdjee/boost/libs/circular_buffer/include;../../thirdparty/owemdjee/boost/libs/compatibility/include;../../thirdparty/owemdjee/boost/libs/compute/include;../../thirdparty/owemdjee/boost/libs/concept_check/include;../../thirdparty/owemdjee/boost/libs/config/include;../../thirdparty/owemdjee/boost/libs/container/include;../../thirdparty/owemdjee/boost/libs/container_hash/include;../../thirdparty/owemdjee/boost/libs/context/include;../../thirdparty/owemdjee/boost/libs/contract/include;../../thirdparty/owemdjee/boost/libs/conversion/include;../../thirdparty/owemdjee/boost/libs/convert/include;../../thirdparty/owemdjee/boost/libs/core/include;../../thirdparty/owemdjee/boost/libs/coroutine/include;../../thirdparty/owemdjee/boost/libs/coroutine2/include;../../thirdparty/owemdjee/boost/libs/crc/include;../../thirdparty/owemdjee/boost/libs/date_time/include;../../thirdparty/owemdjee/boost/libs/describe/include;../../thirdparty/owemdjee/boost/libs/detail/include;../../thirdparty/owemdjee/boost/libs/dll/include;../../thirdparty/owemdjee/boost/libs/dynamic_bitset/include;../../thirdparty/owemdjee/boost/libs/endian/include;../../thirdparty/owemdjee/boost/libs/exception/include;../../thirdparty/owemdjee/boost/libs/fiber/include;../../thirdparty/owemdjee/boost/libs/filesystem/include;../../thirdparty/owemdjee/boost/libs/flyweight/include;../../thirdparty/owemdjee/boost/libs/foreach/include;../../thirdparty/owemdjee/boost/libs/format/include;../../thirdparty/owemdjee/boost/libs/function/include;../../thirdparty/owemdjee/boost/libs/functional/include;../../thirdparty/owemdjee/boost/libs/function_types/include;../../thirdparty/owemdjee/boost/libs/fusion/include;../../thirdparty/owemdjee/boost/libs/geometry/include;../../thirdparty/owemdjee/boost/libs/gil/include;../../thirdparty/owemdjee/boost/libs/graph/include;../../thirdparty/owemdjee/boost/libs/graph_parallel/include;../../thirdparty/owemdjee/boost/libs/hana/include;../../thirdparty/owemdjee/boost/libs/heap/include;../../thirdparty/owemdjee/boost/libs/histogram/include;../../thirdparty/owemdjee/boost/libs/hof/include;../../thirdparty/owemdjee/boost/libs/icl/include;../../thirdparty/owemdjee/boost/libs/integer/include;../../thirdparty/owemdjee/boost/libs/interprocess/include;../../thirdparty/owemdjee/boost/libs/intrusive/include;../../thirdparty/owemdjee/boost/libs/io/include;../../thirdparty/owemdjee/boost/libs/iostreams/include;../../thirdparty/owemdjee/boost/libs/iterator/include;../../thirdparty/owemdjee/boost/libs/json/include;../../thirdparty/owemdjee/boost/libs/lambda/include;../../thirdparty/owemdjee/boost/libs/lambda2/include;../../thirdparty/owemdjee/boost/libs/leaf/include;../../thirdparty/owemdjee/boost/libs/lexical_cast/include;../../thirdparty/owemdjee/boost/libs/locale/include;../../thirdparty/owemdjee/boost/libs/local_function/include;../../thirdparty/owemdjee/boost/libs/lockfree/include;../../thirdparty/owemdjee/boost/libs/log/include;../../thirdparty/owemdjee/boost/libs/logic/include;../../thirdparty/owemdjee/boost/libs/math/include;../../thirdparty/owemdjee/boost/libs/metaparse/include;../../thirdparty/owemdjee/boost/libs/move/include;../../thirdparty/owemdjee/boost/libs/mp11/include;../../thirdparty/owemdjee/boost/libs/mpi/include;../../thirdparty/owemdjee/boost/libs/mpl/include;../../thirdparty/owemdjee/boost/libs/msm/include;../../thirdparty/owemdjee/boost/libs/multiprecision/include;../../thirdparty/owemdjee/boost/libs/multi_array/include;../../thirdparty/owemdjee/boost/libs/multi_index/include;../../thirdparty/owemdjee/boost/libs/nowide/include;../../thirdparty/owemdjee/boost/libs/numeric/conversion/include;../../thirdparty/owemdjee/boost/libs/numeric/interval/include;../../thirdparty/owemdjee/boost/libs/numeric/odeint/include;../../thirdparty/owemdjee/boost/libs/numeric/ublas/include;../../thirdparty/owemdjee/boost/libs/optional/include;../../thirdparty/owemdjee/boost/libs/outcome/include;../../thirdparty/owemdjee/boost/libs/parameter/include;../../thirdparty/owemdjee/boost/libs/parameter_python/include;../../thirdparty/owemdjee/boost/libs/pfr/include;../../thirdparty/owemdjee/boost/libs/phoenix/include;../../thirdparty/owemdjee/boost/libs/polygon/include;../../thirdparty/owemdjee/boost/libs/poly_collection/include;../../thirdparty/owemdjee/boost/libs/pool/include;../../thirdparty/owemdjee/boost/libs/predef/include;../../thirdparty/owemdjee/boost/libs/preprocessor/include;../../thirdparty/owemdjee/boost/libs/process/include;../../thirdparty/owemdjee/boost/libs/program_options/include;../../thirdparty/owemdjee/boost/libs/property_map/include;../../thirdparty/owemdjee/boost/libs/property_map_parallel/include;../../thirdparty/owemdjee/boost/libs/property_tree/include;../../thirdparty/owemdjee/boost/libs/proto/include;../../thirdparty/owemdjee/boost/libs/ptr_container/include;../../thirdparty/owemdjee/boost/libs/python/include;../../thirdparty/owemdjee/boost/libs/qvm/include;../../thirdparty/owemdjee/boost/libs/random/include;../../thirdparty/owemdjee/boost/libs/range/include;../../thirdparty/owemdjee/boost/libs/ratio/include;../../thirdparty/owemdjee/boost/libs/rational/include;../../thirdparty/owemdjee/boost/libs/regex/include;../../thirdparty/owemdjee/boost/libs/safe_numerics/include;../../thirdparty/owemdjee/boost/libs/scope_exit/include;../../thirdparty/owemdjee/boost/libs/serialization/include;../../thirdparty/owemdjee/boost/libs/signals2/include;../../thirdparty/owemdjee/boost/libs/smart_ptr/include;../../thirdparty/owemdjee/boost/libs/sort/include;../../thirdparty/owemdjee/boost/libs/spirit/include;../../thirdparty/owemdjee/boost/libs/stacktrace/include;../../thirdparty/owemdjee/boost/libs/statechart/include;../../thirdparty/owemdjee/boost/libs/static_assert/include;../../thirdparty/owemdjee/boost/libs/static_string/include;../../thirdparty/owemdjee/boost/libs/stl_interfaces/include;../../thirdparty/owemdjee/boost/libs/system/include;../../thirdparty/owemdjee/boost/libs/test/include;../../thirdparty/owemdjee/boost/libs/thread/include;../../thirdparty/owemdjee/boost/libs/throw_exception/include;../../thirdparty/owemdjee/boost/libs/timer/include;../../thirdparty/owemdjee/boost/libs/tokenizer/include;../../thirdparty/owemdjee/boost/libs/tti/include;../../thirdparty/owemdjee/boost/libs/tuple/include;../../thirdparty/owemdjee/boost/libs/typeof/include;../../thirdparty/owemdjee/boost/libs/type_erasure/include;../../thirdparty/owemdjee/boost/libs/type_index/include;../../thirdparty/owemdjee/boost/libs/type_traits/include;../../thirdparty/owemdjee/boost/libs/units/include;../../thirdparty/owemdjee/boost/libs/unordered/include;../../thirdparty/owemdjee/boost/libs/utility/include;../../thirdparty/owemdjee/boost/libs/uuid/include;../../thirdparty/owemdjee/boost/libs/variant/include;../../thirdparty/owemdjee/boost/libs/variant2/include;../../thirdparty/owemdjee/boost/libs/vmd/include;../../thirdparty/owemdjee/boost/libs/wave/include;../../thirdparty/owemdjee/boost/libs/winapi/include;../../thirdparty/owemdjee/boost/libs/xpressive/include;../../thirdparty/owemdjee/boost/libs/yap/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBBOOST;BOOST_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBBOOST;BOOST_STATICLIB;CHM_NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/boost;../../thirdparty/owemdjee/boost/libs/accumulators/include;../../thirdparty/owemdjee/boost/libs/algorithm/include;../../thirdparty/owemdjee/boost/libs/align/include;../../thirdparty/owemdjee/boost/libs/any/include;../../thirdparty/owemdjee/boost/libs/array/include;../../thirdparty/owemdjee/boost/libs/asio/include;../../thirdparty/owemdjee/boost/libs/assert/include;../../thirdparty/owemdjee/boost/libs/assign/include;../../thirdparty/owemdjee/boost/libs/atomic/include;../../thirdparty/owemdjee/boost/libs/beast/include;../../thirdparty/owemdjee/boost/libs/beast/test/extras/include;../../thirdparty/owemdjee/boost/libs/bimap/include;../../thirdparty/owemdjee/boost/libs/bind/include;../../thirdparty/owemdjee/boost/libs/callable_traits/include;../../thirdparty/owemdjee/boost/libs/chrono/include;../../thirdparty/owemdjee/boost/libs/circular_buffer/include;../../thirdparty/owemdjee/boost/libs/compatibility/include;../../thirdparty/owemdjee/boost/libs/compute/include;../../thirdparty/owemdjee/boost/libs/concept_check/include;../../thirdparty/owemdjee/boost/libs/config/include;../../thirdparty/owemdjee/boost/libs/container/include;../../thirdparty/owemdjee/boost/libs/container_hash/include;../../thirdparty/owemdjee/boost/libs/context/include;../../thirdparty/owemdjee/boost/libs/contract/include;../../thirdparty/owemdjee/boost/libs/conversion/include;../../thirdparty/owemdjee/boost/libs/convert/include;../../thirdparty/owemdjee/boost/libs/core/include;../../thirdparty/owemdjee/boost/libs/coroutine/include;../../thirdparty/owemdjee/boost/libs/coroutine2/include;../../thirdparty/owemdjee/boost/libs/crc/include;../../thirdparty/owemdjee/boost/libs/date_time/include;../../thirdparty/owemdjee/boost/libs/describe/include;../../thirdparty/owemdjee/boost/libs/detail/include;../../thirdparty/owemdjee/boost/libs/dll/include;../../thirdparty/owemdjee/boost/libs/dynamic_bitset/include;../../thirdparty/owemdjee/boost/libs/endian/include;../../thirdparty/owemdjee/boost/libs/exception/include;../../thirdparty/owemdjee/boost/libs/fiber/include;../../thirdparty/owemdjee/boost/libs/filesystem/include;../../thirdparty/owemdjee/boost/libs/flyweight/include;../../thirdparty/owemdjee/boost/libs/foreach/include;../../thirdparty/owemdjee/boost/libs/format/include;../../thirdparty/owemdjee/boost/libs/function/include;../../thirdparty/owemdjee/boost/libs/functional/include;../../thirdparty/owemdjee/boost/libs/function_types/include;../../thirdparty/owemdjee/boost/libs/fusion/include;../../thirdparty/owemdjee/boost/libs/geometry/include;../../thirdparty/owemdjee/boost/libs/gil/include;../../thirdparty/owemdjee/boost/libs/graph/include;../../thirdparty/owemdjee/boost/libs/graph_parallel/include;../../thirdparty/owemdjee/boost/libs/hana/include;../../thirdparty/owemdjee/boost/libs/heap/include;../../thirdparty/owemdjee/boost/libs/histogram/include;../../thirdparty/owemdjee/boost/libs/hof/include;../../thirdparty/owemdjee/boost/libs/icl/include;../../thirdparty/owemdjee/boost/libs/integer/include;../../thirdparty/owemdjee/boost/libs/interprocess/include;../../thirdparty/owemdjee/boost/libs/intrusive/include;../../thirdparty/owemdjee/boost/libs/io/include;../../thirdparty/owemdjee/boost/libs/iostreams/include;../../thirdparty/owemdjee/boost/libs/iterator/include;../../thirdparty/owemdjee/boost/libs/json/include;../../thirdparty/owemdjee/boost/libs/lambda/include;../../thirdparty/owemdjee/boost/libs/lambda2/include;../../thirdparty/owemdjee/boost/libs/leaf/include;../../thirdparty/owemdjee/boost/libs/lexical_cast/include;../../thirdparty/owemdjee/boost/libs/locale/include;../../thirdparty/owemdjee/boost/libs/local_function/include;../../thirdparty/owemdjee/boost/libs/lockfree/include;../../thirdparty/owemdjee/boost/libs/log/include;../../thirdparty/owemdjee/boost/libs/logic/include;../../thirdparty/owemdjee/boost/libs/math/include;../../thirdparty/owemdjee/boost/libs/metaparse/include;../../thirdparty/owemdjee/boost/libs/move/include;../../thirdparty/owemdjee/boost/libs/mp11/include;../../thirdparty/owemdjee/boost/libs/mpi/include;../../thirdparty/owemdjee/boost/libs/mpl/include;../../thirdparty/owemdjee/boost/libs/msm/include;../../thirdparty/owemdjee/boost/libs/multiprecision/include;../../thirdparty/owemdjee/boost/libs/multi_array/include;../../thirdparty/owemdjee/boost/libs/multi_index/include;../../thirdparty/owemdjee/boost/libs/nowide/include;../../thirdparty/owemdjee/boost/libs/numeric/conversion/include;../../thirdparty/owemdjee/boost/libs/numeric/interval/include;../../thirdparty/owemdjee/boost/libs/numeric/odeint/include;../../thirdparty/owemdjee/boost/libs/numeric/ublas/include;../../thirdparty/owemdjee/boost/libs/optional/include;../../thirdparty/owemdjee/boost/libs/outcome/include;../../thirdparty/owemdjee/boost/libs/parameter/include;../../thirdparty/owemdjee/boost/libs/parameter_python/include;../../thirdparty/owemdjee/boost/libs/pfr/include;../../thirdparty/owemdjee/boost/libs/phoenix/include;../../thirdparty/owemdjee/boost/libs/polygon/include;../../thirdparty/owemdjee/boost/libs/poly_collection/include;../../thirdparty/owemdjee/boost/libs/pool/include;../../thirdparty/owemdjee/boost/libs/predef/include;../../thirdparty/owemdjee/boost/libs/preprocessor/include;../../thirdparty/owemdjee/boost/libs/process/include;../../thirdparty/owemdjee/boost/libs/program_options/include;../../thirdparty/owemdjee/boost/libs/property_map/include;../../thirdparty/owemdjee/boost/libs/property_map_parallel/include;../../thirdparty/owemdjee/boost/libs/property_tree/include;../../thirdparty/owemdjee/boost/libs/proto/include;../../thirdparty/owemdjee/boost/libs/ptr_container/include;../../thirdparty/owemdjee/boost/libs/python/include;../../thirdparty/owemdjee/boost/libs/qvm/include;../../thirdparty/owemdjee/boost/libs/random/include;../../thirdparty/owemdjee/boost/libs/range/include;../../thirdparty/owemdjee/boost/libs/ratio/include;../../thirdparty/owemdjee/boost/libs/rational/include;../../thirdparty/owemdjee/boost/libs/regex/include;../../thirdparty/owemdjee/boost/libs/safe_numerics/include;../../thirdparty/owemdjee/boost/libs/scope_exit/include;../../thirdparty/owemdjee/boost/libs/serialization/include;../../thirdparty/owemdjee/boost/libs/signals2/include;../../thirdparty/owemdjee/boost/libs/smart_ptr/include;../../thirdparty/owemdjee/boost/libs/sort/include;../../thirdparty/owemdjee/boost/libs/spirit/include;../../thirdparty/owemdjee/boost/libs/stacktrace/include;../../thirdparty/owemdjee/boost/libs/statechart/include;../../thirdparty/owemdjee/boost/libs/static_assert/include;../../thirdparty/owemdjee/boost/libs/static_string/include;../../thirdparty/owemdjee/boost/libs/stl_interfaces/include;../../thirdparty/owemdjee/boost/libs/system/include;../../thirdparty/owemdjee/boost/libs/test/include;../../thirdparty/owemdjee/boost/libs/thread/include;../../thirdparty/owemdjee/boost/libs/throw_exception/include;../../thirdparty/owemdjee/boost/libs/timer/include;../../thirdparty/owemdjee/boost/libs/tokenizer/include;../../thirdparty/owemdjee/boost/libs/tti/include;../../thirdparty/owemdjee/boost/libs/tuple/include;../../thirdparty/owemdjee/boost/libs/typeof/include;../../thirdparty/owemdjee/boost/libs/type_erasure/include;../../thirdparty/owemdjee/boost/libs/type_index/include;../../thirdparty/owemdjee/boost/libs/type_traits/include;../../thirdparty/owemdjee/boost/libs/units/include;../../thirdparty/owemdjee/boost/libs/unordered/include;../../thirdparty/owemdjee/boost/libs/utility/include;../../thirdparty/owemdjee/boost/libs/uuid/include;../../thirdparty/owemdjee/boost/libs/variant/include;../../thirdparty/owemdjee/boost/libs/variant2/include;../../thirdparty/owemdjee/boost/libs/vmd/include;../../thirdparty/owemdjee/boost/libs/wave/include;../../thirdparty/owemdjee/boost/libs/winapi/include;../../thirdparty/owemdjee/boost/libs/xpressive/include;../../thirdparty/owemdjee/boost/libs/yap/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBBOOST;BOOST_STATICLIB;CHM__DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/boost;../../thirdparty/owemdjee/boost/libs/accumulators/include;../../thirdparty/owemdjee/boost/libs/algorithm/include;../../thirdparty/owemdjee/boost/libs/align/include;../../thirdparty/owemdjee/boost/libs/any/include;../../thirdparty/owemdjee/boost/libs/array/include;../../thirdparty/owemdjee/boost/libs/asio/include;../../thirdparty/owemdjee/boost/libs/assert/include;../../thirdparty/owemdjee/boost/libs/assign/include;../../thirdparty/owemdjee/boost/libs/atomic/include;../../thirdparty/owemdjee/boost/libs/beast/include;../../thirdparty/owemdjee/boost/libs/beast/test/extras/include;../../thirdparty/owemdjee/boost/libs/bimap/include;../../thirdparty/owemdjee/boost/libs/bind/include;../../thirdparty/owemdjee/boost/libs/callable_traits/include;../../thirdparty/owemdjee/boost/libs/chrono/include;../../thirdparty/owemdjee/boost/libs/circular_buffer/include;../../thirdparty/owemdjee/boost/libs/compatibility/include;../../thirdparty/owemdjee/boost/libs/compute/include;../../thirdparty/owemdjee/boost/libs/concept_check/include;../../thirdparty/owemdjee/boost/libs/config/include;../../thirdparty/owemdjee/boost/libs/container/include;../../thirdparty/owemdjee/boost/libs/container_hash/include;../../thirdparty/owemdjee/boost/libs/context/include;../../thirdparty/owemdjee/boost/libs/contract/include;../../thirdparty/owemdjee/boost/libs/conversion/include;../../thirdparty/owemdjee/boost/libs/convert/include;../../thirdparty/owemdjee/boost/libs/core/include;../../thirdparty/owemdjee/boost/libs/coroutine/include;../../thirdparty/owemdjee/boost/libs/coroutine2/include;../../thirdparty/owemdjee/boost/libs/crc/include;../../thirdparty/owemdjee/boost/libs/date_time/include;../../thirdparty/owemdjee/boost/libs/describe/include;../../thirdparty/owemdjee/boost/libs/detail/include;../../thirdparty/owemdjee/boost/libs/dll/include;../../thirdparty/owemdjee/boost/libs/dynamic_bitset/include;../../thirdparty/owemdjee/boost/libs/endian/include;../../thirdparty/owemdjee/boost/libs/exception/include;../../thirdparty/owemdjee/boost/libs/fiber/include;../../thirdparty/owemdjee/boost/libs/filesystem/include;../../thirdparty/owemdjee/boost/libs/flyweight/include;../../thirdparty/owemdjee/boost/libs/foreach/include;../../thirdparty/owemdjee/boost/libs/format/include;../../thirdparty/owemdjee/boost/libs/function/include;../../thirdparty/owemdjee/boost/libs/functional/include;../../thirdparty/owemdjee/boost/libs/function_types/include;../../thirdparty/owemdjee/boost/libs/fusion/include;../../thirdparty/owemdjee/boost/libs/geometry/include;../../thirdparty/owemdjee/boost/libs/gil/include;../../thirdparty/owemdjee/boost/libs/graph/include;../../thirdparty/owemdjee/boost/libs/graph_parallel/include;../../thirdparty/owemdjee/boost/libs/hana/include;../../thirdparty/owemdjee/boost/libs/heap/include;../../thirdparty/owemdjee/boost/libs/histogram/include;../../thirdparty/owemdjee/boost/libs/hof/include;../../thirdparty/owemdjee/boost/libs/icl/include;../../thirdparty/owemdjee/boost/libs/integer/include;../../thirdparty/owemdjee/boost/libs/interprocess/include;../../thirdparty/owemdjee/boost/libs/intrusive/include;../../thirdparty/owemdjee/boost/libs/io/include;../../thirdparty/owemdjee/boost/libs/iostreams/include;../../thirdparty/owemdjee/boost/libs/iterator/include;../../thirdparty/owemdjee/boost/libs/json/include;../../thirdparty/owemdjee/boost/libs/lambda/include;../../thirdparty/owemdjee/boost/libs/lambda2/include;../../thirdparty/owemdjee/boost/libs/leaf/include;../../thirdparty/owemdjee/boost/libs/lexical_cast/include;../../thirdparty/owemdjee/boost/libs/locale/include;../../thirdparty/owemdjee/boost/libs/local_function/include;../../thirdparty/owemdjee/boost/libs/lockfree/include;../../thirdparty/owemdjee/boost/libs/log/include;../../thirdparty/owemdjee/boost/libs/logic/include;../../thirdparty/owemdjee/boost/libs/math/include;../../thirdparty/owemdjee/boost/libs/metaparse/include;../../thirdparty/owemdjee/boost/libs/move/include;../../thirdparty/owemdjee/boost/libs/mp11/include;../../thirdparty/owemdjee/boost/libs/mpi/include;../../thirdparty/owemdjee/boost/libs/mpl/include;../../thirdparty/owemdjee/boost/libs/msm/include;../../thirdparty/owemdjee/boost/libs/multiprecision/include;../../thirdparty/owemdjee/boost/libs/multi_array/include;../../thirdparty/owemdjee/boost/libs/multi_index/include;../../thirdparty/owemdjee/boost/libs/nowide/include;../../thirdparty/owemdjee/boost/libs/numeric/conversion/include;../../thirdparty/owemdjee/boost/libs/numeric/interval/include;../../thirdparty/owemdjee/boost/libs/numeric/odeint/include;../../thirdparty/owemdjee/boost/libs/numeric/ublas/include;../../thirdparty/owemdjee/boost/libs/optional/include;../../thirdparty/owemdjee/boost/libs/outcome/include;../../thirdparty/owemdjee/boost/libs/parameter/include;../../thirdparty/owemdjee/boost/libs/parameter_python/include;../../thirdparty/owemdjee/boost/libs/pfr/include;../../thirdparty/owemdjee/boost/libs/phoenix/include;../../thirdparty/owemdjee/boost/libs/polygon/include;../../thirdparty/owemdjee/boost/libs/poly_collection/include;../../thirdparty/owemdjee/boost/libs/pool/include;../../thirdparty/owemdjee/boost/libs/predef/include;../../thirdparty/owemdjee/boost/libs/preprocessor/include;../../thirdparty/owemdjee/boost/libs/process/include;../../thirdparty/owemdjee/boost/libs/program_options/include;../../thirdparty/owemdjee/boost/libs/property_map/include;../../thirdparty/owemdjee/boost/libs/property_map_parallel/include;../../thirdparty/owemdjee/boost/libs/property_tree/include;../../thirdparty/owemdjee/boost/libs/proto/include;../../thirdparty/owemdjee/boost/libs/ptr_container/include;../../thirdparty/owemdjee/boost/libs/python/include;../../thirdparty/owemdjee/boost/libs/qvm/include;../../thirdparty/owemdjee/boost/libs/random/include;../../thirdparty/owemdjee/boost/libs/range/include;../../thirdparty/owemdjee/boost/libs/ratio/include;../../thirdparty/owemdjee/boost/libs/rational/include;../../thirdparty/owemdjee/boost/libs/regex/include;../../thirdparty/owemdjee/boost/libs/safe_numerics/include;../../thirdparty/owemdjee/boost/libs/scope_exit/include;../../thirdparty/owemdjee/boost/libs/serialization/include;../../thirdparty/owemdjee/boost/libs/signals2/include;../../thirdparty/owemdjee/boost/libs/smart_ptr/include;../../thirdparty/owemdjee/boost/libs/sort/include;../../thirdparty/owemdjee/boost/libs/spirit/include;../../thirdparty/owemdjee/boost/libs/stacktrace/include;../../thirdparty/owemdjee/boost/libs/statechart/include;../../thirdparty/owemdjee/boost/libs/static_assert/include;../../thirdparty/owemdjee/boost/libs/static_string/include;../../thirdparty/owemdjee/boost/libs/stl_interfaces/include;../../thirdparty/owemdjee/boost/libs/system/include;../../thirdparty/owemdjee/boost/libs/test/include;../../thirdparty/owemdjee/boost/libs/thread/include;../../thirdparty/owemdjee/boost/libs/throw_exception/include;../../thirdparty/owemdjee/boost/libs/timer/include;../../thirdparty/owemdjee/boost/libs/tokenizer/include;../../thirdparty/owemdjee/boost/libs/tti/include;../../thirdparty/owemdjee/boost/libs/tuple/include;../../thirdparty/owemdjee/boost/libs/typeof/include;../../thirdparty/owemdjee/boost/libs/type_erasure/include;../../thirdparty/owemdjee/boost/libs/type_index/include;../../thirdparty/owemdjee/boost/libs/type_traits/include;../../thirdparty/owemdjee/boost/libs/units/include;../../thirdparty/owemdjee/boost/libs/unordered/include;../../thirdparty/owemdjee/boost/libs/utility/include;../../thirdparty/owemdjee/boost/libs/uuid/include;../../thirdparty/owemdjee/boost/libs/variant/include;../../thirdparty/owemdjee/boost/libs/variant2/include;../../thirdparty/owemdjee/boost/libs/vmd/include;../../thirdparty/owemdjee/boost/libs/wave/include;../../thirdparty/owemdjee/boost/libs/winapi/include;../../thirdparty/owemdjee/boost/libs/xpressive/include;../../thirdparty/owemdjee/boost/libs/yap/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBBOOST;BOOST_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBBOOST;BOOST_STATICLIB;CHM__DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/boost;../../thirdparty/owemdjee/boost/libs/accumulators/include;../../thirdparty/owemdjee/boost/libs/algorithm/include;../../thirdparty/owemdjee/boost/libs/align/include;../../thirdparty/owemdjee/boost/libs/any/include;../../thirdparty/owemdjee/boost/libs/array/include;../../thirdparty/owemdjee/boost/libs/asio/include;../../thirdparty/owemdjee/boost/libs/assert/include;../../thirdparty/owemdjee/boost/libs/assign/include;../../thirdparty/owemdjee/boost/libs/atomic/include;../../thirdparty/owemdjee/boost/libs/beast/include;../../thirdparty/owemdjee/boost/libs/beast/test/extras/include;../../thirdparty/owemdjee/boost/libs/bimap/include;../../thirdparty/owemdjee/boost/libs/bind/include;../../thirdparty/owemdjee/boost/libs/callable_traits/include;../../thirdparty/owemdjee/boost/libs/chrono/include;../../thirdparty/owemdjee/boost/libs/circular_buffer/include;../../thirdparty/owemdjee/boost/libs/compatibility/include;../../thirdparty/owemdjee/boost/libs/compute/include;../../thirdparty/owemdjee/boost/libs/concept_check/include;../../thirdparty/owemdjee/boost/libs/config/include;../../thirdparty/owemdjee/boost/libs/container/include;../../thirdparty/owemdjee/boost/libs/container_hash/include;../../thirdparty/owemdjee/boost/libs/context/include;../../thirdparty/owemdjee/boost/libs/contract/include;../../thirdparty/owemdjee/boost/libs/conversion/include;../../thirdparty/owemdjee/boost/libs/convert/include;../../thirdparty/owemdjee/boost/libs/core/include;../../thirdparty/owemdjee/boost/libs/coroutine/include;../../thirdparty/owemdjee/boost/libs/coroutine2/include;../../thirdparty/owemdjee/boost/libs/crc/include;../../thirdparty/owemdjee/boost/libs/date_time/include;../../thirdparty/owemdjee/boost/libs/describe/include;../../thirdparty/owemdjee/boost/libs/detail/include;../../thirdparty/owemdjee/boost/libs/dll/include;../../thirdparty/owemdjee/boost/libs/dynamic_bitset/include;../../thirdparty/owemdjee/boost/libs/endian/include;../../thirdparty/owemdjee/boost/libs/exception/include;../../thirdparty/owemdjee/boost/libs/fiber/include;../../thirdparty/owemdjee/boost/libs/filesystem/include;../../thirdparty/owemdjee/boost/libs/flyweight/include;../../thirdparty/owemdjee/boost/libs/foreach/include;../../thirdparty/owemdjee/boost/libs/format/include;../../thirdparty/owemdjee/boost/libs/function/include;../../thirdparty/owemdjee/boost/libs/functional/include;../../thirdparty/owemdjee/boost/libs/function_types/include;../../thirdparty/owemdjee/boost/libs/fusion/include;../../thirdparty/owemdjee/boost/libs/geometry/include;../../thirdparty/owemdjee/boost/libs/gil/include;../../thirdparty/owemdjee/boost/libs/graph/include;../../thirdparty/owemdjee/boost/libs/graph_parallel/include;../../thirdparty/owemdjee/boost/libs/hana/include;../../thirdparty/owemdjee/boost/libs/heap/include;../../thirdparty/owemdjee/boost/libs/histogram/include;../../thirdparty/owemdjee/boost/libs/hof/include;../../thirdparty/owemdjee/boost/libs/icl/include;../../thirdparty/owemdjee/boost/libs/integer/include;../../thirdparty/owemdjee/boost/libs/interprocess/include;../../thirdparty/owemdjee/boost/libs/intrusive/include;../../thirdparty/owemdjee/boost/libs/io/include;../../thirdparty/owemdjee/boost/libs/iostreams/include;../../thirdparty/owemdjee/boost/libs/iterator/include;../../thirdparty/owemdjee/boost/libs/json/include;../../thirdparty/owemdjee/boost/libs/lambda/include;../../thirdparty/owemdjee/boost/libs/lambda2/include;../../thirdparty/owemdjee/boost/libs/leaf/include;../../thirdparty/owemdjee/boost/libs/lexical_cast/include;../../thirdparty/owemdjee/boost/libs/locale/include;../../thirdparty/owemdjee/boost/libs/local_function/include;../../thirdparty/owemdjee/boost/libs/lockfree/include;../../thirdparty/owemdjee/boost/libs/log/include;../../thirdparty/owemdjee/boost/libs/logic/include;../../thirdparty/owemdjee/boost/libs/math/include;../../thirdparty/owemdjee/boost/libs/metaparse/include;../../thirdparty/owemdjee/boost/libs/move/include;../../thirdparty/owemdjee/boost/libs/mp11/include;../../thirdparty/owemdjee/boost/libs/mpi/include;../../thirdparty/owemdjee/boost/libs/mpl/include;../../thirdparty/owemdjee/boost/libs/msm/include;../../thirdparty/owemdjee/boost/libs/multiprecision/include;../../thirdparty/owemdjee/boost/libs/multi_array/include;../../thirdparty/owemdjee/boost/libs/multi_index/include;../../thirdparty/owemdjee/boost/libs/nowide/include;../../thirdparty/owemdjee/boost/libs/numeric/conversion/include;../../thirdparty/owemdjee/boost/libs/numeric/interval/include;../../thirdparty/owemdjee/boost/libs/numeric/odeint/include;../../thirdparty/owemdjee/boost/libs/numeric/ublas/include;../../thirdparty/owemdjee/boost/libs/optional/include;../../thirdparty/owemdjee/boost/libs/outcome/include;../../thirdparty/owemdjee/boost/libs/parameter/include;../../thirdparty/owemdjee/boost/libs/parameter_python/include;../../thirdparty/owemdjee/boost/libs/pfr/include;../../thirdparty/owemdjee/boost/libs/phoenix/include;../../thirdparty/owemdjee/boost/libs/polygon/include;../../thirdparty/owemdjee/boost/libs/poly_collection/include;../../thirdparty/owemdjee/boost/libs/pool/include;../../thirdparty/owemdjee/boost/libs/predef/include;../../thirdparty/owemdjee/boost/libs/preprocessor/include;../../thirdparty/owemdjee/boost/libs/process/include;../../thirdparty/owemdjee/boost/libs/program_options/include;../../thirdparty/owemdjee/boost/libs/property_map/include;../../thirdparty/owemdjee/boost/libs/property_map_parallel/include;../../thirdparty/owemdjee/boost/libs/property_tree/include;../../thirdparty/owemdjee/boost/libs/proto/include;../../thirdparty/owemdjee/boost/libs/ptr_container/include;../../thirdparty/owemdjee/boost/libs/python/include;../../thirdparty/owemdjee/boost/libs/qvm/include;../../thirdparty/owemdjee/boost/libs/random/include;../../thirdparty/owemdjee/boost/libs/range/include;../../thirdparty/owemdjee/boost/libs/ratio/include;../../thirdparty/owemdjee/boost/libs/rational/include;../../thirdparty/owemdjee/boost/libs/regex/include;../../thirdparty/owemdjee/boost/libs/safe_numerics/include;../../thirdparty/owemdjee/boost/libs/scope_exit/include;../../thirdparty/owemdjee/boost/libs/serialization/include;../../thirdparty/owemdjee/boost/libs/signals2/include;../../thirdparty/owemdjee/boost/libs/smart_ptr/include;../../thirdparty/owemdjee/boost/libs/sort/include;../../thirdparty/owemdjee/boost/libs/spirit/include;../../thirdparty/owemdjee/boost/libs/stacktrace/include;../../thirdparty/owemdjee/boost/libs/statechart/include;../../thirdparty/owemdjee/boost/libs/static_assert/include;../../thirdparty/owemdjee/boost/libs/static_string/include;../../thirdparty/owemdjee/boost/libs/stl_interfaces/include;../../thirdparty/owemdjee/boost/libs/system/include;../../thirdparty/owemdjee/boost/libs/test/include;../../thirdparty/owemdjee/boost/libs/thread/include;../../thirdparty/owemdjee/boost/libs/throw_exception/include;../../thirdparty/owemdjee/boost/libs/timer/include;../../thirdparty/owemdjee/boost/libs/tokenizer/include;../../thirdparty/owemdjee/boost/libs/tti/include;../../thirdparty/owemdjee/boost/libs/tuple/include;../../thirdparty/owemdjee/boost/libs/typeof/include;../../thirdparty/owemdjee/boost/libs/type_erasure/include;../../thirdparty/owemdjee/boost/libs/type_index/include;../../thirdparty/owemdjee/boost/libs/type_traits/include;../../thirdparty/owemdjee/boost/libs/units/include;../../thirdparty/owemdjee/boost/libs/unordered/include;../../thirdparty/owemdjee/boost/libs/utility/include;../../thirdparty/owemdjee/boost/libs/uuid/include;../../thirdparty/owemdjee/boost/libs/variant/include;../../thirdparty/owemdjee/boost/libs/variant2/include;../../thirdparty/owemdjee/boost/libs/vmd/include;../../thirdparty/owemdjee/boost/libs/wave/include;../../thirdparty/owemdjee/boost/libs/winapi/include;../../thirdparty/owemdjee/boost/libs/xpressive/include;../../thirdparty/owemdjee/boost/libs/yap/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/build/has_atomic_flag_lockfree_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/ba_externallly_locked.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/condition.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/default_executor.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/executor.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/fib_task_region.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/future_fallback_to.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/future_then.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/future_unwrap.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/future_when_all.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/generic_executor_ref.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/lambda_future.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/make_future.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/monitor.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/mutex.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/not_interleaved.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/not_interleaved2.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/once.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/parallel_accumulate.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/parallel_quick_sort.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/perf_condition_variable.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/perf_shared_mutex.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/producer_consumer.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/producer_consumer2.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/producer_consumer_bounded.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/recursive_mutex.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/scoped_thread.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/serial_executor.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/serial_executor_cont.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/shared_monitor.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/shared_mutex.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/starvephil.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/std_scoped_thread.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/std_thread_guard.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/strict_lock.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/synchronized_person.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/synchronized_value.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/tennis.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/this_executor.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/thread.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/thread_group.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/thread_guard.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/thread_pool.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/tss.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/user_scheduler.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/with_lock_guard.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/example/xtime.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/src/future.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/src/pthread/once.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/src/pthread/once_atomic.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/src/pthread/thread.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/src/tss_null.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/src/win32/thread.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/src/win32/thread_primitives.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/src/win32/tss_dll.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/src/win32/tss_pe.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/experimental/parallel/v1/exception_list_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/experimental/parallel/v2/task_region_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/functional/invoke/invoke_int_0_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/functional/invoke/invoke_lvalue_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/functional/invoke/invoke_rvalue_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/functional/invoker/invoker_int_0_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/functional/invoker/invoker_lvalue_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/functional/invoker/invoker_rvalue_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/no_implicit_assign_from_lvalue_thread.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/no_implicit_move_from_lvalue_thread.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/self_contained_header.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/conditions/condition_variable/assign_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/conditions/condition_variable/copy_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/conditions/condition_variable/default_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/conditions/condition_variable/dtor_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/conditions/condition_variable/lost_notif_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/conditions/condition_variable/native_handle_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/conditions/condition_variable/wait_for_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/conditions/condition_variable/wait_for_pred_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/conditions/condition_variable/wait_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/conditions/condition_variable/wait_until_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/conditions/condition_variable/wait_until_pred_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/conditions/condition_variable_any/assign_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/conditions/condition_variable_any/copy_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/conditions/condition_variable_any/default_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/conditions/condition_variable_any/dtor_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/conditions/condition_variable_any/lost_notif_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/conditions/condition_variable_any/wait_for_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/conditions/condition_variable_any/wait_for_pred_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/conditions/condition_variable_any/wait_until_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/conditions/condition_variable_any/wait_until_pred_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/conditions/cv_status/cv_status_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/conditions/notify_all_at_thread_exit_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/async/async_executor_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/async/async_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/future/async_deferred_then_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/future/copy_assign_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/future/copy_ctor_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/future/default_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/future/dtor_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/future/get_or_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/future/get_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/future/move_assign_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/future/move_ctor_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/future/share_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/future/then_deferred_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/future/then_executor_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/future/then_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/future/wait_for_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/future/wait_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/future/wait_until_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/make_ready_future_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/packaged_task/alloc_ctor_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/packaged_task/copy_assign_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/packaged_task/copy_ctor_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/packaged_task/default_ctor_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/packaged_task/dtor_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/packaged_task/func_ctor_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/packaged_task/get_future_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/packaged_task/make_ready_at_thread_exit_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/packaged_task/member_swap_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/packaged_task/move_assign_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/packaged_task/move_ctor_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/packaged_task/non_member_swap_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/packaged_task/operator_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/packaged_task/reset_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/packaged_task/types_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/packaged_task/use_allocator_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/promise/alloc_ctor_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/promise/copy_assign_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/promise/copy_ctor_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/promise/default_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/promise/dtor_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/promise/emplace_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/promise/get_future_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/promise/move_assign_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/promise/move_ctor_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/promise/set_exception_at_thread_exit_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/promise/set_exception_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/promise/set_lvalue_at_thread_exit_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/promise/set_lvalue_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/promise/set_rvalue_at_thread_exit_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/promise/set_rvalue_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/promise/set_value_at_thread_exit_const_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/promise/set_value_at_thread_exit_void_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/promise/set_value_const_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/promise/set_value_void_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/promise/use_allocator_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/shared_future/copy_assign_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/shared_future/copy_ctor_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/shared_future/default_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/shared_future/dtor_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/shared_future/get_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/shared_future/move_assign_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/shared_future/move_ctor_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/shared_future/then_executor_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/shared_future/then_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/shared_future/wait_for_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/shared_future/wait_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/shared_future/wait_until_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/when_all/iterators_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/when_all/none_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/when_all/one_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/when_all/variadic_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/when_any/iterators_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/when_any/none_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/when_any/one_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/when_any/variadic_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/deque_views/single_thread_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/lock_guard/adopt_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/lock_guard/copy_assign_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/lock_guard/copy_ctor_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/lock_guard/default_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/lock_guard/lock_guard_adopt_lock_compile_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/lock_guard/lock_guard_adopt_lock_compile_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/lock_guard/lock_guard_compile_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/lock_guard/lock_guard_compile_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/lock_guard/make_lock_guard_adopt_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/lock_guard/make_lock_guard_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/lock_guard/types_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/nested_strict_lock/copy_assign_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/nested_strict_lock/copy_ctor_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/nested_strict_lock/default_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/nested_strict_lock/make_nested_strict_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/nested_strict_lock/owns_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/nested_strict_lock/types_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/reverse_lock/copy_assign_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/reverse_lock/copy_ctor_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/reverse_lock/types_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/reverse_lock/unique_lock_ctor_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock/cons/adopt_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock/cons/copy_assign_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock/cons/copy_ctor_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock/cons/default_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock/cons/defer_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock/cons/duration_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock/cons/move_assign_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock/cons/move_ctor_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock/cons/move_ctor_unique_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock/cons/move_ctor_upgrade_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock/cons/mutex_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock/cons/time_point_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock/cons/try_to_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock/locking/lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock/locking/try_lock_for_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock/locking/try_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock/locking/try_lock_until_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock/locking/unlock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock/mod/member_swap_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock/mod/non_member_swap_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock/mod/release_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock/obs/mutex_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock/obs/op_bool_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock/obs/owns_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock/types_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock_guard/adopt_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock_guard/copy_assign_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock_guard/copy_ctor_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock_guard/default_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/shared_lock_guard/types_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/strict_lock/copy_assign_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/strict_lock/copy_ctor_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/strict_lock/default_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/strict_lock/make_strict_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/strict_lock/owns_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/strict_lock/types_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/cons/adopt_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/cons/copy_assign_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/cons/copy_ctor_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/cons/default_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/cons/defer_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/cons/duration_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/cons/make_unique_lock_adopt_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/cons/make_unique_lock_defer_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/cons/make_unique_lock_mutex_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/cons/make_unique_lock_try_to_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/cons/make_unique_locks_mutex_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/cons/move_assign_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/cons/move_ctor_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/cons/move_ctor_shared_lock_for_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/cons/move_ctor_shared_lock_try_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/cons/move_ctor_shared_lock_until_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/cons/move_ctor_upgrade_lock_for_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/cons/move_ctor_upgrade_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/cons/move_ctor_upgrade_lock_try_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/cons/move_ctor_upgrade_lock_until_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/cons/mutex_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/cons/time_point_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/cons/try_to_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/locking/lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/locking/try_lock_for_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/locking/try_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/locking/try_lock_until_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/locking/unlock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/mod/member_swap_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/mod/non_member_swap_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/mod/release_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/obs/mutex_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/obs/op_bool_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/obs/op_int_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/obs/owns_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/unique_lock/types_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/upgrade_lock/cons/adopt_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/upgrade_lock/cons/copy_assign_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/upgrade_lock/cons/copy_ctor_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/upgrade_lock/cons/default_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/upgrade_lock/cons/defer_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/upgrade_lock/cons/duration_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/upgrade_lock/cons/move_assign_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/upgrade_lock/cons/move_ctor_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/upgrade_lock/cons/move_ctor_shared_lock_for_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/upgrade_lock/cons/move_ctor_shared_lock_try_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/upgrade_lock/cons/move_ctor_shared_lock_until_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/upgrade_lock/cons/move_ctor_unique_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/upgrade_lock/cons/mutex_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/upgrade_lock/cons/time_point_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/upgrade_lock/cons/try_to_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/upgrade_lock/locking/lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/upgrade_lock/locking/try_lock_for_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/upgrade_lock/locking/try_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/upgrade_lock/locking/try_lock_until_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/upgrade_lock/locking/unlock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/upgrade_lock/mod/member_swap_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/upgrade_lock/mod/non_member_swap_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/upgrade_lock/mod/release_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/upgrade_lock/obs/mutex_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/upgrade_lock/obs/op_bool_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/upgrade_lock/obs/owns_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/locks/upgrade_lock/types_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/mutex/assign_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/mutex/copy_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/mutex/default_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/mutex/lock_compile_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/mutex/lock_compile_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/mutex/lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/mutex/native_handle_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/mutex/try_lock_compile_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/mutex/try_lock_compile_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/mutex/try_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/null_mutex/assign_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/null_mutex/copy_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/null_mutex/default_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/null_mutex/lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/null_mutex/try_lock_for_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/null_mutex/try_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/null_mutex/try_lock_until_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/once/call_once/call_once_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/queue_views/single_thread_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/recursive_mutex/assign_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/recursive_mutex/copy_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/recursive_mutex/default_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/recursive_mutex/lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/recursive_mutex/native_handle_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/recursive_mutex/try_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/recursive_timed_mutex/assign_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/recursive_timed_mutex/copy_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/recursive_timed_mutex/default_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/recursive_timed_mutex/lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/recursive_timed_mutex/native_handle_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/recursive_timed_mutex/try_lock_for_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/recursive_timed_mutex/try_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/recursive_timed_mutex/try_lock_until_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/shared_mutex/assign_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/shared_mutex/copy_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/shared_mutex/default_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/shared_mutex/lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/shared_mutex/try_lock_for_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/shared_mutex/try_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/shared_mutex/try_lock_until_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/sync_bounded_queue/multi_thread_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/sync_bounded_queue/single_thread_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/sync_deque/multi_thread_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/sync_deque/single_thread_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/sync_pq/pq_multi_thread_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/sync_pq/pq_single_thread_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/sync_pq/tq_multi_thread_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/sync_pq/tq_single_thread_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/sync_queue/multi_thread_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/sync_queue/single_thread_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/synchronized_value/call_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/synchronized_value/copy_T_assign_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/synchronized_value/copy_T_ctor_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/synchronized_value/copy_assign_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/synchronized_value/copy_ctor_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/synchronized_value/default_ctor_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/synchronized_value/indirect_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/synchronized_value/move_T_assign_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/synchronized_value/move_T_ctor_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/synchronized_value/move_assign_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/synchronized_value/move_ctor_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/synchronized_value/swap_T_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/synchronized_value/swap_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/synchronized_value/synchronize_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/timed_mutex/assign_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/timed_mutex/copy_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/timed_mutex/default_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/timed_mutex/lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/timed_mutex/native_handle_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/timed_mutex/try_lock_for_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/timed_mutex/try_lock_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/timed_mutex/try_lock_until_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/with_lock_guard/with_lock_guard_bind.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/with_lock_guard/with_lock_guard_lambda.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/with_lock_guard/with_lock_guard_move.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/mutual_exclusion/with_lock_guard/with_lock_guard_simple.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_10340.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_10963.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_10964.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_11053.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_11256.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_11266.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_11499.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_11611.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_11796.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_11818.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_12293.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_12949.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_13480b.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_13561.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_2309.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_2501.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_2741.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_3628.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_366_1.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_366_2.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_366_3.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_366_4.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_3837.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_4521.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_4648.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_4882.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_5351.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_5502.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_5542_1.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_5542_2.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_5542_3.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_5891.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_6130.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_6170.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_6174.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_7160.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_7328.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_7571.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_7665.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_7666.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_7720.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_7755.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_8455.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_8508.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_8557.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_8586.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_8596.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_8600.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_8674.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_8943.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_8960.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_9079_a.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_9079_b.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_9192.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_9303.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_9319.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_9711.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_9856.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_barrier.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_barrier_size_fct.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_barrier_void_fct.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_completion_latch.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_condition.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_condition_notify_all.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_condition_notify_one.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_condition_timed_wait_times_out.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_futures.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_generic_locks.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_hardware_concurrency.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_latch.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_lock_concept.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_ml.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_ml2.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_move_function.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_mutex.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_once.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_physical_concurrency.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_scheduled_tp.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_scheduler.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_scheduling_adaptor.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_shared_mutex.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_shared_mutex_part_2.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_shared_mutex_timed_locks.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_shared_mutex_timed_locks_chrono.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_thread.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_thread_exit.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_thread_id.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_thread_launching.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_thread_mf.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_thread_move.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_thread_move_return.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_thread_return_local.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_time_jumps.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_tss.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/test_xtime.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/threads/container/thread_ptr_list_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/threads/container/thread_vector_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/threads/this_thread/get_id/get_id_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/threads/this_thread/sleep_for/sleep_for_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/threads/this_thread/sleep_until/sleep_until_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/threads/thread/assign/copy_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/threads/thread/assign/move_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/threads/thread/constr/FArgs_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/threads/thread/constr/F_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/threads/thread/constr/FrvalueArgs_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/threads/thread/constr/Frvalue_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/threads/thread/constr/copy_fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/threads/thread/constr/default_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/threads/thread/constr/lambda_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/threads/thread/constr/move_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/threads/thread/destr/dtor_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/threads/thread/id/hash_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/threads/thread/members/detach_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/threads/thread/members/get_id_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/threads/thread/members/join_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/threads/thread/members/joinable_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/threads/thread/members/native_handle_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/threads/thread/members/swap_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/threads/thread/members/try_join_for_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/threads/thread/members/try_join_until_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/threads/thread/non_members/swap_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/threads/thread/static/hardware_concurrency_pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/test/winrt_init.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/tutorial/bounded_buffer.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/tutorial/counter.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/tutorial/factorial.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/tutorial/factorial2.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/tutorial/factorial3.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/tutorial/helloworld.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/tutorial/helloworld2.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/tutorial/helloworld3.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/tutorial/once.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/thread/tutorial/tss.cpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/barrier.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/caller_context.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/completion_latch.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/concurrent_queues/deque_adaptor.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/concurrent_queues/deque_base.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/concurrent_queues/deque_views.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/concurrent_queues/detail/sync_deque_base.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/concurrent_queues/detail/sync_queue_base.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/concurrent_queues/queue_adaptor.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/concurrent_queues/queue_base.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/concurrent_queues/queue_op_status.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/concurrent_queues/queue_views.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/concurrent_queues/sync_bounded_queue.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/concurrent_queues/sync_deque.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/concurrent_queues/sync_priority_queue.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/concurrent_queues/sync_queue.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/concurrent_queues/sync_timed_queue.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/condition.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/condition_variable.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/csbl/deque.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/csbl/devector.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/csbl/functional.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/csbl/list.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/csbl/memory.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/csbl/memory/allocator_arg.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/csbl/memory/allocator_traits.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/csbl/memory/config.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/csbl/memory/default_delete.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/csbl/memory/pointer_traits.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/csbl/memory/scoped_allocator.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/csbl/memory/shared_ptr.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/csbl/memory/unique_ptr.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/csbl/queue.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/csbl/tuple.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/csbl/vector.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/cv_status.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/detail/atomic_redef_macros.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/detail/atomic_undef_macros.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/detail/config.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/detail/counter.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/detail/delete.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/detail/force_cast.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/detail/function_wrapper.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/detail/invoke.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/detail/invoker.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/detail/is_convertible.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/detail/lockable_wrapper.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/detail/log.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/detail/make_tuple_indices.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/detail/memory.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/detail/move.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/detail/nullary_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/detail/platform.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/detail/platform_time.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/detail/singleton.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/detail/thread.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/detail/thread_group.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/detail/thread_heap_alloc.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/detail/thread_interruption.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/detail/thread_safety.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/detail/tss_hooks.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/detail/variadic_footer.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/detail/variadic_header.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/exceptional_ptr.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/exceptions.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/executor.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/executors/basic_thread_pool.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/executors/detail/priority_executor_base.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/executors/detail/scheduled_executor_base.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/executors/executor.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/executors/executor_adaptor.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/executors/generic_executor_ref.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/executors/inline_executor.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/executors/loop_executor.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/executors/scheduled_thread_pool.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/executors/scheduler.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/executors/scheduling_adaptor.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/executors/serial_executor.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/executors/serial_executor_cont.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/executors/thread_executor.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/executors/work.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/experimental/config/inline_namespace.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/experimental/exception_list.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/experimental/parallel/v1/exception_list.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/experimental/parallel/v1/inline_namespace.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/experimental/parallel/v2/inline_namespace.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/experimental/parallel/v2/task_region.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/experimental/task_region.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/externally_locked.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/externally_locked_stream.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/future.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/futures/future_error.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/futures/future_error_code.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/futures/future_status.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/futures/is_future_type.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/futures/launch.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/futures/wait_for_all.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/futures/wait_for_any.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/interruption.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/is_locked_by_this_thread.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/latch.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/lock_algorithms.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/lock_concepts.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/lock_factories.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/lock_guard.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/lock_options.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/lock_traits.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/lock_types.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/lockable_adapter.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/lockable_concepts.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/lockable_traits.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/locks.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/mutex.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/null_mutex.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/once.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/ostream_buffer.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/poly_lockable.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/poly_lockable_adapter.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/poly_shared_lockable.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/poly_shared_lockable_adapter.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/pthread/condition_variable.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/pthread/condition_variable_fwd.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/pthread/mutex.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/pthread/once.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/pthread/once_atomic.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/pthread/pthread_helpers.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/pthread/pthread_mutex_scoped_lock.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/pthread/recursive_mutex.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/pthread/shared_mutex.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/pthread/thread_data.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/pthread/thread_heap_alloc.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/recursive_mutex.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/reverse_lock.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/scoped_thread.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/shared_lock_guard.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/shared_mutex.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/strict_lock.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/sync_bounded_queue.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/sync_queue.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/synchronized_value.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/testable_mutex.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/thread.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/thread_functors.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/thread_guard.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/thread_only.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/thread_pool.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/thread_time.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/tss.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/user_scheduler.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/v2/shared_mutex.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/win32/basic_recursive_mutex.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/win32/basic_timed_mutex.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/win32/condition_variable.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/win32/interlocked_read.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/win32/mfc_thread_init.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/win32/mutex.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/win32/once.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/win32/recursive_mutex.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/win32/shared_mutex.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/win32/thread_data.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/win32/thread_heap_alloc.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/win32/thread_primitives.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/with_lock_guard.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/include/boost/thread/xtime.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/test/condition_test_common.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/test/remove_error_code_unused_warning.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/test/shared_mutex_locking_thread.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/test/sync/futures/test_allocator.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/thread/test/timming.hpp" />
+    <Text Include="../../thirdparty/owemdjee/boost/libs/thread/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/boost/libs/thread/README.md" />
+    <Text Include="../../thirdparty/owemdjee/boost/libs/thread/doc/changes.qbk" />
+    <Text Include="../../thirdparty/owemdjee/boost/libs/thread/meta/libraries.json" />
+  </ItemGroup>
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />
+  </ImportGroup>
+</Project>
+  

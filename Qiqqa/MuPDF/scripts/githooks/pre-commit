@@ -1,0 +1,42 @@
+#!/bin/bash
+#
+# Copyright 2022 Artifex Software.
+#
+# pre-commit hook to fix whitespace errors
+#
+# Uses the core.whitespace or .gitattributes whitespace=... settings.
+#
+# see also: "man git-config" under core.whitespace
+# see also: "man gitattributes"
+#
+
+PATCH=P.diff
+
+# patch up whitespace
+if ! git diff --cached --check --quiet
+then
+	git diff --cached > $PATCH
+	git apply --cached -R $PATCH
+	git apply --cached --whitespace=fix $PATCH
+	rm $PATCH
+fi
+
+# update copyright year if needed
+YEAR=$(date +%Y)
+git diff --cached --name-only | while read FILE
+do
+	if git show ":$FILE" | grep -q "Copyright.*Artifex"
+	then
+		if ! git show ":$FILE" | grep -q "Copyright.*$YEAR.*Artifex"
+		then
+			echo
+			echo WARNING: Patched copyright year in "$FILE"
+			echo
+
+			mv "$FILE" __copydate
+			git show ":$FILE" | sed -e "/Copyright/s/[0-9]* Artifex/$YEAR Artifex/" > "$FILE"
+			git add "$FILE"
+			mv __copydate "$FILE"
+		fi
+	fi
+done

@@ -1,0 +1,1009 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03fd328}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{42f0fc98-34f6-4567-b3cf-de13e74a89ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{b1798409-2031-413d-9df7-70b0202ddd98}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files\include">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\xtensor">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\test\files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\benchmark">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\docs">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\docs\source">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\docs\source\_static">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\docs\source\api">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0009}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\docs\source\developer">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0010}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\docs\source\quickref">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0011}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0013}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\files\xio_expected_results">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0014}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\tools">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0015}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0016}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\docs">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\docs\source">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\notebooks">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0020}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\notebooks\images">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0019}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\benchmark">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_adapter.cpp">
+      <Filter>Source Files\benchmark</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_assign.cpp">
+      <Filter>Source Files\benchmark</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_builder.cpp">
+      <Filter>Source Files\benchmark</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_container.cpp">
+      <Filter>Source Files\benchmark</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_creation.cpp">
+      <Filter>Source Files\benchmark</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_increment_stepper.cpp">
+      <Filter>Source Files\benchmark</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_lambda_expressions.cpp">
+      <Filter>Source Files\benchmark</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_math.cpp">
+      <Filter>Source Files\benchmark</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_random.cpp">
+      <Filter>Source Files\benchmark</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_reducer.cpp">
+      <Filter>Source Files\benchmark</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_view_access.cpp">
+      <Filter>Source Files\benchmark</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_view_adapt.cpp">
+      <Filter>Source Files\benchmark</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_view_assignment.cpp">
+      <Filter>Source Files\benchmark</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_views.cpp">
+      <Filter>Source Files\benchmark</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/benchmark_xshape.cpp">
+      <Filter>Source Files\benchmark</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/benchmark/main.cpp">
+      <Filter>Source Files\benchmark</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/main.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_extended_broadcast_view.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_extended_xhistogram.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_extended_xmath_interp.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_extended_xmath_reducers.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_extended_xsort.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_sfinae.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xaccumulator.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xadapt.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xadaptor_semantic.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xarray.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xarray_adaptor.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xassign.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xaxis_iterator.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xaxis_slice_iterator.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xblockwise_reducer.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xbroadcast.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xbuffer_adaptor.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xbuilder.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xchunked_array.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xchunked_view.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xcomplex.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xcontainer_semantic.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xcsv.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xdatesupport.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xdynamic_view.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xeval.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xexception.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xexpression.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xexpression_holder.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xexpression_traits.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xfixed.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xfunc_on_xexpression.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xfunction.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xfunctor_adaptor.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xhistogram.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xindex_view.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xinfo.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xio.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xiterator.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xjson.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xlayout.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xmanipulation.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xmasked_view.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xmath.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xmath_result_type.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xmime.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xmultiindex_iterator.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xnan_functions.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xnoalias.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xnorm.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xnpy.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xoperation.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xoptional.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xoptional_assembly.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xoptional_assembly_adaptor.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xoptional_assembly_storage.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xpad.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xrandom.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xreducer.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xrepeat.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xscalar.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xscalar_semantic.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xset_operation.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xshape.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xsimd.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xsimd8.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xsort.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xstorage.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xstrided_view.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xstrides.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xtensor.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xtensor_adaptor.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xtensor_semantic.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xutils.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xvectorize.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xview.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xview_semantic.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xaccessible.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xaccumulator.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xadapt.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xarray.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xassign.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xaxis_iterator.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xaxis_slice_iterator.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xblockwise_reducer.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xblockwise_reducer_functors.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xbroadcast.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xbuffer_adaptor.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xbuilder.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xchunked_array.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xchunked_assign.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xchunked_view.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xcomplex.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xcontainer.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xcsv.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xdynamic_view.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xeval.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xexception.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xexpression.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xexpression_holder.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xexpression_traits.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xfixed.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xfunction.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xfunctor_view.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xgenerator.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xhistogram.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xindex_view.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xinfo.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xio.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xiterable.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xiterator.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xjson.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xlayout.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xmanipulation.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xmasked_view.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xmath.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xmime.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xmultiindex_iterator.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xnoalias.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xnorm.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xnpy.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xoffset_view.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xoperation.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xoptional.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xoptional_assembly.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xoptional_assembly_base.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xoptional_assembly_storage.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xpad.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xrandom.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xreducer.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xrepeat.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xscalar.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xsemantic.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xset_operation.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xshape.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xslice.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xsort.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xstorage.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xstrided_view.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xstrided_view_base.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xstrides.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xtensor.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xtensor_config.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xtensor_forward.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xtensor_simd.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xutils.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xvectorize.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xview.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/include/xtensor/xview_utils.hpp">
+      <Filter>Header Files\include\xtensor</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results.hpp">
+      <Filter>Header Files\test\files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/test/test_common.hpp">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/test/test_common_macros.hpp">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/test/test_utils.hpp">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtensor/test/test_xsemantic.hpp">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
+    <Image Include="../../thirdparty/owemdjee/xtensor/docs/source/xeus-cling-screenshot.png">
+      <Filter>Resource Files\docs\source</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/xtensor/notebooks/images/xtensor-blas.png">
+      <Filter>Resource Files\notebooks\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/xtensor/notebooks/images/xtensor.png">
+      <Filter>Resource Files\notebooks\images</Filter>
+    </Image>
+    <Text Include="../../thirdparty/owemdjee/xtensor/CMakeLists.txt">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/README.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/benchmark/CMakeLists.txt">
+      <Filter>Misc Files\benchmark</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/benchmark/copyGBenchmark.cmake.in">
+      <Filter>Misc Files\benchmark</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/benchmark/downloadGBenchmark.cmake.in">
+      <Filter>Misc Files\benchmark</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/make.bat">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/_static/goatcounter.js">
+      <Filter>Misc Files\docs\source\_static</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/adaptor.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/accumulating_functions.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/basic_functions.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/chunked_array.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/classif_functions.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/container_index.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/error_functions.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/exponential_functions.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/expression_index.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/function_index.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/hyperbolic_functions.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/index_related.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/io_index.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/iterator_index.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/nan_functions.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/nearint_operations.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/operators.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/power_functions.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/reducing_functions.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/trigonometric_functions.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xaccumulator.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xarray.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xarray_adaptor.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xaxis_iterator.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xaxis_slice_iterator.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xbroadcast.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xbuilder.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xcontainer.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xcontainer_semantic.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xcsv.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xeval.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xexpression.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xfixed.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xfunction.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xfunctor_view.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xgenerator.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xhistogram.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xindex_view.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xio.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xiterable.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xjson.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xmanipulation.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xmasked_view.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xmath.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xnpy.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xoptional_assembly.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xoptional_assembly_adaptor.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xoptional_assembly_base.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xpad.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xrandom.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xreducer.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xrepeat.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xsemantic_base.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xset_operation.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xshape.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xsort.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xstrided_view.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xstrides.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xtensor.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xtensor_adaptor.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xview.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xview_semantic.rst">
+      <Filter>Misc Files\docs\source\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/bindings.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/build-options.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/builder.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/changelog.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/closure-semantics.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/compilers.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/conf.py">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/container.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/dev-build-options.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/assignment.rst">
+      <Filter>Misc Files\docs\source\developer</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/concepts.rst">
+      <Filter>Misc Files\docs\source\developer</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/expression_tree.rst">
+      <Filter>Misc Files\docs\source\developer</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/implementation_classes.rst">
+      <Filter>Misc Files\docs\source\developer</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/iterating_expression.rst">
+      <Filter>Misc Files\docs\source\developer</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/xtensor_internals.rst">
+      <Filter>Misc Files\docs\source\developer</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/expression.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/external-structures.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/file_loading.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/getting_started.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/histogram.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/index.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/indices.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/installation.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/missing.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/numpy-differences.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/numpy.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/operator.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/pitfall.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/quickref/basic.rst">
+      <Filter>Misc Files\docs\source\quickref</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/quickref/builder.rst">
+      <Filter>Misc Files\docs\source\quickref</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/quickref/chunked_arrays.rst">
+      <Filter>Misc Files\docs\source\quickref</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/quickref/iterator.rst">
+      <Filter>Misc Files\docs\source\quickref</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/quickref/manipulation.rst">
+      <Filter>Misc Files\docs\source\quickref</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/quickref/math.rst">
+      <Filter>Misc Files\docs\source\quickref</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/quickref/operator.rst">
+      <Filter>Misc Files\docs\source\quickref</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/quickref/reducer.rst">
+      <Filter>Misc Files\docs\source\quickref</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/random.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/rank.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/related.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/releasing.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/scalar.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/view.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/CMakeLists.txt">
+      <Filter>Misc Files\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/generate.py">
+      <Filter>Misc Files\test\files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/preprocess.py">
+      <Filter>Misc Files\test\files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/big_exp.txt">
+      <Filter>Misc Files\test\files\xio_expected_results</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/bool_fn.txt">
+      <Filter>Misc Files\test\files\xio_expected_results</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/complex_numbers.txt">
+      <Filter>Misc Files\test\files\xio_expected_results</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/complex_zero_erasing.txt">
+      <Filter>Misc Files\test\files\xio_expected_results</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/custom_formatter_result.txt">
+      <Filter>Misc Files\test\files\xio_expected_results</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/cut_4d.txt">
+      <Filter>Misc Files\test\files\xio_expected_results</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/cut_both.txt">
+      <Filter>Misc Files\test\files\xio_expected_results</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/cut_high.txt">
+      <Filter>Misc Files\test\files\xio_expected_results</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/cut_long.txt">
+      <Filter>Misc Files\test\files\xio_expected_results</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/float_leading_zero.txt">
+      <Filter>Misc Files\test\files\xio_expected_results</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/long_strings.txt">
+      <Filter>Misc Files\test\files\xio_expected_results</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/precision.txt">
+      <Filter>Misc Files\test\files\xio_expected_results</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/print_options_result.txt">
+      <Filter>Misc Files\test\files\xio_expected_results</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/random_nan_inf.txt">
+      <Filter>Misc Files\test\files\xio_expected_results</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/random_strings.txt">
+      <Filter>Misc Files\test\files\xio_expected_results</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/threed_double.txt">
+      <Filter>Misc Files\test\files\xio_expected_results</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/twod_double.txt">
+      <Filter>Misc Files\test\files\xio_expected_results</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/tools/check_circular.py">
+      <Filter>Misc Files\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/xtensor.pc.in">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtensor/xtensorConfig.cmake.in">
+      <Filter>Misc Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
+    

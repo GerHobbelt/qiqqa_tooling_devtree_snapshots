@@ -1,0 +1,1510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03fd328}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{42f0fc98-34f6-4567-b3cf-de13e74a89ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{b1798409-2031-413d-9df7-70b0202ddd98}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files\b">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\b\lib">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\docs">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\docs\cmdline-opts">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\docs\examples">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\docs\libcurl">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\docs\libcurl\opts">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0009}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\curl">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\lib">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0010}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\lib\vauth">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0011}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\lib\vquic">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\lib\vssh">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0013}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\lib\vtls">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0014}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\packages">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0016}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\packages\OS400">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0015}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\packages\vms">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\plan9">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0019}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\plan9\lib">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\plan9\src">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0020}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\projects">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\tests">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\tests\data">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\tests\libtest">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\tests\server">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\tests\unit">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\CMake">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\LICENSES">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0029}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\b">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0030}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\b\CMakeFiles">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0031}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\b\CMakeFiles\3.22.0-rc1">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0032}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\docs">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0033}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\docs\cmdline-opts">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0034}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\docs\examples">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0035}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\docs\libcurl">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0036}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\docs\libcurl\opts">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0037}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\include">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0038}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\include\curl">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0039}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\lib">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0040}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\packages">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0041}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\packages\OS400">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0042}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\packages\vms">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0043}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\plan9">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0044}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\projects">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0045}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\scripts">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0046}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\scripts\zuul">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0047}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0048}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\tests">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0049}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\tests\certs">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0050}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\tests\certs\scripts">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0051}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\tests\data">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0052}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\tests\libtest">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0053}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\tests\server">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0054}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\tests\tests-httpd">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0055}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\tests\tests-httpd\testenv">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0056}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\tests\unit">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0057}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\winbuild">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0058}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0059}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\src">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0061}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CMake">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0062}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\b">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0066}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\b\CMakeFiles">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0065}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\b\CMakeFiles\3.22.0-rc1">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0064}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\b\CMakeFiles\3.22.0-rc1\CompilerIdC">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0063}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\b\CMakeFiles\CheckIncludeFiles">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0067}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\b\CMakeFiles\CheckTypeSize">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0068}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\b\src">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0069}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\b\tests">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0071}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\b\tests\libtest">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0070}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\docs">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0073}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\docs\examples">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0072}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lib">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0074}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lib\vauth">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0075}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lib\vquic">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0076}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lib\vssh">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0077}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lib\vtls">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0078}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\packages">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0080}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\packages\OS400">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\packages\vms">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0081}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0082}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tests">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0084}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tests\libtest">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0083}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tests\server">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0085}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tests\tests-httpd">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0088}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tests\tests-httpd\testenv">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0087}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tests\tests-httpd\testenv\mod_curltest">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0086}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tests\unit">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0089}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="../../thirdparty/curl/docs/cmdline-opts/Makefile.inc">
+      <Filter>Header Files\docs\cmdline-opts</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/docs/examples/Makefile.inc">
+      <Filter>Header Files\docs\examples</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/docs/libcurl/Makefile.inc">
+      <Filter>Header Files\docs\libcurl</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/docs/libcurl/opts/Makefile.inc">
+      <Filter>Header Files\docs\libcurl\opts</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/include/curl/curl.h">
+      <Filter>Header Files\include\curl</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/include/curl/curlbuild.h">
+      <Filter>Header Files\include\curl</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/include/curl/curlver.h">
+      <Filter>Header Files\include\curl</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/include/curl/easy.h">
+      <Filter>Header Files\include\curl</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/include/curl/header.h">
+      <Filter>Header Files\include\curl</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/include/curl/mprintf.h">
+      <Filter>Header Files\include\curl</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/include/curl/multi.h">
+      <Filter>Header Files\include\curl</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/include/curl/options.h">
+      <Filter>Header Files\include\curl</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/include/curl/stdcheaders.h">
+      <Filter>Header Files\include\curl</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/include/curl/system.h">
+      <Filter>Header Files\include\curl</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/include/curl/typecheck-gcc.h">
+      <Filter>Header Files\include\curl</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/include/curl/urlapi.h">
+      <Filter>Header Files\include\curl</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/include/curl/websockets.h">
+      <Filter>Header Files\include\curl</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/Makefile.inc">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/altsvc.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/amigaos.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/arpa_telnet.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/asyn.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/bufref.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/c-hyper.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/cacert.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/cf-socket.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/cfilters.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/config-amigaos.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/config-dos.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/config-freertos.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/config-mac.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/config-micrium.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/config-os400.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/config-plan9.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/config-riscos.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/config-win32.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/config-win32ce.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/conncache.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/connect.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/content_encoding.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/cookie.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_addrinfo.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_base64.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_ctype.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_des.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_endian.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_fnmatch.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_get_line.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_gethostname.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_gssapi.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_hmac.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_krb5.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_ldap.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_log.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_md4.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_md5.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_memory.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_memrchr.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_multibyte.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_ntlm_core.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_ntlm_wb.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_path.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_printf.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_range.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_rtmp.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_sasl.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_setup.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_setup_once.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_sha256.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_sspi.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curl_threads.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/curlx.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/dict.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/doh.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/dynbuf.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/easy_lock.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/easyif.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/easyoptions.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/escape.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/file.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/fileinfo.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/fopen.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/formdata.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/ftp.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/ftplistparser.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/functypes.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/getinfo.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/gopher.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/h2h3.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/hash.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/headers.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/hostip.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/hsts.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/http.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/http2.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/http_aws_sigv4.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/http_chunks.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/http_digest.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/http_negotiate.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/http_ntlm.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/http_proxy.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/idn.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/if2ip.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/imap.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/inet_ntop.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/inet_pton.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/llist.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/memdebug.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/mime.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/mqtt.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/multihandle.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/multiif.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/netrc.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/nonblock.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/noproxy.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/openlock.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/parsedate.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/pingpong.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/pop3.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/progress.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/psl.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/rand.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/rename.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/rtsp.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/select.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/sendf.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/setopt.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/setup-os400.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/setup-vms.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/setup-win32.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/share.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/sigpipe.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/slist.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/smb.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/smtp.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/sockaddr.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/socketpair.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/socks.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/speedcheck.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/splay.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/strcase.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/strdup.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/strerror.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/strtok.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/strtoofft.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/system_win32.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/telnet.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/tftp.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/timediff.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/timeval.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/transfer.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/url.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/urlapi-int.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/urldata.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/vauth/digest.h">
+      <Filter>Header Files\lib\vauth</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/vauth/ntlm.h">
+      <Filter>Header Files\lib\vauth</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/vauth/vauth.h">
+      <Filter>Header Files\lib\vauth</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/version_win32.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/vquic/curl_msh3.h">
+      <Filter>Header Files\lib\vquic</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/vquic/curl_ngtcp2.h">
+      <Filter>Header Files\lib\vquic</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/vquic/curl_quiche.h">
+      <Filter>Header Files\lib\vquic</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/vquic/vquic.h">
+      <Filter>Header Files\lib\vquic</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/vquic/vquic_int.h">
+      <Filter>Header Files\lib\vquic</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/vssh/ssh.h">
+      <Filter>Header Files\lib\vssh</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/vtls/bearssl.h">
+      <Filter>Header Files\lib\vtls</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/vtls/gskit.h">
+      <Filter>Header Files\lib\vtls</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/vtls/gtls.h">
+      <Filter>Header Files\lib\vtls</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/vtls/hostcheck.h">
+      <Filter>Header Files\lib\vtls</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/vtls/keylog.h">
+      <Filter>Header Files\lib\vtls</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/vtls/mbedtls.h">
+      <Filter>Header Files\lib\vtls</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/vtls/mbedtls_threadlock.h">
+      <Filter>Header Files\lib\vtls</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/vtls/nssg.h">
+      <Filter>Header Files\lib\vtls</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/vtls/openssl.h">
+      <Filter>Header Files\lib\vtls</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/vtls/rustls.h">
+      <Filter>Header Files\lib\vtls</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/vtls/schannel.h">
+      <Filter>Header Files\lib\vtls</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/vtls/sectransp.h">
+      <Filter>Header Files\lib\vtls</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/vtls/vtls.h">
+      <Filter>Header Files\lib\vtls</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/vtls/vtls_int.h">
+      <Filter>Header Files\lib\vtls</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/vtls/wolfssl.h">
+      <Filter>Header Files\lib\vtls</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/vtls/x509asn1.h">
+      <Filter>Header Files\lib\vtls</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/warnless.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/wildcard.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/ws.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/packages/OS400/ccsidcurl.h">
+      <Filter>Header Files\packages\OS400</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/packages/OS400/os400sys.h">
+      <Filter>Header Files\packages\OS400</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/packages/vms/curlmsg.h">
+      <Filter>Header Files\packages\vms</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/packages/vms/curlmsg_vms.h">
+      <Filter>Header Files\packages\vms</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/packages/vms/vms_eco_level.h">
+      <Filter>Header Files\packages\vms</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/plan9/lib/mkfile.inc">
+      <Filter>Header Files\plan9\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/plan9/src/mkfile.inc">
+      <Filter>Header Files\plan9\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/projects/wolfssl_options.h">
+      <Filter>Header Files\projects</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/Makefile.inc">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/slist_wc.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_binmode.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_bname.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_cb_dbg.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_cb_hdr.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_cb_prg.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_cb_rea.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_cb_see.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_cb_wrt.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_cfgable.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_dirhie.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_doswin.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_easysrc.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_filetime.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_findfile.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_formparse.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_getenv.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_getparam.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_getpass.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_help.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_helpers.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_hugehelp.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_libinfo.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_main.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_msgs.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_operate.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_operhlp.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_paramhlp.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_parsecfg.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_progress.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_sdecls.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_setopt.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_setup.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_sleep.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_strdup.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_urlglob.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_util.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_version.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_vms.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_writeout.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_writeout_json.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_xattr.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/tests/data/Makefile.inc">
+      <Filter>Header Files\tests\data</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/tests/libtest/Makefile.inc">
+      <Filter>Header Files\tests\libtest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/tests/libtest/sethostname.h">
+      <Filter>Header Files\tests\libtest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/tests/libtest/stub_gssapi.h">
+      <Filter>Header Files\tests\libtest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/tests/libtest/test.h">
+      <Filter>Header Files\tests\libtest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/tests/libtest/testtrace.h">
+      <Filter>Header Files\tests\libtest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/tests/libtest/testutil.h">
+      <Filter>Header Files\tests\libtest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/tests/server/Makefile.inc">
+      <Filter>Header Files\tests\server</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/tests/server/getpart.h">
+      <Filter>Header Files\tests\server</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/tests/server/server_setup.h">
+      <Filter>Header Files\tests\server</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/tests/server/server_sockaddr.h">
+      <Filter>Header Files\tests\server</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/tests/server/tftp.h">
+      <Filter>Header Files\tests\server</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/tests/server/util.h">
+      <Filter>Header Files\tests\server</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/tests/unit/Makefile.inc">
+      <Filter>Header Files\tests\unit</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/tests/unit/curlcheck.h">
+      <Filter>Header Files\tests\unit</Filter>
+    </ClInclude>
+    <ResourceCompile Include="../../thirdparty/curl/src/curl.rc">
+      <Filter>Resource Files\src</Filter>
+    </ResourceCompile>
+    <Text Include="../../thirdparty/curl/CHANGES">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/CMake/CMakeConfigurableFile.in">
+      <Filter>Misc Files\CMake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/CMake/cmake_uninstall.cmake.in">
+      <Filter>Misc Files\CMake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/CMake/curl-config.cmake.in">
+      <Filter>Misc Files\CMake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/CMakeLists.txt">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/LICENSES/BSD-3-Clause.txt">
+      <Filter>Misc Files\LICENSES</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/LICENSES/BSD-4-Clause-UC.txt">
+      <Filter>Misc Files\LICENSES</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/LICENSES/ISC.txt">
+      <Filter>Misc Files\LICENSES</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/LICENSES/curl.txt">
+      <Filter>Misc Files\LICENSES</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/Makefile.am">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/README">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/README.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/SECURITY.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/buildconf.bat">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/configure.ac">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/curl-config.in">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/ALTSVC.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/BINDINGS.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/BUFREF.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/BUG-BOUNTY.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/BUGS.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/CHECKSRC.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/CIPHERS.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/CMakeLists.txt">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/CODE_OF_CONDUCT.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/CODE_REVIEW.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/CODE_STYLE.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/CONNECTION-FILTERS.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/CONTRIBUTE.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/CURL-DISABLE.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/DEPRECATE.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/DYNBUF.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/EARLY-RELEASE.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/EXPERIMENTAL.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/FEATURES.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/GOVERNANCE.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/GPLv3.txt">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/HELP-US.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/HISTORY.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/HSTS.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/HTTP-COOKIES.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/HTTP2.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/HTTP3.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/HYPER.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/INSTALL.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/INTERNALS.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/MANUAL.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/MQTT.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/Makefile.am">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/NEW-PROTOCOL.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/PARALLEL-TRANSFERS.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/README.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/RELEASE-PROCEDURE.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/ROADMAP.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/RUSTLS.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/SECURITY-PROCESS.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/SSL-PROBLEMS.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/SSLCERTS.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/TINY-CURL.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/TODO">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/TheArtOfHttpScripting.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/URL-SYNTAX.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/VERSIONS.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/WEBSOCKET.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/cmdline-opts/CMakeLists.txt">
+      <Filter>Misc Files\docs\cmdline-opts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/cmdline-opts/MANPAGE.md">
+      <Filter>Misc Files\docs\cmdline-opts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/cmdline-opts/Makefile.am">
+      <Filter>Misc Files\docs\cmdline-opts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/examples/Makefile.am">
+      <Filter>Misc Files\docs\examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/examples/README.md">
+      <Filter>Misc Files\docs\examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/libcurl/ABI.md">
+      <Filter>Misc Files\docs\libcurl</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/libcurl/CMakeLists.txt">
+      <Filter>Misc Files\docs\libcurl</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/libcurl/Makefile.am">
+      <Filter>Misc Files\docs\libcurl</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/libcurl/opts/CMakeLists.txt">
+      <Filter>Misc Files\docs\libcurl\opts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/libcurl/opts/Makefile.am">
+      <Filter>Misc Files\docs\libcurl\opts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/include/Makefile.am">
+      <Filter>Misc Files\include</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/include/README.md">
+      <Filter>Misc Files\include</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/include/curl/Makefile.am">
+      <Filter>Misc Files\include\curl</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/lib/CMakeLists.txt">
+      <Filter>Misc Files\lib</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/lib/Makefile.am">
+      <Filter>Misc Files\lib</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/lib/libcurl.plist.in">
+      <Filter>Misc Files\lib</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/lib/libcurl.vers.in">
+      <Filter>Misc Files\lib</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/libcurl.pc.in">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/mlc_config.json">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/packages/Makefile.am">
+      <Filter>Misc Files\packages</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/packages/OS400/README.OS400">
+      <Filter>Misc Files\packages\OS400</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/packages/OS400/curl.inc.in">
+      <Filter>Misc Files\packages\OS400</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/packages/OS400/initscript.sh">
+      <Filter>Misc Files\packages\OS400</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/packages/OS400/make-include.sh">
+      <Filter>Misc Files\packages\OS400</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/packages/OS400/make-lib.sh">
+      <Filter>Misc Files\packages\OS400</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/packages/OS400/make-src.sh">
+      <Filter>Misc Files\packages\OS400</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/packages/OS400/make-tests.sh">
+      <Filter>Misc Files\packages\OS400</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/packages/OS400/makefile.sh">
+      <Filter>Misc Files\packages\OS400</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/packages/README">
+      <Filter>Misc Files\packages</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/packages/vms/Makefile.am">
+      <Filter>Misc Files\packages\vms</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/packages/vms/curl_gnv_build_steps.txt">
+      <Filter>Misc Files\packages\vms</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/packages/vms/curl_release_note_start.txt">
+      <Filter>Misc Files\packages\vms</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/packages/vms/gnv_curl_configure.sh">
+      <Filter>Misc Files\packages\vms</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/packages/vms/make_gnv_curl_install.sh">
+      <Filter>Misc Files\packages\vms</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/packages/vms/pcsi_gnv_curl_file_list.txt">
+      <Filter>Misc Files\packages\vms</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/packages/vms/readme">
+      <Filter>Misc Files\packages\vms</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/plan9/README">
+      <Filter>Misc Files\plan9</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/projects/README.md">
+      <Filter>Misc Files\projects</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/projects/build-openssl.bat">
+      <Filter>Misc Files\projects</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/projects/build-wolfssl.bat">
+      <Filter>Misc Files\projects</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/projects/checksrc.bat">
+      <Filter>Misc Files\projects</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/projects/generate.bat">
+      <Filter>Misc Files\projects</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/scripts/Makefile.am">
+      <Filter>Misc Files\scripts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/scripts/contributors.sh">
+      <Filter>Misc Files\scripts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/scripts/contrithanks.sh">
+      <Filter>Misc Files\scripts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/scripts/coverage.sh">
+      <Filter>Misc Files\scripts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/scripts/firefox-db2pem.sh">
+      <Filter>Misc Files\scripts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/scripts/installcheck.sh">
+      <Filter>Misc Files\scripts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/scripts/log2changes.pl">
+      <Filter>Misc Files\scripts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/scripts/zuul/before_script.sh">
+      <Filter>Misc Files\scripts\zuul</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/scripts/zuul/script.sh">
+      <Filter>Misc Files\scripts\zuul</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/src/CMakeLists.txt">
+      <Filter>Misc Files\src</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/src/Makefile.am">
+      <Filter>Misc Files\src</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/CI.md">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/CMakeLists.txt">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/FILEFORMAT.md">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/Makefile.am">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/README.md">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/certs/Makefile.am">
+      <Filter>Misc Files\tests\certs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/certs/scripts/Makefile.am">
+      <Filter>Misc Files\tests\certs\scripts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/certs/scripts/genroot.sh">
+      <Filter>Misc Files\tests\certs\scripts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/certs/scripts/genserv.sh">
+      <Filter>Misc Files\tests\certs\scripts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/config.in">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/data/CMakeLists.txt">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/data/Makefile.am">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/dictserver.py">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/libtest/CMakeLists.txt">
+      <Filter>Misc Files\tests\libtest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/libtest/Makefile.am">
+      <Filter>Misc Files\tests\libtest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/negtelnetserver.py">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/server/CMakeLists.txt">
+      <Filter>Misc Files\tests\server</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/server/Makefile.am">
+      <Filter>Misc Files\tests\server</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/smbserver.py">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/tests-httpd/README.md">
+      <Filter>Misc Files\tests\tests-httpd</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/tests-httpd/config.ini.in">
+      <Filter>Misc Files\tests\tests-httpd</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/tests-httpd/conftest.py">
+      <Filter>Misc Files\tests\tests-httpd</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/tests-httpd/test_01_basic.py">
+      <Filter>Misc Files\tests\tests-httpd</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/tests-httpd/test_02_download.py">
+      <Filter>Misc Files\tests\tests-httpd</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/tests-httpd/test_03_goaway.py">
+      <Filter>Misc Files\tests\tests-httpd</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/tests-httpd/test_04_stuttered.py">
+      <Filter>Misc Files\tests\tests-httpd</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/tests-httpd/test_05_errors.py">
+      <Filter>Misc Files\tests\tests-httpd</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/tests-httpd/testenv/__init__.py">
+      <Filter>Misc Files\tests\tests-httpd\testenv</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/tests-httpd/testenv/certs.py">
+      <Filter>Misc Files\tests\tests-httpd\testenv</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/tests-httpd/testenv/curl.py">
+      <Filter>Misc Files\tests\tests-httpd\testenv</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/tests-httpd/testenv/env.py">
+      <Filter>Misc Files\tests\tests-httpd\testenv</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/tests-httpd/testenv/httpd.py">
+      <Filter>Misc Files\tests\tests-httpd\testenv</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/tests-httpd/testenv/nghttpx.py">
+      <Filter>Misc Files\tests\tests-httpd\testenv</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/unit/CMakeLists.txt">
+      <Filter>Misc Files\tests\unit</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/unit/Makefile.am">
+      <Filter>Misc Files\tests\unit</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/unit/README.md">
+      <Filter>Misc Files\tests\unit</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/tests/util.py">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/winbuild/Makefile.vc">
+      <Filter>Misc Files\winbuild</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/winbuild/MakefileBuild.vc">
+      <Filter>Misc Files\winbuild</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/winbuild/README.md">
+      <Filter>Misc Files\winbuild</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/winbuild/gen_resp_file.bat">
+      <Filter>Misc Files\winbuild</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/winbuild/makedebug.cmd">
+      <Filter>Misc Files\winbuild</Filter>
+    </Text>
+    <ClCompile Include="..\..\source\tools\curl_tool.c" />
+  </ItemGroup>
+</Project>

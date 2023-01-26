@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<!-- Server: sfs-forge-10 -->
+
+<!--[if lt IE 7]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]>-->
+<html lang="en" class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+    <title>bibutils / Home / Bibutils</title>
+
+    <meta name="viewport" content="width=1100" />
+
+    <link
+      rel="icon"
+      sizes="180x180"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/images/sandiego/logo-180x180.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      sizes="any"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/images/sandiego/svg/originals/sf-icon-orange-no_sf.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/images/sandiego/logo-180x180.png"
+    />
+    <link
+      rel="mask-icon"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/images/sandiego/svg/originals/sf-icon-orange-no_sf.svg"
+      color="#FF6600"
+    />
+
+    <!--[if lt IE 7]>
+      <script src="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/js/sftheme/vendor/dd_belatedpng.js"></script>
+      <script>
+        DD_belatedPNG.fix("img, .png_bg"); //fix any <img> or .png_bg background-images
+      </script>
+    <![endif]-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700"
+      rel="stylesheet"
+    />
+    <script>
+      if (!window.SF) {
+        window.SF = {};
+      }
+      SF.sandiego = false;
+      SF.sandiego_chrome = true;
+      SF.cdn = "https://a.fsdn.com/con";
+    </script>
+
+    <!-- ew:head_css -->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/allura/css/forge/hilite.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/tool/wiki/css/wiki.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/_slim/css?href=allura%2Fcss%2Fforge%2Ftooltipster.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/allura/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/css/forge.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/css/simplemde.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/_slim/css?href=css%2Fmarkitup_sf.css%3Bcss%2Fshow-hint.css"
+    />
+
+    <style>
+      div.moderate {
+        color: grey;
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/_slim/css?href=css%2Fpage_list.css%3Bcss%2Fjquery.tagsinput.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/css/sftheme/sandiego/cmp.css"
+    />
+
+    <!-- /ew:head_css -->
+
+    <!-- ew:head_js -->
+
+    <script
+      type="text/javascript"
+      src="https://a.fsdn.com/allura/nf/1589309844/_ew_/_slim/js?href=allura%2Fjs%2Fjquery-base.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Fpromise.polyfill.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fcmp2.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Fmodernizr.3.3.1.custom.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fshared_head.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Ftypescript%2Fcompliance.js"
+    ></script>
+
+    <!-- /ew:head_js -->
+
+    <style type="text/css">
+      /* make URL & Project custom fields in support tickets not get hidden as much */
+      .project-forge.mountpoint-site-support .view_holder .grid-4:nth-child(5),
+      .project-forge.mountpoint-site-support .view_holder .grid-4:nth-child(6) {
+        overflow: visible;
+        font-size: 22px;
+        width: 340px;
+        line-height: 1;
+        margin-bottom: 5px;
+      }
+      .project-forge.mountpoint-site-support
+        .view_holder
+        .grid-4:nth-child(5)
+        label,
+      .project-forge.mountpoint-site-support
+        .view_holder
+        .grid-4:nth-child(6)
+        label {
+        font-size: 14px;
+      }
+    </style>
+
+    <style>
+      .hidden {
+        display: none;
+      }
+      a.notfound {
+        color: #f00;
+      }
+    </style>
+
+    <style>
+      .XwprCkcOWwqZwrwSBWMwovDjMOdwHCkFnDkTBIw {
+        display: none;
+      }
+    </style>
+
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Page RSS"
+      href="Bibutils/feed.rss"
+    />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Page Atom"
+      href="Bibutils/feed.atom"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Wiki RSS"
+      href="feed.rss"
+    />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Wiki Atom"
+      href="feed.atom"
+    />
+
+    <script type="text/javascript"></script>
+
+    <script>
+      window.bizx.cmp.init({}, "consentmanager.net");
+    </script>
+
+    <script>
+      function initPiwik() {
+        var _paq = (window._paq = window._paq || []);
+        _paq.push([
+          "trackPageView",
+          document.title,
+          {
+            dimension1: "bibutils",
+            dimension2: "wiki",
+          },
+        ]);
+        _paq.push(["enableLinkTracking"]);
+        (function () {
+          var u = "//analytics.slashdotmedia.com/";
+          _paq.push(["setTrackerUrl", u + "sf.php"]);
+          _paq.push(["setSiteId", 39]);
+          var d = document,
+            g = d.createElement("script"),
+            s = d.getElementsByTagName("script")[0];
+          g.type = "text/javascript";
+          g.async = true;
+          g.defer = true;
+          g.src = u + "sf.js";
+          s.parentNode.insertBefore(g, s);
+        })();
+      }
+      bizx.cmp.ifConsent("publisher", ["storage", "measurement"], initPiwik);
+    </script>
+  </head>
+
+  <body>
+    <div id="content_base">
+      <div class="grid-24 pad">
+        <h2 class="dark title">
+          Bibutils
+          <!-- actions -->
+          <small>
+            <a class="icon" href="Bibutils/history.html" title="History"
+              ><i class="fa fa-calendar"></i
+            ></a>
+
+            <a class="icon" href="Bibutils/feed" title="RSS"
+              ><i class="fa fa-rss"></i
+            ></a>
+            <a class="icon" href="search.html" title="Search"
+              ><i class="fa fa-search"></i
+            ></a>
+          </small>
+          <!-- /actions -->
+        </h2>
+
+        <div class="editbox">
+          <div class="grid-9 gravatar sm">
+            <label class="simple">Authors: </label>
+
+            <a href="https://sourceforge.net/u/cdputnam/">
+              <img
+                src="https://secure.gravatar.com/avatar/f12e8bce72883cb9e8a165cc2e312289?r=pg&amp;d=https%3A%2F%2Fa.fsdn.com%2Fallura%2Fnf%2F1589309844%2F_ew_%2Ftheme%2Fsftheme%2Fimages%2Fsandiego%2Ficons%2Fdefault-avatar.png&s=16"
+                srcset="
+                  https://secure.gravatar.com/avatar/f12e8bce72883cb9e8a165cc2e312289?r=pg&amp;d=https%3A%2F%2Fa.fsdn.com%2Fallura%2Fnf%2F1589309844%2F_ew_%2Ftheme%2Fsftheme%2Fimages%2Fsandiego%2Ficons%2Fdefault-avatar.png&s=24.0 1.5x,
+                  https://secure.gravatar.com/avatar/f12e8bce72883cb9e8a165cc2e312289?r=pg&amp;d=https%3A%2F%2Fa.fsdn.com%2Fallura%2Fnf%2F1589309844%2F_ew_%2Ftheme%2Fsftheme%2Fimages%2Fsandiego%2Ficons%2Fdefault-avatar.png&s=32   2x
+                "
+                width="16"
+                height="16"
+                alt="Chris Putnam"
+                title="Chris Putnam"
+                class="emboss x16"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <div class="markdown_content">
+              <h2 id="description">Description:</h2>
+              <p>
+                The bibutils program set interconverts between various
+                bibliography formats using a common MODS-format XML
+                intermediate. For example, one can convert RIS-format files to
+                Bibtex by doing two transformations: RIS-&gt;MODS-&gt;Bibtex. By
+                using a common intermediate for N formats, only 2N programs are
+                required and not N²-N. These programs operate on the command
+                line and are styled after standard UNIX-like filters.
+              </p>
+              <p>
+                I primarily use these tools at the command line, but they are
+                suitable for scripting and have been incorporated into a number
+                of different bibliographic projects.
+              </p>
+              <p>
+                The Library of Congress's Metadata Object Description Schema
+                (MODS) XML format is described
+                <a
+                  class=""
+                  href="http://www.loc.gov/standards/mods/"
+                  rel="nofollow"
+                  >here</a
+                >. I've written a
+                <a class="" href="Working.with.MODS.html">short introduction</a>
+                to using MODS that might be useful.
+              </p>
+              <h2 id="programs">Programs:</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Program</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="" href="bib2xml.html">bib2xml</a></td>
+                    <td>convert BibTeX to MODS XML intermediate</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a class="" href="biblatex2xml.html">biblatex2xml</a>
+                    </td>
+                    <td>convert BibLaTeX to MODS XML intermediate</td>
+                  </tr>
+                  <tr>
+                    <td><a class="" href="bibdiff.html">bibdiff</a></td>
+                    <td>
+                      compare two bibliographies after reading into the bibutils
+                      internal format
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a class="" href="copac2xml.html">copac2xml</a></td>
+                    <td>
+                      convert COPAC format references to MODS XML intermediate
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a class="" href="end2xml.html">end2xml</a></td>
+                    <td>
+                      convert EndNote (Refer format) to MODS XML intermediate
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a class="" href="endx2xml.html">endx2xml</a></td>
+                    <td>convert EndNote XML to MODS XML intermediate</td>
+                  </tr>
+                  <tr>
+                    <td><a class="" href="isi2xml.html">isi2xml</a></td>
+                    <td>convert ISI web of science to MODS XML intermediate</td>
+                  </tr>
+                  <tr>
+                    <td><a class="" href="med2xml.html">med2xml</a></td>
+                    <td>
+                      convert Pubmed XML references to MODS XML intermediate
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a class="" href="modsclean.html">modsclean</a></td>
+                    <td>a MODS to MODS converter for testing puposes mostly</td>
+                  </tr>
+                  <tr>
+                    <td>nbib2xml</td>
+                    <td>
+                      convert Pubmed/National Library of Medicine nbib format to
+                      MODS XML intermedidate
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a class="" href="ris2xml.html">ris2xml</a></td>
+                    <td>convert RIS format to MODS XML intermediate</td>
+                  </tr>
+                  <tr>
+                    <td><a class="" href="xml2ads.html">xml2ads</a></td>
+                    <td>
+                      convert MODS XML intermediate into Smithsonian
+                      Astrophysical Observatory (SAO)/National Aeronautics and
+                      Space Administration (NASA) Astrophyics Data System or ADS
+                      reference format (converter submitted by Richard Mathar)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a class="" href="xml2bib.html">xml2bib</a></td>
+                    <td>convert MODS XML intermediate into BibTeX</td>
+                  </tr>
+                  <tr>
+                    <td>xml2biblatex</td>
+                    <td>convert MODS XML intermediate into BibLaTeX</td>
+                  </tr>
+                  <tr>
+                    <td><a class="" href="xml2end.html">xml2end</a></td>
+                    <td>
+                      convert MODS XML intermediate into format for EndNote
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a class="" href="xml2isi.html">xml2isi</a></td>
+                    <td>convert MODS XML intermediate to ISI format</td>
+                  </tr>
+                  <tr>
+                    <td>xml2nbib</td>
+                    <td>
+                      convert MODS XML intermediate to Pubmed/National Library
+                      of Medicine nbib format
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a class="" href="xml2ris.html">xml2ris</a></td>
+                    <td>convert MODS XML intermediate into RIS format</td>
+                  </tr>
+                  <tr>
+                    <td><a class="" href="xml2wordbib.html">xml2wordbib</a></td>
+                    <td>
+                      convert MODS XML intermediate into Word 2007 bibliography
+                      format
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2 id="development-history">Development History:</h2>
+              <ul>
+                <li>
+                  <a class="" href="history_version6/index.html">Version 6</a>.
+                  Library changes forced change of major version.
+                </li>
+                <li>
+                  <a class="" href="history_version5/index.html">Version 5</a>.
+                  User visible changes change default input and output character
+                  set to UTF-8 Unicode and ability to write MODS XML in multiple
+                  character sets.
+                </li>
+                <li>
+                  <a class="" href="history_version4/index.html">Version 4</a>.
+                  User visible changes are alteration of library API.
+                </li>
+                <li>
+                  <a class="" href="history_version3/index.html">Version 3</a>
+                </li>
+                <li>
+                  <a class="" href="history_version2/index.html">Version 2</a>
+                </li>
+              </ul>
+              <h2 id="frequently-asked-questions">
+                Frequently Asked Questions:
+              </h2>
+              <p>
+                <em>The programs don't run for me. What am I doing wrong?</em>
+                If you send me this question, I would immediately have to ask
+                for more information. So do us both a favor and provide more
+                information. The follow items address specific problems:
+              </p>
+              <p>
+                <em>"command not found"</em> The message "command not found" on
+                Linux/UNIX/MacOSX systems indicates that the commands cannot be
+                found. This could mean that the programs are not flagged as
+                being executable (run "chmod ugo+x xml2bib" for the appropriate
+                binaries) or the executables are not in your current path (and
+                have to be specified directly like ./xml2bib). A quick web
+                search on chmod or path variables should provide many detailed
+                resources.
+              </p>
+              <p>
+                <em
+                  >I'm running MacOSX and I just get a terminal when I
+                  double-click on the programs.</em
+                >
+                Simply put, this is not the way to run the programs. You want to
+                run the terminal first and then issue the commands at the
+                command line. It should be under
+                Applications-&gt;Utilities-&gt;Terminal on most MacOSX systems
+                I've seen. If you just double-click the program, the terminal
+                corresponds to the input to the tool. Not so useful. Some links
+                to get you started running the terminal in a standard UNIX-like
+                fashion are at
+                <a
+                  class=""
+                  href="http://homepage.mac.com/rgriff/files/TerminalBasics.pdf"
+                  rel="nofollow"
+                  >TerminalBasics.pdf</a
+                >,
+                <a
+                  class=""
+                  href="http://www.macdevcenter.com/pub/ct/51"
+                  rel="nofollow"
+                  >macdevcenter.com</a
+                >, and
+                <a
+                  class=""
+                  href="http://www.ee.surrey.ac.uk/Teaching/Unix/"
+                  rel="nofollow"
+                  >ee.surrey.ac.uk</a
+                >.
+              </p>
+              <p>
+                <em>This stuff is great, how can I help?</em> OK, I actually
+                don't get this question so often, though I have gotten very
+                useful help through people who have willingly sent useful bug
+                reports and sample problematic data to allow me to test these
+                programs. I willingly accept bug reports, patches, new filters,
+                suggestions on program improvements or better documentation and
+                the like. All I can say is that users (or programmers) who
+                contact me with these sorts of things are far more likely to get
+                their itches scratched.
+              </p>
+              <p>
+                I am interested in bug reports and problems in conversions. Feel
+                free to e-mail me if you run into these issues. The absolute
+                best bug reports provide error messages from the operating
+                systems and/or input and outputs that detail the problems.
+                Please remember that I'm not looking over your shoulder and I
+                cannot read your mind to figure out what you are doing--"It
+                doesn't work." isn't a bug report I can help you with.
+              </p>
+              <h2 id="license">License</h2>
+              <p>
+                All versions of bibutils are relased under the GNU Public
+                License (GPL) version 2. In a nutshell, feel free to download,
+                run, and modify these programs as required. If you re-release
+                these, you need to release the modified version of the source.
+                (And I'd appreciate patches as well...if you care enough to make
+                the change, then I'd like to see what you're adding or fixing.)
+              </p>
+            </div>
+          </div>
+
+          <div
+            id="create_wiki_page_holder"
+            title="Create New Page"
+            style="display: none;"
+          >
+            <form>
+              <label class="grid-2">Name</label>
+              <div class="grid-7"><input type="text" name="name" /></div>
+            </form>
+          </div>
+        </div>
+
+        <hr style="margin-top: 1em; margin-bottom: 2em; clear: both;" />
+
+        <div id="lightbox_confirm" class="modal" style="display: none;">
+          <a class="icon close" href="index.html#" title="Close"
+            ><i class="fa fa-close"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

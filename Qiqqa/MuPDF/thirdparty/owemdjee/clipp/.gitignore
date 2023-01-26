@@ -1,0 +1,13 @@
+/build*
+/dev
+/issues
+.settings
+.project
+.cproject
+.pydevproject
+tags
+*.out
+*.json
+*.exe
+*.o
+

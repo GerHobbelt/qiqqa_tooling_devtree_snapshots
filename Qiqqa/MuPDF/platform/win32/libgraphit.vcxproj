@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>libgraphit</ProjectName>
+    <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FFCB155C}</ProjectGuid>
+    <RootNamespace>libgraphit</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project.props" Label="SolutionWideSettings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.28307.799</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+<ItemDefinitionGroup>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <BrowseInformation>false</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <DisableSpecificWarnings>4018;4100;4127;4180;4206;4244;4267;5105;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <SDLCheck>false</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <ConformanceMode>true</ConformanceMode>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableUnitySupport>true</EnableUnitySupport>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+</ItemDefinitionGroup>
+<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPHIT;GRAPHIT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPHIT;GRAPHIT_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPHIT;GRAPHIT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPHIT;GRAPHIT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPHIT;GRAPHIT_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPHIT;GRAPHIT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPHIT;GRAPHIT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPHIT;GRAPHIT_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPHIT;GRAPHIT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPHIT;GRAPHIT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPHIT;GRAPHIT_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPHIT;GRAPHIT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/apps/astar_distance_loader.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/apps/set_cover_extern.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/graphit_eval/devcloud_eval_dataset1/table7/apps/astar_distance_loader.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/graphit_eval/devcloud_eval_dataset1/table7/apps/set_cover_extern.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/graphit_eval/devcloud_eval_dataset1/table7/schedules/set_cover_extern.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/graphit_eval/devcloud_eval_dataset2/table7/apps/astar_distance_loader.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/graphit_eval/devcloud_eval_dataset2/table7/apps/set_cover_extern.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/graphit_eval/devcloud_eval_dataset2/table7/schedules/set_cover_extern.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/graphit_eval/eval/table7/compile.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/graphit_eval/lanka_eval/table7/apps/astar_distance_loader.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/graphit_eval/lanka_eval/table7/apps/set_cover_extern.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/graphit_eval/lanka_eval/table7/compile.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/graphit_eval/lanka_eval/table7/schedules/set_cover_extern.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/graphit_eval/priority_graph_cgo2020_eval/perf_eval/compile.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/backend/backend.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/backend/codegen_cpp.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/backend/codegen_python.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/backend/gen_edge_apply_func_decl.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/default_schedule.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/frontend/clone_apply_node_vistor.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/frontend/clone_for_stmt_node_vistor.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/frontend/clone_loop_body_visitor.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/frontend/error.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/frontend/fir.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/frontend/fir_printer.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/frontend/fir_visitor.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/frontend/frontend.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/frontend/high_level_schedule.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/frontend/low_level_schedule.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/frontend/parser.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/frontend/scanner.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/frontend/schedule.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/frontend/token.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/midend/apply_expr_lower.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/midend/atomics_op_lower.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/midend/change_tracking_lower.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/midend/intersection_expr_lower.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/midend/merge_reduce_lower.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/midend/midend.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/midend/mir.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/midend/mir_context.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/midend/mir_emitter.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/midend/mir_lower.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/midend/mir_printer.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/midend/mir_rewriter.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/midend/mir_visitor.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/midend/par_for_lower.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/midend/physical_data_layout_lower.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/midend/priority_features_lowering.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/midend/udf_dup.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/midend/vector_field_properties_analyzer.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/midend/vector_op_lower.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/midend/vertex_edge_set_lower.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_ligra/ligra/encoder.C" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/utils/exec_cmd.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/src/utils/util.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/test/c++/backend_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/test/c++/frontend_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/test/c++/high_level_schedule_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/test/c++/low_level_schedule_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/test/c++/midend_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/test/c++/runtime_lib_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/test/c++/test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/test/gtest/gtest-all.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/test/input/astar_distance_loader.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/test/input/extern_add_one.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/test/input/extern_src_add_one.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/test/input/simple_extern_function.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/test/input/simple_extern_function_sum.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/test/input_with_schedules/set_cover_extern.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/test/verifiers/bc_verifier.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/test/verifiers/bfs_verifier.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/test/verifiers/cc_verifier.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/test/verifiers/ppsp_verifier.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/test/verifiers/sssp_verifier.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/graphit/test/verifiers/tc_verifier.cpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/backend/backend.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/backend/codegen_cpp.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/backend/codegen_python.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/backend/gen_edge_apply_func_decl.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/frontend/clone_apply_node_visitor.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/frontend/clone_for_stmt_node_visitor.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/frontend/clone_loop_body_visitor.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/frontend/error.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/frontend/fir.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/frontend/fir_context.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/frontend/fir_printer.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/frontend/fir_visitor.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/frontend/frontend.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/frontend/high_level_schedule.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/frontend/low_level_schedule.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/frontend/parser.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/frontend/scanner.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/frontend/schedule.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/frontend/token.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/midend/apply_expr_lower.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/midend/atomics_op_lower.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/midend/change_tracking_lower.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/midend/field_vector_property.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/midend/intersection_expr_lower.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/midend/label_scope.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/midend/merge_reduce_lower.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/midend/midend.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/midend/mir.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/midend/mir_context.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/midend/mir_emitter.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/midend/mir_lower.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/midend/mir_printer.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/midend/mir_rewriter.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/midend/mir_visitor.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/midend/par_for_lower.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/midend/physical_data_layout_lower.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/midend/priority_features_lowering.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/midend/udf_dup.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/midend/var.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/midend/vector_field_properties_analyzer.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/midend/vector_op_lower.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/midend/vertex_edge_set_lower.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/utils/command_line.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/utils/exec_cmd.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/utils/scopedmap.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/include/graphit/utils/util.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/edgeset_apply_functions.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_gapbs/benchmark.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_gapbs/bitmap.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_gapbs/bucket.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_gapbs/builder.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_gapbs/command_line.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_gapbs/eager_priority_queue.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_gapbs/generator.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_gapbs/graph.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_gapbs/graph_verifier.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_gapbs/intersections.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_gapbs/minimum_spanning_tree.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_gapbs/ordered_processing.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_gapbs/platform_atomics.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_gapbs/pvector.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_gapbs/reader.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_gapbs/segmentgraph.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_gapbs/sliding_queue.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_gapbs/timer.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_gapbs/util.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_gapbs/writer.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/IO.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/binary_search.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/blockRadixSort.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/bucket.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/byte-pd.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/byte.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/byteRLE-pd.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/byteRLE.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/compressedVertex.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/counting_sort.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/dyn_arr.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/edgeMapReduce.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/edgeMap_utils.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/gettime.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/graph.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/histogram.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/index_map.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/ligra.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/maybe.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/nibble-pd.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/nibble.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/parallel.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/parseCommandLine.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/priority_queue.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/priority_queue_gapbs.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/quickSort.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/sequence.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/sequentialHT.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/transpose.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/utils.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/vertex.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_julienne/vertexSubset.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_ligra/ligra/IO.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_ligra/ligra/blockRadixSort.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_ligra/ligra/byte-pd.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_ligra/ligra/byte.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_ligra/ligra/byteRLE-pd.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_ligra/ligra/byteRLE.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_ligra/ligra/compressedVertex.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_ligra/ligra/gettime.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_ligra/ligra/graph.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_ligra/ligra/ligra.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_ligra/ligra/nibble-pd.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_ligra/ligra/nibble.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_ligra/ligra/parallel.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_ligra/ligra/parseCommandLine.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_ligra/ligra/quickSort.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_ligra/ligra/transpose.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_ligra/ligra/utils.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_ligra/ligra/vertex.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/infra_ligra/ligra/vertexSubset.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/intrinsics.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/src/runtime_lib/vertexsubset.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/test/gtest/gtest.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/graphit/test/verifiers/verifier_utils.h" />
+    <Text Include="../../thirdparty/owemdjee/graphit/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/graphit/README.md" />
+    <Text Include="../../thirdparty/owemdjee/graphit/apps/pagerank_delta.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/apps/python_bindings/pagerank_delta/pagerank_delta.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/apps/python_bindings/sssp/sssp.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/autotune/README.md" />
+    <Text Include="../../thirdparty/owemdjee/graphit/autotune/graphit_autotuner.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/autotune/graphitc.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/Devcloud_evaluation.md" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/GraphIt_Evaluation_Guide.md" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/devcloud_eval_dataset1/table7/apps/pagerank_delta.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/devcloud_eval_dataset1/table7/apps/python_bindings/pagerank_delta/pagerank_delta.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/devcloud_eval_dataset1/table7/apps/python_bindings/sssp/sssp.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/devcloud_eval_dataset1/table7/benchmark.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/devcloud_eval_dataset1/table7/eval.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/devcloud_eval_dataset1/table7/parse.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/devcloud_eval_dataset2/table7/apps/pagerank_delta.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/devcloud_eval_dataset2/table7/apps/python_bindings/pagerank_delta/pagerank_delta.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/devcloud_eval_dataset2/table7/apps/python_bindings/sssp/sssp.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/devcloud_eval_dataset2/table7/benchmark.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/devcloud_eval_dataset2/table7/eval.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/devcloud_eval_dataset2/table7/parse.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/eval/Xeon_E5-4640/benchmark.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/eval/Xeon_E5-4640/parse.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/eval/Xeon_E5-4640/table7_graphit.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/eval/table7/benchmark.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/eval/table7/parse.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/eval/table7/table7_graphit.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/lanka_eval/table7/apps/pagerank_delta.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/lanka_eval/table7/apps/python_bindings/pagerank_delta/pagerank_delta.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/lanka_eval/table7/apps/python_bindings/sssp/sssp.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/lanka_eval/table7/benchmark.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/lanka_eval/table7/eval.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/lanka_eval/table7/parse.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/lanka_eval/table7/references/output_06_11_2020.csv" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/pagerankdelta_example/README.md" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/pagerankdelta_example/compile_pagerankdelta_fig6.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/performance_script_guide.md" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/priority_graph_cgo2020_eval/perf_eval/benchmark.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/priority_graph_cgo2020_eval/perf_eval/parse.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/priority_graph_cgo2020_eval/perf_eval/table4_priority_graph.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/priority_graph_cgo2020_eval/readme.md" />
+    <Text Include="../../thirdparty/owemdjee/graphit/graphit_eval/priority_graph_cgo2020_eval/sssp_delta_stepping_example/compile_sssp_delta_stepping_fig9.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/src/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/graphit/src/frontend/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/graphit/src/graphitc.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/src/python/graphit.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/test/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/graphit/test/c++/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/graphit/test/gtest/README.SIMIT" />
+    <Text Include="../../thirdparty/owemdjee/graphit/test/library_test_drivers/library_test_driver_cf_cpp.txt" />
+    <Text Include="../../thirdparty/owemdjee/graphit/test/library_test_drivers/library_test_driver_cpp.txt" />
+    <Text Include="../../thirdparty/owemdjee/graphit/test/library_test_drivers/library_test_driver_weighted_cpp.txt" />
+    <Text Include="../../thirdparty/owemdjee/graphit/test/python/pybind_test.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/test/python/test.py" />
+    <Text Include="../../thirdparty/owemdjee/graphit/test/python/test_with_schedules.py" />
+  </ItemGroup>
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />
+  </ImportGroup>
+</Project>
+  

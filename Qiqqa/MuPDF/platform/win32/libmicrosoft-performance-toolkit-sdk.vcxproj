@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>libmicrosoft-performance-toolkit-sdk</ProjectName>
+    <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF703CF5}</ProjectGuid>
+    <RootNamespace>libmicrosoft-performance-toolkit-sdk</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project.props" Label="SolutionWideSettings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.28307.799</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+<ItemDefinitionGroup>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <BrowseInformation>false</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <DisableSpecificWarnings>4018;4100;4127;4180;4206;4244;4267;5105;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <SDLCheck>false</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <ConformanceMode>true</ConformanceMode>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableUnitySupport>true</EnableUnitySupport>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+</ItemDefinitionGroup>
+<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMICROSOFT_PERFORMANCE_TOOLKIT_SDK;MICROSOFT_PERFORMANCE_TOOLKIT_SDK_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMICROSOFT_PERFORMANCE_TOOLKIT_SDK;MICROSOFT_PERFORMANCE_TOOLKIT_SDK_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMICROSOFT_PERFORMANCE_TOOLKIT_SDK;MICROSOFT_PERFORMANCE_TOOLKIT_SDK_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMICROSOFT_PERFORMANCE_TOOLKIT_SDK;MICROSOFT_PERFORMANCE_TOOLKIT_SDK_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMICROSOFT_PERFORMANCE_TOOLKIT_SDK;MICROSOFT_PERFORMANCE_TOOLKIT_SDK_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMICROSOFT_PERFORMANCE_TOOLKIT_SDK;MICROSOFT_PERFORMANCE_TOOLKIT_SDK_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMICROSOFT_PERFORMANCE_TOOLKIT_SDK;MICROSOFT_PERFORMANCE_TOOLKIT_SDK_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMICROSOFT_PERFORMANCE_TOOLKIT_SDK;MICROSOFT_PERFORMANCE_TOOLKIT_SDK_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMICROSOFT_PERFORMANCE_TOOLKIT_SDK;MICROSOFT_PERFORMANCE_TOOLKIT_SDK_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMICROSOFT_PERFORMANCE_TOOLKIT_SDK;MICROSOFT_PERFORMANCE_TOOLKIT_SDK_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMICROSOFT_PERFORMANCE_TOOLKIT_SDK;MICROSOFT_PERFORMANCE_TOOLKIT_SDK_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMICROSOFT_PERFORMANCE_TOOLKIT_SDK;MICROSOFT_PERFORMANCE_TOOLKIT_SDK_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <Image Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/documentation/Videos/SDK Video 1.png" />
+    <Image Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/documentation/Videos/SDK Video 2.png" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/CODE_OF_CONDUCT.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/CONTRIBUTING.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/LICENSE.txt" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/NOTICE.txt" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/README.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/SECURITY.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/devel-template/README.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/documentation/Architecture/README.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/documentation/Architecture/The-Data-Processing-Pipeline.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/documentation/Architecture/The-SDK-Engine.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/documentation/Architecture/The-SDK-Runtime.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/documentation/Glossary.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/documentation/Known-SDK-Driver-Compatibility/README.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/documentation/Known-SDK-Driver-Compatibility/WPA.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/documentation/Migration/README.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/documentation/Migration/Update-0.109.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/documentation/Migration/Update-1.0.0-rc1.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/documentation/README.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/documentation/Troubleshooting.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/documentation/Using-the-SDK/Advanced/Creating-Your-Own-DataSource.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/documentation/Using-the-SDK/Advanced/Custom-Table-Discovery.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/documentation/Using-the-SDK/Advanced/Disposable-Extensions.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/documentation/Using-the-SDK/Advanced/README.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/documentation/Using-the-SDK/Building-a-table.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/documentation/Using-the-SDK/Creating-a-pipeline.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/documentation/Using-the-SDK/Creating-a-simple-sdk-plugin.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/documentation/Using-the-SDK/Creating-a-table.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/documentation/Using-the-SDK/Creating-your-plugin.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/documentation/Using-the-SDK/Installing-WPA.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/documentation/Using-the-SDK/Using-the-engine.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/samples/SimpleDataSource/README.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/samples/SimpleDataSource/SampleTestFile.txt" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/samples/SqlPlugin/README.md" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/src/Microsoft.Performance.SDK.Tests/Resources/TestTableConfigurations.json" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/src/Microsoft.Performance.SDK/Processing/Projection/IntToDoubleProjection.cs" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/src/Microsoft.Performance.SDK/Processing/Projection/TimestampDeltaToDoubleProjection.cs" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/src/Microsoft.Performance.SDK/Processing/Projection/UlongToDoubleProjection.cs" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/src/Microsoft.Performance.Toolkit.Engine.Tests/TestCookers/README.txt" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/src/Microsoft.Performance.Toolkit.Engine.Tests/TestData/BuildTableTestSuite.json" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/src/Microsoft.Performance.Toolkit.Engine.Tests/TestData/ProcessTestSuite.json" />
+    <Text Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/version.json" />
+    <Xml Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/CustomDictionary.xml" />
+    <Xml Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/samples/SqlPlugin/SampleSqlTraceFile.xml" />
+    <Xml Include="../../thirdparty/owemdjee/microsoft-performance-toolkit-sdk/src/Microsoft.Performance.SDK.Runtime.Tests/TestData/DataResolverTestCases.xml" />
+  </ItemGroup>
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />
+  </ImportGroup>
+</Project>
+  

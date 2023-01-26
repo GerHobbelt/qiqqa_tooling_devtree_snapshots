@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>libCLBlast</ProjectName>
+    <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF3EA9B5}</ProjectGuid>
+    <RootNamespace>libCLBlast</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project.props" Label="SolutionWideSettings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.28307.799</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+<ItemDefinitionGroup>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <BrowseInformation>false</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <DisableSpecificWarnings>4018;4100;4127;4180;4206;4244;4267;5105;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <SDLCheck>false</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <ConformanceMode>true</ConformanceMode>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableUnitySupport>true</EnableUnitySupport>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+</ItemDefinitionGroup>
+<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCLBLAST;CLBLAST_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCLBLAST;CLBLAST_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCLBLAST;CLBLAST_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCLBLAST;CLBLAST_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCLBLAST;CLBLAST_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCLBLAST;CLBLAST_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCLBLAST;CLBLAST_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCLBLAST;CLBLAST_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCLBLAST;CLBLAST_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCLBLAST;CLBLAST_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCLBLAST;CLBLAST_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCLBLAST;CLBLAST_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/samples/cache.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/samples/daxpy_cuda.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/samples/dgemv.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/samples/dtrsm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/samples/haxpy.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/samples/samax.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/samples/sasum.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/samples/sgemm.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/samples/sgemm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/samples/sgemm_batched.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/samples/sgemm_cuda.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/samples/sgemm_netlib.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/samples/tuning_api.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/api_common.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/cache.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/clblast.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/clblast_c.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/clblast_cuda.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/clblast_netlib_c.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/database/database.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/copy/copy.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/gemm_routine/gemm_routine.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/invert/invert.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/pad/pad.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/padtranspose/padtranspose.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/transpose/transpose.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/trsv_routine/trsv_routine.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xaxpy/xaxpy.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xconvgemm/xconvgemm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xdot/xdot.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemm/xgemm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemm_direct/xgemm_direct.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemv/xgemv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemv_fast/xgemv_fast.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemv_fast_rot/xgemv_fast_rot.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xger/xger.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/kernel_preprocessor.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routine.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/common.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level1/xamax.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level1/xasum.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level1/xaxpy.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level1/xcopy.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level1/xdot.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level1/xdotc.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level1/xdotu.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level1/xnrm2.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level1/xscal.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level1/xswap.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xgbmv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xgemv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xger.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xgerc.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xgeru.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xhbmv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xhemv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xher.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xher2.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xhpmv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xhpr.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xhpr2.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xsbmv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xspmv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xspr.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xspr2.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xsymv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xsyr.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xsyr2.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xtbmv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xtpmv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xtrmv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xtrsv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level3/xgemm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level3/xhemm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level3/xher2k.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level3/xherk.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level3/xsymm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level3/xsyr2k.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level3/xsyrk.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level3/xtrmm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/level3/xtrsm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/levelx/xaxpybatched.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/levelx/xcol2im.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/levelx/xconvgemm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/levelx/xgemmbatched.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/levelx/xgemmstridedbatched.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/levelx/xhad.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/levelx/xim2col.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/levelx/xinvert.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/routines/levelx/xomatcopy.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/tuning/configurations.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/tuning/kernels/copy_fast.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/tuning/kernels/copy_pad.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/tuning/kernels/invert.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/tuning/kernels/transpose_fast.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/tuning/kernels/transpose_pad.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/tuning/kernels/xaxpy.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/tuning/kernels/xconvgemm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/tuning/kernels/xdot.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/tuning/kernels/xgemm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/tuning/kernels/xgemm_direct.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/tuning/kernels/xgemv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/tuning/kernels/xger.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/tuning/routines/xgemm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/tuning/routines/xtrsv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/tuning/tuning.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/tuning/tuning_api.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/utilities/clblast_exceptions.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/utilities/compile.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/utilities/timing.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/src/utilities/utilities.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/misc/override_parameters.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/misc/preprocessor.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/misc/retrieve_parameters.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level1/xamax.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level1/xasum.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level1/xaxpy.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level1/xcopy.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level1/xdot.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level1/xdotc.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level1/xdotu.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level1/xnrm2.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level1/xrot.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level1/xrotg.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level1/xrotm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level1/xrotmg.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level1/xscal.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level1/xswap.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level2/xgbmv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level2/xgemv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level2/xger.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level2/xgerc.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level2/xgeru.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level2/xhbmv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level2/xhemv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level2/xher.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level2/xher2.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level2/xhpmv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level2/xhpr.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level2/xhpr2.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level2/xsbmv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level2/xspmv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level2/xspr.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level2/xspr2.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level2/xsymv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level2/xsyr.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level2/xsyr2.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level2/xtbmv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level2/xtbsv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level2/xtpmv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level2/xtpsv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level2/xtrmv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level2/xtrsv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level3/xgemm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level3/xhemm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level3/xher2k.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level3/xherk.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level3/xsymm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level3/xsyr2k.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level3/xsyrk.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level3/xtrmm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/level3/xtrsm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/levelx/xaxpybatched.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/levelx/xcol2im.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/levelx/xconvgemm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/levelx/xgemmbatched.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/levelx/xgemmstridedbatched.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/levelx/xhad.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/levelx/xim2col.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/levelx/xinvert.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/routines/levelx/xomatcopy.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/testblas.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/correctness/tester.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/diagnostics.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/client.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level1/xamax.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level1/xasum.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level1/xaxpy.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level1/xcopy.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level1/xdot.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level1/xdotc.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level1/xdotu.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level1/xnrm2.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level1/xrot.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level1/xrotg.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level1/xrotm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level1/xrotmg.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level1/xscal.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level1/xswap.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level2/xgbmv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level2/xgemv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level2/xger.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level2/xgerc.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level2/xgeru.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level2/xhbmv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level2/xhemv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level2/xher.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level2/xher2.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level2/xhpmv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level2/xhpr.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level2/xhpr2.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level2/xsbmv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level2/xspmv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level2/xspr.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level2/xspr2.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level2/xsymv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level2/xsyr.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level2/xsyr2.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level2/xtbmv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level2/xtbsv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level2/xtpmv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level2/xtpsv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level2/xtrmv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level2/xtrsv.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level3/xgemm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level3/xhemm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level3/xher2k.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level3/xherk.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level3/xsymm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level3/xsyr2k.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level3/xsyrk.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level3/xtrmm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/level3/xtrsm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/levelx/xaxpybatched.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/levelx/xcol2im.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/levelx/xconvgemm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/levelx/xgemmbatched.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/levelx/xgemmstridedbatched.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/levelx/xhad.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/levelx/xim2col.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/levelx/xinvert.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/performance/routines/levelx/xomatcopy.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/CLBlast/test/test_utilities.cpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/include/clblast.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/include/clblast_c.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/include/clblast_cuda.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/include/clblast_half.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/include/clblast_netlib_c.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/cache.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/clpp11.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/cupp11.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/cxpp11_common.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/apple_cpu_fallback.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/database.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/database_structure.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/copy/copy.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/copy/copy_16.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/copy/copy_32.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/copy/copy_3232.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/copy/copy_64.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/copy/copy_6464.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/gemm_routine/gemm_routine.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/gemm_routine/gemm_routine_16.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/gemm_routine/gemm_routine_32.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/gemm_routine/gemm_routine_3232.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/gemm_routine/gemm_routine_64.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/gemm_routine/gemm_routine_6464.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/invert/invert.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/invert/invert_16.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/invert/invert_32.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/invert/invert_3232.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/invert/invert_64.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/invert/invert_6464.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/pad/pad.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/pad/pad_16.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/pad/pad_32.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/pad/pad_3232.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/pad/pad_64.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/pad/pad_6464.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/padtranspose/padtranspose.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/padtranspose/padtranspose_16.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/padtranspose/padtranspose_32.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/padtranspose/padtranspose_3232.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/padtranspose/padtranspose_64.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/padtranspose/padtranspose_6464.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/transpose/transpose.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/transpose/transpose_16.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/transpose/transpose_32.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/transpose/transpose_3232.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/transpose/transpose_64.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/transpose/transpose_6464.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/trsv_routine/trsv_routine.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/trsv_routine/trsv_routine_16.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/trsv_routine/trsv_routine_32.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/trsv_routine/trsv_routine_3232.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/trsv_routine/trsv_routine_64.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/trsv_routine/trsv_routine_6464.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xaxpy/xaxpy.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xaxpy/xaxpy_16.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xaxpy/xaxpy_32.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xaxpy/xaxpy_3232.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xaxpy/xaxpy_64.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xaxpy/xaxpy_6464.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xconvgemm/xconvgemm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xconvgemm/xconvgemm_16.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xconvgemm/xconvgemm_32.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xconvgemm/xconvgemm_3232.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xconvgemm/xconvgemm_64.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xconvgemm/xconvgemm_6464.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xdot/xdot.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xdot/xdot_16.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xdot/xdot_32.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xdot/xdot_3232.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xdot/xdot_64.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xdot/xdot_6464.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemm/xgemm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemm/xgemm_16.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemm/xgemm_32.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemm/xgemm_3232.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemm/xgemm_64.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemm/xgemm_6464.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemm_direct/xgemm_direct.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemm_direct/xgemm_direct_16.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemm_direct/xgemm_direct_32.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemm_direct/xgemm_direct_3232.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemm_direct/xgemm_direct_64.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemm_direct/xgemm_direct_6464.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemv/xgemv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemv/xgemv_16.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemv/xgemv_32.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemv/xgemv_3232.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemv/xgemv_64.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemv/xgemv_6464.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemv_fast/xgemv_fast.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemv_fast/xgemv_fast_16.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemv_fast/xgemv_fast_32.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemv_fast/xgemv_fast_3232.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemv_fast/xgemv_fast_64.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemv_fast/xgemv_fast_6464.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemv_fast_rot/xgemv_fast_rot.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemv_fast_rot/xgemv_fast_rot_16.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemv_fast_rot/xgemv_fast_rot_32.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemv_fast_rot/xgemv_fast_rot_3232.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemv_fast_rot/xgemv_fast_rot_64.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xgemv_fast_rot/xgemv_fast_rot_6464.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xger/xger.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xger/xger_16.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xger/xger_32.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xger/xger_3232.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xger/xger_64.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/database/kernels/xger/xger_6464.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/kernel_preprocessor.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/kernels/opencl_to_cuda.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routine.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/common.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level1/xamax.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level1/xamin.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level1/xasum.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level1/xaxpy.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level1/xcopy.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level1/xdot.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level1/xdotc.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level1/xdotu.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level1/xmax.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level1/xmin.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level1/xnrm2.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level1/xscal.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level1/xsum.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level1/xswap.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xgbmv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xgemv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xger.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xgerc.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xgeru.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xhbmv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xhemv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xher.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xher2.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xhpmv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xhpr.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xhpr2.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xsbmv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xspmv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xspr.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xspr2.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xsymv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xsyr.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xsyr2.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xtbmv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xtpmv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xtrmv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level2/xtrsv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level3/xgemm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level3/xhemm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level3/xher2k.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level3/xherk.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level3/xsymm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level3/xsyr2k.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level3/xsyrk.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level3/xtrmm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/level3/xtrsm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/levelx/xaxpybatched.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/levelx/xcol2im.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/levelx/xconvgemm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/levelx/xgemmbatched.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/levelx/xgemmstridedbatched.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/levelx/xhad.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/levelx/xim2col.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/levelx/xinvert.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/levelx/xomatcopy.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/routines/routines.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/tuning/configurations.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/tuning/kernels/copy_fast.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/tuning/kernels/copy_pad.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/tuning/kernels/invert.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/tuning/kernels/transpose_fast.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/tuning/kernels/transpose_pad.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/tuning/kernels/xaxpy.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/tuning/kernels/xconvgemm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/tuning/kernels/xdot.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/tuning/kernels/xgemm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/tuning/kernels/xgemm_direct.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/tuning/kernels/xgemv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/tuning/kernels/xger.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/tuning/routines/routine_tuner.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/tuning/tuning.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/utilities/android.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/utilities/buffer_test.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/utilities/clblast_exceptions.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/utilities/compile.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/utilities/device_mapping.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/utilities/msvc.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/utilities/timing.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/src/utilities/utilities.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/correctness/testblas.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/correctness/tester.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/performance/client.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/common.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level1/xamax.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level1/xasum.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level1/xaxpy.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level1/xcopy.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level1/xdot.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level1/xdotc.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level1/xdotu.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level1/xnrm2.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level1/xscal.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level1/xswap.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level2/xgbmv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level2/xgemv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level2/xger.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level2/xgerc.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level2/xgeru.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level2/xhbmv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level2/xhemv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level2/xher.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level2/xher2.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level2/xhpmv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level2/xhpr.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level2/xhpr2.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level2/xsbmv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level2/xspmv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level2/xspr.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level2/xspr2.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level2/xsymv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level2/xsyr.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level2/xsyr2.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level2/xtbmv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level2/xtpmv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level2/xtrmv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level2/xtrsv.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level3/xgemm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level3/xhemm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level3/xher2k.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level3/xherk.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level3/xsymm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level3/xsyr2k.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level3/xsyrk.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level3/xtrmm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level3/xtrsm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/level3/xtrsm_data.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/levelx/xaxpybatched.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/levelx/xcol2im.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/levelx/xconvgemm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/levelx/xgemmbatched.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/levelx/xgemmstridedbatched.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/levelx/xhad.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/levelx/xim2col.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/levelx/xinvert.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/routines/levelx/xomatcopy.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/test_utilities.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/wrapper_cblas.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/wrapper_clblas.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/wrapper_cublas.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/CLBlast/test/wrapper_cuda.hpp" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/CHANGELOG" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/CONTRIBUTING.md" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/README.md" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/ROADMAP.md" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/clblast.pc.in" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/doc/api.md" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/doc/benchmarking.md" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/doc/bindings.md" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/doc/details_conv.md" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/doc/details_gemm.md" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/doc/faq.md" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/doc/glossary.md" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/doc/installation.md" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/doc/routines.md" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/doc/testing.md" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/doc/tuning.md" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/scripts/benchmark/benchmark.py" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/scripts/benchmark/benchmark_all.py" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/scripts/benchmark/plot.py" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/scripts/benchmark/settings.py" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/scripts/benchmark/utils.py" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/scripts/database/database.py" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/scripts/database/database/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/scripts/database/database/bests.py" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/scripts/database/database/clblast.py" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/scripts/database/database/db.py" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/scripts/database/database/defaults.py" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/scripts/database/database/io.py" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/scripts/generator/generator.py" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/scripts/generator/generator/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/scripts/generator/generator/convert.py" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/scripts/generator/generator/cpp.py" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/scripts/generator/generator/datatype.py" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/scripts/generator/generator/doc.py" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/scripts/generator/generator/pyclblast.py" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/scripts/generator/generator/routine.py" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/src/pyclblast/MANIFEST.in" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/src/pyclblast/README.md" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/src/pyclblast/samples/haxpy.py" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/src/pyclblast/samples/override_parameters.py" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/src/pyclblast/samples/saxpy.py" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/src/pyclblast/samples/saxpybatched.py" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/src/pyclblast/samples/sgemm.py" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/src/pyclblast/samples/sgemv.py" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/src/pyclblast/setup.py" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/src/pyclblast/test/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/CLBlast/src/pyclblast/test/test_pyclblast.py" />
+  </ItemGroup>
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />
+  </ImportGroup>
+</Project>
+  

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03fd328}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{42f0fc98-34f6-4567-b3cf-de13e74a89ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{b1798409-2031-413d-9df7-70b0202ddd98}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files\blas">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\matlab">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\matlab">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\python">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\python\liblinear">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\blas">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\matlab">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/liblinear/blas/daxpy.c">
+      <Filter>Source Files\blas</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/liblinear/blas/ddot.c">
+      <Filter>Source Files\blas</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/liblinear/blas/dnrm2.c">
+      <Filter>Source Files\blas</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/liblinear/blas/dscal.c">
+      <Filter>Source Files\blas</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/liblinear/linear.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/liblinear/matlab/libsvmread.c">
+      <Filter>Source Files\matlab</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/liblinear/matlab/libsvmwrite.c">
+      <Filter>Source Files\matlab</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/liblinear/matlab/linear_model_matlab.c">
+      <Filter>Source Files\matlab</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/liblinear/matlab/predict.c">
+      <Filter>Source Files\matlab</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/liblinear/matlab/train.c">
+      <Filter>Source Files\matlab</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/liblinear/newton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/liblinear/predict.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/liblinear/svm-scale.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/liblinear/train.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClInclude Include="../../thirdparty/owemdjee/liblinear/blas/blas.h">
+      <Filter>Header Files\blas</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/liblinear/blas/blasp.h">
+      <Filter>Header Files\blas</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/liblinear/linear.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/liblinear/matlab/linear_model_matlab.h">
+      <Filter>Header Files\matlab</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/liblinear/newton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <Text Include="../../thirdparty/owemdjee/liblinear/README">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/liblinear/matlab/README">
+      <Filter>Misc Files\matlab</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/liblinear/python/MANIFEST.in">
+      <Filter>Misc Files\python</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/liblinear/python/README">
+      <Filter>Misc Files\python</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/liblinear/python/liblinear/__init__.py">
+      <Filter>Misc Files\python\liblinear</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/liblinear/python/liblinear/commonutil.py">
+      <Filter>Misc Files\python\liblinear</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/liblinear/python/liblinear/liblinear.py">
+      <Filter>Misc Files\python\liblinear</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/liblinear/python/liblinear/liblinearutil.py">
+      <Filter>Misc Files\python\liblinear</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/liblinear/python/setup.py">
+      <Filter>Misc Files\python</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
+    

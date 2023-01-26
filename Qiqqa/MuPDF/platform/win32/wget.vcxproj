@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>wget</ProjectName>
+    <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FFE20576}</ProjectGuid>
+    <RootNamespace>wget</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project.props" Label="SolutionWideSettings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.28307.799</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+<ItemDefinitionGroup>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <BrowseInformation>false</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <DisableSpecificWarnings>4018;4100;4127;4180;4206;4244;4267;5105;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <SDLCheck>false</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <ConformanceMode>true</ConformanceMode>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableUnitySupport>true</EnableUnitySupport>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+</ItemDefinitionGroup>
+<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WGET;WGET_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WGET;WGET_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WGET;WGET_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WGET;WGET_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WGET;WGET_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WGET;WGET_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WGET;WGET_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WGET;WGET_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WGET;WGET_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WGET;WGET_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WGET;WGET_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WGET;WGET_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/wget/fuzz/glob_crash.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/fuzz/main.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/fuzz/wget_cookie_fuzzer.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/fuzz/wget_css_fuzzer.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/fuzz/wget_ftpls_fuzzer.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/fuzz/wget_html_fuzzer.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/fuzz/wget_netrc_fuzzer.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/fuzz/wget_ntlm_fuzzer.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/fuzz/wget_options_fuzzer.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/fuzz/wget_progress_fuzzer.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/fuzz/wget_read_hunk_fuzzer.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/fuzz/wget_robots_fuzzer.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/fuzz/wget_url_fuzzer.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/msdos/msdos.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/connect.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/convert.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/cookies.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/css-url.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/decc_ver.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/exits.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/ftp-basic.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/ftp-ls.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/ftp-opie.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/ftp.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/gnutls.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/hash.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/host.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/hsts.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/html-parse.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/html-url.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/http-ntlm.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/http.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/init.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/iri.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/log.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/main.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/metalink.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/mswindows.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/netrc.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/openssl.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/progress.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/ptimer.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/recur.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/res.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/retr.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/spider.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/url.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/utils.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/vms.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/warc.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/src/xattr.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/tests/unit-tests.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget/util/trunc.c" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/build-aux/link-warning.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/fuzz/fuzzer.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/msdos/config.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/connect.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/convert.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/cookies.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/css-tokens.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/css-url.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/exits.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/ftp.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/hash.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/host.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/hsts.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/html-parse.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/html-url.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/http-ntlm.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/http.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/init.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/iri.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/log.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/metalink.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/mswindows.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/netrc.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/options.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/progress.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/ptimer.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/recur.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/res.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/retr.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/spider.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/ssl.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/sysdep.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/url.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/utils.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/version.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/warc.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/wget.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/src/xattr.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/tests/unit-tests.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/vms/alloca.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/vms/stdint.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/vms/vms.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/wget/vms/vms_ip.h" />
+    <Text Include="../../thirdparty/owemdjee/wget/CONTRIBUTING.md" />
+    <Text Include="../../thirdparty/owemdjee/wget/ChangeLog" />
+    <Text Include="../../thirdparty/owemdjee/wget/ChangeLog-2014-12-10" />
+    <Text Include="../../thirdparty/owemdjee/wget/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/wget/NEWS" />
+    <Text Include="../../thirdparty/owemdjee/wget/README" />
+    <Text Include="../../thirdparty/owemdjee/wget/README.checkout" />
+    <Text Include="../../thirdparty/owemdjee/wget/configure.ac" />
+    <Text Include="../../thirdparty/owemdjee/wget/doc/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/wget/doc/announcement_1.19.txt" />
+    <Text Include="../../thirdparty/owemdjee/wget/doc/metalink-standard.txt" />
+    <Text Include="../../thirdparty/owemdjee/wget/doc/metalink.txt" />
+    <Text Include="../../thirdparty/owemdjee/wget/fuzz/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/wget/fuzz/README.md" />
+    <Text Include="../../thirdparty/owemdjee/wget/fuzz/run-afl.sh" />
+    <Text Include="../../thirdparty/owemdjee/wget/fuzz/run-clang.sh" />
+    <Text Include="../../thirdparty/owemdjee/wget/fuzz/test-runner.sh" />
+    <Text Include="../../thirdparty/owemdjee/wget/fuzz/view-coverage.sh" />
+    <Text Include="../../thirdparty/owemdjee/wget/fuzz/wget_cookie_fuzzer.in/" />
+    <Text Include="../../thirdparty/owemdjee/wget/fuzz/wget_css_fuzzer.in/" />
+    <Text Include="../../thirdparty/owemdjee/wget/fuzz/wget_ftpls_fuzzer.in/" />
+    <Text Include="../../thirdparty/owemdjee/wget/fuzz/wget_html_fuzzer.in/" />
+    <Text Include="../../thirdparty/owemdjee/wget/fuzz/wget_netrc_fuzzer.in/" />
+    <Text Include="../../thirdparty/owemdjee/wget/fuzz/wget_ntlm_fuzzer.in/" />
+    <Text Include="../../thirdparty/owemdjee/wget/fuzz/wget_options_fuzzer.in/" />
+    <Text Include="../../thirdparty/owemdjee/wget/fuzz/wget_progress_fuzzer.in/" />
+    <Text Include="../../thirdparty/owemdjee/wget/fuzz/wget_read_hunk_fuzzer.in/" />
+    <Text Include="../../thirdparty/owemdjee/wget/fuzz/wget_robots_fuzzer.in/" />
+    <Text Include="../../thirdparty/owemdjee/wget/fuzz/wget_url_fuzzer.in/" />
+    <Text Include="../../thirdparty/owemdjee/wget/lib/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/wget/po/POTFILES.in" />
+    <Text Include="../../thirdparty/owemdjee/wget/src/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/wget/src/build_info.c.in" />
+    <Text Include="../../thirdparty/owemdjee/wget/src/css.l" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/README" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test--convert-links--content-on-error.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test--https-crl.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test--https.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test--rejected-log.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test--spider-r.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-416.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-504.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-Content-disposition-2.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-Content-disposition.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-Head.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-O.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-Parallel-Proto.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-Post.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-Proto.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-auth-basic-fail.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-auth-basic-netrc-pass-given.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-auth-basic-netrc-user-given.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-auth-basic-netrc.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-auth-basic-no-netrc-fail.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-auth-basic.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-auth-both.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-auth-digest.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-auth-no-challenge-url.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-auth-no-challenge.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-auth-retcode.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-auth-with-content-disposition.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-c-full.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-condget.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-cookie-401.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-cookie-domain-mismatch.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-cookie-expires.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-cookie.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-hsts.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-http-baddigest.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-http-quoted.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-http-xml-trust-name.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-http-xml-trust.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-http-xml-type-content.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-http-xml-type-trust-content.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-http-xml-type-trust.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-http-xml-type.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-http-xml.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-http.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-xml-abspath-trust.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-xml-abspath.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-xml-absprefix-trust.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-xml-absprefix.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-xml-continue.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-xml-emptyprefix-trust.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-xml-homepath-trust.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-xml-homepath.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-xml-homeprefix-trust.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-xml-homeprefix.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-xml-nohash.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-xml-nourls.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-xml-prefix-trust.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-xml-prefix.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-xml-relpath-trust.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-xml-relpath.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-xml-relprefix-trust.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-xml-relprefix.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-xml-size.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-xml-trust.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-xml-urlbreak.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-metalink-xml.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-missing-scheme-retval.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-no_proxy-env.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-pinnedpubkey-der-https.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-pinnedpubkey-der-no-check-https.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-pinnedpubkey-hash-https.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-pinnedpubkey-hash-no-check-fail-https.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-pinnedpubkey-pem-fail-https.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-pinnedpubkey-pem-https.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-recursive-basic.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-recursive-include.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-recursive-redirect.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-redirect-crash.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-redirect.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/Test-reserved-chars.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/certs/README" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/certs/make_ca.sh" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/conf/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/conf/authentication.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/conf/domains.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/conf/environment_variables.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/conf/expect_header.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/conf/expected_files.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/conf/expected_ret_code.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/conf/files_crawled.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/conf/hook_sample.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/conf/local_files.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/conf/reject_header.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/conf/response.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/conf/rule_sample.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/conf/send_header.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/conf/server_files.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/conf/urls.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/conf/wget_commands.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/exc/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/exc/server_error.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/exc/test_failed.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/misc/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/misc/colour_terminal.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/misc/metalinkv3_xml.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/misc/wget_file.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/server/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/server/ftp/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/server/ftp/ftp_server.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/server/http/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/server/http/http_server.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/test/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/test/base_test.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/testenv/test/http_test.py" />
+    <Text Include="../../thirdparty/owemdjee/wget/tests/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/wget/tests/certs/README" />
+    <Text Include="../../thirdparty/owemdjee/wget/tests/certs/client-template.txt" />
+    <Text Include="../../thirdparty/owemdjee/wget/tests/certs/create-certs.sh" />
+    <Text Include="../../thirdparty/owemdjee/wget/tests/certs/expired-template.txt" />
+    <Text Include="../../thirdparty/owemdjee/wget/tests/certs/interca.conf.in" />
+    <Text Include="../../thirdparty/owemdjee/wget/tests/certs/invalid-template.txt" />
+    <Text Include="../../thirdparty/owemdjee/wget/tests/certs/revoked-template.txt" />
+    <Text Include="../../thirdparty/owemdjee/wget/tests/certs/rootca.conf.in" />
+    <Text Include="../../thirdparty/owemdjee/wget/tests/certs/server-template.txt" />
+    <Text Include="../../thirdparty/owemdjee/wget/tests/certs/test-ca-template.txt" />
+    <Text Include="../../thirdparty/owemdjee/wget/util/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/wget/util/README" />
+    <Text Include="../../thirdparty/owemdjee/wget/util/createcerts.sh" />
+    <Text Include="../../thirdparty/owemdjee/wget/vms/VMS_NOTES.TXT" />
+  </ItemGroup>
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />
+  </ImportGroup>
+</Project>
+  

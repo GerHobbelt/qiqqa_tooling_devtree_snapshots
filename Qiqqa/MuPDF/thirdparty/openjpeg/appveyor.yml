@@ -1,0 +1,51 @@
+version: 2.5.0.{build}
+branches:
+  except:
+  - coverity_scan
+skip_tags: false
+clone_depth: 50
+test: off
+
+image:
+  - Visual Studio 2013
+  - Ubuntu
+  - Ubuntu1604
+  - macos
+
+configuration:
+  - Release
+
+environment:
+  matrix:
+  - platform: x86
+    BUILD_PLATFORM: Win32
+    OPJ_CI_ARCH: x86
+  - platform: x64
+    BUILD_PLATFORM: x64
+    OPJ_CI_ARCH: x64
+
+before_build:
+  - cmd: mkdir build && cd build
+  - cmd: cmake ../ -DCMAKE_BUILD_TYPE=%CONFIGURATION% -A %BUILD_PLATFORM% -DBUILD_CSHARP=ON
+  - sh: mkdir build && cd build
+  - sh: cmake ../ -DCMAKE_BUILD_TYPE=$CONFIGURATION -DBUILD_CSHARP=ON
+
+build_script:
+  - cmd: cmake --build . --config %CONFIGURATION%
+  - sh: cmake --build . --config $CONFIGURATION
+
+artifacts:
+  - path: build/bin/Release/*.dll
+    name: Windows dynamic libraries
+
+  - path: build/bin/Release/*.lib
+    name: Windows static libraries
+
+  - path: build/bin/*.so*
+    name: Linux dynamic libs
+
+  - path: build/bin/*.a
+    name: Static libs
+
+  - path: build/bin/*.dylib
+    name: MacOS dynamic libs

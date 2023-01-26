@@ -1,0 +1,740 @@
+// Copyright (C) 2004-2023 Artifex Software, Inc.
+//
+// This file is part of MuPDF.
+//
+// MuPDF is free software: you can redistribute it and/or modify it under the
+// terms of the GNU Affero General Public License as published by the Free
+// Software Foundation, either version 3 of the License, or (at your option)
+// any later version.
+//
+// MuPDF is distributed in the hope that it will be useful, but WITHOUT ANY
+// WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+// FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more
+// details.
+//
+// You should have received a copy of the GNU Affero General Public License
+// along with MuPDF. If not, see <https://www.gnu.org/licenses/agpl-3.0.en.html>
+//
+// Alternative licensing terms are available from the licensor.
+// For commercial licensing, see <https://www.artifex.com/> or contact
+// Artifex Software, Inc., 1305 Grant Avenue - Suite 200, Novato,
+// CA 94945, U.S.A., +1(415)492-9861, for further information.
+
+#ifndef MUPDF_FITZ_DEVICE_H
+#define MUPDF_FITZ_DEVICE_H
+
+#include "mupdf/fitz/system.h"
+#include "mupdf/fitz/context.h"
+#include "mupdf/fitz/geometry.h"
+#include "mupdf/fitz/image.h"
+#include "mupdf/fitz/shade.h"
+#include "mupdf/fitz/path.h"
+#include "mupdf/fitz/text.h"
+
+#include "plf_nanotimer_c_api.h"
+
+#if FZ_ENABLE_RENDER_CORE 
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/**
+	The different format handlers (pdf, xps etc) interpret pages to
+	a device. These devices can then process the stream of calls
+	they receive in various ways:
+		The trace device outputs debugging information for the calls.
+		The draw device will render them.
+		The list device stores them in a list to play back later.
+		The text device performs text extraction and searching.
+		The bbox device calculates the bounding box for the page.
+		The stats device calculates the drawing primitives' statistics (occurrence, count, variants) for the page.
+	Other devices can (and will) be written in the future.
+*/
+typedef struct fz_device fz_device;
+
+typedef struct fz_context fz_context;
+typedef struct fz_cookie fz_cookie;
+
+enum
+{
+	/* Flags */
+	FZ_DEVFLAG_MASK = 1,
+	FZ_DEVFLAG_COLOR = 2,
+	FZ_DEVFLAG_UNCACHEABLE = 4,
+	FZ_DEVFLAG_FILLCOLOR_UNDEFINED = 8,
+	FZ_DEVFLAG_STROKECOLOR_UNDEFINED = 16,
+	FZ_DEVFLAG_STARTCAP_UNDEFINED = 32,
+	FZ_DEVFLAG_DASHCAP_UNDEFINED = 64,
+	FZ_DEVFLAG_ENDCAP_UNDEFINED = 128,
+	FZ_DEVFLAG_LINEJOIN_UNDEFINED = 256,
+	FZ_DEVFLAG_MITERLIMIT_UNDEFINED = 512,
+	FZ_DEVFLAG_LINEWIDTH_UNDEFINED = 1024,
+	/* Arguably we should have a bit for the dash pattern itself
+	 * being undefined, but that causes problems; do we assume that
+	 * it should always be set to non-dashing at the start of every
+	 * glyph? */
+	FZ_DEVFLAG_BBOX_DEFINED = 2048,
+	FZ_DEVFLAG_GRIDFIT_AS_TILED = 4096,
+};
+
+enum
+{
+	/* PDF 1.4 -- standard separable */
+	FZ_BLEND_NORMAL,
+	FZ_BLEND_MULTIPLY,
+	FZ_BLEND_SCREEN,
+	FZ_BLEND_OVERLAY,
+	FZ_BLEND_DARKEN,
+	FZ_BLEND_LIGHTEN,
+	FZ_BLEND_COLOR_DODGE,
+	FZ_BLEND_COLOR_BURN,
+	FZ_BLEND_HARD_LIGHT,
+	FZ_BLEND_SOFT_LIGHT,
+	FZ_BLEND_DIFFERENCE,
+	FZ_BLEND_EXCLUSION,
+
+	/* PDF 1.4 -- standard non-separable */
+	FZ_BLEND_HUE,
+	FZ_BLEND_SATURATION,
+	FZ_BLEND_COLOR,
+	FZ_BLEND_LUMINOSITY,
+
+	/* For packing purposes */
+	FZ_BLEND_MODEMASK = 15,
+	FZ_BLEND_ISOLATED = 16,
+	FZ_BLEND_KNOCKOUT = 32
+};
+
+/**
+	Map from (case sensitive) blend mode string to enumeration.
+*/
+int fz_lookup_blendmode(const char *name);
+
+/**
+	Map from enumeration to blend mode string.
+
+	The string is static, with arbitrary lifespan.
+*/
+const char *fz_blendmode_name(int blendmode);
+
+/**
+	The device structure is public to allow devices to be
+	implemented outside of fitz.
+
+	Device methods should always be called using e.g.
+	fz_fill_path(ctx, dev, ...) rather than
+	dev->fill_path(ctx, dev, ...)
+*/
+
+/**
+	Devices can keep track of containers (clips/masks/groups/tiles)
+	as they go to save callers having to do it.
+*/
+typedef struct
+{
+	fz_rect scissor;
+	int type;
+	int user;
+} fz_device_container_stack;
+
+enum
+{
+	fz_device_container_stack_is_clip,
+	fz_device_container_stack_is_mask,
+	fz_device_container_stack_is_group,
+	fz_device_container_stack_is_tile,
+};
+
+/* Structure types */
+typedef enum
+{
+	FZ_STRUCTURE_INVALID = -1,
+
+	/* Grouping elements (PDF 1.7 - Table 10.20) */
+	FZ_STRUCTURE_DOCUMENT,
+	FZ_STRUCTURE_PART,
+	FZ_STRUCTURE_ART,
+	FZ_STRUCTURE_SECT,
+	FZ_STRUCTURE_DIV,
+	FZ_STRUCTURE_BLOCKQUOTE,
+	FZ_STRUCTURE_CAPTION,
+	FZ_STRUCTURE_TOC,
+	FZ_STRUCTURE_TOCI,
+	FZ_STRUCTURE_INDEX,
+	FZ_STRUCTURE_NONSTRUCT,
+	FZ_STRUCTURE_PRIVATE,
+
+	/* Paragraphlike elements (PDF 1.7 - Table 10.21) */
+	FZ_STRUCTURE_P,
+	FZ_STRUCTURE_H,
+	FZ_STRUCTURE_H1,
+	FZ_STRUCTURE_H2,
+	FZ_STRUCTURE_H3,
+	FZ_STRUCTURE_H4,
+	FZ_STRUCTURE_H5,
+	FZ_STRUCTURE_H6,
+
+	/* List elements (PDF 1.7 - Table 10.23) */
+	FZ_STRUCTURE_LIST,
+	FZ_STRUCTURE_LISTITEM,
+	FZ_STRUCTURE_LABEL,
+	FZ_STRUCTURE_LISTBODY,
+
+	/* Table elements (PDF 1.7 - Table 10.24) */
+	FZ_STRUCTURE_TABLE,
+	FZ_STRUCTURE_TR,
+	FZ_STRUCTURE_TH,
+	FZ_STRUCTURE_TD,
+	FZ_STRUCTURE_THEAD,
+	FZ_STRUCTURE_TBODY,
+	FZ_STRUCTURE_TFOOT,
+
+	/* Inline elements (PDF 1.7 - Table 10.25) */
+	FZ_STRUCTURE_SPAN,
+	FZ_STRUCTURE_QUOTE,
+	FZ_STRUCTURE_NOTE,
+	FZ_STRUCTURE_REFERENCE,
+	FZ_STRUCTURE_BIBENTRY,
+	FZ_STRUCTURE_CODE,
+	FZ_STRUCTURE_LINK,
+	FZ_STRUCTURE_ANNOT,
+
+	/* Ruby inline element (PDF 1.7 - Table 10.26) */
+	FZ_STRUCTURE_RUBY,
+	FZ_STRUCTURE_RB,
+	FZ_STRUCTURE_RT,
+	FZ_STRUCTURE_RP,
+
+	/* Warichu inline element (PDF 1.7 - Table 10.26) */
+	FZ_STRUCTURE_WARICHU,
+	FZ_STRUCTURE_WT,
+	FZ_STRUCTURE_WP,
+
+	/* Illustration elements (PDF 1.7 - Table 10.27) */
+	FZ_STRUCTURE_FIGURE,
+	FZ_STRUCTURE_FORMULA,
+	FZ_STRUCTURE_FORM
+} fz_structure;
+
+const char *fz_structure_to_string(fz_structure type);
+
+typedef enum
+{
+	FZ_METATEXT_ACTUALTEXT,
+	FZ_METATEXT_ALT,
+	FZ_METATEXT_ABBREVIATION,
+	FZ_METATEXT_TITLE
+} fz_metatext;
+
+struct fz_device
+{
+	int refs;
+	int hints;
+	int flags;
+
+	void (*close_device)(fz_context *, fz_device *);
+	void (*drop_device)(fz_context *, fz_device *);
+
+	void (*fill_path)(fz_context *, fz_device *, const fz_path *, int even_odd, fz_matrix, fz_colorspace *, const float *color, float alpha, fz_color_params );
+	void (*stroke_path)(fz_context *, fz_device *, const fz_path *, const fz_stroke_state *, fz_matrix, fz_colorspace *, const float *color, float alpha, fz_color_params );
+	void (*clip_path)(fz_context *, fz_device *, const fz_path *, int even_odd, fz_matrix, fz_rect scissor);
+	void (*clip_stroke_path)(fz_context *, fz_device *, const fz_path *, const fz_stroke_state *, fz_matrix, fz_rect scissor);
+
+	void (*fill_text)(fz_context *, fz_device *, const fz_text *, fz_matrix, fz_colorspace *, const float *color, float alpha, fz_color_params );
+	void (*stroke_text)(fz_context *, fz_device *, const fz_text *, const fz_stroke_state *, fz_matrix, fz_colorspace *, const float *color, float alpha, fz_color_params );
+	void (*clip_text)(fz_context *, fz_device *, const fz_text *, fz_matrix, fz_rect scissor);
+	void (*clip_stroke_text)(fz_context *, fz_device *, const fz_text *, const fz_stroke_state *, fz_matrix, fz_rect scissor);
+	void (*ignore_text)(fz_context *, fz_device *, const fz_text *, fz_matrix );
+
+	void (*fill_shade)(fz_context *, fz_device *, fz_shade *shd, fz_matrix ctm, float alpha, fz_color_params color_params);
+	void (*fill_image)(fz_context *, fz_device *, fz_image *img, fz_matrix ctm, float alpha, fz_color_params color_params);
+	void (*fill_image_mask)(fz_context *, fz_device *, fz_image *img, fz_matrix ctm, fz_colorspace *, const float *color, float alpha, fz_color_params color_params);
+	void (*clip_image_mask)(fz_context *, fz_device *, fz_image *img, fz_matrix ctm, fz_rect scissor);
+
+	void (*pop_clip)(fz_context *, fz_device *);
+
+	void (*begin_mask)(fz_context *, fz_device *, fz_rect area, int luminosity, fz_colorspace *, const float *bc, fz_color_params );
+	void (*end_mask)(fz_context *, fz_device *);
+	void (*begin_group)(fz_context *, fz_device *, fz_rect area, fz_colorspace *cs, int isolated, int knockout, int blendmode, float alpha);
+	void (*end_group)(fz_context *, fz_device *);
+
+	int (*begin_tile)(fz_context *, fz_device *, fz_rect area, fz_rect view, float xstep, float ystep, fz_matrix ctm, int id);
+	void (*end_tile)(fz_context *, fz_device *);
+
+	void (*render_flags)(fz_context *, fz_device *, int set, int clear);
+	void (*set_default_colorspaces)(fz_context *, fz_device *, fz_default_colorspaces *);
+
+	void (*begin_layer)(fz_context *, fz_device *, const char *layer_name);
+	void (*end_layer)(fz_context *, fz_device *);
+
+	void (*begin_structure)(fz_context *, fz_device *, fz_structure standard, const char *raw, int uid);
+	void (*end_structure)(fz_context *, fz_device *);
+
+	void (*begin_metatext)(fz_context *, fz_device *, fz_metatext meta, const char *text);
+	void (*end_metatext)(fz_context *, fz_device *);
+
+	fz_rect d1_rect;
+
+	int container_len;
+	int container_cap;
+	fz_device_container_stack *container;
+};
+
+/**
+	Device calls; graphics primitives and containers.
+*/
+void fz_fill_path(fz_context *ctx, fz_device *dev, const fz_path *path, int even_odd, fz_matrix ctm, fz_colorspace *colorspace, const float *color, float alpha, fz_color_params color_params);
+void fz_stroke_path(fz_context *ctx, fz_device *dev, const fz_path *path, const fz_stroke_state *stroke, fz_matrix ctm, fz_colorspace *colorspace, const float *color, float alpha, fz_color_params color_params);
+void fz_clip_path(fz_context *ctx, fz_device *dev, const fz_path *path, int even_odd, fz_matrix ctm, fz_rect scissor);
+void fz_clip_stroke_path(fz_context *ctx, fz_device *dev, const fz_path *path, const fz_stroke_state *stroke, fz_matrix ctm, fz_rect scissor);
+void fz_fill_text(fz_context *ctx, fz_device *dev, const fz_text *text, fz_matrix ctm, fz_colorspace *colorspace, const float *color, float alpha, fz_color_params color_params);
+void fz_stroke_text(fz_context *ctx, fz_device *dev, const fz_text *text, const fz_stroke_state *stroke, fz_matrix ctm, fz_colorspace *colorspace, const float *color, float alpha, fz_color_params color_params);
+void fz_clip_text(fz_context *ctx, fz_device *dev, const fz_text *text, fz_matrix ctm, fz_rect scissor);
+void fz_clip_stroke_text(fz_context *ctx, fz_device *dev, const fz_text *text, const fz_stroke_state *stroke, fz_matrix ctm, fz_rect scissor);
+void fz_ignore_text(fz_context *ctx, fz_device *dev, const fz_text *text, fz_matrix ctm);
+void fz_pop_clip(fz_context *ctx, fz_device *dev);
+void fz_fill_shade(fz_context *ctx, fz_device *dev, fz_shade *shade, fz_matrix ctm, float alpha, fz_color_params color_params);
+void fz_fill_image(fz_context *ctx, fz_device *dev, fz_image *image, fz_matrix ctm, float alpha, fz_color_params color_params);
+void fz_fill_image_mask(fz_context *ctx, fz_device *dev, fz_image *image, fz_matrix ctm, fz_colorspace *colorspace, const float *color, float alpha, fz_color_params color_params);
+void fz_clip_image_mask(fz_context *ctx, fz_device *dev, fz_image *image, fz_matrix ctm, fz_rect scissor);
+void fz_begin_mask(fz_context *ctx, fz_device *dev, fz_rect area, int luminosity, fz_colorspace *colorspace, const float *bc, fz_color_params color_params);
+void fz_end_mask(fz_context *ctx, fz_device *dev);
+void fz_begin_group(fz_context *ctx, fz_device *dev, fz_rect area, fz_colorspace *cs, int isolated, int knockout, int blendmode, float alpha);
+void fz_end_group(fz_context *ctx, fz_device *dev);
+void fz_begin_tile(fz_context *ctx, fz_device *dev, fz_rect area, fz_rect view, float xstep, float ystep, fz_matrix ctm);
+int fz_begin_tile_id(fz_context *ctx, fz_device *dev, fz_rect area, fz_rect view, float xstep, float ystep, fz_matrix ctm, int id);
+void fz_end_tile(fz_context *ctx, fz_device *dev);
+void fz_render_flags(fz_context *ctx, fz_device *dev, int set, int clear);
+void fz_set_default_colorspaces(fz_context *ctx, fz_device *dev, fz_default_colorspaces *default_cs);
+void fz_begin_layer(fz_context *ctx, fz_device *dev, const char *layer_name);
+void fz_end_layer(fz_context *ctx, fz_device *dev);
+void fz_begin_structure(fz_context *ctx, fz_device *dev, fz_structure standard, const char *raw, int uid);
+void fz_end_structure(fz_context *ctx, fz_device *dev);
+void fz_begin_metatext(fz_context *ctx, fz_device *dev, fz_metatext meta, const char *text);
+void fz_end_metatext(fz_context *ctx, fz_device *dev);
+
+/**
+	Devices are created by calls to device implementations, for
+	instance: foo_new_device(). These will be implemented by calling
+	fz_new_derived_device(ctx, foo_device) where foo_device is a
+	structure "derived from" fz_device, for instance
+	typedef struct { fz_device base;  ...extras...} foo_device;
+*/
+fz_device *fz_new_device_of_size(fz_context *ctx, int size);
+#define fz_new_derived_device(CTX, TYPE) \
+	((TYPE *)Memento_label(fz_new_device_of_size(ctx,sizeof(TYPE)),#TYPE))
+
+/**
+	Signal the end of input, and flush any buffered output.
+	This is NOT called implicitly on fz_drop_device. This
+	may throw exceptions.
+*/
+void fz_close_device(fz_context *ctx, fz_device *dev);
+
+/**
+	Reduce the reference count on a device. When the reference count
+	reaches zero, the device and its resources will be freed.
+	Don't forget to call fz_close_device before dropping the device,
+	or you may get incomplete output!
+
+	Never throws exceptions.
+*/
+void fz_drop_device(fz_context *ctx, fz_device *dev);
+
+/**
+	Increment the reference count for a device. Returns the same
+	pointer.
+
+	Never throws exceptions.
+*/
+fz_device *fz_keep_device(fz_context *ctx, fz_device *dev);
+
+/**
+	Enable (set) hint bits within the hint bitfield for a device.
+*/
+void fz_enable_device_hints(fz_context *ctx, fz_device *dev, int hints);
+
+/**
+	Disable (clear) hint bits within the hint bitfield for a device.
+*/
+void fz_disable_device_hints(fz_context *ctx, fz_device *dev, int hints);
+
+/**
+	Find current scissor region as tracked by the device.
+*/
+fz_rect fz_device_current_scissor(fz_context *ctx, fz_device *dev);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif // FZ_ENABLE_RENDER_CORE 
+
+
+
+
+//==================================================================================
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+enum
+{
+	/* Hints */
+	FZ_DONT_INTERPOLATE_IMAGES = 1,
+	FZ_NO_CACHE = 2,
+};
+
+/**
+	Cookie support - simple communication channel between app/library.
+*/
+
+enum fz_run_flags
+{
+	FZ_RUN_EVERYTHING				= 0,
+	FZ_RUN_CONTENT					= 0x0001,
+	FZ_RUN_ANNOTATIONS				= 0x0002,
+};
+
+enum fz_progress_state
+{
+	FZ_PROGRESS_INIT = 0,
+	FZ_PROGRESS_LOAD_PAGE,			// `next_progress_step` arg will encode chapter in MSW, page number in LSW.
+	FZ_PROGRESS_START_RUN,
+	FZ_PROGRESS_RUN_PROCEEDING,
+	FZ_PROGRESS_ANNOT_RUN_PROCEEDING,
+	FZ_PROGRESS_RUN_FINISH,
+	FZ_PROGRESS_START_PAINT,
+	FZ_PROGRESS_PAINT_PROCEEDING,
+	FZ_PROGRESS_PAINT_FINISH,
+};
+
+/**
+	Return TRUE when the process should be stopped/skipped.
+*/
+typedef int fz_cookie_callback_f(fz_context *ctx, enum fz_progress_state state, size_t next_progress_step);
+
+int fz_default_cookie_callback_handler(fz_context* ctx, enum fz_progress_state state, size_t next_progress_step);
+
+/**
+	Provide two-way communication between application and library.
+	Intended for multi-threaded applications where one thread is
+	rendering pages and another thread wants to read progress
+	feedback or abort a job that takes a long time to finish. The
+	communication is unsynchronized without locking.
+
+	abort: The application should set this field to 0 before
+	calling fz_run_page to render a page. At any point when the
+	page is being rendered the application my set this field to 1
+	which will cause the rendering to finish soon. This field is
+	checked periodically when the page is rendered, but exactly
+	when is not known, therefore there is no upper bound on
+	exactly when the rendering will abort. If the application
+	did not provide a set of locks to fz_new_context, it must also
+	await the completion of fz_run_page before issuing another
+	call to fz_run_page. Note that once the application has set
+	this field to 1 after it called fz_run_page it may not change
+	the value again.
+
+	progress: Communicates rendering progress back to the
+	application and is read only. Increments as a page is being
+	rendered. The value starts out at 0 and is limited to less
+	than or equal to progress_max, unless progress_max is -1.
+
+	progress_max: Communicates the known upper bound of rendering
+	back to the application and is read only. The maximum value
+	that the progress field may take. If there is no known upper
+	bound on how long the rendering may take this value is -1 and
+	progress is not limited. Note that the value of progress_max
+	may change from -1 to a positive value once an upper bound is
+	known, so take this into consideration when comparing the
+	value of progress to that of progress_max.
+
+	errors: count of errors during current rendering.
+
+	incomplete: Initially should be set to 0. Will be set to
+	non-zero if a TRYLATER error is thrown during rendering.
+
+	run_mode: a bit set signaling which type of content to render.
+	For backwards compatibility of the code, the ZERO(0) value
+	signals to run everything (FZ_RUN_EVERYTHING).
+
+	run_annotations_reject_mask: a boolean array set signaling which
+	annotation types to ignore/skip when rendering (and the run_mode
+	includes annotations).
+	Each slot is for a particular annotation subtype (enum pdf_annot_type);
+	slot indexes are pdf_annot_type+1, so that slot 0 is for 
+	the PDF_ANNOT_UNKNOWN type, slot 1 is for the PDF_ANNOT_TEXT type,
+	and so on.
+*/
+struct fz_cookie
+{
+	struct
+	{
+		volatile int abort;
+
+		size_t progress;
+		size_t progress_max; /* (size_t)-1 for unknown */
+		int errors;
+		int incomplete;
+		enum fz_run_flags run_mode;
+		int render_rough_approx;
+		int ignore_minor_errors;
+		char run_annotations_reject_mask[32 /* PDF_ANNOT_UNKNOWN + 2 */];   // char acts as boolean value carrier: 0 = false, !0 = true
+
+		size_t max_nodes_per_page_render;		// 0: doesn't matter; > 0: abort page render when there's more nodes than this
+		float max_msecs_per_page_render;		// 0: doesn't matter; > 0: abort page render when time spent is more than this
+
+		// `start_time` registers the time (in nsecs) when the current session was started.
+		//
+		// this can be used to measure both:
+		// 1. time elapsed since (and decide whether we wish to continue running the current process: `max_msecs_per_page_render`)
+		// 2. time elapsed since last time the check_back callback was invoked and see if we can tune the amount of time measuring overhead
+		//    to a bare minimum by dynamically adjusting the `time_step_estimate` count which is the amount the `progress` has to
+		//    increase before we we actually do another (relatively) expensive time/progress measurement.
+		//
+		// Do note: this entire procedure SHOULD be managed by the `check_back` callback, as the mupdf core code will simply keep
+		// invoking it for every notable bit of progress anyway -- this allows for maximum flexibility in the userland code driving
+		// the decision to change/alter the rendering process at hand.
+		nanotimer_data_t start_time;
+
+		size_t time_step_estimate;			
+		size_t prev_progress_pos;			
+		double prev_step_time;				// msecs since `start_time`
+	} d;
+
+	fz_cookie_callback_f *check_back;
+};
+
+/**
+	Attach the cookie to the given context. A context can always only have one cookie attached,
+	hence attaching equals replacing any previously attached cookie.
+
+	`cookie`: NULL to detach any previously attached cookie.
+
+	Note: the cookie SHOULD outlive all context instances (`fz_context`) it is
+	attached to -- or it must have been detached earlier.
+*/
+static inline void fz_attach_cookie_to_context(fz_context *ctx, fz_cookie *cookie)
+{
+	ASSERT0(ctx != NULL);
+	ctx->cookie = cookie;
+
+	// when there's no check_back been set up in the cookie already, we assign the default one:
+	if (cookie && !cookie->check_back)
+	{
+		cookie->check_back = fz_default_cookie_callback_handler;
+	}
+}
+static inline void fz_detach_cookie_from_context(fz_context* ctx)
+{
+	fz_attach_cookie_to_context(ctx, NULL);
+}
+static inline void fz_clean_cookie(fz_context *ctx, fz_cookie *cookie)
+{
+	memset(&cookie->d, 0, sizeof(cookie->d));
+}
+static inline void fz_restart_time_step_estimation(fz_context *ctx, size_t initial_step)
+{
+	fz_cookie *cookie = ctx->cookie;
+
+	cookie->d.prev_progress_pos = cookie->d.progress;
+	cookie->d.time_step_estimate = initial_step;
+	cookie->d.prev_step_time = nanotimer_get_elapsed_ms(&cookie->d.start_time);
+}
+static inline void fz_restart_time_measurement(fz_context *ctx)
+{
+	fz_cookie *cookie = ctx->cookie;
+
+	nanotimer_start(&cookie->d.start_time);
+	fz_restart_time_step_estimation(ctx, 1);
+}
+
+#ifdef __cplusplus
+}
+#endif
+
+//==================================================================================
+
+
+
+
+#if FZ_ENABLE_RENDER_CORE 
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/**
+	Create a device to print a debug trace of all device calls.
+*/
+fz_device *fz_new_trace_device(fz_context *ctx, fz_output *out);
+
+/**
+	Create a device to output raw information.
+*/
+fz_device *fz_new_xmltext_device(fz_context *ctx, fz_output *out);
+
+/**
+	Create a device to compute the bounding
+	box of all marks on a page.
+
+	The returned bounding box will be the union of all bounding
+	boxes of all objects on a page.
+*/
+fz_device *fz_new_bbox_device(fz_context *ctx, fz_rect *rectp);
+
+/**
+	Create a device to test for features.
+
+	Currently only tests for the presence of non-grayscale colors.
+
+	is_color: Possible values returned:
+		0: Definitely grayscale
+		1: Probably color (all colors were gray, but there
+		were images or shadings in a non gray colorspace).
+		2: Definitely color
+
+	threshold: The difference from grayscale that will be tolerated.
+	Typical values to use are either 0 (be exact) and 0.02 (allow an
+	imperceptible amount of slop).
+
+	options: A set of bitfield options, from the FZ_TEST_OPT set.
+
+	passthrough: A device to pass all calls through to, or NULL.
+	If set, then the test device can both test and pass through to
+	an underlying device (like, say, the display list device). This
+	means that a display list can be created and at the end we'll
+	know if it's colored or not.
+
+	In the absence of a passthrough device, the device will throw
+	an exception to stop page interpretation when color is found.
+*/
+fz_device *fz_new_test_device(fz_context *ctx, int *is_color, float threshold, int options, fz_device *passthrough);
+
+enum
+{
+	/* If set, test every pixel of images exhaustively.
+	 * If clear, just look at colorspaces for images. */
+	FZ_TEST_OPT_IMAGES = 1,
+
+	/* If set, test every pixel of shadings. */
+	/* If clear, just look at colorspaces for shadings. */
+	FZ_TEST_OPT_SHADINGS = 2
+};
+
+/**
+	Create a device to draw on a pixmap.
+
+	dest: Target pixmap for the draw device. See fz_new_pixmap*
+	for how to obtain a pixmap. The pixmap is not cleared by the
+	draw device, see fz_clear_pixmap* for how to clear it prior to
+	calling fz_new_draw_device. Free the device by calling
+	fz_drop_device.
+
+	transform: Transform from user space in points to device space
+	in pixels.
+*/
+fz_device *fz_new_draw_device(fz_context *ctx, fz_matrix transform, fz_pixmap *dest);
+
+/**
+	Create a device to draw on a pixmap.
+
+	dest: Target pixmap for the draw device. See fz_new_pixmap*
+	for how to obtain a pixmap. The pixmap is not cleared by the
+	draw device, see fz_clear_pixmap* for how to clear it prior to
+	calling fz_new_draw_device. Free the device by calling
+	fz_drop_device.
+
+	transform: Transform from user space in points to device space
+	in pixels.
+
+	clip: Bounding box to restrict any marking operations of the
+	draw device.
+*/
+fz_device *fz_new_draw_device_with_bbox(fz_context *ctx, fz_matrix transform, fz_pixmap *dest, const fz_irect *clip);
+
+/**
+	Create a device to draw on a pixmap.
+
+	dest: Target pixmap for the draw device. See fz_new_pixmap*
+	for how to obtain a pixmap. The pixmap is not cleared by the
+	draw device, see fz_clear_pixmap* for how to clear it prior to
+	calling fz_new_draw_device. Free the device by calling
+	fz_drop_device.
+
+	transform: Transform from user space in points to device space
+	in pixels.
+
+	proof_cs: Intermediate color space to map though when mapping to
+	color space defined by pixmap.
+*/
+fz_device *fz_new_draw_device_with_proof(fz_context *ctx, fz_matrix transform, fz_pixmap *dest, fz_colorspace *proof_cs);
+
+/**
+	Create a device to draw on a pixmap.
+
+	dest: Target pixmap for the draw device. See fz_new_pixmap*
+	for how to obtain a pixmap. The pixmap is not cleared by the
+	draw device, see fz_clear_pixmap* for how to clear it prior to
+	calling fz_new_draw_device. Free the device by calling
+	fz_drop_device.
+
+	transform: Transform from user space in points to device space
+	in pixels.
+
+	clip: Bounding box to restrict any marking operations of the
+	draw device.
+
+	proof_cs: Color space to render to prior to mapping to color
+	space defined by pixmap.
+*/
+fz_device *fz_new_draw_device_with_bbox_proof(fz_context *ctx, fz_matrix transform, fz_pixmap *dest, const fz_irect *clip, fz_colorspace *cs);
+
+fz_device *fz_new_draw_device_type3(fz_context *ctx, fz_matrix transform, fz_pixmap *dest);
+
+/**
+	struct fz_draw_options: Options for creating a pixmap and draw
+	device.
+*/
+typedef struct
+{
+	int rotate;
+	int x_resolution;
+	int y_resolution;
+	int width;
+	int height;
+	fz_colorspace *colorspace;
+	int alpha;
+	int graphics;
+	int text;
+} fz_draw_options;
+
+FZ_DATA extern const char *fz_draw_options_usage;
+
+/**
+	Parse draw device options from a comma separated key-value string.
+*/
+fz_draw_options *fz_parse_draw_options(fz_context *ctx, fz_draw_options *options, const char *string);
+
+/**
+	Create a new pixmap and draw device, using the specified options.
+
+	options: Options to configure the draw device, and choose the
+	resolution and colorspace.
+
+	mediabox: The bounds of the page in points.
+
+	pixmap: An out parameter containing the newly created pixmap.
+*/
+fz_device *fz_new_draw_device_with_options(fz_context *ctx, const fz_draw_options *options, fz_rect mediabox, fz_pixmap **pixmap);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif // FZ_ENABLE_RENDER_CORE 
+
+#endif

@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<!-- Server: sfs-forge-4 -->
+
+<!--[if lt IE 7]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]>-->
+<html lang="en" class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+    <title>bibutils / Home / history_version4</title>
+
+    <meta name="viewport" content="width=1100" />
+
+    <link
+      rel="icon"
+      sizes="180x180"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/images/sandiego/logo-180x180.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      sizes="any"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/images/sandiego/svg/originals/sf-icon-orange-no_sf.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/images/sandiego/logo-180x180.png"
+    />
+    <link
+      rel="mask-icon"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/images/sandiego/svg/originals/sf-icon-orange-no_sf.svg"
+      color="#FF6600"
+    />
+
+    <!--[if lt IE 7]>
+      <script src="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/js/sftheme/vendor/dd_belatedpng.js"></script>
+      <script>
+        DD_belatedPNG.fix("img, .png_bg"); //fix any <img> or .png_bg background-images
+      </script>
+    <![endif]-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700"
+      rel="stylesheet"
+    />
+    <script>
+      if (!window.SF) {
+        window.SF = {};
+      }
+      SF.sandiego = false;
+      SF.sandiego_chrome = true;
+      SF.cdn = "https://a.fsdn.com/con";
+    </script>
+
+    <!-- ew:head_css -->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/allura/css/forge/hilite.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/tool/wiki/css/wiki.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/_slim/css?href=allura%2Fcss%2Fforge%2Ftooltipster.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/allura/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/css/forge.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/css/simplemde.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/_slim/css?href=css%2Fmarkitup_sf.css%3Bcss%2Fshow-hint.css"
+    />
+
+    <style>
+      div.moderate {
+        color: grey;
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/_slim/css?href=css%2Fpage_list.css%3Bcss%2Fjquery.tagsinput.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/css/sftheme/sandiego/cmp.css"
+    />
+
+    <!-- /ew:head_css -->
+
+    <!-- ew:head_js -->
+
+    <script
+      type="text/javascript"
+      src="https://a.fsdn.com/allura/nf/1589309844/_ew_/_slim/js?href=allura%2Fjs%2Fjquery-base.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Fpromise.polyfill.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fcmp2.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Fmodernizr.3.3.1.custom.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fshared_head.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Ftypescript%2Fcompliance.js"
+    ></script>
+
+    <!-- /ew:head_js -->
+
+    <style type="text/css">
+      /* make URL & Project custom fields in support tickets not get hidden as much */
+      .project-forge.mountpoint-site-support .view_holder .grid-4:nth-child(5),
+      .project-forge.mountpoint-site-support .view_holder .grid-4:nth-child(6) {
+        overflow: visible;
+        font-size: 22px;
+        width: 340px;
+        line-height: 1;
+        margin-bottom: 5px;
+      }
+      .project-forge.mountpoint-site-support
+        .view_holder
+        .grid-4:nth-child(5)
+        label,
+      .project-forge.mountpoint-site-support
+        .view_holder
+        .grid-4:nth-child(6)
+        label {
+        font-size: 14px;
+      }
+    </style>
+
+    <style>
+      .hidden {
+        display: none;
+      }
+      a.notfound {
+        color: #f00;
+      }
+    </style>
+
+    <style>
+      .XFCIPRXCrfDlcKLwrAwojCvSHDjThHwBDLA {
+        display: none;
+      }
+    </style>
+
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Page RSS"
+      href="feed.rss"
+    />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Page Atom"
+      href="feed.atom"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Wiki RSS"
+      href="../feed.rss"
+    />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Wiki Atom"
+      href="../feed.atom"
+    />
+
+    <script type="text/javascript"></script>
+
+    <script>
+      window.bizx.cmp.init({}, "consentmanager.net");
+    </script>
+
+    <script>
+      function initPiwik() {
+        var _paq = (window._paq = window._paq || []);
+        _paq.push([
+          "trackPageView",
+          document.title,
+          {
+            dimension1: "bibutils",
+            dimension2: "wiki",
+          },
+        ]);
+        _paq.push(["enableLinkTracking"]);
+        (function () {
+          var u = "//analytics.slashdotmedia.com/";
+          _paq.push(["setTrackerUrl", u + "sf.php"]);
+          _paq.push(["setSiteId", 39]);
+          var d = document,
+            g = d.createElement("script"),
+            s = d.getElementsByTagName("script")[0];
+          g.type = "text/javascript";
+          g.async = true;
+          g.defer = true;
+          g.src = u + "sf.js";
+          s.parentNode.insertBefore(g, s);
+        })();
+      }
+      bizx.cmp.ifConsent("publisher", ["storage", "measurement"], initPiwik);
+    </script>
+  </head>
+
+  <body>
+    <div id="content_base">
+      <div class="grid-24 pad">
+        <h2 class="dark title">
+          history_version4
+          <!-- actions -->
+          <small>
+            <a class="icon" href="history.html" title="History"
+              ><i class="fa fa-calendar"></i
+            ></a>
+
+            <a class="icon" href="feed" title="RSS"
+              ><i class="fa fa-rss"></i
+            ></a>
+            <a class="icon" href="../search.html" title="Search"
+              ><i class="fa fa-search"></i
+            ></a>
+          </small>
+          <!-- /actions -->
+        </h2>
+
+        <div class="editbox">
+          <div class="grid-9 gravatar sm">
+            <label class="simple">Authors: </label>
+
+            <a href="https://sourceforge.net/u/cdputnam/">
+              <img
+                src="https://secure.gravatar.com/avatar/f12e8bce72883cb9e8a165cc2e312289?r=pg&amp;d=https%3A%2F%2Fa.fsdn.com%2Fallura%2Fnf%2F1589309844%2F_ew_%2Ftheme%2Fsftheme%2Fimages%2Fsandiego%2Ficons%2Fdefault-avatar.png&s=16"
+                srcset="
+                  https://secure.gravatar.com/avatar/f12e8bce72883cb9e8a165cc2e312289?r=pg&amp;d=https%3A%2F%2Fa.fsdn.com%2Fallura%2Fnf%2F1589309844%2F_ew_%2Ftheme%2Fsftheme%2Fimages%2Fsandiego%2Ficons%2Fdefault-avatar.png&s=24.0 1.5x,
+                  https://secure.gravatar.com/avatar/f12e8bce72883cb9e8a165cc2e312289?r=pg&amp;d=https%3A%2F%2Fa.fsdn.com%2Fallura%2Fnf%2F1589309844%2F_ew_%2Ftheme%2Fsftheme%2Fimages%2Fsandiego%2Ficons%2Fdefault-avatar.png&s=32   2x
+                "
+                width="16"
+                height="16"
+                alt="Chris Putnam"
+                title="Chris Putnam"
+                class="emboss x16"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <div class="markdown_content">
+              <h2 id="417">4.17</h2>
+              <p>01/24/13</p>
+              <p>BUILD</p>
+              <ul>
+                <li>
+                  Large changes to build process; more changes for
+                  MINGW32/Cygwin
+                </li>
+                <li>
+                  Remove attempt to build powerpc-supporting binaries for MacOSX
+                </li>
+              </ul>
+              <p>GLOBAL</p>
+              <ul>
+                <li>
+                  Attempt to include iso639-2b codes for languages when possible
+                </li>
+                <li>
+                  Make output consistent with MODS version 3.4 by adding
+                  language/languageTerm (reported by Nick Bart)
+                </li>
+                <li>
+                  Fix accidental duplication of roles in MODS output (reported
+                  by Nick Bart)
+                </li>
+              </ul>
+              <p>BIBLATEXIN</p>
+              <ul>
+                <li>
+                  Map 'hyphenation' to recordInfo/languageOfCataloging (reported
+                  by Nick Bart)
+                </li>
+                <li>
+                  Map biblatex 'version' to edition (reported by Nick Bart)
+                </li>
+                <li>Fix series fields in @inbook (reported by Nick Bart)</li>
+                <li>Fix issues with @periodical (reported by Nick Bart)</li>
+                <li>
+                  Handle entrysubtypes for
+                  <a
+                    class="user-mention"
+                    href="https://sourceforge.net/u/article/"
+                    >@article</a
+                  >
+                  (reported by Nick Bart)
+                </li>
+                <li>Handle origdate (reported by Nick Bart)</li>
+                <li>Fix corporate editors (reported by Nick Bart)</li>
+                <li>Process report 'isrn' field (reported by Nick Bart)</li>
+              </ul>
+              <p>MEDIN</p>
+              <ul>
+                <li>
+                  Handle iso639-2b language input and output as full language
+                  name
+                </li>
+              </ul>
+              <h2 id="416">4.16</h2>
+              <p>01/09/13</p>
+              <p>BUILD</p>
+              <ul>
+                <li>Add version to GPL for Fedora/Redhat</li>
+                <li>
+                  Add recognition of x86_64 MacOSX as Intel Macintoshes to
+                  configure
+                </li>
+                <li>Add recognition of OpenBSD to configure</li>
+                <li>Add recognition of MINGW32 architecture to configure</li>
+                <li>
+                  Remove explicit use of 'make' in Makefiles and use $(MAKE)
+                  instead
+                </li>
+                <li>
+                  Switch to sh version of configure script (thanks to Adrian
+                  Devries)
+                </li>
+                <li>
+                  Switch to sh version of maketgz script (thanks to Adrian
+                  Devries)
+                </li>
+                <li>Switch to sh version of makedeb script</li>
+              </ul>
+              <p>GLOBAL</p>
+              <ul>
+                <li>
+                  Improve propagation of memory errors in libraries to calling
+                  programs
+                </li>
+                <li>Update help messages</li>
+                <li>Rewrite name parsing/mangling code</li>
+                <li>
+                  Do cast for ctype.h functions to handle MINGW32 architecture
+                  (reported by Adrian Devries)
+                </li>
+              </ul>
+              <p>ADSOUT</p>
+              <ul>
+                <li>
+                  Fix bug where partial matches for journal titles identified
+                  journals
+                </li>
+                <li>
+                  Add Windows-specific format string for MINGW32 architecture
+                  (reported by Adrian Devries)
+                </li>
+                <li>Update list of journal abbreviations</li>
+              </ul>
+              <p>BIBTEXIN</p>
+              <ul>
+                <li>
+                  Fix bug where spaces following an escaped quotation mark (as
+                  with the -nl, no latex, flag) are lost (reported by Raoul
+                  Blankertz)
+                </li>
+                <li>
+                  Fix bug where pages had to be completely numeric (reported by
+                  Nick Bart)
+                </li>
+                <li>Import series information for @Techreport</li>
+                <li>Rewrite name parsing</li>
+                <li>Improve recognition of urls put in inappropriate fields</li>
+                <li>Improve handling of tilde/sticky space</li>
+                <li>
+                  Add latex recognition of alternative ways to express the
+                  (Polish) capital and lowercase slashed L
+                </li>
+                <li>Improve recognition of URL identifiers in note fields</li>
+                <li>Map 'howpublished' to publisher (reported by Nick Bart)</li>
+              </ul>
+              <p>BIBLATEXIN</p>
+              <ul>
+                <li>
+                  Add 'date' field to every reference type, regardless if it's
+                  in the reference documentation or not (reported by Nick Bart)
+                </li>
+                <li>
+                  Fix bug where pages had to be completely numeric (reported by
+                  Nick Bart)
+                </li>
+                <li>
+                  Add support for 'institution' and 'type' for report references
+                  (reported by Nick Bart)
+                </li>
+                <li>Add strings support (reported by Nick Bart)</li>
+                <li>
+                  Handle editor types, including bibtex-chicago variants
+                  (reported by Nick Bart)
+                </li>
+                <li>
+                  Map 'introduction', 'foreward', 'afterward' to "author of
+                  introduction/foreward/afterward" (reported by Nick Bart)
+                </li>
+                <li>
+                  Ignore 'school' in biblatexin reference if 'institution' is
+                  available like biblatex(reported by Nick Bart)
+                </li>
+                <li>Improve biblatex thesis type recognition</li>
+                <li>Rewrite name parsing</li>
+                <li>Improve handlning of tilde/sticky space</li>
+                <li>Map 'howpublished' to publisher (reported by Nick Bart)</li>
+                <li>Handle 'titleaddon' field (reported by Nick Bart)</li>
+                <li>
+                  Output number field differently for type report (reported by
+                  Nick Bart)
+                </li>
+              </ul>
+              <p>BIBTEXOUT</p>
+              <ul>
+                <li>Output series information for @Techreport</li>
+                <li>
+                  Output all keywords in single entry as semi-colon deliminated
+                  list
+                </li>
+              </ul>
+              <p>COPACIN</p>
+              <ul>
+                <li>
+                  Fix pre-name mangling that prevents recognition by
+                  asis/corporation lists
+                </li>
+              </ul>
+              <p>ENDIN</p>
+              <ul>
+                <li>Add better support for series information</li>
+              </ul>
+              <p>ENDOUT</p>
+              <ul>
+                <li>Add better support for series information</li>
+              </ul>
+              <p>MODSIN</p>
+              <ul>
+                <li>
+                  Add support for common MARC role codes (role abbreviations)
+                </li>
+              </ul>
+              <p>RISIN</p>
+              <ul>
+                <li>Add recognition of map type</li>
+                <li>
+                  Improve support for series information (reported by Mattheis
+                  Steffens)
+                </li>
+              </ul>
+              <p>RISOUT</p>
+              <ul>
+                <li>
+                  Add recognition of map type (reported by Mattheis Steffens)
+                </li>
+                <li>Fix bug in date output (reported by Mattheis Steffens)</li>
+                <li>
+                  Improve support for series information (reported by Mattheis
+                  Steffens)
+                </li>
+              </ul>
+              <h2 id="415">4.15</h2>
+              <p>9/26/12</p>
+              <p>BIBTEXIN</p>
+              <ul>
+                <li>
+                  <a
+                    class="user-mention"
+                    href="https://sourceforge.net/u/article/"
+                    >@article</a
+                  >
+                  'number' -&gt; MODS 'issue'
+                </li>
+                <li>@conference = @inproceedings</li>
+                <li>
+                  'organization' -&gt; publisher if publisher not available,
+                  otherwise output<br />
+                  as
+                  \&lt;name\&gt;\&lt;namepart\&gt;xx\&lt;/namepart\&gt;\&lt;role\&gt;\&lt;roleterm\&gt;organizer
+                  of
+                  meeting\&lt;/roleterm\&gt;\\&lt;/name&gt;&lt;/role\&gt;&lt;/name\&gt;
+                </li>
+              </ul>
+              <p>BIBLATEXIN</p>
+              <ul>
+                <li>Add missing month parsing</li>
+              </ul>
+              <h2 id="414">4.14</h2>
+              <p>9/04/12</p>
+              <p>BIBTEXIN</p>
+              <ul>
+                <li>
+                  Split individual keywords in the keywords field separated by
+                  semi-colons
+                </li>
+              </ul>
+              <p>RISIN</p>
+              <ul>
+                <li>
+                  Handle URL schemes from L1 and L4 fields (reported by Martin
+                  Kucej)
+                </li>
+              </ul>
+              <p>RISOUT</p>
+              <ul>
+                <li>
+                  PY outputs only year, DA outputs year/month/day combination
+                  (reported by Nelson Hart)
+                </li>
+                <li>
+                  L1 and L4 fields need to be URL's (reported by Martin Kucej)
+                </li>
+              </ul>
+              <p>WORD2007OUT</p>
+              <ul>
+                <li>Replace b:PeriodicalName with b:PeriodicalTitle</li>
+              </ul>
+              <h2 id="413">4.13</h2>
+              <p>8/28/12</p>
+              <p>BUILD</p>
+              <ul>
+                <li>
+                  Fix build problem with test subdirectory (patch by David
+                  Bremner)
+                </li>
+                <li>
+                  Avoid hard-coded dynamic library to help out Debian (path by
+                  David Bremner)
+                </li>
+                <li>Add patch to bibutils.dbk (patch by David Bremner)</li>
+              </ul>
+              <p>CHARSETS</p>
+              <ul>
+                <li>Add more latex character &lt;-&gt; Unicode conversions</li>
+                <li>
+                  Fix caron (and other) errors in export (reported by Philip
+                  Eisenlohr)
+                </li>
+              </ul>
+              <p>FIELDS</p>
+              <ul>
+                <li>
+                  Update internals, add vplist component, and convert to new
+                  interface
+                </li>
+              </ul>
+              <p>BIBTEXIN</p>
+              <ul>
+                <li>
+                  Fix chapter in @inbook, @inproceedings, and @incollection from
+                  overwriting the title of the section being cited (reported by
+                  Brian Keese)
+                </li>
+                <li>
+                  Cleanly handle "illegal" @inbook entries that have both
+                  "title" and "booktitle" fields and really want to be
+                  @incollection entries (reported by Brian Keese)
+                </li>
+                <li>Remove mbox commands from input</li>
+              </ul>
+              <p>RISIN</p>
+              <ul>
+                <li>
+                  Add recognition of more RIS fields (reported by Nelson Hart)
+                </li>
+              </ul>
+              <p>RISOUT</p>
+              <ul>
+                <li>
+                  Use 'AB' instead of 'N2' tag for abstracts (reported by Nelson
+                  Hart)
+                </li>
+                <li>
+                  Use 'DO' tag instead of building a complete URL for DOI's
+                  (reported by Nelson Hart)
+                </li>
+                <li>
+                  Use 'ET' tag for edition output (reported by Nelson Hart)
+                </li>
+                <li>Use 'LA' tag for language</li>
+                <li>
+                  Add recognition of non-official genres "book chapter" and
+                  "journal article" (reported by Nelson Hart)
+                </li>
+              </ul>
+              <h2 id="412">4.12</h2>
+              <p>10/10/2010</p>
+              <p>BUILD</p>
+              <ul>
+                <li>Allow smaller static libraries to be built</li>
+                <li>
+                  Add --dynamic and --static (default) options to configure
+                  script
+                </li>
+                <li>
+                  Add --install-lib to configure script to controll installation
+                  of dynamic libraries
+                </li>
+              </ul>
+              <p>XML2ADS</p>
+              <ul>
+                <li>
+                  Fix overflow of page value with really large page numbers
+                </li>
+                <li>Update journal abbreviation list</li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>
+                  Add command-line option -d or --drop-key to prevent xml2bib
+                  from<br />
+                  adding tags (so they can be generated by programs like JabRef)
+                </li>
+              </ul>
+              <h2 id="411">4.11</h2>
+              <p>9/14/2010</p>
+              <p>BUILD</p>
+              <ul>
+                <li>
+                  Include some "unused" flags like LDFLAGS so that people with
+                  particular build<br />
+                  environments can have these flags respected (from Gentoo
+                  <br />
+                  <a
+                    href="http://bugs.gentoo.org/show_bug.cgi?id=336237"
+                    rel="nofollow"
+                    >http://bugs.gentoo.org/show_bug.cgi?id=336237</a
+                  >)
+                </li>
+                <li>Add test programs to "make test" protocol</li>
+              </ul>
+              <p>TEST</p>
+              <ul>
+                <li>
+                  Fix some signedness issues (bit rot) in the test programs
+                  (from Mandriva<br />
+                  packager, Stéphane Téletchéa
+                </li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>
+                  Add command-line option -at or --abbreviatedtitles to force
+                  xml2bib to<br />
+                  use abbreviated titles for journals (books and other host
+                  types), if present<br />
+                  in the MODS input
+                </li>
+              </ul>
+              <h2 id="410">4.10</h2>
+              <p>8/30/2010</p>
+              <p>BIBLATEX2XML</p>
+              <ul>
+                <li>
+                  fix organization/event handling (thanks to Johannes Wilms)
+                </li>
+              </ul>
+              <p>MODSIN</p>
+              <ul>
+                <li>
+                  support the presence of the reference identifier/key in<br />
+                  mods:recordInfo:recordIdentifier
+                </li>
+              </ul>
+              <h2 id="49">4.9</h2>
+              <p>4/9/2010</p>
+              <p>BIBLATEX2XML</p>
+              <ul>
+                <li>Many, many changes thanks to Johannes Wilms</li>
+              </ul>
+              <p>BIB2XML</p>
+              <ul>
+                <li>
+                  Some improvements in thesis handling derived from biblatex2xml
+                  changes
+                </li>
+              </ul>
+              <p>BUILD</p>
+              <ul>
+                <li>
+                  Fix build for _x86_64 (amd64) (Thanks to patch from Colin
+                  Bell).
+                </li>
+              </ul>
+              <h2 id="48">4.8</h2>
+              <p>2/2/2010</p>
+              <p>BIB2XML</p>
+              <ul>
+                <li>Handle bibtex annote tags</li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>Handle bibtex annote tags</li>
+              </ul>
+              <h2 id="47">4.7</h2>
+              <p>12/11/2009</p>
+              <p>XML2ADS</p>
+              <ul>
+                <li>
+                  Fix not outputting multiple authors from "ASIS" and "CORP"
+                  categories.
+                </li>
+              </ul>
+              <p>XML2END</p>
+              <ul>
+                <li>
+                  Fix not outputting multiple authors from "ASIS" and "CORP"
+                  categories.
+                </li>
+              </ul>
+              <p>XML2ISI</p>
+              <ul>
+                <li>
+                  Fix not outputting multiple authors from "ASIS" and "CORP"
+                  categories.
+                </li>
+              </ul>
+              <h2 id="46">4.6</h2>
+              <p>11/02/2009</p>
+              <p>BIB2XML</p>
+              <ul>
+                <li>
+                  Fix inefficiency in latex2char() that gives roughly a 10x
+                  speed increase<br />
+                  in bib2xml. Thanks to Stephan Washietl for the patch.
+                </li>
+              </ul>
+              <p>NAME MANGLING</p>
+              <ul>
+                <li>
+                  Fix bug with uninitalized pointer. Thanks to David Bremner for
+                  patch.
+                </li>
+              </ul>
+              <p>NEWSTRING</p>
+              <ul>
+                <li>Add newstrs versions of various commands.</li>
+              </ul>
+              <h2 id="45">4.5</h2>
+              <p>10/24/2009</p>
+              <p>BIB2XML</p>
+              <ul>
+                <li>Identify and use byte-order-mark in UTF8-encoded files</li>
+                <li>
+                  Support file attachments with "pdf" tags (old JabRef),
+                  "sentelink" (Sente),<br />
+                  and "file" (new JabRef, Zotero, Mendeley). (Thanks to Richard
+                  Karnesky)
+                </li>
+              </ul>
+              <p>COPAC2XML</p>
+              <ul>
+                <li>Identify and use byte-order-mark in UTF8-encoded files</li>
+              </ul>
+              <p>ISI2XML</p>
+              <ul>
+                <li>Identify and use byte-order-mark in UTF8-encoded files</li>
+              </ul>
+              <p>RIS2XML</p>
+              <ul>
+                <li>
+                  Add support for DOI tags DO and DI from Scopus (Thanks to Fred
+                  Howell)
+                </li>
+                <li>Identify and use byte-order-mark in UTF8-encoded files</li>
+                <li>
+                  Add support for L1 file attachment tags (Thanks to Richard
+                  Karnesky)
+                </li>
+              </ul>
+              <p>XML2ADS</p>
+              <ul>
+                <li>Output file attachments as URLs</li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>
+                  Add support for "file" file attachment tag in the
+                  JabRef/Mendeley/Zotero format
+                </li>
+              </ul>
+              <p>XML2END</p>
+              <ul>
+                <li>Output file attachments as URLs</li>
+              </ul>
+              <p>XML2ISI</p>
+              <ul>
+                <li>Output file attachments as URLs</li>
+              </ul>
+              <p>XML2RIS</p>
+              <ul>
+                <li>Add support for L1 file attachment tags</li>
+              </ul>
+              <h2 id="44">4.4</h2>
+              <p>10/05/2009</p>
+              <p>BIB2XML</p>
+              <ul>
+                <li>
+                  Add -nt --nosplit-title command line option to avoid splitting
+                  titles<br />
+                  with colons or question marks into title/subtitle MODS pairs
+                </li>
+              </ul>
+              <p>COPAC2XML</p>
+              <ul>
+                <li>
+                  Add -nt --nosplit-title command line option to avoid splitting
+                  titles<br />
+                  with colons or question marks into title/subtitle MODS pairs
+                </li>
+              </ul>
+              <p>END2XML</p>
+              <ul>
+                <li>
+                  Add -nt --nosplit-title command line option to avoid splitting
+                  titles<br />
+                  with colons or question marks into title/subtitle MODS pairs
+                </li>
+                <li>
+                  Add support for electronic-source-num as potential location of
+                  DOI
+                </li>
+                <li>Add support for language</li>
+              </ul>
+              <p>END2XML</p>
+              <ul>
+                <li>
+                  Fix support for number field in report/book/book
+                  section/edited book<br />
+                  reference types
+                </li>
+              </ul>
+              <p>ENDXML2XML</p>
+              <ul>
+                <li>Support pdf-url in endnote XML file</li>
+              </ul>
+              <p>ISI2XML</p>
+              <ul>
+                <li>
+                  Add -nt --nosplit-title command line option to avoid splitting
+                  titles<br />
+                  with colons or question marks into title/subtitle MODS pairs
+                </li>
+              </ul>
+              <p>RIS2XML</p>
+              <ul>
+                <li>
+                  Add -nt --nosplit-title command line option to avoid splitting
+                  titles<br />
+                  with colons or question marks into title/subtitle MODS pairs
+                </li>
+              </ul>
+              <h2 id="43">4.3</h2>
+              <p>7/31/09</p>
+              <p>BIB2XML</p>
+              <ul>
+                <li>
+                  Add support for recognizing howpublished = {arXiv:xxxx}
+                  entries
+                </li>
+              </ul>
+              <p>LATEX</p>
+              <ul>
+                <li>Fix bug for {\c{c}} output</li>
+              </ul>
+              <p>XML2END</p>
+              <ul>
+                <li>
+                  Add support for Pubmed ID's (PMID) as %U
+                  <a href="http://www.ncbi.nlm.nih.gov/pubmed/.." rel="nofollow"
+                    >http://www.ncbi.nlm.nih.gov/pubmed/..</a
+                  ><br />
+                  .
+                </li>
+                <li>
+                  Add support for arXiv identifiers as %U
+                  <a href="http://arxiv.org/abs/..." rel="nofollow"
+                    >http://arxiv.org/abs/...</a
+                  >
+                </li>
+              </ul>
+              <p>XML2RIS</p>
+              <ul>
+                <li>
+                  Add support for Pubmed ID's (PMID) as UR -
+                  <a href="http://www.ncbi.nlm.nih.gov/pubmed/" rel="nofollow"
+                    >http://www.ncbi.nlm.nih.gov/pubmed/</a
+                  ><br />
+                  ..
+                </li>
+                <li>
+                  Add support for arXiv identifiers as UR -
+                  <a href="http://arxiv.org/abs/..." rel="nofollow"
+                    >http://arxiv.org/abs/...</a
+                  >
+                </li>
+                <li>Change abstract output from "AB" tag to "N2"</li>
+              </ul>
+              <p>XML2WORDBIB</p>
+              <ul>
+                <li>Add support to handle inventors in patent type</li>
+                <li>
+                  Fix inappropriate output of empty author or editor lists
+                </li>
+              </ul>
+              <h2 id="42">4.2</h2>
+              <p>06/25/09</p>
+              <p>BUILD</p>
+              <ul>
+                <li>
+                  Add support for 'Power Macintosh' as MacOSX_ppc. Thanks to
+                  Matthias<br />
+                  Steffens for the fix.
+                </li>
+                <li>
+                  Fix additional MacOSX build bugs, thanks to David Sanson
+                </li>
+              </ul>
+              <p>END2XML</p>
+              <ul>
+                <li>Add %1 parsing to journal articles</li>
+                <li>Fix bug not recognizing %[ and elements as valid tags</li>
+                <li>Add support for Conference Paper</li>
+              </ul>
+              <p>ENDX2XML</p>
+              <ul>
+                <li>Add support for pub-location tags</li>
+                <li>Add support for Conference Paper</li>
+              </ul>
+              <p>LATEX</p>
+              <ul>
+                <li>
+                  Fix bug for {\AA} conversion, patch thanks to Joseph
+                  Barillari.
+                </li>
+              </ul>
+              <p>MED2XML</p>
+              <ul>
+                <li>
+                  Recognized medline entries from MEDLINE in addition to PUBMED.
+                  Thanks to<br />
+                  Hamish McWilliam for providing useful information.
+                </li>
+              </ul>
+              <p>MODSIN</p>
+              <ul>
+                <li>
+                  Handle pages provided as list, patch thanks to Heiko Jansen
+                </li>
+              </ul>
+              <p>NAME MANGLING</p>
+              <ul>
+                <li>Handle hyphenated names better</li>
+                <li>Handle "et al." in name lists better</li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>
+                  Add recognition of genre "article", patch thanks to Heiko
+                  Jansen
+                </li>
+              </ul>
+              <p>XML2END</p>
+              <ul>
+                <li>
+                  Add export of DOI as %U
+                  <a href="http://dx.doi.org/...." rel="nofollow"
+                    >http://dx.doi.org/....</a
+                  >
+                  Thanks to Mattheis<br />
+                  Stevens for the report
+                </li>
+              </ul>
+              <p>XML2RIS</p>
+              <ul>
+                <li>
+                  Add export of DOI as UR -
+                  <a href="http://dx.doi.org/...." rel="nofollow"
+                    >http://dx.doi.org/....</a
+                  >
+                  Thanks to Mattheis<br />
+                  Stevens for the report
+                </li>
+              </ul>
+              <p>XML2WORD</p>
+              <ul>
+                <li>Add support for more types of sources.</li>
+              </ul>
+              <h2 id="41">4.1</h2>
+              <p>12/21/08</p>
+              <p>BIBLATEX2XML</p>
+              <ul>
+                <li>Lots of bug fixes</li>
+              </ul>
+              <p>BUILD</p>
+              <ul>
+                <li>
+                  Try to make changes to bin/Makefile to fix problem on FreeBSD.
+                  Still<br />
+                  awaiting feedback to see if problem is solved.
+                </li>
+              </ul>
+              <p>END2XML</p>
+              <ul>
+                <li>Handle DOI placed in %1 custom field by Wiley</li>
+              </ul>
+              <p>RIS2XML</p>
+              <ul>
+                <li>
+                  Add pattern matching for new DOI output by Science Direct
+                </li>
+              </ul>
+              <p>XML2ADS</p>
+              <ul>
+                <li>
+                  Fix putting comma after the first keyword (thanks to Richard
+                  Mathar)
+                </li>
+              </ul>
+              <h2 id="40">4.0</h2>
+              <p>12/14/08</p>
+              <p>BIBLATEX2XML</p>
+              <ul>
+                <li>
+                  Initial alpha version of the program -- mapping certain fields
+                  to MODS<br />
+                  hasn't been done yet.
+                </li>
+              </ul>
+              <p>BUILD</p>
+              <ul>
+                <li>
+                  Move files/functions around so all of the code necessary to
+                  support<br />
+                  the converters but not part of the bibutils libraries are in
+                  the<br />
+                  bin subdirectory.
+                </li>
+              </ul>
+              <p>CHARSET CONVERSION</p>
+              <ul>
+                <li>
+                  add partial recognition of Chinese GB18030 character set
+                  (containing<br />
+                  the GBK superset)
+                </li>
+                <li>
+                  Revert 3.41 patch from Luc Pardon default that made
+                  unicode/utf8 take<br />
+                  precedence over latex now that -nl, --no-latex flag is
+                  available
+                </li>
+              </ul>
+              <p>END2XML</p>
+              <ul>
+                <li>support %G language tag</li>
+                <li>support %H translator tag</li>
+              </ul>
+              <p>ENDX2XML</p>
+              <ul>
+                <li>fix bug caused by style tags in author fields</li>
+              </ul>
+              <p>LIBRARY HANDLING</p>
+              <ul>
+                <li>
+                  Remove requirement for defining lists for "as-is" and
+                  "corporation" names<br />
+                  to be read from the file -- embed in the param structure
+                  instead (help<br />
+                  for Haskell bindings)
+                </li>
+                <li>
+                  Modify the library API so that input and output formats are
+                  stored in<br />
+                  struct param and do not need to be repeated in bibl_read() and
+                  bibl_write()<br />
+                  calls.
+                </li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>
+                  Turn off latex encoding if we're using the GB18030 character
+                  set.
+                </li>
+              </ul>
+              <p>XML2END</p>
+              <ul>
+                <li>support %G language tag</li>
+                <li>support %H translator tag</li>
+                <li>add better support for MARC-authority genre tags</li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            id="create_wiki_page_holder"
+            title="Create New Page"
+            style="display: none;"
+          >
+            <form>
+              <label class="grid-2">Name</label>
+              <div class="grid-7"><input type="text" name="name" /></div>
+            </form>
+          </div>
+        </div>
+
+        <hr style="margin-top: 1em; margin-bottom: 2em; clear: both;" />
+
+        <div id="lightbox_confirm" class="modal" style="display: none;">
+          <a class="icon close" href="index.html@version=14.html#" title="Close"
+            ><i class="fa fa-close"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

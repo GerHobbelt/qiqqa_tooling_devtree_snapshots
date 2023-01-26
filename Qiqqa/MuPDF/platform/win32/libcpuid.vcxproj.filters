@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03fd328}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{42f0fc98-34f6-4567-b3cf-de13e74a89ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{b1798409-2031-413d-9df7-70b0202ddd98}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files\contrib">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\contrib\MSR Driver">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\contrib\MSR Driver\Kernel">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\libcpuid">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\cmake">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\cpuid_tool">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\libcpuid">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\tests">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0009}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\contrib">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\contrib\MSR Driver">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0011}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\contrib\MSR Driver\Kernel">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0010}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\contrib">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0015}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\contrib\MSR Driver">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0014}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\contrib\MSR Driver\Kernel">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0013}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cpuid_tool">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0016}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libcpuid">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0017}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/libcpuid/contrib/MSR Driver/Kernel/TmpRdr.c">
+      <Filter>Source Files\contrib\MSR Driver\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libcpuid/cpuid_tool/cpuid_tool.c">
+      <Filter>Source Files\cpuid_tool</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libcpuid/libcpuid/asm-bits.c">
+      <Filter>Source Files\libcpuid</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libcpuid/libcpuid/cpuid_main.c">
+      <Filter>Source Files\libcpuid</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libcpuid/libcpuid/embed_drivers.cpp">
+      <Filter>Source Files\libcpuid</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libcpuid/libcpuid/libcpuid_util.c">
+      <Filter>Source Files\libcpuid</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libcpuid/libcpuid/msrdriver.c">
+      <Filter>Source Files\libcpuid</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libcpuid/libcpuid/rdmsr.c">
+      <Filter>Source Files\libcpuid</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libcpuid/libcpuid/rdtsc.c">
+      <Filter>Source Files\libcpuid</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libcpuid/libcpuid/recog_amd.c">
+      <Filter>Source Files\libcpuid</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libcpuid/libcpuid/recog_intel.c">
+      <Filter>Source Files\libcpuid</Filter>
+    </ClCompile>
+    <ClInclude Include="../../thirdparty/owemdjee/libcpuid/contrib/MSR Driver/Kernel/resource.h">
+      <Filter>Header Files\contrib\MSR Driver\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libcpuid/libcpuid/amd_code_t.h">
+      <Filter>Header Files\libcpuid</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libcpuid/libcpuid/asm-bits.h">
+      <Filter>Header Files\libcpuid</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libcpuid/libcpuid/intel_code_t.h">
+      <Filter>Header Files\libcpuid</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libcpuid/libcpuid/libcpuid.h">
+      <Filter>Header Files\libcpuid</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libcpuid/libcpuid/libcpuid_constants.h">
+      <Filter>Header Files\libcpuid</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libcpuid/libcpuid/libcpuid_internal.h">
+      <Filter>Header Files\libcpuid</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libcpuid/libcpuid/libcpuid_types.h">
+      <Filter>Header Files\libcpuid</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libcpuid/libcpuid/libcpuid_util.h">
+      <Filter>Header Files\libcpuid</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libcpuid/libcpuid/rdtsc.h">
+      <Filter>Header Files\libcpuid</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libcpuid/libcpuid/recog_amd.h">
+      <Filter>Header Files\libcpuid</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libcpuid/libcpuid/recog_intel.h">
+      <Filter>Header Files\libcpuid</Filter>
+    </ClInclude>
+    <MASM Include="../../thirdparty/owemdjee/libcpuid/libcpuid/masm-x64.asm">
+      <Filter>Source Files\libcpuid</Filter>
+    </MASM>
+    <ResourceCompile Include="../../thirdparty/owemdjee/libcpuid/contrib/MSR Driver/Kernel/tmprdr.rc">
+      <Filter>Resource Files\contrib\MSR Driver\Kernel</Filter>
+    </ResourceCompile>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/CMakeLists.txt">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/ChangeLog">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/Makefile.am">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/NEWS">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/README">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/Readme.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/bump_version.sh">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/cmake-format.py">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/cmake/Config.cmake.in">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/configure.ac">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/cpuid_tool/CMakeLists.txt">
+      <Filter>Misc Files\cpuid_tool</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/cpuid_tool/Makefile.am">
+      <Filter>Misc Files\cpuid_tool</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/libcpuid.pc.in">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/libcpuid/CMakeLists.txt">
+      <Filter>Misc Files\libcpuid</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/libcpuid/Doxyfile.in">
+      <Filter>Misc Files\libcpuid</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/libcpuid/Makefile.am">
+      <Filter>Misc Files\libcpuid</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/libcpuid/check-consistency.py">
+      <Filter>Misc Files\libcpuid</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/tests/CMakeLists.txt">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/tests/Makefile.am">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/tests/create_test.py">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/tests/run_tests.py">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/tests/update_tests.sh">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
+    

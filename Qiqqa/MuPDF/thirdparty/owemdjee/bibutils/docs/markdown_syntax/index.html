@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<!-- Server: sfs-forge-5 -->
+
+<!--[if lt IE 7]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]>-->
+<html lang="en" class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+    <title>bibutils / Home / Markdown Syntax</title>
+
+    <meta name="viewport" content="width=1100" />
+
+    <link
+      rel="icon"
+      sizes="180x180"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/images/sandiego/logo-180x180.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      sizes="any"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/images/sandiego/svg/originals/sf-icon-orange-no_sf.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/images/sandiego/logo-180x180.png"
+    />
+    <link
+      rel="mask-icon"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/images/sandiego/svg/originals/sf-icon-orange-no_sf.svg"
+      color="#FF6600"
+    />
+
+    <!--[if lt IE 7]>
+      <script src="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/js/sftheme/vendor/dd_belatedpng.js"></script>
+      <script>
+        DD_belatedPNG.fix("img, .png_bg"); //fix any <img> or .png_bg background-images
+      </script>
+    <![endif]-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700"
+      rel="stylesheet"
+    />
+    <script>
+      if (!window.SF) {
+        window.SF = {};
+      }
+      SF.sandiego = false;
+      SF.sandiego_chrome = true;
+      SF.cdn = "https://a.fsdn.com/con";
+    </script>
+
+    <!-- ew:head_css -->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/_slim/css?href=allura%2Fcss%2Fforge%2Fhilite.css%3Ballura%2Fcss%2Fforge%2Ftooltipster.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/allura/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/css/forge.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/css/sftheme/sandiego/cmp.css"
+    />
+
+    <!-- /ew:head_css -->
+
+    <!-- ew:head_js -->
+
+    <script
+      type="text/javascript"
+      src="https://a.fsdn.com/allura/nf/1589309844/_ew_/_slim/js?href=allura%2Fjs%2Fjquery-base.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Fpromise.polyfill.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fcmp2.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Fmodernizr.3.3.1.custom.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fshared_head.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Ftypescript%2Fcompliance.js"
+    ></script>
+
+    <!-- /ew:head_js -->
+
+    <style type="text/css">
+      /* make URL & Project custom fields in support tickets not get hidden as much */
+      .project-forge.mountpoint-site-support .view_holder .grid-4:nth-child(5),
+      .project-forge.mountpoint-site-support .view_holder .grid-4:nth-child(6) {
+        overflow: visible;
+        font-size: 22px;
+        width: 340px;
+        line-height: 1;
+        margin-bottom: 5px;
+      }
+      .project-forge.mountpoint-site-support
+        .view_holder
+        .grid-4:nth-child(5)
+        label,
+      .project-forge.mountpoint-site-support
+        .view_holder
+        .grid-4:nth-child(6)
+        label {
+        font-size: 14px;
+      }
+    </style>
+
+    <style>
+      .XRKwrxDPMOBTQArwrDlTDtmwoTDusKPwUh {
+        display: none;
+      }
+    </style>
+
+    <script type="text/javascript"></script>
+
+    <script>
+      window.bizx.cmp.init({}, "consentmanager.net");
+    </script>
+
+    <script>
+      function initPiwik() {
+        var _paq = (window._paq = window._paq || []);
+        _paq.push([
+          "trackPageView",
+          document.title,
+          {
+            dimension1: "bibutils",
+            dimension2: "wiki",
+          },
+        ]);
+        _paq.push(["enableLinkTracking"]);
+        (function () {
+          var u = "//analytics.slashdotmedia.com/";
+          _paq.push(["setTrackerUrl", u + "sf.php"]);
+          _paq.push(["setSiteId", 39]);
+          var d = document,
+            g = d.createElement("script"),
+            s = d.getElementsByTagName("script")[0];
+          g.type = "text/javascript";
+          g.async = true;
+          g.defer = true;
+          g.src = u + "sf.js";
+          s.parentNode.insertBefore(g, s);
+        })();
+      }
+      bizx.cmp.ifConsent("publisher", ["storage", "measurement"], initPiwik);
+    </script>
+  </head>
+
+  <body>
+    <div id="content_base">
+      <a id="sidebar-activate" href="index.html#">
+        <span class="btn-label">Menu</span>
+        <span class="btn-arrow-down">▾</span>
+        <span class="btn-arrow-up">▴</span>
+      </a>
+
+      <div id="sidebar">
+        <form id="search" method="GET" action="../search.html">
+          <input
+            name="q"
+            type="text"
+            title="Search Home"
+            placeholder="Search Home"
+          />
+          <label>
+            <input type="submit" style="display: none;" />
+            <b class="fa fa-search" title="Submit"></b>
+          </label>
+        </form>
+
+        <ul class="sidebarmenu">
+          <li>
+            <a href="../index.html" class="wiki_home">
+              <span>Wiki Home</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="../browse_pages/index.html">
+              <span>Browse Pages</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="../browse_tags/index.html">
+              <span>Browse Labels</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="sidebarmenu">
+          <li class="active">
+            <a href="index.html">
+              <span>Formatting Help</span>
+            </a>
+          </li>
+        </ul>
+
+        <script>
+          $("#sidebar").on("click", 'a[href$="#toggle-subscribe"]', function (
+            e
+          ) {
+            e.preventDefault();
+            var link = this;
+            var data = {
+              _session_id: $.cookie("_session_id"),
+              subscribe: "1",
+            };
+            $.post(this.href, data, function () {
+              $("#messages").notify("Subscribed to wiki.");
+              $("span", link).text("Unsubscribe");
+              $(link).attr(
+                "href",
+                $(link).attr("href").replace("-subscribe", "-unsubscribe")
+              );
+            });
+          });
+          $("#sidebar").on("click", 'a[href$="#toggle-unsubscribe"]', function (
+            e
+          ) {
+            e.preventDefault();
+            var link = this;
+            var data = {
+              _session_id: $.cookie("_session_id"),
+              unsubscribe: "1",
+            };
+            $.post(this.href, data, function () {
+              $("#messages").notify("Unsubscribed.");
+              $("span", link).text("Subscribe to wiki");
+              $(link).attr(
+                "href",
+                $(link).attr("href").replace("-unsubscribe", "-subscribe")
+              );
+            });
+          });
+        </script>
+      </div>
+
+      <div class="grid-20 pad">
+        <h2 class="dark title">
+          Markdown Syntax
+          <!-- actions -->
+          <small> </small>
+          <!-- /actions -->
+        </h2>
+
+        <div>
+          <a class="markdown_syntax_toc_crumb" href="index.html#md_ex_toc"
+            >Back</a
+          >
+          <h1>Markdown Syntax Guide</h1>
+
+          <div class="markdown_syntax_section md_ex_toc">
+            <p>
+              SourceForge uses markdown syntax everywhere to allow you to create
+              rich<br />text markup, and extends markdown in several ways to
+              allow for quick linking<br />to other artifacts in your project.
+            </p>
+            <p>
+              Markdown was created to be easy to read, easy to write, and still
+              readable in plain text format.
+            </p>
+
+            <ul class="markdown_syntax_toc">
+              <li><a href="index.html#md_ex_links">Links</a></li>
+              <li><a href="index.html#md_ex_reflinks">Reference Links</a></li>
+              <li><a href="index.html#md_ex_artlinks">Artifact Links</a></li>
+              <li><a href="index.html#md_ex_usermentions">User Mentions</a></li>
+              <li><a href="index.html#md_ex_text">Basic Text Formatting</a></li>
+              <li><a href="index.html#md_ex_bq">Blockquotes</a></li>
+              <li><a href="index.html#md_ex_pre">Preformatted Text</a></li>
+              <li><a href="index.html#md_ex_lists">Lists</a></li>
+              <li><a href="index.html#md_ex_tables">Tables</a></li>
+              <li><a href="index.html#md_ex_headers">Headers</a></li>
+              <li><a href="index.html#md_ex_hr">Horizontal Rules</a></li>
+              <li><a href="index.html#md_ex_img">Images</a></li>
+              <li><a href="index.html#md_ex_video">Videos</a></li>
+              <li><a href="index.html#md_ex_escapes">Escapes and HTML</a></li>
+              <li><a href="index.html#md_ex_moreheaders">More Headers</a></li>
+              <li><a href="index.html#md_ex_toc1">Table of Contents</a></li>
+              <li><a href="index.html#md_ex_code">Code Highlighting</a></li>
+              <li><a href="index.html#md_ex_includes">Includes</a></li>
+              <li>
+                <a href="index.html#md_ex_neighborhood_notes"
+                  >Neighborhood Notifications</a
+                >
+              </li>
+              <li>
+                <a href="index.html#md_ex_project_macros"
+                  >Project Info Macros</a
+                >
+              </li>
+              <li><a href="index.html#md_ex_thanks">Thanks</a></li>
+            </ul>
+          </div>
+
+          <div class="markdown_syntax_section hidden_in_modal md_ex_links">
+            <h2 id="md_ex_links">Links</h2>
+
+            <p>
+              Most URLs will automatically be turned into links. To be explicit,
+              just write it like this:
+            </p>
+
+            <div class="codehilite">
+              <pre>
+&lt;http://someurl&gt;
+
+&lt;somebbob@example.com&gt;
+
+</pre
+              >
+            </div>
+
+            <p>Output:</p>
+            <div class="markdown_content">
+              <p><a href="http://someurl" rel="nofollow">http://someurl</a></p>
+              <p>
+                <a href="mailto:somebbob@example.com">somebbob@example.com</a>
+              </p>
+            </div>
+
+            <p>To use text for the link, write it:</p>
+            <div class="codehilite"><pre>[like this](http://someurl)</pre></div>
+
+            <p>Output:</p>
+            <div class="markdown_content">
+              <p>
+                <a class="" href="http://someurl" rel="nofollow">like this</a>
+              </p>
+            </div>
+
+            <p>You can add a *title* (which shows up under the cursor):</p>
+            <div class="codehilite">
+              <pre>
+[like this](http://someurl "this title shows up when you hover")</pre
+              >
+            </div>
+
+            <p>Output:</p>
+            <div class="markdown_content">
+              <p>
+                <a
+                  class=""
+                  href="http://someurl"
+                  rel="nofollow"
+                  title="this title shows up when you hover"
+                  >like this</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="markdown_syntax_section hidden_in_modal md_ex_reflinks">
+            <h2 id="md_ex_reflinks">Reference Links</h2>
+            <div class="codehilite">
+              <pre>
+You can also put the [link URL][1] below the current paragraph
+like [this][2].
+
+   [1]: http://url
+   [2]: http://another.url "A funky title"
+</pre
+              >
+            </div>
+            <p>Output:</p>
+            <div class="markdown_content">
+              <p>
+                You can also put the
+                <a href="http://url" rel="nofollow">link URL</a> below the
+                current paragraph<br />
+                like
+                <a
+                  href="http://another.url"
+                  rel="nofollow"
+                  title="A funky title"
+                  >this</a
+                >.
+              </p>
+            </div>
+
+            <p>
+              Here the text "link URL" gets linked to "http://url", and the
+              lines showing "[1]: http://url" won't show anything.
+            </p>
+
+            <p>
+              Or you can use a [shortcut][] reference, which links the text
+              "shortcut" to the link named "[shortcut]" on the next paragraph.
+            </p>
+
+            <div class="codehilite">
+              <pre>
+Or you can use a [shortcut][] reference, which links the text
+"shortcut" to the link named "[shortcut]" on the next paragraph.
+
+[shortcut]: http://goes/with/the/link/name/text</pre
+              >
+            </div>
+            <p>Output:</p>
+            <div class="markdown_content">
+              <p>
+                Or you can use a
+                <a href="http://goes/with/the/link/name/text" rel="nofollow"
+                  >shortcut</a
+                >
+                reference, which links the text<br />
+                "shortcut" to the link named "<span>[shortcut]</span>" on the
+                next paragraph.
+              </p>
+            </div>
+          </div>
+
+          <div class="markdown_syntax_section hidden_in_modal md_ex_artlinks">
+            <h2 id="md_ex_artlinks">Artifact Links</h2>
+            <p>
+              Any forge resource (artifact) can be linked with surrounding
+              square brackets, e.g. [MyPage] or [#123]. These artifact links can
+              take several forms.
+            </p>
+
+            <h3>Simple Links</h3>
+            <p>
+              Most commonly, the artifact identifier can simply be surrounded
+              with square brackets. Here are some examples:
+            </p>
+            <div class="codehilite">
+              <pre>
+[MyWikiPage]       # Wiki - name of wiki page
+[#123]             # Tracker - ticket number
+[r10721]           # SVN - revision number
+[3b9d48]           # Git &amp; Mercurial - first 6 characters of revision hash
+[2012/02/my-post]  # Blog - post slug, including YYYY/MM/ prefix
+[a6d38f98]         # Discussion Thread - thread id
+[a6d38f98#42f8]    # Discussion Post - thread_id#post_id
+</pre
+              >
+            </div>
+            <br />
+
+            <h3>Two-part Links</h3>
+            <p>
+              To link to an artifact in a specific tool, use the form:
+              `[tool:artifact]`, where `tool` is the name of the tool as it
+              appears in the URL. Two-part links are useful when you have two
+              tools of the same type installed. For example, let's say you have
+              a 'bugs' tracker and a 'features' tracker installed, and you want
+              to link to the first ticket in each:
+            </p>
+            <div class="codehilite">
+              <pre>
+[bugs:#1]
+[features:#1]
+</pre
+              >
+            </div>
+            <br />
+
+            <h3>Three-part Links</h3>
+            <p>
+              To link to an artifact in another project, use the form:
+              `[project:tool:artifact]`, where `project` is the name of the
+              project as it appears in the URL. For example:
+            </p>
+
+            <div class="codehilite">
+              <pre>
+[allura:wiki:Home]
+</pre
+              >
+            </div>
+            <br />
+
+            <p>
+              To link to an artifact in a subproject, use the form:
+              `[project/subproject:tool:artifact]`, where `subproject` is the
+              name of the subproject as it appears in the URL. For example:
+            </p>
+            <div class="codehilite">
+              <pre>
+[allura/sub:code:3b9d48]
+</pre
+              >
+            </div>
+            <br />
+          </div>
+
+          <div
+            class="markdown_syntax_section hidden_in_modal md_ex_usermentions"
+          >
+            <h2 id="md_ex_usermentions">User Mentions</h2>
+            <p>
+              An user can be mentioned using @ sign and the username. A rendered
+              user mention has a link to the particular user and also an info
+              tip on mouse hover.
+            </p>
+            <div class="codehilite">
+              <pre>
+  @test-user-1       # Mention test-user-1
+  </pre
+              >
+            </div>
+            <br />
+          </div>
+
+          <div class="markdown_syntax_section hidden_in_modal md_ex_text">
+            <h2 id="md_ex_text">Basic Text Formatting</h2>
+            <p>Use * or _ to emphasize things:</p>
+            <div class="codehilite">
+              <pre>
+*this is in italic*  and _so is this_
+
+**this is in bold**  and __so is this__
+
+***this is bold and italic***  and ___so is this___
+</pre
+              >
+            </div>
+
+            <p>Output:</p>
+            <div class="markdown_content">
+              <p><em>this is in italic</em> and <em>so is this</em></p>
+              <p>
+                <strong>this is in bold</strong> and <strong>so is this</strong>
+              </p>
+              <p>
+                <strong><em>this is bold and italic</em></strong> and
+                <strong><em>so is this</em></strong>
+              </p>
+            </div>
+
+            <p>You can strike through text using HTML like this:</p>
+            <div class="codehilite">
+              <pre>
+&lt;s&gt;this is strike through text&lt;/s&gt;
+</pre
+              >
+            </div>
+
+            <p>Output:</p>
+            <div class="markdown_content">
+              <p><s>this is strike through text</s></p>
+            </div>
+
+            <div class="codehilite">
+              <pre>
+A carriage return
+makes a line break.
+
+Two carriage returns make a new paragraph.</pre
+              >
+            </div>
+
+            <p>Output:</p>
+            <div class="markdown_content">
+              <p>
+                A carriage return<br />
+                makes a line break.
+              </p>
+              <p>Two carriage returns make a new paragraph.</p>
+            </div>
+          </div>
+
+          <div class="markdown_syntax_section hidden_in_modal md_ex_bq">
+            <h2 id="md_ex_bq">Blockquotes</h2>
+            <p>
+              Use the &gt; character in front of a line,
+              <i>just like in email</i>
+            </p>
+            <div class="codehilite">
+              <pre>
+&gt; Use it if you're quoting a person, a song or whatever.
+
+&gt; You can use *italic* or lists inside them also.
+And just like with other paragraphs,
+all of these lines are still
+part of the blockquote, even without the &gt; character in front.
+
+To end the blockquote, just put a blank line before the following
+paragraph.
+</pre
+              >
+            </div>
+
+            <p>Output:</p>
+            <div class="markdown_content">
+              <blockquote>
+                <p>Use it if you're quoting a person, a song or whatever.</p>
+                <p>
+                  You can use <em>italic</em> or lists inside them also.<br />
+                  And just like with other paragraphs,<br />
+                  all of these lines are still<br />
+                  part of the blockquote, even without the &gt; character in
+                  front.
+                </p>
+              </blockquote>
+              <p>
+                To end the blockquote, just put a blank line before the
+                following<br />
+                paragraph.
+              </p>
+            </div>
+          </div>
+
+          <div class="markdown_syntax_section hidden_in_modal md_ex_pre">
+            <h2 id="md_ex_pre">Preformatted Text</h2>
+            <p>
+              If you want some text to show up exactly as you write it, without
+              Markdown doing anything to it, just indent every line by at least
+              4 spaces (or 1 tab). As an alternative to indenting, you can make
+              a code block use 3 or more tildes (~) or backticks (`) on a line
+              before and after the text (<a
+                href="https://pythonhosted.org/Markdown/extensions/fenced_code_blocks.html"
+                >syntax details</a
+              >). See examples in the
+              <a href="index.html#md_ex_code">Code Highlighting section</a>.
+            </p>
+            <div class="codehilite">
+              <pre>
+    This line won't *have any markdown* formatting applied.
+    I can even write &lt;b&gt;HTML&lt;/b&gt; and it will show up as text.
+    This is great for showing program source code, or HTML or even
+    Markdown. &lt;b&gt;this won't show up as HTML&lt;/b&gt; but
+    exactly &lt;i&gt;as you see it in this text file&lt;/i&gt;.
+
+Within a paragraph, you can use backquotes to do the same thing.
+`This won't be *italic* or **bold** at all.`
+</pre
+              >
+            </div>
+
+            <p>Output:</p>
+            <div class="markdown_content">
+              <div class="codehilite">
+                <pre><span></span><span class="nv">This</span> <span class="nv">line</span> <span class="nv">won</span><span class="s1">'</span><span class="s">t *have any markdown* formatting applied.</span>
+<span class="nv">I</span> <span class="nv">can</span> <span class="nv">even</span> <span class="nv">write</span> <span class="o">&lt;</span><span class="nv">b</span><span class="o">&gt;</span><span class="nv">HTML</span><span class="o">&lt;/</span><span class="nv">b</span><span class="o">&gt;</span> <span class="nv">and</span> <span class="nv">it</span> <span class="nv">will</span> <span class="k">show</span> <span class="nv">up</span> <span class="nv">as</span> <span class="nv">text</span>.
+<span class="nv">This</span> <span class="nv">is</span> <span class="nv">great</span> <span class="k">for</span> <span class="nv">showing</span> <span class="nv">program</span> <span class="nv">source</span> <span class="nv">code</span>, <span class="nv">or</span> <span class="nv">HTML</span> <span class="nv">or</span> <span class="nv">even</span>
+<span class="nv">Markdown</span>. <span class="o">&lt;</span><span class="nv">b</span><span class="o">&gt;</span><span class="nv">this</span> <span class="nv">won</span><span class="s1">'</span><span class="s">t show up as HTML&lt;/b&gt; but</span>
+<span class="nv">exactly</span> <span class="o">&lt;</span><span class="nv">i</span><span class="o">&gt;</span><span class="nv">as</span> <span class="nv">you</span> <span class="nv">see</span> <span class="nv">it</span> <span class="nv">in</span> <span class="nv">this</span> <span class="nv">text</span> <span class="nv">file</span><span class="o">&lt;/</span><span class="nv">i</span><span class="o">&gt;</span>.
+</pre>
+              </div>
+
+              <p>
+                Within a paragraph, you can use backquotes to do the same
+                thing.<br />
+                <code>This won't be *italic* or **bold** at all.</code>
+              </p>
+            </div>
+          </div>
+
+          <div class="markdown_syntax_section hidden_in_modal md_ex_lists">
+            <h2 id="md_ex_lists">Lists</h2>
+            <div class="codehilite">
+              <pre>
+* an asterisk starts an unordered list
+* and this is another item in the list
++ or you can also use the + character
+- or the - character
+
+To start an ordered list, write this:
+
+1. this starts a list *with* numbers
++  this will show as number "2"
+*  this will show as number "3."
+9. any number, +, -, or * will keep the list going.
+    * just indent by 4 spaces (or tab) to make a sub-list
+        1. keep indenting for more sub lists
+    * here i'm back to the second level
+
+To start a check list, write this:
+
+- [ ] this is not checked
+- [ ] this is too
+- [x] but this is checked
+</pre
+              >
+            </div>
+
+            <p>Output:</p>
+            <div class="markdown_content">
+              <ul>
+                <li>an asterisk starts an unordered list</li>
+                <li>and this is another item in the list</li>
+                <li>or you can also use the + character</li>
+                <li>or the - character</li>
+              </ul>
+              <p>To start an ordered list, write this:</p>
+              <ol>
+                <li>this starts a list <em>with</em> numbers</li>
+                <li>this will show as number "2"</li>
+                <li>this will show as number "3."</li>
+                <li>
+                  any number, +, -, or * will keep the list going.
+                  <ul>
+                    <li>
+                      just indent by 4 spaces (or tab) to make a sub-list
+                      <ol>
+                        <li>keep indenting for more sub lists</li>
+                      </ol>
+                    </li>
+                    <li>here i'm back to the second level</li>
+                  </ul>
+                </li>
+              </ol>
+              <p>To start a check list, write this:</p>
+              <ul class="checklist">
+                <li>
+                  <input disabled="" type="checkbox" /> this is not checked
+                </li>
+                <li><input disabled="" type="checkbox" /> this is too</li>
+                <li>
+                  <input checked="" disabled="" type="checkbox" /> but this is
+                  checked
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="markdown_syntax_section hidden_in_modal md_ex_tables">
+            <h2 id="md_ex_tables">Tables</h2>
+            <p>You can create tables using pipes and dashes like this:</p>
+            <div class="codehilite">
+              <pre>
+  First Header  | Second Header
+  ------------- | -------------
+  Content Cell  | Content Cell
+  Content Cell  | Content Cell
+</pre
+              >
+            </div>
+
+            <p>Output:</p>
+            <div class="markdown_content">
+              <table>
+                <thead>
+                  <tr>
+                    <th>First Header</th>
+                    <th>Second Header</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Content Cell</td>
+                    <td>Content Cell</td>
+                  </tr>
+                  <tr>
+                    <td>Content Cell</td>
+                    <td>Content Cell</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>
+              You can use markdown syntax within table cells for formatting:
+            </p>
+
+            <div class="codehilite">
+              <pre>
+  First Header   | Second Header
+  -------------  | -------------
+  *Content Cell* | Content Cell
+  Content Cell   | Content Cell
+</pre
+              >
+            </div>
+
+            <p>Output:</p>
+            <div class="markdown_content">
+              <table>
+                <thead>
+                  <tr>
+                    <th>First Header</th>
+                    <th>Second Header</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><em>Content Cell</em></td>
+                    <td>Content Cell</td>
+                  </tr>
+                  <tr>
+                    <td>Content Cell</td>
+                    <td>Content Cell</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>You can also create tables using HTML code.</p>
+          </div>
+
+          <div class="markdown_syntax_section hidden_in_modal md_ex_headers">
+            <h2 id="md_ex_headers">Headers</h2>
+            <p>
+              Just put 1 or more dashes or equals signs (--- or ===) below the
+              title.
+            </p>
+            <div class="codehilite">
+              <pre>
+This is a huge header
+==================
+
+this is a smaller header
+------------------
+</pre
+              >
+            </div>
+
+            <p>Output:</p>
+            <div class="markdown_content">
+              <h1 id="this-is-a-huge-header">This is a huge header</h1>
+              <h2 id="this-is-a-smaller-header">this is a smaller header</h2>
+            </div>
+          </div>
+
+          <div class="markdown_syntax_section hidden_in_modal md_ex_hr">
+            <h2 id="md_ex_hr">Horizontal Rule</h2>
+            <p>Just put three or more *'s or -'s on a line:</p>
+            <div class="codehilite">
+              <pre>
+----------------
+</pre
+              >
+            </div>
+
+            <p>Output:</p>
+            <div class="markdown_content"><hr /></div>
+
+            <p>Or, you can use single spaces between then, like this:</p>
+
+            <div class="codehilite">
+              <pre>
+* * *
+</pre
+              >
+            </div>
+
+            <p>Output:</p>
+            <div class="markdown_content"><hr /></div>
+
+            <p>or</p>
+
+            <div class="codehilite">
+              <pre>
+- - - - - - -
+</pre
+              >
+            </div>
+
+            <p>Output:</p>
+            <div class="markdown_content"><hr /></div>
+
+            Make sure you have a blank line above the dashes, though, or else:
+
+            <div class="codehilite">
+              <pre>
+you will get a header
+---
+</pre
+              >
+            </div>
+
+            <p>Output:</p>
+            <div class="markdown_content">
+              <h2 id="you-will-get-a-header">you will get a header</h2>
+            </div>
+          </div>
+
+          <div class="markdown_syntax_section hidden_in_modal md_ex_img">
+            <h2 id="md_ex_img">Images</h2>
+            <p>To include an image, just put a "!" in front of a text link:</p>
+            <div class="codehilite">
+              <pre>
+![alternate text](https://sourceforge.net/images/icon_linux.gif)
+</pre
+              >
+            </div>
+
+            <p>Output:</p>
+            <div class="markdown_content">
+              <p>
+                <img
+                  alt="alternate text"
+                  src="../../../../images/icon_linux.gif"
+                />
+              </p>
+            </div>
+
+            <p>
+              The "alternate text" will show up if the browser can't load the
+              image.
+            </p>
+            <p>You can also use a title if you want, like this:</p>
+            <div class="codehilite">
+              <pre>
+![tiny arrow](https://sourceforge.net/images/icon_linux.gif "tiny arrow")
+</pre
+              >
+            </div>
+
+            <p>Output:</p>
+            <div class="markdown_content">
+              <p>
+                <img
+                  alt="tiny arrow"
+                  src="../../../../images/icon_linux.gif"
+                  title="tiny arrow"
+                />
+              </p>
+            </div>
+
+            <p>
+              To reference an attached image, just use the img macro. You can
+              add more attributes:
+            </p>
+            <div class="codehilite">
+              <pre>
+[[img src=attached-image.jpg alt=foobar]]
+</pre
+              >
+            </div>
+
+            <p>Output:</p>
+            <div class="markdown_content">
+              <p>
+                <img
+                  alt="foobar"
+                  src="https://sourceforge.net/p/bibutils/home/markdown_syntax/attachment/attached-image.jpg"
+                />
+              </p>
+            </div>
+          </div>
+
+          <div class="markdown_syntax_section hidden_in_modal md_ex_video">
+            <h2 id="md_ex_video">Videos</h2>
+            <p>
+              To embed a YouTube video, use the `embed` macro (only YouTube is
+              supported at this time):
+            </p>
+            <div class="codehilite">
+              <pre>
+[[embed url=http://www.youtube.com/watch?v=6YbBmqUnoQM]]
+</pre
+              >
+            </div>
+
+            <p>Output:</p>
+            <div class="markdown_content">
+              <p>
+                <iframe
+                  height="344"
+                  src="https://www.youtube-nocookie.com/embed/6YbBmqUnoQM?feature=oembed"
+                  width="459"
+                ></iframe>
+              </p>
+            </div>
+          </div>
+
+          <div class="markdown_syntax_section hidden_in_modal md_ex_escapes">
+            <h2 id="md_ex_escapes">Escapes and HTML</h2>
+            <p>What if you want to just show asterisks, not italics?</p>
+            <div class="codehilite">
+              <pre>
+* this shows up in italics: *a happy day*
+* this shows the asterisks: \*a happy day\*
+</pre
+              >
+            </div>
+
+            <p>Output:</p>
+            <div class="markdown_content">
+              <ul>
+                <li>this shows up in italics: <em>a happy day</em></li>
+                <li>this shows the asterisks: *a happy day*</li>
+              </ul>
+            </div>
+
+            <p>
+              The backslashes will disappear and leave the asterisks. You can do
+              the same with any of the characters that have a special meaning<br />for
+              Markdown.
+            </p>
+
+            <p>
+              Many simple HTML tags are allowed, for example &lt;b&gt; And
+              unknown tags will be dropped. To show a literal &lt;b&gt; or an
+              unknown tag like &lt;foobar&gt; you need escape it with HTML
+              entities: :
+            </p>
+            <div class="codehilite">
+              <pre>
+&lt;b&gt;this will be bold&lt;/b&gt;
+you should escape &amp;lt;unknown&amp;gt; tags
+&amp;copy; special entities work
+&amp;amp;copy; if you want to escape it
+</pre
+              >
+            </div>
+
+            <p>Output:</p>
+            <div class="markdown_content">
+              <p>
+                <b>this will be bold</b><br />
+                you should escape &lt;unknown&gt; tags<br />
+                © special entities work<br />
+                &amp;copy; if you want to escape it
+              </p>
+            </div>
+
+            <p>
+              HTML tags that are block-level like &lt;div&gt; can be used, but
+              if there is markdown formatting within it, you must add a
+              "markdown" attribute: &lt;div markdown&gt; Some safe attributes
+              are also allowed, permitting basic styling and layout: &lt;div
+              markdown style="float:left"&gt;
+            </p>
+
+            <p>
+              Individual ampersands (&amp;) and less-than signs (&lt;) are fine,
+              they will be shown as expected.
+            </p>
+          </div>
+
+          <div
+            class="markdown_syntax_section hidden_in_modal md_ex_moreheaders"
+          >
+            <h2 id="md_ex_moreheaders">More Headers</h2>
+            <p>More ways of doing headers:</p>
+            <div class="codehilite">
+              <pre>
+# this is a huge header #
+## this is a smaller header ##
+### this is even smaller ###
+#### more small ####
+##### even smaller #####
+###### smallest still: `&lt;h6&gt;` header
+</pre
+              >
+            </div>
+
+            <p>Output:</p>
+            <div class="markdown_content">
+              <h1 id="this-is-a-huge-header">this is a huge header</h1>
+              <h2 id="this-is-a-smaller-header">this is a smaller header</h2>
+              <h3 id="this-is-even-smaller">this is even smaller</h3>
+              <h4 id="more-small">more small</h4>
+              <h5 id="even-smaller">even smaller</h5>
+              <h6 id="smallest-still-h6-header">
+                smallest still: <code>&lt;h6&gt;</code> header
+              </h6>
+            </div>
+            <p>
+              You can use up to 6 <code>#</code> characters at the beginning of
+              the line.
+            </p>
+          </div>
+
+          <div class="markdown_syntax_section hidden_in_modal md_ex_toc1">
+            <h2 id="md_ex_toc1">Table of Contents</h2>
+            <p>
+              You can display a list of links to jump to headers in a document.
+              Sub-headers will be nested.
+            </p>
+            <div class="codehilite">
+              <pre>
+[TOC]
+
+# Section 1
+## Sub-section 1
+# Section 2</pre
+              >
+            </div>
+
+            <p>Output:</p>
+            <div class="markdown_content">
+              <div class="toc">
+                <ul>
+                  <li>
+                    <a href="index.html#section-1">Section 1</a>
+                    <ul>
+                      <li>
+                        <a href="index.html#sub-section-1">Sub-section 1</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="index.html#section-2">Section 2</a></li>
+                </ul>
+              </div>
+              <h1 id="section-1">Section 1</h1>
+              <h2 id="sub-section-1">Sub-section 1</h2>
+              <h1 id="section-2">Section 2</h1>
+            </div>
+          </div>
+
+          <div class="markdown_syntax_section hidden_in_modal md_ex_code">
+            <h2 id="md_ex_code">Code Highlighting</h2>
+            <p>
+              The code highlighting syntax uses
+              <a
+                href="http://pythonhosted.org/Markdown/extensions/code_hilite.html"
+                >CodeHilite</a
+              >
+              and is colored with <a href="http://pygments.org/">Pygments</a>.
+              It follows the same syntax as regular Markdown
+              <a href="index.html#md_ex_pre">code blocks</a>, with ways to tell
+              the highlighter what language to use for the code block.
+            </p>
+
+            <p>
+              The language will be detected automatically, if possible. Or you
+              can specify it on the first line with 3 colons and the language
+              name.
+            </p>
+
+            <div class="codehilite">
+              <pre>
+    :::python
+    import abc
+</pre
+              >
+            </div>
+
+            <p>Output:</p>
+            <div class="markdown_content">
+              <div class="codehilite">
+                <pre><span></span><span class="kn">import</span> <span class="nn">abc</span>
+</pre>
+              </div>
+            </div>
+
+            <p>
+              If the first line of the codeblock contains a shebang, the
+              language is derived from that and line numbers are used. If
+              shebang line contains a full path, it will be included in the
+              output. If it does not contain a path (a single / or even a
+              space), then that shebang line will be omitted from output.
+            </p>
+
+            <div class="codehilite">
+              <pre>
+    #!/usr/bin/python
+    import abc
+</pre
+              >
+            </div>
+
+            <p>Output:</p>
+            <div class="markdown_content">
+              <table class="codehilitetable">
+                <tbody>
+                  <tr>
+                    <td class="linenos">
+                      <div class="linenodiv">
+                        <pre>
+1
+2</pre
+                        >
+                      </div>
+                    </td>
+                    <td class="code">
+                      <div class="codehilite">
+                        <pre><span></span><span class="ch">#!/usr/bin/python</span>
+<span class="kn">import</span> <span class="nn">abc</span>
+</pre>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>
+              If using a code block of tildes or backticks, you can also specify
+              the language on the first divider line
+            </p>
+
+            <div class="codehilite">
+              <pre>
+~~~html
+&lt;a href="#">My code&lt;/a>
+~~~
+</pre
+              >
+            </div>
+
+            <div class="codehilite">
+              <pre>
+```html
+&lt;a href="#">My code&lt;/a>
+```
+</pre
+              >
+            </div>
+
+            <p>Output:</p>
+            <div class="markdown_content">
+              <div class="codehilite">
+                <pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;</span>My code<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre>
+              </div>
+            </div>
+
+            <p>
+              Many languages are supported. See all the "short names" listed in
+              the <a href="http://pygments.org/docs/lexers/">Pygments docs</a>.
+            </p>
+          </div>
+
+          <div class="markdown_syntax_section hidden_in_modal md_ex_includes">
+            <h2 id="md_ex_includes">Includes</h2>
+            <p>You can embed another wiki page directly:</p>
+            <div class="codehilite">
+              <pre>
+[[include ref=SamplePage]]
+</pre
+              >
+            </div>
+
+            <p>
+              No example output is available for this one because it only works
+              on real wiki pages. Try it in your wiki!
+            </p>
+
+            <p>
+              Also, you can embed a file directly from a repository! Just skip
+              the ref parameter and pass repository, path and optional revision:
+            </p>
+            <div class="codehilite">
+              <pre>
+[[include repo=code path=README]]
+
+[[include repo=myproject:code path=/ew/forms.py rev=fa61e7]]
+
+[[include repo=p:myproject:code path=/ew/forms.py]]
+</pre
+              >
+            </div>
+
+            <p>Repo could be specified in three ways:</p>
+            <ul>
+              <li>app</li>
+              <li>project:app</li>
+              <li>neighborhood:project:app</li>
+            </ul>
+
+            <p>
+              Where app is a repository's mount point, project is a project's
+              shortname and neighborhood is a neighborhood's prefix that appears
+              in url.
+            </p>
+          </div>
+
+          <div
+            class="markdown_syntax_section hidden_in_modal md_ex_neighborhood_notes"
+          >
+            <h2 id="md_ex_neighborhood_notes">Neighborhood Notifications</h2>
+            <p>
+              You can list updates from all projects in a neighborhood by tool
+              type. Max_number (default is 5) and sort (default is pubdate) are
+              optional:
+            </p>
+            <div class="codehilite">
+              <pre>
+[[neighborhood_feeds tool_name=wiki max_number=10 sort=pubdate]]
+</pre
+              >
+            </div>
+          </div>
+
+          <div
+            class="markdown_syntax_section hidden_in_modal md_ex_neighborhood_blog_posts"
+          >
+            <h2 id="md_ex_neighborhood_blog_posts">Neighborhood Blog Posts</h2>
+            <p>
+              You can view blog posts from all projects in a neighborhood.
+              Max_number (default is 5) and sort (default is timestamp) are
+              optional:
+            </p>
+            <div class="codehilite">
+              <pre>
+[[neighborhood_blog_posts max_number=10 sort=timestamp]]
+</pre
+              >
+            </div>
+          </div>
+
+          <div
+            class="markdown_syntax_section hidden_in_modal md_ex_project_blog_posts"
+          >
+            <h2 id="md_ex_project_blog_posts">Project Blog Posts</h2>
+            <p>
+              You can view blog posts from all blogs in a project. Max_number
+              (default is 5), mount point (leave empty to view posts from all
+              blog tools in a project), and sort (default is timestamp) are
+              optional:
+            </p>
+            <div class="codehilite">
+              <pre>
+[[project_blog_posts max_number=10 sort=timestamp mount_point=news]]
+</pre
+              >
+            </div>
+          </div>
+
+          <div
+            class="markdown_syntax_section hidden_in_modal md_ex_project_macros"
+            id="md_ex_project_macros"
+          >
+            <h2 id="md_ex_download_button">Download Button</h2>
+            <p>
+              You can display a download button that links to the best download
+              available for the active project. Please note that if you use this
+              macro and there is no download associated with your project, the
+              button will not appear.
+            </p>
+            <div class="codehilite">
+              <pre>
+[[download_button]]
+</pre
+              >
+            </div>
+
+            <h2 id="md_ex_gittip_button">Gittip Button</h2>
+            <p>
+              You can display a Gittip button in your wiki. You will need to
+              provide your gittip handle in the username parameter.
+            </p>
+            <div class="codehilite">
+              <pre>
+[[gittip_button username=foo]]
+</pre
+              >
+            </div>
+
+            <h2 id="md_ex_member">Project Member List</h2>
+            <p>
+              You can display a list of project members. By default the list is
+              limited to 20 members, and a link is provided to a page with the
+              full list.
+            </p>
+            <div class="codehilite">
+              <pre>
+[[members]]
+</pre
+              >
+            </div>
+
+            <h2 id="md_ex_project_screenshots">Project Screenshots</h2>
+            <p>
+              You can show all the screenshots for the current project as
+              thumbnails that are linked to the full-size image.
+            </p>
+            <div class="codehilite">
+              <pre>
+[[project_screenshots]]
+</pre
+              >
+            </div>
+          </div>
+
+          <div class="markdown_syntax_section hidden_in_modal md_ex_thanks">
+            <h2 id="md_ex_thanks">Thanks</h2>
+            <p>Thanks to John Gruber and Aaron Swartz for creating Markdown.</p>
+            <p>
+              This page is based on some examples from Greg Schueler,
+              <a href="mailto:greg@vario.us">greg@vario.us</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1732 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03fd328}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{42f0fc98-34f6-4567-b3cf-de13e74a89ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{b1798409-2031-413d-9df7-70b0202ddd98}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files\include">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\caffe">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\caffe\layers">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\caffe\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\caffe\util">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\gtest">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\cmake">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\cmake\Templates">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0009}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\data">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0011}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\data\cifar10">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0010}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\data\ilsvrc12">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\data\mnist">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0013}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\docker">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0014}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\docs">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0015}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\docs\tutorial">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0016}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\docs\tutorial\layers">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\examples">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\examples\cifar10">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0019}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\examples\cpp_classification">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0020}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\examples\feature_extraction">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\examples\finetune_flickr_style">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\examples\imagenet">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\examples\mnist">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\examples\pycaffe">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\examples\pycaffe\layers">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\examples\siamese">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\examples\web_demo">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\matlab">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0029}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\models">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0031}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\models\bvlc_alexnet">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0030}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\models\bvlc_googlenet">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0032}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\models\bvlc_reference_caffenet">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0033}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\models\bvlc_reference_rcnn_ilsvrc13">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0034}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\models\finetune_flickr_style">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0035}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\python">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0036}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\python\caffe">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0037}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\python\caffe\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0038}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\scripts">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0039}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\scripts\travis">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0040}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0042}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\caffe">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0041}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\caffe\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0043}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\caffe\test\test_data">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0044}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\gtest">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0045}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\tools">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0046}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\tools\extra">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0047}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0048}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\docs">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0050}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\docs\images">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0049}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\docs\tutorial">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0052}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\docs\tutorial\fig">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0051}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\examples">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0054}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\examples\images">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0053}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\examples">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0056}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\examples\cifar10">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0055}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\examples\cpp_classification">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0057}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\examples\mnist">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0058}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\examples\siamese">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0059}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\matlab">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0062}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\matlab\+caffe">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0061}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\matlab\+caffe\private">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0060}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\python">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0064}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\python\caffe">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0063}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0066}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\caffe">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0065}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\caffe\layers">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0067}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\caffe\solvers">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0068}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\caffe\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0069}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\caffe\util">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0070}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\gtest">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0071}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tools">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0072}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/examples/cifar10/convert_cifar_data.cpp">
+      <Filter>Source Files\examples\cifar10</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/examples/cpp_classification/classification.cpp">
+      <Filter>Source Files\examples\cpp_classification</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/examples/mnist/convert_mnist_data.cpp">
+      <Filter>Source Files\examples\mnist</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/examples/siamese/convert_mnist_siamese_data.cpp">
+      <Filter>Source Files\examples\siamese</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/matlab/+caffe/private/caffe_.cpp">
+      <Filter>Source Files\matlab\+caffe\private</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/python/caffe/_caffe.cpp">
+      <Filter>Source Files\python\caffe</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/blob.cpp">
+      <Filter>Source Files\src\caffe</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/common.cpp">
+      <Filter>Source Files\src\caffe</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/data_transformer.cpp">
+      <Filter>Source Files\src\caffe</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/internal_thread.cpp">
+      <Filter>Source Files\src\caffe</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layer.cpp">
+      <Filter>Source Files\src\caffe</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layer_factory.cpp">
+      <Filter>Source Files\src\caffe</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/absval_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/accuracy_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/argmax_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/base_conv_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/base_data_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/batch_norm_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/batch_reindex_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/bias_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/bnll_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/clip_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/concat_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/contrastive_loss_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/conv_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/crop_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/cudnn_conv_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/cudnn_deconv_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/cudnn_lcn_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/cudnn_lrn_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/cudnn_pooling_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/cudnn_relu_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/cudnn_sigmoid_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/cudnn_softmax_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/cudnn_tanh_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/data_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/deconv_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/dropout_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/dummy_data_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/eltwise_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/elu_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/embed_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/euclidean_loss_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/exp_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/filter_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/flatten_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/hdf5_data_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/hdf5_output_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/hinge_loss_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/im2col_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/image_data_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/infogain_loss_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/inner_product_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/input_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/log_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/loss_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/lrn_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/lstm_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/lstm_unit_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/memory_data_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/multinomial_logistic_loss_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/mvn_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/neuron_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/parameter_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/pooling_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/power_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/prelu_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/recurrent_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/reduction_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/relu_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/reshape_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/rnn_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/scale_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/sigmoid_cross_entropy_loss_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/sigmoid_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/silence_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/slice_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/softmax_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/softmax_loss_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/split_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/spp_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/swish_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/tanh_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/threshold_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/tile_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/layers/window_data_layer.cpp">
+      <Filter>Source Files\src\caffe\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/net.cpp">
+      <Filter>Source Files\src\caffe</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/parallel.cpp">
+      <Filter>Source Files\src\caffe</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/solver.cpp">
+      <Filter>Source Files\src\caffe</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/solvers/adadelta_solver.cpp">
+      <Filter>Source Files\src\caffe\solvers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/solvers/adagrad_solver.cpp">
+      <Filter>Source Files\src\caffe\solvers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/solvers/adam_solver.cpp">
+      <Filter>Source Files\src\caffe\solvers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/solvers/nesterov_solver.cpp">
+      <Filter>Source Files\src\caffe\solvers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/solvers/rmsprop_solver.cpp">
+      <Filter>Source Files\src\caffe\solvers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/solvers/sgd_solver.cpp">
+      <Filter>Source Files\src\caffe\solvers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/syncedmem.cpp">
+      <Filter>Source Files\src\caffe</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_accuracy_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_argmax_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_batch_norm_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_batch_reindex_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_benchmark.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_bias_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_blob.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_caffe_main.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_common.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_concat_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_contrastive_loss_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_convolution_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_crop_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_data_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_data_transformer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_db.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_deconvolution_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_dummy_data_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_eltwise_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_embed_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_euclidean_loss_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_filler.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_filter_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_flatten_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_gradient_based_solver.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_hdf5_output_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_hdf5data_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_hinge_loss_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_im2col_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_image_data_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_infogain_loss_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_inner_product_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_internal_thread.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_io.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_layer_factory.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_lrn_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_lstm_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_math_functions.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_maxpool_dropout_layers.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_memory_data_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_multinomial_logistic_loss_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_mvn_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_net.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_neuron_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_platform.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_pooling_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_power_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_protobuf.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_random_number_generator.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_reduction_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_reshape_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_rnn_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_scale_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_sigmoid_cross_entropy_loss_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_slice_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_softmax_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_softmax_with_loss_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_solver.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_solver_factory.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_split_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_spp_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_stochastic_pooling.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_syncedmem.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_tanh_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_threshold_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_tile_layer.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_upgrade_proto.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_util_blas.cpp">
+      <Filter>Source Files\src\caffe\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/util/benchmark.cpp">
+      <Filter>Source Files\src\caffe\util</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/util/blocking_queue.cpp">
+      <Filter>Source Files\src\caffe\util</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/util/cudnn.cpp">
+      <Filter>Source Files\src\caffe\util</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/util/db.cpp">
+      <Filter>Source Files\src\caffe\util</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/util/db_leveldb.cpp">
+      <Filter>Source Files\src\caffe\util</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/util/db_lmdb.cpp">
+      <Filter>Source Files\src\caffe\util</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/util/hdf5.cpp">
+      <Filter>Source Files\src\caffe\util</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/util/im2col.cpp">
+      <Filter>Source Files\src\caffe\util</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/util/insert_splits.cpp">
+      <Filter>Source Files\src\caffe\util</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/util/io.cpp">
+      <Filter>Source Files\src\caffe\util</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/util/math_functions.cpp">
+      <Filter>Source Files\src\caffe\util</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/util/signal_handler.cpp">
+      <Filter>Source Files\src\caffe\util</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/caffe/util/upgrade_proto.cpp">
+      <Filter>Source Files\src\caffe\util</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/gtest/gtest-all.cpp">
+      <Filter>Source Files\src\gtest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/src/gtest/gtest_main.cc">
+      <Filter>Source Files\src\gtest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/tools/caffe.cpp">
+      <Filter>Source Files\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/tools/compute_image_mean.cpp">
+      <Filter>Source Files\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/tools/convert_imageset.cpp">
+      <Filter>Source Files\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/tools/extract_features.cpp">
+      <Filter>Source Files\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/tools/upgrade_net_proto_binary.cpp">
+      <Filter>Source Files\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/tools/upgrade_net_proto_text.cpp">
+      <Filter>Source Files\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/caffe/tools/upgrade_solver_proto_text.cpp">
+      <Filter>Source Files\tools</Filter>
+    </ClCompile>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/blob.hpp">
+      <Filter>Header Files\include\caffe</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/caffe.hpp">
+      <Filter>Header Files\include\caffe</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/common.hpp">
+      <Filter>Header Files\include\caffe</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/data_transformer.hpp">
+      <Filter>Header Files\include\caffe</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/filler.hpp">
+      <Filter>Header Files\include\caffe</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/internal_thread.hpp">
+      <Filter>Header Files\include\caffe</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layer.hpp">
+      <Filter>Header Files\include\caffe</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layer_factory.hpp">
+      <Filter>Header Files\include\caffe</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/absval_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/accuracy_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/argmax_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/base_conv_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/base_data_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/batch_norm_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/batch_reindex_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/bias_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/bnll_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/clip_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/concat_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/contrastive_loss_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/conv_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/crop_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/cudnn_conv_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/cudnn_deconv_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/cudnn_lcn_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/cudnn_lrn_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/cudnn_pooling_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/cudnn_relu_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/cudnn_sigmoid_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/cudnn_softmax_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/cudnn_tanh_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/data_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/deconv_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/dropout_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/dummy_data_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/eltwise_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/elu_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/embed_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/euclidean_loss_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/exp_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/filter_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/flatten_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/hdf5_data_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/hdf5_output_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/hinge_loss_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/im2col_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/image_data_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/infogain_loss_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/inner_product_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/input_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/log_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/loss_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/lrn_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/lstm_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/memory_data_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/multinomial_logistic_loss_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/mvn_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/neuron_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/parameter_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/pooling_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/power_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/prelu_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/python_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/recurrent_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/reduction_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/relu_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/reshape_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/rnn_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/scale_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/sigmoid_cross_entropy_loss_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/sigmoid_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/silence_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/slice_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/softmax_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/softmax_loss_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/split_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/spp_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/swish_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/tanh_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/threshold_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/tile_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/layers/window_data_layer.hpp">
+      <Filter>Header Files\include\caffe\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/net.hpp">
+      <Filter>Header Files\include\caffe</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/parallel.hpp">
+      <Filter>Header Files\include\caffe</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/sgd_solvers.hpp">
+      <Filter>Header Files\include\caffe</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/solver.hpp">
+      <Filter>Header Files\include\caffe</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/solver_factory.hpp">
+      <Filter>Header Files\include\caffe</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/syncedmem.hpp">
+      <Filter>Header Files\include\caffe</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/test/test_caffe_main.hpp">
+      <Filter>Header Files\include\caffe\test</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/test/test_gradient_check_util.hpp">
+      <Filter>Header Files\include\caffe\test</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/util/benchmark.hpp">
+      <Filter>Header Files\include\caffe\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/util/blocking_queue.hpp">
+      <Filter>Header Files\include\caffe\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/util/cudnn.hpp">
+      <Filter>Header Files\include\caffe\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/util/db.hpp">
+      <Filter>Header Files\include\caffe\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/util/db_leveldb.hpp">
+      <Filter>Header Files\include\caffe\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/util/db_lmdb.hpp">
+      <Filter>Header Files\include\caffe\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/util/device_alternate.hpp">
+      <Filter>Header Files\include\caffe\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/util/format.hpp">
+      <Filter>Header Files\include\caffe\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/util/hdf5.hpp">
+      <Filter>Header Files\include\caffe\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/util/im2col.hpp">
+      <Filter>Header Files\include\caffe\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/util/insert_splits.hpp">
+      <Filter>Header Files\include\caffe\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/util/io.hpp">
+      <Filter>Header Files\include\caffe\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/util/math_functions.hpp">
+      <Filter>Header Files\include\caffe\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/util/mkl_alternate.hpp">
+      <Filter>Header Files\include\caffe\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/util/nccl.hpp">
+      <Filter>Header Files\include\caffe\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/util/rng.hpp">
+      <Filter>Header Files\include\caffe\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/util/signal_handler.h">
+      <Filter>Header Files\include\caffe\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/include/caffe/util/upgrade_proto.hpp">
+      <Filter>Header Files\include\caffe\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/caffe/src/gtest/gtest.h">
+      <Filter>Header Files\src\gtest</Filter>
+    </ClInclude>
+    <Image Include="../../thirdparty/owemdjee/caffe/docs/images/GitHub-Mark-64px.png">
+      <Filter>Resource Files\docs\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/caffe/docs/images/caffeine-icon.png">
+      <Filter>Resource Files\docs\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/caffe/docs/tutorial/fig/backward.jpg">
+      <Filter>Resource Files\docs\tutorial\fig</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/caffe/docs/tutorial/fig/forward.jpg">
+      <Filter>Resource Files\docs\tutorial\fig</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/caffe/docs/tutorial/fig/forward_backward.png">
+      <Filter>Resource Files\docs\tutorial\fig</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/caffe/docs/tutorial/fig/layer.jpg">
+      <Filter>Resource Files\docs\tutorial\fig</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/caffe/docs/tutorial/fig/logreg.jpg">
+      <Filter>Resource Files\docs\tutorial\fig</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/caffe/examples/images/cat gray.jpg">
+      <Filter>Resource Files\examples\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/caffe/examples/images/cat.jpg">
+      <Filter>Resource Files\examples\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/caffe/examples/images/cat_gray.jpg">
+      <Filter>Resource Files\examples\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/caffe/examples/images/fish-bike.jpg">
+      <Filter>Resource Files\examples\images</Filter>
+    </Image>
+    <Text Include="../../thirdparty/owemdjee/caffe/CMakeLists.txt">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/CONTRIBUTING.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/CONTRIBUTORS.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/INSTALL.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/README.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/cmake/Templates/CaffeConfig.cmake.in">
+      <Filter>Misc Files\cmake\Templates</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/cmake/Templates/CaffeConfigVersion.cmake.in">
+      <Filter>Misc Files\cmake\Templates</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/cmake/Templates/caffe_config.h.in">
+      <Filter>Misc Files\cmake\Templates</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/cmake/Uninstall.cmake.in">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/data/cifar10/get_cifar10.sh">
+      <Filter>Misc Files\data\cifar10</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/data/ilsvrc12/get_ilsvrc_aux.sh">
+      <Filter>Misc Files\data\ilsvrc12</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/data/mnist/get_mnist.sh">
+      <Filter>Misc Files\data\mnist</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docker/README.md">
+      <Filter>Misc Files\docker</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/CMakeLists.txt">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/README.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/development.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/index.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/install_apt.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/install_apt_debian.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/install_osx.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/install_yum.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/installation.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/model_zoo.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/multigpu.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/convolution.md">
+      <Filter>Misc Files\docs\tutorial</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/data.md">
+      <Filter>Misc Files\docs\tutorial</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/forward_backward.md">
+      <Filter>Misc Files\docs\tutorial</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/index.md">
+      <Filter>Misc Files\docs\tutorial</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/interfaces.md">
+      <Filter>Misc Files\docs\tutorial</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers.md">
+      <Filter>Misc Files\docs\tutorial</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/absval.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/accuracy.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/argmax.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/batchnorm.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/batchreindex.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/bias.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/bnll.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/clip.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/concat.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/contrastiveloss.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/convolution.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/crop.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/data.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/deconvolution.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/dropout.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/dummydata.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/eltwise.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/elu.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/embed.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/euclideanloss.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/exp.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/filter.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/flatten.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/hdf5data.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/hdf5output.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/hingeloss.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/im2col.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/imagedata.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/infogainloss.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/innerproduct.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/input.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/log.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/lrn.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/lstm.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/memorydata.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/multinomiallogisticloss.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/mvn.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/parameter.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/pooling.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/power.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/prelu.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/python.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/recurrent.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/reduction.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/relu.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/reshape.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/rnn.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/scale.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/sigmoid.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/sigmoidcrossentropyloss.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/silence.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/slice.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/softmax.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/softmaxwithloss.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/split.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/spp.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/tanh.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/threshold.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/tile.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/layers/windowdata.md">
+      <Filter>Misc Files\docs\tutorial\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/loss.md">
+      <Filter>Misc Files\docs\tutorial</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/net_layer_blob.md">
+      <Filter>Misc Files\docs\tutorial</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/docs/tutorial/solver.md">
+      <Filter>Misc Files\docs\tutorial</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/CMakeLists.txt">
+      <Filter>Misc Files\examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/cifar10/create_cifar10.sh">
+      <Filter>Misc Files\examples\cifar10</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/cifar10/readme.md">
+      <Filter>Misc Files\examples\cifar10</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/cifar10/train_full.sh">
+      <Filter>Misc Files\examples\cifar10</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/cifar10/train_full_sigmoid.sh">
+      <Filter>Misc Files\examples\cifar10</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/cifar10/train_full_sigmoid_bn.sh">
+      <Filter>Misc Files\examples\cifar10</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/cifar10/train_quick.sh">
+      <Filter>Misc Files\examples\cifar10</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/cpp_classification/readme.md">
+      <Filter>Misc Files\examples\cpp_classification</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/feature_extraction/readme.md">
+      <Filter>Misc Files\examples\feature_extraction</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/finetune_flickr_style/assemble_data.py">
+      <Filter>Misc Files\examples\finetune_flickr_style</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/finetune_flickr_style/readme.md">
+      <Filter>Misc Files\examples\finetune_flickr_style</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/finetune_flickr_style/style_names.txt">
+      <Filter>Misc Files\examples\finetune_flickr_style</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/imagenet/create_imagenet.sh">
+      <Filter>Misc Files\examples\imagenet</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/imagenet/make_imagenet_mean.sh">
+      <Filter>Misc Files\examples\imagenet</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/imagenet/readme.md">
+      <Filter>Misc Files\examples\imagenet</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/imagenet/resume_training.sh">
+      <Filter>Misc Files\examples\imagenet</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/imagenet/train_caffenet.sh">
+      <Filter>Misc Files\examples\imagenet</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/mnist/create_mnist.sh">
+      <Filter>Misc Files\examples\mnist</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/mnist/readme.md">
+      <Filter>Misc Files\examples\mnist</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/mnist/train_lenet.sh">
+      <Filter>Misc Files\examples\mnist</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/mnist/train_lenet_adam.sh">
+      <Filter>Misc Files\examples\mnist</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/mnist/train_lenet_consolidated.sh">
+      <Filter>Misc Files\examples\mnist</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/mnist/train_lenet_docker.sh">
+      <Filter>Misc Files\examples\mnist</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/mnist/train_lenet_rmsprop.sh">
+      <Filter>Misc Files\examples\mnist</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/mnist/train_mnist_autoencoder.sh">
+      <Filter>Misc Files\examples\mnist</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/mnist/train_mnist_autoencoder_adadelta.sh">
+      <Filter>Misc Files\examples\mnist</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/mnist/train_mnist_autoencoder_adagrad.sh">
+      <Filter>Misc Files\examples\mnist</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/mnist/train_mnist_autoencoder_nesterov.sh">
+      <Filter>Misc Files\examples\mnist</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/pycaffe/caffenet.py">
+      <Filter>Misc Files\examples\pycaffe</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/pycaffe/layers/pascal_multilabel_datalayers.py">
+      <Filter>Misc Files\examples\pycaffe\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/pycaffe/layers/pyloss.py">
+      <Filter>Misc Files\examples\pycaffe\layers</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/pycaffe/tools.py">
+      <Filter>Misc Files\examples\pycaffe</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/siamese/create_mnist_siamese.sh">
+      <Filter>Misc Files\examples\siamese</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/siamese/readme.md">
+      <Filter>Misc Files\examples\siamese</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/siamese/train_mnist_siamese.sh">
+      <Filter>Misc Files\examples\siamese</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/web_demo/app.py">
+      <Filter>Misc Files\examples\web_demo</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/web_demo/exifutil.py">
+      <Filter>Misc Files\examples\web_demo</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/web_demo/readme.md">
+      <Filter>Misc Files\examples\web_demo</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/examples/web_demo/requirements.txt">
+      <Filter>Misc Files\examples\web_demo</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/matlab/CMakeLists.txt">
+      <Filter>Misc Files\matlab</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/models/bvlc_alexnet/readme.md">
+      <Filter>Misc Files\models\bvlc_alexnet</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/models/bvlc_googlenet/readme.md">
+      <Filter>Misc Files\models\bvlc_googlenet</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/models/bvlc_reference_caffenet/readme.md">
+      <Filter>Misc Files\models\bvlc_reference_caffenet</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/models/bvlc_reference_rcnn_ilsvrc13/readme.md">
+      <Filter>Misc Files\models\bvlc_reference_rcnn_ilsvrc13</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/models/finetune_flickr_style/readme.md">
+      <Filter>Misc Files\models\finetune_flickr_style</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/python/CMakeLists.txt">
+      <Filter>Misc Files\python</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/python/caffe/__init__.py">
+      <Filter>Misc Files\python\caffe</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/python/caffe/classifier.py">
+      <Filter>Misc Files\python\caffe</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/python/caffe/coord_map.py">
+      <Filter>Misc Files\python\caffe</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/python/caffe/detector.py">
+      <Filter>Misc Files\python\caffe</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/python/caffe/draw.py">
+      <Filter>Misc Files\python\caffe</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/python/caffe/io.py">
+      <Filter>Misc Files\python\caffe</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/python/caffe/net_spec.py">
+      <Filter>Misc Files\python\caffe</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/python/caffe/pycaffe.py">
+      <Filter>Misc Files\python\caffe</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/python/caffe/test/test_coord_map.py">
+      <Filter>Misc Files\python\caffe\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/python/caffe/test/test_draw.py">
+      <Filter>Misc Files\python\caffe\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/python/caffe/test/test_io.py">
+      <Filter>Misc Files\python\caffe\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/python/caffe/test/test_layer_type_list.py">
+      <Filter>Misc Files\python\caffe\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/python/caffe/test/test_nccl.py">
+      <Filter>Misc Files\python\caffe\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/python/caffe/test/test_net.py">
+      <Filter>Misc Files\python\caffe\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/python/caffe/test/test_net_spec.py">
+      <Filter>Misc Files\python\caffe\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/python/caffe/test/test_python_layer.py">
+      <Filter>Misc Files\python\caffe\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/python/caffe/test/test_python_layer_with_param_str.py">
+      <Filter>Misc Files\python\caffe\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/python/caffe/test/test_solver.py">
+      <Filter>Misc Files\python\caffe\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/python/classify.py">
+      <Filter>Misc Files\python</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/python/detect.py">
+      <Filter>Misc Files\python</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/python/draw_net.py">
+      <Filter>Misc Files\python</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/python/requirements.txt">
+      <Filter>Misc Files\python</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/python/train.py">
+      <Filter>Misc Files\python</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/scripts/build_docs.sh">
+      <Filter>Misc Files\scripts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/scripts/copy_notebook.py">
+      <Filter>Misc Files\scripts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/scripts/cpp_lint.py">
+      <Filter>Misc Files\scripts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/scripts/deploy_docs.sh">
+      <Filter>Misc Files\scripts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/scripts/download_model_binary.py">
+      <Filter>Misc Files\scripts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/scripts/download_model_from_gist.sh">
+      <Filter>Misc Files\scripts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/scripts/gather_examples.sh">
+      <Filter>Misc Files\scripts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/scripts/split_caffe_proto.py">
+      <Filter>Misc Files\scripts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/scripts/travis/build.sh">
+      <Filter>Misc Files\scripts\travis</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/scripts/travis/configure-cmake.sh">
+      <Filter>Misc Files\scripts\travis</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/scripts/travis/configure-make.sh">
+      <Filter>Misc Files\scripts\travis</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/scripts/travis/configure.sh">
+      <Filter>Misc Files\scripts\travis</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/scripts/travis/defaults.sh">
+      <Filter>Misc Files\scripts\travis</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/scripts/travis/install-deps.sh">
+      <Filter>Misc Files\scripts\travis</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/scripts/travis/install-python-deps.sh">
+      <Filter>Misc Files\scripts\travis</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/scripts/travis/setup-venv.sh">
+      <Filter>Misc Files\scripts\travis</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/scripts/travis/test.sh">
+      <Filter>Misc Files\scripts\travis</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/scripts/upload_model_to_gist.sh">
+      <Filter>Misc Files\scripts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/src/caffe/CMakeLists.txt">
+      <Filter>Misc Files\src\caffe</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/src/caffe/test/CMakeLists.txt">
+      <Filter>Misc Files\src\caffe\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_data/generate_sample_data.py">
+      <Filter>Misc Files\src\caffe\test\test_data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_data/sample_data_list.txt">
+      <Filter>Misc Files\src\caffe\test\test_data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/src/caffe/test/test_data/solver_data_list.txt">
+      <Filter>Misc Files\src\caffe\test\test_data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/src/gtest/CMakeLists.txt">
+      <Filter>Misc Files\src\gtest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/tools/CMakeLists.txt">
+      <Filter>Misc Files\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/tools/extra/extract_seconds.py">
+      <Filter>Misc Files\tools\extra</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/tools/extra/launch_resize_and_crop_images.sh">
+      <Filter>Misc Files\tools\extra</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/tools/extra/parse_log.py">
+      <Filter>Misc Files\tools\extra</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/tools/extra/parse_log.sh">
+      <Filter>Misc Files\tools\extra</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/tools/extra/resize_and_crop_images.py">
+      <Filter>Misc Files\tools\extra</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/caffe/tools/extra/summarize.py">
+      <Filter>Misc Files\tools\extra</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
+    

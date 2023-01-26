@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>manticore-columnar</ProjectName>
+    <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF8BB277}</ProjectGuid>
+    <RootNamespace>manticore-columnar</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project.props" Label="SolutionWideSettings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.28307.799</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+<ItemDefinitionGroup>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <BrowseInformation>false</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <DisableSpecificWarnings>4018;4100;4127;4180;4206;4244;4267;5105;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <SDLCheck>false</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <ConformanceMode>true</ConformanceMode>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableUnitySupport>true</EnableUnitySupport>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+</ItemDefinitionGroup>
+<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_MANTICORE_COLUMNAR;MANTICORE_COLUMNAR_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/manticore-columnar/columnar;../../thirdparty/owemdjee/manticore-columnar/columnar/builder;../../thirdparty/owemdjee/manticore-columnar/columnar/accessor;../../thirdparty/owemdjee/manticoresearch/src;../../thirdparty/owemdjee/manticoresearch/src/replication;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/manticore-columnar;../../thirdparty/owemdjee/boost/libs/fiber/include;../../thirdparty/owemdjee/manticore-columnar/util;../../thirdparty/owemdjee/boost;../../thirdparty/owemdjee/fast_pfor/headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_MANTICORE_COLUMNAR;MANTICORE_COLUMNAR_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_MANTICORE_COLUMNAR;MANTICORE_COLUMNAR_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/manticore-columnar/columnar;../../thirdparty/owemdjee/manticore-columnar/columnar/builder;../../thirdparty/owemdjee/manticore-columnar/columnar/accessor;../../thirdparty/owemdjee/manticoresearch/src;../../thirdparty/owemdjee/manticoresearch/src/replication;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/manticore-columnar;../../thirdparty/owemdjee/boost/libs/fiber/include;../../thirdparty/owemdjee/manticore-columnar/util;../../thirdparty/owemdjee/boost;../../thirdparty/owemdjee/fast_pfor/headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_MANTICORE_COLUMNAR;MANTICORE_COLUMNAR_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/manticore-columnar/columnar;../../thirdparty/owemdjee/manticore-columnar/columnar/builder;../../thirdparty/owemdjee/manticore-columnar/columnar/accessor;../../thirdparty/owemdjee/manticoresearch/src;../../thirdparty/owemdjee/manticoresearch/src/replication;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/manticore-columnar;../../thirdparty/owemdjee/boost/libs/fiber/include;../../thirdparty/owemdjee/manticore-columnar/util;../../thirdparty/owemdjee/boost;../../thirdparty/owemdjee/fast_pfor/headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_MANTICORE_COLUMNAR;MANTICORE_COLUMNAR_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_MANTICORE_COLUMNAR;MANTICORE_COLUMNAR_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/manticore-columnar/columnar;../../thirdparty/owemdjee/manticore-columnar/columnar/builder;../../thirdparty/owemdjee/manticore-columnar/columnar/accessor;../../thirdparty/owemdjee/manticoresearch/src;../../thirdparty/owemdjee/manticoresearch/src/replication;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/manticore-columnar;../../thirdparty/owemdjee/boost/libs/fiber/include;../../thirdparty/owemdjee/manticore-columnar/util;../../thirdparty/owemdjee/boost;../../thirdparty/owemdjee/fast_pfor/headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_MANTICORE_COLUMNAR;MANTICORE_COLUMNAR_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/manticore-columnar/columnar;../../thirdparty/owemdjee/manticore-columnar/columnar/builder;../../thirdparty/owemdjee/manticore-columnar/columnar/accessor;../../thirdparty/owemdjee/manticoresearch/src;../../thirdparty/owemdjee/manticoresearch/src/replication;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/manticore-columnar;../../thirdparty/owemdjee/boost/libs/fiber/include;../../thirdparty/owemdjee/manticore-columnar/util;../../thirdparty/owemdjee/boost;../../thirdparty/owemdjee/fast_pfor/headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_MANTICORE_COLUMNAR;MANTICORE_COLUMNAR_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_MANTICORE_COLUMNAR;MANTICORE_COLUMNAR_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/manticore-columnar/columnar;../../thirdparty/owemdjee/manticore-columnar/columnar/builder;../../thirdparty/owemdjee/manticore-columnar/columnar/accessor;../../thirdparty/owemdjee/manticoresearch/src;../../thirdparty/owemdjee/manticoresearch/src/replication;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/manticore-columnar;../../thirdparty/owemdjee/boost/libs/fiber/include;../../thirdparty/owemdjee/manticore-columnar/util;../../thirdparty/owemdjee/boost;../../thirdparty/owemdjee/fast_pfor/headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_MANTICORE_COLUMNAR;MANTICORE_COLUMNAR_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/manticore-columnar/columnar;../../thirdparty/owemdjee/manticore-columnar/columnar/builder;../../thirdparty/owemdjee/manticore-columnar/columnar/accessor;../../thirdparty/owemdjee/manticoresearch/src;../../thirdparty/owemdjee/manticoresearch/src/replication;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/manticore-columnar;../../thirdparty/owemdjee/boost/libs/fiber/include;../../thirdparty/owemdjee/manticore-columnar/util;../../thirdparty/owemdjee/boost;../../thirdparty/owemdjee/fast_pfor/headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_MANTICORE_COLUMNAR;MANTICORE_COLUMNAR_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_MANTICORE_COLUMNAR;MANTICORE_COLUMNAR_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/manticore-columnar/columnar;../../thirdparty/owemdjee/manticore-columnar/columnar/builder;../../thirdparty/owemdjee/manticore-columnar/columnar/accessor;../../thirdparty/owemdjee/manticoresearch/src;../../thirdparty/owemdjee/manticoresearch/src/replication;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/manticore-columnar;../../thirdparty/owemdjee/boost/libs/fiber/include;../../thirdparty/owemdjee/manticore-columnar/util;../../thirdparty/owemdjee/boost;../../thirdparty/owemdjee/fast_pfor/headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/manticore-columnar/columnar/accessor/accessor.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/manticore-columnar/columnar/accessor/accessorbool.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/manticore-columnar/columnar/accessor/accessorint.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/manticore-columnar/columnar/accessor/accessormva.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/manticore-columnar/columnar/accessor/accessorstr.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/manticore-columnar/columnar/accessor/accessortraits.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/manticore-columnar/columnar/accessor/attributeheader.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/manticore-columnar/columnar/accessor/check.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/manticore-columnar/columnar/builder.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/manticore-columnar/columnar/builder/builderbool.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/manticore-columnar/columnar/builder/builderint.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/manticore-columnar/columnar/builder/buildermva.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/manticore-columnar/columnar/builder/builderstr.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/manticore-columnar/columnar/builder/buildertraits.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/manticore-columnar/columnar/columnar.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/manticore-columnar/common/filter.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/manticore-columnar/secondary/blockreader.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/manticore-columnar/secondary/builder.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/manticore-columnar/secondary/iterator.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/manticore-columnar/secondary/secondary.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/manticore-columnar/util/codec.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/manticore-columnar/util/delta.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/manticore-columnar/util/reader.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/manticore-columnar/util/util.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/manticore-columnar/util/version.cpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/columnar/accessor/accessor.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/columnar/accessor/accessorbool.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/columnar/accessor/accessorint.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/columnar/accessor/accessormva.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/columnar/accessor/accessorstr.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/columnar/accessor/accessortraits.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/columnar/accessor/attributeheader.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/columnar/accessor/check.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/columnar/builder.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/columnar/builder/builderbool.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/columnar/builder/builderint.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/columnar/builder/builderminmax.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/columnar/builder/buildermva.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/columnar/builder/builderstr.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/columnar/builder/buildertraits.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/columnar/columnar.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/common/blockiterator.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/common/filter.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/common/interval.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/common/schema.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/secondary/blockreader.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/secondary/builder.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/secondary/iterator.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/secondary/pgm.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/secondary/secondary.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/util/bitvec.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/util/codec.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/util/delta.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/util/reader.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/manticore-columnar/util/util.h" />
+    <Image Include="../../thirdparty/owemdjee/manticore-columnar/benchmarks/hn_small_es_ms_100MB.png" />
+    <Image Include="../../thirdparty/owemdjee/manticore-columnar/benchmarks/hn_small_es_ms_1024MB.png" />
+    <Image Include="../../thirdparty/owemdjee/manticore-columnar/benchmarks/hn_small_es_ms_30MB.png" />
+    <Image Include="../../thirdparty/owemdjee/manticore-columnar/benchmarks/hn_small_ma_co_100MB.png" />
+    <Image Include="../../thirdparty/owemdjee/manticore-columnar/benchmarks/hn_small_ma_co_1024MB.png" />
+    <Image Include="../../thirdparty/owemdjee/manticore-columnar/benchmarks/hn_small_ma_co_30MB.png" />
+    <Image Include="../../thirdparty/owemdjee/manticore-columnar/benchmarks/logs116m_es_ms_1500MB.png" />
+    <Image Include="../../thirdparty/owemdjee/manticore-columnar/benchmarks/logs116m_es_ms_36000MB.png" />
+    <Image Include="../../thirdparty/owemdjee/manticore-columnar/benchmarks/logs116m_es_ms_4400MB.png" />
+    <Text Include="../../thirdparty/owemdjee/manticore-columnar/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/manticore-columnar/README.md" />
+    <Text Include="../../thirdparty/owemdjee/manticore-columnar/cmake/CPackOptions.cmake.in" />
+    <Text Include="../../thirdparty/owemdjee/manticore-columnar/cmake/external-build.cmake.in" />
+    <Text Include="../../thirdparty/owemdjee/manticore-columnar/columnar/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/manticore-columnar/columnar/accessor/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/manticore-columnar/columnar/builder/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/manticore-columnar/common/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/manticore-columnar/dist/upload_repo_arc.sh" />
+    <Text Include="../../thirdparty/owemdjee/manticore-columnar/dist/upload_repo_deb.sh" />
+    <Text Include="../../thirdparty/owemdjee/manticore-columnar/dist/upload_repo_rpm.sh" />
+    <Text Include="../../thirdparty/owemdjee/manticore-columnar/libfastpfor/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/manticore-columnar/manticore_src.txt" />
+    <Text Include="../../thirdparty/owemdjee/manticore-columnar/pgm/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/manticore-columnar/secondary/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/manticore-columnar/smoke.sh" />
+    <Text Include="../../thirdparty/owemdjee/manticore-columnar/util/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/manticore-columnar/util/version.h.in" />
+  </ItemGroup>
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />
+  </ImportGroup>
+</Project>
+  

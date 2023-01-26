@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>libnanoflann</ProjectName>
+    <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF844EE8}</ProjectGuid>
+    <RootNamespace>libnanoflann</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project.props" Label="SolutionWideSettings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.28307.799</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+<ItemDefinitionGroup>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <BrowseInformation>false</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <DisableSpecificWarnings>4018;4100;4127;4180;4206;4244;4267;5105;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <SDLCheck>false</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <ConformanceMode>true</ConformanceMode>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableUnitySupport>true</EnableUnitySupport>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+</ItemDefinitionGroup>
+<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/nanoflann/include;../../thirdparty/owemdjee/opencv/modules/flann/include/opencv2;../../thirdparty/owemdjee/opencv/modules/flann/include;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/nanoflann/include;../../thirdparty/owemdjee/opencv/modules/flann/include/opencv2;../../thirdparty/owemdjee/opencv/modules/flann/include;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/nanoflann/include;../../thirdparty/owemdjee/opencv/modules/flann/include/opencv2;../../thirdparty/owemdjee/opencv/modules/flann/include;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/nanoflann/include;../../thirdparty/owemdjee/opencv/modules/flann/include/opencv2;../../thirdparty/owemdjee/opencv/modules/flann/include;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/nanoflann/include;../../thirdparty/owemdjee/opencv/modules/flann/include/opencv2;../../thirdparty/owemdjee/opencv/modules/flann/include;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/nanoflann/include;../../thirdparty/owemdjee/opencv/modules/flann/include/opencv2;../../thirdparty/owemdjee/opencv/modules/flann/include;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/nanoflann/include;../../thirdparty/owemdjee/opencv/modules/flann/include/opencv2;../../thirdparty/owemdjee/opencv/modules/flann/include;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/nanoflann/include;../../thirdparty/owemdjee/opencv/modules/flann/include/opencv2;../../thirdparty/owemdjee/opencv/modules/flann/include;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/nanoflann/examples/SO2_adaptor_example.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/nanoflann/examples/SO3_adaptor_example.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/nanoflann/examples/dynamic_pointcloud_example.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/nanoflann/examples/example_with_cmake/pointcloud_example.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/nanoflann/examples/example_with_pkgconfig/pointcloud_example.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/nanoflann/examples/examples_gui/nanoflann_gui_example_R3/nanoflann_gui_example_R3.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/nanoflann/examples/matrix_example.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/nanoflann/examples/pointcloud_adaptor_example.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/nanoflann/examples/pointcloud_custom_metric.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/nanoflann/examples/pointcloud_example.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/nanoflann/examples/pointcloud_kdd_radius.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/nanoflann/examples/saveload_example.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/nanoflann/examples/vector_of_vectors_example.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/src/gtest-all.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/src/gtest-death-test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/src/gtest-filepath.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/src/gtest-port.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/src/gtest-printers.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/src/gtest-test-part.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/src/gtest-typed-test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/src/gtest.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/src/gtest_main.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/nanoflann/tests/test_main.cpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/nanoflann/examples/KDTreeVectorOfVectorsAdaptor.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/nanoflann/examples/utils.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/nanoflann/include/nanoflann.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/include/gtest/gtest-death-test.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/include/gtest/gtest-message.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/include/gtest/gtest-param-test.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/include/gtest/gtest-printers.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/include/gtest/gtest-spi.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/include/gtest/gtest-test-part.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/include/gtest/gtest-typed-test.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/include/gtest/gtest.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/include/gtest/gtest_pred_impl.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/include/gtest/gtest_prod.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/include/gtest/internal/custom/gtest-port.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/include/gtest/internal/custom/gtest-printers.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/include/gtest/internal/custom/gtest.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/include/gtest/internal/gtest-death-test-internal.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/include/gtest/internal/gtest-filepath.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/include/gtest/internal/gtest-internal.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/include/gtest/internal/gtest-linked_ptr.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/include/gtest/internal/gtest-param-util-generated.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/include/gtest/internal/gtest-param-util.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/include/gtest/internal/gtest-port-arch.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/include/gtest/internal/gtest-port.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/include/gtest/internal/gtest-string.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/include/gtest/internal/gtest-tuple.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/include/gtest/internal/gtest-type-util.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/src/gtest-internal-inl.h" />
+    <Image Include="../../thirdparty/owemdjee/nanoflann/doc/logo.png" />
+    <Image Include="../../thirdparty/owemdjee/nanoflann/doc/perf1_conv_matrix.png" />
+    <Image Include="../../thirdparty/owemdjee/nanoflann/doc/perf1_conv_matrix.small.png" />
+    <Image Include="../../thirdparty/owemdjee/nanoflann/doc/perf2_build_index.png" />
+    <Image Include="../../thirdparty/owemdjee/nanoflann/doc/perf2_build_index.small.png" />
+    <Image Include="../../thirdparty/owemdjee/nanoflann/doc/perf3_query.png" />
+    <Image Include="../../thirdparty/owemdjee/nanoflann/doc/perf3_query.small.png" />
+    <Image Include="../../thirdparty/owemdjee/nanoflann/doc/perf4_time_saved.png" />
+    <Image Include="../../thirdparty/owemdjee/nanoflann/doc/perf4_time_saved.small.png" />
+    <Image Include="../../thirdparty/owemdjee/nanoflann/doc/perf5_1e5pts_time_vs_maxleaf.png" />
+    <Image Include="../../thirdparty/owemdjee/nanoflann/doc/perf5_1e5pts_time_vs_maxleaf_double.png" />
+    <Image Include="../../thirdparty/owemdjee/nanoflann/doc/perf5_1e5pts_time_vs_maxleaf_real_dataset.png" />
+    <Text Include="../../thirdparty/owemdjee/nanoflann/CHANGELOG.md" />
+    <Text Include="../../thirdparty/owemdjee/nanoflann/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/nanoflann/README.md" />
+    <Text Include="../../thirdparty/owemdjee/nanoflann/examples/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/nanoflann/examples/example_with_cmake/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/nanoflann/examples/examples_gui/README.md" />
+    <Text Include="../../thirdparty/owemdjee/nanoflann/examples/examples_gui/nanoflann_gui_example_R3/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/nanoflann/scripts/cmake_uninstall.cmake.in" />
+    <Text Include="../../thirdparty/owemdjee/nanoflann/scripts/nanoflann.pc.in" />
+    <Text Include="../../thirdparty/owemdjee/nanoflann/scripts/nanoflannConfig.cmake.in" />
+    <Text Include="../../thirdparty/owemdjee/nanoflann/scripts/prepare_debian.sh" />
+    <Text Include="../../thirdparty/owemdjee/nanoflann/scripts/prepare_release.sh" />
+    <Text Include="../../thirdparty/owemdjee/nanoflann/scripts/prepare_ubuntu_pkgs_for_ppa.sh" />
+    <Text Include="../../thirdparty/owemdjee/nanoflann/tests/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/CONTRIBUTORS" />
+    <Text Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/README.md" />
+  </ItemGroup>
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />
+  </ImportGroup>
+</Project>
+  

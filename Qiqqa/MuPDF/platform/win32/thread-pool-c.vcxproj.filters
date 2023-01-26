@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03fd328}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{42f0fc98-34f6-4567-b3cf-de13e74a89ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{b1798409-2031-413d-9df7-70b0202ddd98}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Misc Files\docs">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\tests">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tests">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tests\ext_bugs">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tests\src">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/thread-pool-c/example.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/thread-pool-c/tests/ext_bugs/memleak.c">
+      <Filter>Source Files\tests\ext_bugs</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/thread-pool-c/tests/src/api.c">
+      <Filter>Source Files\tests\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/thread-pool-c/tests/src/conc_increment.c">
+      <Filter>Source Files\tests\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/thread-pool-c/tests/src/no_work.c">
+      <Filter>Source Files\tests\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/thread-pool-c/tests/src/nonzero_heap_stack.c">
+      <Filter>Source Files\tests\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/thread-pool-c/tests/src/pause_resume.c">
+      <Filter>Source Files\tests\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/thread-pool-c/tests/src/wait.c">
+      <Filter>Source Files\tests\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/thread-pool-c/thpool.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClInclude Include="../../thirdparty/owemdjee/thread-pool-c/thpool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <Text Include="../../thirdparty/owemdjee/thread-pool-c/README.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/thread-pool-c/docs/Design.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/thread-pool-c/docs/FAQ.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/thread-pool-c/tests/README.md">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/thread-pool-c/tests/api.sh">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/thread-pool-c/tests/funcs.sh">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/thread-pool-c/tests/heap_stack_garbage.sh">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/thread-pool-c/tests/memleaks.sh">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/thread-pool-c/tests/normal_compile.sh">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/thread-pool-c/tests/optimized_compile.sh">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/thread-pool-c/tests/pause_resume.sh">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/thread-pool-c/tests/threadpool.sh">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/thread-pool-c/tests/wait.sh">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
+    

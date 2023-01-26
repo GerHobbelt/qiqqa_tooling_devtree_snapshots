@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>libtensorflow-text</ProjectName>
+    <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF9AE8A3}</ProjectGuid>
+    <RootNamespace>libtensorflow-text</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project.props" Label="SolutionWideSettings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.28307.799</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+<ItemDefinitionGroup>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <BrowseInformation>false</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <DisableSpecificWarnings>4018;4100;4127;4180;4206;4244;4267;5105;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <SDLCheck>false</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <ConformanceMode>true</ConformanceMode>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableUnitySupport>true</EnableUnitySupport>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+</ItemDefinitionGroup>
+<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTENSORFLOW_TEXT;TENSORFLOW_TEXT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTENSORFLOW_TEXT;TENSORFLOW_TEXT_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTENSORFLOW_TEXT;TENSORFLOW_TEXT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTENSORFLOW_TEXT;TENSORFLOW_TEXT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTENSORFLOW_TEXT;TENSORFLOW_TEXT_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTENSORFLOW_TEXT;TENSORFLOW_TEXT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTENSORFLOW_TEXT;TENSORFLOW_TEXT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTENSORFLOW_TEXT;TENSORFLOW_TEXT_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTENSORFLOW_TEXT;TENSORFLOW_TEXT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTENSORFLOW_TEXT;TENSORFLOW_TEXT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTENSORFLOW_TEXT;TENSORFLOW_TEXT_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTENSORFLOW_TEXT;TENSORFLOW_TEXT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/boise_offset_converter.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/boise_offset_converter_kernel.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/boise_offset_converter_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/byte_splitter.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/byte_splitter_kernel.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/byte_splitter_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/byte_splitter_tflite.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/constrained_sequence.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/constrained_sequence_kernel.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/constrained_sequence_kernel_input_validation_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/darts_clone_trie_builder.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/darts_clone_trie_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/disjoint_set_forest_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/exp_greedy_constrained_sequence_kernel_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/exp_viterbi_constrained_sequence_kernel_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/fast_bert_normalizer_model_builder.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/fast_bert_normalizer_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/fast_bert_normalizer_tf_kernel.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/fast_bert_normalizer_tflite.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/fast_wordpiece_tokenizer.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/fast_wordpiece_tokenizer_kernel.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/fast_wordpiece_tokenizer_model_builder.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/fast_wordpiece_tokenizer_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/fast_wordpiece_tokenizer_tflite.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/fast_wordpiece_tokenizer_utils_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/log_greedy_constrained_sequence_kernel_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/log_viterbi_constrained_sequence_kernel_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/mst_op_kernels.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/mst_solver_random_comparison_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/mst_solver_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/ngrams_kernel.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/ngrams_kernel_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/ngrams_tflite.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/ngrams_tflite_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/normalize_kernels.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/normalize_kernels_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/phrase_tokenizer.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/phrase_tokenizer_kernel.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/phrase_tokenizer_model_builder.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/phrase_tokenizer_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/ragged_tensor_to_tensor_tflite.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/ragged_tensor_to_tensor_tflite_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/regex_split.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/regex_split_kernels.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/regex_split_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/rouge_l_kernel.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/rouge_l_kernel_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentence_breaking_kernels.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentence_breaking_utils.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentence_breaking_utils_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentence_fragmenter.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentence_fragmenter_v2.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentence_fragmenter_v2_kernel.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentence_fragmenter_v2_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentence_fragmenter_v2_tflite.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentencepiece/double_array_trie_builder.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentencepiece/double_array_trie_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentencepiece/model_converter.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentencepiece/optimized_decoder.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentencepiece/optimized_decoder_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentencepiece/optimized_encoder.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentencepiece/optimized_encoder_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentencepiece/py_tflite_registerer.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentencepiece/sentencepiece_detokenizer_kernel.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentencepiece/sentencepiece_detokenizer_tflite.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentencepiece/sentencepiece_tokenizer_kernel.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentencepiece/sentencepiece_tokenizer_tflite.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentencepiece_kernels.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/spanning_tree_iterator.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/spanning_tree_iterator_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/split_merge_tokenize_kernel.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/string_vocab.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/text_kernels_test_util.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/tokenizer_from_logits_kernel.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/unicode_script_tokenize_kernel.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/unicode_script_tokenize_kernel_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/whitespace_tokenize_kernel.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/whitespace_tokenize_kernel_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/whitespace_tokenizer.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/whitespace_tokenizer_config_builder.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/whitespace_tokenizer_config_builder_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/whitespace_tokenizer_kernel.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/whitespace_tokenizer_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/whitespace_tokenizer_tflite.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/wordpiece_kernel.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/wordpiece_kernel_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/wordpiece_tokenizer.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/ops/boise_offset_converter_op.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/ops/boise_offset_converter_op_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/ops/byte_splitter_op.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/ops/byte_splitter_op_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/ops/constrained_sequence_op.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/ops/fast_bert_normalizer_op.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/ops/fast_sentencepiece_ops.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/ops/fast_wordpiece_tokenizer_op.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/ops/fast_wordpiece_tokenizer_op_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/ops/mst_ops.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/ops/ngrams_op.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/ops/normalize_ops.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/ops/phrase_tokenizer_op.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/ops/regex_split_ops.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/ops/rouge_l_op.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/ops/sentence_breaking_ops.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/ops/sentence_fragmenter_v2_op.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/ops/sentence_fragmenter_v2_op_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/ops/sentencepiece_ops.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/ops/split_merge_tokenize_op.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/ops/tokenizer_from_logits_op.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/ops/unicode_script_tokenize_op.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/ops/whitespace_tokenize_op.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/ops/whitespace_tokenizer_op.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/ops/wordpiece_op.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/pybinds/pywrap_fast_bert_normalizer_model_builder.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/pybinds/pywrap_fast_wordpiece_tokenizer_model_builder.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/pybinds/pywrap_model_converter.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/pybinds/pywrap_phrase_tokenizer_model_builder.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/pybinds/pywrap_whitespace_tokenizer_config_builder.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/pybinds/tflite_registrar.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/tensorflow-text/third_party/icu/data/normalization_data.c" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/boise_offset_converter.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/boise_offset_converter_kernel.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/boise_offset_converter_kernel_template.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/byte_splitter.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/byte_splitter_kernel.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/byte_splitter_kernel_template.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/byte_splitter_tflite.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/constrained_sequence.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/darts_clone_trie_builder.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/darts_clone_trie_wrapper.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/disjoint_set_forest.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/fast_bert_normalizer.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/fast_bert_normalizer_kernel_template.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/fast_bert_normalizer_model_builder.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/fast_bert_normalizer_tf_kernel.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/fast_bert_normalizer_tflite.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/fast_wordpiece_tokenizer.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/fast_wordpiece_tokenizer_kernel.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/fast_wordpiece_tokenizer_kernel_template.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/fast_wordpiece_tokenizer_model_builder.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/fast_wordpiece_tokenizer_tflite.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/fast_wordpiece_tokenizer_utils.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/mst_solver.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/ngrams_kernel.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/ngrams_kernel_template.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/ngrams_tflite.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/phrase_tokenizer.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/phrase_tokenizer_kernel.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/phrase_tokenizer_kernel_template.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/phrase_tokenizer_model_builder.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/ragged_tensor_to_tensor_tflite.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/regex_split.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentence_breaking_utils.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentence_fragmenter.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentence_fragmenter_v2.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentence_fragmenter_v2_kernel.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentence_fragmenter_v2_kernel_template.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentence_fragmenter_v2_tflite.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentencepiece/double_array_trie.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentencepiece/double_array_trie_builder.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentencepiece/model_converter.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentencepiece/optimized_decoder.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentencepiece/optimized_encoder.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentencepiece/py_tflite_registerer.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentencepiece/sentencepiece_constants.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentencepiece/sentencepiece_detokenizer.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentencepiece/sentencepiece_tokenizer.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/sentencepiece/utils.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/spanning_tree_iterator.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/string_vocab.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/text_kernels_test_util.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/whitespace_tokenizer.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/whitespace_tokenizer_config_builder.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/whitespace_tokenizer_kernel.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/whitespace_tokenizer_kernel_template.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/whitespace_tokenizer_tflite.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/wordpiece_tokenizer.h" />
+    <Image Include="../../thirdparty/owemdjee/tensorflow-text/docs/guide/images/embedding.jpg" />
+    <Image Include="../../thirdparty/owemdjee/tensorflow-text/docs/guide/images/embedding2.png" />
+    <Image Include="../../thirdparty/owemdjee/tensorflow-text/docs/guide/images/embeddings_classifier_accuracy.png" />
+    <Image Include="../../thirdparty/owemdjee/tensorflow-text/docs/guide/images/one-hot.png" />
+    <Image Include="../../thirdparty/owemdjee/tensorflow-text/docs/include/architecture-with-tf-text.png" />
+    <Image Include="../../thirdparty/owemdjee/tensorflow-text/docs/include/architecture-without-tf-text.png" />
+    <Image Include="../../thirdparty/owemdjee/tensorflow-text/docs/include/architecture.gif" />
+    <Image Include="../../thirdparty/owemdjee/tensorflow-text/docs/include/tftext.png" />
+    <Image Include="../../thirdparty/owemdjee/tensorflow-text/docs/tutorials/images/attention_equation_1.jpg" />
+    <Image Include="../../thirdparty/owemdjee/tensorflow-text/docs/tutorials/images/attention_equation_2.jpg" />
+    <Image Include="../../thirdparty/owemdjee/tensorflow-text/docs/tutorials/images/attention_equation_3.jpg" />
+    <Image Include="../../thirdparty/owemdjee/tensorflow-text/docs/tutorials/images/attention_equation_4.jpg" />
+    <Image Include="../../thirdparty/owemdjee/tensorflow-text/docs/tutorials/images/bidirectional.png" />
+    <Image Include="../../thirdparty/owemdjee/tensorflow-text/docs/tutorials/images/layered_bidirectional.png" />
+    <Image Include="../../thirdparty/owemdjee/tensorflow-text/docs/tutorials/images/text_generation_sampling.png" />
+    <Image Include="../../thirdparty/owemdjee/tensorflow-text/docs/tutorials/images/text_generation_training.png" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/CONTRIBUTING.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/README.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/index.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/BertTokenizer.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/ByteSplitter.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/Detokenizer.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/FastBertNormalizer.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/FastBertTokenizer.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/FastSentencepieceTokenizer.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/FastWordpieceTokenizer.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/FirstNItemSelector.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/HubModuleSplitter.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/HubModuleTokenizer.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/MaskValuesChooser.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/PhraseTokenizer.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/RandomItemSelector.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/Reduction.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/RegexSplitter.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/RoundRobinTrimmer.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/SentencepieceTokenizer.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/ShrinkLongestTrimmer.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/SplitMergeFromLogitsTokenizer.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/SplitMergeTokenizer.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/Splitter.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/SplitterWithOffsets.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/StateBasedSentenceBreaker.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/Tokenizer.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/TokenizerWithOffsets.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/Trimmer.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/UnicodeCharTokenizer.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/UnicodeScriptTokenizer.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/WaterfallTrimmer.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/WhitespaceTokenizer.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/WordShape_cls.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/WordpieceTokenizer.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/_api_cache.json" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/all_symbols.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/build_fast_bert_normalizer_model.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/build_fast_wordpiece_model.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/case_fold_utf8.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/coerce_to_structurally_valid_utf8.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/combine_segments.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/find_source_offsets.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/gather_with_default.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/greedy_constrained_sequence.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/keras.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/keras/layers.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/keras/layers/ToDense.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/keras/layers/UnicodeScriptTokenizer.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/keras/layers/WhitespaceTokenizer.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/keras/layers/WordpieceTokenizer.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/mask_language_model.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/max_spanning_tree.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/max_spanning_tree_gradient.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/metrics.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/metrics/rouge_l.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/ngrams.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/normalize_utf8.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/normalize_utf8_with_offsets_map.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/offsets_to_boise_tags.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/pad_along_dimension.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/pad_model_inputs.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/regex_split.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/regex_split_with_offsets.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/sentence_fragments.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/sliding_window.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/span_alignment.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/span_overlaps.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/tflite_registrar.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/tflite_registrar/AddByteSplit.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/tflite_registrar/AddFastBertNormalize.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/tflite_registrar/AddFastSentencepieceDetokenize.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/tflite_registrar/AddFastSentencepieceTokenize.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/tflite_registrar/AddFastWordpieceDetokenize.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/tflite_registrar/AddFastWordpieceTokenize.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/tflite_registrar/AddNgramsStringJoin.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/tflite_registrar/AddRaggedTensorToTensor.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/tflite_registrar/AddWhitespaceTokenize.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/viterbi_constrained_sequence.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_docs/python/text/wordshape.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/api_overview.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/docs/guide/tf_text_intro.md" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/oss_scripts/build_docs.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/oss_scripts/configure.sh" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/oss_scripts/install_bazel.sh" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/oss_scripts/pip_package/MANIFEST.in" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/oss_scripts/pip_package/build_pip_package.sh" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/oss_scripts/pip_package/setup.nightly.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/oss_scripts/pip_package/setup.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/oss_scripts/prepare_tf_dep.sh" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/oss_scripts/run_build.sh" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/oss_scripts/run_tests.sh" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/kernels/edit_changes.proto" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/pybinds/pywrap_fast_bert_normalizer_model_builder_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/pybinds/pywrap_fast_wordpiece_tokenizer_model_builder_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/pybinds/pywrap_phrase_tokenizer_model_builder_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/core/pybinds/pywrap_whitespace_tokenizer_config_builder_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/public_names_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/benchmarks/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/benchmarks/benchmark_utils.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/benchmarks/ops_benchmarks.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/benchmarks/test_data/uncased_L-12_H-768_A-12/vocab.txt" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/benchmarks/tokenizers_benchmarks.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/keras/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/keras/layers/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/keras/layers/todense.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/keras/layers/todense_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/keras/layers/tokenization_layers.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/keras/layers/tokenization_layers_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/metrics/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/metrics/text_similarity_metric_ops.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/metrics/text_similarity_metric_ops_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/numpy/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/numpy/viterbi_decode.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/numpy/viterbi_decode_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/bert_tokenizer.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/bert_tokenizer_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/boise_offset_converter.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/boise_offset_converter_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/byte_splitter.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/byte_splitter_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/coerce_to_valid_utf8_op_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/create_feature_bitmask_op.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/create_feature_bitmask_op_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/fast_bert_normalizer.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/fast_bert_normalizer_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/fast_bert_tokenizer.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/fast_bert_tokenizer_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/fast_sentencepiece_tokenizer.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/fast_sentencepiece_tokenizer_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/fast_wordpiece_tokenizer.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/fast_wordpiece_tokenizer_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/gather_with_default_op_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/greedy_constrained_sequence_op.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/greedy_constrained_sequence_op_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/hub_module_splitter.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/hub_module_splitter_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/hub_module_tokenizer.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/hub_module_tokenizer_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/item_selector_ops.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/item_selector_ops_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/masking_ops.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/masking_ops_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/mst_ops.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/mst_ops_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/ngrams_op.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/ngrams_op_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/normalize_ops.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/normalize_ops_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/pad_along_dimension_op.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/pad_along_dimension_op_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/pad_model_inputs_ops.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/pad_model_inputs_ops_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/phrase_tokenizer.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/phrase_tokenizer_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/pointer_ops.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/regex_split_ops.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/regex_split_ops_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/segment_combiner_ops.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/segment_combiner_ops_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/sentence_breaking_ops.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/sentence_breaking_ops_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/sentencepiece_tokenizer.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/sentencepiece_tokenizer_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/sliding_window_op.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/sliding_window_op_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/span_alignment_op_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/span_overlaps_op_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/split_merge_from_logits_tokenizer.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/split_merge_from_logits_tokenizer_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/split_merge_tokenizer.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/split_merge_tokenizer_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/splitter.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/state_based_sentence_breaker_op.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/state_based_sentence_breaker_op_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/string_ops.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/test_data/fast_wordpiece_README.google.txt" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/test_data/test_wp_en_vocab.txt" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/tokenization.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/trimmer_ops.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/trimmer_ops_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/unicode_char_tokenizer.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/unicode_char_tokenizer_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/unicode_script_tokenizer.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/unicode_script_tokenizer_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/viterbi_constrained_sequence_op.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/viterbi_constrained_sequence_op_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/whitespace_tokenizer.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/whitespace_tokenizer_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/wordpiece_tokenizer.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/wordpiece_tokenizer_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/wordshape_ops.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ops/wordshape_ops_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/python/ragged/ragged_tensor_to_tensor_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/tools/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/tools/wordpiece_vocab/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/tools/wordpiece_vocab/bert_vocab_from_dataset.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/tools/wordpiece_vocab/bert_vocab_from_dataset_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/tools/wordpiece_vocab/generate_vocab.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/tools/wordpiece_vocab/generate_word_counts.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/tools/wordpiece_vocab/measure_wordpiece_stats.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/tools/wordpiece_vocab/utils.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/tools/wordpiece_vocab/utils_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/tools/wordpiece_vocab/wordpiece_tokenizer_learner.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/tools/wordpiece_vocab/wordpiece_tokenizer_learner_lib.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/tensorflow_text/tools/wordpiece_vocab/wordpiece_tokenizer_learner_test.py" />
+    <Text Include="../../thirdparty/owemdjee/tensorflow-text/third_party/icu/data/filters.json" />
+  </ItemGroup>
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />
+  </ImportGroup>
+</Project>
+  

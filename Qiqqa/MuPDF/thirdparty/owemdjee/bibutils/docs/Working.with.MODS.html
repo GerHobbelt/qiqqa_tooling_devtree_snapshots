@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<!-- Server: sfs-forge-8 -->
+
+<!--[if lt IE 7]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]>-->
+<html lang="en" class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+    <title>bibutils / Home / Working with MODS</title>
+
+    <meta name="viewport" content="width=1100" />
+
+    <link
+      rel="icon"
+      sizes="180x180"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/images/sandiego/logo-180x180.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      sizes="any"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/images/sandiego/svg/originals/sf-icon-orange-no_sf.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/images/sandiego/logo-180x180.png"
+    />
+    <link
+      rel="mask-icon"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/images/sandiego/svg/originals/sf-icon-orange-no_sf.svg"
+      color="#FF6600"
+    />
+
+    <!--[if lt IE 7]>
+      <script src="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/js/sftheme/vendor/dd_belatedpng.js"></script>
+      <script>
+        DD_belatedPNG.fix("img, .png_bg"); //fix any <img> or .png_bg background-images
+      </script>
+    <![endif]-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700"
+      rel="stylesheet"
+    />
+    <script>
+      if (!window.SF) {
+        window.SF = {};
+      }
+      SF.sandiego = false;
+      SF.sandiego_chrome = true;
+      SF.cdn = "https://a.fsdn.com/con";
+    </script>
+
+    <!-- ew:head_css -->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/allura/css/forge/hilite.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/tool/wiki/css/wiki.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/_slim/css?href=allura%2Fcss%2Fforge%2Ftooltipster.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/allura/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/css/forge.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/css/simplemde.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/_slim/css?href=css%2Fmarkitup_sf.css%3Bcss%2Fshow-hint.css"
+    />
+
+    <style>
+      div.moderate {
+        color: grey;
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/_slim/css?href=css%2Fpage_list.css%3Bcss%2Fjquery.tagsinput.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/css/sftheme/sandiego/cmp.css"
+    />
+
+    <!-- /ew:head_css -->
+
+    <!-- ew:head_js -->
+
+    <script
+      type="text/javascript"
+      src="https://a.fsdn.com/allura/nf/1589309844/_ew_/_slim/js?href=allura%2Fjs%2Fjquery-base.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Fpromise.polyfill.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fcmp2.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Fmodernizr.3.3.1.custom.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fshared_head.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Ftypescript%2Fcompliance.js"
+    ></script>
+
+    <!-- /ew:head_js -->
+
+    <style type="text/css">
+      /* make URL & Project custom fields in support tickets not get hidden as much */
+      .project-forge.mountpoint-site-support .view_holder .grid-4:nth-child(5),
+      .project-forge.mountpoint-site-support .view_holder .grid-4:nth-child(6) {
+        overflow: visible;
+        font-size: 22px;
+        width: 340px;
+        line-height: 1;
+        margin-bottom: 5px;
+      }
+      .project-forge.mountpoint-site-support
+        .view_holder
+        .grid-4:nth-child(5)
+        label,
+      .project-forge.mountpoint-site-support
+        .view_holder
+        .grid-4:nth-child(6)
+        label {
+        font-size: 14px;
+      }
+    </style>
+
+    <style>
+      .hidden {
+        display: none;
+      }
+      a.notfound {
+        color: #f00;
+      }
+    </style>
+
+    <style>
+      .XHCTCoKswEQYgstDcKVwrpRwwCsMOwIUw {
+        display: none;
+      }
+    </style>
+
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Page RSS"
+      href="feed.rss"
+    />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Page Atom"
+      href="feed.atom"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Wiki RSS"
+      href="../feed.rss"
+    />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Wiki Atom"
+      href="../feed.atom"
+    />
+
+    <script type="text/javascript"></script>
+
+    <script>
+      window.bizx.cmp.init({}, "consentmanager.net");
+    </script>
+
+    <script>
+      function initPiwik() {
+        var _paq = (window._paq = window._paq || []);
+        _paq.push([
+          "trackPageView",
+          document.title,
+          {
+            dimension1: "bibutils",
+            dimension2: "wiki",
+          },
+        ]);
+        _paq.push(["enableLinkTracking"]);
+        (function () {
+          var u = "//analytics.slashdotmedia.com/";
+          _paq.push(["setTrackerUrl", u + "sf.php"]);
+          _paq.push(["setSiteId", 39]);
+          var d = document,
+            g = d.createElement("script"),
+            s = d.getElementsByTagName("script")[0];
+          g.type = "text/javascript";
+          g.async = true;
+          g.defer = true;
+          g.src = u + "sf.js";
+          s.parentNode.insertBefore(g, s);
+        })();
+      }
+      bizx.cmp.ifConsent("publisher", ["storage", "measurement"], initPiwik);
+    </script>
+  </head>
+
+  <body>
+    <div id="content_base">
+      <div class="grid-24 pad">
+        <h2 class="dark title">
+          Working with MODS
+          <!-- actions -->
+          <small>
+            <a class="icon" href="history.html" title="History"
+              ><i class="fa fa-calendar"></i
+            ></a>
+
+            <a class="icon" href="feed" title="RSS"
+              ><i class="fa fa-rss"></i
+            ></a>
+            <a class="icon" href="../search.html" title="Search"
+              ><i class="fa fa-search"></i
+            ></a>
+          </small>
+          <!-- /actions -->
+        </h2>
+
+        <div class="editbox">
+          <div class="grid-9 gravatar sm">
+            <label class="simple">Authors: </label>
+
+            <a href="https://sourceforge.net/u/cdputnam/">
+              <img
+                src="https://secure.gravatar.com/avatar/f12e8bce72883cb9e8a165cc2e312289?r=pg&amp;d=https%3A%2F%2Fa.fsdn.com%2Fallura%2Fnf%2F1589309844%2F_ew_%2Ftheme%2Fsftheme%2Fimages%2Fsandiego%2Ficons%2Fdefault-avatar.png&s=16"
+                srcset="
+                  https://secure.gravatar.com/avatar/f12e8bce72883cb9e8a165cc2e312289?r=pg&amp;d=https%3A%2F%2Fa.fsdn.com%2Fallura%2Fnf%2F1589309844%2F_ew_%2Ftheme%2Fsftheme%2Fimages%2Fsandiego%2Ficons%2Fdefault-avatar.png&s=24.0 1.5x,
+                  https://secure.gravatar.com/avatar/f12e8bce72883cb9e8a165cc2e312289?r=pg&amp;d=https%3A%2F%2Fa.fsdn.com%2Fallura%2Fnf%2F1589309844%2F_ew_%2Ftheme%2Fsftheme%2Fimages%2Fsandiego%2Ficons%2Fdefault-avatar.png&s=32   2x
+                "
+                width="16"
+                height="16"
+                alt="Chris Putnam"
+                title="Chris Putnam"
+                class="emboss x16"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <div class="markdown_content">
+              <h1 id="introduction-to-mods-version-3-bibliography-format">
+                Introduction to MODS version 3 Bibliography Format
+              </h1>
+              <p>
+                Document Version 0.3 November 2 2007<br />
+                Chris Putnam
+              </p>
+              <p>
+                The MODS Schema is defined at the Library of Congress which is
+                the ultimate authority. This document seeks to be an
+                introduction to trying to use MODS and is the sort of document I
+                would have liked to have had when I first started outputting
+                MODS from my conversion tools.
+              </p>
+              <div class="codehilite">
+                <pre><span></span><span class="mi">1</span>. <span class="nv">Self</span><span class="o">-</span><span class="nv">contained</span> <span class="nv">Items</span>
+    <span class="mi">1</span>.<span class="mi">1</span> <span class="nv">modsCollection</span>
+    <span class="mi">1</span>.<span class="mi">2</span> <span class="nv">title</span>
+    <span class="mi">1</span>.<span class="mi">3</span> <span class="nv">names</span>
+    <span class="mi">1</span>.<span class="mi">4</span> <span class="nv">origin</span>
+    <span class="mi">1</span>.<span class="mi">5</span> <span class="nv">type</span> <span class="nv">of</span> <span class="nv">resource</span>
+    <span class="mi">1</span>.<span class="mi">6</span> <span class="nv">genre</span>
+    <span class="mi">1</span>.<span class="mi">7</span> <span class="nv">citation</span> <span class="nv">key</span> 
+<span class="mi">2</span>. <span class="nv">Items</span> <span class="nv">within</span> <span class="nv">Larger</span> <span class="nv">Collections</span>
+    <span class="mi">2</span>.<span class="mi">1</span> <span class="nv">part</span> <span class="nv">tag</span> 
+<span class="mi">3</span>. <span class="nv">Thoughts</span> <span class="nv">about</span> <span class="nv">MODS</span> <span class="k">for</span> <span class="nv">Bibliography</span> <span class="nv">Conversions</span>
+<span class="mi">4</span>. <span class="nv">Credits</span>
+</pre>
+              </div>
+
+              <h1 id="1-self-contained-items">1. Self-contained Items</h1>
+              <p>
+                The easiest type of reference is to a self-contained item, such
+                as a book or report. The source I'm showing is bibtex (but I
+                also could find RIS, EndNote, or other examples if it's
+                helpful).
+              </p>
+              <div class="codehilite">
+                <pre><span></span><span class="w"> </span><span class="nv">@book</span><span class="p">(</span><span class="n">bandj</span><span class="p">,</span><span class="w"></span>
+<span class="w"> </span><span class="n">author</span><span class="o">=</span><span class="ss">"T. L. Blundell</span>
+<span class="ss"> and L. N. Johnson"</span><span class="p">,</span><span class="w"></span>
+<span class="w"> </span><span class="n">title</span><span class="o">=</span><span class="ss">"Protein Crystallography"</span><span class="p">,</span><span class="w"></span>
+<span class="w"> </span><span class="n">publisher</span><span class="o">=</span><span class="ss">"Academic Press"</span><span class="p">,</span><span class="w"></span>
+<span class="w"> </span><span class="n">address</span><span class="o">=</span><span class="ss">"New York"</span><span class="p">,</span><span class="w"></span>
+<span class="w"> </span><span class="nf">year</span><span class="o">=</span><span class="mi">1976</span><span class="p">)</span><span class="w"></span>
+</pre>
+              </div>
+
+              <p>Converted to MODS, it looks like the following:</p>
+              <div class="codehilite">
+                <pre><span></span><span class="nt">&lt;mods</span> <span class="na">ID=</span><span class="s">"bandj"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;titleInfo&gt;</span>
+        <span class="nt">&lt;title&gt;</span>Protein Crystallography?<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;/titleInfo&gt;</span>
+    <span class="nt">&lt;name</span> <span class="na">type=</span><span class="s">"personal"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;namePart</span> <span class="na">type=</span><span class="s">"given"</span><span class="nt">&gt;</span>T.<span class="nt">&lt;/namePart&gt;</span>
+        <span class="nt">&lt;namePart</span> <span class="na">type=</span><span class="s">"given"</span><span class="nt">&gt;</span>L.<span class="nt">&lt;/namePart&gt;</span>
+            <span class="nt">&lt;namePart</span> <span class="na">type=</span><span class="s">"family"</span><span class="nt">&gt;</span>Blundell<span class="nt">&lt;/namePart&gt;</span>
+            <span class="nt">&lt;role&gt;</span>
+                <span class="nt">&lt;roleTerm</span> <span class="na">authority=</span><span class="s">"marcrelator"</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>author<span class="nt">&lt;/roleTerm&gt;</span>
+            <span class="nt">&lt;/role&gt;</span>
+    <span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;name</span> <span class="na">type=</span><span class="s">"personal"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;namePart</span> <span class="na">type=</span><span class="s">"given"</span><span class="nt">&gt;</span>L.<span class="nt">&lt;/namePart&gt;</span>
+        <span class="nt">&lt;namePart</span> <span class="na">type=</span><span class="s">"given"</span><span class="nt">&gt;</span>N.<span class="nt">&lt;/namePart&gt;</span>
+        <span class="nt">&lt;namePart</span> <span class="na">type=</span><span class="s">"family"</span><span class="nt">&gt;</span>Johnson<span class="nt">&lt;/namePart&gt;</span>
+        <span class="nt">&lt;role&gt;</span>
+            <span class="nt">&lt;roleTerm</span> <span class="na">authority=</span><span class="s">"marcrelator"</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>author<span class="nt">&lt;/roleTerm&gt;</span>
+        <span class="nt">&lt;/role&gt;</span>
+    <span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;originInfo&gt;</span>
+        <span class="nt">&lt;dateIssued&gt;</span>1976<span class="nt">&lt;/dateIssued&gt;</span>
+        <span class="nt">&lt;publisher&gt;</span>Academic Press<span class="nt">&lt;/publisher&gt;</span>
+        <span class="nt">&lt;place&gt;</span>
+            <span class="nt">&lt;placeTerm</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>New York<span class="nt">&lt;/placeTerm&gt;</span>
+        <span class="nt">&lt;/place&gt;</span>
+    <span class="nt">&lt;/originInfo&gt;</span>
+    <span class="nt">&lt;typeOfResource&gt;</span>text<span class="nt">&lt;/typeOfResource&gt;</span>
+    <span class="nt">&lt;genre&gt;</span>book<span class="nt">&lt;/genre&gt;</span>
+    <span class="nt">&lt;identifier</span> <span class="na">type=</span><span class="s">"citekey"</span><span class="nt">&gt;</span>bandj<span class="nt">&lt;/identifier&gt;</span>
+<span class="nt">&lt;/mods&gt;</span>
+</pre>
+              </div>
+
+              <h2 id="11-modscollection">1.1 modsCollection</h2>
+              <p>
+                First things first. A list of bibliographies is a
+                modsCollection, which is only allowed to have mods (individual
+                items) collection inside.
+              </p>
+              <div class="codehilite">
+                <pre><span></span><span class="nt">&lt;modsCollection&gt;</span>
+    <span class="nt">&lt;mods&gt;&lt;/mods&gt;</span>
+    <span class="nt">&lt;mods&gt;&lt;/mods&gt;</span>
+<span class="nt">&lt;/modsCollection&gt;</span>
+</pre>
+              </div>
+
+              <h2 id="12-title">1.2 Title</h2>
+              <p>
+                The title of the item goes under the title key. Subtitles are
+                explictly split.
+              </p>
+              <div class="codehilite">
+                <pre><span></span><span class="w"> </span><span class="nv">@book</span><span class="p">(</span><span class="n">bandj</span><span class="p">,</span><span class="w"></span>
+<span class="w"> </span><span class="n">author</span><span class="o">=</span><span class="ss">"T. L. Blundell</span>
+<span class="ss"> and L. N. Johnson"</span><span class="p">,</span><span class="w"></span>
+<span class="w"> </span><span class="n">title</span><span class="o">=</span><span class="ss">"Protein Crystallography: with subtitle"</span><span class="p">,</span><span class="w"></span>
+<span class="w"> </span><span class="n">publisher</span><span class="o">=</span><span class="ss">"Academic Press"</span><span class="p">,</span><span class="w"></span>
+<span class="w"> </span><span class="n">address</span><span class="o">=</span><span class="ss">"New York"</span><span class="p">,</span><span class="w"></span>
+<span class="w"> </span><span class="nf">year</span><span class="o">=</span><span class="mi">1976</span><span class="p">)</span><span class="w"></span>
+</pre>
+              </div>
+
+              <p>The title as MODS:</p>
+              <div class="codehilite">
+                <pre><span></span><span class="nt">&lt;titleInfo&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Protein Crystallography<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;subTitle&gt;</span>with subtitle<span class="nt">&lt;/subTitle&gt;</span>
+<span class="nt">&lt;/titleInfo&gt;</span>
+
+@book(bandj,
+author="T. L. Blundell
+and L. N. Johnson",
+title="Protein Crystallography? with subtitle",
+publisher="Academic Press",
+address="New York",
+year=1976)
+</pre>
+              </div>
+
+              <p>The title as MODS:</p>
+              <div class="codehilite">
+                <pre><span></span><span class="nt">&lt;titleInfo&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Protein Crystallography?<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;subTitle&gt;</span>with subtitle<span class="nt">&lt;/subTitle&gt;</span>
+<span class="nt">&lt;/titleInfo&gt;</span>
+</pre>
+              </div>
+
+              <p>
+                MODS also supports items with full and abbreviated titles,
+                something that I do not know how to code in BibTeX.
+              </p>
+              <div class="codehilite">
+                <pre><span></span><span class="nt">&lt;titleInfo&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Protein Crystallography<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;subTitle&gt;</span>with subtitle<span class="nt">&lt;/subTitle&gt;</span>
+<span class="nt">&lt;/titleInfo&gt;</span>
+<span class="nt">&lt;titleInfo</span> <span class="na">type=</span><span class="s">"abbreviated"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Blundell-and-Johnson we call it<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/titleInfo&gt;</span>
+</pre>
+              </div>
+
+              <h2 id="13-people">1.3 People</h2>
+              <p>
+                People associated with the work (authors, editors, translators)
+                all fall under the &lt;name&gt; tag, distinguished by their
+                role. All possible roles under the "marcauthority" are defined
+                on the MODS web site. I do have some problems with limitations.
+                For example, "reporter" isn't a valid term, which is problematic
+                both for newspapers and court proceedings; however, the roles
+                under the "marcauthority" do cover a lot of ground.&lt;/name&gt;
+              </p>
+              <div class="codehilite">
+                <pre><span></span><span class="nt">&lt;name</span> <span class="na">type=</span><span class="s">"personal"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;namePart</span> <span class="na">type=</span><span class="s">"given"</span><span class="nt">&gt;</span>T.<span class="nt">&lt;/namePart&gt;</span>
+    <span class="nt">&lt;namePart</span> <span class="na">type=</span><span class="s">"given"</span><span class="nt">&gt;</span>L.<span class="nt">&lt;/namePart&gt;</span>
+    <span class="nt">&lt;namePart</span> <span class="na">type=</span><span class="s">"family"</span><span class="nt">&gt;</span>Blundell<span class="nt">&lt;/namePart&gt;</span>
+    <span class="nt">&lt;role&gt;</span>
+        <span class="nt">&lt;roleTerm</span> <span class="na">authority=</span><span class="s">"marcrelator"</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>author<span class="nt">&lt;/roleTerm&gt;</span>
+    <span class="nt">&lt;/role&gt;</span>
+<span class="nt">&lt;/name&gt;</span>
+</pre>
+              </div>
+
+              <p>
+                There are two name 'types', personal and corporate (for things
+                authored by agencies and the like). My converter tools support
+                an external file that lists names that when matched will be
+                automatically listed as "corporate", which also includes
+                government agencies.
+              </p>
+              <h2 id="14-origin">1.4 Origin</h2>
+              <p>
+                Provides the information about date, publisher, and the like.
+                The date really ought to be output in a much cleaner way using
+                nice XML standards (whose names I don't have right here). I've
+                been dragging my feet just a little bit--mostly it's due to the
+                range of things I've seen used as date information in different
+                bibliography sources (that claim to be the same
+                formats)....They're easy for humans to parse, but much more
+                difficult to do correctly using a program. This is mostly me
+                being lazy coupled with a lack of people really pushing it.
+              </p>
+              <h2 id="15-type-of-resource">1.5 Type of Resource</h2>
+              <p>The options here are fully enumerated by the MODS standard:</p>
+              <div class="codehilite">
+                <pre><span></span><span class="nb">text</span>
+<span class="n">cartographic</span>
+<span class="n">notated</span> <span class="n">music</span>
+<span class="n">sound</span> <span class="n">recording</span><span class="o">-</span><span class="n">musical</span>
+<span class="n">sound</span> <span class="n">recording</span><span class="o">-</span><span class="n">nonmusical</span>
+<span class="n">sound</span> <span class="n">recording</span>
+<span class="n">still</span> <span class="n">image</span>
+<span class="n">moving</span> <span class="n">image</span>
+<span class="n">three</span> <span class="n">dimensional</span> <span class="k">object</span>
+<span class="n">software</span><span class="p">,</span> <span class="n">multimedia</span> <span class="p">(</span><span class="n">note</span> <span class="n">error</span> <span class="k">on</span> <span class="n">MODS</span> <span class="n">web</span> <span class="n">page</span><span class="p">)</span>
+<span class="n">mixed</span> <span class="n">material</span>
+</pre>
+              </div>
+
+              <p>
+                Almost all references are going to be
+                &lt;typeofresource&gt;text&lt;/typeofresource&gt;, which makes
+                the field not so useful for determining reference "types" in the
+                bibliography software world.
+              </p>
+              <h2 id="16-genre">1.6 Genre</h2>
+              <p>
+                The &lt;genre&gt; tag is more helpful for actually dterming
+                reference "types" in the more traditional sense of software.
+                Allowed types under are defined at the MODS web
+                site.&lt;/genre&gt;
+              </p>
+              <h2 id="17-citekey">1.7 CiteKey</h2>
+              <p>
+                There was a question as to where the citekey "bandj" should go.
+                Two possibilities were discussed and both were used to make the
+                MODS output more generally useful for different XML
+                parsings...the first is the ID attribute for the main
+                &lt;mods&gt; tag, the second is the citekey type of
+                identifier.&lt;/mods&gt;
+              </p>
+              <h1 id="2-items-within-larger-collections">
+                2. Items within Larger Collections
+              </h1>
+              <p>
+                These types of scenarios were more difficult for me to initially
+                understand, but once I appreciated them, it shows how MODS
+                really shines. Every MODS reference can also include a
+                &lt;relatedItem&gt;, which is another MODS reference and
+                potentially other &lt;relatedItem&gt;s. The &lt;relatedItem
+                type="host"&gt; and &lt;relatedItem type="series"&gt; refer to a
+                larger collection that contains the reference. Thus it's
+                possible to nest a chapter of a book in a series thusly:
+              </p>
+              <div class="codehilite">
+                <pre><span></span><span class="nt">&lt;mods&gt;</span>
+...chapter details...
+<span class="nt">&lt;relatedItem</span> <span class="na">type=</span><span class="s">"host"</span><span class="nt">&gt;</span>
+    ...book details...
+    <span class="nt">&lt;relatedItem</span> <span class="na">type=</span><span class="s">"series"</span><span class="nt">&gt;</span>
+        ...series details...
+    <span class="nt">&lt;/relatedItem&gt;</span>
+<span class="nt">&lt;/relatedItem&gt;</span>
+<span class="nt">&lt;/mods&gt;</span>
+</pre>
+              </div>
+
+              <p>
+                For a journal (or newspaper) article, the article is considered
+                as part of the journal as a larger collection:
+              </p>
+              <div class="codehilite">
+                <pre><span></span><span class="nt">&lt;mods&gt;</span>
+...article details...
+<span class="nt">&lt;relatedItem</span> <span class="na">type=</span><span class="s">"host"</span><span class="nt">&gt;</span>
+    ...journal details...
+<span class="nt">&lt;/relatedItem&gt;</span>
+<span class="nt">&lt;/mods&gt;</span>
+</pre>
+              </div>
+
+              <p>For example, here's a bibtex journal article:</p>
+              <div class="codehilite">
+                <pre><span></span><span class="x"> @ARTICLE(C003,</span>
+<span class="x"> AUTHOR="B. Kramer</span>
+<span class="x"> and W. Kramer</span>
+<span class="x"> and H. J. Fritz",</span>
+<span class="x"> TITLE="Different base/base mismatches are corrected with</span>
+<span class="x"> different efficiencies by the methyl-directed {DNA} mismatch-repair</span>
+<span class="x"> system of </span><span class="cp">{{</span><span class="err">\</span><span class="nv">it</span> <span class="nv">E</span><span class="err">.</span> <span class="nv">coli</span><span class="cp">}}</span><span class="x">",</span>
+<span class="x"> JOURNAL="Cell",</span>
+<span class="x"> VOLUME=38,</span>
+<span class="x"> YEAR=1984,</span>
+<span class="x"> PAGES="879--887")</span>
+</pre>
+              </div>
+
+              <p>As MODS:</p>
+              <div class="codehilite">
+                <pre><span></span><span class="o">&lt;</span><span class="nv">mods</span> <span class="nv">ID</span><span class="o">=</span><span class="s2">"</span><span class="s">C003</span><span class="s2">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nv">titleInfo</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nv">title</span><span class="o">&gt;</span><span class="nv">Different</span> <span class="nv">base</span><span class="o">/</span><span class="nv">base</span> <span class="nv">mismatches</span> <span class="nv">are</span> <span class="nv">corrected</span> <span class="nv">with</span> 
+        <span class="nv">different</span> <span class="nv">efficiencies</span> <span class="nv">by</span> <span class="nv">the</span> <span class="nv">methyl</span><span class="o">-</span><span class="nv">directed</span> <span class="nv">DNA</span> <span class="nv">mismatch</span><span class="o">-</span><span class="nv">repair</span> 
+        <span class="nv">system</span> <span class="nv">of</span> <span class="nv">E</span>. <span class="nv">coli</span><span class="o">&lt;/</span><span class="nv">title</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="nv">titleInfo</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nv">name</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"</span><span class="s">personal</span><span class="s2">"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nv">namePart</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"</span><span class="s">given</span><span class="s2">"</span><span class="o">&gt;</span><span class="nv">B</span>.<span class="o">&lt;/</span><span class="nv">namePart</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nv">namePart</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"</span><span class="s">family</span><span class="s2">"</span><span class="o">&gt;</span><span class="nv">Kramer</span><span class="o">&lt;/</span><span class="nv">namePart</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nv">role</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nv">roleTerm</span> <span class="nv">authority</span><span class="o">=</span><span class="s2">"</span><span class="s">marcrelator</span><span class="s2">"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"</span><span class="s">text</span><span class="s2">"</span><span class="o">&gt;</span><span class="nv">author</span><span class="o">&lt;/</span><span class="nv">roleTerm</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="nv">role</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="nv">name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nv">name</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"</span><span class="s">personal</span><span class="s2">"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nv">namePart</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"</span><span class="s">given</span><span class="s2">"</span><span class="o">&gt;</span><span class="nv">W</span>.<span class="o">&lt;/</span><span class="nv">namePart</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nv">namePart</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"</span><span class="s">family</span><span class="s2">"</span><span class="o">&gt;</span><span class="nv">Kramer</span><span class="o">&lt;/</span><span class="nv">namePart</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nv">role</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nv">roleTerm</span> <span class="nv">authority</span><span class="o">=</span><span class="s2">"</span><span class="s">marcrelator</span><span class="s2">"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"</span><span class="s">text</span><span class="s2">"</span><span class="o">&gt;</span><span class="nv">author</span><span class="o">&lt;/</span><span class="nv">roleTerm</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="nv">role</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="nv">name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nv">name</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"</span><span class="s">personal</span><span class="s2">"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nv">namePart</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"</span><span class="s">given</span><span class="s2">"</span><span class="o">&gt;</span><span class="nv">H</span>.<span class="o">&lt;/</span><span class="nv">namePart</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nv">namePart</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"</span><span class="s">given</span><span class="s2">"</span><span class="o">&gt;</span><span class="nv">J</span>.<span class="o">&lt;/</span><span class="nv">namePart</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nv">namePart</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"</span><span class="s">family</span><span class="s2">"</span><span class="o">&gt;</span><span class="nv">Fritz</span><span class="o">&lt;/</span><span class="nv">namePart</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nv">role</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nv">roleTerm</span> <span class="nv">authority</span><span class="o">=</span><span class="s2">"</span><span class="s">marcrelator</span><span class="s2">"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"</span><span class="s">text</span><span class="s2">"</span><span class="o">&gt;</span><span class="nv">author</span><span class="o">&lt;/</span><span class="nv">roleTerm</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="nv">role</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="nv">name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nv">typeOfResource</span><span class="o">&gt;</span><span class="nv">text</span><span class="o">&lt;/</span><span class="nv">typeOfResource</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nv">relatedItem</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"</span><span class="s">host</span><span class="s2">"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nv">titleInfo</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nv">title</span><span class="o">&gt;</span><span class="nv">Cell</span><span class="o">&lt;/</span><span class="nv">title</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="nv">titleInfo</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nv">originInfo</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nv">issuance</span><span class="o">&gt;</span><span class="nv">continuing</span><span class="o">&lt;/</span><span class="nv">issuance</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="nv">originInfo</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nv">genre</span> <span class="nv">authority</span><span class="o">=</span><span class="s2">"</span><span class="s">marc</span><span class="s2">"</span><span class="o">&gt;</span><span class="nv">periodical</span><span class="o">&lt;/</span><span class="nv">genre</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nv">genre</span><span class="o">&gt;</span><span class="nv">academic</span> <span class="nv">journal</span><span class="o">&lt;/</span><span class="nv">genre</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nv">part</span><span class="o">&gt;</span>
+           <span class="o">&lt;</span><span class="nv">date</span><span class="o">&gt;</span><span class="mi">1984</span><span class="o">&lt;/</span><span class="nv">date</span><span class="o">&gt;</span>
+           <span class="o">&lt;</span><span class="nv">detail</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"</span><span class="s">volume</span><span class="s2">"</span><span class="o">&gt;&lt;</span><span class="nv">number</span><span class="o">&gt;</span><span class="mi">38</span><span class="o">&lt;/</span><span class="nv">number</span><span class="o">&gt;&lt;/</span><span class="nv">detail</span><span class="o">&gt;</span>
+           <span class="o">&lt;</span><span class="nv">extent</span> <span class="nv">unit</span><span class="o">=</span><span class="s2">"</span><span class="s">page</span><span class="s2">"</span><span class="o">&gt;</span>
+               <span class="o">&lt;</span><span class="nv">start</span><span class="o">&gt;</span><span class="mi">879</span><span class="o">&lt;/</span><span class="nv">start</span><span class="o">&gt;</span>
+               <span class="o">&lt;</span><span class="k">end</span><span class="o">&gt;</span><span class="mi">887</span><span class="o">&lt;/</span><span class="k">end</span><span class="o">&gt;</span>
+           <span class="o">&lt;/</span><span class="nv">extent</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="nv">part</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="nv">relatedItem</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nv">identifier</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"</span><span class="s">citekey</span><span class="s2">"</span><span class="o">&gt;</span><span class="nv">C003</span><span class="o">&lt;/</span><span class="nv">identifier</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="nv">mods</span><span class="o">&gt;</span>
+</pre>
+              </div>
+
+              <h2 id="21-part-tag">2.1 Part tag</h2>
+              <p>
+                The part tag is the only new tag defined in the
+                &lt;relateditem&gt; that isn't defined in the main mods level.
+                For a &lt;relateditem type="host"&gt;, it describes where the
+                object is in terms of volume, issue, pages, and the like. From
+                the above example:&lt;/relateditem&gt;&lt;/relateditem&gt;
+              </p>
+              <div class="codehilite">
+                <pre><span></span>    <span class="o">&lt;</span><span class="nv">part</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="nv">date</span><span class="o">&gt;</span><span class="mi">1984</span><span class="o">&lt;/</span><span class="nv">date</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="nv">detail</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"</span><span class="s">volume</span><span class="s2">"</span><span class="o">&gt;&lt;</span><span class="nv">number</span><span class="o">&gt;</span><span class="mi">38</span><span class="o">&lt;/</span><span class="nv">number</span><span class="o">&gt;&lt;/</span><span class="nv">detail</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="nv">extent</span> <span class="nv">unit</span><span class="o">=</span><span class="s2">"</span><span class="s">page</span><span class="s2">"</span><span class="o">&gt;</span>
+           <span class="o">&lt;</span><span class="nv">start</span><span class="o">&gt;</span><span class="mi">879</span><span class="o">&lt;/</span><span class="nv">start</span><span class="o">&gt;</span>
+           <span class="o">&lt;</span><span class="k">end</span><span class="o">&gt;</span><span class="mi">887</span><span class="o">&lt;/</span><span class="k">end</span><span class="o">&gt;</span>
+       <span class="o">&lt;/</span><span class="nv">extent</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="nv">part</span><span class="o">&gt;</span>
+</pre>
+              </div>
+
+              <p>
+                The detail is used to describe single item locators, such as
+                volume, issue, number, section, and session.
+              </p>
+              <p>
+                The extent is used to describe ranges. The only extent element
+                that I current output is the page range; however, I've been told
+                that to use extent for a reference of only a single page is
+                wrong. So:
+              </p>
+              <div class="codehilite">
+                <pre><span></span><span class="nt">&lt;part&gt;</span>
+    <span class="nt">&lt;extent</span> <span class="na">unit=</span><span class="s">"page"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;start&gt;</span>879<span class="nt">&lt;/start&gt;</span>
+    <span class="nt">&lt;/extent&gt;</span>
+<span class="nt">&lt;/part&gt;</span>
+</pre>
+              </div>
+
+              <p>and</p>
+              <div class="codehilite">
+                <pre><span></span><span class="o">&lt;</span><span class="nv">part</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nv">extent</span> <span class="nv">unit</span><span class="o">=</span><span class="s2">"</span><span class="s">page</span><span class="s2">"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nv">start</span><span class="o">&gt;</span><span class="mi">879</span><span class="o">&lt;/</span><span class="nv">start</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="k">end</span><span class="o">&gt;</span><span class="mi">879</span><span class="o">&lt;/</span><span class="k">end</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="nv">extent</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="nv">part</span><span class="o">&gt;</span>
+</pre>
+              </div>
+
+              <p>and should be handled by a detail element</p>
+              <div class="codehilite">
+                <pre><span></span><span class="nt">&lt;part&gt;</span>
+    <span class="nt">&lt;detail</span> <span class="na">type=</span><span class="s">"page"</span><span class="nt">&gt;&lt;number&gt;</span>879<span class="nt">&lt;/number&gt;&lt;/detail&gt;</span>
+<span class="nt">&lt;/part&gt;</span>
+</pre>
+              </div>
+
+              <h1 id="3-thoughts-about-mods-for-bibliography-conversions">
+                3. Thoughts about MODS for Bibliography Conversions
+              </h1>
+              <p>
+                The biggest problem for using MODS as an intermediate XML format
+                for converting between different bibliographies may be one of
+                scope. MODS appears to have been defined for people who want to
+                extensively characterize their references, and it lacks a field
+                with a simple 1:1 relationship to typical bibliographic
+                reference types used in bibliography programs. Instead the
+                information appears to be scattered across a number of different
+                fields which have to be looked up to sort out what sort of
+                reference type a particular reference is (which is the most
+                basic sort of information programs like BibTeX and EndNote
+                require).
+              </p>
+              <p>
+                Thus far, I've resisted introducing my own custom "authorities"
+                and types to my MODS output (and input) as I want the conversion
+                tools to happily take MODS files from anywhere, rather than only
+                handling MODS files that my programs have generated.
+              </p>
+              <h1 id="4-credits">4. Credits</h1>
+              <p>
+                As a final thought, this entire document stems simply from my
+                experience in trying to use MODS as a format. Bruce D'Arcus
+                <a
+                  href="http://netapps.muohio.edu/movabletype/archives/darcusb/darcusb/"
+                  rel="nofollow"
+                  >http://netapps.muohio.edu/movabletype/archives/darcusb/darcusb/</a
+                >) has been really helpful in getting me started in working with
+                the format and has patiently looked for bugs even in really raw
+                alpha versions of my converter programs. What's right about the
+                software is substantially due to his help. What's wrong about
+                the software (and this document) are fully my responsibility.
+              </p>
+            </div>
+          </div>
+
+          <div
+            id="create_wiki_page_holder"
+            title="Create New Page"
+            style="display: none;"
+          >
+            <form>
+              <label class="grid-2">Name</label>
+              <div class="grid-7"><input type="text" name="name" /></div>
+            </form>
+          </div>
+        </div>
+
+        <hr style="margin-top: 1em; margin-bottom: 2em; clear: both;" />
+
+        <div id="lightbox_confirm" class="modal" style="display: none;">
+          <a class="icon close" href="index.html@version=5.html#" title="Close"
+            ><i class="fa fa-close"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

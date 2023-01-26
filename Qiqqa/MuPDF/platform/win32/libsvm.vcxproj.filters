@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03fd328}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{42f0fc98-34f6-4567-b3cf-de13e74a89ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{b1798409-2031-413d-9df7-70b0202ddd98}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files\matlab">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\matlab">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\python">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\python\libsvm">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\tools">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\matlab">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\svm-toy">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\svm-toy\qt">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\svm-toy\windows">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0009}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/libsvm/matlab/libsvmread.c">
+      <Filter>Source Files\matlab</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libsvm/matlab/libsvmwrite.c">
+      <Filter>Source Files\matlab</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libsvm/matlab/svm_model_matlab.c">
+      <Filter>Source Files\matlab</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libsvm/matlab/svmpredict.c">
+      <Filter>Source Files\matlab</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libsvm/matlab/svmtrain.c">
+      <Filter>Source Files\matlab</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libsvm/svm-predict.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libsvm/svm-scale.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libsvm/svm-toy/qt/svm-toy.cpp">
+      <Filter>Source Files\svm-toy\qt</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libsvm/svm-toy/windows/svm-toy.cpp">
+      <Filter>Source Files\svm-toy\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libsvm/svm-train.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libsvm/svm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClInclude Include="../../thirdparty/owemdjee/libsvm/matlab/svm_model_matlab.h">
+      <Filter>Header Files\matlab</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libsvm/svm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <Text Include="../../thirdparty/owemdjee/libsvm/README">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libsvm/matlab/README">
+      <Filter>Misc Files\matlab</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libsvm/python/MANIFEST.in">
+      <Filter>Misc Files\python</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libsvm/python/README">
+      <Filter>Misc Files\python</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libsvm/python/libsvm/__init__.py">
+      <Filter>Misc Files\python\libsvm</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libsvm/python/libsvm/commonutil.py">
+      <Filter>Misc Files\python\libsvm</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libsvm/python/libsvm/svm.py">
+      <Filter>Misc Files\python\libsvm</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libsvm/python/libsvm/svmutil.py">
+      <Filter>Misc Files\python\libsvm</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libsvm/python/setup.py">
+      <Filter>Misc Files\python</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libsvm/tools/README">
+      <Filter>Misc Files\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libsvm/tools/checkdata.py">
+      <Filter>Misc Files\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libsvm/tools/easy.py">
+      <Filter>Misc Files\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libsvm/tools/grid.py">
+      <Filter>Misc Files\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libsvm/tools/subset.py">
+      <Filter>Misc Files\tools</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
+    

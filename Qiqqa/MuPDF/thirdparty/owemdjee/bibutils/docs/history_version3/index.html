@@ -1,0 +1,2007 @@
+<!DOCTYPE html>
+<!-- Server: sfs-forge-7 -->
+
+<!--[if lt IE 7]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]>-->
+<html lang="en" class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+    <title>bibutils / Home / history_version3</title>
+
+    <meta name="viewport" content="width=1100" />
+
+    <link
+      rel="icon"
+      sizes="180x180"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/images/sandiego/logo-180x180.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      sizes="any"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/images/sandiego/svg/originals/sf-icon-orange-no_sf.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/images/sandiego/logo-180x180.png"
+    />
+    <link
+      rel="mask-icon"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/images/sandiego/svg/originals/sf-icon-orange-no_sf.svg"
+      color="#FF6600"
+    />
+
+    <!--[if lt IE 7]>
+      <script src="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/js/sftheme/vendor/dd_belatedpng.js"></script>
+      <script>
+        DD_belatedPNG.fix("img, .png_bg"); //fix any <img> or .png_bg background-images
+      </script>
+    <![endif]-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700"
+      rel="stylesheet"
+    />
+    <script>
+      if (!window.SF) {
+        window.SF = {};
+      }
+      SF.sandiego = false;
+      SF.sandiego_chrome = true;
+      SF.cdn = "https://a.fsdn.com/con";
+    </script>
+
+    <!-- ew:head_css -->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/allura/css/forge/hilite.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/tool/wiki/css/wiki.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/_slim/css?href=allura%2Fcss%2Fforge%2Ftooltipster.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/allura/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/css/forge.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/css/simplemde.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/_slim/css?href=css%2Fmarkitup_sf.css%3Bcss%2Fshow-hint.css"
+    />
+
+    <style>
+      div.moderate {
+        color: grey;
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/_slim/css?href=css%2Fpage_list.css%3Bcss%2Fjquery.tagsinput.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://a.fsdn.com/allura/nf/1589309844/_ew_/theme/sftheme/css/sftheme/sandiego/cmp.css"
+    />
+
+    <!-- /ew:head_css -->
+
+    <!-- ew:head_js -->
+
+    <script
+      type="text/javascript"
+      src="https://a.fsdn.com/allura/nf/1589309844/_ew_/_slim/js?href=allura%2Fjs%2Fjquery-base.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Fpromise.polyfill.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fcmp2.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Fmodernizr.3.3.1.custom.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fshared_head.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Ftypescript%2Fcompliance.js"
+    ></script>
+
+    <!-- /ew:head_js -->
+
+    <style type="text/css">
+      /* make URL & Project custom fields in support tickets not get hidden as much */
+      .project-forge.mountpoint-site-support .view_holder .grid-4:nth-child(5),
+      .project-forge.mountpoint-site-support .view_holder .grid-4:nth-child(6) {
+        overflow: visible;
+        font-size: 22px;
+        width: 340px;
+        line-height: 1;
+        margin-bottom: 5px;
+      }
+      .project-forge.mountpoint-site-support
+        .view_holder
+        .grid-4:nth-child(5)
+        label,
+      .project-forge.mountpoint-site-support
+        .view_holder
+        .grid-4:nth-child(6)
+        label {
+        font-size: 14px;
+      }
+    </style>
+
+    <style>
+      .hidden {
+        display: none;
+      }
+      a.notfound {
+        color: #f00;
+      }
+    </style>
+
+    <style>
+      .XZRRzLkfDplkwogQWWDCoFBvwoXCtMOwrTCnA {
+        display: none;
+      }
+    </style>
+
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Page RSS"
+      href="feed.rss"
+    />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Page Atom"
+      href="feed.atom"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Wiki RSS"
+      href="../feed.rss"
+    />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Wiki Atom"
+      href="../feed.atom"
+    />
+
+    <script type="text/javascript"></script>
+
+    <script>
+      window.bizx.cmp.init({}, "consentmanager.net");
+    </script>
+
+    <script>
+      function initPiwik() {
+        var _paq = (window._paq = window._paq || []);
+        _paq.push([
+          "trackPageView",
+          document.title,
+          {
+            dimension1: "bibutils",
+            dimension2: "wiki",
+          },
+        ]);
+        _paq.push(["enableLinkTracking"]);
+        (function () {
+          var u = "//analytics.slashdotmedia.com/";
+          _paq.push(["setTrackerUrl", u + "sf.php"]);
+          _paq.push(["setSiteId", 39]);
+          var d = document,
+            g = d.createElement("script"),
+            s = d.getElementsByTagName("script")[0];
+          g.type = "text/javascript";
+          g.async = true;
+          g.defer = true;
+          g.src = u + "sf.js";
+          s.parentNode.insertBefore(g, s);
+        })();
+      }
+      bizx.cmp.ifConsent("publisher", ["storage", "measurement"], initPiwik);
+    </script>
+  </head>
+
+  <body>
+    <div id="content_base">
+      <div class="grid-24 pad">
+        <h2 class="dark title">
+          history_version3
+          <!-- actions -->
+          <small>
+            <a class="icon" href="history.html" title="History"
+              ><i class="fa fa-calendar"></i
+            ></a>
+
+            <a class="icon" href="feed" title="RSS"
+              ><i class="fa fa-rss"></i
+            ></a>
+            <a class="icon" href="../search.html" title="Search"
+              ><i class="fa fa-search"></i
+            ></a>
+          </small>
+          <!-- /actions -->
+        </h2>
+
+        <div class="editbox">
+          <div class="grid-9 gravatar sm">
+            <label class="simple">Authors: </label>
+
+            <a href="https://sourceforge.net/u/cdputnam/">
+              <img
+                src="https://secure.gravatar.com/avatar/f12e8bce72883cb9e8a165cc2e312289?r=pg&amp;d=https%3A%2F%2Fa.fsdn.com%2Fallura%2Fnf%2F1589309844%2F_ew_%2Ftheme%2Fsftheme%2Fimages%2Fsandiego%2Ficons%2Fdefault-avatar.png&s=16"
+                srcset="
+                  https://secure.gravatar.com/avatar/f12e8bce72883cb9e8a165cc2e312289?r=pg&amp;d=https%3A%2F%2Fa.fsdn.com%2Fallura%2Fnf%2F1589309844%2F_ew_%2Ftheme%2Fsftheme%2Fimages%2Fsandiego%2Ficons%2Fdefault-avatar.png&s=24.0 1.5x,
+                  https://secure.gravatar.com/avatar/f12e8bce72883cb9e8a165cc2e312289?r=pg&amp;d=https%3A%2F%2Fa.fsdn.com%2Fallura%2Fnf%2F1589309844%2F_ew_%2Ftheme%2Fsftheme%2Fimages%2Fsandiego%2Ficons%2Fdefault-avatar.png&s=32   2x
+                "
+                width="16"
+                height="16"
+                alt="Chris Putnam"
+                title="Chris Putnam"
+                class="emboss x16"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <div class="markdown_content">
+              <h2 id="343">3.43</h2>
+              <p>11/24/2008</p>
+              <p>BIB2XML</p>
+              <ul>
+                <li>
+                  Fix recognition of em-dash by placing it before en-dash in
+                  conversion<br />
+                  list.
+                </li>
+                <li>
+                  Add -nl or --no-latex to prevent conversion of latex
+                  character<br />
+                  combinations
+                </li>
+              </ul>
+              <p>MODSOUT</p>
+              <ul>
+                <li>
+                  Ensure that bibutils handles records with empty MODS
+                  attributes
+                </li>
+              </ul>
+              <h2 id="342">3.42</h2>
+              <p>10/31/2008</p>
+              <p>MODSOUT</p>
+              <ul>
+                <li>
+                  Change default to UTF8 unicode characters written directly
+                  (not<br />
+                  via XML entities) and writing BOM. Add command-line switch<br />
+                  -x or --xml-entities to write XML entities instead to
+                  BIB2XML<br />
+                  END2XML ENDX2XML MED2XML RIS2XML, etc.
+                </li>
+              </ul>
+              <p>XML2ADS</p>
+              <ul>
+                <li>Fix unicode output to add Byte Order Mark by default</li>
+                <li>
+                  Add -nb or --no-bom switch to turn off Byte Order Mark for
+                  unicode if<br />
+                  the user doesn't want it
+                </li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>
+                  For users who want the bibtex file format, but not the latex
+                  encryption<br />
+                  of characters, add -nl or --no-latex to command-line switches
+                </li>
+                <li>Fix unicode output to add Byte Order Mark by default</li>
+                <li>
+                  Add -nb or --no-bom switch to turn off Byte Order Mark for
+                  unicode if<br />
+                  the user doesn't want it
+                </li>
+              </ul>
+              <p>XML2END</p>
+              <ul>
+                <li>Fix unicode output to add Byte Order Mark by default</li>
+                <li>
+                  Add -nb or --no-bom switch to turn off Byte Order Mark for
+                  unicode if<br />
+                  the user doesn't want it
+                </li>
+              </ul>
+              <p>XML2ISI</p>
+              <ul>
+                <li>Fix unicode output to add Byte Order Mark by default</li>
+                <li>
+                  Add -nb or --no-bom switch to turn off Byte Order Mark for
+                  unicode if<br />
+                  the user doesn't want it
+                </li>
+              </ul>
+              <p>XML2RIS</p>
+              <ul>
+                <li>Fix unicode output to add Byte Order Mark by default</li>
+                <li>
+                  Add -nb or --no-bom switch to turn off Byte Order Mark for
+                  unicode if<br />
+                  the user doesn't want it
+                </li>
+              </ul>
+              <p>XML2WORD2007</p>
+              <ul>
+                <li>
+                  Add -nb or --no-bom switch to turn off Byte Order Mark for
+                  unicode if<br />
+                  the user doesn't want it
+                </li>
+                <li>
+                  Fix the recognition of incollection items as book sections.
+                </li>
+              </ul>
+              <h2 id="341">3.41</h2>
+              <p>6/16/2008</p>
+              <p>BUILD</p>
+              <ul>
+                <li>Fix bug in makedeb.csh</li>
+                <li>
+                  Fix site-specific compiler definition for SunOS5 target.
+                </li>
+                <li>Add Linux x86_64 target for configuration.</li>
+              </ul>
+              <p>MODSIN</p>
+              <ul>
+                <li>
+                  Fix NULL pointer dereference for "detail" elements lacking a
+                  type<br />
+                  attribute. (Noticed and hunted down by Thomas Fischer.)
+                </li>
+              </ul>
+              <p>RIS2XML</p>
+              <ul>
+                <li>
+                  Fix bug where "AB - " with a newline before the abstract
+                  was<br />
+                  not recognized as an abstracted. (Reported by Thomas Braun<br />
+                  and Richard Mathar.)
+                </li>
+              </ul>
+              <p>XML2ADS</p>
+              <ul>
+                <li>
+                  Updates from Richard Mathar fixing R-tag output, merging
+                  keywords,<br />
+                  fixing date, adding title, and replacing double dash.
+                </li>
+                <li>
+                  Update journals to current list from:<br />
+                  <a
+                    href="http://adsabs.harvard.edu/abs_doc/journals1.html"
+                    rel="nofollow"
+                    >http://adsabs.harvard.edu/abs_doc/journals1.html</a
+                  >
+                </li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>
+                  Fix character priority so unicode/utf8 takes precedence over
+                  latex<br />
+                  (Patch from Luc Pardon)
+                </li>
+              </ul>
+              <h2 id="340">3.40</h2>
+              <p>2/10/2008</p>
+              <p>MODSIN</p>
+              <ul>
+                <li>
+                  Fix crash where placeTerm tag doesn't have attribute (Thanks
+                  to<br />
+                  Martin-Michael Schoenbeck for identifying the problem and
+                  submitting<br />
+                  an initial patch).
+                </li>
+                <li>
+                  Properly handle the 'mods:' namespace (Thanks to
+                  Martin-Michael<br />
+                  Schoenbeck for identifying the problem and submitting an<br />
+                  initial patch).
+                </li>
+                <li>
+                  Fix bug where multiple roleTerms confused role assignment.
+                </li>
+              </ul>
+              <p>RIS2XML</p>
+              <ul>
+                <li>
+                  Oxford journal RIS output is now putting DOI information in
+                  the N1<br />
+                  field; recognize this (Thanks to Richard Mathar for letting me
+                  know).
+                </li>
+              </ul>
+              <p>XML2ADS</p>
+              <ul>
+                <li>
+                  New converter for the ADS format submitted by Richard Mathar.
+                </li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>
+                  Bias the program to output issue/number tags as 'number'
+                  first<br />
+                  and use 'issue' only in cases where both issue and number
+                  have<br />
+                  been defined.
+                </li>
+                <li>
+                  Add '-sk' '--strictkey' option that only outputs
+                  alphanumeric<br />
+                  characters in the bibtex reference names (this is overly
+                  strict,<br />
+                  but may be useful in some cases to automatically avoid
+                  problems<br />
+                  with other bibtex parsers)
+                </li>
+              </ul>
+              <p>XML2END</p>
+              <ul>
+                <li>
+                  Fix missing return for articles with article numbers rather
+                  than<br />
+                  page numbers
+                </li>
+              </ul>
+              <p>XML2WORDBIB</p>
+              <ul>
+                <li>
+                  Rename "xml2word" to avoid confusion with other programs that
+                  work<br />
+                  on Word documents, not Word bibliographies
+                </li>
+              </ul>
+              <h2 id="339">3.39</h2>
+              <p>10/24/2007</p>
+              <p>NAME MANGLING</p>
+              <ul>
+                <li>Fix crash caused by specifically malformed name field</li>
+              </ul>
+              <h2 id="338">3.38</h2>
+              <p>10/10/2007</p>
+              <p>BIB2XML</p>
+              <ul>
+                <li>
+                  Fix crash when bibtex citation key is blank (introduced in
+                  3.37)
+                </li>
+              </ul>
+              <p>END2XML</p>
+              <ul>
+                <li>Fix handling of total pages</li>
+                <li>Fix handling of conference name</li>
+              </ul>
+              <p>ENDX2XML</p>
+              <ul>
+                <li>Fix handling of total pages</li>
+                <li>Fix handling of conference name</li>
+                <li>
+                  Fix bug where reference would skip if the starting record tag
+                  was<br />
+                  split by the input buffer
+                </li>
+              </ul>
+              <h2 id="337">3.37</h2>
+              <p>8/20/2007</p>
+              <p>MODSOUT</p>
+              <ul>
+                <li>
+                  fix bug where terminating &gt; symbol is missing in
+                  &lt;identifier type="serialnumber"&gt;
+                  output&lt;/identifier&gt;
+                </li>
+              </ul>
+              <h2 id="336">3.36</h2>
+              <p>8/19/2007</p>
+              <p>CHARSET CONVERSION</p>
+              <ul>
+                <li>add recognition of apostrophe HTML entity</li>
+              </ul>
+              <p>LIBRARY HANDLING</p>
+              <ul>
+                <li>resolve duplicates of citation keys by adding a-z</li>
+              </ul>
+              <p>BIB2XML</p>
+              <ul>
+                <li>
+                  properly handle bibtex files output by endnote that don't have
+                  field keys
+                </li>
+                <li>
+                  add support for Diploma, Doctoral, and Habilitation theses
+                  (German)
+                </li>
+              </ul>
+              <p>ENDX2XML</p>
+              <ul>
+                <li>properly handle whitespace in style tags</li>
+                <li>
+                  add support for Diploma, Doctoral, and Habilitation theses
+                  (German)
+                </li>
+              </ul>
+              <p>RIS2XML</p>
+              <ul>
+                <li>support computer program "COMP" type</li>
+                <li>support patent "PAT" type</li>
+                <li>support unpublished "UNPB" type</li>
+                <li>
+                  add support for Diploma, Doctoral, and Habilitation theses
+                  (German)
+                </li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>output newspaper articles as @ARTICLE as well</li>
+                <li>
+                  output series titles as "series" for book chapter,
+                  inproceedings, theses<br />
+                  types
+                </li>
+                <li>
+                  add support for Diploma, Doctoral, and Habilitation theses
+                  (German)
+                </li>
+              </ul>
+              <p>XML2END</p>
+              <ul>
+                <li>support magazine article type</li>
+                <li>support patent type</li>
+                <li>support computer program type</li>
+                <li>
+                  add support for Diploma, Doctoral, and Habilitation theses
+                  (German)
+                </li>
+              </ul>
+              <p>XML2ISI</p>
+              <ul>
+                <li>be more aggressive about outputting the date</li>
+              </ul>
+              <p>XML2RIS</p>
+              <ul>
+                <li>support magazine article type</li>
+                <li>support abstract/summary type</li>
+                <li>support patent type</li>
+                <li>support computer program type</li>
+                <li>support unpublished "UNPB" type</li>
+                <li>
+                  add support for Diploma, Doctoral, and Habilitation theses
+                  (German)
+                </li>
+              </ul>
+              <h2 id="335">3.35</h2>
+              <p>7/30/2007</p>
+              <p>BIB2XML</p>
+              <ul>
+                <li>support translator field</li>
+              </ul>
+              <p>COPAC2XML</p>
+              <ul>
+                <li>fix bug where garbage input can lead to infinite loop</li>
+              </ul>
+              <p>ENDX2XML</p>
+              <ul>
+                <li>
+                  fix bug where multiple style tags caused data to be lost
+                </li>
+              </ul>
+              <p>ISI2XML</p>
+              <ul>
+                <li>
+                  use authors listed with "AF" instead of "AU" when present as
+                  they<br />
+                  are a "better" annotated list
+                </li>
+                <li>
+                  fix bug where garbage input can lead to infinite loop (patch
+                  thanks<br />
+                  to Fred Howell)
+                </li>
+                <li>add type S for book in series</li>
+                <li>
+                  fix bug where NR number of references was being recognized
+                  as<br />
+                  journal number
+                </li>
+              </ul>
+              <p>RIS2XML</p>
+              <ul>
+                <li>add support for RIS magazine article "MGZN"</li>
+                <li>add support for RIS abstract "ABST"</li>
+                <li>
+                  add support for reading thesis hint in "user 1" tag "U1"
+                </li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>
+                  output article number as page number if page numbers aren't
+                  found
+                </li>
+                <li>support translator field</li>
+                <li>
+                  make preferred form of \text markups have curly brackets
+                </li>
+              </ul>
+              <p>XML2END</p>
+              <ul>
+                <li>
+                  output article number as page number if page numbers aren't
+                  found
+                </li>
+              </ul>
+              <p>XML2RIS</p>
+              <ul>
+                <li>
+                  output article number as page number if page numbers aren't
+                  found
+                </li>
+                <li>fix recognition of thesis type</li>
+                <li>
+                  output "U1 - Masters thesis" or "U1 - Ph.D. thesis" as a
+                  hint<br />
+                  for Refbase of the thesis type
+                </li>
+              </ul>
+              <p>XML2WORD</p>
+              <ul>
+                <li>
+                  output article number as page number if page numbers aren't
+                  found
+                </li>
+              </ul>
+              <h2 id="334">3.34</h2>
+              <p>6/7/2007</p>
+              <p>ENDX2XML</p>
+              <ul>
+                <li>fix bug that prevent dates from being read in</li>
+              </ul>
+              <h2 id="333">3.33</h2>
+              <p>5/23/2007</p>
+              <p>MED2XML</p>
+              <ul>
+                <li>fix stupid change that caused core dumps</li>
+              </ul>
+              <h2 id="332">3.32</h2>
+              <p>5/21/2007</p>
+              <p>CHARSET CONVERSION</p>
+              <ul>
+                <li>
+                  fix bug where UTF-8/Unicode input is ignored for BibTeX files
+                </li>
+              </ul>
+              <p>MODSIN</p>
+              <ul>
+                <li>
+                  Recognize both &lt;extent unit="page"&gt; and &lt;extent
+                  unit="pages"&gt;&lt;/extent&gt;&lt;/extent&gt;
+                </li>
+              </ul>
+              <p>NEWSTR</p>
+              <ul>
+                <li>Fix compilation on 64 bit processors</li>
+              </ul>
+              <p>BIB2XML</p>
+              <ul>
+                <li>Strip latex \url{} tags from input data</li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>Add recognition of --verbose and --debug</li>
+              </ul>
+              <p>XML2END</p>
+              <ul>
+                <li>Add recognition of --verbose and --debug</li>
+              </ul>
+              <p>XML2ISI</p>
+              <ul>
+                <li>Add recognition of --verbose and --debug</li>
+              </ul>
+              <p>XML2RIS</p>
+              <ul>
+                <li>Add recognition of --verbose and --debug</li>
+              </ul>
+              <p>XML2WORD</p>
+              <ul>
+                <li>Add recognition of command line switches</li>
+              </ul>
+              <h2 id="331">3.31</h2>
+              <p>4/1/2007</p>
+              <p>BIBTEXIN</p>
+              <ul>
+                <li>Fix typo in genre for "incollection" to "monographic"</li>
+                <li>Remove text markups like \textit{} and \textbf{}</li>
+                <li>
+                  Replace text markups like "\textonesuperior" with appropriate
+                  Unicode<br />
+                  characters
+                </li>
+                <li>
+                  Have electronic types set MODS resource "software, multimedia"
+                </li>
+              </ul>
+              <p>BIBTEXOUT</p>
+              <ul>
+                <li>
+                  Modify warning message for "xml2bib: cannot identify type"
+                  to<br />
+                  tell user that it's defaulting to @Misc so people stop
+                  reporting<br />
+                  this information to me
+                </li>
+                <li>Add electronic type recognition and output</li>
+              </ul>
+              <p>ENDIN</p>
+              <ul>
+                <li>Have electronic types set MODS genre "electronic"</li>
+                <li>Add '%S' Series title to Book type</li>
+                <li>Add recognition of Unicode UTF8 byte order information</li>
+              </ul>
+              <p>ENDXMLIN</p>
+              <ul>
+                <li>
+                  Ensure that the "label" field ends up in the MODS output as
+                  <br />
+                  reference ID
+                </li>
+                <li>Pass through "short-title" information</li>
+              </ul>
+              <p>MODSOUT</p>
+              <ul>
+                <li>
+                  Fix typo so MARC-authority genre types are "marcgt", not
+                  "marc"
+                </li>
+                <li>Output ACCESSNUM to MODS</li>
+              </ul>
+              <p>RISIN</p>
+              <ul>
+                <li>Add thesis type</li>
+                <li>Add report type</li>
+              </ul>
+              <p>RISOUT</p>
+              <ul>
+                <li>
+                  Map "collection" and "incollection" from bibtex to "book" and
+                  "inbook"
+                </li>
+                <li>Add thesis type</li>
+                <li>Add report type</li>
+              </ul>
+              <p>ENDOUT</p>
+              <ul>
+                <li>
+                  Map "collection" and "incollection" from bibtex to "book" and
+                  "inbook"
+                </li>
+              </ul>
+              <h2 id="330">3.30</h2>
+              <p>3/17/2007</p>
+              <p>XML2WORD</p>
+              <ul>
+                <li>Write first version of the program</li>
+              </ul>
+              <h2 id="329">3.29</h2>
+              <p>3/12/2007</p>
+              <p>ENDIN</p>
+              <ul>
+                <li>
+                  Fix addition of extraneous tag for electronic types; add<br />
+                  proper MODS resource tag
+                </li>
+              </ul>
+              <p>ENDX2XML</p>
+              <ul>
+                <li>Fix problems parsing in XML files without newlines</li>
+              </ul>
+              <h2 id="328">3.28</h2>
+              <p>3/10/2007</p>
+              <p>BIBTEXIN</p>
+              <ul>
+                <li>
+                  Fix problems parsing files that have non-bibtex lines in them
+                </li>
+                <li>
+                  Add c with a hacek support to latex characters (thanks to
+                  <br />
+                  George Smith for the information)
+                </li>
+                <li>
+                  Add enspace, emspace, and thinspace support to latex<br />
+                  characters (patch from John Spray; thanks!)
+                </li>
+              </ul>
+              <p>ENDX2XML</p>
+              <ul>
+                <li>Write first version of the program</li>
+              </ul>
+              <p>ISIIN</p>
+              <ul>
+                <li>Add support for DOI tag "DI"</li>
+              </ul>
+              <p>NAME MANGLING</p>
+              <ul>
+                <li>Fix bug in handling multibyte Unicode characters</li>
+              </ul>
+              <p>XMLIN</p>
+              <ul>
+                <li>
+                  Fix bug where single quoted XML attributes were not
+                  recognized<br />
+                  (Patch due to Jason Lerch)
+                </li>
+              </ul>
+              <p>XML2ISI</p>
+              <ul>
+                <li>Write first version of the program</li>
+              </ul>
+              <h2 id="327">3.27</h2>
+              <p>06/22/2006</p>
+              <p>BIBTEXIN</p>
+              <ul>
+                <li>
+                  Fix scrambling of title/booktitle for bibtex
+                  cross-references<br />
+                  involving "incollection" and "inproceeding" types
+                </li>
+              </ul>
+              <h2 id="326">3.26</h2>
+              <p>06/21/2006</p>
+              <p>MODSIN</p>
+              <ul>
+                <li>Add reading in pubmed/medline/pii identifiers</li>
+              </ul>
+              <p>RISOUT</p>
+              <ul>
+                <li>
+                  Output pubmed identifiers as UR - PM:###### (Thanks to Mark
+                  Runyan)
+                </li>
+              </ul>
+              <h2 id="325">3.25</h2>
+              <p>06/14/06</p>
+              <p>BUILD PROCESS</p>
+              <ul>
+                <li>
+                  Add NetBSD, FreeBSD, and Cygwin to recognized architectures
+                </li>
+              </ul>
+              <p>MODSOUT</p>
+              <ul>
+                <li>
+                  Convert patent assignee to the MARC term "patent holder"
+                  (modified from<br />
+                  patch by Ralf Ahlbrink)
+                </li>
+                <li>
+                  Add role types "organizer of meeting", "inventor", "degree
+                  grantor"<br />
+                  (modified from patch by Ralf Ahlbrink)
+                </li>
+              </ul>
+              <p>NAME MANGLING</p>
+              <ul>
+                <li>
+                  Fix possible interactions between pre-defined corporate
+                  types<br />
+                  and user-defined as-is and corporate types
+                </li>
+              </ul>
+              <p>ISI2XML</p>
+              <ul>
+                <li>
+                  Add support for "article number" (AR) field that some journals
+                  are<br />
+                  now using instead of page numbers
+                </li>
+              </ul>
+              <p>MED2XML</p>
+              <ul>
+                <li>
+                  Fix date parsing for entries that have a "medline format date"
+                  rather<br />
+                  than a date broken down into XML fields
+                </li>
+                <li>
+                  Fix bug that doesn't output proper end pages if first and last
+                  pages<br />
+                  are the same length (thanks to Andreas Hartmetz for finding
+                  and patching<br />
+                  the bug)
+                </li>
+              </ul>
+              <h2 id="324">3.24</h2>
+              <p>02/21/2006</p>
+              <p>CHARSET CONVERSION</p>
+              <ul>
+                <li>
+                  fix bug where requests for UTF-8 encoded output were ignored
+                </li>
+              </ul>
+              <p>MED2XML</p>
+              <ul>
+                <li>
+                  default input to UTF-8 encoded unicode, as it ought to be
+                </li>
+                <li>
+                  extract a few more items (like pubmed/medline/pii ID's,
+                  MeSH<br />
+                  headings)...most currently only make it into MODS output
+                </li>
+              </ul>
+              <p>XML</p>
+              <ul>
+                <li>
+                  fix potential core dump from empty xml attributes values
+                </li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>
+                  for better compatibility with Emacs, default the bibtex tags
+                  to<br />
+                  lower case (based on patch from Stefan Schmitt)
+                </li>
+                <li>
+                  new switch -U, --uppercase to switch to old all uppercase tag
+                  behavior
+                </li>
+              </ul>
+              <h2 id="323">3.23</h2>
+              <p>1/02/2006</p>
+              <p>
+                Changes in this release are thanks to patch and bug report by
+                Jeremy Malcolm.
+              </p>
+              <p>BIB2XML</p>
+              <ul>
+                <li>
+                  Add support for volume in
+                  <a
+                    class="user-mention"
+                    href="https://sourceforge.net/u/electronic/"
+                    >@electronic</a
+                  >
+                  reference type
+                </li>
+              </ul>
+              <p>END2XML</p>
+              <ul>
+                <li>Add support for volume in electronic reference type</li>
+              </ul>
+              <p>RIS2XML</p>
+              <ul>
+                <li>Add support for TY - ELEC reference type</li>
+              </ul>
+              <p>XML2RIS</p>
+              <ul>
+                <li>Add support for TY - ELEC reference type</li>
+                <li>
+                  Fix bug where GENRE, but not NGENRE data was being parsed for
+                  reference<br />
+                  type
+                </li>
+              </ul>
+              <h2 id="322">3.22</h2>
+              <p>12/09/2005</p>
+              <p>MODSIN</p>
+              <ul>
+                <li>
+                  fix off-by one bug that can cause references to be skipped
+                </li>
+              </ul>
+              <p>XML</p>
+              <ul>
+                <li>fix potential coredump on error path in xml_findend()</li>
+              </ul>
+              <h2 id="321">3.21</h2>
+              <p>11/02/2005</p>
+              <p>CHARSET CONVERSION</p>
+              <ul>
+                <li>add latex version of degree sign, micro sign</li>
+                <li>numerous fixes to charset handling</li>
+                <li>
+                  add -i,--input-encoding and -o, --output-encoding parameters
+                  for the<br />
+                  programs xml2bib, xml2end, xml2ris
+                </li>
+                <li>
+                  allow modsin and medin modules to read the character set
+                  specified by<br />
+                  the xml descriptors
+                </li>
+                <li>
+                  set priority so that the character set has the priority:<br />
+                  program defaults &lt; xml file specified &lt; user specified
+                </li>
+              </ul>
+              <p>LIBRARY</p>
+              <ul>
+                <li>
+                  fix bug where static prototype appears to be illegal and
+                  prevents<br />
+                  compilation on MacOSX "Tiger"
+                </li>
+                <li>finally add error reporting messages for library errors</li>
+              </ul>
+              <p>BIB2XML</p>
+              <ul>
+                <li>add support for cross referencing</li>
+              </ul>
+              <h2 id="320">3.20</h2>
+              <p>10/06/2005</p>
+              <p>END2XML</p>
+              <ul>
+                <li>fix type of court reporter</li>
+              </ul>
+              <p>NAME PROCESSING</p>
+              <ul>
+                <li>
+                  recognize names in the form Author, HQ or HQ Author and split
+                  up<br />
+                  the initials
+                </li>
+              </ul>
+              <p>BUILD PROCESS</p>
+              <ul>
+                <li>
+                  switch build to a ./configure; make; make install commands
+                  (but do<br />
+                  it without autoconf)
+                </li>
+                <li>
+                  add debian package options to Linux and MacOSX as a trial
+                </li>
+              </ul>
+              <p>MODSOUT</p>
+              <ul>
+                <li>
+                  start fixing position of items like volume, issue, pages for
+                  entries<br />
+                  now that MODS v3.1 allows part tags at the main level
+                </li>
+              </ul>
+              <h2 id="319">3.19</h2>
+              <p>09/14/2005</p>
+              <p>BIB2XML</p>
+              <ul>
+                <li>
+                  add issuance of monographic to book types: book, inbook,
+                  incollection
+                </li>
+                <li>
+                  fix bug where fields protected by braces or quotations would
+                  still <br />
+                  be subjected to string substitutions
+                </li>
+                <li>
+                  fix bug where string substitutions could be applied multiple
+                  times;<br />
+                  bibtex has special concatenation with string substitution
+                  rules
+                </li>
+                <li>
+                  add latin capital/lowercase c with acute to latex conversion
+                </li>
+                <li>add some letters with caron (hacek) specifications</li>
+              </ul>
+              <p>END2XML</p>
+              <ul>
+                <li>
+                  add issuance of monographic to book types: book, edited book,
+                  chapter
+                </li>
+                <li>
+                  move publisher to host level in journal article and add to
+                  magazine<br />
+                  article
+                </li>
+              </ul>
+              <p>ISI2XML</p>
+              <ul>
+                <li>
+                  add issuance of monographic to book types: book, chapter
+                </li>
+              </ul>
+              <p>RIS2XML</p>
+              <ul>
+                <li>add issuance of monographic to book types: book, inbook</li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>
+                  The protected latex forms of characters, e.g. {\'A}, are
+                  preferred<br />
+                  to non-protected, e.g. \'A or \'{A}. So fixup lookup table
+                  <br />
+                  so the preferred forms are output.
+                </li>
+              </ul>
+              <p>XML2RIS</p>
+              <ul>
+                <li>
+                  better detection of book types via issuance of monographic
+                </li>
+              </ul>
+              <p>SERIALNUMBER</p>
+              <ul>
+                <li>split out common serial number processing code</li>
+              </ul>
+              <p>MODSIN</p>
+              <ul>
+                <li>
+                  fix bug where unicode character set in was not the default
+                </li>
+              </ul>
+              <p>MODSOUT</p>
+              <ul>
+                <li>ensure that ambiguous serial numbers are output</li>
+                <li>fix bug where -un/-u flags weren't being respected</li>
+              </ul>
+              <h2 id="318">3.18</h2>
+              <p>07/11/2005</p>
+              <p>BIB2XML</p>
+              <ul>
+                <li>
+                  accommodate all entries from the IEEEtrans bibtex style and
+                  other requests<br />
+                  for missing common fields
+                </li>
+                <li>
+                  to article reference type add key, location, language, note,
+                  keywords
+                </li>
+                <li>
+                  to book reference type add key, location, language, note,
+                  series,<br />
+                  volume, number, lccn, keywords
+                </li>
+                <li>
+                  to techreport reference type add key, location, language,
+                  note, institution,<br />
+                  number, type, lccn, keywords
+                </li>
+                <li>
+                  to inbook reference type add key, location, language, note,
+                  lccn, keywords
+                </li>
+                <li>
+                  to incollection reference type add key, location, language,
+                  note, number,<br />
+                  chapter, type, lccn
+                </li>
+                <li>
+                  to booklet reference type add key, location, note, series,
+                  volume, number<br />
+                  organization, language, lccn
+                </li>
+                <li>
+                  to manual reference type add key, location, note, language,
+                  organization,<br />
+                  lccn, keywords
+                </li>
+                <li>
+                  to inproceedings/incollection type add key, location, note,
+                  language,<br />
+                  series, number, organization, paper, type, lccn, keywords
+                </li>
+                <li>
+                  to proceedings type add key, location, note, language, series,
+                  number,<br />
+                  organization, lccn, keywords
+                </li>
+                <li>
+                  to mastersthesis type add key, location, note, language, type,
+                  keywords
+                </li>
+                <li>
+                  to phdthesis type add key, location, note, languate, type,
+                  keywords
+                </li>
+                <li>
+                  to misc type add key, location, note, language, organization,
+                  keywords
+                </li>
+                <li>add unpublished type</li>
+                <li>add electronic type</li>
+                <li>add patent type</li>
+                <li>add periodical type</li>
+                <li>add standard type</li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>fix recognition of collection/incollection types</li>
+                <li>add handling of location information</li>
+              </ul>
+              <p>XML2END</p>
+              <ul>
+                <li>output all note fields</li>
+              </ul>
+              <p>MODSIN</p>
+              <ul>
+                <li>add physical location to tags read in</li>
+                <li>fix memory leak in modsin_location()</li>
+                <li>fix bug in modsin_descriptionr()</li>
+                <li>keep type="school" information in place entries</li>
+              </ul>
+              <p>MODSOUT</p>
+              <ul>
+                <li>handle key field from bibtex</li>
+              </ul>
+              <h2 id="317">3.17</h2>
+              <p>BIB2XML</p>
+              <ul>
+                <li>add series information to incollection type</li>
+                <li>add edition input to types</li>
+                <li>protect URL, DOI, REFNUM fields from being detexified</li>
+                <li>support URLs in "howpublished" tags</li>
+                <li>support \url{} in addition to \urllink{}</li>
+                <li>
+                  inbook reference types should use chapter+title, not
+                  title+booktitle
+                </li>
+                <li>incollection reference types should use booktitle+title</li>
+                <li>
+                  fix bug where spaces in string replacements cause the
+                  replacements to<br />
+                  be misunderstood
+                </li>
+              </ul>
+              <p>COPAC2XML</p>
+              <ul>
+                <li>
+                  fix but in name mangling and insertion of editors in author
+                  fields
+                </li>
+              </ul>
+              <p>ISI2XML</p>
+              <ul>
+                <li>fix bug in outputing times cited to note field</li>
+              </ul>
+              <p>RIS2XML</p>
+              <ul>
+                <li>
+                  add reading user U1-U5 and miscellaneous M1-M3 fields; convert
+                  to "notes"<br />
+                  so they'll be output at least
+                </li>
+              </ul>
+              <p>MODSIN</p>
+              <ul>
+                <li>put in the core of handling physicalDescription tags</li>
+                <li>
+                  fix bug where files with mods ending and starting on the same
+                  line were<br />
+                  mangled
+                </li>
+              </ul>
+              <p>MODSOUT</p>
+              <ul>
+                <li>fix place term output and edition output</li>
+                <li>output all URL information</li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>add edition output</li>
+                <li>protect REFNUM fields from being texified</li>
+                <li>better error messages for misidentified TYPE</li>
+                <li>recognize Masters and Ph.D. thesis types</li>
+                <li>
+                  inbook reference types should use chapter+title, not
+                  title+booktitle
+                </li>
+                <li>incollection reference types should use booktitle+title</li>
+                <li>fix recognition of genre magazine as ARTICLE</li>
+              </ul>
+              <p>XML2END</p>
+              <ul>
+                <li>fix bug in recognizing the thesis type</li>
+              </ul>
+              <h2 id="316">3.16</h2>
+              <p>4/10/2005</p>
+              <p>GLOBAL CHANGES</p>
+              <ul>
+                <li>rename progs directory to bin</li>
+                <li>fix warnings from SunOS compile</li>
+              </ul>
+              <p>BIB2XML</p>
+              <ul>
+                <li>add masters thesis type</li>
+                <li>
+                  change Ph.D. thesis and Masters thesis to add non-MARC
+                  genres<br />
+                  "Ph.D. thesis" and "Masters thesis" to distinguish
+                </li>
+              </ul>
+              <p>END2XML</p>
+              <ul>
+                <li>
+                  fix bug where endin_readf() can return 0 even if reference is
+                  obtained
+                </li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>don't texify special characters in URLs and DOIs</li>
+              </ul>
+              <h2 id="315">3.15</h2>
+              <p>3/17/2005</p>
+              <p>GLOBAL CHANGES</p>
+              <ul>
+                <li>
+                  Convert all programs to use the bibutils library with
+                  bibl_read() and<br />
+                  bibl_write() with appropriate modes. Massive conversion to a
+                  bibutils<br />
+                  library.
+                </li>
+                <li>
+                  Add -o or --output-encoding to xml2bib, xml2end, xml2ris
+                </li>
+                <li>
+                  Add -s or --single-refperfile to xml2bib, xml2end, xml2ris
+                </li>
+                <li>
+                  Handle all character conversion issues nicely in the library.
+                  Set default<br />
+                  to Latin-1 (ISO 8859-1), same as web browsers.
+                </li>
+                <li>
+                  Move around files to lib/, prog/, and test/ directories; fix
+                  top level make
+                </li>
+                <li>
+                  Change name of struct newstring to struct newstr for
+                  consistency
+                </li>
+                <li>
+                  Change cleanf() to take entire bibliographies and not just
+                  references in<br />
+                  preparation for cross-referencing handling in bib2xml
+                </li>
+              </ul>
+              <p>BIB2XML</p>
+              <ul>
+                <li>Do a nice job of translating latex codes to Unicode</li>
+                <li>Bump version number to 3.12</li>
+              </ul>
+              <p>COPAC2XML</p>
+              <ul>
+                <li>Bump version number to 1.2</li>
+              </ul>
+              <p>END2XML</p>
+              <ul>
+                <li>Bump version number to 3.13</li>
+              </ul>
+              <p>ISI2XML</p>
+              <ul>
+                <li>Move times cited field to notes</li>
+                <li>Bump version number to 2.5</li>
+              </ul>
+              <p>MED2XML</p>
+              <ul>
+                <li>Bump version number to 2.3</li>
+              </ul>
+              <p>RIS2XML</p>
+              <ul>
+                <li>Bump version number to 2.11</li>
+              </ul>
+              <p>MODSIN</p>
+              <ul>
+                <li>add URL support to identifier type="uri"</li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>
+                  Make sure illegal bibtex isn't outputted (including quotes
+                  when brackets<br />
+                  aren't requested), and do a nice job of Unicode to latex.
+                </li>
+                <li>
+                  Allow any non-space and non-tab to be output as bibtex key
+                  identifiers
+                </li>
+                <li>Add URL support</li>
+                <li>Bump version number to 2.6</li>
+              </ul>
+              <p>XML2END</p>
+              <ul>
+                <li>fix output of ISSN/ISBN/URL/etc.</li>
+                <li>Bump version number to 2.3</li>
+              </ul>
+              <p>XML2RIS</p>
+              <ul>
+                <li>add number/issue output</li>
+                <li>Bump version number to 2.3</li>
+              </ul>
+              <p>MODSCLEAN</p>
+              <ul>
+                <li>Bump version number to 1.1</li>
+              </ul>
+              <h2 id="314">3.14</h2>
+              <p>2/09/2005</p>
+              <p>GLOBAL CHANGES FOR THE TOMODS CONVERTERS</p>
+              <ul>
+                <li>
+                  The current programs add an underscore and the reference count
+                  to the<br />
+                  reference id by default. This is changed so that it only
+                  occurs when<br />
+                  requested using the new -a or --add-refcount flags.
+                </li>
+                <li>
+                  Fixed bug where the reference count wasn't used when
+                  outputting individual<br />
+                  files for each reference. This is, of course, dependent on the
+                  -a<br />
+                  or --add-refcount flags.
+                </li>
+                <li>change --verbose flag to only output warnings</li>
+                <li>
+                  add --debug flag for full output useful in hunting down
+                  problems
+                </li>
+                <li>
+                  Major rewrite of the converters:<br />
+                  Common framework is in lib/tomods.c<br />
+                  Variables and unique function pointers defined by struct
+                  convert_rules<br />
+                  Must define readf() to read a single reference from a file<br />
+                  Must define processf() to convert raw input into
+                  tag/data/level in a<br />
+                  field using native tags<br />
+                  Define cleanf() or set to NULL to define function to clean up
+                  data<br />
+                  such as LaTeX codes<br />
+                  Must define convertf() to convert native tag/data/level
+                  elements into<br />
+                  those appropriate for MODS XML output.
+                </li>
+              </ul>
+              <p>BIB2XML</p>
+              <ul>
+                <li>add URL to list of recognized bibtex entries</li>
+                <li>bump version number to 3.11</li>
+              </ul>
+              <p>COPAC2XML</p>
+              <ul>
+                <li>bump version number to 1.1</li>
+              </ul>
+              <p>END2XML</p>
+              <ul>
+                <li>
+                  fix bug in magazine article that misplaced article title
+                </li>
+                <li>fix bug that lost track of reference type information</li>
+                <li>bump version number to 3.12</li>
+              </ul>
+              <p>ISI2XML</p>
+              <ul>
+                <li>parse multiple keywords placed under same tag</li>
+                <li>bump version number to 2.4</li>
+              </ul>
+              <p>MED2XML</p>
+              <ul>
+                <li>bump version number to 2.2</li>
+              </ul>
+              <p>RIS2XML</p>
+              <ul>
+                <li>bump version number to 2.10</li>
+              </ul>
+              <h2 id="313">3.13</h2>
+              <p>12/15/2004</p>
+              <p>COPAC2XML</p>
+              <ul>
+                <li>write first version of program</li>
+              </ul>
+              <p>ISI2XML</p>
+              <ul>
+                <li>fix bugs in handling multi-author references</li>
+                <li>bump version number to 2.3</li>
+              </ul>
+              <p>END2XML</p>
+              <ul>
+                <li>clean up some left over references to RIS</li>
+                <li>fix incrementing in waslast_tag()</li>
+                <li>bump version number to 3.11</li>
+              </ul>
+              <h2 id="312">3.12</h2>
+              <p>11/22/2004</p>
+              <p>BIB2XML</p>
+              <ul>
+                <li>add support for FTP = {\urllink{http://online.ref.com}}</li>
+                <li>
+                  add support for TITLE = {\href{http://online.ref.com}Real
+                  Title}
+                </li>
+                <li>
+                  add conversion for latex encodings character into unicode;
+                  also fixes some<br />
+                  processing bugs due to names with a diaresis
+                </li>
+                <li>
+                  add support for reading in digital object identifier (doi)
+                </li>
+                <li>add unpublished type (and "new" genre type in MODS)</li>
+                <li>add proceedings type</li>
+                <li>add misc type</li>
+                <li>bump version number to 3.10</li>
+              </ul>
+              <p>END2XML</p>
+              <ul>
+                <li>
+                  switch order of "Book" and "Book Section" now that the
+                  Refer-format<br />
+                  handling introduced a bug that caused both to be recognized as
+                  Book
+                </li>
+                <li>bump version number to 3.10</li>
+              </ul>
+              <p>MED2XML</p>
+              <ul>
+                <li>silence compile warnings</li>
+                <li>
+                  pass digital object identifier (doi) information to MODS
+                </li>
+                <li>bump version number to 2.1</li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>fix command line parsing</li>
+                <li>pass digital object identifier (doi) output to bibtex</li>
+                <li>add unpublished and misc types to output</li>
+                <li>bump version number to 2.5</li>
+              </ul>
+              <p>XML2END</p>
+              <ul>
+                <li>fix help message</li>
+                <li>bump version number to 2.2</li>
+              </ul>
+              <p>MAKEFILE</p>
+              <ul>
+                <li>fix typo in "make install" target</li>
+                <li>repair loss of med2xml in makefile</li>
+              </ul>
+              <h2 id="311">3.11</h2>
+              <p>9/29/2004</p>
+              <p>BIB2XML</p>
+              <ul>
+                <li>
+                  re-write bibtex parser to handle references with missing or
+                  empty<br />
+                  reference ids
+                </li>
+                <li>use common title mangling</li>
+                <li>support table of contents</li>
+                <li>bump version number to 3.9</li>
+              </ul>
+              <p>END2XML</p>
+              <ul>
+                <li>use common title mangling</li>
+                <li>bump version number to 3.9</li>
+              </ul>
+              <p>ISI2XML</p>
+              <ul>
+                <li>use common title mangling</li>
+                <li>bump version number to 2.2</li>
+              </ul>
+              <p>RIS2XML</p>
+              <ul>
+                <li>use common title mangling</li>
+                <li>bump version number to 2.9</li>
+              </ul>
+              <p>MODSCLEAN</p>
+              <ul>
+                <li>verson 1.0 of the program</li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>
+                  fix bug where -fc/--final-comma isn't removed from argument
+                  list
+                </li>
+                <li>
+                  merge corporate and non-corporate authors/editors into same
+                  bibtex line
+                </li>
+                <li>support table of contents data</li>
+                <li>
+                  fix distinction between PROCEEDINGS and INPROCEEDINGS data
+                  types
+                </li>
+                <li>bump version number to 2.4</li>
+              </ul>
+              <p>MODSIN</p>
+              <ul>
+                <li>
+                  make role="creator" equivalent to role="author" to handle LOC
+                  input
+                </li>
+                <li>support table of contents data</li>
+              </ul>
+              <p>MODSOUT</p>
+              <ul>
+                <li>support table of contents data</li>
+              </ul>
+              <p>TITLE</p>
+              <ul>
+                <li>merge all copies of title mangling into library</li>
+              </ul>
+              <p>XML</p>
+              <ul>
+                <li>properly handle XML comments in files</li>
+              </ul>
+              <h2 id="310">3.10</h2>
+              <p>9/23/2004</p>
+              <p>BIB2XML</p>
+              <ul>
+                <li>add explicit fflushes to try and help python deadlocks</li>
+                <li>bump version number to 3.8</li>
+              </ul>
+              <p>END2XML</p>
+              <ul>
+                <li>add explicit fflushes to try and help python deadlocks</li>
+                <li>fix typo in "Conference Proceedings" type</li>
+                <li>bump version number to 3.8</li>
+              </ul>
+              <p>ISI2XML</p>
+              <ul>
+                <li>
+                  handle processing of names with and without commas properly
+                </li>
+                <li>bump version number to 2.1</li>
+              </ul>
+              <p>MED2XML</p>
+              <ul>
+                <li>write MODS version of converter</li>
+                <li>set version to 2.0</li>
+              </ul>
+              <p>RIS2XML</p>
+              <ul>
+                <li>
+                  handle processing of names with and without commas properly
+                </li>
+                <li>bump version number to 2.8</li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>
+                  output author/year combo when REFNUM is not already defined
+                </li>
+                <li>add keyword, abstract, note to output</li>
+                <li>bump version number to 2.3</li>
+              </ul>
+              <p>MODSIN</p>
+              <ul>
+                <li>
+                  fix merging of placeTerm when both by code and by text are
+                  present
+                </li>
+              </ul>
+              <p>MODSOUT</p>
+              <ul>
+                <li>add explicit fflushes to try and help python deadlocks</li>
+              </ul>
+              <p>NAME</p>
+              <ul>
+                <li>merge all functions for name mangling into library</li>
+              </ul>
+              <h2 id="39">3.9</h2>
+              <p>09/01/2004</p>
+              <p>BIB2XML</p>
+              <ul>
+                <li>
+                  convert "." to ". " in names so that names like G.P. Smith
+                  don't lose<br />
+                  information
+                </li>
+                <li>bump version number to 3.7</li>
+              </ul>
+              <p>END2XML</p>
+              <ul>
+                <li>
+                  modify parser so that refer-style bibliographies are handled
+                  naturally
+                </li>
+                <li>
+                  convert "." to ". " in names so that names like G.P. Smith
+                  don't lose<br />
+                  information
+                </li>
+                <li>bump version number to 3.7</li>
+              </ul>
+              <p>ISI2XML</p>
+              <ul>
+                <li>write new MODS version</li>
+                <li>bump version number to 2.0</li>
+              </ul>
+              <p>RIS2XML</p>
+              <ul>
+                <li>use newstr_trimendingws</li>
+                <li>
+                  convert "." to ". " in names so that names like G.P. Smith
+                  don't lose<br />
+                  information
+                </li>
+                <li>bump version number to 2.7</li>
+              </ul>
+              <p>XML2BIB</p>
+              <ul>
+                <li>add corporate authors/editors to output</li>
+                <li>bump version number to 2.2</li>
+              </ul>
+              <p>XML2RIS</p>
+              <ul>
+                <li>add corporate authors/editors to output</li>
+                <li>bump version number to 2.2</li>
+              </ul>
+              <p>MODSIN</p>
+              <ul>
+                <li>convert numeric month to name</li>
+                <li>handle multiple roles per person</li>
+                <li>
+                  prevent unnecessary decents through the XML tree structure
+                </li>
+                <li>fix core dump in modsin_detailr due to copy/paste bug</li>
+                <li>fix role processing in corporation names</li>
+              </ul>
+              <p>MODSOUT</p>
+              <ul>
+                <li>some code cleanups</li>
+                <li>
+                  if a reference ID cannot be found, first try to output one
+                  based<br />
+                  on the first author and four-digit year and refnum, eg.
+                  Jones2000_123, <br />
+                  and then default to a ref#### ID
+                </li>
+              </ul>
+              <p>NEWSTR</p>
+              <ul>
+                <li>add newstr_trimendingws</li>
+              </ul>
+              <p>XML</p>
+              <ul>
+                <li>
+                  fix identification of tags like &lt;title&gt; that scrambled
+                  the XML &lt;br&gt; hierarchy&lt;/li&gt; &lt;/ul&gt; &lt;h2
+                  id="38"&gt;3.8&lt;/h2&gt; &lt;p&gt;07/29/2004&lt;/p&gt;
+                  &lt;p&gt;XML2BIB&lt;/p&gt; &lt;ul&gt; &lt;li&gt;fix bug in
+                  command line parsing&lt;/li&gt; &lt;li&gt;fix bug where ending
+                  commas are missing&lt;/li&gt; &lt;li&gt;add periods after
+                  abbreviated given names&lt;/li&gt; &lt;li&gt;bump version
+                  number to 2.1&lt;/li&gt; &lt;/ul&gt;
+                  &lt;p&gt;XML2END&lt;/p&gt; &lt;ul&gt; &lt;li&gt;add periods
+                  after abbreviated given names&lt;/li&gt; &lt;li&gt;bump
+                  version number to 2.1&lt;/li&gt; &lt;/ul&gt;
+                  &lt;p&gt;XML2RIS&lt;/p&gt; &lt;ul&gt; &lt;li&gt;add periods
+                  after abbreviated given names&lt;/li&gt; &lt;li&gt;bump
+                  version number to 2.1&lt;/li&gt; &lt;/ul&gt;
+                  &lt;p&gt;MODSIN&lt;/p&gt; &lt;ul&gt; &lt;li&gt;handle pages
+                  either as details or extents&lt;/li&gt; &lt;/ul&gt;
+                  &lt;p&gt;MODSOUT&lt;/p&gt; &lt;ul&gt; &lt;li&gt;fix bug where
+                  empty names were output&lt;/li&gt; &lt;li&gt;if given names
+                  are abbreviations, e.g. "A. B. Jones", drop periods&lt;/li&gt;
+                  &lt;li&gt;write out single pages as details, not
+                  extents&lt;/li&gt; &lt;/ul&gt; &lt;h2
+                  id="37"&gt;3.7&lt;/h2&gt; &lt;p&gt;07/27/2004&lt;/p&gt;
+                  &lt;p&gt;BIB2XML&lt;/p&gt; &lt;ul&gt; &lt;li&gt;fix bug where
+                  multi-line authors w/o trailing spaces were merged&lt;/li&gt;
+                  &lt;li&gt;add publisher and address fields to book and report
+                  types&lt;/li&gt; &lt;li&gt;add/fix genre output to many
+                  reference types&lt;/li&gt; &lt;li&gt;add support for given
+                  name separation for MODSOUT&lt;/li&gt; &lt;li&gt;add issue
+                  field to article type&lt;/li&gt; &lt;li&gt;bump version number
+                  to 3.6&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;END2XML&lt;/p&gt;
+                  &lt;ul&gt; &lt;li&gt;add support for given name separation for
+                  MODSOUT&lt;/li&gt; &lt;li&gt;add/fix genre output to many
+                  reference types&lt;/li&gt; &lt;li&gt;fix core dump on empty
+                  input&lt;/li&gt; &lt;li&gt;bump version number to
+                  3.6&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;RIS2XML&lt;/p&gt;
+                  &lt;ul&gt; &lt;li&gt;add support for given name separation for
+                  MODSOUT&lt;/li&gt; &lt;li&gt;handle case where last reference
+                  in file is missing end tag&lt;/li&gt; &lt;li&gt;add/fix
+                  genre/typeOfResource output to many reference types&lt;/li&gt;
+                  &lt;li&gt;bump version number to 2.6&lt;/li&gt; &lt;/ul&gt;
+                  &lt;p&gt;XML2BIB&lt;/p&gt; &lt;ul&gt; &lt;li&gt;write first
+                  MODS version of the program&lt;/li&gt; &lt;li&gt;bump version
+                  number to 2.0&lt;/li&gt; &lt;/ul&gt;
+                  &lt;p&gt;XML2RIS&lt;/p&gt; &lt;ul&gt; &lt;li&gt;write first
+                  MODS version of the program&lt;/li&gt; &lt;li&gt;bump version
+                  number to 2.0&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;FIELDS&lt;/p&gt;
+                  &lt;ul&gt; &lt;li&gt;add function fields_maxlevel()&lt;/li&gt;
+                  &lt;/ul&gt; &lt;p&gt;MODSOUT&lt;/p&gt; &lt;ul&gt;
+                  &lt;li&gt;add support for separating each part of the given
+                  name to a separate&lt;br&gt; namePart construct&lt;/li&gt;
+                  &lt;li&gt;write out given names before family name&lt;/li&gt;
+                  &lt;li&gt;ensure that both start and end elements are written
+                  when page&lt;br&gt; extents are output&lt;/li&gt; &lt;/ul&gt;
+                  &lt;p&gt;NEWSTRING&lt;/p&gt; &lt;ul&gt; &lt;li&gt;add
+                  newstr_toupper(), newstr_prepend() functions&lt;/li&gt;
+                  &lt;/ul&gt; &lt;h2 id="36"&gt;3.6&lt;/h2&gt;
+                  &lt;p&gt;06/1/2004&lt;/p&gt; &lt;p&gt;BIB2XML&lt;/p&gt;
+                  &lt;ul&gt; &lt;li&gt;bump version number to 3.5&lt;/li&gt;
+                  &lt;/ul&gt; &lt;p&gt;END2XML&lt;/p&gt; &lt;ul&gt;
+                  &lt;li&gt;bump version number to 3.5&lt;/li&gt; &lt;/ul&gt;
+                  &lt;p&gt;RIS2XML&lt;/p&gt; &lt;ul&gt; &lt;li&gt;clean up
+                  reference parsing loop as per end2xml from bibutils v
+                  2.16&lt;/li&gt; &lt;li&gt;fix missing break statement in
+                  process_cite that put titles into dates&lt;/li&gt;
+                  &lt;li&gt;move abstracts marked by "N2" into the main record,
+                  not host&lt;/li&gt; &lt;li&gt;bump version number to
+                  2.5&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;MODSOUT&lt;/p&gt;
+                  &lt;ul&gt; &lt;li&gt;move part element of relatedItems to the
+                  very last element outputted&lt;br&gt; (needs to be after
+                  identifier and .xsd would suggest that it should be&lt;br&gt;
+                  the last item)&lt;/li&gt; &lt;/ul&gt; &lt;h2
+                  id="35"&gt;3.5&lt;/h2&gt; &lt;p&gt;05/28/2004&lt;/p&gt;
+                  &lt;p&gt;BIB2XML&lt;/p&gt; &lt;ul&gt; &lt;li&gt;clean up name
+                  processing&lt;/li&gt; &lt;li&gt;add corporation recognition
+                  for names&lt;/li&gt; &lt;li&gt;add -c, --corporation-file to
+                  input corporation names&lt;/li&gt; &lt;li&gt;add genre type
+                  periodical to journal articles&lt;/li&gt; &lt;li&gt;bump
+                  version number 3.4&lt;/li&gt; &lt;/ul&gt;
+                  &lt;p&gt;END2XML&lt;/p&gt; &lt;ul&gt; &lt;li&gt;add genre type
+                  periodical to journal articles&lt;/li&gt; &lt;li&gt;add genre
+                  type periodical to magazines&lt;/li&gt; &lt;li&gt;add genre
+                  type thesis to thesis&lt;/li&gt; &lt;li&gt;fix read_refs() to
+                  not require leading %0 as per version 2.16&lt;/li&gt;
+                  &lt;li&gt;use fields_init()&lt;/li&gt; &lt;li&gt;clean up name
+                  processing&lt;/li&gt; &lt;li&gt;add -c, --corporation-file to
+                  input corporation names&lt;/li&gt; &lt;li&gt;bump version
+                  number 2.5&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;RIS2XML&lt;/p&gt;
+                  &lt;ul&gt; &lt;li&gt;add genre type periodical to journal
+                  articles&lt;/li&gt; &lt;li&gt;clean up name
+                  processing&lt;/li&gt; &lt;li&gt;add corporation recognition
+                  for names&lt;/li&gt; &lt;li&gt;add -c, --corporation-file to
+                  input corporation names&lt;/li&gt; &lt;li&gt;bump version
+                  number 2.4&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;MODSOUT&lt;/p&gt;
+                  &lt;ul&gt; &lt;li&gt;separate genre output into own function,
+                  have it automatically detect&lt;br&gt; genre terms under the
+                  "marc authority", make sure genre type is properly&lt;br&gt;
+                  unicode formated, allow multiple genres to be output per level
+                  of &lt;br&gt; reference&lt;/li&gt; &lt;li&gt;separate
+                  typeofResource output into own function, and have it make
+                  sure&lt;br&gt; that output matches the legal values, generate
+                  error if it doesn't&lt;/li&gt; &lt;li&gt;handle corporation
+                  name output&lt;/li&gt; &lt;/ul&gt; &lt;h2
+                  id="34"&gt;3.4&lt;/h2&gt; &lt;p&gt;01/31/2004&lt;/p&gt;
+                  &lt;p&gt;BIB2XML&lt;/p&gt; &lt;ul&gt; &lt;li&gt;add "?" as
+                  title/subtitle separator like ":"&lt;/li&gt; &lt;li&gt;bump
+                  version to 3.3&lt;/li&gt; &lt;/ul&gt;
+                  &lt;p&gt;END2XML&lt;/p&gt; &lt;ul&gt; &lt;li&gt;add "?" as
+                  title/subtitle separator like ":"&lt;/li&gt; &lt;li&gt;bump
+                  version to 2.4&lt;/li&gt; &lt;/ul&gt;
+                  &lt;p&gt;RIS2XML&lt;/p&gt; &lt;ul&gt; &lt;li&gt;do some
+                  reference type/tag additions&lt;/li&gt; &lt;li&gt;fix bug
+                  where titles weren't being put in output&lt;/li&gt;
+                  &lt;li&gt;add "?" as title/subtitle separator like
+                  ":"&lt;/li&gt; &lt;li&gt;bump version to 2.3&lt;/li&gt;
+                  &lt;/ul&gt; &lt;p&gt;MODSOUT&lt;/p&gt; &lt;ul&gt;
+                  &lt;li&gt;fix shorttitle output so that if long version has
+                  subtitle,&lt;br&gt; shorttitle is always output...otherwise
+                  only output if&lt;br&gt; shorttitle is different than long
+                  title&lt;/li&gt; &lt;/ul&gt; &lt;h2 id="33"&gt;3.3&lt;/h2&gt;
+                  &lt;p&gt;01/24/04&lt;/p&gt; &lt;p&gt;END2XML&lt;/p&gt;
+                  &lt;ul&gt; &lt;li&gt;correct typeOfResource "software" to
+                  "software, multimedia"&lt;/li&gt; &lt;li&gt;have shorttitles
+                  terminate at colons&lt;/li&gt; &lt;li&gt;bump version to
+                  2.3&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;MODOUTS&lt;/p&gt;
+                  &lt;ul&gt; &lt;li&gt;allow single and double quotes to be
+                  placed directly in output&lt;/li&gt; &lt;/ul&gt; &lt;h2
+                  id="32"&gt;3.2&lt;/h2&gt; &lt;p&gt;1/22/2004&lt;/p&gt;
+                  &lt;p&gt;BIB2XML&lt;/p&gt; &lt;ul&gt; &lt;li&gt;add
+                  -un/--unicode-no-bom option for writing unicode w/o adding
+                  the&lt;br&gt; byte order mark at the beginning of the
+                  file&lt;/li&gt; &lt;li&gt;assign dates in part and in
+                  dateIssued by reference type&lt;/li&gt; &lt;li&gt;bump version
+                  to 3.2&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;END2XML&lt;/p&gt;
+                  &lt;ul&gt; &lt;li&gt;add -un/--unicode-no-bom option for
+                  writing unicode w/o adding the&lt;br&gt; byte order mark at
+                  the beginning of the file&lt;/li&gt; &lt;li&gt;fix
+                  LEVEL_HOST/LEVEL_MAIN mismatches for reference
+                  types&lt;/li&gt; &lt;li&gt;assign dates in part and in
+                  dateIssued by reference type&lt;/li&gt; &lt;li&gt;bump version
+                  to 2.2&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;RIS2XML&lt;/p&gt;
+                  &lt;ul&gt; &lt;li&gt;add -un/--unicode-no-bom option for
+                  writing unicode w/o adding the&lt;br&gt; byte order mark at
+                  the beginning of the file&lt;/li&gt; &lt;li&gt;assign dates in
+                  part and in dateIssued by reference type&lt;/li&gt;
+                  &lt;li&gt;bump version to 2.2&lt;/li&gt; &lt;/ul&gt;
+                  &lt;p&gt;MODSOUT&lt;/p&gt; &lt;ul&gt; &lt;li&gt;convert to
+                  proper UTF-8 output&lt;/li&gt; &lt;li&gt;put "ref" in front of
+                  all numeric ID cite key for compliance with&lt;br&gt; MODS DTD
+                  "rules"&lt;/li&gt; &lt;li&gt;protect mods ID from output
+                  illegal characters and IDs that start&lt;br&gt; with
+                  non-alphanumerics&lt;/li&gt; &lt;li&gt;fix over-zealousness of
+                  fields_find()&lt;/li&gt; &lt;li&gt;distinguish between dates
+                  that fall in &lt;part&gt; and those&lt;br&gt; in
+                  &lt;dateIsssued&gt;&lt;/li&gt; &lt;/ul&gt; &lt;h2
+                  id="31"&gt;3.1&lt;/h2&gt; &lt;p&gt;1/21/2004&lt;/p&gt;
+                  &lt;p&gt;BIB2XML&lt;/p&gt; &lt;ul&gt; &lt;li&gt;add
+                  -d/--drop-key option&lt;/li&gt; &lt;li&gt;bump version to
+                  3.1&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;END2XML&lt;/p&gt;
+                  &lt;ul&gt; &lt;li&gt;add -d/--drop-key option&lt;/li&gt;
+                  &lt;li&gt;fix loss of year output for newspaper article
+                  type&lt;/li&gt; &lt;li&gt;fix moving picture/moving image
+                  issue for film type&lt;/li&gt; &lt;li&gt;bump version to
+                  2.1&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;RIS2XML&lt;/p&gt;
+                  &lt;ul&gt; &lt;li&gt;add -d/--drop-key option&lt;/li&gt;
+                  &lt;li&gt;bump version to 2.1&lt;/li&gt; &lt;/ul&gt;
+                  &lt;p&gt;MODSOUT&lt;/p&gt; &lt;ul&gt; &lt;li&gt;fix bug where
+                  part is output in main level&lt;/li&gt; &lt;li&gt;add mods ID
+                  for cite key, controllable by -d/--drop-key&lt;/li&gt;
+                  &lt;/ul&gt; &lt;h2 id="30"&gt;3.0&lt;/h2&gt;
+                  &lt;p&gt;1/20/2004&lt;/p&gt; &lt;p&gt;BIB2XML&lt;/p&gt;
+                  &lt;ul&gt; &lt;li&gt;new version 3.0&lt;/li&gt; &lt;/ul&gt;
+                  &lt;p&gt;END2XML&lt;/p&gt; &lt;ul&gt; &lt;li&gt;new version
+                  2.0&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;RIS2XML&lt;/p&gt;
+                  &lt;ul&gt; &lt;li&gt;new version 2.0&lt;/li&gt;
+                  &lt;/ul&gt;&lt;/title&gt;
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            id="create_wiki_page_holder"
+            title="Create New Page"
+            style="display: none;"
+          >
+            <form>
+              <label class="grid-2">Name</label>
+              <div class="grid-7"><input type="text" name="name" /></div>
+            </form>
+          </div>
+        </div>
+
+        <hr style="margin-top: 1em; margin-bottom: 2em; clear: both;" />
+
+        <div id="lightbox_confirm" class="modal" style="display: none;">
+          <a class="icon close" href="index.html@version=4.html#" title="Close"
+            ><i class="fa fa-close"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+
+#pragma once
+
+#ifndef __ETERNAL_TIMESTAMP_CPP__
+#define __ETERNAL_TIMESTAMP_CPP__
+
+#include "eternal_timestamp.hpp"
+
+#endif

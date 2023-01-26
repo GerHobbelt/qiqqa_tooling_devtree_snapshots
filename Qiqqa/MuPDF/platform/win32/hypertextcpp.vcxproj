@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="pthread_lib.2019.vcxproj">
+      <Project>{C431B5C5-FF25-4450-A13C-EA3123456789}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libgflags.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffc19ff8}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>hypertextcpp</ProjectName>
+    <ProjectGuid>{5E7728B5-9C50-45DA-8D25-32CF2D4B3C7E}</ProjectGuid>
+    <RootNamespace>hypertextcpp</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project.props" Label="SolutionWideSettings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.28307.799</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+<ItemDefinitionGroup>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <BrowseInformation>false</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <DisableSpecificWarnings>4018;4100;4127;4180;4206;4244;4267;5105;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <SDLCheck>false</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <ConformanceMode>true</ConformanceMode>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableUnitySupport>true</EnableUnitySupport>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+</ItemDefinitionGroup>
+<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHYPERTEXTCPP;HYPERTEXTCPP_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/hypertextcpp/shared_lib_api/include;../../thirdparty\owemdjee\hypertextcpp\thirdparty\gsl\include;../../thirdparty\owemdjee\hypertextcpp\thirdparty\cmdlime\include;../../thirdparty\owemdjee\hypertextcpp\thirdparty\sfun\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHYPERTEXTCPP;HYPERTEXTCPP_STATICLIB;GOOGLE_GLOG_DLL_DECL=;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHYPERTEXTCPP;HYPERTEXTCPP_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/hypertextcpp/shared_lib_api/include;../../thirdparty\owemdjee\hypertextcpp\thirdparty\gsl\include;../../thirdparty\owemdjee\hypertextcpp\thirdparty\cmdlime\include;../../thirdparty\owemdjee\hypertextcpp\thirdparty\sfun\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHYPERTEXTCPP;HYPERTEXTCPP_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/hypertextcpp/shared_lib_api/include;../../thirdparty\owemdjee\hypertextcpp\thirdparty\gsl\include;../../thirdparty\owemdjee\hypertextcpp\thirdparty\cmdlime\include;../../thirdparty\owemdjee\hypertextcpp\thirdparty\sfun\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHYPERTEXTCPP;HYPERTEXTCPP_STATICLIB;GOOGLE_GLOG_DLL_DECL=;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHYPERTEXTCPP;HYPERTEXTCPP_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/hypertextcpp/shared_lib_api/include;../../thirdparty\owemdjee\hypertextcpp\thirdparty\gsl\include;../../thirdparty\owemdjee\hypertextcpp\thirdparty\cmdlime\include;../../thirdparty\owemdjee\hypertextcpp\thirdparty\sfun\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHYPERTEXTCPP;HYPERTEXTCPP_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/hypertextcpp/shared_lib_api/include;../../thirdparty\owemdjee\hypertextcpp\thirdparty\gsl\include;../../thirdparty\owemdjee\hypertextcpp\thirdparty\cmdlime\include;../../thirdparty\owemdjee\hypertextcpp\thirdparty\sfun\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHYPERTEXTCPP;HYPERTEXTCPP_STATICLIB;GOOGLE_GLOG_DLL_DECL=;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHYPERTEXTCPP;HYPERTEXTCPP_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/hypertextcpp/shared_lib_api/include;../../thirdparty\owemdjee\hypertextcpp\thirdparty\gsl\include;../../thirdparty\owemdjee\hypertextcpp\thirdparty\cmdlime\include;../../thirdparty\owemdjee\hypertextcpp\thirdparty\sfun\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHYPERTEXTCPP;HYPERTEXTCPP_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/hypertextcpp/shared_lib_api/include;../../thirdparty\owemdjee\hypertextcpp\thirdparty\gsl\include;../../thirdparty\owemdjee\hypertextcpp\thirdparty\cmdlime\include;../../thirdparty\owemdjee\hypertextcpp\thirdparty\sfun\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHYPERTEXTCPP;HYPERTEXTCPP_STATICLIB;GOOGLE_GLOG_DLL_DECL=;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHYPERTEXTCPP;HYPERTEXTCPP_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/hypertextcpp/shared_lib_api/include;../../thirdparty\owemdjee\hypertextcpp\thirdparty\gsl\include;../../thirdparty\owemdjee\hypertextcpp\thirdparty\cmdlime\include;../../thirdparty\owemdjee\hypertextcpp\thirdparty\sfun\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/examples/01/todolist_printer.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/examples/02/todolist_printer.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/examples/03/todolist_printer.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/examples/04/todolist_printer.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/examples/05/todolist_printer.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/src/codenode.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/src/main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/src/nameutils.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/src/nodeextension.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/src/nodereader.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/src/procedurenode.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/src/sectionnode.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/src/sharedlibtranspiler.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/src/singleheadertranspiler.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/src/streamreader.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/src/tagnode.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/src/textnode.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/src/transpiler.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/src/utils.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/tests/test_codenode.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/tests/test_nameutils.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/tests/test_procedurenode.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/tests/test_sectionnode.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/tests/test_tagnode.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/tests/test_utils.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/examples/ex01.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/examples/ex02.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/examples/ex03.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/examples/ex04.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/examples/ex05.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/examples/ex06.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/examples/ex07.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/examples/ex08.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/examples/ex09.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/examples/ex10.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/examples/ex11.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/examples/ex12.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/examples/ex13.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/examples/ex14.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/tests/test_gnu_format.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/tests/test_nameutils.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/tests/test_posix_format.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/tests/test_simple_format.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/tests/test_x11_format.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/gsl/tests/algorithm_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/gsl/tests/assertion_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/gsl/tests/at_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/gsl/tests/bounds_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/gsl/tests/byte_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/gsl/tests/multi_span_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/gsl/tests/no_exception_ensure_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/gsl/tests/notnull_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/gsl/tests/owner_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/gsl/tests/span_compatibility_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/gsl/tests/span_ext_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/gsl/tests/span_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/gsl/tests/strict_notnull_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/gsl/tests/strided_span_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/gsl/tests/string_span_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/gsl/tests/utils_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/sfun/tests/test_string.cpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/shared_lib_api/include/hypertextcpp/itemplate.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/shared_lib_api/include/hypertextcpp/templateloader.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/shared_lib_api/include/hypertextcpp/templateloadingerror.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/src/codenode.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/src/errors.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/src/idocumentnode.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/src/nameutils.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/src/nodeextension.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/src/nodereader.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/src/procedurenode.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/src/sectionnode.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/src/sharedlibtranspiler.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/src/singleheadertranspiler.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/src/streamreader.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/src/streamreaderposition.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/src/tagnode.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/src/textnode.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/src/transpiler.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/src/utils.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/tests/assert_exception.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/config.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/configreader.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/customnames.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/detail/arg.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/detail/arglist.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/detail/command.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/detail/config.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/detail/configaccess.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/detail/configmacro.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/detail/flag.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/detail/format.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/detail/gnuformat.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/detail/iarg.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/detail/iarglist.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/detail/icommand.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/detail/iflag.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/detail/iparam.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/detail/iparamlist.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/detail/nameutils.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/detail/optioninfo.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/detail/param.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/detail/paramlist.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/detail/parser.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/detail/posixformat.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/detail/simpleformat.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/detail/streamreader.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/detail/usageinfocreator.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/detail/utils.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/detail/x11format.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/errors.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/gnuconfig.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/posixconfig.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/simpleconfig.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/usageinfoformat.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/include/cmdlime/x11config.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/tests/assert_exception.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/sfun/include/sfun/string_utils.h" />
+    <Image Include="../../thirdparty/owemdjee/hypertextcpp/doc/logo.png" />
+    <Image Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/doc/logo.jpg" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/LICENSE.md" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/README.md" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/examples/01/todolist.htcpp" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/examples/02/todolist.htcpp" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/examples/03/todolist.htcpp" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/examples/04/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/examples/04/todolist.htcpp" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/examples/05/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/examples/05/todolist.htcpp" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/shared_template/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/tests/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/README.md" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/LICENSE.md" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/README.md" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/cmdlime/tests/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/gsl/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/gsl/CMakeSettings.json" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/gsl/CONTRIBUTING.md" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/gsl/README.md" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/gsl/ThirdPartyNotices.txt" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/gsl/tests/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/gsl/tests/CMakeLists.txt.in" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/sfun/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/sfun/LICENSE.md" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/sfun/README.md" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/sfun/cmake/sfunConfig.cmake.in" />
+    <Text Include="../../thirdparty/owemdjee/hypertextcpp/thirdparty/sfun/tests/CMakeLists.txt" />
+  </ItemGroup>
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />
+  </ImportGroup>
+</Project>
+  
