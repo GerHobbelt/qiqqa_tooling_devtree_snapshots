@@ -6,6 +6,9 @@
 
 #include "mupdf/mutool.h"
 #include "mupdf/fitz.h"
+#include "mupdf/helpers/jmemcust.h"
+
+#include "../../source/fitz/tessocr.h"
 
 #include <string.h>
 #include <stdio.h>
@@ -42,8 +45,15 @@ int main(int argc, const char** argv)
 		return EXIT_FAILURE;
 	}
 
+	// registeer a mupdf-aligned default heap memory manager for jpeg/jpeg-turbo
+	fz_set_default_jpeg_sys_mem_mgr();
+
+	ocr_set_leptonica_mem(ctx);
+
 	//fz_info(ctx, "usage: tesseract <command> [options]");
 	int rv = tesseract_main(argc, argv);
+
+	ocr_clear_leptonica_mem(ctx);
 
 	fz_drop_context(ctx);
 

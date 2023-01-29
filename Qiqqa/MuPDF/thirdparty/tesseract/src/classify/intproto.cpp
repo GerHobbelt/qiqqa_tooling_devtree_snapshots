@@ -518,9 +518,11 @@ INT_TEMPLATES_STRUCT *Classify::CreateIntTemplates(CLASSES FloatProtos,
     }
     assert(UnusedClassIdIn(IntTemplates, ClassId));
     IClass = new INT_CLASS_STRUCT(FClass->NumProtos, FClass->NumConfigs);
-    FontSet fs{FClass->font_set.size()};
-    for (unsigned i = 0; i < fs.size(); ++i) {
-      fs[i] = FClass->font_set.at(i);
+    unsigned fs_size = FClass->font_set.size();
+    FontSet fs;
+    fs.reserve(fs_size);
+    for (unsigned i = 0; i < fs_size; ++i) {
+      fs.push_back(FClass->font_set[i]);
     }
     IClass->font_set_id = this->fontset_table_.push_back(fs);
     AddIntClass(IntTemplates, ClassId, IClass);
@@ -952,7 +954,7 @@ void ClearFeatureSpaceWindow(NORM_METHOD norm_method, ScrollView *window) {
 void Classify::WriteIntTemplates(FILE *File, INT_TEMPLATES_STRUCT *Templates,
                                  const UNICHARSET &target_unicharset) {
   INT_CLASS_STRUCT *Class;
-  auto unicharset_size = target_unicharset.size();
+  uint32_t unicharset_size = target_unicharset.size();
   int version_id = -5; // When negated by the reader -1 becomes +1 etc.
 
   if (Templates->NumClasses != unicharset_size) {

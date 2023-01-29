@@ -957,17 +957,15 @@ struct hb_accelerate_subtables_context_t :
   template <typename T>
   return_t dispatch (const T &obj)
   {
-    hb_applicable_t entry;
+    hb_applicable_t *entry = array.push ();
 
-    entry.init (obj,
-		apply_to<T>
+    entry->init (obj,
+		 apply_to<T>
 #ifndef HB_NO_OT_LAYOUT_LOOKUP_CACHE
-		, apply_cached_to<T>
-		, cache_func_to<T>
+		 , apply_cached_to<T>
+		 , cache_func_to<T>
 #endif
-		);
-
-    array.push (entry);
+		 );
 
 #ifndef HB_NO_OT_LAYOUT_LOOKUP_CACHE
     /* Cache handling
@@ -3540,7 +3538,7 @@ struct ChainContextFormat2_5
      */
 
     struct ChainContextApplyLookupContext lookup_context = {
-      {{cached && &backtrack_class_def == &input_class_def ? match_class_cached : match_class,
+      {{cached && &backtrack_class_def == &lookahead_class_def ? match_class_cached : match_class,
         cached && &input_class_def == &lookahead_class_def ? match_class_cached : match_class,
         cached ? match_class_cached : match_class}},
       {&backtrack_class_def,
@@ -4024,7 +4022,7 @@ struct hb_ot_layout_lookup_accelerator_t
     lookup.dispatch (&c_accelerate_subtables);
 
     digest.init ();
-    for (auto& subtable : hb_iter (subtables))
+    for (auto& subtable : subtables)
       digest.add (subtable.digest);
 
 #ifndef HB_NO_OT_LAYOUT_LOOKUP_CACHE
@@ -4472,7 +4470,7 @@ struct GSUBGPOS
     }
 
     hb_blob_ptr_t<T> table;
-  protected:
+//  protected:
     unsigned int lookup_count;
     hb_ot_layout_lookup_accelerator_t *accels;
   };

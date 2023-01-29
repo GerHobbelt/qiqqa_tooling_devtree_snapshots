@@ -25,6 +25,7 @@
 #include <setjmp.h>
 #include <ctype.h>
 #include <jpeglib.h>
+#include <jerror.h>
 
 #include "md5.h"
 #include "jpeginfo.h"
@@ -83,49 +84,72 @@ static const char *current = NULL;
 
 /*****************************************************************/
 
-typedef void* backing_store_ptr;
-#include "../../source/fitz/jmemcust.h"
 
-#define JZ_CTX_FROM_CINFO(c) (fz_context *)(GET_CUST_MEM_DATA(c)->priv)
+#define JZ_CTX_FROM_CINFO(c) ((fz_context *)((c)->client_data_ref))
 
 static void*
-fz_jpg_mem_alloc(j_common_ptr cinfo, size_t size)
+jpi_jpeg_mem_alloc(j_common_ptr cinfo, size_t size)
 {
 	fz_context* ctx = JZ_CTX_FROM_CINFO(cinfo);
 	return fz_malloc_no_throw(ctx, size);
 }
 
 static void
-fz_jpg_mem_free(j_common_ptr cinfo, void* object, size_t size)
+jpi_jpeg_mem_free(j_common_ptr cinfo, void* object, size_t size)
 {
 	fz_context* ctx = JZ_CTX_FROM_CINFO(cinfo);
 	fz_free(ctx, object);
 }
 
-static void
-fz_jpg_mem_init(j_common_ptr cinfo, fz_context* ctx)
+static long
+jpi_jpeg_mem_init(j_common_ptr cinfo)
 {
-	jpeg_cust_mem_data* custmptr;
-	custmptr = fz_malloc_struct(ctx, jpeg_cust_mem_data);
-	if (!jpeg_cust_mem_init(custmptr, (void*)ctx, NULL, NULL, NULL,
-		fz_jpg_mem_alloc, fz_jpg_mem_free,
-		fz_jpg_mem_alloc, fz_jpg_mem_free, NULL))
-	{
-		fz_free(ctx, custmptr);
-		fz_throw(ctx, FZ_ERROR_GENERIC, "cannot initialize custom JPEG memory handler");
-	}
-	cinfo->client_data = custmptr;
+	return 0;			/* just set max_memory_to_use to 0 */
 }
 
 static void
-fz_jpg_mem_term(j_common_ptr cinfo)
+jpi_jpeg_mem_term(j_common_ptr cinfo)
 {
-	if (cinfo->client_data)
-	{
-		fz_context* ctx = JZ_CTX_FROM_CINFO(cinfo);
-		fz_free(ctx, cinfo->client_data);
-		cinfo->client_data = NULL;
-	}
+	cinfo->client_data_ref = NULL;
+	cinfo->client_init_callback = NULL;
+}
+
+static size_t
+jpi_jpeg_mem_available(j_common_ptr cinfo, size_t min_bytes_needed,
+	size_t max_bytes_needed,
+	size_t already_allocated)
+{
+	// Here we always say, "we got all you want bud!"
+	long ret = max_bytes_needed;
+
+	return ret;
+}
+
+static void
+jpi_jpeg_open_backing_store(j_common_ptr cinfo,
+	backing_store_ptr info,
+	long total_bytes_needed)
+{
+	ERREXIT(cinfo, JERR_NO_BACKING_STORE);
+}
+
+
+static int jpi_jpg_sys_mem_register(j_common_ptr cinfo)
+{
+	cinfo->sys_mem_if.get_small = jpi_jpeg_mem_alloc;
+	cinfo->sys_mem_if.free_small = jpi_jpeg_mem_free;
+
+	cinfo->sys_mem_if.get_large = jpi_jpeg_mem_alloc;
+	cinfo->sys_mem_if.free_large = jpi_jpeg_mem_free;
+
+	cinfo->sys_mem_if.mem_available = jpi_jpeg_mem_available;
+
+	cinfo->sys_mem_if.open_backing_store = jpi_jpeg_open_backing_store;
+
+	cinfo->sys_mem_if.mem_init = jpi_jpeg_mem_init;
+	cinfo->sys_mem_if.mem_term = jpi_jpeg_mem_term;
+
+	return 0;
 }
 
 /*****************************************************************/
@@ -222,7 +246,7 @@ int main(int argc, const char** argv)
   size_t last_read;
   fz_context* ctx = fz_get_global_context();
 
-  global_total_errors=0;
+  global_total_errors = 0;
 
   struct jpeg_decompress_struct cinfo = { 0 };
   struct my_error_mgr jerr = { 0 };
@@ -231,7 +255,8 @@ int main(int argc, const char** argv)
   cinfo.global_state = 0;
   cinfo.err = jpeg_std_error(&jerr.pub);
 
-  fz_jpg_mem_init((j_common_ptr)&cinfo, ctx);
+  cinfo.client_data_ref = ctx;
+  cinfo.client_init_callback = jpi_jpg_sys_mem_register;
 
   fz_try(ctx)
   {

@@ -491,6 +491,7 @@ replxx
 # sparsehash
 # spdlog
 # spdlog_setup
+splitmerge
 # spy-build-sysinfo
 # sqlcipher
 # sqlean
@@ -671,6 +672,8 @@ cat > utils/tmp.bat  <<EOF
 
 robocopy Z:\lib\tooling\qiqqa\MuPDF Qiqqa/MuPDF * /LOG:snapshot.log /LEV:8 /S /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE /XD .vs obj bin b tmp research node_modules packages owemdjee downloads ~ .circleci  /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules 
 
+robocopy Z:\lib\tooling\qiqqa\MuPDF\thirdparty\owemdjee Qiqqa/MuPDF/thirdparty/owemdjee * /LOG+:snapshot.log /LEV:1    /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE    /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules 
+
 FOR %f IN ( langdata_LSTM tessconfigs tessdata tessdata_best tessdata_contrib tessdata_fast tessdoc tesseract_docs tesseract_langdata tesseract_ocr_test tesstrain ) DO robocopy Z:\lib\tooling\qiqqa\MuPDF\thirdparty\%f Qiqqa/MuPDF\thirdparty\%f * /LOG+:snapshot.log /LEV:8 /S /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE /XD .vs obj b tmp research node_modules packages .circleci 3rd thirdparty third_party 3rdparty 3rd_party  /XF  *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules 
 
 robocopy Z:\lib\tooling\qiqqa\MuPDF\thirdparty\owemdjee\boost Qiqqa/MuPDF\thirdparty\owemdjee\boost * /LOG+:snapshot.log /LEV:20 /S /COPY:DAT /DCOPY:DAT /IM      /W:1 /R:3 /PURGE /XD .vs obj b tmp research node_modules packages owemdjee downloads ~ .circleci 3rd thirdparty third_party 3rdparty 3rd_party  /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules 
@@ -680,4 +683,16 @@ FOR /F %f IN ( utils\tmp.lst ) DO IF NOT %f == # robocopy Z:\lib\tooling\qiqqa\M
 EOF
 cat utils/tmp.bat | cmd
 
+# and then some post-orgasmic cleanup bliss:
+cd Qiqqa/MuPDF
+
+for f in 					\
+	platform/win32/*.pdf			\
+	platform/win32/text*.xml		\
+	__git_lazy_remotes__			\
+; do
+	rm "$f"
+done
+cd ../..
+		
 popd                       > /dev/null

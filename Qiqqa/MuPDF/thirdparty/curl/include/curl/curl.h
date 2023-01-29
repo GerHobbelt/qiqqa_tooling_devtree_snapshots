@@ -159,6 +159,17 @@ typedef int curl_socket_t;
 #define curl_socket_typedef
 #endif /* curl_socket_typedef */
 
+
+typedef enum {
+	CLOBBER_DEFAULT = 0, /* Provides compatibility with previous versions of curl,
+						  by using the default behavior for -o, -O, and -J.
+						  If those options would have overwritten files, like
+						  -o and -O would, then overwrite them. In the case of
+						  -J, this will not overwrite any files. */
+	CLOBBER_NEVER, /* If the file exists, always fail */
+	CLOBBER_ALWAYS /* If the file exists, always overwrite it */
+} file_clobber_mode_t;
+
 /* enum for the different supported SSL backends */
 typedef enum {
   CURLSSLBACKEND_NONE = 0,
@@ -2720,6 +2731,15 @@ CURL_EXTERN char *curl_easy_unescape(CURL *handle,
 /* the previous version */
 CURL_EXTERN char *curl_unescape(const char *string,
                                 int length);
+
+
+/*
+* Clean single line input for display on the stdout: replace control characters,
+* keeep it otherwise as-is.
+*
+* Note: CR/LF are therefore also considered undesirable control codes in this context.
+*/
+CURL_EXTERN char* curl_clean_for_printing_to_console(const char* url);
 
 /*
  * NAME curl_free()

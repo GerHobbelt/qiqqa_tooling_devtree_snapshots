@@ -129,19 +129,19 @@
 #include "allheaders.h"
 #include "pix_internal.h"
 
+ /* jconfig.h makes the error of setting
+  *   #define HAVE_STDLIB_H
+  * which conflicts with config_auto.h (where it is set to 1) and results
+  * for some gcc compiler versions in a warning.  The conflict is harmless
+  * but we suppress it by undefining the variable. */
+#undef HAVE_STDLIB_H
+#include "jpeglib.h"
+
 /* --------------------------------------------*/
 #if  HAVE_LIBJPEG   /* defined in environ.h */
 /* --------------------------------------------*/
 
 #include <setjmp.h>
-
-    /* jconfig.h makes the error of setting
-     *   #define HAVE_STDLIB_H
-     * which conflicts with config_auto.h (where it is set to 1) and results
-     * for some gcc compiler versions in a warning.  The conflict is harmless
-     * but we suppress it by undefining the variable. */
-#undef HAVE_STDLIB_H
-#include "jpeglib.h"
 
 static void jpeg_error_catch_all_1(j_common_ptr cinfo);
 static void jpeg_error_catch_all_2(j_common_ptr cinfo);
@@ -275,8 +275,8 @@ l_uint32                      *line, *ppixel;
 JSAMPROW                       rowbuffer;
 PIX                           *pix;
 PIXCMAP                       *cmap;
-struct jpeg_decompress_struct  cinfo;
-struct jpeg_error_mgr          jerr;
+struct jpeg_decompress_struct  cinfo = { 0 };
+struct jpeg_error_mgr          jerr = { 0 };
 jmp_buf                        jmpbuf;  /* must be local to the function */
 
     if (pnwarn) *pnwarn = 0;
@@ -297,7 +297,7 @@ jmp_buf                        jmpbuf;  /* must be local to the function */
         /* Modify the jpeg error handling to catch fatal errors  */
     cinfo.err = jpeg_std_error(&jerr);
     jerr.error_exit = jpeg_error_catch_all_1;
-    cinfo.client_data = (void *)&jmpbuf;
+	cinfo.client_data_ref = (void *)&jmpbuf;
     if (setjmp(jmpbuf)) {
         jpeg_destroy_decompress(&cinfo);
         pixDestroy(&pix);
@@ -551,8 +551,8 @@ freadHeaderJpeg(FILE     *fp,
                 l_int32  *pcmyk)
 {
 l_int32                        spp, w, h;
-struct jpeg_decompress_struct  cinfo;
-struct jpeg_error_mgr          jerr;
+struct jpeg_decompress_struct  cinfo = { 0 };
+struct jpeg_error_mgr          jerr = { 0 };
 jmp_buf                        jmpbuf;  /* must be local to the function */
 
     if (pw) *pw = 0;
@@ -569,7 +569,7 @@ jmp_buf                        jmpbuf;  /* must be local to the function */
 
         /* Modify the jpeg error handling to catch fatal errors  */
     cinfo.err = jpeg_std_error(&jerr);
-    cinfo.client_data = (void *)&jmpbuf;
+    cinfo.client_data_ref = (void *)&jmpbuf;
     jerr.error_exit = jpeg_error_catch_all_1;
     if (setjmp(jmpbuf))
         return ERROR_INT("internal jpeg error", __func__, 1);
@@ -621,8 +621,8 @@ fgetJpegResolution(FILE     *fp,
                    l_int32  *pxres,
                    l_int32  *pyres)
 {
-struct jpeg_decompress_struct  cinfo;
-struct jpeg_error_mgr          jerr;
+struct jpeg_decompress_struct  cinfo = { 0 };
+struct jpeg_error_mgr          jerr = { 0 };
 jmp_buf                        jmpbuf;  /* must be local to the function */
 
     if (pxres) *pxres = 0;
@@ -636,7 +636,7 @@ jmp_buf                        jmpbuf;  /* must be local to the function */
 
         /* Modify the jpeg error handling to catch fatal errors  */
     cinfo.err = jpeg_std_error(&jerr);
-    cinfo.client_data = (void *)&jmpbuf;
+    cinfo.client_data_ref = (void *)&jmpbuf;
     jerr.error_exit = jpeg_error_catch_all_1;
     if (setjmp(jmpbuf))
         return ERROR_INT("internal jpeg error", __func__, 1);
@@ -678,9 +678,9 @@ l_int32
 fgetJpegComment(FILE      *fp,
                 l_uint8  **pcomment)
 {
-struct jpeg_decompress_struct  cinfo;
-struct jpeg_error_mgr          jerr;
-struct callback_data           cb_data;  /* contains local jmp_buf */
+struct jpeg_decompress_struct  cinfo = { 0 };
+struct jpeg_error_mgr          jerr = { 0 };
+struct callback_data           cb_data = { 0 };  /* contains local jmp_buf */
 
     if (!pcomment)
         return ERROR_INT("&comment not defined", __func__, 1);
@@ -690,12 +690,12 @@ struct callback_data           cb_data;  /* contains local jmp_buf */
 
     rewind(fp);
 
-        /* Modify the jpeg error handling to catch fatal errors  */
+    /* Modify the jpeg error handling to catch fatal errors  */
     cinfo.err = jpeg_std_error(&jerr);
     jerr.error_exit = jpeg_error_catch_all_2;
     cb_data.comment = NULL;
-    cinfo.client_data = (void *)&cb_data;
-    if (setjmp(cb_data.jmpbuf)) {
+	cinfo.client_data_ref = (void *)&cb_data;
+	if (setjmp(cb_data.jmpbuf)) {
         LEPT_FREE(cb_data.comment);
         return ERROR_INT("internal jpeg error", __func__, 1);
     }
@@ -839,7 +839,7 @@ jmp_buf                      jmpbuf;  /* must be local to the function */
 
         /* Modify the jpeg error handling to catch fatal errors  */
     cinfo.err = jpeg_std_error(&jerr);
-    cinfo.client_data = (void *)&jmpbuf;
+    cinfo.client_data_ref = (void *)&jmpbuf;
     jerr.error_exit = jpeg_error_catch_all_1;
     if (setjmp(jmpbuf)) {
         LEPT_FREE(rowbuffer);
@@ -1197,7 +1197,7 @@ pixSetChromaSampling(PIX     *pix,
 static void
 jpeg_error_catch_all_1(j_common_ptr cinfo)
 {
-    jmp_buf *pjmpbuf = (jmp_buf *)cinfo->client_data;
+    jmp_buf *pjmpbuf = (jmp_buf *)cinfo->client_data_ref;
     (*cinfo->err->output_message) (cinfo);
     jpeg_destroy(cinfo);
     longjmp(*pjmpbuf, 1);
@@ -1216,7 +1216,7 @@ jpeg_error_catch_all_2(j_common_ptr cinfo)
 {
 struct callback_data  *pcb_data;
 
-    pcb_data = (struct callback_data *)cinfo->client_data;
+    pcb_data = (struct callback_data *)cinfo->client_data_ref;
     (*cinfo->err->output_message) (cinfo);
     jpeg_destroy(cinfo);
     longjmp(pcb_data->jmpbuf, 1);
@@ -1267,7 +1267,7 @@ struct callback_data  *pcb_data;
         comment[i] = jpeg_getc(cinfo);
 
         /* Save the comment and return */
-    pcb_data = (struct callback_data *)cinfo->client_data;
+    pcb_data = (struct callback_data *)cinfo->client_data_ref;
     if (pcb_data->comment) {  /* clear before overwriting previous comment */
         LEPT_FREE(pcb_data->comment);
         pcb_data->comment = NULL;

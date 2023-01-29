@@ -77,15 +77,7 @@ bool tool_create_output_file(struct OutStruct *outs,
   struct GlobalConfig *global;
   struct OperationConfig *config;
   FILE *file = NULL;
-  enum {
-	  CLOBBER_DEFAULT, /* Provides compatibility with previous versions of curl,
-						  by using the default behavior for -o, -O, and -J.
-						  If those options would have overwritten files, like
-						  -o and -O would, then overwrite them. In the case of
-						  -J, this will not overwrite any files. */
-	  CLOBBER_NEVER, /* If the file exists, always fail */
-	  CLOBBER_ALWAYS /* If the file exists, always overwrite it */
-  } clobber_mode;
+  file_clobber_mode_t clobber_mode;
   int duplicate = 1;
   char* fname = outs->filename;
   char* aname = NULL;
@@ -524,6 +516,14 @@ size_t tool_write_cb(char *buffer, size_t sz, size_t nmemb, void *userdata)
       warnf(config->global, "Binary output can mess up your terminal. "
             "Use \"--output -\" to tell curl to output it to your terminal "
             "anyway, or consider \"--output <FILE>\" to save to a file.\n");
+
+	  if (config->output_dir) {
+		  warnf(config->global, "\n");
+		  warnf(config->global, "By the way: you specified --output-dir "
+			  "but output is still written to stdout as you apperently did not "
+			  "specify an --output or --remote-name-all option. Might be you "
+			  "wanted to do that?\n");
+	  }
       config->synthetic_error = TRUE;
       return CURL_WRITEFUNC_ERROR;
     }
