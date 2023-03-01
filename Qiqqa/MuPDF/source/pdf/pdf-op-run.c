@@ -290,9 +290,9 @@ end_softmask(fz_context *ctx, pdf_run_processor *pr, softmask_save *save)
 static void
 pdf_push_tk_group(fz_context *ctx, pdf_run_processor *pr)
 {
+#if 0
 	fz_rect rect = fz_infinite_rect;
 
-#if 0
 	fz_begin_group(ctx, pr->dev, rect, NULL, 0 /* isolated */, 1, FZ_BLEND_NORMAL, 1.0);
 	pr->tos.tk_group_pushed = 1;
 #endif
@@ -1444,6 +1444,20 @@ structure_type(fz_context *ctx, pdf_run_processor *proc, pdf_obj *tag)
 		return FZ_STRUCTURE_NONSTRUCT;
 	if (pdf_name_eq(ctx, tag, PDF_NAME(Private)))
 		return FZ_STRUCTURE_PRIVATE;
+	/* Grouping elements (PDF 2.0 - Table 364) */
+	if (pdf_name_eq(ctx, tag, PDF_NAME(DocumentFragment)))
+		return FZ_STRUCTURE_DOCUMENTFRAGMENT;
+	/* Grouping elements (PDF 2.0 - Table 365) */
+	if (pdf_name_eq(ctx, tag, PDF_NAME(Aside)))
+		return FZ_STRUCTURE_ASIDE;
+	/* Grouping elements (PDF 2.0 - Table 366) */
+	if (pdf_name_eq(ctx, tag, PDF_NAME(Title)))
+		return FZ_STRUCTURE_TITLE;
+	if (pdf_name_eq(ctx, tag, PDF_NAME(FENote)))
+		return FZ_STRUCTURE_FENOTE;
+	/* Grouping elements (PDF 2.0 - Table 367) */
+	if (pdf_name_eq(ctx, tag, PDF_NAME(Sub)))
+		return FZ_STRUCTURE_SUB;
 
 	/* Paragraphlike elements (PDF 1.7 - Table 10.21) */
 	if (pdf_name_eq(ctx, tag, PDF_NAME(P)))
@@ -1468,7 +1482,7 @@ structure_type(fz_context *ctx, pdf_run_processor *proc, pdf_obj *tag)
 		return FZ_STRUCTURE_LIST;
 	if (pdf_name_eq(ctx, tag, PDF_NAME(LI)))
 		return FZ_STRUCTURE_LISTITEM;
-	if (pdf_name_eq(ctx, tag, PDF_NAME(Label)))
+	if (pdf_name_eq(ctx, tag, PDF_NAME(Lbl)))
 		return FZ_STRUCTURE_LABEL;
 	if (pdf_name_eq(ctx, tag, PDF_NAME(LBody)))
 		return FZ_STRUCTURE_LISTBODY;
@@ -1506,6 +1520,11 @@ structure_type(fz_context *ctx, pdf_run_processor *proc, pdf_obj *tag)
 		return FZ_STRUCTURE_LINK;
 	if (pdf_name_eq(ctx, tag, PDF_NAME(Annot)))
 		return FZ_STRUCTURE_ANNOT;
+	/* Inline elements (PDF 2.0 - Table 368) */
+	if (pdf_name_eq(ctx, tag, PDF_NAME(Em)))
+		return FZ_STRUCTURE_EM;
+	if (pdf_name_eq(ctx, tag, PDF_NAME(Strong)))
+		return FZ_STRUCTURE_STRONG;
 
 	/* Ruby inline element (PDF 1.7 - Table 10.26) */
 	if (pdf_name_eq(ctx, tag, PDF_NAME(Ruby)))
@@ -1532,6 +1551,10 @@ structure_type(fz_context *ctx, pdf_run_processor *proc, pdf_obj *tag)
 		return FZ_STRUCTURE_FORMULA;
 	if (pdf_name_eq(ctx, tag, PDF_NAME(Form)))
 		return FZ_STRUCTURE_FORM;
+
+	/* Artifact structure type (PDF 2.0 - Table 375) */
+	if (pdf_name_eq(ctx, tag, PDF_NAME(Artifact)))
+		return FZ_STRUCTURE_ARTIFACT;
 
 	return FZ_STRUCTURE_INVALID;
 }
@@ -1636,7 +1659,6 @@ end_layer(fz_context *ctx, pdf_run_processor *proc, pdf_obj *val)
 	if (obj)
 	{
 		fz_end_layer(ctx, proc->dev);
-		return;
 	}
 }
 
@@ -1644,12 +1666,10 @@ static void
 pop_structure_to(fz_context *ctx, pdf_run_processor *proc, pdf_obj *common)
 {
 	pdf_obj *struct_tree_root = pdf_dict_getl(ctx, pdf_trailer(ctx, proc->doc), PDF_NAME(Root), PDF_NAME(StructTreeRoot), NULL);
-	pdf_obj *parent_tree_root = pdf_dict_get(ctx, struct_tree_root, PDF_NAME(ParentTree));
 
 	while (pdf_objcmp(ctx, proc->mcid_sent, common))
 	{
 		pdf_obj *p = pdf_dict_get(ctx, proc->mcid_sent, PDF_NAME(P));
-		pdf_obj *tag = pdf_dict_get(ctx, proc->mcid_sent, PDF_NAME(S));
 
 		fz_end_structure(ctx, proc->dev);
 		pdf_drop_obj(ctx, proc->mcid_sent);
@@ -2814,6 +2834,8 @@ pdf_drop_run_processor(fz_context *ctx, pdf_processor *proc)
 
 	while (pr->marked_content)
 		pop_marked_content(ctx, pr, 0);
+
+	pdf_drop_obj(ctx, pr->mcid_sent);
 
 	pdf_drop_document(ctx, pr->doc);
 	pdf_drop_obj(ctx, pr->role_map);

@@ -106,10 +106,10 @@ public:
             wxBusyInfo(wxBusyInfoFlags().Parent(parent).Label(message))
         @endcode
 
-        @note If @a parent is not @NULL you must ensure that it is not
+        @note If @a parent is not @nullptr you must ensure that it is not
               closed while the busy info is shown.
     */
-    wxBusyInfo(const wxString& msg, wxWindow* parent = NULL);
+    wxBusyInfo(const wxString& msg, wxWindow* parent = nullptr);
 
     /**
         Update the information text.

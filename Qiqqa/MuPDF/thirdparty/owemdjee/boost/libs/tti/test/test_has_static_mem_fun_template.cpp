@@ -22,7 +22,7 @@ int main()
   
   BOOST_TEST((!TAnother<AType,short,boost::mpl::vector<int,long &,const long &> >::value));
   
-  // Mismatched paramaters
+  // Mismatched parameters
   
   BOOST_TEST((!BOOST_TTI_HAS_STATIC_MEMBER_FUNCTION_TEMPLATE_GEN(YetAnotherFuncTemplate)<AnotherType,void,boost::mpl::vector<const long &,float &> >::value));
   

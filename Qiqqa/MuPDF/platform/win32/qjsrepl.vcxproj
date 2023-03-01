@@ -217,14 +217,20 @@
     <ProjectReference Include="libmujs.vcxproj">
       <Project>{5edcf4fd-0291-4fb9-8d96-858957ca5e3c}</Project>
     </ProjectReference>
+    <ProjectReference Include="libmupdf_minimal_core.vcxproj">
+      <Project>{6f1ee8ba-ccb7-4f76-b9da-337c41dd6fc0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libqjscalc.vcxproj">
+      <Project>{64726826-d4bd-4a18-91c8-7b4905af7bc7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libqjsrepl.vcxproj">
+      <Project>{684bac1d-1fb3-4cc5-adaa-4a4b6721badb}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libqjsrunner.vcxproj">
+      <Project>{eb6b45ed-1f50-43a8-91ff-046a7203c46e}</Project>
+    </ProjectReference>
     <ProjectReference Include="libQuickJS.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff0e57ba}</Project>
-    </ProjectReference>
-    <ProjectReference Include="libQuickJSpp.vcxproj">
-      <Project>{a60d8644-5a1c-4d29-8970-7518ff2ef6ed}</Project>
-    </ProjectReference>
-    <ProjectReference Include="libQuickJSpp2.vcxproj">
-      <Project>{a60d8644-5a1c-4d29-8970-7518ffb7b249}</Project>
     </ProjectReference>
     <ProjectReference Include="libQuickJS_examples.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff0e57b3}</Project>

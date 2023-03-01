@@ -117,118 +117,118 @@
     <Filter Include="Misc Files\blosc">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0035}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\compat">
+    <Filter Include="Misc Files\cmake">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0036}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\contrib">
+    <Filter Include="Misc Files\compat">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0037}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\doc">
+    <Filter Include="Misc Files\contrib">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0038}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\doc\development">
+    <Filter Include="Misc Files\doc">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0039}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\doc\format">
+    <Filter Include="Misc Files\doc\development">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0040}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\doc\reference">
+    <Filter Include="Misc Files\doc\format">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0041}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\examples">
+    <Filter Include="Misc Files\doc\reference">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0042}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\internal-complibs">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0044}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6">
+    <Filter Include="Misc Files\examples">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0043}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\arch">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0046}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\arch\arm">
+    <Filter Include="Misc Files\internal-complibs">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0045}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\arch\generic">
+    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0044}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\arch">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0047}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\arch\power">
+    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\arch\arm">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0046}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\arch\generic">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0048}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\arch\s390">
+    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\arch\power">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0049}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\arch\x86">
+    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\arch\s390">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0050}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\doc">
+    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\arch\x86">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0051}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\test">
+    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\cmake">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0052}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\test\GH-361">
+    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\doc">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0053}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\test\GH-751">
+    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\test">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0054}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\test\data">
+    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\test\GH-361">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0055}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\test\pigz">
+    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\test\GH-751">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0056}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\tools">
+    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\test\data">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0057}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\win32">
+    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\test\pigz">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0058}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\internal-complibs\zstd-1.5.2">
+    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\tools">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0059}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\internal-complibs\zstd-1.5.2\decompress">
+    <Filter Include="Misc Files\internal-complibs\zlib-ng-2.0.6\win32">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0060}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\internal-complibs\zstd-1.5.2\dll">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0062}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\internal-complibs\zstd-1.5.2\dll\example">
+    <Filter Include="Misc Files\internal-complibs\zstd-1.5.2">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0061}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\plugins">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0063}</UniqueIdentifier>
+    <Filter Include="Misc Files\internal-complibs\zstd-1.5.2\decompress">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0062}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\plugins\codecs">
+    <Filter Include="Misc Files\internal-complibs\zstd-1.5.2\dll">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0064}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\plugins\codecs\ndlz">
+    <Filter Include="Misc Files\internal-complibs\zstd-1.5.2\dll\example">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0063}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\plugins">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0065}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\plugins\codecs\zfp">
+    <Filter Include="Misc Files\plugins\codecs">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0066}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\plugins\filters">
+    <Filter Include="Misc Files\plugins\codecs\ndlz">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0067}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\plugins\filters\ndcell">
+    <Filter Include="Misc Files\plugins\codecs\zfp">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0068}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\plugins\filters\ndmean">
+    <Filter Include="Misc Files\plugins\filters">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0069}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\plugins\test_data">
+    <Filter Include="Misc Files\plugins\filters\ndcell">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0070}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tests">
+    <Filter Include="Misc Files\plugins\filters\ndmean">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0071}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tests\fuzz">
+    <Filter Include="Misc Files\plugins\test_data">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0072}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tests\fuzz\corpus">
+    <Filter Include="Misc Files\tests">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0073}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files">
@@ -369,71 +369,65 @@
     <Filter Include="Source Files\internal-complibs\zlib-ng-2.0.6\test">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0119}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\internal-complibs\zlib-ng-2.0.6\test\fuzz">
+    <Filter Include="Source Files\internal-complibs\zlib-ng-2.0.6\tools">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0120}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\internal-complibs\zlib-ng-2.0.6\tools">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0121}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\internal-complibs\zstd-1.5.2">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0123}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\internal-complibs\zstd-1.5.2\common">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0122}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\internal-complibs\zstd-1.5.2\common">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0121}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files\internal-complibs\zstd-1.5.2\compress">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0124}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0123}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\internal-complibs\zstd-1.5.2\decompress">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0125}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0124}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\internal-complibs\zstd-1.5.2\deprecated">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0126}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0125}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\internal-complibs\zstd-1.5.2\dictBuilder">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0127}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0126}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\internal-complibs\zstd-1.5.2\legacy">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0128}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0127}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\plugins">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0129}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0128}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\plugins\codecs">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0130}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0129}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\plugins\codecs\ndlz">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0131}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0130}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\plugins\codecs\zfp">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0132}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0131}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\plugins\codecs\zfp\src">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0133}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0132}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\plugins\codecs\zfp\src\inline">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0134}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0133}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\plugins\codecs\zfp\src\share">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0135}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0134}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\plugins\codecs\zfp\src\template">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0136}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0135}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\plugins\filters">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0137}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0136}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\plugins\filters\ndcell">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0138}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0137}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\plugins\filters\ndmean">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0139}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0138}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\tests">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0140}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\tests\fuzz">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0141}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0139}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -923,30 +917,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/test/example.c">
       <Filter>Source Files\internal-complibs\zlib-ng-2.0.6\test</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/test/fuzz/checksum_fuzzer.c">
-      <Filter>Source Files\internal-complibs\zlib-ng-2.0.6\test\fuzz</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/test/fuzz/compress_fuzzer.c">
-      <Filter>Source Files\internal-complibs\zlib-ng-2.0.6\test\fuzz</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/test/fuzz/example_dict_fuzzer.c">
-      <Filter>Source Files\internal-complibs\zlib-ng-2.0.6\test\fuzz</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/test/fuzz/example_flush_fuzzer.c">
-      <Filter>Source Files\internal-complibs\zlib-ng-2.0.6\test\fuzz</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/test/fuzz/example_large_fuzzer.c">
-      <Filter>Source Files\internal-complibs\zlib-ng-2.0.6\test\fuzz</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/test/fuzz/example_small_fuzzer.c">
-      <Filter>Source Files\internal-complibs\zlib-ng-2.0.6\test\fuzz</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/test/fuzz/minigzip_fuzzer.c">
-      <Filter>Source Files\internal-complibs\zlib-ng-2.0.6\test\fuzz</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/test/fuzz/standalone_fuzz_target_runner.c">
-      <Filter>Source Files\internal-complibs\zlib-ng-2.0.6\test\fuzz</Filter>
-    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/test/hash_head_0.c">
       <Filter>Source Files\internal-complibs\zlib-ng-2.0.6\test</Filter>
     </ClCompile>
@@ -1375,24 +1345,6 @@
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/c-blosc2/plugins/plugin_utils.c">
       <Filter>Source Files\plugins</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/c-blosc2/tests/fuzz/fuzz_compress_chunk.c">
-      <Filter>Source Files\tests\fuzz</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/c-blosc2/tests/fuzz/fuzz_compress_frame.c">
-      <Filter>Source Files\tests\fuzz</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/c-blosc2/tests/fuzz/fuzz_decompress_chunk.c">
-      <Filter>Source Files\tests\fuzz</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/c-blosc2/tests/fuzz/fuzz_decompress_frame.c">
-      <Filter>Source Files\tests\fuzz</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/c-blosc2/tests/fuzz/generate_inputs_corpus.c">
-      <Filter>Source Files\tests\fuzz</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/c-blosc2/tests/fuzz/standalone.c">
-      <Filter>Source Files\tests\fuzz</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/c-blosc2/tests/gcc-segfault-issue.c">
       <Filter>Source Files\tests</Filter>
@@ -2078,6 +2030,30 @@
     <Text Include="../../thirdparty/owemdjee/c-blosc2/blosc2.pc.in">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/c-blosc2/cmake/FindIPP.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/c-blosc2/cmake/FindLZ4.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/c-blosc2/cmake/FindSIMD.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/c-blosc2/cmake/FindZLIB_NG.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/c-blosc2/cmake/FindZSTD.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/c-blosc2/cmake/toolchain-aarch64.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/c-blosc2/cmake/toolchain-armhf.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/c-blosc2/cmake/toolchain-armsf.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/c-blosc2/cmake_uninstall.cmake.in">
       <Filter>Misc Files</Filter>
     </Text>
@@ -2194,6 +2170,57 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/arch/x86/Makefile.in">
       <Filter>Misc Files\internal-complibs\zlib-ng-2.0.6\arch\x86</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/cmake/detect-arch.cmake">
+      <Filter>Misc Files\internal-complibs\zlib-ng-2.0.6\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/cmake/detect-coverage.cmake">
+      <Filter>Misc Files\internal-complibs\zlib-ng-2.0.6\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/cmake/detect-install-dirs.cmake">
+      <Filter>Misc Files\internal-complibs\zlib-ng-2.0.6\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/cmake/detect-sanitizer.cmake">
+      <Filter>Misc Files\internal-complibs\zlib-ng-2.0.6\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/cmake/run-and-compare.cmake">
+      <Filter>Misc Files\internal-complibs\zlib-ng-2.0.6\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/cmake/run-and-redirect.cmake">
+      <Filter>Misc Files\internal-complibs\zlib-ng-2.0.6\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/cmake/test-compress.cmake">
+      <Filter>Misc Files\internal-complibs\zlib-ng-2.0.6\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/cmake/test-tools.cmake">
+      <Filter>Misc Files\internal-complibs\zlib-ng-2.0.6\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/cmake/toolchain-aarch64.cmake">
+      <Filter>Misc Files\internal-complibs\zlib-ng-2.0.6\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/cmake/toolchain-arm.cmake">
+      <Filter>Misc Files\internal-complibs\zlib-ng-2.0.6\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/cmake/toolchain-mingw-i686.cmake">
+      <Filter>Misc Files\internal-complibs\zlib-ng-2.0.6\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/cmake/toolchain-mingw-x86_64.cmake">
+      <Filter>Misc Files\internal-complibs\zlib-ng-2.0.6\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/cmake/toolchain-powerpc.cmake">
+      <Filter>Misc Files\internal-complibs\zlib-ng-2.0.6\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/cmake/toolchain-powerpc64.cmake">
+      <Filter>Misc Files\internal-complibs\zlib-ng-2.0.6\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/cmake/toolchain-powerpc64le.cmake">
+      <Filter>Misc Files\internal-complibs\zlib-ng-2.0.6\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/cmake/toolchain-s390x.cmake">
+      <Filter>Misc Files\internal-complibs\zlib-ng-2.0.6\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/cmake/toolchain-sparc64.cmake">
+      <Filter>Misc Files\internal-complibs\zlib-ng-2.0.6\cmake</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/c-blosc2/internal-complibs/zlib-ng-2.0.6/doc/algorithm.txt">
       <Filter>Misc Files\internal-complibs\zlib-ng-2.0.6\doc</Filter>
@@ -2315,15 +2342,6 @@
     <Text Include="../../thirdparty/owemdjee/c-blosc2/tests/CMakeLists.txt">
       <Filter>Misc Files\tests</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/c-blosc2/tests/fuzz/CMakeLists.txt">
-      <Filter>Misc Files\tests\fuzz</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/c-blosc2/tests/fuzz/README.md">
-      <Filter>Misc Files\tests\fuzz</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/c-blosc2/tests/fuzz/corpus/README.md">
-      <Filter>Misc Files\tests\fuzz\corpus</Filter>
-    </Text>
     <Text Include="../../thirdparty/owemdjee/c-blosc2/tests/test_all.sh">
       <Filter>Misc Files\tests</Filter>
     </Text>
@@ -2350,4 +2368,3 @@
     </Text>
   </ItemGroup>
 </Project>
-    

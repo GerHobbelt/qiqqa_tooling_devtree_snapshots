@@ -297,7 +297,7 @@ static const struct LongShort aliases[]= {
   {"F",  "form",                     ARG_STRING},
   {"Fs", "form-string",              ARG_STRING},
   {"g",  "globoff",                  ARG_BOOL},
-  {"G",  "get",                      ARG_NONE},
+  {"G",  "get",                      ARG_BOOL},
   {"Ga", "request-target",           ARG_STRING},
   {"h",  "help",                     ARG_BOOL},
   {"H",  "header",                   ARG_STRING},
@@ -2270,9 +2270,12 @@ ParameterError getparameter(const char *flag, /* f or -long-flag */
       if(config->url_out)
         /* existing node */
         url = config->url_out;
-      else
+      else {
+        if(!toggle && !config->default_node_flags)
+          break;
         /* there was no free node, create one! */
         config->url_out = url = new_getout(config);
+      }
 
       if(!url)
         return PARAM_NO_MEM;
@@ -2373,21 +2376,11 @@ ParameterError getparameter(const char *flag, /* f or -long-flag */
       /* use remote file's time */
       config->remote_time = toggle;
       break;
-    case 's':
-      /* don't show progress meter, don't show errors : */
-      if(toggle)
-        global->mute = global->noprogress = TRUE;
-      else
-        global->mute = global->noprogress = FALSE;
-      if(global->showerror < 0)
-        /* if still on the default value, set showerror to the reverse of
-           toggle. This is to allow -S and -s to be used in an independent
-           order but still have the same effect. */
-        global->showerror = (!toggle)?TRUE:FALSE; /* toggle off */
+    case 's': /* --silent */
+      global->silent = toggle;
       break;
-    case 'S':
-      /* show errors */
-      global->showerror = toggle?1:0; /* toggle on if used with -s */
+    case 'S': /* --show-error */
+      global->showerror = toggle;
       break;
     case 't':
       /* Telnet options */

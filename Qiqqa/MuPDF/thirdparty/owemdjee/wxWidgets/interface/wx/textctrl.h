@@ -294,7 +294,7 @@ public:
         attributes from @a style that are the same as those in @a compareWith (if passed).
     */
     bool Apply(const wxTextAttr& style,
-               const wxTextAttr* compareWith = NULL);
+               const wxTextAttr* compareWith = nullptr);
 
     /**
         Copies all defined/valid properties from overlay to current object.
@@ -1326,7 +1326,7 @@ public:
         Constructor, creating and showing a text control.
 
         @param parent
-            Parent window. Should not be @NULL.
+            Parent window. Should not be @nullptr.
         @param id
             Control identifier. A value of -1 denotes a default value.
         @param value
@@ -1389,8 +1389,9 @@ public:
         Delete the undo history.
 
         Currently only implemented in wxMSW (for controls using wxTE_RICH2
-        style only) and wxOSX (for multiline text controls only), does nothing
-        in the other ports or for the controls not using the appropriate styles.
+        style only), wxOSX and wxQt (for multiline text controls only in both
+        of these ports), does nothing in the other ports or for the controls
+        not using the appropriate styles.
 
         @since 3.1.6
     */
@@ -1520,7 +1521,7 @@ public:
             portable code only positive values should be used.
         @param pos
             Receives the position of the character at the given position. May
-            be @NULL.
+            be @nullptr.
 
         @see PositionToXY(), XYToPosition()
     */
@@ -1546,10 +1547,10 @@ public:
             The position of the point to check, in window device coordinates.
         @param col
             Receives the column of the character at the given position. May be
-            @NULL.
+            @nullptr.
         @param row
             Receives the row of the character at the given position. May be
-            @NULL.
+            @nullptr.
 
         @see PositionToXY(), XYToPosition()
     */
@@ -1884,9 +1885,9 @@ public:
         the default parameter value to the text control @a text.
 
         @param text
-            The text control to append output too, must be non-@NULL
+            The text control to append output too, must be non-null
         @param ostr
-            The C++ stream to redirect, cout is used if it is @NULL
+            The C++ stream to redirect, cout is used if it is @nullptr
     */
     wxStreamToTextRedirector(wxTextCtrl *text, ostream* ostr);
 

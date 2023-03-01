@@ -21,14 +21,13 @@
 #  include "config_auto.h"
 #endif
 
+#include <tesseract/debugheap.h>
+
 #include <cctype>
 #include <cmath>
 #include <cstdint> // for int16_t, int32_t
 #include <cstdio>  // for fclose, fopen, FILE
 #include <ctime>   // for clock
-#if defined(_MSC_VER)
-#  include <crtdbg.h>
-#endif
 
 #include "control.h"
 #if !DISABLED_LEGACY_ENGINE
@@ -184,11 +183,7 @@ void Tesseract::SetupWordPassN(int pass_n, WordData *word) {
     for (unsigned s = 0; s <= sub_langs_.size(); ++s) {
       // The sub_langs_.size() entry is for the master language.
       Tesseract *lang_t = s < sub_langs_.size() ? sub_langs_[s] : this;
-#if defined(_DEBUG) && defined(_CRTDBG_REPORT_FLAG)
-	  WERD_RES* word_res = new (_CLIENT_BLOCK, __FILE__, __LINE__) WERD_RES;
-#else
 	  auto* word_res = new WERD_RES;
-#endif  // _DEBUG
       word_res->InitForRetryRecognition(*word->word);
       word->lang_words.push_back(word_res);
       // LSTM doesn't get setup for pass2.
@@ -307,8 +302,8 @@ bool Tesseract::recog_all_words(PAGE_RES *page_res, ETEXT_DESC *monitor,
     // ****************** Pass 1 *******************
 
 #if !DISABLED_LEGACY_ENGINE
-    // If the adaptive classifier is full switch to one we prepared earlier,
-    // ie on the previous page. If the current adaptive classifier is non-empty,
+    // If the adaptive classifier is full, switch to one we prepared earlier,
+    // i.e. on the previous page. If the current adaptive classifier is non-empty,
     // prepare a backup starting at this page, in case it fills up. Do all this
     // independently for each language.
     if (AdaptiveClassifierIsFull()) {
@@ -1575,7 +1570,7 @@ void Tesseract::classify_word_pass2(const WordData &word_data, WERD_RES **in_wor
       TrainedXheightFix(word, block, row);
     }
   }
-#  ifndef GRAPHICS_DISABLED
+#  if !GRAPHICS_DISABLED
   if (tessedit_display_outwords) {
     if (fx_win == nullptr) {
       create_fx_win();
@@ -1954,7 +1949,7 @@ void Tesseract::set_word_fonts(WERD_RES *word) {
   }
   if (tessedit_font_id > 0) {
     if (tessedit_font_id >= fontinfo_size) {
-      tprintf("Error, invalid font ID provided: must be below {}.\n"
+      tprintf("ERROR: Invalid font ID provided: must be below {}.\n"
               "Falling back to font auto-detection.\n", fontinfo_size);
     } else {
       word->fontinfo = &fontinfo_table_.at(tessedit_font_id);
@@ -2098,7 +2093,7 @@ void Tesseract::italic_recognition_pass(PAGE_RES *page_res) {
 
   // This line has some side effect that prevents "Segmentation fault (core dumped)" in certain cases. 
   // Do not understand why that happens. 
-  word->best_choice->debug_string().c_str();
+  (void)word->best_choice->debug_string().c_str();
 
   while (word_next != nullptr) {
 

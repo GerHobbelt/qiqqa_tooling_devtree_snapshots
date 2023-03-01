@@ -368,8 +368,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/cpython/Modules/_weakref.c" />
     <ClCompile Include="../../thirdparty/owemdjee/cpython/Modules/_winapi.c" />
     <ClCompile Include="../../thirdparty/owemdjee/cpython/Modules/_xxsubinterpretersmodule.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/cpython/Modules/_xxtestfuzz/_xxtestfuzz.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/cpython/Modules/_xxtestfuzz/fuzzer.c" />
     <ClCompile Include="../../thirdparty/owemdjee/cpython/Modules/_zoneinfo.c" />
     <ClCompile Include="../../thirdparty/owemdjee/cpython/Modules/arraymodule.c" />
     <ClCompile Include="../../thirdparty/owemdjee/cpython/Modules/atexitmodule.c" />
@@ -3281,7 +3279,6 @@
     <Text Include="../../thirdparty/owemdjee/cpython/Lib/test/test_xmlrpc.py" />
     <Text Include="../../thirdparty/owemdjee/cpython/Lib/test/test_xmlrpc_net.py" />
     <Text Include="../../thirdparty/owemdjee/cpython/Lib/test/test_xxlimited.py" />
-    <Text Include="../../thirdparty/owemdjee/cpython/Lib/test/test_xxtestfuzz.py" />
     <Text Include="../../thirdparty/owemdjee/cpython/Lib/test/test_yield_from.py" />
     <Text Include="../../thirdparty/owemdjee/cpython/Lib/test/test_zipapp.py" />
     <Text Include="../../thirdparty/owemdjee/cpython/Lib/test/test_zipfile/__init__.py" />
@@ -3368,6 +3365,7 @@
     <Text Include="../../thirdparty/owemdjee/cpython/Lib/turtledemo/round_dance.py" />
     <Text Include="../../thirdparty/owemdjee/cpython/Lib/turtledemo/sorting_animate.py" />
     <Text Include="../../thirdparty/owemdjee/cpython/Lib/turtledemo/tree.py" />
+    <Text Include="../../thirdparty/owemdjee/cpython/Lib/turtledemo/turtle.cfg" />
     <Text Include="../../thirdparty/owemdjee/cpython/Lib/turtledemo/two_canvases.py" />
     <Text Include="../../thirdparty/owemdjee/cpython/Lib/turtledemo/yinyang.py" />
     <Text Include="../../thirdparty/owemdjee/cpython/Lib/types.py" />
@@ -3462,7 +3460,6 @@
     <Text Include="../../thirdparty/owemdjee/cpython/Mac/Resources/framework/Info.plist.in" />
     <Text Include="../../thirdparty/owemdjee/cpython/Mac/Tools/plistlib_generate_testdata.py" />
     <Text Include="../../thirdparty/owemdjee/cpython/Makefile.pre.in" />
-    <Text Include="../../thirdparty/owemdjee/cpython/Misc/NEWS.d/" />
     <Text Include="../../thirdparty/owemdjee/cpython/Misc/NEWS.d/3.10.0a1.rst" />
     <Text Include="../../thirdparty/owemdjee/cpython/Misc/NEWS.d/3.10.0a2.rst" />
     <Text Include="../../thirdparty/owemdjee/cpython/Misc/NEWS.d/3.10.0a3.rst" />
@@ -3622,15 +3619,6 @@
     <Text Include="../../thirdparty/owemdjee/cpython/Modules/_decimal/tests/runall.bat" />
     <Text Include="../../thirdparty/owemdjee/cpython/Modules/_sha3/README.txt" />
     <Text Include="../../thirdparty/owemdjee/cpython/Modules/_testcapi/README.txt" />
-    <Text Include="../../thirdparty/owemdjee/cpython/Modules/_xxtestfuzz/README.rst" />
-    <Text Include="../../thirdparty/owemdjee/cpython/Modules/_xxtestfuzz/fuzz_csv_reader_corpus/test.csv" />
-    <Text Include="../../thirdparty/owemdjee/cpython/Modules/_xxtestfuzz/fuzz_json_loads_corpus/empty_array.json" />
-    <Text Include="../../thirdparty/owemdjee/cpython/Modules/_xxtestfuzz/fuzz_json_loads_corpus/empty_object.json" />
-    <Text Include="../../thirdparty/owemdjee/cpython/Modules/_xxtestfuzz/fuzz_json_loads_corpus/pass1.json" />
-    <Text Include="../../thirdparty/owemdjee/cpython/Modules/_xxtestfuzz/fuzz_json_loads_corpus/pass2.json" />
-    <Text Include="../../thirdparty/owemdjee/cpython/Modules/_xxtestfuzz/fuzz_json_loads_corpus/pass3.json" />
-    <Text Include="../../thirdparty/owemdjee/cpython/Modules/_xxtestfuzz/fuzz_json_loads_corpus/simple_array.json" />
-    <Text Include="../../thirdparty/owemdjee/cpython/Modules/_xxtestfuzz/fuzz_tests.txt" />
     <Text Include="../../thirdparty/owemdjee/cpython/Modules/cjkcodecs/README" />
     <Text Include="../../thirdparty/owemdjee/cpython/Modules/config.c.in" />
     <Text Include="../../thirdparty/owemdjee/cpython/Modules/gc_weakref.txt" />

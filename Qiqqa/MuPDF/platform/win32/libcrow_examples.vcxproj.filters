@@ -97,19 +97,16 @@
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\tests">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0029}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0030}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\tests\external_definition">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0030}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0029}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\tests\multi_file">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0031}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\tests\ssl">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0032}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\tests\template">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0033}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0032}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -164,7 +161,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/crow/examples/websocket/example_ws.cpp">
       <Filter>Source Files\examples\websocket</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/crow/tests/external_definition/main.cpp">
+    <ClCompile Include="../../thirdparty/owemdjee/crow/tests/external_definition/ed_main.cpp">
       <Filter>Source Files\tests\external_definition</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/crow/tests/multi_file/main.cpp">
@@ -173,14 +170,8 @@
     <ClCompile Include="../../thirdparty/owemdjee/crow/tests/multi_file/secondary.cpp">
       <Filter>Source Files\tests\multi_file</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/crow/tests/ssl/ssltest.cpp">
-      <Filter>Source Files\tests\ssl</Filter>
-    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/crow/tests/template/mustachetest.cpp">
       <Filter>Source Files\tests\template</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/crow/tests/unittest.cpp">
-      <Filter>Source Files\tests</Filter>
     </ClCompile>
     <ClInclude Include="../../thirdparty/owemdjee/crow/include/crow.h">
       <Filter>Header Files\include</Filter>
@@ -326,7 +317,13 @@
     <Text Include="../../thirdparty/owemdjee/crow/cmake/CrowConfig.cmake.in">
       <Filter>Misc Files\cmake</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/crow/cmake/Findasio.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/crow/cmake/cmake_uninstall.cmake.in">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/crow/cmake/compiler_options.cmake">
       <Filter>Misc Files\cmake</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/crow/docs/getting_started/a_simple_webpage.md">

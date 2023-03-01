@@ -180,7 +180,7 @@ wxStyledTextCtrl::wxStyledTextCtrl(wxWindow *parent,
                                    long style,
                                    const wxString& name)
 {
-    m_swx = NULL;
+    m_swx = nullptr;
     Create(parent, id, pos, size, style, name);
 }
 
@@ -204,12 +204,10 @@ bool wxStyledTextCtrl::Create(wxWindow *parent,
     m_swx = new ScintillaWX(this);
     m_stopWatch.Start();
     m_lastKeyDownConsumed = false;
-    m_vScrollBar = NULL;
-    m_hScrollBar = NULL;
-#if wxUSE_UNICODE
+    m_vScrollBar = nullptr;
+    m_hScrollBar = nullptr;
     // Put Scintilla into unicode (UTF-8) mode
     SetCodePage(wxSTC_CP_UTF8);
-#endif
 
     SetInitialSize(size);
 
@@ -255,7 +253,7 @@ wxIntPtr wxStyledTextCtrl::SendMsg(int msg, wxUIntPtr wp, wxIntPtr lp) const
 // Set the vertical scrollbar to use instead of the one that's built-in.
 void wxStyledTextCtrl::SetVScrollBar(wxScrollBar* bar)  {
     m_vScrollBar = bar;
-    if (bar != NULL) {
+    if (bar != nullptr) {
         // ensure that the built-in scrollbar is not visible
         SetScrollbar(wxVERTICAL, 0, 0, 0);
     }
@@ -265,7 +263,7 @@ void wxStyledTextCtrl::SetVScrollBar(wxScrollBar* bar)  {
 // Set the horizontal scrollbar to use instead of the one that's built-in.
 void wxStyledTextCtrl::SetHScrollBar(wxScrollBar* bar)  {
     m_hScrollBar = bar;
-    if (bar != NULL) {
+    if (bar != nullptr) {
         // ensure that the built-in scrollbar is not visible
         SetScrollbar(wxHORIZONTAL, 0, 0, 0);
     }
@@ -363,7 +361,7 @@ void wxStyledTextCtrl::StyleSetFont(int styleNum, const wxFont& font) {
 #ifdef __WXGTK__
     // Ensure that the native font is initialized
     int x, y;
-    GetTextExtent(wxT("X"), &x, &y, NULL, NULL, &font);
+    GetTextExtent(wxT("X"), &x, &y, nullptr, nullptr, &font);
 #endif
     int            size     = font.GetPointSize();
     wxString       faceName = font.GetFaceName();
@@ -558,7 +556,7 @@ bool wxStyledTextCtrl::GetUseAntiAliasing() {
 }
 
 void wxStyledTextCtrl::AnnotationClearLine(int line) {
-    SendMsg(SCI_ANNOTATIONSETTEXT, line, (sptr_t)NULL);
+    SendMsg(SCI_ANNOTATIONSETTEXT, line, (sptr_t)nullptr);
 }
 
 void wxStyledTextCtrl::MarkerDefineBitmap(int markerNumber,
@@ -821,7 +819,7 @@ void wxStyledTextCtrl::OnMouseWheel(wxMouseEvent& evt)
     if ( !GetMouseWheelCaptures() && !GetRect().Contains(evt.GetPosition()) )
     {
         wxWindow* parent = GetParent();
-        if ( parent != NULL )
+        if ( parent != nullptr )
         {
             wxMouseEvent newevt(evt);
             newevt.SetPosition(
@@ -836,7 +834,7 @@ void wxStyledTextCtrl::OnMouseWheel(wxMouseEvent& evt)
 
         // First try to find the list. It will be a wxVListBox named
         // "AutoCompListBox".
-        wxWindow* curWin  = this, *acListBox = NULL;
+        wxWindow* curWin  = this, *acListBox = nullptr;
         wxStack<wxWindow*> windows;
         windows.push(curWin);
 
@@ -899,15 +897,12 @@ void wxStyledTextCtrl::OnChar(wxKeyEvent& evt) {
 #endif
     bool skip = ((ctrl || alt) && ! (ctrl && alt));
 
-#if wxUSE_UNICODE
     // apparently if we don't do this, Unicode keys pressed after non-char
     // ASCII ones (e.g. Enter, Tab) are not taken into account (patch 1615989)
     if (m_lastKeyDownConsumed && evt.GetUnicodeKey() > 255)
         m_lastKeyDownConsumed = false;
-#endif
 
     if (!m_lastKeyDownConsumed && !skip) {
-#if wxUSE_UNICODE
         int key = evt.GetUnicodeKey();
         bool keyOk = true;
 
@@ -923,13 +918,6 @@ void wxStyledTextCtrl::OnChar(wxKeyEvent& evt) {
             m_swx->DoAddChar(key);
             return;
         }
-#else
-        int key = evt.GetKeyCode();
-        if (key < WXK_START) {
-            m_swx->DoAddChar(key);
-            return;
-        }
-#endif
     }
 
     evt.Skip();

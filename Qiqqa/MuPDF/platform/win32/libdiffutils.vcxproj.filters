@@ -122,6 +122,9 @@
     <Text Include="../../thirdparty/owemdjee/diffutils/TODO">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/diffutils/bootstrap.conf">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/diffutils/configure.ac">
       <Filter>Misc Files</Filter>
     </Text>
@@ -146,6 +149,9 @@
     <Text Include="../../thirdparty/owemdjee/diffutils/tests/Makefile.am">
       <Filter>Misc Files\tests</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/diffutils/tests/init.cfg">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/diffutils/tests/init.sh">
       <Filter>Misc Files\tests</Filter>
     </Text>
@@ -154,4 +160,3 @@
     </Text>
   </ItemGroup>
 </Project>
-    

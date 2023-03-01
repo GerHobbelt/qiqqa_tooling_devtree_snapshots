@@ -388,7 +388,7 @@ int main(int argc, const char **argv)
 
   free ( affine ) ;
 
-#ifdef _MSC_VER
+#if defined(_MSC_VER) && !defined(BUILD_MONOLITHIC)
   /* DUMP MEMORY LEAK INFORMATION */
   _CrtDumpMemoryLeaks () ;
 #endif

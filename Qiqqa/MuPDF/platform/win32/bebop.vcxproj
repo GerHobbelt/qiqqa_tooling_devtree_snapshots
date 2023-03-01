@@ -247,6 +247,7 @@
     <Text Include="../../thirdparty/owemdjee/bebop/Compiler/Properties/launchSettings.json" />
     <Text Include="../../thirdparty/owemdjee/bebop/Compiler/bebop_config_schema.json" />
     <Text Include="../../thirdparty/owemdjee/bebop/LICENSE.TXT" />
+    <Text Include="../../thirdparty/owemdjee/bebop/Laboratory/C#/Benchmarks/obj/Benchmarks.csproj.nuget.dgspec.json" />
     <Text Include="../../thirdparty/owemdjee/bebop/Laboratory/C#/Benchmarks/obj/project.assets.json" />
     <Text Include="../../thirdparty/owemdjee/bebop/Laboratory/C#/README.md" />
     <Text Include="../../thirdparty/owemdjee/bebop/Laboratory/C#/Test/obj/Test.csproj.nuget.dgspec.json" />
@@ -259,7 +260,6 @@
     <Text Include="../../thirdparty/owemdjee/bebop/Laboratory/Integration/decode.ts" />
     <Text Include="../../thirdparty/owemdjee/bebop/Laboratory/Integration/encode.ts" />
     <Text Include="../../thirdparty/owemdjee/bebop/Laboratory/Integration/makelib.ts" />
-
     <Text Include="../../thirdparty/owemdjee/bebop/Laboratory/Integration/package-lock.json" />
     <Text Include="../../thirdparty/owemdjee/bebop/Laboratory/Integration/package.json" />
     <Text Include="../../thirdparty/owemdjee/bebop/Laboratory/Integration/run_test.js" />
@@ -304,6 +304,7 @@
     <Text Include="../../thirdparty/owemdjee/bebop/Runtime/TypeScript/tsconfig.json" />
     <Text Include="../../thirdparty/owemdjee/bebop/Tools/bash/install.sh" />
     <Text Include="../../thirdparty/owemdjee/bebop/Tools/bebopc/README.MD" />
+    <Text Include="../../thirdparty/owemdjee/bebop/Tools/cmake/Bebop.cmake" />
     <Text Include="../../thirdparty/owemdjee/bebop/Tools/cmake/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/bebop/Tools/node/bebopc.js" />
     <Text Include="../../thirdparty/owemdjee/bebop/Tools/node/lib/index.ts" />

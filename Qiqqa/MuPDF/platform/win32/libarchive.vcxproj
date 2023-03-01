@@ -124,14 +124,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../scripts/libarchive;..\..\thirdparty\owemdjee\libarchive\libarchive;..\..\thirdparty\owemdjee\libarchive/libarchive_fe;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBARCHIVE;ARCHIVE_STATICLIB;PLATFORM_CONFIG_H="libarchive_config.h";_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;../../scripts/libarchive;..\..\thirdparty\owemdjee\libarchive\libarchive;..\..\thirdparty\owemdjee\libarchive/libarchive_fe;../../thirdparty/owemdjee/dirent/include;../../thirdparty/owemdjee/libarchive/contrib;../../thirdparty/monolithic_tmplt;../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>LIBARCHIVE_STATIC;BUILD_MONOLITHIC;BUILDING_LIBARCHIVE;ARCHIVE_STATICLIB;PLATFORM_CONFIG_H="libarchive_config.h";_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBARCHIVE;ARCHIVE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../scripts/libarchive;..\..\thirdparty\owemdjee\libarchive\libarchive;..\..\thirdparty\owemdjee\libarchive/libarchive_fe;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../scripts/libarchive;..\..\thirdparty\owemdjee\libarchive\libarchive;..\..\thirdparty\owemdjee\libarchive/libarchive_fe;../../thirdparty/owemdjee/dirent/include;../../thirdparty/owemdjee/libarchive/contrib;../../thirdparty/monolithic_tmplt;../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -150,15 +150,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../scripts/libarchive;..\..\thirdparty\owemdjee\libarchive\libarchive;..\..\thirdparty\owemdjee\libarchive/libarchive_fe;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBARCHIVE;ARCHIVE_STATICLIB;PLATFORM_CONFIG_H="libarchive_config.h";_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;../../scripts/libarchive;..\..\thirdparty\owemdjee\libarchive\libarchive;..\..\thirdparty\owemdjee\libarchive/libarchive_fe;../../thirdparty/owemdjee/dirent/include;../../thirdparty/owemdjee/libarchive/contrib;../../thirdparty/monolithic_tmplt;../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>LIBARCHIVE_STATIC;BUILD_MONOLITHIC;BUILDING_LIBARCHIVE;ARCHIVE_STATICLIB;PLATFORM_CONFIG_H="libarchive_config.h";_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBARCHIVE;ARCHIVE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../scripts/libarchive;..\..\thirdparty\owemdjee\libarchive\libarchive;..\..\thirdparty\owemdjee\libarchive/libarchive_fe;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../scripts/libarchive;..\..\thirdparty\owemdjee\libarchive\libarchive;..\..\thirdparty\owemdjee\libarchive/libarchive_fe;../../thirdparty/owemdjee/dirent/include;../../thirdparty/owemdjee/libarchive/contrib;../../thirdparty/monolithic_tmplt;../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -179,14 +179,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../scripts/libarchive;..\..\thirdparty\owemdjee\libarchive\libarchive;..\..\thirdparty\owemdjee\libarchive/libarchive_fe;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBARCHIVE;ARCHIVE_STATICLIB;PLATFORM_CONFIG_H="libarchive_config.h";_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;../../scripts/libarchive;..\..\thirdparty\owemdjee\libarchive\libarchive;..\..\thirdparty\owemdjee\libarchive/libarchive_fe;../../thirdparty/owemdjee/dirent/include;../../thirdparty/owemdjee/libarchive/contrib;../../thirdparty/monolithic_tmplt;../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>LIBARCHIVE_STATIC;BUILD_MONOLITHIC;BUILDING_LIBARCHIVE;ARCHIVE_STATICLIB;PLATFORM_CONFIG_H="libarchive_config.h";_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBARCHIVE;ARCHIVE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../scripts/libarchive;..\..\thirdparty\owemdjee\libarchive\libarchive;..\..\thirdparty\owemdjee\libarchive/libarchive_fe;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../scripts/libarchive;..\..\thirdparty\owemdjee\libarchive\libarchive;..\..\thirdparty\owemdjee\libarchive/libarchive_fe;../../thirdparty/owemdjee/dirent/include;../../thirdparty/owemdjee/libarchive/contrib;../../thirdparty/monolithic_tmplt;../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -205,15 +205,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../scripts/libarchive;..\..\thirdparty\owemdjee\libarchive\libarchive;..\..\thirdparty\owemdjee\libarchive/libarchive_fe;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBARCHIVE;ARCHIVE_STATICLIB;PLATFORM_CONFIG_H="libarchive_config.h";_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;../../scripts/libarchive;..\..\thirdparty\owemdjee\libarchive\libarchive;..\..\thirdparty\owemdjee\libarchive/libarchive_fe;../../thirdparty/owemdjee/dirent/include;../../thirdparty/owemdjee/libarchive/contrib;../../thirdparty/monolithic_tmplt;../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>LIBARCHIVE_STATIC;BUILD_MONOLITHIC;BUILDING_LIBARCHIVE;ARCHIVE_STATICLIB;PLATFORM_CONFIG_H="libarchive_config.h";_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBARCHIVE;ARCHIVE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../scripts/libarchive;..\..\thirdparty\owemdjee\libarchive\libarchive;..\..\thirdparty\owemdjee\libarchive/libarchive_fe;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../scripts/libarchive;..\..\thirdparty\owemdjee\libarchive\libarchive;..\..\thirdparty\owemdjee\libarchive/libarchive_fe;../../thirdparty/owemdjee/dirent/include;../../thirdparty/owemdjee/libarchive/contrib;../../thirdparty/monolithic_tmplt;../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -226,10 +226,12 @@
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ItemGroup>
+    <ClInclude Include="../../scripts/libarchive/libarchive_config.h" />
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="../../thirdparty/owemdjee/libarchive/cat/bsdcat.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libarchive/cat/cat_cmdline.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libarchive/contrib/shar/shar.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libarchive/contrib/shar/tree.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libarchive/contrib/archivetest.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libarchive/contrib/untar.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libarchive/cpio/cpio.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libarchive/cpio/cpio_cmdline.c" />
@@ -265,7 +267,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/libarchive/libarchive/archive_ppmd7.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libarchive/libarchive/archive_ppmd8.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libarchive/libarchive/archive_random.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libarchive/libarchive/archive_rarvm.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libarchive/libarchive/archive_rb.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libarchive/libarchive/archive_read.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libarchive/libarchive/archive_read_add_passphrase.c" />
@@ -380,8 +381,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/libarchive/tar/subst.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libarchive/tar/util.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libarchive/tar/write.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libarchive/test_utils/test_main.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libarchive/test_utils/test_utils.c" />
     <ClInclude Include="../../thirdparty/owemdjee/libarchive/cat/bsdcat.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libarchive/cat/bsdcat_platform.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libarchive/contrib/android/config/android.h" />
@@ -390,8 +389,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/libarchive/contrib/android/include/Bcrypt.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libarchive/contrib/android/include/Windows.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libarchive/contrib/android/include/android_lf.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/libarchive/contrib/shar/tree.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/libarchive/contrib/shar/tree_config.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libarchive/contrib/monolithic_examples.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libarchive/cpio/config_freebsd.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libarchive/cpio/cpio.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libarchive/cpio/cpio_platform.h" />
@@ -423,7 +421,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/libarchive/libarchive/archive_ppmd_private.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libarchive/libarchive/archive_private.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libarchive/libarchive/archive_random_private.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/libarchive/libarchive/archive_rarvm.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libarchive/libarchive/archive_rb.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libarchive/libarchive/archive_read_disk_private.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libarchive/libarchive/archive_read_private.h" />
@@ -446,42 +443,20 @@
     <ClInclude Include="../../thirdparty/owemdjee/libarchive/tar/config_freebsd.h" />
     <Text Include="../../thirdparty/owemdjee/libarchive/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libarchive/CONTRIBUTING.md" />
+    <Text Include="../../thirdparty/owemdjee/libarchive/CTestConfig.cmake" />
     <Text Include="../../thirdparty/owemdjee/libarchive/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libarchive/NEWS" />
     <Text Include="../../thirdparty/owemdjee/libarchive/README.md" />
-    <Text Include="../../thirdparty/owemdjee/libarchive/build/README.txt" />
-    <Text Include="../../thirdparty/owemdjee/libarchive/build/autogen.sh" />
-    <Text Include="../../thirdparty/owemdjee/libarchive/build/bump-version.sh" />
-    <Text Include="../../thirdparty/owemdjee/libarchive/build/ci/build.sh" />
-    <Text Include="../../thirdparty/owemdjee/libarchive/build/ci/cirrus_ci/ci.cmd" />
-    <Text Include="../../thirdparty/owemdjee/libarchive/build/ci/cirrus_ci/ci.sh" />
-    <Text Include="../../thirdparty/owemdjee/libarchive/build/ci/github_actions/ci.cmd" />
-    <Text Include="../../thirdparty/owemdjee/libarchive/build/ci/github_actions/macos.sh" />
-    <Text Include="../../thirdparty/owemdjee/libarchive/build/ci/travis_ci.sh" />
-    <Text Include="../../thirdparty/owemdjee/libarchive/build/clean.sh" />
-    <Text Include="../../thirdparty/owemdjee/libarchive/build/cmake/CheckFuncs_stub.c.in" />
-    <Text Include="../../thirdparty/owemdjee/libarchive/build/cmake/config.h.in" />
-    <Text Include="../../thirdparty/owemdjee/libarchive/build/makerelease.sh" />
-    <Text Include="../../thirdparty/owemdjee/libarchive/build/pkgconfig/libarchive.pc.in" />
-    <Text Include="../../thirdparty/owemdjee/libarchive/build/release/release.sh" />
-    <Text Include="../../thirdparty/owemdjee/libarchive/build/utils/gen_archive_string_composition_h.sh" />
     <Text Include="../../thirdparty/owemdjee/libarchive/cat/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/libarchive/cat/test/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libarchive/configure.ac" />
     <Text Include="../../thirdparty/owemdjee/libarchive/contrib/README" />
-    <Text Include="../../thirdparty/owemdjee/libarchive/contrib/oss-fuzz/oss-fuzz-build.sh" />
     <Text Include="../../thirdparty/owemdjee/libarchive/contrib/psota-benchmark/results.txt" />
     <Text Include="../../thirdparty/owemdjee/libarchive/contrib/psota-benchmark/tcp.sh" />
     <Text Include="../../thirdparty/owemdjee/libarchive/cpio/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/libarchive/cpio/test/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libarchive/doc/update.sh" />
     <Text Include="../../thirdparty/owemdjee/libarchive/examples/minitar/README" />
     <Text Include="../../thirdparty/owemdjee/libarchive/libarchive/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/libarchive/libarchive/libarchive_changes.3" />
-    <Text Include="../../thirdparty/owemdjee/libarchive/libarchive/test/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/libarchive/libarchive/test/README" />
     <Text Include="../../thirdparty/owemdjee/libarchive/tar/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/libarchive/tar/test/CMakeLists.txt" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

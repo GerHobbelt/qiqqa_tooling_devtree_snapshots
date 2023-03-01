@@ -60,7 +60,7 @@ public:
         Creates an empty wxTreebook.
 
         @param parent
-            The parent window. Must be non-@NULL.
+            The parent window. Must be non-null.
         @param id
             The window identifier.
         @param pos
@@ -70,7 +70,7 @@ public:
         @param style
             The window style. See wxNotebook.
         @param name
-            The name of the control (used only under Motif).
+            The name of the control.
     */
     wxTreebook(wxWindow* parent, wxWindowID id,
                const wxPoint& pos = wxDefaultPosition,
@@ -86,13 +86,13 @@ public:
 
     /**
         Adds a new page. The page is placed at the topmost level after all other
-        pages. @NULL could be specified for page to create an empty page.
+        pages. @nullptr could be specified for page to create an empty page.
     */
     virtual bool AddPage(wxWindow* page, const wxString& text,
                          bool bSelect = false, int imageId = wxNOT_FOUND);
 
     /**
-        Adds a new child-page to the last top-level page. @NULL could be
+        Adds a new child-page to the last top-level page. @nullptr could be
         specified for page to create an empty page.
     */
     virtual bool AddSubPage(wxWindow* page, const wxString& text,
@@ -148,7 +148,7 @@ public:
     /**
         Inserts a new page just before the page indicated by @a pagePos.
         The new page is placed before @a pagePos page and on the same level.
-        @NULL could be specified for page to create an empty page.
+        @nullptr could be specified for page to create an empty page.
     */
     virtual bool InsertPage(size_t pagePos, wxWindow* page,
                             const wxString& text, bool bSelect = false,
@@ -157,7 +157,7 @@ public:
     /**
         Inserts a sub page under the specified page.
 
-        @NULL could be specified for page to create an empty page.
+        @nullptr could be specified for page to create an empty page.
     */
     virtual bool InsertSubPage(size_t pagePos, wxWindow* page,
                                const wxString& text, bool bSelect = false,

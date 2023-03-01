@@ -1,0 +1,136 @@
+toolsets = gnu vs2017 vs2015 vs2013;
+
+gnu.makefile = ../../GNUmakefile;
+vs2017.solutionfile = ../msw/wxchartstests_vc15.sln;
+vs2015.solutionfile = ../msw/wxchartstests_vc14.sln;
+vs2013.solutionfile = ../msw/wxchartstests_vc12.sln;
+
+setting WXWIDGETS_ROOT
+{
+    help = "Path to the wxWidgets installation";
+    default = '$(WXWIN)';
+}
+
+setting WXCHARTS_ROOT
+{
+    help = "Path to the wxCharts installation";
+    default = '$(WXCHARTS)';
+}
+
+setting CATCH2_ROOT
+{
+    help = "Path to the Catch2 installation";
+    default = '$(WXCHARTS)/3rdparty/Catch2';
+}
+
+program wxchartstests
+{
+    archs = x86 x86_64;
+
+    vs2017.projectfile = ../msw/wxchartstests_vc15.vcxproj;
+    vs2015.projectfile = ../msw/wxchartstests_vc14.vcxproj;
+    vs2013.projectfile = ../msw/wxchartstests_vc12.vcxproj;
+ 
+    includedirs += $(WXCHARTS_ROOT)/include;
+    includedirs += $(CATCH2_ROOT)/single_include;
+
+    if (($(toolset) == vs2017) || ($(toolset) == vs2015) || ($(toolset) == vs2013))
+    {
+        win32-subsystem = windows;
+        
+        includedirs += $(WXWIDGETS_ROOT)/include;
+        includedirs += $(WXWIDGETS_ROOT)/include/msvc;
+        if ($(arch) == x86)
+        {
+            libdirs += $(WXCHARTS_ROOT)/lib/vc_lib;
+            libdirs += $(WXWIDGETS_ROOT)/lib/vc_lib;
+        }
+        if ($(arch) == x86_64)
+        {
+            libdirs += $(WXCHARTS_ROOT)/lib/vc_x64_lib;
+            libdirs += $(WXWIDGETS_ROOT)/lib/vc_x64_lib;
+        }
+    }
+    if ($(toolset) == gnu)
+    {
+        cxx-compiler-options = "-std=c++11 `wx-config --cxxflags`";
+        link-options = "`wx-config --libs`";
+        libdirs += $(WXCHARTS_ROOT);
+        libs += wxcharts;
+    }
+
+    headers
+    {
+        ../../src/wxchartstestsapp.h
+        ../../src/wxchartstestsframe.h
+        ../../src/wxchartstestsmenubar.h
+        ../../src/wxchartstestswindowids.h
+        ../../src/wxchartsdefaultthemepanel.h
+        ../../src/wxchartsrectanglepanel.h
+        ../../src/wxchartslabelpanel.h
+        ../../src/wxchartslabelseriespanel.h
+        ../../src/wxchartscategoricalaxispanel.h
+        ../../src/wxchartsnumericalaxispanel.h
+        ../../src/wxchartsgridpanel.h
+        ../../src/wxareachartpanel.h
+        ../../src/wxbarchartpanel.h
+        ../../src/wxboxplotpanel.h
+        ../../src/wxbubblechartpanel.h
+        ../../src/wxcandlestickchartpanel.h
+        ../../src/wxcolumnchartpanel.h
+        ../../src/wxdoughnutchartpanel.h
+        ../../src/wxhistogrampanel.h
+        ../../src/wxlinechartpanel.h
+        ../../src/wxpiechartpanel.h
+        ../../src/wxpolarareachartpanel.h
+        ../../src/wxstackedbarchartpanel.h
+        ../../src/wxstackedcolumnchartpanel.h
+        ../../src/elementcanvaswindow.h
+
+        ../../src/tests/testsuite.h
+    }
+
+    sources
+    {
+        ../../src/wxchartstestsapp.cpp
+        ../../src/wxchartstestsframe.cpp
+        ../../src/wxchartstestsmenubar.cpp
+        ../../src/wxchartsdefaultthemepanel.cpp
+        ../../src/wxchartsrectanglepanel.cpp
+        ../../src/wxchartslabelpanel.cpp
+        ../../src/wxchartslabelseriespanel.cpp
+        ../../src/wxchartscategoricalaxispanel.cpp
+        ../../src/wxchartsnumericalaxispanel.cpp
+        ../../src/wxchartsgridpanel.cpp
+        ../../src/wxareachartpanel.cpp
+        ../../src/wxbarchartpanel.cpp
+        ../../src/wxboxplotpanel.cpp
+        ../../src/wxbubblechartpanel.cpp
+        ../../src/wxcandlestickchartpanel.cpp
+        ../../src/wxcolumnchartpanel.cpp
+        ../../src/wxdoughnutchartpanel.cpp
+        ../../src/wxhistogrampanel.cpp
+        ../../src/wxlinechartpanel.cpp
+        ../../src/wxpiechartpanel.cpp
+        ../../src/wxpolarareachartpanel.cpp
+        ../../src/wxstackedbarchartpanel.cpp
+        ../../src/wxstackedcolumnchartpanel.cpp
+        ../../src/elementcanvaswindow.cpp
+
+        ../../src/tests/testsuite.cpp
+        ../../src/tests/wxchartsdatasetidtests.cpp
+        ../../src/tests/wxchartscategoricaldatatests.cpp
+        ../../src/tests/wxchartspenoptionstests.cpp
+        ../../src/tests/wxchartsbrushoptionstests.cpp
+        ../../src/tests/wxchartbackgroundoptionstests.cpp
+        ../../src/tests/wxchartfontoptionstests.cpp
+        ../../src/tests/wxchartslabeloptionstests.cpp
+        ../../src/tests/wxchartaxisoptionstests.cpp
+        ../../src/tests/wxchartsgridoptionstests.cpp
+        ../../src/tests/wxcolumnchartoptionstests.cpp
+        ../../src/tests/wxpiechartoptionstests.cpp
+        ../../src/tests/wxchartsthemeidtests.cpp
+        ../../src/tests/wxchartsthemetests.cpp
+        ../../src/tests/wxchartsthemefactorytests.cpp
+    }
+}

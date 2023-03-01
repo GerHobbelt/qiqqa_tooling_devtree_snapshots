@@ -124,14 +124,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/iresearch/core;../../thirdparty/owemdjee/abseil-cpp;../../thirdparty/owemdjee/iresearch/external;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIRESEARCH;IRESEARCH_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIRESEARCH;IRESEARCH_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/iresearch/core;../../thirdparty/owemdjee/abseil-cpp;../../thirdparty/owemdjee/iresearch/external;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -150,7 +150,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/iresearch/core;../../thirdparty/owemdjee/abseil-cpp;../../thirdparty/owemdjee/iresearch/external;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIRESEARCH;IRESEARCH_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -158,7 +158,7 @@
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIRESEARCH;IRESEARCH_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/iresearch/core;../../thirdparty/owemdjee/abseil-cpp;../../thirdparty/owemdjee/iresearch/external;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -179,14 +179,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/iresearch/core;../../thirdparty/owemdjee/abseil-cpp;../../thirdparty/owemdjee/iresearch/external;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIRESEARCH;IRESEARCH_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIRESEARCH;IRESEARCH_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/iresearch/core;../../thirdparty/owemdjee/abseil-cpp;../../thirdparty/owemdjee/iresearch/external;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -205,7 +205,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/iresearch/core;../../thirdparty/owemdjee/abseil-cpp;../../thirdparty/owemdjee/iresearch/external;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIRESEARCH;IRESEARCH_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -213,7 +213,7 @@
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIRESEARCH;IRESEARCH_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/iresearch/core;../../thirdparty/owemdjee/abseil-cpp;../../thirdparty/owemdjee/iresearch/external;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -1246,8 +1246,34 @@
     <Text Include="../../thirdparty/owemdjee/iresearch/CHANGELOG" />
     <Text Include="../../thirdparty/owemdjee/iresearch/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/iresearch/LICENSE.md" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/PVSIResearch.cfg" />
     <Text Include="../../thirdparty/owemdjee/iresearch/README.md" />
     <Text Include="../../thirdparty/owemdjee/iresearch/THIRD_PARTY_README.md" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/cmake/AddCompilerFlag.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/cmake/CheckCCompilerFlag.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/cmake/CheckCXXCompilerFlag.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/cmake/CheckMicCCompilerFlag.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/cmake/CheckMicCXXCompilerFlag.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/cmake/CodeCoverage.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/cmake/FindASan.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/cmake/FindBFD.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/cmake/FindBoostLocal.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/cmake/FindGTestLocal.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/cmake/FindICU.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/cmake/FindLz4.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/cmake/FindMSan.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/cmake/FindSanitizers.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/cmake/FindSnowball.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/cmake/FindTSan.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/cmake/FindUBSan.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/cmake/FindUnwind.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/cmake/FindUring.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/cmake/HexEncodeFile.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/cmake/OptimizeForArchitecture.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/cmake/PVS-Studio.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/cmake/UpdateModule.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/cmake/Utils.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/cmake/sanitize-helpers.cmake" />
     <Text Include="../../thirdparty/owemdjee/iresearch/core/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/iresearch/external/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/iresearch/external/fastText/CMakeLists.txt" />
@@ -1288,6 +1314,9 @@
     <Text Include="../../thirdparty/owemdjee/iresearch/external/text/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/iresearch/external/text/LICENSE_1_0.txt" />
     <Text Include="../../thirdparty/owemdjee/iresearch/external/text/README.md" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/external/text/cmake/Disassemble.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/external/text/cmake/dependencies.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iresearch/external/text/cmake/text-config.cmake" />
     <Text Include="../../thirdparty/owemdjee/iresearch/external/text/doc/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/iresearch/external/text/doc/generate_perf_charts.sh" />
     <Text Include="../../thirdparty/owemdjee/iresearch/external/text/doc/make_perf_chart.py" />

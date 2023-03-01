@@ -96,7 +96,7 @@ public:
         (@a wndIface is a pointer to interface object for the associated wxHtmlWindow
         or other HTML rendering window such as wxHtmlListBox).
     */
-    wxHtmlWinParser(wxHtmlWindowInterface* wndIface = NULL);
+    wxHtmlWinParser(wxHtmlWindowInterface* wndIface = nullptr);
 
     /**
         Adds module() to the list of wxHtmlWinParser tag handler.
@@ -221,8 +221,8 @@ public:
     wxFontEncoding GetOutputEncoding() const;
 
     /**
-        Returns associated window (wxHtmlWindow). This may be @NULL!
-        (You should always test if it is non-@NULL.
+        Returns associated window (wxHtmlWindow). This may be @nullptr!
+        (You should always test if it is non-null.
         For example @c TITLE handler sets window title only if some window is
         associated, otherwise it does nothing.
    */

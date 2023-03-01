@@ -2,7 +2,7 @@
 // experimental/impl/promise.hpp
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
-// Copyright (c) 2021-2022 Klemens D. Morgenstern
+// Copyright (c) 2021-2023 Klemens D. Morgenstern
 //                         (klemens dot morgenstern at gmx dot net)
 //
 // Distributed under the Boost Software License, Version 1.0. (See accompanying
@@ -228,7 +228,12 @@ struct promise_handler<void(Ts...), Executor, Allocator>
     impl_->done = true;
 
     if (impl_->completion)
-      impl_->complete(std::move(ts)...);
+      impl_->apply(
+        [this](std::remove_reference_t<Ts>... ts_)
+        {
+          impl_->complete(std::move(ts_)...);
+        }
+      );
   }
 };
 

@@ -23,6 +23,8 @@
 
 #include <stddef.h>
 
+#if !defined(_MSC_VER)
+
 /* replacement for broken memcmp() */
 
 /*
@@ -52,3 +54,5 @@ memcmp(const void *b1, const void *b2, size_t len)
     /* strings match */
     return 0;
 }
+
+#endif

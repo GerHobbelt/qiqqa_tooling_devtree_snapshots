@@ -24,12 +24,13 @@
 #
 ###########################################################################
 #
-import json
+import difflib
+import filecmp
 import logging
-from typing import Optional
+import os
 import pytest
 
-from testenv import Env, CurlClient, ExecResult
+from testenv import Env, CurlClient
 
 
 log = logging.getLogger(__name__)
@@ -38,6 +39,17 @@ log = logging.getLogger(__name__)
 @pytest.mark.skipif(condition=Env.setup_incomplete(),
                     reason=f"missing: {Env.incomplete_reason()}")
 class TestDownload:
+
+    @pytest.fixture(autouse=True, scope='class')
+    def _class_scope(self, env, httpd, nghttpx):
+        if env.have_h3():
+            nghttpx.start_if_needed()
+
+    @pytest.fixture(autouse=True, scope='class')
+    def _class_scope(self, env, httpd):
+        env.make_data_file(indir=httpd.docs_dir, fname="data-100k", fsize=100*1024)
+        env.make_data_file(indir=httpd.docs_dir, fname="data-1m", fsize=1024*1024)
+        env.make_data_file(indir=httpd.docs_dir, fname="data-10m", fsize=10*1024*1024)
 
     # download 1 file
     @pytest.mark.parametrize("proto", ['http/1.1', 'h2', 'h3'])
@@ -48,7 +60,7 @@ class TestDownload:
         url = f'https://{env.authority_for(env.domain1, proto)}/data.json'
         r = curl.http_download(urls=[url], alpn_proto=proto)
         assert r.exit_code == 0, f'{r}'
-        r.check_responses(count=1, exp_status=200)
+        r.check_stats(count=1, exp_status=200)
 
     # download 2 files
     @pytest.mark.parametrize("proto", ['http/1.1', 'h2', 'h3'])
@@ -59,7 +71,7 @@ class TestDownload:
         url = f'https://{env.authority_for(env.domain1, proto)}/data.json?[0-1]'
         r = curl.http_download(urls=[url], alpn_proto=proto)
         assert r.exit_code == 0
-        r.check_responses(count=2, exp_status=200)
+        r.check_stats(count=2, exp_status=200)
 
     # download 100 files sequentially
     @pytest.mark.parametrize("proto", ['http/1.1', 'h2', 'h3'])
@@ -71,8 +83,7 @@ class TestDownload:
         urln = f'https://{env.authority_for(env.domain1, proto)}/data.json?[0-99]'
         r = curl.http_download(urls=[urln], alpn_proto=proto)
         assert r.exit_code == 0
-        r.check_responses(count=100, exp_status=200)
-        assert len(r.stats) == 100, f'{r.stats}'
+        r.check_stats(count=100, exp_status=200)
         # http/1.1 sequential transfers will open 1 connection
         assert r.total_connects == 1
 
@@ -87,7 +98,7 @@ class TestDownload:
         r = curl.http_download(urls=[urln], alpn_proto=proto,
                                extra_args=['--parallel'])
         assert r.exit_code == 0
-        r.check_responses(count=100, exp_status=200)
+        r.check_stats(count=100, exp_status=200)
         if proto == 'http/1.1':
             # http/1.1 parallel transfers will open multiple connections
             assert r.total_connects > 1
@@ -105,7 +116,7 @@ class TestDownload:
         urln = f'https://{env.authority_for(env.domain1, proto)}/data.json?[0-499]'
         r = curl.http_download(urls=[urln], alpn_proto=proto)
         assert r.exit_code == 0
-        r.check_responses(count=500, exp_status=200)
+        r.check_stats(count=500, exp_status=200)
         if proto == 'http/1.1':
             # http/1.1 parallel transfers will open multiple connections
             assert r.total_connects > 1
@@ -124,7 +135,7 @@ class TestDownload:
         r = curl.http_download(urls=[urln], alpn_proto=proto,
                                extra_args=['--parallel'])
         assert r.exit_code == 0
-        r.check_responses(count=500, exp_status=200)
+        r.check_stats(count=500, exp_status=200)
         if proto == 'http/1.1':
             # http/1.1 parallel transfers will open multiple connections
             assert r.total_connects > 1
@@ -132,42 +143,123 @@ class TestDownload:
             # http2 parallel transfers will use one connection (common limit is 100)
             assert r.total_connects == 1
 
-    # download 500 files parallel (max of 200), only h2
-    @pytest.mark.skip(reason="TODO: we get 101 connections created. PIPEWAIT needs a fix")
+    # download files parallel, check connection reuse/multiplex
     @pytest.mark.parametrize("proto", ['h2', 'h3'])
-    def test_02_07_download_500_parallel(self, env: Env,
-                                         httpd, nghttpx, repeat, proto):
+    def test_02_07_download_reuse(self, env: Env,
+                                  httpd, nghttpx, repeat, proto):
         if proto == 'h3' and not env.have_h3():
             pytest.skip("h3 not supported")
+        count=200
         curl = CurlClient(env=env)
-        urln = f'https://{env.authority_for(env.domain1, proto)}/data.json?[0-499]'
+        urln = f'https://{env.authority_for(env.domain1, proto)}/data.json?[0-{count-1}]'
         r = curl.http_download(urls=[urln], alpn_proto=proto,
-                               with_stats=False, extra_args=[
+                               with_stats=True, extra_args=[
             '--parallel', '--parallel-max', '200'
         ])
         assert r.exit_code == 0, f'{r}'
-        r.check_responses(count=500, exp_status=200)
-        # http2 should now use 2 connections, at most 5
-        assert r.total_connects <= 5, "h2 should use fewer connections here"
+        r.check_stats(count=count, exp_status=200)
+        # should have used 2 connections only (test servers allow 100 req/conn)
+        assert r.total_connects == 2, "h2 should use fewer connections here"
 
-    def check_response(self, r: ExecResult, count: int,
-                       exp_status: Optional[int] = None):
-        if len(r.responses) != count:
-            seen_queries = []
-            for idx, resp in enumerate(r.responses):
-                assert resp['status'] == 200, f'response #{idx} status: {resp["status"]}'
-                if 'rquery' not in resp['header']:
-                    log.error(f'response #{idx} missing "rquery": {resp["header"]}')
-                seen_queries.append(int(resp['header']['rquery']))
-            for i in range(0,count-1):
-                if i not in seen_queries:
-                    log.error(f'response for query {i} missing')
-            if r.with_stats and len(r.stats) == count:
-                log.error(f'got all {count} stats, though')
-        assert len(r.responses) == count
-        if exp_status is not None:
-            for idx, x in enumerate(r.responses):
-                assert x['status'] == exp_status, \
-                    f'response #{idx} unexpectedstatus: {x["status"]}'
-        if r.with_stats:
-            assert len(r.stats) == count, f'{r}'
+    # download files parallel with http/1.1, check connection not reused
+    @pytest.mark.parametrize("proto", ['http/1.1'])
+    def test_02_07b_download_reuse(self, env: Env,
+                                   httpd, nghttpx, repeat, proto):
+        count=20
+        curl = CurlClient(env=env)
+        urln = f'https://{env.authority_for(env.domain1, proto)}/data.json?[0-{count-1}]'
+        r = curl.http_download(urls=[urln], alpn_proto=proto,
+                               with_stats=True, extra_args=[
+            '--parallel', '--parallel-max', '200'
+        ])
+        assert r.exit_code == 0, f'{r}'
+        r.check_stats(count=count, exp_status=200)
+        # http/1.1 should have used count connections
+        assert r.total_connects == count, "http/1.1 should use this many connections"
+
+    @pytest.mark.parametrize("proto", ['http/1.1', 'h2', 'h3'])
+    def test_02_08_1MB_serial(self, env: Env,
+                              httpd, nghttpx, repeat, proto):
+        count = 20
+        urln = f'https://{env.authority_for(env.domain1, proto)}/data-1m?[0-{count-1}]'
+        curl = CurlClient(env=env)
+        r = curl.http_download(urls=[urln], alpn_proto=proto)
+        assert r.exit_code == 0
+        r.check_stats(count=count, exp_status=200)
+
+    @pytest.mark.parametrize("proto", ['http/1.1', 'h2', 'h3'])
+    def test_02_09_1MB_parallel(self, env: Env,
+                              httpd, nghttpx, repeat, proto):
+        count = 20
+        urln = f'https://{env.authority_for(env.domain1, proto)}/data-1m?[0-{count-1}]'
+        curl = CurlClient(env=env)
+        r = curl.http_download(urls=[urln], alpn_proto=proto, extra_args=[
+            '--parallel'
+        ])
+        assert r.exit_code == 0
+        r.check_stats(count=count, exp_status=200)
+
+    @pytest.mark.parametrize("proto", ['http/1.1', 'h2', 'h3'])
+    def test_02_10_10MB_serial(self, env: Env,
+                              httpd, nghttpx, repeat, proto):
+        count = 20
+        urln = f'https://{env.authority_for(env.domain1, proto)}/data-10m?[0-{count-1}]'
+        curl = CurlClient(env=env)
+        r = curl.http_download(urls=[urln], alpn_proto=proto)
+        assert r.exit_code == 0
+        r.check_stats(count=count, exp_status=200)
+
+    @pytest.mark.parametrize("proto", ['http/1.1', 'h2', 'h3'])
+    def test_02_11_10MB_parallel(self, env: Env,
+                              httpd, nghttpx, repeat, proto):
+        count = 20
+        urln = f'https://{env.authority_for(env.domain1, proto)}/data-10m?[0-{count-1}]'
+        curl = CurlClient(env=env)
+        r = curl.http_download(urls=[urln], alpn_proto=proto, extra_args=[
+            '--parallel'
+        ])
+        assert r.exit_code == 0
+        r.check_stats(count=count, exp_status=200)
+
+    def test_02_20_h2_small_frames(self, env: Env, httpd, repeat):
+        # Test case to reproduce content corruption as observed in
+        # https://github.com/curl/curl/issues/10525
+        # To reliably reproduce, we need an Apache httpd that supports
+        # setting smaller frame sizes. This is not released yet, we
+        # test if it works and back out if not.
+        httpd.set_extra_config(env.domain1, lines=[
+            f'H2MaxDataFrameLen 1024',
+        ])
+        assert httpd.stop()
+        if not httpd.start():
+            # no, not supported, bail out
+            httpd.set_extra_config(env.domain1, lines=None)
+            assert httpd.start()
+            pytest.skip(f'H2MaxDataFrameLen not supported')
+        # ok, make 100 downloads with 2 parallel running and they
+        # are expected to stumble into the issue when using `lib/http2.c`
+        # from curl 7.88.0
+        count = 100
+        urln = f'https://{env.authority_for(env.domain1, "h2")}/data-1m?[0-{count-1}]'
+        curl = CurlClient(env=env)
+        r = curl.http_download(urls=[urln], alpn_proto="h2", extra_args=[
+            '--parallel', '--parallel-max', '2'
+        ])
+        assert r.exit_code == 0
+        r.check_stats(count=count, exp_status=200)
+        srcfile = os.path.join(httpd.docs_dir, 'data-1m')
+        for i in range(count):
+            dfile = curl.download_file(i)
+            assert os.path.exists(dfile)
+            if not filecmp.cmp(srcfile, dfile, shallow=False):
+                diff = "".join(difflib.unified_diff(a=open(srcfile).readlines(),
+                                                    b=open(dfile).readlines(),
+                                                    fromfile=srcfile,
+                                                    tofile=dfile,
+                                                    n=1))
+                assert False, f'download {dfile} differs:\n{diff}'
+        # restore httpd defaults
+        httpd.set_extra_config(env.domain1, lines=None)
+        assert httpd.stop()
+        assert httpd.start()
+

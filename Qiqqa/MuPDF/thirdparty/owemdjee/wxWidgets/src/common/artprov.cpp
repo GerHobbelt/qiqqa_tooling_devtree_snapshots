@@ -173,24 +173,24 @@ public:
     {
     }
 
-    virtual wxSize GetDefaultSize() const wxOVERRIDE
+    virtual wxSize GetDefaultSize() const override
     {
         return m_sizeDefault;
     }
 
-    virtual wxSize GetPreferredBitmapSizeAtScale(double scale) const wxOVERRIDE
+    virtual wxSize GetPreferredBitmapSizeAtScale(double scale) const override
     {
         // Use the standard logic for integer-factor upscaling.
         return DoGetPreferredSize(scale);
     }
 
-    virtual wxBitmap GetBitmap(const wxSize& size) wxOVERRIDE
+    virtual wxBitmap GetBitmap(const wxSize& size) override
     {
         return wxArtProvider::GetBitmap(m_artId, m_artClient, size);
     }
 
 protected:
-    virtual double GetNextAvailableScale(size_t& i) const wxOVERRIDE
+    virtual double GetNextAvailableScale(size_t& i) const override
     {
         // Unfortunately we don't know what bitmap sizes are available here as
         // there is simply nothing in wxArtProvider API that returns this (and
@@ -219,8 +219,8 @@ private:
 
 wxIMPLEMENT_ABSTRACT_CLASS(wxArtProvider, wxObject);
 
-wxArtProvidersList *wxArtProvider::sm_providers = NULL;
-wxArtProviderCache *wxArtProvider::sm_cache = NULL;
+wxArtProvidersList *wxArtProvider::sm_providers = nullptr;
+wxArtProviderCache *wxArtProvider::sm_cache = nullptr;
 
 // ----------------------------------------------------------------------------
 // wxArtProvider ctors/dtor
@@ -635,7 +635,7 @@ void wxArtProvider::InitNativeProvider()
 /* static */
 bool wxArtProvider::HasNativeProvider()
 {
-#ifdef __WXGTK20__
+#ifdef __WXGTK__
     return true;
 #else
     return false;
@@ -649,7 +649,7 @@ bool wxArtProvider::HasNativeProvider()
 class wxArtProviderModule: public wxModule
 {
 public:
-    bool OnInit() wxOVERRIDE
+    bool OnInit() override
     {
         // The order here is such that the native provider will be used first
         // and the standard one last as all these default providers add
@@ -663,7 +663,7 @@ public:
 #endif // wxUSE_ARTPROVIDER_STD
         return true;
     }
-    void OnExit() wxOVERRIDE
+    void OnExit() override
     {
         wxArtProvider::CleanUpProviders();
     }

@@ -73,9 +73,9 @@ public:
 
         @param mat2D
             The rotational components of the matrix (upper 2 x 2), must be
-            non-@NULL.
+            non-null.
         @param tr
-            The translational components of the matrix, may be @NULL.
+            The translational components of the matrix, may be @nullptr.
     */
     virtual void Get(wxMatrix2D* mat2D, wxPoint2DDouble* tr) const = 0;
 

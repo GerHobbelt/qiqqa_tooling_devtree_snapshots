@@ -14,6 +14,11 @@
     This control is implemented natively under macOS and GTK 3.6 or later and
     generically for all the other platforms.
 
+    Please note that this class provides many wxTextCtrl-like methods, but does
+    _not_ necessarily derive from wxTextCtrl in all ports (although it does in
+    the generic version). Only the methods defined in wxTextEntry interface
+    class are guaranteed to be available under all platforms.
+
     @beginStyleTable
     @style{wxTE_PROCESS_TAB}
            The control will receive @c wxEVT_CHAR events for TAB pressed -
@@ -60,7 +65,7 @@
 
     @see wxTextCtrl
 */
-class wxSearchCtrl : public wxTextCtrl
+class wxSearchCtrl : public wxControl, public wxTextEntry
 {
 public:
     /**
@@ -72,7 +77,7 @@ public:
         Constructor, creating and showing a text control.
 
         @param parent
-            Parent window. Should not be @NULL.
+            Parent window. Should not be @nullptr.
         @param id
             Control identifier. A value of -1 denotes a default value.
         @param value
@@ -113,7 +118,7 @@ public:
                  const wxString& name = wxSearchCtrlNameStr);
 
     /**
-        Returns a pointer to the search control's menu object or @NULL if there is no
+        Returns a pointer to the search control's menu object or @nullptr if there is no
         menu attached.
     */
     virtual wxMenu* GetMenu();

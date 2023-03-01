@@ -229,15 +229,6 @@
     <ClInclude Include="../../thirdparty/freeglut/include/GL/glut.h" />
     <ClInclude Include="../../thirdparty/freeglut/progs/demos/shapes/glmatrix.h" />
     <ClInclude Include="../../thirdparty/freeglut/progs/demos/spaceball/vmath.h" />
-    <ClInclude Include="../../thirdparty/freeglut/src/android/fg_internal_android.h" />
-    <ClInclude Include="../../thirdparty/freeglut/src/android/fg_main_android.h" />
-    <ClInclude Include="../../thirdparty/freeglut/src/android/native_app_glue/android_native_app_glue.h" />
-    <ClInclude Include="../../thirdparty/freeglut/src/blackberry/fg_internal_blackberry.h" />
-    <ClInclude Include="../../thirdparty/freeglut/src/egl/fg_init_egl.h" />
-    <ClInclude Include="../../thirdparty/freeglut/src/egl/fg_internal_egl.h" />
-    <ClInclude Include="../../thirdparty/freeglut/src/egl/fg_state_egl.h" />
-    <ClInclude Include="../../thirdparty/freeglut/src/egl/fg_structure_egl.h" />
-    <ClInclude Include="../../thirdparty/freeglut/src/egl/fg_window_egl.h" />
     <ClInclude Include="../../thirdparty/freeglut/src/fg_callback_macros.h" />
     <ClInclude Include="../../thirdparty/freeglut/src/fg_gl2.h" />
     <ClInclude Include="../../thirdparty/freeglut/src/fg_init.h" />
@@ -246,11 +237,6 @@
     <ClInclude Include="../../thirdparty/freeglut/src/fg_version.h" />
     <ClInclude Include="../../thirdparty/freeglut/src/mswin/fg_internal_mswin.h" />
     <ClInclude Include="../../thirdparty/freeglut/src/util/xparsegeometry_repl.h" />
-    <ClInclude Include="../../thirdparty/freeglut/src/wayland/fg_internal_wl.h" />
-    <ClInclude Include="../../thirdparty/freeglut/src/x11/fg_internal_x11.h" />
-    <ClInclude Include="../../thirdparty/freeglut/src/x11/fg_internal_x11_glx.h" />
-    <ClInclude Include="../../thirdparty/freeglut/src/x11/fg_state_x11_glx.h" />
-    <ClInclude Include="../../thirdparty/freeglut/src/x11/fg_window_x11_glx.h" />
     <Image Include="../../thirdparty/freeglut/progs/demos/One/objects.ico" />
     <Image Include="../../thirdparty/freeglut/web-src/images/OGL.png" />
     <Image Include="../../thirdparty/freeglut/web-src/images/chessdemo.png" />
@@ -271,16 +257,16 @@
     <Text Include="../../thirdparty/freeglut/README.mingw_cross" />
     <Text Include="../../thirdparty/freeglut/README.win32" />
     <Text Include="../../thirdparty/freeglut/altbuild/README.md" />
-    <Text Include="../../thirdparty/freeglut/android/README" />
+    <Text Include="../../thirdparty/freeglut/android_toolchain.cmake" />
+    <Text Include="../../thirdparty/freeglut/blackberry.toolchain.cmake" />
     <Text Include="../../thirdparty/freeglut/config.h.in" />
     <Text Include="../../thirdparty/freeglut/freeglut.pc.in" />
     <Text Include="../../thirdparty/freeglut/freeglut.rc.in" />
+    <Text Include="../../thirdparty/freeglut/mingw_cross_toolchain.cmake" />
     <Text Include="../../thirdparty/freeglut/progs/test-shapes-gles1/CMakeLists.txt" />
-    <Text Include="../../thirdparty/freeglut/src/android/native_app_glue/README" />
     <Text Include="../../thirdparty/freeglut/src/fg_version.h.in" />
     <Text Include="../../thirdparty/freeglut/src/freeglutdll.def.in" />
     <Text Include="../../thirdparty/freeglut/test.txt" />
-    <Text Include="../../thirdparty/freeglut/web-src/news.php" />
     <Xml Include="../../thirdparty/freeglut/progs/test-shapes-gles1/AndroidManifest.xml" />
     <Xml Include="../../thirdparty/freeglut/progs/test-shapes-gles1/ndk/AndroidManifest.xml" />
   </ItemGroup>

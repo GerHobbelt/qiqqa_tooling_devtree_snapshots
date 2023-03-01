@@ -1874,13 +1874,13 @@
     <Text Include="../../thirdparty/owemdjee/MITIE-nlp/examples/python/train_ner.py" />
     <Text Include="../../thirdparty/owemdjee/MITIE-nlp/examples/python/train_relation_extraction.py" />
     <Text Include="../../thirdparty/owemdjee/MITIE-nlp/examples/python/train_text_categorizer.py" />
-    <Text Include="../../thirdparty/owemdjee/MITIE-nlp/merge_changes_from_dlib" />
     <Text Include="../../thirdparty/owemdjee/MITIE-nlp/mitielib/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/MITIE-nlp/mitielib/LICENSE.txt" />
     <Text Include="../../thirdparty/owemdjee/MITIE-nlp/mitielib/__init__.py" />
     <Text Include="../../thirdparty/owemdjee/MITIE-nlp/mitielib/java/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/MITIE-nlp/mitielib/java/README" />
     <Text Include="../../thirdparty/owemdjee/MITIE-nlp/mitielib/mitie.py" />
+    <Text Include="../../thirdparty/owemdjee/MITIE-nlp/mitielib/tell_visual_studio_to_use_static_runtime.cmake" />
     <Text Include="../../thirdparty/owemdjee/MITIE-nlp/sample_text.txt" />
     <Text Include="../../thirdparty/owemdjee/MITIE-nlp/setup.py" />
     <Text Include="../../thirdparty/owemdjee/MITIE-nlp/tools/R-binding/README.md" />

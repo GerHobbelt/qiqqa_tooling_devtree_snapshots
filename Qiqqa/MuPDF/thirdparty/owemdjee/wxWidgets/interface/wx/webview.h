@@ -489,7 +489,7 @@ public:
         The following pseudo code demonstrates a typical implementation:
         @code
         void StartRequest(const wxWebViewHandlerRequest& request,
-                              wxSharedPtr<wxWebViewHandlerResponse> response) wxOVERRIDE
+                              wxSharedPtr<wxWebViewHandlerResponse> response) override
         {
             // Set common headers allowing access from XMLHTTPRequests()
             response->SetHeader("Access-Control-Allow-Origin", "*");
@@ -576,7 +576,6 @@ public:
     handler provided URLs.
 
     This backend is not enabled by default, to build it follow these steps:
-    - Visual Studio 2015 or newer, or GCC/Clang with c++11 is required
     - With CMake just enable @c wxUSE_WEBVIEW_EDGE
     - When not using CMake:
         - Download the <a href="https://aka.ms/webviewnuget">WebView2 SDK</a>
@@ -712,8 +711,8 @@ public:
     @event{EVT_WEBVIEW_TITLE_CHANGED(id, func)}
        Process a @c wxEVT_WEBVIEW_TITLE_CHANGED event, generated when
        the page title changes. Use GetString to get the title.
-    @event{EVT_WEBVIEW_FULL_SCREEN_CHANGED(id, func)}
-       Process a @c EVT_WEBVIEW_FULL_SCREEN_CHANGED event, generated when
+    @event{EVT_WEBVIEW_FULLSCREEN_CHANGED(id, func)}
+       Process a @c wxEVT_WEBVIEW_FULLSCREEN_CHANGED event, generated when
        the page wants to enter or leave fullscreen. Use GetInt to get the status.
        Not implemented for the IE backend
        and is only available in wxWidgets 3.1.5 or later.
@@ -771,7 +770,7 @@ public:
         @param style
             Window style. For generic window styles, please see wxWindow.
         @param name Window name.
-        @return The created wxWebView, or @c NULL if the requested backend
+        @return The created wxWebView, or @nullptr if the requested backend
                 is not available
         @since 2.9.5
     */
@@ -848,7 +847,7 @@ public:
                WebKitWebSettings* settings = webkit_web_view_get_settings(wv);
                g_object_set(G_OBJECT(settings),
                             "enable-frame-flattening", TRUE,
-                            NULL);
+                            nullptr);
             #endif
         @endcode
 
@@ -1075,13 +1074,13 @@ public:
 
         @param javascript JavaScript code to execute.
         @param output Pointer to a string to be filled with the result value or
-            @NULL if it is not needed. This parameter is new since wxWidgets
+            @nullptr if it is not needed. This parameter is new since wxWidgets
             version 3.1.1.
         @return @true if there is a result, @false if there is an error.
 
         @see RunScriptAsync()
     */
-    virtual bool RunScript(const wxString& javascript, wxString* output = NULL) const = 0;
+    virtual bool RunScript(const wxString& javascript, wxString* output = nullptr) const = 0;
 
     /**
         Runs the given JavaScript code asynchronously and returns the result
@@ -1101,7 +1100,7 @@ public:
         @since 3.1.6
         @see RunScript()
     */
-    virtual void RunScriptAsync(const wxString& javascript, void* clientData = NULL) const;
+    virtual void RunScriptAsync(const wxString& javascript, void* clientData = nullptr) const;
 
 
     /**
@@ -1585,8 +1584,8 @@ public:
     @event{EVT_WEBVIEW_TITLE_CHANGED(id, func)}
        Process a @c wxEVT_WEBVIEW_TITLE_CHANGED event, generated when
        the page title changes. Use GetString to get the title.
-    @event{EVT_WEBVIEW_FULL_SCREEN_CHANGED(id, func)}
-       Process a @c EVT_WEBVIEW_FULL_SCREEN_CHANGED event, generated when
+    @event{EVT_WEBVIEW_FULLSCREEN_CHANGED(id, func)}
+       Process a @c wxEVT_WEBVIEW_FULLSCREEN_CHANGED event, generated when
        the page wants to enter or leave fullscreen. Use GetInt to get the status.
        Not implemented for the IE backend
        and is only available in wxWidgets 3.1.5 or later.

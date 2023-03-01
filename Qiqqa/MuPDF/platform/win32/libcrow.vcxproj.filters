@@ -12,6 +12,11 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="dummy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
     <Filter Include="Header Files\include">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0001}</UniqueIdentifier>
     </Filter>
@@ -21,68 +26,38 @@
     <Filter Include="Header Files\include\crow\middlewares">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0003}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\tests">
+    <Filter Include="Misc Files\cmake">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\cmake">
+    <Filter Include="Misc Files\docs">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\docs">
+    <Filter Include="Misc Files\docs\getting_started">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\docs\getting_started">
+    <Filter Include="Misc Files\docs\getting_started\setup">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\docs\getting_started\setup">
+    <Filter Include="Misc Files\docs\guides">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\docs\guides">
+    <Filter Include="Misc Files\scripts">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0009}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\examples">
+    <Filter Include="Resource Files">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0010}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\scripts">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0011}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\tests">
+    <Filter Include="Resource Files\docs">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0012}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tests\external_definition">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0013}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\tests\img">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0014}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\tests\multi_file">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0015}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\tests\ssl">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0016}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\tests\template">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0017}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\docs">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0020}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Resource Files\docs\assets">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0019}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0011}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\docs\assets\pkg_logos">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0013}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\docs\stylesheets">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\tests">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\tests\img">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0014}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -188,9 +163,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/crow/include/crow/websocket.h">
       <Filter>Header Files\include\crow</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/crow/tests/catch.hpp">
-      <Filter>Header Files\tests</Filter>
-    </ClInclude>
     <Font Include="../../thirdparty/owemdjee/crow/docs/stylesheets/Lato-Medium.ttf">
       <Filter>Resource Files\docs\stylesheets</Filter>
     </Font>
@@ -218,9 +190,6 @@
     <Image Include="../../thirdparty/owemdjee/crow/logo55.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="../../thirdparty/owemdjee/crow/tests/img/cat.jpg">
-      <Filter>Resource Files\tests\img</Filter>
-    </Image>
     <Text Include="../../thirdparty/owemdjee/crow/CMakeLists.txt">
       <Filter>Misc Files</Filter>
     </Text>
@@ -230,7 +199,13 @@
     <Text Include="../../thirdparty/owemdjee/crow/cmake/CrowConfig.cmake.in">
       <Filter>Misc Files\cmake</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/crow/cmake/Findasio.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/crow/cmake/cmake_uninstall.cmake.in">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/crow/cmake/compiler_options.cmake">
       <Filter>Misc Files\cmake</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/crow/docs/getting_started/a_simple_webpage.md">
@@ -311,9 +286,6 @@
     <Text Include="../../thirdparty/owemdjee/crow/docs/versions.json">
       <Filter>Misc Files\docs</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/crow/examples/CMakeLists.txt">
-      <Filter>Misc Files\examples</Filter>
-    </Text>
     <Text Include="../../thirdparty/owemdjee/crow/run_cmake.sh">
       <Filter>Misc Files</Filter>
     </Text>
@@ -329,58 +301,8 @@
     <Text Include="../../thirdparty/owemdjee/crow/scripts/release.sh">
       <Filter>Misc Files\scripts</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/crow/tests/CMakeLists.txt">
-      <Filter>Misc Files\tests</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/crow/tests/external_definition/CMakeLists.txt">
-      <Filter>Misc Files\tests\external_definition</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/crow/tests/img/CMakeLists.txt">
-      <Filter>Misc Files\tests\img</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/crow/tests/multi_file/CMakeLists.txt">
-      <Filter>Misc Files\tests\multi_file</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/crow/tests/ssl/CMakeLists.txt">
-      <Filter>Misc Files\tests\ssl</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/crow/tests/template/CMakeLists.txt">
-      <Filter>Misc Files\tests\template</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/crow/tests/template/README.md">
-      <Filter>Misc Files\tests\template</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/crow/tests/template/comments.json">
-      <Filter>Misc Files\tests\template</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/crow/tests/template/delimiters.json">
-      <Filter>Misc Files\tests\template</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/crow/tests/template/interpolation.json">
-      <Filter>Misc Files\tests\template</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/crow/tests/template/inverted.json">
-      <Filter>Misc Files\tests\template</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/crow/tests/template/partials.json">
-      <Filter>Misc Files\tests\template</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/crow/tests/template/sections.json">
-      <Filter>Misc Files\tests\template</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/crow/tests/template/test.py">
-      <Filter>Misc Files\tests\template</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/crow/tests/template/~lambdas.json">
-      <Filter>Misc Files\tests\template</Filter>
-    </Text>
     <Text Include="../../thirdparty/owemdjee/crow/vcpkg.json">
       <Filter>Misc Files</Filter>
     </Text>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="dummy.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

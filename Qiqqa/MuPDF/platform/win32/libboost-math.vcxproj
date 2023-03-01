@@ -2494,8 +2494,6 @@
     <Text Include="../../thirdparty/owemdjee/boost/libs/math/doc/graphs/hypergeometric_1f1/negative_b_incalculable.js" />
     <Text Include="../../thirdparty/owemdjee/boost/libs/math/doc/graphs/hypergeometric_1f1/plotlyjs-bundle.js" />
     <Text Include="../../thirdparty/owemdjee/boost/libs/math/doc/graphs/hypergeometric_1f1/positive_abz.js" />
-    <Text Include="../../thirdparty/owemdjee/boost/libs/math/doc/html/math_toolkit/oct_todo.html" />
-    <Text Include="../../thirdparty/owemdjee/boost/libs/math/doc/html/math_toolkit/quat_todo.html" />
     <Text Include="../../thirdparty/owemdjee/boost/libs/math/doc/octonion/output.txt" />
     <Text Include="../../thirdparty/owemdjee/boost/libs/math/doc/octonion/output_more.txt" />
     <Text Include="../../thirdparty/owemdjee/boost/libs/math/doc/quaternion/output.txt" />

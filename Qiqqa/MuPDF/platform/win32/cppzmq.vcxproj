@@ -26,27 +26,27 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>false</UseOfMfc>
     <UseDebugLibraries>true</UseDebugLibraries>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>false</UseOfMfc>
     <UseDebugLibraries>true</UseDebugLibraries>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>false</UseOfMfc>
@@ -226,33 +226,22 @@
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ItemGroup>
-    <ClCompile Include="../../thirdparty/owemdjee/cppzmq/demo/main.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/cppzmq/examples/hello_world.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/cppzmq/examples/multipart_messages.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/cppzmq/examples/pubsub_multithread_inproc.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/cppzmq/tests/active_poller.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/cppzmq/tests/buffer.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/cppzmq/tests/codec_multipart.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/cppzmq/tests/context.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/cppzmq/tests/message.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/cppzmq/tests/monitor.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/cppzmq/tests/multipart.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/cppzmq/tests/poller.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/cppzmq/tests/recv_multipart.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/cppzmq/tests/send_multipart.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/cppzmq/tests/socket.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/cppzmq/tests/socket_ref.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/cppzmq/tests/utilities.cpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/cppzmq/tests/testutil.hpp" />
+    <ProjectReference Include="libcppzmq.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff628af6}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../scripts/cppzmq/monolithic_main.c" />
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="../../thirdparty/owemdjee/cppzmq/zmq.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/cppzmq/zmq_addon.hpp" />
     <Text Include="../../thirdparty/owemdjee/cppzmq/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/cppzmq/README.md" />
+    <Text Include="../../thirdparty/owemdjee/cppzmq/cmake/DetectCPPZMQVersion.cmake" />
     <Text Include="../../thirdparty/owemdjee/cppzmq/cppzmq.pc.in" />
     <Text Include="../../thirdparty/owemdjee/cppzmq/cppzmqConfig.cmake.in" />
-    <Text Include="../../thirdparty/owemdjee/cppzmq/demo/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/cppzmq/examples/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/cppzmq/tests/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/cppzmq/libzmq-pkg-config/FindZeroMQ.cmake" />
     <Text Include="../../thirdparty/owemdjee/cppzmq/version.sh" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >

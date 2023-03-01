@@ -63,10 +63,10 @@
     <Filter Include="Header Files\tests">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0017}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\third_party">
+    <Filter Include="Misc Files\bench">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\bench">
+    <Filter Include="Misc Files\cmake">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0019}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\contrib">
@@ -1073,27 +1073,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/dynet/tests/test.h">
       <Filter>Header Files\tests</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/dynet/third_party/eigen_backward_spatial_convolutions.h">
-      <Filter>Header Files\third_party</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/dynet/third_party/eigen_pooling.h">
-      <Filter>Header Files\third_party</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/dynet/third_party/eigen_spatial_convolutions.h">
-      <Filter>Header Files\third_party</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/dynet/third_party/eigen_volume_patch.h">
-      <Filter>Header Files\third_party</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/dynet/third_party/topk.h">
-      <Filter>Header Files\third_party</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/dynet/third_party/topk_tf.h">
-      <Filter>Header Files\third_party</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/dynet/third_party/topk_tr.h">
-      <Filter>Header Files\third_party</Filter>
-    </ClInclude>
     <Image Include="../../thirdparty/owemdjee/dynet/doc/source/images/ai2.png">
       <Filter>Resource Files\doc\source\images</Filter>
     </Image>
@@ -1180,6 +1159,15 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/dynet/bench/sequence_transduction.py">
       <Filter>Misc Files\bench</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/dynet/cmake/FindDyNet.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/dynet/cmake/FindEigen3.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/dynet/config.h.cmake">
+      <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/dynet/contrib/c/CMakeLists.txt">
       <Filter>Misc Files\contrib\c</Filter>
@@ -1502,6 +1490,9 @@
     <Text Include="../../thirdparty/owemdjee/dynet/python/model_test.py">
       <Filter>Misc Files\python</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/dynet/setup.cfg">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/dynet/setup.py">
       <Filter>Misc Files</Filter>
     </Text>
@@ -1519,4 +1510,3 @@
     </Text>
   </ItemGroup>
 </Project>
-    

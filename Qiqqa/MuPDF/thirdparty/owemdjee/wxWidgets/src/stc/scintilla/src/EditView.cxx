@@ -380,7 +380,7 @@ void EditView::LayoutLine(const EditModel &model, Sci::Line line, Surface *surfa
 		return;
 
 	PLATFORM_ASSERT(line < model.pdoc->LinesTotal());
-	PLATFORM_ASSERT(ll->chars != NULL);
+	PLATFORM_ASSERT(ll->chars != nullptr);
 	const Sci::Position posLineStart = model.pdoc->LineStart(line);
 	Sci::Position posLineEnd = model.pdoc->LineStart(line + 1);
 	// If the line is very long, limit the treatment to a length that should fit in the viewport
@@ -1208,7 +1208,7 @@ void EditView::DrawEOLAnnotationText(Surface *surface, const EditModel &model, c
 
 	PRectangle rcSegment = rcLine;
 	FontAlias fontText = vsDraw.styles[style].font;
-	const int widthEOLAnnotationText = static_cast<int>(surface->WidthText(fontText, stEOLAnnotation.text, stEOLAnnotation.length));
+	const int widthEOLAnnotationText = static_cast<int>(surface->WidthText(fontText, stEOLAnnotation.text, (int)stEOLAnnotation.length));
 
 	const XYPOSITION spaceWidth = vsDraw.styles[ll->EndLineStyle()].spaceWidth;
 	const XYPOSITION virtualSpace = model.sel.VirtualSpaceFor(
@@ -1250,11 +1250,11 @@ void EditView::DrawEOLAnnotationText(Surface *surface, const EditModel &model, c
 	if (phase & drawText) {
 		if (phasesDraw != phasesOne) {
 			surface->DrawTextTransparent(rcSegment, fontText,
-			rcSegment.top + vsDraw.maxAscent, stEOLAnnotation.text, stEOLAnnotation.length,
+			rcSegment.top + vsDraw.maxAscent, stEOLAnnotation.text, (int)stEOLAnnotation.length,
 			textFore);
 		} else {
 			surface->DrawTextNoClip(rcSegment, fontText,
-			rcSegment.top + vsDraw.maxAscent, stEOLAnnotation.text, stEOLAnnotation.length,
+			rcSegment.top + vsDraw.maxAscent, stEOLAnnotation.text, (int)stEOLAnnotation.length,
 			textFore, textBack);
 		}
 	}

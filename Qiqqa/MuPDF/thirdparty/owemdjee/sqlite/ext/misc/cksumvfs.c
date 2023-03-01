@@ -858,9 +858,9 @@ int sqlite3_unregister_cksumvfs(void){
   }
   return SQLITE_OK;
 }
-#endif /* defined(SQLITE_CKSUMVFS_STATIC */
 
-#if !defined(SQLITE_CKSUMVFS_STATIC)
+#else /* defined(SQLITE_CKSUMVFS_STATIC */
+
 /* This variant of the initializer function is used when the
 ** extension is shared library to be loaded at run-time.
 */

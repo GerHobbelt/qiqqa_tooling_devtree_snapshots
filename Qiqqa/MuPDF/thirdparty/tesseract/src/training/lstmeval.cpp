@@ -26,11 +26,12 @@ using namespace tesseract;
 FZ_HEAPDBG_TRACKER_SECTION_START_MARKER(_)
 
 static STRING_PARAM_FLAG(model, "", "Name of model file (training or recognition)");
-static STRING_PARAM_FLAG(traineddata, "",
+// v--- the next few flags are also referenced in lstmtraining.cpp et al
+STRING_PARAM_FLAG(traineddata, "",
                          "If model is a training checkpoint, then traineddata must "
                          "be the traineddata file that was given to the trainer");
-static STRING_PARAM_FLAG(eval_listfile, "", "File listing sample files in lstmf training format.");
-static INT_PARAM_FLAG(max_image_MB, 2000, "Max memory to use for images.");
+STRING_PARAM_FLAG(eval_listfile, "", "File listing sample files in lstmf training format.");
+INT_PARAM_FLAG(max_image_MB, 2000, "Max memory to use for images.");
 static INT_PARAM_FLAG(verbosity, 1, "Amount of diagnosting information to output (0-2).");
 
 FZ_HEAPDBG_TRACKER_SECTION_END_MARKER(_)
@@ -70,6 +71,9 @@ extern "C" int tesseract_lstm_eval_main(int argc, const char** argv)
     mgr.OverwriteEntry(tesseract::TESSDATA_LSTM, &model_data[0], model_data.size());
   }
   tesseract::LSTMTester tester(static_cast<int64_t>(FLAGS_max_image_MB) * 1048576);
+#ifndef NDEBUG
+  tester.SetDebug(true);
+#endif
   if (!tester.LoadAllEvalData(FLAGS_eval_listfile.c_str())) {
     tprintf("ERROR: Failed to load eval data from: {}\n", FLAGS_eval_listfile.c_str());
     return EXIT_FAILURE;

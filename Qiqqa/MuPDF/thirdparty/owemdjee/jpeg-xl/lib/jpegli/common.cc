@@ -10,33 +10,26 @@
 #include "lib/jpegli/memory_manager.h"
 
 void jpegli_abort(j_common_ptr cinfo) {
-  auto mem = reinterpret_cast<jpegli::MemoryManager*>(cinfo->mem);
-  if (mem == nullptr) {
-    return;
+  if (cinfo->mem == nullptr) return;
+  for (int pool_id = 0; pool_id < JPOOL_NUMPOOLS; ++pool_id) {
+    if (pool_id == JPOOL_PERMANENT) continue;
+    (*cinfo->mem->free_pool)(cinfo, pool_id);
   }
-  for (void* ptr : mem->owned_ptrs) {
-    free(ptr);
-  }
-  mem->owned_ptrs.clear();
   if (cinfo->is_decompressor) {
-    cinfo->global_state = jpegli::DecodeState::kStart;
+    cinfo->global_state = jpegli::kDecStart;
+  } else {
+    cinfo->global_state = jpegli::kEncStart;
   }
 }
 
 void jpegli_destroy(j_common_ptr cinfo) {
-  auto mem = reinterpret_cast<jpegli::MemoryManager*>(cinfo->mem);
-  if (mem == nullptr) {
-    return;
-  }
-  for (void* ptr : mem->owned_ptrs) {
-    free(ptr);
-  }
-  delete mem;
-  cinfo->mem = nullptr;
+  if (cinfo->mem == nullptr) return;
+  (*cinfo->mem->self_destruct)(cinfo);
   if (cinfo->is_decompressor) {
-    cinfo->global_state = jpegli::DecodeState::kNull;
+    cinfo->global_state = jpegli::kDecNull;
     delete reinterpret_cast<j_decompress_ptr>(cinfo)->master;
   } else {
+    cinfo->global_state = jpegli::kEncNull;
     delete reinterpret_cast<j_compress_ptr>(cinfo)->master;
   }
 }

@@ -145,7 +145,7 @@ class MyApp : public wxApp
 {
 public:
     // 'Main program' equivalent: the program execution "starts" here
-    virtual bool OnInit() wxOVERRIDE
+    virtual bool OnInit() override
     {
         // create the main application window
         new MyFrame("Keyboard wxWidgets App");
@@ -169,8 +169,8 @@ wxIMPLEMENT_APP(MyApp);
 
 // frame constructor
 MyFrame::MyFrame(const wxString& title)
-       : wxFrame(NULL, wxID_ANY, title),
-         m_inputWin(NULL),
+       : wxFrame(nullptr, wxID_ANY, title),
+         m_inputWin(nullptr),
          m_skipHook(true),
          m_skipDown(true)
 {
@@ -515,7 +515,7 @@ const char* GetVirtualKeyCodeName(int keycode)
 #undef WXK_
 
     default:
-        return NULL;
+        return nullptr;
     }
 }
 
@@ -531,11 +531,9 @@ wxString GetKeyName(const wxKeyEvent &event)
     if ( keycode >= 32 && keycode < 128 )
         return wxString::Format("'%c'", (unsigned char)keycode);
 
-#if wxUSE_UNICODE
     int uc = event.GetUnicodeKey();
     if ( uc != WXK_NONE )
         return wxString::Format("'%c'", uc);
-#endif
 
     return "unknown";
 }
@@ -546,11 +544,7 @@ void MyFrame::LogEvent(const wxString& name, wxKeyEvent& event)
     wxString msg;
     // event  key_name  KeyCode  modifiers  Unicode  raw_code raw_flags pos
     msg.Printf("%7s %15s %5d   %c%c%c%c"
-#if wxUSE_UNICODE
                    "%5d (U+%04x)"
-#else
-                   "    none   "
-#endif
 #ifdef wxHAS_RAW_KEY_CODES
                    "  %7lu    0x%08lx"
 #else
@@ -566,10 +560,8 @@ void MyFrame::LogEvent(const wxString& name, wxKeyEvent& event)
                event.AltDown()     ? 'A' : '-',
                event.ShiftDown()   ? 'S' : '-',
                event.MetaDown()    ? 'M' : '-'
-#if wxUSE_UNICODE
                , event.GetUnicodeKey()
                , event.GetUnicodeKey()
-#endif
 #ifdef wxHAS_RAW_KEY_CODES
                , (unsigned long) event.GetRawKeyCode()
                , (unsigned long) event.GetRawKeyFlags()

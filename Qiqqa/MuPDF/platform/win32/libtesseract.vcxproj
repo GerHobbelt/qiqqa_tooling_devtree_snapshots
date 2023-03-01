@@ -51,20 +51,20 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <ImportGroup Label="PropertySheets">
+  <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project.props" Label="SolutionWideSettings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props" Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
+    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Import Project="$(SolutionDir)\common-project-Release-Win32.props" Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
+    <Import Project="$(SolutionDir)\common-project-Release-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props" Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
+    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <Import Project="$(SolutionDir)\common-project-Release-Win64.props" Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
+    <Import Project="$(SolutionDir)\common-project-Release-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
   </ImportGroup>
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
@@ -103,7 +103,7 @@
     <CustomBuildAfterTargets>
     </CustomBuildAfterTargets>
   </PropertyGroup>
-  <ItemDefinitionGroup>
+<ItemDefinitionGroup>
     <ClCompile>
       <Optimization>Custom</Optimization>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -135,14 +135,14 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+</ItemDefinitionGroup>
+<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Custom</Optimization>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTESSERACT;TESSERACT_STATICLIB;HAVE_TESSERACT_CONFIG_H;HAVE_MUPDF;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;DEBUG</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>..\..\include;..\..\scripts\tesseract;..\..\thirdparty\leptonica\src;..\..\thirdparty\tesseract\include;..\..\thirdparty\tesseract\src\api;..\..\thirdparty\tesseract\src\arch;..\..\thirdparty\tesseract\src\ccmain;..\..\thirdparty\tesseract\src\ccstruct;..\..\thirdparty\tesseract\src\ccutil;..\..\thirdparty\tesseract\src\classify;..\..\thirdparty\tesseract\src\dict;..\..\thirdparty\tesseract\src\lstm;..\..\thirdparty\tesseract\src\textord;..\..\thirdparty\tesseract\src\viewer;..\..\thirdparty\tesseract\src\wordrec;..\..\thirdparty\tesseract\src\cutil;..\..\thirdparty\tesseract\src\training\pango;../../thirdparty/tesseract/src/training/unicharset;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\scripts\libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\include;..\..\scripts\tesseract;..\..\thirdparty\leptonica\src;..\..\thirdparty\tesseract\include;..\..\thirdparty\tesseract\src\api;..\..\thirdparty\tesseract\src\arch;..\..\thirdparty\tesseract\src\ccmain;..\..\thirdparty\tesseract\src\ccstruct;..\..\thirdparty\tesseract\src\ccutil;..\..\thirdparty\tesseract\src\classify;..\..\thirdparty\tesseract\src\dict;..\..\thirdparty\tesseract\src\lstm;..\..\thirdparty\tesseract\src\textord;..\..\thirdparty\tesseract\src\viewer;..\..\thirdparty\tesseract\src\wordrec;..\..\thirdparty\tesseract\src\cutil;..\..\thirdparty\tesseract\src\training\pango;../../thirdparty/tesseract/src/training/unicharset;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\scripts\libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/plf_nanotimer;../../scripts/leptonica/include/leptonica;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <UndefinePreprocessorDefinitions>
       </UndefinePreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -160,7 +160,7 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>..\..\include;..\..\scripts\tesseract;..\..\thirdparty\leptonica\src;..\..\thirdparty\tesseract\include;..\..\thirdparty\tesseract\src\api;..\..\thirdparty\tesseract\src\arch;..\..\thirdparty\tesseract\src\ccmain;..\..\thirdparty\tesseract\src\ccstruct;..\..\thirdparty\tesseract\src\ccutil;..\..\thirdparty\tesseract\src\classify;..\..\thirdparty\tesseract\src\dict;..\..\thirdparty\tesseract\src\lstm;..\..\thirdparty\tesseract\src\textord;..\..\thirdparty\tesseract\src\viewer;..\..\thirdparty\tesseract\src\wordrec;..\..\thirdparty\tesseract\src\cutil;..\..\thirdparty\tesseract\src\training\pango;../../thirdparty/tesseract/src/training/unicharset;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\scripts\libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\include;..\..\scripts\tesseract;..\..\thirdparty\leptonica\src;..\..\thirdparty\tesseract\include;..\..\thirdparty\tesseract\src\api;..\..\thirdparty\tesseract\src\arch;..\..\thirdparty\tesseract\src\ccmain;..\..\thirdparty\tesseract\src\ccstruct;..\..\thirdparty\tesseract\src\ccutil;..\..\thirdparty\tesseract\src\classify;..\..\thirdparty\tesseract\src\dict;..\..\thirdparty\tesseract\src\lstm;..\..\thirdparty\tesseract\src\textord;..\..\thirdparty\tesseract\src\viewer;..\..\thirdparty\tesseract\src\wordrec;..\..\thirdparty\tesseract\src\cutil;..\..\thirdparty\tesseract\src\training\pango;../../thirdparty/tesseract/src/training/unicharset;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\scripts\libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/plf_nanotimer;../../scripts/leptonica/include/leptonica;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <CustomBuildStep>
       <Command>
@@ -194,7 +194,7 @@
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTESSERACT;TESSERACT_STATICLIB;HAVE_TESSERACT_CONFIG_H;HAVE_MUPDF;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;NDEBUG</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>..\..\include;..\..\scripts\tesseract;..\..\thirdparty\leptonica\src;..\..\thirdparty\tesseract\include;..\..\thirdparty\tesseract\src\api;..\..\thirdparty\tesseract\src\arch;..\..\thirdparty\tesseract\src\ccmain;..\..\thirdparty\tesseract\src\ccstruct;..\..\thirdparty\tesseract\src\ccutil;..\..\thirdparty\tesseract\src\classify;..\..\thirdparty\tesseract\src\dict;..\..\thirdparty\tesseract\src\lstm;..\..\thirdparty\tesseract\src\textord;..\..\thirdparty\tesseract\src\viewer;..\..\thirdparty\tesseract\src\wordrec;..\..\thirdparty\tesseract\src\cutil;..\..\thirdparty\tesseract\src\training\pango;../../thirdparty/tesseract/src/training/unicharset;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\scripts\libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\include;..\..\scripts\tesseract;..\..\thirdparty\leptonica\src;..\..\thirdparty\tesseract\include;..\..\thirdparty\tesseract\src\api;..\..\thirdparty\tesseract\src\arch;..\..\thirdparty\tesseract\src\ccmain;..\..\thirdparty\tesseract\src\ccstruct;..\..\thirdparty\tesseract\src\ccutil;..\..\thirdparty\tesseract\src\classify;..\..\thirdparty\tesseract\src\dict;..\..\thirdparty\tesseract\src\lstm;..\..\thirdparty\tesseract\src\textord;..\..\thirdparty\tesseract\src\viewer;..\..\thirdparty\tesseract\src\wordrec;..\..\thirdparty\tesseract\src\cutil;..\..\thirdparty\tesseract\src\training\pango;../../thirdparty/tesseract/src/training/unicharset;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\scripts\libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/plf_nanotimer;../../scripts/leptonica/include/leptonica;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <UndefinePreprocessorDefinitions>
       </UndefinePreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -207,7 +207,7 @@
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>..\..\include;..\..\scripts\tesseract;..\..\thirdparty\leptonica\src;..\..\thirdparty\tesseract\include;..\..\thirdparty\tesseract\src\api;..\..\thirdparty\tesseract\src\arch;..\..\thirdparty\tesseract\src\ccmain;..\..\thirdparty\tesseract\src\ccstruct;..\..\thirdparty\tesseract\src\ccutil;..\..\thirdparty\tesseract\src\classify;..\..\thirdparty\tesseract\src\dict;..\..\thirdparty\tesseract\src\lstm;..\..\thirdparty\tesseract\src\textord;..\..\thirdparty\tesseract\src\viewer;..\..\thirdparty\tesseract\src\wordrec;..\..\thirdparty\tesseract\src\cutil;..\..\thirdparty\tesseract\src\training\pango;../../thirdparty/tesseract/src/training/unicharset;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\scripts\libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\include;..\..\scripts\tesseract;..\..\thirdparty\leptonica\src;..\..\thirdparty\tesseract\include;..\..\thirdparty\tesseract\src\api;..\..\thirdparty\tesseract\src\arch;..\..\thirdparty\tesseract\src\ccmain;..\..\thirdparty\tesseract\src\ccstruct;..\..\thirdparty\tesseract\src\ccutil;..\..\thirdparty\tesseract\src\classify;..\..\thirdparty\tesseract\src\dict;..\..\thirdparty\tesseract\src\lstm;..\..\thirdparty\tesseract\src\textord;..\..\thirdparty\tesseract\src\viewer;..\..\thirdparty\tesseract\src\wordrec;..\..\thirdparty\tesseract\src\cutil;..\..\thirdparty\tesseract\src\training\pango;../../thirdparty/tesseract/src/training/unicharset;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\scripts\libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/plf_nanotimer;../../scripts/leptonica/include/leptonica;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <CustomBuildStep>
       <Command>
@@ -241,7 +241,7 @@
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTESSERACT;TESSERACT_STATICLIB;HAVE_TESSERACT_CONFIG_H;HAVE_MUPDF;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;DEBUG</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>..\..\include;..\..\scripts\tesseract;..\..\thirdparty\leptonica\src;..\..\thirdparty\tesseract\include;..\..\thirdparty\tesseract\src\api;..\..\thirdparty\tesseract\src\arch;..\..\thirdparty\tesseract\src\ccmain;..\..\thirdparty\tesseract\src\ccstruct;..\..\thirdparty\tesseract\src\ccutil;..\..\thirdparty\tesseract\src\classify;..\..\thirdparty\tesseract\src\dict;..\..\thirdparty\tesseract\src\lstm;..\..\thirdparty\tesseract\src\textord;..\..\thirdparty\tesseract\src\viewer;..\..\thirdparty\tesseract\src\wordrec;..\..\thirdparty\tesseract\src\cutil;..\..\thirdparty\tesseract\src\training\pango;../../thirdparty/tesseract/src/training/unicharset;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\scripts\libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\include;..\..\scripts\tesseract;..\..\thirdparty\leptonica\src;..\..\thirdparty\tesseract\include;..\..\thirdparty\tesseract\src\api;..\..\thirdparty\tesseract\src\arch;..\..\thirdparty\tesseract\src\ccmain;..\..\thirdparty\tesseract\src\ccstruct;..\..\thirdparty\tesseract\src\ccutil;..\..\thirdparty\tesseract\src\classify;..\..\thirdparty\tesseract\src\dict;..\..\thirdparty\tesseract\src\lstm;..\..\thirdparty\tesseract\src\textord;..\..\thirdparty\tesseract\src\viewer;..\..\thirdparty\tesseract\src\wordrec;..\..\thirdparty\tesseract\src\cutil;..\..\thirdparty\tesseract\src\training\pango;../../thirdparty/tesseract/src/training/unicharset;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\scripts\libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/plf_nanotimer;../../scripts/leptonica/include/leptonica;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <UndefinePreprocessorDefinitions>
       </UndefinePreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -254,7 +254,7 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>..\..\include;..\..\scripts\tesseract;..\..\thirdparty\leptonica\src;..\..\thirdparty\tesseract\include;..\..\thirdparty\tesseract\src\api;..\..\thirdparty\tesseract\src\arch;..\..\thirdparty\tesseract\src\ccmain;..\..\thirdparty\tesseract\src\ccstruct;..\..\thirdparty\tesseract\src\ccutil;..\..\thirdparty\tesseract\src\classify;..\..\thirdparty\tesseract\src\dict;..\..\thirdparty\tesseract\src\lstm;..\..\thirdparty\tesseract\src\textord;..\..\thirdparty\tesseract\src\viewer;..\..\thirdparty\tesseract\src\wordrec;..\..\thirdparty\tesseract\src\cutil;..\..\thirdparty\tesseract\src\training\pango;../../thirdparty/tesseract/src/training/unicharset;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\scripts\libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\include;..\..\scripts\tesseract;..\..\thirdparty\leptonica\src;..\..\thirdparty\tesseract\include;..\..\thirdparty\tesseract\src\api;..\..\thirdparty\tesseract\src\arch;..\..\thirdparty\tesseract\src\ccmain;..\..\thirdparty\tesseract\src\ccstruct;..\..\thirdparty\tesseract\src\ccutil;..\..\thirdparty\tesseract\src\classify;..\..\thirdparty\tesseract\src\dict;..\..\thirdparty\tesseract\src\lstm;..\..\thirdparty\tesseract\src\textord;..\..\thirdparty\tesseract\src\viewer;..\..\thirdparty\tesseract\src\wordrec;..\..\thirdparty\tesseract\src\cutil;..\..\thirdparty\tesseract\src\training\pango;../../thirdparty/tesseract/src/training/unicharset;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\scripts\libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/plf_nanotimer;../../scripts/leptonica/include/leptonica;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <CustomBuildStep>
       <Command>
@@ -288,7 +288,7 @@
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTESSERACT;TESSERACT_STATICLIB;HAVE_TESSERACT_CONFIG_H;HAVE_MUPDF;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;NDEBUG</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>..\..\include;..\..\scripts\tesseract;..\..\thirdparty\leptonica\src;..\..\thirdparty\tesseract\include;..\..\thirdparty\tesseract\src\api;..\..\thirdparty\tesseract\src\arch;..\..\thirdparty\tesseract\src\ccmain;..\..\thirdparty\tesseract\src\ccstruct;..\..\thirdparty\tesseract\src\ccutil;..\..\thirdparty\tesseract\src\classify;..\..\thirdparty\tesseract\src\dict;..\..\thirdparty\tesseract\src\lstm;..\..\thirdparty\tesseract\src\textord;..\..\thirdparty\tesseract\src\viewer;..\..\thirdparty\tesseract\src\wordrec;..\..\thirdparty\tesseract\src\cutil;..\..\thirdparty\tesseract\src\training\pango;../../thirdparty/tesseract/src/training/unicharset;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\scripts\libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\include;..\..\scripts\tesseract;..\..\thirdparty\leptonica\src;..\..\thirdparty\tesseract\include;..\..\thirdparty\tesseract\src\api;..\..\thirdparty\tesseract\src\arch;..\..\thirdparty\tesseract\src\ccmain;..\..\thirdparty\tesseract\src\ccstruct;..\..\thirdparty\tesseract\src\ccutil;..\..\thirdparty\tesseract\src\classify;..\..\thirdparty\tesseract\src\dict;..\..\thirdparty\tesseract\src\lstm;..\..\thirdparty\tesseract\src\textord;..\..\thirdparty\tesseract\src\viewer;..\..\thirdparty\tesseract\src\wordrec;..\..\thirdparty\tesseract\src\cutil;..\..\thirdparty\tesseract\src\training\pango;../../thirdparty/tesseract/src/training/unicharset;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\scripts\libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/plf_nanotimer;../../scripts/leptonica/include/leptonica;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <UndefinePreprocessorDefinitions>
       </UndefinePreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -301,7 +301,7 @@
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>..\..\include;..\..\scripts\tesseract;..\..\thirdparty\leptonica\src;..\..\thirdparty\tesseract\include;..\..\thirdparty\tesseract\src\api;..\..\thirdparty\tesseract\src\arch;..\..\thirdparty\tesseract\src\ccmain;..\..\thirdparty\tesseract\src\ccstruct;..\..\thirdparty\tesseract\src\ccutil;..\..\thirdparty\tesseract\src\classify;..\..\thirdparty\tesseract\src\dict;..\..\thirdparty\tesseract\src\lstm;..\..\thirdparty\tesseract\src\textord;..\..\thirdparty\tesseract\src\viewer;..\..\thirdparty\tesseract\src\wordrec;..\..\thirdparty\tesseract\src\cutil;..\..\thirdparty\tesseract\src\training\pango;../../thirdparty/tesseract/src/training/unicharset;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\scripts\libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\include;..\..\scripts\tesseract;..\..\thirdparty\leptonica\src;..\..\thirdparty\tesseract\include;..\..\thirdparty\tesseract\src\api;..\..\thirdparty\tesseract\src\arch;..\..\thirdparty\tesseract\src\ccmain;..\..\thirdparty\tesseract\src\ccstruct;..\..\thirdparty\tesseract\src\ccutil;..\..\thirdparty\tesseract\src\classify;..\..\thirdparty\tesseract\src\dict;..\..\thirdparty\tesseract\src\lstm;..\..\thirdparty\tesseract\src\textord;..\..\thirdparty\tesseract\src\viewer;..\..\thirdparty\tesseract\src\wordrec;..\..\thirdparty\tesseract\src\cutil;..\..\thirdparty\tesseract\src\training\pango;../../thirdparty/tesseract/src/training/unicharset;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\scripts\libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/plf_nanotimer;../../scripts/leptonica/include/leptonica;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <CustomBuildStep>
       <Command>
@@ -353,16 +353,6 @@
     <ClCompile Include="../../thirdparty/tesseract/src/arch/intsimdmatrixneon.cpp" />
     <ClCompile Include="../../thirdparty/tesseract/src/arch/intsimdmatrixsse.cpp" />
     <ClCompile Include="../../thirdparty/tesseract/src/arch/simddetect.cpp" />
-    <ClCompile Include="../../thirdparty/tesseract/src/arch_sse/sse_dotproduct.cpp" />
-    <ClCompile Include="../../thirdparty/tesseract/src/arch_sse/sse_dotproductavx.cpp" />
-    <ClCompile Include="../../thirdparty/tesseract/src/arch_sse/sse_dotproductfma.cpp" />
-    <ClCompile Include="../../thirdparty/tesseract/src/arch_sse/sse_dotproductneon.cpp" />
-    <ClCompile Include="../../thirdparty/tesseract/src/arch_sse/sse_dotproductsse.cpp" />
-    <ClCompile Include="../../thirdparty/tesseract/src/arch_sse/sse_intsimdmatrix.cpp" />
-    <ClCompile Include="../../thirdparty/tesseract/src/arch_sse/sse_intsimdmatrixavx2.cpp" />
-    <ClCompile Include="../../thirdparty/tesseract/src/arch_sse/sse_intsimdmatrixneon.cpp" />
-    <ClCompile Include="../../thirdparty/tesseract/src/arch_sse/sse_intsimdmatrixsse.cpp" />
-    <ClCompile Include="../../thirdparty/tesseract/src/arch_sse/sse_simddetect.cpp" />
     <ClCompile Include="../../thirdparty/tesseract/src/ccmain/adaptions.cpp" />
     <ClCompile Include="../../thirdparty/tesseract/src/ccmain/applybox.cpp" />
     <ClCompile Include="../../thirdparty/tesseract/src/ccmain/control.cpp" />
@@ -441,6 +431,7 @@
     <ClCompile Include="../../thirdparty/tesseract/src/ccutil/fopenutf8.cpp" />
     <ClCompile Include="../../thirdparty/tesseract/src/ccutil/indexmapbidi.cpp" />
     <ClCompile Include="../../thirdparty/tesseract/src/ccutil/mainblk.cpp" />
+    <ClCompile Include="../../thirdparty/tesseract/src/ccutil/memcost_estimate.cpp" />
     <ClCompile Include="../../thirdparty/tesseract/src/ccutil/params.cpp" />
     <ClCompile Include="../../thirdparty/tesseract/src/ccutil/scanutils.cpp" />
     <ClCompile Include="../../thirdparty/tesseract/src/ccutil/serialis.cpp" />
@@ -623,6 +614,7 @@
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/debugheap.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/export.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/ltrresultiterator.h" />
+    <ClInclude Include="../../thirdparty/tesseract/include/tesseract/memcost_estimate.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/ocrclass.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/osdetect.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/pageiterator.h" />
@@ -634,9 +626,6 @@
     <ClInclude Include="../../thirdparty/tesseract/src/arch/dotproduct.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/arch/intsimdmatrix.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/arch/simddetect.h" />
-    <ClInclude Include="../../thirdparty/tesseract/src/arch_sse/dotproduct.h" />
-    <ClInclude Include="../../thirdparty/tesseract/src/arch_sse/intsimdmatrix.h" />
-    <ClInclude Include="../../thirdparty/tesseract/src/arch_sse/simddetect.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/ccmain/control.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/ccmain/docqual.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/ccmain/equationdetect.h" />
@@ -761,9 +750,6 @@
     <ClInclude Include="../../thirdparty/tesseract/src/dict/matchdefs.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/dict/stopper.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/dict/trie.h" />
-    <ClInclude Include="../../thirdparty/tesseract/src/fmt/include/fmt/core.h" />
-    <ClInclude Include="../../thirdparty/tesseract/src/fmt/include/fmt/format-inl.h" />
-    <ClInclude Include="../../thirdparty/tesseract/src/fmt/include/fmt/format.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/lstm/convolve.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/lstm/fullyconnected.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/lstm/functions.h" />
@@ -875,27 +861,7 @@
     <ClInclude Include="../../thirdparty/tesseract/src/wordrec/plotedges.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/wordrec/render.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/wordrec/wordrec.h" />
-    <ClInclude Include="../../thirdparty/tesseract/unittest/cycletimer.h" />
-    <ClInclude Include="../../thirdparty/tesseract/unittest/doubleptr.h" />
-    <ClInclude Include="../../thirdparty/tesseract/unittest/include_gunit.h" />
-    <ClInclude Include="../../thirdparty/tesseract/unittest/log.h" />
-    <ClInclude Include="../../thirdparty/tesseract/unittest/lstm_test.h" />
-    <ClInclude Include="../../thirdparty/tesseract/unittest/normstrngs_test.h" />
-    <ClInclude Include="../../thirdparty/tesseract/unittest/syntaxnet/base.h" />
-    <ClInclude Include="../../thirdparty/tesseract/unittest/third_party/utf/utf.h" />
-    <ClInclude Include="../../thirdparty/tesseract/unittest/third_party/utf/utfdef.h" />
-    <ClInclude Include="../../thirdparty/tesseract/unittest/util/utf8/unicodetext.h" />
-    <ClInclude Include="../../thirdparty/tesseract/unittest/util/utf8/unilib.h" />
-    <ClInclude Include="../../thirdparty/tesseract/unittest/util/utf8/unilib_utf8_utils.h" />
     <Font Include="../../thirdparty/tesseract/tessdata/pdf.ttf" />
-    <Image Include="../../thirdparty/tesseract/test/testing/devatest-rotated-270.png" />
-    <Image Include="../../thirdparty/tesseract/test/testing/devatest.png" />
-    <Image Include="../../thirdparty/tesseract/test/testing/hebrew-nikud-genesis-1-2.png" />
-    <Image Include="../../thirdparty/tesseract/test/testing/hebrew.png" />
-    <Image Include="../../thirdparty/tesseract/test/testing/hebtypo.jpg" />
-    <Image Include="../../thirdparty/tesseract/test/testing/phototest-rotated-180.png" />
-    <Image Include="../../thirdparty/tesseract/test/testing/phototest-rotated-L.png" />
-    <Image Include="../../thirdparty/tesseract/test/testing/phototest-rotated-R.png" />
     <Text Include="../../thirdparty/tesseract/CMakeLists.txt" />
     <Text Include="../../thirdparty/tesseract/CONTRIBUTING.md" />
     <Text Include="../../thirdparty/tesseract/ChangeLog" />
@@ -903,6 +869,9 @@
     <Text Include="../../thirdparty/tesseract/Makefile.am" />
     <Text Include="../../thirdparty/tesseract/README.md" />
     <Text Include="../../thirdparty/tesseract/autogen.sh" />
+    <Text Include="../../thirdparty/tesseract/cmake/BuildFunctions.cmake" />
+    <Text Include="../../thirdparty/tesseract/cmake/Configure.cmake" />
+    <Text Include="../../thirdparty/tesseract/cmake/SourceGroups.cmake" />
     <Text Include="../../thirdparty/tesseract/cmake/templates/TesseractConfig.cmake.in" />
     <Text Include="../../thirdparty/tesseract/cmake/templates/cmake_uninstall.cmake.in" />
     <Text Include="../../thirdparty/tesseract/configure.ac" />
@@ -917,15 +886,14 @@
     <Text Include="../../thirdparty/tesseract/java/com/google/scrollview/ui/Makefile.am" />
     <Text Include="../../thirdparty/tesseract/make-installer.sh" />
     <Text Include="../../thirdparty/tesseract/nsis/Makefile.am" />
+    <Text Include="../../thirdparty/tesseract/nsis/tesseract.nsi" />
     <Text Include="../../thirdparty/tesseract/run_cmake.sh" />
-    <Text Include="../../thirdparty/tesseract/src/fmt/ChangeLog.rst" />
-    <Text Include="../../thirdparty/tesseract/src/fmt/LICENSE.rst" />
-    <Text Include="../../thirdparty/tesseract/src/fmt/README.rst" />
     <Text Include="../../thirdparty/tesseract/src/lstm/generate_lut.py" />
     <Text Include="../../thirdparty/tesseract/src/training/CMakeLists.txt" />
     <Text Include="../../thirdparty/tesseract/tessdata/Makefile.am" />
     <Text Include="../../thirdparty/tesseract/tessdata/configs/Makefile.am" />
     <Text Include="../../thirdparty/tesseract/tessdata/tessconfigs/Makefile.am" />
+    <Text Include="../../thirdparty/tesseract/tesseract.pc.cmake" />
     <Text Include="../../thirdparty/tesseract/tesseract.pc.in" />
     <Text Include="../../thirdparty/tesseract/test/README.md" />
     <Text Include="../../thirdparty/tesseract/test/langtests/README.md" />
@@ -938,23 +906,15 @@
     <Text Include="../../thirdparty/tesseract/test/langtests/runtestset.sh" />
     <Text Include="../../thirdparty/tesseract/test/testdata/README.md" />
     <Text Include="../../thirdparty/tesseract/test/testdata/scanftest.txt" />
-    <Text Include="../../thirdparty/tesseract/test/testing/8071_093.3B.txt" />
-    <Text Include="../../thirdparty/tesseract/test/testing/8087_054.3B.txt" />
-    <Text Include="../../thirdparty/tesseract/test/testing/README.md" />
-    <Text Include="../../thirdparty/tesseract/test/testing/eurotext.txt" />
-    <Text Include="../../thirdparty/tesseract/test/testing/phototest.gold.txt" />
-    <Text Include="../../thirdparty/tesseract/test/testing/phototest.txt" />
     <Text Include="../../thirdparty/tesseract/test/unlvtests/README.md" />
     <Text Include="../../thirdparty/tesseract/test/unlvtests/counttestset.sh" />
     <Text Include="../../thirdparty/tesseract/test/unlvtests/reorgdata.sh" />
-    <Text Include="../../thirdparty/tesseract/test/unlvtests/reports/1995.news.3B.sum" />
     <Text Include="../../thirdparty/tesseract/test/unlvtests/runalltests.sh" />
     <Text Include="../../thirdparty/tesseract/test/unlvtests/runalltests_spa.sh" />
     <Text Include="../../thirdparty/tesseract/test/unlvtests/runtestset.sh" />
-    <Text Include="../../thirdparty/tesseract/unittest/README.md" />
-    <Text Include="../../thirdparty/tesseract/unittest/fuzzers/oss-fuzz-build.sh" />
   </ItemGroup>
-  <ImportGroup Label="PropertySheets">
+  <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />
   </ImportGroup>
 </Project>
+  

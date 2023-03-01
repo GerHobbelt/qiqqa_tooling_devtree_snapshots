@@ -441,7 +441,6 @@ void HandleCommandLineHelpFlags() {
     ShowVersion();
     // Unlike help, we may be asking for version in a script, so return 0
     gflags_exitfunc(0);
-
   }
 }
 

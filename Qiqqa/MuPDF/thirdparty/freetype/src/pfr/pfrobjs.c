@@ -491,7 +491,7 @@
     glyph1--;
     glyph2--;
 
-    /* check the array bounds, .notdef is automacally out */
+    /* check the array bounds, .notdef is automatically out */
     if ( glyph1 >= phy_font->num_chars ||
          glyph2 >= phy_font->num_chars )
       goto Exit;

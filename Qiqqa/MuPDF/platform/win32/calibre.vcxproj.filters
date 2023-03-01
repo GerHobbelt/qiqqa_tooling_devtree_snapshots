@@ -144,10 +144,10 @@
     <Filter Include="Misc Files\manual\plugin_examples\interface_demo">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0044}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\recipes">
+    <Filter Include="Misc Files\resources">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0045}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\resources">
+    <Filter Include="Misc Files\resources\catalog">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0046}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\resources\editor-help">
@@ -6260,11 +6260,17 @@
     <Text Include="../../thirdparty/owemdjee/calibre/bypy/init_env.py">
       <Filter>Misc Files\bypy</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/calibre/bypy/linux.conf">
+      <Filter>Misc Files\bypy</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/calibre/bypy/linux/__main__.py">
       <Filter>Misc Files\bypy\linux</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/calibre/bypy/linux/site.py">
       <Filter>Misc Files\bypy\linux</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/calibre/bypy/macos.conf">
+      <Filter>Misc Files\bypy</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/calibre/bypy/macos/__main__.py">
       <Filter>Misc Files\bypy\macos</Filter>
@@ -6275,7 +6281,13 @@
     <Text Include="../../thirdparty/owemdjee/calibre/bypy/macos/site.py">
       <Filter>Misc Files\bypy\macos</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/calibre/bypy/rsync.conf">
+      <Filter>Misc Files\bypy</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/calibre/bypy/sources.json">
+      <Filter>Misc Files\bypy</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/calibre/bypy/windows.conf">
       <Filter>Misc Files\bypy</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/calibre/bypy/windows/__main__.py">
@@ -6335,9 +6347,6 @@
     <Text Include="../../thirdparty/owemdjee/calibre/imgsrc/generate.py">
       <Filter>Misc Files\imgsrc</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/imgsrc/news.svg">
-      <Filter>Misc Files\imgsrc</Filter>
-    </Text>
     <Text Include="../../thirdparty/owemdjee/calibre/imgsrc/render-logo.py">
       <Filter>Misc Files\imgsrc</Filter>
     </Text>
@@ -6372,6 +6381,9 @@
       <Filter>Misc Files\manual</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/calibre/manual/diff.rst">
+      <Filter>Misc Files\manual</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/calibre/manual/docutils.conf">
       <Filter>Misc Files\manual</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/calibre/manual/drm.rst">
@@ -6488,161 +6500,14 @@
     <Text Include="../../thirdparty/owemdjee/calibre/manual/xpath.rst">
       <Filter>Misc Files\manual</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/3dnews.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/astro_news_pl.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/athens_news.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/bsi_news.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/buffalo_news.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/catholic_news_agency.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/chicago_breaking_news.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/cnetnews.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/consortium_news.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/cynewslive.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/data_news.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/defensenews.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/detroit_news.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/foxnews.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/gamasutra_news.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/google_news.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/greensboro_news_and_record.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/gulfnews.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/hackernews.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/high_country_news.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/hotnews.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/house_news.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/japan_news.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/jijinews.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/linux_news_de.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/mainichi_science_news.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/metro_news_nl.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/news24.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/news324.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/news_busters.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/news_times.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/newsbeast.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/newsmoldova.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/newsobs.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/newsstraitstimes.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/newsweek_polska.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/nikkei_news.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/penguin_news.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/rtnews.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/sage_news.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/sage_news_opinion.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/salonica_press_news.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/sanjosemercurynews.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/science_news.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/shacknews.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/the_daily_news_egypt.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/thenews.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/usnews.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/wikinews_en.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/calibre/recipes/yahoo_news.recipe">
-      <Filter>Misc Files\recipes</Filter>
-    </Text>
     <Text Include="../../thirdparty/owemdjee/calibre/resources/calibre-portable.bat">
       <Filter>Misc Files\resources</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/calibre/resources/calibre-portable.sh">
       <Filter>Misc Files\resources</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/calibre/resources/catalog/section_list_templates.conf">
+      <Filter>Misc Files\resources\catalog</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/calibre/resources/common-english-words.txt">
       <Filter>Misc Files\resources</Filter>
@@ -6688,6 +6553,9 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/calibre/resources/toc.js">
       <Filter>Misc Files\resources</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/calibre/setup.cfg">
+      <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/calibre/setup.py">
       <Filter>Misc Files</Filter>
@@ -10930,4 +10798,3 @@
     </Xml>
   </ItemGroup>
 </Project>
-    

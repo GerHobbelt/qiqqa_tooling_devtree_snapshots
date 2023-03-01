@@ -33,6 +33,7 @@
  * quality-setting files than with low-quality ones.
  */
 
+#define JPEG_INTERNAL_OPTIONS
 #define JPEG_INTERNALS
 #include "jinclude.h"
 #include "jpeglib.h"
@@ -114,7 +115,7 @@
  */
 
 GLOBAL(void)
-jpeg_fdct_ifast(DCTELEM *data)
+_jpeg_fdct_ifast(DCTELEM *data)
 {
   DCTELEM tmp0, tmp1, tmp2, tmp3, tmp4, tmp5, tmp6, tmp7;
   DCTELEM tmp10, tmp11, tmp12, tmp13;

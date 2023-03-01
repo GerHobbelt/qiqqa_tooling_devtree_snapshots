@@ -412,7 +412,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tests/unittests/TransmitProfilesTests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tests/unittests/UtilsTests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tests/unittests/ZlibUtilsTests.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/third_party/sha1/sha1.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/wrappers/go/src/Microsoft/Telemetry/EventLogger/EventLogger.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/zlib/adler32.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/zlib/compress.c" />
@@ -684,8 +683,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tests/common/SocketTools.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tests/functests/EventDecoderListener.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tests/unittests/CheckForExceptionOrAbort.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/third_party/Reachability/ODWReachability.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/third_party/sha1/sha1.h" />
     <ClInclude Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/wrappers/go/src/Microsoft/Telemetry/EventLogger/EventLogger.h" />
     <ClInclude Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/wrappers/obj-c/ODWCommonDataContext.h" />
     <ClInclude Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/wrappers/obj-c/ODWDiagnosticDataViewer.h" />
@@ -703,6 +700,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/wrappers/obj-c/OneDsCppSdk.h" />
     <ClInclude Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/wrappers/obj-c/objc_begin.h" />
     <ClInclude Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/wrappers/obj-c/objc_end.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/zlib/as400/zlib.inc" />
     <ClInclude Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/zlib/contrib/blast/blast.h" />
     <ClInclude Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/zlib/contrib/infback9/infback9.h" />
     <ClInclude Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/zlib/contrib/infback9/inffix9.h" />
@@ -784,7 +782,9 @@
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/RunOACR.bat" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/SECURITY.md" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/Solutions/version.txt" />
+    <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/Solutions/win32-cs/App.config" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/Solutions/win32-cs/deploy-dll.cmd" />
+    <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/Solutions/win32-cs/packages.config" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/build-Win32Debug.bat" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/build-Win32Release.bat" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/build-all-v142.bat" />
@@ -848,7 +848,9 @@
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/examples/cpp/EventSender/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/examples/cpp/EventSender/build.sh" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/examples/cpp/EventSender/deploy-dll.cmd" />
+    <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/examples/cpp/EventSender/direct.config" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/examples/cpp/EventSender/run.sh" />
+    <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/examples/cpp/EventSender/utc.config" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/examples/cpp/MacProxy/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/examples/cpp/MacProxy/build.sh" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/examples/cpp/MacProxy/run-tests.sh" />
@@ -861,7 +863,10 @@
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/examples/cpp/SampleCppMini/build.sh" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/examples/cpp/SampleCppMini/deploy-dll.cmd" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/examples/cpp/SampleCppMini/run-tests.sh" />
+    <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/examples/cpp/SampleCppUWP/packages.config" />
+    <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/examples/cs/SampleCsNet40/App.config" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/examples/cs/SampleCsNet40/deploy-dll.cmd" />
+    <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/examples/cs/SampleCsNet40/packages.config" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/examples/cs/SampleCsUWP/Assets/transmitProfiles.json" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/examples/objc/cocoa-app/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/examples/objc/cocoa-app/build.sh" />
@@ -886,12 +891,17 @@
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tests/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tests/functests/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tests/unittests/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/third_party/Reachability/README.md" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/CreateDevCert.cmd" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/CreateDevCert.ps1" />
+    <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/FindTcmalloc.cmake" />
+    <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/MakeDeb.cmake" />
+    <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/MakeRpm.cmake" />
+    <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/MakeTgz.cmake" />
+    <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/ParseOsRelease.cmake" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/RunMsBuild.bat" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/RunTests.bat" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/SearchAndReplace.ps1" />
+    <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/Utils.cmake" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/bondjson2cpp.py" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/build-Win10-compact-dll.cmd" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/build-Win10-compact-exp.cmd" />
@@ -901,7 +911,10 @@
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/decoder/compile.cmd" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/download.cmd" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/download.ps1" />
+    <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/fiddler/OneDSInspector/Fiddler.exe.config" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/fiddler/OneDSInspector/README.md" />
+    <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/fiddler/OneDSInspector/app.config" />
+    <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/fiddler/OneDSInspector/packages.config" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/gen-bond.cmd" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/gen-docs.cmd" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/gen-version.cmd" />
@@ -912,8 +925,10 @@
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/install-llvm.ps1" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/makepfx.cmd" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/netem-setup.sh" />
+    <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/ports/benchmark/portfile.cmake" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/ports/mstelemetry/TODO.md" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/ports/mstelemetry/get_repo_name.sh" />
+    <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/ports/mstelemetry/portfile.cmake" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/ports/mstelemetry/response_file_linux.txt" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/ports/mstelemetry/response_file_mac.txt" />
     <Text Include="../../thirdparty/owemdjee/ms_cpp_client_telemetry/tools/reorder_const.py" />

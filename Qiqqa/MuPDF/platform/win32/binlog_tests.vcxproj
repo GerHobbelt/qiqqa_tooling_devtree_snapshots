@@ -234,9 +234,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="../../thirdparty/owemdjee/binlog/bin/binaryio.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/binlog/bin/getopt.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/binlog/bin/printers.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/binlog/example/ConsumeLoop.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/binlog/example/DetailedHelloWorld.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/binlog/example/HelloWorld.cpp" />
@@ -307,8 +304,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/binlog/test/unit/mserialize/visit.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/binlog/tools/generate_foreach_macro.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/binlog/tools/monolithic_main.c" />
-    <ClInclude Include="../../thirdparty/owemdjee/binlog/bin/getopt.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/binlog/bin/printers.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/binlog/include/binlog/Address.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/binlog/include/binlog/ArrayView.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/binlog/include/binlog/Entries.hpp" />
@@ -389,6 +384,12 @@
     <Text Include="../../thirdparty/owemdjee/binlog/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/binlog/INSTALL.md" />
     <Text Include="../../thirdparty/owemdjee/binlog/README.md" />
+    <Text Include="../../thirdparty/owemdjee/binlog/cmake/AddressSanitizer.cmake" />
+    <Text Include="../../thirdparty/owemdjee/binlog/cmake/Coverage.cmake" />
+    <Text Include="../../thirdparty/owemdjee/binlog/cmake/MarkdownToHtml.cmake" />
+    <Text Include="../../thirdparty/owemdjee/binlog/cmake/OptionalCompileOption.cmake" />
+    <Text Include="../../thirdparty/owemdjee/binlog/cmake/ThreadSanitizer.cmake" />
+    <Text Include="../../thirdparty/owemdjee/binlog/cmake/UndefinedSanitizer.cmake" />
     <Text Include="../../thirdparty/owemdjee/binlog/cmake/binlogConfig.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/binlog/dco/dco_template.txt" />
     <Text Include="../../thirdparty/owemdjee/binlog/doc/Internals.md" />
@@ -397,8 +398,6 @@
     <Text Include="../../thirdparty/owemdjee/binlog/doc/catchfile.py" />
     <Text Include="../../thirdparty/owemdjee/binlog/doc/codelink.py" />
     <Text Include="../../thirdparty/owemdjee/binlog/doc/gendoc.py" />
-    <Text Include="../../thirdparty/owemdjee/binlog/test/cmake/install/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/binlog/test/cmake/subdir/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/binlog/test/doctest/detail/doctest-LICENSE.txt" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >

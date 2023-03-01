@@ -14,10 +14,11 @@
  * The routines in jcapimin.c will also be needed by a transcoder.
  */
 
+#define JPEG_INTERNAL_OPTIONS
 #define JPEG_INTERNALS
 #include "jinclude.h"
 #include "jpeglib.h"
-#include "jpegcomp.h"
+#include "jpegapicomp.h"
 
 
 /* Forward declarations */
@@ -42,6 +43,9 @@ LOCAL(void) transencode_coef_controller(j_compress_ptr cinfo,
 GLOBAL(void)
 jpeg_write_coefficients(j_compress_ptr cinfo, jvirt_barray_ptr *coef_arrays)
 {
+  if (cinfo->master->lossless)
+    ERREXIT(cinfo, JERR_NOTIMPL);
+
   if (cinfo->global_state != CSTATE_START)
     ERREXIT1(cinfo, JERR_BAD_STATE, cinfo->global_state);
   /* Mark all tables to be written */
@@ -71,6 +75,9 @@ jpeg_copy_critical_parameters(j_decompress_ptr srcinfo, j_compress_ptr dstinfo)
   jpeg_component_info *incomp, *outcomp;
   JQUANT_TBL *c_quant, *slot_quant;
   int tblno, ci, coefi;
+
+  if (srcinfo->master->lossless)
+    ERREXIT(dstinfo, JERR_NOTIMPL);
 
   /* Safety check to ensure start_compress not called yet. */
   if (dstinfo->global_state != CSTATE_START)
@@ -364,6 +371,13 @@ compress_output(j_compress_ptr cinfo, JSAMPIMAGE input_buf)
 }
 
 
+METHODDEF(boolean)
+compress_output_12(j_compress_ptr cinfo, J12SAMPIMAGE input_buf)
+{
+  return compress_output(cinfo, (JSAMPIMAGE)input_buf);
+}
+
+
 /*
  * Initialize coefficient buffer controller.
  *
@@ -386,6 +400,7 @@ transencode_coef_controller(j_compress_ptr cinfo,
   cinfo->coef = (struct jpeg_c_coef_controller *)coef;
   coef->pub.start_pass = start_pass_coef;
   coef->pub.compress_data = compress_output;
+  coef->pub.compress_data_12 = compress_output_12;
 
   /* Save pointer to virtual arrays */
   coef->whole_image = coef_arrays;

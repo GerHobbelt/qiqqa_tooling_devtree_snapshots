@@ -514,6 +514,18 @@ static void decode_btree_page(
   }
 }
 
+/*
+** Check the range validity for a page number.  Print an error and
+** exit if the page is out of range.
+*/
+static void checkPageValidity(int iPage, int mxPage){
+  if( iPage<1 || iPage>mxPage ){
+    fprintf(stderr, "Invalid page number %d:  valid range is 1..%d\n",
+            iPage, mxPage);
+    exit(1);
+  }
+}
+
 
 
 #if defined(BUILD_MONOLITHIC)
@@ -567,10 +579,12 @@ int main(int argc, const char** argv){
         continue;
       }
       iStart = strtol(argv[i], &zLeft, 0);
+      checkPageValidity(iStart, mxFrame);
       if( zLeft && strcmp(zLeft,"..end")==0 ){
         iEnd = mxFrame;
       }else if( zLeft && zLeft[0]=='.' && zLeft[1]=='.' ){
         iEnd = strtol(&zLeft[2], 0, 0);
+        checkPageValidity(iEnd, mxFrame);
       }else if( zLeft && zLeft[0]=='b' ){
         i64 ofst;
         int nByte, hdrSize;

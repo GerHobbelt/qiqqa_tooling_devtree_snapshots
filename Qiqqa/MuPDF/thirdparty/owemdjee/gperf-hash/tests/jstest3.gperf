@@ -1,0 +1,142 @@
+struct js_keyword {
+  const char * name;
+  int token;
+}
+%%
+abstract, 1
+boolean, 2
+break, 3
+byte, 4
+case, 5
+catch, 6
+char, 7
+class, 8
+const, 9
+continue, 10
+default, 11
+do, 12
+double, 13
+else, 14
+extends, 15
+false, 16
+final, 17
+finally, 18
+float, 19
+for, 20
+function, 21
+goto, 22
+if, 23
+implements, 24
+import, 25
+in, 26
+instanceof, 27
+int, 28
+interface, 29
+long, 30
+native, 31
+new, 32
+null, 33
+package, 34
+private, 35
+protected, 36
+public, 37
+return, 38
+short, 39
+static, 40
+super, 41
+switch, 42
+synchronized, 43
+this, 44
+throw, 45
+throws, 46
+transient, 47
+true, 48
+try, 49
+var, 50
+void, 51
+while, 52
+with, 53
+%%
+#include <stdlib.h>
+#include <string.h>
+static const char* testdata[] = {
+  "bogus\000\000\000",
+  "abstract",
+  "boolean",
+  "break\000\000\000",
+  "byte",
+  "case",
+  "catch\000\000\000",
+  "char",
+  "class\000\000\000",
+  "const\000\000\000",
+  "continue",
+  "default\000",
+  "do\000\000",
+  "double\000\000",
+  "else",
+  "extends\000",
+  "false\000\000\000",
+  "final\000\000\000",
+  "finally\000",
+  "float\000\000\000",
+  "for\000",
+  "function",
+  "goto",
+  "if\000\000",
+  "implements\000\000",
+  "import\000\000",
+  "in\000\000",
+  "instanceof\000\000",
+  "int\000",
+  "interface\000\000\000",
+  "long",
+  "native\000\000",
+  "new\000",
+  "null",
+  "package\000",
+  "private\000",
+  "protected\000\000\000",
+  "public\000\000",
+  "return\000\000",
+  "short\000\000\000",
+  "static\000\000",
+  "super\000\000\000",
+  "switch\000\000",
+  "synchronized",
+  "this",
+  "throw\000\000\000",
+  "throws\000\000",
+  "transient\000\000\000",
+  "true",
+  "try\000",
+  "var\000",
+  "void",
+  "while\000\000\000",
+  "with"
+};
+int main ()
+{
+  unsigned i;
+  for (i = 0; i < sizeof(testdata)/sizeof(testdata[0]); i++)
+    {
+#ifdef CPLUSPLUS_TEST
+      struct js_keyword *resword = (struct js_keyword *)Perfect_Hash::in_word_set(testdata[i],strlen(testdata[i]));
+#else
+      struct js_keyword *resword = (struct js_keyword *)in_word_set(testdata[i],strlen(testdata[i]));
+#endif
+      if (i > 0)
+        {
+          if (!resword)
+            exit (1);
+          if (strcmp(testdata[i],resword->name))
+            exit (1);
+        }
+      else
+        {
+          if (resword)
+            exit (1);
+        }
+    }
+  return 0;
+}

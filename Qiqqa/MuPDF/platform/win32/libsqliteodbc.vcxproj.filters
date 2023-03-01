@@ -200,6 +200,9 @@
     <Text Include="../../thirdparty/owemdjee/sqliteodbc/debian/changelog.in">
       <Filter>Misc Files\debian</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/sqliteodbc/doxygen.conf">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/sqliteodbc/drvdsninst.sh">
       <Filter>Misc Files</Filter>
     </Text>
@@ -233,7 +236,13 @@
     <Text Include="../../thirdparty/owemdjee/sqliteodbc/resource.h.in">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/sqliteodbc/sqliteodbc.nsi">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/sqliteodbc/sqliteodbc.spec.in">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/sqliteodbc/sqliteodbc_w64.nsi">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/sqliteodbc/tccex/README.bench">
@@ -244,4 +253,3 @@
     </Text>
   </ItemGroup>
 </Project>
-    

@@ -288,7 +288,6 @@
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\scripts\googletest\gtest-demos-main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/googletest/googletest/test/googletest-break-on-failure-unittest_.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/googletest/googletest/test/googletest-catch-exceptions-test_.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/googletest/googletest/test/googletest-color-test_.cc" />
@@ -346,6 +345,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/googletest/googletest/test/googletest-param-test-test.h" />
     <ClInclude Include="../../thirdparty/owemdjee/googletest/googletest/test/gtest-typed-test_test.h" />
     <ClInclude Include="../../thirdparty/owemdjee/googletest/googletest/test/production.h" />
+    <Text Include="../../thirdparty/owemdjee/googletest/googletest/test/BUILD.bazel" />
     <Text Include="../../thirdparty/owemdjee/googletest/googletest/test/googletest-break-on-failure-unittest.py" />
     <Text Include="../../thirdparty/owemdjee/googletest/googletest/test/googletest-catch-exceptions-test.py" />
     <Text Include="../../thirdparty/owemdjee/googletest/googletest/test/googletest-color-test.py" />

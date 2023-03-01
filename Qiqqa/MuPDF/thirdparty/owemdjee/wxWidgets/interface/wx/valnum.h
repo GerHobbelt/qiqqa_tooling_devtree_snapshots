@@ -280,14 +280,14 @@ public:
 
         @param value
             A pointer to the variable associated with the validator. If non
-            @NULL, this variable should have a lifetime equal to or longer than
+            @nullptr, this variable should have a lifetime equal to or longer than
             the validator lifetime (which is usually determined by the lifetime
             of the window).
         @param style
             A combination of wxNumValidatorStyle enum values with the exception
             of wxNUM_VAL_NO_TRAILING_ZEROES which can't be used here.
     */
-    wxIntegerValidator(ValueType *value = NULL, int style = wxNUM_VAL_DEFAULT);
+    wxIntegerValidator(ValueType *value = nullptr, int style = wxNUM_VAL_DEFAULT);
 
     /**
         Validator constructor with specified range.
@@ -399,13 +399,13 @@ public:
 
         @param value
             A pointer to the variable associated with the validator. If non
-            @NULL, this variable should have a lifetime equal to or longer than
+            @nullptr, this variable should have a lifetime equal to or longer than
             the validator lifetime (which is usually determined by the lifetime
             of the window).
         @param style
             A combination of wxNumValidatorStyle enum values.
     */
-    wxFloatingPointValidator(ValueType *value = NULL,
+    wxFloatingPointValidator(ValueType *value = nullptr,
                              int style = wxNUM_VAL_DEFAULT);
 
     /**
@@ -413,7 +413,7 @@ public:
 
         @param value
             A pointer to the variable associated with the validator. If non
-            @NULL, this variable should have a lifetime equal to or longer than
+            @nullptr, this variable should have a lifetime equal to or longer than
             the validator lifetime (which is usually determined by the lifetime
             of the window).
         @param style
@@ -423,7 +423,7 @@ public:
             and accept.
     */
     wxFloatingPointValidator(int precision,
-                             ValueType *value = NULL,
+                             ValueType *value = nullptr,
                              int style = wxNUM_VAL_DEFAULT);
 
 

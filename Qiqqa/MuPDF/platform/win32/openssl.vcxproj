@@ -52,20 +52,20 @@
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <ImportGroup Label="PropertySheets">
+  <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project.props" Label="SolutionWideSettings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props" Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
+    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Import Project="$(SolutionDir)\common-project-Release-Win32.props" Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
+    <Import Project="$(SolutionDir)\common-project-Release-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props" Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
+    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <Import Project="$(SolutionDir)\common-project-Release-Win64.props" Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
+    <Import Project="$(SolutionDir)\common-project-Release-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
   </ImportGroup>
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
@@ -79,7 +79,7 @@
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
-  <ItemDefinitionGroup>
+<ItemDefinitionGroup>
     <ClCompile>
       <Optimization>Custom</Optimization>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -111,8 +111,8 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+</ItemDefinitionGroup>
+<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_OPENSSL;OPENSSL_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
@@ -1169,22 +1169,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/openssl/engines/e_ossltest.c" />
     <ClCompile Include="../../thirdparty/owemdjee/openssl/engines/e_ossltest_err.c" />
     <ClCompile Include="../../thirdparty/owemdjee/openssl/engines/e_padlock.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/openssl/fuzz/asn1.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/openssl/fuzz/asn1parse.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/openssl/fuzz/bignum.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/openssl/fuzz/bndiv.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/openssl/fuzz/client.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/openssl/fuzz/cmp.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/openssl/fuzz/cms.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/openssl/fuzz/conf.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/openssl/fuzz/crl.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/openssl/fuzz/ct.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/openssl/fuzz/driver.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/openssl/fuzz/fuzz_rand.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/openssl/fuzz/punycode.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/openssl/fuzz/server.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/openssl/fuzz/test-corpus.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/openssl/fuzz/x509.c" />
     <ClCompile Include="../../thirdparty/owemdjee/openssl/gost-engine/benchmark/sign.c" />
     <ClCompile Include="../../thirdparty/owemdjee/openssl/gost-engine/e_gost_err.c" />
     <ClCompile Include="../../thirdparty/owemdjee/openssl/gost-engine/ecp_id_GostR3410_2001_CryptoPro_A_ParamSet.c" />
@@ -2982,7 +2966,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/openssl/engines/e_dasync_err.h" />
     <ClInclude Include="../../thirdparty/owemdjee/openssl/engines/e_loader_attic_err.h" />
     <ClInclude Include="../../thirdparty/owemdjee/openssl/engines/e_ossltest_err.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/openssl/fuzz/fuzzer.h" />
     <ClInclude Include="../../thirdparty/owemdjee/openssl/gost-engine/e_gost_err.h" />
     <ClInclude Include="../../thirdparty/owemdjee/openssl/gost-engine/getopt.h" />
     <ClInclude Include="../../thirdparty/owemdjee/openssl/gost-engine/gost-engine.h" />
@@ -3816,6 +3799,19 @@
     <Text Include="../../thirdparty/owemdjee/openssl/CHANGES.md" />
     <Text Include="../../thirdparty/owemdjee/openssl/CODE-OF-CONDUCT.md" />
     <Text Include="../../thirdparty/owemdjee/openssl/CONTRIBUTING.md" />
+    <Text Include="../../thirdparty/owemdjee/openssl/Configurations/00-base-templates.conf" />
+    <Text Include="../../thirdparty/owemdjee/openssl/Configurations/10-main.conf" />
+    <Text Include="../../thirdparty/owemdjee/openssl/Configurations/15-android.conf" />
+    <Text Include="../../thirdparty/owemdjee/openssl/Configurations/15-ios.conf" />
+    <Text Include="../../thirdparty/owemdjee/openssl/Configurations/50-cppbuilder.conf" />
+    <Text Include="../../thirdparty/owemdjee/openssl/Configurations/50-djgpp.conf" />
+    <Text Include="../../thirdparty/owemdjee/openssl/Configurations/50-haiku.conf" />
+    <Text Include="../../thirdparty/owemdjee/openssl/Configurations/50-masm.conf" />
+    <Text Include="../../thirdparty/owemdjee/openssl/Configurations/50-nonstop.conf" />
+    <Text Include="../../thirdparty/owemdjee/openssl/Configurations/50-os390.conf" />
+    <Text Include="../../thirdparty/owemdjee/openssl/Configurations/50-vms-x86_64.conf" />
+    <Text Include="../../thirdparty/owemdjee/openssl/Configurations/50-win-clang-cl.conf" />
+    <Text Include="../../thirdparty/owemdjee/openssl/Configurations/50-win-onecore.conf" />
     <Text Include="../../thirdparty/owemdjee/openssl/Configurations/README-design.md" />
     <Text Include="../../thirdparty/owemdjee/openssl/Configurations/README.md" />
     <Text Include="../../thirdparty/owemdjee/openssl/FAQ.md" />
@@ -3879,10 +3875,6 @@
     <Text Include="../../thirdparty/owemdjee/openssl/demos/sslecho/README.md" />
     <Text Include="../../thirdparty/owemdjee/openssl/dev/README.md" />
     <Text Include="../../thirdparty/owemdjee/openssl/dev/release-aux/README.md" />
-    <Text Include="../../thirdparty/owemdjee/openssl/dev/release-aux/fixup-CHANGES.md-postrelease.pl" />
-    <Text Include="../../thirdparty/owemdjee/openssl/dev/release-aux/fixup-CHANGES.md-release.pl" />
-    <Text Include="../../thirdparty/owemdjee/openssl/dev/release-aux/fixup-NEWS.md-postrelease.pl" />
-    <Text Include="../../thirdparty/owemdjee/openssl/dev/release-aux/fixup-NEWS.md-release.pl" />
     <Text Include="../../thirdparty/owemdjee/openssl/dev/release-aux/release-state-fn.sh" />
     <Text Include="../../thirdparty/owemdjee/openssl/dev/release-aux/release-version-fn.sh" />
     <Text Include="../../thirdparty/owemdjee/openssl/dev/release.sh" />
@@ -3975,15 +3967,13 @@
     <Text Include="../../thirdparty/owemdjee/openssl/external/perl/Text-Template-1.56/Changes" />
     <Text Include="../../thirdparty/owemdjee/openssl/external/perl/Text-Template-1.56/META.json" />
     <Text Include="../../thirdparty/owemdjee/openssl/external/perl/Text-Template-1.56/README" />
-    <Text Include="../../thirdparty/owemdjee/openssl/fuzz/README.md" />
-    <Text Include="../../thirdparty/owemdjee/openssl/fuzz/helper.py" />
-    <Text Include="../../thirdparty/owemdjee/openssl/fuzz/oids.txt" />
     <Text Include="../../thirdparty/owemdjee/openssl/gost-engine/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/openssl/gost-engine/INSTALL.md" />
     <Text Include="../../thirdparty/owemdjee/openssl/gost-engine/README.gost" />
     <Text Include="../../thirdparty/owemdjee/openssl/gost-engine/README.md" />
     <Text Include="../../thirdparty/owemdjee/openssl/gost-engine/README.prov.md" />
     <Text Include="../../thirdparty/owemdjee/openssl/gost-engine/etalon/mac.txt" />
+    <Text Include="../../thirdparty/owemdjee/openssl/gost-engine/example.conf" />
     <Text Include="../../thirdparty/owemdjee/openssl/gost-engine/gost.txt" />
     <Text Include="../../thirdparty/owemdjee/openssl/gost-engine/openssl_wrap.sh" />
     <Text Include="../../thirdparty/owemdjee/openssl/gost-engine/tcl_tests/asn.tcl" />
@@ -4210,6 +4200,8 @@
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/clients/kvno/Makefile.in" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/clients/kvno/t_kvno.py" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/config-files/Makefile.in" />
+    <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/config-files/kdc.conf" />
+    <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/config-files/krb5.conf" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/config/ac-archive/README" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/config/lib.in" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/config/libnodeps.in" />
@@ -4219,6 +4211,7 @@
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/config/post.in" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/config/pre.in" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/config/rm.bat" />
+    <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/config/shlib.conf" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/config/win-post.in" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/config/win-pre.in" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/configure.ac" />
@@ -4296,7 +4289,6 @@
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/lib/krb5/asn.1/KRB5-asn.py" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/lib/krb5/asn.1/Makefile.in" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/lib/krb5/asn.1/README.asn1" />
-    <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/lib/krb5/asn.1/TODO.asn1" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/lib/krb5/ccache/Makefile.in" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/lib/krb5/ccache/ccapi/Makefile.in" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/lib/krb5/ccache/t_cccol.py" />
@@ -4306,10 +4298,12 @@
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/lib/krb5/krb/t_expire_warn.py" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/lib/krb5/krb/t_get_etype_info.py" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/lib/krb5/krb/t_in_ccache_patypes.py" />
+    <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/lib/krb5/krb/t_krb5.conf" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/lib/krb5/krb/t_vfy_increds.py" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/lib/krb5/krb/x-deltat.y" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/lib/krb5/os/Makefile.in" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/lib/krb5/os/t_discover_uri.py" />
+    <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/lib/krb5/os/td_krb5.conf" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/lib/krb5/posix/Makefile.in" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/lib/krb5/rcache/Makefile.in" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/lib/krb5/unicode/CompositionExclusions.txt" />
@@ -4364,6 +4358,7 @@
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/plugins/preauth/securid_sam2/Makefile.in" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/plugins/preauth/securid_sam2/README" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/plugins/preauth/spake/Makefile.in" />
+    <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/plugins/preauth/spake/t_krb5.conf" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/plugins/preauth/test/Makefile.in" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/plugins/pwqual/test/Makefile.in" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/plugins/tls/k5tls/Makefile.in" />
@@ -4465,6 +4460,7 @@
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/util/krb5-send-pr.sh" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/util/princflags.py" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/util/profile/Makefile.in" />
+    <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/util/profile/krb5.conf" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/util/profile/prtest.in" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/util/profile/testmod/Makefile.in" />
     <Text Include="../../thirdparty/owemdjee/openssl/krb5/src/util/ss/Makefile.in" />
@@ -4578,6 +4574,7 @@
     <Text Include="../../thirdparty/owemdjee/openssl/pyca-cryptography/docs/x509/reference.rst" />
     <Text Include="../../thirdparty/owemdjee/openssl/pyca-cryptography/docs/x509/tutorial.rst" />
     <Text Include="../../thirdparty/owemdjee/openssl/pyca-cryptography/release.py" />
+    <Text Include="../../thirdparty/owemdjee/openssl/pyca-cryptography/setup.cfg" />
     <Text Include="../../thirdparty/owemdjee/openssl/pyca-cryptography/setup.py" />
     <Text Include="../../thirdparty/owemdjee/openssl/pyca-cryptography/src/_cffi_src/__init__.py" />
     <Text Include="../../thirdparty/owemdjee/openssl/pyca-cryptography/src/_cffi_src/build_openssl.py" />
@@ -4769,7 +4766,6 @@
     <Text Include="../../thirdparty/owemdjee/openssl/pyca-cryptography/tests/hypothesis/test_x509.py" />
     <Text Include="../../thirdparty/owemdjee/openssl/pyca-cryptography/tests/test_cryptography_utils.py" />
     <Text Include="../../thirdparty/owemdjee/openssl/pyca-cryptography/tests/test_fernet.py" />
-    <Text Include="../../thirdparty/owemdjee/openssl/pyca-cryptography/tests/test_interfaces.py" />
     <Text Include="../../thirdparty/owemdjee/openssl/pyca-cryptography/tests/test_meta.py" />
     <Text Include="../../thirdparty/owemdjee/openssl/pyca-cryptography/tests/test_rust_utils.py" />
     <Text Include="../../thirdparty/owemdjee/openssl/pyca-cryptography/tests/test_utils.py" />
@@ -4983,6 +4979,7 @@
     <Text Include="../../thirdparty/owemdjee/openssl/pyca-cryptography/vectors/cryptography_vectors/twofactor/rfc-4226.txt" />
     <Text Include="../../thirdparty/owemdjee/openssl/pyca-cryptography/vectors/cryptography_vectors/twofactor/rfc-6238.txt" />
     <Text Include="../../thirdparty/owemdjee/openssl/pyca-cryptography/vectors/cryptography_vectors/x509/PKITS_data/ReadMe.txt" />
+    <Text Include="../../thirdparty/owemdjee/openssl/pyca-cryptography/vectors/setup.cfg" />
     <Text Include="../../thirdparty/owemdjee/openssl/pyca-cryptography/vectors/setup.py" />
     <Text Include="../../thirdparty/owemdjee/openssl/ssl/statem/README.md" />
     <Text Include="../../thirdparty/owemdjee/openssl/test/README-dev.md" />
@@ -5116,9 +5113,6 @@
     <Text Include="../../thirdparty/owemdjee/openssl/test/recipes/95-test_external_krb5_data/krb5.sh" />
     <Text Include="../../thirdparty/owemdjee/openssl/test/recipes/95-test_external_oqsprovider_data/oqsprovider.sh" />
     <Text Include="../../thirdparty/owemdjee/openssl/test/recipes/95-test_external_pyca_data/cryptography.sh" />
-    <Text Include="../../thirdparty/owemdjee/openssl/test/recipes/95-test_external_tlsfuzzer_data/cert.json.in" />
-    <Text Include="../../thirdparty/owemdjee/openssl/test/recipes/95-test_external_tlsfuzzer_data/tls-fuzzer-cert.sh" />
-    <Text Include="../../thirdparty/owemdjee/openssl/test/recipes/95-test_external_tlsfuzzer_data/tlsfuzzer.sh" />
     <Text Include="../../thirdparty/owemdjee/openssl/test/smcont.txt" />
     <Text Include="../../thirdparty/owemdjee/openssl/test/smcont_zero.txt" />
     <Text Include="../../thirdparty/owemdjee/openssl/test/smime-certs/mksmime-certs.sh" />
@@ -5167,10 +5161,10 @@
     <Text Include="../../thirdparty/owemdjee/openssl/util/missingssl111.txt" />
     <Text Include="../../thirdparty/owemdjee/openssl/util/mktar.sh" />
     <Text Include="../../thirdparty/owemdjee/openssl/util/opensslwrap.sh" />
-    <Text Include="../../thirdparty/owemdjee/openssl/util/perl/TLSProxy/NewSessionTicket.pm" />
     <Text Include="../../thirdparty/owemdjee/openssl/util/shlib_wrap.sh.in" />
     <Text Include="../../thirdparty/owemdjee/openssl/util/unlocal_shlib.com.in" />
     <Text Include="../../thirdparty/owemdjee/openssl/util/wrap.pl.in" />
+    <Text Include="../../thirdparty/owemdjee/openssl/wycheproof/BUILD.bazel" />
     <Text Include="../../thirdparty/owemdjee/openssl/wycheproof/CONTRIBUTING.md" />
     <Text Include="../../thirdparty/owemdjee/openssl/wycheproof/README.md" />
     <Text Include="../../thirdparty/owemdjee/openssl/wycheproof/doc/aesgcm.md" />
@@ -5231,6 +5225,7 @@
     <Text Include="../../thirdparty/owemdjee/openssl/wycheproof/schemas/xdh_comp_schema.json" />
     <Text Include="../../thirdparty/owemdjee/openssl/wycheproof/schemas/xdh_jwk_comp_schema.json" />
     <Text Include="../../thirdparty/owemdjee/openssl/wycheproof/schemas/xdh_pem_comp_schema.json" />
+    <Text Include="../../thirdparty/owemdjee/openssl/wycheproof/testvectors/BUILD.bazel" />
     <Text Include="../../thirdparty/owemdjee/openssl/wycheproof/testvectors/aead_aes_siv_cmac_test.json" />
     <Text Include="../../thirdparty/owemdjee/openssl/wycheproof/testvectors/aegis128L_test.json" />
     <Text Include="../../thirdparty/owemdjee/openssl/wycheproof/testvectors/aegis128_test.json" />
@@ -5392,9 +5387,11 @@
     <Text Include="../../thirdparty/owemdjee/openssl/wycheproof/testvectors/x448_pem_test.json" />
     <Text Include="../../thirdparty/owemdjee/openssl/wycheproof/testvectors/x448_test.json" />
     <Text Include="../../thirdparty/owemdjee/openssl/wycheproof/testvectors/xchacha20_poly1305_test.json" />
+    <Text Include="../../thirdparty/owemdjee/openssl/wycheproof/tools/BUILD.bazel" />
     <Xml Include="../../thirdparty/owemdjee/openssl/krb5/src/windows/leash/kfwribbon.xml" />
   </ItemGroup>
-  <ImportGroup Label="PropertySheets">
+  <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />
   </ImportGroup>
 </Project>
+  

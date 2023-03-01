@@ -62,7 +62,7 @@ void wxTextEntryValidator::SetWindow(wxWindow *win)
 {
     wxValidator::SetWindow(win);
 
-    if ( GetTextEntry() != NULL )
+    if ( GetTextEntry() != nullptr )
     {
         Bind(wxEVT_TEXT, &wxTextEntryValidator::OnText, this);
         Bind(wxEVT_TEXT_PASTE, &wxTextEntryValidator::OnPasteText, this);
@@ -105,7 +105,7 @@ wxTextEntry *wxTextEntryValidator::GetTextEntry() const
     }
 #endif
 
-    return NULL;
+    return nullptr;
 }
 
 void wxTextEntryValidator::OnText(wxCommandEvent& event)
@@ -114,7 +114,7 @@ void wxTextEntryValidator::OnText(wxCommandEvent& event)
 
     if ( IsInteractive() )
     {
-        DoValidate(NULL, wxVALIDATOR_NO_POPUP);
+        DoValidate(nullptr, wxVALIDATOR_NO_POPUP);
     }
 
     event.Skip(ms_skipTextEvent);
@@ -171,13 +171,13 @@ void wxTextEntryValidator::OnValidate(wxValidationStatusEvent& event)
 
     m_validatorWindow->SetFocus();
     wxMessageBox(errormsg, _("Validation conflict"),
-                 wxOK | wxICON_EXCLAMATION, NULL);
+                 wxOK | wxICON_EXCLAMATION, nullptr);
 }
 
 void wxTextEntryValidator::OnKillFocus(wxFocusEvent& event)
 {
     event.Skip();
-    DoValidate(NULL, wxVALIDATOR_NO_POPUP);
+    DoValidate(nullptr, wxVALIDATOR_NO_POPUP);
 }
 
 // ----------------------------------------------------------------------------
@@ -376,14 +376,8 @@ void wxTextValidator::OnChar(wxKeyEvent& event)
     if (!m_validatorWindow)
         return;
 
-#if wxUSE_UNICODE
     // We only filter normal, printable characters.
     int keyCode = event.GetUnicodeKey();
-#else // !wxUSE_UNICODE
-    int keyCode = event.GetKeyCode();
-    if ( keyCode > WXK_START )
-        return;
-#endif // wxUSE_UNICODE/!wxUSE_UNICODE
 
     // we don't filter special keys and delete
     if (keyCode < WXK_SPACE || keyCode == WXK_DELETE)

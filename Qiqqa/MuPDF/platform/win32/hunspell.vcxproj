@@ -125,7 +125,7 @@
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
       <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_HUNSPELL;HUNSPELL_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>HUNSPELL_STATIC;BUILD_MONOLITHIC;BUILDING_HUNSPELL;HUNSPELL_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
@@ -151,7 +151,7 @@
     <ClCompile>
       <Optimization>Custom</Optimization>
       <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_HUNSPELL;HUNSPELL_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>HUNSPELL_STATIC;BUILD_MONOLITHIC;BUILDING_HUNSPELL;HUNSPELL_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
@@ -180,7 +180,7 @@
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
       <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_HUNSPELL;HUNSPELL_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>HUNSPELL_STATIC;BUILD_MONOLITHIC;BUILDING_HUNSPELL;HUNSPELL_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
@@ -206,7 +206,7 @@
     <ClCompile>
       <Optimization>Custom</Optimization>
       <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_HUNSPELL;HUNSPELL_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>HUNSPELL_STATIC;BUILD_MONOLITHIC;BUILDING_HUNSPELL;HUNSPELL_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
@@ -244,11 +244,9 @@
     <ClCompile Include="../../thirdparty/owemdjee/hunspell/src/parsers/testparser.cxx" />
     <ClCompile Include="../../thirdparty/owemdjee/hunspell/src/parsers/textparser.cxx" />
     <ClCompile Include="../../thirdparty/owemdjee/hunspell/src/parsers/xmlparser.cxx" />
-    <ClCompile Include="../../thirdparty/owemdjee/hunspell/src/tools/affdicfuzzer.cxx" />
     <ClCompile Include="../../thirdparty/owemdjee/hunspell/src/tools/analyze.cxx" />
     <ClCompile Include="../../thirdparty/owemdjee/hunspell/src/tools/chmorph.cxx" />
     <ClCompile Include="../../thirdparty/owemdjee/hunspell/src/tools/example.cxx" />
-    <ClCompile Include="../../thirdparty/owemdjee/hunspell/src/tools/fuzzer.cxx" />
     <ClCompile Include="../../thirdparty/owemdjee/hunspell/src/tools/hunspell.cxx" />
     <ClCompile Include="../../thirdparty/owemdjee/hunspell/src/tools/hunzip.cxx" />
     <ClCompile Include="../../thirdparty/owemdjee/hunspell/src/tools/hzip.cxx" />
@@ -294,7 +292,6 @@
     <Text Include="../../thirdparty/owemdjee/hunspell/m4/README" />
     <Text Include="../../thirdparty/owemdjee/hunspell/man/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/hunspell/man/hu/Makefile.am" />
-    <Text Include="../../thirdparty/owemdjee/hunspell/oss-fuzz-build.sh" />
     <Text Include="../../thirdparty/owemdjee/hunspell/po/ChangeLog" />
     <Text Include="../../thirdparty/owemdjee/hunspell/po/Makefile.in.in" />
     <Text Include="../../thirdparty/owemdjee/hunspell/po/POTFILES.in" />

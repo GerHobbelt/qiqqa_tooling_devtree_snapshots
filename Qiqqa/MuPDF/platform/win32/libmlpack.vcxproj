@@ -226,6 +226,9 @@
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/CMake/stb/a.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/CMake/stb/b.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/mlpack/CMake/stb/main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/mlpack/doc/examples/sample-ml-app/sample-ml-app/sample-ml-app.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/mlpack/doc/examples/sample-ml-app/sample-ml-app/stdafx.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/mlpack/src/r_util.cpp" />
@@ -551,7 +554,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/set_param.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/string_type_param.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/string_type_param_impl.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/cli/third_party/CLI/CLI11.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/default_param.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/default_param_impl.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/go/get_go_type.hpp" />
@@ -1692,9 +1694,46 @@
     <Image Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/res/menu_bg.png" />
     <Image Include="../../thirdparty/owemdjee/mlpack/src/mlpack/tests/data/test_image.png" />
     <Text Include="../../thirdparty/owemdjee/mlpack/CMake/Autodownload.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/CMakeExtras.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/CheckAtomic.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/CheckHash.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/ConfigureCrossCompile.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/ConfigureFile.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/CreateGitVersionHeader.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/FindARPACK.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/FindArmadillo.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/FindBfd.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/FindEnsmallen.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/FindGo.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/FindGonum.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/FindJulia.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/FindLibDL.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/FindMathJax.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/FindPythonModule.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/FindR.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/FindRModule.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/FindStbImage.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/Findcereal.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/GenerateBinding.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/GenerateDoxyfile.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/GeneratePkgConfig.cmake" />
     <Text Include="../../thirdparty/owemdjee/mlpack/CMake/LICENSE.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/R/AppendSerialization.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/R/ConfigureRCPP.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/RunProgram.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/StripType.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/TargetDistclean.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/TestError.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/TestStaticSTB.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/UseCython.cmake" />
     <Text Include="../../thirdparty/owemdjee/mlpack/CMake/allexec2man.sh" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/cotire.cmake" />
     <Text Include="../../thirdparty/owemdjee/mlpack/CMake/exec2man.sh" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/go/AppendModel.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/go/ConfigureGoHCPP.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/julia/AppendSerialization.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/julia/AppendType.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/CMake/julia/ConfigureJuliaHCPP.cmake" />
     <Text Include="../../thirdparty/owemdjee/mlpack/CMake/mlpack-config.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/mlpack/CMake/mlpack.pc.in" />
     <Text Include="../../thirdparty/owemdjee/mlpack/CMakeLists.txt" />
@@ -1706,6 +1745,8 @@
     <Text Include="../../thirdparty/owemdjee/mlpack/LICENSE.txt" />
     <Text Include="../../thirdparty/owemdjee/mlpack/README.md" />
     <Text Include="../../thirdparty/owemdjee/mlpack/UPDATING.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/board/crosscompile-toolchain.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/board/flags-config.cmake" />
     <Text Include="../../thirdparty/owemdjee/mlpack/dist/win-installer/staging/LICENSE.rtf" />
     <Text Include="../../thirdparty/owemdjee/mlpack/doc/developer/bindings.md" />
     <Text Include="../../thirdparty/owemdjee/mlpack/doc/developer/elemtype.md" />
@@ -1748,6 +1789,7 @@
     <Text Include="../../thirdparty/owemdjee/mlpack/scripts/update-website-after-release.sh" />
     <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/Categories.cmake" />
     <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/generate_R.cpp.in" />
     <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/R/mlpack/DESCRIPTION.in" />
@@ -1775,6 +1817,7 @@
     <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/generate_markdown.cpp.in" />
     <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/markdown/res/change_language.js" />
     <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/PythonInstall.cmake" />
     <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/copy_artifacts.py" />
     <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/generate_py_wrapper.cpp.in" />
     <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/generate_pyx.cpp.in" />
@@ -1782,6 +1825,7 @@
     <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/mlpack/matrix_utils.py" />
     <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/mlpack/preprocess_json_params.py" />
     <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/print_python_version.py" />
+    <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/setup.cfg" />
     <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/setup.py.in" />
     <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/setup_readme.md" />
     <Text Include="../../thirdparty/owemdjee/mlpack/src/mlpack/bindings/python/tests/CMakeLists.txt" />

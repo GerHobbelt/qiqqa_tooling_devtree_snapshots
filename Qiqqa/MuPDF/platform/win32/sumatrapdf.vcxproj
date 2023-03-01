@@ -309,9 +309,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/sumatrapdf/ext/dav1d/tests/checkasm/msac.c" />
     <ClCompile Include="../../thirdparty/owemdjee/sumatrapdf/ext/dav1d/tests/checkasm/refmvs.c" />
     <ClCompile Include="../../thirdparty/owemdjee/sumatrapdf/ext/dav1d/tests/header_test.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/sumatrapdf/ext/dav1d/tests/libfuzzer/alloc_fail.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/sumatrapdf/ext/dav1d/tests/libfuzzer/dav1d_fuzzer.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/sumatrapdf/ext/dav1d/tests/libfuzzer/main.c" />
     <ClCompile Include="../../thirdparty/owemdjee/sumatrapdf/ext/dav1d/tests/seek_stress.c" />
     <ClCompile Include="../../thirdparty/owemdjee/sumatrapdf/ext/dav1d/tools/compat/getopt.c" />
     <ClCompile Include="../../thirdparty/owemdjee/sumatrapdf/ext/dav1d/tools/dav1d.c" />
@@ -842,11 +839,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/gdk-pixbuf/pixbufloader-heif.c" />
     <ClCompile Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/libheif/bitstream.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/libheif/box.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/libheif/box_fuzzer.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/libheif/color_conversion_fuzzer.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/libheif/encoder_fuzzer.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/libheif/error.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/libheif/file_fuzzer.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/libheif/heif.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/libheif/heif_avif.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/libheif/heif_colorconversion.cc" />
@@ -1926,8 +1919,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/sumatrapdf/ext/dav1d/src/x86/cpu.h" />
     <ClInclude Include="../../thirdparty/owemdjee/sumatrapdf/ext/dav1d/src/x86/msac.h" />
     <ClInclude Include="../../thirdparty/owemdjee/sumatrapdf/ext/dav1d/tests/checkasm/checkasm.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/sumatrapdf/ext/dav1d/tests/libfuzzer/alloc_fail.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/sumatrapdf/ext/dav1d/tests/libfuzzer/dav1d_fuzzer.h" />
     <ClInclude Include="../../thirdparty/owemdjee/sumatrapdf/ext/dav1d/tools/dav1d_cli_parse.h" />
     <ClInclude Include="../../thirdparty/owemdjee/sumatrapdf/ext/dav1d/tools/input/demuxer.h" />
     <ClInclude Include="../../thirdparty/owemdjee/sumatrapdf/ext/dav1d/tools/input/input.h" />
@@ -2970,6 +2961,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/sumatrapdf/ext/zlib/inffixed.h" />
     <ClInclude Include="../../thirdparty/owemdjee/sumatrapdf/ext/zlib/inflate.h" />
     <ClInclude Include="../../thirdparty/owemdjee/sumatrapdf/ext/zlib/inftrees.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/sumatrapdf/ext/zlib/os400/zlib.inc" />
     <ClInclude Include="../../thirdparty/owemdjee/sumatrapdf/ext/zlib/trees.h" />
     <ClInclude Include="../../thirdparty/owemdjee/sumatrapdf/ext/zlib/zconf.h" />
     <ClInclude Include="../../thirdparty/owemdjee/sumatrapdf/ext/zlib/zlib.h" />
@@ -3678,6 +3670,7 @@
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/dav1d/README.md" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/dav1d/THANKS.md" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/dav1d/doc/Doxyfile.in.in" />
+    <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/dav1d/gcovr.cfg" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/dav1d/include/dav1d/version.h.in" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/dav1d/include/vcs_version.h.in" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/dav1d/meson_options.txt" />
@@ -3744,6 +3737,7 @@
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/freetype/docs/markdown/javascripts/extra.js" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/freetype/docs/raster.txt" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/freetype/meson_options.txt" />
+    <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/freetype/modules.cfg" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/freetype/objs/README" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/freetype/src/bdf/README" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/freetype/src/gxvalid/README" />
@@ -3801,6 +3795,7 @@
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/harfbuzz/perf/texts/en-thelittleprince.txt" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/harfbuzz/perf/texts/en-words.txt" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/harfbuzz/perf/texts/fa-thelittleprince.txt" />
+    <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/harfbuzz/replace-enum-strings.cmake" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/harfbuzz/src/ArabicPUASimplified.txt" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/harfbuzz/src/ArabicPUATraditional.txt" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/harfbuzz/src/Makefile.am" />
@@ -3897,6 +3892,7 @@
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libdjvu/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libdjvu/ddjvuapi.pc.in" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/CPPLINT.cfg" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/README.md" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/autogen.sh" />
@@ -3905,8 +3901,6 @@
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/examples/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/examples/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/extra/Makefile.am" />
-    <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/fuzzing/Makefile.am" />
-    <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/fuzzing/dictionary.txt" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/gdk-pixbuf/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/gdk-pixbuf/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/gnome/CMakeLists.txt" />
@@ -3914,6 +3908,7 @@
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/go/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/libheif.pc.in" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/libheif/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/libheif/CPPLINT.cfg" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/libheif/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/libheif/heif_version.h.in" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/post.js" />
@@ -3923,7 +3918,6 @@
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/scripts/check-go-enums.sh" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/scripts/check-gofmt.sh" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/scripts/check-licenses.sh" />
-    <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/scripts/configure-fuzzer.sh" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/scripts/cpplint.py" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/scripts/install-ci-linux.sh" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libheif/scripts/install-ci-osx.sh" />
@@ -3945,6 +3939,7 @@
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libjpeg-turbo/coderules.txt" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libjpeg-turbo/config.h.in" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libjpeg-turbo/configure.ac" />
+    <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libjpeg-turbo/doxygen.config" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libjpeg-turbo/jconfig.h.in" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libjpeg-turbo/jconfig.txt" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libjpeg-turbo/libjpeg.map.in" />
@@ -3974,6 +3969,8 @@
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libwebp/autogen.sh" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libwebp/cmake/WebPConfig.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libwebp/cmake/config.h.in" />
+    <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libwebp/cmake/cpu.cmake" />
+    <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libwebp/cmake/deps.cmake" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libwebp/configure.ac" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libwebp/doc/README" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/ext/libwebp/doc/TODO" />
@@ -4096,7 +4093,6 @@
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/mupdf/CHANGES" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/mupdf/CONTRIBUTORS" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/mupdf/README" />
-    <Text Include="../../thirdparty/owemdjee/sumatrapdf/mupdf/docs/api/changes.html" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/mupdf/docs/bindings.rst" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/mupdf/docs/examples/bbox-device.js" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/mupdf/docs/examples/create-thumbnail.js" />
@@ -4187,6 +4183,7 @@
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/mupdf/scripts/wrap/swig.py" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/mupdf/scripts/wrap/util.py" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/mupdf/setup.py" />
+    <Text Include="../../thirdparty/owemdjee/sumatrapdf/mupdf/source/html/css-properties.gperf" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/mupdf/source/pdf/js/util.js" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/packages/Microsoft.Web.WebView2.1.0.992.28/LICENSE.txt" />
     <Text Include="../../thirdparty/owemdjee/sumatrapdf/premake5.files.lua" />

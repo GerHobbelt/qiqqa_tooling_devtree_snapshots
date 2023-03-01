@@ -55,9 +55,6 @@ enum wxXmlNodeType
     The @c wxXML_DOCUMENT_TYPE_NODE is not implemented at this time. Instead,
     you should get and set the DOCTYPE values using the wxXmlDocument class.
 
-    If @c wxUSE_UNICODE is 0, all strings are encoded in the encoding given to
-    wxXmlDocument::Load (default is UTF-8).
-
     @note
     Once a wxXmlNode has been added to a wxXmlDocument it becomes owned by the
     document and this has two implications. Firstly, the wxXmlDocument takes
@@ -80,7 +77,7 @@ public:
 
         @param parent
             The parent node to which append this node instance.
-            If this argument is @NULL this new node will be floating and it can
+            If this argument is @nullptr this new node will be floating and it can
             be appended later to another one using the AddChild() or InsertChild()
             functions. Otherwise the child is added to the XML tree by this
             constructor and it shouldn't be done again.
@@ -92,20 +89,20 @@ public:
             The content of the node.
             Only meaningful when type is @c wxXML_TEXT_NODE or @c wxXML_CDATA_SECTION_NODE.
         @param attrs
-            If not @NULL, this wxXmlAttribute object and its eventual siblings are attached to the node.
+            If not @nullptr, this wxXmlAttribute object and its eventual siblings are attached to the node.
         @param next
-            If not @NULL, this node and its eventual siblings are attached to the node.
+            If not @nullptr, this node and its eventual siblings are attached to the node.
         @param lineNo
             Number of line this node was present at in input file or -1.
     */
     wxXmlNode(wxXmlNode* parent, wxXmlNodeType type,
               const wxString& name,
               const wxString& content = wxEmptyString,
-              wxXmlAttribute* attrs = NULL,
-              wxXmlNode* next = NULL, int lineNo = -1);
+              wxXmlAttribute* attrs = nullptr,
+              wxXmlNode* next = nullptr, int lineNo = -1);
 
     /**
-        A simplified version of the first constructor form, assuming a @NULL parent.
+        A simplified version of the first constructor form, assuming a @nullptr parent.
 
         @param type
             One of the ::wxXmlNodeType enumeration value.
@@ -125,7 +122,7 @@ public:
         Copy constructor.
 
         Note that this does NOT copy siblings and parent pointer, i.e. GetParent()
-        and GetNext() will return @NULL after using copy ctor and are never unmodified by operator=().
+        and GetNext() will return @nullptr after using copy ctor and are never unmodified by operator=().
         On the other hand, it DOES copy children and attributes.
     */
     wxXmlNode(const wxXmlNode& node);
@@ -169,7 +166,7 @@ public:
 
     /**
         Returns true if a attribute named attrName could be found.
-        The value of that attribute is saved in value (which must not be @NULL).
+        The value of that attribute is saved in value (which must not be @nullptr).
     */
     bool GetAttribute(const wxString& attrName, wxString* value) const;
 
@@ -203,10 +200,10 @@ public:
         Returns the number of nodes which separate this node from @c grandparent.
 
         This function searches only the parents of this node until it finds
-        @a grandparent or the @NULL node (which is the parent of non-linked
+        @a grandparent or the @nullptr node (which is the parent of non-linked
         nodes or the parent of a wxXmlDocument's root element node).
     */
-    int GetDepth(wxXmlNode* grandparent = NULL) const;
+    int GetDepth(wxXmlNode* grandparent = nullptr) const;
 
     /**
         Returns a flag indicating whether encoding conversion is necessary when saving. The default is @false.
@@ -228,7 +225,7 @@ public:
     const wxString& GetName() const;
 
     /**
-        Returns a pointer to the sibling of this node or @NULL if there are no
+        Returns a pointer to the sibling of this node or @nullptr if there are no
         siblings.
     */
     wxXmlNode* GetNext() const;
@@ -258,7 +255,7 @@ public:
     wxString GetNodeContent() const;
 
     /**
-        Returns a pointer to the parent of this node or @NULL if this node has no
+        Returns a pointer to the parent of this node or @nullptr if this node has no
         parent.
     */
     wxXmlNode* GetParent() const;
@@ -282,7 +279,7 @@ public:
                 node has been inserted.
 
         @note
-        For historical reasons, @a followingNode may be @NULL. In that case,
+        For historical reasons, @a followingNode may be @nullptr. In that case,
         then @a child is prepended to the list of children and becomes the
         first child of this node, i.e. it behaves identically to using the
         first children (as returned by GetChildren()) for @a followingNode).
@@ -303,7 +300,7 @@ public:
             The child to insert.
         @param precedingNode
             The node to insert @a child after. As a special case, this can be
-            @NULL if this node has no children yet -- in that case, @a child
+            @nullptr if this node has no children yet -- in that case, @a child
             will become this node's only child node.
 
         @since 2.8.8
@@ -414,10 +411,10 @@ public:
 
     /**
         Creates the attribute with given @a name and @a value.
-        If @a next is not @NULL, then sets it as sibling of this attribute.
+        If @a next is not @nullptr, then sets it as sibling of this attribute.
     */
     wxXmlAttribute(const wxString& name, const wxString& value,
-                   wxXmlAttribute* next = NULL);
+                   wxXmlAttribute* next = nullptr);
 
     /**
         The virtual destructor.
@@ -430,7 +427,7 @@ public:
     wxString GetName() const;
 
     /**
-        Returns the sibling of this attribute or @NULL if there are no siblings.
+        Returns the sibling of this attribute or @nullptr if there are no siblings.
     */
     wxXmlAttribute* GetNext() const;
 
@@ -664,7 +661,7 @@ enum wxXmlDocumentLoadFlag
     // Create a document and add the root node.
     wxXmlDocument xmlDoc;
 
-    wxXmlNode* root = new wxXmlNode(NULL, wxXML_ELEMENT_NODE, "Root");
+    wxXmlNode* root = new wxXmlNode(nullptr, wxXML_ELEMENT_NODE, "Root");
     xmlDoc.SetRoot(root);
 
     // Add some XML.
@@ -741,7 +738,7 @@ public:
     /**
         Detaches the document node and returns it.
 
-        The document node will be set to @NULL and thus IsOk() will
+        The document node will be set to @nullptr and thus IsOk() will
         return @false after calling this function.
 
         Note that the caller is responsible for deleting the returned node in order

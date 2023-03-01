@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2022 Artifex Software, Inc.
+// Copyright (C) 2004-2023 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -199,7 +199,7 @@ fz_keep_buffer(fz_context *ctx, fz_buffer *buf)
 void
 fz_drop_buffer(fz_context *ctx, fz_buffer *buf)
 {
-	if (fz_drop_imp(ctx, buf, &buf->refs))
+	if (buf && fz_drop_imp(ctx, buf, &buf->refs))
 	{
 		if (!buf->shared)
 			fz_free(ctx, buf->data);
@@ -212,22 +212,26 @@ fz_resize_buffer(fz_context *ctx, fz_buffer *buf, size_t size)
 {
 	if (buf->shared)
 		fz_throw(ctx, FZ_ERROR_GENERIC, "cannot resize a buffer with shared storage");
-	buf->data = (unsigned char *)fz_realloc(ctx, buf->data, size);
-	buf->cap = size;
-	if (buf->len > buf->cap)
-		buf->len = buf->cap;
+	if (buf->cap != size)
+	{
+		buf->data = (unsigned char*)fz_realloc(ctx, buf->data, size);
+		buf->cap = size;
+		if (buf->len > buf->cap)
+			buf->len = buf->cap;
+	}
 }
 
 void
 fz_grow_buffer(fz_context *ctx, fz_buffer *buf)
 {
 	size_t newsize = (buf->cap * 3) / 2;
+	newsize = (newsize + 15) & ~15;   // 'align' upwards to 16-byte sizes
 	if (newsize == 0)
 		newsize = 256;
 	fz_resize_buffer(ctx, buf, newsize);
 }
 
-static void
+void
 fz_ensure_buffer(fz_context *ctx, fz_buffer *buf, size_t min)
 {
 	size_t newsize = buf->cap;
@@ -237,7 +241,11 @@ fz_ensure_buffer(fz_context *ctx, fz_buffer *buf, size_t min)
 	{
 		newsize = (newsize * 3) / 2;
 	}
-	fz_resize_buffer(ctx, buf, newsize);
+
+	if (newsize > buf->cap)
+	{
+		fz_resize_buffer(ctx, buf, newsize);
+	}
 }
 
 void
@@ -270,13 +278,18 @@ fz_buffer_storage(fz_context *ctx, fz_buffer *buf, unsigned char **datap)
 	return (buf ? buf->len : 0);
 }
 
-const char *
+char *
 fz_string_from_buffer(fz_context *ctx, fz_buffer *buf)
 {
 	if (!buf)
-		return "";
+	{
+		// we'll return a bogus scratch buffer then...
+		static char str[4];
+		str[0] = 0;
+		return str;
+	}
 	fz_terminate_buffer(ctx, buf);
-	return (const char *)buf->data;
+	return (char *)buf->data;
 }
 
 size_t
@@ -291,6 +304,27 @@ fz_buffer_extract(fz_context *ctx, fz_buffer *buf, unsigned char **datap)
 		buf->len = 0;
 	}
 	return len;
+}
+
+fz_buffer *
+fz_slice_buffer(fz_context *ctx, fz_buffer *buf, int64_t start, int64_t end)
+{
+	unsigned char *src = NULL;
+	size_t size = fz_buffer_storage(ctx, buf, &src);
+	size_t s, e;
+
+	if (start < 0)
+		start += size;
+	if (end < 0)
+		end += size;
+
+	s = fz_clampi(start, 0, size);
+	e = fz_clampi(end, 0, size);
+
+	if (s == size || e <= s)
+		return fz_new_buffer(ctx, 0);
+
+	return fz_new_buffer_from_copied_data(ctx, &src[s], e - s);
 }
 
 void

@@ -55,7 +55,7 @@
     <itemizedlist>
       <listitem>
         <para>The <code>parameter</code> function was renamed to          
-        <code>value</code>. Rationale: "paramater" is yet another term with no
+        <code>value</code>. Rationale: "parameter" is yet another term with no
         clear definition, while "value" is already used everywhere in
         docs.</para>
       </listitem>

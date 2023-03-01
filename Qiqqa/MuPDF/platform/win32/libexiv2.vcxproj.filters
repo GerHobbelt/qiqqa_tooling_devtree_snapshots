@@ -66,34 +66,34 @@
     <Filter Include="Misc Files\cmake">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\contrib">
+    <Filter Include="Misc Files\cmake\toolchain">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0019}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\contrib\Qt">
+    <Filter Include="Misc Files\contrib">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0020}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\contrib\organize">
+    <Filter Include="Misc Files\contrib\Qt">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\contrib\scripts">
+    <Filter Include="Misc Files\contrib\organize">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\contrib\vms">
+    <Filter Include="Misc Files\contrib\scripts">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\contrib\vs2019">
+    <Filter Include="Misc Files\contrib\vms">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\doc">
+    <Filter Include="Misc Files\contrib\vs2019">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\doc\include">
+    <Filter Include="Misc Files\doc">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0026}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\doc\templates">
+    <Filter Include="Misc Files\doc\include">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\fuzz">
+    <Filter Include="Misc Files\doc\templates">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\po">
@@ -192,23 +192,20 @@
     <Filter Include="Source Files\contrib\organize">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0060}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\fuzz">
+    <Filter Include="Source Files\samples">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0061}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\samples">
+    <Filter Include="Source Files\src">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0062}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\src">
+    <Filter Include="Source Files\unitTests">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0063}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\unitTests">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0064}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\xmpsdk">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0066}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0065}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\xmpsdk\src">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0065}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0064}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -238,9 +235,6 @@
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/exiv2/contrib/organize/organize.cpp">
       <Filter>Source Files\contrib\organize</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/exiv2/fuzz/fuzz-read-print-write.cpp">
-      <Filter>Source Files\fuzz</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/exiv2/samples/addmoddel.cpp">
       <Filter>Source Files\samples</Filter>
@@ -1565,8 +1559,56 @@
     <Text Include="../../thirdparty/owemdjee/exiv2/cmake/Doxyfile.in">
       <Filter>Misc Files\cmake</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/exiv2/cmake/FindBrotli.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/exiv2/cmake/FindFilesystem.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/exiv2/cmake/FindIconv.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/exiv2/cmake/JoinPaths.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/exiv2/cmake/compilerFlags.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/exiv2/cmake/compilerFlagsExiv2.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/exiv2/cmake/config.h.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/exiv2/cmake/exiv2.pc.in">
       <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/exiv2/cmake/exiv2_uninstall.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/exiv2/cmake/findDependencies.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/exiv2/cmake/gcovr.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/exiv2/cmake/generateConfigFile.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/exiv2/cmake/generateDoc.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/exiv2/cmake/mainSetup.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/exiv2/cmake/packaging.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/exiv2/cmake/printSummary.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/exiv2/cmake/toolchain/Ubuntu20_04_mingw-w64-x86_64.cmake">
+      <Filter>Misc Files\cmake\toolchain</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/exiv2/conanfile.py">
       <Filter>Misc Files</Filter>
@@ -1777,21 +1819,6 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/exiv2/exiv2.md">
       <Filter>Misc Files</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/exiv2/fuzz/CMakeLists.txt">
-      <Filter>Misc Files\fuzz</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/exiv2/fuzz/README.md">
-      <Filter>Misc Files\fuzz</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/exiv2/fuzz/fuzzloop.sh">
-      <Filter>Misc Files\fuzz</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/exiv2/fuzz/knownleaks.txt">
-      <Filter>Misc Files\fuzz</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/exiv2/fuzz/mkdictionary.py">
-      <Filter>Misc Files\fuzz</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/exiv2/po/CMakeLists.txt">
       <Filter>Misc Files\po</Filter>
@@ -2756,6 +2783,9 @@
     <Text Include="../../thirdparty/owemdjee/exiv2/tests/runner.py">
       <Filter>Misc Files\tests</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/exiv2/tests/suite.conf">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/exiv2/tests/system_tests.py">
       <Filter>Misc Files\tests</Filter>
     </Text>
@@ -2773,4 +2803,3 @@
     </Text>
   </ItemGroup>
 </Project>
-    

@@ -257,9 +257,9 @@ void Dilithium::PackSig(byte *sig, const polyvec *z, const polyvec *h, const pol
   for(i = 0; i < mK; ++i) {
     for(j = 0; j < mN; ++j)
       if(h->at(i).at(j) != 0)
-        sig[k++] = j;
+        sig[k++] = (byte)j;
 
-    sig[mOmega + i] = k;
+    sig[mOmega + i] = (byte)k;
   }
   while(k < mOmega) sig[k++] = 0;
   sig += mOmega + mK;

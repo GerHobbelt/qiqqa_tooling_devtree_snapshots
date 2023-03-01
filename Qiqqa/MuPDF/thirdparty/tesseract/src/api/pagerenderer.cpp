@@ -15,6 +15,7 @@
 // limitations under the License.
  **********************************************************************/
 
+#include <tesseract/debugheap.h>
 #include <tesseract/baseapi.h> // for TessBaseAPI
 
 #include <locale>              // for std::locale::classic
@@ -27,9 +28,6 @@
 
 #include <allheaders.h>
 
-#if defined(_MSC_VER)
-#  include <crtdbg.h>
-#endif
 
 #if defined(WIN32) || defined(_WIN32) || defined(_WIN64)
 #  include "host.h" // windows.h for MultiByteToWideChar, ...
@@ -148,7 +146,7 @@ RecalcPolygonline(Pta *pts, bool upper) {
   bin_line = numaCreate(num_bin+1);
 
   for (int p = 0; p <= num_bin; ++p) {
-	  numaReplaceNumber(bin_line, p, -1.);
+	  numaAddNumber(bin_line, -1.);
   }
 
   num_pts = ptaGetCount(pts);
@@ -167,9 +165,11 @@ RecalcPolygonline(Pta *pts, bool upper) {
 	  l_float32 val;
 	  numaGetFValue(bin_line, p, &val);
       if (!upper) {
-        if ( val == -1. || y0 > val) numaReplaceNumber(bin_line, p, y0);
+        if ( val == -1. || y0 > val)
+			numaReplaceNumber(bin_line, p, y0);
       } else {
-        if ( val == -1. || y0 < val) numaReplaceNumber(bin_line, p, y0);
+        if ( val == -1. || y0 < val)
+			numaReplaceNumber(bin_line, p, y0);
       }
     }
     index += 2;
@@ -190,9 +190,11 @@ RecalcPolygonline(Pta *pts, bool upper) {
 		l_float32 val;
 		numaGetFValue(bin_line, p, &val);
 		if (y != val) {
-			if (y != -1.) ptaAddPt(pts_recalc, x_min+p, y);
+			if (y != -1.)
+				ptaAddPt(pts_recalc, x_min+p, y);
 			numaGetFValue(bin_line, p, &y);
-			if (y != -1.) ptaAddPt(pts_recalc, x_min+p, y);
+			if (y != -1.)
+				ptaAddPt(pts_recalc, x_min+p, y);
 		}
 	}
   }
@@ -762,10 +764,8 @@ char
   Pta *line_baseline_pts = ptaCreate(0);
 
   // Replace this with real flags:
-  bool POLYGONFLAG;
-  GetBoolVariable("tessedit_create_page_polygon", &POLYGONFLAG);
-  bool WORDLEVELFLAG;
-  GetBoolVariable("tessedit_create_page_wordlevel", &WORDLEVELFLAG);
+  #define POLYGONFLAG   tesseract_->tessedit_create_page_polygon
+  #define WORDLEVELFLAG tesseract_->tessedit_create_page_wordlevel
 
   // Use "C" locale (needed for int values larger than 999).
   page_str.imbue(std::locale::classic());
@@ -1077,11 +1077,7 @@ char
   const std::string &text = reading_order_str.str();
   reading_order_str.str("");
 
-#if defined(_DEBUG) && defined(_CRTDBG_REPORT_FLAG)
-  char* result = new (_CLIENT_BLOCK, __FILE__, __LINE__) char[text.length() + 1];
-#else
   char* result = new char[text.length() + 1];
-#endif  // _DEBUG
   strcpy(result, text.c_str());
   return result;
 }

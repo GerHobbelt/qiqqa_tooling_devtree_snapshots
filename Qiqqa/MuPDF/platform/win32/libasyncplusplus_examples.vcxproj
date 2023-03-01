@@ -243,11 +243,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/asyncplusplus/include/async++/task_base.h" />
     <ClInclude Include="../../thirdparty/owemdjee/asyncplusplus/include/async++/traits.h" />
     <ClInclude Include="../../thirdparty/owemdjee/asyncplusplus/include/async++/when_all_any.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/asyncplusplus/src/fifo_queue.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/asyncplusplus/src/internal.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/asyncplusplus/src/singleton.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/asyncplusplus/src/task_wait_event.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/asyncplusplus/src/work_steal_queue.h" />
     <Text Include="../../thirdparty/owemdjee/asyncplusplus/Async++Config.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/asyncplusplus/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/asyncplusplus/README.md" />

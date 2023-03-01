@@ -150,22 +150,6 @@
     <Bscmake>
       <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
     </Bscmake>
-    <PreBuildEvent>
-      <Command>
-      </Command>
-    </PreBuildEvent>
-    <CustomBuildStep>
-      <Command>node $(ProjectDir)..\..\scripts\libQuickJS\compile_scripts.js  $(ProjectDir)..\..\scripts\libQuickJS\ $(OutDirFullPath) $(TargetDir)</Command>
-    </CustomBuildStep>
-    <CustomBuildStep>
-      <Message>Performing Custom Build Step: compile repl and qjscalc JS code to C</Message>
-    </CustomBuildStep>
-    <CustomBuildStep>
-      <Outputs>$(ProjectDir)..\..\scripts\libQuickJS\qjsrepl.c;$(ProjectDir)..\..\scripts\libQuickJS\qjscalc.c;%(Outputs)</Outputs>
-    </CustomBuildStep>
-    <CustomBuildStep>
-      <Inputs>$(ProjectDir)..\..\thirdparty\owemdjee\QuickJS\repl.js;$(ProjectDir)..\..\thirdparty\owemdjee\QuickJS\qjscalc.js;$(ProjectDir)..\..\scripts\libQuickJS\compile_scripts.js;%(Inputs)</Inputs>
-    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
@@ -193,22 +177,6 @@
     <Bscmake>
       <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
     </Bscmake>
-    <PreBuildEvent>
-      <Command>
-      </Command>
-    </PreBuildEvent>
-    <CustomBuildStep>
-      <Command>node $(ProjectDir)..\..\scripts\libQuickJS\compile_scripts.js  $(ProjectDir)..\..\scripts\libQuickJS\ $(OutDirFullPath) $(TargetDir)</Command>
-    </CustomBuildStep>
-    <CustomBuildStep>
-      <Message>Performing Custom Build Step: compile repl and qjscalc JS code to C</Message>
-    </CustomBuildStep>
-    <CustomBuildStep>
-      <Outputs>$(ProjectDir)..\..\scripts\libQuickJS\qjsrepl.c;$(ProjectDir)..\..\scripts\libQuickJS\qjscalc.c;%(Outputs)</Outputs>
-    </CustomBuildStep>
-    <CustomBuildStep>
-      <Inputs>$(ProjectDir)..\..\thirdparty\owemdjee\QuickJS\repl.js;$(ProjectDir)..\..\thirdparty\owemdjee\QuickJS\qjscalc.js;$(ProjectDir)..\..\scripts\libQuickJS\compile_scripts.js;%(Inputs)</Inputs>
-    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
@@ -237,22 +205,6 @@
     <Bscmake>
       <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
     </Bscmake>
-    <PreBuildEvent>
-      <Command>
-      </Command>
-    </PreBuildEvent>
-    <CustomBuildStep>
-      <Command>node $(ProjectDir)..\..\scripts\libQuickJS\compile_scripts.js  $(ProjectDir)..\..\scripts\libQuickJS\ $(OutDirFullPath) $(TargetDir)</Command>
-    </CustomBuildStep>
-    <CustomBuildStep>
-      <Message>Performing Custom Build Step: compile repl and qjscalc JS code to C</Message>
-    </CustomBuildStep>
-    <CustomBuildStep>
-      <Outputs>$(ProjectDir)..\..\scripts\libQuickJS\qjsrepl.c;$(ProjectDir)..\..\scripts\libQuickJS\qjscalc.c;%(Outputs)</Outputs>
-    </CustomBuildStep>
-    <CustomBuildStep>
-      <Inputs>$(ProjectDir)..\..\thirdparty\owemdjee\QuickJS\repl.js;$(ProjectDir)..\..\thirdparty\owemdjee\QuickJS\qjscalc.js;$(ProjectDir)..\..\scripts\libQuickJS\compile_scripts.js;%(Inputs)</Inputs>
-    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
@@ -280,28 +232,12 @@
     <Bscmake>
       <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
     </Bscmake>
-    <PreBuildEvent>
-      <Command>
-      </Command>
-    </PreBuildEvent>
-    <CustomBuildStep>
-      <Command>node $(ProjectDir)..\..\scripts\libQuickJS\compile_scripts.js  $(ProjectDir)..\..\scripts\libQuickJS\ $(OutDirFullPath) $(TargetDir)</Command>
-    </CustomBuildStep>
-    <CustomBuildStep>
-      <Message>Performing Custom Build Step: compile repl and qjscalc JS code to C</Message>
-    </CustomBuildStep>
-    <CustomBuildStep>
-      <Outputs>$(ProjectDir)..\..\scripts\libQuickJS\qjsrepl.c;$(ProjectDir)..\..\scripts\libQuickJS\qjscalc.c;%(Outputs)</Outputs>
-    </CustomBuildStep>
-    <CustomBuildStep>
-      <Inputs>$(ProjectDir)..\..\thirdparty\owemdjee\QuickJS\repl.js;$(ProjectDir)..\..\thirdparty\owemdjee\QuickJS\qjscalc.js;$(ProjectDir)..\..\scripts\libQuickJS\compile_scripts.js;%(Inputs)</Inputs>
-    </CustomBuildStep>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\scripts\QuickJS\quickjs-config.h" />
+    <ClInclude Include="../../scripts/QuickJS/quickjs-config.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="../../thirdparty/owemdjee/QuickJS/examples/fib.c" />
@@ -341,6 +277,21 @@
     <Text Include="../../thirdparty/owemdjee/QuickJS/bench.md" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/build_cmake.bat" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/cfg.sh" />
+    <Text Include="../../thirdparty/owemdjee/QuickJS/cmake/CheckFlags.cmake" />
+    <Text Include="../../thirdparty/owemdjee/QuickJS/cmake/CompileQuickJSModule.cmake" />
+    <Text Include="../../thirdparty/owemdjee/QuickJS/cmake/ConfigQuickJSModule.cmake" />
+    <Text Include="../../thirdparty/owemdjee/QuickJS/cmake/FindQuickJS.cmake" />
+    <Text Include="../../thirdparty/owemdjee/QuickJS/cmake/MakeQuickJSModule.cmake" />
+    <Text Include="../../thirdparty/owemdjee/QuickJS/cmake/QuickJSModule.cmake" />
+    <Text Include="../../thirdparty/owemdjee/QuickJS/cmake/check-flags.cmake" />
+    <Text Include="../../thirdparty/owemdjee/QuickJS/cmake/check-libraries.cmake" />
+    <Text Include="../../thirdparty/owemdjee/QuickJS/cmake/check-shared.cmake" />
+    <Text Include="../../thirdparty/owemdjee/QuickJS/cmake/combine-files.cmake" />
+    <Text Include="../../thirdparty/owemdjee/QuickJS/cmake/functions.cmake" />
+    <Text Include="../../thirdparty/owemdjee/QuickJS/cmake/git-clone.cmake" />
+    <Text Include="../../thirdparty/owemdjee/QuickJS/cmake/quickjs.cmake" />
+    <Text Include="../../thirdparty/owemdjee/QuickJS/cmake/try-compiler.cmake" />
+    <Text Include="../../thirdparty/owemdjee/QuickJS/cmake/wasi.toolchain.cmake" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/config.h.in" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/doc/jsbignum.md" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/doc/quickjs.md" />
@@ -353,43 +304,15 @@
     <Text Include="../../thirdparty/owemdjee/QuickJS/examples/pi_bigint.js" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/examples/test_fib.js" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/examples/test_point.js" />
-    <Text Include="../../thirdparty/owemdjee/QuickJS/get_quickjs.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/host/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/meson_options.txt" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/qjscalc.js" />
-    <Text Include="../../thirdparty/owemdjee/QuickJS/quickjs-config.cmake.in" />
-    <Text Include="../../thirdparty/owemdjee/QuickJS/quickjsConfig.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/readme.md" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/release.sh" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/repl.js" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/sample_app/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/test.js" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/test2.js" />
-    <Text Include="../../thirdparty/owemdjee/QuickJS/tests/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/QuickJS/tests/bench-v8/README.txt" />
-    <Text Include="../../thirdparty/owemdjee/QuickJS/tests/bench-v8/base.js" />
-    <Text Include="../../thirdparty/owemdjee/QuickJS/tests/bench-v8/combined.js" />
-    <Text Include="../../thirdparty/owemdjee/QuickJS/tests/bench-v8/crypto.js" />
-    <Text Include="../../thirdparty/owemdjee/QuickJS/tests/bench-v8/deltablue.js" />
-    <Text Include="../../thirdparty/owemdjee/QuickJS/tests/bench-v8/earley-boyer.js" />
-    <Text Include="../../thirdparty/owemdjee/QuickJS/tests/bench-v8/navier-stokes.js" />
-    <Text Include="../../thirdparty/owemdjee/QuickJS/tests/bench-v8/raytrace.js" />
-    <Text Include="../../thirdparty/owemdjee/QuickJS/tests/bench-v8/regexp.js" />
-    <Text Include="../../thirdparty/owemdjee/QuickJS/tests/bench-v8/richards.js" />
-    <Text Include="../../thirdparty/owemdjee/QuickJS/tests/bench-v8/run_harness.js" />
-    <Text Include="../../thirdparty/owemdjee/QuickJS/tests/bench-v8/splay.js" />
-    <Text Include="../../thirdparty/owemdjee/QuickJS/tests/microbench.js" />
-    <Text Include="../../thirdparty/owemdjee/QuickJS/tests/test_bignum.js" />
-    <Text Include="../../thirdparty/owemdjee/QuickJS/tests/test_bjson.js" />
-    <Text Include="../../thirdparty/owemdjee/QuickJS/tests/test_builtin.js" />
-    <Text Include="../../thirdparty/owemdjee/QuickJS/tests/test_closure.js" />
-    <Text Include="../../thirdparty/owemdjee/QuickJS/tests/test_language.js" />
-    <Text Include="../../thirdparty/owemdjee/QuickJS/tests/test_loop.js" />
-    <Text Include="../../thirdparty/owemdjee/QuickJS/tests/test_op_overloading.js" />
-    <Text Include="../../thirdparty/owemdjee/QuickJS/tests/test_qjscalc.js" />
-    <Text Include="../../thirdparty/owemdjee/QuickJS/tests/test_std.js" />
-    <Text Include="../../thirdparty/owemdjee/QuickJS/tests/test_worker.js" />
-    <Text Include="../../thirdparty/owemdjee/QuickJS/tests/test_worker_module.js" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/tools/ci-install-linux-x86.sh" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/unicode/CaseFolding.txt" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/unicode/CompositionExclusions.txt" />

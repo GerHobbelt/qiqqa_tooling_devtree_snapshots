@@ -15,29 +15,23 @@
     <Filter Include="Header Files\src">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0001}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\tests">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0002}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\visualc">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\visualc\include">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0003}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\benchmarks">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
+    <Filter Include="Header Files\visualc\include">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0002}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\python">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\python\gumbo">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\src">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\src">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0011}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -128,9 +122,6 @@
     <ClInclude Include="../../thirdparty/gumbo-parser/src/vector.h">
       <Filter>Header Files\src</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/gumbo-parser/tests/test_utils.h">
-      <Filter>Header Files\tests</Filter>
-    </ClInclude>
     <ClInclude Include="../../thirdparty/gumbo-parser/visualc/include/strings.h">
       <Filter>Header Files\visualc\include</Filter>
     </ClInclude>
@@ -151,12 +142,6 @@
     </Text>
     <Text Include="../../thirdparty/gumbo-parser/autogen.sh">
       <Filter>Misc Files</Filter>
-    </Text>
-    <Text Include="../../thirdparty/gumbo-parser/benchmarks/arabic_newspapers.html">
-      <Filter>Misc Files\benchmarks</Filter>
-    </Text>
-    <Text Include="../../thirdparty/gumbo-parser/benchmarks/hacker_news.html">
-      <Filter>Misc Files\benchmarks</Filter>
     </Text>
     <Text Include="../../thirdparty/gumbo-parser/configure.ac">
       <Filter>Misc Files</Filter>

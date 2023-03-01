@@ -1130,9 +1130,13 @@ const wxSize wxDefaultSize;
 /**
     This macro loads a bitmap from either application resources (on the
     platforms for which they exist, i.e.\ Windows) or from an XPM file.
-    This can help to avoid using @ifdef_ when creating bitmaps.
 
-    @see @ref overview_bitmap, wxICON()
+    You can use `wxHAS_IMAGES_IN_RESOURCES` to check if the XPM needs to be
+    included when using this macro.
+
+    See also wxBITMAP_PNG() if you want to use images with alpha channel.
+
+    @see @ref overview_bitmap_embedding, wxICON()
 
     @header{wx/gdicmn.h}
 */
@@ -1176,7 +1180,7 @@ const wxSize wxDefaultSize;
     @endcode
     in your application startup code.
 
-    @see wxBITMAP_PNG_FROM_DATA()
+    @see @ref overview_bitmap_embedding, wxBITMAP_PNG_FROM_DATA()
 
     @header{wx/gdicmn.h}
 
@@ -1208,9 +1212,13 @@ const wxSize wxDefaultSize;
 /**
     This macro loads an icon from either application resources (on the
     platforms for which they exist, i.e.\ Windows) or from an XPM file.
-    This can help to avoid using @ifdef_ when creating icons.
 
-    @see @ref overview_bitmap, wxBITMAP()
+    You can use `wxHAS_IMAGES_IN_RESOURCES` to check if the XPM needs to be
+    included when using this macro.
+
+    See also wxBITMAP_PNG() if you want to use images with alpha channel.
+
+    @see @ref overview_bitmap_embedding, wxBITMAP()
 
     @header{wx/gdicmn.h}
 */
@@ -1259,7 +1267,7 @@ void wxSetCursor(const wxCursor& cursor);
     This is the same as wxGetClientDisplayRect() but allows retrieving the
     individual components instead of the entire rectangle.
 
-    Any of the output pointers can be @NULL if the corresponding value is not
+    Any of the output pointers can be @nullptr if the corresponding value is not
     needed by the caller.
 
     @see wxDisplay
@@ -1314,7 +1322,7 @@ wxSize wxGetDisplayPPI();
         works for the primary display. Use wxDisplay::GetGeometry() to retrieve
         the size of the appropriate display instead.
 
-    Either of output pointers can be @NULL if the caller is not interested in
+    Either of output pointers can be @nullptr if the caller is not interested in
     the corresponding value.
 
     @see wxGetDisplaySize(), wxDisplay
@@ -1345,7 +1353,7 @@ wxSize wxGetDisplaySize();
 /**
     Returns the display size in millimeters.
 
-    Either of output pointers can be @NULL if the caller is not interested in
+    Either of output pointers can be @nullptr if the caller is not interested in
     the corresponding value.
 
     @see wxGetDisplaySizeMM(), wxDisplay

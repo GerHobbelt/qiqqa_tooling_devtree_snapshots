@@ -161,7 +161,7 @@ TBOX TBOX::bounding_union( // box enclosing both
  *
  **********************************************************************/
 
-#ifndef GRAPHICS_DISABLED
+#if !GRAPHICS_DISABLED
 void TBOX::plot(                    // paint box
     ScrollView *fd,                 // where to paint
     ScrollView::Color fill_colour,  // colour for inside
@@ -172,6 +172,16 @@ void TBOX::plot(                    // paint box
   plot(fd);
 }
 #endif
+
+void TBOX::plot(                  // use current settings
+  Image& pix) const {             // where to paint
+  //pix->Rectangle(bot_left.x(), bot_left.y(), top_right.x(), top_right.y());
+  auto x = bot_left.x();
+  auto y = bot_left.y();
+  auto x2 = top_right.x();
+  auto y2 = top_right.y();
+}
+
 
 // Appends the bounding box as ({},{})->({},{}) to a string.
 void TBOX::print_to_str(std::string &str) const {

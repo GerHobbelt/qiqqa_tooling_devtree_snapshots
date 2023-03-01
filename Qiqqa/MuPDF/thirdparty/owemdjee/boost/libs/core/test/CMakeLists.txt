@@ -31,6 +31,13 @@ set(BOOST_TEST_LINK_LIBRARIES Boost::core Boost::config Boost::move Boost::smart
 
 boost_test(TYPE run SOURCES fclose_deleter_test.cpp)
 
+set(BOOST_TEST_LINK_LIBRARIES Boost::core Boost::serialization)
+
+boost_test(TYPE run SOURCES serialization_nvp_test.cpp)
+boost_test(TYPE run SOURCES serialization_split_free_test.cpp)
+boost_test(TYPE run SOURCES serialization_split_member_test.cpp)
+boost_test(TYPE run SOURCES serialization_construct_data_test.cpp)
+
 endif()
 
 add_subdirectory(swap)

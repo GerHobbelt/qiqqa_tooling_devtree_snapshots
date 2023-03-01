@@ -3,6 +3,8 @@
  *
  * This file was part of the Independent JPEG Group's software:
  * Copyright (C) 1995-1997, Thomas G. Lane.
+ * Lossless JPEG Modifications:
+ * Copyright (C) 1999, Ken Murchison.
  * libjpeg-turbo Modifications:
  * Copyright (C) 2015-2016, 2018-2022, D. R. Commander.
  * For conditions of distribution and use, see the accompanying README.ijg
@@ -20,10 +22,11 @@
  * Recommendation ITU-T T.81 (1992) | ISO/IEC 10918-1:1994.
  */
 
+#define JPEG_INTERNAL_OPTIONS
 #define JPEG_INTERNALS
 #include "jinclude.h"
 #include "jpeglib.h"
-#include "jdhuff.h"             /* Declarations shared with jdhuff.c */
+#include "jdhuff.h"             /* Declarations shared with jd*huff.c */
 #include <limits.h>
 
 

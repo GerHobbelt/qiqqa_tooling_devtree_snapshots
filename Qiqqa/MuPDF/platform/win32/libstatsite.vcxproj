@@ -359,6 +359,7 @@
     <Text Include="../../thirdparty/owemdjee/statsite/bench_bin.py" />
     <Text Include="../../thirdparty/owemdjee/statsite/configure.ac" />
     <Text Include="../../thirdparty/owemdjee/statsite/debian/changelog" />
+    <Text Include="../../thirdparty/owemdjee/statsite/debian/conf/statsite.conf" />
     <Text Include="../../thirdparty/owemdjee/statsite/deps/check-0.10.0/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/statsite/deps/check-0.10.0/ChangeLog" />
     <Text Include="../../thirdparty/owemdjee/statsite/deps/check-0.10.0/ChangeLogOld" />
@@ -373,6 +374,9 @@
     <Text Include="../../thirdparty/owemdjee/statsite/deps/check-0.10.0/checkmk/checkmk.in" />
     <Text Include="../../thirdparty/owemdjee/statsite/deps/check-0.10.0/checkmk/examples/basic_complete.ts" />
     <Text Include="../../thirdparty/owemdjee/statsite/deps/check-0.10.0/checkmk/examples/multiple_everything.ts" />
+    <Text Include="../../thirdparty/owemdjee/statsite/deps/check-0.10.0/cmake/CheckHeaderDirent.cmake" />
+    <Text Include="../../thirdparty/owemdjee/statsite/deps/check-0.10.0/cmake/CheckStructMember.cmake" />
+    <Text Include="../../thirdparty/owemdjee/statsite/deps/check-0.10.0/cmake/CheckTypeExists.cmake" />
     <Text Include="../../thirdparty/owemdjee/statsite/deps/check-0.10.0/cmake/check_stdint.h.in" />
     <Text Include="../../thirdparty/owemdjee/statsite/deps/check-0.10.0/cmake/config.h.in" />
     <Text Include="../../thirdparty/owemdjee/statsite/deps/check-0.10.0/configure.ac" />
@@ -381,6 +385,7 @@
     <Text Include="../../thirdparty/owemdjee/statsite/deps/check-0.10.0/doc/example/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/statsite/deps/check-0.10.0/doc/example/README" />
     <Text Include="../../thirdparty/owemdjee/statsite/deps/check-0.10.0/doc/example/cmake/COPYING-CMAKE-SCRIPTS.txt" />
+    <Text Include="../../thirdparty/owemdjee/statsite/deps/check-0.10.0/doc/example/cmake/FindCheck.cmake" />
     <Text Include="../../thirdparty/owemdjee/statsite/deps/check-0.10.0/doc/example/cmake/config.h.in" />
     <Text Include="../../thirdparty/owemdjee/statsite/deps/check-0.10.0/doc/example/configure.ac" />
     <Text Include="../../thirdparty/owemdjee/statsite/deps/check-0.10.0/doc/example/src/CMakeLists.txt" />
@@ -414,6 +419,7 @@
     <Text Include="../../thirdparty/owemdjee/statsite/integ/test_stdin.py" />
     <Text Include="../../thirdparty/owemdjee/statsite/integ/test_timers_include.py" />
     <Text Include="../../thirdparty/owemdjee/statsite/man/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/statsite/rpm/statsite.tmpfiles.conf" />
     <Text Include="../../thirdparty/owemdjee/statsite/sinks/__init__.py" />
     <Text Include="../../thirdparty/owemdjee/statsite/sinks/binary_sink.py" />
     <Text Include="../../thirdparty/owemdjee/statsite/sinks/cloudwatch.sh" />

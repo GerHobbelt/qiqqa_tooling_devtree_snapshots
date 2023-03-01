@@ -1,3 +1,4 @@
+
 ///////////////////////////////////////////////////////////////////////
 // File:        combine_tessdata.cpp
 // Description: Creates a unified traineddata file from several
@@ -29,23 +30,24 @@ using namespace tesseract;
 static int list_components(TessdataManager &tm, const char *filename) {
   // Initialize TessdataManager with the data in the given traineddata file.
   if (filename != nullptr && !tm.Init(filename)) {
-    tprintf("Failed to read {}\n", filename);
+    tprintf("ERROR: Failed to read {}\n", filename);
     return EXIT_FAILURE;
   }
   tm.Directory();
   return EXIT_SUCCESS;
 }
 
-static int list_network(TessdataManager &tm, const char *filename) {
+static int list_network(TessdataManager &tm, const char *filename, bool tess_debug_lstm) {
   if (filename != nullptr && !tm.Init(filename)) {
-    tprintf("Failed to read {}\n", filename);
+    tprintf("ERROR: Failed to read {}\n", filename);
     return EXIT_FAILURE;
   }
   tesseract::TFile fp;
   if (tm.GetComponent(tesseract::TESSDATA_LSTM, &fp)) {
     tesseract::LSTMRecognizer recognizer;
+	recognizer.SetDebug(tess_debug_lstm);
     if (!recognizer.DeSerialize(&tm, &fp)) {
-      tprintf("Failed to deserialize LSTM in {}!\n", filename);
+      tprintf("ERROR: Failed to deserialize LSTM in {}!\n", filename);
       return EXIT_FAILURE;
     }
     std::cout << "LSTM: network=" << recognizer.GetNetwork()
@@ -121,6 +123,8 @@ extern "C" int tesseract_combine_tessdata_main(int argc, const char** argv)
 #endif
 {
   tesseract::CheckSharedLibraryVersion();
+
+  bool tess_debug_lstm = false;
 
   int i;
   tesseract::TessdataManager tm;
@@ -210,6 +214,7 @@ extern "C" int tesseract_combine_tessdata_main(int argc, const char** argv)
       return EXIT_FAILURE;
     }
     tesseract::LSTMRecognizer recognizer;
+	recognizer.SetDebug(tess_debug_lstm);
     if (!recognizer.DeSerialize(&tm, &fp)) {
       tprintf("ERROR: Failed to deserialize LSTM in {}!\n", argv[2]);
       return EXIT_FAILURE;
@@ -227,15 +232,15 @@ extern "C" int tesseract_combine_tessdata_main(int argc, const char** argv)
   } else if (argc == 3 && strcmp(argv[1], "-d") == 0) {
     return list_components(tm, argv[2]);
   } else if (argc == 3 && strcmp(argv[1], "-l") == 0) {
-    return list_network(tm, argv[2]);
+    return list_network(tm, argv[2], tess_debug_lstm);
   } else if (argc == 3 && strcmp(argv[1], "-dl") == 0) {
     int result = list_components(tm, argv[2]);
     if (result == EXIT_SUCCESS) {
-      result = list_network(tm, nullptr);
+      result = list_network(tm, nullptr, tess_debug_lstm);
     }
     return result;
   } else if (argc == 3 && strcmp(argv[1], "-ld") == 0) {
-    int result = list_network(tm, argv[2]);
+    int result = list_network(tm, argv[2], tess_debug_lstm);
     if (result == EXIT_SUCCESS) {
       result = list_components(tm, nullptr);
     }

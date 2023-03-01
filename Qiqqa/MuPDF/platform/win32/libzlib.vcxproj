@@ -115,6 +115,9 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..\thirdparty\lcms2\include;..\..\scripts\freetype;..\..\scripts\libpng;..\..\scripts\libtiff;..\..\scripts\libjpeg-turbo;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\freetype\include;..\..\thirdparty\freetype\include\freetype;../../thirdparty/harfbuzz/src;..\..\thirdparty\gumbo-parser\src;..\..\thirdparty\gumbo-parser\visualc\include;..\..\thirdparty\libpng;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\zlib;..\..\include\;..\..\include\mupdf;..\..\scripts\zlib;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/libwebp/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
@@ -127,6 +130,9 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..\thirdparty\lcms2\include;..\..\scripts\freetype;..\..\scripts\libpng;..\..\scripts\libtiff;..\..\scripts\libjpeg-turbo;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\freetype\include;..\..\thirdparty\freetype\include\freetype;../../thirdparty/harfbuzz/src;..\..\thirdparty\gumbo-parser\src;..\..\thirdparty\gumbo-parser\visualc\include;..\..\thirdparty\libpng;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\zlib;..\..\include\;..\..\include\mupdf;..\..\scripts\zlib;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/libwebp/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -136,6 +142,9 @@
       <PreprocessorDefinitions>HAVE_MUPDF;MUJS_ALL_FILES;WITH_GZFILEOP;BUILD_MONOLITHIC;_CRT_NONSTDC_NO_WARNINGS;WIN32;_CRT_SECURE_NO_WARNINGS;FT2_BUILD_LIBRARY;OPJ_STATIC;USE_JPIP=1;FT_CONFIG_MODULES_H="slimftmodules.h";FT_CONFIG_OPTIONS_H="slimftoptions.h";verbose=-1;JBIG_EXTERNAL_MEMENTO_H="memento.h";HAVE_FALLBACK=1;HAVE_OT;HAVE_UCDN;HB_NO_MT;hb_malloc_impl=fz_hb_malloc;hb_calloc_impl=fz_hb_calloc;hb_realloc_impl=fz_hb_realloc;hb_free_impl=fz_hb_free;HAVE_FREETYPE;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..\thirdparty\lcms2\include;..\..\scripts\freetype;..\..\scripts\libpng;..\..\scripts\libtiff;..\..\scripts\libjpeg-turbo;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\freetype\include;..\..\thirdparty\freetype\include\freetype;../../thirdparty/harfbuzz/src;..\..\thirdparty\gumbo-parser\src;..\..\thirdparty\gumbo-parser\visualc\include;..\..\thirdparty\libpng;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\zlib;..\..\include\;..\..\include\mupdf;..\..\scripts\zlib;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/libwebp/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
@@ -148,6 +157,9 @@
       <PreprocessorDefinitions>HAVE_MUPDF;MUJS_ALL_FILES;WITH_GZFILEOP;BUILD_MONOLITHIC;_CRT_NONSTDC_NO_WARNINGS;WIN64;NDEBUG;_CRT_SECURE_NO_WARNINGS;FT2_BUILD_LIBRARY;OPJ_STATIC;USE_JPIP=1;FT_CONFIG_MODULES_H="slimftmodules.h";FT_CONFIG_OPTIONS_H="slimftoptions.h";verbose=-1;HAVE_FALLBACK=1;HAVE_OT;HAVE_UCDN;HB_NO_MT;hb_malloc_impl=fz_hb_malloc;hb_calloc_impl=fz_hb_calloc;hb_realloc_impl=fz_hb_realloc;hb_free_impl=fz_hb_free;HAVE_FREETYPE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..\thirdparty\lcms2\include;..\..\scripts\freetype;..\..\scripts\libpng;..\..\scripts\libtiff;..\..\scripts\libjpeg-turbo;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\freetype\include;..\..\thirdparty\freetype\include\freetype;../../thirdparty/harfbuzz/src;..\..\thirdparty\gumbo-parser\src;..\..\thirdparty\gumbo-parser\visualc\include;..\..\thirdparty\libpng;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\zlib;..\..\include\;..\..\include\mupdf;..\..\scripts\zlib;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/libwebp/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
@@ -264,10 +276,6 @@
     <ClInclude Include="../../thirdparty/zlib/inftrees.h" />
     <ClInclude Include="../../thirdparty/zlib/insert_string_tpl.h" />
     <ClInclude Include="../../thirdparty/zlib/match_tpl.h" />
-    <ClInclude Include="../../thirdparty/zlib/test/benchmarks/benchmark_png_shared.h" />
-    <ClInclude Include="../../thirdparty/zlib/test/monolithic_examples.h" />
-    <ClInclude Include="../../thirdparty/zlib/test/test_shared.h" />
-    <ClInclude Include="../../thirdparty/zlib/test/test_shared_ng.h" />
     <ClInclude Include="../../thirdparty/zlib/trees.h" />
     <ClInclude Include="../../thirdparty/zlib/trees_emit.h" />
     <ClInclude Include="../../thirdparty/zlib/trees_tbl.h" />
@@ -276,7 +284,7 @@
     <ClInclude Include="../../thirdparty/zlib/zendian.h" />
     <ClInclude Include="../../thirdparty/zlib/zutil.h" />
     <ClInclude Include="../../thirdparty/zlib/zutil_p.h" />
-    <Image Include="../../thirdparty/zlib/test/data/fireworks.jpg" />
+    <ResourceCompile Include="../../thirdparty/zlib/win32/zlib-ng1.rc" />
     <Text Include="../../thirdparty/zlib/CMakeLists.txt" />
     <Text Include="../../thirdparty/zlib/INDEX.md" />
     <Text Include="../../thirdparty/zlib/LICENSE.md" />
@@ -296,22 +304,6 @@
     <Text Include="../../thirdparty/zlib/doc/txtvsbin.txt" />
     <Text Include="../../thirdparty/zlib/gzread.c.in" />
     <Text Include="../../thirdparty/zlib/run_cmake.sh" />
-    <Text Include="../../thirdparty/zlib/test/CMakeLists.txt" />
-    <Text Include="../../thirdparty/zlib/test/CVE-2018-25032/default.txt" />
-    <Text Include="../../thirdparty/zlib/test/CVE-2018-25032/fixed.txt" />
-    <Text Include="../../thirdparty/zlib/test/GH-361/test.txt" />
-    <Text Include="../../thirdparty/zlib/test/GH-751/test.txt" />
-    <Text Include="../../thirdparty/zlib/test/Makefile.in" />
-    <Text Include="../../thirdparty/zlib/test/README.md" />
-    <Text Include="../../thirdparty/zlib/test/abicheck.md" />
-    <Text Include="../../thirdparty/zlib/test/abicheck.sh" />
-    <Text Include="../../thirdparty/zlib/test/add-subdirectory-project/CMakeLists.txt" />
-    <Text Include="../../thirdparty/zlib/test/benchmarks/CMakeLists.txt" />
-    <Text Include="../../thirdparty/zlib/test/benchmarks/README.md" />
-    <Text Include="../../thirdparty/zlib/test/data/lcet10.txt" />
-    <Text Include="../../thirdparty/zlib/test/fuzz/CMakeLists.txt" />
-    <Text Include="../../thirdparty/zlib/test/pigz/CMakeLists.txt" />
-    <Text Include="../../thirdparty/zlib/test/pkgcheck.sh" />
     <Text Include="../../thirdparty/zlib/win32/Makefile.msc" />
     <Text Include="../../thirdparty/zlib/win32/zlib-ng.def.in" />
     <Text Include="../../thirdparty/zlib/win32/zlib.def.in" />

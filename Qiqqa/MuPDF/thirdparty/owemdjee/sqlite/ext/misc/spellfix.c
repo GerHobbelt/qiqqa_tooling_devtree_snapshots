@@ -1257,7 +1257,7 @@ static int editDist3Install(sqlite3 *db){
 ** Begin transliterate unicode-to-ascii implementation
 */
 
-#if !SQLITE_AMALGAMATION
+#ifndef SQLITE_AMALGAMATION
 /*
 ** This lookup table is used to help decode the first byte of
 ** a multi-byte UTF8 character.

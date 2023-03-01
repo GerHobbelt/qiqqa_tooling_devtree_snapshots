@@ -43,10 +43,13 @@
 #include "tessdatamanager.h" // for TessdataManager
 #include "textord.h"         // for Textord
 #include "wordrec.h"         // for Wordrec
-#include "genericvector.h"     // for PointerVector (ptr only)
+#include "imagefind.h"       // for ImageFind
+#include "linefind.h"        // for LineFinder
+#include "genericvector.h"   // for PointerVector (ptr only)
 
 #include <tesseract/publictypes.h> // for OcrEngineMode, PageSegMode, OEM_L...
 #include <tesseract/unichar.h>     // for UNICHAR_ID
+#include <tesseract/memcost_estimate.h>  // for ImageCostEstimate
 
 #include <allheaders.h> // for pixDestroy, pixGetWidth, pixGetHe...
 
@@ -67,6 +70,15 @@ class TO_BLOCK_LIST;
 class WERD;
 class WERD_CHOICE;
 class WERD_RES;
+class BLOBNBOX;
+class BLOBNBOX_CLIST;
+class BLOB_CHOICE_LIST;
+class TO_BLOCK_LIST;
+class MutableIterator;
+class ParagraphModel;
+class PARA_LIST;
+struct PARA;
+class RowInfo;
 
 class ColumnFinder;
 class DocumentData;
@@ -77,6 +89,8 @@ class EquationDetect;
 
 class ImageData;
 class LSTMRecognizer;
+class OrientationDetector;
+class ScriptDetector;
 class Tesseract;
 
 // Top-level class for all tesseract global instance data.
@@ -178,7 +192,7 @@ struct WordData {
 using WordRecognizer = void (Tesseract::*)(const WordData &, WERD_RES **,
                                            PointerVector<WERD_RES> *);
 
-class TESS_API Tesseract : public Wordrec {
+class TESS_API Tesseract: public Wordrec {
 public:
   Tesseract();
   ~Tesseract() override;
@@ -218,6 +232,11 @@ public:
     pix_grey_.destroy();
     pix_grey_ = grey_pix;
   }
+#if 0
+  DebugPixa &pix_debug() {
+	  return pixa_debug_;
+  }
+#endif
   Image pix_original() const {
     return pix_original_;
   }
@@ -230,6 +249,18 @@ public:
       lang_ref->set_pix_original(original_pix ? original_pix.clone() : nullptr);
     }
   }
+
+  // Return a memory capacity cost estimate for the given image / current original image.
+  //
+  // (unless overridden by the `pix` argument) uses the current original image for the estimate,
+  // i.e. tells you the cost estimate of this run:
+  ImageCostEstimate EstimateImageMemoryCost(const Pix* pix = nullptr /* default: use pix_original() data */) const;
+
+  // Helper, which may be invoked after SetInputImage() or equivalent has been called:
+  // reports the cost estimate for the current instance/image via `tprintf()` and returns
+  // `true` when the cost is expected to be too high.
+  bool CheckAndReportIfImageTooLarge(const Pix* pix = nullptr /* default: use pix_original() data */) const;
+  bool CheckAndReportIfImageTooLarge(int width, int height) const;
 
   // Returns a pointer to a Pix representing the best available resolution image
   // of the page, with best available bit depth as second priority. Result can
@@ -549,7 +580,7 @@ public:
 
   //// pgedit.h //////////////////////////////////////////////////////////
   SVMenuNode *build_menu_new();
-#ifndef GRAPHICS_DISABLED
+#if !GRAPHICS_DISABLED
   void pgeditor_main(int width, int height, PAGE_RES *page_res);
 
   void process_image_event( // action in image win
@@ -565,7 +596,10 @@ public:
   bool word_bln_display(PAGE_RES_IT *pr_it);
   bool word_blank_and_set_display(PAGE_RES_IT *pr_its);
   bool word_set_display(PAGE_RES_IT *pr_it);
-  // #ifndef GRAPHICS_DISABLED
+
+  void display_current_page_result(PAGE_RES* page_res);
+
+  // #if !GRAPHICS_DISABLED
   bool word_dumper(PAGE_RES_IT *pr_it);
   // #endif // !GRAPHICS_DISABLED
   void blob_feature_display(PAGE_RES *page_res, const TBOX &selection_box);
@@ -773,6 +807,7 @@ public:
   INT_VAR_H(tessedit_pageseg_mode);
   INT_VAR_H(preprocess_graynorm_mode);
   INT_VAR_H(thresholding_method);
+  BOOL_VAR_H(showcase_threshold_methods);
   BOOL_VAR_H(thresholding_debug);
   double_VAR_H(thresholding_window_size);
   double_VAR_H(thresholding_kfactor);
@@ -983,6 +1018,16 @@ public:
   BOOL_VAR_H(scribe_save_binary_rotated_image);
   BOOL_VAR_H(scribe_save_grey_rotated_image);
   BOOL_VAR_H(scribe_save_original_rotated_image);
+  STRING_VAR_H(debug_output_path);
+  INT_VAR_H(debug_baseline_fit);
+  INT_VAR_H(debug_baseline_y_coord);
+  BOOL_VAR_H(debug_write_unlv);
+  BOOL_VAR_H(debug_line_finding);
+  BOOL_VAR_H(debug_image_normalization);
+  BOOL_VAR_H(debug_do_not_use_scrollview_app);
+  BOOL_VAR_H(debug_display_page);
+  BOOL_VAR_H(debug_display_page_blocks);
+  BOOL_VAR_H(debug_display_page_baselines);
 
   //// ambigsrecog.cpp /////////////////////////////////////////////////////////
   FILE *init_recog_training(const char *filename);
@@ -991,11 +1036,67 @@ public:
   void ambigs_classify_and_output(const char *label, PAGE_RES_IT *pr_it, FILE *output_file);
 
   // debug PDF output helper methods:
-  void AddPixDebugPage(Image pix, const char *title) {
-	  if (tessedit_dump_pageseg_images) {
-		  pixa_debug_.AddPix(pix, title);
-	  }
+  void AddPixDebugPage(const Image &pix, const char *title, bool keeep_a_copy = true) {
+	  if (pix == nullptr)
+		  return;
+
+    pixa_debug__.AddPix(pix, title, keeep_a_copy);
   }
+  void AddPixDebugPage(const Image &pix, const std::string& title, bool keeep_a_copy = true) {
+    AddPixDebugPage(pix, title.c_str(), keeep_a_copy);
+  }
+
+public:
+  // Find connected components in the page and process a subset until finished or
+  // a stopping criterion is met.
+  // Returns the number of blobs used in making the estimate. 0 implies failure.
+  int orientation_and_script_detection(const char* filename, OSResults* osr);
+
+  // Filter and sample the blobs.
+  // Returns a non-zero number of blobs if the page was successfully processed, or
+  // zero if the page had too few characters to be reliable
+  int os_detect(TO_BLOCK_LIST* port_blocks, OSResults* osr);
+
+protected:
+  // Detect orientation and script from a list of blobs.
+  // Returns a non-zero number of blobs if the list was successfully processed, or
+  // zero if the list had too few characters to be reliable.
+  // If allowed_scripts is non-null and non-empty, it is a list of scripts that
+  // constrains both orientation and script detection to consider only scripts
+  // from the list.
+  int os_detect_blobs(const std::vector<int>* allowed_scripts, BLOBNBOX_CLIST* blob_list, OSResults* osr);
+
+  // Processes a single blob to estimate script and orientation.
+  // Return true if estimate of orientation and script satisfies stopping
+  // criteria.
+  bool os_detect_blob(BLOBNBOX* bbox, OrientationDetector* o, ScriptDetector* s, OSResults* osr);
+
+  // Detect and erase horizontal/vertical lines and picture regions from the
+  // image, so that non-text blobs are removed from consideration.
+  void remove_nontext_regions(BLOCK_LIST* blocks, TO_BLOCK_LIST* to_blocks);
+
+public:
+  // Main entry point for Paragraph Detection Algorithm.
+  //
+  // Given a set of equally spaced textlines (described by row_infos),
+  // Split them into paragraphs.  See http://goto/paragraphstalk
+  //
+  // Output:
+  //   row_owners - one pointer for each row, to the paragraph it belongs to.
+  //   paragraphs - this is the actual list of PARA objects.
+  //   models - the list of paragraph models referenced by the PARA objects.
+  //            caller is responsible for deleting the models.
+  void DetectParagraphs(std::vector<RowInfo>* row_infos,
+                        std::vector<PARA*>* row_owners, PARA_LIST* paragraphs,
+                        std::vector<ParagraphModel*>* models);
+
+  // Given a MutableIterator to the start of a block, run DetectParagraphs on
+  // that block and commit the results to the underlying ROW and BLOCK structs,
+  // saving the ParagraphModels in models.  Caller owns the models.
+  // We use unicharset during the function to answer questions such as "is the
+  // first letter of this word upper case?"
+  void DetectParagraphs(bool after_text_recognition,
+                        const MutableIterator* block_start, std::vector<ParagraphModel*>* models);
 
 private:
   // The filename of a backup config file. If not null, then we currently
@@ -1014,13 +1115,23 @@ private:
   // Thresholds that were used to generate the thresholded image from grey.
   Image pix_thresholds_;
   // Debug images. If non-empty, will be written on destruction.
-  DebugPixa pixa_debug_;
+  DebugPixa pixa_debug__;
   // Input image resolution after any scaling. The resolution is not well
   // transmitted by operations on Pix, so we keep an independent record here.
   int source_resolution_;
   // The shiro-rekha splitter object which is used to split top-lines in
   // Devanagari words to provide a better word and grapheme segmentation.
   ShiroRekhaSplitter splitter_;
+  // Image finder: located image/photo zones in a given image (scanned page).
+  ImageFind image_finder_;
+  LineFinder line_finder_;
+
+  friend class ColumnFinder;
+  friend class CCNonTextDetect;
+  friend class ColPartitionGrid;
+  friend class ColPartition;
+  friend class StrokeWidth;
+
   // Page segmentation/layout
   Textord textord_;
   // True if the primary language uses right_to_left reading order.

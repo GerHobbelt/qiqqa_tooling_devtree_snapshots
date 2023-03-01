@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectName>opencv_contrib</ProjectName>
-    <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF7E4264}</ProjectGuid>
+    <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF2C120C}</ProjectGuid>
     <RootNamespace>opencv_contrib</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -683,15 +683,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/freetype/test/test_basic.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/freetype/test/test_main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/freetype/test/test_putText.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/samples/fuzzy_filtering.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/samples/fuzzy_inpainting.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/src/fuzzy_F0_math.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/src/fuzzy_F1_math.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/src/fuzzy_image.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/test/test_f0.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/test/test_f1.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/test/test_image.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/test/test_main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/hdf/samples/create_groups.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/hdf/samples/create_read_write_datasets.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/hdf/samples/read_write_attributes.cpp" />
@@ -902,7 +893,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/saliency/src/staticSaliencySpectralResidual.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/saliency/test/test_main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/saliency/test/test_static_saliency_spectral_residual.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/cmake/checks/check_glog_gflags.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/samples/import_reconstruction.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/samples/match_reconstruct.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/samples/recon2v.cpp" />
@@ -1007,7 +997,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/surface_matching/src/ppf_helpers.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/surface_matching/src/ppf_match_3d.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/surface_matching/src/t_hash_int.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/text/cmake/checks/tesseract_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/text/samples/character_recognition.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/text/samples/cropped_word_recognition.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/text/samples/dictnet_demo.cpp" />
@@ -1379,8 +1368,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/xphoto/test/test_main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/xphoto/test/test_oil_painting.cpp" />
     <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/alphamat/include/opencv2/alphamat.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/alphamat/src/3rdparty/KDTreeVectorOfVectorsAdaptor.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/alphamat/src/3rdparty/nanoflann.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/alphamat/src/cm.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/alphamat/src/intraU.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/alphamat/src/local_info.hpp" />
@@ -1764,13 +1751,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/freetype/include/opencv2/freetype.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/freetype/src/precomp.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/freetype/test/test_precomp.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/include/opencv2/fuzzy.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/include/opencv2/fuzzy/fuzzy_F0_math.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/include/opencv2/fuzzy/fuzzy_F1_math.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/include/opencv2/fuzzy/fuzzy_image.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/include/opencv2/fuzzy/types.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/src/precomp.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/test/test_precomp.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/hdf/include/opencv2/hdf.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/hdf/include/opencv2/hdf/hdf5.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/hdf/src/precomp.hpp" />
@@ -2473,15 +2453,6 @@
     <Image Include="../../thirdparty/owemdjee/opencv_contrib/modules/face/tutorials/face_recognition/img/lbp/lbp.png" />
     <Image Include="../../thirdparty/owemdjee/opencv_contrib/modules/face/tutorials/face_recognition/img/lbp/lbp_yale.jpg" />
     <Image Include="../../thirdparty/owemdjee/opencv_contrib/modules/face/tutorials/face_recognition/img/lbp/patterns.png" />
-    <Image Include="../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/samples/input.png" />
-    <Image Include="../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/samples/mask1.png" />
-    <Image Include="../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/samples/mask2.png" />
-    <Image Include="../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/samples/mask3.png" />
-    <Image Include="../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/tutorials/filtering/images/fuzzy_filt_output.jpg" />
-    <Image Include="../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/tutorials/inpainting/images/fuzzy_inp_input.jpg" />
-    <Image Include="../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/tutorials/inpainting/images/fuzzy_inp_output.jpg" />
-    <Image Include="../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/tutorials/theory/images/fuzzy_BF_view.jpg" />
-    <Image Include="../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/tutorials/theory/images/fuzzy_pixel_view.jpg" />
     <Image Include="../../thirdparty/owemdjee/opencv_contrib/modules/hdf/doc/pics/attributes-details.png" />
     <Image Include="../../thirdparty/owemdjee/opencv_contrib/modules/hdf/doc/pics/attributes-file.png" />
     <Image Include="../../thirdparty/owemdjee/opencv_contrib/modules/hdf/doc/pics/create_groups.png" />
@@ -2644,6 +2615,8 @@
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/ccalib/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/ccalib/README.md" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/cnn_3dobj/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/cnn_3dobj/FindCaffe.cmake" />
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/cnn_3dobj/FindGlog.cmake" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/cnn_3dobj/README.md" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/cnn_3dobj/samples/data/label_all.txt" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/cnn_3dobj/samples/datagen_all.sh" />
@@ -2706,8 +2679,6 @@
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/face/samples/landmarks_demo.py" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/freetype/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/freetype/README.md" />
-    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/README.md" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/hdf/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/hdf/README.md" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/hfs/CMakeLists.txt" />
@@ -2721,6 +2692,9 @@
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/intensity_transform/misc/python/test/test_intensity_transform_bimef.py" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/julia/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/julia/README.md" />
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/julia/cmake/FindJulia.cmake" />
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/julia/cmake/hooks/STATUS_DUMP_EXTRA.cmake" />
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/julia/cmake/init.cmake" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/julia/gen/defval.txt" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/julia/gen/funclist.csv" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/julia/gen/gen3_cpp.py" />
@@ -2734,6 +2708,10 @@
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/line_descriptor/README.md" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/matlab/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/matlab/README.md" />
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/matlab/cmake/OpenCVFindMatlab.cmake" />
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/matlab/cmake/hooks/STATUS_DUMP_EXTRA.cmake" />
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/matlab/cmake/init.cmake" />
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/matlab/compile.cmake" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/matlab/generator/build_info.py" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/matlab/generator/cvmex.py" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/matlab/generator/filters.py" />
@@ -2779,10 +2757,13 @@
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/saliency/README.md" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/README.md" />
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/cmake/FindGflags.cmake" />
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/cmake/FindGlog.cmake" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/samples/data/backyard_tracks.txt" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/samples/data/desktop_tracks.txt" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/samples/data/images/dataset_files.txt" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/samples/data/recon2v_checkerboards.txt" />
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/src/libmv_light/CMake/Installation.cmake" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/src/libmv_light/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/src/libmv_light/libmv/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/src/libmv_light/libmv/correspondence/CMakeLists.txt" />
@@ -2807,6 +2788,8 @@
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/surface_matching/samples/ppf_load_match.py" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/text/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/text/README.md" />
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/text/cmake/FindTesseract.cmake" />
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/text/cmake/init.cmake" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/text/misc/objc/gen_dict.json" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/text/samples/deeptextdetection.py" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/text/samples/detect_er_chars.py" />
@@ -2831,6 +2814,8 @@
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/wechat_qrcode/samples/qrcode_without_nn.py" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/xfeatures2d/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/xfeatures2d/README.md" />
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/xfeatures2d/cmake/download_boostdesc.cmake" />
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/xfeatures2d/cmake/download_vgg.cmake" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/xfeatures2d/misc/objc/gen_dict.json" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/xfeatures2d/misc/python/test/test_cuda_xfeatures2d.py" />
     <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/xfeatures2d/misc/python/test/test_descriptors.py" />

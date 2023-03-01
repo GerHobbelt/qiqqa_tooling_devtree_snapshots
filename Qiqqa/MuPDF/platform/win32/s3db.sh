@@ -1,0 +1,46 @@
+#! /bin/bash
+
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/base/INTRANET-OLD-BIG-DB/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/base/S3DB-ISSUE-142/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/base-Alt-0/INTRANET-OLD-BIG-DB/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/base-Alt-0/S3DB-ISSUE-142/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/base-backup/INTRANET-OLD-BIG-DB/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/base-backup/S3DB-ISSUE-142/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/base-backup-Alt-0/INTRANET-OLD-BIG-DB/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/base-backup-KingDian/INTRANET-OLD-BIG-DB/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/base-backup-KingDian/S3DB-ISSUE-142/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/base-backup-Qdrv/INTRANET-OLD-BIG-DB/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/base-backup-Qdrv/S3DB-ISSUE-142/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/base-backup-SSD-0001/INTRANET-OLD-BIG-DB/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/base-backup-SSD-0001/S3DB-ISSUE-142/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/base-KingDian/INTRANET-OLD-BIG-DB/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/base-KingDian/S3DB-ISSUE-142/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/base-Qdrv/INTRANET-OLD-BIG-DB/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/base-Qdrv/S3DB-ISSUE-142/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/base-SSD-0001/INTRANET-OLD-BIG-DB/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/base-SSD-0001/S3DB-ISSUE-142/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/evil-base/INTRANET-EVIL-PDF-SAMPLES-FOR-QIQQA/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/evil-base-Alt-0/INTRANET-EVIL-PDF-SAMPLES-FOR-QIQQA/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/evil-base-KingDian/INTRANET-EVIL-PDF-SAMPLES-FOR-QIQQA/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/evil-base-Qdrv/INTRANET-EVIL-PDF-SAMPLES-FOR-QIQQA/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/evil-base-SSD-0001/INTRANET-EVIL-PDF-SAMPLES-FOR-QIQQA/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/example-sync-point-rootdir/Qiqqa.LibraryMetadata(2).s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/example-sync-point-rootdir/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/example-sync-point-rootdir-Q-TestDrive/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/example-sync-point-rootdir-SSD-0001/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/example-sync-point-rootdir-SSD-KingDian/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/export-library/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/export-library-KingDian/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/export-library-Qdrv/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/export-library-SSD-0001/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/Qiqqa-SSD-KingDian/sync-points/floating-point/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/qiqqaC9F0D079-EE4C-4A15-8547-72164A7A356D/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/qiqqaC9F0D079-EE4C-4A15-8547-72164A7A356D-Q-TestDrive/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/qiqqaC9F0D079-EE4C-4A15-8547-72164A7A356D-SSD-KingDian/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/qiqqaC9F0D079-EE4C-4A15-8547-72164A7A356D-SSD0001/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/sync-points/floating-point/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/sync-points-Alt-0/floating-point/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/sync-points-Qdrv/floating-point/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/sync-points-SSD-0001/floating-point/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/Qiqqa/ZZZ (sharing,new)/tuti/Qiqqa.LibraryMetadata.s3db"  .dump
+./bin/Release-Unicode-64bit-x64/mutool_ex.exe sqlite -readonly "/s/./_Y/SopKonijn/!QIQQA-pdf-watch-dir/!1/Quantisle/Qiqqa.intranet/test-1/Qiqqa.LibraryMetadata.s3db"  .dump

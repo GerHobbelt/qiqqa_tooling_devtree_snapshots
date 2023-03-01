@@ -40,10 +40,13 @@ POSSIBILITY OF SUCH DAMAGE.
 
 
 #ifndef INCLUDED_FROM_PCRE2_JIT_COMPILE
+#ifndef BUILD_MONOLITHIC
 #error This file must be included from pcre2_jit_compile.c.
+#endif
 #endif
 
 
+#ifdef INCLUDED_FROM_PCRE2_JIT_COMPILE
 
 /*************************************************
 *           Free JIT read-only data              *
@@ -230,5 +233,7 @@ SLJIT_COMPILE_ASSERT(JIT_NUMBER_OF_COMPILE_MODES == 3, number_of_compile_modes_c
 return executable_sizes[0] + executable_sizes[1] + executable_sizes[2];
 #endif
 }
+
+#endif // INCLUDED_FROM_PCRE2_JIT_COMPILE
 
 /* End of pcre2_jit_misc.c */

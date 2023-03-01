@@ -4748,9 +4748,6 @@
     <Text Include="../../thirdparty/owemdjee/boost/libs/mpl/doc/tutorial/changelog-history.html">
       <Filter>Misc Files\doc\tutorial</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/boost/libs/mpl/doc/tutorial/changes-in-boost-1-32-0.html">
-      <Filter>Misc Files\doc\tutorial</Filter>
-    </Text>
     <Text Include="../../thirdparty/owemdjee/boost/libs/mpl/example/fsm/README.txt">
       <Filter>Misc Files\example\fsm</Filter>
     </Text>
@@ -4789,4 +4786,3 @@
     </Text>
   </ItemGroup>
 </Project>
-    

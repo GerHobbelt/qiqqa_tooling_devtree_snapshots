@@ -47,12 +47,20 @@
 
 #include "allheaders.h"
 
+#include "monolithic_examples.h"
+
+
 #define  NTIMES             2
 
-l_int32 main(l_int32  argc,
-             char   **argv)
+
+#if defined(BUILD_MONOLITHIC)
+#define main   lept_cctest1_main
+#endif
+
+int main(int  argc,
+         const char   **argv)
 {
-char     *filein;
+const char     *filein;
 l_int32   i, n, count;
 BOX      *box;
 BOXA     *boxa;

@@ -121,7 +121,7 @@ public:
             This is an array of 7 items of int type.
             The values represent size of font with HTML size from -2 to +4
             ( \<FONT SIZE=-2\> to \<FONT SIZE=+4\> ).
-            Default sizes are used if sizes is @NULL.
+            Default sizes are used if sizes is @nullptr.
 
         Default font sizes are defined by constants wxHTML_FONT_SIZE_1,
         wxHTML_FONT_SIZE_2, ..., wxHTML_FONT_SIZE_7.
@@ -130,7 +130,7 @@ public:
         @see SetSize()
     */
     void SetFonts(const wxString& normal_face, const wxString& fixed_face,
-                  const int* sizes = NULL);
+                  const int* sizes = nullptr);
 
     /**
         Sets font sizes to be relative to the given size or the system
@@ -215,10 +215,10 @@ public:
             Name of the printing object. Used by preview frames and setup dialogs.
         @param parentWindow
             pointer to the window that will own the preview frame and setup dialogs.
-            May be @NULL.
+            May be @nullptr.
     */
     wxHtmlEasyPrinting(const wxString& name = "Printing",
-                       wxWindow* parentWindow = NULL);
+                       wxWindow* parentWindow = nullptr);
 
     /**
         Returns the current name being used for preview frames and setup
@@ -300,7 +300,7 @@ public:
         Sets fonts. See wxHtmlDCRenderer::SetFonts for detailed description.
     */
     void SetFonts(const wxString& normal_face, const wxString& fixed_face,
-                  const int* sizes = NULL);
+                  const int* sizes = nullptr);
 
     /**
         Sets the name used for preview frames and setup dialogs.
@@ -438,7 +438,7 @@ public:
         for detailed description.
     */
     void SetFonts(const wxString& normal_face, const wxString& fixed_face,
-                  const int* sizes = NULL);
+                  const int* sizes = nullptr);
 
     /**
         Set page footer. The following macros can be used inside it:

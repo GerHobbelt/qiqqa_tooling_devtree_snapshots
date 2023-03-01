@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2022 Artifex Software, Inc.
+// Copyright (C) 2004-2023 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -123,6 +123,7 @@ void pdf_set_annot_hot(fz_context *ctx, pdf_annot *annot, int hot)
 	old = annot->is_hot;
 	annot->is_hot = !!hot;
 	if (old != annot->is_hot)
+		// TODO: only set changed if the annot has a different appearance for rollover
 		pdf_set_annot_has_changed(ctx, annot);
 }
 
@@ -430,6 +431,9 @@ pdf_annot_type_from_string(fz_context *ctx, const char *subtype)
 static void
 begin_annot_op(fz_context *ctx, pdf_annot *annot, const char *op)
 {
+	if (annot->page == NULL)
+		fz_throw(ctx, FZ_ERROR_GENERIC, "cannot alter annotation deleted from page");
+
 	pdf_begin_operation(ctx, annot->page->doc, op);
 }
 
@@ -935,6 +939,8 @@ pdf_delete_annot(fz_context *ctx, pdf_page *page, pdf_annot *annot)
 			pdf_obj *fields = pdf_dict_get(ctx, acroform, PDF_NAME(Fields));
 			(void)remove_from_tree(ctx, fields, annot->obj, NULL);
 		}
+
+		annot->page = NULL;
 
 		/* The garbage collection pass when saving will remove the annot object,
 		 * removing it here may break files if multiple pages use the same annot. */
@@ -1457,7 +1463,6 @@ pdf_annot_border(fz_context *ctx, pdf_annot *annot)
 	fz_try(ctx)
 	{
 		bs = pdf_dict_get(ctx, annot->obj, PDF_NAME(BS));
-		pdf_dict_put(ctx, bs, PDF_NAME(Type), PDF_NAME(Border));
 		bs_w = pdf_dict_get(ctx, bs, PDF_NAME(W));
 		if (pdf_is_number(ctx, bs_w))
 		{
@@ -3456,15 +3461,15 @@ pdf_set_annot_filespec(fz_context *ctx, pdf_annot *annot, pdf_obj *fs)
 }
 
 int
-pdf_annot_hidden(fz_context *ctx, pdf_annot *annot)
+pdf_annot_hidden_for_editing(fz_context *ctx, const pdf_annot *annot)
 {
-	return annot->hidden;
+	return annot->hidden_editing;
 }
 
 void
-pdf_set_annot_hidden(fz_context *ctx, pdf_annot *annot, int hidden)
+pdf_set_annot_hidden_for_editing(fz_context *ctx, pdf_annot *annot, int hidden)
 {
-	annot->hidden = hidden;
+	annot->hidden_editing = hidden;
 }
 
 #endif

@@ -316,24 +316,6 @@ SRC = \
 # Source code for extensions
 #
 SRC += \
-  $(TOP)/ext/fts1/fts1.c \
-  $(TOP)/ext/fts1/fts1.h \
-  $(TOP)/ext/fts1/fts1_hash.c \
-  $(TOP)/ext/fts1/fts1_hash.h \
-  $(TOP)/ext/fts1/fts1_porter.c \
-  $(TOP)/ext/fts1/fts1_tokenizer.h \
-  $(TOP)/ext/fts1/fts1_tokenizer1.c
-SRC += \
-  $(TOP)/ext/fts2/fts2.c \
-  $(TOP)/ext/fts2/fts2.h \
-  $(TOP)/ext/fts2/fts2_hash.c \
-  $(TOP)/ext/fts2/fts2_hash.h \
-  $(TOP)/ext/fts2/fts2_icu.c \
-  $(TOP)/ext/fts2/fts2_porter.c \
-  $(TOP)/ext/fts2/fts2_tokenizer.h \
-  $(TOP)/ext/fts2/fts2_tokenizer.c \
-  $(TOP)/ext/fts2/fts2_tokenizer1.c
-SRC += \
   $(TOP)/ext/fts3/fts3.c \
   $(TOP)/ext/fts3/fts3.h \
   $(TOP)/ext/fts3/fts3Int.h \
@@ -391,7 +373,6 @@ TESTSRC = \
   $(TOP)/src/test4.c \
   $(TOP)/src/test5.c \
   $(TOP)/src/test6.c \
-  $(TOP)/src/test7.c \
   $(TOP)/src/test8.c \
   $(TOP)/src/test9.c \
   $(TOP)/src/test_autoext.c \
@@ -420,7 +401,6 @@ TESTSRC = \
   $(TOP)/src/test_quota.c \
   $(TOP)/src/test_rtree.c \
   $(TOP)/src/test_schema.c \
-  $(TOP)/src/test_server.c \
   $(TOP)/src/test_superlock.c \
   $(TOP)/src/test_syscall.c \
   $(TOP)/src/test_tclsh.c \
@@ -569,14 +549,6 @@ HDR = \
 # Header files used by extensions
 #
 EXTHDR += \
-  $(TOP)/ext/fts1/fts1.h \
-  $(TOP)/ext/fts1/fts1_hash.h \
-  $(TOP)/ext/fts1/fts1_tokenizer.h
-EXTHDR += \
-  $(TOP)/ext/fts2/fts2.h \
-  $(TOP)/ext/fts2/fts2_hash.h \
-  $(TOP)/ext/fts2/fts2_tokenizer.h
-EXTHDR += \
   $(TOP)/ext/fts3/fts3.h \
   $(TOP)/ext/fts3/fts3Int.h \
   $(TOP)/ext/fts3/fts3_hash.h \
@@ -619,7 +591,8 @@ TESTOPTS = --verbose=file --output=test-out.txt
 
 # Extra compiler options for various shell tools
 #
-SHELL_OPT = -DSQLITE_ENABLE_FTS4
+SHELL_OPT += -DSQLITE_DQS=0
+SHELL_OPT += -DSQLITE_ENABLE_FTS4
 #SHELL_OPT += -DSQLITE_ENABLE_FTS5
 SHELL_OPT += -DSQLITE_ENABLE_RTREE
 SHELL_OPT += -DSQLITE_ENABLE_EXPLAIN_COMMENTS
@@ -652,10 +625,17 @@ FUZZCHECK_SRC += $(TOP)/test/vt02.c
 DBFUZZ_OPT =
 ST_OPT = -DSQLITE_OS_KV_OPTIONAL
 
+
+# In wasi-sdk builds, disable the CLI shell build in the "all" target.
+SQLITE3_SHELL_TARGET_  = sqlite3$(TEXE)
+SQLITE3_SHELL_TARGET_1 =
+SQLITE3_SHELL_TARGET   = $(SQLITE3_SHELL_TARGET_@HAVE_WASI_SDK@)
+
 # This is the default Makefile target.  The objects listed here
 # are what get build when you type just "make" with no arguments.
 #
-all:	sqlite3.h libsqlite3.la sqlite3$(TEXE) $(HAVE_TCL:1=libtclsqlite3.la)
+all:	sqlite3.h libsqlite3.la $(SQLITE3_SHELL_TARGET) \
+  $(HAVE_TCL:1=libtclsqlite3.la)
 
 Makefile: $(TOP)/Makefile.in
 	./config.status
@@ -1160,24 +1140,6 @@ shell.c:	$(SHELL_SRC) $(TOP)/tool/mkshellc.tcl
 icu.lo:	$(TOP)/ext/icu/icu.c $(HDR) $(EXTHDR)
 	$(LTCOMPILE) -DSQLITE_CORE -c $(TOP)/ext/icu/icu.c
 
-fts2.lo:	$(TOP)/ext/fts2/fts2.c $(HDR) $(EXTHDR)
-	$(LTCOMPILE) -DSQLITE_CORE -c $(TOP)/ext/fts2/fts2.c
-
-fts2_hash.lo:	$(TOP)/ext/fts2/fts2_hash.c $(HDR) $(EXTHDR)
-	$(LTCOMPILE) -DSQLITE_CORE -c $(TOP)/ext/fts2/fts2_hash.c
-
-fts2_icu.lo:	$(TOP)/ext/fts2/fts2_icu.c $(HDR) $(EXTHDR)
-	$(LTCOMPILE) -DSQLITE_CORE -c $(TOP)/ext/fts2/fts2_icu.c
-
-fts2_porter.lo:	$(TOP)/ext/fts2/fts2_porter.c $(HDR) $(EXTHDR)
-	$(LTCOMPILE) -DSQLITE_CORE -c $(TOP)/ext/fts2/fts2_porter.c
-
-fts2_tokenizer.lo:	$(TOP)/ext/fts2/fts2_tokenizer.c $(HDR) $(EXTHDR)
-	$(LTCOMPILE) -DSQLITE_CORE -c $(TOP)/ext/fts2/fts2_tokenizer.c
-
-fts2_tokenizer1.lo:	$(TOP)/ext/fts2/fts2_tokenizer1.c $(HDR) $(EXTHDR)
-	$(LTCOMPILE) -DSQLITE_CORE -c $(TOP)/ext/fts2/fts2_tokenizer1.c
-
 fts3.lo:	$(TOP)/ext/fts3/fts3.c $(HDR) $(EXTHDR)
 	$(LTCOMPILE) -DSQLITE_CORE -c $(TOP)/ext/fts3/fts3.c
 
@@ -1331,6 +1293,15 @@ tcltest:	./testfixture$(TEXE)
 # concurrently.
 testrunner:	testfixture$(TEXE)
 	./testfixture$(TEXE) $(TOP)/test/testrunner.tcl
+
+# Runs both fuzztest and testrunner, consecutively.
+#
+devtest:	testfixture$(TEXE) fuzztest testrunner
+
+# Testing for a release
+#
+releasetest: testfixture$(TEXE)
+	./testfixture$(TEXE) $(TOP)/test/testrunner.tcl release
 
 # Minimal testing that runs in less than 3 minutes
 #
@@ -1488,9 +1459,6 @@ threadtest: threadtest3$(TEXE)
 
 threadtest5: sqlite3.c $(TOP)/test/threadtest5.c
 	$(LTLINK) $(TOP)/test/threadtest5.c sqlite3.c -o $@ $(TLIBS)
-
-releasetest:
-	$(TCLSH_CMD) $(TOP)/test/releasetest.tcl
 
 AMALGAMATIONS_SRC = \
 			$(TOP)/src/pragma.h    \

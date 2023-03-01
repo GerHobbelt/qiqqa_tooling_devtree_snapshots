@@ -632,7 +632,6 @@ struct SingleRequest {
   curl_off_t pendingheader;      /* this many bytes left to send is actually
                                     header and not body */
   struct curltime start;         /* transfer started at this time */
-  struct curltime now;           /* current time */
   enum {
     HEADER_NORMAL,              /* no bad header at all */
     HEADER_PARTHEADER,          /* part of the chunk is a bad header, the rest
@@ -691,6 +690,7 @@ struct SingleRequest {
   struct dohdata *doh; /* DoH specific data for this request */
 #endif
   unsigned char setcookies;
+  unsigned char writer_stack_depth; /* Unencoding stack depth. */
   BIT(header);        /* incoming data has HTTP header */
   BIT(content_range); /* set TRUE if Content-Range: was found */
   BIT(upload_done);   /* set to TRUE when doing chunked transfer-encoding
@@ -767,8 +767,8 @@ struct Curl_handler {
   /* This function *MAY* be set to a protocol-dependent function that is run
    * by the curl_disconnect(), as a step in the disconnection.  If the handler
    * is called because the connection has been considered dead,
-   * dead_connection is set to TRUE. The connection is already disassociated
-   * from the transfer here.
+   * dead_connection is set to TRUE. The connection is (again) associated with
+   * the transfer here.
    */
   CURLcode (*disconnect)(struct Curl_easy *, struct connectdata *,
                          bool dead_connection);
@@ -831,20 +831,6 @@ struct Curl_handler {
 
 #define CONNRESULT_NONE 0                /* No extra information. */
 #define CONNRESULT_DEAD (1<<0)           /* The connection is dead. */
-
-#ifdef USE_RECV_BEFORE_SEND_WORKAROUND
-struct postponed_data {
-  char *buffer;          /* Temporal store for received data during
-                            sending, must be freed */
-  size_t allocated_size; /* Size of temporal store */
-  size_t recv_size;      /* Size of received data during sending */
-  size_t recv_processed; /* Size of processed part of postponed data */
-#ifdef DEBUGBUILD
-  curl_socket_t bindsock;/* Structure must be bound to specific socket,
-                            used only for DEBUGASSERT */
-#endif /* DEBUGBUILD */
-};
-#endif /* USE_RECV_BEFORE_SEND_WORKAROUND */
 
 struct proxy_info {
   struct hostname host;
@@ -928,9 +914,6 @@ struct connectdata {
   Curl_send *send[2];
   struct Curl_cfilter *cfilter[2]; /* connection filters */
 
-#ifdef USE_RECV_BEFORE_SEND_WORKAROUND
-  struct postponed_data postponed[2]; /* two buffers for two sockets */
-#endif /* USE_RECV_BEFORE_SEND_WORKAROUND */
   struct ssl_primary_config ssl_config;
 #ifndef CURL_DISABLE_PROXY
   struct ssl_primary_config proxy_ssl_config;
@@ -1033,6 +1016,9 @@ struct connectdata {
     struct ldapconninfo *ldapc;
 #ifndef CURL_DISABLE_MQTT
     struct mqtt_conn mqtt;
+#endif
+#ifdef USE_WEBSOCKETS
+    struct ws_conn ws;
 #endif
   } proto;
 
@@ -1252,6 +1238,7 @@ typedef enum {
   EXPIRE_TOOFAST,
   EXPIRE_QUIC,
   EXPIRE_FTP_ACCEPT,
+  EXPIRE_ALPN_EYEBALLS,
   EXPIRE_LAST /* not an actual timer, used as a marker only */
 } expire_id;
 
@@ -1371,7 +1358,7 @@ struct UrlState {
   size_t drain; /* Increased when this stream has data to read, even if its
                    socket is not necessarily is readable. Decreased when
                    checked. */
-  struct Curl_data_priority priority; /* shallow coyp of data->set */
+  struct Curl_data_priority priority; /* shallow copy of data->set */
 #endif
 
   curl_read_callback fread_func; /* read callback/function */

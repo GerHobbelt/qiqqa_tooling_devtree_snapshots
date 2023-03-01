@@ -41,12 +41,6 @@ static int sqlite3TestExtInit(sqlite3 *db){
 ** Forward declarations of external module initializer functions
 ** for modules that need them.
 */
-#ifdef SQLITE_ENABLE_FTS1
-int sqlite3Fts1Init(sqlite3*);
-#endif
-#ifdef SQLITE_ENABLE_FTS2
-int sqlite3Fts2Init(sqlite3*);
-#endif
 #ifdef SQLITE_ENABLE_FTS5
 int sqlite3Fts5Init(sqlite3*);
 #endif
@@ -59,12 +53,6 @@ int sqlite3StmtVtabInit(sqlite3*);
 ** built-in extensions.
 */
 static int (*const sqlite3BuiltinExtensions[])(sqlite3*) = {
-#ifdef SQLITE_ENABLE_FTS1
-  sqlite3Fts1Init,
-#endif
-#ifdef SQLITE_ENABLE_FTS2
-  sqlite3Fts2Init,
-#endif
 #ifdef SQLITE_ENABLE_FTS3
   sqlite3Fts3Init,
 #endif
@@ -1800,7 +1788,9 @@ int sqlite3_busy_timeout(sqlite3 *db, int ms){
 */
 void sqlite3_interrupt(sqlite3 *db){
 #ifdef SQLITE_ENABLE_API_ARMOR
-  if( !sqlite3SafetyCheckOk(db) && (db==0 || db->eOpenState!=SQLITE_STATE_ZOMBIE) ){
+  if( !sqlite3SafetyCheckOk(db)
+   && (db==0 || db->eOpenState!=SQLITE_STATE_ZOMBIE)
+  ){
     (void)SQLITE_MISUSE_BKPT;
     return;
   }
@@ -1808,6 +1798,21 @@ void sqlite3_interrupt(sqlite3 *db){
   AtomicStore(&db->u1.isInterrupted, 1);
 }
 
+/*
+** Return true or false depending on whether or not an interrupt is
+** pending on connection db.
+*/
+int sqlite3_is_interrupted(sqlite3 *db){
+#ifdef SQLITE_ENABLE_API_ARMOR
+  if( !sqlite3SafetyCheckOk(db)
+   && (db==0 || db->eOpenState!=SQLITE_STATE_ZOMBIE)
+  ){
+    (void)SQLITE_MISUSE_BKPT;
+    return 0;
+  }
+#endif
+  return AtomicLoad(&db->u1.isInterrupted)!=0;
+}
 
 /*
 ** This function is exactly the same as sqlite3_create_function(), except
@@ -1852,7 +1857,7 @@ int sqlite3CreateFunc(
   /* The SQLITE_INNOCUOUS flag is the same bit as SQLITE_FUNC_UNSAFE.  But
   ** the meaning is inverted.  So flip the bit. */
   assert( SQLITE_FUNC_UNSAFE==SQLITE_INNOCUOUS );
-  extraFlags ^= SQLITE_FUNC_UNSAFE;
+  extraFlags ^= SQLITE_FUNC_UNSAFE;  /* tag-20230109-1 */
 
   
 #ifndef SQLITE_OMIT_UTF16
@@ -1870,11 +1875,11 @@ int sqlite3CreateFunc(
     case SQLITE_ANY: {
       int rc;
       rc = sqlite3CreateFunc(db, zFunctionName, nArg,
-           (SQLITE_UTF8|extraFlags)^SQLITE_FUNC_UNSAFE,
+           (SQLITE_UTF8|extraFlags)^SQLITE_FUNC_UNSAFE, /* tag-20230109-1 */
            pUserData, xSFunc, xStep, xFinal, xValue, xInverse, pDestructor);
       if( rc==SQLITE_OK ){
         rc = sqlite3CreateFunc(db, zFunctionName, nArg,
-             (SQLITE_UTF16LE|extraFlags)^SQLITE_FUNC_UNSAFE,
+             (SQLITE_UTF16LE|extraFlags)^SQLITE_FUNC_UNSAFE, /* tag-20230109-1*/
              pUserData, xSFunc, xStep, xFinal, xValue, xInverse, pDestructor);
       }
       if( rc!=SQLITE_OK ){

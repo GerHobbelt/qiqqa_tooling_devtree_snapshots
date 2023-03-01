@@ -19,6 +19,13 @@
 # endif
 #endif
 
+
+// Microsoft crtdbg operator new override work, in conjunction with monolithic build / mupdf system-header-files.h, defines NEW_CBDBG
+#if defined(NEW_CBDBG)
+#undef new 
+#endif
+
+
 NAMESPACE_BEGIN(CryptoPP)
 
 // ************** secure memory allocation ***************

@@ -145,7 +145,7 @@ typedef unsigned char u8;
 
 #if !defined(_WIN32) && !defined(WIN32)
 # include <signal.h>
-# if !defined(__RTP__) && !defined(_WRS_KERNEL)
+# if !defined(__RTP__) && !defined(_WRS_KERNEL) && !defined(SQLITE_WASI)
 #  include <pwd.h>
 # endif
 #endif
@@ -200,6 +200,14 @@ typedef unsigned char u8;
 # define SHELL_USE_LOCAL_GETLINE 1
 #endif
 
+#ifndef deliberate_fall_through
+/* Quiet some compilers about some of our intentional code. */
+# if defined(GCC_VERSION) && GCC_VERSION>=7000000
+#  define deliberate_fall_through __attribute__((fallthrough));
+# else
+#  define deliberate_fall_through
+# endif
+#endif
 
 #if defined(_WIN32) || defined(WIN32)
 # if SQLITE_OS_WINRT
@@ -226,7 +234,7 @@ typedef unsigned char u8;
  /* Make sure isatty() has a prototype. */
  extern int isatty(int);
 
-# if !defined(__RTP__) && !defined(_WRS_KERNEL)
+# if !defined(__RTP__) && !defined(_WRS_KERNEL) && !defined(SQLITE_WASI)
   /* popen and pclose are not C89 functions and so are
   ** sometimes omitted from the <stdio.h> header */
    extern FILE *popen(const char*,const char*);
@@ -763,6 +771,18 @@ static char mainPrompt[PROMPT_LEN_MAX];
 /* Continuation prompt. default: "   ...> " */
 static char continuePrompt[PROMPT_LEN_MAX];
 
+/* This is variant of the standard-library strncpy() routine with the
+** one change that the destination string is always zero-terminated, even
+** if there is no zero-terminator in the first n-1 characters of the source
+** string.
+*/
+static char *shell_strncpy(char *dest, const char *src, size_t n){
+  size_t i;
+  for(i=0; i<n-1 && src[i]!=0; i++) dest[i] = src[i];
+  dest[i] = 0;
+  return dest;
+}
+
 /*
 ** Optionally disable dynamic continuation prompt.
 ** Unless disabled, the continuation prompt shows open SQL lexemes if any,
@@ -830,18 +850,18 @@ static char *dynamicContinuePrompt(void){
       if( ndp > ncp-3 ) return continuePrompt;
       strcpy(dynPrompt.dynamicPrompt, dynPrompt.zScannerAwaits);
       while( ndp<3 ) dynPrompt.dynamicPrompt[ndp++] = ' ';
-      strncpy(dynPrompt.dynamicPrompt+3, continuePrompt+3,
+      shell_strncpy(dynPrompt.dynamicPrompt+3, continuePrompt+3,
               PROMPT_LEN_MAX-4);
     }else{
       if( dynPrompt.inParenLevel>9 ){
-        strncpy(dynPrompt.dynamicPrompt, "(..", 4);
+        shell_strncpy(dynPrompt.dynamicPrompt, "(..", 4);
       }else if( dynPrompt.inParenLevel<0 ){
-        strncpy(dynPrompt.dynamicPrompt, ")x!", 4);
+        shell_strncpy(dynPrompt.dynamicPrompt, ")x!", 4);
       }else{
-        strncpy(dynPrompt.dynamicPrompt, "(x.", 4);
+        shell_strncpy(dynPrompt.dynamicPrompt, "(x.", 4);
         dynPrompt.dynamicPrompt[2] = (char)('0'+dynPrompt.inParenLevel);
       }
-      strncpy(dynPrompt.dynamicPrompt+3, continuePrompt+3, PROMPT_LEN_MAX-4);
+      shell_strncpy(dynPrompt.dynamicPrompt+3, continuePrompt+3, PROMPT_LEN_MAX-4);
     }
   }
   return dynPrompt.dynamicPrompt;
@@ -3490,6 +3510,15 @@ SQLITE_EXTENSION_EXPORT int sqlite3_decimal_init(
 
 /* #include "sqlite3ext.h" */
 
+#ifndef deliberate_fall_through
+/* Quiet some compilers about some of our intentional code. */
+# if GCC_VERSION>=7000000
+#  define deliberate_fall_through __attribute__((fallthrough));
+# else
+#  define deliberate_fall_through
+# endif
+#endif
+
 SQLITE_EXTENSION_INIT1;
 
 #define PC 0x80 /* pad character */
@@ -3600,15 +3629,15 @@ static u8* fromBase64( char *pIn, int ncIn, u8 *pOut ){
       case ND:
         /*  Treat dark non-digits as pad, but they terminate decode too. */
         ncIn = 0;
-        /* fall thru */
+        deliberate_fall_through;
       case WS:
         /* Treat whitespace as pad and terminate this group.*/
         nti = nac;
-        /* fall thru */
+        deliberate_fall_through;
       case PC:
         bdp = 0;
         --nbo;
-         /* fall thru */
+        deliberate_fall_through;
       default: /* bdp is the digit value. */
         qv = qv<<6 | bdp;
         break;
@@ -3876,7 +3905,8 @@ static char* toBase85( u8 *pIn, int nbIn, char *pOut, char *pSep ){
   int nCol = 0;
   while( nbIn >= 4 ){
     int nco = 5;
-    unsigned long qbv = (pIn[0]<<24)|(pIn[1]<<16)|(pIn[2]<<8)|pIn[3];
+    unsigned long qbv = (((unsigned long)pIn[0])<<24) |
+                        (pIn[1]<<16) | (pIn[2]<<8) | pIn[3];
     while( nco > 0 ){
       unsigned nqv = (unsigned)(qbv/85UL);
       unsigned char dv = qbv - 85UL*nqv;
@@ -9326,7 +9356,7 @@ static int zipfileFilter(
   }
 
   if( 0==pTab->pWriteFd && 0==bInMemory ){
-    pCsr->pFile = fopen(zFile, "rb");
+    pCsr->pFile = zFile ? fopen(zFile, "rb") : 0;
     if( pCsr->pFile==0 ){
       zipfileCursorErr(pCsr, "cannot open file: %s", zFile);
       rc = SQLITE_ERROR;
@@ -10361,7 +10391,9 @@ static void sqlarUncompressFunc(
   }else{
     const Bytef *pData= sqlite3_value_blob(argv[0]);
     Bytef *pOut = sqlite3_malloc(sz);
-    if( Z_OK!=zng_uncompress(pOut, &sz, pData, nData) ){
+    if( pOut==0 ){
+      sqlite3_result_error_nomem(context);
+    }else if( Z_OK!=zng_uncompress(pOut, &sz, pData, nData) ){
       sqlite3_result_error(context, "error in uncompress()", -1);
     }else{
       sqlite3_result_blob(context, pOut, sz, SQLITE_TRANSIENT);
@@ -10369,7 +10401,6 @@ static void sqlarUncompressFunc(
     sqlite3_free(pOut);
   }
 }
-
 
 SQLITE_EXTENSION_EXPORT int sqlite3_sqlar_init(
   sqlite3 *db, 
@@ -13844,6 +13875,9 @@ SQLITE_EXTENSION_EXPORT int sqlite3_dbdata_init(
 **
 */
 
+#if 0
+#define SQLITE_CORE
+#endif
 
 /* #include "sqlite3recover.h" */
 /* #include "sqlite3ext.h" */
@@ -17197,25 +17231,42 @@ static void outputModePop(ShellState *p){
 /*
 ** Output the given string as a hex-encoded blob (eg. X'1234' )
 */
-static void output_hex_blob(FILE *out, const void *pBlob, int nBlob){
+static void output_hex_blob(FILE *out, ShellState* p, const void *pBlob, int nBlob){
   int i;
   unsigned char *aBlob = (unsigned char*)pBlob;
 
-  char *zStr = sqlite3_malloc(nBlob*2 + 1);
-  shell_check_oom(zStr);
+  int mode = p->cMode;    // mode drives the logic below
 
-  for(i=0; i<nBlob; i++){
-    static const char aHex[] = {
-        '0', '1', '2', '3', '4', '5', '6', '7',
-        '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'
-    };
-    zStr[i*2] = aHex[ (aBlob[i] >> 4) ];
-    zStr[i*2+1] = aHex[ (aBlob[i] & 0x0F) ];
+  int nonprintable_count = 0;
+  int squote_count = 0;
+  for (i = 0; i < nBlob; i++) {
+	  unsigned char c = aBlob[i];
+	  if (c < ' ' || c >= 127)
+		  nonprintable_count++;
+	  else if (c == '\'')
+		  squote_count++;
   }
-  zStr[i*2] = '\0';
 
-  raw_printf(out,"X'%s'", zStr);
-  sqlite3_free(zStr);
+  if (nonprintable_count == 0 && squote_count == 0) {
+	  raw_printf(out, "'%.*s'", nBlob, aBlob);
+  }
+  else {
+	  char* zStr = sqlite3_malloc(nBlob * 2 + 1);
+	  shell_check_oom(zStr);
+
+	  for (i = 0; i < nBlob; i++) {
+		  static const char aHex[] = {
+			  '0', '1', '2', '3', '4', '5', '6', '7',
+			  '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'
+		  };
+		  zStr[i * 2] = aHex[(aBlob[i] >> 4)];
+		  zStr[i * 2 + 1] = aHex[(aBlob[i] & 0x0F)];
+	  }
+	  zStr[i * 2] = '\0';
+
+	  raw_printf(out, "X'%s'", zStr);
+	  sqlite3_free(zStr);
+  }
 }
 
 /*
@@ -17410,21 +17461,25 @@ static void output_json_string(FILE *out, const char *z, i64 n){
 ** Output the given string with characters that are special to
 ** HTML escaped.
 */
-static void output_html_string(FILE *out, const char *z){
+static void output_html_string(FILE *out, const char *z, i64 n){
   int i;
   if( z==0 ) z = "";
-  while( *z ){
+  if( n<0 ) n = strlen(z);
+  while( n ){
     for(i=0;   z[i]
             && z[i]!='<'
             && z[i]!='&'
             && z[i]!='>'
             && z[i]!='\"'
-            && z[i]!='\'';
+            && z[i]!='\''
+			&& i < n;
         i++){}
     if( i>0 ){
       utf8_printf(out,"%.*s",i,z);
     }
-    if( z[i]=='<' ){
+	if (i == n) {
+	  break;
+    }else if( z[i]=='<' ){
       raw_printf(out,"&lt;");
     }else if( z[i]=='&' ){
       raw_printf(out,"&amp;");
@@ -17434,10 +17489,12 @@ static void output_html_string(FILE *out, const char *z){
       raw_printf(out,"&quot;");
     }else if( z[i]=='\'' ){
       raw_printf(out,"&#39;");
+    }else if( z[i]==0 ){
+      raw_printf(out,"&lt;NUL&gt;");
     }else{
       break;
     }
-    z += i + 1;
+    n -= i + 1;
   }
 }
 
@@ -17656,7 +17713,7 @@ static void printSchemaLine(FILE *out, const char *z, const char *zTail){
       sqlite3_free(zNew);
     }
   }
-  if( sqlite3_strglob("CREATE TABLE ['\"]*", z)==0 ){
+  if( sqlite3_strglob("CREATE TABLE ['\"[]*", z)==0 ){
     utf8_printf(out, "CREATE TABLE IF NOT EXISTS %s%s", z+13, zTail);
   }else{
     utf8_printf(out, "%s%s", z, zTail);
@@ -17995,7 +18052,7 @@ static int shell_callback(
         raw_printf(p->out,"<TR>");
         for(i=0; i<nArg; i++){
           raw_printf(p->out,"<TH>");
-          output_html_string(p->out, azCol[i]);
+          output_html_string(p->out, azCol[i], -1);
           raw_printf(p->out,"</TH>\n");
         }
         raw_printf(p->out,"</TR>\n");
@@ -18004,7 +18061,15 @@ static int shell_callback(
       raw_printf(p->out,"<TR>");
       for(i=0; i<nArg; i++){
         raw_printf(p->out,"<TD>");
-        output_html_string(p->out, azArg[i] ? azArg[i] : p->nullValue);
+        if( (azArg[i]==0) || (aiType && aiType[i]==SQLITE_NULL) ){
+          output_html_string(p->out, p->nullValue, -1);
+        }else if( aiType && aiType[i]==SQLITE_BLOB && p->pStmt ){
+          const void *pBlob = sqlite3_column_blob(p->pStmt, i);
+          int nBlob = sqlite3_column_bytes(p->pStmt, i);
+          output_html_string(p->out, pBlob, nBlob);
+        }else{
+          output_html_string(p->out, (azArg[i] ? azArg[i] : p->nullValue), -1);
+        }
         raw_printf(p->out,"</TD>\n");
       }
       raw_printf(p->out,"</TR>\n");
@@ -18126,7 +18191,7 @@ static int shell_callback(
         }else if( aiType && aiType[i]==SQLITE_BLOB && p->pStmt ){
           const void *pBlob = sqlite3_column_blob(p->pStmt, i);
           int nBlob = sqlite3_column_bytes(p->pStmt, i);
-          output_hex_blob(p->out, pBlob, nBlob);
+          output_hex_blob(p->out, p, pBlob, nBlob);
         }else if( isNumber(azArg[i], 0) ){
           utf8_printf(p->out,"%s", azArg[i]);
         }else if( ShellHasFlag(p, SHFLG_Newlines) ){
@@ -18206,7 +18271,7 @@ static int shell_callback(
         }else if( aiType && aiType[i]==SQLITE_BLOB && p->pStmt ){
           const void *pBlob = sqlite3_column_blob(p->pStmt, i);
           int nBlob = sqlite3_column_bytes(p->pStmt, i);
-          output_hex_blob(p->out, pBlob, nBlob);
+          output_hex_blob(p->out, p, pBlob, nBlob);
         }else if( isNumber(azArg[i], 0) ){
           utf8_printf(p->out,"%s", azArg[i]);
         }else{
@@ -20040,7 +20105,7 @@ static int dump_callback(void *pArg, int nArg, char **azArg, char **azNotUsed){
     savedDestTable = p->zDestTable;
     savedMode = p->mode;
     p->zDestTable = sTable.z;
-    p->mode = p->cMode = MODE_Insert;
+    // p->mode = p->cMode = MODE_Insert;    <-- this is now set in the dump command itself
     rc = shell_exec(p, sSelect.z, 0);
     if( (rc&0xff)==SQLITE_CORRUPT ){
       raw_printf(p->out, "/****** CORRUPTION ERROR *******/\n");
@@ -20803,7 +20868,7 @@ static void linenoise_completion(const char *zLine, linenoiseCompletions *lc){
   char *zSql;
   char zBuf[1000];
 
-  if( nLine>sizeof(zBuf)-30 ) return;
+  if( nLine>(i64)sizeof(zBuf)-30 ) return;
   if( zLine[0]=='.' || zLine[0]=='#') return;
   for(i=nLine-1; i>=0 && (isalnum(zLine[i]) || zLine[i]=='_'); i--){}
   if( i==nLine-1 ) return;
@@ -20819,7 +20884,7 @@ static void linenoise_completion(const char *zLine, linenoiseCompletions *lc){
   while( sqlite3_step(pStmt)==SQLITE_ROW ){
     const char *zCompletion = (const char*)sqlite3_column_text(pStmt, 0);
     int nCompletion = sqlite3_column_bytes(pStmt, 0);
-    if( iStart+nCompletion < sizeof(zBuf)-1 && zCompletion ){
+    if( iStart+nCompletion < (i64)sizeof(zBuf)-1 && zCompletion ){
       memcpy(zBuf+iStart, zCompletion, nCompletion+1);
       linenoiseAddCompletion(lc, zBuf);
     }
@@ -21013,10 +21078,13 @@ static void sql_trace_callback(
 /*
 ** A no-op routine that runs with the ".breakpoint" doc-command.  This is
 ** a useful spot to set a debugger breakpoint.
+**
+** This routine does not do anything practical.  The code are there simply
+** to prevent the compiler from optimizing this routine out.
 */
 static void test_breakpoint(void){
-  static int nCall = 0;
-  nCall++;
+  static unsigned int nCall = 0;
+  if( (nCall++)==0xffffffff ) printf("Many .breakpoints have run\n");
 }
 
 /*
@@ -21315,7 +21383,7 @@ static void tryToCloneSchema(
   char *zErrMsg = 0;
 
   zQuery = sqlite3_mprintf("SELECT name, sql FROM sqlite_schema"
-                           " WHERE %s", zWhere);
+                           " WHERE %s ORDER BY rowid ASC", zWhere);
   shell_check_oom(zQuery);
   rc = sqlite3_prepare_v2(p->db, zQuery, -1, &pQuery, 0);
   if( rc ){
@@ -21328,12 +21396,14 @@ static void tryToCloneSchema(
     zName = sqlite3_column_text(pQuery, 0);
     zSql = sqlite3_column_text(pQuery, 1);
     if( zName==0 || zSql==0 ) continue;
-    fprintf(STD_OUT, "%s... ", zName); fflush(STD_OUT);
-    sqlite3_exec(newDb, (const char*)zSql, 0, 0, &zErrMsg);
-    if( zErrMsg ){
-      utf8_printf(STD_ERR, "Error: %s\nSQL: [%s]\n", zErrMsg, zSql);
-      sqlite3_free(zErrMsg);
-      zErrMsg = 0;
+    if( sqlite3_stricmp((char*)zName, "sqlite_sequence")!=0 ){
+      fprintf(STD_OUT, "%s... ", zName); fflush(STD_OUT);
+      sqlite3_exec(newDb, (const char*)zSql, 0, 0, &zErrMsg);
+      if( zErrMsg ){
+        utf8_printf(STD_ERR, "Error: %s\nSQL: [%s]\n", zErrMsg, zSql);
+        sqlite3_free(zErrMsg);
+        zErrMsg = 0;
+      }
     }
     if( xForEach ){
       xForEach(p, newDb, (const char*)zName);
@@ -21357,6 +21427,7 @@ static void tryToCloneSchema(
       zName = sqlite3_column_text(pQuery, 0);
       zSql = sqlite3_column_text(pQuery, 1);
       if( zName==0 || zSql==0 ) continue;
+      if( sqlite3_stricmp((char*)zName, "sqlite_sequence")!=0 ) continue;
       fprintf(STD_OUT, "%s... ", zName); fflush(STD_OUT);
       sqlite3_exec(newDb, (const char*)zSql, 0, 0, &zErrMsg);
       if( zErrMsg ){
@@ -22169,7 +22240,7 @@ static int arProcessSwitch(ArCommand *pAr, int eSwitch, const char *zArg){
       break;
     case AR_SWITCH_APPEND:
       pAr->bAppend = 1;
-      /* Fall thru into --file */
+      deliberate_fall_through;
     case AR_SWITCH_FILE:
       pAr->zFile = zArg;
       break;
@@ -23560,11 +23631,12 @@ static int dumpCommand(char *azArg[], int nArg, ShellState *p, char **pzErr){
   char *zLike = 0;
   char *zSql;
   int i;
-  int savedShowHeader = p->showHeader;
-  int savedShellFlags = p->shellFlgs;
+  ShellState data = *p;
+  p = &data;
   ShellClearFlag(p,
      SHFLG_PreserveRowid|SHFLG_Newlines|SHFLG_Echo
      |SHFLG_DumpDataOnly|SHFLG_DumpNoSys|SHFLG_UseIeee754Func);
+  p->cMode = MODE_Insert;
   for(i=1; i<nArg; i++){
     if( azArg[i][0]=='-' ){
       const char *z = azArg[i]+1;
@@ -23589,6 +23661,8 @@ static int dumpCommand(char *azArg[], int nArg, ShellState *p, char **pzErr){
           ShellSetFlag(p, SHFLG_DumpDataOnly);
         }else if( cli_strcmp(z,"nosys")==0 ){
           ShellSetFlag(p, SHFLG_DumpNoSys);
+        }else if( cli_strcmp(z,"use-mode")==0 ){
+		  p->cMode = p->mode;
         }else{
           *pzErr = sqlite3_mprintf
             ("Unknown option \"%s\" on \".dump\"\n", azArg[i]);
@@ -23618,6 +23692,8 @@ static int dumpCommand(char *azArg[], int nArg, ShellState *p, char **pzErr){
       }
     }
   }
+
+  p->mode = p->cMode;
 
   open_db(p, 0);
 
@@ -23665,8 +23741,6 @@ static int dumpCommand(char *azArg[], int nArg, ShellState *p, char **pzErr){
   if( (p->shellFlgs & SHFLG_DumpDataOnly)==0 ){
     raw_printf(p->out, p->nErr?"ROLLBACK; -- due to errors\n":"COMMIT;\n");
   }
-  p->showHeader = savedShowHeader;
-  p->shellFlgs = savedShellFlags;
 
   return 0;
 }
@@ -24018,9 +24092,8 @@ static int filectrlCommand(char *azArg[], int nArg, ShellState *p, char **pzErr)
 
 static int fullschemaCommand(char *azArg[], int nArg, ShellState *p, char **pzErr){
   int rc;
-  ShellState data;
+  ShellState data = *p;
   int doStats = 0;
-  memcpy(&data, p, sizeof(data));
   data.showHeader = 0;
   data.cMode = data.mode = MODE_Semi;
   if( nArg==2 && optionMatch(azArg[1], "indent") ){
@@ -24701,10 +24774,10 @@ static int modeCommand(char *azArg[], int nArg, ShellState *p, char **pzErr){
     zMode = modeDescr[p->mode];
   }
   n2 = strlen30(zMode);
-  if( cli_strncmp(zMode,"lines",n2)==0 ){
+  if( cli_strncmp(zMode,"lines",n2)==0 || cli_strncmp(zMode,"line",n2)==0 ){
     p->mode = MODE_Line;
     sqlite3_snprintf(sizeof(p->rowSeparator), p->rowSeparator, SEP_Row);
-  }else if( cli_strncmp(zMode,"columns",n2)==0 ){
+  }else if( cli_strncmp(zMode,"columns",n2)==0 || cli_strncmp(zMode,"column",n2)==0 ){
     p->mode = MODE_Column;
     if( (p->shellFlgs & SHFLG_HeaderSet)==0 ){
       p->showHeader = 1;
@@ -24713,6 +24786,10 @@ static int modeCommand(char *azArg[], int nArg, ShellState *p, char **pzErr){
     p->cmOpts = cmOpts;
   }else if( cli_strncmp(zMode,"list",n2)==0 ){
     p->mode = MODE_List;
+    sqlite3_snprintf(sizeof(p->colSeparator), p->colSeparator, SEP_Column);
+    sqlite3_snprintf(sizeof(p->rowSeparator), p->rowSeparator, SEP_Row);
+  }else if( cli_strncmp(zMode,"semi",n2)==0 ){
+    p->mode = MODE_Semi;
     sqlite3_snprintf(sizeof(p->colSeparator), p->colSeparator, SEP_Column);
     sqlite3_snprintf(sizeof(p->rowSeparator), p->rowSeparator, SEP_Row);
   }else if( cli_strncmp(zMode,"html",n2)==0 ){
@@ -24756,8 +24833,8 @@ static int modeCommand(char *azArg[], int nArg, ShellState *p, char **pzErr){
     p->mode = MODE_Json;
   }else{
     *pzErr = sqlite3_mprintf
-      ("Error: mode should be one of: ascii box column count csv html\n"
-       " insert json line list markdown off qbox quote table tabs tcl\n");
+      ("Error: mode should be one of: ascii box column columns count csv html\n"
+       " insert json line lines list markdown off qbox quote semi table tabs tcl\n");
     return 1;
   }
   p->cMode = p->mode;
@@ -25049,10 +25126,10 @@ static int progressCommand(char *azArg[], int nArg, ShellState *p, char **pzErr)
 /* Allow too few arguments by tradition, (a form of no-op.) */
 static int promptCommand(char *azArg[], int nArg, ShellState *p, char **pzErr){
   if( nArg >= 2) {
-    strncpy(mainPrompt,azArg[1],(int)ArraySize(mainPrompt)-1);
+    shell_strncpy(mainPrompt,azArg[1],(int)ArraySize(mainPrompt)-1);
   }
   if( nArg >= 3) {
-    strncpy(continuePrompt,azArg[2],(int)ArraySize(continuePrompt)-1);
+    shell_strncpy(continuePrompt,azArg[2],(int)ArraySize(continuePrompt)-1);
   }
   return 0;
 }
@@ -25484,7 +25561,7 @@ static int scanstatsCommand(char *azArg[], int nArg, ShellState *p, char **pzErr
 static int schemaCommand(char *azArg[], int nArg, ShellState *p, char **pzErr){
   int rc;
   ShellText sSelect;
-  ShellState data;
+  ShellState data = *p;
   char *zErrMsg = 0;
   const char *zDiv = "(";
   const char *zName = 0;
@@ -25494,7 +25571,6 @@ static int schemaCommand(char *azArg[], int nArg, ShellState *p, char **pzErr){
   int ii;
 
   open_db(p, 0);
-  memcpy(&data, p, sizeof(data));
   data.showHeader = 0;
   data.cMode = data.mode = MODE_Semi;
   initText(&sSelect);
@@ -27079,6 +27155,8 @@ static const char *__azHelp[] = {
   ".dump ?OBJECTS?          Render database content as SQL\n",
   "   Options:\n"
   "     --data-only            Output only INSERT statements\n"
+  "     --use-mode             Use the current output mode for dump output\n"
+  "                            rather than the default 'insert' mode\n"
   "     --newlines             Allow unescaped newline characters in output\n"
   "     --nosys                Omit system tables (ex: \"sqlite_stat1\")\n"
   "     --preserve-rowids      Include ROWID values in the output\n"
@@ -27239,7 +27317,7 @@ static const char *__azHelp[] = {
 #endif
   ".prompt MAIN CONTINUE    Replace the standard prompts\n",
   "",
-  ".quit                    Exit this program\n",
+  ".quit                    Stop interpreting input stream, exit if primary.\n",
   "",
   ".read FILE               Read input from FILE or command output\n",
   "    If FILE begins with \"|\", it is a command that generates the input.\n"
@@ -27378,7 +27456,7 @@ static const char *__azHelp[] = {
   "     edit USER PASSWORD ISADMIN\n"
   "",
 #endif
-  ".version                 Show a variety of version info\n",
+  ".version                 Show source, library and compiler versions\n",
   "",
   ".vfsinfo ?AUX?           Information about the top-level VFS\n",
   "",
@@ -27640,7 +27718,7 @@ static QuickScanState quickscan(char *zLine, QuickScanState qss,
         break;
       case '[':
         cin = ']';
-        /* fall thru */
+        deliberate_fall_through;
       case '`': case '\'': case '"':
         cWait = cin;
         qss = QSS_HasDark | cWait;
@@ -27676,7 +27754,7 @@ static QuickScanState quickscan(char *zLine, QuickScanState qss,
             ++zLine;
             continue;
           }
-          /* fall thru */
+          deliberate_fall_through;
         case ']':
           cWait = 0;
           CONTINUE_PROMPT_AWAITC(pst, 0);
@@ -27952,7 +28030,7 @@ static char *find_home_dir(int clearFlag){
   if( home_dir ) return home_dir;
 
 #if !defined(_WIN32) && !defined(WIN32) && !defined(_WIN32_WCE) \
-     && !defined(__RTP__) && !defined(_WRS_KERNEL)
+     && !defined(__RTP__) && !defined(_WRS_KERNEL) && !defined(SQLITE_WASI)
   {
     struct passwd *pwent;
     uid_t uid = getuid();
@@ -28303,7 +28381,7 @@ int SQLITE_CDECL SHELL_MAIN(int argc, const wchar_t **wargv){
 #ifdef SQLITE_SHELL_FIDDLE
 #  define data shellState
 #else
-  ShellState data;
+  ShellState data = { 0 };
 #endif
   const char *zInitFile = 0;
   int i;
@@ -28851,6 +28929,7 @@ shell_bail:
   /* In WASM mode we have to leave the db state in place so that
   ** client code can "push" SQL into it after this call returns. */
   free((void *)azCmd);
+  azCmd = NULL;
   set_table_name(&data, 0);
   if( data.db ){
     session_close_all(&data, -1);
@@ -28877,6 +28956,7 @@ shell_bail:
   free(data.zNonce);
   /* Freed ShellState objects so that valgrind detects real memory leaks. */
   free((void *)azCmd);
+  azCmd = NULL;
   /* Process exit codes to yield single shell exit code.
    * rc == 2 is a quit signal, resulting in no error by itself.
    * data.bAbruptExit conveys either an normal (success or error) exit

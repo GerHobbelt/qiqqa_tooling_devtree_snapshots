@@ -108,6 +108,8 @@
 #endif  /* HAVE_CONFIG_H */
 
 #ifdef _WIN32
+// MSWin fix: make sure we include winsock2.h *before* windows.h implicitly includes the antique winsock.h and causes all kinds of weird errors at compile time:
+#include <winsock2.h>
 #include <windows.h>
 #if defined(_MSC_VER)
 #ifndef _CRTDBG_MAP_ALLOC
@@ -201,7 +203,7 @@ returnErrorInt(const char  *msg,
                const char  *procname,
                l_int32      ival)
 {
-    lept_stderr("Error in %s: %s\n", procname, msg);
+    lept_stderr("Leptonica Error in %s: %s\n", procname, msg);
     return ival;
 }
 
@@ -219,7 +221,7 @@ returnErrorFloat(const char  *msg,
                  const char  *procname,
                  l_float32    fval)
 {
-    lept_stderr("Error in %s: %s\n", procname, msg);
+    lept_stderr("Leptonica Error in %s: %s\n", procname, msg);
     return fval;
 }
 
@@ -237,7 +239,7 @@ returnErrorPtr(const char  *msg,
                const char  *procname,
                void        *pval)
 {
-    lept_stderr("Error in %s: %s\n", procname, msg);
+    lept_stderr("Leptonica Error in %s: %s\n", procname, msg);
     return pval;
 }
 
@@ -268,7 +270,7 @@ static void lept_default_stderr_handler(const char *formatted_msg)
 
     /* The stderr callback handler is private to leptonica.
      * By default it writes to stderr.  */
-void (*stderr_handler)(const char *) = lept_default_stderr_handler;
+static void (*stderr_handler)(const char *) = lept_default_stderr_handler;
 
 
 /*!
@@ -318,6 +320,8 @@ l_int32  n;
 
     va_start(args, fmt);
     n = vsnprintf(msg, sizeof(msg), fmt, args);
+	// when error message is longer than the buffer can deal with, it's automatically marked as truncated this way:
+	strcpy(msg + sizeof(msg) - sizeof("(...truncated...)"), "(...truncated...)");
     va_end(args);
     if (n < 0)
         return;

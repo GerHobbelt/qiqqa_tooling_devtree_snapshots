@@ -188,6 +188,11 @@ void jpeg_write_m_byte(j_compress_ptr cinfo, int val) {
   jpegli_write_m_byte(cinfo, val);
 }
 
+void jpeg_write_marker(j_compress_ptr cinfo, int marker, const JOCTET *dataptr,
+                       unsigned int datalen) {
+  jpegli_write_marker(cinfo, marker, dataptr, datalen);
+}
+
 void jpeg_write_icc_profile(j_compress_ptr cinfo, const JOCTET *icc_data_ptr,
                             unsigned int icc_data_len) {
   jpegli_write_icc_profile(cinfo, icc_data_ptr, icc_data_len);
@@ -197,14 +202,28 @@ void jpeg_start_compress(j_compress_ptr cinfo, boolean write_all_tables) {
   jpegli_start_compress(cinfo, write_all_tables);
 }
 
+void jpeg_write_tables(j_compress_ptr cinfo) { jpegli_write_tables(cinfo); }
+
 JDIMENSION jpeg_write_scanlines(j_compress_ptr cinfo, JSAMPARRAY scanlines,
                                 JDIMENSION num_lines) {
   return jpegli_write_scanlines(cinfo, scanlines, num_lines);
 }
 
+JDIMENSION jpeg_write_raw_data(j_compress_ptr cinfo, JSAMPIMAGE data,
+                               JDIMENSION num_lines) {
+  return jpegli_write_raw_data(cinfo, data, num_lines);
+}
+
+void jpeg_write_coefficients(j_compress_ptr cinfo,
+                             jvirt_barray_ptr *coef_arrays) {
+  jpegli_write_coefficients(cinfo, coef_arrays);
+}
+
 void jpeg_finish_compress(j_compress_ptr cinfo) {
   jpegli_finish_compress(cinfo);
 }
+
+void jpeg_abort_compress(j_compress_ptr cinfo) { jpegli_abort_compress(cinfo); }
 
 void jpeg_destroy_compress(j_compress_ptr cinfo) {
   jpegli_destroy_compress(cinfo);

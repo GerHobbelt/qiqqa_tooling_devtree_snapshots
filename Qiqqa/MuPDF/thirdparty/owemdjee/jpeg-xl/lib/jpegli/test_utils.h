@@ -8,6 +8,10 @@
 #include "gtest/gtest.h"
 #include "lib/jxl/base/file_io.h"
 
+#if !defined(TEST_DATA_PATH)
+#include "tools/cpp/runfiles/runfiles.h"
+#endif
+
 // googletest before 1.10 didn't define INSTANTIATE_TEST_SUITE_P() but instead
 // used INSTANTIATE_TEST_CASE_P which is now deprecated.
 #ifdef INSTANTIATE_TEST_SUITE_P
@@ -18,9 +22,22 @@
 
 namespace jpegli {
 
+#if defined(TEST_DATA_PATH)
+std::string GetTestDataPath(const std::string& filename) {
+  return std::string(TEST_DATA_PATH "/") + filename;
+}
+#else
+using bazel::tools::cpp::runfiles::Runfiles;
+const std::unique_ptr<Runfiles> kRunfiles(Runfiles::Create(""));
+std::string GetTestDataPath(const std::string& filename) {
+  return kRunfiles->Rlocation("__main__/testdata/" + filename);
+}
+#endif
+
 static inline std::vector<uint8_t> ReadTestData(const std::string& filename) {
-  std::string full_path = std::string(TEST_DATA_PATH "/") + filename;
+  std::string full_path = GetTestDataPath(filename);
   std::vector<uint8_t> data;
+  fprintf(stderr, "ReadTestData %s\n", full_path.c_str());
   JXL_CHECK(jxl::ReadFile(full_path, &data));
   printf("Test data %s is %d bytes long.\n", filename.c_str(),
          static_cast<int>(data.size()));
@@ -33,9 +50,8 @@ class PNMParser {
       : pos_(data), end_(data + len) {}
 
   // Sets "pos" to the first non-header byte/pixel on success.
-  bool ParseHeader(const uint8_t** pos, volatile size_t* xsize,
-                   volatile size_t* ysize, volatile size_t* num_channels,
-                   volatile size_t* bitdepth) {
+  bool ParseHeader(const uint8_t** pos, size_t* xsize, size_t* ysize,
+                   size_t* num_channels, size_t* bitdepth) {
     if (pos_[0] != 'P' || (pos_[1] != '5' && pos_[1] != '6')) {
       fprintf(stderr, "Invalid PNM header.");
       return false;
@@ -76,7 +92,7 @@ class PNMParser {
     return IsLineBreak(c) || c == '\t' || c == ' ';
   }
 
-  bool ParseUnsigned(volatile size_t* number) {
+  bool ParseUnsigned(size_t* number) {
     if (pos_ == end_ || *pos_ < '0' || *pos_ > '9') {
       fprintf(stderr, "Expected unsigned number.\n");
       return false;
@@ -106,11 +122,9 @@ class PNMParser {
   const uint8_t* const end_;
 };
 
-static inline bool ReadPNM(const std::vector<uint8_t>& data,
-                           volatile size_t* xsize, volatile size_t* ysize,
-                           volatile size_t* num_channels,
-                           volatile size_t* bitdepth,
-                           std::vector<uint8_t>* pixels) {
+static inline bool ReadPNM(const std::vector<uint8_t>& data, size_t* xsize,
+                           size_t* ysize, size_t* num_channels,
+                           size_t* bitdepth, std::vector<uint8_t>* pixels) {
   if (data.size() < 2) {
     fprintf(stderr, "PNM file too small.\n");
     return false;

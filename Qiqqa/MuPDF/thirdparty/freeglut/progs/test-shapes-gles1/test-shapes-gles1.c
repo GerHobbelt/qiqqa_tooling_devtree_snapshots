@@ -337,8 +337,8 @@ int main(int argc, const char **argv)
 
     glutMainLoop();
 
-#ifdef _MSC_VER
-    /* DUMP MEMORY LEAK INFORMATION */
+#if defined(_MSC_VER) && !defined(BUILD_MONOLITHIC)
+	/* DUMP MEMORY LEAK INFORMATION */
     _CrtDumpMemoryLeaks () ;
 #endif
 

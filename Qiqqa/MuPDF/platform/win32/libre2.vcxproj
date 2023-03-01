@@ -276,6 +276,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/re2/re2/unicode_groups.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/re2/testinstall.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/re2/util/benchmark.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/re2/util/monolithic_main.c" />
     <ClCompile Include="../../thirdparty/owemdjee/re2/util/pcre.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/re2/util/rune.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/re2/util/strutil.cc" />

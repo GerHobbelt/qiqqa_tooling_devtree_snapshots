@@ -124,14 +124,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/catboost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CATBOOST;CATBOOST_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CATBOOST;CATBOOST_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/catboost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -150,7 +150,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/catboost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CATBOOST;CATBOOST_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -158,7 +158,7 @@
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CATBOOST;CATBOOST_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/catboost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -179,14 +179,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/catboost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CATBOOST;CATBOOST_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CATBOOST;CATBOOST_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/catboost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -205,7 +205,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/catboost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CATBOOST;CATBOOST_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -213,7 +213,7 @@
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CATBOOST;CATBOOST_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/catboost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -4801,7 +4801,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/tcmalloc/cpu_cache_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/tcmalloc/experiment.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/tcmalloc/experiment_config_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/tcmalloc/experiment_fuzz.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/tcmalloc/experimental_56_size_class.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/tcmalloc/experimental_pow2_below64_size_class.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/tcmalloc/experimental_pow2_size_class.cc" />
@@ -4848,7 +4847,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/tcmalloc/internal/util.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/tcmalloc/legacy_size_classes.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/tcmalloc/malloc_extension.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/tcmalloc/malloc_extension_fuzz.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/tcmalloc/malloc_extension_system_malloc_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/tcmalloc/malloc_extension_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/tcmalloc/mock_central_freelist.cc" />
@@ -4866,7 +4864,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/tcmalloc/profile_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/tcmalloc/realloc_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/tcmalloc/runtime_size_classes.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/tcmalloc/runtime_size_classes_fuzz.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/tcmalloc/runtime_size_classes_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/tcmalloc/sampler.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/tcmalloc/size_classes.cc" />
@@ -4888,7 +4885,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/tcmalloc/thread_cache_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/tcmalloc/transfer_cache.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/tcmalloc/transfer_cache_benchmark.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/tcmalloc/transfer_cache_fuzz.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/tcmalloc/transfer_cache_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/tcmalloc/want_hpaa.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/tcmalloc/want_hpaa_subrelease.cc" />
@@ -6795,8 +6791,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/tools/python3/src/Modules/_weakref.c" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/tools/python3/src/Modules/_winapi.c" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/tools/python3/src/Modules/_xxsubinterpretersmodule.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/tools/python3/src/Modules/_xxtestfuzz/_xxtestfuzz.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/tools/python3/src/Modules/_xxtestfuzz/fuzzer.c" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/tools/python3/src/Modules/_zoneinfo.c" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/tools/python3/src/Modules/arraymodule.c" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/contrib/tools/python3/src/Modules/atexitmodule.c" />
@@ -7141,7 +7135,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/blockcodecs/codecs_ut.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/blockcodecs/core/codecs.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/blockcodecs/core/stream.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/blockcodecs/fuzz/main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/blockcodecs/stream.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/build_info/build_info_static.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/cache/cache.cpp" />
@@ -7152,7 +7145,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/case_insensitive_string/case_insensitive_string_ut.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/cgiparam/cgiparam.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/cgiparam/cgiparam_ut.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/cgiparam/fuzz/main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/charset/ci_string.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/charset/ci_string_ut.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/charset/codepage.cpp" />
@@ -7214,9 +7206,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/containers/disjoint_interval_tree/ut/disjoint_interval_tree_ut.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/containers/flat_hash/benchmark/flat_hash_benchmark.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/containers/flat_hash/flat_hash.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/containers/flat_hash/fuzz/dense_map_fuzz/fuzz.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/containers/flat_hash/fuzz/flat_map_fuzz/fuzz.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/containers/flat_hash/fuzz/fuzz_common/fuzz_common.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/containers/flat_hash/lib/concepts/container.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/containers/flat_hash/lib/concepts/iterator.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/containers/flat_hash/lib/concepts/size_fitter.cpp" />
@@ -7239,7 +7228,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/containers/heap_dict/benchmark/main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/containers/heap_dict/heap_dict.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/containers/heap_dict/ut/main.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/containers/intrusive_rb_tree/fuzz/rb_tree_fuzzing.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/containers/intrusive_rb_tree/rb_tree.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/containers/intrusive_rb_tree/rb_tree_ut.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/containers/paged_vector/paged_vector.cpp" />
@@ -7357,7 +7345,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/getopt/ut/wrap.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/getopt/ut/ygetopt_ut.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/grid_creator/binarization.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/grid_creator/fuzz/main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/grid_creator/ut/binarization_ut.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/hnsw/helpers/interrupt.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/hnsw/index/all.cpp" />
@@ -7370,7 +7357,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/http/io/chunk_ut.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/http/io/compression.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/http/io/compression_ut.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/http/io/fuzz/main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/http/io/headers.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/http/io/headers_ut.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/http/io/list_codings/main.cpp" />
@@ -7408,7 +7394,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/json/fast_sax/unescape.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/json/flex_buffers/cvt.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/json/flex_buffers/ut/cvt_ut.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/json/fuzzy_test/main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/json/json_prettifier.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/json/json_reader.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/json/json_writer.cpp" />
@@ -7643,8 +7628,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/string_utils/base64/base64_decode_uneven_ut.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/string_utils/base64/base64_ut.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/string_utils/base64/bench/main.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/string_utils/base64/fuzz/lib/main.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/string_utils/base64/fuzz/uneven/main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/string_utils/csv/bench/main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/string_utils/csv/csv.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/string_utils/csv/csv_ut.cpp" />
@@ -7780,7 +7763,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/tokenizer/tokenizer.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/tokenizer/tokenizer_ut.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/yson/consumer.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/yson/fuzz/main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/yson/json/json_writer.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/yson/json/yson2json_adapter.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/library/cpp/yson/lexer.cpp" />
@@ -7966,7 +7948,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/catboost/util/generic/function_ref.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/util/generic/function_ref_ut.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/util/generic/function_ut.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/catboost/util/generic/fuzz/vector/main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/util/generic/fwd.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/util/generic/guid.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/util/generic/guid_ut.cpp" />
@@ -8166,9 +8147,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/catboost/util/string/cstriter.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/util/string/escape.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/util/string/escape_ut.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/catboost/util/string/fuzzing/collapse/main.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/catboost/util/string/fuzzing/escape_c/main.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/catboost/util/string/fuzzing/strtod/main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/util/string/hex.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/util/string/hex_ut.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/catboost/util/string/join.cpp" />
@@ -15004,7 +14982,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/catboost/library/cpp/containers/dense_hash/fwd.h" />
     <ClInclude Include="../../thirdparty/owemdjee/catboost/library/cpp/containers/disjoint_interval_tree/disjoint_interval_tree.h" />
     <ClInclude Include="../../thirdparty/owemdjee/catboost/library/cpp/containers/flat_hash/flat_hash.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/catboost/library/cpp/containers/flat_hash/fuzz/fuzz_common/fuzz_common.h" />
     <ClInclude Include="../../thirdparty/owemdjee/catboost/library/cpp/containers/flat_hash/lib/concepts/container.h" />
     <ClInclude Include="../../thirdparty/owemdjee/catboost/library/cpp/containers/flat_hash/lib/concepts/iterator.h" />
     <ClInclude Include="../../thirdparty/owemdjee/catboost/library/cpp/containers/flat_hash/lib/concepts/size_fitter.h" />
@@ -16041,6 +16018,32 @@
     <Text Include="../../thirdparty/owemdjee/catboost/PULL_REQUEST_TEMPLATE.md" />
     <Text Include="../../thirdparty/owemdjee/catboost/README.md" />
     <Text Include="../../thirdparty/owemdjee/catboost/RELEASE.md" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/conf/bison_lex.conf" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/conf/compilers/gnu_compiler.conf" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/conf/compilers/msvc_compiler.conf" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/conf/docs.conf" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/conf/export_gradle.no.conf" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/conf/export_gradle.yes.conf" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/conf/java.ymake.conf" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/conf/jbuild.ymake.conf" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/conf/license.conf" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/conf/linkers/ld.conf" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/conf/linkers/msvc_linker.conf" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/conf/opensource.conf" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/conf/project_specific/maps/aar.conf" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/conf/project_specific/maps/asrc.conf" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/conf/project_specific/maps/mapkit.conf" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/conf/project_specific/maps/sproto.conf" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/conf/project_specific/other.conf" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/conf/project_specific/uservices.conf" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/conf/project_specific/yql_udf.conf" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/conf/rules.conf" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/conf/settings.conf" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/conf/sysincl.conf" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/conf/toolchains/gnu_toolchain.conf" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/conf/toolchains/msvc_toolchain.conf" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/conf/ts.conf" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/config/tests/flake8/flake8.conf" />
     <Text Include="../../thirdparty/owemdjee/catboost/build/docs/all.md" />
     <Text Include="../../thirdparty/owemdjee/catboost/build/docs/readme.md" />
     <Text Include="../../thirdparty/owemdjee/catboost/build/export_generators/gradle/generator.json" />
@@ -16071,6 +16074,7 @@
     <Text Include="../../thirdparty/owemdjee/catboost/build/external_resources/ymake/resources.json" />
     <Text Include="../../thirdparty/owemdjee/catboost/build/mapping.conf.json" />
     <Text Include="../../thirdparty/owemdjee/catboost/build/platform.md" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/platform/clang/arch.cmake" />
     <Text Include="../../thirdparty/owemdjee/catboost/build/platform/clang/clang14.json" />
     <Text Include="../../thirdparty/owemdjee/catboost/build/platform/linux_sdk/README.md" />
     <Text Include="../../thirdparty/owemdjee/catboost/build/platform/local_so/readme.md" />
@@ -16202,6 +16206,7 @@
     <Text Include="../../thirdparty/owemdjee/catboost/build/scripts/fix_java_command_file_cp.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/build/scripts/fix_msvc_output.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/build/scripts/fs_tools.py" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/scripts/gather_swig_java.cmake" />
     <Text Include="../../thirdparty/owemdjee/catboost/build/scripts/gen_aar_gradle_script.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/build/scripts/gen_java_codenav_entry.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/build/scripts/gen_java_codenav_protobuf.py" />
@@ -16284,6 +16289,7 @@
     <Text Include="../../thirdparty/owemdjee/catboost/build/scripts/yield_line.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/build/scripts/yndexer.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/build/ya.conf.json" />
+    <Text Include="../../thirdparty/owemdjee/catboost/build/ymake.core.conf" />
     <Text Include="../../thirdparty/owemdjee/catboost/build/ymake_conf.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/catboost/CMakeLists.android-arm.txt" />
     <Text Include="../../thirdparty/owemdjee/catboost/catboost/CMakeLists.android-arm64.txt" />
@@ -18478,6 +18484,18 @@
     <Text Include="../../thirdparty/owemdjee/catboost/ci/fixup_python_version.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/ci/fixups_for_freebsd.sh" />
     <Text Include="../../thirdparty/owemdjee/catboost/ci/webdav_upload.py" />
+    <Text Include="../../thirdparty/owemdjee/catboost/cmake/FindJNITarget.cmake" />
+    <Text Include="../../thirdparty/owemdjee/catboost/cmake/archive.cmake" />
+    <Text Include="../../thirdparty/owemdjee/catboost/cmake/conan.cmake" />
+    <Text Include="../../thirdparty/owemdjee/catboost/cmake/cuda.cmake" />
+    <Text Include="../../thirdparty/owemdjee/catboost/cmake/cython.cmake" />
+    <Text Include="../../thirdparty/owemdjee/catboost/cmake/fat_object.cmake" />
+    <Text Include="../../thirdparty/owemdjee/catboost/cmake/fbs.cmake" />
+    <Text Include="../../thirdparty/owemdjee/catboost/cmake/global_flags.cmake" />
+    <Text Include="../../thirdparty/owemdjee/catboost/cmake/global_vars.cmake" />
+    <Text Include="../../thirdparty/owemdjee/catboost/cmake/protobuf.cmake" />
+    <Text Include="../../thirdparty/owemdjee/catboost/cmake/swig.cmake" />
+    <Text Include="../../thirdparty/owemdjee/catboost/cmake/yandex_common.cmake" />
     <Text Include="../../thirdparty/owemdjee/catboost/conanfile.txt" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/CMakeLists.android-arm.txt" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/CMakeLists.android-arm64.txt" />
@@ -19238,6 +19256,7 @@
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/libs/tbb/README.md" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/libs/tbb/RELEASE_NOTES.md" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/libs/tbb/SYSTEM_REQUIREMENTS.md" />
+    <Text Include="../../thirdparty/owemdjee/catboost/contrib/libs/tbb/WORKSPACE.bazel" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/CMakeLists.linux.txt" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/libs/tcmalloc/CONTRIBUTING.md" />
@@ -20877,6 +20896,7 @@
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/numpy/py2/numpy/f2py/func2subr.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/numpy/py2/numpy/f2py/info.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/numpy/py2/numpy/f2py/rules.py" />
+    <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/numpy/py2/numpy/f2py/setup.cfg" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/numpy/py2/numpy/f2py/setup.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/numpy/py2/numpy/f2py/tests/__init__.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/numpy/py2/numpy/f2py/tests/test_array_from_pyobj.py" />
@@ -21368,6 +21388,7 @@
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/numpy/py3/numpy/f2py/f90mod_rules.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/numpy/py3/numpy/f2py/func2subr.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/numpy/py3/numpy/f2py/rules.py" />
+    <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/numpy/py3/numpy/f2py/setup.cfg" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/numpy/py3/numpy/f2py/setup.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/numpy/py3/numpy/f2py/symbolic.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/numpy/py3/numpy/f2py/tests/__init__.py" />
@@ -22409,6 +22430,7 @@
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/pandas/py2/pandas/util/_tester.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/pandas/py2/pandas/util/_validators.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/pandas/py2/pandas/util/testing.py" />
+    <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/pandas/py2/symbols.cmake" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/pandas/py3/README.md" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/pandas/py3/pandas/__init__.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/pandas/py3/pandas/_config/__init__.py" />
@@ -22705,6 +22727,7 @@
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/pandas/py3/pandas/util/_validators.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/pandas/py3/pandas/util/testing.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/pandas/py3/pandas/util/version/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/pandas/py3/symbols.cmake" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/parso/py2/AUTHORS.txt" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/parso/py2/LICENSE.txt" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/parso/py2/README.rst" />
@@ -22741,7 +22764,6 @@
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/parso/py2/tests/__init__.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/parso/py2/tests/conftest.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/parso/py2/tests/failing_examples.py" />
-    <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/parso/py2/tests/fuzz_diff_parser.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/parso/py2/tests/normalizer_issue_files/E10.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/parso/py2/tests/normalizer_issue_files/E101.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/parso/py2/tests/normalizer_issue_files/E11.py" />
@@ -22830,7 +22852,6 @@
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/parso/py3/tests/__init__.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/parso/py3/tests/conftest.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/parso/py3/tests/failing_examples.py" />
-    <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/parso/py3/tests/fuzz_diff_parser.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/parso/py3/tests/normalizer_issue_files/E10.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/parso/py3/tests/normalizer_issue_files/E101.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/parso/py3/tests/normalizer_issue_files/E11.py" />
@@ -23074,7 +23095,6 @@
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/prompt-toolkit/py3/prompt_toolkit/completion/base.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/prompt-toolkit/py3/prompt_toolkit/completion/deduplicate.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/prompt-toolkit/py3/prompt_toolkit/completion/filesystem.py" />
-    <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/prompt-toolkit/py3/prompt_toolkit/completion/fuzzy_completer.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/prompt-toolkit/py3/prompt_toolkit/completion/nested.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/prompt-toolkit/py3/prompt_toolkit/completion/word_completer.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/prompt-toolkit/py3/prompt_toolkit/contrib/__init__.py" />
@@ -24603,7 +24623,6 @@
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/scipy/py2/scipy/sparse/linalg/_onenormest.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/scipy/py2/scipy/sparse/linalg/dsolve/SuperLU/License.txt" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/scipy/py2/scipy/sparse/linalg/dsolve/SuperLU/README" />
-    <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/scipy/py2/scipy/sparse/linalg/dsolve/SuperLU/scipychanges.patch" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/scipy/py2/scipy/sparse/linalg/dsolve/__init__.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/scipy/py2/scipy/sparse/linalg/dsolve/_add_newdocs.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/scipy/py2/scipy/sparse/linalg/dsolve/linsolve.py" />
@@ -25258,7 +25277,6 @@
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/scipy/py3/scipy/sparse/linalg/_onenormest.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/scipy/py3/scipy/sparse/linalg/dsolve/SuperLU/License.txt" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/scipy/py3/scipy/sparse/linalg/dsolve/SuperLU/README" />
-    <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/scipy/py3/scipy/sparse/linalg/dsolve/SuperLU/scipychanges.patch" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/scipy/py3/scipy/sparse/linalg/dsolve/__init__.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/scipy/py3/scipy/sparse/linalg/dsolve/_add_newdocs.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/contrib/python/scipy/py3/scipy/sparse/linalg/dsolve/linsolve.py" />
@@ -28890,6 +28908,7 @@
     <Text Include="../../thirdparty/owemdjee/catboost/util/system/ut_cython/test_system.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/util/tests/sym_versions/test_glibc.py" />
     <Text Include="../../thirdparty/owemdjee/catboost/ya.bat" />
+    <Text Include="../../thirdparty/owemdjee/catboost/ya.conf" />
     <Xml Include="../../thirdparty/owemdjee/catboost/catboost/dotnet/CatBoostNet/CatBoostNet.xml" />
     <Xml Include="../../thirdparty/owemdjee/catboost/catboost/jvm-packages/catboost4j-prediction/pom.xml" />
     <Xml Include="../../thirdparty/owemdjee/catboost/catboost/jvm-packages/common/pom.xml" />

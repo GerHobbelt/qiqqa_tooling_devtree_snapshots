@@ -4,6 +4,8 @@
  * This file was part of the Independent JPEG Group's software:
  * Copyright (C) 1994-1997, Thomas G. Lane.
  * Modified 1997-2009 by Guido Vollbeding.
+ * Lossless JPEG Modifications:
+ * Copyright (C) 1999, Ken Murchison.
  * libjpeg-turbo Modifications:
  * Copyright (C) 2014, 2017, 2021-2022, D. R. Commander.
  * For conditions of distribution and use, see the accompanying README.ijg
@@ -43,9 +45,8 @@ typedef enum {
 JMESSAGE(JMSG_NOMESSAGE, "Bogus message code %d") /* Must be first entry! */
 
 /* For maintenance convenience, list is alphabetical by message code name */
-#if JPEG_LIB_VERSION < 70
 JMESSAGE(JERR_ARITH_NOTIMPL, "Sorry, arithmetic coding is not implemented")
-#endif
+
 JMESSAGE(JERR_BAD_ALIGN_TYPE, "ALIGN_TYPE is wrong, please fix")
 JMESSAGE(JERR_BAD_ALLOC_CHUNK, "MAX_ALLOC_CHUNK is wrong, please fix")
 JMESSAGE(JERR_BAD_BUFFER_MODE, "Bogus buffer control mode")
@@ -53,7 +54,8 @@ JMESSAGE(JERR_BAD_COMPONENT_ID, "Invalid component ID %d in SOS")
 #if JPEG_LIB_VERSION >= 70
 JMESSAGE(JERR_BAD_CROP_SPEC, "Invalid crop request")
 #endif
-JMESSAGE(JERR_BAD_DCT_COEF, "DCT coefficient out of range")
+JMESSAGE(JERR_BAD_DCT_COEF,
+         "DCT coefficient (lossy) or spatial difference (lossless) out of range")
 JMESSAGE(JERR_BAD_DCTSIZE, "IDCT output block size %d not supported")
 #if JPEG_LIB_VERSION >= 70
 JMESSAGE(JERR_BAD_DROP_SAMPLING,
@@ -69,9 +71,9 @@ JMESSAGE(JERR_BAD_MCU_SIZE, "Sampling factors too large for interleaved scan")
 JMESSAGE(JERR_BAD_POOL_ID, "Invalid memory pool code %d")
 JMESSAGE(JERR_BAD_PRECISION, "Unsupported JPEG data precision %d")
 JMESSAGE(JERR_BAD_PROGRESSION,
-         "Invalid progressive parameters Ss=%d Se=%d Ah=%d Al=%d")
+         "Invalid progressive/lossless parameters Ss=%d Se=%d Ah=%d Al=%d")
 JMESSAGE(JERR_BAD_PROG_SCRIPT,
-         "Invalid progressive parameters at scan script entry %d")
+         "Invalid progressive/lossless parameters at scan script entry %d")
 JMESSAGE(JERR_BAD_SAMPLING, "Bogus sampling factors")
 JMESSAGE(JERR_BAD_SCAN_SCRIPT, "Invalid scan script at entry %d")
 JMESSAGE(JERR_BAD_STATE, "Improper call to JPEG library in state %d")
@@ -180,7 +182,7 @@ JMESSAGE(JTRC_THUMB_PALETTE,
 JMESSAGE(JTRC_THUMB_RGB,
          "JFIF extension marker: RGB thumbnail image, length %u")
 JMESSAGE(JTRC_UNKNOWN_IDS,
-         "Unrecognized component IDs %d %d %d, assuming YCbCr")
+         "Unrecognized component IDs %d %d %d, assuming YCbCr (lossy) or RGB (lossless)")
 JMESSAGE(JTRC_XMS_CLOSE, "Freed XMS handle %u")
 JMESSAGE(JTRC_XMS_OPEN, "Obtained XMS handle %u")
 JMESSAGE(JWRN_ADOBE_XFORM, "Unknown Adobe color transform code %d")
@@ -211,7 +213,9 @@ JMESSAGE(JWRN_BOGUS_ICC, "Corrupt JPEG data: bad ICC marker")
 JMESSAGE(JERR_BAD_DROP_SAMPLING,
          "Component index %d: mismatching sampling ratio %d:%d, %d:%d, %c")
 #endif
-	JMESSAGE(JERR_BAD_CLIENT_INFO_CALLBACK, "Failed to set up the jpeg-turbo library through the client_callback interface.")
+JMESSAGE(JERR_BAD_RESTART,
+         "Invalid restart interval %d; must be an integer multiple of the number of MCUs in an MCU row (%d)")
+JMESSAGE(JERR_BAD_CLIENT_INFO_CALLBACK, "Failed to set up the jpeg-turbo library through the client_callback interface.")
 
 #ifdef JMAKE_ENUM_LIST
 

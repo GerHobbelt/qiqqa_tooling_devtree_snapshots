@@ -12,7 +12,6 @@
 #include <string>
 #include <vector>
 
-#include "lib/jxl/aux_out.h"
 #include "lib/jxl/base/data_parallel.h"
 #include "lib/jxl/base/padded_bytes.h"
 #include "lib/jxl/base/span.h"
@@ -46,11 +45,6 @@ class ImageCodec {
   virtual void ParseParameters(const std::string& parameters);
 
   virtual Status ParseParam(const std::string& param);
-
-  // Returns true iff the codec instance (including parameters) can tolerate
-  // ImageBundle c_current() != metadata()->color_encoding, and the possibility
-  // of negative (out of gamut) pixel values.
-  virtual bool IsColorAware() const { return false; }
 
   // Returns true iff the codec instance (including parameters) will operate
   // only with quantized DCT (JPEG) coefficients in input.

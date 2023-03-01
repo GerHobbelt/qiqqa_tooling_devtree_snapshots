@@ -48,12 +48,20 @@ static BOOL_PARAM_FLAG(reset_learning_rate, false,
                        "Resets all stored learning rates to the value specified by --learning_rate.");
 static DOUBLE_PARAM_FLAG(momentum, 0.5, "Decay factor for repeating deltas.");
 static DOUBLE_PARAM_FLAG(adam_beta, 0.999, "Decay factor for repeating deltas.");
+#if !defined(BUILD_MONOLITHIC)
 static INT_PARAM_FLAG(max_image_MB, 6000, "Max memory to use for images.");
+#else
+DECLARE_INT_PARAM_FLAG(max_image_MB);        // already declared in lstmeval.cpp
+#endif
 static STRING_PARAM_FLAG(continue_from, "", "Existing model to extend");
 static STRING_PARAM_FLAG(model_output, "lstmtrain", "Basename for output models");
 static STRING_PARAM_FLAG(train_listfile, "",
                          "File listing training files in lstmf training format.");
+#if !defined(BUILD_MONOLITHIC)
 static STRING_PARAM_FLAG(eval_listfile, "", "File listing eval files in lstmf training format.");
+#else
+DECLARE_STRING_PARAM_FLAG(eval_listfile);        // already declared in lstmeval.cpp
+#endif
 #if defined(__USE_GNU)
 static BOOL_PARAM_FLAG(debug_float, false, "Raise error on certain float errors.");
 #endif
@@ -66,7 +74,11 @@ static INT_PARAM_FLAG(append_index, -1,
                       " attach the new network defined by net_spec");
 static BOOL_PARAM_FLAG(debug_network, false, "Get info on distribution of weight values");
 static INT_PARAM_FLAG(max_iterations, 0, "If set, exit after this many iterations");
+#if !defined(BUILD_MONOLITHIC)
 static STRING_PARAM_FLAG(traineddata, "", "Combined Dawgs/Unicharset/Recoder for language model");
+#else
+DECLARE_STRING_PARAM_FLAG(traineddata);        // already declared in lstmeval.cpp
+#endif
 static STRING_PARAM_FLAG(old_traineddata, "",
                          "When changing the character set, this specifies the old"
                          " character set that is to be replaced");
@@ -127,8 +139,11 @@ extern "C" int tesseract_lstm_training_main(int argc, const char** argv)
   tesseract::LSTMTrainer trainer(FLAGS_model_output.c_str(), checkpoint_file.c_str(),
                                  FLAGS_debug_interval,
                                  static_cast<int64_t>(FLAGS_max_image_MB) * 1048576);
+#if !defined(NDEEBUG)
+  trainer.SetDebug(true);
+#endif
   if (!trainer.InitCharSet(FLAGS_traineddata.c_str())) {
-    tprintf("Error, failed to read {}\n", FLAGS_traineddata.c_str());
+    tprintf("ERROR: Failed to read {}\n", FLAGS_traineddata.c_str());
     return EXIT_FAILURE;
   }
 

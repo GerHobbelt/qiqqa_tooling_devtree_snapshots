@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2022 Artifex Software, Inc.
+// Copyright (C) 2004-2023 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -131,7 +131,7 @@ resize_xref_sub(fz_context *ctx, pdf_xref *xref, int base, int newlen)
 	assert(newlen+base > xref->num_objects);
 
 	sub->table = fz_realloc_array(ctx, sub->table, newlen, pdf_xref_entry);
-	for (i = xref->num_objects-base; i < newlen; i++)
+	for (i = sub->len; i < newlen; i++)
 	{
 		sub->table[i].type = 0;
 		sub->table[i].ofs = 0;
@@ -142,7 +142,8 @@ resize_xref_sub(fz_context *ctx, pdf_xref *xref, int base, int newlen)
 		sub->table[i].obj = NULL;
 	}
 	sub->len = newlen;
-	xref->num_objects = newlen+base;
+	if (newlen+base > xref->num_objects)
+		xref->num_objects = newlen+base;
 }
 
 /* This is only ever called when we already have an incremental
@@ -1036,32 +1037,85 @@ static pdf_xref_entry *
 pdf_xref_find_subsection(fz_context *ctx, pdf_document *doc, int start, int len)
 {
 	pdf_xref *xref = &doc->xref_sections[doc->num_xref_sections-1];
-	pdf_xref_subsec *sub;
+	pdf_xref_subsec *sub, *extend = NULL;
 	int num_objects;
+	int solidify = 0;
 
-	/* Different cases here. Case 1) We might be asking for a
-	 * subsection (or a subset of a subsection) that we already
-	 * have - Just return it. Case 2) We might be asking for a
-	 * completely new subsection - Create it and return it.
-	 * Case 3) We might have an overlapping one - Create a 'solid'
-	 * subsection and return that. */
+	if (len == 0)
+		return NULL;
+
+	/* Different cases here.
+	 * Case 1) We might be asking for a subsection (or a subset of a
+	 *         subsection) that we already have - Just return it.
+	 * Case 2) We might be asking for a subsection that overlaps (or
+	 *         extends) a subsection we already have - extend the existing one.
+	 * Case 3) We might be asking for a subsection that overlaps multiple
+	 *         existing subsections - solidify the whole set.
+	 * Case 4) We might be asking for a completely new subsection - just
+	 *         allocate it.
+	 */
 
 	/* Sanity check */
 	for (sub = xref->subsec; sub != NULL; sub = sub->next)
 	{
-		if (start >= sub->start && start + len <= sub->start + sub->len)
-			return &sub->table[start-sub->start]; /* Case 1 */
-		if (start + len > sub->start && start <= sub->start + sub->len)
-			break; /* Case 3 */
+		if (start >= sub->start && start <= sub->start + sub->len)
+		{
+			/* 'start' is in (or immediately after) 'sub' */
+			if (start + len <= sub->start + sub->len)
+			{
+				/* And so is start+len-1 - just return this! Case 1. */
+				return &sub->table[start-sub->start];
+			}
+			/* So we overlap with sub. */
+			if (extend == NULL)
+			{
+				/* Maybe we can extend sub? */
+				extend = sub;
+			}
+			else
+			{
+				/* OK, so we've already found an overlapping one. We'll need to solidify. Case 3. */
+				solidify = 1;
+				break;
+			}
+		}
+		else if (start + len > sub->start && start + len < sub->start + sub->len)
+		{
+			/* The end of the start+len range is in 'sub'. */
+			/* For now, we won't support extending sub backwards. Just take this as
+			 * needing to solidify. Case 3. */
+			solidify = 1;
+			break;
+		}
 	}
 
 	num_objects = xref->num_objects;
 	if (num_objects < start + len)
 		num_objects = start + len;
 
-	if (sub == NULL)
+	if (solidify)
 	{
-		/* Case 2 */
+		/* Case 3: Solidify the xref */
+		ensure_solid_xref(ctx, doc, num_objects, doc->num_xref_sections-1);
+		xref = &doc->xref_sections[doc->num_xref_sections-1];
+		sub = xref->subsec;
+	}
+	else if (extend)
+	{
+		/* Case 2: Extend the subsection */
+		int newlen = start + len - extend->start;
+		sub = extend;
+		sub->table = fz_realloc_array(ctx, sub->table, newlen, pdf_xref_entry);
+		memset(&sub->table[sub->len], 0, sizeof(pdf_xref_entry) * (newlen - sub->len));
+		sub->len = newlen;
+		if (xref->num_objects < sub->start + sub->len)
+			xref->num_objects = sub->start + sub->len;
+		if (doc->max_xref_len < sub->start + sub->len)
+			extend_xref_index(ctx, doc, sub->start + sub->len);
+	}
+	else
+	{
+		/* Case 4 */
 		sub = fz_malloc_struct(ctx, pdf_xref_subsec);
 		fz_try(ctx)
 		{
@@ -1076,16 +1130,10 @@ pdf_xref_find_subsection(fz_context *ctx, pdf_document *doc, int start, int len)
 			fz_free(ctx, sub);
 			fz_rethrow(ctx);
 		}
-		xref->num_objects = num_objects;
+		if (xref->num_objects < num_objects)
+			xref->num_objects = num_objects;
 		if (doc->max_xref_len < num_objects)
 			extend_xref_index(ctx, doc, num_objects);
-	}
-	else
-	{
-		/* Case 3 */
-		ensure_solid_xref(ctx, doc, num_objects, doc->num_xref_sections-1);
-		xref = &doc->xref_sections[doc->num_xref_sections-1];
-		sub = xref->subsec;
 	}
 	return &sub->table[start-sub->start];
 }
@@ -1389,9 +1437,10 @@ read_xref_section(fz_context *ctx, pdf_document *doc, int64_t ofs)
 	int64_t xrefstmofs = 0;
 	int64_t prevofs = 0;
 
-	trailer = pdf_read_xref(ctx, doc, ofs);
 	fz_try(ctx)
 	{
+		trailer = pdf_read_xref(ctx, doc, ofs);
+
 		pdf_set_populating_xref_trailer(ctx, doc, trailer);
 
 		/* FIXME: do we overwrite free entries properly? */
@@ -1475,7 +1524,10 @@ pdf_read_xref_sections(fz_context *ctx, pdf_document *doc, int64_t ofs, int read
 	{
 		/* Undo pdf_populate_next_xref_level if we've done that already. */
 		if (populated)
+		{
+			pdf_drop_xref_subsec(ctx, &doc->xref_sections[doc->num_xref_sections - 1]);
 			doc->num_xref_sections--;
+		}
 		fz_rethrow(ctx);
 	}
 }
@@ -1840,6 +1892,9 @@ pdf_drop_document_imp(fz_context *ctx, pdf_document *doc)
 {
 	int i;
 
+	while (doc && doc->rev_page_map)
+		pdf_drop_page_tree(ctx, doc);
+
 	fz_defer_reap_start(ctx);
 
 	/* Type3 glyphs in the glyph cache can contain pdf_obj pointers
@@ -1866,6 +1921,8 @@ pdf_drop_document_imp(fz_context *ctx, pdf_document *doc)
 
 	fz_drop_stream(ctx, doc->file);
 	pdf_drop_crypt(ctx, doc->crypt);
+
+	pdf_drop_page_tree(ctx, doc);
 
 	pdf_drop_obj(ctx, doc->linear_obj);
 	if (doc->linear_page_refs)
@@ -1908,7 +1965,7 @@ pdf_drop_document_imp(fz_context *ctx, pdf_document *doc)
 
 	fz_free(ctx, doc->orphans);
 
-	fz_free(ctx, doc->rev_page_map);
+	pdf_drop_page_tree_internal(ctx, doc);
 
 	fz_defer_reap_end(ctx);
 
@@ -2906,10 +2963,6 @@ static int __pdf_has_permission(fz_context* ctx, fz_document* doc, fz_permission
 {
 	return pdf_has_permission(ctx, pdf_document_from_fz_document(ctx, doc), permission);
 }
-static fz_outline* __pdf_load_outline(fz_context* ctx, fz_document* doc)
-{
-	return pdf_load_outline(ctx, pdf_document_from_fz_document(ctx, doc));
-}
 static fz_outline_iterator* __pdf_new_outline_iterator(fz_context* ctx, fz_document* doc)
 {
 	return pdf_new_outline_iterator(ctx, pdf_document_from_fz_document(ctx, doc));
@@ -2953,6 +3006,7 @@ pdf_new_document(fz_context *ctx, fz_stream *file)
 	doc->super.format_link_uri = pdf_format_link_uri_imp;
 	doc->super.count_pages = pdf_count_pages_imp;
 	doc->super.load_page = pdf_load_page_imp;
+	doc->super.page_label = pdf_page_label_imp;
 	doc->super.lookup_metadata = __pdf_lookup_metadata;
 	doc->super.set_metadata = __pdf_document_set_metadata;
 

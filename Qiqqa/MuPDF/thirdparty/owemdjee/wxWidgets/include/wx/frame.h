@@ -77,7 +77,7 @@ public:
 
     // get the origin of the client area (which may be different from (0, 0)
     // if the frame has a toolbar) in client coordinates
-    virtual wxPoint GetClientAreaOrigin() const wxOVERRIDE;
+    virtual wxPoint GetClientAreaOrigin() const override;
 
 
     // menu bar functions
@@ -166,15 +166,15 @@ public:
 #endif // wxUSE_STATUSBAR
 
     // send wxUpdateUIEvents for all menu items in the menubar,
-    // or just for menu if non-NULL
-    virtual void DoMenuUpdates(wxMenu* menu = NULL);
+    // or just for menu if non-null
+    virtual void DoMenuUpdates(wxMenu* menu = nullptr);
 #endif // wxUSE_MENUS
 
     // do the UI update processing for this window
-    virtual void UpdateWindowUI(long flags = wxUPDATE_UI_NONE) wxOVERRIDE;
+    virtual void UpdateWindowUI(long flags = wxUPDATE_UI_NONE) override;
 
     // Implement internal behaviour (menu updating on some platforms)
-    virtual void OnInternalIdle() wxOVERRIDE;
+    virtual void OnInternalIdle() override;
 
 #if wxUSE_MENUS || wxUSE_TOOLBAR
     // show help text for the currently selected menu or toolbar item
@@ -183,7 +183,7 @@ public:
     virtual void DoGiveHelp(const wxString& text, bool show);
 #endif
 
-    virtual bool IsClientAreaChild(const wxWindow *child) const wxOVERRIDE
+    virtual bool IsClientAreaChild(const wxWindow *child) const override
     {
         return !IsOneOfBars(child) && wxTopLevelWindow::IsClientAreaChild(child);
     }
@@ -197,7 +197,7 @@ protected:
     void DeleteAllBars();
 
     // test whether this window makes part of the frame
-    virtual bool IsOneOfBars(const wxWindow *win) const wxOVERRIDE;
+    virtual bool IsOneOfBars(const wxWindow *win) const override;
 
 #if wxUSE_MENUBAR
     // override to update menu bar position when the frame size changes
@@ -267,12 +267,8 @@ protected:
         #include "wx/msw/frame.h"
     #elif defined(__WXUWP__)
         #include "wx/uwp/frame.h"
-    #elif defined(__WXGTK20__)
-        #include "wx/gtk/frame.h"
     #elif defined(__WXGTK__)
-        #include "wx/gtk1/frame.h"
-    #elif defined(__WXMOTIF__)
-        #include "wx/motif/frame.h"
+        #include "wx/gtk/frame.h"
     #elif defined(__WXMAC__)
         #include "wx/osx/frame.h"
     #elif defined(__WXQT__)

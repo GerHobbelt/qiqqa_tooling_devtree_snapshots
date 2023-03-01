@@ -16,7 +16,7 @@ cat > utils/tmp.lst  <<EOF
 # annoy
 # ApprovalTestsCpp
 # arangodb
-# argparse
+argparse
 # arrayfire
 asio
 # asyncplusplus
@@ -37,6 +37,7 @@ BLAKE3
 # bolt
 boost
 # boost-url
+# boringssl
 # BoxFort
 # breakpad
 brotli
@@ -44,6 +45,8 @@ brotli
 # CacheLib
 # caches
 # caffe
+# cairo
+# cairo-demos
 # calibre
 # catboost
 # cctz
@@ -61,10 +64,13 @@ brotli
 # civetweb
 # clBLAS
 # CLBlast
+# CLBlast-database
 # cld2-language-detect
 cli11
 clipp
+# CLTune
 # cmph-hasher
+# ColorSpace
 # comdb2-bdb
 # compact_enc_det
 # completesearch
@@ -94,9 +100,13 @@ cryptopp
 # csync2
 # CTCWordBeamSearch
 # CTPL-Thread-Pool
+# ctsa
 # cuckoo-index
 # cuckoofilter
+# curl-impersonate
+# curl-www
 # CxImage
+# cxxopts
 # cxxtest
 # cxxtest_catch_2_gtest
 # Cysboard
@@ -111,8 +121,10 @@ cryptopp
 # diffutils
 dirent
 # djvulibre
+dlfcn-win32
 # dlib
 # docxBox
+# doh
 # drogon
 # dtl-diff-template-library
 # dtoa-benchmark
@@ -122,8 +134,10 @@ dirent
 # efsw
 # emphf-hash
 # enkiTS-TaskScheduler
+# EOT
 # EtwExplorer
 # eventpp
+# everything-curl
 # exiv2
 # expected-lite
 # Extensible-Storage-Engine
@@ -134,6 +148,7 @@ dirent
 # fast_float
 # fast_pfor
 # fatal
+# fftw3
 # file
 # filesystem
 # flat_hash_map
@@ -141,6 +156,7 @@ dirent
 fmt
 # fmtlog
 # folly
+# fribidi
 # friso
 # frozen
 gbenchmark
@@ -157,7 +173,7 @@ glog
 # google-diff-match-patch
 # google-marl
 googletest
-# gperf-hash
+gperf-hash
 # GraphicsMagick
 # graphit
 # gtn
@@ -183,7 +199,7 @@ highway
 # htmlstreamparser
 # http-parser
 # hunspell
-# hunspell-dictionarries
+# hunspell-dictionaries
 # hunspell-hyphen
 # hyperscan
 # hypertextcpp
@@ -208,6 +224,7 @@ jpeg-xl
 # json-jansson
 # jsoncons
 # kahypar
+# kfr
 # kgraph
 # koan
 # krabsETW
@@ -219,21 +236,24 @@ jpeg-xl
 # LDCF-hash
 # lerc
 # libaco
+# libalg
 # libaom
-# libarchive
+libarchive
 # libassert
+# libavif
 libbf
 # libbloom
 # libcbor
 # libchaos
 # libchardet
+# libclip
 # libclipboard
 # libcmime
 # libcnl
 # libconfig
 # libcopp
 # libcppjieba
-# libcpr
+libcpr
 # libcpuid
 # libCRCpp
 # libcsp
@@ -245,6 +265,7 @@ libbf
 # libdi-dependency-injection
 # libdist
 # libdivsufsort
+# libdtm
 # libeigen
 libeternaltimestamp
 # libevent
@@ -254,9 +275,11 @@ libeternaltimestamp
 # libfolia
 # libfort
 # libfyaml
+# libgateY
 # libgd
 libgif
 # libgrape-lite
+# libharry
 # libheif
 # libheif-alt
 # libicns
@@ -273,10 +296,12 @@ libjxl
 # libngt-ann
 # libocca
 # libpinyin
+# libpopcnt
 # libpsl
 # libq
 libqrencode
 # libquill
+# libraqm
 # librs232
 # librsync
 # libscanf
@@ -318,7 +343,6 @@ linenoise
 # lmdb
 # lmdb-safe
 # lmdb-store
-# lmdb-tmp
 # lmdb.spreads.net
 # lmdbxx
 # localmemcache
@@ -374,6 +398,13 @@ nanosvg
 # nmslib
 # notcurses
 # npoi
+# nsis
+# nsis-nscurl
+# NSIS-OBSInstallerUtils
+# nsis-stdutils
+# NSISDotNetChecker
+# NSISFileCheck
+# NSISMultiUser
 # nsync
 # nuspell
 # ocreval
@@ -402,6 +433,7 @@ nanosvg
 # pagerank
 # palanteer
 # palmtree
+# pango
 # papis-zotero
 # parallel-hashmap
 # pcg-c-random
@@ -425,6 +457,8 @@ pcre
 # pinyin
 # pipes
 # pisa
+# pixman
+# PlatformFolders
 plf_nanotimer
 pmt-png-tools
 # podofo
@@ -438,6 +472,7 @@ pmt-png-tools
 # promise-cpp
 # promise-hpp
 # proxygen
+# prvhash
 pthread-win32
 # pthreadpool
 # pybind11
@@ -483,6 +518,7 @@ replxx
 # shoco
 # Signals
 # SilkETW
+# simd-imgproc
 # sioyek
 # smhasher
 # snap
@@ -526,8 +562,9 @@ sqlite-amalgamation
 # sumatrapdf
 svg-charter
 # swig
+# SymSpell
 # tabulate
-# taglib
+taglib
 # taolog
 # taskflow
 # tcpshm
@@ -537,7 +574,7 @@ svg-charter
 # tensorflow-io
 # tensorflow-text
 # tesseract-gImgRdrGui
-# tesslinesplit
+tesslinesplit
 # textflowcpp
 # thread-pool
 # thread-pool-c
@@ -562,7 +599,7 @@ tinyexpr
 # transwarp
 # tre
 # tsf
-# tvision
+tvision
 # txiki.js
 # typesense
 # uberlog
@@ -588,6 +625,7 @@ upskirt-markdown
 # VisualScriptEngine
 # VQMT
 # VSNASM
+# vxl
 # warc2text
 # warp-ctc
 # warpLDA
@@ -603,6 +641,8 @@ upskirt-markdown
 # WinHttpPAL
 # word2vec
 # word2vec-GloVe
+# wordfreq
+# wordfrequency
 wxCharts
 # wxDatabase
 # wxExamples
@@ -660,39 +700,133 @@ zstd
 __docs
 __docs_src
 
+# SymSpell
+# wordfreq
+# wordfrequency
+# libdtm
+# prvhash
+# vxl
+# metalink-cli
+# libmetalink
+# metalink-mini-downloader
+# wget2
+# wxCurl
 
 jpeg-xl\third_party\lodepng
 jpeg-xl\third_party\highway
 
+taglib\3rdparty\utf8-cpp
+
+../../../thirdparty/DirScanner
 
 EOF
 
 cat > utils/tmp.bat  <<EOF
 @echo on
 
-robocopy Z:\lib\tooling\qiqqa\MuPDF Qiqqa/MuPDF * /LOG:snapshot.log /LEV:8 /S /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE /XD .vs obj bin b tmp research node_modules packages owemdjee downloads ~ .circleci  /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules 
+robocopy Z:\lib\tooling\qiqqa\MuPDF Qiqqa/MuPDF * /LOG:snapshot.log /LEV:8 /S /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE /XD .vs obj bin b tmp research node_modules packages owemdjee downloads ~ .circleci  /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* *.dump *-files .git .gitmodules 
 
 robocopy Z:\lib\tooling\qiqqa\MuPDF\thirdparty\owemdjee Qiqqa/MuPDF/thirdparty/owemdjee * /LOG+:snapshot.log /LEV:1    /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE    /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules 
 
-FOR %f IN ( langdata_LSTM tessconfigs tessdata tessdata_best tessdata_contrib tessdata_fast tessdoc tesseract_docs tesseract_langdata tesseract_ocr_test tesstrain ) DO robocopy Z:\lib\tooling\qiqqa\MuPDF\thirdparty\%f Qiqqa/MuPDF\thirdparty\%f * /LOG+:snapshot.log /LEV:8 /S /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE /XD .vs obj b tmp research node_modules packages .circleci 3rd thirdparty third_party 3rdparty 3rd_party  /XF  *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules 
+EOF
+
+for f in   langdata_LSTM tessconfigs tessdata tessdata_best tessdata_contrib tessdata_fast tessdoc tesseract_docs tesseract_langdata tesseract_ocr_test tesstrain    ; do
+
+	echo "$f..."
+	echo "set F=$f" >> utils/tmp.bat  
+	cat >> utils/tmp.bat  <<EOF
+
+robocopy Z:\lib\tooling\qiqqa\MuPDF\thirdparty\%F%  Qiqqa/MuPDF\thirdparty\%F%  * /LOG+:snapshot.log /LEV:8 /S /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE /XD .vs obj b tmp research node_modules packages .circleci 3rd thirdparty third_party 3rdparty 3rd_party  /XF  *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules 
+
+EOF
+done
+
+cat >> utils/tmp.bat  <<EOF
 
 robocopy Z:\lib\tooling\qiqqa\MuPDF\thirdparty\owemdjee\boost Qiqqa/MuPDF\thirdparty\owemdjee\boost * /LOG+:snapshot.log /LEV:20 /S /COPY:DAT /DCOPY:DAT /IM      /W:1 /R:3 /PURGE /XD .vs obj b tmp research node_modules packages owemdjee downloads ~ .circleci 3rd thirdparty third_party 3rdparty 3rd_party  /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules 
 
-FOR /F %f IN ( utils\tmp.lst ) DO IF NOT %f == # robocopy Z:\lib\tooling\qiqqa\MuPDF\thirdparty\owemdjee\%f Qiqqa/MuPDF\thirdparty\owemdjee\%f * /LOG+:snapshot.log /LEV:8 /S /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE /XD .vs obj b tmp research node_modules packages owemdjee downloads ~ .circleci 3rd thirdparty third_party 3rdparty 3rd_party  /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules 
+EOF
+
+for f in $( cat utils/tmp.lst | grep -v '#' ) ; do
+
+	echo "$f..."
+	echo "set F=$f" >> utils/tmp.bat  
+	cat >> utils/tmp.bat  <<EOF
+
+robocopy Z:\lib\tooling\qiqqa\MuPDF\thirdparty\owemdjee\%F%  Qiqqa/MuPDF\thirdparty\owemdjee\%F%  * /LOG+:snapshot.log /LEV:15 /S /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE /XD .vs obj b tmp research node_modules packages downloads ~ .circleci 3rd thirdparty third_party 3rdparty 3rd_party  /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules 
 
 EOF
+done
+
+cat >> utils/tmp.bat  <<EOF
+
+robocopy "Z:\lib\tooling\qiqqa\Technology.Tests\forking cleans up memory leaks" "Qiqqa\Technology.Tests\forking cleans up memory leaks" * /LOG+:snapshot.log /LEV:20 /S /COPY:DAT /DCOPY:DAT /IM      /W:1 /R:3 /PURGE /XD .vs obj b tmp research node_modules packages owemdjee downloads ~ .circleci 3rd thirdparty third_party 3rdparty 3rd_party  /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules *.tlog *.log *.lastbuildstate *.recipe *.ilk *.pdb *.idb *.vcxproj.FileListAbsolute.txt *.iobj *.ipdb 
+
+robocopy "Z:\lib\tooling\qiqqa\Technology.Tests\monitor our memory usage and die when passing threshold" "Qiqqa\Technology.Tests\monitor our memory usage and die when passing threshold" * /LOG+:snapshot.log /LEV:20 /S /COPY:DAT /DCOPY:DAT /IM      /W:1 /R:3 /PURGE /XD .vs obj b tmp research node_modules packages owemdjee downloads ~ .circleci 3rd thirdparty third_party 3rdparty 3rd_party  /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules *.tlog *.log *.lastbuildstate *.recipe *.ilk *.pdb *.idb *.vcxproj.FileListAbsolute.txt *.iobj *.ipdb 
+
+robocopy Z:\lib\tooling\qiqqa\MuPDF\platform\win32\bin\Release-Unicode-64bit-x64 utils splitmerge.exe /LOG+:snapshot.log /LEV:8 /S /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE 
+
+EOF
+
+#sed -i -E -e 's/^(robocopy.*)$/echo "\1"\n\1/g' utils/tmp.bat
+
+rm snapshot.log
+
 cat utils/tmp.bat | cmd
 
+
 # and then some post-orgasmic cleanup bliss:
+
+cat << EOF
+
+-----------------------------------------------
+
+
+
+Cleaning cruft that got copied inadvertently...
+-----------------------------------------------
+
+(expect some errors reported beyond this line!)
+
+
+EOF
+
 cd Qiqqa/MuPDF
 
 for f in 					\
 	platform/win32/*.pdf			\
+	platform/win32/*-files			\
+	platform/win32/*.dump			\
+	platform/win32/unnamed*			\
+	platform/win32/files 			\
 	platform/win32/text*.xml		\
 	__git_lazy_remotes__			\
 ; do
-	rm "$f"
+	rm "$f"                        2> /dev/null
 done
+
+for f in 										\
+	thirdparty/libWebP.Net/src/Imazen.WebP/obj/					\
+	thirdparty/owemdjee/QuickJS/test262/	         				\
+	thirdparty/owemdjee/libiconv/build-VS2022/iconv-static/x64/                     \
+; do
+	rm -rf "$f"                    2> /dev/null
+done
+
+find ../.. -name dirlist.txt -delete
+find ../.. -name 'db*.sql' -delete
+find ../ -name '.gitignore*' -type f -delete
+find ../ -name '.gitattr*' -type f -delete
+
+# plus some last-minute compensations, filling up the potholes left by the bulk /XF & /XD rejections:
+for f in 									\
+	/z/lib/tooling/qiqqa/MuPDF/platform/win32/*fuzz*proj*			\
+; do
+	DSTFILE="$( echo "$f" | sed -E -e 's/^.*[^q]+qiqqa\//..\/..\/Qiqqa\//' )"
+	echo "$f --> $DSTFILE"
+	cp "$f" "$DSTFILE"
+done
+
 cd ../..
 		
 popd                       > /dev/null

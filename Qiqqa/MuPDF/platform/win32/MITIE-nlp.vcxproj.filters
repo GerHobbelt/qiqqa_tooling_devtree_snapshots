@@ -5726,9 +5726,6 @@
     <Text Include="../../thirdparty/owemdjee/MITIE-nlp/examples/python/train_text_categorizer.py">
       <Filter>Misc Files\examples\python</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/MITIE-nlp/merge_changes_from_dlib">
-      <Filter>Misc Files</Filter>
-    </Text>
     <Text Include="../../thirdparty/owemdjee/MITIE-nlp/mitielib/CMakeLists.txt">
       <Filter>Misc Files\mitielib</Filter>
     </Text>
@@ -5745,6 +5742,9 @@
       <Filter>Misc Files\mitielib\java</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/MITIE-nlp/mitielib/mitie.py">
+      <Filter>Misc Files\mitielib</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/MITIE-nlp/mitielib/tell_visual_studio_to_use_static_runtime.cmake">
       <Filter>Misc Files\mitielib</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/MITIE-nlp/sample_text.txt">
@@ -5914,4 +5914,3 @@
     </Xml>
   </ItemGroup>
 </Project>
-    

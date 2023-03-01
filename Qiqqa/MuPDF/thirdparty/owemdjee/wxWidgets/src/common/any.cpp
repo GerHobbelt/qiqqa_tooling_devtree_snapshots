@@ -111,7 +111,7 @@ public:
         }
 
         // Nothing found
-        return NULL;
+        return nullptr;
     }
 
 private:
@@ -186,7 +186,7 @@ bool wxConvertAnyToVariant(const wxAny& any, wxVariant* variant)
     wxVariantDataFactory f =
         GetAnyValueTypeGlobals()->FindVariantDataFactory(any.GetType());
 
-    wxVariantData* data = NULL;
+    wxVariantData* data = nullptr;
 
     if ( f )
     {
@@ -226,11 +226,11 @@ public:
     wxAnyValueTypeGlobalsManager() : wxModule() { }
     virtual ~wxAnyValueTypeGlobalsManager() { }
 
-    virtual bool OnInit() wxOVERRIDE
+    virtual bool OnInit() override
     {
         return true;
     }
-    virtual void OnExit() wxOVERRIDE
+    virtual void OnExit() override
     {
         GetAnyValueTypeGlobals().reset();
     }
@@ -499,13 +499,13 @@ class wxAnyValueTypeImpl<wxAnyNullValue> : public wxAnyValueType
     WX_DECLARE_ANY_VALUE_TYPE(wxAnyValueTypeImpl<wxAnyNullValue>)
 public:
     // Dummy implementations
-    virtual void DeleteValue(wxAnyValueBuffer& buf) const wxOVERRIDE
+    virtual void DeleteValue(wxAnyValueBuffer& buf) const override
     {
         wxUnusedVar(buf);
     }
 
     virtual void CopyBuffer(const wxAnyValueBuffer& src,
-                            wxAnyValueBuffer& dst) const wxOVERRIDE
+                            wxAnyValueBuffer& dst) const override
     {
         wxUnusedVar(src);
         wxUnusedVar(dst);
@@ -513,7 +513,7 @@ public:
 
     virtual bool ConvertValue(const wxAnyValueBuffer& src,
                               wxAnyValueType* dstType,
-                              wxAnyValueBuffer& dst) const wxOVERRIDE
+                              wxAnyValueBuffer& dst) const override
     {
         wxUnusedVar(src);
         wxUnusedVar(dstType);
@@ -525,7 +525,7 @@ public:
     virtual const wxTypeInfo* GetTypeInfo() const
     {
         wxFAIL_MSG("Null Type Info not available");
-        return NULL;
+        return nullptr;
     }
 #endif
 

@@ -192,7 +192,7 @@ bool wxGLCanvas::Create(wxWindow *parent,
     // wxWindow::Create() returns if parent is already visible)
 #if !wxUSE_GLCANVAS_EGL
     unsigned sig_id = g_signal_lookup("parent-set", GTK_TYPE_WIDGET);
-    g_signal_add_emission_hook(sig_id, 0, parent_set_hook, this, NULL);
+    g_signal_add_emission_hook(sig_id, 0, parent_set_hook, this, nullptr);
 #endif
 
     wxWindow::Create( parent, id, pos, size, style, name );
@@ -200,7 +200,9 @@ bool wxGLCanvas::Create(wxWindow *parent,
     g_signal_connect(m_wxwindow, "draw", G_CALLBACK(draw), this);
 #endif
 
+    wxGCC_WARNING_SUPPRESS(deprecated-declarations)
     gtk_widget_set_double_buffered(m_wxwindow, false);
+    wxGCC_WARNING_RESTORE(deprecated-declarations)
 
     return true;
 }

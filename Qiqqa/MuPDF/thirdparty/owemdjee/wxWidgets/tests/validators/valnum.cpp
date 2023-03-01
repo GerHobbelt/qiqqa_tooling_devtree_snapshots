@@ -271,7 +271,7 @@ TEST_CASE_METHOD(NumValidatorTestCase, "ValNum::ClipboardTest", "[valnum]")
     m_text->SetValidator(valInt);
 
     wxWindow * const parent = m_text->GetParent();
-    CHECK( parent != NULL );
+    CHECK( parent != nullptr );
 
     CHECK( parent->TransferDataToWindow() );
     CHECK( parent->Validate() );
@@ -318,7 +318,7 @@ TEST_CASE_METHOD(NumValidatorTestCase, "ValNum::Interactive", "[valnum]")
     wxLocale loc(wxLANGUAGE_ENGLISH_UK, wxLOCALE_DONT_LOAD_DEFAULT);
 
     m_text->SetValidator(
-        wxIntegerValidator<unsigned>(NULL, wxNUM_VAL_THOUSANDS_SEPARATOR));
+        wxIntegerValidator<unsigned>(nullptr, wxNUM_VAL_THOUSANDS_SEPARATOR));
 
     // Create a sibling text control to be able to switch focus and thus
     // trigger the control validation/normalization.

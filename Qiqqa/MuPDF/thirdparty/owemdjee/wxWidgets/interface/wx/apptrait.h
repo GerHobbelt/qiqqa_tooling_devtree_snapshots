@@ -45,7 +45,7 @@ public:
         The default implementation of this method in wxGUIAppTraits returns the
         usual platform-specific GUI event loop. The version in wxConsoleAppTraits
         returns a console-specific event loop which can be used to handle timer
-        and socket events in console programs under Unix and MSW or @NULL under
+        and socket events in console programs under Unix and MSW or @nullptr under
         the other platforms where console event loops are not supported yet.
      */
     virtual wxEventLoopBase *CreateEventLoop() = 0;
@@ -70,8 +70,8 @@ public:
 
     /**
         Returns the renderer to use for drawing the generic controls (return
-        value may be @NULL in which case the default renderer for the current
-        platform is used); this is used in GUI mode only and always returns @NULL
+        value may be @nullptr in which case the default renderer for the current
+        platform is used); this is used in GUI mode only and always returns @nullptr
         in console.
 
         @note the returned pointer needs to be deleted by the caller.
@@ -104,7 +104,7 @@ public:
         digits of the native toolkit currently used.
 
         The version numbers returned are thus detected at run-time and not compile-time
-        (except when this is not possible e.g. wxMotif).
+        if possible.
 
         E.g. if your program is using wxGTK port this function will return wxPORT_GTK
         and put in given pointers the versions of the GTK library in use.
@@ -112,9 +112,9 @@ public:
 
         If a micro version is not available it will have a value of 0.
     */
-    virtual wxPortId GetToolkitVersion(int* major = NULL,
-                                       int* minor = NULL,
-                                       int* micro = NULL) const = 0;
+    virtual wxPortId GetToolkitVersion(int* major = nullptr,
+                                       int* minor = nullptr,
+                                       int* micro = nullptr) const = 0;
 
     /**
         Returns @true if @c fprintf(stderr) goes somewhere, @false otherwise.

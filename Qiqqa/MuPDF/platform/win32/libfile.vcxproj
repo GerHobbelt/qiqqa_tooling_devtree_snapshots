@@ -280,10 +280,10 @@
     <Text Include="../../thirdparty/owemdjee/file/README.DEVELOPER" />
     <Text Include="../../thirdparty/owemdjee/file/README.md" />
     <Text Include="../../thirdparty/owemdjee/file/TODO" />
+    <Text Include="../../thirdparty/owemdjee/file/cmake/ConfigureChecks.cmake" />
     <Text Include="../../thirdparty/owemdjee/file/cmake/config.h.in" />
     <Text Include="../../thirdparty/owemdjee/file/configure.ac" />
     <Text Include="../../thirdparty/owemdjee/file/doc/Makefile.am" />
-    <Text Include="../../thirdparty/owemdjee/file/fuzz/build.sh" />
     <Text Include="../../thirdparty/owemdjee/file/libmagic.pc.in" />
     <Text Include="../../thirdparty/owemdjee/file/magic/Magdir/mail.news" />
     <Text Include="../../thirdparty/owemdjee/file/magic/Magdir/news" />

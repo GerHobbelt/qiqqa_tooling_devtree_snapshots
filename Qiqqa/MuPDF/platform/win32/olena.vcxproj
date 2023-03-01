@@ -2907,11 +2907,11 @@
     <Text Include="../../thirdparty/owemdjee/olena/configure.ac" />
     <Text Include="../../thirdparty/owemdjee/olena/debian/README.Debian" />
     <Text Include="../../thirdparty/owemdjee/olena/debian/changelog" />
+    <Text Include="../../thirdparty/owemdjee/olena/debian/gbp.conf" />
     <Text Include="../../thirdparty/owemdjee/olena/debian/olena.xpm" />
     <Text Include="../../thirdparty/owemdjee/olena/distrib/macports/Portfile.in" />
     <Text Include="../../thirdparty/owemdjee/olena/doc/Doxyfile.in" />
     <Text Include="../../thirdparty/owemdjee/olena/doc/Makefile.am" />
-    <Text Include="../../thirdparty/owemdjee/olena/doc/contributors.dox" />
     <Text Include="../../thirdparty/owemdjee/olena/dynamic-use-of-static-c++/ChangeLog" />
     <Text Include="../../thirdparty/owemdjee/olena/dynamic-use-of-static-c++/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/olena/dynamic-use-of-static-c++/README" />
@@ -2971,6 +2971,8 @@
     <Text Include="../../thirdparty/owemdjee/olena/milena/doc/Doxyfile.in" />
     <Text Include="../../thirdparty/owemdjee/olena/milena/doc/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/olena/milena/doc/benchmark/compression.txt" />
+    <Text Include="../../thirdparty/owemdjee/olena/milena/doc/img/src/standalone.cfg" />
+    <Text Include="../../thirdparty/owemdjee/olena/milena/doc/img/src/ydoc.cfg" />
     <Text Include="../../thirdparty/owemdjee/olena/milena/doc/outputs/accu-right-instantiation.txt" />
     <Text Include="../../thirdparty/owemdjee/olena/milena/doc/outputs/borderthickness.txt" />
     <Text Include="../../thirdparty/owemdjee/olena/milena/doc/outputs/box2d-bbox.txt" />

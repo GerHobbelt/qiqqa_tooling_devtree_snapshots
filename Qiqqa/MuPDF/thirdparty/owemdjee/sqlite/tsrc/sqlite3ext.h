@@ -360,6 +360,8 @@ struct sqlite3_api_routines {
   const char *(*db_name)(sqlite3*,int);
   /* Version 3.40.0 and later */
   int (*value_encoding)(sqlite3_value*);
+  /* Version 3.41.0 and later */
+  int (*is_interrupted)(sqlite3*);
 };
 
 // typedef sqlite3_loadext_entry is already defined in sqlite3.h.in 
@@ -678,6 +680,8 @@ struct sqlite3_api_routines {
 #define sqlite3_db_name                sqlite3_api->db_name
 /* Version 3.40.0 and later */
 #define sqlite3_value_encoding         sqlite3_api->value_encoding
+/* Version 3.41.0 and later */
+#define sqlite3_is_interrupted         sqlite3_api->is_interrupted
 #endif /* !defined(SQLITE_CORE) && !defined(SQLITE_OMIT_LOAD_EXTENSION) */
 
 #if !defined(SQLITE_CORE) && !defined(SQLITE_OMIT_LOAD_EXTENSION)

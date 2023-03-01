@@ -51,7 +51,7 @@ public:
 
         You can also change the parent window later with SetParentWindow().
     */
-    wxHelpControllerBase(wxWindow* parentWindow = NULL);
+    wxHelpControllerBase(wxWindow* parentWindow = nullptr);
 
     /**
         Destroys the help instance, closing down the viewer if it is running.
@@ -121,7 +121,7 @@ public:
     /**
         For wxHtmlHelpController, returns the latest frame size and position
         settings and whether a new frame is drawn with each invocation.
-        For all other help controllers, this function does nothing and just returns @NULL.
+        For all other help controllers, this function does nothing and just returns @nullptr.
 
         @param size
             The most recent frame size.
@@ -130,9 +130,9 @@ public:
         @param newFrameEachTime
             @true if a new frame is drawn with each invocation.
     */
-    virtual wxFrame* GetFrameParameters(wxSize* size = NULL,
-                                        wxPoint* pos = NULL,
-                                        bool* newFrameEachTime = NULL);
+    virtual wxFrame* GetFrameParameters(wxSize* size = nullptr,
+                                        wxPoint* pos = nullptr,
+                                        bool* newFrameEachTime = nullptr);
 
     /**
         Returns the window to be used as the parent for the help window.
@@ -310,7 +310,7 @@ public:
 
         You can also change the parent window later with SetParentWindow().
     */
-    wxHelpController(wxWindow* parentWindow = NULL);
+    wxHelpController(wxWindow* parentWindow = nullptr);
 };
 
 

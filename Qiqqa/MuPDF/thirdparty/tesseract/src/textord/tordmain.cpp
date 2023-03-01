@@ -48,6 +48,7 @@
 #include "textord.h"     // for Textord, WordWithBox, WordGrid, WordS...
 #include "tprintf.h"     // for tprintf
 #include "werd.h"        // for WERD_IT, WERD, WERD_LIST, W_DONT_CHOP
+#include "tesseractclass.h"
 
 #include <allheaders.h> // for pixDestroy, pixGetHeight, boxCreate
 
@@ -237,7 +238,7 @@ void Textord::filter_blobs(ICOORD page_tr,        // top right
   TO_BLOCK_IT block_it = blocks;                  // destination iterator
   TO_BLOCK *block;                                // created block
 
-#ifndef GRAPHICS_DISABLED
+#if !GRAPHICS_DISABLED
   if (to_win != nullptr) {
     to_win->Clear();
   }
@@ -258,21 +259,72 @@ void Textord::filter_blobs(ICOORD page_tr,        // top right
     block->line_size *= textord_min_linesize;
     block->max_blob_size = block->line_size * textord_excess_blobsize;
 
-#ifndef GRAPHICS_DISABLED
+#if !GRAPHICS_DISABLED
     if (textord_show_blobs && testing_on) {
-      if (to_win == nullptr) {
-        create_to_win(page_tr);
+      if (!tesseract_->debug_do_not_use_scrollview_app) {
+        if (to_win == nullptr) {
+          create_to_win(page_tr);
+        }
+        block->plot_graded_blobs(to_win);
       }
-      block->plot_graded_blobs(to_win);
+      else {
+        const char* name = "Rejected blobs";
+        auto width = tesseract_->ImageWidth();
+        auto height = tesseract_->ImageHeight();
+
+        Image pix = pixCreate(width + 8, height + 8, 32 /* RGBA */);
+        pixClearAll(pix);
+
+        BOX* border = boxCreate(2, 2, width + 4, height + 4);
+        // boxDestroy(BOX * *pbox);
+        BOXA* boxlist = boxaCreate(1);
+        boxaAddBox(boxlist, border, false);
+        //boxaDestroy(BOXA * *pboxa);
+        l_uint32 bordercolor;
+        composeRGBAPixel(255, 32, 32, 255, &bordercolor);
+        pix = pixDrawBoxa(pix, boxlist, 2, bordercolor);
+        boxaDestroy(&boxlist);
+
+        block->plot_graded_blobs(pix);
+
+        tesseract_->AddPixDebugPage(pix, name, false);
+      }
     }
     if (textord_show_boxes && testing_on) {
-      if (to_win == nullptr) {
-        create_to_win(page_tr);
+      if (!tesseract_->debug_do_not_use_scrollview_app) {
+        if (to_win == nullptr) {
+          create_to_win(page_tr);
+        }
+        plot_box_list(to_win, &block->noise_blobs, ScrollView::WHITE);
+        plot_box_list(to_win, &block->small_blobs, ScrollView::WHITE);
+        plot_box_list(to_win, &block->large_blobs, ScrollView::WHITE);
+        plot_box_list(to_win, &block->blobs, ScrollView::WHITE);
       }
-      plot_box_list(to_win, &block->noise_blobs, ScrollView::WHITE);
-      plot_box_list(to_win, &block->small_blobs, ScrollView::WHITE);
-      plot_box_list(to_win, &block->large_blobs, ScrollView::WHITE);
-      plot_box_list(to_win, &block->blobs, ScrollView::WHITE);
+      else {
+        const char* name = "Rejected blobs";
+        auto width = tesseract_->ImageWidth();
+        auto height = tesseract_->ImageHeight();
+
+        Image pix = pixCreate(width + 8, height + 8, 32 /* RGBA */);
+        pixClearAll(pix);
+
+        BOX* border = boxCreate(2, 2, width + 4, height + 4);
+        // boxDestroy(BOX * *pbox);
+        BOXA* boxlist = boxaCreate(1);
+        boxaAddBox(boxlist, border, false);
+        //boxaDestroy(BOXA * *pboxa);
+        l_uint32 bordercolor;
+        composeRGBAPixel(255, 32, 32, 255, &bordercolor);
+        pix = pixDrawBoxa(pix, boxlist, 2, bordercolor);
+        boxaDestroy(&boxlist);
+
+        plot_box_list(pix, &block->noise_blobs, ScrollView::WHITE);
+        plot_box_list(pix, &block->small_blobs, ScrollView::WHITE);
+        plot_box_list(pix, &block->large_blobs, ScrollView::WHITE);
+        plot_box_list(pix, &block->blobs, ScrollView::WHITE);
+
+        tesseract_->AddPixDebugPage(pix, name, false);
+      }
     }
 #endif // !GRAPHICS_DISABLED
   }
@@ -751,7 +803,7 @@ void Textord::TransferDiacriticsToBlockGroups(BLOBNBOX_LIST *diacritic_blobs, BL
     if (group->bounding_box.null_box()) {
       continue;
     }
-    WordGrid word_grid(group->min_xheight, group->bounding_box.botleft(),
+    WordGrid word_grid(tesseract_, group->min_xheight, group->bounding_box.botleft(),
                        group->bounding_box.topright());
     for (auto b : group->blocks) {
       ROW_IT row_it(b->row_list());

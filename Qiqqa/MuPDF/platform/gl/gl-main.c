@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2022 Artifex Software, Inc.
+// Copyright (C) 2004-2023 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -124,7 +124,7 @@ static void open_browser(const char *uri)
 }
 
 static const int zoom_list[] = {
-	24, 36, 48, 60, 72, 84, 96, 108,
+	6, 12, 24, 36, 48, 60, 72, 84, 96, 108,
 	120, 144, 168, 192, 228, 264,
 	300, 350, 400, 450, 500, 550, 600
 };
@@ -645,7 +645,7 @@ static void info_dialog(void)
 	ui_layout(ALL, BOTH, CENTER, ui.padsize, ui.padsize);
 
 	info_text = format_info_text();
-	ui_label_with_scrollbar((char*)fz_string_from_buffer(ctx, info_text), 0, 0, &scroll, NULL);
+	ui_label_with_scrollbar(fz_string_from_buffer(ctx, info_text), 0, 0, &scroll, NULL);
 	fz_drop_buffer(ctx, info_text);
 
 	ui_dialog_end();
@@ -2160,6 +2160,8 @@ static void console_init(void)
 
 static void console_fin(void)
 {
+	fz_set_warning_callback(ctx, warning_callback, warning_user);
+	fz_set_error_callback(ctx, error_callback, error_user);
 	fz_drop_buffer(ctx, console_buffer);
 	console_buffer = NULL;
 }
@@ -2235,7 +2237,7 @@ void do_console(void)
 	glColorHex(0xF5F5F5);
 	glRectf(ui.cavity->x0, ui.cavity->y0, ui.cavity->x1, ui.cavity->y1);
 
-	char *console_string = (char *) fz_string_from_buffer(ctx, console_buffer);
+	char *console_string = fz_string_from_buffer(ctx, console_buffer);
 	ui_label_with_scrollbar(console_string, 0, 10, &console_scroll, &console_sticky);
 
 	ui_panel_end();
@@ -2624,6 +2626,7 @@ static fz_buffer *format_info_text()
 	}
 
 	fz_append_printf(ctx, out, "Page: %d / %d\n", fz_page_number_from_location(ctx, doc, currentpage)+1, fz_count_pages(ctx, doc));
+	fz_append_printf(ctx, out, "Page Label: %s\n", fz_page_label(ctx, fzpage, buf, sizeof buf));
 	{
 		int w = (int)(page_bounds.x1 - page_bounds.x0 + 0.5f);
 		int h = (int)(page_bounds.y1 - page_bounds.y0 + 0.5f);
@@ -2986,7 +2989,7 @@ static void cleanup(void)
 
 	trace_action("quit(0);\n");
 
-	console_fin();
+	fz_flush_warnings(ctx);
 
 	fz_drop_output(ctx, trace_file);
 	fz_drop_stext_page(ctx, page_text);
@@ -2996,6 +2999,8 @@ static void cleanup(void)
 	fz_drop_outline(ctx, outline);
 	fz_drop_document(ctx, doc);
 	fz_drop_context(ctx);
+
+	console_fin();
 }
 
 int reloadrequested = 0;

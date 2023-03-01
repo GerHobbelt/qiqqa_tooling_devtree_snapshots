@@ -11,7 +11,6 @@
 namespace jpegli {
 namespace {
 
-const int kJpegPrecision = 8;
 // JpegBitWriter: buffer size
 const size_t kJpegBitWriterChunkSize = 16384;
 
@@ -457,8 +456,26 @@ void WriteOutput(j_compress_ptr cinfo, std::initializer_list<uint8_t> bytes) {
   WriteOutput(cinfo, bytes.begin(), bytes.size());
 }
 
+void EncodeAPP0(j_compress_ptr cinfo) {
+  WriteOutput(cinfo,
+              {0xff, 0xe0, 0, 16, 'J', 'F', 'I', 'F', '\0',
+               cinfo->JFIF_major_version, cinfo->JFIF_minor_version,
+               cinfo->density_unit, static_cast<uint8_t>(cinfo->X_density >> 8),
+               static_cast<uint8_t>(cinfo->X_density & 0xff),
+               static_cast<uint8_t>(cinfo->Y_density >> 8),
+               static_cast<uint8_t>(cinfo->Y_density & 0xff), 0, 0});
+}
+
+void EncodeAPP14(j_compress_ptr cinfo) {
+  uint8_t color_transform = cinfo->jpeg_color_space == JCS_YCbCr  ? 1
+                            : cinfo->jpeg_color_space == JCS_YCCK ? 2
+                                                                  : 0;
+  WriteOutput(cinfo, {0xff, 0xee, 0, 14, 'A', 'd', 'o', 'b', 'e', 0, 100, 0, 0,
+                      0, 0, color_transform});
+}
+
 void EncodeSOF(j_compress_ptr cinfo) {
-  const uint8_t marker = cinfo->progressive_mode ? 0xc2 : 0xc0;
+  const uint8_t marker = cinfo->progressive_mode ? 0xc2 : 0xc1;
   const size_t n_comps = cinfo->num_components;
   const size_t marker_len = 8 + 3 * n_comps;
   std::vector<uint8_t> data(marker_len + 2);
@@ -499,9 +516,6 @@ void EncodeSOS(j_compress_ptr cinfo, int scan_index) {
   data[pos++] = scan_info->comps_in_scan;
   for (int i = 0; i < scan_info->comps_in_scan; ++i) {
     int comp_idx = scan_info->component_index[i];
-    if (comp_idx >= cinfo->num_components) {
-      JPEGLI_ERROR("Invalid scan component index %u.", comp_idx);
-    }
     data[pos++] = cinfo->comp_info[comp_idx].component_id;
     data[pos++] = (sci.dc_tbl_idx[i] << 4u) + sci.ac_tbl_idx[i];
   }
@@ -511,20 +525,23 @@ void EncodeSOS(j_compress_ptr cinfo, int scan_index) {
   WriteOutput(cinfo, data);
 }
 
-void EncodeDHT(j_compress_ptr cinfo,
-               const std::vector<JPEGHuffmanCode>& huffman_code,
-               size_t* next_huffman_code, size_t num_huffman_codes) {
+void EncodeDHT(j_compress_ptr cinfo, const JPEGHuffmanCode* huffman_codes,
+               size_t num_huffman_codes) {
   if (num_huffman_codes == 0) {
     return;
   }
 
   size_t marker_len = 2;
   for (size_t i = 0; i < num_huffman_codes; ++i) {
-    const JPEGHuffmanCode& huff = huffman_code[*next_huffman_code + i];
+    const JPEGHuffmanCode& huff = huffman_codes[i];
+    if (huff.sent_table) continue;
     marker_len += kJpegHuffmanMaxBitLength;
     for (size_t j = 0; j < huff.counts.size(); ++j) {
       marker_len += huff.counts[j];
     }
+  }
+  if (marker_len == 2) {
+    return;
   }
   std::vector<uint8_t> data(marker_len + 2);
   size_t pos = 0;
@@ -533,8 +550,7 @@ void EncodeDHT(j_compress_ptr cinfo,
   data[pos++] = marker_len >> 8u;
   data[pos++] = marker_len & 0xFFu;
   for (size_t i = 0; i < num_huffman_codes; ++i) {
-    const size_t huffman_code_index = *next_huffman_code + i;
-    const JPEGHuffmanCode& huff = huffman_code[huffman_code_index];
+    const JPEGHuffmanCode& huff = huffman_codes[i];
     size_t index = huff.slot_id;
     HuffmanCodeTable* huff_table;
     if (index & 0x10) {
@@ -548,6 +564,7 @@ void EncodeDHT(j_compress_ptr cinfo,
     if (!BuildHuffmanCodeTable(huff, huff_table)) {
       JPEGLI_ERROR("Failed to build Huffman code table.");
     }
+    if (huff.sent_table) continue;
     size_t total_count = 0;
     size_t max_length = 0;
     for (size_t i = 0; i < huff.counts.size(); ++i) {
@@ -564,40 +581,42 @@ void EncodeDHT(j_compress_ptr cinfo,
     for (size_t i = 0; i < total_count; ++i) {
       data[pos++] = huff.values[i];
     }
-    if (i + 1 == num_huffman_codes) {
-      JXL_ASSERT(huff.is_last);
-    }
   }
-  *next_huffman_code += num_huffman_codes;
   WriteOutput(cinfo, data);
 }
 
 void EncodeDQT(j_compress_ptr cinfo) {
-  // TODO(szabadka) Support 16-bit values (if force_baseline was not set).
-  int marker_len = 2;
-  for (int i = 0; i < NUM_QUANT_TBLS; ++i) {
-    JQUANT_TBL* quant_table = cinfo->quant_tbl_ptrs[i];
-    if (quant_table == nullptr || quant_table->sent_table) continue;
-    marker_len += 1 + kDCTBlockSize;
-  }
-  std::vector<uint8_t> data(marker_len + 2);
+  uint8_t data[4 + NUM_QUANT_TBLS * (1 + 2 * DCTSIZE2)];  // 520 bytes
   size_t pos = 0;
   data[pos++] = 0xFF;
   data[pos++] = 0xDB;
-  data[pos++] = marker_len >> 8u;
-  data[pos++] = marker_len & 0xFFu;
+  pos += 2;  // Length will be filled in later.
   for (int i = 0; i < NUM_QUANT_TBLS; ++i) {
     JQUANT_TBL* quant_table = cinfo->quant_tbl_ptrs[i];
     if (quant_table == nullptr || quant_table->sent_table) continue;
-    data[pos++] = i;
+    int precision = 0;
+    for (size_t k = 0; k < DCTSIZE2; ++k) {
+      if (quant_table->quantval[k] > 255) precision = 1;
+    }
+    data[pos++] = (precision << 4) + i;
     for (size_t j = 0; j < DCTSIZE2; ++j) {
       int val_idx = kJPEGNaturalOrder[j];
       int val = quant_table->quantval[val_idx];
+      if (val == 0) {
+        JPEGLI_ERROR("Invalid quantval 0.");
+      }
+      if (precision) {
+        data[pos++] = val >> 8;
+      }
       data[pos++] = val & 0xFFu;
     }
     quant_table->sent_table = TRUE;
   }
-  WriteOutput(cinfo, data);
+  if (pos > 4) {
+    data[2] = (pos - 2) >> 8u;
+    data[3] = (pos - 2) & 0xFFu;
+    WriteOutput(cinfo, data, pos);
+  }
 }
 
 bool EncodeDRI(j_compress_ptr cinfo) {
@@ -618,7 +637,7 @@ bool EncodeScan(j_compress_ptr cinfo,
   JpegBitWriter bw;
   JpegBitWriterInit(&bw, cinfo);
 
-  coeff_t last_dc_coeff[kMaxComponents] = {0};
+  coeff_t last_dc_coeff[MAX_COMPS_IN_SCAN] = {0};
   DCTCodingState coding_state;
   DCTCodingStateInit(&coding_state);
 
@@ -645,6 +664,7 @@ bool EncodeScan(j_compress_ptr cinfo,
   const int Ah = scan_info->Ah;
   const int Ss = scan_info->Ss;
   const int Se = scan_info->Se;
+  constexpr coeff_t kDummyBlock[DCTSIZE2] = {0};
 
   for (int mcu_y = 0; mcu_y < MCU_rows; ++mcu_y) {
     for (int mcu_x = 0; mcu_x < MCUs_per_row; ++mcu_x) {
@@ -668,20 +688,24 @@ bool EncodeScan(j_compress_ptr cinfo,
         int n_blocks_x = is_interleaved ? comp->h_samp_factor : 1;
         for (int iy = 0; iy < n_blocks_y; ++iy) {
           for (int ix = 0; ix < n_blocks_x; ++ix) {
-            int block_y = mcu_y * n_blocks_y + iy;
-            int block_x = mcu_x * n_blocks_x + ix;
-            int block_idx = block_y * comp->width_in_blocks + block_x;
-            int num_zero_runs = 0;
+            size_t block_y = mcu_y * n_blocks_y + iy;
+            size_t block_x = mcu_x * n_blocks_x + ix;
+            size_t block_idx = block_y * comp->width_in_blocks + block_x;
+            size_t num_zero_runs = 0;
             const coeff_t* block = &coeffs[comp_idx][block_idx << 6];
+            if (block_x >= comp->width_in_blocks ||
+                block_y >= comp->height_in_blocks) {
+              block = kDummyBlock;
+            }
             bool ok;
             if (!is_progressive) {
               ok = EncodeDCTBlockSequential(block, dc_huff, ac_huff,
-                                            num_zero_runs,
-                                            last_dc_coeff + comp_idx, &bw);
+                                            num_zero_runs, last_dc_coeff + i,
+                                            &bw);
             } else if (Ah == 0) {
               ok = EncodeDCTBlockProgressive(block, dc_huff, ac_huff, Ss, Se,
                                              Al, num_zero_runs, &coding_state,
-                                             last_dc_coeff + comp_idx, &bw);
+                                             last_dc_coeff + i, &bw);
             } else {
               ok = EncodeRefinementBits(block, ac_huff, Ss, Se, Al,
                                         &coding_state, &bw);

@@ -132,7 +132,7 @@ public:
         called because of the usual C++ virtual call resolution rules.
 
         @param parent
-            The window parent. Usually is @NULL.
+            The window parent. Usually is @nullptr.
         @param id
             The window identifier. It may take a value of @c wxID_ANY to
             indicate a default value.
@@ -150,9 +150,7 @@ public:
             The window style. Default value includes wxHSCROLL and wxVSCROLL
             styles.
         @param name
-            The name of the window. This parameter is used to associate a name
-            with the item, allowing the application user to set Motif resource
-            values for individual windows.
+            The name of the window.
 
         @remarks
 
@@ -230,7 +228,7 @@ public:
     /**
         Returns a pointer to the active MDI child, if there is one.
 
-        If there are any children at all this function returns a non-@NULL
+        If there are any children at all this function returns a non-null
         pointer.
     */
     virtual wxMDIChildFrame* GetActiveChild() const;
@@ -253,7 +251,7 @@ public:
 
         This function is currently not available under macOS.
 
-        @return The current Window menu or @NULL.
+        @return The current Window menu or @nullptr.
     */
     wxMenu *GetWindowMenu() const;
 
@@ -306,7 +304,7 @@ public:
         SetWindowMenu() is called again).
 
         To remove the window completely, you can use the wxFRAME_NO_WINDOW_MENU
-        window style but this function also allows doing it by passing @NULL
+        window style but this function also allows doing it by passing @nullptr
         pointer as @a menu.
 
         The menu may include the items with the following standard identifiers
@@ -323,7 +321,7 @@ public:
         This function is currently not available under macOS.
 
         @param menu
-            The menu to be used instead of the standard MDI Window menu or @NULL.
+            The menu to be used instead of the standard MDI Window menu or @nullptr.
     */
     virtual void SetWindowMenu(wxMenu* menu);
 
@@ -379,7 +377,7 @@ public:
         Constructor, creating the window.
 
         @param parent
-            The window parent. This should not be @NULL.
+            The window parent. This should not be @nullptr.
         @param id
             The window identifier. It may take a value of -1 to indicate a default
             value.
@@ -394,9 +392,7 @@ public:
         @param style
             The window style. See wxMDIChildFrame.
         @param name
-            The name of the window. This parameter is used to associate a name with the
-            item, allowing the application user to set Motif resource values for individual
-            windows.
+            The name of the window.
 
         @see Create()
     */

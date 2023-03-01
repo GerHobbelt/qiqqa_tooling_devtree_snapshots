@@ -56,7 +56,7 @@
     @style{wxTR_TWIST_BUTTONS}
         Selects alternative style of @c +/@c - buttons and shows rotating
         ("twisting") arrows instead. Currently this style is only implemented
-        under Microsoft Windows Vista and later Windows versions and is ignored
+        in wxMSW and is ignored
         under the other platforms as enabling it is equivalent to using
         wxSystemThemedControl::EnableSystemTheme().
     @style{wxTR_NO_LINES}
@@ -203,7 +203,7 @@ public:
         Constructor, creating and showing a tree control.
 
         @param parent
-            Parent window. Must not be @NULL.
+            Parent window. Must not be @nullptr.
         @param id
             Window identifier. The value @c wxID_ANY indicates a default value.
         @param pos
@@ -244,7 +244,7 @@ public:
     */
     virtual wxTreeItemId AddRoot(const wxString& text, int image = -1,
                                  int selImage = -1,
-                                 wxTreeItemData* data = NULL);
+                                 wxTreeItemData* data = nullptr);
 
     /**
         Appends an item to the end of the branch identified by @a parent, return
@@ -259,7 +259,7 @@ public:
                             const wxString& text,
                             int image = -1,
                             int selImage = -1,
-                            wxTreeItemData* data = NULL);
+                            wxTreeItemData* data = nullptr);
 
     /**
         Sets the buttons image list. The button images assigned with this method
@@ -268,7 +268,7 @@ public:
 
         Setting or assigning the button image list enables the display of image
         buttons. Once enabled, the only way to disable the display of button
-        images is to set the button image list to @NULL.
+        images is to set the button image list to @nullptr.
 
         This function is only available in the generic version.
 
@@ -452,7 +452,7 @@ public:
 
     /**
         Returns the edit control being currently used to edit a label. Returns
-        @NULL if no label is being edited.
+        @nullptr if no label is being edited.
 
         @note This is currently only implemented for wxMSW.
     */
@@ -730,7 +730,7 @@ public:
                             const wxString& text,
                             int image = -1,
                             int selImage = -1,
-                            wxTreeItemData* data = NULL);
+                            wxTreeItemData* data = nullptr);
 
     /**
         Inserts an item before one identified
@@ -747,7 +747,7 @@ public:
                             const wxString& text,
                             int image = -1,
                             int selImage = -1,
-                            wxTreeItemData* data = NULL);
+                            wxTreeItemData* data = nullptr);
 
     /**
         Returns @true if the given item is in bold state.
@@ -812,7 +812,7 @@ public:
                              const wxString& text,
                              int image = -1,
                              int selImage = -1,
-                             wxTreeItemData* data = NULL);
+                             wxTreeItemData* data = nullptr);
 
     /**
         Scrolls the specified item into view.
@@ -844,7 +844,7 @@ public:
         @ref wxTreeCtrl "wxTreeCtrl"'s destructor, you must delete it yourself.
         Setting or assigning the button image list enables the display of image
         buttons. Once enabled, the only way to disable the display of button
-        images is to set the button image list to @NULL.
+        images is to set the button image list to @nullptr.
 
         @note This function is only available in the generic version.
 

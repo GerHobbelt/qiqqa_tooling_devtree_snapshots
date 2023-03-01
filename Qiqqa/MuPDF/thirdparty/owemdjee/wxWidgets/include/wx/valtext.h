@@ -66,7 +66,7 @@ public:
 
 protected:
     // Get the text entry of the associated control. Normally shouldn't ever
-    // return NULL (and will assert if it does return it) but the caller should
+    // return nullptr (and will assert if it does return it) but the caller should
     // still test the return value for safety.
     wxTextEntry *GetTextEntry() const;
 
@@ -92,27 +92,27 @@ private:
 class WXDLLIMPEXP_CORE wxTextValidator: public wxTextEntryValidator
 {
 public:
-    wxTextValidator(long style = wxFILTER_NONE, wxString *val = NULL);
+    wxTextValidator(long style = wxFILTER_NONE, wxString *val = nullptr);
     wxTextValidator(const wxTextValidator& val);
 
     virtual ~wxTextValidator(){}
 
-    // Make a clone of this validator (or return NULL) - currently necessary
+    // Make a clone of this validator (or return nullptr) - currently necessary
     // if you're passing a reference to a validator.
     // Another possibility is to always pass a pointer to a new validator
     // (so the calling code can use a copy constructor of the relevant class).
-    virtual wxObject *Clone() const wxOVERRIDE { return new wxTextValidator(*this); }
+    virtual wxObject *Clone() const override { return new wxTextValidator(*this); }
     bool Copy(const wxTextValidator& val);
 
     // Called when the value in the window must be validated.
     // This function can pop up an error message.
-    virtual bool Validate(wxWindow *parent) wxOVERRIDE;
+    virtual bool Validate(wxWindow *parent) override;
 
     // Called to transfer data to the window
-    virtual bool TransferToWindow() wxOVERRIDE;
+    virtual bool TransferToWindow() override;
 
     // Called to transfer data from the window
-    virtual bool TransferFromWindow() wxOVERRIDE;
+    virtual bool TransferFromWindow() override;
 
     // Filter keystrokes
     void OnChar(wxKeyEvent& event);
@@ -210,9 +210,9 @@ private:
 class WXDLLIMPEXP_CORE wxRegexTextValidator : public wxTextValidator
 {
 public:
-    wxRegexTextValidator(long style = wxFILTER_NONE, wxString* str = NULL);
+    wxRegexTextValidator(long style = wxFILTER_NONE, wxString* str = nullptr);
     wxRegexTextValidator(const wxString& pattern, const wxString& intent,
-                         long style = wxFILTER_NONE, wxString* str = NULL);
+                         long style = wxFILTER_NONE, wxString* str = nullptr);
 
     // default ctor is ok
 

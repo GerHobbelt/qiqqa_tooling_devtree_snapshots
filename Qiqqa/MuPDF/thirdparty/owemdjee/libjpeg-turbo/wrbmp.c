@@ -24,6 +24,7 @@
 #include "cmyk.h"
 #include "cdjpeg.h"             /* Common decls for cjpeg/djpeg applications */
 #include "jconfigint.h"
+#include "jsamplecomp.h"
 
 #ifdef BMP_SUPPORTED
 
@@ -34,7 +35,7 @@
  */
 
 #if BITS_IN_JSAMPLE != 8
-  Sorry, this code only copes with 8-bit JSAMPLEs. /* deliberate syntax err */
+#error "Sorry, this code only copes with 8-bit JSAMPLEs." /* deliberate syntax err */
 #endif
 
 /*
@@ -479,6 +480,9 @@ jinit_write_bmp(j_decompress_ptr cinfo, boolean is_os2,
 {
   bmp_dest_ptr dest;
   JDIMENSION row_width;
+
+  if (cinfo->data_precision != 8)
+    ERREXIT1(cinfo, JERR_BAD_PRECISION, cinfo->data_precision);
 
   /* Create module interface object, fill in method pointers */
   dest = (bmp_dest_ptr)

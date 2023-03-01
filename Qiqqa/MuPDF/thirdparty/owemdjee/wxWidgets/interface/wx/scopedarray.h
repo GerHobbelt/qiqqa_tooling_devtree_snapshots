@@ -70,13 +70,13 @@ class wxScopedArray
 {
 public:
     /**
-        Creates the smart pointer with the given pointer or none if @NULL.  On
+        Creates the smart pointer with the given pointer or none if @nullptr.  On
         compilers that support it, this uses the explicit keyword.
     */
-    wxScopedArray(type*  T = NULL);
+    wxScopedArray(type*  T = nullptr);
 
     /**
-        This operator gets the pointer stored in the smart pointer or returns @NULL if
+        This operator gets the pointer stored in the smart pointer or returns @nullptr if
         there is none.
     */
     const T* get();
@@ -88,11 +88,11 @@ public:
     const T& operator [](long int i);
 
     /**
-        Deletes the currently held pointer and sets it to 'p' or to @NULL if no
+        Deletes the currently held pointer and sets it to 'p' or to @nullptr if no
         arguments are specified. This function does check to make sure that the
         pointer you are assigning is not the same pointer that is already stored.
     */
-    reset(T* p  = NULL);
+    reset(T* p  = nullptr);
 
     /**
         Swap the pointer inside the smart pointer with @a ot. The pointer being swapped
@@ -122,12 +122,12 @@ public:
     /**
         Constructor takes ownership of the given array.
 
-        If @a array is @NULL, reset() must presumably be called later.
+        If @a array is @nullptr, reset() must presumably be called later.
 
         @param array
-            An array allocated using @c new[] or @NULL.
+            An array allocated using @c new[] or @nullptr.
      */
-    explicit wxScopedArray(T * array = NULL);
+    explicit wxScopedArray(T * array = nullptr);
 
     /**
         Constructor allocating a new array of the specified size.
@@ -147,7 +147,7 @@ public:
         convertible to anything but a boolean expression).
 
         If this class contains a valid array it will return @true, if it contains
-        a @NULL pointer it will return @false.
+        a @nullptr pointer it will return @false.
     */
     operator unspecified_bool_type() const;
 
@@ -157,9 +157,9 @@ public:
         The previously stored array is deleted.
 
         @param array
-            An array allocated using @c new[] or @NULL.
+            An array allocated using @c new[] or @nullptr.
      */
-    void reset(T *array = NULL);
+    void reset(T *array = nullptr);
 
     /**
         Return the n-th element of the array.
@@ -171,8 +171,8 @@ public:
     /**
         Return the array pointer.
 
-        The returned pointer may be @NULL. It must not be deleted by the
-        caller, call @c reset(NULL) instead.
+        The returned pointer may be @nullptr. It must not be deleted by the
+        caller, call @c reset(nullptr) instead.
      */
     T *get() const;
 

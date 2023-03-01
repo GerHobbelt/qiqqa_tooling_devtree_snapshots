@@ -49,26 +49,26 @@ public:
     virtual ~wxDialog();
 
     // return true if we're showing the dialog modally
-    virtual bool IsModal() const wxOVERRIDE { return m_modalData != NULL; }
+    virtual bool IsModal() const override { return m_modalData != nullptr; }
 
     // show the dialog modally and return the value passed to EndModal()
-    virtual int ShowModal() wxOVERRIDE;
+    virtual int ShowModal() override;
 
     // may be called to terminate the dialog with the given return code
-    virtual void EndModal(int retCode) wxOVERRIDE;
+    virtual void EndModal(int retCode) override;
 
 
     // implementation only from now on
     // -------------------------------
 
     // override some base class virtuals
-    virtual bool Show(bool show = true) wxOVERRIDE;
-    virtual void SetWindowStyleFlag(long style) wxOVERRIDE;
+    virtual bool Show(bool show = true) override;
+    virtual void SetWindowStyleFlag(long style) override;
 
     void ShowGripper(bool show);
 
     // Windows callbacks
-    WXLRESULT MSWWindowProc(WXUINT message, WXWPARAM wParam, WXLPARAM lParam) wxOVERRIDE;
+    WXLRESULT MSWWindowProc(WXUINT message, WXWPARAM wParam, WXLPARAM lParam) override;
 
 protected:
     // common part of all ctors
@@ -85,11 +85,11 @@ private:
     // gripper if we have one
     void OnWindowCreate(wxWindowCreateEvent& event);
 
-    // gripper window for a resizable dialog, NULL if we're not resizable
+    // gripper window for a resizable dialog, nullptr if we're not resizable
     WXHWND m_hGripper;
     bool m_showGripper;
 
-    // this pointer is non-NULL only while the modal event loop is running
+    // this pointer is non-null only while the modal event loop is running
     wxDialogModalData *m_modalData;
 
     wxDECLARE_DYNAMIC_CLASS(wxDialog);

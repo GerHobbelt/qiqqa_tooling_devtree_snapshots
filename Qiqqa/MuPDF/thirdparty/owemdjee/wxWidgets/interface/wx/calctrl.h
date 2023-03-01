@@ -368,7 +368,7 @@ public:
 
     /**
         Returns the attribute for the given date (should be in the range
-        1...31). The returned pointer may be @NULL. Only in generic
+        1...31). The returned pointer may be @nullptr. Only in generic
         wxCalendarCtrl.
     */
     virtual wxCalendarDateAttr* GetAttr(size_t day) const;
@@ -448,8 +448,8 @@ public:
         Not implemented in wxGTK currently.
     */
     virtual wxCalendarHitTestResult HitTest(const wxPoint& pos,
-                                            wxDateTime* date = NULL,
-                                            wxDateTime::WeekDay* wd = NULL);
+                                            wxDateTime* date = nullptr,
+                                            wxDateTime::WeekDay* wd = nullptr);
 
     /**
         Clears any attributes associated with the given day (in the range
@@ -459,7 +459,7 @@ public:
 
     /**
         Associates the attribute with the specified date (in the range 1...31).
-        If the pointer is @NULL, the items attribute is cleared. Only in
+        If the pointer is @nullptr, the items attribute is cleared. Only in
         generic wxCalendarCtrl.
     */
     virtual void SetAttr(size_t day, wxCalendarDateAttr* attr);
@@ -553,11 +553,11 @@ public:
         @see SetDateRange()
 
         @param lowerdate
-            If non-@NULL, the value of the low limit for the dates shown by the
+            If non-null, the value of the low limit for the dates shown by the
             control is returned (which may be ::wxDefaultDateTime if no limit
             is set).
         @param upperdate
-            If non-@NULL, the value of the upper limit for the dates shown by
+            If non-null, the value of the upper limit for the dates shown by
             the control is returned (which may be ::wxDefaultDateTime if no
             limit is set).
         @return

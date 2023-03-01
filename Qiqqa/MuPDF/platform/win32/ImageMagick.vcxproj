@@ -974,7 +974,6 @@
     <Image Include="../../thirdparty/owemdjee/ImageMagick/images/difference.png" />
     <Image Include="../../thirdparty/owemdjee/ImageMagick/images/examples.jpg" />
     <Image Include="../../thirdparty/owemdjee/ImageMagick/images/frame.jpg" />
-    <Image Include="../../thirdparty/owemdjee/ImageMagick/images/fuzzy-magick.png" />
     <Image Include="../../thirdparty/owemdjee/ImageMagick/images/gaussian-blur.png" />
     <Image Include="../../thirdparty/owemdjee/ImageMagick/images/granite.png" />
     <Image Include="../../thirdparty/owemdjee/ImageMagick/images/imade_art2.jpg" />
@@ -1093,10 +1092,6 @@
     <Text Include="../../thirdparty/owemdjee/ImageMagick/Magick++/NEWS" />
     <Text Include="../../thirdparty/owemdjee/ImageMagick/Magick++/README" />
     <Text Include="../../thirdparty/owemdjee/ImageMagick/Magick++/bin/Magick++-config.in" />
-    <Text Include="../../thirdparty/owemdjee/ImageMagick/Magick++/fuzz/build.sh" />
-    <Text Include="../../thirdparty/owemdjee/ImageMagick/Magick++/fuzz/build_dependencies.sh" />
-    <Text Include="../../thirdparty/owemdjee/ImageMagick/Magick++/fuzz/build_fuzzers.sh" />
-    <Text Include="../../thirdparty/owemdjee/ImageMagick/Magick++/fuzz/build_imagemagick.sh" />
     <Text Include="../../thirdparty/owemdjee/ImageMagick/Magick++/lib/Magick++.pc.in" />
     <Text Include="../../thirdparty/owemdjee/ImageMagick/MagickCore/ImageMagick.pc.in" />
     <Text Include="../../thirdparty/owemdjee/ImageMagick/MagickCore/MagickCore-config.in" />
@@ -1178,11 +1173,9 @@
     <Text Include="../../thirdparty/owemdjee/ImageMagick/utilities/stream.1.in" />
     <Text Include="../../thirdparty/owemdjee/ImageMagick/winpath.sh" />
     <Text Include="../../thirdparty/owemdjee/ImageMagick/www/Magick++/ChangeLog.html" />
-    <Text Include="../../thirdparty/owemdjee/ImageMagick/www/Magick++/NEWS.html" />
     <Text Include="../../thirdparty/owemdjee/ImageMagick/www/Magick++/README.txt" />
     <Text Include="../../thirdparty/owemdjee/ImageMagick/www/assets/magick.js" />
     <Text Include="../../thirdparty/owemdjee/ImageMagick/www/changelog.html" />
-    <Text Include="../../thirdparty/owemdjee/ImageMagick/www/news.html" />
     <Xml Include="../../thirdparty/owemdjee/ImageMagick/config/coder.xml" />
     <Xml Include="../../thirdparty/owemdjee/ImageMagick/config/colors.xml" />
     <Xml Include="../../thirdparty/owemdjee/ImageMagick/config/english.xml" />

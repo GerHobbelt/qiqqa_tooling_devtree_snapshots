@@ -616,7 +616,7 @@ public:
         BeginEdit()). If it isn't, it just returns @false, otherwise it must do
         the following:
             - Save the new value internally so that ApplyEdit() could apply it.
-            - Fill @a newval (which is never @NULL) with the string
+            - Fill @a newval (which is never @nullptr) with the string
             representation of the new value.
             - Return @true
 
@@ -668,7 +668,7 @@ public:
         Show or hide the edit control, use the specified attributes to set
         colours/fonts for it.
     */
-    virtual void Show(bool show, wxGridCellAttr* attr = NULL);
+    virtual void Show(bool show, wxGridCellAttr* attr = nullptr);
 
     /**
         If the editor is enabled by clicking on the cell, this method will be
@@ -684,13 +684,13 @@ public:
 
     /**
        Return @true to allow the given key to start editing: the base class
-       version only checks that the event has no modifiers. 
+       version only checks that the event has no modifiers.
 
        If the key is F2 (special), editing will always start and this
        method will not be called at all (but StartingKey() will)
     */
     virtual bool IsAcceptedKey(wxKeyEvent& event);
-    
+
 
     /**
        Returns the value currently in the editor control.
@@ -720,7 +720,7 @@ public:
        a wxControl-derived class.
 
        Note that if SetWindow() had been called with an object not deriving
-       from wxControl, this method will return @NULL.
+       from wxControl, this method will return @nullptr.
     */
     wxControl* GetControl();
 
@@ -905,7 +905,7 @@ public:
             array.
     */
     wxGridCellChoiceEditor(size_t count = 0,
-                           const wxString choices[] = NULL,
+                           const wxString choices[] = nullptr,
                            bool allowOthers = false);
 
     /**
@@ -1246,7 +1246,7 @@ public:
     /**
         Default constructor.
     */
-    explicit wxGridCellAttr(wxGridCellAttr* attrDefault = NULL);
+    explicit wxGridCellAttr(wxGridCellAttr* attrDefault = nullptr);
 
     /**
         Constructor specifying some of the often used attributes.
@@ -1277,10 +1277,10 @@ public:
         this function, use GetNonDefaultAlignment() if this is not desirable.
 
         @param hAlign
-            Horizontal alignment is returned here if this argument is non-@NULL.
+            Horizontal alignment is returned here if this argument is non-null.
             It is one of wxALIGN_LEFT, wxALIGN_CENTRE or wxALIGN_RIGHT.
         @param vAlign
-            Vertical alignment is returned here if this argument is non-@NULL.
+            Vertical alignment is returned here if this argument is non-null.
             It is one of wxALIGN_TOP, wxALIGN_CENTRE or wxALIGN_BOTTOM.
     */
     void GetAlignment(int* hAlign, int* vAlign) const;
@@ -1737,7 +1737,7 @@ public:
         the cell attribute having the highest precedence.
 
         Notice that the caller must call DecRef() on the returned pointer if it
-        is non-@NULL. GetAttrPtr() method can be used to do this automatically.
+        is non-null. GetAttrPtr() method can be used to do this automatically.
 
         @param row
             The row of the cell.
@@ -1746,7 +1746,7 @@ public:
         @param kind
             The kind of the attribute to return.
         @return
-            The attribute to use which should be DecRef()'d by caller or @NULL
+            The attribute to use which should be DecRef()'d by caller or @nullptr
             if no attributes are defined for this cell.
      */
     virtual wxGridCellAttr *GetAttr(int row, int col,
@@ -1768,7 +1768,7 @@ public:
 
         All these functions take ownership of the attribute passed to them,
         i.e. will call DecRef() on it themselves later and so it should not be
-        destroyed by the caller. The attribute can be @NULL to reset a
+        destroyed by the caller. The attribute can be @nullptr to reset a
         previously set value.
      */
     ///@{
@@ -1789,7 +1789,7 @@ public:
 
         These functions return the renderers for the given row or column header
         label and the corner window. Unlike cell attributes, these objects are
-        not reference counted and are never @NULL so they are returned by
+        not reference counted and are never @nullptr so they are returned by
         reference and not pointer and DecRef() shouldn't (and can't) be called
         for them.
 
@@ -2212,19 +2212,10 @@ struct wxGridBlockDiffResult
     Note that objects of this class can only be returned by wxGrid, but not
     constructed in the application code.
 
-    The preferable way to iterate over it is using C++11 range-for loop:
+    The preferable way to iterate over it is using range-for loop:
     @code
         for ( const auto& block: grid->GetSelectedBlocks() ) {
             ... do something with block ...
-        }
-    @endcode
-    When not using C++11, iteration has to be done manually:
-    @code
-        wxGridBlocks range = grid->GetSelectedBlocks();
-        for ( wxGridBlocks::iterator it = range.begin();
-              it != range.end();
-              ++it ) {
-            ... do something with *it ...
         }
     @endcode
 
@@ -2423,7 +2414,7 @@ public:
         Returns the value of the given cell as a user-defined type.
 
         This should only be called if CanGetValueAs() returns @true when called
-        with @a typeName. Default implementation always return @NULL.
+        with @a typeName. Default implementation always return @nullptr.
 
         Note that if the pointer is not null, it will be deleted by the caller,
         so it must be allocated on the heap by any class overriding this
@@ -2632,7 +2623,7 @@ public:
         Associate this attributes provider with the table.
 
         The table takes ownership of @a attrProvider pointer and will delete it
-        when it doesn't need it any more. The pointer can be @NULL, however
+        when it doesn't need it any more. The pointer can be @nullptr, however
         this won't disable attributes management in the table but will just
         result in a default attributes being recreated the next time any of the
         other functions in this section is called. To completely disable the
@@ -2644,7 +2635,7 @@ public:
     /**
         Returns the attribute provider currently being used.
 
-        This function may return @NULL if the attribute provider hasn't been
+        This function may return @nullptr if the attribute provider hasn't been
         either associated with this table by SetAttrProvider() nor created on
         demand by any other methods.
      */
@@ -4467,10 +4458,10 @@ public:
         @param col
             The column of the cell.
         @param num_rows
-            Pointer to variable receiving the number of rows, must not be @NULL.
+            Pointer to variable receiving the number of rows, must not be @nullptr.
         @param num_cols
             Pointer to variable receiving the number of columns, must not be
-            @NULL.
+            @nullptr.
         @return
             The kind of this cell span (the return value is new in wxWidgets
             2.9.1, this function was void in previous wxWidgets versions).
@@ -5024,7 +5015,7 @@ public:
     /**
         Returns a range of grid selection blocks.
 
-        The returned range can be iterated over, e.g. with C++11 range-for loop:
+        The returned range can be iterated over, e.g. with range-for loop:
         @code
             for ( const auto block: grid->GetSelectedBlocks() ) {
                 if ( block.Intersects(myBlock) )
@@ -5363,7 +5354,7 @@ public:
     */
     wxRect BlockToDeviceRect(const wxGridCellCoords& topLeft,
                              const wxGridCellCoords& bottomRight,
-                             const wxGridWindow *gridWindow = NULL) const;
+                             const wxGridWindow *gridWindow = nullptr) const;
 
     /**
         Return the rectangle corresponding to the grid cell's size and position
@@ -5463,12 +5454,12 @@ public:
         @param gridWindow
             The associated grid window that limits the search (note that this
             parameter is only available since wxWidgets 3.1.3).
-            If @a gridWindow is @NULL, it will consider all the cells, no matter
+            If @a gridWindow is @nullptr, it will consider all the cells, no matter
             which grid they belong to.
         @return
             The column index or @c wxNOT_FOUND.
     */
-    int XToCol(int x, bool clipToMinMax = false, wxGridWindow *gridWindow = NULL) const;
+    int XToCol(int x, bool clipToMinMax = false, wxGridWindow *gridWindow = nullptr) const;
 
     /**
         Returns the column whose right hand edge is close to the given logical
@@ -5487,20 +5478,20 @@ public:
         logical ones.
 
         The parameter @a gridWindow is new since wxWidgets 3.1.3. If it is
-        specified, i.e. non-@NULL, the coordinates must be in this window
+        specified, i.e. non-null, the coordinates must be in this window
         coordinate system and only the cells of this window are considered,
         i.e. the function returns @c wxNOT_FOUND if the coordinates are out of
         bounds.
 
-        If @a gridWindow is @NULL, coordinates are relative to the main grid
+        If @a gridWindow is @nullptr, coordinates are relative to the main grid
         window and all cells are considered.
 
         @see XToCol(), YToRow()
      */
-    wxGridCellCoords XYToCell(int x, int y, wxGridWindow *gridWindow = NULL) const;
+    wxGridCellCoords XYToCell(int x, int y, wxGridWindow *gridWindow = nullptr) const;
 
     /// @overload
-    wxGridCellCoords XYToCell(const wxPoint& pos, wxGridWindow *gridWindow = NULL) const;
+    wxGridCellCoords XYToCell(const wxPoint& pos, wxGridWindow *gridWindow = nullptr) const;
 
     // XYToCell(int, int, wxGridCellCoords&) overload is intentionally
     // undocumented, using it is ugly and non-const reference parameters are
@@ -5519,14 +5510,14 @@ public:
 
 
         The parameter @a gridWindow is new since wxWidgets 3.1.3. If it is
-        specified, i.e. non-@NULL, only the cells of this window are
+        specified, i.e. non-null, only the cells of this window are
         considered, i.e. the function returns @c wxNOT_FOUND if @a y is out of
         bounds.
 
-        If @a gridWindow is @NULL, the function returns @c wxNOT_FOUND only if
+        If @a gridWindow is @nullptr, the function returns @c wxNOT_FOUND only if
         there is no row at all at the @a y position.
     */
-    int YToRow(int y, bool clipToMinMax = false, wxGridWindow *gridWindow = NULL) const;
+    int YToRow(int y, bool clipToMinMax = false, wxGridWindow *gridWindow = nullptr) const;
 
     ///@}
 
@@ -5946,11 +5937,11 @@ public:
 
 
     wxArrayInt CalcRowLabelsExposed( const wxRegion& reg,
-                                     wxGridWindow *gridWindow = NULL) const;
+                                     wxGridWindow *gridWindow = nullptr) const;
     wxArrayInt CalcColLabelsExposed( const wxRegion& reg,
-                                     wxGridWindow *gridWindow = NULL) const;
+                                     wxGridWindow *gridWindow = nullptr) const;
     wxGridCellCoordsArray CalcCellsExposed( const wxRegion& reg,
-                                            wxGridWindow *gridWindow = NULL) const;
+                                            wxGridWindow *gridWindow = nullptr) const;
 
     ///@}
 
@@ -6239,14 +6230,14 @@ class wxGridUpdateLocker
 public:
     /**
         Creates an object preventing the updates of the specified @a grid. The
-        parameter could be @NULL in which case nothing is done. If @a grid is
-        non-@NULL then the grid must exist for longer than this
+        parameter could be @nullptr in which case nothing is done. If @a grid is
+        non-null then the grid must exist for longer than this
         wxGridUpdateLocker object itself.
 
         The default constructor could be followed by a call to Create() to set
         the grid object later.
     */
-    wxGridUpdateLocker(wxGrid* grid = NULL);
+    wxGridUpdateLocker(wxGrid* grid = nullptr);
 
     /**
         Destructor reenables updates for the grid this object is associated
@@ -6322,9 +6313,13 @@ public:
         The user double-clicked a label with the right mouse button. Processes
         a @c wxEVT_GRID_LABEL_RIGHT_DCLICK event type.
     @event{EVT_GRID_SELECT_CELL(func)}
-        The given cell was made current, either by user or by the program via a
-        call to SetGridCursor() or GoToCell(). Processes a
-        @c wxEVT_GRID_SELECT_CELL event type.
+        The given cell is about to be made current, either by user or by the
+        program via a call to wxGrid::SetGridCursor() or wxGrid::GoToCell().
+        The event can be vetoed to prevent this from happening and
+        wxGrid::GetGridCursorCoords() still returns the previous current cell
+        coordinates during the event handler execution, while the new ones are
+        available via the event object GetRow() and GetCol() functions.
+        Processes a @c wxEVT_GRID_SELECT_CELL event type.
     @event{EVT_GRID_ROW_MOVE(func)}
         The user tries to change the order of the rows in the grid by
         dragging the row specified by GetRow(). This event can be vetoed to
@@ -6677,7 +6672,7 @@ public:
         a wxControl-derived class.
 
         Note that if SetWindow() had been called with an object not deriving
-        from wxControl, this method will return @NULL.
+        from wxControl, this method will return @nullptr.
     */
     wxControl* GetControl();
 

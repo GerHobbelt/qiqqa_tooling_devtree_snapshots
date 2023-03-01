@@ -84,14 +84,14 @@ public:
         Adds the given item to the given position.
 
         @return A valid pointer if the item was successfully placed at the
-                 given position, or @NULL if something was already there.
+                 given position, or @nullptr if something was already there.
     */
     wxSizerItem* Add(wxWindow* window, const wxGBPosition& pos,
                      const wxGBSpan& span = wxDefaultSpan,
-                     int flag = 0, int border = 0, wxObject* userData = NULL);
+                     int flag = 0, int border = 0, wxObject* userData = nullptr);
     wxSizerItem* Add(wxSizer* sizer, const wxGBPosition& pos,
                      const wxGBSpan& span = wxDefaultSpan,
-                     int flag = 0, int border = 0, wxObject* userData = NULL);
+                     int flag = 0, int border = 0, wxObject* userData = nullptr);
     wxSizerItem* Add(wxGBSizerItem* item);
 
     /**
@@ -99,11 +99,11 @@ public:
         @a width and @a height specify the dimension of the spacer to be added.
 
         @return A valid pointer if the spacer was successfully placed at the
-                 given position, or @NULL if something was already there.
+                 given position, or @nullptr if something was already there.
     */
     wxSizerItem* Add(int width, int height, const wxGBPosition& pos,
                      const wxGBSpan& span = wxDefaultSpan,
-                     int flag = 0, int border = 0, wxObject* userData = NULL);
+                     int flag = 0, int border = 0, wxObject* userData = nullptr);
 
     ///@}
     /**
@@ -120,14 +120,14 @@ public:
         for example it may be the item we are checking the position of.
     */
     bool CheckForIntersection(wxGBSizerItem* item,
-                              wxGBSizerItem* excludeItem = NULL);
+                              wxGBSizerItem* excludeItem = nullptr);
     bool CheckForIntersection(const wxGBPosition& pos, const wxGBSpan& span,
-                              wxGBSizerItem* excludeItem = NULL);
+                              wxGBSizerItem* excludeItem = nullptr);
     ///@}
 
     ///@{
     /**
-        Find the sizer item for the given window or subsizer, returns @NULL if
+        Find the sizer item for the given window or subsizer, returns @nullptr if
         not found. (non-recursive)
     */
     wxGBSizerItem* FindItem(wxWindow* window);
@@ -135,7 +135,7 @@ public:
     ///@}
 
     /**
-        Return the sizer item located at the point given in pt, or @NULL if
+        Return the sizer item located at the point given in pt, or @nullptr if
         there is no item at that point. The (x,y) coordinates in @a pt
         correspond to the client coordinates of the window using the sizer for
         layout. (non-recursive)
@@ -143,14 +143,14 @@ public:
     wxGBSizerItem* FindItemAtPoint(const wxPoint& pt);
 
     /**
-        Return the sizer item for the given grid cell, or @NULL if there is no
+        Return the sizer item for the given grid cell, or @nullptr if there is no
         item at that position. (non-recursive)
     */
     wxGBSizerItem* FindItemAtPosition(const wxGBPosition& pos);
 
     /**
         Return the sizer item that has a matching user data (it only compares
-        pointer values) or @NULL if not found. (non-recursive)
+        pointer values) or @nullptr if not found. (non-recursive)
     */
     wxGBSizerItem* FindItemWithData(const wxObject* userData);
 
@@ -239,19 +239,19 @@ public:
     */
     wxGBSizerItem(int width, int height, const wxGBPosition& pos,
                   const wxGBSpan& span=wxDefaultSpan, int flag=0, int border=0,
-                  wxObject* userData=NULL);
+                  wxObject* userData=nullptr);
     /**
         Construct a sizer item for tracking a window.
     */
     wxGBSizerItem(wxWindow* window, const wxGBPosition& pos,
                   const wxGBSpan& span=wxDefaultSpan, int flag=0, int border=0,
-                  wxObject* userData=NULL);
+                  wxObject* userData=nullptr);
     /**
         Construct a sizer item for tracking a subsizer.
     */
     wxGBSizerItem(wxSizer* sizer, const wxGBPosition& pos,
                   const wxGBSpan& span=wxDefaultSpan, int flag=0, int border=0,
-                  wxObject* userData=NULL);
+                  wxObject* userData=nullptr);
 
     /**
         Get the row and column of the endpoint of this item.

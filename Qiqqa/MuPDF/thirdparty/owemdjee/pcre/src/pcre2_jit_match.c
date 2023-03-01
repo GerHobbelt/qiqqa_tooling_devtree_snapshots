@@ -39,8 +39,13 @@ POSSIBILITY OF SUCH DAMAGE.
 */
 
 #ifndef INCLUDED_FROM_PCRE2_JIT_COMPILE
+#ifndef BUILD_MONOLITHIC
 #error This file must be included from pcre2_jit_compile.c.
 #endif
+#endif
+
+
+#ifdef INCLUDED_FROM_PCRE2_JIT_COMPILE
 
 #ifdef SUPPORT_JIT
 
@@ -182,5 +187,7 @@ return match_data->rc;
 
 #endif  /* SUPPORT_JIT */
 }
+
+#endif // INCLUDED_FROM_PCRE2_JIT_COMPILE
 
 /* End of pcre2_jit_match.c */

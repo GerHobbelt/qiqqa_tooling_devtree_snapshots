@@ -229,9 +229,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/clipp/include/clipp.h" />
     <Text Include="../../thirdparty/owemdjee/clipp/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/clipp/README.md" />
-    <Text Include="../../thirdparty/owemdjee/clipp/examples/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/clipp/test/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/clipp/test/run_tests.py" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

@@ -1,7 +1,8 @@
-
 # Generated files:
 cscope.*
 node_modules
+
+log.log
 
 # Editor and file browser turds:
 *~
@@ -22,6 +23,15 @@ node_modules
 *.lo
 *.o
 *.obj
+*.tlog 
+*.lastbuildstate 
+*.recipe 
+*.ilk 
+*.pdb 
+*.idb 
+*.vcxproj.FileListAbsolute.txt 
+*.iobj 
+*.ipdb 
 
 # Precompiled Headers
 *.gch
@@ -46,8 +56,24 @@ platform/win32/Release-*/
 platform/win32/ReleaseOpenssl
 platform/win32/Memento
 platform/win32/DebugJava-32
+/Qiqqa/Technology.Tests/forking cleans up memory leaks/Debug-64/
+/Qiqqa/Technology.Tests/forking cleans up memory leaks/Release-64/
+/Qiqqa/thirdparty/DirScanner/NTFS Find hardlinks or regular files/Debug-64/
+/Qiqqa/thirdparty/DirScanner/NTFS Find hardlinks or regular files/Release-64/
+/Qiqqa/thirdparty/DirScanner/NTFS ADS Viewer/Debug-64/
+/Qiqqa/thirdparty/DirScanner/NTFS ADS Viewer/Release-64/
+**/x64/Debug/
+**/x64/Release/
+**/x86/Debug/
+**/x86/Release/
+**/Win32/Debug/
+**/Win32/Release/
+**/bin/Debug-Unicode-32bit-x86/
+**/bin/Debug-Unicode-64bit-x64/
+**/bin/Release-Unicode-32bit-x86/
+**/bin/Release-Unicode-64bit-x64/
+*.CppClean.log
 .vs
-bin
 obj
 Browse.VC.*
 Solution.VC.*
@@ -95,3 +121,12 @@ tmp.bat
 *.app
 snapshot.log
 /Qiqqa/MuPDF/__git_lazy_remotes__
+
+# large file split/unsplit support: ignoring the large files.
+		
+Qiqqa/MuPDF/thirdparty/langdata_LSTM/ell/ell.training_text
+Qiqqa/MuPDF/thirdparty/tessdata/chi_tra.traineddata
+Qiqqa/MuPDF/thirdparty/tessdata/script/Latin.traineddata
+Qiqqa/MuPDF/thirdparty/tessdata_best/script/Latin.traineddata
+Qiqqa/MuPDF/thirdparty/tessdata_fast/script/Latin.traineddata
+Qiqqa/MuPDF/thirdparty/tessdata/chi_sim.traineddata

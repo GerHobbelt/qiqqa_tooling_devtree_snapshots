@@ -255,12 +255,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/rapidyaml/src/c4/yml/yml.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/rapidyaml/src/ryml.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/rapidyaml/src/ryml_std.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/rapidyaml/test/callbacks_tester.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/rapidyaml/test/test_case.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/rapidyaml/test/test_group.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/rapidyaml/test/test_suite/test_suite_common.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/rapidyaml/test/test_suite/test_suite_events.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/rapidyaml/test/test_suite/test_suite_parts.hpp" />
     <Image Include="../../thirdparty/owemdjee/rapidyaml/img/first_comparison_yaml_cpp.png" />
     <Text Include="../../thirdparty/owemdjee/rapidyaml/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/rapidyaml/CONTRIBUTING.md" />
@@ -288,28 +282,12 @@
     <Text Include="../../thirdparty/owemdjee/rapidyaml/changelog/0.4.0.md" />
     <Text Include="../../thirdparty/owemdjee/rapidyaml/changelog/0.4.1.md" />
     <Text Include="../../thirdparty/owemdjee/rapidyaml/changelog/0.5.0.md" />
+    <Text Include="../../thirdparty/owemdjee/rapidyaml/cmake/uninstall.cmake" />
+    <Text Include="../../thirdparty/owemdjee/rapidyaml/compat.cmake" />
+    <Text Include="../../thirdparty/owemdjee/rapidyaml/ext/testbm.cmake" />
     <Text Include="../../thirdparty/owemdjee/rapidyaml/requirements.txt" />
-    <Text Include="../../thirdparty/owemdjee/rapidyaml/samples/add_subdirectory/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/rapidyaml/samples/add_subdirectory/run.sh" />
-    <Text Include="../../thirdparty/owemdjee/rapidyaml/samples/custom_c4core/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/rapidyaml/samples/custom_c4core/run.sh" />
-    <Text Include="../../thirdparty/owemdjee/rapidyaml/samples/fetch_content/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/rapidyaml/samples/fetch_content/run.sh" />
-    <Text Include="../../thirdparty/owemdjee/rapidyaml/samples/find_package/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/rapidyaml/samples/find_package/run.sh" />
-    <Text Include="../../thirdparty/owemdjee/rapidyaml/samples/singleheader/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/rapidyaml/samples/singleheader/run.sh" />
-    <Text Include="../../thirdparty/owemdjee/rapidyaml/samples/singleheaderlib/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/rapidyaml/samples/singleheaderlib/run_shared.sh" />
-    <Text Include="../../thirdparty/owemdjee/rapidyaml/samples/singleheaderlib/run_static.sh" />
     <Text Include="../../thirdparty/owemdjee/rapidyaml/setup.py" />
     <Text Include="../../thirdparty/owemdjee/rapidyaml/src/ryml-gdbtypes.py" />
-    <Text Include="../../thirdparty/owemdjee/rapidyaml/test/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/rapidyaml/test/test_install/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/rapidyaml/test/test_singleheader/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/rapidyaml/tools/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/rapidyaml/tools/amalgamate.py" />
-    <Text Include="../../thirdparty/owemdjee/rapidyaml/tools/test_suite/run_test_suite.sh" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

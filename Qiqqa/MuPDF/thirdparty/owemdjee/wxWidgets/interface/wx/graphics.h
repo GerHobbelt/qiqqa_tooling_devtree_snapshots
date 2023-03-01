@@ -229,7 +229,7 @@ class wxGraphicsObject : public wxObject
 {
 public:
     /**
-        Returns the renderer that was used to create this instance, or @NULL
+        Returns the renderer that was used to create this instance, or @nullptr
         if it has not been initialized yet.
     */
     wxGraphicsRenderer* GetRenderer() const;
@@ -479,7 +479,7 @@ public:
 
         Creates a wxGraphicsContext if @a dc is a supported type (i.e. has a
         corresponding Create() method, e.g. wxWindowDC or wxMemoryDC).
-        Returns @NULL if the DC is unsupported.
+        Returns @nullptr if the DC is unsupported.
 
         This method is only useful as a helper in generic code that operates
         with wxDC and doesn't known its exact type. Use Create() instead if
@@ -1139,9 +1139,9 @@ public:
 
         If this context was created using Create() overload taking wxWindow or
         wxWindowDC, this method returns the corresponding window. Otherwise
-        returns @NULL.
+        returns @nullptr.
 
-        @return A possibly @NULL window pointer.
+        @return A possibly @nullptr window pointer.
 
         @since 3.1.2
      */
@@ -1435,7 +1435,7 @@ public:
 
         Creates a wxGraphicsContext if @a dc is a supported type (i.e. has a
         corresponding CreateContext() method, e.g. wxWindowDC or wxMemoryDC).
-        Returns @NULL if the DC is unsupported.
+        Returns @nullptr if the DC is unsupported.
 
         This method is only useful as a helper in generic code that operates
         with wxDC and doesn't known its exact type. Use the appropriate
@@ -1622,7 +1622,7 @@ public:
         For Cairo, this is the major,minor,micro version of the Cairo library
         which is returned.
      */
-    virtual void GetVersion(int* major, int* minor = NULL, int* micro=NULL) const = 0;
+    virtual void GetVersion(int* major, int* minor = nullptr, int* micro = nullptr) const = 0;
 
     /**
         Returns the default renderer on this platform. On macOS this is the Core
@@ -1831,9 +1831,9 @@ public:
     /**
         Returns the component values of the matrix via the argument pointers.
     */
-    virtual void Get(wxDouble* a = NULL, wxDouble* b = NULL,
-                     wxDouble* c = NULL, wxDouble* d = NULL,
-                     wxDouble* tx = NULL, wxDouble* ty = NULL) const;
+    virtual void Get(wxDouble* a = nullptr, wxDouble* b = nullptr,
+                     wxDouble* c = nullptr, wxDouble* d = nullptr,
+                     wxDouble* tx = nullptr, wxDouble* ty = nullptr) const;
 
     /**
         Returns the native representation of the matrix. For CoreGraphics this

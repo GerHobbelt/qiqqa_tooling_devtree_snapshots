@@ -32,7 +32,7 @@
 class wxStockGDIMac: public wxStockGDI
 {
 public:
-    virtual const wxFont* GetFont(Item item) wxOVERRIDE;
+    virtual const wxFont* GetFont(Item item) override;
 
 private:
     typedef wxStockGDI super;
@@ -41,7 +41,7 @@ private:
 const wxFont* wxStockGDIMac::GetFont(Item item)
 {
     wxFont* font = static_cast<wxFont*>(ms_stockObject[item]);
-    if (font == NULL)
+    if (font == nullptr)
     {
         switch (item)
         {

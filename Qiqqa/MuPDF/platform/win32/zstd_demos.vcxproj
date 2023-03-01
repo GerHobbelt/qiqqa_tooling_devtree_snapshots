@@ -227,9 +227,6 @@
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\scripts\libzstd\monolithic_main.c" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="../../thirdparty/owemdjee/zstd/build/single_file_libs/examples/emscripten.c" />
     <ClCompile Include="../../thirdparty/owemdjee/zstd/build/single_file_libs/examples/roundtrip.c" />
     <ClCompile Include="../../thirdparty/owemdjee/zstd/build/single_file_libs/examples/simple.c" />
@@ -333,7 +330,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/zstd/tests/datagencli.c" />
     <ClCompile Include="../../thirdparty/owemdjee/zstd/tests/decodecorpus.c" />
     <ClCompile Include="../../thirdparty/owemdjee/zstd/tests/fullbench.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/zstd/tests/fuzzer.c" />
     <ClCompile Include="../../thirdparty/owemdjee/zstd/tests/invalidDictionaries.c" />
     <ClCompile Include="../../thirdparty/owemdjee/zstd/tests/legacy.c" />
     <ClCompile Include="../../thirdparty/owemdjee/zstd/tests/longmatch.c" />
@@ -452,10 +448,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/zstd/programs/util.h" />
     <ClInclude Include="../../thirdparty/owemdjee/zstd/programs/windres/verrsrc.h" />
     <ClInclude Include="../../thirdparty/owemdjee/zstd/programs/zstdcli_trace.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/zstd/tests/fuzz/fuzz.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/zstd/tests/fuzz/fuzz_data_producer.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/zstd/tests/fuzz/fuzz_helpers.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/zstd/tests/fuzz/zstd_helpers.h" />
     <ClInclude Include="../../thirdparty/owemdjee/zstd/tests/regression/config.h" />
     <ClInclude Include="../../thirdparty/owemdjee/zstd/tests/regression/data.h" />
     <ClInclude Include="../../thirdparty/owemdjee/zstd/tests/regression/levels.h" />
@@ -505,6 +497,7 @@
     <Text Include="../../thirdparty/owemdjee/zstd/build/cmake/lib/cmake_uninstall.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/zstd/build/cmake/programs/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/zstd/build/cmake/tests/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/zstd/build/cmake/zstdConfig.cmake" />
     <Text Include="../../thirdparty/owemdjee/zstd/build/meson/GetZstdLibraryVersion.py" />
     <Text Include="../../thirdparty/owemdjee/zstd/build/meson/InstallSymlink.py" />
     <Text Include="../../thirdparty/owemdjee/zstd/build/meson/README.md" />
@@ -583,12 +576,11 @@
     <Text Include="../../thirdparty/owemdjee/zstd/tests/cli-tests/dictionaries/golden.sh" />
     <Text Include="../../thirdparty/owemdjee/zstd/tests/cli-tests/run.py" />
     <Text Include="../../thirdparty/owemdjee/zstd/tests/cli-tests/zstd-symlinks/zstdcat.sh" />
-    <Text Include="../../thirdparty/owemdjee/zstd/tests/fuzz/README.md" />
-    <Text Include="../../thirdparty/owemdjee/zstd/tests/fuzz/fuzz.py" />
     <Text Include="../../thirdparty/owemdjee/zstd/tests/gzip/gzip-env.sh" />
     <Text Include="../../thirdparty/owemdjee/zstd/tests/gzip/helin-segv.sh" />
     <Text Include="../../thirdparty/owemdjee/zstd/tests/gzip/help-version.sh" />
     <Text Include="../../thirdparty/owemdjee/zstd/tests/gzip/hufts.sh" />
+    <Text Include="../../thirdparty/owemdjee/zstd/tests/gzip/init.cfg" />
     <Text Include="../../thirdparty/owemdjee/zstd/tests/gzip/init.sh" />
     <Text Include="../../thirdparty/owemdjee/zstd/tests/gzip/keep.sh" />
     <Text Include="../../thirdparty/owemdjee/zstd/tests/gzip/list.sh" />

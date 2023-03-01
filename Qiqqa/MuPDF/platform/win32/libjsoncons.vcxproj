@@ -124,14 +124,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/jsoncons/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/jsoncons/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -150,7 +150,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/jsoncons/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -158,7 +158,7 @@
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/jsoncons/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -179,14 +179,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/jsoncons/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/jsoncons/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -205,7 +205,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/jsoncons/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -213,7 +213,7 @@
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/jsoncons/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -273,24 +273,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/examples_boost/more_examples/src/extensibility.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/examples_boost/more_examples/src/more_examples.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/examples_boost/more_examples/src/pool_allocator.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/fuzzers/fuzz_bson.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/fuzzers/fuzz_bson_encoder.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/fuzzers/fuzz_bson_parser_max.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/fuzzers/fuzz_cbor.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/fuzzers/fuzz_cbor_encoder.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/fuzzers/fuzz_cbor_parser_max.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/fuzzers/fuzz_csv.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/fuzzers/fuzz_csv_encoder.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/fuzzers/fuzz_json_cursor.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/fuzzers/fuzz_json_encoder.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/fuzzers/fuzz_json_parser_max.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/fuzzers/fuzz_msgpack.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/fuzzers/fuzz_msgpack_encoder.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/fuzzers/fuzz_msgpack_parser_max.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/fuzzers/fuzz_parse.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/fuzzers/fuzz_ubjson.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/fuzzers/fuzz_ubjson_encoder.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/fuzzers/fuzz_ubjson_parser_max.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/bson/src/bson_cursor_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/bson/src/bson_decimal128_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/bson/src/bson_encoder_tests.cpp" />
@@ -382,7 +364,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/csv/src/csv_subfield_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/csv/src/csv_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/csv/src/encode_decode_csv_tests.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/fuzz_regression/src/fuzz_regression_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/jmespath/src/jmespath_expression_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/jmespath/src/jmespath_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/jsonpatch/src/jsonpatch_test_suite.cpp" />
@@ -555,7 +536,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/test/common/test_utilities.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/freelist_allocator.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/test/csv/src/csv_sample_allocators.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/third_party/catch/catch.hpp" />
     <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/bson/diagrams/basic_bson_encoder.png" />
     <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/bson/diagrams/bson_options.png" />
     <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/cbor/diagrams/basic_cbor_encoder.png" />
@@ -585,6 +565,7 @@
     <Text Include="../../thirdparty/owemdjee/jsoncons/README.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/Roadmap.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/acknowledgements.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/cmake/Config.cmake" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/Examples.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/Pages/index.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/Reference.md" />
@@ -781,7 +762,6 @@
     <Text Include="../../thirdparty/owemdjee/jsoncons/examples/output/tasks.csv" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/examples/output/tasks.json" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/examples/output/xxx.txt" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/fuzzers/build_fuzzers.sh" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/test/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/test/corelib/input/JSONTestSuite/i_number_double_huge_neg_exp.json" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/test/corelib/input/JSONTestSuite/i_number_huge_exp.json" />

@@ -110,7 +110,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>..\..\scripts\freetype;..\..\scripts\libjpeg-turbo;..\..\include;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\gumbo-parser\src;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\thirdparty\extract\include;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\zlib;..\..\thirdparty\freetype\include;..\..\thirdparty\mujs;..\..\thirdparty\harfbuzz\src;..\..\thirdparty\lcms2\include;..\..\thirdparty\tesseract\include;..\..\scripts\tesseract;..\..\thirdparty\leptonica/src;..\..\scripts\zlib;..\..\scripts\libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;..\..\scripts\libwebp;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\scripts\freetype;..\..\scripts\libjpeg-turbo;..\..\include;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\gumbo-parser\src;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\thirdparty\extract\include;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\zlib;..\..\thirdparty\freetype\include;..\..\thirdparty\mujs;..\..\thirdparty\harfbuzz\src;..\..\thirdparty\lcms2\include;..\..\thirdparty\tesseract\include;..\..\scripts\tesseract;..\..\thirdparty\leptonica/src;..\..\scripts\zlib;..\..\scripts\libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;..\..\scripts\libwebp;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;../../scripts/leptonica/include/leptonica;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILDING_MUPDF_MINIMAL_CORE=2;OPJ_STATIC;HAVE_LCMS2MT=1;HAVE_EXTRACT;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -125,7 +125,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>..\..\scripts\freetype;..\..\scripts\libjpeg-turbo;..\..\include;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\gumbo-parser\src;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\thirdparty\extract\include;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\zlib;..\..\thirdparty\freetype\include;..\..\thirdparty\mujs;..\..\thirdparty\harfbuzz\src;..\..\thirdparty\lcms2\include;..\..\thirdparty\tesseract\include;..\..\scripts\tesseract;..\..\thirdparty\leptonica/src;..\..\scripts\zlib;..\..\scripts\libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;..\..\scripts\libwebp;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\scripts\freetype;..\..\scripts\libjpeg-turbo;..\..\include;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\gumbo-parser\src;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\thirdparty\extract\include;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\zlib;..\..\thirdparty\freetype\include;..\..\thirdparty\mujs;..\..\thirdparty\harfbuzz\src;..\..\thirdparty\lcms2\include;..\..\thirdparty\tesseract\include;..\..\scripts\tesseract;..\..\thirdparty\leptonica/src;..\..\scripts\zlib;..\..\scripts\libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;..\..\scripts\libwebp;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;../../scripts/leptonica/include/leptonica;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILDING_MUPDF_MINIMAL_CORE=2;OPJ_STATIC;HAVE_LCMS2MT=1;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -138,7 +138,7 @@
     <ClCompile>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories>..\..\scripts\freetype;..\..\scripts\libjpeg-turbo;..\..\include;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\gumbo-parser\src;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\thirdparty\extract\include;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\zlib;..\..\thirdparty\freetype\include;..\..\thirdparty\mujs;..\..\thirdparty\harfbuzz\src;..\..\thirdparty\lcms2\include;..\..\thirdparty\tesseract\include;..\..\scripts\tesseract;..\..\thirdparty\leptonica/src;..\..\scripts\zlib;..\..\scripts\libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;..\..\scripts\libwebp;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\scripts\freetype;..\..\scripts\libjpeg-turbo;..\..\include;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\gumbo-parser\src;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\thirdparty\extract\include;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\zlib;..\..\thirdparty\freetype\include;..\..\thirdparty\mujs;..\..\thirdparty\harfbuzz\src;..\..\thirdparty\lcms2\include;..\..\thirdparty\tesseract\include;..\..\scripts\tesseract;..\..\thirdparty\leptonica/src;..\..\scripts\zlib;..\..\scripts\libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;..\..\scripts\libwebp;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;../../scripts/leptonica/include/leptonica;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILDING_MUPDF_MINIMAL_CORE=2;OPJ_STATIC;HAVE_LCMS2MT=1;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
@@ -153,7 +153,7 @@
     <ClCompile>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories>..\..\scripts\freetype;..\..\scripts\libjpeg-turbo;..\..\include;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\gumbo-parser\src;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\thirdparty\extract\include;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\zlib;..\..\thirdparty\freetype\include;..\..\thirdparty\mujs;..\..\thirdparty\harfbuzz\src;..\..\thirdparty\lcms2\include;..\..\thirdparty\tesseract\include;..\..\scripts\tesseract;..\..\thirdparty\leptonica/src;..\..\scripts\zlib;..\..\scripts\libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;..\..\scripts\libwebp;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\scripts\freetype;..\..\scripts\libjpeg-turbo;..\..\include;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\gumbo-parser\src;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\thirdparty\extract\include;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\zlib;..\..\thirdparty\freetype\include;..\..\thirdparty\mujs;..\..\thirdparty\harfbuzz\src;..\..\thirdparty\lcms2\include;..\..\thirdparty\tesseract\include;..\..\scripts\tesseract;..\..\thirdparty\leptonica/src;..\..\scripts\zlib;..\..\scripts\libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;..\..\scripts\libwebp;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;../../scripts/leptonica/include/leptonica;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILDING_MUPDF_MINIMAL_CORE=2;OPJ_STATIC;HAVE_LCMS2MT=1;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
@@ -221,6 +221,7 @@
     <ClInclude Include="../../include/mupdf/helpers/cpu.h" />
     <ClInclude Include="../../include/mupdf/helpers/debugheap.h" />
     <ClInclude Include="../../include/mupdf/helpers/dir.h" />
+    <ClInclude Include="../../include/mupdf/helpers/jmemcust.h" />
     <ClInclude Include="../../include/mupdf/helpers/mu-office-lib.h" />
     <ClInclude Include="../../include/mupdf/helpers/mu-threads.h" />
     <ClInclude Include="../../include/mupdf/helpers/pkcs7-openssl.h" />
@@ -333,6 +334,7 @@
     <ClCompile Include="../../source/fitz/outline.c" />
     <ClCompile Include="../../source/fitz/output-cbz.c" />
     <ClCompile Include="../../source/fitz/output-docx.c" />
+    <ClCompile Include="../../source/fitz/output-jpeg.c" />
     <ClCompile Include="../../source/fitz/output-muraw.c" />
     <ClCompile Include="../../source/fitz/output-pcl.c" />
     <ClCompile Include="../../source/fitz/output-pclm.c" />
@@ -482,7 +484,6 @@
     <ClInclude Include="../../source/fitz/icc/rgb.icc.h" />
     <ClInclude Include="../../source/fitz/icc34.h" />
     <ClInclude Include="../../source/fitz/image-imp.h" />
-    <ClInclude Include="../../source/fitz/jmemcust.h" />
     <ClInclude Include="../../source/fitz/paint-glyph.h" />
     <ClInclude Include="../../source/fitz/pixmap-imp.h" />
     <ClInclude Include="../../source/fitz/smallcaps.h" />

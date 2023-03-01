@@ -54,24 +54,24 @@ public:
     {
     }
 
-    virtual bool Eq(wxVariantData& data) const wxOVERRIDE
+    virtual bool Eq(wxVariantData& data) const override
     {
         // We're only called with the objects of the same type, so the cast is
         // safe.
         return static_cast<wxBitmapBundleVariantData&>(data).m_value.IsSameAs(m_value);
     }
 
-    virtual wxString GetType() const wxOVERRIDE
+    virtual wxString GetType() const override
     {
         return wxASCII_STR("wxBitmapBundle");
     }
 
-    virtual wxClassInfo* GetValueClassInfo() wxOVERRIDE
+    virtual wxClassInfo* GetValueClassInfo() override
     {
-        return NULL;
+        return nullptr;
     }
 
-    virtual wxVariantData* Clone() const wxOVERRIDE
+    virtual wxVariantData* Clone() const override
     {
         return new wxBitmapBundleVariantData(m_value);
     }
@@ -131,12 +131,12 @@ public:
     {
     }
 
-    virtual wxSize GetDefaultSize() const wxOVERRIDE;
-    virtual wxSize GetPreferredBitmapSizeAtScale(double scale) const wxOVERRIDE;
-    virtual wxBitmap GetBitmap(const wxSize& size) wxOVERRIDE;
+    virtual wxSize GetDefaultSize() const override;
+    virtual wxSize GetPreferredBitmapSizeAtScale(double scale) const override;
+    virtual wxBitmap GetBitmap(const wxSize& size) override;
 
 protected:
-    virtual double GetNextAvailableScale(size_t& i) const wxOVERRIDE;
+    virtual double GetNextAvailableScale(size_t& i) const override;
 
 private:
     // Struct containing bitmap itself as well as a flag indicating whether we
@@ -313,7 +313,7 @@ wxBitmap wxBitmapBundleImplSet::GetBitmap(const wxSize& size)
 #ifdef __WXOSX__
 void wxBitmapBundleImplSet::OSXCreateNSImage()
 {
-    WXImage image = NULL;
+    WXImage image = nullptr;
     const size_t n = m_entries.size();
     if ( n == 1 )
     {
@@ -368,19 +368,19 @@ wxBitmapBundle::wxBitmapBundle(wxBitmapBundleImpl* impl)
 }
 
 wxBitmapBundle::wxBitmapBundle(const wxBitmap& bitmap)
-    : m_impl(bitmap.IsOk() ? new wxBitmapBundleImplSet(bitmap) : NULL)
+    : m_impl(bitmap.IsOk() ? new wxBitmapBundleImplSet(bitmap) : nullptr)
 {
 }
 
 wxBitmapBundle::wxBitmapBundle(const wxIcon& icon)
-    : m_impl(icon.IsOk() ? new wxBitmapBundleImplSet(wxBitmap(icon)) : NULL)
+    : m_impl(icon.IsOk() ? new wxBitmapBundleImplSet(wxBitmap(icon)) : nullptr)
 {
 }
 
 #if wxUSE_IMAGE
 
 wxBitmapBundle::wxBitmapBundle(const wxImage& image)
-    : m_impl(image.IsOk() ? new wxBitmapBundleImplSet(wxBitmap(image)) : NULL)
+    : m_impl(image.IsOk() ? new wxBitmapBundleImplSet(wxBitmap(image)) : nullptr)
 {
 }
 
@@ -409,7 +409,7 @@ wxBitmapBundle::~wxBitmapBundle()
 
 void wxBitmapBundle::Clear()
 {
-    m_impl.reset(NULL);
+    m_impl.reset(nullptr);
 }
 
 /* static */
@@ -678,8 +678,8 @@ wxImageList*
 wxBitmapBundle::CreateImageList(wxWindow* win,
                                 const wxVector<wxBitmapBundle>& bundles)
 {
-    wxCHECK_MSG( win, NULL, "must have a valid window" );
-    wxCHECK_MSG( !bundles.empty(), NULL, "should have some images" );
+    wxCHECK_MSG( win, nullptr, "must have a valid window" );
+    wxCHECK_MSG( !bundles.empty(), nullptr, "should have some images" );
 
     wxSize size = GetConsensusSizeFor(win, bundles);
 

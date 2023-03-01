@@ -113,6 +113,17 @@ void StoreUnsignedRow(float* JXL_RESTRICT input[3], size_t x0, size_t len,
                         DemoteTo(du, NearestInt(v1)),
                         DemoteTo(du, NearestInt(v2)), du, &output[3 * i]);
     }
+  } else if (num_channels == 4) {
+    for (size_t i = 0; i < len; i += Lanes(d)) {
+      auto v0 = Mul(Clamp(zero, Load(d, &input[0][x0 + i]), one), mul);
+      auto v1 = Mul(Clamp(zero, Load(d, &input[1][x0 + i]), one), mul);
+      auto v2 = Mul(Clamp(zero, Load(d, &input[2][x0 + i]), one), mul);
+      auto v3 = Mul(Clamp(zero, Load(d, &input[3][x0 + i]), one), mul);
+      StoreInterleaved4(DemoteTo(du, NearestInt(v0)),
+                        DemoteTo(du, NearestInt(v1)),
+                        DemoteTo(du, NearestInt(v2)),
+                        DemoteTo(du, NearestInt(v3)), du, &output[4 * i]);
+    }
   }
 #if JXL_MEMORY_SANITIZER
   __msan_poison(output + num_channels * len,
@@ -312,7 +323,7 @@ void DecodeCurrentiMCURow(j_decompress_ptr cinfo) {
                                       &m->biases_[k0]);
       }
     }
-    RowBuffer* raw_out = &m->raw_output_[c];
+    RowBuffer<float>* raw_out = &m->raw_output_[c];
     for (int iy = 0; iy < compinfo.v_samp_factor; ++iy) {
       size_t by = block_row + iy;
       size_t bix = by * compinfo.width_in_blocks;
@@ -370,8 +381,8 @@ void ProcessOutput(j_decompress_ptr cinfo, size_t* num_output_rows,
     size_t ye = DivCeil(yend, vfactor) * vfactor;
     for (size_t y = yb; y < ye; y += vfactor) {
       for (int c = 0; c < cinfo->num_components; ++c) {
-        RowBuffer* raw_out = &m->raw_output_[c];
-        RowBuffer* render_out = &m->render_output_[c];
+        RowBuffer<float>* raw_out = &m->raw_output_[c];
+        RowBuffer<float>* render_out = &m->render_output_[c];
         const auto& compinfo = cinfo->comp_info[c];
         size_t yc = (y / vfactor) * compinfo.v_samp_factor;
         if (compinfo.v_samp_factor < vfactor) {
@@ -392,12 +403,14 @@ void ProcessOutput(j_decompress_ptr cinfo, size_t* num_output_rows,
       }
       for (int yix = 0; yix < vfactor; ++yix) {
         if (y + yix < ybegin || y + yix >= yend) continue;
-        // TODO(szabadka) Support 4 components JPEGs.
-        float* rows[3];
+        float* rows[4];
         for (int c = 0; c < cinfo->out_color_components; ++c) {
           rows[c] = m->render_output_[c].Row(yix);
         }
-        if (cinfo->jpeg_color_space == JCS_YCbCr) {
+        if (cinfo->jpeg_color_space == JCS_YCCK) {
+          YCCKToCMYK(rows[0], rows[1], rows[2], rows[3],
+                     xsize_blocks * DCTSIZE);
+        } else if (cinfo->jpeg_color_space == JCS_YCbCr) {
           YCbCrToRGB(rows[0], rows[1], rows[2], xsize_blocks * DCTSIZE);
         } else {
           for (int c = 0; c < cinfo->out_color_components; ++c) {
@@ -429,7 +442,7 @@ void ProcessOutput(j_decompress_ptr cinfo, size_t* num_output_rows,
     for (int c = 0; c < cinfo->num_components; ++c) {
       const auto& compinfo = cinfo->comp_info[c];
       if (compinfo.h_samp_factor < cinfo->max_h_samp_factor) {
-        RowBuffer* raw_out = &m->raw_output_[c];
+        RowBuffer<float>* raw_out = &m->raw_output_[c];
         size_t y0 = imcu_row * compinfo.v_samp_factor * DCTSIZE;
         for (int iy = 0; iy < compinfo.v_samp_factor * DCTSIZE; ++iy) {
           float* JXL_RESTRICT row = raw_out->Row(y0 + iy);

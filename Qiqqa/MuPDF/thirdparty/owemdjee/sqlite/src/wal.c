@@ -3906,7 +3906,7 @@ int sqlite3WalFindFrame(
   /* This routine is only be called from within a read transaction. Or,
   ** sometimes, as part of a rollback that occurs after an error reaquiring
   ** a read-lock in walRestartLog().  */
-  assert( pWal->readLock!=WAL_LOCK_NONE || pWal->writeLock );
+  assert( pWal->readLock!=WAL_LOCK_NONE || pWal->lockError );
 
   /* If this is a regular wal system, then iApp must be set to 0 (there is
   ** only one wal file, after all). Or, if this is a wal2 system and the
@@ -3955,6 +3955,7 @@ int sqlite3WalFindFrame(
   )){
     rc = walSearchWal(pWal, !iApp, pgno, &iRead);
   }
+  if( rc!=SQLITE_OK ) return rc;
 
 #if defined(SQLITE_TEST) && defined(SQLITE_DEBUG)
   if( iRead ){ 
@@ -3966,7 +3967,7 @@ int sqlite3WalFindFrame(
   }
 #endif
 
-#ifdef SQLITE_ENABLE_EXPENSIVE_ASSERT
+#if  defined(SQLITE_ENABLE_EXPENSIVE_ASSERT) && /*TODO*/ 0
   /* If expensive assert() statements are available, do a linear search
   ** of the wal-index file content. Make sure the results agree with the
   ** result obtained using the hash indexes above.  

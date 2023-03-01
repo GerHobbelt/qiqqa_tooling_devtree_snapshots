@@ -262,7 +262,6 @@
     <Text Include="../../thirdparty/owemdjee/argparse/README.md" />
     <Text Include="../../thirdparty/owemdjee/argparse/conanfile.py" />
     <Text Include="../../thirdparty/owemdjee/argparse/packaging/pkgconfig.pc.in" />
-    <Text Include="../../thirdparty/owemdjee/argparse/samples/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/argparse/test/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/argparse/test/README.md" />
     <Text Include="../../thirdparty/owemdjee/argparse/tools/build.bat" />

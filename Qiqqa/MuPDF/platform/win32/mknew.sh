@@ -16,12 +16,14 @@ fi
 
 mknewproj() {
 	libname=$( echo lib$1 | sed -E -e 's/^liblib/lib/' -e 's/-?lib$//i' )
-	if ! test -f $1.vcxproj -o -f $libname.vcxproj ; then
-		echo "mknewproj: $libname"
-		cp -n libcpuid.vcxproj $libname.vcxproj
-		node ./patch-vcxproj.js $libname.vcxproj
-		./update-vcxproj.sh $libname.vcxproj
-		node ./refill-vcxproj.js $libname.vcxproj
+	if ! test -f $1.vcxproj ; then
+		if ! test -f $libname.vcxproj ; then
+			echo "mknewproj: $libname"
+			cp -n libcpuid.vcxproj $libname.vcxproj
+			node ./patch-vcxproj.js $libname.vcxproj
+			./update-vcxproj.sh $libname.vcxproj
+			./refill-vcxproj.sh $libname.vcxproj
+		fi
 	fi
 }
 
@@ -32,7 +34,18 @@ mknewAPPproj() {
 		cp -n mutool.vcxproj $libname.vcxproj
 		node ./patch-vcxproj.js $libname.vcxproj
 		./update-vcxproj.sh $libname.vcxproj
-		node ./refill-vcxproj.js $libname.vcxproj
+		./refill-vcxproj.sh $libname.vcxproj
+	fi
+}
+
+mknewMISCproj() {
+	libname=$1
+	if ! test -f $libname.vcxproj ; then
+		echo "mknewMISCproj: $libname"
+		cp -n collection-0.vcxproj $libname.vcxproj
+		node ./patch-vcxproj.js $libname.vcxproj
+		./update-vcxproj.sh $libname.vcxproj
+		./refill-vcxproj.sh $libname.vcxproj
 	fi
 }
 
@@ -64,13 +77,17 @@ BoxFort
 CHM-lib
 CImg
 CLBlast
+CLBlast-database
+CLTune
 CRFpp
 CRFsuite-extended
 CRoaring
 CTCWordBeamSearch
 CTPL-Thread-Pool
 CacheLib
+ColorSpace
 Criterion
+CryptSync
 CxImage
 Cysboard
 DBoW2
@@ -92,6 +109,10 @@ Lightning.NET
 MITIE-nlp
 MNN
 MariGold.OpenXHTML
+NSIS-OBSInstallerUtils
+NSISDotNetChecker
+NSISFileCheck
+NSISMultiUser
 NanoLog
 NiuTrans.NMT
 OfficeIMO
@@ -106,10 +127,12 @@ OptimizationTemplateLibrary
 PGM-index
 PaddlePaddle
 PhotonLibOS
+PlatformFolders
 QCBOR
 QuickJS
 QuickJS-C++-Wrapper
 QuickJS-C++-Wrapper2
+RuntimeCompiledCPlusPlus
 RxCpp
 SQLiteCpp
 SQLiteHistograms
@@ -122,6 +145,7 @@ StarSpace
 ThreadPool
 TraceETW
 VQMT
+VSNASM
 Verify
 VisualScriptEngine
 Win32_read_directory_changes
@@ -129,7 +153,9 @@ Win32_read_directory_changes_IOCP
 WinHttpPAL
 Windows10EtwEvents
 XMP-Toolkit-SDK
+Xoshiro-cpp
 YACLib
+abseil-cpp
 annoy
 arangodb
 argparse
@@ -144,14 +170,18 @@ bibtex-robust-decoder
 bibtool
 bibutils
 binlog
+bitsery
 bolt
 boost
 boost-url
+boringssl
 breakpad
 brotli
 c-blosc2
 caches
 caffe
+cairo
+cairo-demos
 catboost
 cctz
 ccv-nnc
@@ -184,14 +214,18 @@ cpptoml
 cppzmq
 cpuinfo
 cpython
+cr
 createprocess-windows
 crfsuite
 crow
 cryptopp
 csv-parser
 csync2
+ctsa
 cuckoo-index
 cuckoofilter
+curl-impersonate
+cxxopts
 cxxtest
 cxxtest_catch_2_gtest
 date
@@ -201,9 +235,11 @@ debugbreak
 delegate
 diffutils
 dirent
-djvulibre
+###### djvulibre -- already exists as libdjvu
+dlfcn-win32
 dlib
 docxBox
+doh
 dtl-diff-template-library
 dtoa-benchmark
 dynet
@@ -216,16 +252,20 @@ exiv2
 expected-lite
 faiss
 fastBPE
+fastPRNG
 fastText
 fast_float
 fast_pfor
 fatal
+fftw3
 file
 filesystem
 flat_hash_map
+fluent-bit
 fmt
 fmtlog
 folly
+fribidi
 friso
 frozen
 gbenchmark
@@ -244,6 +284,7 @@ graphit
 gtn
 gumbo-libxml
 gumbo-query
+harbour-core
 hedley
 highway
 highwayhash
@@ -265,7 +306,9 @@ hunspell-dictionaries
 hunspell-hyphen
 hyperscan
 hypertextcpp
+iODBC
 iceoryx
+id3-tagparser
 indicators
 infoware
 ion-c
@@ -273,13 +316,16 @@ ipa-dict
 iresearch
 jasper
 jemalloc
+jerryscript
 jpeg-xl
 jq
 json
 json-jansson
 jsoncons
 kahypar
+kfr
 kgraph
+koan
 krabsETW
 lapack
 lda
@@ -291,13 +337,17 @@ libCRCpp
 libCZMQ
 lib_nas_lockfile
 libaco
+libalg
 libaom
 libarchive
 libassert
+libavif
 libbf
 libbloom
 libcbor
+libchaos
 libchardet
+libclip
 libclipboard
 libcmime
 libcnl
@@ -313,17 +363,21 @@ libde265
 libdeflate
 libdi-dependency-injection
 libdist
+libdivsufsort
 libeigen
 libeternaltimestamp
+libevent
 libevt
 libexpat
 libffi
 libfolia
 libfort
 libfyaml
+libgateY
 libgd
 libgif
 libgrape-lite
+libharry
 libheif
 libheif-alt
 libicns
@@ -340,10 +394,12 @@ libmobi
 libngt-ann
 libocca
 libpinyin
+libpopcnt
 libpsl
 libq
 libqrencode
 libquill
+libraqm
 librs232
 librsync
 libscanf
@@ -409,6 +465,7 @@ mimetic
 mipp
 mlpack
 mmc
+mmkv
 monolith
 morton_filter
 ms_cpp_client_telemetry
@@ -417,6 +474,7 @@ mxnet
 mydumper
 mysql-connector-cpp
 nameof
+nanodbc
 nanoflann
 nanomsg-nng
 nanosvg
@@ -424,9 +482,13 @@ nativefiledialog-extended
 ncnn
 neutralinoJS
 neutralinoJS-CLI
+nghttp3
+ngtcp2
 nmslib
 notcurses
 npoi
+nsis-nscurl
+nsis-stdutils
 nsync
 nuspell
 ocreval
@@ -445,6 +507,7 @@ pHash
 pagerank
 palanteer
 palmtree
+pango
 papis-zotero
 parallel-hashmap
 pcg-c-random
@@ -465,6 +528,7 @@ picohttpparser
 pinyin
 pipes
 pisa
+pixman
 plf_nanotimer
 pmt-png-tools
 podofo
@@ -511,6 +575,7 @@ shadesmar
 sharedhashfile
 shmdata
 shoco
+simd-imgproc
 sioyek
 smhasher
 snap
@@ -519,6 +584,7 @@ snowball
 sparsehash
 spdlog
 spdlog_setup
+splitmerge
 spy-build-sysinfo
 sqlcipher
 sqlean
@@ -532,6 +598,7 @@ sqlite3pp
 sqlite_fts_tokenizer_chinese_simple
 sqlite_wrapper
 sqlite_zstd_vfs
+sqliteodbc
 sqlpp11
 ssdeep
 ssimulacra2
@@ -546,9 +613,11 @@ stx-error-handling
 subprocess
 subprocess-cpp
 subprocess_h
+sumatrapdf
 svg-charter
 swig
 tabulate
+taglib
 taolog
 taskflow
 tcp_pubsub
@@ -593,6 +662,7 @@ uint128_t
 unicode-cldr
 unicode-icu
 universal-numbers
+unixODBC
 unpaper
 upscaledb
 upskirt
@@ -613,6 +683,7 @@ winflexbison
 word2vec
 word2vec-GloVe
 wxCharts
+wxDatabase
 wxExamples
 wxFormBuilder
 wxMEdit
@@ -663,30 +734,14 @@ zsv
 zsync2
 zxing-cpp
 
-ssdeep
-cr
-RuntimeCompiledCPlusPlus
-koan
-iODBC
-nanodbc
-unixODBC
-jerryscript
-wxDatabase
-sqliteodbc
-Xoshiro-cpp
-fastPRNG
-libchaos
+SymSpell
 
-libevent
-abseil-cpp
-libdivsufsort
-fluent-bit
-bitsery
-CryptSync
-taglib
-harbour-core
-id3-tagparser
-mmkv
+libdtm
+prvhash
+vxl
+libmetalink
+wget2
+wxCurl
 
 EOT
 )
@@ -701,10 +756,35 @@ UIforETW
 bebop
 calibre
 drogon
+gperf
 h2o-server
+nsis
 olena
 sumatrapdf
-gperf
+
+metalink-cli
+metalink-mini-downloader
+
+EOT
+)
+
+misclist=$(
+grep -v '#' <<EOT
+
+calibre
+cef-pdf
+curl-www
+everything-curl
+hunspell-dictionaries
+ipa-dict
+pdfium
+podofo
+poppler
+pyclustering
+tensorflow-docs
+
+wordfreq
+wordfrequency
 
 EOT
 )
@@ -719,7 +799,8 @@ math-atlas
 c-blosc2
 cpp-btree
 CHM-lib
-djvulibre
+libdjvulibre
+libdjvu_io
 dtl-diff-template-library
 enkiTS-TaskScheduler
 lda-Familia
@@ -747,6 +828,7 @@ manticoresearch
 uberlog
 pmt-png-tools
 libchm_io
+gperf-hash
 
 EOT
 )
@@ -776,6 +858,12 @@ if [[ "$ARG" =~ [2] ]] ; then
 	for f in  $myapplist  ; do
 		if [[ $f =~ $FILTER ]] ; then
 			mknewAPPproj $f
+		fi
+	done
+
+	for f in  $misclist  ; do
+		if [[ $f =~ $FILTER ]] ; then
+			mknewMISCproj $f
 		fi
 	done
 fi

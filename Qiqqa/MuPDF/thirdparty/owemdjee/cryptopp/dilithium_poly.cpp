@@ -594,7 +594,7 @@ void Dilithium::Polyt0Pack(byte *r, const poly *a) {
     t[2] = mQ + (1U << (mD-1)) - a->at(4*i+2);
     t[3] = mQ + (1U << (mD-1)) - a->at(4*i+3);
 
-    r[7*i+0]  =  t[0];
+    r[7*i+0]  =  (byte)t[0];
     r[7*i+1]  =  t[0] >> 8;
     r[7*i+1] |=  t[1] << 6;
     r[7*i+2]  =  t[1] >> 2;
@@ -661,7 +661,7 @@ void Dilithium::PolyzPack(byte *r, const poly *a) {
     t[1] = mGamma1 - 1 - a->at(2*i+1);
     t[1] += ((sword32)t[1] >> 31) & mQ;
 
-    r[5*i+0]  = t[0];
+    r[5*i+0]  = (byte)(t[0]);
     r[5*i+1]  = t[0] >> 8;
     r[5*i+2]  = t[0] >> 16;
     r[5*i+2] |= t[1] << 4;

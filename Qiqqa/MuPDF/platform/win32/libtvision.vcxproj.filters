@@ -12,6 +12,11 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="../../scripts/tvision/genparts.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
     <Filter Include="Header Files\examples">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0002}</UniqueIdentifier>
     </Filter>
@@ -60,111 +65,78 @@
     <Filter Include="Header Files\source\tvision">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0015}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\test">
+    <Filter Include="Misc Files\examples">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0017}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\examples">
+    <Filter Include="Misc Files\examples\mmenu">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\examples\avscolor">
+    <Filter Include="Misc Files\examples\palette">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0019}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\examples\mmenu">
+    <Filter Include="Misc Files\examples\tvdemo">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0020}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\examples\palette">
+    <Filter Include="Misc Files\examples\tvdir">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\examples\tvdemo">
+    <Filter Include="Misc Files\examples\tvedit">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\examples\tvdir">
+    <Filter Include="Misc Files\examples\tvforms">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\examples\tvedit">
+    <Filter Include="Misc Files\examples\tvhc">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\examples\tvforms">
+    <Filter Include="Misc Files\source">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\examples\tvhc">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0026}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\source">
+    <Filter Include="Source Files\examples">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0029}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\examples">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0031}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\examples\avscolor">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0030}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\examples">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0033}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\examples\avscolor">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0032}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\examples\mmenu">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0034}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0026}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\examples\palette">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0035}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\examples\tvdemo">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0036}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0029}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\examples\tvdir">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0037}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0030}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\examples\tvedit">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0038}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0031}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\examples\tvforms">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0039}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0032}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\examples\tvhc">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0040}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0033}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\source">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0042}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0035}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\source\platform">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0041}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0034}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\source\tvision">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0043}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0045}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\test\platform">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0044}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\test\tvision">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0046}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0036}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="../../thirdparty/owemdjee/tvision/examples/avscolor/termcolor.cpp">
-      <Filter>Source Files\examples\avscolor</Filter>
+    <ClCompile Include="../../thirdparty/owemdjee/tvision/examples/mmenu/mm_test.cpp">
+      <Filter>Source Files\examples\mmenu</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/tvision/examples/mmenu/mmenu.cpp">
       <Filter>Source Files\examples\mmenu</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/tvision/examples/mmenu/test.cpp">
-      <Filter>Source Files\examples\mmenu</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/tvision/examples/palette/palette.cpp">
+    <ClCompile Include="../../thirdparty/owemdjee/tvision/examples/palette/p_test.cpp">
       <Filter>Source Files\examples\palette</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/tvision/examples/palette/test.cpp">
+    <ClCompile Include="../../thirdparty/owemdjee/tvision/examples/palette/palette_example.cpp">
       <Filter>Source Files\examples\palette</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/tvision/examples/tvdemo/ascii.cpp">
@@ -263,6 +235,9 @@
     <ClCompile Include="../../thirdparty/owemdjee/tvision/source/platform/events.cpp">
       <Filter>Source Files\source\platform</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/tvision/source/platform/far2l.cpp">
+      <Filter>Source Files\source\platform</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/tvision/source/platform/findfrst.cpp">
       <Filter>Source Files\source\platform</Filter>
     </ClCompile>
@@ -315,6 +290,9 @@
       <Filter>Source Files\source\platform</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/tvision/source/platform/win32con.cpp">
+      <Filter>Source Files\source\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/tvision/source/platform/windows.cpp">
       <Filter>Source Files\source\platform</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/tvision/source/platform/winwidth.cpp">
@@ -656,6 +634,9 @@
     <ClCompile Include="../../thirdparty/owemdjee/tvision/source/tvision/tcheckbo.cpp">
       <Filter>Source Files\source\tvision</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/tvision/source/tvision/tclipbrd.cpp">
+      <Filter>Source Files\source\tvision</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/tvision/source/tvision/tcluster.cpp">
       <Filter>Source Files\source\tvision</Filter>
     </ClCompile>
@@ -815,6 +796,9 @@
     <ClCompile Include="../../thirdparty/owemdjee/tvision/source/tvision/tsurface.cpp">
       <Filter>Source Files\source\tvision</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/tvision/source/tvision/ttimerqu.cpp">
+      <Filter>Source Files\source\tvision</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/tvision/source/tvision/ttprvlns.cpp">
       <Filter>Source Files\source\tvision</Filter>
     </ClCompile>
@@ -841,15 +825,6 @@
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/tvision/source/tvision/twindow.cpp">
       <Filter>Source Files\source\tvision</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/tvision/test/platform/base64.test.cpp">
-      <Filter>Source Files\test\platform</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/tvision/test/platform/terminal.test.cpp">
-      <Filter>Source Files\test\platform</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/tvision/test/tvision/tkey.test.cpp">
-      <Filter>Source Files\test\tvision</Filter>
     </ClCompile>
     <ClInclude Include="../../thirdparty/owemdjee/tvision/examples/mmenu/cmds.h">
       <Filter>Header Files\examples\mmenu</Filter>
@@ -1013,9 +988,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/base64.h">
       <Filter>Header Files\include\tvision\internal</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/buffdisp.h">
-      <Filter>Header Files\include\tvision\internal</Filter>
-    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/codepage.h">
       <Filter>Header Files\include\tvision\internal</Filter>
     </ClInclude>
@@ -1028,7 +1000,13 @@
     <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/cursor.h">
       <Filter>Header Files\include\tvision\internal</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/dispbuff.h">
+      <Filter>Header Files\include\tvision\internal</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/events.h">
+      <Filter>Header Files\include\tvision\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/far2l.h">
       <Filter>Header Files\include\tvision\internal</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/findfrst.h">
@@ -1089,6 +1067,9 @@
       <Filter>Header Files\include\tvision\internal</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/menus.h">
+      <Filter>Header Files\include\tvision</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/monolithic_examples.h">
       <Filter>Header Files\include\tvision</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/msgbox.h">
@@ -1154,42 +1135,36 @@
     <ClInclude Include="../../thirdparty/owemdjee/tvision/source/tvision/tv.inc">
       <Filter>Header Files\source\tvision</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/tvision/test/test.h">
-      <Filter>Header Files\test</Filter>
-    </ClInclude>
-    <Image Include="../../thirdparty/owemdjee/tvision/examples/avscolor/termcolor.png">
-      <Filter>Resource Files\examples\avscolor</Filter>
-    </Image>
-    <NASM Include="../../thirdparty/owemdjee/tvision/source/tvision/edits.asm">
+    <MASM Include="../../thirdparty/owemdjee/tvision/source/tvision/edits.asm">
       <Filter>Source Files\source\tvision</Filter>
-    </NASM>
-    <NASM Include="../../thirdparty/owemdjee/tvision/source/tvision/framelin.asm">
+    </MASM>
+    <MASM Include="../../thirdparty/owemdjee/tvision/source/tvision/framelin.asm">
       <Filter>Source Files\source\tvision</Filter>
-    </NASM>
-    <NASM Include="../../thirdparty/owemdjee/tvision/source/tvision/hardware.asm">
+    </MASM>
+    <MASM Include="../../thirdparty/owemdjee/tvision/source/tvision/hardware.asm">
       <Filter>Source Files\source\tvision</Filter>
-    </NASM>
-    <NASM Include="../../thirdparty/owemdjee/tvision/source/tvision/swapst.asm">
+    </MASM>
+    <MASM Include="../../thirdparty/owemdjee/tvision/source/tvision/swapst.asm">
       <Filter>Source Files\source\tvision</Filter>
-    </NASM>
-    <NASM Include="../../thirdparty/owemdjee/tvision/source/tvision/sysint.asm">
+    </MASM>
+    <MASM Include="../../thirdparty/owemdjee/tvision/source/tvision/sysint.asm">
       <Filter>Source Files\source\tvision</Filter>
-    </NASM>
-    <NASM Include="../../thirdparty/owemdjee/tvision/source/tvision/tgrmv.asm">
+    </MASM>
+    <MASM Include="../../thirdparty/owemdjee/tvision/source/tvision/tgrmv.asm">
       <Filter>Source Files\source\tvision</Filter>
-    </NASM>
-    <NASM Include="../../thirdparty/owemdjee/tvision/source/tvision/ttprvlns.asm">
+    </MASM>
+    <MASM Include="../../thirdparty/owemdjee/tvision/source/tvision/ttprvlns.asm">
       <Filter>Source Files\source\tvision</Filter>
-    </NASM>
-    <NASM Include="../../thirdparty/owemdjee/tvision/source/tvision/tvcursor.asm">
+    </MASM>
+    <MASM Include="../../thirdparty/owemdjee/tvision/source/tvision/tvcursor.asm">
       <Filter>Source Files\source\tvision</Filter>
-    </NASM>
-    <NASM Include="../../thirdparty/owemdjee/tvision/source/tvision/tvexposd.asm">
+    </MASM>
+    <MASM Include="../../thirdparty/owemdjee/tvision/source/tvision/tvexposd.asm">
       <Filter>Source Files\source\tvision</Filter>
-    </NASM>
-    <NASM Include="../../thirdparty/owemdjee/tvision/source/tvision/tvwrite.asm">
+    </MASM>
+    <MASM Include="../../thirdparty/owemdjee/tvision/source/tvision/tvwrite.asm">
       <Filter>Source Files\source\tvision</Filter>
-    </NASM>
+    </MASM>
     <Text Include="../../thirdparty/owemdjee/tvision/CMakeLists.txt">
       <Filter>Misc Files</Filter>
     </Text>
@@ -1198,9 +1173,6 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/tvision/examples/CMakeLists.txt">
       <Filter>Misc Files\examples</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/tvision/examples/avscolor/CMakeLists.txt">
-      <Filter>Misc Files\examples\avscolor</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/tvision/examples/mmenu/CMakeLists.txt">
       <Filter>Misc Files\examples\mmenu</Filter>
@@ -1232,9 +1204,5 @@
     <Text Include="../../thirdparty/owemdjee/tvision/source/CMakeLists.txt">
       <Filter>Misc Files\source</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/tvision/test/CMakeLists.txt">
-      <Filter>Misc Files\test</Filter>
-    </Text>
   </ItemGroup>
 </Project>
-    

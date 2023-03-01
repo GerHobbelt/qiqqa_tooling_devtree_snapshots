@@ -31,7 +31,7 @@ import subprocess
 from datetime import timedelta, datetime
 from json import JSONEncoder
 import time
-from typing import List
+from typing import List, Union, Optional
 
 from .curl import CurlClient, ExecResult
 from .env import Env
@@ -44,9 +44,9 @@ class Httpd:
 
     MODULES = [
         'log_config', 'logio', 'unixd', 'version', 'watchdog',
-        'authn_core', 'authz_user', 'authz_core',
+        'authn_core', 'authz_user', 'authz_core', 'authz_host',
         'env', 'filter', 'headers', 'mime',
-        'rewrite', 'http2', 'ssl',
+        'rewrite', 'http2', 'ssl', 'proxy', 'proxy_http', 'proxy_connect',
         'mpm_event',
     ]
     COMMON_MODULES_DIRS = [
@@ -60,6 +60,8 @@ class Httpd:
         self.env = env
         self._cmd = env.apachectl
         self._apache_dir = os.path.join(env.gen_dir, 'apache')
+        self._run_dir = os.path.join(self._apache_dir, 'run')
+        self._lock_dir = os.path.join(self._apache_dir, 'locks')
         self._docs_dir = os.path.join(self._apache_dir, 'docs')
         self._conf_dir = os.path.join(self._apache_dir, 'conf')
         self._conf_file = os.path.join(self._conf_dir, 'test.conf')
@@ -67,21 +69,24 @@ class Httpd:
         self._error_log = os.path.join(self._logs_dir, 'error_log')
         self._tmp_dir = os.path.join(self._apache_dir, 'tmp')
         self._mods_dir = None
-        if env.apxs is not None:
-            p = subprocess.run(args=[env.apxs, '-q', 'libexecdir'],
-                               capture_output=True, text=True)
-            if p.returncode != 0:
-                raise Exception(f'{env.apxs} failed to query libexecdir: {p}')
-            self._mods_dir = p.stdout.strip()
-        else:
-            for md in self.COMMON_MODULES_DIRS:
-                if os.path.isdir(md):
-                    self._mods_dir = md
+        self._extra_configs = {}
+        assert env.apxs
+        p = subprocess.run(args=[env.apxs, '-q', 'libexecdir'],
+                           capture_output=True, text=True)
+        if p.returncode != 0:
+            raise Exception(f'{env.apxs} failed to query libexecdir: {p}')
+        self._mods_dir = p.stdout.strip()
         if self._mods_dir is None:
             raise Exception(f'apache modules dir cannot be found')
+        if not os.path.exists(self._mods_dir):
+            raise Exception(f'apache modules dir does not exist: {self._mods_dir}')
         self._process = None
         self._rmf(self._error_log)
         self._init_curltest()
+
+    @property
+    def docs_dir(self):
+        return self._docs_dir
 
     def clear_logs(self):
         self._rmf(self._error_log)
@@ -89,10 +94,24 @@ class Httpd:
     def exists(self):
         return os.path.exists(self._cmd)
 
+    def set_extra_config(self, domain: str, lines: Optional[Union[str, List[str]]]):
+        if lines is None:
+            self._extra_configs.pop(domain, None)
+        else:
+            self._extra_configs[domain] = lines
+
     def _run(self, args, intext=''):
+        env = {}
+        for key, val in os.environ.items():
+            env[key] = val
+        env['APACHE_RUN_DIR'] = self._run_dir
+        env['APACHE_RUN_USER'] = os.environ['USER']
+        env['APACHE_LOCK_DIR'] = self._lock_dir
+        env['APACHE_CONFDIR'] = self._apache_dir
         p = subprocess.run(args, stderr=subprocess.PIPE, stdout=subprocess.PIPE,
                            cwd=self.env.gen_dir,
-                           input=intext.encode() if intext else None)
+                           input=intext.encode() if intext else None,
+                           env=env)
         start = datetime.now()
         return ExecResult(args=args, exit_code=p.returncode,
                           stdout=p.stdout.decode().splitlines(),
@@ -117,6 +136,7 @@ class Httpd:
         r = self._apachectl('start')
         if r.exit_code != 0:
             log.error(f'failed to start httpd: {r}')
+            return False
         return self.wait_live(timeout=timedelta(seconds=5))
 
     def stop(self):
@@ -130,6 +150,7 @@ class Httpd:
         return self.start()
 
     def reload(self):
+        self._write_config()
         r = self._apachectl("graceful")
         if r.exit_code != 0:
             log.error(f'failed to reload httpd: {r}')
@@ -170,6 +191,8 @@ class Httpd:
         creds1 = self.env.get_credentials(domain1)
         domain2 = self.env.domain2
         creds2 = self.env.get_credentials(domain2)
+        proxy_domain = self.env.proxy_domain
+        proxy_creds = self.env.get_credentials(proxy_domain)
         self._mkpath(self._conf_dir)
         self._mkpath(self._logs_dir)
         self._mkpath(self._tmp_dir)
@@ -197,18 +220,20 @@ class Httpd:
                 f'ErrorLog {self._error_log}',
                 f'LogLevel {self._get_log_level()}',
                 f'LogLevel http:trace4',
+                f'LogLevel proxy:trace4',
+                f'LogLevel proxy_http:trace4',
                 f'H2MinWorkers 16',
                 f'H2MaxWorkers 128',
                 f'Listen {self.env.http_port}',
                 f'Listen {self.env.https_port}',
+                f'Listen {self.env.proxy_port}',
+                f'Listen {self.env.proxys_port}',
                 f'TypesConfig "{self._conf_dir}/mime.types',
-                # we want the quest string in a response header, so we
-                # can check responses more easily
-                f'Header set rquery "%{{QUERY_STRING}}s"',
             ]
             conf.extend([  # plain http host for domain1
                 f'<VirtualHost *:{self.env.http_port}>',
                 f'    ServerName {domain1}',
+                f'    ServerAlias localhost',
                 f'    DocumentRoot "{self._docs_dir}"',
             ])
             conf.extend(self._curltest_conf())
@@ -226,6 +251,8 @@ class Httpd:
                 f'    DocumentRoot "{self._docs_dir}"',
             ])
             conf.extend(self._curltest_conf())
+            if domain1 in self._extra_configs:
+                conf.extend(self._extra_configs[domain1])
             conf.extend([
                 f'</VirtualHost>',
                 f'',
@@ -240,9 +267,38 @@ class Httpd:
                 f'    DocumentRoot "{self._docs_dir}/two"',
             ])
             conf.extend(self._curltest_conf())
+            if domain2 in self._extra_configs:
+                conf.extend(self._extra_configs[domain2])
             conf.extend([
                 f'</VirtualHost>',
                 f'',
+            ])
+            conf.extend([  # http forward proxy
+                f'<VirtualHost *:{self.env.proxy_port}>',
+                f'    ServerName {proxy_domain}',
+                f'    Protocols h2c, http/1.1',
+                f'    ProxyRequests On',
+                f'    ProxyVia On',
+                f'    AllowCONNECT {self.env.http_port} {self.env.https_port}',
+                f'    <Proxy "*">',
+                f'      Require ip 127.0.0.1',
+                f'    </Proxy>',
+                f'</VirtualHost>',
+            ])
+            conf.extend([  # https forward proxy
+                f'<VirtualHost *:{self.env.proxys_port}>',
+                f'    ServerName {proxy_domain}',
+                f'    Protocols h2, http/1.1',
+                f'    SSLEngine on',
+                f'    SSLCertificateFile {proxy_creds.cert_file}',
+                f'    SSLCertificateKeyFile {proxy_creds.pkey_file}',
+                f'    ProxyRequests On',
+                f'    ProxyVia On',
+                f'    AllowCONNECT {self.env.http_port} {self.env.https_port}',
+                f'    <Proxy "*">',
+                f'      Require ip 127.0.0.1',
+                f'    </Proxy>',
+                f'</VirtualHost>',
             ])
             fd.write("\n".join(conf))
         with open(os.path.join(self._conf_dir, 'mime.types'), 'w') as fd:
@@ -253,12 +309,12 @@ class Httpd:
             ]))
 
     def _get_log_level(self):
-        if self.env.verbose > 3:
-            return 'trace2'
-        if self.env.verbose > 2:
-            return 'trace1'
-        if self.env.verbose > 1:
-            return 'debug'
+        #if self.env.verbose > 3:
+        #    return 'trace2'
+        #if self.env.verbose > 2:
+        #    return 'trace1'
+        #if self.env.verbose > 1:
+        #    return 'debug'
         return 'info'
 
     def _curltest_conf(self) -> List[str]:

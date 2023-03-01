@@ -92,7 +92,7 @@ public:
         Constructor, creating and showing an owner-drawn combobox.
 
         @param parent
-            Parent window. Must not be @NULL.
+            Parent window. Must not be @nullptr.
         @param id
             Window identifier. The value @c wxID_ANY indicates a default value.
         @param value
@@ -120,7 +120,7 @@ public:
                          const wxPoint& pos = wxDefaultPosition,
                          const wxSize& size = wxDefaultSize,
                          int n = 0,
-                         const wxString choices[] = NULL,
+                         const wxString choices[] = nullptr,
                          long style = 0,
                          const wxValidator& validator = wxDefaultValidator,
                          const wxString& name = "comboBox");
@@ -128,7 +128,7 @@ public:
         Constructor, creating and showing a owner-drawn combobox.
 
         @param parent
-            Parent window. Must not be @NULL.
+            Parent window. Must not be @nullptr.
         @param id
             Window identifier. The value @c wxID_ANY indicates a default value.
         @param value

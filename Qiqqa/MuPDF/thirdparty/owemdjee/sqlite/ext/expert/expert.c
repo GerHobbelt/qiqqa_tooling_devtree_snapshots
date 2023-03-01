@@ -19,16 +19,16 @@
 #include "sqlite3expert.h"
 
 
-static void option_requires_argument(const char *zOpt){
+static int option_requires_argument(const char *zOpt){
   fprintf(stderr, "Option requires an argument: %s\n", zOpt);
-  exit(-3);
+  return -3;
 }
 
 static int option_integer_arg(const char *zVal){
   return atoi(zVal);
 }
 
-static void usage(const char **argv){
+static int usage(const char **argv){
   fprintf(stderr, "\n");
   fprintf(stderr, "Usage %s ?OPTIONS? DATABASE\n", argv[0]);
   fprintf(stderr, "\n");
@@ -37,7 +37,7 @@ static void usage(const char **argv){
   fprintf(stderr, "  -file FILE (read SQL statements from file FILE)\n");
   fprintf(stderr, "  -verbose LEVEL (integer verbosity level. default 1)\n");
   fprintf(stderr, "  -sample PERCENT (percent of db to sample. default 100)\n");
-  exit(-1);
+  return -1;
 }
 
 static int readSqlFromFile(sqlite3expert *p, const char *zFile, char **pzErr){
@@ -82,13 +82,13 @@ int main(int argc, const char **argv){
   sqlite3 *db = 0;
   sqlite3expert *p = 0;
 
-  if( argc<2 ) usage(argv);
+  if( argc<2 ) return usage(argv);
   zDb = argv[argc-1];
-  if( zDb[0]=='-' ) usage(argv);
+  if( zDb[0]=='-' ) return usage(argv);
   rc = sqlite3_open(zDb, &db);
   if( rc!=SQLITE_OK ){
     fprintf(stderr, "Cannot open db file: %s - %s\n", zDb, sqlite3_errmsg(db));
-    exit(-2);
+    return -2;
   }
 
   p = sqlite3_expert_new(db, &zErr);
@@ -102,29 +102,29 @@ int main(int argc, const char **argv){
       if( zArg[0]=='-' && zArg[1]=='-' && zArg[2]!=0 ) zArg++;
       nArg = (int)strlen(zArg);
       if( nArg>=2 && 0==sqlite3_strnicmp(zArg, "-file", nArg) ){
-        if( ++i==(argc-1) ) option_requires_argument("-file");
+        if( ++i==(argc-1) ) return option_requires_argument("-file");
         rc = readSqlFromFile(p, argv[i], &zErr);
       }
 
       else if( nArg>=3 && 0==sqlite3_strnicmp(zArg, "-sql", nArg) ){
-        if( ++i==(argc-1) ) option_requires_argument("-sql");
+        if( ++i==(argc-1) ) return option_requires_argument("-sql");
         rc = sqlite3_expert_sql(p, argv[i], &zErr);
       }
 
       else if( nArg>=3 && 0==sqlite3_strnicmp(zArg, "-sample", nArg) ){
         int iSample;
-        if( ++i==(argc-1) ) option_requires_argument("-sample");
+        if( ++i==(argc-1) ) return option_requires_argument("-sample");
         iSample = option_integer_arg(argv[i]);
         sqlite3_expert_config(p, EXPERT_CONFIG_SAMPLE, iSample);
       }
 
       else if( nArg>=2 && 0==sqlite3_strnicmp(zArg, "-verbose", nArg) ){
-        if( ++i==(argc-1) ) option_requires_argument("-verbose");
+        if( ++i==(argc-1) ) return option_requires_argument("-verbose");
         iVerbose = option_integer_arg(argv[i]);
       }
 
       else{
-        usage(argv);
+        return usage(argv);
       }
     }
   }

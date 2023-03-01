@@ -9,8 +9,10 @@ echo "REPODIR=$REPODIR"
 cd ../sqlite/
 make clean
 rm -f sqliteInt_expanded.h
+rm -f src/ctime.c
 
 # make sqlite3_cfg.h
+tclsh tool/mkctimec.tcl
 make amalgamation
 
 tclsh tool/mksqliteInt_h.tcl --linemacros=0

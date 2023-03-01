@@ -352,11 +352,11 @@ public:
 
         This function does the same thing as GetNativeDIPSizeHint(), but uses
         @a win to convert the returned value to logical pixels. If @a win is
-        @NULL, default DPI scaling (i.e. that of the primary display) is used.
+        @nullptr, default DPI scaling (i.e. that of the primary display) is used.
 
         @since 2.9.0 (@a win parameter is available only since 3.1.6)
      */
-    static wxSize GetNativeSizeHint(const wxArtClient& client, wxWindow* win = NULL);
+    static wxSize GetNativeSizeHint(const wxArtClient& client, wxWindow* win = nullptr);
 
     /**
         Returns a suitable size hint for the given @e wxArtClient in DIPs.
@@ -373,12 +373,12 @@ public:
         Returns a suitable size hint for the given @e wxArtClient.
 
         This function does the same thing as GetDIPSizeHint(), but uses @a win
-        to convert the returned value to logical pixels. If @a win is @NULL,
+        to convert the returned value to logical pixels. If @a win is @nullptr,
         default DPI scaling (i.e. that of the primary display) is used.
 
         Note that @a win parameter is only available since wxWidgets 3.1.6.
      */
-    static wxSize GetSizeHint(const wxArtClient& client, wxWindow* win = NULL);
+    static wxSize GetSizeHint(const wxArtClient& client, wxWindow* win = nullptr);
 
     /**
         Query registered providers for icon bundle with given ID.

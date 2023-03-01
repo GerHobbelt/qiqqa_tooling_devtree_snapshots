@@ -704,7 +704,12 @@
 #define HAVE_STRSTR 1
 
 /* Define to 1 if you have the strtok_r function. */
-/* #undef HAVE_STRTOK_R */
+#define HAVE_STRTOK_R 1
+
+// See also https://en.cppreference.com/w/c/string/byte/strtok 'Note' section:
+#if defined(_MSC_VER)
+#define strtok_r	strtok_s
+#endif
 
 /* Define to 1 if you have the strtoll function. */
 #define HAVE_STRTOLL 1

@@ -223,7 +223,7 @@ WX_PG_IMPLEMENT_INTERNAL_EDITOR_CLASS(SpinCtrl,
 // Destructor. It is useful to reset the global pointer in it.
 wxPGSpinCtrlEditor::~wxPGSpinCtrlEditor()
 {
-    wxPG_EDITOR(SpinCtrl) = NULL;
+    wxPG_EDITOR(SpinCtrl) = nullptr;
 }
 
 // Create controls and initialize event handling.
@@ -270,7 +270,7 @@ wxPGWindowList wxPGSpinCtrlEditor::CreateControls( wxPropertyGrid* propgrid, wxP
     {
         wxFAIL_MSG( "SpinCtrl editor can be assigned only to numeric property" );
         tcSz.Set(sz.x, sz.y);
-        wnd2 = NULL;
+        wnd2 = nullptr;
     }
 
     wxWindow* wnd1 = wxPGTextCtrlEditor::CreateControls(propgrid, property, pos, tcSz).GetPrimary();
@@ -360,16 +360,16 @@ class wxPGDatePickerCtrlEditor : public wxPGEditor
 public:
     virtual ~wxPGDatePickerCtrlEditor();
 
-    wxString GetName() const wxOVERRIDE;
+    wxString GetName() const override;
     virtual wxPGWindowList CreateControls(wxPropertyGrid* propgrid,
                                           wxPGProperty* property,
                                           const wxPoint& pos,
-                                          const wxSize& size) const wxOVERRIDE;
-    virtual void UpdateControl( wxPGProperty* property, wxWindow* wnd ) const wxOVERRIDE;
+                                          const wxSize& size) const override;
+    virtual void UpdateControl( wxPGProperty* property, wxWindow* wnd ) const override;
     virtual bool OnEvent( wxPropertyGrid* propgrid, wxPGProperty* property,
-        wxWindow* wnd, wxEvent& event ) const wxOVERRIDE;
-    virtual bool GetValueFromControl( wxVariant& variant, wxPGProperty* property, wxWindow* wnd ) const wxOVERRIDE;
-    virtual void SetValueToUnspecified( wxPGProperty* WXUNUSED(property), wxWindow* wnd ) const wxOVERRIDE;
+        wxWindow* wnd, wxEvent& event ) const override;
+    virtual bool GetValueFromControl( wxVariant& variant, wxPGProperty* property, wxWindow* wnd ) const override;
+    virtual void SetValueToUnspecified( wxPGProperty* WXUNUSED(property), wxWindow* wnd ) const override;
 };
 
 
@@ -380,7 +380,7 @@ WX_PG_IMPLEMENT_INTERNAL_EDITOR_CLASS(DatePickerCtrl,
 
 wxPGDatePickerCtrlEditor::~wxPGDatePickerCtrlEditor()
 {
-    wxPG_EDITOR(DatePickerCtrl) = NULL;
+    wxPG_EDITOR(DatePickerCtrl) = nullptr;
 }
 
 wxPGWindowList wxPGDatePickerCtrlEditor::CreateControls( wxPropertyGrid* propgrid,
@@ -388,11 +388,8 @@ wxPGWindowList wxPGDatePickerCtrlEditor::CreateControls( wxPropertyGrid* propgri
                                                          const wxPoint& pos,
                                                          const wxSize& sz ) const
 {
-    wxCHECK_MSG( wxDynamicCast(property, wxDateProperty),
-                 NULL,
-                 wxS("DatePickerCtrl editor can only be used with wxDateProperty or derivative.") );
-
     wxDateProperty* prop = wxDynamicCast(property, wxDateProperty);
+    wxCHECK_MSG(prop, nullptr, "wxDatePickerCtrl editor can only be used with wxDateProperty or derivative.");
 
     // Use two stage creation to allow cleaner display on wxMSW
     wxDatePickerCtrl* ctrl = new wxDatePickerCtrl();
@@ -428,8 +425,8 @@ wxPGWindowList wxPGDatePickerCtrlEditor::CreateControls( wxPropertyGrid* propgri
 void wxPGDatePickerCtrlEditor::UpdateControl( wxPGProperty* property,
                                               wxWindow* wnd ) const
 {
-    wxDatePickerCtrl* ctrl = (wxDatePickerCtrl*) wnd;
-    wxASSERT( wxDynamicCast(ctrl, wxDatePickerCtrl) );
+    wxDatePickerCtrl* ctrl = wxDynamicCast(wnd, wxDatePickerCtrl);
+    wxCHECK_RET(ctrl, "Only wxDatePickerCtrl editor can be updated");
 
     wxDateTime dateValue(wxInvalidDateTime);
     wxVariant v(property->GetValue());
@@ -453,8 +450,8 @@ bool wxPGDatePickerCtrlEditor::OnEvent( wxPropertyGrid* WXUNUSED(propgrid),
 
 bool wxPGDatePickerCtrlEditor::GetValueFromControl( wxVariant& variant, wxPGProperty* WXUNUSED(property), wxWindow* wnd ) const
 {
-    wxDatePickerCtrl* ctrl = (wxDatePickerCtrl*) wnd;
-    wxASSERT( wxDynamicCast(ctrl, wxDatePickerCtrl) );
+    wxDatePickerCtrl* ctrl = wxDynamicCast(wnd, wxDatePickerCtrl);
+    wxCHECK_MSG(ctrl, false, "Value can be retrieved only from wxDatePickerCtrl editor");
 
     variant = ctrl->GetValue();
 
@@ -464,17 +461,15 @@ bool wxPGDatePickerCtrlEditor::GetValueFromControl( wxVariant& variant, wxPGProp
 void wxPGDatePickerCtrlEditor::SetValueToUnspecified( wxPGProperty* property,
                                                       wxWindow* wnd ) const
 {
-    wxDatePickerCtrl* ctrl = (wxDatePickerCtrl*) wnd;
-    wxASSERT( wxDynamicCast(ctrl, wxDatePickerCtrl) );
+    wxDatePickerCtrl* ctrl = wxDynamicCast(wnd, wxDatePickerCtrl);
+    wxCHECK_RET(ctrl, "Only wxDatePickerCtrl editor can be updated");
 
     wxDateProperty* prop = wxDynamicCast(property, wxDateProperty);
+    wxCHECK_RET(prop, "wxDatePickerCtrl editor can only be used with wxDateProperty or derivative.");
 
-    if ( prop )
-    {
-        int datePickerStyle = prop->GetDatePickerStyle();
-        if ( datePickerStyle & wxDP_ALLOWNONE )
-            ctrl->SetValue(wxInvalidDateTime);
-    }
+    int datePickerStyle = prop->GetDatePickerStyle();
+    if ( datePickerStyle & wxDP_ALLOWNONE )
+        ctrl->SetValue(wxInvalidDateTime);
 }
 
 #endif // wxUSE_DATEPICKCTRL
@@ -496,7 +491,7 @@ static const wxChar* const gs_fp_es_family_labels[] = {
     wxT("Roman"), wxT("Script"),
     wxT("Swiss"), wxT("Modern"),
     wxT("Teletype"), wxT("Unknown"),
-    (const wxChar*) NULL
+    (const wxChar*) nullptr
 };
 
 static const long gs_fp_es_family_values[] = {
@@ -510,7 +505,7 @@ static const wxChar* const gs_fp_es_style_labels[] = {
     wxT("Normal"),
     wxT("Slant"),
     wxT("Italic"),
-    (const wxChar*) NULL
+    (const wxChar*) nullptr
 };
 
 static const long gs_fp_es_style_values[] = {
@@ -530,7 +525,7 @@ static const wxChar* const gs_fp_es_weight_labels[] = {
     wxT("ExtraBold"),
     wxT("Heavy"),
     wxT("ExtraHeavy"),
-    (const wxChar*) NULL
+    (const wxChar*) nullptr
 };
 
 static const long gs_fp_es_weight_values[] = {
@@ -822,7 +817,7 @@ static const char* const gs_cp_es_syscolour_labels[] = {
     /* TRANSLATORS: Keyword of system colour */ wxTRANSLATE("WindowFrame"),
     /* TRANSLATORS: Keyword of system colour */ wxTRANSLATE("WindowText"),
     /* TRANSLATORS: Custom colour choice entry */ wxTRANSLATE("Custom"),
-    NULL
+    nullptr
 };
 
 static const long gs_cp_es_syscolour_values[] = {
@@ -1349,7 +1344,7 @@ void wxSystemColourProperty::OnCustomPaint( wxDC& dc, const wxRect& rect,
     if ( col.IsOk() )
     {
 #if wxPG_USE_GC_FOR_ALPHA
-        wxGCDC *gdc = NULL;
+        wxGCDC *gdc = nullptr;
         if ( col.Alpha() != wxALPHA_OPAQUE )
         {
             if ( wxPaintDC *paintdc = wxDynamicCast(&dc, wxPaintDC) )
@@ -1409,7 +1404,7 @@ bool wxSystemColourProperty::StringToValue( wxVariant& value, const wxString& te
         if ( colStr.Find(wxS("(")) == 0 )
         {
             // Eliminate whitespace
-            colStr.Replace(wxS(" "), wxEmptyString);
+            colStr.Replace(wxS(" "), wxString());
 
             int commaCount = colStr.Freq(wxS(','));
             if ( commaCount == 2 )
@@ -1550,7 +1545,7 @@ static const char* const gs_cp_es_normcolour_labels[] = {
     wxTRANSLATE("Yellow"),
     wxTRANSLATE("White"),
     /* TRANSLATORS: Custom colour choice entry */ wxTRANSLATE("Custom"),
-    NULL
+    nullptr
 };
 
 static const long gs_cp_es_normcolour_values[] = {
@@ -1712,7 +1707,7 @@ static const char* const gs_cp_es_syscursors_labels[NUM_CURSORS+1] = {
     wxTRANSLATE_IN_CONTEXT("system cursor name", "Wait"),
     wxTRANSLATE_IN_CONTEXT("system cursor name", "Watch"),
     wxTRANSLATE_IN_CONTEXT("system cursor name", "Wait Arrow"),
-    NULL
+    nullptr
 };
 
 static const long gs_cp_es_syscursors_values[NUM_CURSORS] = {
@@ -1806,7 +1801,7 @@ void wxCursorProperty::OnCustomPaint( wxDC& dc,
 
             wxCursor cursor( cursorIndex );
 
-#if defined(__WXMSW__) || ( defined(__WXGTK__) && defined(__WXGTK20__) )
+#if defined(__WXMSW__) || ( defined(__WXGTK__) && defined(__WXGTK__) )
             wxBitmap bmp(cursor);
             if ( bmp.IsOk() )
             {
@@ -1843,11 +1838,8 @@ const wxString& wxPGGetDefaultImageWildcard()
 
         wxList& handlers = wxImage::GetHandlers();
 
-        wxList::iterator node;
-
         // Let's iterate over the image handler list.
-        //for ( wxList::Node *node = handlers.GetFirst(); node; node = node->GetNext() )
-        for ( node = handlers.begin(); node != handlers.end(); ++node )
+        for (wxList::iterator node = handlers.begin(); node != handlers.end(); ++node)
         {
             wxImageHandler *handler = (wxImageHandler*)*node;
 
@@ -2086,7 +2078,7 @@ bool wxMultiChoiceProperty::DisplayEditorDialog(wxPropertyGrid* pg, wxVariant& v
                              _("Make a selection:"),
                              m_dlgTitle.empty() ? GetLabel() : m_dlgTitle,
                              choiceCount,
-                             choiceCount?&labels[0]:NULL,
+                             choiceCount?&labels[0]:nullptr,
                              m_dlgStyle );
 
     dlg.Move( pg->GetGoodEditorDialogPosition(this,dlg.GetSize()) );

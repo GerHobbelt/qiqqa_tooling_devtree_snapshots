@@ -182,7 +182,6 @@
     <ClInclude Include="../../thirdparty/gumbo-parser/src/utf8.h" />
     <ClInclude Include="../../thirdparty/gumbo-parser/src/util.h" />
     <ClInclude Include="../../thirdparty/gumbo-parser/src/vector.h" />
-    <ClInclude Include="../../thirdparty/gumbo-parser/tests/test_utils.h" />
     <ClInclude Include="../../thirdparty/gumbo-parser/visualc/include/strings.h" />
     <Text Include="../../thirdparty/gumbo-parser/CHANGES.md" />
     <Text Include="../../thirdparty/gumbo-parser/CONTRIBUTING.md" />
@@ -190,8 +189,6 @@
     <Text Include="../../thirdparty/gumbo-parser/Makefile.am" />
     <Text Include="../../thirdparty/gumbo-parser/README.md" />
     <Text Include="../../thirdparty/gumbo-parser/autogen.sh" />
-    <Text Include="../../thirdparty/gumbo-parser/benchmarks/arabic_newspapers.html" />
-    <Text Include="../../thirdparty/gumbo-parser/benchmarks/hacker_news.html" />
     <Text Include="../../thirdparty/gumbo-parser/configure.ac" />
     <Text Include="../../thirdparty/gumbo-parser/genperf.py" />
     <Text Include="../../thirdparty/gumbo-parser/gentags.py" />

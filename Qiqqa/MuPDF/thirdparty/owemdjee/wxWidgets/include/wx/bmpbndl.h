@@ -46,7 +46,7 @@ public:
 
 #if wxUSE_IMAGE
 
-	// Another conversion ctor from a single image: this one is needed to allow
+    // Another conversion ctor from a single image: this one is needed to allow
     // passing wxImage to the functions that used to take wxBitmap but now take
     // wxBitmapBundle.
     wxBitmapBundle(const wxImage& image);
@@ -120,7 +120,7 @@ public:
     static wxBitmapBundle FromImpl(wxBitmapBundleImpl* impl);
 
     // Check if bitmap bundle is non-empty.
-    bool IsOk() const { return m_impl.get() != NULL; }
+    bool IsOk() const { return m_impl.get() != nullptr; }
 
     // Clear the bundle contents, IsOk() will return false after doing this.
     void Clear();

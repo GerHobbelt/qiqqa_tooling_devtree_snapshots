@@ -1433,15 +1433,9 @@ typedef INT8_TYPE i8;              /* 1-byte signed integer */
 
 /*
 ** The datatype used to store estimates of the number of rows in a
-** table or index.  This is an unsigned integer type.  For 99.9% of
-** the world, a 32-bit integer is sufficient.  But a 64-bit integer
-** can be used at compile-time if desired.
+** table or index.
 */
-#ifdef SQLITE_64BIT_STATS
- typedef u64 tRowcnt;    /* 64-bit only if requested at compile-time */
-#else
- typedef u32 tRowcnt;    /* 32-bit is the default */
-#endif
+typedef u64 tRowcnt;
 
 /*
 ** Estimated quantities used for query planning are stored as 16-bit
@@ -2881,7 +2875,15 @@ SQLITE_PRIVATE int sqlite3BtreeInsert(BtCursor*, const BtreePayload *pPayload,
 /* SQLITE_PRIVATE u32 sqlite3BtreePayloadSize(BtCursor*); */
 /* SQLITE_PRIVATE sqlite3_int64 sqlite3BtreeMaxRecordSize(BtCursor*); */
 
-/* SQLITE_PRIVATE char *sqlite3BtreeIntegrityCheck(sqlite3*,Btree*,Pgno*aRoot,int nRoot,int,int*); */
+SQLITE_PRIVATE int sqlite3BtreeIntegrityCheck(
+  sqlite3 *db,  /* Database connection that is running the check */
+  Btree *p,     /* The btree to be checked */
+  Pgno *aRoot,  /* An array of root pages numbers for individual trees */
+  int nRoot,    /* Number of entries in aRoot[] */
+  int mxErr,    /* Stop reporting errors after this many */
+  int *pnErr,   /* OUT: Write number of errors seen to this variable */
+  char **pzOut  /* OUT: Write the error message string here */
+);
 /* SQLITE_PRIVATE struct Pager *sqlite3BtreePager(Btree*); */
 /* SQLITE_PRIVATE i64 sqlite3BtreeRowCountEst(BtCursor*); */
 
@@ -4562,8 +4564,14 @@ struct FuncDestructor {
 **     SQLITE_FUNC_TYPEOF      ==  OPFLAG_TYPEOFARG
 **     SQLITE_FUNC_CONSTANT    ==  SQLITE_DETERMINISTIC from the API
 **     SQLITE_FUNC_DIRECT      ==  SQLITE_DIRECTONLY from the API
-**     SQLITE_FUNC_UNSAFE      ==  SQLITE_INNOCUOUS
+**     SQLITE_FUNC_UNSAFE      ==  SQLITE_INNOCUOUS  -- opposite meanings!!!
 **     SQLITE_FUNC_ENCMASK   depends on SQLITE_UTF* macros in the API
+**
+** Note that even though SQLITE_FUNC_UNSAFE and SQLITE_INNOCUOUS have the
+** same bit value, their meanings are inverted.  SQLITE_FUNC_UNSAFE is
+** used internally and if set means tha the function has side effects.
+** SQLITE_INNOCUOUS is used by application code and means "not unsafe".
+** See multiple instances of tag-20230109-1.
 */
 #define SQLITE_FUNC_ENCMASK  0x0003 /* SQLITE_UTF8, SQLITE_UTF16BE or UTF16LE */
 #define SQLITE_FUNC_LIKE     0x0004 /* Candidate for the LIKE optimization */
@@ -4680,7 +4688,7 @@ struct FuncDestructor {
   {nArg, SQLITE_FUNC_BUILTIN|SQLITE_FUNC_CONSTANT|SQLITE_UTF8, \
    xPtr, 0, xFunc, 0, 0, 0, #zName, {0} }
 #define JFUNCTION(zName, nArg, iArg, xFunc) \
-  {nArg, SQLITE_FUNC_BUILTIN|SQLITE_DETERMINISTIC|SQLITE_INNOCUOUS|\
+  {nArg, SQLITE_FUNC_BUILTIN|SQLITE_DETERMINISTIC|\
    SQLITE_FUNC_CONSTANT|SQLITE_UTF8, \
    SQLITE_INT_TO_PTR(iArg), 0, xFunc, 0, 0, 0, #zName, {0} }
 #define INLINE_FUNC(zName, nArg, iArg, mFlags) \
@@ -6381,6 +6389,9 @@ struct Parse {
   u32 nQueryLoop;      /* Est number of iterations of a query (10*log2(N)) */
   u32 oldmask;         /* Mask of old.* columns referenced */
   u32 newmask;         /* Mask of new.* columns referenced */
+#ifndef SQLITE_OMIT_PROGRESS_CALLBACK
+  u32 nProgressSteps;  /* xProgress steps taken during sqlite3_prepare() */
+#endif
   u8 eTriggerOp;       /* TK_UPDATE, TK_INSERT or TK_DELETE */
   u8 bReturning;       /* Coding a RETURNING trigger */
   u8 eOrconf;          /* Default ON CONFLICT policy for trigger steps */
@@ -7129,13 +7140,11 @@ struct Window {
 #ifdef SQLITE_USE_ALLOCA
 # define sqlite3StackAllocRaw(D,N)   alloca(N)
 # define sqlite3StackAllocRawNN(D,N) alloca(N)
-# define sqlite3StackAllocZero(D,N)  memset(alloca(N), 0, N)
 # define sqlite3StackFree(D,P)
 # define sqlite3StackFreeNN(D,P)
 #else
 # define sqlite3StackAllocRaw(D,N)   sqlite3DbMallocRaw(D,N)
 # define sqlite3StackAllocRawNN(D,N) sqlite3DbMallocRawNN(D,N)
-# define sqlite3StackAllocZero(D,N)  sqlite3DbMallocZero(D,N)
 # define sqlite3StackFree(D,P)       sqlite3DbFree(D,P)
 # define sqlite3StackFreeNN(D,P)     sqlite3DbFreeNN(D,P)
 #endif
@@ -7260,6 +7269,7 @@ SQLITE_PRIVATE   void sqlite3TreeViewUpdate(const With*, const SrcList*, const E
 #endif
 
 /* SQLITE_PRIVATE void sqlite3SetString(char **, sqlite3*, const char*); */
+/* SQLITE_PRIVATE void sqlite3ProgressCheck(Parse*); */
 /* SQLITE_PRIVATE void sqlite3ErrorMsg(Parse*, const char*, ...); */
 /* SQLITE_PRIVATE int sqlite3ErrorToParser(sqlite3*,int); */
 /* SQLITE_PRIVATE void sqlite3Dequote(char*); */
@@ -7640,7 +7650,7 @@ SQLITE_PRIVATE   TriggerStep *sqlite3TriggerDeleteStep(Parse*,Token*, Expr*,
 /* SQLITE_PRIVATE int sqlite3FixTriggerStep(DbFixer*, TriggerStep*); */
 /* SQLITE_PRIVATE int sqlite3RealSameAsInt(double,sqlite3_int64); */
 /* SQLITE_PRIVATE i64 sqlite3RealToI64(double); */
-/* SQLITE_PRIVATE void sqlite3Int64ToText(i64,char*); */
+/* SQLITE_PRIVATE int sqlite3Int64ToText(i64,char*); */
 /* SQLITE_PRIVATE int sqlite3AtoF(const char *z, double*, int, u8); */
 /* SQLITE_PRIVATE int sqlite3GetInt32(const char *, int*); */
 /* SQLITE_PRIVATE int sqlite3GetUInt32(const char*, u32*); */

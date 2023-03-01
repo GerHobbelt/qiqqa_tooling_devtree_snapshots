@@ -353,6 +353,12 @@ void fz_set_stddbg(fz_context *ctx, fz_output *out);
 fz_output *fz_stddbg(fz_context *ctx);
 
 /**
+	Return TRUE when the specified `fz_output` stream is one of the global stdout/stderr/stddbg.
+*/
+int fz_channel_is_any_stdout(fz_context *ctx, fz_output *stream);
+
+
+/**
 	Format and write data to an output stream.
 	See fz_format_string for formatting details.
 	Does not write zero terminator.
@@ -487,7 +493,7 @@ void fz_truncate_output(fz_context *, fz_output *);
 
 	The naive implementation would have cost O(M+N) instead: copy M old/existing + 1 write (+ 1 rename).
 	As we expect 'M' to be large/huge, compared to the amount of data we expect to append,
-	the append-on-close scheme was chosen to reduce I/O costs.
+	the append-on-close scheme was chosen to reduce I/O costs (assuming 3N < M+N for the average case).
 
 	Note:
 

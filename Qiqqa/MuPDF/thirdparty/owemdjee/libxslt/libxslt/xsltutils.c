@@ -42,6 +42,7 @@
 #include "transform.h"
 
 #if defined(_WIN32)
+#include <windows.h>
 #define XSLT_WIN32_PERFORMANCE_COUNTER
 #endif
 
@@ -960,7 +961,7 @@ xsltDocumentSortFunction(xmlNodeSetPtr list) {
  */
 static xmlXPathObjectPtr *
 xsltComputeSortResultInternal(xsltTransformContextPtr ctxt, xmlNodePtr sort,
-                              int number, xsltLocale locale) {
+                              int number, void *locale) {
 #ifdef XSLT_REFACTORED
     xsltStyleItemSortPtr comp;
 #else
@@ -1047,10 +1048,17 @@ xsltComputeSortResultInternal(xsltTransformContextPtr ctxt, xmlNodePtr sort,
 		}
 	    } else {
 		if (res->type == XPATH_STRING) {
-		    if (locale != (xsltLocale)0) {
+		    if (locale != NULL) {
 			xmlChar *str = res->stringval;
-			res->stringval = (xmlChar *) xsltStrxfrm(locale, str);
-			xmlFree(str);
+                        xmlChar *sortKey = ctxt->genSortKey(locale, str);
+
+                        if (sortKey == NULL) {
+                            xsltTransformError(ctxt, NULL, sort,
+                                "xsltComputeSortResult: sort key is null\n");
+                        } else {
+                            res->stringval = sortKey;
+                            xmlFree(str);
+                        }
 		    }
 
 		    results[i] = res;
@@ -1089,8 +1097,13 @@ xsltComputeSortResultInternal(xsltTransformContextPtr ctxt, xmlNodePtr sort,
  */
 xmlXPathObjectPtr *
 xsltComputeSortResult(xsltTransformContextPtr ctxt, xmlNodePtr sort) {
-    return xsltComputeSortResultInternal(ctxt, sort, /* number */ 0,
-                                         /* locale */ 0);
+    const xsltStylePreComp *comp = sort->psvi;
+    int number = 0;
+
+    if (comp != NULL)
+        number = comp->number;
+    return xsltComputeSortResultInternal(ctxt, sort, number,
+                                         /* locale */ NULL);
 }
 
 /**
@@ -1120,7 +1133,7 @@ xsltDefaultSortFunction(xsltTransformContextPtr ctxt, xmlNodePtr *sorts,
     xmlNodePtr node;
     xmlXPathObjectPtr tmp;
     int number[XSLT_MAX_SORT], desc[XSLT_MAX_SORT];
-    xsltLocale locale[XSLT_MAX_SORT];
+    void *locale[XSLT_MAX_SORT];
 
     if ((ctxt == NULL) || (sorts == NULL) || (nbsorts <= 0) ||
 	(nbsorts >= XSLT_MAX_SORT))
@@ -1136,6 +1149,8 @@ xsltDefaultSortFunction(xsltTransformContextPtr ctxt, xmlNodePtr *sorts,
 	return; /* nothing to do */
 
     for (j = 0; j < nbsorts; j++) {
+        xmlChar *lang;
+
 	comp = sorts[j]->psvi;
 	if ((comp->stype == NULL) && (comp->has_stype != 0)) {
 	    xmlChar *stype =
@@ -1177,17 +1192,18 @@ xsltDefaultSortFunction(xsltTransformContextPtr ctxt, xmlNodePtr *sorts,
 	    desc[j] = comp->descending;
 	}
 	if ((comp->lang == NULL) && (comp->has_lang != 0)) {
-            xmlChar *lang = xsltEvalAttrValueTemplate(ctxt, sorts[j],
+            lang = xsltEvalAttrValueTemplate(ctxt, sorts[j],
 						      (xmlChar *) "lang",
 						      NULL);
-	    if (lang != NULL) {
-                locale[j] = xsltNewLocale(lang);
-                xmlFree(lang);
-            } else {
-                locale[j] = 0;
-            }
 	} else {
-            locale[j] = comp->locale;
+            lang = (xmlChar *) comp->lang;
+        }
+        if (lang != NULL) {
+            locale[j] = ctxt->newLocale(lang, comp->lower_first);
+            if (lang != comp->lang)
+                xmlFree(lang);
+        } else {
+            locale[j] = NULL;
         }
     }
 
@@ -1232,11 +1248,6 @@ xsltDefaultSortFunction(xsltTransformContextPtr ctxt, xmlNodePtr *sorts,
 				results[j + incr]->floatval)
 			    tst = 1;
 			else tst = -1;
-		    } else if(locale[0] != (xsltLocale)0) {
-			tst = xsltLocaleStrcmp(
-			    locale[0],
-			    (xsltLocaleChar *) results[j]->stringval,
-			    (xsltLocaleChar *) results[j + incr]->stringval);
 		    } else {
 			tst = xmlStrcmp(results[j]->stringval,
 				     results[j + incr]->stringval);
@@ -1294,11 +1305,6 @@ xsltDefaultSortFunction(xsltTransformContextPtr ctxt, xmlNodePtr *sorts,
 					res[j + incr]->floatval)
 				    tst = 1;
 				else tst = -1;
-			    } else if(locale[depth] != (xsltLocale)0) {
-				tst = xsltLocaleStrcmp(
-				    locale[depth],
-				    (xsltLocaleChar *) res[j]->stringval,
-				    (xsltLocaleChar *) res[j + incr]->stringval);
 			    } else {
 				tst = xmlStrcmp(res[j]->stringval,
 					     res[j + incr]->stringval);
@@ -1347,11 +1353,8 @@ xsltDefaultSortFunction(xsltTransformContextPtr ctxt, xmlNodePtr *sorts,
 
 cleanup:
     for (j = 0; j < nbsorts; j++) {
-	comp = sorts[j]->psvi;
-	if ((comp->lang == NULL) && (comp->has_lang != 0)) {
-            if (locale[j] != (xsltLocale)0) {
-                xsltFreeLocale(locale[j]);
-            }
+        if (locale[j] != NULL) {
+            ctxt->freeLocale(locale[j]);
         }
 	if (resultsTab[j] != NULL) {
 	    for (i = 0;i < len;i++)
@@ -1392,6 +1395,8 @@ xsltDoSortFunction(xsltTransformContextPtr ctxt, xmlNodePtr * sorts,
  * xsltSetSortFunc:
  * @handler:  the new handler function
  *
+ * DEPRECATED: Use xsltSetCtxtLocaleHandlers.
+ *
  * Function to reset the global handler for XSLT sorting.
  * If the handler is NULL, the default sort function will be used.
  */
@@ -1408,6 +1413,8 @@ xsltSetSortFunc(xsltSortFunc handler) {
  * @ctxt:  a XSLT process context
  * @handler:  the new handler function
  *
+ * DEPRECATED: Use xsltSetCtxtLocaleHandlers.
+ *
  * Function to set the handler for XSLT sorting
  * for the specified context.
  * If the handler is NULL, then the global
@@ -1416,6 +1423,28 @@ xsltSetSortFunc(xsltSortFunc handler) {
 void
 xsltSetCtxtSortFunc(xsltTransformContextPtr ctxt, xsltSortFunc handler) {
     ctxt->sortfunc = handler;
+}
+
+/**
+ * xsltSetCtxtLocaleHandlers:
+ * @ctxt:  an XSLT transform context
+ * @newLocale:  locale constructor
+ * @freeLocale:  locale destructor
+ * @genSortKey  sort key generator
+ *
+ * Set the locale handlers.
+ */
+void
+xsltSetCtxtLocaleHandlers(xsltTransformContextPtr ctxt,
+                          xsltNewLocaleFunc newLocale,
+                          xsltFreeLocaleFunc freeLocale,
+                          xsltGenSortKeyFunc genSortKey) {
+    if (ctxt == NULL)
+        return;
+
+    ctxt->newLocale = newLocale;
+    ctxt->freeLocale = freeLocale;
+    ctxt->genSortKey = genSortKey;
 }
 
 /************************************************************************

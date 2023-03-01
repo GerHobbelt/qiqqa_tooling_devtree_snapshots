@@ -65,7 +65,7 @@ public:
         other windows.
 
         This version of StartDrawingOnTop() is used to specify an area of the
-        screen which is to be drawn on. If @NULL is passed, the whole screen is
+        screen which is to be drawn on. If @nullptr is passed, the whole screen is
         available. It is recommended that an area of the screen is specified
         with this function rather than with StartDrawingOnTop(wxWindow*),
         because with large regions, flickering effects are noticeable when
@@ -80,6 +80,6 @@ public:
                  that this function allows the screen to be refreshed
                  afterwards, may be useful to some applications.
     */
-    static bool StartDrawingOnTop(wxRect* rect = NULL);
+    static bool StartDrawingOnTop(wxRect* rect = nullptr);
 };
 

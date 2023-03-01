@@ -124,14 +124,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CAFFE;CAFFE_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/caffe/include;../../scripts/libgflags/include;../../thirdparty/owemdjee/boost/libs/thread/include;../../thirdparty/owemdjee/boost/libs/function/include;../../thirdparty/owemdjee/boost/libs/smart_ptr/include;../../thirdparty/owemdjee/boost/libs/config/include;../../thirdparty/owemdjee/boost/libs/core/include;../../thirdparty/owemdjee/boost/libs/throw_exception/include;../../thirdparty/owemdjee/boost/libs/assert/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;../../thirdparty/owemdjee/boost/libs/date_time/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/boost/libs/winapi/include;../../thirdparty/owemdjee/boost/libs/algorithm/include;../../thirdparty/owemdjee/boost/libs/predef/include;../../thirdparty/owemdjee/boost/libs/utility/include;../../thirdparty/owemdjee/boost/libs/static_assert/include;../../thirdparty/owemdjee/boost/libs/type_traits/include;../../scripts/caffe/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CPU_ONLY;GLOG_NO_ABBREVIATED_SEVERITIES;BUILD_MONOLITHIC;BUILDING_CAFFE;CAFFE_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CAFFE;CAFFE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/caffe/include;../../scripts/libgflags/include;../../thirdparty/owemdjee/boost/libs/thread/include;../../thirdparty/owemdjee/boost/libs/function/include;../../thirdparty/owemdjee/boost/libs/smart_ptr/include;../../thirdparty/owemdjee/boost/libs/config/include;../../thirdparty/owemdjee/boost/libs/core/include;../../thirdparty/owemdjee/boost/libs/throw_exception/include;../../thirdparty/owemdjee/boost/libs/assert/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;../../thirdparty/owemdjee/boost/libs/date_time/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/boost/libs/winapi/include;../../thirdparty/owemdjee/boost/libs/algorithm/include;../../thirdparty/owemdjee/boost/libs/predef/include;../../thirdparty/owemdjee/boost/libs/utility/include;../../thirdparty/owemdjee/boost/libs/static_assert/include;../../thirdparty/owemdjee/boost/libs/type_traits/include;../../scripts/caffe/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -150,15 +150,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CAFFE;CAFFE_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/caffe/include;../../scripts/libgflags/include;../../thirdparty/owemdjee/boost/libs/thread/include;../../thirdparty/owemdjee/boost/libs/function/include;../../thirdparty/owemdjee/boost/libs/smart_ptr/include;../../thirdparty/owemdjee/boost/libs/config/include;../../thirdparty/owemdjee/boost/libs/core/include;../../thirdparty/owemdjee/boost/libs/throw_exception/include;../../thirdparty/owemdjee/boost/libs/assert/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;../../thirdparty/owemdjee/boost/libs/date_time/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/boost/libs/winapi/include;../../thirdparty/owemdjee/boost/libs/algorithm/include;../../thirdparty/owemdjee/boost/libs/predef/include;../../thirdparty/owemdjee/boost/libs/utility/include;../../thirdparty/owemdjee/boost/libs/static_assert/include;../../thirdparty/owemdjee/boost/libs/type_traits/include;../../scripts/caffe/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CPU_ONLY;GLOG_NO_ABBREVIATED_SEVERITIES;BUILD_MONOLITHIC;BUILDING_CAFFE;CAFFE_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CAFFE;CAFFE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/caffe/include;../../scripts/libgflags/include;../../thirdparty/owemdjee/boost/libs/thread/include;../../thirdparty/owemdjee/boost/libs/function/include;../../thirdparty/owemdjee/boost/libs/smart_ptr/include;../../thirdparty/owemdjee/boost/libs/config/include;../../thirdparty/owemdjee/boost/libs/core/include;../../thirdparty/owemdjee/boost/libs/throw_exception/include;../../thirdparty/owemdjee/boost/libs/assert/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;../../thirdparty/owemdjee/boost/libs/date_time/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/boost/libs/winapi/include;../../thirdparty/owemdjee/boost/libs/algorithm/include;../../thirdparty/owemdjee/boost/libs/predef/include;../../thirdparty/owemdjee/boost/libs/utility/include;../../thirdparty/owemdjee/boost/libs/static_assert/include;../../thirdparty/owemdjee/boost/libs/type_traits/include;../../scripts/caffe/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -179,14 +179,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CAFFE;CAFFE_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/caffe/include;../../scripts/libgflags/include;../../thirdparty/owemdjee/boost/libs/thread/include;../../thirdparty/owemdjee/boost/libs/function/include;../../thirdparty/owemdjee/boost/libs/smart_ptr/include;../../thirdparty/owemdjee/boost/libs/config/include;../../thirdparty/owemdjee/boost/libs/core/include;../../thirdparty/owemdjee/boost/libs/throw_exception/include;../../thirdparty/owemdjee/boost/libs/assert/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;../../thirdparty/owemdjee/boost/libs/date_time/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/boost/libs/winapi/include;../../thirdparty/owemdjee/boost/libs/algorithm/include;../../thirdparty/owemdjee/boost/libs/predef/include;../../thirdparty/owemdjee/boost/libs/utility/include;../../thirdparty/owemdjee/boost/libs/static_assert/include;../../thirdparty/owemdjee/boost/libs/type_traits/include;../../scripts/caffe/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CPU_ONLY;GLOG_NO_ABBREVIATED_SEVERITIES;BUILD_MONOLITHIC;BUILDING_CAFFE;CAFFE_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CAFFE;CAFFE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/caffe/include;../../scripts/libgflags/include;../../thirdparty/owemdjee/boost/libs/thread/include;../../thirdparty/owemdjee/boost/libs/function/include;../../thirdparty/owemdjee/boost/libs/smart_ptr/include;../../thirdparty/owemdjee/boost/libs/config/include;../../thirdparty/owemdjee/boost/libs/core/include;../../thirdparty/owemdjee/boost/libs/throw_exception/include;../../thirdparty/owemdjee/boost/libs/assert/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;../../thirdparty/owemdjee/boost/libs/date_time/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/boost/libs/winapi/include;../../thirdparty/owemdjee/boost/libs/algorithm/include;../../thirdparty/owemdjee/boost/libs/predef/include;../../thirdparty/owemdjee/boost/libs/utility/include;../../thirdparty/owemdjee/boost/libs/static_assert/include;../../thirdparty/owemdjee/boost/libs/type_traits/include;../../scripts/caffe/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -205,15 +205,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CAFFE;CAFFE_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/caffe/include;../../scripts/libgflags/include;../../thirdparty/owemdjee/boost/libs/thread/include;../../thirdparty/owemdjee/boost/libs/function/include;../../thirdparty/owemdjee/boost/libs/smart_ptr/include;../../thirdparty/owemdjee/boost/libs/config/include;../../thirdparty/owemdjee/boost/libs/core/include;../../thirdparty/owemdjee/boost/libs/throw_exception/include;../../thirdparty/owemdjee/boost/libs/assert/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;../../thirdparty/owemdjee/boost/libs/date_time/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/boost/libs/winapi/include;../../thirdparty/owemdjee/boost/libs/algorithm/include;../../thirdparty/owemdjee/boost/libs/predef/include;../../thirdparty/owemdjee/boost/libs/utility/include;../../thirdparty/owemdjee/boost/libs/static_assert/include;../../thirdparty/owemdjee/boost/libs/type_traits/include;../../scripts/caffe/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CPU_ONLY;GLOG_NO_ABBREVIATED_SEVERITIES;BUILD_MONOLITHIC;BUILDING_CAFFE;CAFFE_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CAFFE;CAFFE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/caffe/include;../../scripts/libgflags/include;../../thirdparty/owemdjee/boost/libs/thread/include;../../thirdparty/owemdjee/boost/libs/function/include;../../thirdparty/owemdjee/boost/libs/smart_ptr/include;../../thirdparty/owemdjee/boost/libs/config/include;../../thirdparty/owemdjee/boost/libs/core/include;../../thirdparty/owemdjee/boost/libs/throw_exception/include;../../thirdparty/owemdjee/boost/libs/assert/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;../../thirdparty/owemdjee/boost/libs/date_time/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/boost/libs/winapi/include;../../thirdparty/owemdjee/boost/libs/algorithm/include;../../thirdparty/owemdjee/boost/libs/predef/include;../../thirdparty/owemdjee/boost/libs/utility/include;../../thirdparty/owemdjee/boost/libs/static_assert/include;../../thirdparty/owemdjee/boost/libs/type_traits/include;../../scripts/caffe/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -537,10 +537,34 @@
     <Text Include="../../thirdparty/owemdjee/caffe/CONTRIBUTORS.md" />
     <Text Include="../../thirdparty/owemdjee/caffe/INSTALL.md" />
     <Text Include="../../thirdparty/owemdjee/caffe/README.md" />
+    <Text Include="../../thirdparty/owemdjee/caffe/cmake/ConfigGen.cmake" />
+    <Text Include="../../thirdparty/owemdjee/caffe/cmake/Cuda.cmake" />
+    <Text Include="../../thirdparty/owemdjee/caffe/cmake/Dependencies.cmake" />
+    <Text Include="../../thirdparty/owemdjee/caffe/cmake/External/gflags.cmake" />
+    <Text Include="../../thirdparty/owemdjee/caffe/cmake/External/glog.cmake" />
+    <Text Include="../../thirdparty/owemdjee/caffe/cmake/Misc.cmake" />
+    <Text Include="../../thirdparty/owemdjee/caffe/cmake/Modules/FindAtlas.cmake" />
+    <Text Include="../../thirdparty/owemdjee/caffe/cmake/Modules/FindGFlags.cmake" />
+    <Text Include="../../thirdparty/owemdjee/caffe/cmake/Modules/FindGlog.cmake" />
+    <Text Include="../../thirdparty/owemdjee/caffe/cmake/Modules/FindLAPACK.cmake" />
+    <Text Include="../../thirdparty/owemdjee/caffe/cmake/Modules/FindLMDB.cmake" />
+    <Text Include="../../thirdparty/owemdjee/caffe/cmake/Modules/FindLevelDB.cmake" />
+    <Text Include="../../thirdparty/owemdjee/caffe/cmake/Modules/FindMKL.cmake" />
+    <Text Include="../../thirdparty/owemdjee/caffe/cmake/Modules/FindMatlabMex.cmake" />
+    <Text Include="../../thirdparty/owemdjee/caffe/cmake/Modules/FindNCCL.cmake" />
+    <Text Include="../../thirdparty/owemdjee/caffe/cmake/Modules/FindNumPy.cmake" />
+    <Text Include="../../thirdparty/owemdjee/caffe/cmake/Modules/FindOpenBLAS.cmake" />
+    <Text Include="../../thirdparty/owemdjee/caffe/cmake/Modules/FindSnappy.cmake" />
+    <Text Include="../../thirdparty/owemdjee/caffe/cmake/Modules/FindvecLib.cmake" />
+    <Text Include="../../thirdparty/owemdjee/caffe/cmake/ProtoBuf.cmake" />
+    <Text Include="../../thirdparty/owemdjee/caffe/cmake/Summary.cmake" />
+    <Text Include="../../thirdparty/owemdjee/caffe/cmake/Targets.cmake" />
     <Text Include="../../thirdparty/owemdjee/caffe/cmake/Templates/CaffeConfig.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/caffe/cmake/Templates/CaffeConfigVersion.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/caffe/cmake/Templates/caffe_config.h.in" />
     <Text Include="../../thirdparty/owemdjee/caffe/cmake/Uninstall.cmake.in" />
+    <Text Include="../../thirdparty/owemdjee/caffe/cmake/Utils.cmake" />
+    <Text Include="../../thirdparty/owemdjee/caffe/cmake/lint.cmake" />
     <Text Include="../../thirdparty/owemdjee/caffe/data/cifar10/get_cifar10.sh" />
     <Text Include="../../thirdparty/owemdjee/caffe/data/ilsvrc12/get_ilsvrc_aux.sh" />
     <Text Include="../../thirdparty/owemdjee/caffe/data/mnist/get_mnist.sh" />

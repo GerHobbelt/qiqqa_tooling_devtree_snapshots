@@ -61,9 +61,7 @@ static const char * const sqlite3azCompileOpt[] = {
   "64BIT_STATS",
 #endif
 #ifdef SQLITE_ALLOW_COVERING_INDEX_SCAN
-# if SQLITE_ALLOW_COVERING_INDEX_SCAN != 1
   "ALLOW_COVERING_INDEX_SCAN=" CTIMEOPT_VAL(SQLITE_ALLOW_COVERING_INDEX_SCAN),
-# endif
 #endif
 #ifdef SQLITE_ALLOW_URI_AUTHORITY
   "ALLOW_URI_AUTHORITY",
@@ -767,6 +765,7 @@ static const char * const sqlite3azCompileOpt[] = {
 #ifdef SQLITE_VDBE_COVERAGE
   "VDBE_COVERAGE",
 #endif
+"WAL2",
 #ifdef SQLITE_WIN32_MALLOC
   "WIN32_MALLOC",
 #endif

@@ -23,7 +23,7 @@ int main()
   
   BOOST_TEST((!SameName<int (AType::*)(int *,int,float &)>::value));
   
-  // Mismatched paramaters
+  // Mismatched parameters
   
   BOOST_TEST((!BOOST_TTI_HAS_MEMBER_FUNCTION_TEMPLATE_GEN(AFuncTemplate)<int (AType::*)(const bool &)>::value));
   

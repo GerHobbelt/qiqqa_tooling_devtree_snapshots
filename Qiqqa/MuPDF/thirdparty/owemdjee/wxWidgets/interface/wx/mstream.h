@@ -38,14 +38,14 @@ class wxMemoryOutputStream : public wxOutputStream
 {
 public:
     /**
-        If @a data is @NULL, then it will initialize a new empty buffer which will
+        If @a data is @nullptr, then it will initialize a new empty buffer which will
         grow if required.
 
         @warning
         If the buffer is created by wxMemoryOutputStream, it will be destroyed
         at the destruction of the stream.
     */
-    wxMemoryOutputStream(void* data = NULL, size_t length = 0);
+    wxMemoryOutputStream(void* data = nullptr, size_t length = 0);
 
     /**
         Destructor.

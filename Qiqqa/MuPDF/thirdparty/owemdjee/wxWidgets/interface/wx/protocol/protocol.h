@@ -121,12 +121,12 @@ public:
         Set the logger, deleting the old one and taking ownership of this one.
 
         @param log
-            New logger allocated on the heap or @NULL.
+            New logger allocated on the heap or @nullptr.
      */
     void SetLog(wxProtocolLog *log);
 
     /**
-        Return the current logger, may be @NULL.
+        Return the current logger, may be @nullptr.
      */
     wxProtocolLog *GetLog() const { return m_log; }
 
@@ -134,7 +134,7 @@ public:
         Detach the existing logger without deleting it.
 
         The caller is responsible for deleting the returned pointer if it's
-        non-@c NULL.
+        non-null.
      */
     wxProtocolLog *DetachLog();
 

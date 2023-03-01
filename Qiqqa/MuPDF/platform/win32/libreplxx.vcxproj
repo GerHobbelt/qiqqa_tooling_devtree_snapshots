@@ -237,8 +237,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/replxx/src/util.cxx" />
     <ClCompile Include="../../thirdparty/owemdjee/replxx/src/wcwidth.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/replxx/src/windows.cxx" />
-    <ClInclude Include="../../thirdparty/owemdjee/replxx/examples/monolithic_examples.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/replxx/examples/util.h" />
     <ClInclude Include="../../thirdparty/owemdjee/replxx/include/replxx.h" />
     <ClInclude Include="../../thirdparty/owemdjee/replxx/include/replxx.hxx" />
     <ClInclude Include="../../thirdparty/owemdjee/replxx/src/ConvertUTF.h" />

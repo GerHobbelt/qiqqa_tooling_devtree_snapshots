@@ -93,71 +93,68 @@
     <Filter Include="Misc Files\examples\c++">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\lib">
+    <Filter Include="Misc Files\examples\c\cfg_includes">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tests">
+    <Filter Include="Misc Files\examples\c\cfg_includes\cfg_subincludes">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0029}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tests\testdata">
+    <Filter Include="Misc Files\lib">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0030}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tinytest">
+    <Filter Include="Misc Files\tests">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0031}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\contrib">
+    <Filter Include="Misc Files\tests\testdata">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0032}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\contrib\chained">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0034}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\contrib\chained\examples">
+    <Filter Include="Misc Files\tinytest">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0033}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\contrib\cmake">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0037}</UniqueIdentifier>
+    <Filter Include="Source Files\contrib">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0034}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\contrib\cmake\CMakeFiles">
+    <Filter Include="Source Files\contrib\chained">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0036}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\contrib\cmake\CMakeFiles\CompilerIdC">
+    <Filter Include="Source Files\contrib\chained\examples">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0035}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\contrib\cmake\CMakeFiles\CompilerIdCXX">
+    <Filter Include="Source Files\contrib\cmake">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0038}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\contrib\cmake\src">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0039}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0037}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\contrib\libconfig-ruby">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0041}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\contrib\libconfig-ruby\ext">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0040}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\contrib\ls-config">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0043}</UniqueIdentifier>
+    <Filter Include="Source Files\contrib\libconfig-ruby\ext">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0039}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\contrib\ls-config\src">
+    <Filter Include="Source Files\contrib\ls-config">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0042}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\examples">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0045}</UniqueIdentifier>
+    <Filter Include="Source Files\contrib\ls-config\src">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0041}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\examples\c">
+    <Filter Include="Source Files\examples">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0044}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\examples\c">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0043}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files\examples\c++">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0046}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0045}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\lib">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0047}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0046}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\tests">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0048}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0047}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\tinytest">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0049}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0048}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -172,12 +169,6 @@
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/libconfig/contrib/chained/examples/chained_examples.cpp">
       <Filter>Source Files\contrib\chained\examples</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/libconfig/contrib/cmake/CMakeFiles/CompilerIdC/CMakeCCompilerId.c">
-      <Filter>Source Files\contrib\cmake\CMakeFiles\CompilerIdC</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/libconfig/contrib/cmake/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp">
-      <Filter>Source Files\contrib\cmake\CMakeFiles\CompilerIdCXX</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/libconfig/contrib/cmake/src/main.cpp">
       <Filter>Source Files\contrib\cmake\src</Filter>
@@ -221,10 +212,10 @@
     <ClCompile Include="../../thirdparty/owemdjee/libconfig/lib/libconfig.c">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/libconfig/lib/libconfigcpp.c++">
+    <ClCompile Include="../../thirdparty/owemdjee/libconfig/lib/libconfig_cpp.cc">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/libconfig/lib/libconfigcpp.cc">
+    <ClCompile Include="../../thirdparty/owemdjee/libconfig/lib/libconfigcpp.c++">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/libconfig/lib/scanctx.c">
@@ -341,6 +332,9 @@
     <Text Include="../../thirdparty/owemdjee/libconfig/contrib/chained/examples/README.md">
       <Filter>Misc Files\contrib\chained\examples</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/contrib/chained/examples/example.cfg">
+      <Filter>Misc Files\contrib\chained\examples</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libconfig/contrib/cmake/1_configure.sh">
       <Filter>Misc Files\contrib\cmake</Filter>
     </Text>
@@ -349,6 +343,12 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/libconfig/contrib/cmake/CMakeLists.txt">
       <Filter>Misc Files\contrib\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/contrib/cmake/cmake_work/FindConfig++.cmake">
+      <Filter>Misc Files\contrib\cmake\cmake_work</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/contrib/cmake/cmake_work/FindConfig.cmake">
+      <Filter>Misc Files\contrib\cmake\cmake_work</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libconfig/contrib/cmake/cmake_work/cmake_uninstall.cmake.in">
       <Filter>Misc Files\contrib\cmake\cmake_work</Filter>
@@ -407,10 +407,43 @@
     <Text Include="../../thirdparty/owemdjee/libconfig/examples/c++/Makefile.am">
       <Filter>Misc Files\examples\c++</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/examples/c++/example.cfg">
+      <Filter>Misc Files\examples\c++</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/examples/c++/invalid.cfg">
+      <Filter>Misc Files\examples\c++</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libconfig/examples/c/CMakeLists.txt">
       <Filter>Misc Files\examples\c</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libconfig/examples/c/Makefile.am">
+      <Filter>Misc Files\examples\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/examples/c/cfg_includes/book1.cfg">
+      <Filter>Misc Files\examples\c\cfg_includes</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/examples/c/cfg_includes/book2.cfg">
+      <Filter>Misc Files\examples\c\cfg_includes</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/examples/c/cfg_includes/book3.cfg">
+      <Filter>Misc Files\examples\c\cfg_includes</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/examples/c/cfg_includes/book4.cfg">
+      <Filter>Misc Files\examples\c\cfg_includes</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/examples/c/cfg_includes/cfg_subincludes/extra1.cfg">
+      <Filter>Misc Files\examples\c\cfg_includes\cfg_subincludes</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/examples/c/cfg_includes/cfg_subincludes/extra2.cfg">
+      <Filter>Misc Files\examples\c\cfg_includes\cfg_subincludes</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/examples/c/cfg_includes/other.cfg">
+      <Filter>Misc Files\examples\c\cfg_includes</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/examples/c/example.cfg">
+      <Filter>Misc Files\examples\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/examples/c/example4.cfg">
       <Filter>Misc Files\examples\c</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libconfig/lib/CMakeLists.txt">
@@ -440,16 +473,79 @@
     <Text Include="../../thirdparty/owemdjee/libconfig/libconfig.spec.in">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/test.cfg">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libconfig/tests/CMakeLists.txt">
       <Filter>Misc Files\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libconfig/tests/Makefile.am">
       <Filter>Misc Files\tests</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/tests/testdata/bad_input_0.cfg">
+      <Filter>Misc Files\tests\testdata</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/tests/testdata/bad_input_1.cfg">
+      <Filter>Misc Files\tests\testdata</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/tests/testdata/input_0.cfg">
+      <Filter>Misc Files\tests\testdata</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/tests/testdata/input_1.cfg">
+      <Filter>Misc Files\tests\testdata</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/tests/testdata/input_2.cfg">
+      <Filter>Misc Files\tests\testdata</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/tests/testdata/input_3.cfg">
+      <Filter>Misc Files\tests\testdata</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/tests/testdata/input_4.cfg">
+      <Filter>Misc Files\tests\testdata</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/tests/testdata/input_5.cfg">
+      <Filter>Misc Files\tests\testdata</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/tests/testdata/input_6.cfg">
+      <Filter>Misc Files\tests\testdata</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/tests/testdata/more.cfg">
+      <Filter>Misc Files\tests\testdata</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/tests/testdata/nesting.cfg">
+      <Filter>Misc Files\tests\testdata</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/tests/testdata/output_0.cfg">
+      <Filter>Misc Files\tests\testdata</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/tests/testdata/output_1.cfg">
+      <Filter>Misc Files\tests\testdata</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/tests/testdata/output_2.cfg">
+      <Filter>Misc Files\tests\testdata</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/tests/testdata/output_3.cfg">
+      <Filter>Misc Files\tests\testdata</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/tests/testdata/output_4.cfg">
+      <Filter>Misc Files\tests\testdata</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/tests/testdata/output_5.cfg">
+      <Filter>Misc Files\tests\testdata</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/tests/testdata/output_6.cfg">
+      <Filter>Misc Files\tests\testdata</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/tests/testdata/override_setting.cfg">
+      <Filter>Misc Files\tests\testdata</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libconfig/tests/testdata/parse_error_0.txt">
       <Filter>Misc Files\tests\testdata</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libconfig/tests/testdata/parse_error_1.txt">
+      <Filter>Misc Files\tests\testdata</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libconfig/tests/testdata/strings.cfg">
       <Filter>Misc Files\tests\testdata</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libconfig/tinytest/CMakeLists.txt">
@@ -460,4 +556,3 @@
     </Text>
   </ItemGroup>
 </Project>
-    

@@ -5423,6 +5423,19 @@ static int sqlite3Fts5ExprNew(
 }
 
 /*
+** Assuming that buffer z is at least nByte bytes in size and contains a
+** valid utf-8 string, return the number of characters in the string.
+*/
+static int fts5ExprCountChar(const char *z, int nByte){
+  int nRet = 0;
+  int ii;
+  for(ii=0; ii<nByte; ii++){
+    if( (z[ii] & 0xC0)!=0x80 ) nRet++;
+  }
+  return nRet;
+}
+
+/*
 ** This function is only called when using the special 'trigram' tokenizer.
 ** Argument zText contains the text of a LIKE or GLOB pattern matched
 ** against column iCol. This function creates and compiles an FTS5 MATCH
@@ -5459,7 +5472,8 @@ static int sqlite3Fts5ExprPattern(
       if( i==nText 
        || zText[i]==aSpec[0] || zText[i]==aSpec[1] || zText[i]==aSpec[2] 
       ){
-        if( i-iFirst>=3 ){
+
+        if( fts5ExprCountChar(&zText[iFirst], i-iFirst)>=3 ){
           int jj;
           zExpr[iOut++] = '"';
           for(jj=iFirst; jj<i; jj++){
@@ -8821,6 +8835,8 @@ static void sqlite3Fts5HashScanEntry(
 #if FTS5_MAX_PREFIX_INDEXES > 31
 # error "FTS5_MAX_PREFIX_INDEXES is too large"
 #endif
+
+#define FTS5_MAX_LEVEL 64
 
 /*
 ** Details:
@@ -13536,10 +13552,10 @@ static Fts5Structure *fts5IndexOptimizeStruct(
   if( pNew ){
     Fts5StructureLevel *pLvl;
     nByte = nSeg * sizeof(Fts5StructureSegment);
-    pNew->nLevel = pStruct->nLevel+1;
+    pNew->nLevel = MIN(pStruct->nLevel+1, FTS5_MAX_LEVEL);
     pNew->nRef = 1;
     pNew->nWriteCounter = pStruct->nWriteCounter;
-    pLvl = &pNew->aLevel[pStruct->nLevel];
+    pLvl = &pNew->aLevel[pNew->nLevel-1];
     pLvl->aSeg = (Fts5StructureSegment*)sqlite3Fts5MallocZero(&p->rc, nByte);
     if( pLvl->aSeg ){
       int iLvl, iSeg;
@@ -18386,7 +18402,7 @@ static void fts5SourceIdFunc(
 ){
   assert( nArg==0 );
   UNUSED_PARAM2(nArg, apUnused);
-  sqlite3_result_text(pCtx, "fts5: 2023-01-03 15:11:01 df5ea47130d275e9fa1bd6aa8d55f1d5e136cba30ba13b7ede22224aa7f78919", -1, SQLITE_TRANSIENT);
+  sqlite3_result_text(pCtx, "fts5: 2023-02-14 18:09:40 e6c8e19ab0d6e7526d4596b75a45bb6becaf3c029690f7e75c016eac803c9990", -1, SQLITE_TRANSIENT);
 }
 
 /*
@@ -18459,7 +18475,9 @@ static int fts5Init(sqlite3 *db){
     }
     if( rc==SQLITE_OK ){
       rc = sqlite3_create_function(
-          db, "fts5_source_id", 0, SQLITE_UTF8, p, fts5SourceIdFunc, 0, 0
+          db, "fts5_source_id", 0, 
+          SQLITE_UTF8|SQLITE_DETERMINISTIC|SQLITE_INNOCUOUS,
+          p, fts5SourceIdFunc, 0, 0
       );
     }
   }

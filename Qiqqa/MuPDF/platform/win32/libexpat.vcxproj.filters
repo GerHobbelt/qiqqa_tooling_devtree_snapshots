@@ -78,23 +78,20 @@
     <Filter Include="Source Files\expat\examples">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\expat\fuzz">
+    <Filter Include="Source Files\expat\gennmtab">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\expat\gennmtab">
+    <Filter Include="Source Files\expat\lib">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\expat\lib">
+    <Filter Include="Source Files\expat\tests">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\expat\tests">
+    <Filter Include="Source Files\expat\tests\benchmark">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0026}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\expat\tests\benchmark">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\expat\xmlwf">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -103,12 +100,6 @@
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/libexpat/expat/examples/outline.c">
       <Filter>Source Files\expat\examples</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/libexpat/expat/fuzz/xml_parse_fuzzer.c">
-      <Filter>Source Files\expat\fuzz</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/libexpat/expat/fuzz/xml_parsebuffer_fuzzer.c">
-      <Filter>Source Files\expat\fuzz</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/libexpat/expat/gennmtab/gennmtab.c">
       <Filter>Source Files\expat\gennmtab</Filter>
@@ -257,6 +248,9 @@
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/Changes">
       <Filter>Misc Files\expat</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/ConfigureChecks.cmake">
+      <Filter>Misc Files\expat</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/Makefile.am">
       <Filter>Misc Files\expat</Filter>
     </Text>
@@ -284,7 +278,16 @@
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/cmake/autotools/expat-noconfig__windows.cmake.in">
       <Filter>Misc Files\expat\cmake\autotools</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/cmake/autotools/expat-package-init.cmake">
+      <Filter>Misc Files\expat\cmake\autotools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/cmake/autotools/expat.cmake">
+      <Filter>Misc Files\expat\cmake\autotools</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/cmake/expat-config.cmake.in">
+      <Filter>Misc Files\expat\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/cmake/mingw-toolchain.cmake">
       <Filter>Misc Files\expat\cmake</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/configure-ac-style.md">
@@ -308,7 +311,13 @@
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/examples/Makefile.am">
       <Filter>Misc Files\expat\examples</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/expat.pc.cmake">
+      <Filter>Misc Files\expat</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/expat.pc.in">
+      <Filter>Misc Files\expat</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/expat_config.h.cmake">
       <Filter>Misc Files\expat</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/expat_config.h.in">
@@ -318,6 +327,9 @@
       <Filter>Misc Files\expat</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/lib/Makefile.am">
+      <Filter>Misc Files\expat\lib</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/lib/libexpat.def.cmake">
       <Filter>Misc Files\expat\lib</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/memory-sanitizer-blacklist.txt">
@@ -391,4 +403,3 @@
     </Xml>
   </ItemGroup>
 </Project>
-    

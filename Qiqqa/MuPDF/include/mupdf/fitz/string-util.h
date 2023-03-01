@@ -97,7 +97,7 @@ size_t fz_strlcat(char *dst, const char *src, size_t n);
 
 	This is similar to regular RTL strncpy() with these differences:
 
-	- `fz_strncpy_s()` DOES NOT pad `dst` with extra NUL bytes
+	- `fz_strncpy_s()` DOES NOT pad `dst` with surplus NUL bytes
 	  after the string-sentinel (NUL).
 	- no more than `dstsiz` characters in `src` will be accessed
 	  at any time, hence you can legally feed this function a
@@ -314,7 +314,17 @@ enum { FZ_UTFMAX = 4 };
 	Returns the number of bytes consumed.
 */
 int fz_chartorune(int *rune, const char *str, size_t n);
-int fz_chartorune_unsafe(int* rune, const char* str);
+
+/*
+	'Unsafe' version of chars->unicode point: this one assumes your
+	input string is properly NUL terminated, which will help it detect
+	invalid UTF8 inputs.
+*/
+static inline int
+fz_chartorune_unsafe(int* rune, const char* str)
+{
+	return fz_chartorune(rune, str, 7 /* arbitrary */);
+}
 
 /**
 	UTF8 encode a rune to a sequence of chars.

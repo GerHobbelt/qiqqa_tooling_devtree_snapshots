@@ -1,5 +1,5 @@
 [/
- / Copyright (c) 2003-2022 Christopher M. Kohlhoff (chris at kohlhoff dot com)
+ / Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)
  /
  / Distributed under the Boost Software License, Version 1.0. (See accompanying
  / file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
@@ -398,6 +398,13 @@ functionality, and behaviour of Asio.
 
       Note: If symbols are hidden, extra care must be taken to ensure that Asio
       types are not passed across shared library API boundaries.
+    ]
+  ]
+  [
+    [`ASIO_NO_SET_SA_RESTART`]
+    [
+      Disables the use of the flag `SA_RESTART` when establishing signal
+      handlers.
     ]
   ]
 ]

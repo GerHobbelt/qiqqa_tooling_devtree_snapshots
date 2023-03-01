@@ -272,7 +272,12 @@
     <Text Include="../../thirdparty/owemdjee/json-jansson/CONTRIBUTING.md" />
     <Text Include="../../thirdparty/owemdjee/json-jansson/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/json-jansson/README.rst" />
+    <Text Include="../../thirdparty/owemdjee/json-jansson/cmake/CheckFunctionKeywords.cmake" />
+    <Text Include="../../thirdparty/owemdjee/json-jansson/cmake/CodeCoverage.cmake" />
+    <Text Include="../../thirdparty/owemdjee/json-jansson/cmake/FindSphinx.cmake" />
     <Text Include="../../thirdparty/owemdjee/json-jansson/cmake/janssonConfig.cmake.in" />
+    <Text Include="../../thirdparty/owemdjee/json-jansson/cmake/jansson_config.h.cmake" />
+    <Text Include="../../thirdparty/owemdjee/json-jansson/cmake/jansson_private_config.h.cmake" />
     <Text Include="../../thirdparty/owemdjee/json-jansson/configure.ac" />
     <Text Include="../../thirdparty/owemdjee/json-jansson/doc/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/json-jansson/doc/README" />
@@ -293,8 +298,6 @@
     <Text Include="../../thirdparty/owemdjee/json-jansson/src/jansson_config.h.in" />
     <Text Include="../../thirdparty/owemdjee/json-jansson/test/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/json-jansson/test/bin/Makefile.am" />
-    <Text Include="../../thirdparty/owemdjee/json-jansson/test/ossfuzz/Makefile.am" />
-    <Text Include="../../thirdparty/owemdjee/json-jansson/test/ossfuzz/ossfuzz.sh" />
     <Text Include="../../thirdparty/owemdjee/json-jansson/test/scripts/run-tests.sh" />
     <Text Include="../../thirdparty/owemdjee/json-jansson/test/scripts/valgrind.sh" />
     <Text Include="../../thirdparty/owemdjee/json-jansson/test/suites/Makefile.am" />

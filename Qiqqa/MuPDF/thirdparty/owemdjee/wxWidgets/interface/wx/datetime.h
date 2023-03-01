@@ -61,7 +61,7 @@
     char pointer is returned. Finally, if the input parameter is a wxString, a
     narrow char pointer is also returned for backwards compatibility but there
     is also an additional argument of wxString::const_iterator type in which,
-    if it is not @NULL, an iterator pointing to the end of the scanned string
+    if it is not @nullptr, an iterator pointing to the end of the scanned string
     part is returned.
 
 
@@ -852,7 +852,7 @@ public:
 
     /**
         This function does the same as the standard ANSI C @c strftime(3)
-        function (http://www.cplusplus.com/reference/clibrary/ctime/strftime.html).
+        function (https://cplusplus.com/reference/ctime/strftime/).
         Please see its description for the meaning of @a format parameter.
 
         Notice that POSIX @c "%g", @c "%G", @c "%V" and @c "%z" format
@@ -977,7 +977,7 @@ public:
             Will be filled with the iterator pointing to the location where the
             parsing stopped if the function returns @true. If the entire string
             was consumed, it is set to @c date.end(). Notice that this argument
-            must be non-@NULL.
+            must be non-null.
         @return
             @true if at least part of the string was parsed successfully,
             @false otherwise.
@@ -1036,7 +1036,7 @@ public:
         strings expressing date in this format may be something like
         @c "Sat, 18 Dec 1999 00:48:30 +0100".
 
-        Returns @NULL if the conversion failed, otherwise return the pointer to
+        Returns @nullptr if the conversion failed, otherwise return the pointer to
         the character immediately following the part of the string which could
         be parsed. If the entire string contains only the date in RFC 822
         format, the returned pointer will be pointing to a @c NUL character.
@@ -1341,7 +1341,7 @@ public:
 
     /**
         Returns the translations of the strings @c AM and @c PM used for time
-        formatting for the current locale. Either of the pointers may be @NULL
+        formatting for the current locale. Either of the pointers may be @nullptr
         if the corresponding value is not needed.
     */
     static void GetAmPmStrings(wxString* am, wxString* pm);

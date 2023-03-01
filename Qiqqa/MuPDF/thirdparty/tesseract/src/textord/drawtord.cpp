@@ -36,7 +36,7 @@ BOOL_VAR(textord_show_fixed_cuts, false, "Draw fixed pitch cell boundaries");
 
 ScrollView *to_win = nullptr;
 
-#ifndef GRAPHICS_DISABLED
+#if !GRAPHICS_DISABLED
 
 /**********************************************************************
  * create_to_win
@@ -77,6 +77,26 @@ void plot_box_list(               // make gradients win
   win->Brush(ScrollView::NONE);
   for (it.mark_cycle_pt(); !it.cycled_list(); it.forward()) {
     it.data()->bounding_box().plot(win);
+  }
+}
+
+/**********************************************************************
+ * plot_box_list
+ *
+ * Draw a list of blobs.
+ **********************************************************************/
+
+void plot_box_list(               // make gradients win
+    Image& pix,                   // iamge to draw in
+    BLOBNBOX_LIST* list,          // blob list
+    ScrollView::Color body_colour // colour to draw
+) {
+  BLOBNBOX_IT it = list; // iterator
+
+  //pix->Pen(body_colour);
+  //pix->Brush(ScrollView::NONE);
+  for (it.mark_cycle_pt(); !it.cycled_list(); it.forward()) {
+    it.data()->bounding_box().plot(pix);
   }
 }
 

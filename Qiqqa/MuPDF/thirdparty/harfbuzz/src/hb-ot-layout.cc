@@ -1960,7 +1960,8 @@ inline void hb_ot_map_t::apply (const Proxy &proxy,
       auto &lookup = lookups[table_index][i];
 
       unsigned int lookup_index = lookup.index;
-      if (!buffer->message (font, "start lookup %u feature '%c%c%c%c'", lookup_index, HB_UNTAG (lookup.feature_tag))) continue;
+      if (buffer->messaging () &&
+	  !buffer->message (font, "start lookup %u feature '%c%c%c%c'", lookup_index, HB_UNTAG (lookup.feature_tag))) continue;
 
       /* c.digest is a digest of all the current glyphs in the buffer
        * (plus some past glyphs).
@@ -1979,10 +1980,11 @@ inline void hb_ot_map_t::apply (const Proxy &proxy,
 			     proxy.table.get_lookup (lookup_index),
 			     proxy.accels[lookup_index]);
       }
-      else
+      else if (buffer->messaging ())
 	(void) buffer->message (font, "skipped lookup %u feature '%c%c%c%c' because no glyph matches", lookup_index, HB_UNTAG (lookup.feature_tag));
 
-      (void) buffer->message (font, "end lookup %u feature '%c%c%c%c'", lookup_index, HB_UNTAG (lookup.feature_tag));
+      if (buffer->messaging ())
+	(void) buffer->message (font, "end lookup %u feature '%c%c%c%c'", lookup_index, HB_UNTAG (lookup.feature_tag));
     }
 
     if (stage->pause_func)
@@ -1999,17 +2001,21 @@ inline void hb_ot_map_t::apply (const Proxy &proxy,
 void hb_ot_map_t::substitute (const hb_ot_shape_plan_t *plan, hb_font_t *font, hb_buffer_t *buffer) const
 {
   GSUBProxy proxy (font->face);
-  if (!buffer->message (font, "start table GSUB")) return;
+  if (buffer->messaging () &&
+      !buffer->message (font, "start table GSUB")) return;
   apply (proxy, plan, font, buffer);
-  (void) buffer->message (font, "end table GSUB");
+  if (buffer->messaging ())
+    (void) buffer->message (font, "end table GSUB");
 }
 
 void hb_ot_map_t::position (const hb_ot_shape_plan_t *plan, hb_font_t *font, hb_buffer_t *buffer) const
 {
   GPOSProxy proxy (font->face);
-  if (!buffer->message (font, "start table GPOS")) return;
+  if (buffer->messaging () &&
+      !buffer->message (font, "start table GPOS")) return;
   apply (proxy, plan, font, buffer);
-  (void) buffer->message (font, "end table GPOS");
+  if (buffer->messaging ())
+    (void) buffer->message (font, "end table GPOS");
 }
 
 void

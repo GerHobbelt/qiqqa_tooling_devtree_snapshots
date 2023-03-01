@@ -26,6 +26,7 @@
 #include "host.h" // for NearlyEqual
 #include "linefind.h"
 #include "tabfind.h"
+#include "tesseractclass.h"
 
 #include <algorithm>
 
@@ -62,9 +63,9 @@ const double kCosMaxSkewAngle = 0.866025;
 static BOOL_VAR(textord_tabfind_show_initialtabs, false, "Show tab candidates");
 static BOOL_VAR(textord_tabfind_show_finaltabs, false, "Show tab vectors");
 
-TabFind::TabFind(int gridsize, const ICOORD &bleft, const ICOORD &tright, TabVector_LIST *vlines,
+TabFind::TabFind(Tesseract* tess, int gridsize, const ICOORD &bleft, const ICOORD &tright, TabVector_LIST *vlines,
                  int vertical_x, int vertical_y, int resolution)
-    : AlignedBlob(gridsize, bleft, tright)
+    : AlignedBlob(tess, gridsize, bleft, tright)
     , resolution_(resolution)
     , image_origin_(0, tright.y() - 1)
     , v_it_(&vectors_) {
@@ -433,7 +434,7 @@ bool TabFind::FindTabVectors(TabVector_LIST *hlines, BLOBNBOX_LIST *image_blobs,
   }
   part_grid->Deskew(*deskew);
   ApplyTabConstraints();
-#ifndef GRAPHICS_DISABLED
+#if !GRAPHICS_DISABLED
   if (textord_tabfind_show_finaltabs) {
     tab_win = MakeWindow(640, 50, "FinalTabs");
     DisplayBoxes(tab_win);
@@ -472,11 +473,36 @@ void TabFind::TidyBlobs(TO_BLOCK *block) {
   }
   if (textord_debug_tabfind) {
     tprintf("Moved {} large blobs to normal list\n", b_count);
-#ifndef GRAPHICS_DISABLED
-    ScrollView *rej_win = MakeWindow(500, 300, "Image blobs");
-    block->plot_graded_blobs(rej_win);
-    block->plot_noise_blobs(rej_win);
-    rej_win->Update();
+#if !GRAPHICS_DISABLED
+    if (!tesseract_->debug_do_not_use_scrollview_app) {
+      ScrollView *rej_win = MakeWindow(500, 300, "Image blobs");
+      block->plot_graded_blobs(rej_win);
+      block->plot_noise_blobs(rej_win);
+      rej_win->Update();
+    }
+    else {
+      const char* name = "Image blobs";
+      auto width = tright_.x() - bleft_.x();
+      auto height = tright_.y() - bleft_.y();
+
+      Image pix = pixCreate(width + 8, height + 8, 32 /* RGBA */);
+      pixClearAll(pix);
+
+      BOX* border = boxCreate(2, 2, width + 4, height + 4);
+      // boxDestroy(BOX * *pbox);
+      BOXA* boxlist = boxaCreate(1);
+      boxaAddBox(boxlist, border, false);
+      //boxaDestroy(BOXA * *pboxa);
+      l_uint32 bordercolor;
+      composeRGBAPixel(255, 32, 32, 255, &bordercolor);
+      pix = pixDrawBoxa(pix, boxlist, 2, bordercolor);
+      boxaDestroy(&boxlist);
+
+      block->plot_graded_blobs(pix);
+      block->plot_noise_blobs(pix);
+
+      tesseract_->AddPixDebugPage(pix, name, false);
+    }
 #endif // !GRAPHICS_DISABLED
   }
   block->DeleteUnownedNoise();
@@ -490,7 +516,7 @@ void TabFind::SetupTabSearch(int x, int y, int *min_key, int *max_key) {
   *max_key = std::max(key1, key2);
 }
 
-#ifndef GRAPHICS_DISABLED
+#if !GRAPHICS_DISABLED
 
 ScrollView *TabFind::DisplayTabVectors(ScrollView *tab_win) {
   // For every vector, display it.
@@ -503,6 +529,17 @@ ScrollView *TabFind::DisplayTabVectors(ScrollView *tab_win) {
   return tab_win;
 }
 
+void TabFind::DisplayTabVectors(Image &pix) {
+  // For every vector, display it.
+  TabVector_IT it(&vectors_);
+  for (it.mark_cycle_pt(); !it.cycled_list(); it.forward()) {
+    TabVector* vector = it.data();
+    vector->Display(pix);
+  }
+  //tab_win->Update();
+  return;
+}
+
 #endif
 
 // PRIVATE CODE.
@@ -511,7 +548,7 @@ ScrollView *TabFind::DisplayTabVectors(ScrollView *tab_win) {
 // is mostly of vertical alignment.
 ScrollView *TabFind::FindInitialTabVectors(BLOBNBOX_LIST *image_blobs, int min_gutter_width,
                                            double tabfind_aligned_gap_fraction, TO_BLOCK *block) {
-#ifndef GRAPHICS_DISABLED
+#if !GRAPHICS_DISABLED
   if (textord_tabfind_show_initialtabs) {
     ScrollView *line_win = MakeWindow(0, 0, "VerticalLines");
     line_win = DisplayTabVectors(line_win);
@@ -528,7 +565,7 @@ ScrollView *TabFind::FindInitialTabVectors(BLOBNBOX_LIST *image_blobs, int min_g
   TabVector::MergeSimilarTabVectors(vertical_skew_, &vectors_, this);
   SortVectors();
   EvaluateTabs();
-#ifndef GRAPHICS_DISABLED
+#if !GRAPHICS_DISABLED
   if (textord_tabfind_show_initialtabs && initial_win != nullptr) {
     initial_win = DisplayTabVectors(initial_win);
   }
@@ -537,7 +574,7 @@ ScrollView *TabFind::FindInitialTabVectors(BLOBNBOX_LIST *image_blobs, int min_g
   return initial_win;
 }
 
-#ifndef GRAPHICS_DISABLED
+#if !GRAPHICS_DISABLED
 
 // Helper displays all the boxes in the given vector on the given window.
 static void DisplayBoxVector(const std::vector<BLOBNBOX *> &boxes, ScrollView *win) {
@@ -581,7 +618,7 @@ ScrollView *TabFind::FindTabBoxes(int min_gutter_width, double tabfind_aligned_g
   std::sort(left_tab_boxes_.begin(), left_tab_boxes_.end(), StdSortByBoxLeft<BLOBNBOX>);
   std::sort(right_tab_boxes_.begin(), right_tab_boxes_.end(), StdSortRightToLeft<BLOBNBOX>);
   ScrollView *tab_win = nullptr;
-#ifndef GRAPHICS_DISABLED
+#if !GRAPHICS_DISABLED
   if (textord_tabfind_show_initialtabs) {
     tab_win = MakeWindow(0, 100, "InitialTabs");
     tab_win->Pen(ScrollView::BLUE);
@@ -964,7 +1001,7 @@ void TabFind::EvaluateTabs() {
 // the most frequent column widths found in a list so that a given width
 // can be tested for being a common width with a simple callback function.
 void TabFind::ComputeColumnWidths(ScrollView *tab_win, ColPartitionGrid *part_grid) {
-#ifndef GRAPHICS_DISABLED
+#if !GRAPHICS_DISABLED
   if (tab_win != nullptr) {
     tab_win->Pen(ScrollView::WHITE);
   }
@@ -973,7 +1010,7 @@ void TabFind::ComputeColumnWidths(ScrollView *tab_win, ColPartitionGrid *part_gr
   int col_widths_size = (tright_.x() - bleft_.x()) / kColumnWidthFactor;
   STATS col_widths(0, col_widths_size);
   ApplyPartitionsToColumnWidths(part_grid, &col_widths);
-#ifndef GRAPHICS_DISABLED
+#if !GRAPHICS_DISABLED
   if (tab_win != nullptr) {
     tab_win->Update();
   }

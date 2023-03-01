@@ -1,5 +1,7 @@
 #include "blake3_impl.h"
 
+#if !(defined(BUILD_MONOLITHIC) && defined(_MSC_VER))  // monolithic build mode also includes the Assembly source files implementing these same functions.
+
 #include <immintrin.h>
 
 #define DEGREE 8
@@ -324,3 +326,5 @@ void blake3_hash_many_avx2(const uint8_t *const *inputs, size_t num_inputs,
                             out);
 #endif
 }
+
+#endif

@@ -190,8 +190,29 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ProjectReference Include="MuPDFLib.vcxproj">
-      <Project>{c21b464f-7799-4b39-8ca6-67ce0468966c}</Project>
+    <ProjectReference Include="libcurl.vcxproj">
+      <Project>{87ee9da4-de1e-4448-8324-183c98dca588}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libjpeg-turbo.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff92ba30}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libjpeg-xl.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffa838c1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libmupdf_minimal_core.vcxproj">
+      <Project>{6f1ee8ba-ccb7-4f76-b9da-337c41dd6fc0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libopenjpeg.vcxproj">
+      <Project>{5edcf4fd-0291-4fb9-8d96-758957ca5e3c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libpng.vcxproj">
+      <Project>{5edcf4fd-0291-4fb9-8d96-658957ca5e3c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libxml2.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffa57a44}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libzlib.vcxproj">
+      <Project>{5edcf4fd-0291-4fb9-8d96-458957ca5e3c}</Project>
     </ProjectReference>
     <ProjectReference Include="wxWidgets.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ffb10a63}</Project>

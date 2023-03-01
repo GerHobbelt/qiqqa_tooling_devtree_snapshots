@@ -1416,6 +1416,7 @@ int test_lsm_mt3(
 }
 
 #else
+
 static void mt_shutdown(LsmDb *pDb) { 
   unused_parameter(pDb); 
 }

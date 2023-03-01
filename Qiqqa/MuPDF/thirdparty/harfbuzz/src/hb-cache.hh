@@ -48,8 +48,9 @@ struct hb_cache_t
   static_assert ((key_bits >= cache_bits), "");
   static_assert ((key_bits + value_bits <= cache_bits + 8 * sizeof (item_t)), "");
 
+  hb_cache_t () { init (); }
+
   void init () { clear (); }
-  void fini () {}
 
   void clear ()
   {

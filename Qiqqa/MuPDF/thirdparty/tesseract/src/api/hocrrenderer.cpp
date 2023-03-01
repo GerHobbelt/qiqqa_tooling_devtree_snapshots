@@ -17,14 +17,12 @@
  *
  **********************************************************************/
 
+#include <tesseract/debugheap.h>
 #include <tesseract/baseapi.h> // for TessBaseAPI
 #include <locale>              // for std::locale::classic
 #include <memory>              // for std::unique_ptr
 #include <sstream>             // for std::stringstream
 
-#if defined(_MSC_VER)
-#  include <crtdbg.h>
-#endif
 
 #if defined(WIN32) || defined(_WIN32) || defined(_WIN64)
 #  include "host.h" // windows.h for MultiByteToWideChar, ...
@@ -145,12 +143,6 @@ char *TessBaseAPI::GetHOCRText(ETEXT_DESC *monitor, int page_number) {
   int page_id = page_number + 1; // hOCR uses 1-based page numbers.
   bool para_is_ltr = true;       // Default direction is LTR
   const char *paragraph_lang = nullptr;
-  bool font_info = false;
-  bool hocr_boxes = false;
-  bool hocr_images = false;
-  GetBoolVariable("hocr_font_info", &font_info);
-  GetBoolVariable("hocr_char_boxes", &hocr_boxes);
-  GetBoolVariable("hocr_images", &hocr_images);
 
   if (input_file_.empty()) {
     SetInputName(nullptr);
@@ -298,7 +290,7 @@ char *TessBaseAPI::GetHOCRText(ETEXT_DESC *monitor, int page_number) {
     hocr_str << " title='bbox " << left << " " << top << " " << right << " "
              << bottom << "; x_wconf "
              << static_cast<int>(res_it->Confidence(RIL_WORD));
-    if (font_info) {
+    if (tesseract_->hocr_font_info) {
       if (font_name) {
         hocr_str << "; x_font " << HOcrEscape(font_name).c_str();
       }
@@ -340,14 +332,14 @@ char *TessBaseAPI::GetHOCRText(ETEXT_DESC *monitor, int page_number) {
       const std::unique_ptr<const char[]> grapheme(
           res_it->GetUTF8Text(RIL_SYMBOL));
       if (grapheme && grapheme[0] != 0) {
-        if (hocr_boxes) {
+        if (tesseract_->hocr_char_boxes) {
           res_it->BoundingBox(RIL_SYMBOL, &left, &top, &right, &bottom);
           hocr_str << "\n       <span class='ocrx_cinfo' title='x_bboxes "
                    << left << " " << top << " " << right << " " << bottom
                    << "; x_conf " << res_it->Confidence(RIL_SYMBOL) << "'>";
         }
         hocr_str << HOcrEscape(grapheme.get()).c_str();
-        if (hocr_boxes) {
+        if (tesseract_->hocr_char_boxes) {
           hocr_str << "</span>";
           tesseract::ChoiceIterator ci(*res_it);
           if (lstm_choice_mode == 1 && ci.Timesteps() != nullptr) {
@@ -408,7 +400,7 @@ char *TessBaseAPI::GetHOCRText(ETEXT_DESC *monitor, int page_number) {
       hocr_str << "</strong>";
     }
     // If the lstm choice mode is required it is added here
-    if (lstm_choice_mode == 1 && !hocr_boxes && rawTimestepMap != nullptr) {
+    if (lstm_choice_mode == 1 && !tesseract_->hocr_char_boxes && rawTimestepMap != nullptr) {
       for (const auto &symbol : *rawTimestepMap) {
         hocr_str << "\n       <span class='ocr_symbol'"
                  << " id='"
@@ -433,7 +425,7 @@ char *TessBaseAPI::GetHOCRText(ETEXT_DESC *monitor, int page_number) {
         hocr_str << "</span>";
         ++scnt;
       }
-    } else if (lstm_choice_mode == 2 && !hocr_boxes && CTCMap != nullptr) {
+    } else if (lstm_choice_mode == 2 && !tesseract_->hocr_char_boxes && CTCMap != nullptr) {
       for (const auto &timestep : *CTCMap) {
         if (timestep.size() > 0) {
           hocr_str << "\n       <span class='ocrx_cinfo'"
@@ -462,7 +454,7 @@ char *TessBaseAPI::GetHOCRText(ETEXT_DESC *monitor, int page_number) {
       }
     }
     // Close ocrx_word.
-    if (hocr_boxes || lstm_choice_mode > 0) {
+    if (tesseract_->hocr_char_boxes || lstm_choice_mode > 0) {
       hocr_str << "\n      ";
     }
     hocr_str << "</span>";
@@ -488,11 +480,7 @@ word_end:
   hocr_str << "  </div>\n";
 
   const std::string &text = hocr_str.str();
-#if defined(_DEBUG) && defined(_CRTDBG_REPORT_FLAG)
-  char* result = new (_CLIENT_BLOCK, __FILE__, __LINE__) char[text.length() + 1];
-#else
   char* result = new char[text.length() + 1];
-#endif  // _DEBUG
   strcpy(result, text.c_str());
   return result;
 }

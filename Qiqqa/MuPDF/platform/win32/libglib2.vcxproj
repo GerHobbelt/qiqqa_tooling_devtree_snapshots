@@ -1020,7 +1020,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/glib2/gobject/tests/value.c" />
     <ClCompile Include="../../thirdparty/owemdjee/glib2/gthread/gthread-impl.c" />
     <ClCompile Include="../../thirdparty/owemdjee/glib2/gthread/tests/init.c" />
-    <ClInclude Include="../../thirdparty/owemdjee/glib2/fuzzing/fuzz.h" />
     <ClInclude Include="../../thirdparty/owemdjee/glib2/gio/gaction.h" />
     <ClInclude Include="../../thirdparty/owemdjee/glib2/gio/gactiongroup.h" />
     <ClInclude Include="../../thirdparty/owemdjee/glib2/gio/gactiongroupexporter.h" />
@@ -1535,7 +1534,6 @@
     <Text Include="../../thirdparty/owemdjee/glib2/docs/supported-platforms.md" />
     <Text Include="../../thirdparty/owemdjee/glib2/docs/testing.md" />
     <Text Include="../../thirdparty/owemdjee/glib2/docs/toolchain-requirements.md" />
-    <Text Include="../../thirdparty/owemdjee/glib2/fuzzing/README.md" />
     <Text Include="../../thirdparty/owemdjee/glib2/gio/data-to-c.py" />
     <Text Include="../../thirdparty/owemdjee/glib2/gio/gdbus-2.0/codegen/__init__.py" />
     <Text Include="../../thirdparty/owemdjee/glib2/gio/gdbus-2.0/codegen/codegen.py" />

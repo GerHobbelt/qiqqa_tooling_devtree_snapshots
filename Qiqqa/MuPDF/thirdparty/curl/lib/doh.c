@@ -401,6 +401,7 @@ struct Curl_addrinfo *Curl_doh(struct Curl_easy *data,
     goto error;
   dohp->pending++;
 
+#ifdef ENABLE_IPV6
   if((conn->ip_version != CURL_IPRESOLVE_V4) && Curl_ipv6works(data)) {
     /* create IPv6 DoH request */
     result = dohprobe(data, &dohp->probe[DOH_PROBE_SLOT_IPADDR_V6],
@@ -410,6 +411,7 @@ struct Curl_addrinfo *Curl_doh(struct Curl_easy *data,
       goto error;
     dohp->pending++;
   }
+#endif
   return NULL;
 
   error:
@@ -955,7 +957,7 @@ CURLcode Curl_doh_is_resolved(struct Curl_easy *data,
         Curl_share_lock(data, CURL_LOCK_DATA_DNS, CURL_LOCK_ACCESS_SINGLE);
 
       /* we got a response, store it in the cache */
-      dns = Curl_cache_addr(data, ai, dohp->host, dohp->port);
+      dns = Curl_cache_addr(data, ai, dohp->host, 0, dohp->port);
 
       if(data->share)
         Curl_share_unlock(data, CURL_LOCK_DATA_DNS);

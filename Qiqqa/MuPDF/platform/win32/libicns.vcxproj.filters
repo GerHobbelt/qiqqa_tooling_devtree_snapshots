@@ -104,9 +104,6 @@
     <Text Include="../../thirdparty/owemdjee/libicns/configure.ac">
       <Filter>Misc Files</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/libicns/debian/NEWS.Debian">
-      <Filter>Misc Files\debian</Filter>
-    </Text>
     <Text Include="../../thirdparty/owemdjee/libicns/debian/changelog">
       <Filter>Misc Files\debian</Filter>
     </Text>
@@ -127,4 +124,3 @@
     </Text>
   </ItemGroup>
 </Project>
-    

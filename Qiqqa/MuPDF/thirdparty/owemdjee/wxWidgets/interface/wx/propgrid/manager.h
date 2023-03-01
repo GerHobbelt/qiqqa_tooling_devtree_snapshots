@@ -249,7 +249,7 @@ public:
 
         @param pageObj
             wxPropertyGridPage instance. Manager will take ownership of this
-            object. @NULL indicates that a default page instance should be created.
+            object. @nullptr indicates that a default page instance should be created.
 
         @return Returns pointer to created property grid page.
 
@@ -257,9 +257,9 @@ public:
                 added when the toolbar is not turned off using window style flag
                 switching. Otherwise toolbar buttons might not be added properly.
     */
-    wxPropertyGridPage* AddPage( const wxString& label = wxEmptyString,
+    wxPropertyGridPage* AddPage( const wxString& label = wxString(),
                                  const wxBitmapBundle& bmp = wxBitmapBundle(),
-                                 wxPropertyGridPage* pageObj = NULL );
+                                 wxPropertyGridPage* pageObj = nullptr );
 
     /**
         Deletes all properties and all pages.
@@ -407,13 +407,13 @@ public:
 
         @param pageObj
             wxPropertyGridPage instance. Manager will take ownership of this
-            object. If @NULL, default page object is constructed.
+            object. If @nullptr, default page object is constructed.
 
         @return Returns pointer to created page.
     */
     virtual wxPropertyGridPage* InsertPage( int index, const wxString& label,
                                             const wxBitmapBundle& bmp = wxBitmapBundle(),
-                                            wxPropertyGridPage* pageObj = NULL );
+                                            wxPropertyGridPage* pageObj = nullptr );
 
     /**
         Returns @true if any property on any page has been modified by the user.

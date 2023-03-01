@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2022 Artifex Software, Inc.
+// Copyright (C) 2004-2023 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -266,10 +266,16 @@ pdf_obj *pdf_lookup_name(fz_context *ctx, pdf_document *doc, pdf_obj *which, pdf
 /*
 	Load a nametree, flattening it into a single dictionary.
 
-	The caller is responsible for pdf_dropping the returned
-	reference.
+	The caller is responsible for dropping the returned
+	reference by invoking pdf_drop_name_tree().
 */
 pdf_obj *pdf_load_name_tree(fz_context *ctx, pdf_document *doc, pdf_obj *which);
+
+static inline void
+pdf_drop_name_tree(fz_context *ctx, pdf_obj *name_tree)
+{
+	pdf_drop_obj(ctx, name_tree);
+}
 
 /*
 	Lookup needle in the given number tree.
@@ -933,11 +939,11 @@ void pdf_set_annot_filespec(fz_context *ctx, pdf_annot *annot, pdf_obj *obj);
 
 /*
 	Get/set a hidden flag preventing the annotation from being
-	rendered. This flag is independent of the hidden flag in the
-	PDF annotation object described in the PDF specification.
+	rendered when it is being edited. This flag is independent
+	of the hidden flag in the PDF annotation object described in the PDF specification.
 */
-int pdf_annot_hidden(fz_context *ctx, pdf_annot *annot);
-void pdf_set_annot_hidden(fz_context *ctx, pdf_annot *annot, int hidden);
+int pdf_annot_hidden_for_editing(fz_context *ctx, const pdf_annot *annot);
+void pdf_set_annot_hidden_for_editing(fz_context *ctx, pdf_annot *annot, int hidden);
 
 #endif // FZ_ENABLE_PDF
 

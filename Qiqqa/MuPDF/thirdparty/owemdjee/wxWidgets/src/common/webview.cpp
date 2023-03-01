@@ -80,7 +80,7 @@ public:
 
     ~wxWebViewHandlerResponseDataString() { delete m_stream; }
 
-    virtual wxInputStream* GetStream() wxOVERRIDE
+    virtual wxInputStream* GetStream() override
     {
         return m_stream;
     }
@@ -105,7 +105,7 @@ public:
 
     ~wxWebViewHandlerResponseDataFile() { delete m_file; }
 
-    virtual wxInputStream* GetStream() wxOVERRIDE
+    virtual wxInputStream* GetStream() override
     { return m_file->GetStream(); }
 
     wxFSFile* m_file;
@@ -122,7 +122,7 @@ wxString wxWebViewHandler::GetVirtualHost() const
 
 wxFSFile* wxWebViewHandler::GetFile(const wxString& WXUNUSED(uri))
 {
-    return NULL;
+    return nullptr;
 }
 
 void wxWebViewHandler::StartRequest(const wxWebViewHandlerRequest& request,
@@ -395,7 +395,7 @@ wxWebView* wxWebView::New(const wxString& backend)
     wxStringWebViewFactoryMap::iterator iter = FindFactory(backend);
 
     if(iter == m_factoryMap.end())
-        return NULL;
+        return nullptr;
     else
         return (*iter).second->Create();
 }
@@ -409,7 +409,7 @@ wxWebView* wxWebView::New(wxWindow* parent, wxWindowID id, const wxString& url,
     wxStringWebViewFactoryMap::iterator iter = FindFactory(backend);
 
     if(iter == m_factoryMap.end())
-        return NULL;
+        return nullptr;
     else
         return (*iter).second->Create(parent, id, url, pos, size, style, name);
 

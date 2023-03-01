@@ -114,7 +114,7 @@ EquationDetect::EquationDetect(const char *equ_datapath, const char *equ_name) {
 
   if (equ_tesseract_.init_tesseract(equ_datapath, equ_name, OEM_TESSERACT_ONLY)) {
     tprintf(
-        "Warning: equation region detection requested,"
+        "WARNING: Equation region detection requested,"
         " but {} failed to load from {}\n",
         equ_name, equ_datapath);
   }
@@ -1405,7 +1405,8 @@ void EquationDetect::GetOutputTiffName(const char *name, std::string &image_name
   ASSERT_HOST(name);
   char page[50];
   snprintf(page, sizeof(page), "%04d", page_count_);
-  image_name = (lang_tesseract_->imagebasename) + page + name + ".tif";
+  // name: _spt, _bi, _seed, _merged
+  image_name = (lang_tesseract_->imagebasename) + page + name + ".tiff";
 }
 
 void EquationDetect::PaintSpecialTexts(const std::string &outfile) const {

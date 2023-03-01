@@ -27,7 +27,7 @@
 //                              misc functions
 // ============================================================================
 
-/* checks whether the passed in pointer is NULL and if the string is empty */
+/* checks whether the passed in pointer is null and if the string is empty */
 inline bool wxIsEmpty(const char *s) { return !s || !*s; }
 inline bool wxIsEmpty(const wchar_t *s) { return !s || !*s; }
 inline bool wxIsEmpty(const wxScopedCharBuffer& s) { return wxIsEmpty(s.data()); }
@@ -43,17 +43,11 @@ inline bool wxIsEmpty(const wxCStrData& s) { return s.AsString().empty(); }
 WXDLLIMPEXP_BASE size_t wxMB2WC(wchar_t *buf, const char *psz, size_t n);
 WXDLLIMPEXP_BASE size_t wxWC2MB(char *buf, const wchar_t *psz, size_t n);
 
-#if wxUSE_UNICODE
-    #define wxMB2WX wxMB2WC
-    #define wxWX2MB wxWC2MB
-    #define wxWC2WX wxStrncpy
-    #define wxWX2WC wxStrncpy
-#else
-    #define wxMB2WX wxStrncpy
-    #define wxWX2MB wxStrncpy
-    #define wxWC2WX wxWC2MB
-    #define wxWX2WC wxMB2WC
-#endif
+// Obsolete helpers.
+#define wxMB2WX wxMB2WC
+#define wxWX2MB wxWC2MB
+#define wxWC2WX wxStrncpy
+#define wxWX2WC wxStrncpy
 
 
 //  RN: We could do the usual tricky compiler detection here,
@@ -65,47 +59,45 @@ WXDLLIMPEXP_BASE size_t wxWC2MB(char *buf, const wchar_t *psz, size_t n);
 //
 #include <string.h>
 
-#if wxUSE_UNICODE
-    //implement our own wmem variants
-    inline wxChar* wxTmemchr(const wxChar* s, wxChar c, size_t l)
-    {
-        for(;l && *s != c;--l, ++s) {}
+//implement our own wmem variants
+inline wxChar* wxTmemchr(const wxChar* s, wxChar c, size_t l)
+{
+    for(;l && *s != c;--l, ++s) {}
 
-        if(l)
-            return const_cast<wxChar*>(s);
-        return NULL;
-    }
+    if(l)
+        return const_cast<wxChar*>(s);
+    return nullptr;
+}
 
-    inline int wxTmemcmp(const wxChar* sz1, const wxChar* sz2, size_t len)
-    {
-        for(; *sz1 == *sz2 && len; --len, ++sz1, ++sz2) {}
+inline int wxTmemcmp(const wxChar* sz1, const wxChar* sz2, size_t len)
+{
+    for(; *sz1 == *sz2 && len; --len, ++sz1, ++sz2) {}
 
-        if(len)
-            return *sz1 < *sz2 ? -1 : *sz1 > *sz2;
-        else
-            return 0;
-    }
+    if(len)
+        return *sz1 < *sz2 ? -1 : *sz1 > *sz2;
+    else
+        return 0;
+}
 
-    inline wxChar* wxTmemcpy(wxChar* szOut, const wxChar* szIn, size_t len)
-    {
-        return (wxChar*) memcpy(szOut, szIn, len * sizeof(wxChar));
-    }
+inline wxChar* wxTmemcpy(wxChar* szOut, const wxChar* szIn, size_t len)
+{
+    return (wxChar*) memcpy(szOut, szIn, len * sizeof(wxChar));
+}
 
-    inline wxChar* wxTmemmove(wxChar* szOut, const wxChar* szIn, size_t len)
-    {
-        return (wxChar*) memmove(szOut, szIn, len * sizeof(wxChar));
-    }
+inline wxChar* wxTmemmove(wxChar* szOut, const wxChar* szIn, size_t len)
+{
+    return (wxChar*) memmove(szOut, szIn, len * sizeof(wxChar));
+}
 
-    inline wxChar* wxTmemset(wxChar* szOut, wxChar cIn, size_t len)
-    {
-        wxChar* szRet = szOut;
+inline wxChar* wxTmemset(wxChar* szOut, wxChar cIn, size_t len)
+{
+    wxChar* szRet = szOut;
 
-        while (len--)
-            *szOut++ = cIn;
+    while (len--)
+        *szOut++ = cIn;
 
-        return szRet;
-    }
-#endif /* wxUSE_UNICODE */
+    return szRet;
+}
 
 // provide trivial wrappers for char* versions for both ANSI and Unicode builds
 // (notice that these intentionally return "char *" and not "void *" unlike the
@@ -145,7 +137,7 @@ inline char* wxTmemset(char* szOut, char cIn, size_t len)
 // ----------------------------------------------------------------------------
 
 // NB: we can't provide const wchar_t* (= wxChar*) overload, because calling
-//     wxSetlocale(category, NULL) -- which is a common thing to do -- would be
+//     wxSetlocale(category, nullptr) -- which is a common thing to do -- would be
 //     ambiguous
 WXDLLIMPEXP_BASE char* wxSetlocale(int category, const char *locale);
 inline char* wxSetlocale(int category, const wxScopedCharBuffer& locale)
@@ -161,7 +153,7 @@ inline char* wxSetlocale(int category, const wxCStrData& locale)
 //                              string functions
 // ----------------------------------------------------------------------------
 
-/* safe version of strlen() (returns 0 if passed NULL pointer) */
+/* safe version of strlen() (returns 0 if passed null pointer) */
 // NB: these are defined in wxcrtbase.h, see the comment there
 // inline size_t wxStrlen(const char *s) { return s ? strlen(s) : 0; }
 // inline size_t wxStrlen(const wchar_t *s) { return s ? wxCRT_Strlen_(s) : 0; }
@@ -557,15 +549,11 @@ WX_STRCMP_FUNC(wxStrcoll, wxCRT_StrcollA, wxCRT_StrcollW, wxStrcoll_String)
 template<typename T>
 inline int wxStrcoll_String(const wxString& s1, const T& s2)
 {
-#if wxUSE_UNICODE
     // NB: strcoll() doesn't work correctly on UTF-8 strings, so we have to use
     //     wc_str() even if wxUSE_UNICODE_UTF8; the (const wchar_t*) cast is
     //     there just as optimization to avoid going through
     //     wxStrcoll<wxScopedWCharBuffer>:
     return wxStrcoll((const wchar_t*)s1.wc_str(), s2);
-#else
-    return wxStrcoll((const char*)s1.mb_str(), s2);
-#endif
 }
 
 #endif // defined(wxCRT_Strcoll[AW])
@@ -692,19 +680,19 @@ inline const char *wxStrrchr(const char *s, char c)
 inline const wchar_t *wxStrrchr(const wchar_t *s, wchar_t c)
     { return wxCRT_StrrchrW(s, c); }
 inline const char *wxStrchr(const char *s, const wxUniChar& uc)
-    { char c; return uc.GetAsChar(&c) ? wxCRT_StrchrA(s, c) : NULL; }
+    { char c; return uc.GetAsChar(&c) ? wxCRT_StrchrA(s, c) : nullptr; }
 inline const wchar_t *wxStrchr(const wchar_t *s, const wxUniChar& c)
     { return wxCRT_StrchrW(s, (wchar_t)c); }
 inline const char *wxStrrchr(const char *s, const wxUniChar& uc)
-    { char c; return uc.GetAsChar(&c) ? wxCRT_StrrchrA(s, c) : NULL; }
+    { char c; return uc.GetAsChar(&c) ? wxCRT_StrrchrA(s, c) : nullptr; }
 inline const wchar_t *wxStrrchr(const wchar_t *s, const wxUniChar& c)
     { return wxCRT_StrrchrW(s, (wchar_t)c); }
 inline const char *wxStrchr(const char *s, const wxUniCharRef& uc)
-    { char c; return uc.GetAsChar(&c) ? wxCRT_StrchrA(s, c) : NULL; }
+    { char c; return uc.GetAsChar(&c) ? wxCRT_StrchrA(s, c) : nullptr; }
 inline const wchar_t *wxStrchr(const wchar_t *s, const wxUniCharRef& c)
     { return wxCRT_StrchrW(s, (wchar_t)c); }
 inline const char *wxStrrchr(const char *s, const wxUniCharRef& uc)
-    { char c; return uc.GetAsChar(&c) ? wxCRT_StrrchrA(s, c) : NULL; }
+    { char c; return uc.GetAsChar(&c) ? wxCRT_StrrchrA(s, c) : nullptr; }
 inline const wchar_t *wxStrrchr(const wchar_t *s, const wxUniCharRef& c)
     { return wxCRT_StrrchrW(s, (wchar_t)c); }
 template<typename T>
@@ -737,13 +725,13 @@ inline const char* wxStrchr(const wxString& s, int c)
 inline const char* wxStrrchr(const wxString& s, int c)
     { return wxCRT_StrrchrA((const char*)s.c_str(), c); }
 inline const char* wxStrchr(const wxString& s, const wxUniChar& uc)
-    { char c; return uc.GetAsChar(&c) ? wxCRT_StrchrA(s.c_str(), c) : NULL; }
+    { char c; return uc.GetAsChar(&c) ? wxCRT_StrchrA(s.c_str(), c) : nullptr; }
 inline const char* wxStrrchr(const wxString& s, const wxUniChar& uc)
-    { char c; return uc.GetAsChar(&c) ? wxCRT_StrrchrA(s.c_str(), c) : NULL; }
+    { char c; return uc.GetAsChar(&c) ? wxCRT_StrrchrA(s.c_str(), c) : nullptr; }
 inline const char* wxStrchr(const wxString& s, const wxUniCharRef& uc)
-    { char c; return uc.GetAsChar(&c) ? wxCRT_StrchrA(s.c_str(), c) : NULL; }
+    { char c; return uc.GetAsChar(&c) ? wxCRT_StrchrA(s.c_str(), c) : nullptr; }
 inline const char* wxStrrchr(const wxString& s, const wxUniCharRef& uc)
-    { char c; return uc.GetAsChar(&c) ? wxCRT_StrrchrA(s.c_str(), c) : NULL; }
+    { char c; return uc.GetAsChar(&c) ? wxCRT_StrrchrA(s.c_str(), c) : nullptr; }
 #endif // wxNO_IMPLICIT_WXSTRING_ENCODING
 inline const wchar_t* wxStrchr(const wxString& s, wchar_t c)
     { return wxCRT_StrchrW((const wchar_t*)s.c_str(), c); }
@@ -759,13 +747,13 @@ inline const char* wxStrchr(const wxCStrData& s, int c)
 inline const char* wxStrrchr(const wxCStrData& s, int c)
     { return wxCRT_StrrchrA(s.AsChar(), c); }
 inline const char* wxStrchr(const wxCStrData& s, const wxUniChar& uc)
-    { char c; return uc.GetAsChar(&c) ? wxCRT_StrchrA(s, c) : NULL; }
+    { char c; return uc.GetAsChar(&c) ? wxCRT_StrchrA(s, c) : nullptr; }
 inline const char* wxStrrchr(const wxCStrData& s, const wxUniChar& uc)
-    { char c; return uc.GetAsChar(&c) ? wxCRT_StrrchrA(s, c) : NULL; }
+    { char c; return uc.GetAsChar(&c) ? wxCRT_StrrchrA(s, c) : nullptr; }
 inline const char* wxStrchr(const wxCStrData& s, const wxUniCharRef& uc)
-    { char c; return uc.GetAsChar(&c) ? wxCRT_StrchrA(s, c) : NULL; }
+    { char c; return uc.GetAsChar(&c) ? wxCRT_StrchrA(s, c) : nullptr; }
 inline const char* wxStrrchr(const wxCStrData& s, const wxUniCharRef& uc)
-    { char c; return uc.GetAsChar(&c) ? wxCRT_StrrchrA(s, c) : NULL; }
+    { char c; return uc.GetAsChar(&c) ? wxCRT_StrrchrA(s, c) : nullptr; }
 #endif // wxNO_IMPLICIT_WXSTRING_ENCODING
 inline const wchar_t* wxStrchr(const wxCStrData& s, wchar_t c)
     { return wxCRT_StrchrW(s.AsWChar(), c); }
@@ -920,10 +908,10 @@ template<typename T>
 inline double wxStrtod(const wxScopedCharTypeBuffer<T>& nptr, T **endptr)
     { return wxStrtod(nptr.data(), endptr); }
 
-// We implement wxStrto*() like this so that the code compiles when NULL is
+// We implement wxStrto*() like this so that the code compiles when nullptr is
 // passed in - - if we had just char** and wchar_t** overloads for 'endptr', it
 // would be ambiguous. The solution is to use a template so that endptr can be
-// any type: when NULL constant is used, the type will be int and we can handle
+// any type: when nullptr constant is used, the type will be int and we can handle
 // that case specially. Otherwise, we infer the type that 'nptr' should be
 // converted to from the type of 'endptr'. We need wxStrtoxCharType<T> template
 // to make the code compile even for T=int (that's the case when it's not going
@@ -944,8 +932,8 @@ template<> struct wxStrtoxCharType<int>
     typedef const char* Type; /* this one is never used */
     static char** AsPointer(int WXUNUSED_UNLESS_DEBUG(p))
     {
-        wxASSERT_MSG( p == 0, "passing non-NULL int is invalid" );
-        return NULL;
+        wxASSERT_MSG( p == 0, "passing non-null int is invalid" );
+        return nullptr;
     }
 };
 
@@ -957,7 +945,7 @@ inline double wxStrtod(const wxString& nptr, T endptr)
         // when we don't care about endptr, use the string representation that
         // doesn't require any conversion (it doesn't matter for this function
         // even if its UTF-8):
-        wxStringCharType** p = NULL;
+        wxStringCharType** p = nullptr;
         return wxStrtod(nptr.wx_str(), p);
     }
     // note that it is important to use c_str() here and not mb_str() or
@@ -974,16 +962,16 @@ inline double wxStrtod(const wxCStrData& nptr, T endptr)
 #ifdef wxHAS_NULLPTR_T
 
 inline double wxStrtod(const wxString& nptr, std::nullptr_t)
-    { return wxStrtod(nptr.wx_str(), static_cast<wxStringCharType**>(NULL)); }
+    { return wxStrtod(nptr.wx_str(), static_cast<wxStringCharType**>(nullptr)); }
 inline double wxStrtod(const wxCStrData& nptr, std::nullptr_t)
-    { return wxStrtod(nptr.AsString(), static_cast<wxStringCharType**>(NULL)); }
+    { return wxStrtod(nptr.AsString(), static_cast<wxStringCharType**>(nullptr)); }
 
 #define WX_STRTOX_DEFINE_NULLPTR_OVERLOADS(rettype, name)                     \
     inline rettype name(const wxString& nptr, std::nullptr_t, int base)       \
-        { return name(nptr.wx_str(), static_cast<wxStringCharType**>(NULL),   \
+        { return name(nptr.wx_str(), static_cast<wxStringCharType**>(nullptr),   \
                       base); }                                                \
     inline rettype name(const wxCStrData& nptr, std::nullptr_t, int base)     \
-        { return name(nptr.AsString(), static_cast<wxStringCharType**>(NULL), \
+        { return name(nptr.AsString(), static_cast<wxStringCharType**>(nullptr), \
                       base); }
 
 #else // !wxHAS_NULLPTR_T
@@ -1005,7 +993,7 @@ inline double wxStrtod(const wxCStrData& nptr, std::nullptr_t)
     {                                                                         \
         if (!endptr)                                                          \
         {                                                                     \
-            wxStringCharType** p = NULL;                                      \
+            wxStringCharType** p = nullptr;                                      \
             return name(nptr.wx_str(), p, base);                              \
         }                                                                     \
         typedef typename wxStrtoxCharType<T>::Type CharType;                  \

@@ -125,11 +125,26 @@
   <ItemDefinitionGroup>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Technology.Tests\forking cleans up memory leaks\forking cleans up memory leaks.vcxproj">
+      <Project>{d60370db-184a-4fb4-ac09-a0cd7e0f34fa}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Technology.Tests\monitor our memory usage and die when passing threshold\monitor our memory usage and die when passing threshold.vcxproj">
+      <Project>{4f88275c-d544-40c0-b478-9018f8bae8c5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\thirdparty\DirScanner\NTFS ADS Viewer\NTFS ADS Viewer.vcxproj">
+      <Project>{28e9e026-5e87-4248-ba0b-07813dcd8db1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\thirdparty\DirScanner\NTFS Find hardlinks or regular files\NTFS Find hardlinks or regular files.vcxproj">
+      <Project>{ec989955-8ccb-49b4-891f-8761cf6e2560}</Project>
+    </ProjectReference>
     <ProjectReference Include="bibutils.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff55313e}</Project>
     </ProjectReference>
     <ProjectReference Include="bin2coff.vcxproj">
       <Project>{bfe316b3-bd90-433a-a20d-c73975f1caa7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="brotli.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffb3b08f}</Project>
     </ProjectReference>
     <ProjectReference Include="bulktest.vcxproj">
       <Project>{8156c20c-dd56-4200-b4a6-40c056eb0a45}</Project>
@@ -140,8 +155,38 @@
     <ProjectReference Include="glob.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff17062e}</Project>
     </ProjectReference>
+    <ProjectReference Include="gperf.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff5fc8ac}</Project>
+    </ProjectReference>
     <ProjectReference Include="jpeginfo.vcxproj">
       <Project>{e74f29fa-f143-4adc-b92c-6af1a8e4a417}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libarchive.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff18377f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libarchive_tools.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffd03c63}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libcpr.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff55f506}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libdlfcn-win32-test-dladdr.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff2ce62c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libdlfcn-win32-testmain.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffe2ce95}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libdlfcn-win32.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffcfa3c0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libtag.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff2daf08}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libtvision.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff5340c1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libtvision_tests.vcxproj">
+      <Project>{a60d8644-5a16-4d29-8970-7518ff5340c1}</Project>
     </ProjectReference>
     <ProjectReference Include="linenoise.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ffac1208}</Project>
@@ -185,6 +230,9 @@
     <ProjectReference Include="replxx.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518fffe817a}</Project>
     </ProjectReference>
+    <ProjectReference Include="splitmerge.vcxproj">
+      <Project>{edc7613a-2ce0-428a-a2d8-c98897b693be}</Project>
+    </ProjectReference>
     <ProjectReference Include="sqlite_tools.vcxproj">
       <Project>{5924a383-0110-4cbe-a7b4-0fbba6c19561}</Project>
     </ProjectReference>
@@ -193,6 +241,12 @@
     </ProjectReference>
     <ProjectReference Include="tesseract.vcxproj">
       <Project>{00115919-815b-4f64-bc9d-219078b1f3aa}</Project>
+    </ProjectReference>
+    <ProjectReference Include="tvision.vcxproj">
+      <Project>{a10d8644-5a1c-4d29-8970-7518ff5340c1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="xtractprotos.vcxproj">
+      <Project>{ca0bda38-89b9-4703-a77d-8049ac6afb0c}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

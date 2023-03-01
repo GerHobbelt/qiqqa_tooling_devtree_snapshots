@@ -838,7 +838,6 @@
     <Text Include="../../thirdparty/owemdjee/libvips/doc/gen-function-list.py" />
     <Text Include="../../thirdparty/owemdjee/libvips/doc/libvips-docs.xml.in" />
     <Text Include="../../thirdparty/owemdjee/libvips/doc/libvips-from-C++.md" />
-    <Text Include="../../thirdparty/owemdjee/libvips/fuzz/test_fuzz.sh" />
     <Text Include="../../thirdparty/owemdjee/libvips/libvips/colour/wrap-profiles.sh" />
     <Text Include="../../thirdparty/owemdjee/libvips/libvips/foreign/libnsgif/README-ns.md" />
     <Text Include="../../thirdparty/owemdjee/libvips/libvips/foreign/libnsgif/README.md" />

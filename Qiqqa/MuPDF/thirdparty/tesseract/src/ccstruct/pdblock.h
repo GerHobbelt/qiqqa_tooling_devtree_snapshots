@@ -94,12 +94,18 @@ public:
   // mask image.
   Image render_mask(const FCOORD &rerotation, TBOX *mask_box);
 
-#ifndef GRAPHICS_DISABLED
+#if !GRAPHICS_DISABLED
   /// draw histogram
   ///@param window window to draw in
   ///@param serial serial number
   ///@param colour colour to draw in
   void plot(ScrollView *window, int32_t serial, ScrollView::Color colour);
+
+  /// draw histogram
+  ///@param pix image to draw in
+  ///@param serial serial number
+  ///@param colour colour to draw in
+  void plot(Image &pix, int32_t serial, ScrollView::Color colour);
 #endif // !GRAPHICS_DISABLED
 
   /// assignment

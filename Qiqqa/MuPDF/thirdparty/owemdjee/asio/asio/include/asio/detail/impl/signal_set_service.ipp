@@ -2,7 +2,7 @@
 // detail/impl/signal_set_service.ipp
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
-// Copyright (c) 2003-2022 Christopher M. Kohlhoff (chris at kohlhoff dot com)
+// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)
 //
 // Distributed under the Boost Software License, Version 1.0. (See accompanying
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
@@ -342,6 +342,9 @@ asio::error_code signal_set_service::add(
       struct sigaction sa;
       memset(&sa, 0, sizeof(sa));
       sa.sa_handler = asio_signal_handler;
+#  if !defined(ASIO_NO_SET_SA_RESTART)
+      sa.sa_flags = SA_RESTART;
+#  endif
       sigfillset(&sa.sa_mask);
       if (::sigaction(signal_number, &sa, 0) == -1)
 # else // defined(ASIO_HAS_SIGACTION)

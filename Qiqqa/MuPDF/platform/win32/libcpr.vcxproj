@@ -306,25 +306,28 @@
     <ClInclude Include="../../thirdparty/owemdjee/libcpr/include/cpr/user_agent.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libcpr/include/cpr/util.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libcpr/include/cpr/verbose.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/libcpr/test/abstractServer.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/libcpr/test/httpServer.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/libcpr/test/httpsServer.hpp" />
     <Image Include="../../thirdparty/owemdjee/libcpr/nuget/resources/cpr.png" />
     <Text Include="../../thirdparty/owemdjee/libcpr/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libcpr/CODE_OF_CONDUCT.md" />
     <Text Include="../../thirdparty/owemdjee/libcpr/CONTRIBUTING.md" />
     <Text Include="../../thirdparty/owemdjee/libcpr/CppCheckSuppressions.txt" />
     <Text Include="../../thirdparty/owemdjee/libcpr/README.md" />
+    <Text Include="../../thirdparty/owemdjee/libcpr/cmake/FindMbedTLS.cmake" />
+    <Text Include="../../thirdparty/owemdjee/libcpr/cmake/clang-tidy.cmake" />
+    <Text Include="../../thirdparty/owemdjee/libcpr/cmake/clear_variable.cmake" />
+    <Text Include="../../thirdparty/owemdjee/libcpr/cmake/code_coverage.cmake" />
+    <Text Include="../../thirdparty/owemdjee/libcpr/cmake/cppcheck.cmake" />
     <Text Include="../../thirdparty/owemdjee/libcpr/cmake/cprConfig.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/libcpr/cmake/cprver.h.in" />
     <Text Include="../../thirdparty/owemdjee/libcpr/cmake/mongoose.CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libcpr/cmake/sanitizer.cmake" />
+    <Text Include="../../thirdparty/owemdjee/libcpr/cmake/zlib_external.cmake" />
+    <Text Include="../../thirdparty/owemdjee/libcpr/cpr-config.cmake" />
     <Text Include="../../thirdparty/owemdjee/libcpr/cpr/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libcpr/include/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libcpr/package-build/build-package.sh" />
     <Text Include="../../thirdparty/owemdjee/libcpr/package-build/debian-libcpr/README.Debian" />
     <Text Include="../../thirdparty/owemdjee/libcpr/package-build/debian-libcpr/changelog" />
-    <Text Include="../../thirdparty/owemdjee/libcpr/test/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/libcpr/test/data/generate-certificates.sh" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

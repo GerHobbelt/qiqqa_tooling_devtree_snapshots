@@ -2,10 +2,10 @@
 # used by the refill-vcxproj.sh tool
 #
 
-directories:
-	../../thirdparty/leptonica
-	
 ignore:
 	/src/
+	/prog/fuzzing/
+	
 	sw.cpp
+	/prog/xtractprotos.c
 	

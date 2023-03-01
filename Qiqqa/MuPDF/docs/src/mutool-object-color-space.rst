@@ -12,25 +12,25 @@
 .. _mutool_run_js_api_colorspace:
 
 
-``ColorSpace``
+`ColorSpace`
 ----------------------------
 
 **Properties**
 
 
-``DeviceGray``
+`DeviceGray`
 
     The default grayscale colorspace.
 
-``DeviceRGB``
+`DeviceRGB`
 
     The default RGB colorspace.
 
-``DeviceBGR``
+`DeviceBGR`
 
     The default RGB colorspace, but with components in reverse order.
 
-``DeviceCMYK``
+`DeviceCMYK`
 
     The default CMYK colorspace.
 
@@ -53,6 +53,3 @@
         var cs = DeviceRGB;
         var num = cs.getNumberOfComponents();
         print(num);  //3
-
-
-

@@ -1787,7 +1787,7 @@ if (after_context > 0 && lastmatchnumber > 0)
   int ellength = 0;
   while (lastmatchrestart < endptr && count < after_context)
     {
-    char *pp = end_of_line(lastmatchrestart, endptr, &ellength);
+    const char *pp = end_of_line(lastmatchrestart, endptr, &ellength);
     if (ellength == 0 && pp == main_buffer + bufsize) break;
     if (printname != NULL) fprintf(stdout, "%s%c", printname, printname_hyphen);
     if (number) fprintf(stdout, "%lu-", lastmatchnumber++);
@@ -3406,15 +3406,22 @@ if (isdirectory(pathname))
 #ifdef WIN32
 if (iswild(pathname))
   {
-  char buffer[1024];
+	char *path = strdup(pathname);
+#ifndef MAX
+#define MAX(a, b) ((a) > (b) ? (a) : (b))
+#endif
+  char buffer[MAX(MAX_PATH,1024)];
   const char *nextfile;
-  const char *name;
-  directory_type *dir = opendirectory(pathname);
+  char *name;
+  directory_type *dir = opendirectory(path);
 
   if (dir == NULL)
-    return 0;
+  {
+	  free(path);
+	  return 0;
+  }
 
-  for (nextfile = name = pathname; *nextfile != 0; nextfile++)
+  for (nextfile = name = path; *nextfile != 0; nextfile++)
     if (*nextfile == '/' || *nextfile == '\\')
       name = nextfile + 1;
   *name = 0;
@@ -3422,13 +3429,14 @@ if (iswild(pathname))
   while ((nextfile = readdirectory(dir)) != NULL)
     {
     int frc;
-    sprintf(buffer, "%.512s%.128s", pathname, nextfile);
+    snprintf(buffer, sizeof(buffer), "%.*s%.128s", MAX(MAX_PATH, 1024) - 128 - 2, path, nextfile);
     frc = grep_or_recurse(buffer, dir_recurse, FALSE);
     if (frc > 1) rc = frc;
      else if (frc == 0 && rc == 1) rc = 0;
     }
 
   closedirectory(dir);
+  free(path);
   return rc;
   }
 #endif

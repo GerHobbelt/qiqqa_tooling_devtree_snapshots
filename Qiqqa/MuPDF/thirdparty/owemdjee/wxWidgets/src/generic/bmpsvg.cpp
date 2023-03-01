@@ -49,12 +49,6 @@
     #pragma warning(push)
     #pragma warning(disable:4456)
     #pragma warning(disable:4702)
-
-    // Also make nanosvg.h compile with older MSVC versions which didn't have
-    // strtoll().
-    #if _MSC_VER < 1800
-        #define strtoll _strtoi64
-    #endif
 #endif
 
 #if !wxUSE_NANOSVG_EXTERNAL || defined(wxUSE_NANOSVG_EXTERNAL_ENABLE_IMPL)
@@ -144,9 +138,9 @@ public:
         nsvgDelete(m_svgImage);
     }
 
-    virtual wxSize GetDefaultSize() const wxOVERRIDE;
-    virtual wxSize GetPreferredBitmapSizeAtScale(double scale) const wxOVERRIDE;
-    virtual wxBitmap GetBitmap(const wxSize& size) wxOVERRIDE;
+    virtual wxSize GetDefaultSize() const override;
+    virtual wxSize GetPreferredBitmapSizeAtScale(double scale) const override;
+    virtual wxBitmap GetBitmap(const wxSize& size) override;
 
 private:
     wxBitmap DoRasterize(const wxSize& size);
@@ -335,7 +329,7 @@ wxBitmapBundleImplSVGD2D::wxBitmapBundleImplSVGD2D(const char* data, const wxSiz
 
 bool wxBitmapBundleImplSVGD2D::IsOk() const
 {
-    return m_SVGDocument.get() != NULL;
+    return m_SVGDocument.get() != nullptr;
 }
 
 bool wxBitmapBundleImplSVGD2D::CreateSVGDocument(const wxCOMPtr<IStream>& SVGStream)
@@ -418,7 +412,7 @@ bool wxBitmapBundleImplSVGD2D::GetSVGBitmapFromSharedBitmap(const wxSize& size, 
 
     UINT  stride     = 0;
     UINT  bufferSize = 0;
-    BYTE* buffer     = NULL;
+    BYTE* buffer     = nullptr;
 
     hr = lock->GetStride(&stride);
     if ( FAILED(hr) )
@@ -525,7 +519,7 @@ void wxBitmapBundleImplSVGD2D::Initialize()
     if ( !platformInfo.CheckOSVersion(10, 0, 16299) )
         return;
 
-    if ( wxWICImagingFactory() == NULL || wxD2D1Factory() == NULL )
+    if ( wxWICImagingFactory() == nullptr || wxD2D1Factory() == nullptr )
     {
         wxLogDebug("wxDirect2D surprisingly unavailable");
         return;
@@ -592,7 +586,7 @@ bool wxBitmapBundleImplSVGD2D::IsAvailable()
     if ( !IsInitialized() )
         Initialize();
 
-    return ms_context.get() != NULL;
+    return ms_context.get() != nullptr;
 }
 
 // static

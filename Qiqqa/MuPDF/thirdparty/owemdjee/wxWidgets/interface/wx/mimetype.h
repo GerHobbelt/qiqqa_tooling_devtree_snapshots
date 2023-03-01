@@ -40,7 +40,7 @@
     These functions are the heart of this class: they allow to find a file type
     object from either file extension or MIME type.
     If the function is successful, it returns a pointer to the wxFileType object
-    which must be deleted by the caller, otherwise @NULL will be returned.
+    which must be deleted by the caller, otherwise @nullptr will be returned.
 
     - wxMimeTypesManager::GetFileTypeFromMimeType()
     - wxMimeTypesManager::GetFileTypeFromExtension()
@@ -72,7 +72,7 @@ public:
 
     /**
         Gather information about the files with given extension and return the
-        corresponding wxFileType object or @NULL if the extension is unknown.
+        corresponding wxFileType object or @nullptr if the extension is unknown.
 
         The @a extension parameter may have, or not, the leading dot, if it has it,
         it is stripped automatically. It must not however be empty.
@@ -81,7 +81,7 @@ public:
 
     /**
         Gather information about the files with given MIME type and return the
-        corresponding wxFileType object or @NULL if the MIME type is unknown.
+        corresponding wxFileType object or @nullptr if the MIME type is unknown.
     */
     wxFileType* GetFileTypeFromMimeType(const wxString& mimeType);
 
@@ -433,18 +433,19 @@ public:
     /**
         Constructor allowing to specify all the fields at once.
 
-        This is a vararg constructor taking an arbitrary number of extensions
-        after the first four required parameters. The list must be terminated
-        by @c wxNullPtr, notice that @c NULL can't be used here in portable
-        code (C++0x @c nullptr can be used as well if your compiler supports
-        it).
+        This is a variadic constructor taking an arbitrary number of extensions
+        (which can be strings of any kind) after the four required parameters.
+
+        In wxWidgets versions before 3.3.0 the list of extensions had to be
+        terminated with @NULL, but this is not the case any more, trailing
+        @NULL is still allowed, but will be ignored.
      */
+    template <typename... Targs>
     wxFileTypeInfo(const wxString& mimeType,
                    const wxString& openCmd,
                    const wxString& printCmd,
                    const wxString& description,
-                   const wxString& extension,
-                   ...);
+                   Targs... extensions);
 
     /**
        Constructor using an array of string elements corresponding to the

@@ -390,7 +390,7 @@ wxDbgHelpDLL::DumpField(wxPSYMBOL_INFO pSym, void *pVariable, unsigned level)
         case SYMBOL_TAG_DATA:
             if ( !pVariable )
             {
-                s = wxT("NULL");
+                s = wxT("nullptr");
             }
             else // valid location
             {
@@ -475,86 +475,55 @@ wxDbgHelpDLL::DumpUDT(wxPSYMBOL_INFO pSym, void *pVariable, unsigned level)
     s.reserve(512);
     s = GetSymbolName(pSym);
 
-#if !wxUSE_STD_STRING
-    // special handling for ubiquitous wxString: although the code below works
-    // for it as well, it shows the wxStringBase class and takes 4 lines
-    // instead of only one as this branch
-    if ( s == wxT("wxString") )
+    // Determine how many children this type has.
+    DWORD dwChildrenCount = 0;
+    DoGetTypeInfo(pSym, TI_GET_CHILDRENCOUNT, &dwChildrenCount);
+
+    // Prepare to get an array of "TypeIds", representing each of the children.
+    TI_FINDCHILDREN_PARAMS *children = (TI_FINDCHILDREN_PARAMS *)
+        malloc(sizeof(TI_FINDCHILDREN_PARAMS) +
+                    (dwChildrenCount - 1)*sizeof(ULONG));
+    if ( !children )
+        return s;
+
+    children->Count = dwChildrenCount;
+    children->Start = 0;
+
+    // Get the array of TypeIds, one for each child type
+    if ( !DoGetTypeInfo(pSym, TI_FINDCHILDREN, children) )
     {
-        wxString *ps = (wxString *)pVariable;
-
-        // we can't just dump wxString directly as it could be corrupted or
-        // invalid and it could also be locked for writing (i.e. if we're
-        // between GetWriteBuf() and UngetWriteBuf() calls) and assert when we
-        // try to access it contents using public methods, so instead use our
-        // knowledge of its internals
-        const wxChar *p = NULL;
-        if ( !::IsBadReadPtr(ps, sizeof(wxString)) )
-        {
-            p = ps->data();
-            wxStringData *data = (wxStringData *)p - 1;
-            if ( ::IsBadReadPtr(data, sizeof(wxStringData)) ||
-                    ::IsBadReadPtr(p, sizeof(wxChar *)*data->nAllocLength) )
-            {
-                p = NULL; // don't touch this pointer with 10 feet pole
-            }
-        }
-
-        s << wxT("(\"") << (p ? p : wxT("???")) << wxT(")\"");
-    }
-    else // any other UDT
-#endif // !wxUSE_STD_STRING
-    {
-        // Determine how many children this type has.
-        DWORD dwChildrenCount = 0;
-        DoGetTypeInfo(pSym, TI_GET_CHILDRENCOUNT, &dwChildrenCount);
-
-        // Prepare to get an array of "TypeIds", representing each of the children.
-        TI_FINDCHILDREN_PARAMS *children = (TI_FINDCHILDREN_PARAMS *)
-            malloc(sizeof(TI_FINDCHILDREN_PARAMS) +
-                        (dwChildrenCount - 1)*sizeof(ULONG));
-        if ( !children )
-            return s;
-
-        children->Count = dwChildrenCount;
-        children->Start = 0;
-
-        // Get the array of TypeIds, one for each child type
-        if ( !DoGetTypeInfo(pSym, TI_FINDCHILDREN, children) )
-        {
-            free(children);
-            return s;
-        }
-
-        s << wxT(" {\n");
-
-        // Iterate through all children
-        wxSYMBOL_INFO sym;
-        wxZeroMemory(sym);
-        sym.ModBase = pSym->ModBase;
-        for ( unsigned i = 0; i < dwChildrenCount; i++ )
-        {
-            sym.TypeIndex = children->ChildId[i];
-
-            // children here are in lexicographic sense, i.e. we get all our nested
-            // classes and not only our member fields, but we can't get the values
-            // for the members of the nested classes, of course!
-            DWORD nested;
-            if ( DoGetTypeInfo(&sym, TI_GET_NESTED, &nested) && nested )
-                continue;
-
-            // avoid infinite recursion: this does seem to happen sometimes with
-            // complex typedefs...
-            if ( sym.TypeIndex == pSym->TypeIndex )
-                continue;
-
-            s += DumpField(&sym, pVariable, level + 1);
-        }
-
         free(children);
-
-        s << wxString(wxT('\t'), level + 1) << wxT('}');
+        return s;
     }
+
+    s << wxT(" {\n");
+
+    // Iterate through all children
+    wxSYMBOL_INFO sym;
+    wxZeroMemory(sym);
+    sym.ModBase = pSym->ModBase;
+    for ( unsigned i = 0; i < dwChildrenCount; i++ )
+    {
+        sym.TypeIndex = children->ChildId[i];
+
+        // children here are in lexicographic sense, i.e. we get all our nested
+        // classes and not only our member fields, but we can't get the values
+        // for the members of the nested classes, of course!
+        DWORD nested;
+        if ( DoGetTypeInfo(&sym, TI_GET_NESTED, &nested) && nested )
+            continue;
+
+        // avoid infinite recursion: this does seem to happen sometimes with
+        // complex typedefs...
+        if ( sym.TypeIndex == pSym->TypeIndex )
+            continue;
+
+        s += DumpField(&sym, pVariable, level + 1);
+    }
+
+    free(children);
+
+    s << wxString(wxT('\t'), level + 1) << wxT('}');
 
     return s;
 }
@@ -656,7 +625,7 @@ public:
     #define wxMODULE_NAMEA PCSTR
 #endif
 
-#if defined(UNICODE) && defined(wxHAS_NON_CONST_MODULE_NAME)
+#if defined(wxHAS_NON_CONST_MODULE_NAME)
 
 static BOOL CALLBACK
 wxEnumLoadedW64Callback(PWSTR ModuleName,
@@ -670,7 +639,7 @@ wxEnumLoadedW64Callback(PWSTR ModuleName,
     return (*bridge.m_callback)(ModuleName, ModuleBase, ModuleSize, bridge.m_data);
 }
 
-#endif // UNICODE && wxHAS_NON_CONST_MODULE_NAME
+#endif // wxHAS_NON_CONST_MODULE_NAME
 
 static BOOL CALLBACK
 wxEnumLoaded64Callback(wxMODULE_NAMEA ModuleName,
@@ -683,11 +652,7 @@ wxEnumLoaded64Callback(wxMODULE_NAMEA ModuleName,
 
     return (*bridge.m_callback)
            (
-#ifdef UNICODE
                 wxConvLocal.cMB2WC(ModuleName),
-#else // !UNICODE
-                ModuleName,
-#endif // UNICODE
                 ModuleBase, ModuleSize, bridge.m_data
            );
 }
@@ -703,11 +668,7 @@ wxEnumLoadedCallback(wxMODULE_NAMEA ModuleName,
 
     return (*bridge.m_callback)
            (
-#ifdef UNICODE
                 wxConvLocal.cMB2WC(ModuleName),
-#else // !UNICODE
-                ModuleName,
-#endif // UNICODE
                 ModuleBase, ModuleSize, bridge.m_data
            );
 }
@@ -718,7 +679,6 @@ wxDbgHelpDLL::CallEnumerateLoadedModules(HANDLE handle,
                                          wxPENUMLOADED_MODULES_CALLBACK callback,
                                          PVOID callbackParam)
 {
-#ifdef UNICODE
     if ( EnumerateLoadedModulesW64 )
     {
 #ifdef wxHAS_NON_CONST_MODULE_NAME
@@ -733,7 +693,6 @@ wxDbgHelpDLL::CallEnumerateLoadedModules(HANDLE handle,
             return TRUE;
 #endif // old/new SDK
     }
-#endif // UNICODE
 
     if ( EnumerateLoadedModules64 )
     {
@@ -762,17 +721,15 @@ wxDbgHelpDLL::CallEnumerateLoadedModules(HANDLE handle,
 BOOL
 wxDbgHelpDLL::CallSymInitialize(HANDLE hProcess, BOOL fInvadeProcess)
 {
-#ifdef UNICODE
     if ( SymInitializeW )
     {
-        if ( SymInitializeW(hProcess, NULL, fInvadeProcess) )
+        if ( SymInitializeW(hProcess, nullptr, fInvadeProcess) )
             return TRUE;
     }
-#endif // UNICODE
 
     if ( SymInitialize )
     {
-        if ( SymInitialize(hProcess, NULL, fInvadeProcess) )
+        if ( SymInitialize(hProcess, nullptr, fInvadeProcess) )
             return TRUE;
     }
 
@@ -788,7 +745,6 @@ wxDbgHelpDLL::CallSymFromAddr(HANDLE hProcess,
 {
     DWORD64 dwDisplacement;
 
-#ifdef UNICODE
     if ( SymFromAddrW )
     {
         VarSizedStruct<SYMBOL_INFOW> infoW;
@@ -799,7 +755,6 @@ wxDbgHelpDLL::CallSymFromAddr(HANDLE hProcess,
             return TRUE;
         }
     }
-#endif // UNICODE
 
     if ( SymFromAddr )
     {
@@ -824,7 +779,6 @@ wxDbgHelpDLL::CallSymGetLineFromAddr(HANDLE hProcess,
 {
     DWORD dwDisplacement;
 
-#ifdef UNICODE
     if ( SymGetLineFromAddrW64 )
     {
         SizedStruct<IMAGEHLP_LINEW64> lineW64;
@@ -835,7 +789,6 @@ wxDbgHelpDLL::CallSymGetLineFromAddr(HANDLE hProcess,
             return TRUE;
         }
     }
-#endif // UNICODE
 
     if ( SymGetLineFromAddr64 )
     {
@@ -861,8 +814,6 @@ wxDbgHelpDLL::CallSymGetLineFromAddr(HANDLE hProcess,
 
     return FALSE;
 }
-
-#ifdef UNICODE
 
 // Allow to adapt callback supposed to be used with SymEnumSymbolsW() with
 // SymEnumSymbols().
@@ -909,8 +860,6 @@ wxEnumSymbolsCallback(PSYMBOL_INFO pSymInfo, ULONG SymbolSize, PVOID UserContext
     return (*bridge.m_callback)(infoW, SymbolSize, bridge.m_data);
 }
 
-#endif // UNICODE
-
 /* static */
 BOOL
 wxDbgHelpDLL::CallSymEnumSymbols(HANDLE hProcess,
@@ -918,10 +867,9 @@ wxDbgHelpDLL::CallSymEnumSymbols(HANDLE hProcess,
                                  wxPSYM_ENUMERATESYMBOLS_CALLBACK callback,
                                  const PVOID callbackParam)
 {
-#ifdef UNICODE
     if ( SymEnumSymbolsW )
     {
-        if ( SymEnumSymbolsW(hProcess, baseOfDll, NULL, callback, callbackParam) )
+        if ( SymEnumSymbolsW(hProcess, baseOfDll, nullptr, callback, callbackParam) )
             return TRUE;
     }
 
@@ -929,16 +877,9 @@ wxDbgHelpDLL::CallSymEnumSymbols(HANDLE hProcess,
     {
         wxEnumSymbolsCallbackBridge br(callback, callbackParam);
 
-        if ( SymEnumSymbols(hProcess, baseOfDll, NULL, wxEnumSymbolsCallback, &br) )
+        if ( SymEnumSymbols(hProcess, baseOfDll, nullptr, wxEnumSymbolsCallback, &br) )
             return TRUE;
     }
-#else // !UNICODE
-    if ( SymEnumSymbols )
-    {
-        if ( SymEnumSymbols(hProcess, baseOfDll, NULL, callback, callbackParam) )
-            return TRUE;
-    }
-#endif // UNICODE/!UNICODE
 
     return FALSE;
 }

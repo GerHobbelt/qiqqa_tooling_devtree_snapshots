@@ -6,7 +6,7 @@
 /////////////////////////////////////////////////////////////////////////////
 
 
-#define wxNullProperty  ((wxPGProperty*)NULL)
+#define wxNullProperty  nullptr
 
 /** @class wxPGPaintData
 
@@ -585,7 +585,7 @@ wxPG_PROP_CLASS_SPECIFIC_3          = 0x00400000
     wxLongStringProperty and override DisplayEditorDialog, like this:
 
     @code
-        bool DisplayEditorDialog( wxPropertyGrid* propGrid, wxVariant& value ) wxOVERRIDE
+        bool DisplayEditorDialog( wxPropertyGrid* propGrid, wxVariant& value ) override
         {
             wxSize dialogSize(...size of your dialog...);
 
@@ -817,7 +817,7 @@ wxPG_PROP_CLASS_SPECIFIC_3          = 0x00400000
             // use wxPG_LABEL for label and name
             MyProperty( const wxString& label = wxPG_LABEL,
                         const wxString& name = wxPG_LABEL,
-                        const wxString& value = wxEmptyString )
+                        const wxString& value = wxString() )
                 : wxPGProperty(label, name)
             {
                 // m_value is wxVariant
@@ -920,7 +920,7 @@ public:
         Converts text into wxVariant value appropriate for this property.
 
         @param variant
-            On function entry this is the old value (should not be wxNullVariant
+            On function entry this is the old value (should not be null wxVariant
             in normal cases). Translated value must be assigned back to it.
 
         @param text
@@ -949,7 +949,7 @@ public:
         appropriate for this property.
 
         @param variant
-            On function entry this is the old value (should not be wxNullVariant
+            On function entry this is the old value (should not be null wxVariant
             in normal cases). Translated value must be assigned back to it.
         @param number
             Integer to be translated into variant.
@@ -1122,7 +1122,7 @@ public:
 
     /**
         Returns pointer to the wxValidator that should be used
-        with the editor of this property (@NULL for no validator).
+        with the editor of this property (@nullptr for no validator).
         Setting validator explicitly via SetPropertyValidator
         will override this.
 
@@ -1249,7 +1249,7 @@ public:
 
         Override if custom handling of attributes is needed.
 
-        Default implementation simply return @NULL variant.
+        Default implementation simply return @nullptr variant.
     */
     virtual wxVariant DoGetAttribute( const wxString& name ) const;
 
@@ -1257,7 +1257,7 @@ public:
         Returns instance of a new wxPGEditorDialogAdapter instance, which is
         used when user presses the (optional) button next to the editor control;
 
-        Default implementation returns @NULL (i.e. no action is generated when
+        Default implementation returns @nullptr (i.e. no action is generated when
         button is pressed).
     */
     virtual wxPGEditorDialogAdapter* GetEditorDialog() const;
@@ -1330,7 +1330,7 @@ public:
             Assumes members in this wxVariant list as pending
             replacement values.
     */
-    bool AreAllChildrenSpecified( const wxVariant* pendingList = NULL ) const;
+    bool AreAllChildrenSpecified( const wxVariant* pendingList = nullptr ) const;
 
     /**
         Returns @true if children of this property are component values (for instance,
@@ -1445,7 +1445,7 @@ public:
     wxVariant GetAttributesAsList() const;
 
     /**
-        Returns editor used for given column. @NULL for no editor.
+        Returns editor used for given column. @nullptr for no editor.
     */
     const wxPGEditor* GetColumnEditor( int column ) const;
 
@@ -1600,7 +1600,7 @@ public:
     wxPGProperty* GetParent() const;
 
     /**
-        Returns (direct) child property with given name (or @NULL if not found).
+        Returns (direct) child property with given name (or @nullptr if not found).
 
         @param name
             Name of the child property to look for.
@@ -1616,7 +1616,7 @@ public:
     wxVariant GetValue() const;
 
     /**
-        Returns bitmap that appears next to value text. Only returns non-@NULL
+        Returns bitmap that appears next to value text. Only returns non-null
         bitmap if one was set with SetValueImage().
     */
     wxBitmap* GetValueImage() const;
@@ -2032,12 +2032,12 @@ public:
             The value to set.
         @param pList
             Pointer to list variant that contains child values. Used to indicate
-            which children should be marked as modified. Usually you just use @NULL.
+            which children should be marked as modified. Usually you just use @nullptr.
         @param flags
             ::wxPG_SETVAL_REFRESH_EDITOR is set by default, to refresh editor
             and redraw properties.
     */
-    void SetValue( wxVariant value, wxVariant* pList = NULL,
+    void SetValue( wxVariant value, wxVariant* pList = nullptr,
                    int flags = wxPG_SETVAL_REFRESH_EDITOR );
 
     /**
@@ -2176,7 +2176,7 @@ protected:
     */
     void EnsureCells( unsigned int column );
 
-    /** Returns (direct) child property with given name (or @NULL if not found),
+    /** Returns (direct) child property with given name (or @nullptr if not found),
         with hint index.
 
         @param name
@@ -2304,7 +2304,7 @@ public:
     /** Returns size of the image in front of the editable area.
 
         @remarks
-        If property is @NULL, then this call is for a custom value. In that case
+        If property is @nullptr, then this call is for a custom value. In that case
         the item is index to wxPropertyGrid's custom values.
     */
     virtual wxSize GetImageSize( const wxPGProperty* property,
@@ -2325,7 +2325,7 @@ public:
 
     /**
         Utility to draw editor's value, or vertically aligned text if editor is
-        @NULL.
+        @nullptr.
     */
     void DrawEditorValue( wxDC& dc, const wxRect& rect,
                           int xOffset, const wxString& text,
@@ -2611,7 +2611,7 @@ protected:
     virtual ~wxPGChoicesData();
 };
 
-#define wxPGChoicesEmptyData    ((wxPGChoicesData*)NULL)
+#define wxPGChoicesEmptyData nullptr
 
 
 
@@ -2657,12 +2657,12 @@ public:
         @param labels
             Labels for choices.
         @param values
-            Values for choices. If @NULL, indexes are used. Otherwise must have
+            Values for choices. If @nullptr, indexes are used. Otherwise must have
             at least @a count elements.
 
         @since 3.1.2
      */
-    wxPGChoices(size_t count, const wxString* labels, const long* values = NULL);
+    wxPGChoices(size_t count, const wxString* labels, const long* values = nullptr);
 
     /**
         Constructor overload taking wxChar strings.
@@ -2671,13 +2671,13 @@ public:
         one of the other constructor overloads in the new code.
 
         @param labels
-            Labels for choices, @NULL-terminated.
+            Labels for choices, @nullptr-terminated.
 
         @param values
-            Values for choices. If @NULL, indexes are used. Otherwise must have
+            Values for choices. If @nullptr, indexes are used. Otherwise must have
             at least the same size as @a labels.
     */
-    wxPGChoices( const wxChar** labels, const long* values = NULL );
+    wxPGChoices( const wxChar** labels, const long* values = nullptr );
 
     /**
         Constructor.
@@ -2710,12 +2710,12 @@ public:
         @param labels
             Labels for choices.
         @param values
-            Values for choices. If @NULL, indexes are used. Otherwise must have
+            Values for choices. If @nullptr, indexes are used. Otherwise must have
             at least @a count elements.
 
         @since 3.1.2
      */
-    void Add(size_t count, const wxString* labels, const long* values = NULL);
+    void Add(size_t count, const wxString* labels, const long* values = nullptr);
 
     /**
         Adds to current.
@@ -2724,13 +2724,13 @@ public:
         of the other ones in the new code.
 
         @param labels
-            Labels for added choices, @NULL-terminated.
+            Labels for added choices, @nullptr-terminated.
 
         @param values
             Values for added choices. If empty, relevant entry indexes are
             used. Otherwise must have at least the same size as @a labels.
     */
-    void Add( const wxChar** labels, const long* values = NULL );
+    void Add( const wxChar** labels, const long* values = nullptr );
 
     /**
         @overload
@@ -2815,10 +2815,10 @@ public:
 
     /**
         Returns array of indices matching given strings. Unmatching strings
-        are added to 'unmatched', if not @NULL.
+        are added to 'unmatched', if not @nullptr.
     */
     wxArrayInt GetIndicesForStrings( const wxArrayString& strings,
-                                     wxArrayString* unmatched = NULL ) const;
+                                     wxArrayString* unmatched = nullptr ) const;
 
     /**
         Returns index of item with given label.
@@ -2866,12 +2866,12 @@ public:
 
         This is similar to calling Clear() and the corresponding overload of Add().
     */
-    void Set(size_t count, const wxString* labels, const long* values = NULL);
+    void Set(size_t count, const wxString* labels, const long* values = nullptr);
 
     /**
         @overload
      */
-    void Set( const wxChar** labels, const long* values = NULL );
+    void Set( const wxChar** labels, const long* values = nullptr );
 
     /**
         @overload

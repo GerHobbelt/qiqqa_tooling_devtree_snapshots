@@ -23,7 +23,6 @@
 #include "lib/extras/dec/jxl.h"
 #include "lib/extras/enc/jxl.h"
 #include "lib/extras/packed_image_convert.h"
-#include "lib/jxl/aux_out_fwd.h"
 #include "lib/jxl/base/data_parallel.h"
 #include "lib/jxl/base/printf_macros.h"
 #include "lib/jxl/base/random.h"
@@ -77,6 +76,9 @@ MATCHER_P(IsSlightlyBelow, max, "") {
 }
 
 namespace jxl {
+
+struct AuxOut;
+
 namespace test {
 
 void JxlBasicInfoSetFromPixelFormat(JxlBasicInfo* basic_info,
@@ -598,7 +600,9 @@ float ButteraugliDistance(const extras::PackedPixelFile& a,
   EXPECT_TRUE(ConvertPackedPixelFileToCodecInOut(a, pool, &io0));
   CodecInOut io1;
   EXPECT_TRUE(ConvertPackedPixelFileToCodecInOut(b, pool, &io1));
-  return ButteraugliDistance(io0, io1, ButteraugliParams(), GetJxlCms(),
+  // TODO(eustas): simplify?
+  return ButteraugliDistance(io0.frames, io1.frames, ButteraugliParams(),
+                             GetJxlCms(),
                              /*distmap=*/nullptr, pool);
 }
 

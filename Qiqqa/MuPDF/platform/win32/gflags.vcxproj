@@ -125,7 +125,7 @@
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
       <AdditionalIncludeDirectories>.;../../scripts/libgflags/include;../../scripts/libgflags/include/gflags;../../thirdparty/owemdjee/gflags/src;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/monolithic_tmplt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_GFLAGS;GFLAGS_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_GFLAGS;GFLAGS_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
@@ -160,7 +160,7 @@
     <ClCompile>
       <Optimization>Custom</Optimization>
       <AdditionalIncludeDirectories>.;../../scripts/libgflags/include;../../scripts/libgflags/include/gflags;../../thirdparty/owemdjee/gflags/src;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/monolithic_tmplt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_GFLAGS;GFLAGS_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_GFLAGS;GFLAGS_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
@@ -198,7 +198,7 @@
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
       <AdditionalIncludeDirectories>.;../../scripts/libgflags/include;../../scripts/libgflags/include/gflags;../../thirdparty/owemdjee/gflags/src;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/monolithic_tmplt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_GFLAGS;GFLAGS_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_GFLAGS;GFLAGS_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
@@ -233,7 +233,7 @@
     <ClCompile>
       <Optimization>Custom</Optimization>
       <AdditionalIncludeDirectories>.;../../scripts/libgflags/include;../../scripts/libgflags/include/gflags;../../thirdparty/owemdjee/gflags/src;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/monolithic_tmplt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_GFLAGS;GFLAGS_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_GFLAGS;GFLAGS_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
@@ -296,8 +296,10 @@
     <Text Include="../../thirdparty/owemdjee/gflags/cmake/README_runtime.txt" />
     <Text Include="../../thirdparty/owemdjee/gflags/cmake/cmake_uninstall.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/gflags/cmake/config.cmake.in" />
+    <Text Include="../../thirdparty/owemdjee/gflags/cmake/execute_test.cmake" />
     <Text Include="../../thirdparty/owemdjee/gflags/cmake/package.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/gflags/cmake/package.pc.in" />
+    <Text Include="../../thirdparty/owemdjee/gflags/cmake/utils.cmake" />
     <Text Include="../../thirdparty/owemdjee/gflags/cmake/version.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/gflags/doc/README.md" />
     <Text Include="../../thirdparty/owemdjee/gflags/src/defines.h.in" />
@@ -309,6 +311,7 @@
     <Text Include="../../thirdparty/owemdjee/gflags/test/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/gflags/test/config/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/gflags/test/gflags_build.py.in" />
+    <Text Include="../../thirdparty/owemdjee/gflags/test/gflags_strip_flags_test.cmake" />
     <Text Include="../../thirdparty/owemdjee/gflags/test/nc/CMakeLists.txt" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >

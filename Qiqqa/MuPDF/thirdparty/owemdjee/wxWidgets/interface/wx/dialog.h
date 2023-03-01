@@ -114,7 +114,7 @@ enum wxDialogLayoutAdaptationMode
            This style is obsolete and doesn't do anything any more, don't use
            it in any new code.
     @style{wxDIALOG_NO_PARENT}
-           By default, a dialog created with a @NULL parent window will be
+           By default, a dialog created with a @nullptr parent window will be
            given the @ref wxApp::GetTopWindow() "application's top level window"
            as parent. Use this style to prevent this from happening and create
            an orphan dialog. This is not recommended for modal dialogs.
@@ -130,9 +130,8 @@ enum wxDialogLayoutAdaptationMode
            look. This is an extra style.
     @endStyleTable
 
-    Under Unix or Linux, MWM (the Motif Window Manager) or other window
-    managers recognizing the MHM hints should be running for any of these
-    styles to have an effect.
+    Under Unix a window manager recognizing the WM hints should be running for
+    any of these styles to have an effect.
 
 
     @beginEventEmissionTable{wxCloseEvent}
@@ -161,7 +160,7 @@ public:
         Constructor.
 
         @param parent
-            Can be @NULL, a frame or another dialog box.
+            Can be @nullptr, a frame or another dialog box.
         @param id
             An identifier for the dialog. A value of -1 is taken to mean a
             default.
@@ -178,8 +177,8 @@ public:
         @param style
             The window style.
         @param name
-            Used to associate a name with the window, allowing the application
-            user to set Motif resource values for individual dialog boxes.
+            Used to associate a name with the window. This is @a not the same
+            as the title of the window.
 
         @see Create()
     */
@@ -244,7 +243,7 @@ public:
         This function uses CreateStdDialogButtonSizer() internally for most
         platforms but doesn't create the sizer at all for the platforms with
         hardware buttons (such as smartphones) for which it sets up the
-        hardware buttons appropriately and returns @NULL, so don't forget to
+        hardware buttons appropriately and returns @nullptr, so don't forget to
         test that the return value is valid before using it.
     */
     wxSizer* CreateButtonSizer(long flags);
@@ -254,7 +253,7 @@ public:
         separated from the rest of the dialog contents by a horizontal
         wxStaticLine.
 
-        @note Just like CreateButtonSizer(), this function may return @NULL if
+        @note Just like CreateButtonSizer(), this function may return @nullptr if
               no buttons were created.
 
         This is a combination of CreateButtonSizer() and
@@ -274,7 +273,7 @@ public:
 
         @since 2.9.2
 
-        @param sizer The sizer to wrap, must be non-@NULL.
+        @param sizer The sizer to wrap, must be non-null.
         @return The sizer wrapping the input one or possibly the input sizer
             itself if no wrapping is necessary.
      */
@@ -427,11 +426,8 @@ public:
             If @true, iconizes the dialog box; if @false, shows and restores it.
 
         @remarks Note that in Windows, iconization has no effect since dialog
-                 boxes cannot be iconized. However, applications may need to
-                 explicitly restore dialog boxes under Motif which have
-                 user-iconizable frames, and under Windows calling
-                 Iconize(@false) will bring the window to the front, as does
-                 Show(@true).
+                 boxes cannot be iconized. However calling Iconize(@false) will
+                 bring the window to the front, as does Show(@true).
     */
     virtual void Iconize(bool iconize = true);
 
@@ -634,7 +630,7 @@ public:
         passed as the argument upon completion, instead of generating the
         wxEVT_WINDOW_MODAL_DIALOG_CLOSED event.
 
-        This form is particularly useful in combination with C++11 lambdas,
+        This form is particularly useful in combination with lambdas,
         when it allows writing window-modal very similarly to how ShowModal()
         is used (with the notable exception of not being able to create
         the dialog on stack):

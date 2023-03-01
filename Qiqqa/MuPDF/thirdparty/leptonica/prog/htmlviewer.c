@@ -55,6 +55,9 @@
 
 #ifdef _WIN32
 #include <windows.h>   /* for CreateDirectory() */
+
+#include "monolithic_examples.h"
+
 #endif
 
 static const l_int32  DEFAULT_THUMB_WIDTH = 120;
@@ -68,10 +71,15 @@ static l_int32 pixHtmlViewer(const char *dirin, const char *dirout,
 static void WriteFormattedPix(const char *fname, PIX *pix);
 
 
+
+#if defined(BUILD_MONOLITHIC)
+#define main   lept_htmlviewer_main
+#endif
+
 int main(int    argc,
-         char **argv)
+         const char **argv)
 {
-char    *dirin, *dirout, *rootname;
+const char    *dirin, *dirout, *rootname;
 l_int32  thumbwidth, viewwidth;
 
     if (argc != 6)
@@ -161,7 +169,7 @@ SARRAY    *safiles, *sathumbs, *saviews, *sahtml, *salink;
     snprintf(buf, sizeof(buf), "mkdir -p %s", dirout);
     ret = system(buf);
 #else
-    ret = CreateDirectory(dirout, NULL) ? 0 : 1;
+    ret = CreateDirectoryA(dirout, NULL) ? 0 : 1;
 #endif  /* !_WIN32 */
     if (ret) {
         L_ERROR("output directory %s not made\n", __func__, dirout);

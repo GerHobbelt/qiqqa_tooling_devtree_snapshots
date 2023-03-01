@@ -461,6 +461,8 @@
     <Text Include="../../thirdparty/owemdjee/libwebp/autogen.sh" />
     <Text Include="../../thirdparty/owemdjee/libwebp/cmake/WebPConfig.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/libwebp/cmake/config.h.in" />
+    <Text Include="../../thirdparty/owemdjee/libwebp/cmake/cpu.cmake" />
+    <Text Include="../../thirdparty/owemdjee/libwebp/cmake/deps.cmake" />
     <Text Include="../../thirdparty/owemdjee/libwebp/configure.ac" />
     <Text Include="../../thirdparty/owemdjee/libwebp/doc/TODO" />
     <Text Include="../../thirdparty/owemdjee/libwebp/doc/api.md" />
@@ -493,9 +495,6 @@
     <Text Include="../../thirdparty/owemdjee/libwebp/src/mux/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libwebp/src/mux/libwebpmux.pc.in" />
     <Text Include="../../thirdparty/owemdjee/libwebp/src/utils/Makefile.am" />
-    <Text Include="../../thirdparty/owemdjee/libwebp/swig/README.md" />
-    <Text Include="../../thirdparty/owemdjee/libwebp/swig/libwebp.py" />
-    <Text Include="../../thirdparty/owemdjee/libwebp/swig/setup.py" />
     <Text Include="../../thirdparty/owemdjee/libwebp/tests/README.md" />
     <Text Include="../../thirdparty/owemdjee/libwebp/webp_js/README.md" />
     <Text Include="../../thirdparty/owemdjee/libwebp/xcframeworkbuild.sh" />

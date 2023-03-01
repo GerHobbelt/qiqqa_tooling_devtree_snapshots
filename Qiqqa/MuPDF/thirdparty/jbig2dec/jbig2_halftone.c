@@ -49,7 +49,7 @@
 static Jbig2PatternDict *
 jbig2_hd_new(Jbig2Ctx *ctx, const Jbig2PatternDictParams *params, Jbig2Image *image)
 {
-    Jbig2PatternDict *new;
+    Jbig2PatternDict *newp;
     const uint32_t N = params->GRAYMAX + 1;
     const uint32_t HPW = params->HDPW;
     const uint32_t HPH = params->HDPH;
@@ -63,45 +63,45 @@ jbig2_hd_new(Jbig2Ctx *ctx, const Jbig2PatternDictParams *params, Jbig2Image *im
     }
 
     /* allocate a new struct */
-    new = jbig2_new(ctx, Jbig2PatternDict, 1);
-    if (new != NULL) {
-        new->patterns = jbig2_new(ctx, Jbig2Image *, N);
-        if (new->patterns == NULL) {
+    newp = jbig2_new(ctx, Jbig2PatternDict, 1);
+    if (newp != NULL) {
+        newp->patterns = jbig2_new(ctx, Jbig2Image *, N);
+        if (newp->patterns == NULL) {
             jbig2_error(ctx, JBIG2_SEVERITY_FATAL, JBIG2_UNKNOWN_SEGMENT_NUMBER, "failed to allocate pattern in collective bitmap dictionary");
-            jbig2_free(ctx->allocator, new);
+            jbig2_free(ctx->allocator, newp);
             return NULL;
         }
-        new->n_patterns = N;
-        new->HPW = HPW;
-        new->HPH = HPH;
+        newp->n_patterns = N;
+        newp->HPW = HPW;
+        newp->HPH = HPH;
 
         /* 6.7.5(4) - copy out the individual pattern images */
         for (i = 0; i < N; i++) {
-            new->patterns[i] = jbig2_image_new(ctx, HPW, HPH);
-            if (new->patterns[i] == NULL) {
+            newp->patterns[i] = jbig2_image_new(ctx, HPW, HPH);
+            if (newp->patterns[i] == NULL) {
                 jbig2_error(ctx, JBIG2_SEVERITY_WARNING, JBIG2_UNKNOWN_SEGMENT_NUMBER, "failed to allocate pattern element image");
-                /* new->patterns[i] above did not succeed, so releasing patterns 0..i-1 is enough */
+                /* newp->patterns[i] above did not succeed, so releasing patterns 0..i-1 is enough */
                 for (j = 0; j < i; j++)
                 {
-                    VERIFY_AND_CONTINUE_EQ(jbig2_image_release(ctx, new->patterns[j]), 1);
+                    VERIFY_AND_CONTINUE_EQ(jbig2_image_release(ctx, newp->patterns[j]), 1);
                 }
-                jbig2_free(ctx->allocator, new->patterns);
-                jbig2_free(ctx->allocator, new);
+                jbig2_free(ctx->allocator, newp->patterns);
+                jbig2_free(ctx->allocator, newp);
                 return NULL;
             }
             /* compose with the REPLACE operator; the source
                will be clipped to the destination, selecting the
                proper sub image */
-            code = jbig2_image_compose(ctx, new->patterns[i], image, (- (int32_t)i) * (int32_t) HPW, 0, JBIG2_COMPOSE_REPLACE);
+            code = jbig2_image_compose(ctx, newp->patterns[i], image, (- (int32_t)i) * (int32_t) HPW, 0, JBIG2_COMPOSE_REPLACE);
             if (code < 0) {
                 jbig2_error(ctx, JBIG2_SEVERITY_WARNING, JBIG2_UNKNOWN_SEGMENT_NUMBER, "failed to compose image into collective bitmap dictionary");
-                /* new->patterns[i] above succeeded, so release all patterns 0..i */
+                /* newp->patterns[i] above succeeded, so release all patterns 0..i */
                 for (j = 0; j <= i; j++)
                 {
-                    VERIFY_AND_CONTINUE_EQ(jbig2_image_release(ctx, new->patterns[j]), 1);
+                    VERIFY_AND_CONTINUE_EQ(jbig2_image_release(ctx, newp->patterns[j]), 1);
                 }
-                jbig2_free(ctx->allocator, new->patterns);
-                jbig2_free(ctx->allocator, new);
+                jbig2_free(ctx->allocator, newp->patterns);
+                jbig2_free(ctx->allocator, newp);
                 return NULL;
             }
         }
@@ -109,7 +109,7 @@ jbig2_hd_new(Jbig2Ctx *ctx, const Jbig2PatternDictParams *params, Jbig2Image *im
         jbig2_error(ctx, JBIG2_SEVERITY_FATAL, JBIG2_UNKNOWN_SEGMENT_NUMBER, "failed to allocate collective bitmap dictionary");
     }
 
-    return new;
+    return newp;
 }
 
 /**

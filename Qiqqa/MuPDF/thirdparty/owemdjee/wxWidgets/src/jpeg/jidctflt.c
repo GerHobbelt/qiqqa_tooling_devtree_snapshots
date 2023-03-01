@@ -5,7 +5,7 @@
  * Copyright (C) 1994-1998, Thomas G. Lane.
  * Modified 2010 by Guido Vollbeding.
  * libjpeg-turbo Modifications:
- * Copyright (C) 2014, D. R. Commander.
+ * Copyright (C) 2014, 2022, D. R. Commander.
  * For conditions of distribution and use, see the accompanying README.ijg
  * file.
  *
@@ -40,6 +40,7 @@
  * we use floating point arithmetic.
  */
 
+#define JPEG_INTERNAL_OPTIONS
 #define JPEG_INTERNALS
 #include "jinclude.h"
 #include "jpeglib.h"
@@ -69,9 +70,9 @@
  */
 
 GLOBAL(void)
-jpeg_idct_float(j_decompress_ptr cinfo, jpeg_component_info *compptr,
-                JCOEFPTR coef_block, JSAMPARRAY output_buf,
-                JDIMENSION output_col)
+_jpeg_idct_float(j_decompress_ptr cinfo, jpeg_component_info *compptr,
+                 JCOEFPTR coef_block, _JSAMPARRAY output_buf,
+                 JDIMENSION output_col)
 {
   FAST_FLOAT tmp0, tmp1, tmp2, tmp3, tmp4, tmp5, tmp6, tmp7;
   FAST_FLOAT tmp10, tmp11, tmp12, tmp13;
@@ -79,8 +80,8 @@ jpeg_idct_float(j_decompress_ptr cinfo, jpeg_component_info *compptr,
   JCOEFPTR inptr;
   FLOAT_MULT_TYPE *quantptr;
   FAST_FLOAT *wsptr;
-  JSAMPROW outptr;
-  JSAMPLE *range_limit = cinfo->sample_range_limit;
+  _JSAMPROW outptr;
+  _JSAMPLE *range_limit = (_JSAMPLE *)cinfo->sample_range_limit;
   int ctr;
   FAST_FLOAT workspace[DCTSIZE2]; /* buffers data between passes */
 #define _0_125  ((FLOAT_MULT_TYPE)0.125)
@@ -192,7 +193,7 @@ jpeg_idct_float(j_decompress_ptr cinfo, jpeg_component_info *compptr,
     /* Even part */
 
     /* Apply signed->unsigned and prepare float->int conversion */
-    z5 = wsptr[0] + ((FAST_FLOAT)CENTERJSAMPLE + (FAST_FLOAT)0.5);
+    z5 = wsptr[0] + ((FAST_FLOAT)_CENTERJSAMPLE + (FAST_FLOAT)0.5);
     tmp10 = z5 + wsptr[4];
     tmp11 = z5 - wsptr[4];
 

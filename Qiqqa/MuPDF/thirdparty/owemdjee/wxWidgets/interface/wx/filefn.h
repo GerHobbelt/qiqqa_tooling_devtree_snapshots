@@ -193,19 +193,19 @@ bool wxDirExists(const wxString& dirname);
     This function splits a full file name into components: the path (including
     possible disk/drive specification under Windows), the base name, and the
     extension. Any of the output parameters (@a path, @a name or @a ext) may be
-    @NULL if you are not interested in the value of a particular component.
+    @nullptr if you are not interested in the value of a particular component.
 
     wxSplitPath() will correctly handle filenames with both DOS and Unix path
     separators under Windows, however it will not consider backslashes as path
     separators under Unix (where backslash is a valid character in a filename).
 
-    On entry, @a fullname should be non-@NULL (it may be empty though).
+    On entry, @a fullname should be non-null (it may be empty though).
 
     On return, @a path contains the file path (without the trailing separator),
     @a name contains the file name and @c ext contains the file extension
     without leading dot. All three of them may be empty if the corresponding
     component is. The old contents of the strings pointed to by these
-    parameters will be overwritten in any case (if the pointers are not @NULL).
+    parameters will be overwritten in any case (if the pointers are not @nullptr).
 
     @header{wx/filefn.h}
 */
@@ -279,13 +279,13 @@ bool wxMatchWild(const wxString& pattern,
 
     Copies the current working directory into the buffer if supplied, or copies
     the working directory into new storage (which you must delete yourself) if
-    the buffer is @NULL.
+    the buffer is @nullptr.
 
     @a sz is the size of the buffer if supplied.
 
     @header{wx/filefn.h}
 */
-wxString wxGetWorkingDirectory(char* buf = NULL, int sz = 1000);
+wxString wxGetWorkingDirectory(char* buf = nullptr, int sz = 1000);
 
 /**
     Returns the directory part of the filename.
@@ -527,7 +527,7 @@ char* wxFileNameFromPath(char* path);
 
     @header{wx/filefn.h}
 */
-char* wxGetTempFileName(const wxString& prefix, char* buf = NULL);
+char* wxGetTempFileName(const wxString& prefix, char* buf = nullptr);
 bool wxGetTempFileName(const wxString& prefix, wxString& buf);
 ///@}
 

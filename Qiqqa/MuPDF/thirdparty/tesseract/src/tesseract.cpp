@@ -159,7 +159,7 @@ static void PrintVersionInfo() {
     tprintf(" Found AVX512F\n");
   }
   if (tesseract::SIMDDetect::IsAVX512VNNIAvailable()) {
-    printf(" Found AVX512VNNI\n");
+    tprintf(" Found AVX512VNNI\n");
   }
   if (tesseract::SIMDDetect::IsAVX2Available()) {
     tprintf(" Found AVX2\n");
@@ -251,13 +251,16 @@ static void PrintHelpExtra(const char *program) {
       "--help-oem | "
 #endif
       "--version\n"
-      "  {} --list-langs [--tessdata-dir PATH]\n"
+      "  {} --list-langs [--tessdata-dir <path>]\n"
 #if !DISABLED_LEGACY_ENGINE
-      "  {} --print-fonts-table [options...] [configfile...]\n"
+      "  {} --print-fonts-table [options...] [<configfile>...]\n"
 #endif  // !DISABLED_LEGACY_ENGINE
-      "  {} --print-parameters [options...] [configfile...]\n"
-      "  {} imagename|imagelist|stdin outputbase|stdout [options...] "
-      "[configfile...]\n"
+      "  {} --print-parameters [options...] [<configfile>...]\n"
+      "  {} info [<trainingfile>...]\n"
+      "  {} unpack [<file>...]\n"
+      "  {} version\n"
+      "  {} <imagename>|<imagelist>|stdin <outputbase>|stdout [options...] "
+      "[<configfile>...]\n"
       "\n"
       "OCR options:\n"
       "  --tessdata-dir PATH   Specify the location of tessdata path.\n"
@@ -281,8 +284,8 @@ static void PrintHelpExtra(const char *program) {
       "                        (page rendered then as image + OCR text hidden overlay)\n"
       "\n"
       "NOTE: These options must occur before any configfile.\n"
-      "\n",
-      program, program, program, program
+      "",
+      program, program, program, program, program, program, program
 #if !DISABLED_LEGACY_ENGINE
       , program
 #endif  // !DISABLED_LEGACY_ENGINE
@@ -296,7 +299,20 @@ static void PrintHelpExtra(const char *program) {
 
   tprintf(
       "\n"
-      "Single options:\n"
+      "Commands:\n"
+      "\n"
+      "  {} info [<trainingfile>...]\n"
+      "                        Prints info about the trainingfile(s), whether they are\n"
+      "                        LSTM (tesseract v4/v5) or Legacy (teesseract v3)\n"
+      "\n"
+      "  {} unpack [<file>...]\n"
+      "                        Unpack training archives into transcription text files\n"
+      "                        and image scans (pictures)\n"
+      "\n"
+      "  {} version\n"
+      "                        Alias for '--version'.\n"
+      "\n"
+      "Stand-alonee {} options:\n"
       "  -h, --help            Show minimal help message.\n"
       "  --help-extra          Show extra help for advanced users.\n"
       "  --help-psm            Show page segmentation modes.\n"
@@ -308,7 +324,16 @@ static void PrintHelpExtra(const char *program) {
 #if !DISABLED_LEGACY_ENGINE
       "  --print-fonts-table   Print tesseract fonts table.\n"
 #endif  // !DISABLED_LEGACY_ENGINE
-      "  --print-parameters    Print tesseract parameters.\n");
+      "  --print-parameters    Print tesseract parameters.\n"
+      "\n"
+      "You may also use the 'help' command as an alias for '--help' like this:\n"
+      "  {} help\n"
+      "or"
+      "  {} help <section>\n"
+      "where section is one of:\n"
+      "  extra, oem, psm\n"
+      "",
+      program, program, program, program, program, program);
 }
 
 static void PrintHelpMessage(const char *program) {
@@ -316,20 +341,22 @@ static void PrintHelpMessage(const char *program) {
   tprintf(
       "Usage:\n"
       "  {} --help | --help-extra | --version\n"
+      "  {} help [section]\n"
       "  {} --list-langs\n"
-      "  {} imagename outputbase [options...] [configfile...]\n"
+      "  {} --print-parameters\n"
+      "  {} <imagename> <outputbase> [options...] [<configfile>...]\n"
       "\n"
       "OCR options:\n"
       "  -l LANG[+LANG]        Specify language(s) used for OCR.\n"
       "NOTE: These options must occur before any configfile.\n"
       "\n"
-      "Single options:\n"
+      "Stand-alone {} options:\n"
       "  --help                Show this help message.\n"
       "  --help-extra          Show extra help for advanced users.\n"
       "  --version             Show version information.\n"
-      "  --list-langs          List available languages for tesseract "
-      "engine.\n",
-      program, program, program);
+      "  --list-langs          List available languages for tesseract engine.\n"
+      "  --print-parameters    Print tesseract parameters.\n",
+      program, program, program, program, program, program);
 }
 
 static bool SetVariablesFromCLArgs(tesseract::TessBaseAPI &api, int argc, const char** argv) {
@@ -556,7 +583,11 @@ static bool ParseArgs(int argc, const char** argv, const char **lang, const char
       ++i;
     } else if (strcmp(argv[i], "--loglevel") == 0 && i + 1 < argc) {
       // Allow the log levels which are used by log4cxx.
-      const std::string loglevel_string = argv[++i];
+      std::string loglevel_string = argv[++i];
+      std::transform(loglevel_string.cbegin(), loglevel_string.cend(),
+                   loglevel_string.begin(), // write to the same location
+                   [](unsigned char c) { return std::toupper(c); });
+
       static const std::map<const std::string, int> loglevels {
         {"ALL", INT_MIN},
         {"TRACE", 5000},
@@ -569,11 +600,11 @@ static bool ParseArgs(int argc, const char** argv, const char **lang, const char
       };
       try {
         auto loglevel = loglevels.at(loglevel_string);
-		FLAGS_tlog_level = loglevel;
+        FLAGS_tlog_level = loglevel;
       } catch (const std::out_of_range &e) {
-		(void)e;		// unused variable
+		    (void)e;		// unused variable
         // TODO: Allow numeric argument?
-        tprintf("Error, unsupported --loglevel {}\n", loglevel_string);
+        tprintf("ERROR: Unsupported --loglevel {}\n", loglevel_string);
         return false;
       }
     } else if (strcmp(argv[i], "--user-words") == 0 && i + 1 < argc) {
@@ -639,7 +670,7 @@ static bool ParseArgs(int argc, const char** argv, const char **lang, const char
     if (*lang != nullptr && strcmp(*lang, "osd")) {
       // If the user explicitly specifies a language (other than osd)
       // or a script, only orientation can be detected.
-      tprintf("WARNING: detects only orientation with -l {}\n", *lang);
+      tprintf("WARNING: Detects only orientation with -l {}\n", *lang);
     } else {
       // That mode requires osd.traineddata to detect orientation and script.
       *lang = "osd";
@@ -694,7 +725,7 @@ static void PreloadRenderers(tesseract::TessBaseAPI &api,
       if (renderer->happy()) {
         renderers.push_back(std::move(renderer));
       } else {
-        tprintf("Error, could not create PAGE output file: {}\n", strerror(errno));
+        tprintf("ERROR: Could not create ALTO output file: {}\n", strerror(errno));
         error = true;
       }
     }
@@ -881,6 +912,7 @@ extern "C" int tesseract_main(int argc, const char** argv)
   // first TessBaseAPI must be destructed, DawgCache must be the last object.
   tesseract::Dict::GlobalDawgCache();
 
+  {
   TessBaseAPI api;
 
   api.SetOutputName(outputbase);
@@ -922,6 +954,11 @@ extern "C" int tesseract_main(int argc, const char** argv)
   }
 #endif  // !DISABLED_LEGACY_ENGINE
 
+  // record the currently active input image path as soon as possible:
+  // this path is also used to construct the destination path for 
+  // various debug output files.
+  api.SetInputName(image);
+
   FixPageSegMode(api, pagesegmode);
 
   if (dpi) {
@@ -961,9 +998,8 @@ extern "C" int tesseract_main(int argc, const char** argv)
     }
 
     pixDestroy(&pixs);
-    return ret_val;
   }
-
+  else {
   // Set in_training_mode to true when using one of these configs:
   // ambigs.train, box.train, box.train.stderr, linebox, rebox, lstm.train.
   // In this mode no other OCR result files are written.
@@ -985,17 +1021,167 @@ extern "C" int tesseract_main(int argc, const char** argv)
   } else if (cur_psm == tesseract::PSM_AUTO_OSD) {
     api.SetPageSegMode(tesseract::PSM_AUTO);
     osd_warning +=
-        "\nWarning: The page segmentation mode 1 (Auto+OSD) is currently "
+        "\nWARNING: The page segmentation mode 1 (Auto+OSD) is currently "
         "disabled. "
         "Using PSM 3 (Auto) instead.\n\n";
   } else if (cur_psm == tesseract::PSM_SPARSE_TEXT_OSD) {
     api.SetPageSegMode(tesseract::PSM_SPARSE_TEXT);
     osd_warning +=
-        "\nWarning: The page segmentation mode 12 (Sparse text + OSD) is "
+        "\nWARNING: The page segmentation mode 12 (Sparse text + OSD) is "
         "currently disabled. "
         "Using PSM 11 (Sparse text) instead.\n\n";
   }
 #endif // DISABLED_LEGACY_ENGINE
+
+  if (debug_all)
+  {
+      api.SetVariable("textord_tabfind_show_images", "Y");
+      api.SetVariable("textord_tabfind_show_vlines", "Y");
+
+#if !GRAPHICS_DISABLED
+      api.SetVariable("textord_tabfind_show_initial_partitions", "Y");
+      api.SetVariable("textord_tabfind_show_reject_blobs", "Y");
+      api.SetVariable("textord_tabfind_show_partitions", "2");
+      api.SetVariable("textord_tabfind_show_columns", "Y");
+      api.SetVariable("textord_tabfind_show_blocks", "Y");
+#endif
+
+      api.SetVariable("textord_noise_debug", "Y");
+      api.SetVariable("textord_oldbl_debug", "N");  // very noisy output
+      api.SetVariable("textord_baseline_debug", "Y");
+      api.SetVariable("textord_debug_block", "9");
+      api.SetVariable("textord_debug_bugs", "9");
+      api.SetVariable("textord_debug_tabfind", "0" /* "9" */);  // very noisy output
+
+      api.SetVariable("textord_debug_baselines", "Y");
+      api.SetVariable("textord_debug_blob", "Y");
+      api.SetVariable("textord_debug_blob", "Y");
+      api.SetVariable("textord_debug_pitch_metric", "Y");
+      api.SetVariable("textord_debug_pitch_test", "Y");
+      api.SetVariable("textord_debug_printable", "Y");
+      api.SetVariable("textord_debug_xheights", "Y");
+      api.SetVariable("textord_debug_xheights", "Y");
+
+      api.SetVariable("tessedit_create_hocr", "Y");
+      api.SetVariable("tessedit_create_alto", "Y");
+      api.SetVariable("tessedit_create_page", "Y");
+      api.SetVariable("tessedit_create_tsv", "Y");
+      api.SetVariable("tessedit_create_pdf", "Y");
+      api.SetVariable("textonly_pdf", "n");
+      api.SetVariable("tessedit_write_unlv", "Y");
+      api.SetVariable("tessedit_create_lstmbox", "Y");
+      api.SetVariable("tessedit_create_boxfile", "Y");
+      api.SetVariable("tessedit_create_wordstrbox", "Y");
+      api.SetVariable("tessedit_create_txt", "Y");
+
+      api.SetVariable("tessedit_dump_choices", "Y");
+      api.SetVariable("tessedit_dump_pageseg_images", "Y");
+
+      api.SetVariable("tessedit_write_images", "Y");
+
+      api.SetVariable("tessedit_adaption_debug", "Y");
+      api.SetVariable("tessedit_debug_block_rejection", "Y");
+      api.SetVariable("tessedit_debug_doc_rejection", "Y");
+      api.SetVariable("tessedit_debug_fonts", "Y");
+      api.SetVariable("tessedit_debug_quality_metrics", "Y");
+
+      api.SetVariable("tessedit_rejection_debug", "Y");
+      api.SetVariable("tessedit_timing_debug", "Y");
+
+      api.SetVariable("tessedit_bigram_debug", "Y");
+
+      api.SetVariable("tess_debug_lstm", "N");  // LSTM debug output is extremely noisy
+
+      api.SetVariable("debug_noise_removal", "Y");
+
+
+      api.SetVariable("classify_debug_level", "1" /* "9" */);  // LSTM debug output is extremely noisy
+      api.SetVariable("classify_learning_debug_level", "9");
+      api.SetVariable("classify_debug_character_fragments", "Y");
+      api.SetVariable("classify_enable_adaptive_debugger", "Y");
+      //api.SetVariable("classify_learn_debug_str", "????????????????");
+      api.SetVariable("matcher_debug_separate_windows", "Y");
+      api.SetVariable("matcher_debug_flags", "Y");
+      api.SetVariable("matcher_debug_level", "3");
+
+      api.SetVariable("multilang_debug_level", "3");
+
+      api.SetVariable("paragraph_debug_level", "3");
+
+      api.SetVariable("segsearch_debug_level", "3");
+
+      api.SetVariable("stopper_debug_level", "3");
+
+      api.SetVariable("superscript_debug", "Y");
+
+      api.SetVariable("crunch_debug", "Y");
+
+      api.SetVariable("dawg_debug_level", "3");
+
+      api.SetVariable("debug_fix_space_level", "9");
+      api.SetVariable("debug_x_ht_level", "3");
+      //api.SetVariable("debug_file", "xxxxxxxxxxxxxxxxx");
+      //api.SetVariable("debug_output_path", "xxxxxxxxxxxxxx");
+
+      api.SetVariable("hyphen_debug_level", "3");
+
+      api.SetVariable("language_model_debug_level", "3");
+
+      api.SetVariable("tosp_debug_level", "3");
+
+      api.SetVariable("wordrec_debug_level", "3");
+
+      api.SetVariable("word_to_debug", "Y");
+
+      api.SetVariable("scribe_save_grey_rotated_image", "Y");
+      api.SetVariable("scribe_save_binary_rotated_image", "Y");
+      api.SetVariable("scribe_save_original_rotated_image", "Y");
+
+      api.SetVariable("hocr_font_info", "Y");
+      api.SetVariable("hocr_char_boxes", "Y");
+      api.SetVariable("hocr_images", "Y");
+
+      api.SetVariable("thresholding_debug", "Y");
+
+      api.SetVariable("preprocess_graynorm_mode", "0"); // 0..3
+
+      api.SetVariable("tessedit_bigram_debug", "Y");
+
+      api.SetVariable("wordrec_debug_blamer", "Y");
+
+      api.SetVariable("devanagari_split_debugimage", "Y");
+      api.SetVariable("devanagari_split_debuglevel", "3");
+
+      api.SetVariable("gapmap_debug", "Y");
+
+      api.SetVariable("poly_debug", "N");  // very noisy output
+
+      api.SetVariable("edges_debug", "Y");
+
+      api.SetVariable("ambigs_debug_level", "3");
+
+      api.SetVariable("applybox_debug", "Y");
+
+      api.SetVariable("bidi_debug", "Y");
+
+      api.SetVariable("chop_debug", "Y");
+
+      api.SetVariable("debug_baseline_fit", "1"); // 0..3
+      api.SetVariable("debug_baseline_y_coord", "-2000");
+
+      api.SetVariable("showcase_threshold_methods", "N");
+
+      api.SetVariable("debug_write_unlv", "Y");
+      api.SetVariable("debug_line_finding", "Y");
+      api.SetVariable("debug_image_normalization", "Y");
+      api.SetVariable("debug_do_not_use_scrollview_app", "Y");
+
+      api.SetVariable("interactive_display_mode", "Y");
+
+      api.SetVariable("debug_display_page", "Y");
+      api.SetVariable("debug_display_page_blocks", "Y");
+      api.SetVariable("debug_display_page_baselines", "Y");
+  }
 
   std::vector<std::unique_ptr<TessResultRenderer>> renderers;
 
@@ -1013,10 +1199,18 @@ extern "C" int tesseract_main(int argc, const char** argv)
 #endif
     bool succeed = api.ProcessPages(image, nullptr, 0, renderers[0].get());
     if (!succeed) {
-      tprintf("ERROR: Error during processing.\n");
+      tprintf("ERROR: Error during page processing.\n");
       ret_val = EXIT_FAILURE;
     }
   }
+  }
+
+  api.ReportParamsUsageStatistics();
+  }
+  // ^^^ end of scope for the Tesseract api instance
+  // --> cache occupancy is removed, so the next call will succeed without fail (due to internal sanity checks)
+
+  tesseract::Dict::CleanGlobalDawgCache();
 
   return ret_val;
 }

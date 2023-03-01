@@ -125,7 +125,7 @@ public:
         In addition to that, the button will be decorated with stock icons under GTK+ 2.
 
         @param parent
-            Parent window. Must not be @NULL.
+            Parent window. Must not be @nullptr.
         @param id
             Button identifier. A value of @c wxID_ANY indicates a default value.
         @param label
@@ -168,8 +168,7 @@ public:
         Returns @true if an authentication needed symbol is displayed on the
         button.
 
-        @remarks This method always returns @false if the platform is not
-                 Windows Vista or newer.
+        @remarks This method always returns @false on non-Windows platforms.
 
         @see SetAuthNeeded()
 
@@ -187,7 +186,7 @@ public:
         The optional @a win argument is new since wxWidgets 3.1.3 and allows to
         get a per-monitor DPI specific size.
     */
-    static wxSize GetDefaultSize(wxWindow* win = NULL);
+    static wxSize GetDefaultSize(wxWindow* win = nullptr);
 
     /**
         Returns the string label for the button.
@@ -200,8 +199,7 @@ public:
         Sets whether an authentication needed symbol should be displayed on the
         button.
 
-        @remarks This method doesn't do anything if the platform is not Windows
-                 Vista or newer.
+        @remarks This method doesn't do anything on non-Windows platforms.
 
         @see GetAuthNeeded()
 
@@ -222,7 +220,7 @@ public:
 
         @remarks Under Windows, only dialog box buttons respond to this function.
 
-        @return the old default item (possibly @NULL)
+        @return the old default item (possibly @nullptr)
     */
     virtual wxWindow* SetDefault();
 

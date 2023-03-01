@@ -31,9 +31,8 @@
     wxCommandLinkButton generates the same event as wxButton but doesn't
     support any of wxButton-specific styles nor adds any new styles of its own.
 
-    Currently this class uses native implementation under Windows Vista and
-    later versions and a generic implementation for the other platforms and
-    earlier Windows versions.
+    Currently this class uses native implementation under Windows and a generic
+    implementation for the other platforms.
 
     @since 2.9.2
 
@@ -59,7 +58,7 @@ public:
         The button will be decorated with stock icons under GTK+ 2.
 
         @param parent
-            Parent window. Must not be @NULL.
+            Parent window. Must not be @nullptr.
         @param id
             Button identifier. A value of wxID_ANY indicates a default value.
         @param mainLabel

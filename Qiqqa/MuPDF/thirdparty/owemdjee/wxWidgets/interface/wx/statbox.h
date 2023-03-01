@@ -55,7 +55,7 @@ public:
         Constructor, creating and showing a static box.
 
         @param parent
-            Parent window. Must not be @NULL.
+            Parent window. Must not be @nullptr.
         @param id
             Window identifier. The value wxID_ANY indicates a default value.
         @param label
@@ -167,8 +167,7 @@ public:
         checkbox stays enabled even if @c box->Enable(false) is called.
 
         However with the actual behaviour, implemented in this overridden
-        method, the following code (shown using C++11 only for convenience,
-        this behaviour is not C++11-specific):
+        method, the following code:
         @code
             auto check = new wxCheckBox(parent, wxID_ANY, "Use the box");
             auto box = new wxStaticBox(parent, wxID_ANY, check);

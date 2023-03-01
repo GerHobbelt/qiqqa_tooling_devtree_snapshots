@@ -73,24 +73,32 @@ pdf_test_outline(fz_context *ctx, pdf_document *doc, pdf_obj *dict, pdf_mark_bit
 			if (*fixed == 0)
 				pdf_begin_operation(ctx, doc, "Repair outline nodes");
 			*fixed = 1;
-		}
-		if (parent_diff)
-		{
-			fz_warn(ctx, "Bad or missing parent pointer in outline tree, repairing");
-			pdf_dict_put(ctx, dict, PDF_NAME(Parent), expected_parent);
-		}
-		if (prev_diff)
-		{
-			fz_warn(ctx, "Bad or missing prev pointer in outline tree, repairing");
-			if (expected_prev)
-				pdf_dict_put(ctx, dict, PDF_NAME(Prev), expected_prev);
-			else
-				pdf_dict_del(ctx, dict, PDF_NAME(Prev));
-		}
-		if (last_diff)
-		{
-			fz_warn(ctx, "Bad or missing last pointer in outline tree, repairing");
-			pdf_dict_put(ctx, expected_parent, PDF_NAME(Last), dict);
+			doc->non_structural_change = 1;
+			fz_try(ctx)
+			{
+				if (parent_diff)
+				{
+					fz_warn(ctx, "Bad or missing parent pointer in outline tree, repairing");
+					pdf_dict_put(ctx, dict, PDF_NAME(Parent), expected_parent);
+				}
+				if (prev_diff)
+				{
+					fz_warn(ctx, "Bad or missing prev pointer in outline tree, repairing");
+					if (expected_prev)
+						pdf_dict_put(ctx, dict, PDF_NAME(Prev), expected_prev);
+					else
+						pdf_dict_del(ctx, dict, PDF_NAME(Prev));
+				}
+				if (last_diff)
+				{
+					fz_warn(ctx, "Bad or missing last pointer in outline tree, repairing");
+					pdf_dict_put(ctx, expected_parent, PDF_NAME(Last), dict);
+				}
+			}
+			fz_always(ctx)
+				doc->non_structural_change = 0;
+			fz_catch(ctx)
+				fz_rethrow(ctx);
 		}
 
 		first = pdf_dict_get(ctx, dict, PDF_NAME(First));
@@ -503,6 +511,7 @@ fz_outline_iterator *pdf_new_outline_iterator(fz_context *ctx, pdf_document *doc
 	pdf_mark_bits *marks;
 	pdf_outline_iterator *iter = NULL;
 	int fixed = 0;
+	int page_tree_loaded = 0;
 
 	/* Walk the outlines to spot problems that might bite us later
 	 * (in particular, for cycles). */
@@ -514,8 +523,11 @@ fz_outline_iterator *pdf_new_outline_iterator(fz_context *ctx, pdf_document *doc
 		first = pdf_dict_get(ctx, obj, PDF_NAME(First));
 		if (first)
 		{
-			/* cache page tree for fast link destination lookups */
+			/* cache page tree for fast link destination lookups. This
+			 * will be dropped 'just in time' on writes to the doc. */
 			pdf_load_page_tree(ctx, doc);
+			page_tree_loaded = 1;
+
 			fz_try(ctx)
 			{
 				/* Pass through the outlines once, fixing inconsistencies */
@@ -533,16 +545,34 @@ fz_outline_iterator *pdf_new_outline_iterator(fz_context *ctx, pdf_document *doc
 			{
 				if (fixed)
 					pdf_end_operation(ctx, doc);
-				pdf_drop_page_tree(ctx, doc);
 			}
 			fz_catch(ctx)
 				fz_rethrow(ctx);
 		}
 	}
 	fz_always(ctx)
+	{
+		// [GerHobbelt]: to be explained: this call here effectively nukes the cache, but also PREVENTS a large number of small
+		// memory leaks.
+		//
+		// The odd part is that this same API is called later (at document modification *plus* at drop_document time) and when
+		// the reference counter is checked then (WITHOUT this API call here) it LOOKS like the same cleanup is performed YET
+		// we're stuck with a ton of heap allocation leakages at the end then.
+		//
+		// I'm sure I'm missing something here, probably some dependency thing or what-not, but after 4+ hours of looking
+		// I haven't found what's wrong, so the leakage prevention code wins, bad luck for the page cache for the outline...
+		if (page_tree_loaded)
+			pdf_drop_page_tree(ctx, doc);
+
 		pdf_drop_mark_bits(ctx, marks);
+	}
 	fz_catch(ctx)
+	{
+		if (page_tree_loaded)
+			pdf_drop_page_tree(ctx, doc);
+
 		fz_rethrow(ctx);
+	}
 
 	iter = fz_new_derived_outline_iter(ctx, pdf_outline_iterator, &doc->super);
 	iter->super.del = pdf_outline_iterator_del;

@@ -233,7 +233,7 @@ TEST_P(DecodeAPITestParam, TestAPI) {
                                    chunk_size);
   SuspendingSourceManager src_susp(compressed.data(), compressed.size(),
                                    chunk_size);
-  std::string jpg_full_path = std::string(TEST_DATA_PATH "/") + config.fn;
+  std::string jpg_full_path = GetTestDataPath(config.fn);
   jxl::FileWrapper testfile(jpg_full_path, "rb");
   ASSERT_TRUE(testfile != nullptr);
   if (config.source_mgr == SOURCE_MGR_CHUNKED) {
@@ -604,6 +604,12 @@ std::vector<TestConfig> GenerateTests() {
         all_tests.push_back(config);
       }
     }
+  }
+  {
+    TestConfig config;
+    config.fn = "jxl/flower/flower_small.cmyk.jpg";
+    config.fn_desc = "CMYK";
+    all_tests.push_back(config);
   }
   return all_tests;
 }

@@ -2,6 +2,8 @@
 
 #include <immintrin.h>
 
+#if !(defined(BUILD_MONOLITHIC) && defined(_MSC_VER))  // monolithic build mode also includes the Assembly source files implementing these same functions.
+
 #define DEGREE 4
 
 #define _mm_shuffle_ps2(a, b, c)                                               \
@@ -558,3 +560,5 @@ void blake3_hash_many_sse41(const uint8_t *const *inputs, size_t num_inputs,
     out = &out[BLAKE3_OUT_LEN];
   }
 }
+
+#endif

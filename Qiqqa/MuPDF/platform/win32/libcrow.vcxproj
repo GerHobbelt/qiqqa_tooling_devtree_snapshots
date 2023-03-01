@@ -52,20 +52,20 @@
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <ImportGroup Label="PropertySheets">
+  <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project.props" Label="SolutionWideSettings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props" Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
+    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Import Project="$(SolutionDir)\common-project-Release-Win32.props" Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
+    <Import Project="$(SolutionDir)\common-project-Release-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props" Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
+    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <Import Project="$(SolutionDir)\common-project-Release-Win64.props" Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
+    <Import Project="$(SolutionDir)\common-project-Release-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
   </ImportGroup>
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
@@ -79,7 +79,7 @@
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
-  <ItemDefinitionGroup>
+<ItemDefinitionGroup>
     <ClCompile>
       <Optimization>Custom</Optimization>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -111,8 +111,8 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+</ItemDefinitionGroup>
+<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCROW;CROW_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
@@ -226,6 +226,9 @@
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ItemGroup>
+    <ClCompile Include="dummy.c" />
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="../../thirdparty/owemdjee/crow/include/crow.h" />
     <ClInclude Include="../../thirdparty/owemdjee/crow/include/crow/TinySHA1.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/crow/include/crow/app.h" />
@@ -260,7 +263,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/crow/include/crow/utility.h" />
     <ClInclude Include="../../thirdparty/owemdjee/crow/include/crow/version.h" />
     <ClInclude Include="../../thirdparty/owemdjee/crow/include/crow/websocket.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/crow/tests/catch.hpp" />
     <Font Include="../../thirdparty/owemdjee/crow/docs/stylesheets/Lato-Medium.ttf" />
     <Image Include="../../thirdparty/owemdjee/crow/docs/assets/favicon.png" />
     <Image Include="../../thirdparty/owemdjee/crow/docs/assets/og_img.png" />
@@ -270,11 +272,12 @@
     <Image Include="../../thirdparty/owemdjee/crow/docs/assets/pkg_logos/ubuntu.png" />
     <Image Include="../../thirdparty/owemdjee/crow/docs/assets/pkg_logos/vcpkg.png" />
     <Image Include="../../thirdparty/owemdjee/crow/logo55.png" />
-    <Image Include="../../thirdparty/owemdjee/crow/tests/img/cat.jpg" />
     <Text Include="../../thirdparty/owemdjee/crow/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/crow/README.md" />
     <Text Include="../../thirdparty/owemdjee/crow/cmake/CrowConfig.cmake.in" />
+    <Text Include="../../thirdparty/owemdjee/crow/cmake/Findasio.cmake" />
     <Text Include="../../thirdparty/owemdjee/crow/cmake/cmake_uninstall.cmake.in" />
+    <Text Include="../../thirdparty/owemdjee/crow/cmake/compiler_options.cmake" />
     <Text Include="../../thirdparty/owemdjee/crow/docs/getting_started/a_simple_webpage.md" />
     <Text Include="../../thirdparty/owemdjee/crow/docs/getting_started/setup/linux.md" />
     <Text Include="../../thirdparty/owemdjee/crow/docs/getting_started/setup/macos.md" />
@@ -301,33 +304,15 @@
     <Text Include="../../thirdparty/owemdjee/crow/docs/guides/websockets.md" />
     <Text Include="../../thirdparty/owemdjee/crow/docs/index.md" />
     <Text Include="../../thirdparty/owemdjee/crow/docs/versions.json" />
-    <Text Include="../../thirdparty/owemdjee/crow/examples/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/crow/run_cmake.sh" />
     <Text Include="../../thirdparty/owemdjee/crow/scripts/generateDocumentationAndDeploy.sh" />
     <Text Include="../../thirdparty/owemdjee/crow/scripts/merge_all.py" />
     <Text Include="../../thirdparty/owemdjee/crow/scripts/nginx_mime2cpp.py" />
     <Text Include="../../thirdparty/owemdjee/crow/scripts/release.sh" />
-    <Text Include="../../thirdparty/owemdjee/crow/tests/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/crow/tests/external_definition/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/crow/tests/img/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/crow/tests/multi_file/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/crow/tests/ssl/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/crow/tests/template/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/crow/tests/template/README.md" />
-    <Text Include="../../thirdparty/owemdjee/crow/tests/template/comments.json" />
-    <Text Include="../../thirdparty/owemdjee/crow/tests/template/delimiters.json" />
-    <Text Include="../../thirdparty/owemdjee/crow/tests/template/interpolation.json" />
-    <Text Include="../../thirdparty/owemdjee/crow/tests/template/inverted.json" />
-    <Text Include="../../thirdparty/owemdjee/crow/tests/template/partials.json" />
-    <Text Include="../../thirdparty/owemdjee/crow/tests/template/sections.json" />
-    <Text Include="../../thirdparty/owemdjee/crow/tests/template/test.py" />
-    <Text Include="../../thirdparty/owemdjee/crow/tests/template/~lambdas.json" />
     <Text Include="../../thirdparty/owemdjee/crow/vcpkg.json" />
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="dummy.c" />
-  </ItemGroup>
-  <ImportGroup Label="PropertySheets">
+  <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />
   </ImportGroup>
 </Project>
+  

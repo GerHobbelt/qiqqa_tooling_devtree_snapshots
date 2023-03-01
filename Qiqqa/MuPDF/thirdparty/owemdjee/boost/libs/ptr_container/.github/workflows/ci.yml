@@ -14,14 +14,7 @@ on:
     branches:
       - master
       - develop
-      - bugfix/**
       - feature/**
-      - fix/**
-      - pr/**
-
-concurrency:
-  group: ${{format('{0}:{1}', github.repository, github.ref)}}
-  cancel-in-progress: true
 
 env:
   ASAN_OPTIONS: allocator_may_return_null=1
@@ -86,7 +79,7 @@ jobs:
               compiler: clang-12,  cxxstd: '03,11,14,17,20', os: ubuntu-20.04, stdlib: libc++, install: 'clang-12 libc++-12-dev libc++abi-12-dev' }
 
           # OSX, clang
-          - { compiler: clang,     cxxstd: '03,11,14,17,2a', os: macos-10.15 }
+          - { compiler: clang,     cxxstd: '03,11,14,17,2a', os: macos-11 }
 
           # Coverity Scan
           # requires two github secrets in repo to activate; see ci/github/coverity.sh
@@ -131,20 +124,23 @@ jobs:
             fi
             git config --global pack.threads 0
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           # For coverage builds fetch the whole history, else only 1 commit using a 'fake ternary'
           fetch-depth: ${{ matrix.coverage && '0' || '1' }}
 
       - name: Cache ccache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         if: env.B2_USE_CCACHE
         with:
           path: ~/.ccache
-          key: ${{matrix.os}}-${{matrix.container}}-${{matrix.compiler}}
+          key: ${{matrix.os}}-${{matrix.container}}-${{matrix.compiler}}-${{github.sha}}
+          restore-keys: |
+            ${{matrix.os}}-${{matrix.container}}-${{matrix.compiler}}-
+            ${{matrix.os}}-${{matrix.container}}-${{matrix.compiler}}
 
       - name: Fetch Boost.CI
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: boostorg/boost-ci
           ref: master
@@ -251,10 +247,10 @@ jobs:
     runs-on: ${{matrix.os}}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Fetch Boost.CI
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: boostorg/boost-ci
           ref: master
@@ -287,7 +283,7 @@ jobs:
 
       - name: Upload coverage
         if: matrix.coverage
-        uses: codecov/codecov-action@v2
+        uses: codecov/codecov-action@v3
         with:
           files: __out/cobertura.xml
 
@@ -309,10 +305,10 @@ jobs:
     runs-on: ${{matrix.os}}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Fetch Boost.CI
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: boostorg/boost-ci
           ref: master

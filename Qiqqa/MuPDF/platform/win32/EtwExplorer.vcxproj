@@ -205,11 +205,6 @@
       <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ProjectReference Include="MuPDFLib.vcxproj">
-      <Project>{c21b464f-7799-4b39-8ca6-67ce0468966c}</Project>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
@@ -225,6 +220,11 @@
     <Image Include="../../thirdparty/owemdjee/EtwExplorer/EtwExplorer/Icons/xml.ico" />
     <Image Include="../../thirdparty/owemdjee/EtwExplorer/EtwExplorer/app.ico" />
     <Image Include="../../thirdparty/owemdjee/EtwExplorer/etwexplorer2.PNG" />
+    <Text Include="../../thirdparty/owemdjee/EtwExplorer/EtwExplorer/App.config" />
+    <Text Include="../../thirdparty/owemdjee/EtwExplorer/EtwExplorer/packages.config" />
+    <Text Include="../../thirdparty/owemdjee/EtwExplorer/EtwManifestParsing/app.config" />
+    <Text Include="../../thirdparty/owemdjee/EtwExplorer/EtwManifestParsing/packages.config" />
+    <Text Include="../../thirdparty/owemdjee/EtwExplorer/MigrationBackup/ae6cc1ee/EtwExplorer/packages.config" />
     <Text Include="../../thirdparty/owemdjee/EtwExplorer/README.md" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >

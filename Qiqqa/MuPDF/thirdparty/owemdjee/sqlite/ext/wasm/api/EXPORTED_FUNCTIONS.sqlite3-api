@@ -1,6 +1,3 @@
-_malloc
-_free
-_realloc
 _sqlite3_aggregate_context
 _sqlite3_auto_extension
 _sqlite3_bind_blob

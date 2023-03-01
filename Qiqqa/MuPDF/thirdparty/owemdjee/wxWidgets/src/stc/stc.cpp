@@ -180,7 +180,7 @@ wxStyledTextCtrl::wxStyledTextCtrl(wxWindow *parent,
                                    long style,
                                    const wxString& name)
 {
-    m_swx = NULL;
+    m_swx = nullptr;
     Create(parent, id, pos, size, style, name);
 }
 
@@ -204,12 +204,10 @@ bool wxStyledTextCtrl::Create(wxWindow *parent,
     m_swx = new ScintillaWX(this);
     m_stopWatch.Start();
     m_lastKeyDownConsumed = false;
-    m_vScrollBar = NULL;
-    m_hScrollBar = NULL;
-#if wxUSE_UNICODE
+    m_vScrollBar = nullptr;
+    m_hScrollBar = nullptr;
     // Put Scintilla into unicode (UTF-8) mode
     SetCodePage(wxSTC_CP_UTF8);
-#endif
 
     SetInitialSize(size);
 
@@ -255,7 +253,7 @@ wxIntPtr wxStyledTextCtrl::SendMsg(int msg, wxUIntPtr wp, wxIntPtr lp) const
 // Set the vertical scrollbar to use instead of the one that's built-in.
 void wxStyledTextCtrl::SetVScrollBar(wxScrollBar* bar)  {
     m_vScrollBar = bar;
-    if (bar != NULL) {
+    if (bar != nullptr) {
         // ensure that the built-in scrollbar is not visible
         SetScrollbar(wxVERTICAL, 0, 0, 0);
     }
@@ -265,7 +263,7 @@ void wxStyledTextCtrl::SetVScrollBar(wxScrollBar* bar)  {
 // Set the horizontal scrollbar to use instead of the one that's built-in.
 void wxStyledTextCtrl::SetHScrollBar(wxScrollBar* bar)  {
     m_hScrollBar = bar;
-    if (bar != NULL) {
+    if (bar != nullptr) {
         // ensure that the built-in scrollbar is not visible
         SetScrollbar(wxHORIZONTAL, 0, 0, 0);
     }
@@ -587,13 +585,8 @@ int wxStyledTextCtrl::GetNextTabStop(int line, int x)
 
 // Set the code page used to interpret the bytes of the document as characters.
 void wxStyledTextCtrl::SetCodePage(int codePage) {
-#if wxUSE_UNICODE
     wxASSERT_MSG(codePage == wxSTC_CP_UTF8,
-                 wxT("Only wxSTC_CP_UTF8 may be used when wxUSE_UNICODE is on."));
-#else
-    wxASSERT_MSG(codePage != wxSTC_CP_UTF8,
-                 wxT("wxSTC_CP_UTF8 may not be used when wxUSE_UNICODE is off."));
-#endif
+                 wxT("Only wxSTC_CP_UTF8 may be used."));
     SendMsg(SCI_SETCODEPAGE, codePage);
 }
 
@@ -1155,7 +1148,7 @@ void wxStyledTextCtrl::SetWordChars(const wxString& characters)
 // Get the set of characters making up words for when moving or selecting by word.
 wxString wxStyledTextCtrl::GetWordChars() const {
          const int msg = SCI_GETWORDCHARS;
-         int len = SendMsg(msg, 0, (sptr_t)NULL);
+         int len = SendMsg(msg, 0, (sptr_t)nullptr);
          if (!len) return wxEmptyString;
 
          wxMemoryBuffer mbuf(len+1);
@@ -2302,7 +2295,7 @@ void wxStyledTextCtrl::SetDefaultFoldDisplayText(const wxString& text)
 // Get the default fold display text.
 wxString wxStyledTextCtrl::GetDefaultFoldDisplayText() const {
          const int msg = SCI_GETDEFAULTFOLDDISPLAYTEXT;
-         long len = SendMsg(msg, 0, (sptr_t)NULL);
+         long len = SendMsg(msg, 0, (sptr_t)nullptr);
          if (!len) return wxEmptyString;
 
          wxCharBuffer buf(len);
@@ -2634,7 +2627,7 @@ int wxStyledTextCtrl::GetMultiPaste() const
 // Retrieve the value of a tag from a regular expression search.
 wxString wxStyledTextCtrl::GetTag(int tagNumber) const {
          const int msg = SCI_GETTAG;
-         long len = SendMsg(msg, tagNumber, (sptr_t)NULL);
+         long len = SendMsg(msg, tagNumber, (sptr_t)nullptr);
          if (!len) return wxEmptyString;
 
          wxCharBuffer buf(len);
@@ -3694,7 +3687,7 @@ void wxStyledTextCtrl::SetWhitespaceChars(const wxString& characters)
 // Get the set of characters making up whitespace for when moving or selecting by word.
 wxString wxStyledTextCtrl::GetWhitespaceChars() const {
          const int msg = SCI_GETWHITESPACECHARS;
-         int len = SendMsg(msg, 0, (sptr_t)NULL);
+         int len = SendMsg(msg, 0, (sptr_t)nullptr);
          if (!len) return wxEmptyString;
 
          wxMemoryBuffer mbuf(len+1);
@@ -3715,7 +3708,7 @@ void wxStyledTextCtrl::SetPunctuationChars(const wxString& characters)
 // Get the set of characters making up punctuation characters
 wxString wxStyledTextCtrl::GetPunctuationChars() const {
          const int msg = SCI_GETPUNCTUATIONCHARS;
-         int len = SendMsg(msg, 0, (sptr_t)NULL);
+         int len = SendMsg(msg, 0, (sptr_t)nullptr);
          if (!len) return wxEmptyString;
 
          wxMemoryBuffer mbuf(len+1);
@@ -3882,13 +3875,13 @@ int wxStyledTextCtrl::GetIndicatorValue() const
     return SendMsg(SCI_GETINDICATORVALUE, 0, 0);
 }
 
-// Turn an indicator on over a range.
+// Turn a indicator on over a range.
 void wxStyledTextCtrl::IndicatorFillRange(int start, int lengthFill)
 {
     SendMsg(SCI_INDICATORFILLRANGE, start, lengthFill);
 }
 
-// Turn an indicator off over a range.
+// Turn a indicator off over a range.
 void wxStyledTextCtrl::IndicatorClearRange(int start, int lengthClear)
 {
     SendMsg(SCI_INDICATORCLEARRANGE, start, lengthClear);
@@ -4448,7 +4441,7 @@ int wxStyledTextCtrl::GetVirtualSpaceOptions() const
     return SendMsg(SCI_GETVIRTUALSPACEOPTIONS, 0, 0);
 }
 
-// On GTK+, allow selecting the modifier key to use for mouse-based
+// On GTK, allow selecting the modifier key to use for mouse-based
 // rectangular selection. Often the window manager requires Alt+Mouse Drag
 // for moving windows.
 // Valid values are wxSTC_KEYMOD_CTRL (default), wxSTC_KEYMOD_ALT, or wxSTC_KEYMOD_SUPER.
@@ -4684,7 +4677,7 @@ void wxStyledTextCtrl::SetRepresentation(const wxString& encodedCharacter, const
 wxString wxStyledTextCtrl::GetRepresentation(const wxString& encodedCharacter) const {
          const int msg = SCI_GETREPRESENTATION;
          const wxWX2MBbuf encCharBuf = wx2stc(encodedCharacter);
-         long len = SendMsg(msg, (sptr_t)(const char*)encCharBuf, (sptr_t)NULL);
+         long len = SendMsg(msg, (sptr_t)(const char*)encCharBuf, (sptr_t)nullptr);
          if (!len) return wxEmptyString;
 
          wxCharBuffer buf(len);
@@ -4707,7 +4700,7 @@ void wxStyledTextCtrl::EOLAnnotationSetText(int line, const wxString& text)
 // Get the end of line annotation text for a line
 wxString wxStyledTextCtrl::EOLAnnotationGetText(int line) const {
          const int msg = SCI_EOLANNOTATIONGETTEXT;
-         long len = SendMsg(msg, line, (sptr_t)NULL);
+         long len = SendMsg(msg, line, (sptr_t)nullptr);
          if (!len) return wxEmptyString;
 
          wxCharBuffer buf(len);
@@ -4845,7 +4838,7 @@ int wxStyledTextCtrl::GetPropertyInt(const wxString &key, int defaultValue) cons
 // Retrieve the lexing language of the document.
 wxString wxStyledTextCtrl::GetLexerLanguage() const {
          const int msg = SCI_GETLEXERLANGUAGE;
-         int len = SendMsg(msg, 0, (sptr_t)NULL);
+         int len = SendMsg(msg, 0, (sptr_t)nullptr);
          if (!len) return wxEmptyString;
 
          wxCharBuffer buf(len);
@@ -4861,7 +4854,7 @@ void* wxStyledTextCtrl::PrivateLexerCall(int operation, void* pointer) {
 // Retrieve a '\\n' separated list of properties understood by the current lexer.
 wxString wxStyledTextCtrl::PropertyNames() const {
          const int msg = SCI_PROPERTYNAMES;
-         long len = SendMsg(msg, 0, (sptr_t)NULL);
+         long len = SendMsg(msg, 0, (sptr_t)nullptr);
          if (!len) return wxEmptyString;
 
          wxCharBuffer buf(len);
@@ -4879,7 +4872,7 @@ int wxStyledTextCtrl::PropertyType(const wxString& name)
 wxString wxStyledTextCtrl::DescribeProperty(const wxString& name) const {
          const int msg = SCI_DESCRIBEPROPERTY;
          const wxWX2MBbuf nameBuf = wx2stc(name);
-         long len = SendMsg(msg, (uptr_t)(const char*)nameBuf, (sptr_t)NULL);
+         long len = SendMsg(msg, (uptr_t)(const char*)nameBuf, (sptr_t)nullptr);
          if (!len) return wxEmptyString;
 
          wxCharBuffer buf(len);
@@ -4890,7 +4883,7 @@ wxString wxStyledTextCtrl::DescribeProperty(const wxString& name) const {
 // Retrieve a '\\n' separated list of descriptions of the keyword sets understood by the current lexer.
 wxString wxStyledTextCtrl::DescribeKeyWordSets() const {
          const int msg = SCI_DESCRIBEKEYWORDSETS;
-         long len = SendMsg(msg, 0, (sptr_t)NULL);
+         long len = SendMsg(msg, 0, (sptr_t)nullptr);
          if (!len) return wxEmptyString;
 
          wxCharBuffer buf(len);
@@ -4957,7 +4950,7 @@ int wxStyledTextCtrl::DistanceToSecondaryStyles() const
 // Get the set of base styles that can be extended with sub styles
 wxString wxStyledTextCtrl::GetSubStyleBases() const {
          const int msg = SCI_GETSUBSTYLEBASES;
-         long len = SendMsg(msg, 0, (sptr_t)NULL);
+         long len = SendMsg(msg, 0, (sptr_t)nullptr);
          if (!len) return wxEmptyString;
 
          wxCharBuffer buf(len);
@@ -4975,7 +4968,7 @@ int wxStyledTextCtrl::GetNamedStyles() const
 // Result is NUL-terminated.
 wxString wxStyledTextCtrl::NameOfStyle(int style) const {
          const int msg = SCI_NAMEOFSTYLE;
-         long len = SendMsg(msg, style, (sptr_t)NULL);
+         long len = SendMsg(msg, style, (sptr_t)nullptr);
          if (!len) return wxEmptyString;
 
          wxCharBuffer buf(len);
@@ -4987,7 +4980,7 @@ wxString wxStyledTextCtrl::NameOfStyle(int style) const {
 // Result is NUL-terminated.
 wxString wxStyledTextCtrl::TagsOfStyle(int style) const {
          const int msg = SCI_TAGSOFSTYLE;
-         long len = SendMsg(msg, style, (sptr_t)NULL);
+         long len = SendMsg(msg, style, (sptr_t)nullptr);
          if (!len) return wxEmptyString;
 
          wxCharBuffer buf(len);
@@ -4999,7 +4992,7 @@ wxString wxStyledTextCtrl::TagsOfStyle(int style) const {
 // Result is NUL-terminated.
 wxString wxStyledTextCtrl::DescriptionOfStyle(int style) const {
          const int msg = SCI_DESCRIPTIONOFSTYLE;
-         long len = SendMsg(msg, style, (sptr_t)NULL);
+         long len = SendMsg(msg, style, (sptr_t)nullptr);
          if (!len) return wxEmptyString;
 
          wxCharBuffer buf(len);
@@ -5114,7 +5107,7 @@ void wxStyledTextCtrl::StyleSetFont(int styleNum, const wxFont& font) {
 #ifdef __WXGTK__
     // Ensure that the native font is initialized
     int x, y;
-    GetTextExtent(wxT("X"), &x, &y, NULL, NULL, &font);
+    GetTextExtent(wxT("X"), &x, &y, nullptr, nullptr, &font);
 #endif
     int            size     = font.GetPointSize();
     wxString       faceName = font.GetFaceName();
@@ -5309,7 +5302,7 @@ bool wxStyledTextCtrl::GetUseAntiAliasing() {
 }
 
 void wxStyledTextCtrl::AnnotationClearLine(int line) {
-    SendMsg(SCI_ANNOTATIONSETTEXT, line, (sptr_t)NULL);
+    SendMsg(SCI_ANNOTATIONSETTEXT, line, (sptr_t)nullptr);
 }
 
 void wxStyledTextCtrl::MarkerDefineBitmap(int markerNumber,
@@ -5572,7 +5565,7 @@ void wxStyledTextCtrl::OnMouseWheel(wxMouseEvent& evt)
     if ( !GetMouseWheelCaptures() && !GetRect().Contains(evt.GetPosition()) )
     {
         wxWindow* parent = GetParent();
-        if ( parent != NULL )
+        if ( parent != nullptr )
         {
             wxMouseEvent newevt(evt);
             newevt.SetPosition(
@@ -5587,7 +5580,7 @@ void wxStyledTextCtrl::OnMouseWheel(wxMouseEvent& evt)
 
         // First try to find the list. It will be a wxVListBox named
         // "AutoCompListBox".
-        wxWindow* curWin  = this, *acListBox = NULL;
+        wxWindow* curWin  = this, *acListBox = nullptr;
         wxStack<wxWindow*> windows;
         windows.push(curWin);
 
@@ -5650,15 +5643,12 @@ void wxStyledTextCtrl::OnChar(wxKeyEvent& evt) {
 #endif
     bool skip = ((ctrl || alt) && ! (ctrl && alt));
 
-#if wxUSE_UNICODE
     // apparently if we don't do this, Unicode keys pressed after non-char
     // ASCII ones (e.g. Enter, Tab) are not taken into account (patch 1615989)
     if (m_lastKeyDownConsumed && evt.GetUnicodeKey() > 255)
         m_lastKeyDownConsumed = false;
-#endif
 
     if (!m_lastKeyDownConsumed && !skip) {
-#if wxUSE_UNICODE
         int key = evt.GetUnicodeKey();
         bool keyOk = true;
 
@@ -5674,13 +5664,6 @@ void wxStyledTextCtrl::OnChar(wxKeyEvent& evt) {
             m_swx->DoAddChar(key);
             return;
         }
-#else
-        int key = evt.GetKeyCode();
-        if (key < WXK_START) {
-            m_swx->DoAddChar(key);
-            return;
-        }
-#endif
     }
 
     evt.Skip();

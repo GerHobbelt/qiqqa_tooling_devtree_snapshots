@@ -207,7 +207,7 @@ public:
 protected:
     virtual void DoLogRecord(wxLogLevel level,
                              const wxString& msg,
-                             const wxLogRecordInfo& info) wxOVERRIDE
+                             const wxLogRecordInfo& info) override
     {
         // If logging was explicitly enabled, show everything on the console.
         //
@@ -269,11 +269,11 @@ public:
     TestApp();
 
     // standard overrides
-    virtual bool OnInit() wxOVERRIDE;
-    virtual int  OnExit() wxOVERRIDE;
+    virtual bool OnInit() override;
+    virtual int  OnExit() override;
 
 #ifdef __WIN32__
-    virtual wxAppTraits *CreateTraits() wxOVERRIDE
+    virtual wxAppTraits *CreateTraits() override
     {
         // Define a new class just to customize CanUseStderr() behaviour.
         class TestAppTraits : public TestAppTraitsBase
@@ -283,11 +283,11 @@ public:
             // in this case we really don't want to show any message boxes, as
             // wxMessageOutputBest, used e.g. from the default implementation
             // of wxApp::OnUnhandledException(), would do by default.
-            virtual bool CanUseStderr() wxOVERRIDE { return true; }
+            virtual bool CanUseStderr() override { return true; }
 
             // Overriding CanUseStderr() is not enough, we also need to
             // override this one to avoid returning false from it.
-            virtual bool WriteToStderr(const wxString& text) wxOVERRIDE
+            virtual bool WriteToStderr(const wxString& text) override
             {
                 wxFputs(text, stderr);
                 fflush(stderr);
@@ -304,7 +304,7 @@ public:
 
     // Also override this method to avoid showing any dialogs from here -- and
     // show some details about the exception along the way.
-    virtual bool OnExceptionInMainLoop() wxOVERRIDE
+    virtual bool OnExceptionInMainLoop() override
     {
         wxFprintf(stderr, wxASCII_STR("Unhandled exception in the main loop: %s\n"),
                   wxASCII_STR(Catch::translateActiveException().c_str()));
@@ -313,8 +313,8 @@ public:
     }
 
     // used by events propagation test
-    virtual int FilterEvent(wxEvent& event) wxOVERRIDE;
-    virtual bool ProcessEvent(wxEvent& event) wxOVERRIDE;
+    virtual int FilterEvent(wxEvent& event) override;
+    virtual bool ProcessEvent(wxEvent& event) override;
 
     void SetFilterEventFunc(FilterEventFunc f) { m_filterEventFunc = f; }
     void SetProcessEventFunc(ProcessEventFunc f) { m_processEventFunc = f; }
@@ -352,7 +352,7 @@ public:
         event.Skip();
     }
 
-    virtual int OnRun() wxOVERRIDE
+    virtual int OnRun() override
     {
         if ( TestAppBase::OnRun() != 0 )
             m_exitcode = EXIT_FAILURE;
@@ -360,7 +360,7 @@ public:
         return m_exitcode;
     }
 #else // !wxUSE_GUI
-    virtual int OnRun() wxOVERRIDE
+    virtual int OnRun() override
     {
         return RunTests();
     }
@@ -470,8 +470,8 @@ extern bool IsAutomaticTest()
     static int s_isAutomatic = -1;
     if ( s_isAutomatic == -1 )
     {
-        s_isAutomatic = wxGetEnv(wxASCII_STR("GITHUB_ACTIONS"), NULL) ||
-                            wxGetEnv(wxASCII_STR("APPVEYOR"), NULL);
+        s_isAutomatic = wxGetEnv(wxASCII_STR("GITHUB_ACTIONS"), nullptr) ||
+                            wxGetEnv(wxASCII_STR("APPVEYOR"), nullptr);
     }
 
     return s_isAutomatic == 1;
@@ -599,8 +599,8 @@ TestApp::TestApp()
 {
     m_runTests = true;
 
-    m_filterEventFunc = NULL;
-    m_processEventFunc = NULL;
+    m_filterEventFunc = nullptr;
+    m_processEventFunc = nullptr;
 
 #if wxUSE_GUI
     m_exitcode = EXIT_SUCCESS;
@@ -646,8 +646,8 @@ bool TestApp::OnInit()
 
     Connect(wxEVT_IDLE, wxIdleEventHandler(TestApp::OnIdle));
 
-#ifdef __WXGTK20__
-    g_log_set_default_handler(wxTestGLogHandler, NULL);
+#ifdef __WXGTK__
+    g_log_set_default_handler(wxTestGLogHandler, nullptr);
 #endif // __WXGTK__
 
 #ifdef GDK_WINDOWING_X11

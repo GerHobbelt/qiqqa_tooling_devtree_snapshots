@@ -13,6 +13,9 @@
 #if defined(_MSC_VER)
 // warning C4464: relative include path contains '..'
 #pragma warning(disable:4464)
+#ifndef _CRT_NONSTDC_NO_WARNINGS
+#define _CRT_NONSTDC_NO_WARNINGS
+#endif
 #endif
 #include "../win32/config.h"
 #endif

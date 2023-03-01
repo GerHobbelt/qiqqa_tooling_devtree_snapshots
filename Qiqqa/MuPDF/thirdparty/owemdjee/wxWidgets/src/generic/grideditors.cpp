@@ -43,12 +43,6 @@
 #include "wx/generic/grideditors.h"
 #include "wx/generic/private/grid.h"
 
-#if defined(__WXMOTIF__)
-    #define WXUNUSED_MOTIF(identifier)  WXUNUSED(identifier)
-#else
-    #define WXUNUSED_MOTIF(identifier)  identifier
-#endif
-
 #if defined(__WXGTK__)
     #define WXUNUSED_GTK(identifier)    WXUNUSED(identifier)
 #else
@@ -186,7 +180,7 @@ void wxGridCellEditorEvtHandler::OnChar(wxKeyEvent& event)
                 // get width of cell CONTENTS (text)
                 int y;
                 wxFont font = m_grid->GetCellFont(row, col);
-                m_grid->GetTextExtent(value, &textWidth, &y, NULL, NULL, &font);
+                m_grid->GetTextExtent(value, &textWidth, &y, nullptr, nullptr, &font);
 
                 // try to RIGHT align the text by scrolling
                 int client_right = m_grid->GetGridWindow()->GetClientSize().GetWidth();
@@ -236,7 +230,7 @@ wxGridCellEditor::wxGridCellEditor(const wxGridCellEditor& other)
       m_colBgOld(other.m_colBgOld),
       m_fontOld(other.m_fontOld)
 {
-    m_attr = other.m_attr ? other.m_attr->Clone() : NULL;
+    m_attr = other.m_attr ? other.m_attr->Clone() : nullptr;
 }
 
 wxGridCellEditor::~wxGridCellEditor()
@@ -269,7 +263,7 @@ void wxGridCellEditor::Destroy()
         m_control->PopEventHandler( true /* delete it*/ );
 
         m_control->Destroy();
-        m_control = NULL;
+        m_control = nullptr;
     }
 }
 
@@ -290,11 +284,8 @@ void wxGridCellEditor::Show(bool show, wxGridCellAttr *attr)
             m_colBgOld = m_control->GetBackgroundColour();
             m_control->SetBackgroundColour(attr->GetBackgroundColour());
 
-// Workaround for GTK+1 font setting problem on some platforms
-#if !defined(__WXGTK__) || defined(__WXGTK20__)
             m_fontOld = m_control->GetFont();
             m_control->SetFont(attr->GetFont());
-#endif
 
             // can't do anything more in the base class version, the other
             // attributes may only be used by the derived classes
@@ -315,14 +306,11 @@ void wxGridCellEditor::Show(bool show, wxGridCellAttr *attr)
             m_colBgOld = wxNullColour;
         }
 
-// Workaround for GTK+1 font setting problem on some platforms
-#if !defined(__WXGTK__) || defined(__WXGTK20__)
         if ( m_fontOld.IsOk() )
         {
             m_control->SetFont(m_fontOld);
             m_fontOld = wxNullFont;
         }
-#endif
     }
 }
 
@@ -413,13 +401,8 @@ bool wxGridCellEditor::IsAcceptedKey(wxKeyEvent& event)
     if ((ctrl || alt) && !(ctrl && alt))
         return false;
 
-#if wxUSE_UNICODE
     if ( static_cast<int>(event.GetUnicodeKey()) == WXK_NONE )
         return false;
-#else
-    if ( event.GetKeyCode() > WXK_START )
-        return false;
-#endif
 
     return true;
 }
@@ -505,11 +488,6 @@ void wxGridCellTextEditor::SetSize(const wxRect& rectOrig)
 #elif !defined(__WXGTK__)
     int extra_x = 2;
     int extra_y = 2;
-
-    #if defined(__WXMOTIF__)
-        extra_x *= 2;
-        extra_y *= 2;
-    #endif
 
     rect.SetLeft( wxMax(0, rect.x - extra_x) );
     rect.SetTop( wxMax(0, rect.y - extra_y) );
@@ -602,12 +580,10 @@ void wxGridCellTextEditor::StartingKey(wxKeyEvent& event)
 
     bool isPrintable;
 
-#if wxUSE_UNICODE
     ch = event.GetUnicodeKey();
     if ( ch != WXK_NONE )
         isPrintable = true;
     else
-#endif // wxUSE_UNICODE
     {
         ch = event.GetKeyCode();
         isPrintable = ch >= WXK_SPACE && ch < WXK_START;
@@ -636,10 +612,10 @@ void wxGridCellTextEditor::StartingKey(wxKeyEvent& event)
 }
 
 void wxGridCellTextEditor::HandleReturn( wxKeyEvent&
-                                         WXUNUSED_GTK(WXUNUSED_MOTIF(event)) )
+                                         WXUNUSED_GTK(event) )
 {
-#if defined(__WXMOTIF__) || defined(__WXGTK__)
-    // wxMotif needs a little extra help...
+#if defined(__WXGTK__)
+    // wxGTK needs a little extra help...
     size_t pos = (size_t)( Text()->GetInsertionPoint() );
     wxString s( Text()->GetValue() );
     s = s.Left(pos) + wxT("\n") + s.Mid(pos);
@@ -1530,7 +1506,7 @@ void wxGridCellChoiceEditor::BeginEdit(int row, int col, wxGrid* grid)
     wxASSERT_MSG(m_control,
                  wxT("The wxGridCellEditor must be created first!"));
 
-    wxGridCellEditorEvtHandler* evtHandler = NULL;
+    wxGridCellEditorEvtHandler* evtHandler = nullptr;
     if (m_control)
     {
         // This event handler is needed to properly dismiss the editor when the popup is closed
@@ -1560,7 +1536,7 @@ void wxGridCellChoiceEditor::BeginEdit(int row, int col, wxGrid* grid)
     {
         // When dropping down the menu, a kill focus event
         // happens after this point, so we can't reset the flag yet.
-#if !defined(__WXGTK20__)
+#if !defined(__WXGTK__)
         evtHandler->SetInSetFocus(false);
 #endif
     }
@@ -1673,7 +1649,7 @@ void wxGridCellEnumEditor::BeginEdit(int row, int col, wxGrid* grid)
     wxASSERT_MSG(m_control,
                  wxT("The wxGridCellEnumEditor must be Created first!"));
 
-    wxGridCellEditorEvtHandler* evtHandler = NULL;
+    wxGridCellEditorEvtHandler* evtHandler = nullptr;
     if (m_control)
         evtHandler = wxDynamicCast(m_control->GetEventHandler(), wxGridCellEditorEvtHandler);
 
@@ -1715,7 +1691,7 @@ void wxGridCellEnumEditor::BeginEdit(int row, int col, wxGrid* grid)
     {
         // When dropping down the menu, a kill focus event
         // happens after this point, so we can't reset the flag yet.
-#if !defined(__WXGTK20__)
+#if !defined(__WXGTK__)
         evtHandler->SetInSetFocus(false);
 #endif
     }
@@ -1809,7 +1785,7 @@ struct wxGridCellDateEditorKeyHandler
     // see the comment before WX_DECLARE_TYPEINFO_INLINE() in wx/typeinfo.h)
     // and this, in turn, requires a default ctor of this class -- which will
     // never be actually used, but must nevertheless exist.
-    wxGridCellDateEditorKeyHandler() : m_handler(NULL) { }
+    wxGridCellDateEditorKeyHandler() : m_handler(nullptr) { }
 #endif // wxNO_RTTI
 };
 #endif // __WXGTK__

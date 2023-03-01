@@ -48,7 +48,7 @@ public:
 
     /**
         Creates an object preventing the updates of the specified @e win.
-        The parameter must be non-@NULL and the window must exist for longer than
+        The parameter must be non-null and the window must exist for longer than
         wxWindowUpdateLocker object itself.
     */
     explicit wxWindowUpdateLocker(wxWindow* win);
@@ -59,7 +59,7 @@ public:
         This method can only be called on an object initialized using the
         default constructor.
 
-        @param win Non-@NULL window which must exist for longer than this object.
+        @param win Non-@nullptr window which must exist for longer than this object.
 
         @since 3.1.4
      */

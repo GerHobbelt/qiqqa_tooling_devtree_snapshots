@@ -42,7 +42,7 @@ set ::headCode "
 ** Include the configuration header output by 'configure' if we're using the
 ** autoconf-based build
 */
-#include "sqlite3_config.h"
+#include \"sqlite3_config.h\"
 
 /* These macros are provided to \"stringify\" the value of the define
 ** for those options in which the value is meaningful. */
@@ -379,6 +379,8 @@ set options(THREADSAFE) {
   "THREADSAFE=1",
 #endif
 }
+
+set options(WAL2) { "WAL2", }
 
 proc trim_name {in} {
   set ret $in

@@ -218,7 +218,6 @@ public:
 
     /**
         Adds custom, user-defined language to the database of known languages.
-        This database is used in conjunction with the first form of Init().
     */
     static void AddLanguage(const wxLanguageInfo& info);
 
@@ -230,7 +229,7 @@ public:
         the underscore character is supported as the separator between language and
         region codes.
 
-        Returns the information for the given language or @NULL if this language
+        Returns the information for the given language or @nullptr if this language
         is unknown. Note that even if the returned pointer is valid, the caller
         should @e not delete it.
 
@@ -242,7 +241,7 @@ public:
         This function may be used to find the language description structure for the
         given locale, specified as a locale identifier.
 
-        Returns the information for the given language or @NULL if this language
+        Returns the information for the given language or @nullptr if this language
         is unknown. Note that even if the returned pointer is valid, the caller
         should @e not delete it.
 
@@ -252,7 +251,7 @@ public:
 
     /**
         Returns a pointer to wxLanguageInfo structure containing information about
-        the given language or @NULL if this language is unknown. Note that even if
+        the given language or @nullptr if this language is unknown. Note that even if
         the returned pointer is valid, the caller should @e not delete it.
 
         See AddLanguage() for the wxLanguageInfo description.
@@ -271,8 +270,8 @@ public:
     static wxString GetLanguageName(int lang);
 
     /**
-        Returns canonical name (see GetCanonicalName()) of the given language
-        or empty string if this language is unknown.
+        Returns canonical name of the given language or empty string if this
+        language is unknown.
 
         See GetLanguageInfo() for a remark about special meaning of @c wxLANGUAGE_DEFAULT.
     */

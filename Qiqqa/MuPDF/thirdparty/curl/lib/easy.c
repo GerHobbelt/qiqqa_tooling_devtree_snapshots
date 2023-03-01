@@ -1237,7 +1237,6 @@ CURLcode curl_easy_recv(struct Curl_easy *data, void *buffer, size_t buflen,
     return result;
 
   *n = (size_t)n1;
-
   return CURLE_OK;
 }
 

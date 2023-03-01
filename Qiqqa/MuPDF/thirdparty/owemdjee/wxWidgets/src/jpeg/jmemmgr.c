@@ -27,8 +27,9 @@
  * memory then you shouldn't care about a little bit of unused code...)
  */
 
-#define JPEG_INTERNALS
 #define AM_MEMORY_MANAGER       /* we define jvirt_Xarray_control structs */
+#define JPEG_INTERNAL_OPTIONS
+#define JPEG_INTERNALS
 #include "jinclude.h"
 #include "jpeglib.h"
 #include "jmemsys.h"            /* import the system-dependent declarations */
@@ -155,7 +156,9 @@ typedef my_memory_mgr *my_mem_ptr;
  */
 
 struct jvirt_sarray_control {
-  JSAMPARRAY mem_buffer;        /* => the in-memory buffer */
+  JSAMPARRAY mem_buffer;        /* => the in-memory buffer (if
+                                   cinfo->data_precision is 12, then this is
+                                   actually a J12SAMPARRAY) */
   JDIMENSION rows_in_array;     /* total virtual array height */
   JDIMENSION samplesperrow;     /* width of array (and of memory buffer) */
   JDIMENSION maxaccess;         /* max rows accessed by access_virt_sarray */
@@ -312,7 +315,7 @@ alloc_small(j_common_ptr cinfo, int pool_id, size_t sizeofobject)
       slop = (size_t)(MAX_ALLOC_CHUNK - min_request);
     /* Try to get space, if fail reduce slop and try again */
     for (;;) {
-      hdr_ptr = (small_pool_ptr)jpeg_get_small(cinfo, min_request + slop);
+      hdr_ptr = (small_pool_ptr)cinfo->sys_mem_if.get_small(cinfo, min_request + slop);
       if (hdr_ptr != NULL)
         break;
       slop /= 2;
@@ -351,9 +354,10 @@ alloc_small(j_common_ptr cinfo, int pool_id, size_t sizeofobject)
  * request is large enough that it may as well be passed directly to
  * jpeg_get_large; the pool management just links everything together
  * so that we can free it all on demand.
- * Note: the major use of "large" objects is in JSAMPARRAY and JBLOCKARRAY
- * structures.  The routines that create these structures (see below)
- * deliberately bunch rows together to ensure a large request size.
+ * Note: the major use of "large" objects is in
+ * JSAMPARRAY/J12SAMPARRAY/J16SAMPARRAY and JBLOCKARRAY structures.  The
+ * routines that create these structures (see below) deliberately bunch rows
+ * together to ensure a large request size.
  */
 
 METHODDEF(void *)
@@ -385,7 +389,7 @@ alloc_large(j_common_ptr cinfo, int pool_id, size_t sizeofobject)
   if (pool_id < 0 || pool_id >= JPOOL_NUMPOOLS)
     ERREXIT1(cinfo, JERR_BAD_POOL_ID, pool_id); /* safety check */
 
-  hdr_ptr = (large_pool_ptr)jpeg_get_large(cinfo, sizeofobject +
+  hdr_ptr = (large_pool_ptr)cinfo->sys_mem_if.get_large(cinfo, sizeofobject +
                                            sizeof(large_pool_hdr) +
                                            ALIGN_SIZE - 1);
   if (hdr_ptr == NULL)
@@ -437,9 +441,22 @@ alloc_sarray(j_common_ptr cinfo, int pool_id, JDIMENSION samplesperrow,
   JSAMPROW workspace;
   JDIMENSION rowsperchunk, currow, i;
   long ltemp;
+  J12SAMPARRAY result12;
+  J12SAMPROW workspace12;
+#if defined(C_LOSSLESS_SUPPORTED) || defined(D_LOSSLESS_SUPPORTED)
+  J16SAMPARRAY result16;
+  J16SAMPROW workspace16;
+#endif
+  int data_precision = cinfo->is_decompressor ?
+                        ((j_decompress_ptr)cinfo)->data_precision :
+                        ((j_compress_ptr)cinfo)->data_precision;
+  size_t sample_size = data_precision == 16 ?
+                       sizeof(J16SAMPLE) : (data_precision == 12 ?
+                                            sizeof(J12SAMPLE) :
+                                            sizeof(JSAMPLE));
 
   /* Make sure each row is properly aligned */
-  if ((ALIGN_SIZE % sizeof(JSAMPLE)) != 0)
+  if ((ALIGN_SIZE % sample_size) != 0)
     out_of_memory(cinfo, 5);    /* safety check */
 
   if (samplesperrow > MAX_ALLOC_CHUNK) {
@@ -448,11 +465,11 @@ alloc_sarray(j_common_ptr cinfo, int pool_id, JDIMENSION samplesperrow,
     out_of_memory(cinfo, 9);
   }
   samplesperrow = (JDIMENSION)round_up_pow2(samplesperrow, (2 * ALIGN_SIZE) /
-                                                           sizeof(JSAMPLE));
+                                                           sample_size);
 
   /* Calculate max # of rows allowed in one allocation chunk */
   ltemp = (MAX_ALLOC_CHUNK - sizeof(large_pool_hdr)) /
-          ((long)samplesperrow * sizeof(JSAMPLE));
+          ((long)samplesperrow * (long)sample_size);
   if (ltemp <= 0)
     ERREXIT(cinfo, JERR_WIDTH_OVERFLOW);
   if (ltemp < (long)numrows)
@@ -461,24 +478,68 @@ alloc_sarray(j_common_ptr cinfo, int pool_id, JDIMENSION samplesperrow,
     rowsperchunk = numrows;
   mem->last_rowsperchunk = rowsperchunk;
 
-  /* Get space for row pointers (small object) */
-  result = (JSAMPARRAY)alloc_small(cinfo, pool_id,
-                                   (size_t)(numrows * sizeof(JSAMPROW)));
+  if (data_precision == 16) {
+#if defined(C_LOSSLESS_SUPPORTED) || defined(D_LOSSLESS_SUPPORTED)
+    /* Get space for row pointers (small object) */
+    result16 = (J16SAMPARRAY)alloc_small(cinfo, pool_id,
+                                         (size_t)(numrows *
+                                                  sizeof(J16SAMPROW)));
 
-  /* Get the rows themselves (large objects) */
-  currow = 0;
-  while (currow < numrows) {
-    rowsperchunk = MIN(rowsperchunk, numrows - currow);
-    workspace = (JSAMPROW)alloc_large(cinfo, pool_id,
-      (size_t)((size_t)rowsperchunk * (size_t)samplesperrow *
-               sizeof(JSAMPLE)));
-    for (i = rowsperchunk; i > 0; i--) {
-      result[currow++] = workspace;
-      workspace += samplesperrow;
+    /* Get the rows themselves (large objects) */
+    currow = 0;
+    while (currow < numrows) {
+      rowsperchunk = MIN(rowsperchunk, numrows - currow);
+      workspace16 = (J16SAMPROW)alloc_large(cinfo, pool_id,
+        (size_t)((size_t)rowsperchunk * (size_t)samplesperrow * sample_size));
+      for (i = rowsperchunk; i > 0; i--) {
+        result16[currow++] = workspace16;
+        workspace16 += samplesperrow;
+      }
     }
-  }
 
-  return result;
+    return (JSAMPARRAY)result16;
+#else
+    ERREXIT1(cinfo, JERR_BAD_PRECISION, data_precision);
+    return NULL;
+#endif
+  } else if (data_precision == 12) {
+    /* Get space for row pointers (small object) */
+    result12 = (J12SAMPARRAY)alloc_small(cinfo, pool_id,
+                                         (size_t)(numrows *
+                                                  sizeof(J12SAMPROW)));
+
+    /* Get the rows themselves (large objects) */
+    currow = 0;
+    while (currow < numrows) {
+      rowsperchunk = MIN(rowsperchunk, numrows - currow);
+      workspace12 = (J12SAMPROW)alloc_large(cinfo, pool_id,
+        (size_t)((size_t)rowsperchunk * (size_t)samplesperrow * sample_size));
+      for (i = rowsperchunk; i > 0; i--) {
+        result12[currow++] = workspace12;
+        workspace12 += samplesperrow;
+      }
+    }
+
+    return (JSAMPARRAY)result12;
+  } else {
+    /* Get space for row pointers (small object) */
+    result = (JSAMPARRAY)alloc_small(cinfo, pool_id,
+                                     (size_t)(numrows * sizeof(JSAMPROW)));
+
+    /* Get the rows themselves (large objects) */
+    currow = 0;
+    while (currow < numrows) {
+      rowsperchunk = MIN(rowsperchunk, numrows - currow);
+      workspace = (JSAMPROW)alloc_large(cinfo, pool_id,
+        (size_t)((size_t)rowsperchunk * (size_t)samplesperrow * sample_size));
+      for (i = rowsperchunk; i > 0; i--) {
+        result[currow++] = workspace;
+        workspace += samplesperrow;
+      }
+    }
+
+    return result;
+  }
 }
 
 
@@ -640,6 +701,13 @@ realize_virt_arrays(j_common_ptr cinfo)
   size_t minheights, max_minheights;
   jvirt_sarray_ptr sptr;
   jvirt_barray_ptr bptr;
+  int data_precision = cinfo->is_decompressor ?
+                        ((j_decompress_ptr)cinfo)->data_precision :
+                        ((j_compress_ptr)cinfo)->data_precision;
+  size_t sample_size = data_precision == 16 ?
+                       sizeof(J16SAMPLE) : (data_precision == 12 ?
+                                            sizeof(J12SAMPLE) :
+                                            sizeof(JSAMPLE));
 
   /* Compute the minimum space needed (maxaccess rows in each buffer)
    * and the maximum space needed (full image height in each buffer).
@@ -650,10 +718,10 @@ realize_virt_arrays(j_common_ptr cinfo)
   for (sptr = mem->virt_sarray_list; sptr != NULL; sptr = sptr->next) {
     if (sptr->mem_buffer == NULL) { /* if not realized yet */
       size_t new_space = (long)sptr->rows_in_array *
-                         (long)sptr->samplesperrow * sizeof(JSAMPLE);
+                         (long)sptr->samplesperrow * sample_size;
 
       space_per_minheight += (long)sptr->maxaccess *
-                             (long)sptr->samplesperrow * sizeof(JSAMPLE);
+                             (long)sptr->samplesperrow * sample_size;
       if (SIZE_MAX - maximum_space < new_space)
         out_of_memory(cinfo, 10);
       maximum_space += new_space;
@@ -676,7 +744,7 @@ realize_virt_arrays(j_common_ptr cinfo)
     return;                     /* no unrealized arrays, no work */
 
   /* Determine amount of memory to actually use; this is system-dependent. */
-  avail_mem = jpeg_mem_available(cinfo, space_per_minheight, maximum_space,
+  avail_mem = cinfo->sys_mem_if.mem_available(cinfo, space_per_minheight, maximum_space,
                                  mem->total_space_allocated);
 
   /* If the maximum space needed is available, make all the buffers full
@@ -705,10 +773,10 @@ realize_virt_arrays(j_common_ptr cinfo)
       } else {
         /* It doesn't fit in memory, create backing store. */
         sptr->rows_in_mem = (JDIMENSION)(max_minheights * sptr->maxaccess);
-        jpeg_open_backing_store(cinfo, &sptr->b_s_info,
+		cinfo->sys_mem_if.open_backing_store(cinfo, &sptr->b_s_info,
                                 (long)sptr->rows_in_array *
                                 (long)sptr->samplesperrow *
-                                (long)sizeof(JSAMPLE));
+                                (long)sample_size);
         sptr->b_s_open = TRUE;
       }
       sptr->mem_buffer = alloc_sarray(cinfo, JPOOL_IMAGE,
@@ -729,7 +797,7 @@ realize_virt_arrays(j_common_ptr cinfo)
       } else {
         /* It doesn't fit in memory, create backing store. */
         bptr->rows_in_mem = (JDIMENSION)(max_minheights * bptr->maxaccess);
-        jpeg_open_backing_store(cinfo, &bptr->b_s_info,
+		cinfo->sys_mem_if.open_backing_store(cinfo, &bptr->b_s_info,
                                 (long)bptr->rows_in_array *
                                 (long)bptr->blocksperrow *
                                 (long)sizeof(JBLOCK));
@@ -751,8 +819,15 @@ do_sarray_io(j_common_ptr cinfo, jvirt_sarray_ptr ptr, boolean writing)
 /* Do backing store read or write of a virtual sample array */
 {
   long bytesperrow, file_offset, byte_count, rows, thisrow, i;
+  int data_precision = cinfo->is_decompressor ?
+                        ((j_decompress_ptr)cinfo)->data_precision :
+                        ((j_compress_ptr)cinfo)->data_precision;
+  size_t sample_size = data_precision == 16 ?
+                       sizeof(J16SAMPLE) : (data_precision == 12 ?
+                                            sizeof(J12SAMPLE) :
+                                            sizeof(JSAMPLE));
 
-  bytesperrow = (long)ptr->samplesperrow * sizeof(JSAMPLE);
+  bytesperrow = (long)ptr->samplesperrow * (long)sample_size;
   file_offset = ptr->cur_start_row * bytesperrow;
   /* Loop to read or write each allocation chunk in mem_buffer */
   for (i = 0; i < (long)ptr->rows_in_mem; i += ptr->rowsperchunk) {
@@ -766,14 +841,42 @@ do_sarray_io(j_common_ptr cinfo, jvirt_sarray_ptr ptr, boolean writing)
     if (rows <= 0)              /* this chunk might be past end of file! */
       break;
     byte_count = rows * bytesperrow;
-    if (writing)
-      (*ptr->b_s_info.write_backing_store) (cinfo, &ptr->b_s_info,
-                                            (void *)ptr->mem_buffer[i],
-                                            file_offset, byte_count);
-    else
-      (*ptr->b_s_info.read_backing_store) (cinfo, &ptr->b_s_info,
-                                           (void *)ptr->mem_buffer[i],
-                                           file_offset, byte_count);
+    if (data_precision == 16) {
+#if defined(C_LOSSLESS_SUPPORTED) || defined(D_LOSSLESS_SUPPORTED)
+      J16SAMPARRAY mem_buffer16 = (J16SAMPARRAY)ptr->mem_buffer;
+
+      if (writing)
+        (*ptr->b_s_info.write_backing_store) (cinfo, &ptr->b_s_info,
+                                              (void *)mem_buffer16[i],
+                                              file_offset, byte_count);
+      else
+        (*ptr->b_s_info.read_backing_store) (cinfo, &ptr->b_s_info,
+                                             (void *)mem_buffer16[i],
+                                             file_offset, byte_count);
+#else
+      ERREXIT1(cinfo, JERR_BAD_PRECISION, data_precision);
+#endif
+    } else if (data_precision == 12) {
+      J12SAMPARRAY mem_buffer12 = (J12SAMPARRAY)ptr->mem_buffer;
+
+      if (writing)
+        (*ptr->b_s_info.write_backing_store) (cinfo, &ptr->b_s_info,
+                                              (void *)mem_buffer12[i],
+                                              file_offset, byte_count);
+      else
+        (*ptr->b_s_info.read_backing_store) (cinfo, &ptr->b_s_info,
+                                             (void *)mem_buffer12[i],
+                                             file_offset, byte_count);
+    } else {
+      if (writing)
+        (*ptr->b_s_info.write_backing_store) (cinfo, &ptr->b_s_info,
+                                              (void *)ptr->mem_buffer[i],
+                                              file_offset, byte_count);
+      else
+        (*ptr->b_s_info.read_backing_store) (cinfo, &ptr->b_s_info,
+                                             (void *)ptr->mem_buffer[i],
+                                             file_offset, byte_count);
+    }
     file_offset += byte_count;
   }
 }
@@ -821,6 +924,13 @@ access_virt_sarray(j_common_ptr cinfo, jvirt_sarray_ptr ptr,
 {
   JDIMENSION end_row = start_row + num_rows;
   JDIMENSION undef_row;
+  int data_precision = cinfo->is_decompressor ?
+                        ((j_decompress_ptr)cinfo)->data_precision :
+                        ((j_compress_ptr)cinfo)->data_precision;
+  size_t sample_size = data_precision == 16 ?
+                       sizeof(J16SAMPLE) : (data_precision == 12 ?
+                                            sizeof(J12SAMPLE) :
+                                            sizeof(JSAMPLE));
 
   /* debugging check */
   if (end_row > ptr->rows_in_array || num_rows > ptr->maxaccess ||
@@ -876,7 +986,7 @@ access_virt_sarray(j_common_ptr cinfo, jvirt_sarray_ptr ptr,
     if (writable)
       ptr->first_undef_row = end_row;
     if (ptr->pre_zero) {
-      size_t bytesperrow = (size_t)ptr->samplesperrow * sizeof(JSAMPLE);
+      size_t bytesperrow = (size_t)ptr->samplesperrow * sample_size;
       undef_row -= ptr->cur_start_row; /* make indexes relative to buffer */
       end_row -= ptr->cur_start_row;
       while (undef_row < end_row) {
@@ -1030,7 +1140,7 @@ free_pool(j_common_ptr cinfo, int pool_id)
     space_freed = lhdr_ptr->bytes_used +
                   lhdr_ptr->bytes_left +
                   sizeof(large_pool_hdr) + ALIGN_SIZE - 1;
-    jpeg_free_large(cinfo, (void *)lhdr_ptr, space_freed);
+	cinfo->sys_mem_if.free_large(cinfo, (void *)lhdr_ptr, space_freed);
     mem->total_space_allocated -= space_freed;
     lhdr_ptr = next_lhdr_ptr;
   }
@@ -1043,7 +1153,7 @@ free_pool(j_common_ptr cinfo, int pool_id)
     small_pool_ptr next_shdr_ptr = shdr_ptr->next;
     space_freed = shdr_ptr->bytes_used + shdr_ptr->bytes_left +
                   sizeof(small_pool_hdr) + ALIGN_SIZE - 1;
-    jpeg_free_small(cinfo, (void *)shdr_ptr, space_freed);
+	cinfo->sys_mem_if.free_small(cinfo, (void *)shdr_ptr, space_freed);
     mem->total_space_allocated -= space_freed;
     shdr_ptr = next_shdr_ptr;
   }
@@ -1069,10 +1179,12 @@ self_destruct(j_common_ptr cinfo)
   }
 
   /* Release the memory manager control block too. */
-  jpeg_free_small(cinfo, (void *)cinfo->mem, sizeof(my_memory_mgr));
+  cinfo->sys_mem_if.free_small(cinfo, (void *)cinfo->mem, sizeof(my_memory_mgr));
   cinfo->mem = NULL;            /* ensures I will be called only once */
 
-  jpeg_mem_term(cinfo);         /* system-dependent cleanup */
+  cinfo->sys_mem_if.mem_term(cinfo);         /* system-dependent cleanup */
+
+  memset(&cinfo->sys_mem_if, 0, sizeof(cinfo->sys_mem_if));
 }
 
 
@@ -1089,6 +1201,7 @@ jinit_memory_mgr(j_common_ptr cinfo)
   int pool;
   size_t test_mac;
 
+  memset(&cinfo->sys_mem_if, 0, sizeof(cinfo->sys_mem_if));
   cinfo->mem = NULL;            /* for safety if init fails */
 
   /* Check for configuration errors.
@@ -1110,13 +1223,24 @@ jinit_memory_mgr(j_common_ptr cinfo)
       (MAX_ALLOC_CHUNK % ALIGN_SIZE) != 0)
     ERREXIT(cinfo, JERR_BAD_ALLOC_CHUNK);
 
-  max_to_use = jpeg_mem_init(cinfo); /* system-dependent initialization */
+  if (cinfo->client_init_callback)
+  {
+	  if (cinfo->client_init_callback(cinfo))
+		  ERREXIT(cinfo, JERR_BAD_CLIENT_INFO_CALLBACK);
+  }
+  else
+  {
+	  if (jpeg_nobs_sys_mem_register(cinfo))
+		  ERREXIT(cinfo, JERR_BAD_CLIENT_INFO_CALLBACK);
+  }
+
+  max_to_use = cinfo->sys_mem_if.mem_init(cinfo); /* system-dependent initialization */
 
   /* Attempt to allocate memory manager's control block */
-  mem = (my_mem_ptr)jpeg_get_small(cinfo, sizeof(my_memory_mgr));
+  mem = (my_mem_ptr)cinfo->sys_mem_if.get_small(cinfo, sizeof(my_memory_mgr));
 
   if (mem == NULL) {
-    jpeg_mem_term(cinfo);       /* system-dependent cleanup */
+    cinfo->sys_mem_if.mem_term(cinfo);       /* system-dependent cleanup */
     ERREXIT1(cinfo, JERR_OUT_OF_MEMORY, 0);
   }
 

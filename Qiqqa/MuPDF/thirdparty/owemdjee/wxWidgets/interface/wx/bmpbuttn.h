@@ -53,7 +53,7 @@ public:
         Constructor, creating and showing a button.
 
         @param parent
-            Parent window. Must not be @NULL.
+            Parent window. Must not be @nullptr.
         @param id
             Button identifier. The value wxID_ANY indicates a default value.
         @param bitmap
@@ -107,7 +107,7 @@ public:
         on a default-constructed wxBitmapButton object to achieve the same
         effect.
 
-        @param parent The button parent window, must be non-@NULL.
+        @param parent The button parent window, must be non-null.
         @param winid The identifier for the new button.
         @param name The name for the new button.
 
@@ -125,7 +125,7 @@ public:
         provided to avoid the need to test for the current platform and creates
         the button with as native look as possible.
 
-        @param parent The button parent window, must be non-@NULL.
+        @param parent The button parent window, must be non-null.
         @param winid The identifier for the new button.
         @param name The name for the new button (available since wxWidgets 3.1.5)
         @return The new button.

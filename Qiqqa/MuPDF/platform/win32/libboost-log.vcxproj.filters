@@ -1634,9 +1634,6 @@
     <Text Include="../../thirdparty/owemdjee/boost/libs/log/doc/changelog.qbk">
       <Filter>Misc Files\doc</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/boost/libs/log/doc/todo.qbk">
-      <Filter>Misc Files\doc</Filter>
-    </Text>
     <Text Include="../../thirdparty/owemdjee/boost/libs/log/example/settings_file/settings.txt">
       <Filter>Misc Files\example\settings_file</Filter>
     </Text>
@@ -1651,4 +1648,3 @@
     </Text>
   </ItemGroup>
 </Project>
-    

@@ -908,7 +908,7 @@ enum
 
 static
 void CompareImage(const wxImageHandler& handler, const wxImage& image,
-    int properties = 0, const wxImage *compareTo = NULL)
+    int properties = 0, const wxImage *compareTo = nullptr)
 {
     wxBitmapType type = handler.GetType();
 
@@ -1107,7 +1107,7 @@ void ImageTestCase::SavePNG()
 
 #if wxUSE_LIBTIFF
 static void TestTIFFImage(const wxString& option, int value,
-    const wxImage *compareImage = NULL)
+    const wxImage *compareImage = nullptr)
 {
     wxImage image;
     if (compareImage)
@@ -1474,7 +1474,7 @@ void ImageTestCase::ScaleCompare()
 
 void ImageTestCase::CreateBitmapFromCursor()
 {
-#if !defined __WXOSX_IPHONE__ && !defined __WXDFB__ && !defined __WXMOTIF__ && !defined __WXX11__
+#if !defined __WXOSX_IPHONE__ && !defined __WXDFB__ && !defined __WXX11__
 
     wxImage image("image/wx.png");
     wxCursor cursor(image);

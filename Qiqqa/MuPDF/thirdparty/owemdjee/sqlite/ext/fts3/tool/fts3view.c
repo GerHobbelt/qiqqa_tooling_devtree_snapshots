@@ -804,7 +804,7 @@ static void listBigSegments(sqlite3 *db, const char *zTab){
 
 
 
-static void usage(const char *argv0){
+static int usage(const char *argv0){
   fprintf(stderr, "Usage: %s DATABASE\n"
                   "   or: %s DATABASE FTS3TABLE ARGS...\n", argv0, argv0);
   fprintf(stderr,
@@ -818,7 +818,7 @@ static void usage(const char *argv0){
     "  stat                                      the %%_stat table\n"
     "  vocabulary [--top N]                      document vocabulary\n"
   );
-  exit(1);
+  return 1;
 }
 
 
@@ -832,11 +832,11 @@ int main(int argc, const char **argv){
   const char *zTab;
   const char *zCmd;
 
-  if( argc<2 ) usage(argv[0]);
+  if( argc<2 ) return usage(argv[0]);
   rc = sqlite3_open(argv[1], &db);
   if( rc ){
     fprintf(stderr, "Cannot open %s\n", argv[1]);
-    exit(1);
+    return 1;
   }
   if( argc==2 ){
     sqlite3_stmt *pStmt;
@@ -856,7 +856,7 @@ int main(int argc, const char **argv){
     }
     return 0;
   }
-  if( argc<4 ) usage(argv[0]);
+  if( argc<4 ) return usage(argv[0]);
   zTab = argv[2];
   zCmd = argv[3];
   nExtra = argc-4;
@@ -864,14 +864,14 @@ int main(int argc, const char **argv){
   if( strcmp(zCmd,"big-segments")==0 ){
     listBigSegments(db, zTab);
   }else if( strcmp(zCmd,"doclist")==0 ){
-    if( argc<7 ) usage(argv[0]);
+    if( argc<7 ) return usage(argv[0]);
     showDoclist(db, zTab);
   }else if( strcmp(zCmd,"schema")==0 ){
     showSchema(db, zTab);
   }else if( strcmp(zCmd,"segdir")==0 ){
     showSegdirMap(db, zTab);
   }else if( strcmp(zCmd,"segment")==0 ){
-    if( argc<5 ) usage(argv[0]);
+    if( argc<5 ) return usage(argv[0]);
     showSegment(db, zTab);
   }else if( strcmp(zCmd,"segment-stats")==0 ){
     showSegmentStats(db, zTab);
@@ -880,7 +880,7 @@ int main(int argc, const char **argv){
   }else if( strcmp(zCmd,"vocabulary")==0 ){
     showVocabulary(db, zTab);
   }else{
-    usage(argv[0]);
+    return usage(argv[0]);
   }
   return 0; 
 }

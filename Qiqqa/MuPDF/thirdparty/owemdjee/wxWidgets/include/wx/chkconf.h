@@ -322,14 +322,6 @@
 #   endif
 #endif /* !defined(wxUSE_STD_CONTAINERS) */
 
-#ifndef wxUSE_STD_CONTAINERS_COMPATIBLY
-#   ifdef wxABORT_ON_CONFIG_ERROR
-#       error "wxUSE_STD_CONTAINERS_COMPATIBLY must be defined, please read comment near the top of this file."
-#   else
-#       define wxUSE_STD_CONTAINERS_COMPATIBLY 0
-#   endif
-#endif /* !defined(wxUSE_STD_CONTAINERS_COMPATIBLY) */
-
 #ifndef wxUSE_STD_STRING_CONV_IN_WXSTRING
 #   ifdef wxABORT_ON_CONFIG_ERROR
 #       error "wxUSE_STD_STRING_CONV_IN_WXSTRING must be defined, please read comment near the top of this file."
@@ -369,14 +361,6 @@
 #       define wxUSE_TEXTFILE 0
 #   endif
 #endif /* !defined(wxUSE_TEXTFILE) */
-
-#ifndef wxUSE_UNICODE
-#   ifdef wxABORT_ON_CONFIG_ERROR
-#       error "wxUSE_UNICODE must be defined, please read comment near the top of this file."
-#   else
-#       define wxUSE_UNICODE 0
-#   endif
-#endif /* !defined(wxUSE_UNICODE) */
 
 #ifndef wxUSE_UNSAFE_WXSTRING_CONV
 #   ifdef wxABORT_ON_CONFIG_ERROR
@@ -1329,8 +1313,6 @@
 #  include "wx/osx/chkconf.h"
 #elif defined(__WXDFB__)
 #  include "wx/dfb/chkconf.h"
-#elif defined(__WXMOTIF__)
-#  include "wx/motif/chkconf.h"
 #elif defined(__WXX11__)
 #  include "wx/x11/chkconf.h"
 #elif defined(__WXANDROID__)
@@ -2096,15 +2078,6 @@
 #        endif
 #   endif
 
-#   if !wxUSE_STREAMS && !wxUSE_STD_IOSTREAM
-#        ifdef wxABORT_ON_CONFIG_ERROR
-#            error "DocView requires wxUSE_STREAMS or wxUSE_STD_IOSTREAM"
-#        else
-#            undef wxUSE_STREAMS
-#            define wxUSE_STREAMS 1
-#        endif
-#   endif
-
 #   if !wxUSE_FILE_HISTORY
 #        ifdef wxABORT_ON_CONFIG_ERROR
 #            error "DocView requires wxUSE_FILE_HISTORY"
@@ -2366,6 +2339,14 @@
 #       define wxUSE_WEBREQUEST 0
 #   endif
 #endif /* wxUSE_WEBREQUEST && !any web request backend */
+
+// cURL has priority over other webrequest backends:
+#if wxUSE_WEBREQUEST && wxUSE_WEBREQUEST_CURL
+#undef wxUSE_WEBREQUEST_WINHTTP
+#undef wxUSE_WEBREQUEST_URLSESSION
+#define wxUSE_WEBREQUEST_WINHTTP      0
+#define wxUSE_WEBREQUEST_URLSESSION   0
+#endif
 
 #if wxUSE_PREFERENCES_EDITOR
     /*

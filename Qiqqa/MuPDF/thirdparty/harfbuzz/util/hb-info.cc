@@ -27,6 +27,8 @@
 #include "batch.hh"
 #include "font-options.hh"
 
+#ifdef HAVE_GLIB_H
+
 #ifdef HB_HAS_GOBJECT
 #include <hb-gobject.h>
 #endif
@@ -35,8 +37,8 @@
 # include <chafa.h>
 #endif
 
-const unsigned DEFAULT_FONT_SIZE = FONT_SIZE_UPEM;
-const unsigned SUBPIXEL_BITS = 0;
+static const unsigned DEFAULT_FONT_SIZE = FONT_SIZE_UPEM;
+static const unsigned SUBPIXEL_BITS = 0;
 
 static void
 _hb_ot_name_get_utf8 (hb_face_t       *face,
@@ -1448,3 +1450,6 @@ main (int argc, char **argv)
 {
   return batch_main<info_t> (argc, argv);
 }
+
+#endif // HAVE_GLIB_H
+

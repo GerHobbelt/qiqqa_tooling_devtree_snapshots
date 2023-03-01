@@ -250,11 +250,11 @@ public:
     /**
         Check if this object can actually be used.
 
-        @param errmsg If not @NULL, this parameter is filled with a
+        @param errmsg If not @nullptr, this parameter is filled with a
             user-readable error message explaining why the secret store can't
             be used (this argument is new since wxWidgets 3.1.4)
      */
-    bool IsOk(wxString* errmsg = NULL) const;
+    bool IsOk(wxString* errmsg = nullptr) const;
 
     /**
         Store a username/password combination.

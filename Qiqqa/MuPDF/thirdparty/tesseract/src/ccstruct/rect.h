@@ -299,11 +299,14 @@ public:
   // Appends the bounding box as (%d,%d)->(%d,%d) to a string.
   void print_to_str(std::string &str) const;
 
-#ifndef GRAPHICS_DISABLED
+#if !GRAPHICS_DISABLED
   void plot(                  // use current settings
       ScrollView *fd) const { // where to paint
     fd->Rectangle(bot_left.x(), bot_left.y(), top_right.x(), top_right.y());
   }
+
+  void plot(                  // use current settings
+    Image& pix) const;        // where to paint
 
   void plot(                                  // paint box
       ScrollView *fd,                         // where to paint

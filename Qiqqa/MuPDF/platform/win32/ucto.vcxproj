@@ -52,20 +52,20 @@
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <ImportGroup Label="PropertySheets" >
+  <ImportGroup Label="PropertySheets">
     <Import Project="$(SolutionDir)\common-project.props" Label="SolutionWideSettings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
+    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props" Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Import Project="$(SolutionDir)\common-project-Release-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
+    <Import Project="$(SolutionDir)\common-project-Release-Win32.props" Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
+    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props" Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <Import Project="$(SolutionDir)\common-project-Release-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
+    <Import Project="$(SolutionDir)\common-project-Release-Win64.props" Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
   </ImportGroup>
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
@@ -79,7 +79,7 @@
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
-<ItemDefinitionGroup>
+  <ItemDefinitionGroup>
     <ClCompile>
       <Optimization>Custom</Optimization>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -111,8 +111,8 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
-</ItemDefinitionGroup>
-<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_UCTO;UCTO_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
@@ -124,7 +124,7 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/ucto/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_UCTO;UCTO_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
@@ -150,7 +150,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/ucto/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_UCTO;UCTO_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -179,7 +179,7 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/ucto/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_UCTO;UCTO_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
@@ -205,7 +205,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/ucto/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_UCTO;UCTO_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -242,6 +242,7 @@
     <Text Include="../../thirdparty/owemdjee/ucto/build-deps.sh" />
     <Text Include="../../thirdparty/owemdjee/ucto/codemeta.json" />
     <Text Include="../../thirdparty/owemdjee/ucto/config/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/ucto/config/textcat.cfg" />
     <Text Include="../../thirdparty/owemdjee/ucto/config/textcat_alt.cfg.in" />
     <Text Include="../../thirdparty/owemdjee/ucto/config/textcat_normal.cfg.in" />
     <Text Include="../../thirdparty/owemdjee/ucto/configure.ac" />
@@ -250,6 +251,7 @@
     <Text Include="../../thirdparty/owemdjee/ucto/docs/source/index.rst" />
     <Text Include="../../thirdparty/owemdjee/ucto/docs/todo" />
     <Text Include="../../thirdparty/owemdjee/ucto/docs/ucto_manual.rst" />
+    <Text Include="../../thirdparty/owemdjee/ucto/dox.cfg" />
     <Text Include="../../thirdparty/owemdjee/ucto/include/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/ucto/include/ucto/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/ucto/m4/Makefile.am" />
@@ -317,8 +319,11 @@
     <Text Include="../../thirdparty/owemdjee/ucto/tests/quotetest_nosentence.nl.txt" />
     <Text Include="../../thirdparty/owemdjee/ucto/tests/quotetest_onesentence.nl.txt" />
     <Text Include="../../thirdparty/owemdjee/ucto/tests/reverse-smiley.nl.txt" />
+    <Text Include="../../thirdparty/owemdjee/ucto/tests/small.cfg" />
     <Text Include="../../thirdparty/owemdjee/ucto/tests/small.txt" />
     <Text Include="../../thirdparty/owemdjee/ucto/tests/smileys.nl.txt" />
+    <Text Include="../../thirdparty/owemdjee/ucto/tests/stuk1.cfg" />
+    <Text Include="../../thirdparty/owemdjee/ucto/tests/stuk2.cfg" />
     <Text Include="../../thirdparty/owemdjee/ucto/tests/suffix.nl.txt" />
     <Text Include="../../thirdparty/owemdjee/ucto/tests/test.de.txt" />
     <Text Include="../../thirdparty/owemdjee/ucto/tests/test.en.txt" />
@@ -328,6 +333,7 @@
     <Text Include="../../thirdparty/owemdjee/ucto/tests/test.py" />
     <Text Include="../../thirdparty/owemdjee/ucto/tests/testpunctuation.txt" />
     <Text Include="../../thirdparty/owemdjee/ucto/tests/tokens.txt" />
+    <Text Include="../../thirdparty/owemdjee/ucto/tests/tst.cfg" />
     <Text Include="../../thirdparty/owemdjee/ucto/tests/tst.txt" />
     <Text Include="../../thirdparty/owemdjee/ucto/tests/twitter.txt" />
     <Text Include="../../thirdparty/owemdjee/ucto/tests/urls.nl.txt" />
@@ -373,8 +379,7 @@
     <Xml Include="../../thirdparty/owemdjee/ucto/tests/utt.xml" />
     <Xml Include="../../thirdparty/owemdjee/ucto/tests/utt2.xml" />
   </ItemGroup>
-  <ImportGroup Label="PropertySheets" >
+  <ImportGroup Label="PropertySheets">
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />
   </ImportGroup>
 </Project>
-  

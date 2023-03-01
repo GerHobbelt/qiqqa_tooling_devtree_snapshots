@@ -239,6 +239,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/tre/lib/tre-parse.c" />
     <ClCompile Include="../../thirdparty/owemdjee/tre/lib/tre-stack.c" />
     <ClCompile Include="../../thirdparty/owemdjee/tre/lib/xmalloc.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/tre/python/tre-python.c" />
     <ClCompile Include="../../thirdparty/owemdjee/tre/src/agrep.c" />
     <ClCompile Include="../../thirdparty/owemdjee/tre/tests/bench.c" />
     <ClCompile Include="../../thirdparty/owemdjee/tre/tests/randtest.c" />

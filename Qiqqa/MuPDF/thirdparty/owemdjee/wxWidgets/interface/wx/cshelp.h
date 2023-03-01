@@ -78,7 +78,7 @@ public:
     /**
         Set the current, application-wide help provider.
 
-        @return Pointer to previous help provider or @NULL if there wasn't any.
+        @return Pointer to previous help provider or @nullptr if there wasn't any.
     */
     static wxHelpProvider* Set(wxHelpProvider* helpProvider);
 
@@ -142,7 +142,7 @@ public:
         Note that the instance doesn't own the help controller. The help
         controller should be deleted separately.
     */
-    wxHelpControllerHelpProvider(wxHelpControllerBase* hc = NULL);
+    wxHelpControllerHelpProvider(wxHelpControllerBase* hc = nullptr);
 
     /**
         Returns the help controller associated with this help provider.
@@ -197,9 +197,9 @@ public:
         Constructs a context help object, calling BeginContextHelp() if
         @a doNow is @true (the default).
 
-        If @a window is @NULL, the top window is used.
+        If @a window is @nullptr, the top window is used.
     */
-    wxContextHelp(wxWindow* window = NULL, bool doNow = true);
+    wxContextHelp(wxWindow* window = nullptr, bool doNow = true);
 
     /**
         Destroys the context help object.
@@ -208,7 +208,7 @@ public:
 
     /**
         Puts the application into context-sensitive help mode. @a window is the
-        window which will be used to catch events; if @NULL, the top window
+        window which will be used to catch events; if @nullptr, the top window
         will be used.
 
         Returns @true if the application was successfully put into
@@ -250,7 +250,7 @@ public:
         Constructor, creating and showing a context help button.
 
         @param parent
-            Parent window. Must not be @NULL.
+            Parent window. Must not be @nullptr.
         @param id
             Button identifier. Defaults to wxID_CONTEXT_HELP.
         @param pos

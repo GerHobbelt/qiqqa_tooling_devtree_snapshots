@@ -230,7 +230,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/uint128_t/endianness.h" />
     <ClInclude Include="../../thirdparty/owemdjee/uint128_t/uint128_t.h" />
     <Text Include="../../thirdparty/owemdjee/uint128_t/README.md" />
-    <Text Include="../../thirdparty/owemdjee/uint128_t/tests/install_gtest.sh" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

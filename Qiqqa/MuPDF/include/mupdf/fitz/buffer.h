@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2022 Artifex Software, Inc.
+// Copyright (C) 2004-2023 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -79,7 +79,7 @@ size_t fz_buffer_storage(fz_context *ctx, fz_buffer *buf, unsigned char **datap)
 	Ensure that a buffer's data ends in a
 	0 byte, and return a pointer to the buffer content.
 
-	WARNING: If the buffer may contain NUL bytes, these will prematurely terminate
+	WARNING: If the buffer contains NUL data bytes, these will prematurely terminate
 	the returned C string. Use
 
 		fz_terminate_buffer(ctx, buf);
@@ -89,7 +89,7 @@ size_t fz_buffer_storage(fz_context *ctx, fz_buffer *buf, unsigned char **datap)
 	to obtain an equivalent NUL-terminated string *with* the
 	string length specified in `string_length` (including embedded NUL bytes).
 */
-const char *fz_string_from_buffer(fz_context *ctx, fz_buffer *buf);
+char *fz_string_from_buffer(fz_context *ctx, fz_buffer *buf);
 
 fz_buffer *fz_new_buffer(fz_context *ctx, size_t capacity);
 
@@ -134,7 +134,7 @@ fz_buffer *fz_new_buffer_from_base64(fz_context *ctx, const char *data, size_t s
 	truncating data if required.
 
 	capacity: The desired capacity for the buffer. If the current
-	size of the buffer contents is smaller than capacity, it is
+	size of the buffer contents is larger than the requested capacity, it is
 	truncated.
 */
 void fz_resize_buffer(fz_context *ctx, fz_buffer *buf, size_t capacity);
@@ -144,6 +144,15 @@ void fz_resize_buffer(fz_context *ctx, fz_buffer *buf, size_t capacity);
 	capacity > size).
 */
 void fz_grow_buffer(fz_context *ctx, fz_buffer *buf);
+
+/**
+	Ensure that a buffer has a given *minimum* capacity. Data is NOT 
+	truncated.
+
+	`min_capacity`: The desired *minimum* capacity for the buffer. If the current
+	size of the buffer is larger than capacity, it is kept as-is.
+*/
+void fz_ensure_buffer(fz_context *ctx, fz_buffer *buf, size_t min_capacity);
 
 /**
 	Trim wasted capacity from a buffer by resizing internal memory.
@@ -157,6 +166,16 @@ void fz_trim_buffer(fz_context *ctx, fz_buffer *buf);
 	Never throws exceptions.
 */
 void fz_clear_buffer(fz_context *ctx, fz_buffer *buf);
+
+/**
+	Create a new buffer with a (subset of) the data from the buffer.
+
+	start: if >= 0, offset from start of buffer, if < 0 offset from end of buffer.
+
+	end: if >= 0, offset from start of buffer, if < 0 offset from end of buffer.
+
+*/
+fz_buffer *fz_slice_buffer(fz_context *ctx, fz_buffer *buf, int64_t start, int64_t end);
 
 /**
 	Append the contents of the source buffer onto the end of the

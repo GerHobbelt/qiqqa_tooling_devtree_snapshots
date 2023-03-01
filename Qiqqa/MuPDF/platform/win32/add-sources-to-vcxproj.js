@@ -13,6 +13,7 @@ let path = require('path');
 let glob = require('@gerhobbelt/glob');
 
 let DEBUG = 0;
+
 const globDefaultOptions = {
   debug: (DEBUG > 4),
   matchBase: true, // true: pattern starting with / matches the basedir, while non-/-prefixed patterns will match in any subdirectory --> act like **/<pattern>
@@ -88,15 +89,36 @@ if (!fs.existsSync(filepath)) {
 let spec = {
 	nasm_or_masm: 0,   // 0: auto; -1: masm; +1: nasm
 	ignores: [
-		'/thirdparty/',
-		'/third_party/',
-		'/3rd_party/',
-		'/owemdjee/',
-		'/3rd/',
+		'thirdparty/',
+		'third_party/',
+		'3rd_party/',
+		'3rdparty/',
+		'owemdjee/',
+		'3rd/',
+		'/b/',             // our in-company default cmake build work directory. NOT '/build/' as many projects already have that one as part of their source tree!
+		'CMakeFiles/',
+		'CMakeModules/',
+		'cmake/modules/',
+		'cmake/checks/',
+		'fuzz.*',
+		'node_modules/',
+		'obj/Debug[^/]*',
+		'obj/Release[^/]*',
 	],
 	sources: [],
 	directories: [],
+	special_inject: null,
 };
+
+let rawSourcesPath = process.argv[3] || '';
+if (DEBUG > 2) console.error({argv: process.argv, rawSourcesPath})
+if (rawSourcesPath.trim() !== '') {
+	let pa = rawSourcesPath
+	.split(';')
+	.map((line) => line.trim());
+
+	spec.directories.push(...pa);
+}
 
 let specPath = filepath.replace(/\.vcxproj/, '.spec');
 if (fs.existsSync(specPath)) {
@@ -104,7 +126,7 @@ if (fs.existsSync(specPath)) {
   let rawSpec = fs.readFileSync(specPath, 'utf8').split('\n')
   .map((line) => line.trimEnd().replace(/\t/g, '    '))
   // filter out commented lines in the ignore spec
-  .filter((line) => line.trim().length > 0 && !/^[#;]/.test(line))
+  .filter((line) => line.trim().length > 0 && !/^[#;]/.test(line.trim()))
   .join('\n');
 
   rawSpec = '\n' + rawSpec + '\n';
@@ -119,14 +141,31 @@ if (fs.existsSync(specPath)) {
   if (/^ignore:/m.test(rawSpec)) {
     if (DEBUG > 0) console.log("SPEC include [ignore] section...");
     spec.ignores = rawSpec.replace(/^.*\nignore:(.*?)\n(?:[^\s].*)?$/s, '$1')
+    // .replace(/\\/g, '/')   -- some backslashes are quitee relevant in here as some lines will specify REGEXES, so we'll have to apply this path conversion later!
     .split('\n')
     .map((line) => line.trim())
     .filter((line) => line.trim().length > 0);
+  }
+  if (/^also-ignore:/m.test(rawSpec)) {
+    if (DEBUG > 0) console.log("SPEC include [also-ignore] section...");
+    let a = rawSpec.replace(/^.*\nalso-ignore:(.*?)\n(?:[^\s].*)?$/s, '$1')
+    // .replace(/\\/g, '/')   -- some backslashes are quitee relevant in here as some lines will specify REGEXES, so we'll have to apply this path conversion later!
+    .split('\n')
+    .map((line) => line.trim())
+    .filter((line) => line.trim().length > 0);
+    
+    spec.ignores = spec.ignores.concat(a);
+  }
+
+  if (/^special-inject:/m.test(rawSpec)) {
+    if (DEBUG > 0) console.log("SPEC include [special-inject] section...");
+    spec.special_inject = rawSpec.replace(/^.*\nspecial-inject:(.*?)\n(?:[^\s].*)?$/s, '$1');
   }
 
   if (/^sources:/m.test(rawSpec)) {
     if (DEBUG > 0) console.log("SPEC include [sources] section...");
     spec.sources = rawSpec.replace(/^.*\nsources:(.*?)\n(?:[^\s].*)?$/s, '$1')
+    .replace(/\\/g, '/')
     .split('\n')
     .map((line) => line.trim())
     .filter((line) => line.trim().length > 0);
@@ -134,10 +173,12 @@ if (fs.existsSync(specPath)) {
 
   if (/^directories:/m.test(rawSpec)) {
     if (DEBUG > 0) console.log("SPEC include [directories] section...");
-    spec.directories = rawSpec.replace(/^.*\ndirectories:(.*?)\n(?:[^\s].*)?$/s, '$1')
+    let a = rawSpec.replace(/^.*\ndirectories:(.*?)\n(?:[^\s].*)?$/s, '$1')
+    .replace(/\\/g, '/')
     .split('\n')
     .map((line) => line.trim())
     .filter((line) => line.trim().length > 0);
+    spec.directories = spec.directories.concat(a);
   }
 
   if (DEBUG > 0) console.error("PROC'D SPEC [DONE]:", {rawSpec, spec});
@@ -150,32 +191,25 @@ if (rawIgnoresPath.trim() !== '') {
     console.error(`ERROR: user-specified ignores list file "${ignoresPath}" does not exist or is not a file.`);
     process.exit(1);
   }
-  spec.ignores = fs.readFileSync(ignoresPath, 'utf8').split('\n')
+  spec.ignores = fs.readFileSync(ignoresPath, 'utf8')
+  // .replace(/\\/g, '/')   -- some backslashes are quitee relevant in here as some lines will specify REGEXES, so we'll have to apply this path conversion later!
+  .split('\n')
   .map((line) => line.trim())
   // filter out commented lines in the ignore spec
-  .filter((line) => line.length > 0 && !/^[#;]/.test(line));
+  .filter((line) => line.length > 0 && !/^[#;]/.test(line.trim()));
 
   console.info('Will ignore any paths which include: ', spec.ignores);
 }
 
-let rawSourcesPath = process.argv[3] || '';
-if (DEBUG > 2) console.error({argv: process.argv, rawSourcesPath})
-if (rawSourcesPath.trim() === '') {
-	if (spec.sources.length + spec.directories.length === 0) {
-	  console.error("Missing sources directory argument or spec file.");
-	  console.error("call:\n  add-sources-to-vcxproj.js xyz.vcxproj directory-of-sourcefiles");
-	  process.exit(1);
-	}
-}
-else {
-	let pa = rawSourcesPath
-	.split(';')
-	.map((line) => line.trim());
-
-	spec.directories.push(...pa);
-}
-
 if (DEBUG > 2) console.error({spec})
+
+
+if (spec.sources.length + spec.directories.length === 0) {
+  console.error("Missing sources directory argument or spec file.");
+  console.error("call:\n  add-sources-to-vcxproj.js xyz.vcxproj directory-of-sourcefiles");
+  console.error("\n\nCould not infer source/submodule directory for given MSVC vcxproj.");
+  process.exit(1);
+}
 
 
 let src = fs.readFileSync(filepath, 'utf8');
@@ -205,12 +239,14 @@ if (!filterSrc.match(/<\/Project>/)) {
 
 
 const specialFilenames = [
-  "README", 
+  "README[^/]*", 
   "NEWS", 
   "TODO", 
   "CHANGES", 
-  "ChangeLog", 
-  "Contributors"
+  "ChangeLog[^/]*", 
+  "Contributors",
+  "SConstruct",
+  "SConscript"
 ];
 let specialFilenameRes = [];
 
@@ -242,24 +278,37 @@ if (DEBUG > 2) console.error({spec})
 // turn all ignores[] into regexes:
 spec.ignores = spec.ignores
 .map(f => {
-	// we use the next heuristic to detect 'literal paths' instead of regexes: when the path does not
-	// contain any special regex char (except '.') then it's a literal filename; 
-	// when does not start with a '/' we assume it's an *entire* directory or file name, i.e.
-	// 'ger.c' would then not be meant to match 'bugger.c'...
+	//
+	// we use the next heuristic to detect 'literal paths' instead of regexes: 
+	//
+	// 1. when the path does not contain any special regex char (except '.') 
+	//    then it's a literal filename (or directory/path); 
+	// 2. when it does not start with a '/' we assume it's an *entire* directory or file name, 
+	//    i.e. 'ger.c' would then not be meant to match 'bugger.c'...
+	// 3. anything else is a regex that can match ANY part of a filename/path.
+	//
+	// When these regexes are tested, the path-to-test has ALWAYS been prefixed with '/'
+	// so the obvious and easy way to write a regex which matches only whole file and
+	// directory names is to start it with a '/', e.g. regex '/[A-D]+' would match
+	// '/x/y/AAAA/z' but not '/x/yAAAA/z'.
+	//
 	if (!/[()\[\]?:*+{}]/.test(f)) {
-		// convert to regex format:
-		f = f.replace(/[.]/g, '[.]');
+		// a literal path --> convert to regex format:
+		f = f.replace(/[.]/g, '[.]')
+		.replace(/\\/g, '/');
 
-		if (!f.startsWith('/')) {
-			f = '[/]' + f;
+		// when ignore path starts with '/' it means to match from start of (reduced) file path!
+		if (f.startsWith('/')) {
+			f = '^' + f;
+		}
+		else {
+			f = '/' + f;
 		}
 	}
-
-	// when ignore path starts with '/' it means to match from start of (reduced) file path!
-	if (f.startsWith('/')) {
-		f = '^' + f;
+	else {
+		// a regex: no path \ -> / conversion applied as that mistake any regex escape character for a path separator!
 	}
-	
+
 	if (DEBUG > 1) console.error("'ignore' line half-way through conversion to regex:", {f})
 	
 	let re = new RegExp(f);
@@ -321,6 +370,11 @@ function process_glob_list(files, sourcesPath, is_dir, rawSourcesPath) {
     case '.cmd':
     case '.cppcode':
     case '.csv':
+    case '.cmake':
+    case '.config':
+    case '.conf':
+    case '.cfg':
+    case '.bazel':
     case '.gcc':
     case '.gperf':
     case '.htcpp':
@@ -351,6 +405,7 @@ function process_glob_list(files, sourcesPath, is_dir, rawSourcesPath) {
     case '.xml':
     case '.y':
     case '.tcl':
+    case '.nsi':
         filterDirs.add('Misc Files');
         base = path.dirname(f);
         if (base === '.') {
@@ -475,8 +530,8 @@ function process_glob_list(files, sourcesPath, is_dir, rawSourcesPath) {
             base = 'Misc Files';
         }
         base = base.replace(/\//g, '\\');
-        if (DEBUG > 3) console.error("item -- re-construct the file:", {item, rawSourcesPath})
-        f = unixify(`${rawSourcesPath}/${item}`).replace(/\/\//g, '/');
+        if (DEBUG > 3) console.error("item -- re-construct the file:", {item, rawSourcesPath, is_dir})
+        f = unixify(is_dir ? `${rawSourcesPath}/${item}` : `${rawSourcesPath}`).replace(/\/\//g, '/');
         slot = `
     <Text Include="${xmlEncode(f)}">
       <Filter>${xmlEncode(base)}</Filter>
@@ -506,8 +561,8 @@ function process_glob_list(files, sourcesPath, is_dir, rawSourcesPath) {
             base = 'Source Files';
         }
         base = base.replace(/\//g, '\\');
-        if (DEBUG > 3) console.error("item -- re-construct the file:", {item, rawSourcesPath})
-        f = unixify(`${rawSourcesPath}/${item}`).replace(/\/\//g, '/');
+        if (DEBUG > 3) console.error("item -- re-construct the file:", {item, rawSourcesPath, is_dir})
+        f = unixify(is_dir ? `${rawSourcesPath}/${item}` : `${rawSourcesPath}`).replace(/\/\//g, '/');
         slot = `
     <ClCompile Include="${xmlEncode(f)}">
       <Filter>${xmlEncode(base)}</Filter>
@@ -539,8 +594,8 @@ function process_glob_list(files, sourcesPath, is_dir, rawSourcesPath) {
             base = 'Header Files';
         }
         base = base.replace(/\//g, '\\');
-        if (DEBUG > 3) console.error("item -- re-construct the file:", {item, rawSourcesPath})
-        f = unixify(`${rawSourcesPath}/${item}`).replace(/\/\//g, '/');
+        if (DEBUG > 3) console.error("item -- re-construct the file:", {item, rawSourcesPath, is_dir})
+        f = unixify(is_dir ? `${rawSourcesPath}/${item}` : `${rawSourcesPath}`).replace(/\/\//g, '/');
         slot = `
     <ClInclude Include="${xmlEncode(f)}">
       <Filter>${xmlEncode(base)}</Filter>
@@ -566,8 +621,8 @@ function process_glob_list(files, sourcesPath, is_dir, rawSourcesPath) {
             base = 'Resource Files';
         }
         base = base.replace(/\//g, '\\');
-        if (DEBUG > 3) console.error("item -- re-construct the file:", {item, rawSourcesPath})
-        f = unixify(`${rawSourcesPath}/${item}`).replace(/\/\//g, '/');
+        if (DEBUG > 3) console.error("item -- re-construct the file:", {item, rawSourcesPath, is_dir})
+        f = unixify(is_dir ? `${rawSourcesPath}/${item}` : `${rawSourcesPath}`).replace(/\/\//g, '/');
         slot = `
     <ResourceCompile Include="${xmlEncode(f)}">
       <Filter>${xmlEncode(base)}</Filter>
@@ -597,8 +652,8 @@ function process_glob_list(files, sourcesPath, is_dir, rawSourcesPath) {
             base = 'Resource Files';
         }
         base = base.replace(/\//g, '\\');
-        if (DEBUG > 3) console.error("item -- re-construct the file:", {item, rawSourcesPath})
-        f = unixify(`${rawSourcesPath}/${item}`).replace(/\/\//g, '/');
+        if (DEBUG > 3) console.error("item -- re-construct the file:", {item, rawSourcesPath, is_dir})
+        f = unixify(is_dir ? `${rawSourcesPath}/${item}` : `${rawSourcesPath}`).replace(/\/\//g, '/');
         slot = `
     <Image Include="${xmlEncode(f)}">
       <Filter>${xmlEncode(base)}</Filter>
@@ -626,8 +681,8 @@ function process_glob_list(files, sourcesPath, is_dir, rawSourcesPath) {
             base = 'Resource Files';
         }
         base = base.replace(/\//g, '\\');
-        if (DEBUG > 3) console.error("item -- re-construct the file:", {item, rawSourcesPath})
-        f = unixify(`${rawSourcesPath}/${item}`).replace(/\/\//g, '/');
+        if (DEBUG > 3) console.error("item -- re-construct the file:", {item, rawSourcesPath, is_dir})
+        f = unixify(is_dir ? `${rawSourcesPath}/${item}` : `${rawSourcesPath}`).replace(/\/\//g, '/');
         slot = `
     <Font Include="${xmlEncode(f)}">
       <Filter>${xmlEncode(base)}</Filter>
@@ -655,8 +710,8 @@ function process_glob_list(files, sourcesPath, is_dir, rawSourcesPath) {
             base = 'Resource Files';
         }
         base = base.replace(/\//g, '\\');
-        if (DEBUG > 3) console.error("item -- re-construct the file:", {item, rawSourcesPath})
-        f = unixify(`${rawSourcesPath}/${item}`).replace(/\/\//g, '/');
+        if (DEBUG > 3) console.error("item -- re-construct the file:", {item, rawSourcesPath, is_dir})
+        f = unixify(is_dir ? `${rawSourcesPath}/${item}` : `${rawSourcesPath}`).replace(/\/\//g, '/');
         slot = `
     <Text Include="${xmlEncode(f)}">
       <Filter>${xmlEncode(base)}</Filter>
@@ -682,17 +737,22 @@ function process_glob_list(files, sourcesPath, is_dir, rawSourcesPath) {
             base = 'Source Files';
         }
         base = base.replace(/\//g, '\\');
-        if (DEBUG > 3) console.error("item -- re-construct the file:", {item, rawSourcesPath})
-        f = unixify(`${rawSourcesPath}/${item}`).replace(/\/\//g, '/');
+        if (DEBUG > 3) console.error("item -- re-construct the file:", {item, rawSourcesPath, is_dir})
+        f = unixify(is_dir ? `${rawSourcesPath}/${item}` : `${rawSourcesPath}`).replace(/\/\//g, '/');
+	let do_nasm = spec.nasm_or_masm;
+	if (!do_nasm) {
+		do_nasm = /masm/.test(f) ? -1 : +1;
+	}
+	let asmexe =  do_nasm < 0 ? "MASM" : "NASM";
         slot = `
-    <NASM Include="${xmlEncode(f)}">
+    <${ asmexe } Include="${xmlEncode(f)}">
       <Filter>${xmlEncode(base)}</Filter>
-    </NASM>
+    </${ asmexe }>
         `;
         filesToAdd.push(slot);
 
         slot = `
-    <NASM Include="${xmlEncode(f)}" />
+    <${ asmexe } Include="${xmlEncode(f)}" />
         `;
         filesToAddToProj.push(slot);
         break;
@@ -710,8 +770,8 @@ function process_glob_list(files, sourcesPath, is_dir, rawSourcesPath) {
             base = 'Resource Files';
         }
         base = base.replace(/\//g, '\\');
-        if (DEBUG > 3) console.error("item -- re-construct the file:", {item, rawSourcesPath})
-        f = unixify(`${rawSourcesPath}/${item}`).replace(/\/\//g, '/');
+        if (DEBUG > 3) console.error("item -- re-construct the file:", {item, rawSourcesPath, is_dir})
+        f = unixify(is_dir ? `${rawSourcesPath}/${item}` : `${rawSourcesPath}`).replace(/\/\//g, '/');
         slot = `
     <None Include="${xmlEncode(f)}">
       <Filter>${xmlEncode(base)}</Filter>
@@ -737,8 +797,8 @@ function process_glob_list(files, sourcesPath, is_dir, rawSourcesPath) {
             base = 'Misc Files';
         }
         base = base.replace(/\//g, '\\');
-        if (DEBUG > 3) console.error("item -- re-construct the file:", {item, rawSourcesPath})
-        f = unixify(`${rawSourcesPath}/${item}`).replace(/\/\//g, '/');
+        if (DEBUG > 3) console.error("item -- re-construct the file:", {item, rawSourcesPath, is_dir})
+        f = unixify(is_dir ? `${rawSourcesPath}/${item}` : `${rawSourcesPath}`).replace(/\/\//g, '/');
         slot = `
     <Xml Include="${xmlEncode(f)}">
       <Filter>${xmlEncode(base)}</Filter>
@@ -783,14 +843,13 @@ function process_glob_list(files, sourcesPath, is_dir, rawSourcesPath) {
 
 
 function process_path(rawSourcesPath, is_dir) {
-
-	if (DEBUG > 1) console.error("process_path RAW:", {rawSourcesPath});
+	if (DEBUG > 1) console.error("process_path RAW:", {rawSourcesPath, is_dir});
 	while (/\/[^.\/][^\/]*\/\.\.\//.test(rawSourcesPath)) {
 		rawSourcesPath = rawSourcesPath.replace(/\/[^.\/][^\/]*\/\.\.\//, '/')
 	}
 	
 	let sourcesPath = unixify(path.resolve(rawSourcesPath.trim()));
-	if (DEBUG > 1) console.error("process_path NORMALIZED:", {rawSourcesPath, sourcesPath});
+	if (DEBUG > 1) console.error("process_path NORMALIZED:", {rawSourcesPath, sourcesPath, is_dir});
 	if (!fs.existsSync(sourcesPath)) {
 	    console.error("Non-existing path specified:", sourcesPath);
 	    process.exit(1);
@@ -798,17 +857,22 @@ function process_path(rawSourcesPath, is_dir) {
 
 	const globConfig = Object.assign({}, globDefaultOptions, {
 	  nodir: !is_dir,
-	  cwd: is_dir ? sourcesPath : path.basedir(sourcesPath)
+	  cwd: is_dir ? sourcesPath : path.dirname(sourcesPath)
 	});
 
 	let pathWithWildCards = is_dir ? '*' : path.basename(sourcesPath);
 	if (DEBUG > 2) console.error("process_path GLOB:", {pathWithWildCards, globConfig, cwd: globConfig.cwd, is_dir});
 
 	let files_rec = glob(pathWithWildCards, globConfig);
-	if (DEBUG > 2) console.error("process_path GLOB DONE:", {pathWithWildCards, globConfig, cwd: files_rec.cwd, is_dir});
+	if (DEBUG > 2) console.error("process_path GLOB DONE:", {pathWithWildCards, globConfig, cwd: files_rec.cwd, is_dir, found: files_rec.found});
 	process_glob_list(files_rec.found, files_rec.cwd, is_dir, rawSourcesPath);
 }
 
+
+
+if (spec.special_inject != null) {
+	fsrc1_arr.push(spec.special_inject);
+}
 
 
 

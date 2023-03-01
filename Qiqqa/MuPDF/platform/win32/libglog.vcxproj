@@ -230,11 +230,19 @@
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\scripts\libglog\config.h" />
-    <ClInclude Include="..\..\scripts\libglog\glog\logging.h" />
-    <ClInclude Include="..\..\scripts\libglog\glog\raw_logging.h" />
-    <ClInclude Include="..\..\scripts\libglog\glog\stl_logging.h" />
-    <ClInclude Include="..\..\scripts\libglog\glog\vlog_is_on.h" />
+    <ClInclude Include="../../scripts/libglog/config.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="../../scripts/libglog/glog/logging.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="../../scripts/libglog/glog/raw_logging.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="../../scripts/libglog/glog/stl_logging.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="../../scripts/libglog/glog/vlog_is_on.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="../../thirdparty/owemdjee/glog/src/demangle.cc" />
@@ -246,12 +254,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/glog/src/utilities.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/glog/src/vlog_is_on.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/glog/src/windows/port.cc" />
-    <ClInclude Include="../../thirdparty/owemdjee/glog/b/config.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/glog/b/glog/export.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/glog/b/glog/logging.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/glog/b/glog/raw_logging.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/glog/b/glog/stl_logging.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/glog/b/glog/vlog_is_on.h" />
     <ClInclude Include="../../thirdparty/owemdjee/glog/src/base/commandlineflags.h" />
     <ClInclude Include="../../thirdparty/owemdjee/glog/src/base/googleinit.h" />
     <ClInclude Include="../../thirdparty/owemdjee/glog/src/base/mutex.h" />
@@ -272,29 +274,21 @@
     <ClInclude Include="../../thirdparty/owemdjee/glog/src/utilities.h" />
     <ClInclude Include="../../thirdparty/owemdjee/glog/src/windows/dirent.h" />
     <ClInclude Include="../../thirdparty/owemdjee/glog/src/windows/port.h" />
+    <Text Include="../../thirdparty/owemdjee/glog/BUILD.bazel" />
     <Text Include="../../thirdparty/owemdjee/glog/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/glog/CONTRIBUTORS" />
     <Text Include="../../thirdparty/owemdjee/glog/ChangeLog" />
     <Text Include="../../thirdparty/owemdjee/glog/README.rst" />
-    <Text Include="../../thirdparty/owemdjee/glog/b/CMakeCache.txt" />
-    <Text Include="../../thirdparty/owemdjee/glog/b/CMakeFiles/3.22.0-rc1/VCTargetsPath.txt" />
-    <Text Include="../../thirdparty/owemdjee/glog/b/CMakeFiles/TargetDirectories.txt" />
-    <Text Include="../../thirdparty/owemdjee/glog/b/DartConfiguration.tcl" />
     <Text Include="../../thirdparty/owemdjee/glog/build_win_cmake.bat" />
-    <Text Include="../../thirdparty/owemdjee/glog/cmake/VersionInfo.in" />
     <Text Include="../../thirdparty/owemdjee/glog/glog-config.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/glog/glog-modules.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/glog/libglog.pc.in" />
     <Text Include="../../thirdparty/owemdjee/glog/src/config.h.cmake.in" />
-    <Text Include="../../thirdparty/owemdjee/glog/src/demangle_unittest.sh" />
-    <Text Include="../../thirdparty/owemdjee/glog/src/demangle_unittest.txt" />
     <Text Include="../../thirdparty/owemdjee/glog/src/glog/logging.h.in" />
     <Text Include="../../thirdparty/owemdjee/glog/src/glog/raw_logging.h.in" />
     <Text Include="../../thirdparty/owemdjee/glog/src/glog/stl_logging.h.in" />
     <Text Include="../../thirdparty/owemdjee/glog/src/glog/vlog_is_on.h.in" />
     <Text Include="../../thirdparty/owemdjee/glog/src/logging_striplog_test.sh" />
-    <Text Include="../../thirdparty/owemdjee/glog/src/package_config_unittest/working_config/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/glog/src/signalhandler_unittest.sh" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

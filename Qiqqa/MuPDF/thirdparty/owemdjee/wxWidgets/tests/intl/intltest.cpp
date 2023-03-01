@@ -31,10 +31,10 @@
 class IntlTestCase : public CppUnit::TestCase
 {
 public:
-    IntlTestCase() { m_locale=NULL; }
+    IntlTestCase() { m_locale=nullptr; }
 
-    virtual void setUp() wxOVERRIDE;
-    virtual void tearDown() wxOVERRIDE;
+    virtual void setUp() override;
+    virtual void tearDown() override;
 
 private:
     CPPUNIT_TEST_SUITE( IntlTestCase );
@@ -70,7 +70,7 @@ CPPUNIT_TEST_SUITE_NAMED_REGISTRATION( IntlTestCase, "IntlTestCase" );
 void IntlTestCase::setUp()
 {
     // Check that French locale is supported, this test doesn't work without it
-    // and all the other function need to check whether m_locale is non-NULL
+    // and all the other function need to check whether m_locale is non-null
     // before continuing
     if ( !wxLocale::IsAvailable(wxLANGUAGE_FRENCH) )
         return;
@@ -92,7 +92,7 @@ void IntlTestCase::tearDown()
     if (m_locale)
     {
         delete m_locale;
-        m_locale = NULL;
+        m_locale = nullptr;
     }
 }
 
@@ -225,17 +225,13 @@ void IntlTestCase::DateTimeFmtFrench()
 
 void IntlTestCase::IsAvailable()
 {
-    const wxString origLocale(setlocale(LC_ALL, NULL));
+    const wxString origLocale(setlocale(LC_ALL, nullptr));
 
     // Calling IsAvailable() shouldn't change the locale.
     wxLocale::IsAvailable(wxLANGUAGE_ENGLISH);
 
-    CPPUNIT_ASSERT_EQUAL( origLocale, setlocale(LC_ALL, NULL) );
+    CPPUNIT_ASSERT_EQUAL( origLocale, setlocale(LC_ALL, nullptr) );
 }
-
-// The test may fail in ANSI builds because of unsupported encoding, but we
-// don't really care about this build anyhow, so just skip it there.
-#if wxUSE_UNICODE
 
 TEST_CASE("wxLocale::Default", "[locale]")
 {
@@ -245,8 +241,6 @@ TEST_CASE("wxLocale::Default", "[locale]")
 
     REQUIRE( loc.Init(wxLANGUAGE_DEFAULT, wxLOCALE_DONT_LOAD_DEFAULT) );
 }
-
-#endif // wxUSE_UNICODE
 
 // Under MSW and macOS all the locales used below should be supported, but
 // under Linux some locales may be unavailable.
@@ -324,8 +318,6 @@ TEST_CASE("wxUILocale::CompareStrings", "[uilocale]")
 #endif
     }
 
-    // UTF-8 strings are not supported in ASCII build.
-#if wxUSE_UNICODE
     SECTION("German")
     {
         const wxUILocale l(wxLocaleIdent().Language("de").Region("DE"));
@@ -362,7 +354,6 @@ TEST_CASE("wxUILocale::CompareStrings", "[uilocale]")
         CHECK( l.CompareStrings(u8("ä"), "ae") == 1 );
         CHECK( l.CompareStrings(u8("ö"), "z" ) == 1 );
     }
-#endif // wxUSE_UNICODE
 }
 
 // Small helper for making the test below more concise.
@@ -408,7 +399,7 @@ static void CheckFindLanguage(const wxString& tag, const char* expected)
 
 TEST_CASE("wxUILocale::FindLanguageInfo", "[uilocale]")
 {
-    CheckFindLanguage("", NULL);
+    CheckFindLanguage("", nullptr);
     CheckFindLanguage("en", "en");
     CheckFindLanguage("en_US", "en_US");
     CheckFindLanguage("en_US.utf8", "en_US");

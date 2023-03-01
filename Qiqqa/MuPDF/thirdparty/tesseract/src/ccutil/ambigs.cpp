@@ -30,15 +30,17 @@
 
 #include <cstdio>
 
+#ifndef strtok_r
 #if defined(_WIN32) && !defined(__GNUC__)
 #  define strtok_r(str, delim, saveptr) strtok_s(str, delim, saveptr)
 #endif /* _WIN32 && !__GNUC__ */
+#endif
 
 namespace tesseract {
 
 static const char kAmbigDelimiters[] = "\t ";
-static const char kIllegalMsg[] = "Illegal ambiguity specification on line %d\n";
-static const char kIllegalUnicharMsg[] = "Illegal unichar %s in ambiguity specification\n";
+static const char kIllegalMsg[] = "ERROR: Illegal ambiguity specification on line %d\n";
+static const char kIllegalUnicharMsg[] = "ERROR: Illegal unichar %s in ambiguity specification\n";
 
 // Maximum line size:
 //   10 for sizes of ambigs, tabs, abmig type and newline
@@ -246,7 +248,7 @@ bool UnicharAmbigs::ParseAmbiguityLine(int line_num, int version, int debug_leve
     *test_ambig_part_size = unichars.size();
     if (*test_ambig_part_size > MAX_AMBIG_SIZE) {
       if (debug_level) {
-        tprintf("Too many unichars in ambiguity on line {}\n", line_num);
+        tprintf("ERROR: Too many unichars in ambiguity on line {}\n", line_num);
       }
       return false;
     }
@@ -262,7 +264,7 @@ bool UnicharAmbigs::ParseAmbiguityLine(int line_num, int version, int debug_leve
     *replacement_ambig_part_size = unichars.size();
     if (*replacement_ambig_part_size > MAX_AMBIG_SIZE) {
       if (debug_level) {
-        tprintf("Too many unichars in ambiguity on line {}\n", line_num);
+        tprintf("ERROR: Too many unichars in ambiguity on line {}\n", line_num);
       }
       return false;
     }
@@ -287,7 +289,7 @@ bool UnicharAmbigs::ParseAmbiguityLine(int line_num, int version, int debug_leve
   }
   if (*test_ambig_part_size > MAX_AMBIG_SIZE) {
     if (debug_level) {
-      tprintf("Too many unichars in ambiguity on line {}\n", line_num);
+      tprintf("ERROR: Too many unichars in ambiguity on line {}\n", line_num);
     }
     return false;
   }
@@ -314,7 +316,7 @@ bool UnicharAmbigs::ParseAmbiguityLine(int line_num, int version, int debug_leve
   }
   if (*replacement_ambig_part_size > MAX_AMBIG_SIZE) {
     if (debug_level) {
-      tprintf("Too many unichars in ambiguity on line {}\n", line_num);
+      tprintf("ERROR: Too many unichars in ambiguity on line {}\n", line_num);
     }
     return false;
   }

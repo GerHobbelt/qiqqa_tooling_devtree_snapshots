@@ -78,131 +78,134 @@
     <Filter Include="Header Files\tools\box">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\debian">
+    <Filter Include="Misc Files\cmake">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\doc">
+    <Filter Include="Misc Files\debian">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\doc\man">
+    <Filter Include="Misc Files\doc">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\doc\sphinx">
+    <Filter Include="Misc Files\doc\man">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0026}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\doc\tables">
+    <Filter Include="Misc Files\doc\sphinx">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\docker">
+    <Filter Include="Misc Files\doc\tables">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\docker\scripts">
+    <Filter Include="Misc Files\docker">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0029}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\examples">
+    <Filter Include="Misc Files\docker\scripts">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0030}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\experimental">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0032}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\experimental\fast_lossless">
+    <Filter Include="Misc Files\examples">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0031}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\lib">
+    <Filter Include="Misc Files\experimental">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0033}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\lib\extras">
+    <Filter Include="Misc Files\experimental\fast_lossless">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0032}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\lib">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0034}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\lib\jpegli">
+    <Filter Include="Misc Files\lib\extras">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0035}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\lib\jxl">
+    <Filter Include="Misc Files\lib\jpegli">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0036}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\lib\threads">
+    <Filter Include="Misc Files\lib\jxl">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0037}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tools">
+    <Filter Include="Misc Files\lib\threads">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0038}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tools\box">
+    <Filter Include="Misc Files\tools">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0039}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tools\conformance">
+    <Filter Include="Misc Files\tools\box">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0040}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tools\hdr">
+    <Filter Include="Misc Files\tools\conformance">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0041}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tools\optimizer">
+    <Filter Include="Misc Files\tools\hdr">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0042}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tools\upscaling_coefficients">
+    <Filter Include="Misc Files\tools\optimizer">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0043}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\examples">
+    <Filter Include="Misc Files\tools\upscaling_coefficients">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0044}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\experimental">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0046}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\experimental\fast_lossless">
+    <Filter Include="Source Files\examples">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0045}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\lib">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0048}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\lib\extras">
+    <Filter Include="Source Files\experimental">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0047}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\lib\extras\dec">
+    <Filter Include="Source Files\experimental\fast_lossless">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0046}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lib">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0049}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\lib\extras\enc">
+    <Filter Include="Source Files\lib\extras">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0048}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lib\extras\dec">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0050}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\lib\jpegli">
+    <Filter Include="Source Files\lib\extras\enc">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0051}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\lib\jxl">
+    <Filter Include="Source Files\lib\jpegli">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0052}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\lib\jxl\base">
+    <Filter Include="Source Files\lib\jxl">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0053}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\lib\jxl\butteraugli">
+    <Filter Include="Source Files\lib\jxl\base">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0054}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\lib\jxl\jpeg">
+    <Filter Include="Source Files\lib\jxl\butteraugli">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0055}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\lib\jxl\modular">
+    <Filter Include="Source Files\lib\jxl\jpeg">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0056}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\lib\jxl\modular\encoding">
+    <Filter Include="Source Files\lib\jxl\modular">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0057}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\lib\jxl\modular\transform">
+    <Filter Include="Source Files\lib\jxl\modular\encoding">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0058}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\lib\jxl\render_pipeline">
+    <Filter Include="Source Files\lib\jxl\modular\transform">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0059}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\lib\profiler">
+    <Filter Include="Source Files\lib\jxl\render_pipeline">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0060}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\lib\threads">
+    <Filter Include="Source Files\lib\profiler">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0061}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\tools">
+    <Filter Include="Source Files\lib\threads">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0062}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\tools\box">
+    <Filter Include="Source Files\tools">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0063}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\tools\hdr">
+    <Filter Include="Source Files\tools\box">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0064}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tools\hdr">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0065}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -293,9 +296,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/extras/packed_image_convert.cc">
       <Filter>Source Files\lib\extras</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/extras/render_hdr.cc">
-      <Filter>Source Files\lib\extras</Filter>
-    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/extras/time.cc">
       <Filter>Source Files\lib\extras</Filter>
     </ClCompile>
@@ -347,6 +347,9 @@
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jpegli/libjpeg_wrapper.cc">
       <Filter>Source Files\lib\jpegli</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jpegli/memory_manager.cc">
+      <Filter>Source Files\lib\jpegli</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jpegli/quant.cc">
       <Filter>Source Files\lib\jpegli</Filter>
     </ClCompile>
@@ -366,9 +369,6 @@
       <Filter>Source Files\lib\jxl</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/ans_common.cc">
-      <Filter>Source Files\lib\jxl</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/aux_out.cc">
       <Filter>Source Files\lib\jxl</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/base/cache_aligned.cc">
@@ -482,6 +482,9 @@
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_ar_control_field.cc">
       <Filter>Source Files\lib\jxl</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_aux_out.cc">
+      <Filter>Source Files\lib\jxl</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_bit_writer.cc">
       <Filter>Source Files\lib\jxl</Filter>
     </ClCompile>
@@ -527,10 +530,16 @@
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_fast_lossless.cc">
       <Filter>Source Files\lib\jxl</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_fields.cc">
+      <Filter>Source Files\lib\jxl</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_file.cc">
       <Filter>Source Files\lib\jxl</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_frame.cc">
+      <Filter>Source Files\lib\jxl</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_gaborish.cc">
       <Filter>Source Files\lib\jxl</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_group.cc">
@@ -542,10 +551,16 @@
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_huffman.cc">
       <Filter>Source Files\lib\jxl</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_huffman_tree.cc">
+      <Filter>Source Files\lib\jxl</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_icc_codec.cc">
       <Filter>Source Files\lib\jxl</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_image_bundle.cc">
+      <Filter>Source Files\lib\jxl</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_linalg.cc">
       <Filter>Source Files\lib\jxl</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_modular.cc">
@@ -554,10 +569,16 @@
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_noise.cc">
       <Filter>Source Files\lib\jxl</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_optimize.cc">
+      <Filter>Source Files\lib\jxl</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_patch_dictionary.cc">
       <Filter>Source Files\lib\jxl</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_photon_noise.cc">
+      <Filter>Source Files\lib\jxl</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_progressive_split.cc">
       <Filter>Source Files\lib\jxl</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_quant_weights.cc">
@@ -590,9 +611,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/frame_header.cc">
       <Filter>Source Files\lib\jxl</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/gaborish.cc">
-      <Filter>Source Files\lib\jxl</Filter>
-    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/gauss_blur.cc">
       <Filter>Source Files\lib\jxl</Filter>
     </ClCompile>
@@ -600,9 +618,6 @@
       <Filter>Source Files\lib\jxl</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/huffman_table.cc">
-      <Filter>Source Files\lib\jxl</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/huffman_tree.cc">
       <Filter>Source Files\lib\jxl</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/icc_codec.cc">
@@ -642,9 +657,6 @@
       <Filter>Source Files\lib\jxl</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/jxl_encode.cc">
-      <Filter>Source Files\lib\jxl</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/linalg.cc">
       <Filter>Source Files\lib\jxl</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/loop_filter.cc">
@@ -701,13 +713,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/opsin_params.cc">
       <Filter>Source Files\lib\jxl</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/optimize.cc">
-      <Filter>Source Files\lib\jxl</Filter>
-    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/passes_state.cc">
-      <Filter>Source Files\lib\jxl</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/progressive_split.cc">
       <Filter>Source Files\lib\jxl</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/quant_weights.cc">
@@ -839,6 +845,9 @@
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/tools/hdr/tone_map.cc">
       <Filter>Source Files\tools\hdr</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/tools/image_utils.cc">
+      <Filter>Source Files\tools</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/jpeg-xl/tools/jxl_from_tree.cc">
       <Filter>Source Files\tools</Filter>
     </ClCompile>
@@ -945,9 +954,6 @@
       <Filter>Header Files\lib\extras</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/extras/packed_image_convert.h">
-      <Filter>Header Files\lib\extras</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/extras/render_hdr.h">
       <Filter>Header Files\lib\extras</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/extras/time.h">
@@ -1092,12 +1098,6 @@
       <Filter>Header Files\lib\jxl</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/ans_params.h">
-      <Filter>Header Files\lib\jxl</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/aux_out.h">
-      <Filter>Header Files\lib\jxl</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/aux_out_fwd.h">
       <Filter>Header Files\lib\jxl</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/base/arch_macros.h">
@@ -1274,6 +1274,9 @@
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_ar_control_field.h">
       <Filter>Header Files\lib\jxl</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_aux_out.h">
+      <Filter>Header Files\lib\jxl</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_bit_writer.h">
       <Filter>Header Files\lib\jxl</Filter>
     </ClInclude>
@@ -1319,10 +1322,16 @@
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_fast_lossless.h">
       <Filter>Header Files\lib\jxl</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_fields.h">
+      <Filter>Header Files\lib\jxl</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_file.h">
       <Filter>Header Files\lib\jxl</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_frame.h">
+      <Filter>Header Files\lib\jxl</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_gaborish.h">
       <Filter>Header Files\lib\jxl</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_gamma_correct.h">
@@ -1337,6 +1346,9 @@
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_huffman.h">
       <Filter>Header Files\lib\jxl</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_huffman_tree.h">
+      <Filter>Header Files\lib\jxl</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_icc_codec.h">
       <Filter>Header Files\lib\jxl</Filter>
     </ClInclude>
@@ -1346,10 +1358,16 @@
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_jxl_skcms.h">
       <Filter>Header Files\lib\jxl</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_linalg.h">
+      <Filter>Header Files\lib\jxl</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_modular.h">
       <Filter>Header Files\lib\jxl</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_noise.h">
+      <Filter>Header Files\lib\jxl</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_optimize.h">
       <Filter>Header Files\lib\jxl</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_params.h">
@@ -1359,6 +1377,9 @@
       <Filter>Header Files\lib\jxl</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_photon_noise.h">
+      <Filter>Header Files\lib\jxl</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_progressive_split.h">
       <Filter>Header Files\lib\jxl</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/enc_quant_weights.h">
@@ -1427,9 +1448,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/frame_header.h">
       <Filter>Header Files\lib\jxl</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/gaborish.h">
-      <Filter>Header Files\lib\jxl</Filter>
-    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/gauss_blur.h">
       <Filter>Header Files\lib\jxl</Filter>
     </ClInclude>
@@ -1437,9 +1455,6 @@
       <Filter>Header Files\lib\jxl</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/huffman_table.h">
-      <Filter>Header Files\lib\jxl</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/huffman_tree.h">
       <Filter>Header Files\lib\jxl</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/icc_codec.h">
@@ -1490,13 +1505,13 @@
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/lehmer_code.h">
       <Filter>Header Files\lib\jxl</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/linalg.h">
-      <Filter>Header Files\lib\jxl</Filter>
-    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/loop_filter.h">
       <Filter>Header Files\lib\jxl</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/luminance.h">
+      <Filter>Header Files\lib\jxl</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/matrix_ops.h">
       <Filter>Header Files\lib\jxl</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/memory_manager_internal.h">
@@ -1559,16 +1574,10 @@
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/opsin_params.h">
       <Filter>Header Files\lib\jxl</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/optimize.h">
-      <Filter>Header Files\lib\jxl</Filter>
-    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/passes_state.h">
       <Filter>Header Files\lib\jxl</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/patch_dictionary_internal.h">
-      <Filter>Header Files\lib\jxl</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/progressive_split.h">
       <Filter>Header Files\lib\jxl</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/quant_weights.h">
@@ -1688,6 +1697,9 @@
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/tools/file_io.h">
       <Filter>Header Files\tools</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/tools/image_utils.h">
+      <Filter>Header Files\tools</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/tools/speed_stats.h">
       <Filter>Header Files\tools</Filter>
     </ClInclude>
@@ -1700,6 +1712,18 @@
     <ClInclude Include="../../thirdparty/owemdjee/jpeg-xl/tools/tool_version.h">
       <Filter>Header Files\tools</Filter>
     </ClInclude>
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/BUILD.bazel">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/BUILDING.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/BUILDING_Haiku.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/BUILDING_OSX.md">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/CHANGELOG.md">
       <Filter>Misc Files</Filter>
     </Text>
@@ -1715,12 +1739,6 @@
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/CONTRIBUTORS">
       <Filter>Misc Files</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/jpeg-xl/README.Haiku.md">
-      <Filter>Misc Files</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/jpeg-xl/README.OSX.md">
-      <Filter>Misc Files</Filter>
-    </Text>
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/README.md">
       <Filter>Misc Files</Filter>
     </Text>
@@ -1729,6 +1747,18 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/ci.sh">
       <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/cmake/FindAtomics.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/cmake/FindBrotli.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/cmake/FindHWY.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/cmake/FindLCMS2.cmake">
+      <Filter>Misc Files\cmake</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/debian/changelog">
       <Filter>Misc Files\debian</Filter>
@@ -1892,6 +1922,9 @@
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/examples/CMakeLists.txt">
       <Filter>Misc Files\examples</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/examples/examples.cmake">
+      <Filter>Misc Files\examples</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/experimental/fast_lossless/README.md">
       <Filter>Misc Files\experimental\fast_lossless</Filter>
     </Text>
@@ -1907,17 +1940,41 @@
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/CMakeLists.txt">
       <Filter>Misc Files\lib</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/compatibility.cmake">
+      <Filter>Misc Files\lib</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/extras/README.md">
       <Filter>Misc Files\lib\extras</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/jpegli.cmake">
+      <Filter>Misc Files\lib</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/jpegli/README.md">
       <Filter>Misc Files\lib\jpegli</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl.cmake">
+      <Filter>Misc Files\lib</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/libjxl.pc.in">
       <Filter>Misc Files\lib\jxl</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/version.h.in">
       <Filter>Misc Files\lib\jxl</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl_benchmark.cmake">
+      <Filter>Misc Files\lib</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl_extras.cmake">
+      <Filter>Misc Files\lib</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl_lists.cmake">
+      <Filter>Misc Files\lib</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl_profiler.cmake">
+      <Filter>Misc Files\lib</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl_threads.cmake">
+      <Filter>Misc Files\lib</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/threads/libjxl_threads.pc.in">
       <Filter>Misc Files\lib\threads</Filter>
@@ -1961,14 +2018,23 @@
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/example_tree.txt">
       <Filter>Misc Files\tools</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/git_version.cmake">
+      <Filter>Misc Files\tools</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/hdr/README.md">
       <Filter>Misc Files\tools\hdr</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/jxl-eval.sh">
+      <Filter>Misc Files\tools</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/optimizer/simplex_fork.py">
       <Filter>Misc Files\tools\optimizer</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/optimizer/update_jpegli_global_scale.py">
       <Filter>Misc Files\tools\optimizer</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/progressive_saliency.conf">
+      <Filter>Misc Files\tools</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/progressive_sizes.sh">
       <Filter>Misc Files\tools</Filter>

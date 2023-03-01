@@ -11,7 +11,7 @@
 // For compilers that support precompilation, includes "wx.h".
 #include "wx/wxprec.h"
 
-#if wxUSE_FONTDLG && (!defined(__WXGTK__) || defined(__WXGPE__) || defined(__WXUNIVERSAL__))
+#if wxUSE_FONTDLG
 
 #ifndef WX_PRECOMP
     #include <stdio.h>
@@ -267,7 +267,7 @@ FZ_HEAPDBG_TRACKER_SECTION_END_MARKER(_19)
 void wxGenericFontDialog::Init()
 {
     m_useEvents = false;
-    m_previewer = NULL;
+    m_previewer = nullptr;
     Create( m_parent ) ;
 }
 
@@ -402,7 +402,7 @@ void wxGenericFontDialog::CreateWidgets()
 
     wxBoxSizer* itemBoxSizer14 = new wxBoxSizer(wxVERTICAL);
     itemGridSizer4->Add(itemBoxSizer14, 0, wxALIGN_CENTER_HORIZONTAL|wxGROW, 5);
-    m_colourChoice = NULL;
+    m_colourChoice = nullptr;
     if (m_fontData.GetEnableEffects())
     {
         wxStaticText* itemStaticText15 = new wxStaticText( this, wxID_STATIC, _("C&olour:"), wxDefaultPosition, wxDefaultSize, 0 );
@@ -438,7 +438,7 @@ void wxGenericFontDialog::CreateWidgets()
     itemBoxSizer17->Add(m_pointSizeChoice, 0, wxALIGN_LEFT|wxALL, 5);
 #endif
 
-    m_underLineCheckBox = NULL;
+    m_underLineCheckBox = nullptr;
     if (m_fontData.GetEnableEffects())
     {
         wxBoxSizer* itemBoxSizer20 = new wxBoxSizer(wxVERTICAL);

@@ -612,7 +612,7 @@ void TrainingSampleSet::ComputeCanonicalSamples(const IntFeatureMap &map, bool d
   ASSERT_HOST(font_class_array_ != nullptr);
   IntFeatureDist f_table;
   if (debug) {
-    tprintf("feature table size {}\n", map.sparse_size());
+    tprintf("Feature table size {}\n", map.sparse_size());
   }
   f_table.Init(&map);
   int worst_s1 = 0;
@@ -785,7 +785,7 @@ void TrainingSampleSet::AddAllFontsForClass(int class_id, Shape *shape) const {
   }
 }
 
-#ifndef GRAPHICS_DISABLED
+#if !GRAPHICS_DISABLED
 
 // Display the samples with the given indexed feature that also match
 // the given shape.

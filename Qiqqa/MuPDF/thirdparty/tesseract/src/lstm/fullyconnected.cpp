@@ -22,6 +22,7 @@
 #if defined(HAVE_MUPDF) || defined(BUILD_MONOLITHIC)
 #include "mupdf/fitz.h"
 #include "mupdf/helpers/cpu.h"
+#include "mupdf/assertions.h"     // for ASSERT
 #else
 static const int fz_get_cpu_core_count()
 {
@@ -300,7 +301,7 @@ void FullyConnected::Forward(bool debug, const NetworkIO &input,
   tprintf("F Output:{}\n", name_.c_str());
   output->Print(10);
 #endif
-#ifndef GRAPHICS_DISABLED
+#if !GRAPHICS_DISABLED
   if (debug) {
     DisplayForward(*output);
   }
@@ -361,7 +362,7 @@ void FullyConnected::ForwardTimeStep(const int8_t *i_input, int t,
 // See NetworkCpp for a detailed discussion of the arguments.
 bool FullyConnected::Backward(bool debug, const NetworkIO &fwd_deltas,
                               NetworkScratch *scratch, NetworkIO *back_deltas) {
-#ifndef GRAPHICS_DISABLED
+#if !GRAPHICS_DISABLED
   if (debug) {
     DisplayBackward(fwd_deltas);
   }

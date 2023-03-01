@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2022 Artifex Software, Inc.
+// Copyright (C) 2004-2023 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -1129,6 +1129,22 @@ FUN(PDFAnnotation_setNativeAppearance)(JNIEnv *env, jobject self, jstring jappea
 }
 
 JNIEXPORT void JNICALL
+FUN(PDFAnnotation_setNativeAppearanceImage)(JNIEnv *env, jobject self, jobject jimage)
+{
+	fz_context *ctx = get_context(env);
+	pdf_annot *annot = from_PDFAnnotation(env, self);
+	fz_image *image = from_Image(env, jimage);
+
+	if (!ctx || !annot || !image)
+		return;
+
+	fz_try(ctx)
+		pdf_set_annot_stamp_image(ctx, annot, image);
+	fz_catch(ctx)
+		jni_rethrow_void(env, ctx);
+}
+
+JNIEXPORT void JNICALL
 FUN(PDFAnnotation_setNativeAppearanceDisplayList)(JNIEnv *env, jobject self, jstring jappearance, jstring jstate, jobject jctm, jobject jlist)
 {
 	fz_context *ctx = get_context(env);
@@ -1565,7 +1581,7 @@ FUN(PDFAnnotation_setStampImage)(JNIEnv *env, jobject self, jobject jimg)
 }
 
 JNIEXPORT void JNICALL
-FUN(PDFAnnotation_setHidden)(JNIEnv *env, jobject self, jboolean hidden)
+FUN(PDFAnnotation_setHiddenForEditing)(JNIEnv *env, jobject self, jboolean hidden)
 {
 	fz_context *ctx = get_context(env);
 	pdf_annot *annot = from_PDFAnnotation_safe(env, self);
@@ -1573,13 +1589,13 @@ FUN(PDFAnnotation_setHidden)(JNIEnv *env, jobject self, jboolean hidden)
 	if (!ctx || !annot) return;
 
 	fz_try(ctx)
-		pdf_set_annot_hidden(ctx, annot, hidden);
+		pdf_set_annot_hidden_for_editing(ctx, annot, hidden);
 	fz_catch(ctx)
 		jni_rethrow_void(env, ctx);
 }
 
 JNIEXPORT jboolean JNICALL
-FUN(PDFAnnotation_getHidden)(JNIEnv *env, jobject self)
+FUN(PDFAnnotation_getHiddenForEditing)(JNIEnv *env, jobject self)
 {
 	fz_context *ctx = get_context(env);
 	pdf_annot *annot = from_PDFAnnotation_safe(env, self);
@@ -1588,7 +1604,7 @@ FUN(PDFAnnotation_getHidden)(JNIEnv *env, jobject self)
 	if (!ctx || !annot) return JNI_FALSE;
 
 	fz_try(ctx)
-		hidden = pdf_get_annot_hidden(ctx, annot);
+		hidden = pdf_annot_hidden_for_editing(ctx, annot);
 	fz_catch(ctx)
 		jni_rethrow(env, ctx);
 

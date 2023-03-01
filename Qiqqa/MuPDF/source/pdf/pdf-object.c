@@ -32,6 +32,8 @@
 
 #if FZ_ENABLE_PDF
 
+#define PDF_SANE_MAX_TREE_DEPTH   2048 /* Ger: loop vs tail recusion */   // alt: 600 /* SumatraPDF */   // alt: 100 /* Artifex */
+
 #define PDF_MAKE_NAME(STRING,NAME) STRING,
 static const char *PDF_NAME_LIST[] = {
 	"", "", "", /* dummy slots for null, true, and false */
@@ -1540,6 +1542,29 @@ static void prepare_object_for_alteration(fz_context *ctx, pdf_obj *obj, pdf_obj
 		return;
 	}
 
+	/* Do we need to drop the page & reverse page maps? */
+	if (doc && (doc->rev_page_map || doc->fwd_page_map))
+	{
+		if (doc->non_structural_change)
+		{
+			/* No need to drop the reverse page map on a non-structural change. */
+		}
+		else if (parent == 0)
+		{
+			/* This object isn't linked into the document - can't change the
+			 * pagemap. */
+		}
+		else if (doc->local_xref && doc->local_xref_nesting > 0)
+		{
+			/* We have a local_xref and it's in force. By convention, we
+			 * never do structural changes in local_xrefs. */
+		}
+		else
+		{
+			pdf_drop_page_tree_internal(ctx, doc);
+		}
+	}
+
 	if (val)
 	{
 		val_doc = pdf_get_bound_document(ctx, val);
@@ -2156,25 +2181,13 @@ pdf_dict_get(fz_context *ctx, pdf_obj *obj, pdf_obj *key)
 		return NULL;
 	if (!OBJ_IS_NAME(key))
 		return NULL;
-	if (0) fprintf(stderr, "%s:%i:%s: key=%p\n",
-			__FILE__, __LINE__, __FUNCTION__,
-			key
-			);
+
 	if (key < PDF_LIMIT)
 		i = pdf_dict_find(ctx, obj, key);
 	else
 	{
-		const char* n = pdf_to_name(ctx, key);
-		if (0) fprintf(stderr, "%s:%i:%s: n=%s\n",
-				__FILE__, __LINE__, __FUNCTION__,
-				n
-				);
 		i = pdf_dict_finds(ctx, obj, pdf_to_name(ctx, key));
 	}
-	if (0) fprintf(stderr, "%s:%i:%s: i=%i\n",
-			__FILE__, __LINE__, __FUNCTION__,
-			i
-			);
 	if (i >= 0)
 		return DICT(obj)->items[i].v;
 	return NULL;
@@ -2638,7 +2651,10 @@ pdf_cycle(fz_context *ctx, pdf_cycle_list *here, pdf_cycle_list *up, pdf_obj *ob
 			{
 				// cycle detected: see if `countdown` is depleted by now
 				if (x->countdown <= 0)
+				{
+					here->countdown = up->countdown - 1;
 					return 1;
+				}
 				// otherwise, silently allow the cycle to proceed yet another round
 				//
 				// NOTE: make sure to copy the countdown to `here` as *that* will be
@@ -3390,7 +3406,6 @@ static void fmt_obj(fz_context *ctx, struct fmt *fmt, pdf_obj *obj)
 			{
 				fz_terminate_buffer(ctx, fbuf);
 				fdatalen = fz_buffer_storage(ctx, fbuf, &fdata);
-				// fdata = fz_string_from_buffer(ctx, fbuf);
 			}
 
 			fmt_printf(ctx, fmt, "filename:%q type:%s length:%zu", fs_params.filename, fs_params.mimetype, (size_t)fs_params.size);
@@ -4323,6 +4338,8 @@ static void fmt_obj_to_json(fz_context* ctx, struct fmt* fmt, pdf_obj* obj)
 										i--;
 										if (isspace(string_value[i]))
 											string_value[i] = 0;
+										else
+											break;
 									}
 
 									fz_error(ctx, "%s\n", string_value);
@@ -4523,7 +4540,9 @@ pdf_sprint_obj_to_json(fz_context* ctx, char* buf, size_t cap, size_t* len, pdf_
 
 	if (!buf || cap == 0)
 	{
-		fmt.cap = 1024;
+		if (cap == 0)
+			cap = 1024;
+		fmt.cap = cap;
 		fmt.buf = NULL;
 		fmt.ptr = Memento_label(fz_malloc(ctx, fmt.cap), "fmt_buf");
 	}
@@ -4573,49 +4592,63 @@ void pdf_print_obj_to_json(fz_context* ctx, fz_output* out, pdf_obj* obj, int fl
 /* Convenience functions */
 
 static pdf_obj *
-pdf_dict_get_inheritable_imp(fz_context *ctx, pdf_obj *node, pdf_obj *key, int depth, pdf_cycle_list *cycle_up)
+pdf_dict_get_inheritable_imp(fz_context *ctx, pdf_obj *node, pdf_obj *key)
 {
-	pdf_cycle_list cycle;
-	pdf_obj *val = pdf_dict_get(ctx, node, key);
-	if (val)
-		return val;
-	if (pdf_cycle(ctx, &cycle, cycle_up, node))
-		fz_throw(ctx, FZ_ERROR_GENERIC, "cycle in tree (parents)");
-	if (depth > 100)
+	pdf_cycle_list cycle[PDF_SANE_MAX_TREE_DEPTH];
+	pdf_cycle_list* cycle_up = NULL;
+	int depth;
+
+	for (depth = 0; node && depth < PDF_SANE_MAX_TREE_DEPTH; depth++)
+	{
+		pdf_obj* val = pdf_dict_get(ctx, node, key);
+		if (val)
+			return val;
+		if (pdf_cycle(ctx, &cycle[depth], cycle_up, node))
+			fz_throw(ctx, FZ_ERROR_GENERIC, "cycle in tree (parents)");
+		cycle_up = &cycle[depth];
+		node = pdf_dict_get(ctx, node, PDF_NAME(Parent));
+	}
+
+	if (depth >= PDF_SANE_MAX_TREE_DEPTH)
 		fz_throw(ctx, FZ_ERROR_GENERIC, "too much recursion in tree (parents)");
-	node = pdf_dict_get(ctx, node, PDF_NAME(Parent));
-	if (node)
-		return pdf_dict_get_inheritable_imp(ctx, node, key, depth + 1, &cycle);
+
 	return NULL;
 }
 
 pdf_obj *
 pdf_dict_get_inheritable(fz_context *ctx, pdf_obj *node, pdf_obj *key)
 {
-	return pdf_dict_get_inheritable_imp(ctx, node, key, 0, NULL);
+	return pdf_dict_get_inheritable_imp(ctx, node, key);
 }
 
 static pdf_obj *
-pdf_dict_getp_inheritable_imp(fz_context *ctx, pdf_obj *node, const char *path, int depth, pdf_cycle_list *cycle_up)
+pdf_dict_getp_inheritable_imp(fz_context *ctx, pdf_obj *node, const char *path)
 {
-	pdf_cycle_list cycle;
-	pdf_obj *val = pdf_dict_getp(ctx, node, path);
-	if (val)
-		return val;
-	if (pdf_cycle(ctx, &cycle, cycle_up, node))
-		fz_throw(ctx, FZ_ERROR_GENERIC, "cycle in tree (parents)");
-	if (depth > 100)
+	pdf_cycle_list cycle[PDF_SANE_MAX_TREE_DEPTH];
+	pdf_cycle_list* cycle_up = NULL;
+	int depth;
+
+	for (depth = 0; node && depth < PDF_SANE_MAX_TREE_DEPTH; depth++)
+	{
+		pdf_obj* val = pdf_dict_getp(ctx, node, path);
+		if (val)
+			return val;
+		if (pdf_cycle(ctx, &cycle[depth], cycle_up, node))
+			fz_throw(ctx, FZ_ERROR_GENERIC, "cycle in tree (parents)");
+		cycle_up = &cycle[depth];
+		node = pdf_dict_get(ctx, node, PDF_NAME(Parent));
+	}
+
+	if (depth >= PDF_SANE_MAX_TREE_DEPTH)
 		fz_throw(ctx, FZ_ERROR_GENERIC, "too much recursion in tree (parents)");
-	node = pdf_dict_get(ctx, node, PDF_NAME(Parent));
-	if (node)
-		return pdf_dict_getp_inheritable_imp(ctx, node, path, depth + 1, &cycle);
+
 	return NULL;
 }
 
 pdf_obj *
 pdf_dict_getp_inheritable(fz_context *ctx, pdf_obj *node, const char *path)
 {
-	return pdf_dict_getp_inheritable_imp(ctx, node, path, 0, NULL);
+	return pdf_dict_getp_inheritable_imp(ctx, node, path);
 }
 
 void pdf_dict_put_bool(fz_context *ctx, pdf_obj *dict, pdf_obj *key, int x)

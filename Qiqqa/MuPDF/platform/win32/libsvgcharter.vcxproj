@@ -249,16 +249,9 @@
     <ClInclude Include="../../thirdparty/owemdjee/svg-charter/src/parser.h" />
     <ClInclude Include="../../thirdparty/owemdjee/svg-charter/src/renderer.h" />
     <ClInclude Include="../../thirdparty/owemdjee/svg-charter/src/svg_utils.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/svg-charter/src/tinyexpr/minctest.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/svg-charter/src/tinyexpr/monolithic_examples.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/svg-charter/src/tinyexpr/tinyexpr.h" />
     <Image Include="../../thirdparty/owemdjee/svg-charter/marker_charter_support.png" />
-    <Image Include="../../thirdparty/owemdjee/svg-charter/src/tinyexpr/doc/e1.png" />
-    <Image Include="../../thirdparty/owemdjee/svg-charter/src/tinyexpr/doc/e2.png" />
     <Text Include="../../thirdparty/owemdjee/svg-charter/CODE_OF_CONDUCT.md" />
     <Text Include="../../thirdparty/owemdjee/svg-charter/README.md" />
-    <Text Include="../../thirdparty/owemdjee/svg-charter/src/tinyexpr/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/svg-charter/src/tinyexpr/README.md" />
     <Text Include="../../thirdparty/owemdjee/svg-charter/test/data.csv" />
     <Text Include="../../thirdparty/owemdjee/svg-charter/test/test.md" />
   </ItemGroup>

@@ -55,7 +55,7 @@ public:
         Constructor.
 
         To create a dialog, pass a bitlist of @a flags (see below), a style sheet, a
-        text control to apply a selected style to (or @NULL), followed by the usual
+        text control to apply a selected style to (or @nullptr), followed by the usual
         window parameters.
 
         To specify the operations available to the user, pass a combination of these
@@ -103,7 +103,7 @@ public:
         Applies the selected style to selection in the given control or the control
         passed to the constructor.
     */
-    bool ApplyStyle(wxRichTextCtrl* ctrl = NULL);
+    bool ApplyStyle(wxRichTextCtrl* ctrl = nullptr);
 
     /**
         Creates the dialog. See the ctor.

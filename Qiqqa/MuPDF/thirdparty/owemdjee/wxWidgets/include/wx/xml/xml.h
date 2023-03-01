@@ -63,9 +63,9 @@ enum wxXmlNodeType
 class WXDLLIMPEXP_XML wxXmlAttribute
 {
 public:
-    wxXmlAttribute() : m_next(NULL) {}
+    wxXmlAttribute() : m_next(nullptr) {}
     wxXmlAttribute(const wxString& name, const wxString& value,
-                  wxXmlAttribute *next = NULL)
+                  wxXmlAttribute *next = nullptr)
             : m_name(name), m_value(value), m_next(next) {}
     virtual ~wxXmlAttribute() {}
 
@@ -88,28 +88,25 @@ private:
 // are irrelevant) and wxXML_ELEMENT_NODE (e.g. in <title>hi</title> there is
 // element with name="title", irrelevant content and one child (wxXML_TEXT_NODE
 // with content="hi").
-//
-// If wxUSE_UNICODE is 0, all strings are encoded in the encoding given to Load
-// (default is UTF-8).
 
 class WXDLLIMPEXP_XML wxXmlNode
 {
 public:
     wxXmlNode()
-        : m_attrs(NULL), m_parent(NULL), m_children(NULL), m_next(NULL),
+        : m_attrs(nullptr), m_parent(nullptr), m_children(nullptr), m_next(nullptr),
           m_lineNo(-1), m_noConversion(false)
     {
     }
 
     wxXmlNode(wxXmlNode *parent, wxXmlNodeType type,
               const wxString& name, const wxString& content = wxEmptyString,
-              wxXmlAttribute *attrs = NULL, wxXmlNode *next = NULL,
+              wxXmlAttribute *attrs = nullptr, wxXmlNode *next = nullptr,
               int lineNo = -1);
 
     virtual ~wxXmlNode();
 
     // copy ctor & operator=. Note that this does NOT copy siblings
-    // and parent pointer, i.e. m_parent and m_next will be NULL
+    // and parent pointer, i.e. m_parent and m_next will be null
     // after using copy ctor and are never unmodified by operator=.
     // On the other hand, it DOES copy children and attributes.
     wxXmlNode(const wxXmlNode& node);
@@ -132,7 +129,7 @@ public:
     const wxString& GetContent() const { return m_content; }
 
     bool IsWhitespaceOnly() const;
-    int GetDepth(wxXmlNode *grandparent = NULL) const;
+    int GetDepth(wxXmlNode *grandparent = nullptr) const;
 
     // Gets node content from wxXML_ENTITY_NODE
     // The problem is, <tag>content<tag> is represented as
@@ -250,7 +247,7 @@ public:
     virtual bool Save(const wxString& filename, int indentstep = 2) const;
     virtual bool Save(wxOutputStream& stream, int indentstep = 2) const;
 
-    bool IsOk() const { return GetRoot() != NULL; }
+    bool IsOk() const { return GetRoot() != nullptr; }
 
     // Returns root node of the document.
     wxXmlNode *GetRoot() const;
@@ -270,7 +267,7 @@ public:
     wxString GetEOL() const { return m_eol; }
 
     // Write-access methods:
-    wxXmlNode *DetachDocumentNode() { wxXmlNode *old=m_docNode; m_docNode=NULL; return old; }
+    wxXmlNode *DetachDocumentNode() { wxXmlNode *old=m_docNode; m_docNode=nullptr; return old; }
     void SetDocumentNode(wxXmlNode *node) { wxDELETE(m_docNode); m_docNode = node; }
     wxXmlNode *DetachRoot();
     void SetRoot(wxXmlNode *node);
@@ -280,22 +277,11 @@ public:
     void SetFileType(wxTextFileType fileType);
     void AppendToProlog(wxXmlNode *node);
 
-#if !wxUSE_UNICODE
-    // Returns encoding of in-memory representation of the document
-    // (same as passed to Load or ctor, defaults to UTF-8).
-    // NB: this is meaningless in Unicode build where data are stored as wchar_t*
-    wxString GetEncoding() const { return m_encoding; }
-    void SetEncoding(const wxString& enc) { m_encoding = enc; }
-#endif
-
     static wxVersionInfo GetLibraryVersionInfo();
 
 private:
     wxString   m_version;
     wxString   m_fileEncoding;
-#if !wxUSE_UNICODE
-    wxString   m_encoding;
-#endif
     wxXmlDoctype m_doctype;
     wxXmlNode *m_docNode;
     wxTextFileType m_fileType;

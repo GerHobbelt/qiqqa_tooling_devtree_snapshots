@@ -164,7 +164,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/crow/examples/websocket/example_ws.cpp">
       <Filter>Source Files\examples\websocket</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/crow/tests/external_definition/main.cpp">
+    <ClCompile Include="../../thirdparty/owemdjee/crow/tests/external_definition/ed_main.cpp">
       <Filter>Source Files\tests\external_definition</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/crow/tests/multi_file/main.cpp">
@@ -326,7 +326,13 @@
     <Text Include="../../thirdparty/owemdjee/crow/cmake/CrowConfig.cmake.in">
       <Filter>Misc Files\cmake</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/crow/cmake/Findasio.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/crow/cmake/cmake_uninstall.cmake.in">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/crow/cmake/compiler_options.cmake">
       <Filter>Misc Files\cmake</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/crow/docs/getting_started/a_simple_webpage.md">
@@ -475,4 +481,3 @@
     </Text>
   </ItemGroup>
 </Project>
-    

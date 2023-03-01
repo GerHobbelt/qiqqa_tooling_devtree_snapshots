@@ -223,8 +223,8 @@ public:
     virtual wxString GetUserAgent() const;
 
     // Script
-    virtual bool RunScript(const wxString& javascript, wxString* output = NULL) const;
-    virtual void RunScriptAsync(const wxString& javascript, void* clientData = NULL) const;
+    virtual bool RunScript(const wxString& javascript, wxString* output = nullptr) const;
+    virtual void RunScriptAsync(const wxString& javascript, void* clientData = nullptr) const;
     virtual bool AddScriptMessageHandler(const wxString& name)
     { wxUnusedVar(name); return false; }
     virtual bool RemoveScriptMessageHandler(const wxString& name)
@@ -291,7 +291,7 @@ public:
 
     //Get the pointer to the underlying native engine.
     virtual void* GetNativeBackend() const = 0;
-    virtual void* GetNativeConfiguration() const { return NULL; }
+    virtual void* GetNativeConfiguration() const { return nullptr; }
     //Find function
     virtual long Find(const wxString& text, int flags = wxWEBVIEW_FIND_DEFAULT);
 
@@ -339,7 +339,7 @@ public:
     wxWebViewNavigationActionFlags GetNavigationAction() const { return m_actionFlags; }
     const wxString& GetMessageHandler() const { return m_messageHandler; }
 
-    virtual wxEvent* Clone() const wxOVERRIDE { return new wxWebViewEvent(*this); }
+    virtual wxEvent* Clone() const override { return new wxWebViewEvent(*this); }
 private:
     wxString m_url;
     wxString m_target;
@@ -387,6 +387,18 @@ typedef void (wxEvtHandler::*wxWebViewEventFunction)
 
 #define EVT_WEBVIEW_TITLE_CHANGED(id, fn) \
     wx__DECLARE_EVT1(wxEVT_WEBVIEW_TITLE_CHANGED, id, \
+                     wxWebViewEventHandler(fn))
+
+#define EVT_WEBVIEW_FULLSCREEN_CHANGED(id, fn) \
+    wx__DECLARE_EVT1(wxEVT_WEBVIEW_FULLSCREEN_CHANGED, id, \
+                     wxWebViewEventHandler(fn))
+
+#define EVT_WEBVIEW_SCRIPT_MESSAGE_RECEIVED(id, fn) \
+    wx__DECLARE_EVT1(wxEVT_WEBVIEW_SCRIPT_MESSAGE_RECEIVED, id, \
+                     wxWebViewEventHandler(fn))
+
+#define EVT_WEBVIEW_SCRIPT_RESULT(id, fn) \
+    wx__DECLARE_EVT1(wxEVT_WEBVIEW_SCRIPT_RESULT, id, \
                      wxWebViewEventHandler(fn))
 
 // old wxEVT_COMMAND_* constants

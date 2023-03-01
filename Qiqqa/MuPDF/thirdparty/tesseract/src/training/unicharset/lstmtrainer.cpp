@@ -66,7 +66,7 @@ const double kHighConfidence = 0.9375; // 15/16.
 const double kImprovementFraction = 15.0 / 16.0;
 // Fraction of last written best to make it worth writing another.
 const double kBestCheckpointFraction = 31.0 / 32.0;
-#ifndef GRAPHICS_DISABLED
+#if !GRAPHICS_DISABLED
 // Scale factor for display of target activations of CTC.
 const int kTargetXScale = 5;
 const int kTargetYScale = 100;
@@ -90,7 +90,7 @@ LSTMTrainer::LSTMTrainer(const char *model_base, const char *checkpoint_name,
 }
 
 LSTMTrainer::~LSTMTrainer() {
-#ifndef GRAPHICS_DISABLED
+#if !GRAPHICS_DISABLED
   delete align_win_;
   delete target_win_;
   delete ctc_win_;
@@ -111,7 +111,7 @@ bool LSTMTrainer::TryLoadingCheckpoint(const char *filename,
     return false;
   }
   if (IsIntMode()) {
-    tprintf("Error, {} is an integer (fast) model, cannot continue training\n",
+    tprintf("ERROR: {} is an integer (fast) model, cannot continue training.\n",
             filename);
     return false;
   }
@@ -249,8 +249,9 @@ Trainability LSTMTrainer::GridSearchDictParams(
   // NO-dict error.
   RecodeBeamSearch base_search(recoder_, null_char_, SimpleTextOutput(),
                                nullptr);
+  base_search.SetDebug(HasDebug());
   base_search.Decode(fwd_outputs, 1.0, 0.0, RecodeBeamSearch::kMinCertainty,
-                     nullptr);
+                     nullptr, 0);
   base_search.ExtractBestPathAsLabels(&ocr_labels, &xcoords);
   std::string truth_text = DecodeLabels(truth_labels);
   std::string ocr_text = DecodeLabels(ocr_labels);
@@ -258,11 +259,12 @@ Trainability LSTMTrainer::GridSearchDictParams(
   results += "0,0=" + std::to_string(baseline_error);
 
   RecodeBeamSearch search(recoder_, null_char_, SimpleTextOutput(), dict_);
+  search.SetDebug(HasDebug());
   for (double r = min_dict_ratio; r < max_dict_ratio; r += dict_ratio_step) {
     for (double c = min_cert_offset; c < max_cert_offset;
          c += cert_offset_step) {
       search.Decode(fwd_outputs, r, c, RecodeBeamSearch::kMinCertainty,
-                    nullptr);
+                    nullptr, 0);
       search.ExtractBestPathAsLabels(&ocr_labels, &xcoords);
       truth_text = DecodeLabels(truth_labels);
       ocr_text = DecodeLabels(ocr_labels);
@@ -727,6 +729,7 @@ int LSTMTrainer::ReduceLayerLearningRates(TFloat factor, int num_samples,
       }
       // Make a copy of *this, so we can mess about without damaging anything.
       LSTMTrainer copy_trainer;
+	  copy_trainer.SetDebug(samples_trainer->HasDebug());
       samples_trainer->ReadTrainingDump(orig_trainer, copy_trainer);
       // Clear the updates, doing nothing else.
       copy_trainer.network_->Update(0.0, 0.0, 0.0, 0);
@@ -753,7 +756,8 @@ int LSTMTrainer::ReduceLayerLearningRates(TFloat factor, int num_samples,
           continue;
         }
         LSTMTrainer layer_trainer;
-        samples_trainer->ReadTrainingDump(updated_trainer, layer_trainer);
+		layer_trainer.SetDebug(samples_trainer->HasDebug());
+		samples_trainer->ReadTrainingDump(updated_trainer, layer_trainer);
         Network *layer = layer_trainer.GetLayer(layers[i]);
         // Update the weights in just the layer, using Adam if enabled.
         layer->Update(0.0, momentum_, adam_beta_,
@@ -890,7 +894,7 @@ Trainability LSTMTrainer::TrainOnLine(const ImageData *trainingdata,
     network_->Update(learning_rate_, batch ? -1.0f : momentum_, adam_beta_,
                      training_iteration_ + 1);
   }
-#ifndef GRAPHICS_DISABLED
+#if !GRAPHICS_DISABLED
   if (debug_interval_ == 1 && debug_win_ != nullptr) {
     debug_win_->AwaitEvent(SVET_CLICK);
   }
@@ -949,7 +953,7 @@ Trainability LSTMTrainer::PrepareForBackward(const ImageData *trainingdata,
   float image_scale;
   NetworkIO inputs;
   bool invert = trainingdata->boxes().empty();
-  if (!RecognizeLine(*trainingdata, invert ? 0.5f : 0.0f, debug, invert, upside_down,
+  if (!RecognizeLine(*trainingdata, invert ? 0.5f : 0.0f, invert, upside_down,
                      &image_scale, &inputs, fwd_outputs)) {
     tprintf("ERROR: Image {} not trainable\n", trainingdata->imagefilename());
     return UNENCODABLE;
@@ -1135,7 +1139,7 @@ void LSTMTrainer::SetNullChar() {
 
 // Factored sub-constructor sets up reasonable default values.
 void LSTMTrainer::EmptyConstructor() {
-#ifndef GRAPHICS_DISABLED
+#if !GRAPHICS_DISABLED
   align_win_ = nullptr;
   target_win_ = nullptr;
   ctc_win_ = nullptr;
@@ -1177,7 +1181,7 @@ bool LSTMTrainer::DebugLSTMTraining(const NetworkIO &inputs,
       tprintf("TRAINING activation path for truth string {}\n",
               truth_text);
       DebugActivationPath(outputs, labels, xcoords);
-#ifndef GRAPHICS_DISABLED
+#if !GRAPHICS_DISABLED
       DisplayForward(inputs, labels, xcoords, "LSTMTraining", &align_win_);
       if (OutputLossType() == LT_CTC) {
         DisplayTargets(fwd_outputs, "CTC Outputs", &ctc_win_);
@@ -1189,7 +1193,7 @@ bool LSTMTrainer::DebugLSTMTraining(const NetworkIO &inputs,
   return true;
 }
 
-#ifndef GRAPHICS_DISABLED
+#if !GRAPHICS_DISABLED
 
 // Displays the network targets as line a line graph.
 void LSTMTrainer::DisplayTargets(const NetworkIO &targets,

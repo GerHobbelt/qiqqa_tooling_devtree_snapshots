@@ -273,9 +273,11 @@
     <ClInclude Include="../../thirdparty/owemdjee/libexpat/expat/xmlwf/xmlfile.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libexpat/expat/xmlwf/xmlmime.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libexpat/expat/xmlwf/xmltchar.h" />
+    <ResourceCompile Include="../../thirdparty/owemdjee/libexpat/expat/win32/version.rc" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/CMake.README" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/Changes" />
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/ConfigureChecks.cmake" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/README.md" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/apply-clang-format.sh" />
@@ -285,7 +287,10 @@
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/cmake/autotools/expat-noconfig__linux.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/cmake/autotools/expat-noconfig__macos.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/cmake/autotools/expat-noconfig__windows.cmake.in" />
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/cmake/autotools/expat-package-init.cmake" />
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/cmake/autotools/expat.cmake" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/cmake/expat-config.cmake.in" />
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/cmake/mingw-toolchain.cmake" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/configure-ac-style.md" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/configure.ac" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/conftools/get-version.sh" />
@@ -293,10 +298,13 @@
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/distribute.sh" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/doc/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/examples/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/expat.pc.cmake" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/expat.pc.in" />
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/expat_config.h.cmake" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/expat_config.h.in" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/fix-xmltest-log.sh" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/lib/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/lib/libexpat.def.cmake" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/memory-sanitizer-blacklist.txt" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/qa.sh" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/run.sh.in" />

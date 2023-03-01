@@ -88,7 +88,7 @@ public:
         conventions used by the @a order argument.
 
         @param parent
-            The parent window, must be non-@NULL.
+            The parent window, must be non-null.
         @param id
             The window identifier.
         @param pos
@@ -254,7 +254,7 @@ public:
         order.push_back(1);
         order.push_back(2);
 
-        wxRearrangeDialog dlg(NULL,
+        wxRearrangeDialog dlg(nullptr,
                               "You can also uncheck the items you don't like "
                               "at all.",
                               "Sort the items in order of preference",
@@ -304,7 +304,7 @@ public:
         constructor.
 
         @param parent
-            The dialog parent, possibly @NULL.
+            The dialog parent, possibly @nullptr.
         @param message
             The message shown inside the dialog itself, above the items list.
         @param title

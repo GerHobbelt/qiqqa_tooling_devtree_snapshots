@@ -43,10 +43,7 @@ struct Inner {
     #[arg(long, value_name("NUM"))]
     num_threads: Option<usize>,
 
-    /// Use the keyed mode
-    ///
-    /// The secret key is read from standard input, and it must be exactly 32
-    /// raw bytes.
+    /// Use the keyed mode, reading the 32-byte key from stdin
     #[arg(long, requires("file"))]
     keyed: bool,
 
@@ -307,13 +304,13 @@ fn read_key_from_stdin() -> Result<[u8; blake3::KEY_LEN]> {
         .lock()
         .take(blake3::KEY_LEN as u64 + 1)
         .read_to_end(&mut bytes)?;
-    if n < 32 {
+    if n < blake3::KEY_LEN {
         bail!(
             "expected {} key bytes from stdin, found {}",
             blake3::KEY_LEN,
             n,
         )
-    } else if n > 32 {
+    } else if n > blake3::KEY_LEN {
         bail!("read more than {} key bytes from stdin", blake3::KEY_LEN)
     } else {
         Ok(bytes[..blake3::KEY_LEN].try_into().unwrap())
@@ -493,8 +490,8 @@ fn hash_one_input(path: &Path, args: &Args) -> Result<()> {
 }
 
 // Returns true for success. Having a boolean return value here, instead of
-// passing down the some_file_failed reference, makes it less likely that we
-// might forget to set it in some error condition.
+// passing down the files_failed reference, makes it less likely that we might
+// forget to set it in some error condition.
 fn check_one_line(line: &str, args: &Args) -> bool {
     let parse_result = parse_check_line(&line);
     let ParsedCheckLine {
@@ -540,7 +537,7 @@ fn check_one_line(line: &str, args: &Args) -> bool {
     }
 }
 
-fn check_one_checkfile(path: &Path, args: &Args, some_file_failed: &mut bool) -> Result<()> {
+fn check_one_checkfile(path: &Path, args: &Args, files_failed: &mut u64) -> Result<()> {
     let checkfile_input = Input::open(path, args)?;
     let mut bufreader = io::BufReader::new(checkfile_input);
     let mut line = String::new();
@@ -554,7 +551,9 @@ fn check_one_checkfile(path: &Path, args: &Args, some_file_failed: &mut bool) ->
         // return, so it doesn't return a Result.
         let success = check_one_line(&line, args);
         if !success {
-            *some_file_failed = true;
+            // We use `files_failed > 0` to indicate a mismatch, so it's important for correctness
+            // that it's impossible for this counter to overflow.
+            *files_failed = files_failed.saturating_add(1);
         }
     }
 }
@@ -567,16 +566,11 @@ fn main() -> Result<()> {
     }
     let thread_pool = thread_pool_builder.build()?;
     thread_pool.install(|| {
-        let mut some_file_failed = false;
+        let mut files_failed = 0u64;
         // Note that file_args automatically includes `-` if nothing is given.
         for path in &args.file_args {
             if args.check() {
-                // A hash mismatch or a failure to read a hashed file will be
-                // printed in the checkfile loop, and will not propagate here.
-                // This is similar to the explicit error handling we do in the
-                // hashing case immediately below. In these cases,
-                // some_file_failed will be set to false.
-                check_one_checkfile(path, &args, &mut some_file_failed)?;
+                check_one_checkfile(path, &args, &mut files_failed)?;
             } else {
                 // Errors encountered in hashing are tolerated and printed to
                 // stderr. This allows e.g. `b3sum *` to print errors for
@@ -584,12 +578,20 @@ fn main() -> Result<()> {
                 // errors we'll still return non-zero at the end.
                 let result = hash_one_input(path, &args);
                 if let Err(e) = result {
-                    some_file_failed = true;
+                    files_failed = files_failed.saturating_add(1);
                     eprintln!("{}: {}: {}", NAME, path.to_string_lossy(), e);
                 }
             }
         }
-        std::process::exit(if some_file_failed { 1 } else { 0 });
+        if args.check() && files_failed > 0 {
+            eprintln!(
+                "{}: WARNING: {} computed checksum{} did NOT match",
+                NAME,
+                files_failed,
+                if files_failed == 1 { "" } else { "s" },
+            );
+        }
+        std::process::exit(if files_failed > 0 { 1 } else { 0 });
     })
 }
 

@@ -657,12 +657,12 @@ public:
     ///@{
 
     /**
-        Returns the grandparent of a window, or @NULL if there isn't one.
+        Returns the grandparent of a window, or @nullptr if there isn't one.
     */
     wxWindow* GetGrandParent() const;
 
     /**
-        Returns the next window after this one among the parent's children or @NULL
+        Returns the next window after this one among the parent's children or @nullptr
         if this window is the last child.
 
         @since 2.8.8
@@ -672,13 +672,13 @@ public:
     wxWindow* GetNextSibling() const;
 
     /**
-        Returns the parent of the window, or @NULL if there is no parent.
+        Returns the parent of the window, or @nullptr if there is no parent.
     */
     wxWindow* GetParent() const;
 
     /**
         Returns the previous window before this one among the parent's children or @c
-        @NULL if this window is the first child.
+        @nullptr if this window is the first child.
 
         @since 2.8.8
 
@@ -696,7 +696,7 @@ public:
         are in different top level windows, i.e. a child of a wxDialog is not
         considered to be a descendant of dialogs parent wxFrame.
 
-        @param win Any window, possible @NULL (@false is always returned then).
+        @param win Any window, possible @nullptr (@false is always returned then).
 
         @since 2.9.4
      */
@@ -832,7 +832,7 @@ public:
         @param dy
             Amount to scroll vertically.
         @param rect
-            Rectangle to scroll, if it is @NULL, the whole window is
+            Rectangle to scroll, if it is @nullptr, the whole window is
             scrolled (this is always the case under wxGTK which doesn't support this
             parameter)
 
@@ -840,7 +840,7 @@ public:
                  function directly.
     */
     virtual void ScrollWindow(int dx, int dy,
-                              const wxRect* rect = NULL);
+                              const wxRect* rect = nullptr);
 
     /**
         Same as #ScrollLines (-1).
@@ -955,7 +955,7 @@ public:
             Constructor calls wxWindow::BeginRepositioningChildren().
 
             @param win The window to call BeginRepositioningChildren() on. If
-                it is @NULL, nothing is done.
+                it is @nullptr, nothing is done.
          */
         explicit ChildrenRepositioningGuard(wxWindow* win);
 
@@ -1118,12 +1118,12 @@ public:
         windows can appear on different monitors using different resolutions,
         however sometimes no window is available for converting the resolution
         independent pixels to the physical values and in this case these static
-        overloads can be used with @NULL value for @a w argument.
+        overloads can be used with @nullptr value for @a w argument.
 
-        Using these methods is discouraged as passing @NULL will prevent your
+        Using these methods is discouraged as passing @nullptr will prevent your
         application from correctly supporting monitors with different
         resolutions even in the future wxWidgets versions which will add
-        support for them, and passing non-@NULL window is just a less
+        support for them, and passing non-null window is just a less
         convenient way of calling the non-static FromDIP() method.
 
         @since 3.1.0
@@ -1185,12 +1185,12 @@ public:
     windows can appear on different monitors using different resolutions,
     however sometimes no window is available for converting the resolution
     independent pixels to the physical values and in this case these static
-    overloads can be used with @NULL value for @a w argument.
+    overloads can be used with @nullptr value for @a w argument.
 
-    Using these methods is discouraged as passing @NULL will prevent your
+    Using these methods is discouraged as passing @nullptr will prevent your
     application from correctly supporting monitors with different
     resolutions even in the future wxWidgets versions which will add
-    support for them, and passing non-@NULL window is just a less
+    support for them, and passing non-null window is just a less
     convenient way of calling the non-static ToDIP() method.
 
     @since 3.1.0
@@ -1245,7 +1245,7 @@ public:
         Convert from physical pixels to logical pixels for any window.
 
         This function can be used without any window pointer, i.e. @a w can be
-        @NULL. In this case, it uses the content scale factor of the main
+        @nullptr. In this case, it uses the content scale factor of the main
         screen if supported or just does nothing (i.e. uses scale factor of 1)
         otherwise.
 
@@ -1283,7 +1283,7 @@ public:
         Convert from logical pixels to physical pixels for any window.
 
         This function can be used without any window pointer, i.e. @a w can be
-        @NULL. In this case, it uses the content scale factor of the main
+        @nullptr. In this case, it uses the content scale factor of the main
         screen if supported or just does nothing (i.e. uses scale factor of 1)
         otherwise.
 
@@ -1668,7 +1668,7 @@ public:
         This method should not be called from outside the library, unless
         you're implementing a custom sizer class -- and in the latter case you
         must call this method with the pointer to the sizer itself whenever a
-        window is added to it and with @NULL argument when the window is
+        window is added to it and with @nullptr argument when the window is
         removed from it.
     */
     void SetContainingSizer(wxSizer* sizer);
@@ -1898,9 +1898,9 @@ public:
         for the child windows or relative to the display origin for the top level windows.
 
         @param x
-            Receives the x position of the window if non-@NULL.
+            Receives the x position of the window if non-null.
         @param y
-            Receives the y position of the window if non-@NULL.
+            Receives the y position of the window if non-null.
 
         @beginWxPerlOnly
         In wxPerl this method is implemented as GetPositionXY() returning
@@ -1931,9 +1931,9 @@ public:
         child window or a top level one.
 
         @param x
-            Receives the x position of the window on the screen if non-@NULL.
+            Receives the x position of the window on the screen if non-null.
         @param y
-            Receives the y position of the window on the screen if non-@NULL.
+            Receives the y position of the window on the screen if non-null.
 
         @see GetPosition()
     */
@@ -2269,9 +2269,9 @@ public:
     */
     void GetTextExtent(const wxString& string,
                        int* w, int* h,
-                       int* descent = NULL,
-                       int* externalLeading = NULL,
-                       const wxFont* font = NULL) const;
+                       int* descent = nullptr,
+                       int* externalLeading = nullptr,
+                       const wxFont* font = nullptr) const;
 
     /**
         Gets the dimensions of the string as it would be drawn on the
@@ -2312,12 +2312,12 @@ public:
             If @true, the background will be erased too. Note that in non-MSW
             ports background is always erased.
         @param rect
-            If non-@NULL, only the given rectangle will be treated as damaged.
+            If non-null, only the given rectangle will be treated as damaged.
 
         @see RefreshRect()
     */
     virtual void Refresh(bool eraseBackground = true,
-                         const wxRect* rect = NULL);
+                         const wxRect* rect = nullptr);
 
     /**
         Redraws the contents of the given rectangle: only the area inside it will be
@@ -2444,14 +2444,14 @@ public:
         for which this method is called must be fully created.
 
         @param reason
-            If not @NULL, a reason message is provided if transparency is not
+            If not @nullptr, a reason message is provided if transparency is not
             supported.
 
         @return @true if background transparency is supported.
 
         @since 2.9.4
     */
-    virtual bool IsTransparentBackgroundSupported(wxString *reason = NULL) const;
+    virtual bool IsTransparentBackgroundSupported(wxString *reason = nullptr) const;
 
     /**
         Sets the font for this window. This function should not be called for the
@@ -2686,7 +2686,7 @@ public:
 
         @param deleteHandler
             If this is @true, the handler will be deleted after it is removed
-            (and the returned value will be @NULL).
+            (and the returned value will be @nullptr).
 
         @see @ref overview_events_processing
     */
@@ -2731,7 +2731,7 @@ public:
         See wxEvtHandler::Unlink() for more info.
 
         @param handler
-            The event handler to remove, must be non-@NULL and
+            The event handler to remove, must be non-null and
             must be present in this windows event handlers stack.
 
         @return Returns @true if it was found and @false otherwise (this also
@@ -2750,7 +2750,7 @@ public:
         an event, the window itself will have a chance to do it.
 
         @param handler
-            Specifies the handler to be set. Cannot be @NULL.
+            Specifies the handler to be set. Cannot be @nullptr.
 
         @see @ref overview_events_processing
     */
@@ -2871,7 +2871,7 @@ public:
 
         @param win
             A sibling of this window which should precede it in tab order,
-            must not be @NULL
+            must not be @nullptr
     */
     void MoveAfterInTabOrder(wxWindow* win);
 
@@ -3131,7 +3131,7 @@ public:
                                         wxHelpEvent::Origin origin) const;
 
     /**
-        Get the associated tooltip or @NULL if none.
+        Get the associated tooltip or @nullptr if none.
     */
     wxToolTip* GetToolTip() const;
 
@@ -3143,7 +3143,7 @@ public:
     /**
         Attach a tooltip to the window.
 
-        wxToolTip pointer can be @NULL in the overload taking the pointer,
+        wxToolTip pointer can be @nullptr in the overload taking the pointer,
         meaning to unset any existing tooltips; however UnsetToolTip() provides
         a more readable alternative to this operation.
 
@@ -3256,7 +3256,7 @@ public:
     ///@{
 
     /**
-        Returns a pointer to the current validator for the window, or @NULL if
+        Returns a pointer to the current validator for the window, or @nullptr if
         there is none.
     */
     virtual wxValidator* GetValidator();
@@ -3521,7 +3521,7 @@ public:
     ///@{
 
     /**
-        Returns the associated drop target, which may be @NULL.
+        Returns the associated drop target, which may be @nullptr.
 
         @see SetDropTarget(), @ref overview_dnd
     */
@@ -3559,13 +3559,13 @@ public:
     ///@{
 
     /**
-        Returns the sizer of which this window is a member, if any, otherwise @NULL.
+        Returns the sizer of which this window is a member, if any, otherwise @nullptr.
     */
     wxSizer* GetContainingSizer() const;
 
     /**
         Returns the sizer associated with the window by a previous call to
-        SetSizer(), or @NULL.
+        SetSizer(), or @nullptr.
     */
     wxSizer* GetSizer() const;
 
@@ -3577,12 +3577,12 @@ public:
         window, it will be deleted if the @a deleteOld parameter is @true.
 
         Note that this function will also call SetAutoLayout() implicitly with @true
-        parameter if the @a sizer is non-@NULL and @false otherwise so that the
+        parameter if the @a sizer is non-null and @false otherwise so that the
         sizer will be effectively used to layout the window children whenever
         it is resized.
 
         @param sizer
-            The sizer to set. Pass @NULL to disassociate and conditionally delete
+            The sizer to set. Pass @nullptr to disassociate and conditionally delete
             the window's sizer. See below.
         @param deleteOld
             If @true (the default), this will delete any pre-existing sizer.
@@ -3607,7 +3607,7 @@ public:
     void SetSizerAndFit(wxSizer* sizer, bool deleteOld = true);
 
     /**
-        Returns a pointer to the window's layout constraints, or @NULL if there are none.
+        Returns a pointer to the window's layout constraints, or @nullptr if there are none.
     */
     wxLayoutConstraints* GetConstraints() const;
 
@@ -3618,7 +3618,7 @@ public:
         window, it will be deleted.
 
         @param constraints
-            The constraints to set. Pass @NULL to disassociate and delete the window's
+            The constraints to set. Pass @nullptr to disassociate and delete the window's
             constraints.
 
         @remarks You must call SetAutoLayout() to tell a window to use
@@ -3848,7 +3848,7 @@ public:
     /**
         Returns the platform-specific handle of the physical window.
         Cast it to an appropriate handle, such as @b HWND for Windows,
-        @b Widget for Motif or @b GtkWidget for GTK.
+        or @b GtkWidget for GTK.
 
         @beginWxPerlOnly
         This method will return an integer in wxPerl.
@@ -4085,14 +4085,14 @@ public:
     /**
         Find the first window with the given @e id.
 
-        If @a parent is @NULL, the search will start from all top-level frames
-        and dialog boxes; if non-@NULL, the search will be limited to the given
+        If @a parent is @nullptr, the search will start from all top-level frames
+        and dialog boxes; if non-null, the search will be limited to the given
         window hierarchy.
         The search is recursive in both cases.
 
         @see FindWindow()
 
-        @return Window with the given @a id or @NULL if not found.
+        @return Window with the given @a id or @nullptr if not found.
     */
     static wxWindow* FindWindowById(long id, const wxWindow* parent = 0);
 
@@ -4100,8 +4100,8 @@ public:
         Find a window by its label.
 
         Depending on the type of window, the label may be a window title
-        or panel item label. If @a parent is @NULL, the search will start from all
-        top-level frames and dialog boxes; if non-@NULL, the search will be
+        or panel item label. If @a parent is @nullptr, the search will start from all
+        top-level frames and dialog boxes; if non-null, the search will be
         limited to the given window hierarchy.
 
         The search is recursive in both cases and, unlike with FindWindow(),
@@ -4109,7 +4109,7 @@ public:
 
         @see FindWindow()
 
-        @return Window with the given @a label or @NULL if not found.
+        @return Window with the given @a label or @nullptr if not found.
     */
     static wxWindow* FindWindowByLabel(const wxString& label,
                                        const wxWindow* parent = 0);
@@ -4118,8 +4118,8 @@ public:
         Find a window by its name (as given in a window constructor or Create()
         function call).
 
-        If @a parent is @NULL, the search will start from all top-level frames
-        and dialog boxes; if non-@NULL, the search will be limited to the given
+        If @a parent is @nullptr, the search will start from all top-level frames
+        and dialog boxes; if non-null, the search will be limited to the given
         window hierarchy.
 
         The search is recursive in both cases and, unlike FindWindow(),
@@ -4131,7 +4131,7 @@ public:
         confusing, it is usually better to use either the FindWindow() overload
         taking the name or FindWindowByLabel() directly.
 
-        @return Window with the given @a name or @NULL if not found.
+        @return Window with the given @a name or @nullptr if not found.
     */
     static wxWindow* FindWindowByName(const wxString& name,
                                       const wxWindow* parent = 0);
@@ -4178,6 +4178,39 @@ public:
     ///@}
 
 
+    /**
+        Disable the use native double buffering in wxMSW.
+
+        This MSW-specific function can be used to disable the use of
+        `WS_EX_COMPOSITED` for this window and all of its parents and so allow
+        using wxClientDC with it.
+
+        `WS_EX_COMPOSITED` style is turned on by default when creating the
+        windows and it is strongly recommended @e not to use this functions to
+        remove it, but to instead change the drawing code to avoid using
+        wxClientDC.
+
+        If you do need to use it, please note that this function doesn't exist
+        in the other ports and has to be explicitly bracketed by the checks for
+        wxMSW, e.g.
+        @code
+        MyFrame::MyFrame(...)
+        {
+            auto p = new wxPanel(this);
+        #ifdef __WXMSW__
+            p->MSWDisableComposited();
+        #endif
+
+            // Using wxClientDC will work now with this panel in wxMSW --
+            // although it still won't with wxOSX nor wxGTK under Wayland.
+        }
+        @endcode
+
+        @see wxClientDC
+
+        @since 3.3.0
+     */
+    void MSWDisableComposited();
 
 protected:
 
@@ -4344,7 +4377,7 @@ wxWindow* wxFindWindowAtPointer(wxPoint& pt);
 
 /**
     Gets the currently active window (implemented for MSW and GTK only
-    currently, always returns @NULL in the other ports).
+    currently, always returns @nullptr in the other ports).
 
     @header{wx/window.h}
 */
@@ -4352,7 +4385,7 @@ wxWindow* wxGetActiveWindow();
 
 /**
     Returns the first top level parent of the given window, or in other words,
-    the frame or dialog containing it, or @NULL.
+    the frame or dialog containing it, or @nullptr.
 
     Notice that if @a window is itself already a TLW, it is returned directly.
 
@@ -4369,7 +4402,7 @@ wxWindow* wxGetTopLevelParent(wxWindow* window);
     useful description of the window and uniquely identifies it. This can be
     useful to include in debug or tracing messages.
 
-    @param window Window pointer which is allowed to be @NULL.
+    @param window Window pointer which is allowed to be @nullptr.
 
     @header{wx/window.h}
 

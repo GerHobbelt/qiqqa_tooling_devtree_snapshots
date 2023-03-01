@@ -26,7 +26,7 @@
 #include <inttypes.h>
 #include <math.h>
 #include <string.h>
-#include <sys/time.h>
+#include <plf_nanotimer_c_api.h>
 
 #include "libbf.h"
 

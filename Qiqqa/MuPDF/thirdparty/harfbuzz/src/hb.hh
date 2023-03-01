@@ -200,9 +200,9 @@
 
 #if (defined(_MSC_VER) && _MSC_VER >= 1500) || defined(__MINGW32__)
 #ifdef __MINGW32_VERSION
-#ifndef WIN32_LEAN_AND_MEAN
-#define WIN32_LEAN_AND_MEAN 1
-#endif
+//#ifndef WIN32_LEAN_AND_MEAN
+//#define WIN32_LEAN_AND_MEAN 1
+//#endif
 #else
 #include <intrin.h>
 #endif
@@ -382,9 +382,9 @@ extern "C" void  hb_free_impl(void *ptr);
 #      define _WIN32_WINNT 0x0600
 #    endif
 #  endif
-#  ifndef WIN32_LEAN_AND_MEAN
-#    define WIN32_LEAN_AND_MEAN 1
-#  endif
+//#  ifndef WIN32_LEAN_AND_MEAN
+//#    define WIN32_LEAN_AND_MEAN 1
+//#  endif
 #  ifndef STRICT
 #    define STRICT 1
 #  endif

@@ -1005,16 +1005,16 @@
     GX_ItemVarData    varData;
     FT_ItemVarDelta*  deltaSet;
 
-    FT_UInt           master, j;
-    FT_Fixed*         scalars;
-    FT_ItemVarDelta   returnValue;
+    FT_UInt          master, j;
+    FT_Fixed*        scalars;
+    FT_ItemVarDelta  returnValue;
 
 
-    if ( !face->blend->normalizedcoords )
+    if ( !face->blend || !face->blend->normalizedcoords )
       return 0;
 
-    /* OpenType 1.8.4+: No variation data for this item
-     *  as indices have special value 0xFFFF. */
+    /* OpenType 1.8.4+: No variation data for this item */
+    /* as indices have special value 0xFFFF.            */
     if ( outerIndex == 0xFFFF && innerIndex == 0xFFFF )
       return 0;
 
@@ -3995,11 +3995,11 @@
                               FT_Vector*   unrounded )
   {
     FT_Error   error;
-    TT_Face    face = loader->face;
-    FT_Stream  stream = face->root.stream;
-    FT_Memory  memory = stream->memory;
+    TT_Face    face        = loader->face;
+    FT_Stream  stream      = face->root.stream;
+    FT_Memory  memory      = stream->memory;
     FT_UInt    glyph_index = loader->glyph_index;
-    FT_UInt    n_points = (FT_UInt)outline->n_points + 4;
+    FT_UInt    n_points    = (FT_UInt)outline->n_points + 4;
 
     FT_Vector*  points_org = NULL;  /* coordinates in 16.16 format */
     FT_Vector*  points_out = NULL;  /* coordinates in 16.16 format */

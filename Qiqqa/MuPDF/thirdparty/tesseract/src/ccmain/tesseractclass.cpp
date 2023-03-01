@@ -94,6 +94,9 @@ Tesseract::Tesseract()
                  " adaptive normalized background, 4 = Masking and Otsu on "
                  "adaptive normalized background, 5 = Nlbin",
                  this->params())
+    , BOOL_MEMBER(showcase_threshold_methods, false,
+                  "Showcase the avialable threshold methods as part of the thresholding process",
+                  this->params())
     , BOOL_MEMBER(thresholding_debug, false,
                   "Debug the thresholding process",
                   this->params())
@@ -151,7 +154,7 @@ Tesseract::Tesseract()
                   " information for adaption",
                   this->params())
     , INT_MEMBER(bidi_debug, 0, "Debug level for BiDi", this->params())
-    , INT_MEMBER(applybox_debug, 1, "Debug level", this->params())
+    , INT_MEMBER(applybox_debug, 1, "Debug level for apply boxes", this->params())
     , INT_MEMBER(applybox_page, 0, "Page number to apply boxes from", this->params())
     , STRING_MEMBER(applybox_exposure_pattern, ".exp",
                     "Exposure value follows"
@@ -176,7 +179,7 @@ Tesseract::Tesseract()
     , BOOL_MEMBER(tessedit_unrej_any_wd, false, "Don't bother with word plausibility",
                   this->params())
     , BOOL_MEMBER(tessedit_fix_hyphens, true, "Crunch double hyphens?", this->params())
-    , BOOL_MEMBER(tessedit_enable_doc_dict, true, "Add words to the document dictionary",
+    , BOOL_MEMBER(tessedit_enable_doc_dict, true, "Add discovered words to the document dictionary when found to be non-ambiguous through internal heuristic",
                   this->params())
     , BOOL_MEMBER(tessedit_debug_fonts, false, "Output font info per char", this->params())
     , INT_MEMBER(tessedit_font_id, 0, "Font ID to use or zero", this->params())
@@ -192,6 +195,8 @@ Tesseract::Tesseract()
                   " confuse layout analysis, determining diacritics vs noise",
                   this->params())
     , INT_MEMBER(debug_noise_removal, 0, "Debug reassignment of small outlines", this->params())
+    , STRING_MEMBER(debug_output_path, "", "Path where to write debug diagnostics",
+                    this->params())
     ,
     // Worst (min) certainty, for which a diacritic is allowed to make the
     // base
@@ -211,7 +216,7 @@ Tesseract::Tesseract()
                   this->params())
     , INT_MEMBER(noise_maxperblob, 8, "Max diacritics to apply to a blob", this->params())
     , INT_MEMBER(noise_maxperword, 16, "Max diacritics to apply to a word", this->params())
-    , INT_MEMBER(debug_x_ht_level, 0, "Reestimate debug", this->params())
+    , INT_MEMBER(debug_x_ht_level, 0, "Reestimate x-height debug level (0..2)", this->params())
     , STRING_MEMBER(chs_leading_punct, "('`\"", "Leading punctuation", this->params())
     , STRING_MEMBER(chs_trailing_punct1, ").,;:?!", "1st Trailing punctuation", this->params())
     , STRING_MEMBER(chs_trailing_punct2, ")'`\"", "2nd Trailing punctuation", this->params())
@@ -266,8 +271,8 @@ Tesseract::Tesseract()
     , double_MEMBER(tessedit_good_doc_still_rowrej_wd, 1.1,
                     "rej good doc wd if more than this fraction rejected", this->params())
     , BOOL_MEMBER(tessedit_reject_bad_qual_wds, true, "Reject all bad quality wds", this->params())
-    , BOOL_MEMBER(tessedit_debug_doc_rejection, false, "Page stats", this->params())
-    , BOOL_MEMBER(tessedit_debug_quality_metrics, false, "Output data to debug file",
+    , BOOL_MEMBER(tessedit_debug_doc_rejection, false, "Print doc and Block character rejection page stats", this->params())
+    , BOOL_MEMBER(tessedit_debug_quality_metrics, false, "Print recognition quality report to debug channel",
                   this->params())
     , BOOL_MEMBER(bland_unrej, false, "unrej potential with no checks", this->params())
     , double_MEMBER(quality_rowrej_pc, 1.1, "good_quality_doc gte good char limit", this->params())
@@ -304,7 +309,7 @@ Tesseract::Tesseract()
     , INT_MEMBER(crunch_leave_uc_strings, 4, "Don't crunch words with long lower case strings",
                  this->params())
     , INT_MEMBER(crunch_long_repetitions, 3, "Crunch words with long repetitions", this->params())
-    , INT_MEMBER(crunch_debug, 0, "As it says", this->params())
+    , INT_MEMBER(crunch_debug, 0, "Print debug info for word and character crunch", this->params())
     , INT_MEMBER(fixsp_non_noise_limit, 1, "How many non-noise blbs either side?", this->params())
     , double_MEMBER(fixsp_small_outlines_size, 0.28, "Small if lt xht x this", this->params())
     , BOOL_MEMBER(tessedit_prefer_joined_punct, false, "Reward punctuation joins", this->params())
@@ -377,7 +382,7 @@ Tesseract::Tesseract()
     , BOOL_MEMBER(tessedit_zero_kelvin_rejection, false, "Don't reject ANYTHING AT ALL",
                   this->params())
     , INT_MEMBER(tessedit_reject_mode, 0, "Rejection algorithm", this->params())
-    , BOOL_MEMBER(tessedit_rejection_debug, false, "Adaption debug", this->params())
+    , BOOL_MEMBER(tessedit_rejection_debug, false, "Debug adaption/rejection", this->params())
     , BOOL_MEMBER(tessedit_flip_0O, true, "Contextual 0O O0 flips", this->params())
     , double_MEMBER(tessedit_lower_flip_hyphen, 1.5, "Aspect ratio dot/hyphen test", this->params())
     , double_MEMBER(tessedit_upper_flip_hyphen, 1.8, "Aspect ratio dot/hyphen test", this->params())
@@ -461,14 +466,26 @@ Tesseract::Tesseract()
     , BOOL_MEMBER(scribe_save_binary_rotated_image, false, "Saves binary image to file.", this->params())
     , BOOL_MEMBER(scribe_save_grey_rotated_image, false, "Saves grey image to file.", this->params())
     , BOOL_MEMBER(scribe_save_original_rotated_image, false, "Saves color image to file.", this->params())
+    , BOOL_MEMBER(debug_write_unlv, false, "Saves page segmentation intermediate and output box set as UZN file for diagnostics.", this->params())
+    , INT_MEMBER(debug_baseline_fit, 0, "Baseline fit debug level 0..3.", this->params())
+    , INT_MEMBER(debug_baseline_y_coord, -2000, "Output baseline fit debug diagnostics for given Y coord, even when debug_baseline_fit is NOT set. Specify a negative value to disable this debug feature.", this->params())
+    , BOOL_MEMBER(debug_line_finding, false, "Debug the line finding process.", this->params())
+    , BOOL_MEMBER(debug_image_normalization, false, "Debug the image normalization process (which precedes the thresholder).", this->params())
+    , BOOL_MEMBER(debug_do_not_use_scrollview_app, false, "Do NOT use the external ScrollView process. Instead, where available, image data is appended to debug_pixa.", this->params())
+    , BOOL_MEMBER(debug_display_page, false, "Display preliminary OCR results in debug_pixa.", this->params())
+    , BOOL_MEMBER(debug_display_page_blocks, false, "Display preliminary OCR results in debug_pixa: show the blocks.", this->params())
+    , BOOL_MEMBER(debug_display_page_baselines, false, "Display preliminary OCR results in debug_pixa: show the baselines.", this->params())
 
+    , splitter_(this)
+    , image_finder_(this)
+    , line_finder_(this)
     , backup_config_file_(nullptr)
     , pix_binary_(nullptr)
     , pix_grey_(nullptr)
     , pix_original_(nullptr)
     , pix_thresholds_(nullptr)
     , source_resolution_(0)
-    , textord_(this)
+    , textord_(this, this)
     , right_to_left_(false)
     , scaled_color_(nullptr)
     , scaled_factor_(-1)
@@ -484,11 +501,14 @@ Tesseract::Tesseract()
 
 Tesseract::~Tesseract() {
   Clear();
-  pix_original_.destroy();
   end_tesseract();
   for (auto *lang : sub_langs_) {
     delete lang;
   }
+#if !DISABLED_LEGACY_ENGINE
+  delete equ_detect_;
+  equ_detect_ = nullptr;
+#endif // !DISABLED_LEGACY_ENGINE
   delete lstm_recognizer_;
   lstm_recognizer_ = nullptr;
 }
@@ -503,8 +523,23 @@ Dict &Tesseract::getDict() {
 }
 
 void Tesseract::Clear() {
-  std::string debug_name = imagebasename + "_debug.pdf";
-  pixa_debug_.WritePDF(debug_name.c_str());
+  if (!debug_output_path.empty() && pixa_debug__.HasPix()) {
+    const int page_index = 0;
+    std::string file_path = mkUniqueOutputFilePath(debug_output_path.value().c_str() /* imagebasename */, page_index, "page", "pdf");
+#if defined(HAVE_MUPDF)
+    fz_mkdir_for_file(fz_get_global_context(), file_path.c_str());
+#endif
+    //pixaConvertToPdf(pixa_display, resolution, 1.0f, 0, 0, "LineFinding", file_path.c_str());
+    pixa_debug__.WritePDF(file_path.c_str());
+
+    file_path = mkUniqueOutputFilePath(debug_output_path.value().c_str() /* imagebasename */, page_index, "", "png");
+#if defined(HAVE_MUPDF)
+    fz_mkdir_for_file(fz_get_global_context(), file_path.c_str());
+#endif
+    pixa_debug__.WritePNGs(file_path.c_str());
+  }
+  pix_original_.destroy();
+  pixa_debug__.Clear();
   pix_binary_.destroy();
   pix_grey_.destroy();
   pix_thresholds_.destroy();
@@ -588,7 +623,7 @@ void Tesseract::PrepareForPageseg() {
   // the newly split image.
   splitter_.set_orig_pix(pix_binary());
   splitter_.set_pageseg_split_strategy(max_pageseg_strategy);
-  if (splitter_.Split(true, &pixa_debug_)) {
+  if (splitter_.Split(true)) {
     ASSERT_HOST(splitter_.splitted_image());
     pix_binary_.destroy();
     pix_binary_ = splitter_.splitted_image().clone();
@@ -615,7 +650,7 @@ void Tesseract::PrepareForTessOCR(BLOCK_LIST *block_list, Tesseract *osd_tess, O
   splitter_.set_segmentation_block_list(block_list);
   splitter_.set_ocr_split_strategy(max_ocr_strategy);
   // Run the splitter for OCR
-  bool split_for_ocr = splitter_.Split(false, &pixa_debug_);
+  bool split_for_ocr = splitter_.Split(false);
   // Restore pix_binary to the binarized original pix for future reference.
   ASSERT_HOST(splitter_.orig_pix());
   pix_binary_.destroy();
@@ -631,6 +666,47 @@ void Tesseract::PrepareForTessOCR(BLOCK_LIST *block_list, Tesseract *osd_tess, O
   }
   // The splitter isn't needed any more after this, so save memory by clearing.
   splitter_.Clear();
+}
+
+// Return a memory capacity cost estimate for the given image / current original image.
+//
+// uses the current original image for the estimate, i.e. tells you the cost estimate of this run:
+ImageCostEstimate Tesseract::EstimateImageMemoryCost(const Pix* pix) const {
+  // default: use pix_original() data 
+  if (pix == nullptr) {
+    pix = pix_original();
+  }
+
+  return TessBaseAPI::EstimateImageMemoryCost(pix, allowed_image_memory_capacity);
+}
+
+// Helper, which may be invoked after SetInputImage() or equivalent has been called:
+// reports the cost estimate for the current instance/image via `tprintf()` and returns
+// `true` when the cost is expected to be too high.
+bool Tesseract::CheckAndReportIfImageTooLarge(const Pix* pix) const {
+  // default: use pix_original() data 
+  if (pix == nullptr) {
+    pix = pix_original();
+  }
+
+  auto w = pixGetWidth(pix);
+  auto h = pixGetHeight(pix);
+  return CheckAndReportIfImageTooLarge(w, h);
+}
+
+bool Tesseract::CheckAndReportIfImageTooLarge(int width, int height) const {
+  auto cost = TessBaseAPI::EstimateImageMemoryCost(width, height, allowed_image_memory_capacity);
+
+  if (debug_all) {
+    tprintf("Image size & memory cost estimate: {} x {} px, estimated cost {} vs. {} allowed capacity.\n",
+      width, height, cost.to_string(), ImageCostEstimate::capacity_to_string(allowed_image_memory_capacity));
+  }
+
+  if (width >= TDIMENSION_MAX || height >= TDIMENSION_MAX || cost.is_too_large()) {
+    tprintf("ERROR: Image is too large: ({} x {} px, {})\n", width, height, cost.to_string());
+    return true;
+  }
+  return false;
 }
 
 } // namespace tesseract

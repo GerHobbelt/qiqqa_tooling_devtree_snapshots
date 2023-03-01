@@ -52,7 +52,7 @@
 class MyApp: public wxApp
 {
 public:
-    bool OnInit() wxOVERRIDE;
+    bool OnInit() override;
 };
 
 // a text ctrl which allows to call different wxTextCtrl functions
@@ -155,7 +155,7 @@ public:
 private:
     // get the currently focused text control or return the default one
     // (m_multitext) is no text ctrl has focus -- in any case, returns
-    // something non NULL
+    // something non null
     wxTextCtrl *GetFocusedText() const;
 };
 
@@ -717,9 +717,7 @@ void MyTextCtrl::LogKeyEvent(const wxString& name, wxKeyEvent& event) const
         }
     }
 
-#if wxUSE_UNICODE
     key += wxString::Format(" (Unicode: %#04x)", event.GetUnicodeKey());
-#endif // wxUSE_UNICODE
 
     wxLogMessage( "%s event: %s (flags = %c%c%c%c)",
                   name,
@@ -1184,11 +1182,7 @@ MyPanel::MyPanel( wxFrame *frame, int x, int y, int w, int h )
                 m_horizontal->SetFont(wxFontInfo(18)
                                         .Family(wxFONTFAMILY_SWISS)
                                         .Encoding(wxFONTENCODING_CP1251));
-#if wxUSE_UNICODE
                 m_horizontal->AppendText(L"\x0412\x0430\x0434\x0438\x043c \x0426");
-#else
-                m_horizontal->AppendText("\313\301\326\305\324\323\321 \325\304\301\336\316\331\315");
-#endif
         }
     }
     else
@@ -1311,7 +1305,7 @@ wxTextCtrl *MyPanel::GetFocusedText() const
 {
     wxWindow *win = FindFocus();
 
-    wxTextCtrl *text = win ? wxDynamicCast(win, wxTextCtrl) : NULL;
+    wxTextCtrl *text = win ? wxDynamicCast(win, wxTextCtrl) : nullptr;
     return text ? text : m_multitext;
 }
 
@@ -1533,7 +1527,7 @@ wxBEGIN_EVENT_TABLE(MyFrame, wxFrame)
 wxEND_EVENT_TABLE()
 
 MyFrame::MyFrame(const wxString& title, int x, int y)
-       : wxFrame(NULL, wxID_ANY, title, wxPoint(x, y))
+       : wxFrame(nullptr, wxID_ANY, title, wxPoint(x, y))
 {
     SetIcon(wxICON(sample));
 
@@ -1672,7 +1666,7 @@ void MyFrame::OnRichTextTest(wxCommandEvent& WXUNUSED(event))
 void MyFrame::OnIdle( wxIdleEvent& event )
 {
     // track the window which has the focus in the status bar
-    static wxWindow *s_windowFocus = (wxWindow *)NULL;
+    static wxWindow *s_windowFocus = nullptr;
     wxWindow *focus = wxWindow::FindFocus();
     if ( focus && (focus != s_windowFocus) )
     {

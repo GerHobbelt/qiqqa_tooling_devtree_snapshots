@@ -12,6 +12,11 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="../../scripts/libarchive/libarchive_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
     <Filter Include="Header Files\cat">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0001}</UniqueIdentifier>
     </Filter>
@@ -19,13 +24,13 @@
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0002}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\contrib">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0003}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\contrib\android">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\contrib\android\config">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0003}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\contrib\android\include">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
@@ -90,89 +95,83 @@
     <Filter Include="Misc Files\contrib">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0026}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\contrib\oss-fuzz">
+    <Filter Include="Misc Files\contrib\psota-benchmark">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\contrib\psota-benchmark">
+    <Filter Include="Misc Files\cpio">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\cpio">
+    <Filter Include="Misc Files\cpio\test">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0029}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\cpio\test">
+    <Filter Include="Misc Files\doc">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0030}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\doc">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0031}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Misc Files\examples">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0033}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\examples\minitar">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0032}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Misc Files\examples\minitar">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0031}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Misc Files\libarchive">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0034}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0033}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\libarchive\test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0035}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0034}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\tar">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0036}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0035}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\tar\test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0037}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0036}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\build">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0039}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\build\cmake">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0038}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\build\cmake">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0037}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files\cat">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0040}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0039}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\cat\test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0041}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0040}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\contrib">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0042}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\contrib\oss-fuzz">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0043}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0041}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\contrib\shar">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0044}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0042}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\cpio">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0045}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0043}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\cpio\test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0046}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0044}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\examples">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0047}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0045}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\examples\minitar">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0048}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0046}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\libarchive">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0049}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0047}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\libarchive\test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0050}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0048}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\libarchive_fe">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0051}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0049}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\tar">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0052}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0050}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\tar\test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0053}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0051}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\test_utils">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0054}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0052}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -242,8 +241,8 @@
     <ClCompile Include="../../thirdparty/owemdjee/libarchive/contrib/archivetest.c">
       <Filter>Source Files\contrib</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/libarchive/contrib/oss-fuzz/libarchive_fuzzer.cc">
-      <Filter>Source Files\contrib\oss-fuzz</Filter>
+    <ClCompile Include="../../thirdparty/owemdjee/libarchive/contrib/monolithic_main.c">
+      <Filter>Source Files\contrib</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/libarchive/contrib/shar/shar.c">
       <Filter>Source Files\contrib\shar</Filter>
@@ -498,9 +497,6 @@
       <Filter>Source Files\libarchive</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/libarchive/libarchive/archive_random.c">
-      <Filter>Source Files\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/libarchive/libarchive/archive_rarvm.c">
       <Filter>Source Files\libarchive</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/libarchive/libarchive/archive_rb.c">
@@ -1008,9 +1004,6 @@
       <Filter>Source Files\libarchive\test</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/libarchive/libarchive/test/test_filter_count.c">
-      <Filter>Source Files\libarchive\test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/libarchive/libarchive/test/test_fuzz.c">
       <Filter>Source Files\libarchive\test</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/libarchive/libarchive/test/test_gnutar_filename_encoding.c">
@@ -1916,6 +1909,9 @@
     <ClInclude Include="../../thirdparty/owemdjee/libarchive/contrib/android/include/android_lf.h">
       <Filter>Header Files\contrib\android\include</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libarchive/contrib/monolithic_examples.h">
+      <Filter>Header Files\contrib</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/libarchive/contrib/shar/tree.h">
       <Filter>Header Files\contrib\shar</Filter>
     </ClInclude>
@@ -2018,9 +2014,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/libarchive/libarchive/archive_random_private.h">
       <Filter>Header Files\libarchive</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/libarchive/libarchive/archive_rarvm.h">
-      <Filter>Header Files\libarchive</Filter>
-    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/libarchive/libarchive/archive_rb.h">
       <Filter>Header Files\libarchive</Filter>
     </ClInclude>
@@ -2099,6 +2092,9 @@
     <Text Include="../../thirdparty/owemdjee/libarchive/CONTRIBUTING.md">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libarchive/CTestConfig.cmake">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libarchive/Makefile.am">
       <Filter>Misc Files</Filter>
     </Text>
@@ -2138,7 +2134,37 @@
     <Text Include="../../thirdparty/owemdjee/libarchive/build/clean.sh">
       <Filter>Misc Files\build</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libarchive/build/cmake/CheckFileOffsetBits.cmake">
+      <Filter>Misc Files\build\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libarchive/build/cmake/CheckFuncs.cmake">
+      <Filter>Misc Files\build\cmake</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libarchive/build/cmake/CheckFuncs_stub.c.in">
+      <Filter>Misc Files\build\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libarchive/build/cmake/CheckHeaderDirent.cmake">
+      <Filter>Misc Files\build\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libarchive/build/cmake/CheckTypeExists.cmake">
+      <Filter>Misc Files\build\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libarchive/build/cmake/CreatePkgConfigFile.cmake">
+      <Filter>Misc Files\build\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libarchive/build/cmake/FindLIBGCC.cmake">
+      <Filter>Misc Files\build\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libarchive/build/cmake/FindMbedTLS.cmake">
+      <Filter>Misc Files\build\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libarchive/build/cmake/FindNettle.cmake">
+      <Filter>Misc Files\build\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libarchive/build/cmake/FindPCREPOSIX.cmake">
+      <Filter>Misc Files\build\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libarchive/build/cmake/LibarchiveCodeCoverage.cmake">
       <Filter>Misc Files\build\cmake</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libarchive/build/cmake/config.h.in">
@@ -2168,9 +2194,6 @@
     <Text Include="../../thirdparty/owemdjee/libarchive/contrib/README">
       <Filter>Misc Files\contrib</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/libarchive/contrib/oss-fuzz/oss-fuzz-build.sh">
-      <Filter>Misc Files\contrib\oss-fuzz</Filter>
-    </Text>
     <Text Include="../../thirdparty/owemdjee/libarchive/contrib/psota-benchmark/results.txt">
       <Filter>Misc Files\contrib\psota-benchmark</Filter>
     </Text>
@@ -2192,9 +2215,6 @@
     <Text Include="../../thirdparty/owemdjee/libarchive/libarchive/CMakeLists.txt">
       <Filter>Misc Files\libarchive</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/libarchive/libarchive/libarchive_changes.3">
-      <Filter>Misc Files\libarchive</Filter>
-    </Text>
     <Text Include="../../thirdparty/owemdjee/libarchive/libarchive/test/CMakeLists.txt">
       <Filter>Misc Files\libarchive\test</Filter>
     </Text>
@@ -2209,4 +2229,3 @@
     </Text>
   </ItemGroup>
 </Project>
-    

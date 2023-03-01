@@ -28,7 +28,7 @@
 
 
 #if defined(BUILD_MONOLITHIC)
-#define main      nanosvg_example1_main
+#define main      nanosvg_example2_main
 #endif
 
 int main()

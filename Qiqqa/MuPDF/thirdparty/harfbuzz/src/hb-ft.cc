@@ -132,8 +132,6 @@ _hb_ft_font_destroy (void *data)
   if (unlikely (!ft_font))
     return;
 
-  ft_font->advance_cache.fini ();
-
   if (ft_font->unref)
     _hb_ft_face_destroy (ft_font->ft_face);
 

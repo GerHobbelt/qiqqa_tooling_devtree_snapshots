@@ -226,6 +226,14 @@
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/ucx/bindings/java/src/main/native/context.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/ucx/bindings/java/src/main/native/endpoint.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/ucx/bindings/java/src/main/native/jucx_common_def.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/ucx/bindings/java/src/main/native/listener.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/ucx/bindings/java/src/main/native/memory.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/ucx/bindings/java/src/main/native/ucp_constants.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/ucx/bindings/java/src/main/native/ucs_constants.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/ucx/bindings/java/src/main/native/worker.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/ucx/examples/cmake/test_ucp.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ucx/examples/cmake/test_uct.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ucx/examples/ucp_client_server.c" />
@@ -1088,7 +1096,6 @@
     <Text Include="../../thirdparty/owemdjee/ucx/test/apps/iodemo/run_io_demo.sh" />
     <Text Include="../../thirdparty/owemdjee/ucx/test/apps/profiling/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/ucx/test/apps/sockaddr/Makefile.am" />
-    <Text Include="../../thirdparty/owemdjee/ucx/test/apps/test_fuzzy_match.py" />
     <Text Include="../../thirdparty/owemdjee/ucx/test/apps/test_ucx_tls.py" />
     <Text Include="../../thirdparty/owemdjee/ucx/test/apps/uct_info/Makefile.in" />
     <Text Include="../../thirdparty/owemdjee/ucx/test/gtest/Makefile.am" />
@@ -1097,6 +1104,8 @@
     <Text Include="../../thirdparty/owemdjee/ucx/test/gtest/ucm/test_dlopen/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/ucx/test/gtest/ucm/test_dlopen/rpath-subdir/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/ucx/test/gtest/ucs/test_module/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/ucx/test/gtest/ucs/ucx.conf" />
+    <Text Include="../../thirdparty/owemdjee/ucx/test/gtest/ucs/ucx_test.conf" />
     <Text Include="../../thirdparty/owemdjee/ucx/test/mpi/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/ucx/test/mpi/run_mpi.sh.in" />
     <Text Include="../../thirdparty/owemdjee/ucx/ucx.pc.in" />

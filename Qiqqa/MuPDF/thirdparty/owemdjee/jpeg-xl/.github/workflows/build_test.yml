@@ -13,6 +13,8 @@ on:
       - v*.*.x
   pull_request:
     types: [opened, reopened, labeled, synchronize]
+    paths-ignore:
+      - '**md'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}-${{ github.event_name }}
@@ -115,6 +117,7 @@ jobs:
     steps:
     - name: Install build deps
       run: |
+        sudo rm -f /var/lib/man-db/auto-update
         sudo apt update
         sudo apt install -y \
           ccache \
@@ -367,6 +370,7 @@ jobs:
       shell: bash
       run: |
         set -x
+        sudo rm -f /var/lib/man-db/auto-update
         sudo apt update
         pkgs=(
           # Build dependencies
@@ -440,3 +444,31 @@ jobs:
          contains(github.event.pull_request.labels.*.name, 'CI:full'))
       run: |
         ./ci.sh test
+
+  bazel:
+    name: Bazel
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+
+    steps:
+      - name: Checkout the source
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 1
+
+      - name: Patch
+        run: |
+          cd third_party/highway
+          git fetch origin f670ea580bb70b4113b63b9cdaa42ba9b10cd13a
+          git checkout f670ea580bb70b4113b63b9cdaa42ba9b10cd13a
+          git apply ${{ github.workspace }}/.github/workflows/highway.patch
+      - name: Build
+        run: bazel build -c opt ...:all
+      - name: Test
+        if: |
+          true || github.event_name == 'push' ||
+          (github.event_name == 'pull_request' &&
+           contains(github.event.pull_request.labels.*.name, 'CI:full'))
+        run: bazel test -c opt --test_output=errors ...:all
