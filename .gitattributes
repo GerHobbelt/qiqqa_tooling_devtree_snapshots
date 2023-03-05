@@ -73,6 +73,7 @@ source/html/css-properties.h    spaces
 *.png           binary
 *.pnm           binary
 *.ppm           binary
+*.preformatted        binary
 *.ppt           binary
 *.pptx          binary
 *.ps         binary svneol=unset#application/postscript
@@ -80,7 +81,7 @@ source/html/css-properties.h    spaces
 *.raw           binary
 *.rdf        binary svneol=unset#text/rdf
 *.spir          binary
-*.suo             binary
+*.suo           binary
 *.swf           binary
 *.tga           binary
 *.tgz           binary
