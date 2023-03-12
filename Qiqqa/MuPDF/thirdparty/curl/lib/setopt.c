@@ -906,7 +906,7 @@ CURLcode Curl_vsetopt(struct Curl_easy *data, CURLoption option, va_list param)
     case CURL_HTTP_VERSION_NONE:
 #ifdef USE_HTTP2
       /* TODO: this seems an undesirable quirk to force a behaviour on
-       * lower implementations that they should recognize independantly? */
+       * lower implementations that they should recognize independently? */
       arg = CURL_HTTP_VERSION_2TLS;
 #endif
       /* accepted */
@@ -2888,7 +2888,7 @@ CURLcode Curl_vsetopt(struct Curl_easy *data, CURLoption option, va_list param)
     data->set.fnmatch = va_arg(param, curl_fnmatch_callback);
     break;
   case CURLOPT_CHUNK_DATA:
-    data->wildcard.customptr = va_arg(param, void *);
+    data->set.wildcardptr = va_arg(param, void *);
     break;
   case CURLOPT_FNMATCH_DATA:
     data->set.fnmatch_data = va_arg(param, void *);

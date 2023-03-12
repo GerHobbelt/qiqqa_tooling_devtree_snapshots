@@ -532,6 +532,30 @@ struct hb_ot_apply_context_t :
     may_skip (const hb_glyph_info_t &info) const
     { return matcher.may_skip (c, info); }
 
+    enum match_t {
+      MATCH,
+      NOT_MATCH,
+      SKIP
+    };
+
+    match_t match (hb_glyph_info_t &info)
+    {
+      matcher_t::may_skip_t skip = matcher.may_skip (c, info);
+      if (unlikely (skip == matcher_t::SKIP_YES))
+	return SKIP;
+
+      matcher_t::may_match_t match = matcher.may_match (info, get_glyph_data ());
+      if (match == matcher_t::MATCH_YES ||
+	  (match == matcher_t::MATCH_MAYBE &&
+	   skip == matcher_t::SKIP_NO))
+	return MATCH;
+
+      if (skip == matcher_t::SKIP_NO)
+        return NOT_MATCH;
+
+      return SKIP;
+  }
+
     bool next (unsigned *unsafe_to = nullptr)
     {
       assert (num_items > 0);
@@ -543,27 +567,22 @@ struct hb_ot_apply_context_t :
       while ((signed) idx < stop)
       {
 	idx++;
-	hb_glyph_info_t &info = c->buffer->info[idx];
-
-	matcher_t::may_skip_t skip = matcher.may_skip (c, info);
-	if (unlikely (skip == matcher_t::SKIP_YES))
-	  continue;
-
-	matcher_t::may_match_t match = matcher.may_match (info, get_glyph_data ());
-	if (match == matcher_t::MATCH_YES ||
-	    (match == matcher_t::MATCH_MAYBE &&
-	     skip == matcher_t::SKIP_NO))
+	switch (match (c->buffer->info[idx]))
 	{
-	  num_items--;
-	  advance_glyph_data ();
-	  return true;
-	}
-
-	if (skip == matcher_t::SKIP_NO)
-	{
-	  if (unsafe_to)
-	    *unsafe_to = idx + 1;
-	  return false;
+	  case MATCH:
+	  {
+	    num_items--;
+	    advance_glyph_data ();
+	    return true;
+	  }
+	  case NOT_MATCH:
+	  {
+	    if (unsafe_to)
+	      *unsafe_to = idx + 1;
+	    return false;
+	  }
+	  case SKIP:
+	    continue;
 	}
       }
       if (unsafe_to)
@@ -581,27 +600,22 @@ struct hb_ot_apply_context_t :
       while (idx > stop)
       {
 	idx--;
-	hb_glyph_info_t &info = c->buffer->out_info[idx];
-
-	matcher_t::may_skip_t skip = matcher.may_skip (c, info);
-	if (unlikely (skip == matcher_t::SKIP_YES))
-	  continue;
-
-	matcher_t::may_match_t match = matcher.may_match (info, get_glyph_data ());
-	if (match == matcher_t::MATCH_YES ||
-	    (match == matcher_t::MATCH_MAYBE &&
-	     skip == matcher_t::SKIP_NO))
+	switch (match (c->buffer->out_info[idx]))
 	{
-	  num_items--;
-	  advance_glyph_data ();
-	  return true;
-	}
-
-	if (skip == matcher_t::SKIP_NO)
-	{
-	  if (unsafe_from)
-	    *unsafe_from = hb_max (1u, idx) - 1u;
-	  return false;
+	  case MATCH:
+	  {
+	    num_items--;
+	    advance_glyph_data ();
+	    return true;
+	  }
+	  case NOT_MATCH:
+	  {
+	    if (unsafe_from)
+	      *unsafe_from = hb_max (1u, idx) - 1u;
+	    return false;
+	  }
+	  case SKIP:
+	    continue;
 	}
       }
       if (unsafe_from)
@@ -698,6 +712,9 @@ struct hb_ot_apply_context_t :
   uint32_t random_state = 1;
   unsigned new_syllables = (unsigned) -1;
 
+  signed last_base = -1; // GPOS uses
+  unsigned last_base_until = 0; // GPOS uses
+
   hb_ot_apply_context_t (unsigned int table_index_,
 			 hb_font_t *font_,
 			 hb_buffer_t *buffer_) :
@@ -736,7 +753,7 @@ struct hb_ot_apply_context_t :
     iter_context.init (this, true);
   }
 
-  void set_lookup_mask (hb_mask_t mask) { lookup_mask = mask; init_iters (); }
+  void set_lookup_mask (hb_mask_t mask) { lookup_mask = mask; last_base = -1; last_base_until = 0; init_iters (); }
   void set_auto_zwj (bool auto_zwj_) { auto_zwj = auto_zwj_; init_iters (); }
   void set_auto_zwnj (bool auto_zwnj_) { auto_zwnj = auto_zwnj_; init_iters (); }
   void set_per_syllable (bool per_syllable_) { per_syllable = per_syllable_; init_iters (); }
@@ -944,8 +961,6 @@ struct hb_accelerate_subtables_context_t :
     hb_set_digest_t digest;
   };
 
-  typedef hb_vector_t<hb_applicable_t> array_t;
-
 #ifndef HB_NO_OT_LAYOUT_LOOKUP_CACHE
   template <typename T>
   auto cache_cost (const T &obj, hb_priority<1>) HB_AUTO_RETURN ( obj.cache_cost () )
@@ -957,7 +972,7 @@ struct hb_accelerate_subtables_context_t :
   template <typename T>
   return_t dispatch (const T &obj)
   {
-    hb_applicable_t *entry = array.push ();
+    hb_applicable_t *entry = &array[i++];
 
     entry->init (obj,
 		 apply_to<T>
@@ -977,9 +992,9 @@ struct hb_accelerate_subtables_context_t :
      * and we allocate the cache opportunity to the costliest subtable.
      */
     unsigned cost = cache_cost (obj, hb_prioritize);
-    if (cost > cache_user_cost && !array.in_error ())
+    if (cost > cache_user_cost)
     {
-      cache_user_idx = array.length - 1;
+      cache_user_idx = i - 1;
       cache_user_cost = cost;
     }
 #endif
@@ -988,10 +1003,11 @@ struct hb_accelerate_subtables_context_t :
   }
   static return_t default_return_value () { return hb_empty_t (); }
 
-  hb_accelerate_subtables_context_t (array_t &array_) :
+  hb_accelerate_subtables_context_t (hb_applicable_t *array_) :
 				     array (array_) {}
 
-  array_t &array;
+  hb_applicable_t *array;
+  unsigned i = 0;
 
 #ifndef HB_NO_OT_LAYOUT_LOOKUP_CACHE
   unsigned cache_user_idx = (unsigned) -1;
@@ -4014,36 +4030,50 @@ struct Extension
 struct hb_ot_layout_lookup_accelerator_t
 {
   template <typename TLookup>
-  void init (const TLookup &lookup)
+  static hb_ot_layout_lookup_accelerator_t *create (const TLookup &lookup)
   {
-    subtables.init ();
-    subtables.alloc (lookup.get_subtable_count (), true);
-    hb_accelerate_subtables_context_t c_accelerate_subtables (subtables);
+    unsigned count = lookup.get_subtable_count ();
+
+    unsigned size = sizeof (hb_ot_layout_lookup_accelerator_t) -
+		    HB_VAR_ARRAY * sizeof (hb_accelerate_subtables_context_t::hb_applicable_t) +
+		    count * sizeof (hb_accelerate_subtables_context_t::hb_applicable_t);
+
+    /* The following is a calloc because when we are collecting subtables,
+     * some of them might be invalid and hence not collect; as a result,
+     * we might not fill in all the count entries of the subtables array.
+     * Zeroing it allows the set digest to gatekeep it without having to
+     * initialize it further. */
+    auto *thiz = (hb_ot_layout_lookup_accelerator_t *) hb_calloc (1, size);
+    if (unlikely (!thiz))
+      return nullptr;
+
+    hb_accelerate_subtables_context_t c_accelerate_subtables (thiz->subtables);
     lookup.dispatch (&c_accelerate_subtables);
 
-    digest.init ();
-    for (auto& subtable : subtables)
-      digest.add (subtable.digest);
+    thiz->digest.init ();
+    for (auto& subtable : hb_iter (thiz->subtables, count))
+      thiz->digest.add (subtable.digest);
 
 #ifndef HB_NO_OT_LAYOUT_LOOKUP_CACHE
-    cache_user_idx = c_accelerate_subtables.cache_user_idx;
-    for (unsigned i = 0; i < subtables.length; i++)
-      if (i != cache_user_idx)
-	subtables[i].apply_cached_func = subtables[i].apply_func;
+    thiz->cache_user_idx = c_accelerate_subtables.cache_user_idx;
+    for (unsigned i = 0; i < count; i++)
+      if (i != thiz->cache_user_idx)
+	thiz->subtables[i].apply_cached_func = thiz->subtables[i].apply_func;
 #endif
+
+    return thiz;
   }
-  void fini () { subtables.fini (); }
 
   bool may_have (hb_codepoint_t g) const
   { return digest.may_have (g); }
 
-  bool apply (hb_ot_apply_context_t *c, bool use_cache) const
+  bool apply (hb_ot_apply_context_t *c, unsigned subtables_count, bool use_cache) const
   {
 #ifndef HB_NO_OT_LAYOUT_LOOKUP_CACHE
     if (use_cache)
     {
       return
-      + hb_iter (subtables)
+      + hb_iter (hb_iter (subtables, subtables_count))
       | hb_map ([&c] (const hb_accelerate_subtables_context_t::hb_applicable_t &_) { return _.apply_cached (c); })
       | hb_any
       ;
@@ -4052,7 +4082,7 @@ struct hb_ot_layout_lookup_accelerator_t
 #endif
     {
       return
-      + hb_iter (subtables)
+      + hb_iter (hb_iter (subtables, subtables_count))
       | hb_map ([&c] (const hb_accelerate_subtables_context_t::hb_applicable_t &_) { return _.apply (c); })
       | hb_any
       ;
@@ -4079,10 +4109,10 @@ struct hb_ot_layout_lookup_accelerator_t
 
   hb_set_digest_t digest;
   private:
-  hb_accelerate_subtables_context_t::array_t subtables;
 #ifndef HB_NO_OT_LAYOUT_LOOKUP_CACHE
   unsigned cache_user_idx = (unsigned) -1;
 #endif
+  hb_accelerate_subtables_context_t::hb_applicable_t subtables[HB_VAR_ARRAY];
 };
 
 template <typename Types>
@@ -4445,34 +4475,47 @@ struct GSUBGPOS
 
       this->lookup_count = table->get_lookup_count ();
 
-      this->accels = (hb_ot_layout_lookup_accelerator_t *) hb_calloc (this->lookup_count, sizeof (hb_ot_layout_lookup_accelerator_t));
+      this->accels = (hb_atomic_ptr_t<hb_ot_layout_lookup_accelerator_t> *) hb_calloc (this->lookup_count, sizeof (*accels));
       if (unlikely (!this->accels))
       {
 	this->lookup_count = 0;
 	this->table.destroy ();
 	this->table = hb_blob_get_empty ();
       }
-
-      for (unsigned int i = 0; i < this->lookup_count; i++)
-	this->accels[i].init (table->get_lookup (i));
     }
     ~accelerator_t ()
     {
       for (unsigned int i = 0; i < this->lookup_count; i++)
-        this->accels[i].fini ();
+	hb_free (this->accels[i]);
       hb_free (this->accels);
       this->table.destroy ();
     }
 
-    hb_array_t<const hb_ot_layout_lookup_accelerator_t> get_accels () const
-    { 
-      return hb_array (accels, lookup_count); 
+    hb_ot_layout_lookup_accelerator_t *get_accel (unsigned lookup_index) const
+    {
+      if (unlikely (lookup_index >= lookup_count)) return nullptr;
+
+    retry:
+      auto *accel = accels[lookup_index].get_acquire ();
+      if (unlikely (!accel))
+      {
+	accel = hb_ot_layout_lookup_accelerator_t::create (table->get_lookup (lookup_index));
+	if (unlikely (!accel))
+	  return nullptr;
+
+	if (unlikely (!accels[lookup_index].cmpexch (nullptr, accel)))
+	{
+	  hb_free (accel);
+	  goto retry;
+	}
+      }
+
+      return accel;
     }
 
     hb_blob_ptr_t<T> table;
-//  protected:
     unsigned int lookup_count;
-    hb_ot_layout_lookup_accelerator_t *accels;
+    hb_atomic_ptr_t<hb_ot_layout_lookup_accelerator_t> *accels;
   };
 
   protected:

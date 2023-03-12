@@ -85,6 +85,8 @@ HB_BASE_sources = \
 	hb-ot-layout-common.hh \
 	hb-ot-layout-gdef-table.hh \
 	hb-ot-layout-gpos-table.hh \
+	hb-outline.hh \
+	hb-outline.cc \
 	hb-paint.cc \
 	hb-paint.hh \
 	hb-paint-extents.cc \
@@ -223,6 +225,7 @@ HB_BASE_sources = \
 	hb-ot-tag.cc \
 	hb-ot-var-avar-table.hh \
 	hb-ot-var-common.hh \
+	hb-ot-var-cvar-table.hh \
 	hb-ot-var-fvar-table.hh \
 	hb-ot-var-gvar-table.hh \
 	hb-ot-var-hvar-table.hh \

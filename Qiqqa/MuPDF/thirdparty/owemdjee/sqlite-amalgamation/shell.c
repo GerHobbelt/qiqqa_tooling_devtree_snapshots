@@ -13725,14 +13725,16 @@ static int dbdataFilter(
   }
   if( rc==SQLITE_OK ){
     rc = sqlite3_bind_text(pCsr->pStmt, 1, zSchema, -1, SQLITE_TRANSIENT);
-  }else{
-    pTab->base.zErrMsg = sqlite3_mprintf("%s", sqlite3_errmsg(pTab->db));
   }
 
   /* Try to determine the encoding of the db by inspecting the header
   ** field on page 1. */
   if( rc==SQLITE_OK ){
     rc = dbdataGetEncoding(pCsr);
+  }
+
+  if( rc!=SQLITE_OK ){
+    pTab->base.zErrMsg = sqlite3_mprintf("%s", sqlite3_errmsg(pTab->db));
   }
 
   if( rc==SQLITE_OK ){
@@ -20275,16 +20277,27 @@ static char *readFile(const char *zName, int *pnByte){
   long nIn;
   size_t nRead;
   char *pBuf;
+  int rc;
   if( in==0 ) return 0;
-  fseek(in, 0, SEEK_END);
+  rc = fseek(in, 0, SEEK_END);
+  if( rc!=0 ){
+    raw_printf(stderr, "Error: '%s' not seekable\n", zName);
+    fclose(in);
+    return 0;
+  }
   nIn = ftell(in);
   rewind(in);
   pBuf = sqlite3_malloc64( nIn+1 );
-  if( pBuf==0 ){ fclose(in); return 0; }
+  if( pBuf==0 ){
+    raw_printf(stderr, "Error: out of memory\n");
+    fclose(in);
+    return 0;
+  }
   nRead = fread(pBuf, nIn, 1, in);
   fclose(in);
   if( nRead!=1 ){
     sqlite3_free(pBuf);
+    raw_printf(stderr, "Error: cannot read '%s'\n", zName);
     return 0;
   }
   pBuf[nIn] = 0;
@@ -20690,6 +20703,7 @@ static void open_db(ShellState *p, int openFlags){
       }
       exit(1);
     }
+    sqlite3_db_config(p->db, SQLITE_DBCONFIG_STMT_SCANSTATUS, (int)0, (int*)0);
 
 #ifndef SQLITE_OMIT_LOAD_EXTENSION
     sqlite3_enable_load_extension(p->db, 1);
@@ -20705,9 +20719,6 @@ static void open_db(ShellState *p, int openFlags){
 #ifndef SQLITE_SHELL_FIDDLE
     sqlite3_fileio_init(p->db, 0, 0);
     sqlite3_completion_init(p->db, 0, 0);
-#endif
-#if SQLITE_SHELL_HAVE_RECOVER
-    sqlite3_dbdata_init(p->db, 0, 0);
 #endif
 #ifdef SQLITE_HAVE_ZLIB
     sqlite3_zipfile_init(p->db, 0, 0);
@@ -20779,9 +20790,9 @@ static void open_db(ShellState *p, int openFlags){
         aData = (unsigned char*)readFile(zDbFilename, &nData);
       }else{
         aData = readHexDb(p, &nData);
-        if( aData==0 ){
-          return;
-        }
+      }
+      if( aData==0 ){
+        return;
       }
       rc = sqlite3_deserialize(p->db, "main", aData, nData, nData,
                    SQLITE_DESERIALIZE_RESIZEABLE |
@@ -20795,8 +20806,13 @@ static void open_db(ShellState *p, int openFlags){
     }
 #endif
   }
-  if( p->bSafeModeFuture && p->db!=0 ){
-    sqlite3_set_authorizer(p->db, safeModeAuth, p);
+  if( p->db!=0 ){
+    if( p->bSafeModeFuture ){
+      sqlite3_set_authorizer(p->db, safeModeAuth, p);
+    }
+    sqlite3_db_config(
+        p->db, SQLITE_DBCONFIG_STMT_SCANSTATUS, p->scanstatsOn, (int*)0
+    );
   }
 }
 
@@ -21531,7 +21547,7 @@ static int db_int(sqlite3 *db, const char *zSql){
   return res;
 }
 
-#if SQLITE_SHELL_HAVE_RECOVER
+#if defined(SQLITE_SHELL_HAVE_RECOVER)
 /*
 ** Convert a 2-byte or 4-byte big-endian integer into a native integer
 */
@@ -23461,7 +23477,6 @@ static int checkCommand(char *azArg[], int nArg, ShellState *p, char **pzErr){
   if( nArg!=2 ){
     return SHELL_INVALID_ARGS;
   }else if( (zRes = readFile("testcase-out.txt", 0))==0 ){
-    *pzErr = shellMPrintf(&rc, "Error: cannot read 'testcase-out.txt'");
     rc = 2;
   }else if( testcase_glob(azArg[1],zRes)==0 ){
     *pzErr =
@@ -23594,6 +23609,8 @@ static int dbconfigCommand(char *azArg[], int nArg, ShellState *p, char **pzErr)
     { "load_extension",     SQLITE_DBCONFIG_ENABLE_LOAD_EXTENSION },
     { "no_ckpt_on_close",   SQLITE_DBCONFIG_NO_CKPT_ON_CLOSE      },
     { "reset_database",     SQLITE_DBCONFIG_RESET_DATABASE        },
+    { "reverse_scanorder",  SQLITE_DBCONFIG_REVERSE_SCANORDER     },
+    { "stmt_scanstatus",    SQLITE_DBCONFIG_STMT_SCANSTATUS       },
     { "trigger_eqp",        SQLITE_DBCONFIG_TRIGGER_EQP           },
     { "trusted_schema",     SQLITE_DBCONFIG_TRUSTED_SCHEMA        },
     { "writable_schema",    SQLITE_DBCONFIG_WRITABLE_SCHEMA       },
@@ -24706,8 +24723,16 @@ static int loadCommand(char *azArg[], int nArg, ShellState *p, char **pzErr){
 
 static int logCommand(char *azArg[], int nArg, ShellState *p, char **pzErr){
   const char *zFile = azArg[1];
-  if( p->bSafeMode ) return SHELL_FORBIDDEN_OP;
+  if( p->bSafeMode
+      && cli_strcmp(zFile,"on")!=0
+      && cli_strcmp(zFile,"off")!=0
+  ){
+    raw_printf(stdout, "cannot set .log to anything other "
+               "than \"on\" or \"off\"\n");
+    zFile = "off";
+  }
   output_file_close(p->pLog);
+  if( cli_strcmp(zFile,"on")==0 ) zFile = "stdout";
   p->pLog = output_file_open(zFile, 0);
   return 0;
 }
@@ -25553,6 +25578,9 @@ static int scanstatsCommand(char *azArg[], int nArg, ShellState *p, char **pzErr
     }else{
       p->scanstatsOn = (u8)booleanValue(azArg[1]);
     }
+    sqlite3_db_config(
+      p->db, SQLITE_DBCONFIG_STMT_SCANSTATUS, p->scanstatsOn, (int*)0
+    );
 #ifndef SQLITE_ENABLE_STMT_SCANSTATUS
     raw_printf(STD_ERR, "Warning: .scanstats not available in this build.\n");
 #endif
@@ -27237,10 +27265,13 @@ static const char *__azHelp[] = {
   "",
 #ifndef SQLITE_OMIT_LOAD_EXTENSION
   ".load FILE ?ENTRY?       Load an extension library\n",
+  #if !defined(SQLITE_SHELL_FIDDLE)
+  ".log FILE|on|off         Turn logging on or off.  FILE can be stderr/stdout\n",
+  #else
+  ".log on|off              Turn logging on or off.\n",
+  #endif
   "",
 #endif
-  ".log FILE|off            Turn logging on or off.  FILE can be stderr/stdout\n",
-  "",
   ".mode MODE ?OPTIONS?     Set output mode\n",
   "   MODE is one of:\n"
   "     ascii       Columns/rows delimited by 0x1F and 0x1E\n"
@@ -28198,6 +28229,7 @@ static int process_sqliterc(
 */
 static const char *zOptions =
 #if defined(SQLITE_HAVE_ZLIB) && !defined(SQLITE_OMIT_VIRTUALTABLE)
+  "   --                   treat none of arguments following as options\n"
   "   -A ARGS...           run \".archive ARGS\" and exit\n"
 #endif
   "   -append              append the database to the end of the file\n"
@@ -28259,9 +28291,9 @@ static const char *zOptions =
 ;
 static void usage(int showDetail){
   utf8_printf(STD_ERR,
-      "Usage: %s [OPTIONS] FILENAME [SQL]\n"
+      "Usage: %s [OPTIONS] [FILENAME] [SQL]\n"
       "FILENAME is the name of an SQLite database. A new database is created\n"
-      "if the file does not previously exist.\n", Argv0);
+      "if the file does not previously exist. Defaults to :memory:.\n", Argv0);
   if( showDetail ){
     utf8_printf(STD_ERR, "OPTIONS include:\n%s", zOptions);
   }else{
@@ -28294,9 +28326,11 @@ static void main_init(ShellState *data) {
   memcpy(data->rowSeparator,SEP_Row, 2);
   data->showHeader = 0;
   data->shellFlgs = SHFLG_Lookaside;
-  verify_uninitialized();
-  sqlite3_config(SQLITE_CONFIG_URI, 1);
   sqlite3_config(SQLITE_CONFIG_LOG, shellLog, data);
+#if !defined(SQLITE_SHELL_FIDDLE)
+  verify_uninitialized();
+#endif
+  sqlite3_config(SQLITE_CONFIG_URI, 1);
   sqlite3_config(SQLITE_CONFIG_MULTITHREAD);
   sqlite3_snprintf(sizeof(mainPrompt), mainPrompt,"sqlite> ");
   sqlite3_snprintf(sizeof(continuePrompt), continuePrompt,"   ...> ");
@@ -28389,6 +28423,7 @@ int SQLITE_CDECL SHELL_MAIN(int argc, const wchar_t **wargv){
   int warnInmemoryDb = 0;
   int readStdin = 1;
   int nCmd = 0;
+  int nOptsEnd = argc;
   const char **azCmd = 0;
   const char *zVfs = 0;           /* Value of -vfs command-line option */
 #if !SQLITE_SHELL_IS_UTF8
@@ -28491,10 +28526,12 @@ int SQLITE_CDECL SHELL_MAIN(int argc, const wchar_t **wargv){
   ** the size of the alternative malloc heap,
   ** and the first command to execute.
   */
+#ifndef SQLITE_SHELL_FIDDLE
   verify_uninitialized();
+#endif
   for(i=1; i<argc && rc<2; i++){
     const char *z = argv[i];
-    if( z[0]!='-' ){
+    if( z[0]!='-' || i>nOptsEnd ){
       if( data.aAuxDb->zDbFilename==0 ){
         data.aAuxDb->zDbFilename = z;
       }else{
@@ -28506,9 +28543,13 @@ int SQLITE_CDECL SHELL_MAIN(int argc, const wchar_t **wargv){
         shell_check_oom(azCmd);
         azCmd[nCmd-1] = z;
       }
+      continue;
     }
     if( z[1]=='-' ) z++;
-    if( cli_strcmp(z,"-separator")==0
+    if( cli_strcmp(z, "-")==0 ){
+      nOptsEnd = i;
+      continue;
+    }else if( cli_strcmp(z,"-separator")==0
      || cli_strcmp(z,"-nullvalue")==0
      || cli_strcmp(z,"-newline")==0
      || cli_strcmp(z,"-cmd")==0
@@ -28530,6 +28571,7 @@ int SQLITE_CDECL SHELL_MAIN(int argc, const wchar_t **wargv){
       zSize = cmdline_option_value(argc, argv, ++i);
       szHeap = integerValue(zSize);
       if( szHeap>0x7fff0000 ) szHeap = 0x7fff0000;
+      verify_uninitialized();
       sqlite3_config(SQLITE_CONFIG_HEAP, malloc((int)szHeap), (int)szHeap, 64);
 #else
       (void)cmdline_option_value(argc, argv, ++i);
@@ -28543,6 +28585,7 @@ int SQLITE_CDECL SHELL_MAIN(int argc, const wchar_t **wargv){
       if( sz>0 && n>0 && 0xffffffffffffLL/sz<n ){
         n = 0xffffffffffffLL/sz;
       }
+      verify_uninitialized();
       sqlite3_config(SQLITE_CONFIG_PAGECACHE,
                     (n>0 && sz>0) ? malloc(n*sz) : 0, sz, n);
       data.shellFlgs |= SHFLG_Pagecache;
@@ -28552,11 +28595,13 @@ int SQLITE_CDECL SHELL_MAIN(int argc, const wchar_t **wargv){
       if( sz<0 ) sz = 0;
       n = (int)integerValue(cmdline_option_value(argc,argv,++i));
       if( n<0 ) n = 0;
+      verify_uninitialized();
       sqlite3_config(SQLITE_CONFIG_LOOKASIDE, sz, n);
       if( sz*n==0 ) data.shellFlgs &= ~SHFLG_Lookaside;
     }else if( cli_strcmp(z,"-threadsafe")==0 ){
       int n;
       n = (int)integerValue(cmdline_option_value(argc,argv,++i));
+      verify_uninitialized();
       switch( n ){
          case 0:  sqlite3_config(SQLITE_CONFIG_SINGLETHREAD);  break;
          case 2:  sqlite3_config(SQLITE_CONFIG_MULTITHREAD);   break;
@@ -28580,10 +28625,12 @@ int SQLITE_CDECL SHELL_MAIN(int argc, const wchar_t **wargv){
 #endif
     }else if( cli_strcmp(z,"-mmap")==0 ){
       sqlite3_int64 sz = integerValue(cmdline_option_value(argc,argv,++i));
+      verify_uninitialized();
       sqlite3_config(SQLITE_CONFIG_MMAP_SIZE, sz, sz);
-#ifdef SQLITE_ENABLE_SORTER_REFERENCES
+#if defined(SQLITE_ENABLE_SORTER_REFERENCES)
     }else if( cli_strcmp(z,"-sorterref")==0 ){
       sqlite3_int64 sz = integerValue(cmdline_option_value(argc,argv,++i));
+      verify_uninitialized();
       sqlite3_config(SQLITE_CONFIG_SORTERREF_SIZE, (int)sz);
 #endif
     }else if( cli_strcmp(z,"-vfs")==0 ){
@@ -28621,7 +28668,9 @@ int SQLITE_CDECL SHELL_MAIN(int argc, const wchar_t **wargv){
       /* catch this on the second pass (Unsafe is fine on invocation.) */
     }
   }
+#ifndef SQLITE_SHELL_FIDDLE
   verify_uninitialized();
+#endif
 
 #ifdef SQLITE_SHELL_INIT_PROC
   {
@@ -28691,7 +28740,7 @@ int SQLITE_CDECL SHELL_MAIN(int argc, const wchar_t **wargv){
   */
   for(i=1; i<argc && rc<2; i++){
     const char *z = argv[i];
-    if( z[0]!='-' ) continue;
+    if( z[0]!='-' || i>=nOptsEnd ) continue;
     if( z[1]=='-' ){ z++; }
     if( cli_strcmp(z,"-init")==0 ){
       i++;
@@ -28874,6 +28923,7 @@ int SQLITE_CDECL SHELL_MAIN(int argc, const wchar_t **wargv){
           goto shell_bail;
         }
       }else{
+        echo_group_input(&data, azCmd[i]);
         rc = run_single_query(&data, azCmd[i]);
       }
     }

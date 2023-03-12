@@ -119,7 +119,7 @@ struct Glyph
                              hb_bytes_t &dest_bytes /* OUT */) const
   {
     GlyphHeader *glyph_header = nullptr;
-    if (!plan->pinned_at_default && type != EMPTY && all_points.length > 4)
+    if (!plan->pinned_at_default && type != EMPTY && all_points.length >= 4)
     {
       glyph_header = (GlyphHeader *) hb_calloc (1, GlyphHeader::static_size);
       if (unlikely (!glyph_header)) return false;
@@ -439,7 +439,7 @@ struct Glyph
 
 	auto component_coords = coords;
 	if (item.is_reset_unspecified_axes ())
-	  component_coords = hb_array (font->coords, font->num_coords);
+	  component_coords = hb_array<int> ();
 
 	coord_setter_t coord_setter (component_coords);
 	item.set_variations (coord_setter, record_points);

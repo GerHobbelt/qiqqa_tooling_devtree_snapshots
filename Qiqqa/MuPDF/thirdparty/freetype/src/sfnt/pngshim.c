@@ -240,7 +240,7 @@
       *e = FT_THROW( Invalid_Stream_Read );
       png_error( png, NULL );
 
-      return;
+      /* return; (never reached) */
     }
 
     ft_memcpy( data, stream->cursor, length );
@@ -408,7 +408,8 @@
     switch ( color_type )
     {
     default:
-      /* Shouldn't happen, but fall through. */
+      /* Shouldn't happen, but ... */
+      FALL_THROUGH;
 
     case PNG_COLOR_TYPE_RGB_ALPHA:
       png_set_read_user_transform_fn( png, premultiply_data );
@@ -457,7 +458,7 @@
 #else /* !(TT_CONFIG_OPTION_EMBEDDED_BITMAPS && FT_CONFIG_OPTION_USE_PNG) */
 
   /* ANSI C doesn't like empty source files */
-  typedef int  _pngshim_dummy;
+  typedef int  pngshim_dummy_;
 
 #endif /* !(TT_CONFIG_OPTION_EMBEDDED_BITMAPS && FT_CONFIG_OPTION_USE_PNG) */
 

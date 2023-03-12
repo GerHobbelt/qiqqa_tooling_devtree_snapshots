@@ -746,7 +746,7 @@ hb_ot_layout_script_find_language (hb_face_t    *face,
  *
  * Return value: `true` if one of the given language tags is found, `false` otherwise
  *
- * Since: REPLACEME
+ * Since: 7.0.0
  **/
 hb_bool_t
 hb_ot_layout_script_select_language2 (hb_face_t      *face,
@@ -1487,12 +1487,13 @@ hb_ot_layout_lookup_would_substitute (hb_face_t            *face,
 				      unsigned int          glyphs_length,
 				      hb_bool_t             zero_context)
 {
-  auto accels = face->table.GSUB->get_accels ();
-  if (unlikely (lookup_index >= accels.length)) return false;
+  auto &gsub = face->table.GSUB;
+  if (unlikely (lookup_index >= gsub->lookup_count)) return false;
   OT::hb_would_apply_context_t c (face, glyphs, glyphs_length, (bool) zero_context);
 
-  const OT::SubstLookup& l = face->table.GSUB->table->get_lookup (lookup_index);
-  return l.would_apply (&c, &accels[lookup_index]);
+  const OT::SubstLookup& l = gsub->table->get_lookup (lookup_index);
+  auto *accel = gsub->get_accel (lookup_index);
+  return accel && l.would_apply (&c, accel);
 }
 
 
@@ -1831,11 +1832,9 @@ struct GSUBProxy
   typedef OT::SubstLookup Lookup;
 
   GSUBProxy (hb_face_t *face) :
-    table (*face->table.GSUB->table),
-    accels (face->table.GSUB->get_accels ()) {}
+    accel (*face->table.GSUB) {}
 
-  const GSUB &table;
-  hb_array_t<const OT::hb_ot_layout_lookup_accelerator_t> accels;
+  const GSUB::accelerator_t &accel;
 };
 
 struct GPOSProxy
@@ -1845,17 +1844,16 @@ struct GPOSProxy
   typedef OT::PosLookup Lookup;
 
   GPOSProxy (hb_face_t *face) :
-    table (*face->table.GPOS->table),
-    accels (face->table.GPOS->get_accels ()) {}
+    accel (*face->table.GPOS) {}
 
-  const GPOS &table;
-  hb_array_t<const OT::hb_ot_layout_lookup_accelerator_t> accels;
+  const GPOS::accelerator_t &accel;
 };
 
 
 static inline bool
 apply_forward (OT::hb_ot_apply_context_t *c,
-	       const OT::hb_ot_layout_lookup_accelerator_t &accel)
+	       const OT::hb_ot_layout_lookup_accelerator_t &accel,
+	       unsigned subtable_count)
 {
   bool use_cache = accel.cache_enter (c);
 
@@ -1868,7 +1866,7 @@ apply_forward (OT::hb_ot_apply_context_t *c,
 	(buffer->cur().mask & c->lookup_mask) &&
 	c->check_glyph_property (&buffer->cur(), c->lookup_props))
      {
-       applied = accel.apply (c, use_cache);
+       applied = accel.apply (c, subtable_count, use_cache);
      }
 
     if (applied)
@@ -1885,7 +1883,8 @@ apply_forward (OT::hb_ot_apply_context_t *c,
 
 static inline bool
 apply_backward (OT::hb_ot_apply_context_t *c,
-	       const OT::hb_ot_layout_lookup_accelerator_t &accel)
+	       const OT::hb_ot_layout_lookup_accelerator_t &accel,
+	       unsigned subtable_count)
 {
   bool ret = false;
   hb_buffer_t *buffer = c->buffer;
@@ -1894,7 +1893,7 @@ apply_backward (OT::hb_ot_apply_context_t *c,
     if (accel.digest.may_have (buffer->cur().codepoint) &&
 	(buffer->cur().mask & c->lookup_mask) &&
 	c->check_glyph_property (&buffer->cur(), c->lookup_props))
-     ret |= accel.apply (c, false);
+     ret |= accel.apply (c, subtable_count, false);
 
     /* The reverse lookup doesn't "advance" cursor (for good reason). */
     buffer->idx--;
@@ -1910,11 +1909,13 @@ apply_string (OT::hb_ot_apply_context_t *c,
 	      const typename Proxy::Lookup &lookup,
 	      const OT::hb_ot_layout_lookup_accelerator_t &accel)
 {
-  bool ret = false;
   hb_buffer_t *buffer = c->buffer;
+  unsigned subtable_count = lookup.get_subtable_count ();
 
   if (unlikely (!buffer->len || !c->lookup_mask))
-    return ret;
+    return false;
+
+  bool ret = false;
 
   c->set_lookup_props (lookup.get_props ());
 
@@ -1925,7 +1926,7 @@ apply_string (OT::hb_ot_apply_context_t *c,
       buffer->clear_output ();
 
     buffer->idx = 0;
-    ret = apply_forward (c, accel);
+    ret = apply_forward (c, accel, subtable_count);
 
     if (!Proxy::always_inplace)
       buffer->sync ();
@@ -1935,7 +1936,7 @@ apply_string (OT::hb_ot_apply_context_t *c,
     /* in-place backward substitution/positioning */
     assert (!buffer->have_output);
     buffer->idx = buffer->len - 1;
-    ret = apply_backward (c, accel);
+    ret = apply_backward (c, accel, subtable_count);
   }
 
   return ret;
@@ -1960,6 +1961,10 @@ inline void hb_ot_map_t::apply (const Proxy &proxy,
       auto &lookup = lookups[table_index][i];
 
       unsigned int lookup_index = lookup.index;
+
+      auto *accel = proxy.accel.get_accel (lookup_index);
+      if (unlikely (!accel)) continue;
+
       if (buffer->messaging () &&
 	  !buffer->message (font, "start lookup %u feature '%c%c%c%c'", lookup_index, HB_UNTAG (lookup.feature_tag))) continue;
 
@@ -1967,7 +1972,7 @@ inline void hb_ot_map_t::apply (const Proxy &proxy,
        * (plus some past glyphs).
        *
        * Only try applying the lookup if there is any overlap. */
-      if (proxy.accels[lookup_index].digest.may_have (c.digest))
+      if (accel->digest.may_have (c.digest))
       {
 	c.set_lookup_index (lookup_index);
 	c.set_lookup_mask (lookup.mask);
@@ -1977,8 +1982,8 @@ inline void hb_ot_map_t::apply (const Proxy &proxy,
 	c.set_per_syllable (lookup.per_syllable);
 
 	apply_string<Proxy> (&c,
-			     proxy.table.get_lookup (lookup_index),
-			     proxy.accels[lookup_index]);
+			     proxy.accel.table->get_lookup (lookup_index),
+			     *accel);
       }
       else if (buffer->messaging ())
 	(void) buffer->message (font, "skipped lookup %u feature '%c%c%c%c' because no glyph matches", lookup_index, HB_UNTAG (lookup.feature_tag));

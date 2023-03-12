@@ -1743,9 +1743,9 @@
    *   SUCCESS on success, FAILURE on error.
    */
   static Bool
-  Decompose_Curve( RAS_ARGS UShort  first,
-                            UShort  last,
-                            Int     flipped )
+  Decompose_Curve( RAS_ARGS Int  first,
+                            Int  last,
+                            Int  flipped )
   {
     FT_Vector   v_last;
     FT_Vector   v_control;
@@ -1970,8 +1970,8 @@
   static Bool
   Convert_Glyph( RAS_ARGS Int  flipped )
   {
-    Int   i;
-    UInt  start;
+    Int  i;
+    Int  first, last;
 
 
     ras.fProfile = NULL;
@@ -1986,8 +1986,7 @@
     ras.cProfile->offset = ras.top;
     ras.num_Profs        = 0;
 
-    start = 0;
-
+    last = -1;
     for ( i = 0; i < ras.outline.n_contours; i++ )
     {
       PProfile  lastProfile;
@@ -1997,12 +1996,11 @@
       ras.state    = Unknown_State;
       ras.gProfile = NULL;
 
-      if ( Decompose_Curve( RAS_VARS (UShort)start,
-                                     (UShort)ras.outline.contours[i],
-                                     flipped ) )
-        return FAILURE;
+      first = last + 1;
+      last  = ras.outline.contours[i];
 
-      start = (UShort)ras.outline.contours[i] + 1;
+      if ( Decompose_Curve( RAS_VARS first, last, flipped ) )
+        return FAILURE;
 
       /* we must now check whether the extreme arcs join or not */
       if ( FRAC( ras.lastY ) == 0 &&
@@ -2220,8 +2218,8 @@
     /* represent multiples of 1/(1<<12) = 1/4096                    */
     FT_TRACE7(( "  y=%d x=[% .12f;% .12f]",
                 y,
-                x1 / (double)ras.precision,
-                x2 / (double)ras.precision ));
+                (double)x1 / (double)ras.precision,
+                (double)x2 / (double)ras.precision ));
 
     /* Drop-out control */
 
@@ -2295,8 +2293,8 @@
 
     FT_TRACE7(( "  y=%d x=[% .12f;% .12f]",
                 y,
-                x1 / (double)ras.precision,
-                x2 / (double)ras.precision ));
+                (double)x1 / (double)ras.precision,
+                (double)x2 / (double)ras.precision ));
 
     /* Drop-out control */
 
@@ -2478,8 +2476,8 @@
 
     FT_TRACE7(( "  x=%d y=[% .12f;% .12f]",
                 y,
-                x1 / (double)ras.precision,
-                x2 / (double)ras.precision ));
+                (double)x1 / (double)ras.precision,
+                (double)x2 / (double)ras.precision ));
 
     /* We should not need this procedure but the vertical sweep   */
     /* mishandles horizontal lines through pixel centers.  So we  */
@@ -2549,8 +2547,8 @@
 
     FT_TRACE7(( "  x=%d y=[% .12f;% .12f]",
                 y,
-                x1 / (double)ras.precision,
-                x2 / (double)ras.precision ));
+                (double)x1 / (double)ras.precision,
+                (double)x2 / (double)ras.precision ));
 
     /* During the horizontal sweep, we only take care of drop-outs */
 

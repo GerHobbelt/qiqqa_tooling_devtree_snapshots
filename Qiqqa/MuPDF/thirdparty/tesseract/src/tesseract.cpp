@@ -303,7 +303,7 @@ static void PrintHelpExtra(const char *program) {
       "\n"
       "  {} info [<trainingfile>...]\n"
       "                        Prints info about the trainingfile(s), whether they are\n"
-      "                        LSTM (tesseract v4/v5) or Legacy (teesseract v3)\n"
+      "                        LSTM (tesseract v4/v5) or Legacy (tesseract v3)\n"
       "\n"
       "  {} unpack [<file>...]\n"
       "                        Unpack training archives into transcription text files\n"
@@ -312,7 +312,7 @@ static void PrintHelpExtra(const char *program) {
       "  {} version\n"
       "                        Alias for '--version'.\n"
       "\n"
-      "Stand-alonee {} options:\n"
+      "Stand-alone {} options:\n"
       "  -h, --help            Show minimal help message.\n"
       "  --help-extra          Show extra help for advanced users.\n"
       "  --help-psm            Show page segmentation modes.\n"
@@ -1169,7 +1169,7 @@ extern "C" int tesseract_main(int argc, const char** argv)
       api.SetVariable("debug_baseline_fit", "1"); // 0..3
       api.SetVariable("debug_baseline_y_coord", "-2000");
 
-      api.SetVariable("showcase_threshold_methods", "N");
+      api.SetVariable("showcase_threshold_methods", "Y");
 
       api.SetVariable("debug_write_unlv", "Y");
       api.SetVariable("debug_line_finding", "Y");
@@ -1199,13 +1199,15 @@ extern "C" int tesseract_main(int argc, const char** argv)
 #endif
     bool succeed = api.ProcessPages(image, nullptr, 0, renderers[0].get());
     if (!succeed) {
-      tprintf("ERROR: Error during page processing.\n");
+      tprintf("ERROR: Error during page processing. File: {}\n", image);
       ret_val = EXIT_FAILURE;
     }
   }
   }
 
-  api.ReportParamsUsageStatistics();
+  if (ret_val == EXIT_SUCCESS) {
+    api.ReportParamsUsageStatistics();
+  }
   }
   // ^^^ end of scope for the Tesseract api instance
   // --> cache occupancy is removed, so the next call will succeed without fail (due to internal sanity checks)

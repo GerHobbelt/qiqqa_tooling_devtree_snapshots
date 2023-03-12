@@ -187,9 +187,13 @@ void Tesseract::remove_nontext_regions(BLOCK_LIST *blocks, TO_BLOCK_LIST *to_blo
 
 // Find connected components in the page and process a subset until finished or
 // a stopping criterion is met.
+//
+// Notes:
+// The given filename is used to derive a name to search for a possible UNLV zone file.
+//
 // Returns the number of blobs used in making the estimate. 0 implies failure.
 int Tesseract::orientation_and_script_detection(const char *filename, OSResults *osr) {
-  std::string name = filename; // truncated name
+  std::string name = filename ? filename : ""; // truncated name
 
   const char *lastdot = strrchr(name.c_str(), '.');
   if (lastdot != nullptr) {
@@ -201,7 +205,7 @@ int Tesseract::orientation_and_script_detection(const char *filename, OSResults 
   int height = pixGetHeight(pix_binary());
 
   BLOCK_LIST blocks;
-  if (!read_unlv_file(name, width, height, &blocks)) {
+  if (!name.empty() || !read_unlv_file(name, width, height, &blocks)) {
     FullPageBlock(width, height, &blocks);
   }
 
@@ -215,7 +219,7 @@ int Tesseract::orientation_and_script_detection(const char *filename, OSResults 
   } else {
     TBOX page_box(0, 0, width, height);
     // Filter_blobs sets up the TO_BLOCKs the same as find_components does.
-    mutable_textord()->filter_blobs(page_box.topright(), &port_blocks, true);
+    mutable_textord()->filter_blobs(page_box.topright(), &port_blocks);
   }
 
   return os_detect(&port_blocks, osr);
@@ -487,6 +491,8 @@ void ScriptDetector::detect_blob(BLOB_CHOICE_LIST *scores) {
     for (choice_it.mark_cycle_pt(); !choice_it.cycled_list(); choice_it.forward()) {
       BLOB_CHOICE *choice = choice_it.data();
       int id = choice->script_id();
+      if (id < 0) // "large speckle" BLOB_CHOICE object ?
+        continue;
       if (allowed_scripts_ != nullptr && !allowed_scripts_->empty()) {
         // Check that the choice is in an allowed script.
         size_t s = 0;

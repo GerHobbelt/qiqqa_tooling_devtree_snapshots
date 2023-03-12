@@ -1,6 +1,6 @@
 project('harfbuzz', 'c', 'cpp',
   meson_version: '>= 0.55.0',
-  version: '6.0.0',
+  version: '7.1.0',
   default_options: [
     'cpp_eh=none',          # Just to support msvc, we are passing -fno-exceptions also anyway
     'cpp_rtti=false',       # Just to support msvc, we are passing -fno-rtti also anyway
@@ -388,6 +388,9 @@ if not get_option('docs').disabled()
 endif
 
 configure_file(output: 'config.h', configuration: conf)
+
+alias_target('lib', libharfbuzz)
+alias_target('libs', libharfbuzz, libharfbuzz_subset)
 
 build_summary = {
   'Directories':

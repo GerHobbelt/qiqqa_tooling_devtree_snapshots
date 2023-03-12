@@ -17,7 +17,8 @@
 
 #include <istream>
 
-BOOST_JSON_NS_BEGIN
+namespace boost {
+namespace json {
 
 value
 parse(
@@ -59,8 +60,7 @@ parse(
     auto jv = parse(
         s, ec, std::move(sp), opt);
     if(ec)
-        detail::throw_system_error(ec,
-            BOOST_CURRENT_LOCATION);
+        detail::throw_system_error( ec );
     return jv;
 }
 
@@ -126,11 +126,11 @@ parse(
     auto jv = parse(
         is, ec, std::move(sp), opt);
     if(ec)
-        detail::throw_system_error(ec,
-            BOOST_CURRENT_LOCATION);
+        detail::throw_system_error( ec );
     return jv;
 }
 
-BOOST_JSON_NS_END
+} // namespace json
+} // namespace boost
 
 #endif

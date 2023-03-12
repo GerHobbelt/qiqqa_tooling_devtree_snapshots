@@ -146,9 +146,9 @@ extern "C" {
 ** [sqlite3_libversion_number()], [sqlite3_sourceid()],
 ** [sqlite_version()] and [sqlite_source_id()].
 */
-#define SQLITE_VERSION        "3.41.0"
-#define SQLITE_VERSION_NUMBER 3041000
-#define SQLITE_SOURCE_ID      "2023-02-14 18:09:40 e6c8e19ab0d6e7526d4596b75a45bb6becaf3c029690f7e75c016eac803calt1"
+#define SQLITE_VERSION        "3.42.0"
+#define SQLITE_VERSION_NUMBER 3042000
+#define SQLITE_SOURCE_ID      "2023-03-11 00:15:41 30d95a12eb8b1cfc8ed11d3ed68cd713993ba34efa2fe623c18cfe41f14dalt1"
 
 /*
 ** CAPI3REF: Run-Time Library Version Numbers
@@ -1176,7 +1176,6 @@ struct sqlite3_io_methods {
 ** in wal mode after the client has finished copying pages from the wal
 ** file to the database file, but before the *-shm file is updated to
 ** record the fact that the pages have been checkpointed.
-** </ul>
 **
 ** <li>[[SQLITE_FCNTL_EXTERNAL_READER]]
 ** The EXPERIMENTAL [SQLITE_FCNTL_EXTERNAL_READER] opcode is used to detect
@@ -1189,16 +1188,16 @@ struct sqlite3_io_methods {
 ** the database is not a wal-mode db, or if there is no such connection in any
 ** other process. This opcode cannot be used to detect transactions opened
 ** by clients within the current process, only within other processes.
-** </ul>
 **
 ** <li>[[SQLITE_FCNTL_CKSM_FILE]]
-** Used by the cksmvfs VFS module only.
+** The [SQLITE_FCNTL_CKSM_FILE] opcode is for use interally by the
+** [checksum VFS shim] only.
 **
 ** <li>[[SQLITE_FCNTL_RESET_CACHE]]
 ** If there is currently no transaction open on the database, and the
-** database is not a temp db, then this file-control purges the contents
-** of the in-memory page cache. If there is an open transaction, or if
-** the db is a temp-db, it is a no-op, not an error.
+** database is not a temp db, then the [SQLITE_FCNTL_RESET_CACHE] file-control
+** purges the contents of the in-memory page cache. If there is an open
+** transaction, or if the db is a temp-db, this opcode is a no-op, not an error.
 ** </ul>
 */
 #define SQLITE_FCNTL_LOCKSTATE               1
@@ -1656,19 +1655,22 @@ SQLITE_API int sqlite3_os_end(void);
 ** must ensure that no other SQLite interfaces are invoked by other
 ** threads while sqlite3_config() is running.</b>
 **
-** The sqlite3_config() interface
-** may only be invoked prior to library initialization using
-** [sqlite3_initialize()] or after shutdown by [sqlite3_shutdown()].
-** ^If sqlite3_config() is called after [sqlite3_initialize()] and before
-** [sqlite3_shutdown()] then it will return SQLITE_MISUSE.
-** Note, however, that ^sqlite3_config() can be called as part of the
-** implementation of an application-defined [sqlite3_os_init()].
-**
 ** The first argument to sqlite3_config() is an integer
 ** [configuration option] that determines
 ** what property of SQLite is to be configured.  Subsequent arguments
 ** vary depending on the [configuration option]
 ** in the first argument.
+**
+** For most configuration options, the sqlite3_config() interface
+** may only be invoked prior to library initialization using
+** [sqlite3_initialize()] or after shutdown by [sqlite3_shutdown()].
+** The exceptional configuration options that may be invoked at any time
+** are called "anytime configuration options".
+** ^If sqlite3_config() is called after [sqlite3_initialize()] and before
+** [sqlite3_shutdown()] with a first argument that is not an anytime
+** configuration option, then the sqlite3_config() call will return SQLITE_MISUSE.
+** Note, however, that ^sqlite3_config() can be called as part of the
+** implementation of an application-defined [sqlite3_os_init()].
 **
 ** ^When a configuration option is set, sqlite3_config() returns [SQLITE_OK].
 ** ^If the option is unknown or SQLite is unable to set the option
@@ -1776,6 +1778,23 @@ struct sqlite3_mem_methods {
 **
 ** These constants are the available integer configuration options that
 ** can be passed as the first argument to the [sqlite3_config()] interface.
+**
+** Most of the configuration options for sqlite3_config()
+** will only work if invoked prior to [sqlite3_initialize()] or after
+** [sqlite3_shutdown()].  The few exceptions to this rule are called
+** "anytime configuration options".
+** ^Calling [sqlite3_config()] with a first argument that is not an
+** anytime configuration option in between calls to [sqlite3_initialize()] and
+** [sqlite3_shutdown()] is a no-op that returns SQLITE_MISUSE.
+**
+** The set of anytime configuration options can change (by insertions
+** and/or deletions) from one release of SQLite to the next.
+** As of SQLite version 3.42.0, the complete set of anytime configuration
+** options is:
+** <ul>
+** <li> SQLITE_CONFIG_LOG
+** <li> SQLITE_CONFIG_PCACHE_HDRSZ
+** </ul>
 **
 ** New configuration options may be added in future releases of SQLite.
 ** Existing configuration options might be discontinued.  Applications
@@ -2166,6 +2185,12 @@ struct sqlite3_mem_methods {
 ** non-zero [error code] if a discontinued or unsupported configuration option
 ** is invoked.
 **
+** Where these configuration options are stated to be a "flag affecting option",
+** they take two arguments after the int option argument. The first is
+** an integer which is either zero to clear the flag, positive to set it, or
+** negative to leave it as-is. The second is an int pointer through which the
+** resulting option flag value will be written unless the pointer is NULL.
+**
 ** <dl>
 ** [[SQLITE_DBCONFIG_LOOKASIDE]]
 ** <dt>SQLITE_DBCONFIG_LOOKASIDE</dt>
@@ -2193,24 +2218,14 @@ struct sqlite3_mem_methods {
 ** [[SQLITE_DBCONFIG_ENABLE_FKEY]]
 ** <dt>SQLITE_DBCONFIG_ENABLE_FKEY</dt>
 ** <dd> ^This option is used to enable or disable the enforcement of
-** [foreign key constraints].  There should be two additional arguments.
-** The first argument is an integer which is 0 to disable FK enforcement,
-** positive to enable FK enforcement or negative to leave FK enforcement
-** unchanged.  The second parameter is a pointer to an integer into which
-** is written 0 or 1 to indicate whether FK enforcement is off or on
-** following this call.  The second parameter may be a NULL pointer, in
-** which case the FK enforcement setting is not reported back. </dd>
+** [foreign key constraints].  This is a flag affecting option. The flag may
+** be clear to disable FK enforcement or set to enable FK enforcement.</dd>
 **
 ** [[SQLITE_DBCONFIG_ENABLE_TRIGGER]]
 ** <dt>SQLITE_DBCONFIG_ENABLE_TRIGGER</dt>
 ** <dd> ^This option is used to enable or disable [CREATE TRIGGER | triggers].
-** There should be two additional arguments.
-** The first argument is an integer which is 0 to disable triggers,
-** positive to enable triggers or negative to leave the setting unchanged.
-** The second parameter is a pointer to an integer into which
-** is written 0 or 1 to indicate whether triggers are disabled or enabled
-** following this call.  The second parameter may be a NULL pointer, in
-** which case the trigger setting is not reported back.
+** This is a flag affecting option. The flag may be clear to disable triggers,
+** or set to enable triggers.
 **
 ** <p>Originally this option disabled all triggers.  ^(However, since
 ** SQLite version 3.35.0, TEMP triggers are still allowed even if
@@ -2221,13 +2236,8 @@ struct sqlite3_mem_methods {
 ** [[SQLITE_DBCONFIG_ENABLE_VIEW]]
 ** <dt>SQLITE_DBCONFIG_ENABLE_VIEW</dt>
 ** <dd> ^This option is used to enable or disable [CREATE VIEW | views].
-** There should be two additional arguments.
-** The first argument is an integer which is 0 to disable views,
-** positive to enable views or negative to leave the setting unchanged.
-** The second parameter is a pointer to an integer into which
-** is written 0 or 1 to indicate whether views are disabled or enabled
-** following this call.  The second parameter may be a NULL pointer, in
-** which case the view setting is not reported back.
+** This is a flag affecting option. The flag may be clear to disable views,
+** or set to enable views.
 **
 ** <p>Originally this option disabled all views.  ^(However, since
 ** SQLite version 3.35.0, TEMP views are still allowed even if
@@ -2240,14 +2250,8 @@ struct sqlite3_mem_methods {
 ** <dd> ^This option is used to enable or disable the
 ** [fts3_tokenizer()] function which is part of the
 ** [FTS3] full-text search engine extension.
-** There should be two additional arguments.
-** The first argument is an integer which is 0 to disable fts3_tokenizer() or
-** positive to enable fts3_tokenizer() or negative to leave the setting
-** unchanged.
-** The second parameter is a pointer to an integer into which
-** is written 0 or 1 to indicate whether fts3_tokenizer is disabled or enabled
-** following this call.  The second parameter may be a NULL pointer, in
-** which case the new setting is not reported back. </dd>
+** This is a flag affecting option. The flag may be clear to disable
+** fts3_tokenizer() or set to enable fts3_tokenizer().</dd>
 **
 ** [[SQLITE_DBCONFIG_ENABLE_LOAD_EXTENSION]]
 ** <dt>SQLITE_DBCONFIG_ENABLE_LOAD_EXTENSION</dt>
@@ -2255,16 +2259,9 @@ struct sqlite3_mem_methods {
 ** interface independently of the [load_extension()] SQL function.
 ** The [sqlite3_enable_load_extension()] API enables or disables both the
 ** C-API [sqlite3_load_extension()] and the SQL function [load_extension()].
-** There should be two additional arguments.
-** When the first argument to this interface is 1, then only the C-API is
-** enabled and the SQL function remains disabled.  If the first argument to
-** this interface is 0, then both the C-API and the SQL function are disabled.
-** If the first argument is -1, then no changes are made to state of either the
-** C-API or the SQL function.
-** The second parameter is a pointer to an integer into which
-** is written 0 or 1 to indicate whether [sqlite3_load_extension()] interface
-** is disabled or enabled following this call.  The second parameter may
-** be a NULL pointer, in which case the new setting is not reported back.
+** This is a flag affecting option. The flag may be clear to disable both
+** the C-API and the SQL function, or set to enable the C-API and leave
+** the SQL function as last affected by [sqlite3_enable_load_extension()].
 ** </dd>
 **
 ** [[SQLITE_DBCONFIG_MAINDBNAME]] <dt>SQLITE_DBCONFIG_MAINDBNAME</dt>
@@ -2281,13 +2278,9 @@ struct sqlite3_mem_methods {
 ** <dd> Usually, when a database in wal mode is closed or detached from a
 ** database handle, SQLite checks if this will mean that there are now no
 ** connections at all to the database. If so, it performs a checkpoint
-** operation before closing the connection. This option may be used to
-** override this behaviour. The first parameter passed to this operation
-** is an integer - positive to disable checkpoints-on-close, or zero (the
-** default) to enable them, and negative to leave the setting unchanged.
-** The second parameter is a pointer to an integer
-** into which is written 0 or 1 to indicate whether checkpoints-on-close
-** have been disabled - 0 if they are not disabled, 1 if they are.
+** operation before closing the connection. This flag affecting option may
+** be used to override this behaviour. The flag may be set to disable
+** disable checkpoints-on-close, or clear (the default) to enable them.
 ** </dd>
 **
 ** [[SQLITE_DBCONFIG_ENABLE_QPSG]] <dt>SQLITE_DBCONFIG_ENABLE_QPSG</dt>
@@ -2299,29 +2292,21 @@ struct sqlite3_mem_methods {
 ** slower.  But the QPSG has the advantage of more predictable behavior.  With
 ** the QPSG active, SQLite will always use the same query plan in the field as
 ** was used during testing in the lab.
-** The first argument to this setting is an integer which is 0 to disable
-** the QPSG, positive to enable QPSG, or negative to leave the setting
-** unchanged. The second parameter is a pointer to an integer into which
-** is written 0 or 1 to indicate whether the QPSG is disabled or enabled
-** following this call.
+** This flag affecting option may be used to deactivate (clear) the QPSG,
+** or to activate (set) the QPSG, or to query its present state.
 ** </dd>
 **
 ** [[SQLITE_DBCONFIG_TRIGGER_EQP]] <dt>SQLITE_DBCONFIG_TRIGGER_EQP</dt>
 ** <dd> By default, the output of EXPLAIN QUERY PLAN commands does not
 ** include output for any operations performed by trigger programs. This
-** option is used to set or clear (the default) a flag that governs this
-** behavior. The first parameter passed to this operation is an integer -
-** positive to enable output for trigger programs, or zero to disable it,
-** or negative to leave the setting unchanged.
-** The second parameter is a pointer to an integer into which is written
-** 0 or 1 to indicate whether output-for-triggers has been disabled - 0 if
-** it is not disabled, 1 if it is.
+** flag affecting option is used to set or clear (the default) a flag that
+** governs this behavior. Set the flag to get trigger plan output.
 ** </dd>
 **
 ** [[SQLITE_DBCONFIG_RESET_DATABASE]] <dt>SQLITE_DBCONFIG_RESET_DATABASE</dt>
-** <dd> Set the SQLITE_DBCONFIG_RESET_DATABASE flag and then run
-** [VACUUM] in order to reset a database back to an empty database
-** with no schema and no content. The following process works even for
+** <dd> This flag affecting option, when set, causes the database to become
+** empty, with no schema and no content, upon the next VACUUM execution.
+** This option works and may be used as follows, even for
 ** a badly corrupted database file:
 ** <ol>
 ** <li> If the database connection is newly opened, make sure it has read the
@@ -2343,9 +2328,9 @@ struct sqlite3_mem_methods {
 ** without calling their xDestroy() methods.
 **
 ** [[SQLITE_DBCONFIG_DEFENSIVE]] <dt>SQLITE_DBCONFIG_DEFENSIVE</dt>
-** <dd>The SQLITE_DBCONFIG_DEFENSIVE option activates or deactivates the
-** "defensive" flag for a database connection.  When the defensive
-** flag is enabled, language features that allow ordinary SQL to
+** <dd>The SQLITE_DBCONFIG_DEFENSIVE flag affecting option activates or
+** deactivates the "defensive" flag for a database connection.  When the
+** flag is set, language features that allow use of ordinary SQL to
 ** deliberately corrupt the database file are disabled.  The disabled
 ** features include but are not limited to the following:
 ** <ul>
@@ -2358,49 +2343,42 @@ struct sqlite3_mem_methods {
 ** </dd>
 **
 ** [[SQLITE_DBCONFIG_WRITABLE_SCHEMA]] <dt>SQLITE_DBCONFIG_WRITABLE_SCHEMA</dt>
-** <dd>The SQLITE_DBCONFIG_WRITABLE_SCHEMA option activates or deactivates the
-** "writable_schema" flag. This has the same effect and is logically equivalent
-** to setting [PRAGMA writable_schema=ON] or [PRAGMA writable_schema=OFF].
-** The first argument to this setting is an integer which is 0 to disable
-** the writable_schema, positive to enable writable_schema, or negative to
-** leave the setting unchanged. The second parameter is a pointer to an
-** integer into which is written 0 or 1 to indicate whether the writable_schema
-** is enabled or disabled following this call.
+** <dd>The SQLITE_DBCONFIG_WRITABLE_SCHEMA flag affecting option may activate
+** (set) or deactivate (clear) the "writable_schema" flag. This has the same
+** effect as runing [PRAGMA writable_schema=ON] or [PRAGMA writable_schema=OFF].
 ** </dd>
 **
 ** [[SQLITE_DBCONFIG_LEGACY_ALTER_TABLE]]
 ** <dt>SQLITE_DBCONFIG_LEGACY_ALTER_TABLE</dt>
-** <dd>The SQLITE_DBCONFIG_LEGACY_ALTER_TABLE option activates or deactivates
-** the legacy behavior of the [ALTER TABLE RENAME] command such it
-** behaves as it did prior to [version 3.24.0] (2018-06-04).  See the
+** <dd>The SQLITE_DBCONFIG_LEGACY_ALTER_TABLE flag affecting option activates
+** or deactivates the legacy behavior of the [ALTER TABLE RENAME] command such
+** that it behaves as it did prior to [version 3.24.0] (2018-06-04).  See the
 ** "Compatibility Notice" on the [ALTER TABLE RENAME documentation] for
-** additional information. This feature can also be turned on and off
+** additional information. This feature can equivalently be turned on and off
 ** using the [PRAGMA legacy_alter_table] statement.
 ** </dd>
 **
 ** [[SQLITE_DBCONFIG_DQS_DML]]
 ** <dt>SQLITE_DBCONFIG_DQS_DML</td>
-** <dd>The SQLITE_DBCONFIG_DQS_DML option activates or deactivates
-** the legacy [double-quoted string literal] misfeature for DML statements
-** only, that is DELETE, INSERT, SELECT, and UPDATE statements. The
-** default value of this setting is determined by the [-DSQLITE_DQS]
-** compile-time option.
+** <dd>The SQLITE_DBCONFIG_DQS_DML flag affecting option may activate (set) or
+** deactivate (clear) the legacy [double-quoted string literal] misfeature for
+** DML and DQL statements only. (DELETE, INSERT, UPDATE and SELECT) The default
+** value of this flag is determined by the [-DSQLITE_DQS] compile-time option.
 ** </dd>
 **
 ** [[SQLITE_DBCONFIG_DQS_DDL]]
 ** <dt>SQLITE_DBCONFIG_DQS_DDL</td>
-** <dd>The SQLITE_DBCONFIG_DQS option activates or deactivates
-** the legacy [double-quoted string literal] misfeature for DDL statements,
-** such as CREATE TABLE and CREATE INDEX. The
-** default value of this setting is determined by the [-DSQLITE_DQS]
-** compile-time option.
+** <dd>The SQLITE_DBCONFIG_DQS flag affecting option may activate (set) or
+** deactivate (clear) the legacy [double-quoted string literal] misfeature for
+** DDL statements, such as CREATE TABLE and CREATE INDEX. The default value of
+** this setting is determined by the [-DSQLITE_DQS] compile-time option.
 ** </dd>
 **
 ** [[SQLITE_DBCONFIG_TRUSTED_SCHEMA]]
 ** <dt>SQLITE_DBCONFIG_TRUSTED_SCHEMA</td>
-** <dd>The SQLITE_DBCONFIG_TRUSTED_SCHEMA option tells SQLite to
-** assume that database schemas are untainted by malicious content.
-** When the SQLITE_DBCONFIG_TRUSTED_SCHEMA option is disabled, SQLite
+** <dd>The SQLITE_DBCONFIG_TRUSTED_SCHEMA flag affecting option, when set,
+** tells SQLite to assume that database schemas are untainted by malicious
+** content. When the SQLITE_DBCONFIG_TRUSTED_SCHEMA option is clear, SQLite
 ** takes additional defensive steps to protect the application from harm
 ** including:
 ** <ul>
@@ -2418,14 +2396,14 @@ struct sqlite3_mem_methods {
 **
 ** [[SQLITE_DBCONFIG_LEGACY_FILE_FORMAT]]
 ** <dt>SQLITE_DBCONFIG_LEGACY_FILE_FORMAT</td>
-** <dd>The SQLITE_DBCONFIG_LEGACY_FILE_FORMAT option activates or deactivates
-** the legacy file format flag.  When activated, this flag causes all newly
-** created database file to have a schema format version number (the 4-byte
-** integer found at offset 44 into the database header) of 1.  This in turn
-** means that the resulting database file will be readable and writable by
-** any SQLite version back to 3.0.0 ([dateof:3.0.0]).  Without this setting,
-** newly created databases are generally not understandable by SQLite versions
-** prior to 3.3.0 ([dateof:3.3.0]).  As these words are written, there
+** <dd>The SQLITE_DBCONFIG_LEGACY_FILE_FORMAT flag affecting option activates
+** or deactivates the legacy file format flag.  When activated (set), this
+** flag causes all newly created database files to have a schema format version
+** number (the 4-byte integer found at offset 44 into the database header) of 1.
+** This in turn* means that the resulting database file will be readable and
+** writable by any SQLite version back to 3.0.0 ([dateof:3.0.0]).  Without this
+** setting, newly created databases are generally not understandable by SQLite
+** versions to 3.3.0 ([dateof:3.3.0]).  As these words are written, there
 ** is now scarcely any need to generated database files that are compatible
 ** all the way back to version 3.0.0, and so this setting is of little
 ** practical use, but is provided so that SQLite can continue to claim the
@@ -2437,6 +2415,26 @@ struct sqlite3_mem_methods {
 ** not considered a bug since SQLite versions 3.3.0 and earlier do not support
 ** either generated columns or decending indexes.
 ** </dd>
+**
+** [[SQLITE_DBCONFIG_STMT_SCANSTATUS]]
+** <dt>SQLITE_DBCONFIG_STMT_SCANSTATUS</td>
+** <dd>The SQLITE_DBCONFIG_STMT_SCANSTATUS option is only useful in
+** SQLITE_ENABLE_STMT_SCANSTATUS builds. In this case, it sets or clears
+** a flag that enables collection of the sqlite3_stmt_scanstatus_v2()
+** statistics. For statistics to be collected, the flag must be set on
+** the database handle both when the SQL statement is prepared and when it
+** is stepped. The flag is set (collection of statistics is enabled)
+** by default.</dd>
+**
+** [[SQLITE_DBCONFIG_REVERSE_SCANORDER]]
+** <dt>SQLITE_DBCONFIG_REVERSE_SCANORDER</td>
+** <dd>The SQLITE_DBCONFIG_REVERSE_SCANORDER option change the default order
+** in which tables and indexes are scanned so that the scans start at the end
+** and work toward the beginning rather than starting at the beginning and
+** working toward the end.  Setting SQLITE_DBCONFIG_REVERSE_SCANORDER is the
+** same as setting [PRAGMA reverse_unordered_selects].  This configuration option
+** is useful for application testing.</dd>
+**
 ** </dl>
 */
 #define SQLITE_DBCONFIG_MAINDBNAME            1000 /* const char* */
@@ -2457,7 +2455,9 @@ struct sqlite3_mem_methods {
 #define SQLITE_DBCONFIG_ENABLE_VIEW           1015 /* int int* */
 #define SQLITE_DBCONFIG_LEGACY_FILE_FORMAT    1016 /* int int* */
 #define SQLITE_DBCONFIG_TRUSTED_SCHEMA        1017 /* int int* */
-#define SQLITE_DBCONFIG_MAX                   1017 /* Largest DBCONFIG */
+#define SQLITE_DBCONFIG_STMT_SCANSTATUS       1080 /* int int*  */
+#define SQLITE_DBCONFIG_REVERSE_SCANORDER     1019 /* int int* */
+#define SQLITE_DBCONFIG_MAX                   1019 /* Largest DBCONFIG */
 
 /*
 ** CAPI3REF: Enable Or Disable Extended Result Codes
@@ -5584,8 +5584,8 @@ SQLITE_API SQLITE_DEPRECATED int sqlite3_memory_alarm(void(*)(void*,sqlite3_int6
 ** ^Within the [xUpdate] method of a [virtual table], the
 ** sqlite3_value_nochange(X) interface returns true if and only if
 ** the column corresponding to X is unchanged by the UPDATE operation
-** that the xUpdate method call was invoked to implement and if
-** and the prior [xColumn] method call that was invoked to extracted
+** that the xUpdate method call was invoked to implement and
+** the prior [xColumn] method call that was invoked to extracted
 ** the value for that column returned without setting a result (probably
 ** because it queried [sqlite3_vtab_nochange()] and found that the column
 ** was unchanging).  ^Within an [xUpdate] method, any value for which
@@ -9962,7 +9962,6 @@ SQLITE_API int sqlite3_vtab_rhs_value(sqlite3_index_info*, int, sqlite3_value **
 ** id for the X-th query plan element. The id value is unique within the
 ** statement. The select-id is the same value as is output in the first
 ** column of an [EXPLAIN QUERY PLAN] query.
-** </dl>
 **
 ** [[SQLITE_SCANSTAT_PARENTID]] <dt>SQLITE_SCANSTAT_PARENTID</dt>
 ** <dd>The "int" variable pointed to by the V parameter will be set to the
@@ -9976,6 +9975,7 @@ SQLITE_API int sqlite3_vtab_rhs_value(sqlite3_index_info*, int, sqlite3_value **
 ** query element was being processed. This value is not available for
 ** all query elements - if it is unavailable the output variable is
 ** set to -1.
+** </dl>
 */
 #define SQLITE_SCANSTAT_NLOOP    0
 #define SQLITE_SCANSTAT_NVISIT   1
@@ -10132,7 +10132,7 @@ SQLITE_API int sqlite3_db_cacheflush(sqlite3*);
 ** function is not defined for operations on WITHOUT ROWID tables, or for
 ** DELETE operations on rowid tables.
 **
-** ^The sqlite3_update_hook(D,C,P) function returns the P argument from
+** ^The sqlite3_preupdate_hook(D,C,P) function returns the P argument from
 ** the previous call on the same [database connection] D, or NULL for
 ** the first call on D.
 **
@@ -11977,9 +11977,23 @@ SQLITE_API int sqlite3changeset_apply_v2(
 **   Invert the changeset before applying it. This is equivalent to inverting
 **   a changeset using sqlite3changeset_invert() before applying it. It is
 **   an error to specify this flag with a patchset.
+**
+** <dt>SQLITE_CHANGESETAPPLY_IGNORENOOP <dd>
+**   Do not invoke the conflict handler callback for any changes that
+**   would not actually modify the database even if they were applied.
+**   Specifically, this means that the conflict handler is not invoked
+**   for:
+**    <ul>
+**    <li>a delete change if the row being deleted cannot be found,
+**    <li>an update change if the modified fields are already set to
+**        their new values in the conflicting row, or
+**    <li>an insert change if all fields of the conflicting row match
+**        the row being inserted.
+**    </ul>
 */
 #define SQLITE_CHANGESETAPPLY_NOSAVEPOINT   0x0001
 #define SQLITE_CHANGESETAPPLY_INVERT        0x0002
+#define SQLITE_CHANGESETAPPLY_IGNORENOOP    0x0004
 
 /*
 ** CAPI3REF: Constants Passed To The Conflict Handler

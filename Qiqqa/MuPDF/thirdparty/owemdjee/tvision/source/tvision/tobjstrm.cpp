@@ -98,7 +98,7 @@ TStreamableClass::TStreamableClass( const char *n, BUILDER b, int ) noexcept :
     pstream::registerType( this );
 }
 
-TStreamableTypes::TStreamableTypes() noexcept : TNSSortedCollection( 5, 5 )
+TStreamableTypes::TStreamableTypes() noexcept : TNSSortedCollection( 40, 5 )
 {
 }
 
@@ -526,7 +526,7 @@ void *ipstream::readData( const TStreamableClass *c, TStreamable *mem )
     // Register the actual address of the object, not the address of the
     // TStreamable sub-object, so that it is returned by subsequent calls
     // to find().
-    registerObject( dynamic_cast<void *>(mem) );
+	registerObject((void *)(mem));
     return mem->read( *this );
 }
 

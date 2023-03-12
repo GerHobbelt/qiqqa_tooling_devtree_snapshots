@@ -118,19 +118,22 @@ static void plot_outline_list(     // draw outlines
 
 static void plot_outline_list(     // draw outlines
     C_OUTLINE_LIST* list,          // outline to draw
-    Image& pix,                    // image to draw in
-    ScrollView::Color colour,      // colour to use
-    ScrollView::Color child_colour // colour of children
+    Image& pix,
+    std::vector<uint32_t>& cmap, int& cmap_offset, bool noise
 ) {
   C_OUTLINE* outline;     // current outline
   C_OUTLINE_IT it = list; // iterator
 
+  // keep the color for the siblings identical, so there's more color range for children:
+  int color0 = cmap_offset;
+
   for (it.mark_cycle_pt(); !it.cycled_list(); it.forward()) {
     outline = it.data();
     // draw it
-    outline->plot(pix, colour);
+    cmap_offset = color0;
+    outline->plot(pix, cmap, cmap_offset, noise);
     if (!outline->child()->empty()) {
-      plot_outline_list(outline->child(), pix, child_colour, child_colour);
+      plot_outline_list(outline->child(), pix, cmap, cmap_offset, noise);
     }
   }
 }
@@ -549,10 +552,8 @@ void C_BLOB::plot(ScrollView *window,               // window to draw in
   plot_outline_list(&outlines, window, blob_colour, child_colour);
 }
 
-void C_BLOB::plot(Image& pix,                       // image to draw in
-                  ScrollView::Color blob_colour,    // main colour
-                  ScrollView::Color child_colour) { // for holes
-  plot_outline_list(&outlines, pix, blob_colour, child_colour);
+void C_BLOB::plot(Image& pix, std::vector<uint32_t>& cmap, int& cmap_offset, bool noise) {
+  plot_outline_list(&outlines, pix, cmap, cmap_offset, noise);
 }
 
 // Draws the blob in the given colour, and child_colour, normalized

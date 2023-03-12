@@ -71,7 +71,6 @@ hb_subset_input_t::hb_subset_input_t ()
   hb_tag_t default_no_subset_tables[] = {
     HB_TAG ('a', 'v', 'a', 'r'),
     HB_TAG ('g', 'a', 's', 'p'),
-    HB_TAG ('c', 'v', 't', ' '),
     HB_TAG ('f', 'p', 'g', 'm'),
     HB_TAG ('p', 'r', 'e', 'p'),
     HB_TAG ('V', 'D', 'M', 'X'),
@@ -385,7 +384,7 @@ hb_subset_input_get_user_data (const hb_subset_input_t *input,
  *
  * The input can be tailored afterwards by the caller.
  *
- * Since: REPLACEME
+ * Since: 7.0.0
  */
 void
 hb_subset_input_keep_everything (hb_subset_input_t *input)
@@ -404,10 +403,14 @@ hb_subset_input_keep_everything (hb_subset_input_t *input)
     hb_set_invert (set);
   }
 
+  // Don't drop any tables
+  hb_set_clear (hb_subset_input_set (input, HB_SUBSET_SETS_DROP_TABLE_TAG));
+
   hb_subset_input_set_flags (input,
 			     HB_SUBSET_FLAGS_NOTDEF_OUTLINE |
 			     HB_SUBSET_FLAGS_GLYPH_NAMES |
-			     HB_SUBSET_FLAGS_NO_PRUNE_UNICODE_RANGES);
+			     HB_SUBSET_FLAGS_NO_PRUNE_UNICODE_RANGES |
+                             HB_SUBSET_FLAGS_PASSTHROUGH_UNRECOGNIZED);
 }
 
 #ifndef HB_NO_VAR
@@ -535,7 +538,7 @@ hb_subset_preprocess (hb_face_t *source)
  * Note: for mac platform, we only support name_str with all ascii characters,
  * name_str with non-ascii characters will be ignored.
  *
- * Since: EXPERIMENTAL
+ * XSince: EXPERIMENTAL
  **/
 HB_EXTERN hb_bool_t
 hb_subset_input_override_name_table (hb_subset_input_t  *input,

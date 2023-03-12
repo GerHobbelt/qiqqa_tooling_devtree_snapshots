@@ -325,20 +325,6 @@ int Curl_socket_close(struct Curl_easy *data, struct connectdata *conn,
   return socket_close(data, conn, FALSE, sock);
 }
 
-bool Curl_socket_is_dead(curl_socket_t sock)
-{
-  int sval;
-  bool ret_val = TRUE;
-
-  sval = SOCKET_READABLE(sock, 0);
-  if(sval == 0)
-    /* timeout */
-    ret_val = FALSE;
-
-  return ret_val;
-}
-
-
 #ifdef USE_WINSOCK
 /* When you run a program that uses the Windows Sockets API, you may
    experience slow performance when you copy data to a TCP server.
@@ -1071,6 +1057,11 @@ static CURLcode cf_tcp_connect(struct Curl_cfilter *cf,
     if(result)
       goto out;
 
+    if(cf->connected) {
+      *done = TRUE;
+      return CURLE_OK;
+    }
+
     /* Connect TCP socket */
     rc = do_connect(cf, data, cf->conn->bits.tcp_fastopen);
     if(-1 == rc) {
@@ -1436,22 +1427,6 @@ static CURLcode cf_socket_cntrl(struct Curl_cfilter *cf,
   case CF_CTRL_CONN_INFO_UPDATE:
     cf_socket_active(cf, data);
     break;
-  case CF_CTRL_CONN_REPORT_STATS:
-    switch(ctx->transport) {
-    case TRNSPRT_UDP:
-    case TRNSPRT_QUIC:
-      /* Since UDP connected sockets work different from TCP, we use the
-       * time of the first byte from the peer as the "connect" time. */
-      if(ctx->got_first_byte) {
-        Curl_pgrsTimeWas(data, TIMER_CONNECT, ctx->first_byte_at);
-        break;
-      }
-      /* FALLTHROUGH */
-    default:
-      Curl_pgrsTimeWas(data, TIMER_CONNECT, ctx->connected_at);
-      break;
-    }
-    break;
   case CF_CTRL_DATA_SETUP:
     Curl_persistconninfo(data, cf->conn, ctx->l_ip, ctx->l_port);
     break;
@@ -1460,38 +1435,39 @@ static CURLcode cf_socket_cntrl(struct Curl_cfilter *cf,
 }
 
 static bool cf_socket_conn_is_alive(struct Curl_cfilter *cf,
-                                    struct Curl_easy *data)
+                                    struct Curl_easy *data,
+                                    bool *input_pending)
 {
   struct cf_socket_ctx *ctx = cf->ctx;
-  int sval;
+  struct pollfd pfd[1];
+  int r;
 
+  *input_pending = FALSE;
   (void)data;
   if(!ctx || ctx->sock == CURL_SOCKET_BAD)
     return FALSE;
 
-  sval = SOCKET_READABLE(ctx->sock, 0);
-  if(sval == 0) {
-    /* timeout */
-    return TRUE;
-  }
-  else if(sval & CURL_CSELECT_ERR) {
-    /* socket is in an error state */
+  /* Check with 0 timeout if there are any events pending on the socket */
+  pfd[0].fd = ctx->sock;
+  pfd[0].events = POLLRDNORM|POLLIN|POLLRDBAND|POLLPRI;
+  pfd[0].revents = 0;
+
+  r = Curl_poll(pfd, 1, 0);
+  if(r < 0) {
+    DEBUGF(LOG_CF(data, cf, "is_alive: poll error, assume dead"));
     return FALSE;
   }
-  else if(sval & CURL_CSELECT_IN) {
-    /* readable with no error. could still be closed */
-/* Minix 3.1 doesn't support any flags on recv; just assume socket is OK */
-#ifdef MSG_PEEK
-    /* use the socket */
-    char buf;
-    if(recv((RECV_TYPE_ARG1)ctx->sock, (RECV_TYPE_ARG2)&buf,
-            (RECV_TYPE_ARG3)1, (RECV_TYPE_ARG4)MSG_PEEK) == 0) {
-      return FALSE;   /* FIN received */
-    }
-#endif
+  else if(r == 0) {
+    DEBUGF(LOG_CF(data, cf, "is_alive: poll timeout, assume alive"));
     return TRUE;
   }
+  else if(pfd[0].revents & (POLLERR|POLLHUP|POLLPRI|POLLNVAL)) {
+    DEBUGF(LOG_CF(data, cf, "is_alive: err/hup/etc events, assume dead"));
+    return FALSE;
+  }
 
+  DEBUGF(LOG_CF(data, cf, "is_alive: valid events, looks alive"));
+  *input_pending = TRUE;
   return TRUE;
 }
 
@@ -1514,6 +1490,24 @@ static CURLcode cf_socket_query(struct Curl_cfilter *cf,
     else
       *pres1 = -1;
     return CURLE_OK;
+  case CF_QUERY_TIMER_CONNECT: {
+    struct curltime *when = pres2;
+    switch(ctx->transport) {
+    case TRNSPRT_UDP:
+    case TRNSPRT_QUIC:
+      /* Since UDP connected sockets work different from TCP, we use the
+       * time of the first byte from the peer as the "connect" time. */
+      if(ctx->got_first_byte) {
+        *when = ctx->first_byte_at;
+        break;
+      }
+      /* FALLTHROUGH */
+    default:
+      *when = ctx->connected_at;
+      break;
+    }
+    return CURLE_OK;
+  }
   default:
     break;
   }
@@ -1813,7 +1807,6 @@ CURLcode Curl_conn_tcp_listen_set(struct Curl_easy *data,
   Curl_conn_cf_add(data, conn, sockindex, cf);
 
   conn->sock[sockindex] = ctx->sock;
-  set_remote_ip(cf, data);
   set_local_ip(cf, data);
   ctx->active = TRUE;
   ctx->connected_at = Curl_now();
@@ -1826,6 +1819,38 @@ out:
     Curl_safefree(ctx);
   }
   return result;
+}
+
+static void set_accepted_remote_ip(struct Curl_cfilter *cf,
+                                   struct Curl_easy *data)
+{
+  struct cf_socket_ctx *ctx = cf->ctx;
+#ifdef HAVE_GETPEERNAME
+  char buffer[STRERROR_LEN];
+  struct Curl_sockaddr_storage ssrem;
+  curl_socklen_t plen;
+
+  ctx->r_ip[0] = 0;
+  ctx->r_port = 0;
+  plen = sizeof(ssrem);
+  memset(&ssrem, 0, plen);
+  if(getpeername(ctx->sock, (struct sockaddr*) &ssrem, &plen)) {
+    int error = SOCKERRNO;
+    failf(data, "getpeername() failed with errno %d: %s",
+          error, Curl_strerror(error, buffer, sizeof(buffer)));
+    return;
+  }
+  if(!Curl_addr2string((struct sockaddr*)&ssrem, plen,
+                       ctx->r_ip, &ctx->r_port)) {
+    failf(data, "ssrem inet_ntop() failed with errno %d: %s",
+          errno, Curl_strerror(errno, buffer, sizeof(buffer)));
+    return;
+  }
+#else
+  ctx->r_ip[0] = 0;
+  ctx->r_port = 0;
+  (void)data;
+#endif
 }
 
 CURLcode Curl_conn_tcp_accepted_set(struct Curl_easy *data,
@@ -1844,13 +1869,14 @@ CURLcode Curl_conn_tcp_accepted_set(struct Curl_easy *data,
   socket_close(data, conn, TRUE, ctx->sock);
   ctx->sock = *s;
   conn->sock[sockindex] = ctx->sock;
-  set_remote_ip(cf, data);
+  set_accepted_remote_ip(cf, data);
   set_local_ip(cf, data);
   ctx->active = TRUE;
   ctx->accepted = TRUE;
   ctx->connected_at = Curl_now();
   cf->connected = TRUE;
-  DEBUGF(LOG_CF(data, cf, "Curl_conn_tcp_accepted_set(%d)", (int)ctx->sock));
+  DEBUGF(LOG_CF(data, cf, "accepted_set(sock=%d, remote=%s port=%d)",
+         (int)ctx->sock, ctx->r_ip, ctx->r_port));
 
   return CURLE_OK;
 }

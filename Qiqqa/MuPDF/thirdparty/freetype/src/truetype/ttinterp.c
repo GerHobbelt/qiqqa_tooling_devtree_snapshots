@@ -279,57 +279,6 @@
   /**************************************************************************
    *
    * @Function:
-   *   Update_Max
-   *
-   * @Description:
-   *   Checks the size of a buffer and reallocates it if necessary.
-   *
-   * @Input:
-   *   memory ::
-   *     A handle to the parent memory object.
-   *
-   *   multiplier ::
-   *     The size in bytes of each element in the buffer.
-   *
-   *   new_max ::
-   *     The new capacity (size) of the buffer.
-   *
-   * @InOut:
-   *   size ::
-   *     The address of the buffer's current size expressed
-   *     in elements.
-   *
-   *   buff ::
-   *     The address of the buffer base pointer.
-   *
-   * @Return:
-   *   FreeType error code.  0 means success.
-   */
-  FT_LOCAL_DEF( FT_Error )
-  Update_Max( FT_Memory  memory,
-              FT_ULong*  size,
-              FT_ULong   multiplier,
-              void*      _pbuff,
-              FT_ULong   new_max )
-  {
-    FT_Error  error;
-    void**    pbuff = (void**)_pbuff;
-
-
-    if ( *size < new_max )
-    {
-      if ( FT_QREALLOC( *pbuff, *size * multiplier, new_max * multiplier ) )
-        return error;
-      *size = new_max;
-    }
-
-    return FT_Err_Ok;
-  }
-
-
-  /**************************************************************************
-   *
-   * @Function:
    *   TT_Load_Context
    *
    * @Description:
@@ -360,9 +309,9 @@
                    TT_Size         size )
   {
     FT_Int          i;
-    FT_ULong        tmp;
     TT_MaxProfile*  maxp;
     FT_Error        error;
+    FT_Memory       memory = exec->memory;
 
 
     exec->face = face;
@@ -407,25 +356,15 @@
 
     /* XXX: We reserve a little more elements on the stack to deal safely */
     /*      with broken fonts like arialbs, courbs, timesbs, etc.         */
-    tmp = (FT_ULong)exec->stackSize;
-    error = Update_Max( exec->memory,
-                        &tmp,
-                        sizeof ( FT_F26Dot6 ),
-                        (void*)&exec->stack,
-                        maxp->maxStackElements + 32 );
-    exec->stackSize = (FT_Long)tmp;
-    if ( error )
+    if ( FT_QRENEW_ARRAY( exec->stack,
+                          exec->stackSize,
+                          maxp->maxStackElements + 32 ) )
       return error;
+    exec->stackSize = maxp->maxStackElements + 32;
 
-    tmp = (FT_ULong)exec->glyphSize;
-    error = Update_Max( exec->memory,
-                        &tmp,
-                        sizeof ( FT_Byte ),
-                        (void*)&exec->glyphIns,
-                        maxp->maxSizeOfInstructions );
-    exec->glyphSize = (FT_UInt)tmp;
-    if ( error )
-      return error;
+    /* free previous glyph code range */
+    FT_FREE( exec->glyphIns );
+    exec->glyphSize = 0;
 
     exec->pts.n_points   = 0;
     exec->pts.n_contours = 0;
@@ -1531,14 +1470,16 @@
     if ( exc->iniRange == tt_coderange_glyph &&
          exc->cvt != exc->glyfCvt            )
     {
-      exc->error = Update_Max( exc->memory,
-                               &exc->glyfCvtSize,
-                               sizeof ( FT_Long ),
-                               (void*)&exc->glyfCvt,
-                               exc->cvtSize );
-      if ( exc->error )
+      FT_Memory  memory = exc->memory;
+      FT_Error   error;
+
+
+      FT_MEM_QRENEW_ARRAY( exc->glyfCvt, exc->glyfCvtSize, exc->cvtSize );
+      exc->error = error;
+      if ( error )
         return;
 
+      exc->glyfCvtSize = exc->cvtSize;
       FT_ARRAY_COPY( exc->glyfCvt, exc->cvt, exc->glyfCvtSize );
       exc->cvt = exc->glyfCvt;
     }
@@ -3118,18 +3059,18 @@
       if ( exc->iniRange == tt_coderange_glyph &&
            exc->storage != exc->glyfStorage    )
       {
-        FT_ULong  tmp = (FT_ULong)exc->glyfStoreSize;
+        FT_Memory  memory = exc->memory;
+        FT_Error   error;
 
 
-        exc->error = Update_Max( exc->memory,
-                                 &tmp,
-                                 sizeof ( FT_Long ),
-                                 (void*)&exc->glyfStorage,
-                                 exc->storeSize );
-        exc->glyfStoreSize = (FT_UShort)tmp;
-        if ( exc->error )
+        FT_MEM_QRENEW_ARRAY( exc->glyfStorage,
+                             exc->glyfStoreSize,
+                             exc->storeSize );
+        exc->error  = error;
+        if ( error )
           return;
 
+        exc->glyfStoreSize = exc->storeSize;
         FT_ARRAY_COPY( exc->glyfStorage, exc->storage, exc->glyfStoreSize );
         exc->storage = exc->glyfStorage;
       }
@@ -6872,7 +6813,7 @@
 
 
   static void
-  _iup_worker_shift( IUP_Worker  worker,
+  iup_worker_shift_( IUP_Worker  worker,
                      FT_UInt     p1,
                      FT_UInt     p2,
                      FT_UInt     p )
@@ -6894,7 +6835,7 @@
 
 
   static void
-  _iup_worker_interpolate( IUP_Worker  worker,
+  iup_worker_interpolate_( IUP_Worker  worker,
                            FT_UInt     p1,
                            FT_UInt     p2,
                            FT_UInt     ref1,
@@ -7088,7 +7029,7 @@
         {
           if ( ( exc->pts.tags[point] & mask ) != 0 )
           {
-            _iup_worker_interpolate( &V,
+            iup_worker_interpolate_( &V,
                                      cur_touched + 1,
                                      point - 1,
                                      cur_touched,
@@ -7100,17 +7041,17 @@
         }
 
         if ( cur_touched == first_touched )
-          _iup_worker_shift( &V, first_point, end_point, cur_touched );
+          iup_worker_shift_( &V, first_point, end_point, cur_touched );
         else
         {
-          _iup_worker_interpolate( &V,
+          iup_worker_interpolate_( &V,
                                    (FT_UShort)( cur_touched + 1 ),
                                    end_point,
                                    cur_touched,
                                    first_touched );
 
           if ( first_touched > 0 )
-            _iup_worker_interpolate( &V,
+            iup_worker_interpolate_( &V,
                                      first_point,
                                      first_touched - 1,
                                      cur_touched,
@@ -8605,7 +8546,7 @@
 #else /* !TT_USE_BYTECODE_INTERPRETER */
 
   /* ANSI C doesn't like empty source files */
-  typedef int  _tt_interp_dummy;
+  typedef int  tt_interp_dummy_;
 
 #endif /* !TT_USE_BYTECODE_INTERPRETER */
 

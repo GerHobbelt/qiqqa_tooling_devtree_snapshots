@@ -172,14 +172,14 @@ public:
   // As a side-effect, computes the xheights of the rows and the block.
   // Although x-height estimation is conceptually separate, it is part of
   // detecting perspective distortion and therefore baseline fitting.
-  void FitBaselineSplines(bool enable_splines, bool show_final_rows, Textord *textord);
+  void FitBaselineSplines(bool enable_splines, Textord *textord);
 
   // Draws the (straight) baselines and final blobs colored according to
   // what was discarded as noise and what is associated with each row.
   void DrawFinalRows(const ICOORD &page_tr);
 
   // Render the generated spline baselines for this block on pix_in.
-  void DrawPixSpline(Image pix_in);
+  void DrawPixSpline(Image pix_in, uint32_t* data, int wpl, int w, int h);
 
 private:
   // Top-level line-spacing calculation. Computes an estimate of the line-

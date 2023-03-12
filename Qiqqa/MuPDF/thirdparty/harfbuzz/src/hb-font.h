@@ -497,8 +497,7 @@ typedef hb_bool_t (*hb_font_get_glyph_from_name_func_t) (hb_font_t *font, void *
  * A virtual method for the #hb_font_funcs_t of an #hb_font_t object.
  *
  * Since: 4.0.0
- *
- * Deprecated: REPLACEME: Use #hb_font_draw_glyph_func_t instead
+ * Deprecated: 7.0.0: Use #hb_font_draw_glyph_func_t instead
  **/
 typedef void (*hb_font_get_glyph_shape_func_t) (hb_font_t *font, void *font_data,
 						hb_codepoint_t glyph,
@@ -516,7 +515,7 @@ typedef void (*hb_font_get_glyph_shape_func_t) (hb_font_t *font, void *font_data
  *
  * A virtual method for the #hb_font_funcs_t of an #hb_font_t object.
  *
- * Since: REPLACEME
+ * Since: 7.0.0
  *
  **/
 typedef void (*hb_font_draw_glyph_func_t) (hb_font_t *font, void *font_data,
@@ -537,7 +536,7 @@ typedef void (*hb_font_draw_glyph_func_t) (hb_font_t *font, void *font_data,
  *
  * A virtual method for the #hb_font_funcs_t of an #hb_font_t object.
  *
- * Since: REPLACEME
+ * Since: 7.0.0
  */
 typedef void (*hb_font_paint_glyph_func_t) (hb_font_t *font, void *font_data,
                                             hb_codepoint_t glyph,
@@ -815,8 +814,7 @@ hb_font_funcs_set_glyph_from_name_func (hb_font_funcs_t *ffuncs,
  * which is the same as #hb_font_draw_glyph_func_t.
  *
  * Since: 4.0.0
- *
- * Deprecated: REPLACEME: Use hb_font_funcs_set_draw_glyph_func() instead
+ * Deprecated: 7.0.0: Use hb_font_funcs_set_draw_glyph_func() instead
  **/
 HB_EXTERN void
 hb_font_funcs_set_glyph_shape_func (hb_font_funcs_t *ffuncs,
@@ -833,7 +831,7 @@ hb_font_funcs_set_glyph_shape_func (hb_font_funcs_t *ffuncs,
  * Sets the implementation function for #hb_font_draw_glyph_func_t,
  * which is the same as #hb_font_get_glyph_shape_func_t.
  *
- * Since: REPLACEME
+ * Since: 7.0.0
  **/
 HB_EXTERN void
 hb_font_funcs_set_draw_glyph_func (hb_font_funcs_t *ffuncs,
@@ -849,7 +847,7 @@ hb_font_funcs_set_draw_glyph_func (hb_font_funcs_t *ffuncs,
  *
  * Sets the implementation function for #hb_font_paint_glyph_func_t.
  *
- * Since: REPLACEME
+ * Since: 7.0.0
  */
 HB_EXTERN void
 hb_font_funcs_set_paint_glyph_func (hb_font_funcs_t *ffuncs,
@@ -1132,6 +1130,16 @@ HB_EXTERN float
 hb_font_get_ptem (hb_font_t *font);
 
 HB_EXTERN void
+hb_font_set_synthetic_bold (hb_font_t *font,
+			    float x_embolden, float y_embolden,
+			    hb_bool_t in_place);
+
+HB_EXTERN void
+hb_font_get_synthetic_bold (hb_font_t *font,
+			    float *x_embolden, float *y_embolden,
+			    hb_bool_t *in_place);
+
+HB_EXTERN void
 hb_font_set_synthetic_slant (hb_font_t *font, float slant);
 
 HB_EXTERN float
@@ -1141,6 +1149,11 @@ HB_EXTERN void
 hb_font_set_variations (hb_font_t *font,
 			const hb_variation_t *variations,
 			unsigned int variations_length);
+
+HB_EXTERN void
+hb_font_set_variation (hb_font_t *font,
+		       hb_tag_t tag,
+		       float    value);
 
 HB_EXTERN void
 hb_font_set_var_coords_design (hb_font_t *font,
@@ -1167,7 +1180,7 @@ hb_font_get_var_coords_normalized (hb_font_t *font,
  * named-instance index set.  This is the default of
  * a font.
  *
- * Since: REPLACEME
+ * Since: 7.0.0
  */
 #define HB_FONT_NO_VAR_NAMED_INSTANCE 0xFFFFFFFF
 

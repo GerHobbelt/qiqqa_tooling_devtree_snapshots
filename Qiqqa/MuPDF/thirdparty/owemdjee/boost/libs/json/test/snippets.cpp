@@ -14,6 +14,7 @@
 #elif defined(__clang__)
 # pragma clang diagnostic push
 # pragma clang diagnostic ignored "-Wunused"
+# pragma clang diagnostic ignored "-Wmismatched-tags"
 #elif defined(__GNUC__)
 # pragma GCC diagnostic push
 # pragma GCC diagnostic ignored "-Wunused"
@@ -110,7 +111,8 @@ tag_invoke( const try_value_to_tag< ip_address >&, value const& jv )
 
 } // namespace user_ns
 
-BOOST_JSON_NS_BEGIN
+namespace boost {
+namespace json {
 
 namespace {
 
@@ -769,6 +771,32 @@ usingPointer()
     assert( elem1 == elem2 );
 }
 
+
+void
+usingSetAtPointer()
+{
+    //[snippet_pointer_4
+    value jv;
+    jv.set_at_pointer("/two/bar/0", 12);
+    assert( jv.is_object() );
+    assert( jv.at_pointer("/two").is_object() );
+    assert( jv.at_pointer("/two/bar").is_array() );
+    assert( jv.at_pointer("/two/bar/0") == 12 );
+    //]
+
+    jv = nullptr;
+    //[snippet_pointer_5
+    set_pointer_options opts;
+    opts.create_arrays = false;
+
+    jv.set_at_pointer("/two/bar/0", 12, opts);
+    assert( jv.is_object() );
+    assert( jv.at_pointer("/two").is_object() );
+    assert( jv.at_pointer("/two/bar").is_object() ); // object, not array
+    assert( jv.at_pointer("/two/bar/0") == 12 );
+    //]
+}
+
 BOOST_STATIC_ASSERT(
     has_value_from<customer>::value);
 
@@ -836,6 +864,7 @@ public:
         usingStrings();
         usingPointer();
         usingSpecializedTrait();
+        usingSetAtPointer();
 
         BOOST_TEST_PASS();
     }
@@ -843,4 +872,5 @@ public:
 
 TEST_SUITE(snippets_test, "boost.json.snippets");
 
-BOOST_JSON_NS_END
+} // namespace json
+} // namespace boost

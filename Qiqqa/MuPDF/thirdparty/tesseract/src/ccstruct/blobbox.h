@@ -469,13 +469,7 @@ public:
 
   // Helper to draw all the blobs on the list in the given body_colour,
   // with child outlines in the child_colour.
-  static void PlotBlobs(BLOBNBOX_LIST* list, ScrollView::Color body_colour,
-                        ScrollView::Color child_colour, Image &pix);
-  // Helper to draw only DeletableNoise blobs (unowned, BRT_NOISE) on the
-  // given list in the given body_colour, with child outlines in the
-  // child_colour.
-  static void PlotNoiseBlobs(BLOBNBOX_LIST* list, ScrollView::Color body_colour,
-                             ScrollView::Color child_colour, Image& pix);
+  static void PlotBlobs(BLOBNBOX_LIST* list, Image &pix, std::vector<uint32_t>& cmap, int cmap_offset);
 
   static ScrollView::Color TextlineColor(BlobRegionType region_type, BlobTextFlowType flow_type);
 
@@ -486,9 +480,7 @@ public:
             ScrollView::Color blob_colour,   // for outer bits
             ScrollView::Color child_colour); // for holes
 
-  void plot(Image& pix,                      // image to draw in
-            ScrollView::Color blob_colour,   // for outer bits
-            ScrollView::Color child_colour); // for holes
+  void plot(Image& pix, std::vector<uint32_t>& cmap, int &cmap_offset, bool noise);
 #endif
 
   // Initializes members set by StrokeWidth and beyond, without discarding
@@ -787,8 +779,6 @@ public:
   // Draw the blobs on the various lists in the block in different colors.
   void plot_graded_blobs(ScrollView *to_win);
 
-  // Draw the noise blobs from all lists in red.
-  void plot_noise_blobs(Image& pix);
   // Draw the blobs on the various lists in the block in different colors.
   void plot_graded_blobs(Image& pix);
 #endif

@@ -50,8 +50,9 @@
 
 namespace tesseract {
 
-Tesseract::Tesseract()
-    : BOOL_MEMBER(tessedit_resegment_from_boxes, false,
+Tesseract::Tesseract(Tesseract *parent)
+    : parent_instance_(parent)
+    , BOOL_MEMBER(tessedit_resegment_from_boxes, false,
                   "Take segmentation and labeling from box file", this->params())
     , BOOL_MEMBER(tessedit_resegment_from_line_boxes, false,
                   "Conversion of word/line box file to char box file", this->params())
@@ -310,7 +311,7 @@ Tesseract::Tesseract()
                  this->params())
     , INT_MEMBER(crunch_long_repetitions, 3, "Crunch words with long repetitions", this->params())
     , INT_MEMBER(crunch_debug, 0, "Print debug info for word and character crunch", this->params())
-    , INT_MEMBER(fixsp_non_noise_limit, 1, "How many non-noise blbs either side?", this->params())
+    , INT_MEMBER(fixsp_non_noise_limit, 1, "How many non-noise blobs either side?", this->params())
     , double_MEMBER(fixsp_small_outlines_size, 0.28, "Small if lt xht x this", this->params())
     , BOOL_MEMBER(tessedit_prefer_joined_punct, false, "Reward punctuation joins", this->params())
     , INT_MEMBER(fixsp_done_mode, 1, "What constitutes done for spacing", this->params())
@@ -476,6 +477,7 @@ Tesseract::Tesseract()
     , BOOL_MEMBER(debug_display_page_blocks, false, "Display preliminary OCR results in debug_pixa: show the blocks.", this->params())
     , BOOL_MEMBER(debug_display_page_baselines, false, "Display preliminary OCR results in debug_pixa: show the baselines.", this->params())
 
+    , pixa_debug_(this)
     , splitter_(this)
     , image_finder_(this)
     , line_finder_(this)
@@ -523,23 +525,27 @@ Dict &Tesseract::getDict() {
 }
 
 void Tesseract::Clear() {
-  if (!debug_output_path.empty() && pixa_debug__.HasPix()) {
+  if (!debug_output_path.empty() && pixa_debug_.HasPix()) {
     const int page_index = 0;
     std::string file_path = mkUniqueOutputFilePath(debug_output_path.value().c_str() /* imagebasename */, page_index, "page", "pdf");
 #if defined(HAVE_MUPDF)
     fz_mkdir_for_file(fz_get_global_context(), file_path.c_str());
 #endif
+#if 0
     //pixaConvertToPdf(pixa_display, resolution, 1.0f, 0, 0, "LineFinding", file_path.c_str());
-    pixa_debug__.WritePDF(file_path.c_str());
-
-    file_path = mkUniqueOutputFilePath(debug_output_path.value().c_str() /* imagebasename */, page_index, "", "png");
-#if defined(HAVE_MUPDF)
-    fz_mkdir_for_file(fz_get_global_context(), file_path.c_str());
+    pixa_debug_.WritePDF(file_path.c_str());
 #endif
-    pixa_debug__.WritePNGs(file_path.c_str());
+
+    file_path = mkUniqueOutputFilePath(debug_output_path.value().c_str() /* imagebasename */, page_index, "", "html");
+    pixa_debug_.WriteHTML(file_path.c_str());
+
+#if 0
+    file_path = mkUniqueOutputFilePath(debug_output_path.value().c_str() /* imagebasename */, page_index, "", "png");
+    pixa_debug_.WritePNGs(file_path.c_str());
+#endif
   }
   pix_original_.destroy();
-  pixa_debug__.Clear();
+  pixa_debug_.Clear();
   pix_binary_.destroy();
   pix_grey_.destroy();
   pix_thresholds_.destroy();
@@ -702,8 +708,16 @@ bool Tesseract::CheckAndReportIfImageTooLarge(int width, int height) const {
       width, height, cost.to_string(), ImageCostEstimate::capacity_to_string(allowed_image_memory_capacity));
   }
 
-  if (width >= TDIMENSION_MAX || height >= TDIMENSION_MAX || cost.is_too_large()) {
-    tprintf("ERROR: Image is too large: ({} x {} px, {})\n", width, height, cost.to_string());
+  if (width >= TDIMENSION_MAX) {
+    tprintf("ERROR: Image is too large: ({} x {} px, {}) (maximum accepted width: {} px)\n", width, height, cost.to_string(), TDIMENSION_MAX - 1);
+    return true;
+  }
+  if (height >= TDIMENSION_MAX) {
+    tprintf("ERROR: Image is too large: ({} x {} px, {}) (maximum accepted height: {} px)\n", width, height, cost.to_string(), TDIMENSION_MAX - 1);
+    return true;
+  }
+  if (cost.is_too_large()) {
+    tprintf("ERROR: Image is too large: ({} x {} px, {}) (maximum allowed memory cost: {} vs. estimated cost: {})\n", width, height, cost.to_string(), ImageCostEstimate::capacity_to_string(allowed_image_memory_capacity), cost.to_string());
     return true;
   }
   return false;

@@ -1,4 +1,4 @@
-CHANGES BETWEEN 2.12.1 and 2.13
+CHANGES BETWEEN 2.12.1 and 2.13.0 (2023-Feb-09)
 
   I. IMPORTANT CHANGES
 
@@ -8,6 +8,8 @@ CHANGES BETWEEN 2.12.1 and 2.13
     on the Qt framework.  This was Charlie Jiang's GSoC 2022 project.
 
   - The 'COLR' v1 API is now considered as stable.
+
+      https://learn.microsoft.com/en-us/typography/opentype/spec/colr
 
 
   III. MISCELLANEOUS
@@ -51,10 +53,36 @@ CHANGES BETWEEN 2.12.1 and 2.13
   - In  `ftstring`, it  is  now  possible to  set  the displayed  text
     interactively by pressing the 'Enter' key.
 
+  - `ftmulti` can now handle up to 16 design axes.
+
+  - To  avoid  reserved identifiers  that  are  globally defined,  the
+    auto-hinter  debugging   macros  (which  are  only   available  if
+    `FT_DEBUG_AUTOFIT` is defined)
+
+    ```
+    _af_debug_disable_horz_hints
+    _af_debug_disable_vert_hints
+    _af_debug_disable_blue_hints
+    _af_debug_hints
+    ```
+
+    have been renamed to
+
+    ```
+    af_debug_disable_horz_hints_
+    af_debug_disable_vert_hints_
+    af_debug_disable_blue_hints_
+    af_debug_hints_
+    ```
+
+  - The internal  zlib library was  updated to version  1.2.13.  Note,
+    however, that  FreeType is *not* affected  by CVE-2022-37434 since
+    it doesn't use the `inflateGetHeader` function.
+
 
 ======================================================================
 
-CHANGES BETWEEN 2.12.0 and 2.12.1
+CHANGES BETWEEN 2.12.0 and 2.12.1 (2022-May-01)
 
   I. IMPORTANT BUG FIXES
 
@@ -84,7 +112,7 @@ CHANGES BETWEEN 2.12.0 and 2.12.1
 
 ======================================================================
 
-CHANGES BETWEEN 2.11.1 and 2.12.0
+CHANGES BETWEEN 2.11.1 and 2.12.0 (2022-Mar-30)
 
   I. IMPORTANT CHANGES
 
@@ -135,7 +163,7 @@ CHANGES BETWEEN 2.11.1 and 2.12.0
 
 ======================================================================
 
-CHANGES BETWEEN 2.11.0 and 2.11.1
+CHANGES BETWEEN 2.11.0 and 2.11.1 (2021-Dec-01)
 
   I. IMPORTANT CHANGES
 
@@ -167,7 +195,7 @@ CHANGES BETWEEN 2.11.0 and 2.11.1
 
 ======================================================================
 
-CHANGES BETWEEN 2.10.4 and 2.11.0
+CHANGES BETWEEN 2.10.4 and 2.11.0 (2021-Jul-18)
 
   I. IMPORTANT CHANGES
 

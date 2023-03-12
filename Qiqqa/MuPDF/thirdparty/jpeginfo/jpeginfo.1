@@ -1,4 +1,4 @@
-.TH JPEGINFO 1 "10 Dec 2002" 
+.TH JPEGINFO 1 "06 Jan 2023"
 .UC 4 
 .SH NAME 
 jpeginfo \- prints
@@ -17,6 +17,54 @@ information and tests integrity of JPEG/JFIF files.
 is used to generate informative listings of jpeg files, and
 also to check jpeg files for errors. Program also supports automatic
 deletion of broken jpegs.
+
+.SS Default Format
+.PP
+Default output format:
+
+<filename> <image_width> x <image_height> <colordepth> <image_type> <progresive_vs_normal> <size>
+
+Example:
+.PP
+.RS 0
+IMG_6387.jpeg 4032 x 3024 24bit JFIF  N 2416729
+.RS 0
+IMG_6806.jpeg 4032 x 3024 24bit Exif  N 2510587
+.RS 0
+
+.SS Extra information format
+.PP
+Additional information can be displayed usign
+.I -i
+option:
+
+<filename> <image_width> x <image_height> <colordepth> <image_type> <progresive_vs_normal> <additonal_info> <size>
+
+Example:
+.PP
+.RS 0
+IMG_6387.jpeg 4032 x 3024 24bit JFIF  Normal Huffman 2416729
+.RS 0
+IMG_6806.jpeg 4032 x 3024 24bit Exif  Normal Huffman 2510587
+.RS 0
+.RE
+
+.SS Ls command style output format
+.PP
+Option
+.I -l
+moves filename to be last column, resulting output that is bit like output from `ls -l` command:
+
+<image_width> x <image_height> <colordepth> <image_type> <progresive_vs_normal> <size> <filename>
+
+Example:
+
+.PP
+.RS 0
+4032 x 3024 24bit JFIF  N 2416729 IMG_6387.jpeg
+.RS 0
+4032 x 3024 24bit Exif  N 2510587 IMG_6806.jpeg 
+.RS 0
 
 
 .SH OPTIONS
@@ -45,6 +93,9 @@ are given as parameters to the program.
 .TP 0.6i
 .B -h, --help
 Display short usage information and exits.
+.TP 0.6i
+.B -2, --sha256
+Calculates SHA-256 checksum for each file.
 .TP 0.6i
 .B -5, --md5
 Calculates MD5 checksum for each file. 
@@ -90,10 +141,10 @@ None, so far :-)
 jpegoptim(1)
 
 .SH AUTHOR
-Timo Kokkonen (tjko@jyu.fi)
+Timo Kokkonen (tjko@iki.fi)
 
 .SH COPYING
-Copyright (C) 1996-1998  Timo Kokkonen
+Copyright (C) 1995-2023  Timo Kokkonen
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

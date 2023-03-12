@@ -18,13 +18,16 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdarg.h>
 #include <string.h>
 #include <ctype.h>
+
+#include "vms_shorten_symbol.c"
 
 #undef verbose
 
 #define  PROGRAM_NAME     "apinames"
-#define  PROGRAM_VERSION  "0.4"
+#define  PROGRAM_VERSION  "0.5"
 
 #define  LINEBUFF_SIZE  1024
 
@@ -43,9 +46,20 @@ typedef enum  OutputFormat_
 
 
 static void
-panic( const char*  message )
+panic( const char*  fmt,
+       ... )
 {
-  fprintf( stderr, "PANIC: %s\n", message );
+  va_list  ap;
+
+
+  fprintf( stderr, "PANIC: " );
+
+  va_start( ap, fmt );
+  vfprintf( stderr, fmt, ap );
+  va_end( ap );
+
+  fprintf( stderr, "\n" );
+
   exit(2);
 }
 
@@ -204,12 +218,23 @@ names_dump( FILE*         out,
     break;
 
   case OUTPUT_VMS_OPT:
-    fprintf( out, "GSMATCH=LEQUAL,2,0\n"
-                  "CASE_SENSITIVE=YES\n"
-                  "SYMBOL_VECTOR=(-\n" );
-    for ( nn = 0; nn < num_names - 1; nn++ )
-      fprintf( out, "    %s=PROCEDURE,-\n", the_names[nn].name );
-    fprintf( out, "    %s=PROCEDURE)\n", the_names[num_names - 1].name );
+    fprintf( out, "case_sensitive=YES\n" );
+
+    for ( nn = 0; nn < num_names; nn++ )
+    {
+      char  short_symbol[32];
+
+
+      if ( vms_shorten_symbol( the_names[nn].name, short_symbol, 1 ) == -1 )
+        panic( "could not shorten name '%s'", the_names[nn].name );
+      fprintf( out, "symbol_vector = ( %s = PROCEDURE)\n", short_symbol );
+
+      strcat( the_names[nn].name , "64__" );
+
+      if ( vms_shorten_symbol( the_names[nn].name, short_symbol, 1 ) == -1 )
+        panic( "could not shorten name '%s'", the_names[nn].name );
+      fprintf( out, "symbol_vector = ( %s = PROCEDURE)\n", short_symbol );
+    }
 
     break;
 

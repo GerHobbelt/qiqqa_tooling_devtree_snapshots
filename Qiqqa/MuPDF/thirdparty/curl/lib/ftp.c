@@ -437,6 +437,12 @@ static CURLcode InitiateTransfer(struct Curl_easy *data)
   bool connected;
 
   DEBUGF(infof(data, "ftp InitiateTransfer()"));
+  if(conn->bits.ftp_use_data_ssl && data->set.ftp_use_port &&
+     !Curl_conn_is_ssl(conn, SECONDARYSOCKET)) {
+    result = Curl_ssl_cfilter_add(data, conn, SECONDARYSOCKET);
+    if(result)
+      return result;
+  }
   result = Curl_conn_connect(data, SECONDARYSOCKET, TRUE, &connected);
   if(result || !connected)
     return result;
@@ -3283,7 +3289,7 @@ static CURLcode ftp_done(struct Curl_easy *data, CURLcode status,
   if(data->state.wildcardmatch) {
     if(data->set.chunk_end && ftpc->file) {
       Curl_set_in_callback(data, true);
-      data->set.chunk_end(data->wildcard.customptr);
+      data->set.chunk_end(data->set.wildcardptr);
       Curl_set_in_callback(data, false);
     }
     ftpc->known_filesize = -1;
@@ -3789,7 +3795,7 @@ static CURLcode init_wc_data(struct Curl_easy *data)
   char *last_slash;
   struct FTP *ftp = data->req.p.ftp;
   char *path = ftp->path;
-  struct WildcardData *wildcard = &(data->wildcard);
+  struct WildcardData *wildcard = data->wildcard;
   CURLcode result = CURLE_OK;
   struct ftp_wc *ftpwc = NULL;
 
@@ -3837,7 +3843,7 @@ static CURLcode init_wc_data(struct Curl_easy *data)
     goto fail;
   }
 
-  wildcard->protdata = ftpwc; /* put it to the WildcardData tmp pointer */
+  wildcard->ftpwc = ftpwc; /* put it to the WildcardData tmp pointer */
   wildcard->dtor = wc_data_dtor;
 
   /* wildcard does not support NOCWD option (assert it?) */
@@ -3875,13 +3881,13 @@ static CURLcode init_wc_data(struct Curl_easy *data)
   }
   Curl_safefree(wildcard->pattern);
   wildcard->dtor = ZERO_NULL;
-  wildcard->protdata = NULL;
+  wildcard->ftpwc = NULL;
   return result;
 }
 
 static CURLcode wc_statemach(struct Curl_easy *data)
 {
-  struct WildcardData * const wildcard = &(data->wildcard);
+  struct WildcardData * const wildcard = data->wildcard;
   struct connectdata *conn = data->conn;
   CURLcode result = CURLE_OK;
 
@@ -3898,7 +3904,7 @@ static CURLcode wc_statemach(struct Curl_easy *data)
     case CURLWC_MATCHING: {
       /* In this state is LIST response successfully parsed, so lets restore
          previous WRITEFUNCTION callback and WRITEDATA pointer */
-      struct ftp_wc *ftpwc = wildcard->protdata;
+      struct ftp_wc *ftpwc = wildcard->ftpwc;
       data->set.fwrite_func = ftpwc->backup.write_function;
       data->set.out = ftpwc->backup.file_descriptor;
       ftpwc->backup.write_function = ZERO_NULL;
@@ -3937,7 +3943,7 @@ static CURLcode wc_statemach(struct Curl_easy *data)
         long userresponse;
         Curl_set_in_callback(data, true);
         userresponse = data->set.chunk_bgn(
-          finfo, wildcard->customptr, (int)wildcard->filelist.size);
+          finfo, data->set.wildcardptr, (int)wildcard->filelist.size);
         Curl_set_in_callback(data, false);
         switch(userresponse) {
         case CURL_CHUNK_BGN_FUNC_SKIP:
@@ -3977,7 +3983,7 @@ static CURLcode wc_statemach(struct Curl_easy *data)
     case CURLWC_SKIP: {
       if(data->set.chunk_end) {
         Curl_set_in_callback(data, true);
-        data->set.chunk_end(data->wildcard.customptr);
+        data->set.chunk_end(data->set.wildcardptr);
         Curl_set_in_callback(data, false);
       }
       Curl_llist_remove(&wildcard->filelist, wildcard->filelist.head, NULL);
@@ -3987,7 +3993,7 @@ static CURLcode wc_statemach(struct Curl_easy *data)
     }
 
     case CURLWC_CLEAN: {
-      struct ftp_wc *ftpwc = wildcard->protdata;
+      struct ftp_wc *ftpwc = wildcard->ftpwc;
       result = CURLE_OK;
       if(ftpwc)
         result = Curl_ftp_parselist_geterror(ftpwc->parser);
@@ -4000,7 +4006,7 @@ static CURLcode wc_statemach(struct Curl_easy *data)
     case CURLWC_ERROR:
     case CURLWC_CLEAR:
       if(wildcard->dtor)
-        wildcard->dtor(wildcard->protdata);
+        wildcard->dtor(wildcard->ftpwc);
       return result;
     }
   }
@@ -4027,8 +4033,8 @@ static CURLcode ftp_do(struct Curl_easy *data, bool *done)
 
   if(data->state.wildcardmatch) {
     result = wc_statemach(data);
-    if(data->wildcard.state == CURLWC_SKIP ||
-      data->wildcard.state == CURLWC_DONE) {
+    if(data->wildcard->state == CURLWC_SKIP ||
+       data->wildcard->state == CURLWC_DONE) {
       /* do not call ftp_regular_transfer */
       return CURLE_OK;
     }

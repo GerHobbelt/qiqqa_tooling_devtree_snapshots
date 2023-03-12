@@ -1005,7 +1005,7 @@
     {
       size->cvt[i] = FT_MulFix( face->cvt[i], scale );
       FT_TRACE6(( "  %3d: %f (%f)\n",
-                  i, face->cvt[i] / 64.0, size->cvt[i] / 64.0 ));
+                  i, (double)face->cvt[i] / 64, (double)size->cvt[i] / 64 ));
     }
     FT_TRACE6(( "\n" ));
 

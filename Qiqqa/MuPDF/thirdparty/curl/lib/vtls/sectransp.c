@@ -2150,50 +2150,39 @@ static long pem_to_der(const char *in, unsigned char **out, size_t *outlen)
   return sep_end - in;
 }
 
+#define MAX_CERTS_SIZE (50*1024*1024) /* arbitrary - to catch mistakes */
+
 static int read_cert(const char *file, unsigned char **out, size_t *outlen)
 {
   int fd;
-  ssize_t n, len = 0, cap = 512;
-  unsigned char buf[512], *data;
+  ssize_t n;
+  unsigned char buf[512];
+  struct dynbuf certs;
+
+  Curl_dyn_init(&certs, MAX_CERTS_SIZE);
 
   fd = open(file, 0);
   if(fd < 0)
     return -1;
 
-  data = malloc(cap);
-  if(!data) {
-    close(fd);
-    return -1;
-  }
-
   for(;;) {
     n = read(fd, buf, sizeof(buf));
+    if(!n)
+      break;
     if(n < 0) {
       close(fd);
-      free(data);
+      Curl_dyn_free(&certs);
       return -1;
     }
-    else if(n == 0) {
+    if(Curl_dyn_addn(&certs, buf, n)) {
       close(fd);
-      break;
+      return -1;
     }
-
-    if(len + n >= cap) {
-      cap *= 2;
-      data = Curl_saferealloc(data, cap);
-      if(!data) {
-        close(fd);
-        return -1;
-      }
-    }
-
-    memcpy(data + len, buf, n);
-    len += n;
   }
-  data[len] = '\0';
+  close(fd);
 
-  *out = data;
-  *outlen = len;
+  *out = Curl_dyn_uptr(&certs);
+  *outlen = Curl_dyn_len(&certs);
 
   return 0;
 }
@@ -3244,35 +3233,6 @@ static size_t sectransp_version(char *buffer, size_t size)
   return msnprintf(buffer, size, "SecureTransport");
 }
 
-/*
- * This function uses SSLGetSessionState to determine connection status.
- *
- * Return codes:
- *     1 means the connection is still in place
- *     0 means the connection has been closed
- *    -1 means the connection status is unknown
- */
-static int sectransp_check_cxn(struct Curl_cfilter *cf,
-                               struct Curl_easy *data)
-{
-  struct ssl_connect_data *connssl = cf->ctx;
-  struct ssl_backend_data *backend = connssl->backend;
-  OSStatus err;
-  SSLSessionState state;
-
-  (void)data;
-  DEBUGASSERT(backend);
-
-  if(backend->ssl_ctx) {
-    DEBUGF(LOG_CF(data, cf, "check connection"));
-    err = SSLGetSessionState(backend->ssl_ctx, &state);
-    if(err == noErr)
-      return state == kSSLConnected || state == kSSLHandshake;
-    return -1;
-  }
-  return 0;
-}
-
 static bool sectransp_data_pending(struct Curl_cfilter *cf,
                                    const struct Curl_easy *data)
 {
@@ -3484,7 +3444,7 @@ const struct Curl_ssl Curl_ssl_sectransp = {
   Curl_none_init,                     /* init */
   Curl_none_cleanup,                  /* cleanup */
   sectransp_version,                  /* version */
-  sectransp_check_cxn,                /* check_cxn */
+  Curl_none_check_cxn,                /* check_cxn */
   sectransp_shutdown,                 /* shutdown */
   sectransp_data_pending,             /* data_pending */
   sectransp_random,                   /* random */

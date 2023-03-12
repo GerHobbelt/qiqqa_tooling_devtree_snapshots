@@ -485,21 +485,11 @@ void TabFind::TidyBlobs(TO_BLOCK *block) {
       auto width = tright_.x() - bleft_.x();
       auto height = tright_.y() - bleft_.y();
 
-      Image pix = pixCreate(width + 8, height + 8, 32 /* RGBA */);
-      pixClearAll(pix);
-
-      BOX* border = boxCreate(2, 2, width + 4, height + 4);
-      // boxDestroy(BOX * *pbox);
-      BOXA* boxlist = boxaCreate(1);
-      boxaAddBox(boxlist, border, false);
-      //boxaDestroy(BOXA * *pboxa);
-      l_uint32 bordercolor;
-      composeRGBAPixel(255, 32, 32, 255, &bordercolor);
-      pix = pixDrawBoxa(pix, boxlist, 2, bordercolor);
-      boxaDestroy(&boxlist);
+      Image pix = pixCreate(width, height, 32 /* RGBA */);
+      pixSetAll(pix);
 
       block->plot_graded_blobs(pix);
-      block->plot_noise_blobs(pix);
+      //block->plot_noise_blobs(pix);
 
       tesseract_->AddPixDebugPage(pix, name, false);
     }
@@ -529,12 +519,12 @@ ScrollView *TabFind::DisplayTabVectors(ScrollView *tab_win) {
   return tab_win;
 }
 
-void TabFind::DisplayTabVectors(Image &pix) {
+void TabFind::DisplayTabVectors(Image &pix, uint32_t* data, int wpl, int w, int h) {
   // For every vector, display it.
   TabVector_IT it(&vectors_);
   for (it.mark_cycle_pt(); !it.cycled_list(); it.forward()) {
     TabVector* vector = it.data();
-    vector->Display(pix);
+    vector->Display(pix, data, wpl, w, h);
   }
   //tab_win->Update();
   return;

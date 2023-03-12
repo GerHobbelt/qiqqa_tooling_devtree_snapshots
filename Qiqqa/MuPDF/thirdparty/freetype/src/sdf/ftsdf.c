@@ -872,7 +872,7 @@
       cbox.yMax = edge.control_b.y;
 
       is_set = 1;
-      /* fall through */
+      FALL_THROUGH;
 
     case SDF_EDGE_CONIC:
       if ( is_set )
@@ -900,7 +900,7 @@
 
         is_set = 1;
       }
-      /* fall through */
+      FALL_THROUGH;
 
     case SDF_EDGE_LINE:
       if ( is_set )
@@ -2376,7 +2376,7 @@
      *     90~degrees with the curve.  We solve this with the Newton-Raphson
      *     method.
      *
-     * (7) We first assume an arbitary value of factor `t`, which we then
+     * (7) We first assume an arbitrary value of factor `t`, which we then
      *     improve.
      *
      *     ```
@@ -2689,7 +2689,7 @@
      *     90~degree with curve.  We solve this with the Newton-Raphson
      *     method.
      *
-     * (7) We first assume an arbitary value of factor `t`, which we then
+     * (7) We first assume an arbitrary value of factor `t`, which we then
      *     improve.
      *
      *     ```
@@ -2719,8 +2719,9 @@
 
     FT_Error  error = FT_Err_Ok;
 
-    FT_26D6_Vec   aA, bB, cC, dD; /* A, B, C in the above comment          */
-    FT_16D16_Vec  nearest_point;  /* point on curve nearest to `point`     */
+    FT_26D6_Vec   aA, bB, cC, dD; /* A, B, C, D in the above comment       */
+    FT_16D16_Vec  nearest_point = { 0, 0 };
+                                  /* point on curve nearest to `point`     */
     FT_16D16_Vec  direction;      /* direction of curve at `nearest_point` */
 
     FT_26D6_Vec  p0, p1, p2, p3;  /* control points of a cubic curve       */
@@ -3259,7 +3260,7 @@
     /* and also determine the signs properly.             */
     SDF_Signed_Distance*  dists = NULL;
 
-    const FT_16D16  fixed_spread = FT_INT_16D16( spread );
+    const FT_16D16  fixed_spread = (FT_16D16)FT_INT_16D16( spread );
 
 
     if ( !shape || !bitmap )

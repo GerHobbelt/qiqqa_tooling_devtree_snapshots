@@ -194,7 +194,7 @@ using WordRecognizer = void (Tesseract::*)(const WordData &, WERD_RES **,
 
 class TESS_API Tesseract: public Wordrec {
 public:
-  Tesseract();
+  Tesseract(Tesseract *parent = nullptr);
   ~Tesseract() override;
 
   // Return appropriate dictionary
@@ -1036,14 +1036,23 @@ public:
   void ambigs_classify_and_output(const char *label, PAGE_RES_IT *pr_it, FILE *output_file);
 
   // debug PDF output helper methods:
-  void AddPixDebugPage(const Image &pix, const char *title, bool keeep_a_copy = true) {
+  void AddPixDebugPage(const Image &pix, const char *title) {
 	  if (pix == nullptr)
 		  return;
 
-    pixa_debug__.AddPix(pix, title, keeep_a_copy);
+    pixa_debug_.AddPix(pix, title);
   }
-  void AddPixDebugPage(const Image &pix, const std::string& title, bool keeep_a_copy = true) {
-    AddPixDebugPage(pix, title.c_str(), keeep_a_copy);
+  void AddPixDebugPage(const Image &pix, const std::string& title) {
+    AddPixDebugPage(pix, title.c_str());
+  }
+  void AddPixDebugPage(Image& pix, const char* title, bool keep_a_copy) {
+    if (pix == nullptr)
+      return;
+
+    pixa_debug_.AddPix(pix, title, keep_a_copy);
+  }
+  void AddPixDebugPage(Image& pix, const std::string& title, bool keep_a_copy) {
+    AddPixDebugPage(pix, title.c_str(), keep_a_copy);
   }
 
 public:
@@ -1098,6 +1107,14 @@ public:
   void DetectParagraphs(bool after_text_recognition,
                         const MutableIterator* block_start, std::vector<ParagraphModel*>* models);
 
+public:
+  Tesseract* get_parent_instance() const {
+    return parent_instance_;
+  }
+
+protected:
+  Tesseract* parent_instance_;      // reference to parent tesseract instance for sub-languages. Used, f.e., to allow using a single DebugPixa diagnostic channel for all languages tested on the input.
+
 private:
   // The filename of a backup config file. If not null, then we currently
   // have a temporary debug config file loaded, and backup_config_file_
@@ -1115,7 +1132,7 @@ private:
   // Thresholds that were used to generate the thresholded image from grey.
   Image pix_thresholds_;
   // Debug images. If non-empty, will be written on destruction.
-  DebugPixa pixa_debug__;
+  DebugPixa pixa_debug_;
   // Input image resolution after any scaling. The resolution is not well
   // transmitted by operations on Pix, so we keep an independent record here.
   int source_resolution_;

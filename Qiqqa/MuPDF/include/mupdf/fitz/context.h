@@ -92,6 +92,7 @@ typedef struct
 FZ_NORETURN void fz_vthrow(fz_context *ctx, int errcode, const char *fmt, va_list ap);
 FZ_NORETURN void fz_throw(fz_context *ctx, int errcode, const char *fmt, ...);
 FZ_NORETURN void fz_rethrow(fz_context *ctx);
+void fz_morph_error(fz_context *ctx, int fromcode, int tocode);
 void fz_verror(fz_context* ctx, const char* fmt, va_list ap);
 void fz_error(fz_context* ctx, const char* fmt, ...);
 void fz_vwarn(fz_context *ctx, const char *fmt, va_list ap);
@@ -1240,25 +1241,5 @@ fz_drop_imp16(fz_context *ctx, void *p, int16_t *refs)
     }
     return 0;
 }
-
-
-#if defined(WASM_SKIP_TRY_CATCH)
-
-/**
-	Exception macro definitions for WASM_SKIP_TRY_CATCH. In this mode, we
-	throw JS exceptions directly, and we skip fz_catch and fz_always.
-	Useful for producing cleaner stack traces when debugging.
-	Should *never* be used in production.
-*/
-#undef fz_var
-#define fz_var(var) (void)(var)
-#undef fz_try
-#define fz_try(ctx) do
-#undef fz_always
-#define fz_always(ctx) while (0); if (0) do
-#undef fz_catch
-#define fz_catch(ctx) while (0); if (0)
-
-#endif
 
 #endif

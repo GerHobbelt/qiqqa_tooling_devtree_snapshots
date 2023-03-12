@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------
 //
 //  Little Color Management System, multithreaded extensions
-//  Copyright (c) 1998-2022 Marti Maria Saguer, all rights reserved
+//  Copyright (c) 1998-2023 Marti Maria Saguer, all rights reserved
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -50,7 +50,7 @@ static struct timespec start, finish;
 
 cmsINLINE void MeasureTimeStart(void)
 {    
-#ifdef CMS_IS_WINDOWS_
+#if defined(HAVE_TIMESPEC_GET)
     timespec_get(&start, TIME_UTC);
 #else
     clock_gettime(CLOCK_MONOTONIC, &start);
@@ -61,7 +61,7 @@ cmsINLINE double MeasureTimeStop(void)
 {
     double elapsed;
 
-#ifdef CMS_IS_WINDOWS_
+#if defined(HAVE_TIMESPEC_GET)
     timespec_get(&finish, TIME_UTC);
 #else
     clock_gettime(CLOCK_MONOTONIC, &finish);
@@ -856,7 +856,7 @@ int main()
 #endif
 
     trace("Multithreaded extensions testbed - 1.1\n");
-    trace("Copyright (c) 1998-2022 Marti Maria Saguer, all rights reserved\n");
+    trace("Copyright (c) 1998-2023 Marti Maria Saguer, all rights reserved\n");
 
     trace("\nInstalling error logger ... ");
     cmsSetLogErrorHandler(FatalErrorQuit);

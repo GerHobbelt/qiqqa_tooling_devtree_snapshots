@@ -1,9 +1,9 @@
 #########################################################################
-# $Id$ 
+# $Id: 6113ed3e5303220500982411973a6dcbfed6e600 $ 
 # 
 # Makefile for jpeginfo 
 #
-Version = 1.6.2
+Version = 1.7.0
 PKGNAME = jpeginfo
 
 SHELL = /bin/sh
@@ -52,7 +52,7 @@ INSTALL_PROGRAM = @INSTALL_PROGRAM@
 DIRNAME = $(shell basename `pwd`) 
 DISTNAME  = $(PKGNAME)-$(Version)
 
-OBJS = $(PKGNAME).o misc.o @GNUGETOPT@ md5.o 
+OBJS = $(PKGNAME).o misc.o @GNUGETOPT@ md5.o sha256/hash.o sha256/blocks.o
 
 $(PKGNAME):	$(OBJS) 
 	$(CC) $(CFLAGS) -o $(PKGNAME) $(OBJS) $(LDFLAGS) $(LIBS) 

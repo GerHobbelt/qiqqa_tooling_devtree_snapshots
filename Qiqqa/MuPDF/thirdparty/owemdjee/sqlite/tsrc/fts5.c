@@ -3203,7 +3203,7 @@ static int fts5HighlightCb(
   if( tflags & FTS5_TOKEN_COLOCATED ) return SQLITE_OK;
   iPos = p->iPos++;
 
-  if( p->iRangeEnd>0 ){
+  if( p->iRangeEnd>=0 ){
     if( iPos<p->iRangeStart || iPos>p->iRangeEnd ) return SQLITE_OK;
     if( p->iRangeStart && iPos==p->iRangeStart ) p->iOff = iStartOff;
   }
@@ -3215,7 +3215,7 @@ static int fts5HighlightCb(
   }
 
   if( iPos==p->iter.iEnd ){
-    if( p->iRangeEnd && p->iter.iStart<p->iRangeStart ){
+    if( p->iRangeEnd>=0 && p->iter.iStart<p->iRangeStart ){
       fts5HighlightAppend(&rc, p, p->zOpen, -1);
     }
     fts5HighlightAppend(&rc, p, &p->zIn[p->iOff], iEndOff - p->iOff);
@@ -3226,7 +3226,7 @@ static int fts5HighlightCb(
     }
   }
 
-  if( p->iRangeEnd>0 && iPos==p->iRangeEnd ){
+  if( p->iRangeEnd>=0 && iPos==p->iRangeEnd ){
     fts5HighlightAppend(&rc, p, &p->zIn[p->iOff], iEndOff - p->iOff);
     p->iOff = iEndOff;
     if( iPos>=p->iter.iStart && iPos<p->iter.iEnd ){
@@ -3261,6 +3261,7 @@ static void fts5HighlightFunction(
   memset(&ctx, 0, sizeof(HighlightContext));
   ctx.zOpen = (const char*)sqlite3_value_text(apVal[1]);
   ctx.zClose = (const char*)sqlite3_value_text(apVal[2]);
+  ctx.iRangeEnd = -1;
   rc = pApi->xColumnText(pFts, iCol, &ctx.zIn, &ctx.nIn);
 
   if( ctx.zIn ){
@@ -3446,6 +3447,7 @@ static void fts5SnippetFunction(
   iCol = sqlite3_value_int(apVal[0]);
   ctx.zOpen = fts5ValueToText(apVal[1]);
   ctx.zClose = fts5ValueToText(apVal[2]);
+  ctx.iRangeEnd = -1;
   zEllips = fts5ValueToText(apVal[3]);
   nToken = sqlite3_value_int(apVal[4]);
 
@@ -18402,7 +18404,7 @@ static void fts5SourceIdFunc(
 ){
   assert( nArg==0 );
   UNUSED_PARAM2(nArg, apUnused);
-  sqlite3_result_text(pCtx, "fts5: 2023-02-14 18:09:40 e6c8e19ab0d6e7526d4596b75a45bb6becaf3c029690f7e75c016eac803c9990", -1, SQLITE_TRANSIENT);
+  sqlite3_result_text(pCtx, "fts5: 2023-03-11 00:15:41 30d95a12eb8b1cfc8ed11d3ed68cd713993ba34efa2fe623c18cfe41f14df1d9", -1, SQLITE_TRANSIENT);
 }
 
 /*
@@ -22310,7 +22312,7 @@ struct Fts5VocabCursor {
   void *pStruct;                  /* From sqlite3Fts5StructureRef() */
 
   int nLeTerm;                    /* Size of zLeTerm in bytes */
-  char *zLeTerm;                  /* (term <= $zLeTerm) paramater, or NULL */
+  char *zLeTerm;                  /* (term <= $zLeTerm) parameter, or NULL */
 
   /* These are used by 'col' tables only */
   int iCol;

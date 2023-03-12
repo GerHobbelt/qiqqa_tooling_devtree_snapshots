@@ -571,8 +571,8 @@ void BaselineBlock::PrepareForSplineFitting(ICOORD page_tr, bool remove_noise) {
   }
   FCOORD rotation(1.0f, 0.0f);
   double gradient = tan(skew_angle_);
-  separate_underlines(block_, gradient, rotation, true);
-  pre_associate_blobs(page_tr, block_, rotation, true);
+  separate_underlines(block_, gradient, rotation);
+  pre_associate_blobs(page_tr, block_, rotation);
 }
 
 // Fits splines to the textlines, or creates fake QSPLINES from the straight
@@ -581,12 +581,12 @@ void BaselineBlock::PrepareForSplineFitting(ICOORD page_tr, bool remove_noise) {
 // Although x-height estimation is conceptually separate, it is part of
 // detecting perspective distortion and therefore baseline fitting.
 void BaselineBlock::FitBaselineSplines(bool enable_splines,
-                                       bool show_final_rows, Textord *textord) {
+                                       Textord *textord) {
   double gradient = tan(skew_angle_);
   FCOORD rotation(1.0f, 0.0f);
 
   if (enable_splines) {
-    textord->make_spline_rows(block_, gradient, show_final_rows);
+    textord->make_spline_rows(block_, gradient);
   } else {
     // Make a fake spline from the existing line.
     TBOX block_box = block_->block->pdblk.bounding_box();
@@ -619,34 +619,36 @@ void BaselineBlock::DrawFinalRows(const ICOORD &page_tr) {
   FCOORD rotation(1.0f, 0.0f);
   int left_edge = block_->block->pdblk.bounding_box().left();
   ScrollView *win = create_to_win(page_tr);
-  ScrollView::Color colour = ScrollView::RED;
-  TO_ROW_IT row_it = block_->get_rows();
-  for (row_it.mark_cycle_pt(); !row_it.cycled_list(); row_it.forward()) {
-    plot_parallel_row(row_it.data(), gradient, left_edge, colour, rotation);
-    colour = static_cast<ScrollView::Color>(colour + 1);
-    if (colour > ScrollView::MAGENTA) {
-      colour = ScrollView::RED;
+  if (win != nullptr) {
+    ScrollView::Color colour = ScrollView::RED;
+    TO_ROW_IT row_it = block_->get_rows();
+    for (row_it.mark_cycle_pt(); !row_it.cycled_list(); row_it.forward()) {
+      plot_parallel_row(row_it.data(), gradient, left_edge, colour, rotation);
+      colour = static_cast<ScrollView::Color>(colour + 1);
+      if (colour > ScrollView::MAGENTA) {
+        colour = ScrollView::RED;
+      }
     }
+    plot_blob_list(win, &block_->blobs, ScrollView::MAGENTA, ScrollView::WHITE);
+    // Show discarded blobs.
+    plot_blob_list(win, &block_->underlines, ScrollView::YELLOW,
+                   ScrollView::CORAL);
+    if (block_->blobs.length() > 0) {
+      tprintf("{} blobs discarded as noise\n", block_->blobs.length());
+    }
+    draw_meanlines(block_, gradient, left_edge, ScrollView::WHITE, rotation);
   }
-  plot_blob_list(win, &block_->blobs, ScrollView::MAGENTA, ScrollView::WHITE);
-  // Show discarded blobs.
-  plot_blob_list(win, &block_->underlines, ScrollView::YELLOW,
-                 ScrollView::CORAL);
-  if (block_->blobs.length() > 0) {
-    tprintf("{} blobs discarded as noise\n", block_->blobs.length());
-  }
-  draw_meanlines(block_, gradient, left_edge, ScrollView::WHITE, rotation);
 }
 
 #endif // !GRAPHICS_DISABLED
 
-void BaselineBlock::DrawPixSpline(Image pix_in) {
+void BaselineBlock::DrawPixSpline(Image pix_in, uint32_t* data, int wpl, int w, int h) {
   if (non_text_block_) {
     return;
   }
   TO_ROW_IT row_it = block_->get_rows();
   for (row_it.mark_cycle_pt(); !row_it.cycled_list(); row_it.forward()) {
-    row_it.data()->baseline.plot(pix_in);
+    row_it.data()->baseline.plot(pix_in, data, wpl, w, h);
   }
 }
 
@@ -913,7 +915,7 @@ void BaselineDetect::ComputeBaselineSplinesAndXheights(const ICOORD &page_tr,
     if (enable_splines) {
       bl_block->PrepareForSplineFitting(page_tr, remove_noise);
     }
-    bl_block->FitBaselineSplines(enable_splines, show_final_rows, textord);
+    bl_block->FitBaselineSplines(enable_splines, textord);
 #if !GRAPHICS_DISABLED
     if (show_final_rows) {
       bl_block->DrawFinalRows(page_tr);

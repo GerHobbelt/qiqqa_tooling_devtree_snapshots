@@ -64,10 +64,7 @@
 
     /* allocate the stack buffer */
     if ( FT_QNEW_ARRAY( parser->stack, stackSize ) )
-    {
-      FT_FREE( parser->stack );
       goto Exit;
-    }
 
     parser->stackSize = stackSize;
     parser->top       = parser->stack;    /* empty stack */
@@ -83,13 +80,16 @@
                        void*      data,
                        void*      user )
   {
-    CFF_T2_String  t2 = (CFF_T2_String)data;
-
-
     FT_UNUSED( user );
 
-    memory->free( memory, t2->start );
-    memory->free( memory, data );
+    if ( data )
+    {
+      CFF_T2_String  t2 = (CFF_T2_String)data;
+
+
+      FT_FREE( t2->start );
+      FT_FREE( data );
+    }
   }
 #endif /* CFF_CONFIG_OPTION_OLD_ENGINE */
 
@@ -759,12 +759,12 @@
       *upm = (FT_ULong)power_tens[-max_scaling];
 
       FT_TRACE4(( " [%f %f %f %f %f %f]\n",
-                  (double)matrix->xx / *upm / 65536,
-                  (double)matrix->xy / *upm / 65536,
-                  (double)matrix->yx / *upm / 65536,
-                  (double)matrix->yy / *upm / 65536,
-                  (double)offset->x  / *upm / 65536,
-                  (double)offset->y  / *upm / 65536 ));
+                  (double)matrix->xx / (double)*upm / 65536,
+                  (double)matrix->xy / (double)*upm / 65536,
+                  (double)matrix->yx / (double)*upm / 65536,
+                  (double)matrix->yy / (double)*upm / 65536,
+                  (double)offset->x  / (double)*upm / 65536,
+                  (double)offset->y  / (double)*upm / 65536 ));
 
       if ( !FT_Matrix_Check( matrix ) )
       {
@@ -1268,7 +1268,7 @@
         FT_Fixed*      stack;
         FT_ListNode    node;
         CFF_T2_String  t2;
-        FT_Fixed       t2_size;
+        FT_PtrDist     t2_size;
         FT_Byte*       q;
 
 
@@ -1310,18 +1310,13 @@
         /* Now copy the stack data in the temporary decoder object,    */
         /* converting it back to charstring number representations     */
         /* (this is ugly, I know).                                     */
-
-        node = (FT_ListNode)memory->alloc( memory,
-                                           sizeof ( FT_ListNodeRec ) );
-        if ( !node )
-          goto Out_Of_Memory_Error;
+        if ( FT_NEW( node ) )
+          goto Exit;
 
         FT_List_Add( &parser->t2_strings, node );
 
-        t2 = (CFF_T2_String)memory->alloc( memory,
-                                           sizeof ( CFF_T2_StringRec ) );
-        if ( !t2 )
-          goto Out_Of_Memory_Error;
+        if ( FT_NEW( t2 ) )
+          goto Exit;
 
         node->data = t2;
 
@@ -1330,9 +1325,8 @@
 
         t2_size = 5 * ( decoder.top - decoder.stack );
 
-        q = (FT_Byte*)memory->alloc( memory, t2_size );
-        if ( !q )
-          goto Out_Of_Memory_Error;
+        if ( FT_QALLOC( q, t2_size ) )
+          goto Exit;
 
         t2->start = q;
         t2->limit = q + t2_size;
@@ -1341,8 +1335,7 @@
 
         while ( stack < decoder.top )
         {
-          FT_ULong  num;
-          FT_Bool   neg;
+          FT_Long  num = *stack;
 
 
           if ( (FT_UInt)( parser->top - parser->stack ) >= parser->stackSize )
@@ -1350,65 +1343,35 @@
 
           *parser->top++ = q;
 
-          if ( *stack < 0 )
-          {
-            num = (FT_ULong)NEG_LONG( *stack );
-            neg = 1;
-          }
-          else
-          {
-            num = (FT_ULong)*stack;
-            neg = 0;
-          }
-
           if ( num & 0xFFFFU )
           {
-            if ( neg )
-              num = (FT_ULong)-num;
-
             *q++ = 255;
-            *q++ = ( num & 0xFF000000U ) >> 24;
-            *q++ = ( num & 0x00FF0000U ) >> 16;
-            *q++ = ( num & 0x0000FF00U ) >>  8;
-            *q++ =   num & 0x000000FFU;
+            *q++ = (FT_Byte)( ( num >> 24 ) & 0xFF );
+            *q++ = (FT_Byte)( ( num >> 16 ) & 0xFF );
+            *q++ = (FT_Byte)( ( num >>  8 ) & 0xFF );
+            *q++ = (FT_Byte)( ( num       ) & 0xFF );
           }
           else
           {
             num >>= 16;
 
-            if ( neg )
+            if ( -107 <= num && num <= 107 )
+              *q++ = (FT_Byte)( num + 139 );
+            else if ( 108 <= num && num <= 1131 )
             {
-              if ( num <= 107 )
-                *q++ = (FT_Byte)( 139 - num );
-              else if ( num <= 1131 )
-              {
-                *q++ = (FT_Byte)( ( ( num - 108 ) >> 8 ) + 251 );
-                *q++ = (FT_Byte)( ( num - 108 ) & 0xFF );
-              }
-              else
-              {
-                num = (FT_ULong)-num;
-
-                *q++ = 28;
-                *q++ = (FT_Byte)( num >> 8 );
-                *q++ = (FT_Byte)( num & 0xFF );
-              }
+              *q++ = (FT_Byte)( ( ( num - 108 ) >> 8 ) + 247 );
+              *q++ = (FT_Byte)( ( num - 108 ) & 0xFF );
+            }
+            else if ( -1131 <= num && num <= -108 )
+            {
+              *q++ = (FT_Byte)( ( ( -num - 108 ) >> 8 ) + 251 );
+              *q++ = (FT_Byte)( ( -num - 108) & 0xFF );
             }
             else
             {
-              if ( num <= 107 )
-                *q++ = (FT_Byte)( num + 139 );
-              else if ( num <= 1131 )
-              {
-                *q++ = (FT_Byte)( ( ( num - 108 ) >> 8 ) + 247 );
-                *q++ = (FT_Byte)( ( num - 108 ) & 0xFF );
-              }
-              else
-              {
-                *q++ = 28;
-                *q++ = (FT_Byte)( num >> 8 );
-                *q++ = (FT_Byte)( num & 0xFF );
-              }
+              *q++ = 28;
+              *q++ = (FT_Byte)( num >> 8 );
+              *q++ = (FT_Byte)( num & 0xFF );
             }
           }
 
@@ -1598,12 +1561,6 @@
 
   Exit:
     return error;
-
-#ifdef CFF_CONFIG_OPTION_OLD_ENGINE
-  Out_Of_Memory_Error:
-    error = FT_THROW( Out_Of_Memory );
-    goto Exit;
-#endif
 
   Stack_Overflow:
     error = FT_THROW( Invalid_Argument );
