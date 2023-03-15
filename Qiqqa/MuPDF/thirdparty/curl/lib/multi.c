@@ -976,7 +976,7 @@ void Curl_attach_connection(struct Curl_easy *data,
   data->conn = conn;
   Curl_llist_insert_next(&conn->easyq, conn->easyq.tail, data,
                          &data->conn_queue);
-  if(conn->handler->attach)
+  if(conn->handler && conn->handler->attach)
     conn->handler->attach(data, conn);
   Curl_conn_ev_data_attach(conn, data);
 }
@@ -2712,18 +2712,25 @@ CURLMcode curl_multi_perform(struct Curl_multi *multi, int *running_handles)
     return CURLM_RECURSIVE_API_CALL;
 
   data = multi->easyp;
-  while(data) {
+  if(data) {
     CURLMcode result;
+    bool nosig = data->set.no_signal;
     SIGPIPE_VARIABLE(pipe_st);
-
     sigpipe_ignore(data, &pipe_st);
-    result = multi_runsingle(multi, &now, data);
+    /* Do the loop and only alter the signal ignore state if the next handle
+       has a different NO_SIGNAL state than the previous */
+    do {
+      if(data->set.no_signal != nosig) {
+        sigpipe_restore(&pipe_st);
+        sigpipe_ignore(data, &pipe_st);
+        nosig = data->set.no_signal;
+      }
+      result = multi_runsingle(multi, &now, data);
+      if(result)
+        returncode = result;
+      data = data->next; /* operate on next handle */
+    } while(data);
     sigpipe_restore(&pipe_st);
-
-    if(result)
-      returncode = result;
-
-    data = data->next; /* operate on next handle */
   }
 
   /*

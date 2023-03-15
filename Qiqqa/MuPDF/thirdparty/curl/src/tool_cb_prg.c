@@ -275,7 +275,7 @@ void progressbarinit(struct ProgressData *bar,
   else if(bar->width > MAX_BARLENGTH)
     bar->width = MAX_BARLENGTH;
 
-  bar->out = config->global->errors;
+  bar->out = stderr;
   bar->tick = 150;
   bar->barmove = 1;
 }
@@ -330,6 +330,6 @@ void progresspercentinit(struct ProgressPercent *perc,
 {
   memset(perc, 0, sizeof(struct ProgressPercent));
 
-  perc->out = config->global->errors;
+  perc->out = stderr;
   perc->tick = 250;
 }

@@ -1063,6 +1063,7 @@ struct connectdata {
   unsigned char ip_version; /* copied from the Curl_easy at creation time */
   unsigned char httpversion; /* the HTTP version*10 reported by the server */
   unsigned char connect_only;
+  unsigned char gssapi_delegation; /* inherited from set.gssapi_delegation */
 };
 
 /* The end of connectdata. */
@@ -1380,7 +1381,7 @@ struct UrlState {
   struct dynbuf trailers_buf; /* a buffer containing the compiled trailing
                                  headers */
   struct Curl_llist httphdrs; /* received headers */
-  struct curl_header headerout; /* for external purposes */
+  struct curl_header headerout[2]; /* for external purposes */
   struct Curl_header_store *prevhead; /* the latest added header */
   trailers_state trailers_state; /* whether we are sending trailers
                                     and what stage are we at */
@@ -1724,8 +1725,6 @@ struct UserDefined {
 #ifndef CURL_DISABLE_NETRC
   unsigned char use_netrc;        /* enum CURL_NETRC_OPTION values  */
 #endif
-  curl_usessl use_ssl;   /* if AUTH TLS is to be attempted etc, for FTP or
-                            IMAP or POP3 or others! */
   unsigned int new_file_perms;      /* when creating remote files */
   char *str[STRING_LAST]; /* array of strings, pointing to allocated memory */
   struct curl_blob *blobs[BLOB_LAST];
@@ -1787,6 +1786,8 @@ struct UserDefined {
   BIT(mail_rcpt_allowfails); /* allow RCPT TO command to fail for some
                                 recipients */
 #endif
+  unsigned char use_ssl;   /* if AUTH TLS is to be attempted etc, for FTP or
+                              IMAP or POP3 or others! (type: curl_usessl)*/
   unsigned char connect_only; /* make connection/request, then let
                                  application use the socket */
   BIT(is_fread_set); /* has read callback been set to non-NULL? */

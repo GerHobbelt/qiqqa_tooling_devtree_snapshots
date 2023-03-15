@@ -296,33 +296,6 @@ static const struct Curl_handler * const protocols[] = {
   (struct Curl_handler *) NULL
 };
 
-/*
- * Dummy handler for undefined protocol schemes.
- */
-
-static const struct Curl_handler Curl_handler_dummy = {
-  "<no protocol>",                      /* scheme */
-  ZERO_NULL,                            /* setup_connection */
-  ZERO_NULL,                            /* do_it */
-  ZERO_NULL,                            /* done */
-  ZERO_NULL,                            /* do_more */
-  ZERO_NULL,                            /* connect_it */
-  ZERO_NULL,                            /* connecting */
-  ZERO_NULL,                            /* doing */
-  ZERO_NULL,                            /* proto_getsock */
-  ZERO_NULL,                            /* doing_getsock */
-  ZERO_NULL,                            /* domore_getsock */
-  ZERO_NULL,                            /* perform_getsock */
-  ZERO_NULL,                            /* disconnect */
-  ZERO_NULL,                            /* readwrite */
-  ZERO_NULL,                            /* connection_check */
-  ZERO_NULL,                            /* attach connection */
-  0,                                    /* defport */
-  0,                                    /* protocol */
-  0,                                    /* family */
-  PROTOPT_NONE                          /* flags */
-};
-
 void Curl_freeset(struct Curl_easy *data)
 {
   /* Free all dynamic strings stored in the data->set substructure. */
@@ -349,6 +322,11 @@ void Curl_freeset(struct Curl_easy *data)
   data->state.url = NULL;
 
   Curl_mime_cleanpart(&data->set.mimepost);
+
+#ifndef CURL_DISABLE_COOKIES
+  curl_slist_free_all(data->set.cookielist);
+  data->set.cookielist = NULL;
+#endif
 }
 
 /* free the URL pieces */
@@ -439,9 +417,6 @@ CURLcode Curl_close(struct Curl_easy **datap)
   Curl_dyn_free(&data->state.headerb);
   Curl_safefree(data->state.ulbuf);
   Curl_flush_cookies(data, TRUE);
-#ifndef CURL_DISABLE_COOKIES
-  curl_slist_free_all(data->set.cookielist); /* clean up list */
-#endif
   Curl_altsvc_save(data, data->asi, data->set.str[STRING_ALTSVC]);
   Curl_altsvc_cleanup(&data->asi);
   Curl_hsts_save(data, data->hsts, data->set.str[STRING_HSTS]);
@@ -844,7 +819,7 @@ void Curl_disconnect(struct Curl_easy *data,
      disconnect and shutdown */
   Curl_attach_connection(data, conn);
 
-  if(conn->handler->disconnect)
+  if(conn->handler && conn->handler->disconnect)
     /* This is set if protocol-specific cleanups should be made */
     conn->handler->disconnect(data, conn, dead_connection);
 
@@ -1325,6 +1300,11 @@ ConnectionExists(struct Curl_easy *data,
         }
       }
 
+      /* GSS delegation differences do not actually affect every connection
+         and auth method, but this check takes precaution before efficiency */
+      if(needle->gssapi_delegation != check->gssapi_delegation)
+        continue;
+
       /* If multiplexing isn't enabled on the h2 connection and h1 is
          explicitly requested, handle it: */
       if((needle->handler->protocol & PROTO_FAMILY_HTTP) &&
@@ -1333,11 +1313,24 @@ ConnectionExists(struct Curl_easy *data,
           || ((check->httpversion >= 30) &&
            (data->state.httpwant < CURL_HTTP_VERSION_3))))
         continue;
-
-      if(get_protocol_family(needle->handler) == PROTO_FAMILY_SSH) {
+#ifdef USE_SSH
+      else if(get_protocol_family(needle->handler) & PROTO_FAMILY_SSH) {
         if(!ssh_config_matches(needle, check))
           continue;
       }
+#endif
+#ifndef CURL_DISABLE_FTP
+      else if(get_protocol_family(needle->handler) & PROTO_FAMILY_FTP) {
+        /* Also match ACCOUNT, ALTERNATIVE-TO-USER, USE_SSL and CCC options */
+        if(Curl_timestrcmp(needle->proto.ftpc.account,
+                           check->proto.ftpc.account) ||
+           Curl_timestrcmp(needle->proto.ftpc.alternative_to_user,
+                           check->proto.ftpc.alternative_to_user) ||
+           (needle->proto.ftpc.use_ssl != check->proto.ftpc.use_ssl) ||
+           (needle->proto.ftpc.ccc != check->proto.ftpc.ccc))
+          continue;
+      }
+#endif
 
       if((needle->handler->flags&PROTOPT_SSL)
 #ifndef CURL_DISABLE_PROXY
@@ -1528,10 +1521,6 @@ static struct connectdata *allocate_conn(struct Curl_easy *data)
   if(!conn)
     return NULL;
 
-  conn->handler = &Curl_handler_dummy;  /* Be sure we have a handler defined
-                                           already from start to avoid NULL
-                                           situations and checks */
-
   /* and we setup a few fields in case we end up actually using this struct */
 
   conn->sock[FIRSTSOCKET] = CURL_SOCKET_BAD;     /* no file descriptor */
@@ -1623,6 +1612,7 @@ static struct connectdata *allocate_conn(struct Curl_easy *data)
   conn->fclosesocket = data->set.fclosesocket;
   conn->closesocket_client = data->set.closesocket_client;
   conn->lastused = Curl_now(); /* used now */
+  conn->gssapi_delegation = data->set.gssapi_delegation;
 
   return conn;
   error:

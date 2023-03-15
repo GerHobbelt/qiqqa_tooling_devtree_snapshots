@@ -74,15 +74,15 @@ static void open_browser(const char *uri)
 {
 	char buf[PATH_MAX];
 
-	/* Relative file:// URI, make it absolute! */
-	if (!strncmp(uri, "file://", 7) && uri[7] != '/')
+	/* Relative file: URI, make it absolute! */
+	if (!strncmp(uri, "file:", 5) && uri[5] != '/')
 	{
 		char buf_base[PATH_MAX];
 		char buf_cwd[PATH_MAX];
 		fz_dirname(buf_base, filename, sizeof buf_base);
 		if (getcwd(buf_cwd, sizeof buf_cwd))
 		{
-			fz_snprintf(buf, sizeof buf, "file://%s/%s/%s", buf_cwd, buf_base, uri + 7);
+			fz_snprintf(buf, sizeof buf, "file://%s/%s/%s", buf_cwd, buf_base, uri+5);
 			fz_cleanname(buf + 7);
 			uri = buf;
 		}
@@ -1001,17 +1001,30 @@ void render_page(void)
 		fz_clear_pixmap(ctx, page_contents);
 
 		dev = fz_new_draw_device(ctx, draw_page_ctm, page_contents);
-		fz_run_page_contents(ctx, fzpage, dev, fz_identity);
-		fz_close_device(ctx, dev);
-		fz_drop_device(ctx, dev);
+
+		fz_try(ctx)
+		{
+			fz_run_page_contents(ctx, fzpage, dev, fz_identity);
+			fz_close_device(ctx, dev);
+		}
+		fz_always(ctx)
+			fz_drop_device(ctx, dev);
+		fz_catch(ctx)
+			fz_rethrow(ctx);
 	}
 
 	pix = fz_clone_pixmap_area_with_different_seps(ctx, page_contents, NULL, fz_device_rgb(ctx), NULL, fz_default_color_params, NULL);
 	{
 		dev = fz_new_draw_device(ctx, draw_page_ctm, pix);
-		fz_run_page_annots(ctx, fzpage, dev, fz_identity);
-		fz_close_device(ctx, dev);
-		fz_drop_device(ctx, dev);
+		fz_try(ctx)
+		{
+			fz_run_page_annots(ctx, fzpage, dev, fz_identity);
+			fz_close_device(ctx, dev);
+		}
+		fz_always(ctx)
+			fz_drop_device(ctx, dev);
+		fz_catch(ctx)
+			fz_rethrow(ctx);
 	}
 
 	if (currentinvert)
@@ -1725,6 +1738,21 @@ static void load_document(void)
 
 	fz_drop_outline(ctx, outline);
 	fz_drop_document(ctx, doc);
+
+	if (!strncmp(filename, "file://", 7))
+	{
+		anchor = strchr(filename + 7, '#');
+		if (anchor)
+		{
+			// prevent buffer overflow:
+			filename[sizeof(filename) - 2] = 0;
+			char* dst = &filename[anchor - filename];
+			memmove(dst + 1, anchor, strlen(anchor) + 1);
+			*dst = 0;                  // is:   *anchor = 0; but with non-const pointer
+			anchor++;
+		}
+		memmove(filename, filename + 7, strlen(filename) + 1);
+	}
 
 	/* If there was an accelerator to load, what would it be called? */
 	if (get_accelerator_filename(accelpath, sizeof(accelpath)))
@@ -2469,6 +2497,8 @@ static char *short_signature_error_desc(pdf_signature_error err)
 		return "Self-signed in chain";
 	case PDF_SIGNATURE_ERROR_NOT_TRUSTED:
 		return "Untrusted";
+	case PDF_SIGNATURE_ERROR_NOT_SIGNED:
+		return "Not signed";
 	default:
 	case PDF_SIGNATURE_ERROR_UNKNOWN:
 		return "Unknown error";

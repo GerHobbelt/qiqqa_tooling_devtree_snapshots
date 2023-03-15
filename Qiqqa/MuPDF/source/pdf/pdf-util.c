@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2021 Artifex Software, Inc.
+// Copyright (C) 2004-2023 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -67,6 +67,8 @@ pdf_new_pixmap_from_annot(fz_context *ctx, pdf_annot *annot, fz_matrix ctm, fz_c
 	rect = pdf_bound_annot(ctx, annot);
 	rect = fz_transform_rect(rect, ctm);
 	bbox = fz_round_rect(rect);
+	if (fz_is_infinite_irect(bbox))
+		fz_throw(ctx, FZ_ERROR_GENERIC, "infinite annot bounds");
 
 	pix = fz_new_pixmap_with_bbox(ctx, cs, bbox, seps, alpha);
 	if (alpha)
