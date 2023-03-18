@@ -719,6 +719,8 @@ taglib\3rdparty\utf8-cpp
 
 ../../../thirdparty/DirScanner
 
+../../../docs-src/Notes
+
 EOF
 
 cat > utils/tmp.bat  <<EOF
