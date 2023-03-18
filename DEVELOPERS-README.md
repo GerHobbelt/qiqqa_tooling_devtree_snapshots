@@ -68,7 +68,7 @@ This is a view of the Visual Studio 2022 Installer (which sits in your Windows S
 - use as desired.  
 
 
-## /TBD/ *Make sure to read the [detailed DEVELOPER NOTES](docs/Notes/DEVELOPER-NOTES.md)* /TBD/ 
+## /TBD/ *Make sure to read the [detailed DEVELOPER NOTES](Qiqqa/MuPDF/docs/Notes/DEVELOPERS-README.md)* /TBD/ 
 
 > Those notes are managed using [Obsidian](https://obsidian.md/); it might be handy to install that tool as it simplifies browsing through those wiki-style Markdown notes stored in `/docs/Notes/`.
 
