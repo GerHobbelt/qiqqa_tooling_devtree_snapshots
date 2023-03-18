@@ -4,6 +4,40 @@
 Currently supported: MSVC 2022 (Microsoft Visual Studio 2022) :: `/platform/win32/mupdf.sln`
 
 
+# Prerequisites
+
+## NASM (Assembler) + Visual Studio add-on
+
+> When missing, you'll see "*missing `nasm.props`*" errors when attempting a build.
+
+You need to install the *NASM for Visual Studio add-on*:
+
+- First, you'll first need to **install NASM** by way of https://github.com/netwide-assembler/nasm --> https://nasm.us/ --> https://www.nasm.us/pub/nasm/releasebuilds/2.16.01/win64/
+
+- Then you can install the required Visual Studio 2022 add-on (VSNASM), which can be found at: https://github.com/ShiftMediaProject/VSNASM -- for install instruction, see the README there.
+
+
+## Visual Studio ATL/MFC C++ SDK component
+
+(rewrite)
+
+> error: "*missing `afxres.h`*"
+
+Definitely a case of von Moltke ("no plan survives first contact")  :-) 
+
+The `afxres.h` one is resolved by installing the MFC component in Microsoft Developer Studio, as it is obtained from there. We don't use MFC otherwise, not yet anyway. Turns out I don't suffer from this error as I always install the MFC SDK out of old habit.
+
+You can fix this by having a look in the Visual Studio installer and see if you can get the MFC SDK/component installed.
+
+![screenshot](vs-setup-img1.png)
+
+This is a view of the Visual Studio 2022 Installer (which sits in your Windows Start menu): note the blue checks for C++ and .NET development; when you fold the right side open (as shown) for the C++ development entry, you'll notice I've got ATL + MFC ticked ON: that combo is what produces the `afxres.h` file. (And I think these might be expected as well when we start to include wxWidgets GUI work later on, so it's good to install those anyway, if they aren't already.)
+
+
+
+
+
+
 # Building the tools & libraries
 
 - Open the `mupdf.sln` solution in `Qiqqa/MuPDF/platform/win32/`
