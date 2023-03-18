@@ -1,7 +1,10 @@
 
 # For developers
 
-Currently supported: MSVC 2022 (Microsoft Visual Studio 2022) :: `/platform/win32/mupdf.sln`
+Currently supported: MSVC 2022 (Microsoft Visual Studio 2022) ::
+
+- `/platform/win32/mupdf.sln` (**main project/repository Visual Studio solution**)
+- `/platform/win32/mupdf_dev.sln`  (**primarily for qiqqa backend tooling devs, but when you get here, that's who you are 😉 **)
 
 
 # Prerequisites
