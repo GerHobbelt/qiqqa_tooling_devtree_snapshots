@@ -43,6 +43,7 @@
 #endif  /* HAVE_CONFIG_H */
 
 #include "allheaders.h"
+#include "demo_settings.h"
 
 #include "monolithic_examples.h"
 
@@ -99,6 +100,7 @@ SARRAY  *safiles;
         pixDestroy(&pixd);
         boxaDestroy(&boxa1);
         boxaDestroy(&boxa2);
+		stringDestroy(&outfile);
     }
 
     return 0;

@@ -55,14 +55,13 @@ XFAIL_TESTS =
 CLEANFILES = test_packbits.tif o-*
 
 if HAVE_JPEG
-if TIFF_TOOLS
 JPEG_DEPENDENT_CHECK_PROG=raw_decode
 JPEG_DEPENDENT_TESTSCRIPTS=\
 	tiff2rgba-quad-tile.jpg.sh \
 	tiff2rgba-ojpeg_zackthecat_subsamp22_single_strip.sh \
 	tiff2rgba-ojpeg_chewey_subsamp21_multi_strip.sh \
 	tiff2rgba-ojpeg_single_strip_no_rowsperstrip.sh
-endif
+
 else
 JPEG_DEPENDENT_CHECK_PROG=
 JPEG_DEPENDENT_TESTSCRIPTS=
@@ -81,7 +80,6 @@ check_PROGRAMS = \
 endif
 
 # Test scripts to execute
-if TIFF_TOOLS
 TESTSCRIPTS = \
 	ppm2tiff_pbm.sh \
 	ppm2tiff_pgm.sh \
@@ -163,9 +161,6 @@ TESTSCRIPTS = \
 	testfax3_bug_513.sh \
 	testdeflatelaststripextradata.sh \
 	$(JPEG_DEPENDENT_TESTSCRIPTS)
-else
-TESTSCRIPTS=
-endif
 
 # This list should contain the references files
 # from the 'refs' subdirectory
@@ -221,7 +216,6 @@ IMAGES_EXTRA_DIST = \
 	images/test_ifd_loop_to_self.tif \
 	images/test_ifd_loop_to_first.tif \
 	images/test_two_ifds.tif \
-	images/test_ifd_loop_subifd.tif \
 	$(PNMIMAGES) \
 	$(TIFFIMAGES)
 

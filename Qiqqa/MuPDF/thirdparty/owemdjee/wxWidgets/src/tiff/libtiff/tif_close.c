@@ -147,12 +147,9 @@ void _TIFFCleanupIFDOffsetAndNumberMaps(TIFF *tif)
 
 void TIFFClose(TIFF *tif)
 {
-    if (tif != NULL)
-    {
-        TIFFCloseProc closeproc = tif->tif_closeproc;
-        thandle_t fd = tif->tif_clientdata;
+    TIFFCloseProc closeproc = tif->tif_closeproc;
+    thandle_t fd = tif->tif_clientdata;
 
-        TIFFCleanup(tif);
-        (void)(*closeproc)(fd);
-    }
+    TIFFCleanup(tif);
+    (void)(*closeproc)(fd);
 }

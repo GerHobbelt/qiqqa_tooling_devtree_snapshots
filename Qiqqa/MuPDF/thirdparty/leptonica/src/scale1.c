@@ -1305,6 +1305,13 @@ cleanup:
  *          subsampling (%scalex and/or %scaley < 1.0).
  *      (2) If %scalex == 1.0 and %scaley == 1.0, returns a copy.
  *      (3) For upscaling by an integer, use pixExpandReplicate().
+ *      (4) By default, indexing for the sampled source pixel is done
+ *          by rounding.  This shifts the source pixel sampling down
+ *          and to the right by half a pixel, which has the effect of
+ *          shifting the destination image up and to the left by a
+ *          number of pixels approximately equal to half the scaling
+ *          factor.  To avoid this shift in the destination image,
+ *          call pixScalebySamplingWithShift() using 0 for both shifts.
  * </pre>
  */
 PIX *
@@ -2139,6 +2146,13 @@ l_float32  scalex, scaley;
  *      (1) This function samples from the source without
  *          filtering.  As a result, aliasing will occur for
  *          subsampling (scalex and scaley < 1.0).
+ *      (2) By default, indexing for the sampled source pixel is done
+ *          by rounding.  This shifts the source pixel sampling down
+ *          and to the right by half a pixel, which has the effect of
+ *          shifting the destination image up and to the left by a
+ *          number of pixels approximately equal to half the scaling
+ *          factor.  To avoid this shift in the destination image,
+ *          call pixScalebySamplingWithShift() using 0 for both shifts.
  * </pre>
  */
 PIX *
