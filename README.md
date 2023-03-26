@@ -6,7 +6,7 @@
 
 This repo carries full source tree snapshots of the Qiqqa tooling dev source tree for when you don't want to be bothered with git/submodules management intricacies.
 
-Unused / unreferenced research libraries are not included; this monolithic source tree attempts to represent only those bits of the R&D dev treee that *build* to usable tools. *This does not mean we exclude test applications: those are *useful* too, if from a slightly different developer perspective.*
+Unused / unreferenced research libraries are not included; this monolithic source tree attempts to represent only those bits of the R&D dev tree that *build* to usable tools. *This does not mean we exclude test applications: those are *useful* too, if from a slightly different developer perspective.*
 
 
 ## Why & For Whom?
