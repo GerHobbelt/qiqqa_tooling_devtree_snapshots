@@ -22,7 +22,7 @@ Two reasons (or *three*...):
 
 # How?
 
-- the snapshots are created using tooling (scripts 'n' stuff); initially some parts might be done manually. The *goal* is to have the snapshot process manually triggered (management decision!) and then executed fully automatically.
+- the snapshots are created using tooling ([scripts 'n' stuff](https://github.com/GerHobbelt/qiqqa_tooling_devtree_snapshots/tree/main/utils)); initially some parts might be done manually. The *goal* is to have the snapshot process manually triggered (management decision!) and then executed fully automatically.
 - **when you use this repo as a dev and apply changes, be very cautious about feeding those changes back into the master dev tree!** As this feeding-back is a hairy and costly process (due to this repo storing *snapshots* which are, by definition, historical, i.e. *lagging behind*), we DO NOT accept pull-reqs on this nor do we endorse or advise using this snapshot source tree repo for any other purpose than *non-modifiable reference material* applications, such as mentioned in the 'Why?' section above.
 
 
