@@ -6,17 +6,17 @@ But before we go there, let's backpedal a bit and look at the bigger picture of 
 
 ## Old Qiqqa
 
-'*Old Qiqqa*' is a near-monolithic application that way: it has a UI (which in WPF/.NET is served by a single thread by (Microsoft) design), *business logic*, a database (SQLite) and a FTS Engine (Full Text Search Engine) through Lucene.NET, all as *libraries* (Windows DLLs). Then there's a couple of commercial libraries used as well: Intragistics for parts of the UI and some PDF metadata (*page count* extraction) and (*now defunct*) SORAX for PDF page image rendering. All *communications* among these is via library function calls as usual so call overhead is cheap (the biggest costs there are data marshalling in various places and some thread context switching).
+'*Old Qiqqa*' is a near-monolithic application that way: it has a UI (which in WPF/.NET is served by a single thread by (Microsoft) design), *business logic*, a database (SQLite) and a FTS Engine (Full Text Search Engine) through Lucene.NET, all as *libraries* (Windows DLLs). Then there's a couple of commercial libraries used as well: Infragistics for parts of the UI and some PDF metadata (*page count* extraction) and (*now defunct*) SORAX for PDF page image rendering. All *communications* among these is via library function calls as usual so call overhead is cheap (the biggest costs there are data marshalling in various places and some thread context switching).
 
 '*Old Qiqqa*' also has a few external applications it uses for specific tasks: `QiqqaOCR.exe` is a C#/.NET application using SORAX and `tesseract.net` (a .NET wrapper for `tesseract` v3, the Open Source OCR engine) to help with PDF text extraction and PDF OCR, when the text layer is not present in the PDF. `QiqqaOCR.exe` also uses an old, patched, `pdfdraw` application from Artifex (MuPDF v1.11 or there-about) for the text extraction work itself, when no OCR is required. Qiqqa does this through this external application to improve overall user-facing application stability as these tools are/were quite finicky and brittle.
 
-v83 Qiqqa is still '*Old Qiqqa*' that way, but has been slowly moving all costly business logic out of the UI thread to improve UI responsiveness. A *synchronous* to *asynchronous* event handling transition in the application, which is generally cause for reams of bugs to surface -- as has happened to the various v83 experimental releases. It's never a nice story, but it had to happen as a prelude to transitioning Qiqqa to a '*New Qiqqa*': this phase showed various issues in the Qiqqa codebase that will also cause difficulties when we pull the monolith apart into several processing chunks.
+v83 Qiqqa is still '*Old Qiqqa*' that way, but has been slowly moving all costly business logic out of the UI thread to improve UI responsiveness. A *synchronous* to *asynchronous* event handling transition in the application, which is generally cause for reams of bugs to surface -- as has happened to the various v83 experimental releases. It's never a nice story, but it had to happen as a prelude to transitioning Qiqqa to a '*New Qiqqa*': this phase showed various issues in the Qiqqa code-base that will also cause difficulties when we pull the monolith apart into several processing chunks.
 
 ### Important Note
 
 While generally it is easy to invoke external applications on Windows via `execve()` et al (Windows **does not provide a `fork()` API of any kind!**), redirecting stdin/stdout/stderr is a little more involved and pretty important in our case:
 
-- `QiqqaOCR` spits out all kinds of logging info via stdout/stderr, which has to be filed in the logfiles using qiqqa's own log4net logging library. No problem so far.
+- `QiqqaOCR` spits out all kinds of logging info via stdout/stderr, which has to be filed in the log-files using qiqqa's own log4net logging library. No problem so far.
 - `QiqqaOCR` -- or another external application, e.g. bleeding edge MuPDF `mudraw` -- was initially designated as the tool to replace the SORAX render library: *external tool* instead of *library* so we don't have to hassle with marshalling *image data* across the native-to-.NET DLL boundary, *plus* we hoped it would allow us to run 64-bit modern applications as part of the Qiqqa 'back-end'. 
 
    This was considered a good first step as part of the *transitional phase* of Qiqqa from Old to New.
@@ -308,7 +308,8 @@ Flatbuffers/Protocolbuffers/Msgpack have been considered as well and deemed *too
    > -  **WebSockets** 
    >    The WebSocket protocol allows for constant, bi-directional communication between the server and client.
    >  
-   > \[...] 
+   > \[...\]
+   >  
    > ### Conclusion
    > 
    > In the current state of the web, short and long-polling have a much higher bandwidth cost than other options, but may be considered if supporting legacy browsers. Short-polling requires estimating an interval that suits an application’s requirements. Regardless of the estimation’s accuracy, there will be a higher cost due to continuously opening new requests. If using HTTP/1.1, this results in passing headers unnecessarily and potentially opening multiple TCP connections if parallel polls are open. Long-polling reduces these costs significantly by receiving one update per request.
@@ -337,7 +338,7 @@ Flatbuffers/Protocolbuffers/Msgpack have been considered as well and deemed *too
    > 
    > The following piece of code did the magic for our application to achieve the 4X performance.
    > 
-      > ```
+   > ```
    > int OptionValue = 1;
    > DWORD NumberOfBytesReturned = 0;
    >  
@@ -368,3 +369,99 @@ Flatbuffers/Protocolbuffers/Msgpack have been considered as well and deemed *too
    >     }
    > } 
    > ```
+
+-------------------
+
+## Update May 2023
+
+I was of two minds whether ZeroMQ(+TCP) would be useful at all for local communications between application components, the idea being that I want everyone to be able to access the backend anyway and using REST is the obvious approach there as that makes access simple & easy for any programmer and language they want to use.
+
+REST (HTTP/GET) nowadays would imply we'ld need HTTPS for localhost -- see also https://weblog.west-wind.com/posts/2022/Oct/24/Fix-automatic-rerouting-of-http-to-https-on-localhost-in-Web-Browsers for one of the reasons: we MUST assume the user will be running other applications on their machine at any time and when only one of them uses HSTS, we're toast when we do not also include the HTTPS encryption/decryption *overhead* for our REST messages -- something I don't see as adding any kind of benefit when comms are all `localhost` loopback...)
+
+The alternative, *faster* IPC for `localhost` traffic would be using a memory-mapped comms system, such as [iceoryx](https://github.com/eclipse-iceoryx/iceoryx), but I wasn't eager to implement that *immediately* as those performance benefits only MAY become apparent when the Qiqqa system is under heavy load and reducing overhead would become important enough to save on energy consumption and general overhead costs. However, [the article referenced above](https://github.com/eclipse-iceoryx/iceoryx), reminded me of the importance of having a simple & *fast* comms system next to regular REST and it should be implemented straight away as HSTS is a hidden issue that can pop up at arbitrary customer machines, thanks to the domain-wide enforcement by the browsers (which are backing our `webviews`  in any GUI we're about to produce), so it' either immediate use of [iceoryx](https://github.com/eclipse-iceoryx/iceoryx) throughout our design, with REST-style access for "external use by others", and MAYBE adding ZeroMQ-based IPC as well as a simple TCP-based, ah, "intermediate level alternative for arbitrary programming languages", because shared memory and named pipes are beautiful, but, in my experience, not everyone' cup of tea -- *simplicity of access* then being the reason to offer REST access (HTTP**S**/GET!) and ZeroMQ-TCP / iceoryx-shmem for advanced users and internal usage...
+
+🤔 ... and then we'ld have to come up with an iceoryx-compatible IPC codebase for C# and JavaScript as those will be our own *interfacing languages* for the GUI/front-end side of the overall Qiqqa application 🤔🤔 ... which is no sine cure for JavaScript, at least, so we might be well served ourselves by offering ZeroMQ/TCP alongside, so we can guarantee low interfacing overhead (no encrypt/decrypt) between our own old (C#) + new (JavaScript/webview) front-ends and C/C++ backend. 🤔 Unless we can find a cross-platform way to get iceoryx-style shared memory access into those platforms without much effort -- not a great  chance at achieving that, so we'ld better consider using ZeroMQ and seeing how can integrate iceoryx-style shmem access into that one: IIRC ZeroMQ doesn't support shmem on Windows?
+
+
+
+### The solution to this conundrum? `nanomsg`?
+
+- https://nanomsg.org/documentation-zeromq.html
+
+The important bits follow below:
+
+---------------
+
+> **NOTE**
+> 
+> Much has changed since this was written, both in nanomsg and ZeroMQ. Nonetheless this document may be of interest to understand the historical motivations behind nanomsg in the words of the original author of both ZeroMQ and nanomsg.
+> 
+
+
+### POSIX Compliance
+
+ZeroMQ API, while modeled on BSD socket API, doesn’t match the API fully. nanomsg aims for full POSIX compliance.
+
+-   Sockets are represented as ints, not void pointers.
+    
+-   Contexts, as known in ZeroMQ, don’t exist in nanomsg. This means simpler API (sockets can be created in a single step) as well as the possibility of using the library for communication between different modules in a single process (think of plugins implemented in different languages speaking each to another). More discussion can be found [here](http://250bpm.com/blog:23).
+    
+  
+
+### Implementation Language
+
+The library is implemented in C instead of C++.
+
+-   Number of memory allocations is drastically reduced as intrusive containers are used instead of C++ STL containers.
+    
+-   The above also means less memory fragmentation, less cache misses, etc.
+    
+-   More discussion on the C vs. C++ topic can be found [here](http://250bpm.com/blog:4) and [here](http://250bpm.com/blog:8).
+    
+
+### Pluggable Transports and Protocols
+
+In ZeroMQ there was no formal API for plugging in new transports (think WebSockets, DCCP, SCTP) and new protocols (counterparts to REQ/REP, PUB/SUB, etc.) As a consequence there were no new transports added since 2008. No new protocols were implemented either. The formal internal transport API (see [transport.h](https://raw.github.com/nanomsg/nanomsg/master/src/transport.h) and [protocol.h](https://raw.github.com/nanomsg/nanomsg/master/src/protocol.h)) are meant to mitigate the problem and serve as a base for creating and experimenting with new transports and protocols.
+
+Please, be aware that the two APIs are still new and may experience some tweaking in the future to make them usable in wide variety of scenarios.
+
+-   nanomsg implements a new SURVEY protocol. The idea is to send a message ("survey") to multiple peers and wait for responses from all of them. For more details check the article [here](http://250bpm.com/blog:5). Also look [here](http://250bpm.com/blog:20).
+    
+-   In financial services it is quite common to use "deliver messages from anyone to everyone else" kind of messaging. To address this use case, there’s a new BUS protocol implemented in nanomsg. Check the details [here](http://250bpm.com/blog:17).
+    
+
+### Threading Model
+
+One of the big architectural blunders I’ve done in ZeroMQ is its threading model. Each individual object is managed exclusively by a single thread. That works well for async objects handled by worker threads, however, it becomes a trouble for objects managed by user threads. The thread may be used to do unrelated work for arbitrary time span, e.g. an hour, and during that time the object being managed by it is completely stuck. Some unfortunate consequences are: 
+- inability to implement request resending in REQ/REP protocol, 
+- PUB/SUB subscriptions not being applied while application is doing other work, and similar. 
+In nanomsg the objects are not tightly bound to particular threads and thus these problems don’t exist.
+
+-   REQ socket in ZeroMQ cannot be really used in real-world environments, as they get stuck if message is lost due to service failure or similar. Users have to use XREQ instead and implement the request re-trying themselves. With nanomsg, the re-try functionality is built into REQ socket.
+    
+-   In nanomsg, both REQ and REP support cancelling the ongoing processing. Simply send a new request without waiting for a reply (in the case of REQ socket) or grab a new request without replying to the previous one (in the case of REP socket).
+    
+-   In ZeroMQ, due to its threading model, bind-first-then-connect-second scenario doesn’t work for inproc transport. It is fixed in nanomsg.
+    
+-   For similar reasons auto-reconnect doesn’t work for inproc transport in ZeroMQ. This problem is fixed in nanomsg as well.
+    
+-   Finally, nanomsg attempts to make nanomsg sockets thread-safe. While using a single socket from multiple threads in parallel is still discouraged, the way in which ZeroMQ sockets failed randomly in such circumstances proved to be painful and hard to debug.
+    
+
+### IOCP Support
+
+One of the long-standing problems in ZeroMQ was that internally it uses BSD socket API even on Windows platform where it is a second class citizen. Using IOCP instead, as appropriate, would require major rewrite of the codebase and thus, in spite of multiple attempts, was never implemented. IOCP is supposed to have better performance characteristics and, even more importantly, it allows to use additional transport mechanisms such as NamedPipes which are not accessible via BSD socket API. For these reasons nanomsg uses IOCP internally on Windows platforms.
+
+### Level-triggered Polling
+
+One of the aspects of ZeroMQ that proved really confusing for users was the ability to integrate ZeroMQ sockets into an external event loops by using ZMQ_FD file descriptor. The main source of confusion was that the descriptor is edge-triggered, i.e. it signals only when there were no messages before and a new one arrived. nanomsg uses level-triggered file descriptors instead that simply signal when there’s a message available irrespective of whether it was available in the past.
+
+### Zero-Copy
+
+**While ZeroMQ offers a "zero-copy" API, it’s not true zero-copy. Rather it’s "zero-copy till the message gets to the kernel boundary". From that point on data is copied as with standard TCP.** nanomsg, on the other hand, aims at supporting true zero-copy mechanisms such as RDMA (CPU bypass, direct memory-to-memory copying) and shmem (transfer of data between processes on the same box by using shared memory). The API entry points for zero-copy messaging are `nn_allocmsg` and `nn_freemsg` functions in combination with NN_MSG option passed to send/recv functions.
+
+-------------------
+
+🤔 ... or should we rather look into ZeroMQ to make sure those nanomsg improvements & fixes have also made it into ZeroMQ?
+
+- ZeroMQ: https://github.com/zeromq/libzmq, https://github.com/zeromq/libzmq/issues/3934, http://wiki.zeromq.org/blog:zero-copy, 

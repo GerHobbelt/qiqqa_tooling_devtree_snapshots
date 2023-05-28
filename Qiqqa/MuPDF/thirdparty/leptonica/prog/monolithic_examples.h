@@ -265,6 +265,7 @@ int lept_scale_reg_main(int argc, const char **argv);
 int lept_scaleandtile_main(int argc, const char **argv);
 int lept_scaletest1_main(int argc, const char **argv);
 int lept_scaletest2_main(int argc, const char **argv);
+int lept_scaleimages_main(int argc, const char **argv);
 int lept_seedfilltest_main(int argc, const char **argv);
 int lept_seedspread_reg_main(int argc, const char **argv);
 int lept_selio_reg_main(int argc, const char **argv);
@@ -305,6 +306,7 @@ int lept_writemtiff_main(int argc, const char **argv);
 int lept_writetext_reg_main(int argc, const char **argv);
 int lept_xformbox_reg_main(int argc, const char **argv);
 int lept_yuvtest_main(int argc, const char **argv);
+int lept_issue675_check_main(int argc, const char **argv);
 
 #ifdef __cplusplus
 }

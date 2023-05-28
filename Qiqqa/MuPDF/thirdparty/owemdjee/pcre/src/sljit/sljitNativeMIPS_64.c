@@ -24,6 +24,8 @@
  * ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#ifdef SLJIT_IR_AMALGAMATE
+
 /* mips 64-bit arch dependent functions. */
 
 #ifdef SLJIT_API_FUNC_ATTRIBUTE
@@ -128,6 +130,22 @@ static SLJIT_INLINE sljit_s32 emit_const(struct sljit_compiler *compiler, sljit_
 	FAIL_IF(push_inst(compiler, ORI | S(dst) | T(dst) | IMM(init_value >> 16), DR(dst)));
 	FAIL_IF(push_inst(compiler, DSLL | T(dst) | D(dst) | SH_IMM(16), DR(dst)));
 	return push_inst(compiler, ORI | S(dst) | T(dst) | IMM(init_value), DR(dst));
+}
+
+SLJIT_API_FUNC_ATTRIBUTE sljit_s32 sljit_emit_fcopy(struct sljit_compiler *compiler, sljit_s32 op,
+	sljit_s32 freg, sljit_s32 reg)
+{
+	sljit_ins inst;
+
+	CHECK_ERROR();
+	CHECK(check_sljit_emit_fcopy(compiler, op, freg, reg));
+
+	inst = T(reg) | FS(freg);
+
+	if (GET_OPCODE(op) == SLJIT_COPY_TO_F64)
+		return push_inst(compiler, ((op & SLJIT_32) ? MTC1 : DMTC1) | inst, MOVABLE_INS);
+
+	return push_inst(compiler, ((op & SLJIT_32) ? MFC1 : DMFC1) | inst, DR(reg));
 }
 
 SLJIT_API_FUNC_ATTRIBUTE void sljit_set_jump_addr(sljit_uw addr, sljit_uw new_target, sljit_sw executable_offset)
@@ -319,5 +337,7 @@ SLJIT_API_FUNC_ATTRIBUTE sljit_s32 sljit_emit_icall(struct sljit_compiler *compi
 		FAIL_IF(push_inst(compiler, JR | S(PIC_ADDR_REG), UNMOVABLE_INS));
 	return push_inst(compiler, ins, UNMOVABLE_INS);
 }
+
+#endif
 
 #endif

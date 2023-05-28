@@ -610,7 +610,7 @@ argument in 8-bit and 16-bit modes, so we need no more than a 16-bit field
 here.) */
 
 #undef  CODE_BLOCKSIZE_TYPE
-#define CODE_BLOCKSIZE_TYPE size_t
+#define CODE_BLOCKSIZE_TYPE PCRE2_SIZE
 
 #undef  LOOKBEHIND_MAX
 #define LOOKBEHIND_MAX UINT16_MAX
@@ -858,7 +858,7 @@ doing traditional NFA matching (pcre2_match() and friends). */
 
 typedef struct match_block {
   pcre2_memctl memctl;            /* For general use */
-  PCRE2_SIZE heap_limit;          /* As it says */
+  uint32_t heap_limit;            /* As it says */
   uint32_t match_limit;           /* As it says */
   uint32_t match_limit_depth;     /* As it says */
   uint32_t match_call_count;      /* Number of times a new frame is created */
@@ -911,7 +911,7 @@ typedef struct dfa_match_block {
   PCRE2_SPTR last_used_ptr;       /* Latest consulted character */
   const uint8_t *tables;          /* Character tables */
   PCRE2_SIZE start_offset;        /* The start offset value */
-  PCRE2_SIZE heap_limit;          /* As it says */
+  uint32_t heap_limit;            /* As it says */
   PCRE2_SIZE heap_used;           /* As it says */
   uint32_t match_limit;           /* As it says */
   uint32_t match_limit_depth;     /* As it says */

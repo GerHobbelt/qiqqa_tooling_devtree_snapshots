@@ -15,7 +15,6 @@
     #include "wx/intl.h"
     #include "wx/log.h"
     #include "wx/utils.h"
-    #include "wx/memory.h"
     #include "wx/font.h"
 #endif
 
@@ -143,12 +142,9 @@ bool wxApp::DoIdle()
         gs_focusChange = 0;
     }
 
-    bool needMore;
-    do {
-        ProcessPendingEvents();
+    ProcessPendingEvents();
+    const bool needMore = ProcessIdle();
 
-        needMore = ProcessIdle();
-    } while (needMore && gtk_events_pending() == 0);
     gdk_threads_leave();
 
 #if wxUSE_THREADS
@@ -309,6 +305,8 @@ wxApp::wxApp()
 {
     m_isInAssert = false;
     m_idleSourceId = 0;
+
+    WXAppConstructed();
 }
 
 wxApp::~wxApp()

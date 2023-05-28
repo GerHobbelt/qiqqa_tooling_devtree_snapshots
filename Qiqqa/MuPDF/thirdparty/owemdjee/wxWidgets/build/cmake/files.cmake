@@ -464,7 +464,6 @@ set(BASE_CMN_SRC
     src/common/list.cpp
     src/common/log.cpp
     src/common/longlong.cpp
-    src/common/memory.cpp
     src/common/mimecmn.cpp
     src/common/module.cpp
     src/common/mstream.cpp
@@ -1246,6 +1245,7 @@ set(GUI_CMN_HDR
     wx/desktopenv.h
     wx/bmpbndl.h
     wx/filedlgcustomize.h
+    wx/compositebookctrl.h
 )
 
 set(UNIX_SRC
@@ -1623,7 +1623,6 @@ set(MSW_LOWLEVEL_SRC
     src/msw/fontenum.cpp
     src/msw/fontutil.cpp
     src/msw/gdiimage.cpp
-    src/msw/gdiobj.cpp
     src/msw/gdiplus.cpp
     src/msw/graphics.cpp
     src/msw/graphicsd2d.cpp
@@ -1669,6 +1668,7 @@ set(MSW_LOWLEVEL_SRC
     src/msw/evtloop.cpp
     src/msw/ole/access.cpp
     src/msw/bmpbndl.cpp
+    src/msw/overlay.cpp
 )
 
 set(MSW_LOWLEVEL_HDR
@@ -1767,6 +1767,7 @@ set(MSW_SRC
     src/generic/activityindicator.cpp
     src/msw/overlay.cpp
     src/msw/desktopenv.cpp
+    src/msw/darkmode.cpp
 )
 
 set(MSW_HDR
@@ -1873,6 +1874,7 @@ set(MSW_HDR
     wx/msw/datetimectrl.h
     wx/msw/timectrl.h
     wx/generic/activityindicator.h
+    wx/msw/darkmode.h
 )
 
 set(MSW_RSC
@@ -2881,6 +2883,7 @@ set(PROPGRID_HDR
     wx/propgrid/propgridiface.h
     wx/propgrid/propgridpagestate.h
     wx/propgrid/props.h
+    wx/propgrid/private.h
 )
 
 set(RICHTEXT_SRC

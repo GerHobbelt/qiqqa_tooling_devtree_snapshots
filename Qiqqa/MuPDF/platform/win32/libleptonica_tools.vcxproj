@@ -51,20 +51,20 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <ImportGroup Label="PropertySheets">
+  <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project.props" Label="SolutionWideSettings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props" Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
+    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Import Project="$(SolutionDir)\common-project-Release-Win32.props" Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
+    <Import Project="$(SolutionDir)\common-project-Release-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props" Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
+    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <Import Project="$(SolutionDir)\common-project-Release-Win64.props" Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
+    <Import Project="$(SolutionDir)\common-project-Release-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
   </ImportGroup>
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
@@ -78,7 +78,7 @@
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
-  <ItemDefinitionGroup>
+<ItemDefinitionGroup>
     <ClCompile>
       <Optimization>Custom</Optimization>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -112,8 +112,8 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+</ItemDefinitionGroup>
+<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <Optimization>Custom</Optimization>
@@ -133,7 +133,7 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>..\..\include;..\..\scripts\leptonica/include/leptonica;..\..\scripts\libjpeg-turbo;..\..\scripts\libpng;..\..\scripts\libtiff;..\..\thirdparty\leptonica\src;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\libpng;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\zlib;..\..\scripts\zlib;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;..\..\thirdparty\leptonica\prog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;..\..\include;..\..\scripts\leptonica/include/leptonica;..\..\scripts\libjpeg-turbo;..\..\scripts\libpng;..\..\scripts\libtiff;..\..\thirdparty\leptonica\src;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\libpng;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\zlib;..\..\scripts\zlib;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;..\..\thirdparty\leptonica\prog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -156,7 +156,7 @@
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>..\..\include;..\..\scripts\leptonica/include/leptonica;..\..\scripts\libjpeg-turbo;..\..\scripts\libpng;..\..\scripts\libtiff;..\..\thirdparty\leptonica\src;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\libpng;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\zlib;..\..\scripts\zlib;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;..\..\thirdparty\leptonica\prog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;..\..\include;..\..\scripts\leptonica/include/leptonica;..\..\scripts\libjpeg-turbo;..\..\scripts\libpng;..\..\scripts\libtiff;..\..\thirdparty\leptonica\src;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\libpng;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\zlib;..\..\scripts\zlib;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;..\..\thirdparty\leptonica\prog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -179,7 +179,7 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>..\..\include;..\..\scripts\leptonica/include/leptonica;..\..\scripts\libjpeg-turbo;..\..\scripts\libpng;..\..\scripts\libtiff;..\..\thirdparty\leptonica\src;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\libpng;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\zlib;..\..\scripts\zlib;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;..\..\thirdparty\leptonica\prog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;..\..\include;..\..\scripts\leptonica/include/leptonica;..\..\scripts\libjpeg-turbo;..\..\scripts\libpng;..\..\scripts\libtiff;..\..\thirdparty\leptonica\src;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\libpng;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\zlib;..\..\scripts\zlib;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;..\..\thirdparty\leptonica\prog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -202,7 +202,7 @@
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>..\..\include;..\..\scripts\leptonica/include/leptonica;..\..\scripts\libjpeg-turbo;..\..\scripts\libpng;..\..\scripts\libtiff;..\..\thirdparty\leptonica\src;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\libpng;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\zlib;..\..\scripts\zlib;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;..\..\thirdparty\leptonica\prog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;..\..\include;..\..\scripts\leptonica/include/leptonica;..\..\scripts\libjpeg-turbo;..\..\scripts\libpng;..\..\scripts\libtiff;..\..\thirdparty\leptonica\src;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\libpng;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\zlib;..\..\scripts\zlib;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;..\..\thirdparty\leptonica\prog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
@@ -357,6 +357,7 @@
     <ClCompile Include="../../thirdparty/leptonica/prog/insert_reg.c" />
     <ClCompile Include="../../thirdparty/leptonica/prog/ioformats_reg.c" />
     <ClCompile Include="../../thirdparty/leptonica/prog/iomisc_reg.c" />
+    <ClCompile Include="../../thirdparty/leptonica/prog/issue675_check.c" />
     <ClCompile Include="../../thirdparty/leptonica/prog/italic_reg.c" />
     <ClCompile Include="../../thirdparty/leptonica/prog/jbclass_reg.c" />
     <ClCompile Include="../../thirdparty/leptonica/prog/jbcorrelation.c" />
@@ -469,6 +470,7 @@
     <ClCompile Include="../../thirdparty/leptonica/prog/scale_it.c" />
     <ClCompile Include="../../thirdparty/leptonica/prog/scale_reg.c" />
     <ClCompile Include="../../thirdparty/leptonica/prog/scaleandtile.c" />
+    <ClCompile Include="../../thirdparty/leptonica/prog/scaleimages.c" />
     <ClCompile Include="../../thirdparty/leptonica/prog/scaletest1.c" />
     <ClCompile Include="../../thirdparty/leptonica/prog/scaletest2.c" />
     <ClCompile Include="../../thirdparty/leptonica/prog/seedfilltest.c" />
@@ -515,10 +517,22 @@
     <ClInclude Include="../../thirdparty/leptonica/prog/demo_settings.h" />
     <ClInclude Include="../../thirdparty/leptonica/prog/monolithic_examples.h" />
     <Image Include="../../thirdparty/leptonica/moller52.jpg" />
+    <Image Include="../../thirdparty/leptonica/prog/134718316-798e919e-31ac-474f-a792-d1d81ece26d3 (1).png" />
+    <Image Include="../../thirdparty/leptonica/prog/134718316-798e919e-31ac-474f-a792-d1d81ece26d3.png" />
+    <Image Include="../../thirdparty/leptonica/prog/134719202-df30c7a1-1480-4b08-a193-f86d1db0cf43.png" />
     <Image Include="../../thirdparty/leptonica/prog/1555.003.jpg" />
     <Image Include="../../thirdparty/leptonica/prog/1555.007.jpg" />
     <Image Include="../../thirdparty/leptonica/prog/19-colors.png" />
+    <Image Include="../../thirdparty/leptonica/prog/227973355-21fa2800-dee4-4ca8-bed6-38c9885e8a55.png" />
+    <Image Include="../../thirdparty/leptonica/prog/Dance.Troupe.jpg" />
     <Image Include="../../thirdparty/leptonica/prog/Leptonica.jpg" />
+    <Image Include="../../thirdparty/leptonica/prog/MwEfU.png" />
+    <Image Include="../../thirdparty/leptonica/prog/Screenshot 2023-03-18 133714.png" />
+    <Image Include="../../thirdparty/leptonica/prog/Screenshot 2023-03-18 133810.png" />
+    <Image Include="../../thirdparty/leptonica/prog/Screenshot 2023-03-18 133828.png" />
+    <Image Include="../../thirdparty/leptonica/prog/Screenshot 2023-03-18 133913.png" />
+    <Image Include="../../thirdparty/leptonica/prog/Screenshot 2023-03-24 005523.png" />
+    <Image Include="../../thirdparty/leptonica/prog/Screenshot 2023-03-24 005620.png" />
     <Image Include="../../thirdparty/leptonica/prog/amoris.2.150.jpg" />
     <Image Include="../../thirdparty/leptonica/prog/aneurisms8.jpg" />
     <Image Include="../../thirdparty/leptonica/prog/arabic.png" />
@@ -533,6 +547,7 @@
     <Image Include="../../thirdparty/leptonica/prog/barcode-upc-300.png" />
     <Image Include="../../thirdparty/leptonica/prog/barcodetest1.jpg" />
     <Image Include="../../thirdparty/leptonica/prog/barcodetest2.jpg" />
+    <Image Include="../../thirdparty/leptonica/prog/bg-rot-sheet.jpg" />
     <Image Include="../../thirdparty/leptonica/prog/bigweasel2.4c.png" />
     <Image Include="../../thirdparty/leptonica/prog/binding-example.45.jpg" />
     <Image Include="../../thirdparty/leptonica/prog/blend-green1.jpg" />
@@ -542,6 +557,9 @@
     <Image Include="../../thirdparty/leptonica/prog/blend-red.png" />
     <Image Include="../../thirdparty/leptonica/prog/blend-yellow.jpg" />
     <Image Include="../../thirdparty/leptonica/prog/blender8.png" />
+    <Image Include="../../thirdparty/leptonica/prog/blur-mask.png" />
+    <Image Include="../../thirdparty/leptonica/prog/bmp_format2.bmp" />
+    <Image Include="../../thirdparty/leptonica/prog/bmp_format2.png" />
     <Image Include="../../thirdparty/leptonica/prog/books_logo.png" />
     <Image Include="../../thirdparty/leptonica/prog/boxedpage.jpg" />
     <Image Include="../../thirdparty/leptonica/prog/brev.06.75.jpg" />
@@ -595,7 +613,9 @@
     <Image Include="../../thirdparty/leptonica/prog/juditharismax.jpg" />
     <Image Include="../../thirdparty/leptonica/prog/karen8.jpg" />
     <Image Include="../../thirdparty/leptonica/prog/keystone.png" />
+    <Image Include="../../thirdparty/leptonica/prog/kvk-demo.jpg" />
     <Image Include="../../thirdparty/leptonica/prog/lapide.052.100.jpg" />
+    <Image Include="../../thirdparty/leptonica/prog/lept-issue97-7175ab35f819.jpg" />
     <Image Include="../../thirdparty/leptonica/prog/lighttext.jpg" />
     <Image Include="../../thirdparty/leptonica/prog/lion-page.00010.jpg" />
     <Image Include="../../thirdparty/leptonica/prog/lion-page.00011.png" />
@@ -611,6 +631,9 @@
     <Image Include="../../thirdparty/leptonica/prog/map.057.jpg" />
     <Image Include="../../thirdparty/leptonica/prog/map1.jpg" />
     <Image Include="../../thirdparty/leptonica/prog/marge.jpg" />
+    <Image Include="../../thirdparty/leptonica/prog/msedge_bad-old_crop.png" />
+    <Image Include="../../thirdparty/leptonica/prog/msedge_bad_crop.png" />
+    <Image Include="../../thirdparty/leptonica/prog/msedge_good_crop.png" />
     <Image Include="../../thirdparty/leptonica/prog/pageseg2-mask.png" />
     <Image Include="../../thirdparty/leptonica/prog/pageseg2-seed.png" />
     <Image Include="../../thirdparty/leptonica/prog/pancrazi.15.jpg" />
@@ -632,12 +655,14 @@
     <Image Include="../../thirdparty/leptonica/prog/speckle4.png" />
     <Image Include="../../thirdparty/leptonica/prog/stampede2.jpg" />
     <Image Include="../../thirdparty/leptonica/prog/table.150.png" />
+    <Image Include="../../thirdparty/leptonica/prog/target.bmp" />
     <Image Include="../../thirdparty/leptonica/prog/test-1bit-alpha.png" />
     <Image Include="../../thirdparty/leptonica/prog/test-87220.59.png" />
     <Image Include="../../thirdparty/leptonica/prog/test-cmap-alpha.png" />
     <Image Include="../../thirdparty/leptonica/prog/test-cmap-alpha2.png" />
     <Image Include="../../thirdparty/leptonica/prog/test-fulltrans-alpha.png" />
     <Image Include="../../thirdparty/leptonica/prog/test-gray-alpha.png" />
+    <Image Include="../../thirdparty/leptonica/prog/test-rgb.png" />
     <Image Include="../../thirdparty/leptonica/prog/test-rgba.bmp" />
     <Image Include="../../thirdparty/leptonica/prog/test1.bmp" />
     <Image Include="../../thirdparty/leptonica/prog/test1.png" />
@@ -720,7 +745,8 @@
     <Text Include="../../thirdparty/leptonica/run_cmake.sh" />
     <Text Include="../../thirdparty/leptonica/style-guide.txt" />
   </ItemGroup>
-  <ImportGroup Label="PropertySheets">
+  <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />
   </ImportGroup>
 </Project>
+  

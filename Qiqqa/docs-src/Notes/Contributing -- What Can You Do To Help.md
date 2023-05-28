@@ -1,6 +1,11 @@
 # Contributing to Qiqqa :: What Can You Do To Help?
 
-[[toc]]
+
+
+- [[#Preface|Preface]]
+- [[#TBD|TBD]]
+
+
 
 
 ## Preface
@@ -53,4 +58,3 @@ Let me know what you think and what might interest you, then we can work somethi
 
 
 
-## 

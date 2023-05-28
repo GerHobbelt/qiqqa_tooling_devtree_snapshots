@@ -88,6 +88,9 @@
  *     Find number of pages in a pdf
  *          l_int32              getPdfPageCount()
  *
+ *     Find page widths and heights in a pdf
+ *          l_int32              getPdfPageSizes()
+ *
  *     Set flags for special modes
  *          void                 l_pdfSetG4ImageMask()
  *          void                 l_pdfSetDateAndVersion()
@@ -489,11 +492,11 @@ PIXA    *pixa;
 FILE    *fp;
 
     if ((fp = fopenReadStream(filein)) == NULL)
-        return ERROR_INT("file not found", __func__, 1);
+        return ERROR_INT_1("file not found", filein, __func__, 1);
     istiff = fileFormatIsTiff(fp);
     fclose(fp);
     if (!istiff)
-        return ERROR_INT("file not tiff format", __func__, 1);
+        return ERROR_INT_1("file not tiff format", filein, __func__, 1);
 
     pixa = pixaReadMultipageTiff(filein);
     pixaConvertToPdf(pixa, 0, 1.0, 0, 0, "weasel2", fileout);
@@ -776,7 +779,8 @@ PIXCMAP      *cmap = NULL;
          * Implementation by Jeff Breidenbach.
          * First, read the metadata */
     if ((fp = fopenReadStream(fname)) == NULL)
-        return (L_COMP_DATA *)ERROR_PTR("stream not opened", __func__, NULL);
+        return (L_COMP_DATA *)ERROR_PTR_1("stream not opened",
+                                          fname, __func__, NULL);
     freadHeaderPng(fp, &w, &h, &bps, &spp, &cmapflag);
     fgetPngResolution(fp, &xres, &yres);
     fclose(fp);
@@ -787,8 +791,8 @@ PIXCMAP      *cmap = NULL;
 
         /* Read the entire png file */
     if ((pngcomp = l_binaryRead(fname, &nbytespng)) == NULL)
-        return (L_COMP_DATA *)ERROR_PTR("unable to read file",
-                                        __func__, NULL);
+        return (L_COMP_DATA *)ERROR_PTR_1("unable to read file",
+                                          fname, __func__, NULL);
 
         /* Extract flate data, copying portions of it to memory, including
          * the predictor information in a byte at the beginning of each
@@ -935,14 +939,16 @@ FILE         *fp;
         return (L_COMP_DATA *)ERROR_PTR("bad jpeg metadata", __func__, NULL);
     bps = 8;
     if ((fp = fopenReadStream(fname)) == NULL)
-        return (L_COMP_DATA *)ERROR_PTR("stream not opened", __func__, NULL);
+        return (L_COMP_DATA *)ERROR_PTR_1("stream not opened",
+                                          fname, __func__, NULL);
     fgetJpegResolution(fp, &xres, &yres);
     fclose(fp);
 
         /* Read the entire jpeg file.  The returned jpeg data in memory
          * starts with ffd8 and ends with ffd9 */
     if ((data = l_binaryRead(fname, &nbytes)) == NULL)
-        return (L_COMP_DATA *)ERROR_PTR("data not extracted", __func__, NULL);
+        return (L_COMP_DATA *)ERROR_PTR_1("data not extracted",
+                                          fname, __func__, NULL);
 
         /* Optionally, encode the compressed data */
     if (ascii85flag == 1) {
@@ -1116,17 +1122,19 @@ FILE         *fp;
 
         /* Make sure this is a single page tiff file */
     if ((fp = fopenReadStream(fname)) == NULL)
-        return (L_COMP_DATA *)ERROR_PTR("stream not opened", __func__, NULL);
+        return (L_COMP_DATA *)ERROR_PTR_1("stream not opened",
+                                          fname, __func__, NULL);
     tiffGetCount(fp, &npages);
     fclose(fp);
     if (npages != 1) {
-        L_ERROR(" %d page tiff; only works with 1 page\n", __func__, npages);
+        L_ERROR(" %d page tiff; only works with 1 page (file: %s)\n", __func__, npages, fname);
         return NULL;
     }
 
         /* Read the resolution */
     if ((fp = fopenReadStream(fname)) == NULL)
-        return (L_COMP_DATA *)ERROR_PTR("stream not opened", __func__, NULL);
+        return (L_COMP_DATA *)ERROR_PTR_1("stream not opened",
+                                          fname, __func__, NULL);
     getTiffResolution(fp, &xres, &yres);
     fclose(fp);
 
@@ -1135,8 +1143,8 @@ FILE         *fp;
          * ending before the directory. */
     if (extractG4DataFromFile(fname, &datacomp, &nbytescomp,
                               &w, &h, &minisblack)) {
-        return (L_COMP_DATA *)ERROR_PTR("datacomp not extracted",
-                                        __func__, NULL);
+        return (L_COMP_DATA *)ERROR_PTR_1("datacomp not extracted",
+                                          fname, __func__, NULL);
     }
 
         /* Optionally, encode the compressed data */
@@ -2588,7 +2596,7 @@ pdfdataGetCid(L_PDF_DATA  *lpd,
 /*!
  * \brief   getPdfPageCount()
  *
- * \param[in]    fname      compressed image data
+ * \param[in]    fname      filename
  * \param[out]   pnpages    number of pages
  * \return  0 if OK, 1 on error
  *
@@ -2632,31 +2640,147 @@ size_t    nread;
           strlen("/Count"), &loc, &found);
     if (!found) {
         lept_stderr("Reading entire file\n");
-        lept_free(data);
+        LEPT_FREE(data);
         if ((data = l_binaryRead(fname, &nread)) == NULL)
             return ERROR_INT("full data not read", __func__, 1);
         arrayFindSequence(data, nread, (const l_uint8 *)"/Count",
              strlen("/Count"), &loc, &found);
         if (!found) {
-            lept_free(data);
+            LEPT_FREE(data);
             return ERROR_INT("/Count not found", __func__, 1);
         }
     }
 
         /* Unlikely: make sure we can read the count field */
     if (nread - loc < 12)  { /* haven't read enough to capture page count */
-        lept_free(data);
+        LEPT_FREE(data);
         return ERROR_INT("data may not include page count field", __func__, 1);
     }
 
         /* Read the page count; if not found, puts garbage in npages */
     ret = sscanf((char *)&data[loc], "/Count %d", &npages);
-    lept_free(data);
+    LEPT_FREE(data);
     if (ret != 1)
         return ERROR_INT("npages not found", __func__, 1);
     *pnpages = npages;
 /*    lept_stderr("bytes read = %d, loc = %d, npages = %d\n",
                 nread, loc, *pnpages);  */
+    return 0;
+}
+
+
+/*---------------------------------------------------------------------*
+ *                Find page widths and heights in a pdf                *
+ *---------------------------------------------------------------------*/
+/*!
+ * \brief   getPdfPageSizes()
+ *
+ * \param[in]    fname        filename
+ * \param[out]   pnaw         [optional] array of page widths
+ * \param[out]   pnah         [optional] array of page heights
+ * \param[out]   pmedw        [optional] median page width
+ * \param[out]   pmedh        [optional] median page height
+ * \return  0 if OK, 1 on error
+ *
+ * <pre>
+ * Notes:
+ *      (1) Finds the arguments of each instance of '/Width' and '/Height'
+ *          in the file.
+ *      (2) This will not work on encrypted pdf files.
+ * </pre>
+ */
+l_ok
+getPdfPageSizes(const char  *fname,
+                NUMA       **pnaw,
+                NUMA       **pnah,
+                l_int32     *pmedw,
+                l_int32     *pmedh)
+{
+l_uint8   *data;
+l_int32    i, nw, nh, format, ret, loc, width, height;
+l_float32  fval;
+size_t     nread;
+L_DNA     *dnaw;  /* width locations */
+L_DNA     *dnah;  /* height locations */
+NUMA      *naw;   /* widths */
+NUMA      *nah;   /* heights */
+
+    if (pnaw) *pnaw = NULL;
+    if (pnah) *pnah = NULL;
+    if (pmedw) *pmedw = 0;
+    if (pmedh) *pmedh = 0;
+    if (!pnaw && !pnah && !pmedw && !pmedh)
+        return ERROR_INT("no output requested", __func__, 1);
+    if (!fname)
+        return ERROR_INT("fname not defined", __func__, 1);
+
+        /* Make sure this a pdf file */
+    findFileFormat(fname, &format);
+    if (format != IFF_LPDF)
+        return ERROR_INT("file is not pdf", __func__, 1);
+
+        /* Read the file into memory and find all locations of
+         * '/Width' and '/Height' */
+    if ((data = l_binaryRead(fname, &nread)) == NULL)
+        return ERROR_INT("full data not read", __func__, 1);
+    dnaw = arrayFindEachSequence(data, nread, (const l_uint8 *)"/Width",
+                                 strlen("/Width"));
+    dnah = arrayFindEachSequence(data, nread, (const l_uint8 *)"/Height",
+                                 strlen("/Height"));
+    if (!dnaw)
+        L_ERROR("unable to find widths\n", __func__);
+    if (!dnah)
+        L_ERROR("unable to find heights\n", __func__);
+    if (!dnaw && !dnah) {
+        LEPT_FREE(data);
+        return ERROR_INT("no fields found", __func__, 1);
+    }
+
+        /* Find the page widths and heights */
+    nw = l_dnaGetCount(dnaw);
+    naw = numaCreate(nw);
+    for (i = 0; i < nw; i++) {
+        l_dnaGetIValue(dnaw, i, &loc);
+        ret = sscanf((char *)&data[loc], "/Width %d", &width);
+        if (ret != 1) {
+            L_ERROR("width not found for item %d at loc %d\n",
+                    __func__, i, loc);
+            continue;
+        }
+        numaAddNumber(naw, width);
+    }
+    nh = l_dnaGetCount(dnah);
+    nah = numaCreate(nh);
+    for (i = 0; i < nh; i++) {
+        l_dnaGetIValue(dnah, i, &loc);
+        ret = sscanf((char *)&data[loc], "/Height %d", &height);
+        if (ret != 1) {
+            L_ERROR("height not found for item %d at loc %d\n",
+                    __func__, i, loc);
+            continue;
+        }
+        numaAddNumber(nah, height);
+    }
+
+    LEPT_FREE(data);
+    l_dnaDestroy(&dnaw);
+    l_dnaDestroy(&dnah);
+    if (pmedw) {
+        numaGetMedian(naw, &fval);
+        *pmedw = lept_roundftoi(fval);
+    }
+    if (pnaw)
+        *pnaw = naw;
+    else
+        numaDestroy(&naw);
+    if (pmedh) {
+        numaGetMedian(nah, &fval);
+        *pmedh = lept_roundftoi(fval);
+    }
+    if (pnah)
+        *pnah = nah;
+    else
+        numaDestroy(&nah);
     return 0;
 }
 

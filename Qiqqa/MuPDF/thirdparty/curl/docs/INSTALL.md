@@ -149,6 +149,18 @@ conflicting identical symbol names.
 When you build with multiple TLS backends, you can select the active one at
 run-time when curl starts up.
 
+## configure finding libs in wrong directory
+
+When the configure script checks for third-party libraries, it adds those
+directories to the `LDFLAGS` variable and then tries linking to see if it
+works. When successful, the found directory is kept in the `LDFLAGS` variable
+when the script continues to execute and do more tests and possibly check for
+more libraries.
+
+This can make subsequent checks for libraries wrongly detect another
+installation in a directory that was previously added to `LDFLAGS` by another
+library check.
+
 # Windows
 
 ## Building Windows DLLs and C runtime (CRT) linkage issues
@@ -411,7 +423,7 @@ OpenSSL, follow the OpenSSL build instructions and then install `libssl.a` and
 OpenSSL like this:
 
 ```bash
-LIBS="-lssl -lcrypto -lc++" # For OpenSSL/BoringSSL. In general, you'll need to the SSL/TLS layer's transtive dependencies if you're linking statically.
+LIBS="-lssl -lcrypto -lc++" # For OpenSSL/BoringSSL. In general, you will need to the SSL/TLS layer's transitive dependencies if you are linking statically.
 ./configure --host aarch64-linux-android --with-pic --disable-shared --with-openssl="$TOOLCHAIN/sysroot/usr"
 ```
 

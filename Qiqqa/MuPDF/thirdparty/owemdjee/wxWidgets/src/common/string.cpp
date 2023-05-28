@@ -20,7 +20,6 @@
 #ifndef WX_PRECOMP
     #include "wx/string.h"
     #include "wx/wxcrtvararg.h"
-    #include "wx/intl.h"
     #include "wx/log.h"
 #endif
 
@@ -76,34 +75,12 @@ const wxStringCharType WXDLLIMPEXP_BASE *wxEmptyStringImpl = "";
 const wxChar WXDLLIMPEXP_BASE *wxEmptyString = wxT("");
 #if wxUSE_STRING_POS_CACHE
 
-#ifdef wxHAS_COMPILER_TLS
-
-wxTLS_TYPE(wxString::Cache) wxString::ms_cache;
-
-#else // !wxHAS_COMPILER_TLS
-
-struct wxStrCacheInitializer
-{
-    wxStrCacheInitializer()
-    {
-        // calling this function triggers s_cache initialization in it, and
-        // from now on it becomes safe to call from multiple threads
-        wxString::GetCache();
-    }
-};
-
-/*
+/* static */
 wxString::Cache& wxString::GetCache()
 {
-    static wxTLS_TYPE(Cache) s_cache;
-
-    return wxTLS_VALUE(s_cache);
+    static wxTHREAD_SPECIFIC_DECL Cache s_cache;
+    return s_cache;
 }
-*/
-
-static wxStrCacheInitializer gs_stringCacheInit;
-
-#endif // wxHAS_COMPILER_TLS/!wxHAS_COMPILER_TLS
 
 // gdb seems to be unable to display thread-local variables correctly, at least
 // not my 6.4.98 version under amd64, so provide this debugging helper to do it
@@ -257,7 +234,7 @@ void wxString::PosLenToImpl(size_t pos, size_t len,
             // going beyond the end of the string, just as std::string does
             const const_iterator e(end());
             const_iterator i(b);
-            while ( len && i <= e )
+            while ( len && i < e )
             {
                 ++i;
                 --len;
@@ -535,14 +512,6 @@ const char *wxString::AsChar(const wxMBConv& conv) const
         return nullptr;
 
     return m_convertedToChar.m_str;
-}
-
-// shrink to minimal size (releasing extra memory)
-bool wxString::Shrink()
-{
-  wxString tmp(begin(), end());
-  swap(tmp);
-  return true;
 }
 
 // ---------------------------------------------------------------------------
@@ -1446,6 +1415,7 @@ wxString& wxString::Truncate(size_t uiLen)
     if ( uiLen < length() )
     {
         erase(begin() + uiLen, end());
+        wxSTRING_SET_CACHED_LENGTH(uiLen);
     }
     //else: nothing to do, string is already short enough
 
@@ -1468,131 +1438,291 @@ int wxString::Find(wxUniChar ch, bool bFromEnd) const
 // conversion to numbers
 // ----------------------------------------------------------------------------
 
-// The implementation of all the functions below is exactly the same so factor
-// it out. Note that number extraction works correctly on UTF-8 strings, so
-// we can use wxStringCharType and wx_str() for maximum efficiency.
+namespace
+{
 
-#define WX_STRING_TO_X_TYPE_START                                           \
-    wxCHECK_MSG( pVal, false, wxT("null output pointer") );                  \
-    errno = 0;                                                              \
-    const wxStringCharType *start = wx_str();                               \
+// Tiny helper to preserve errno: it's used in the functions below because it
+// would be unexpected if they changed errno, especially in the case of
+// wxString::Format() that might be used when reporting errors.
+class PreserveErrno
+{
+public:
+    PreserveErrno() : m_errnoOrig{errno} {}
+    ~PreserveErrno() { errno = m_errnoOrig; }
+
+private:
+    const int m_errnoOrig;
+
+    wxDECLARE_NO_COPY_CLASS(PreserveErrno);
+};
+
+// The implementation of all the functions below is exactly the same so factor
+// it out in this template helper taking the function to call to actually
+// perform the conversion to some larger type R and a function to check that
+// the conversion result is in the correct range for the type T.
+//
+// Note that number extraction works correctly on UTF-8 strings, so
+// we can use wxStringCharType and wx_str() for maximum efficiency.
+template <typename R, typename T>
+bool
+ToNumeric(T* pVal,
+          R (*convert)(const wxStringCharType*, wxStringCharType**, int),
+          const wxStringCharType* start,
+          int base,
+          bool (*rangeCheck)(R))
+{
+    wxASSERT_MSG(!base || (base > 1 && base <= 36), wxT("invalid base"));
+    wxCHECK_MSG( pVal, false, wxT("null output pointer") );
+
+    PreserveErrno preserveErrno;
+    errno = 0;
+
     wxStringCharType *end;
 
-// notice that we return false without modifying the output parameter at all if
-// nothing could be parsed but we do modify it and return false then if we did
-// parse something successfully but not the entire string
-#define WX_STRING_TO_X_TYPE_END                                             \
-    if ( end == start || errno == ERANGE )                                  \
-        return false;                                                       \
-    *pVal = val;                                                            \
+    const R res = convert(start, &end, base);
+    if ( rangeCheck && !rangeCheck(res) )
+        return false;
+
+    // notice that we return false without modifying the output parameter at all if
+    // nothing could be parsed but we do modify it and return false then if we did
+    // parse something successfully but not the entire string
+    if ( end == start || errno == ERANGE )
+        return false;
+
+    *pVal = static_cast<T>(res);
     return !*end;
+}
+
+// This is a simplified version which uses the conversion function returning
+// the desired type directly, and hence no range checking function at all.
+template <typename T>
+bool
+ToNumeric(T* pVal,
+          T (*convert)(const wxStringCharType*, wxStringCharType**, int),
+          const wxStringCharType* start,
+          int base = 0)
+{
+    return ToNumeric<T>(pVal, convert, start, base, nullptr);
+}
+
+} // anonymous namespace
 
 bool wxString::ToInt(int *pVal, int base) const
 {
-    wxASSERT_MSG(!base || (base > 1 && base <= 36), wxT("invalid base"));
-
-    WX_STRING_TO_X_TYPE_START
-    wxLongLong_t lval = wxStrtoll(start, &end, base);
-
-    if (lval < INT_MIN || lval > INT_MAX)
-        return false;
-    int val = (int)lval;
-
-    WX_STRING_TO_X_TYPE_END
+    return ToNumeric<wxLongLong_t>
+           (
+            pVal, wxStrtoll, wx_str(), base,
+            [](wxLongLong_t val) { return val >= INT_MIN && val <= INT_MAX; }
+           );
 }
 
 bool wxString::ToUInt(unsigned int *pVal, int base) const
 {
-    wxASSERT_MSG(!base || (base > 1 && base <= 36), wxT("invalid base"));
-
-    WX_STRING_TO_X_TYPE_START
-    wxULongLong_t lval = wxStrtoull(start, &end, base);
-    if (lval > UINT_MAX)
-        return false;
-    unsigned int val = (unsigned int)lval;
-    WX_STRING_TO_X_TYPE_END
+    return ToNumeric<wxULongLong_t>
+           (
+            pVal, wxStrtoull, wx_str(), base,
+            [](wxULongLong_t val) { return val <= UINT_MAX; }
+           );
 }
 
 bool wxString::ToLong(long *pVal, int base) const
 {
-    wxASSERT_MSG( !base || (base > 1 && base <= 36), wxT("invalid base") );
-
-    WX_STRING_TO_X_TYPE_START
-    long val = wxStrtol(start, &end, base);
-    WX_STRING_TO_X_TYPE_END
+    return ToNumeric(pVal, wxStrtol, wx_str(), base);
 }
 
 bool wxString::ToULong(unsigned long *pVal, int base) const
 {
-    wxASSERT_MSG( !base || (base > 1 && base <= 36), wxT("invalid base") );
-
-    WX_STRING_TO_X_TYPE_START
-    unsigned long val = wxStrtoul(start, &end, base);
-    WX_STRING_TO_X_TYPE_END
+    return ToNumeric(pVal, wxStrtoul, wx_str(), base);
 }
 
 bool wxString::ToLongLong(wxLongLong_t *pVal, int base) const
 {
-    wxASSERT_MSG( !base || (base > 1 && base <= 36), wxT("invalid base") );
-
-    WX_STRING_TO_X_TYPE_START
-    wxLongLong_t val = wxStrtoll(start, &end, base);
-    WX_STRING_TO_X_TYPE_END
+    return ToNumeric(pVal, wxStrtoll, wx_str(), base);
 }
 
 bool wxString::ToULongLong(wxULongLong_t *pVal, int base) const
 {
-    wxASSERT_MSG( !base || (base > 1 && base <= 36), wxT("invalid base") );
-
-    WX_STRING_TO_X_TYPE_START
-    wxULongLong_t val = wxStrtoull(start, &end, base);
-    WX_STRING_TO_X_TYPE_END
+    return ToNumeric(pVal, wxStrtoull, wx_str(), base);
 }
 
 bool wxString::ToDouble(double *pVal) const
 {
-    WX_STRING_TO_X_TYPE_START
-    double val = wxStrtod(start, &end);
-    WX_STRING_TO_X_TYPE_END
+    // Use a hack to allow calling wxStrtod() with an unused "base" parameter
+    // for consistency with the other functions.
+    return ToNumeric<double>
+           (
+            pVal,
+            [](const wxStringCharType* start, wxStringCharType** endptr, int)
+            {
+                return wxStrtod(start, endptr);
+            },
+            wx_str()
+           );
 }
 
-#if wxUSE_XLOCALE
+// There are several possibilities for implementing the conversion functions
+// always using "C" locale:
+//
+//  1. Preferred one: use C++17 <charconv>, this is the fastest way to do it.
+//  2. Use <xlocale.h> if it's available.
+//  3. Use standard locale-dependent C functions and adjust them for the
+//     current locale (slowest and the least robust).
+
+// Check if C++17 <charconv> is available.
+#if wxCHECK_CXX_STD(201703L)
+#include <charconv>
+#endif
+
+// Now check if the functions we need are present in it (normally they ought
+// to if the compiler claims to support C++17, but it doesn't hurt to check).
+#ifdef __cpp_lib_to_chars
 
 bool wxString::ToCLong(long *pVal, int base) const
 {
-    wxASSERT_MSG( !base || (base > 1 && base <= 36), wxT("invalid base") );
+    wxCHECK_MSG( pVal, false, "null output pointer" );
 
-    WX_STRING_TO_X_TYPE_START
-#if wxUSE_UNICODE_UTF8 && defined(wxHAS_XLOCALE_SUPPORT)
-    long val = wxStrtol_lA(start, &end, base, wxCLocale);
-#else
-    long val = wxStrtol_l(start, &end, base, wxCLocale);
-#endif
-    WX_STRING_TO_X_TYPE_END
+    const wxScopedCharBuffer& buf = utf8_str();
+    auto start = buf.data();
+    const auto end = start + buf.length();
+
+    // from_chars() doesn't recognize base==0 and doesn't recognize "0x" prefix
+    // even if base 16 is explicitly specified, so adjust the input to use the
+    // form it supports.
+    if ( buf.length() > 1 && *start == '0' )
+    {
+        ++start;
+        if ( *start == 'x' || *start == 'X' )
+        {
+            ++start;
+            if ( base == 0 )
+                base = 16;
+            else if ( base != 16 )
+                return false;
+        }
+        else
+        {
+            if ( base == 0 )
+                base = 8;
+        }
+    }
+
+    if ( base == 0 )
+        base = 10;
+
+    const auto res = std::from_chars(start, end, *pVal, base);
+
+    return res.ec == std::errc{} && res.ptr == end;
 }
 
 bool wxString::ToCULong(unsigned long *pVal, int base) const
 {
-    wxASSERT_MSG( !base || (base > 1 && base <= 36), wxT("invalid base") );
+    // We intentionally don't use std::from_chars() here because this function
+    // is supposed to be compatible with strtoul() and so _succeed_ for "-1",
+    // for example, instead of returning an error as from_chars() (much more
+    // logically) does.
 
-    WX_STRING_TO_X_TYPE_START
-#if wxUSE_UNICODE_UTF8 && defined(wxHAS_XLOCALE_SUPPORT)
-    unsigned long val = wxStrtoul_lA(start, &end, base, wxCLocale);
-#else
-    unsigned long val = wxStrtoul_l(start, &end, base, wxCLocale);
-#endif
-    WX_STRING_TO_X_TYPE_END
+    wxCHECK_MSG( pVal, false, "null output pointer" );
+
+    long l;
+    if ( !ToCLong(&l, base) )
+        return false;
+
+    *pVal = static_cast<unsigned long>(l);
+
+    return true;
 }
 
 bool wxString::ToCDouble(double *pVal) const
 {
-    WX_STRING_TO_X_TYPE_START
+    wxCHECK_MSG( pVal, false, "null output pointer" );
+
+    const wxScopedCharBuffer& buf = utf8_str();
+    const auto start = buf.data();
+    const auto end = start + buf.length();
+    const auto res = std::from_chars(start, end, *pVal);
+
+    return res.ec == std::errc{} && res.ptr == end;
+}
+
+wxString wxString::FromCDouble(double val, int precision)
+{
+    wxCHECK_MSG( precision >= -1, wxString(), "Invalid negative precision" );
+
+    // 64 digits is more than enough for any double.
+    char buf[64];
+    const auto start = buf;
+    const auto end = buf + sizeof(buf);
+
+    std::to_chars_result res;
+
+    // Note that we must explicitly specify the precision to remain compatible
+    // with the behaviour of sprintf("%g"): by default, the result would be the
+    // shortest string avoiding precision loss, but "%g" is supposed to
+    // truncate, so use its default precision explicitly to achieve this here.
+    if ( precision == -1 )
+        res = std::to_chars(start, end, val, std::chars_format::general, 6);
+    else
+        res = std::to_chars(start, end, val, std::chars_format::fixed, precision);
+
+    if ( res.ec != std::errc{} )
+        return {};
+
+    *res.ptr = '\0';
+
+    return wxString::FromAscii(buf);
+}
+
+#elif wxUSE_XLOCALE
+
+bool wxString::ToCLong(long *pVal, int base) const
+{
+    return ToNumeric<long>
+           (
+            pVal,
+            [](const wxStringCharType* start, wxStringCharType** endptr, int base)
+            {
 #if wxUSE_UNICODE_UTF8 && defined(wxHAS_XLOCALE_SUPPORT)
-    double val = wxStrtod_lA(start, &end, wxCLocale);
+                return wxStrtol_lA(start, endptr, base, wxCLocale);
 #else
-    double val = wxStrtod_l(start, &end, wxCLocale);
+                return wxStrtol_l(start, endptr, base, wxCLocale);
 #endif
-    WX_STRING_TO_X_TYPE_END
+            },
+            wx_str(), base
+           );
+}
+
+bool wxString::ToCULong(unsigned long *pVal, int base) const
+{
+    return ToNumeric<unsigned long>
+           (
+            pVal,
+            [](const wxStringCharType* start, wxStringCharType** endptr, int base)
+            {
+#if wxUSE_UNICODE_UTF8 && defined(wxHAS_XLOCALE_SUPPORT)
+                return wxStrtoul_lA(start, endptr, base, wxCLocale);
+#else
+                return wxStrtoul_l(start, endptr, base, wxCLocale);
+#endif
+            },
+            wx_str(), base
+           );
+}
+
+bool wxString::ToCDouble(double *pVal) const
+{
+    return ToNumeric<double>
+           (
+            pVal,
+            [](const wxStringCharType* start, wxStringCharType** endptr, int)
+            {
+#if wxUSE_UNICODE_UTF8 && defined(wxHAS_XLOCALE_SUPPORT)
+                return wxStrtod_lA(start, endptr, wxCLocale);
+#else
+                return wxStrtod_l(start, endptr, wxCLocale);
+#endif
+            },
+            wx_str()
+           );
 }
 
 #else // wxUSE_XLOCALE
@@ -1618,30 +1748,31 @@ bool wxString::ToCDouble(double *pVal) const
 {
     // See the explanations in FromCDouble() below for the reasons for all this.
 
-    // Create a copy of this string using the decimal point instead of whatever
-    // separator the current locale uses.
-#if wxUSE_INTL
-    wxString sep = wxUILocale::GetCurrent().GetInfo(wxLOCALE_DECIMAL_POINT,
-                                                    wxLOCALE_CAT_NUMBER);
-    if ( sep == "." )
-    {
-        // We can avoid an unnecessary string copy in this case.
-        return ToDouble(pVal);
-    }
-#else // !wxUSE_INTL
-    // We don't know what the current separator is so it might even be a point
-    // already, try to parse the string as a double:
+    // Try parsing using the current locale separator.
     if ( ToDouble(pVal) )
     {
-        // It must have been the point, nothing else to do.
+        if ( find(',') != npos )
+        {
+            // Can't be a valid number in C locale.
+            return false;
+        }
+
+        // Either current decimal separator is the point or this string doesn't
+        // contain any decimal separator at all, in either case the result must
+        // be correct and we don't have anything else to do.
         return true;
     }
 
-    // Try to guess the separator, using the most common alternative value.
-    wxString sep(",");
-#endif // wxUSE_INTL/!wxUSE_INTL
+    // Try to replace the separator with the only alternative value.
+    const size_t posPeriod = find('.');
+    if ( posPeriod == npos )
+    {
+        // No separator at all, so no need to retry with an alternative one.
+        return false;
+    }
+
     wxString cstr(*this);
-    cstr.Replace(".", sep);
+    cstr[posPeriod] = ',';
 
     return cstr.ToDouble(pVal);
 }
@@ -1670,38 +1801,29 @@ wxString wxString::FromDouble(double val, int precision)
     return wxString::Format(format, val);
 }
 
+#ifndef __cpp_lib_to_chars
+
 /* static */
 wxString wxString::FromCDouble(double val, int precision)
 {
     wxCHECK_MSG( precision >= -1, wxString(), "Invalid negative precision" );
 
-    // Unfortunately there is no good way to get the number directly in the C
-    // locale. Some platforms provide special functions to do this (e.g.
-    // _sprintf_l() in MSVS or sprintf_l() in BSD systems), but some systems we
-    // still support don't have them and it doesn't seem worth it to have two
-    // different ways to do the same thing. Also, in principle, using the
-    // standard C++ streams should allow us to do it, but some implementations
-    // of them are horribly broken and actually change the global C locale,
-    // thus randomly affecting the results produced in other threads, when
-    // imbue() stream method is called (for the record, the latest libstdc++
-    // version included in OS X does it and so seem to do the versions
-    // currently included in Android NDK and both FreeBSD and OpenBSD), so we
-    // can't do this either and are reduced to this hack.
+    // Without std::to_chars() there is no portable way to get the number
+    // directly in the C locale and while some platforms provide special
+    // functions to do this (e.g. _sprintf_l() in MSVS or sprintf_l() in BSD
+    // systems), some systems we still support don't have them, so just use
+    // the hack below and replace any occurrences of a comma (which is the only
+    // alternative decimal separator that can be really used) with a period.
 
     wxString s = FromDouble(val, precision);
-#if wxUSE_INTL
-    wxString sep = wxUILocale::GetCurrent().GetInfo(wxLOCALE_DECIMAL_POINT,
-                                                    wxLOCALE_CAT_NUMBER);
-#else // !wxUSE_INTL
-    // As above, this is the most common alternative value. Notice that here it
-    // doesn't matter if we guess wrongly and the current separator is already
-    // ".": we'll just waste a call to Replace() in this case.
-    wxString sep(",");
-#endif // wxUSE_INTL/!wxUSE_INTL
+    const size_t posComma = s.find(',');
+    if ( posComma != npos )
+        s[posComma] = '.';
 
-    s.Replace(sep, ".");
     return s;
 }
+
+#endif // !__cpp_lib_to_chars
 
 // ---------------------------------------------------------------------------
 // formatted output
@@ -1735,7 +1857,7 @@ int wxString::DoPrintfUtf8(const char *format, ...)
     va_list argptr;
     va_start(argptr, format);
 
-    int iLen = PrintfV(format, argptr);
+    int iLen = PrintfV(wxString::FromUTF8(format), argptr);
 
     va_end(argptr);
 
@@ -1787,6 +1909,7 @@ static int DoStringPrintfV(wxString& str,
                            const wxString& format, va_list argptr)
 {
     size_t size = 1024;
+    PreserveErrno preserveErrno;
 
     for ( ;; )
     {
@@ -1825,6 +1948,13 @@ static int DoStringPrintfV(wxString& str,
         // options.
         if ( len < 0 )
         {
+            // When vswprintf() returns an error, it can leave invalid bytes in
+            // the buffer, e.g. using "%c" with an invalid character results in
+            // U+FFFFFFFF in the buffer, which would trigger an assert when we
+            // try to copy it back to wxString as UTF-8 in "tmp" buffer dtor,
+            // so ensure we don't try to do it.
+            buf[0] = L'\0';
+
             // assume it only returns error if there is not enough space, but
             // as we don't know how much we need, double the current size of
             // the buffer
@@ -1873,16 +2003,12 @@ static int DoStringPrintfV(wxString& str,
 
 int wxString::PrintfV(const wxString& format, va_list argptr)
 {
-#if wxUSE_UNICODE_UTF8
-    typedef wxStringTypeBuffer<char> Utf8Buffer;
-#endif
-
 #if wxUSE_UTF8_LOCALE_ONLY
-    return DoStringPrintfV<Utf8Buffer>(*this, format, argptr);
+    return DoStringPrintfV<wxUTF8StringBuffer>(*this, format, argptr);
 #else
     #if wxUSE_UNICODE_UTF8
     if ( wxLocaleIsUtf8 )
-        return DoStringPrintfV<Utf8Buffer>(*this, format, argptr);
+        return DoStringPrintfV<wxUTF8StringBuffer>(*this, format, argptr);
     else
         // wxChar* version
         return DoStringPrintfV<wxStringBuffer>(*this, format, argptr);

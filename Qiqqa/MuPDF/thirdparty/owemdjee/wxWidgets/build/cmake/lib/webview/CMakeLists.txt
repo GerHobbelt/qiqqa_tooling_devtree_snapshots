@@ -16,10 +16,10 @@ function(wx_webview_copy_webview2_loader target)
         return()
     endif()
 
-    if(CMAKE_SIZEOF_VOID_P EQUAL 4)
-        set(WEBVIEW2_ARCH x86)
+    if(wxPLATFORM_ARCH)
+        set(WEBVIEW2_ARCH ${wxPLATFORM_ARCH})
     else()
-        set(WEBVIEW2_ARCH x64)
+        set(WEBVIEW2_ARCH x86)
     endif()
 
     add_custom_command(TARGET ${target} POST_BUILD
@@ -52,9 +52,9 @@ if(APPLE)
 elseif(WXMSW OR WXUWP)
     if(wxUSE_WEBVIEW_EDGE)
         # Update the following variables if updating WebView2 SDK
-        set(WEBVIEW2_VERSION "1.0.705.50")
+        set(WEBVIEW2_VERSION "1.0.864.35")
         set(WEBVIEW2_URL "https://www.nuget.org/api/v2/package/Microsoft.Web.WebView2/${WEBVIEW2_VERSION}")
-        set(WEBVIEW2_SHA256 "6a34bb553e18cfac7297b4031f3eac2558e439f8d16a45945c22945ac404105d")
+        set(WEBVIEW2_SHA256 "542b271732b9d5435c33180eb4d5ea65fcb10aaf39f4d4be5953abe8d4bd1046")
 
         set(WEBVIEW2_DEFAULT_PACKAGE_DIR "${CMAKE_CURRENT_BINARY_DIR}/packages/Microsoft.Web.WebView2.${WEBVIEW2_VERSION}")
 

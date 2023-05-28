@@ -1,4 +1,4 @@
-.TH PCRE2API 3 "27 July 2022" "PCRE2 10.41"
+.TH PCRE2API 3 "03 February 2023" "PCRE2 10.43"
 .SH NAME
 PCRE2 - Perl-compatible regular expressions (revised API)
 .sp
@@ -48,6 +48,11 @@ document for an overview of all the PCRE2 documentation.
 .sp
 .nf
 .B PCRE2_SPTR pcre2_get_mark(pcre2_match_data *\fImatch_data\fP);
+.sp
+.B PCRE2_SIZE pcre2_get_match_data_size(pcre2_match_data *\fImatch_data\fP);
+.sp
+.B PCRE2_SIZE pcre2_get_match_data_heapframes_size(
+.B "  pcre2_match_data *\fImatch_data\fP);"
 .sp
 .B uint32_t pcre2_get_ovector_count(pcre2_match_data *\fImatch_data\fP);
 .sp
@@ -206,8 +211,8 @@ document for an overview of all the PCRE2 documentation.
 .sp
 .B void pcre2_jit_free_unused_memory(pcre2_general_context *\fIgcontext\fP);
 .sp
-.B pcre2_jit_stack *pcre2_jit_stack_create(PCRE2_SIZE \fIstartsize\fP,
-.B "  PCRE2_SIZE \fImaxsize\fP, pcre2_general_context *\fIgcontext\fP);"
+.B pcre2_jit_stack *pcre2_jit_stack_create(size_t \fIstartsize\fP,
+.B "  size_t \fImaxsize\fP, pcre2_general_context *\fIgcontext\fP);"
 .sp
 .B void pcre2_jit_stack_assign(pcre2_match_context *\fImcontext\fP,
 .B "  pcre2_jit_callback \fIcallback_function\fP, void *\fIcallback_data\fP);"
@@ -270,7 +275,7 @@ document for an overview of all the PCRE2 documentation.
 .sp
 .B int pcre2_set_recursion_memory_management(
 .B "  pcre2_match_context *\fImcontext\fP,"
-.B "  void *(*\fIprivate_malloc\fP)(PCRE2_SIZE, void *),"
+.B "  void *(*\fIprivate_malloc\fP)(size_t, void *),"
 .B "  void (*\fIprivate_free\fP)(void *, void *), void *\fImemory_data\fP);"
 .fi
 .sp
@@ -324,10 +329,8 @@ This contains the function prototypes and other definitions for all three
 libraries. One, two, or all three can be installed simultaneously. On Unix-like
 systems the libraries are called \fBlibpcre2-8\fP, \fBlibpcre2-16\fP, and
 \fBlibpcre2-32\fP, and they can also co-exist with the original PCRE libraries.
-.P
-Character strings are passed to and from a PCRE2 library as a sequence of
-unsigned integers in code units of the appropriate width. Every PCRE2 function
-comes in three different forms, one for each library, for example:
+Every PCRE2 function comes in three different forms, one for each library, for
+example:
 .sp
   \fBpcre2_compile_8()\fP
   \fBpcre2_compile_16()\fP
@@ -342,6 +345,11 @@ The UCHAR types define unsigned code units of the appropriate widths. For
 example, PCRE2_UCHAR16 is usually defined as `uint16_t'. The SPTR types are
 constant pointers to the equivalent UCHAR types, that is, they are pointers to
 vectors of unsigned code units.
+.P
+Character strings are passed to a PCRE2 library as sequences of unsigned
+integers in code units of the appropriate width. The length of a string may
+be given as a number of code units, or the string may be specified as
+zero-terminated.
 .P
 Many applications use only one code unit width. For their convenience, macros
 are defined whose names are the generic forms such as \fBpcre2_compile()\fP and
@@ -490,7 +498,8 @@ unsigned integer type, currently always defined as \fIsize_t\fP. The largest
 value that can be stored in such a type (that is ~(PCRE2_SIZE)0) is reserved
 as a special indicator for zero-terminated strings and unset offsets.
 Therefore, the longest string that can be handled is one less than this
-maximum.
+maximum. Note that string lengths are always given in code units. Only in the
+8-bit library is such a length the same as the number of bytes in the string.
 .
 .
 .\" HTML <a name="newlines"></a>
@@ -1115,7 +1124,13 @@ for the amount of heap memory used by \fBpcre2_match()\fP or
   PCRE2_CONFIG_JIT
 .sp
 The output is a uint32_t integer that is set to one if support for just-in-time
-compiling is available; otherwise it is set to zero.
+compiling is included in the library; otherwise it is set to zero. Note that
+having the support in the library does not guarantee that JIT will be used for
+any given match. See the
+.\" HREF
+\fBpcre2jit\fP
+.\"
+documentation for more details.
 .sp
   PCRE2_CONFIG_JITTARGET
 .sp
@@ -1467,11 +1482,13 @@ PCRE2_UCP is set, Unicode properties are used for all characters with more than
 one other case, and for all characters whose code points are greater than
 U+007F. Note that there are two ASCII characters, K and S, that, in addition to
 their lower case ASCII equivalents, are case-equivalent with U+212A (Kelvin
-sign) and U+017F (long S) respectively. For lower valued characters with only
-one other case, a lookup table is used for speed. When neither PCRE2_UTF nor
-PCRE2_UCP is set, a lookup table is used for all code points less than 256, and
-higher code points (available only in 16-bit or 32-bit mode) are treated as not
-having another case.
+sign) and U+017F (long S) respectively. If you do not want this case 
+equivalence, you can suppress it by setting PCRE2_EXTRA_CASELESS_RESTRICT.
+.P
+For lower valued characters with only one other case, a lookup table is used
+for speed. When neither PCRE2_UTF nor PCRE2_UCP is set, a lookup table is used
+for all code points less than 256, and higher code points (available only in
+16-bit or 32-bit mode) are treated as not having another case.
 .sp
   PCRE2_DOLLAR_ENDONLY
 .sp
@@ -1615,7 +1632,11 @@ PCRE2_EXTRA_MATCH_WORD are also supported. Any other options cause an error.
 .sp
 This option forces PCRE2_UTF (see below) and also enables support for matching
 by \fBpcre2_match()\fP in subject strings that contain invalid UTF sequences.
-This facility is not supported for DFA matching. For details, see the
+Note, however, that the 16-bit and 32-bit PCRE2 libraries process strings as
+sequences of uint16_t or uint32_t code points. They cannot find valid UTF
+sequences within an arbitrary string of bytes unless such sequences are
+suitably aligned. This facility is not supported for DFA matching. For details,
+see the
 .\" HREF
 \fBpcre2unicode\fP
 .\"
@@ -1817,8 +1838,9 @@ are not representable in UTF-16.
 This option has two effects. Firstly, it change the way PCRE2 processes \eB,
 \eb, \eD, \ed, \eS, \es, \eW, \ew, and some of the POSIX character classes. By
 default, only ASCII characters are recognized, but if PCRE2_UCP is set, Unicode
-properties are used instead to classify characters. More details are given in
-the section on
+properties are used to classify characters. There are some PCRE2_EXTRA 
+options (see below) that add finer control to this behaviour. More details are
+given in the section on
 .\" HTML <a href="pcre2pattern.html#genericchartypes">
 .\" </a>
 generic character types
@@ -1827,14 +1849,15 @@ in the
 .\" HREF
 \fBpcre2pattern\fP
 .\"
-page. If you set PCRE2_UCP, matching one of the items it affects takes much
-longer.
+page.
 .P
 The second effect of PCRE2_UCP is to force the use of Unicode properties for
-upper/lower casing operations on characters with code points greater than 127,
-even when PCRE2_UTF is not set. This makes it possible, for example, to process
-strings in the 16-bit UCS-2 code. This option is available only if PCRE2 has
-been compiled with Unicode support (which is the default).
+upper/lower casing operations, even when PCRE2_UTF is not set. This makes it
+possible to process strings in the 16-bit UCS-2 code. This option is available
+only if PCRE2 has been compiled with Unicode support (which is the default).
+The PCRE2_EXTRA_CASELESS_RESTRICT option (see below) restricts caseless
+matching such that ASCII characters match only ASCII characters and non-ASCII
+characters match only non-ASCII characters.
 .sp
   PCRE2_UNGREEDY
 .sp
@@ -1867,8 +1890,7 @@ behaviour of PCRE2 are given in the
 .\" HREF
 \fBpcre2unicode\fP
 .\"
-page. In particular, note that it changes the way PCRE2_CASELESS handles
-characters with code points greater than 127.
+page. In particular, note that it changes the way PCRE2_CASELESS works.
 .
 .
 .\" HTML <a name="extracompileoptions"></a>
@@ -1915,6 +1937,29 @@ defined by ECMAscript 6; setting PCRE2_EXTRA_ALT_BSUX has the effect of
 PCRE2_ALT_BSUX, but in addition it recognizes \eu{hhh..} as a hexadecimal
 character code, where hhh.. is any number of hexadecimal digits.
 .sp
+  PCRE2_EXTRA_ASCII_BSD
+.sp
+This option forces \ed to match only ASCII digits, even when PCRE2_UCP is set.
+It can be changed within a pattern by means of the (?aD) option setting.
+.sp
+  PCRE2_EXTRA_ASCII_BSS
+.sp
+This option forces \es to match only ASCII space characters, even when
+PCRE2_UCP is set. It can be changed within a pattern by means of the (?aS)
+option setting.
+.sp
+  PCRE2_EXTRA_ASCII_BSW
+.sp
+This option forces \ew to match only ASCII word characters, even when PCRE2_UCP
+is set. It can be changed within a pattern by means of the (?aW) option
+setting.
+.sp
+  PCRE2_EXTRA_ASCII_POSIX
+.sp
+This option forces the POSIX character classes to match only ASCII characters,
+even when PCRE2_UCP is set. It can be changed within a pattern by means of the
+(?aP) option setting.
+.sp
   PCRE2_EXTRA_BAD_ESCAPE_IS_LITERAL
 .sp
 This is a dangerous option. Use with care. By default, an unrecognized escape
@@ -1934,6 +1979,17 @@ that a sequence such as [\eN{] is interpreted as a malformed attempt at
 [\eN{...}] and so is treated as [N{] whereas [\eN] gives an error because an
 unqualified \eN is a valid escape sequence but is not supported in a character
 class. To reiterate: this is a dangerous option. Use with great care.
+.sp
+  PCRE2_EXTRA_CASELESS_RESTRICT
+.sp
+When either PCRE2_UCP or PCRE2_UTF is set, caseless matching follows Unicode
+rules, which allow for more than two cases per character. There are two
+case-equivalent character sets that contain both ASCII and non-ASCII
+characters. The ASCII letter S is case-equivalent to U+017f (long S) and the
+ASCII letter K is case-equivalent to U+212a (Kelvin sign). This option disables
+recognition of case-equivalences that cross the ASCII/non-ASCII boundary. In a 
+caseless match, both characters must either be ASCII or non-ASCII. The option 
+can be changed with a pattern by the (?r) option setting.
 .sp
   PCRE2_EXTRA_ESCAPED_CR_IS_LF
 .sp
@@ -1976,8 +2032,8 @@ also set.
 .sp
 .B void pcre2_jit_free_unused_memory(pcre2_general_context *\fIgcontext\fP);
 .sp
-.B pcre2_jit_stack *pcre2_jit_stack_create(PCRE2_SIZE \fIstartsize\fP,
-.B "  PCRE2_SIZE \fImaxsize\fP, pcre2_general_context *\fIgcontext\fP);"
+.B pcre2_jit_stack *pcre2_jit_stack_create(size_t \fIstartsize\fP,
+.B "  size_t \fImaxsize\fP, pcre2_general_context *\fIgcontext\fP);"
 .sp
 .B void pcre2_jit_stack_assign(pcre2_match_context *\fImcontext\fP,
 .B "  pcre2_jit_callback \fIcallback_function\fP, void *\fIcallback_data\fP);"
@@ -2023,7 +2079,8 @@ PCRE2_UCP option can be set when a pattern is compiled; this causes \ew and
 friends to use Unicode property support instead of the built-in tables.
 PCRE2_UCP also causes upper/lower casing operations on characters with code
 points greater than 127 to use Unicode properties. These effects apply even
-when PCRE2_UTF is not set.
+when PCRE2_UTF is not set. There are, however, some PCRE2_EXTRA options (see
+above) that can be used to modify or suppress them.
 .P
 The use of locales with Unicode is discouraged. If you are handling characters
 with code points greater than 127, you should either use Unicode support, or
@@ -2519,7 +2576,9 @@ large enough to hold as many as are expected.
 A minimum of at least 1 pair is imposed by \fBpcre2_match_data_create()\fP, so
 it is always possible to return the overall matched string in the case of
 \fBpcre2_match()\fP or the longest match in the case of
-\fBpcre2_dfa_match()\fP.
+\fBpcre2_dfa_match()\fP. The maximum number of pairs is 65535; if the the first
+argument of \fBpcre2_match_data_create()\fP is greater than this, 65535 is
+used.
 .P
 The second argument of \fBpcre2_match_data_create()\fP is a pointer to a
 general context, which can specify custom memory management for obtaining the
@@ -2569,6 +2628,45 @@ below.
 When a match data block itself is no longer needed, it should be freed by
 calling \fBpcre2_match_data_free()\fP. If this function is called with a NULL
 argument, it returns immediately, without doing anything.
+.
+.
+.SH "MEMORY USE FOR MATCH DATA BLOCKS"
+.rs
+.sp
+.nf
+.B PCRE2_SIZE pcre2_get_match_data_size(pcre2_match_data *\fImatch_data\fP);
+.sp
+.B PCRE2_SIZE pcre2_get_match_data_heapframes_size(
+.B "  pcre2_match_data *\fImatch_data\fP);"
+.fi
+.P
+The size of a match data block depends on the size of the ovector that it
+contains. The function \fBpcre2_get_match_data_size()\fP returns the size, in
+bytes, of the block that is its argument.
+.P
+When \fBpcre2_match()\fP runs interpretively (that is, without using JIT), it
+makes use of a vector of data frames for remembering backtracking positions.
+The size of each individual frame depends on the number of capturing
+parentheses in the pattern and can be obtained by calling
+\fBpcre2_pattern_info()\fP with the PCRE2_INFO_FRAMESIZE option (see the
+section entitled "Information about a compiled pattern"
+.\" HTML <a href="#infoaboutpattern>">
+.\" </a>
+above).
+.\"
+.P
+Heap memory is used for the frames vector; if the initial memory block turns
+out to be too small during matching, it is automatically expanded. When
+\fBpcre2_match()\fP returns, the memory is not freed, but remains attached to
+the match data block, for use by any subsequent matches that use the same
+block. It is automatically freed when the match data block itself is freed.
+.P
+You can find the current size of the frames vector that a match data block owns
+by calling \fBpcre2_get_match_data_heapframes_size()\fP. For a newly created
+match data block the size will be zero. Some types of match may require a lot
+of frames and thus a large vector; applications that run in environments where
+memory is constrained can check this and free the match data block if the heap
+frames vector has become too big.
 .
 .
 .SH "MATCHING A PATTERN: THE TRADITIONAL FUNCTION"
@@ -4027,6 +4125,6 @@ Cambridge, England.
 .rs
 .sp
 .nf
-Last updated: 27 July 2022
-Copyright (c) 1997-2022 University of Cambridge.
+Last updated: 03 February 2023
+Copyright (c) 1997-2023 University of Cambridge.
 .fi

@@ -118,21 +118,22 @@ and \B, because they are defined in terms of \w and \W. If you want
 to test for a wider sense of, say, "digit", you can use explicit Unicode
 property tests such as \p{Nd}. Alternatively, if you set the PCRE2_UCP option,
 the way that the character escapes work is changed so that Unicode properties
-are used to determine which characters match. There are more details in the
-section on
+are used to determine which characters match, though there are some options
+that suppress this for individual escapes. For details see the section on
 <a href="pcre2pattern.html#genericchartypes">generic character types</a>
 in the
 <a href="pcre2pattern.html"><b>pcre2pattern</b></a>
 documentation.
 </P>
 <P>
-Similarly, characters that match the POSIX named character classes are all
-low-valued characters, unless the PCRE2_UCP option is set.
+Like the escapes, characters that match the POSIX named character classes are
+all low-valued characters unless the PCRE2_UCP option is set, but there is an
+option to override this.
 </P>
 <P>
-However, the special horizontal and vertical white space matching escapes (\h,
-\H, \v, and \V) do match all the appropriate Unicode characters, whether or
-not PCRE2_UCP is set.
+In contrast to the character escapes and character classes, the special
+horizontal and vertical white space escapes (\h, \H, \v, and \V) do match
+all the appropriate Unicode characters, whether or not PCRE2_UCP is set.
 </P>
 <br><b>
 UNICODE CASE-EQUIVALENCE
@@ -145,6 +146,14 @@ lookup is used for speed. A few Unicode characters such as Greek sigma have
 more than two code points that are case-equivalent, and these are treated
 specially. Setting PCRE2_UCP without PCRE2_UTF allows Unicode-style case
 processing for non-UTF character encodings such as UCS-2.
+</P>
+<P>
+There are two ASCII characters (S and K) that, in addition to their ASCII lower
+case equivalents, have a non-ASCII one as well (long S and Kelvin sign).
+Recognition of these non-ASCII characters as case-equivalent to their ASCII
+counterparts can be disabled by setting the PCRE2_EXTRA_CASELESS_RESTRICT
+option. When this is set, all characters in a case equivalence must either be
+ASCII or non-ASCII; there can be no mixing.
 <a name="scriptruns"></a></P>
 <br><b>
 SCRIPT RUNS
@@ -432,6 +441,14 @@ PCRE2_UTF to be set as well. Note, however, that the pattern itself must be a
 valid UTF string.
 </P>
 <P>
+If you do not set PCRE2_MATCH_INVALID_UTF when calling <b>pcre2_compile</b>, and
+you are not certain that your subject strings are valid UTF sequences, you
+should not make use of the JIT "fast path" function <b>pcre2_jit_match()</b>
+because it bypasses sanity checks, including the one for UTF validity. An
+invalid string may cause undefined behaviour, including looping, crashing, or
+giving the wrong answer.
+</P>
+<P>
 Setting PCRE2_MATCH_INVALID_UTF does not affect what <b>pcre2_compile()</b>
 generates, but if <b>pcre2_jit_compile()</b> is subsequently called, it does
 generate different code. If JIT is not used, the option affects the behaviour
@@ -472,6 +489,12 @@ Using PCRE2_MATCH_INVALID_UTF, an application can run matches on arbitrary
 data, knowing that any matched strings that are returned are valid UTF. This
 can be useful when searching for UTF text in executable or other binary files.
 </P>
+<P>
+Note, however, that the 16-bit and 32-bit PCRE2 libraries process strings as
+sequences of uint16_t or uint32_t code points. They cannot find valid UTF
+sequences within an arbitrary string of bytes unless such sequences are
+suitably aligned.
+</P>
 <br><b>
 AUTHOR
 </b><br>
@@ -487,9 +510,9 @@ Cambridge, England.
 REVISION
 </b><br>
 <P>
-Last updated: 22 December 2021
+Last updated: 04 February 2023
 <br>
-Copyright &copy; 1997-2021 University of Cambridge.
+Copyright &copy; 1997-2023 University of Cambridge.
 <br>
 <p>
 Return to the <a href="index.html">PCRE2 index page</a>.

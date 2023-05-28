@@ -18,10 +18,11 @@
 #endif // WX_PRECOMP
 
 #include "wx/xml/xml.h"
-#include "wx/scopedptr.h"
 #include "wx/sstream.h"
 
 #include <stdarg.h>
+
+#include <memory>
 
 // ----------------------------------------------------------------------------
 // helpers for testing XML tree
@@ -107,7 +108,7 @@ CPPUNIT_TEST_SUITE_NAMED_REGISTRATION( XmlTestCase, "XmlTestCase" );
 
 void XmlTestCase::InsertChild()
 {
-    wxScopedPtr<wxXmlNode> root(new wxXmlNode(wxXML_ELEMENT_NODE, "root"));
+    std::unique_ptr<wxXmlNode> root(new wxXmlNode(wxXML_ELEMENT_NODE, "root"));
     root->AddChild(new wxXmlNode(wxXML_ELEMENT_NODE, "1"));
     wxXmlNode *two = new wxXmlNode(wxXML_ELEMENT_NODE, "2");
     root->AddChild(two);
@@ -127,7 +128,7 @@ void XmlTestCase::InsertChild()
 
 void XmlTestCase::InsertChildAfter()
 {
-    wxScopedPtr<wxXmlNode> root(new wxXmlNode(wxXML_ELEMENT_NODE, "root"));
+    std::unique_ptr<wxXmlNode> root(new wxXmlNode(wxXML_ELEMENT_NODE, "root"));
 
     root->InsertChildAfter(new wxXmlNode(wxXML_ELEMENT_NODE, "1"), nullptr);
     CheckXml(root.get(), "1", nullptr);
@@ -607,4 +608,21 @@ void XmlTestCase::Doctype()
     // Using both single and double quotes in system ID is not allowed.
     dt = wxXmlDoctype( "root", "O'Reilly (\"editor\")", "Public-ID" );
     CPPUNIT_ASSERT( !dt.IsValid() );
+}
+
+// This test is disabled by default as it requires the environment variable
+// below to be defined to point to a XML file to load.
+TEST_CASE("XML::Load", "[xml][.]")
+{
+    wxString file;
+    REQUIRE( wxGetEnv("WX_TEST_XML_FILE", &file) );
+
+    wxXmlDocument doc;
+    REQUIRE( doc.Load(file) );
+    CHECK( doc.IsOk() );
+
+    wxStringOutputStream sos;
+    REQUIRE( doc.Save(sos) );
+
+    WARN("Dump of " << file << ":\n" << sos.GetString());
 }

@@ -7,8 +7,8 @@
 wxFormBuilder is a GUI builder for the wxWidgets framework.
 
 Code generation is supported for [C++](https://wxwidgets.org/), [Python](https://wxpython.org/),
-[XRC](https://docs.wxwidgets.org/trunk/overview_xrc.html), [Lua](https://github.com/pkulchenko/wxlua) and [PHP](https://github.com/wxphp/wxphp).
-Additionally, the import and export of XRC code is possible.
+[Lua](https://github.com/pkulchenko/wxlua) and [PHP](https://github.com/wxphp/wxphp).
+Additionally, the import and export of [XRC](https://docs.wxwidgets.org/trunk/overview_xrc.html) code is possible.
 To support additional widgets, custom plugins can be used.
 
 wxFormBuilder runs on Windows, various Linux distributions and macOS.
@@ -23,7 +23,7 @@ wxFormBuilder runs on Windows, various Linux distributions and macOS.
 Building from source requires the fairly recent CMake version 3.21. Most Linux distributions don't contain this version
 in their package repositories currently, the [CMake](https://cmake.org/download/) website offers binary downloads for
 multiple platforms. wxFormBuilder uses the [wxWidgets](https://wxwidgets.org/) framework itself, it is highly recommended using
-the current development version 3.1.x. The latest stable version 3.0.x is known to cause multiple issues and should be avoided.
+the current stable version 3.2.x. The previous stable version 3.0.x is known to cause multiple issues and should be avoided.
 
 ### Windows
 
@@ -39,7 +39,7 @@ Installing the Prerequisites:
 ```sh
 pacman -Syu
 pacman -S ${MINGW_PACKAGE_PREFIX}-toolchain ${MINGW_PACKAGE_PREFIX}-cmake ${MINGW_PACKAGE_PREFIX}-make base-devel git
-pacman -S ${MINGW_PACKAGE_PREFIX}-wxWidgets3.1 ${MINGW_PACKAGE_PREFIX}-boost
+pacman -S ${MINGW_PACKAGE_PREFIX}-wxWidgets3.2 ${MINGW_PACKAGE_PREFIX}-boost
 ```
 
 Building:
@@ -69,7 +69,7 @@ Building on Linux has been tested on Ubuntu and Fedora with GCC in 64 bit mode b
 Installing the Prerequisites:
 
 ```sh
-sudo apt install libwxgtk3.0-gtk3-dev libwxgtk-media3.0-gtk3-dev libboost-dev cmake make git
+sudo apt install libwxgtk3.2-dev libwxgtk-media3.2-dev libboost-dev cmake make git
 ```
 
 Building:
@@ -77,7 +77,7 @@ Building:
 ```sh
 git clone --recursive https://github.com/wxFormBuilder/wxFormBuilder
 cd wxFormBuilder
-cmake -S . -B _build -G "Unix Makefiles" --install-prefix "$PWD/_install" -DCMAKE_BUILD_TYPE=Release -DWXFB_WXWIDGETS_ENABLE_30=ON
+cmake -S . -B _build -G "Unix Makefiles" --install-prefix "$PWD/_install" -DCMAKE_BUILD_TYPE=Release
 cmake --build _build --config Release -j `nproc`
 cmake --install _build --config Release
 ```

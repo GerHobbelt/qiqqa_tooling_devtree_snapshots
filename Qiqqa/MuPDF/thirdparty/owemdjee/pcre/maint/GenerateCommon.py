@@ -16,32 +16,32 @@ import re
 #                             DATA LISTS
 # ---------------------------------------------------------------------------
 
-# BIDI classes in the DerivedBidiClass.txt file, with comments.
+# BIDI classes in the DerivedBidiClass.txt file, short and long identifiers.
 
 bidi_classes = [
-  'AL',  'Arabic letter',
-  'AN',  'Arabic number',
-  'B',   'Paragraph separator',
-  'BN',  'Boundary neutral',
-  'CS',  'Common separator',
-  'EN',  'European number',
-  'ES',  'European separator',
-  'ET',  'European terminator',
-  'FSI', 'First strong isolate',
-  'L',   'Left to right',
-  'LRE', 'Left to right embedding',
-  'LRI', 'Left to right isolate',
-  'LRO', 'Left to right override',
-  'NSM', 'Non-spacing mark',
-  'ON',  'Other neutral',
-  'PDF', 'Pop directional format',
-  'PDI', 'Pop directional isolate',
-  'R',   'Right to left',
-  'RLE', 'Right to left embedding',
-  'RLI', 'Right to left isolate',
-  'RLO', 'Right to left override',
-  'S',   'Segment separator',
-  'WS',  'White space'
+  'AL',  'Arabic_Letter',
+  'AN',  'Arabic_Number',
+  'B',   'Paragraph_Separator',
+  'BN',  'Boundary_Neutral',
+  'CS',  'Common_Separator',
+  'EN',  'European_Number',
+  'ES',  'European_Separator',
+  'ET',  'European_Terminator',
+  'FSI', 'First_Strong_Isolate',
+  'L',   'Left_To_Right',
+  'LRE', 'Left_To_Right_Embedding',
+  'LRI', 'Left_To_Right_Isolate',
+  'LRO', 'Left_To_Right_Override',
+  'NSM', 'Nonspacing_Mark',
+  'ON',  'Other_Neutral',
+  'PDF', 'Pop_Directional_Format',
+  'PDI', 'Pop_Directional_Isolate',
+  'R',   'Right_To_Left',
+  'RLE', 'Right_To_Left_Embedding',
+  'RLI', 'Right_To_Left_Isolate',
+  'RLO', 'Right_To_Left_Override',
+  'S',   'Segment_Separator',
+  'WS',  'White_Space'
   ]
 
 # Particular category property names, with comments. NOTE: If ever this list
@@ -139,7 +139,8 @@ def getbpropslist():
         if re.match(pat, bplast) != None:
           break
       else:
-        bplist.append(bplast)
+        if bplast not in bplist:
+          bplist.append(bplast)
 
     file.close()
 
@@ -204,7 +205,7 @@ def collect_property_names():
       if match_obj == None:
         continue
 
-      if match_obj.group(2) in bool_properties:
+      if match_obj.group(2) != match_obj.group(1) and match_obj.group(2) in bool_properties:
         if match_obj.group(3) == None:
           abbreviations[match_obj.group(2)] = (match_obj.group(1),)
         else:
@@ -294,7 +295,7 @@ def open_output(default):
   try:
     file = open(output_name, "w")
   except IOError:
-    print ("** Couldn't open %s" % output_name)
+    print("** Couldn't open %s" % output_name)
     sys.exit(1)
 
   script_name = sys.argv[0]

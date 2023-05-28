@@ -69,24 +69,24 @@
 #include "monolithic_examples.h"
 
 
-#define   BMP_FILE             "test1.bmp"
-#define   FILE_1BPP            "feyn.tif"
-#define   FILE_2BPP            "speckle2.png"
-#define   FILE_2BPP_C          "weasel2.4g.png"
-#define   FILE_4BPP            "speckle4.png"
-#define   FILE_4BPP_C          "weasel4.16c.png"
-#define   FILE_8BPP_1          "dreyfus8.png"
-#define   FILE_8BPP_2          "weasel8.240c.png"
-#define   FILE_8BPP_3          "test8.jpg"
-#define   FILE_16BPP           "test16.tif"
-#define   FILE_32BPP           "marge.jpg"
-#define   FILE_32BPP_ALPHA     "test32-alpha.png"
-#define   FILE_1BIT_ALPHA      "test-1bit-alpha.png"
-#define   FILE_CMAP_ALPHA      "test-cmap-alpha.png"
-#define   FILE_TRANS_ALPHA     "test-fulltrans-alpha.png"
-#define   FILE_GRAY_ALPHA      "test-gray-alpha.png"
-#define   FILE_GRAY_ALPHA_TIF  "gray-alpha.tif"
-#define   FILE_RGB16_TIF       "rgb16.tif"
+#define   BMP_FILE             DEMOPATH("test1.bmp")
+#define   FILE_1BPP            DEMOPATH("feyn.tif")
+#define   FILE_2BPP            DEMOPATH("speckle2.png")
+#define   FILE_2BPP_C          DEMOPATH("weasel2.4g.png")
+#define   FILE_4BPP            DEMOPATH("speckle4.png")
+#define   FILE_4BPP_C          DEMOPATH("weasel4.16c.png")
+#define   FILE_8BPP_1          DEMOPATH("dreyfus8.png")
+#define   FILE_8BPP_2          DEMOPATH("weasel8.240c.png")
+#define   FILE_8BPP_3          DEMOPATH("test8.jpg")
+#define   FILE_16BPP           DEMOPATH("test16.tif")
+#define   FILE_32BPP           DEMOPATH("marge.jpg")
+#define   FILE_32BPP_ALPHA     DEMOPATH("test32-alpha.png")
+#define   FILE_1BIT_ALPHA      DEMOPATH("test-1bit-alpha.png")
+#define   FILE_CMAP_ALPHA      DEMOPATH("test-cmap-alpha.png")
+#define   FILE_TRANS_ALPHA     DEMOPATH("test-fulltrans-alpha.png")
+#define   FILE_GRAY_ALPHA      DEMOPATH("test-gray-alpha.png")
+#define   FILE_GRAY_ALPHA_TIF  DEMOPATH("gray-alpha.tif")
+#define   FILE_RGB16_TIF       DEMOPATH("rgb16.tif")
 
 static l_int32 testcomp(const char *filename, PIX *pix, l_int32 comptype);
 static l_int32 testcomp_mem(PIX *pixs, PIX **ppixt, l_int32 index,
@@ -112,7 +112,7 @@ l_uint8      *data;
 l_int32       i, d, n, success, failure, same;
 l_int32       w, h, bps, spp, iscmap, res;
 size_t        size, nbytes;
-PIX          *pix1, *pix2, *pix3, *pix4, *pix8, *pix16, *pix32;
+PIX          *pix1, *pix2, *pix3, *pix4, *pix5, *pix6, *pix8, *pix16, *pix32;
 PIX          *pix, *pixt, *pixd;
 PIXA         *pixa;
 PIXCMAP      *cmap;
@@ -620,7 +620,6 @@ part6:
     pix4 = pixRead("/tmp/lept/regout/alpha2.bmp");
     pixEqual(pix4, pix1, &same);
     regTestCompareValues(rp, 1.0, same, 0.0);  /* 3 */
-    if (rp->success == FALSE) success = FALSE;
     if (rp->display) {
         writeImageFileInfo("/tmp/lept/regout/alpha2.bmp", stderr, 0);
         pixDisplay(pix1, 300, 100);
@@ -629,6 +628,45 @@ part6:
     pixDestroy(&pix2);
     pixDestroy(&pix3);
     pixDestroy(&pix4);
+
+        /* Test conversion between 32 and 24 bpp */
+    lept_stderr("Test conversion between 32 and 24 bpp\n");
+    pix1 = pixRead("test-rgba.bmp");
+    pix2 = pixConvert32To24(pix1);
+    pix3 = pixConvert24To32(pix2);
+    pixEqual(pix3, pix1, &same);  /* bmp */
+    regTestCompareValues(rp, 1.0, same, 0.0);  /* 4 */
+    pix4 = pixDisplayDiff(pix1, pix3, 1, 1, 0xff000000);
+    regTestWritePixAndCheck(rp, pix4, IFF_PNG);  /* 5 */
+    pixDestroy(&pix1);
+    pixDestroy(&pix2);
+    pixDestroy(&pix3);
+    pixDestroy(&pix4);
+
+        /* Test writing and reading 24 bpp BMP and PNG */
+    lept_stderr("Test write/read of 24 bpp in BMP and PNG\n");
+    pix1 = pixRead("test-rgba.bmp");
+    pix2 = pixConvert32To24(pix1);
+    pixWrite("/tmp/lept/regout/alpha3.bmp", pix2, IFF_BMP);
+    pixWrite("/tmp/lept/regout/alpha3.png", pix2, IFF_PNG);
+    pix3 = pixRead("/tmp/lept/regout/alpha3.bmp");
+    pix4 = pixRead("/tmp/lept/regout/alpha3.png");
+    pixEqual(pix3, pix1, &same);  /* bmp */
+    regTestCompareValues(rp, 1.0, same, 0.0);  /* 6 */
+    pix5 = pixDisplayDiff(pix1, pix3, 1, 1, 0xff000000);
+    regTestWritePixAndCheck(rp, pix5, IFF_PNG);  /* 7 */
+    pixEqual(pix4, pix1, &same);  /* png */
+    regTestCompareValues(rp, 1.0, same, 0.0);  /* 8 */
+    pix6 = pixDisplayDiff(pix1, pix4, 1, 1, 0xff000000);
+    regTestWritePixAndCheck(rp, pix6, IFF_PNG);  /* 9 */
+    if (rp->display) pixDisplay(pix6, 800, 100);
+    pixDestroy(&pix1);
+    pixDestroy(&pix2);
+    pixDestroy(&pix3);
+    pixDestroy(&pix4);
+    pixDestroy(&pix5);
+    pixDestroy(&pix6);
+    if (rp->success == FALSE) success = FALSE;
 
     if (success)
         lept_stderr("\n  ******* Success on misc tests *******\n\n");

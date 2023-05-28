@@ -1,4 +1,4 @@
-.TH PCRE2TEST 1 "27 July 2022" "PCRE 10.41"
+.TH PCRE2TEST 1 "04 February 2023" "PCRE 10.43"
 .SH NAME
 pcre2test - a program for testing Perl-compatible regular expressions.
 .SH SYNOPSIS
@@ -565,12 +565,11 @@ by a previous \fB#pattern\fP command.
 .sp
 The following modifiers set options for \fBpcre2_compile()\fP. Most of them set
 bits in the options argument of that function, but those whose names start with
-PCRE2_EXTRA are additional options that are set in the compile context. For the
-main options, there are some single-letter abbreviations that are the same as
-Perl options. There is special handling for /x: if a second x is present,
-PCRE2_EXTENDED is converted into PCRE2_EXTENDED_MORE as in Perl. A third
-appearance adds PCRE2_EXTENDED as well, though this makes no difference to the
-way \fBpcre2_compile()\fP behaves. See
+PCRE2_EXTRA are additional options that are set in the compile context.
+Some of these options have single-letter abbreviations. There is special
+handling for /x: if a second x is present, PCRE2_EXTENDED is converted into
+PCRE2_EXTENDED_MORE as in Perl. A third appearance adds PCRE2_EXTENDED as well,
+though this makes no difference to the way \fBpcre2_compile()\fP behaves. See
 .\" HREF
 \fBpcre2api\fP
 .\"
@@ -583,9 +582,15 @@ for a description of the effects of these options.
       alt_circumflex            set PCRE2_ALT_CIRCUMFLEX
       alt_verbnames             set PCRE2_ALT_VERBNAMES
       anchored                  set PCRE2_ANCHORED
+  /a  ascii_all                 set all ASCII options
+      ascii_bsd                 set PCRE2_EXTRA_ASCII_BSD
+      ascii_bss                 set PCRE2_EXTRA_ASCII_BSS
+      ascii_bsw                 set PCRE2_EXTRA_ASCII_BSW
+      ascii_posix               set PCRE2_EXTRA_ASCII_POSIX
       auto_callout              set PCRE2_AUTO_CALLOUT
       bad_escape_is_literal     set PCRE2_EXTRA_BAD_ESCAPE_IS_LITERAL
   /i  caseless                  set PCRE2_CASELESS
+  /r  caseless_restrict         set PCRE2_EXTRA_CASELESS_RESTRICT
       dollar_endonly            set PCRE2_DOLLAR_ENDONLY
   /s  dotall                    set PCRE2_DOTALL
       dupnames                  set PCRE2_DUPNAMES
@@ -724,9 +729,11 @@ ending code units are recorded. The subject length line is omitted when
 \fBno_start_optimize\fP is set because the minimum length is not calculated
 when it can never be used.
 .P
-The \fBframesize\fP modifier shows the size, in bytes, of the storage frames
+The \fBframesize\fP modifier shows the size, in bytes, of each storage frame
 used by \fBpcre2_match()\fP for handling backtracking. The size depends on the
-number of capturing parentheses in the pattern.
+number of capturing parentheses in the pattern. A vector of these frames is
+used at matching time; its overall size is shown when the \fBheaframes_size\fP
+subject modifier is set.
 .P
 The \fBcallout_info\fP modifier requests information about all the callouts in
 the pattern. A list of them is output at the end of any other information that
@@ -1039,6 +1046,7 @@ process.
       allusedtext                 show all consulted text
       altglobal                   alternative global matching
   /g  global                      global matching
+      heapframes_size             show match data heapframes size
       jitstack=<n>                set size of JIT stack
       mark                        show mark values
       replace=<string>            specify a replacement string
@@ -1211,6 +1219,7 @@ pattern, but can be overridden by modifiers on the subject.
       get=<number or name>       extract captured substring
       getall                     extract all captured substrings
   /g  global                     global matching
+      heapframes_size            show match data heapframes size
       heap_limit=<n>             set a limit on heap memory (Kbytes)
       jitstack=<n>               set size of JIT stack
       mark                       show mark values
@@ -1595,6 +1604,23 @@ memory is allocated during matching with JIT. For this modifier to work, the
 subject, though it can be set on one or the other.
 .
 .
+.SS "Showing the heap frame overall vector size"
+.rs
+.sp
+The \fBheapframes_size\fP modifier is relevant for matches using
+\fBpcre2_match()\fP without JIT. After a match has run (whether successful or
+not) the size, in bytes, of the allocated heap frames vector that is left
+attached to the match data block is shown. If the matching action involved
+several calls to \fBpcre2_match()\fP (for example, global matching or for
+timing) only the final value is shown.
+.P
+This modifier is ignored, with a warning, for POSIX or DFA matching. JIT
+matching does not use the heap frames vector, so the size is always zero,
+unless there was a previous non-JIT match. Note that specifing a size of zero
+for the output vector (see below) causes \fBpcre2test\fP to free its match data
+block (and associated heap frames vector) and allocate a new one.
+.
+.
 .SS "Setting a starting offset"
 .rs
 .sp
@@ -1624,9 +1650,9 @@ A value of zero is useful when testing the POSIX API because it causes
 \fBregexec()\fP to be called with a NULL capture vector. When not testing the
 POSIX API, a value of zero is used to cause
 \fBpcre2_match_data_create_from_pattern()\fP to be called, in order to create a
-match block of exactly the right size for the pattern. (It is not possible to
-create a match block with a zero-length ovector; there is always at least one
-pair of offsets.)
+new match block of exactly the right size for the pattern. (It is not possible
+to create a match block with a zero-length ovector; there is always at least
+one pair of offsets.) The old match data block is freed.
 .
 .
 .SS "Passing the subject as zero-terminated"
@@ -2121,6 +2147,6 @@ Cambridge, England.
 .rs
 .sp
 .nf
-Last updated: 27 July 2022
-Copyright (c) 1997-2022 University of Cambridge.
+Last updated: 04 February 2023
+Copyright (c) 1997-2023 University of Cambridge.
 .fi

@@ -260,7 +260,9 @@ bool wxNonOwnedWindow::SetBackgroundColour(const wxColour& c )
     // only set the native background color if the toplevel window's
     // background is not supposed to be transparent, otherwise the
     // transparency is lost
-    if ( GetBackgroundStyle() != wxBG_STYLE_PAINT && GetBackgroundStyle() != wxBG_STYLE_TRANSPARENT)
+    // we cannot set the background color on a shaped toplevel window
+    // otherwise we loose the shape and end up with a rectangular background
+    if ( GetBackgroundStyle() != wxBG_STYLE_PAINT && GetBackgroundStyle() != wxBG_STYLE_TRANSPARENT && GetShape().IsEmpty() )
     {
         if ( m_nowpeer )
             return m_nowpeer->SetBackgroundColour(c);
@@ -533,7 +535,7 @@ bool wxNonOwnedWindow::DoSetRegionShape(const wxRegion& region)
 
 #if wxUSE_GRAPHICS_CONTEXT
 
-#include "wx/scopedptr.h"
+#include <memory>
 
 bool wxNonOwnedWindow::DoSetPathShape(const wxGraphicsPath& path)
 {
@@ -547,7 +549,7 @@ bool wxNonOwnedWindow::DoSetPathShape(const wxGraphicsPath& path)
         dc.SetBackground(*wxBLACK_BRUSH);
         dc.Clear();
 
-        wxScopedPtr<wxGraphicsContext> context(wxGraphicsContext::Create(dc));
+        std::unique_ptr<wxGraphicsContext> context(wxGraphicsContext::Create(dc));
         context->SetBrush(*wxWHITE_BRUSH);
         context->SetAntialiasMode(wxANTIALIAS_NONE);
         context->FillPath(path);

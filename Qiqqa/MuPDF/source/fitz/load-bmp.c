@@ -617,8 +617,8 @@ bmp_read_bitmap(fz_context *ctx, struct info *info, const unsigned char *begin, 
 	{
 		fz_warn(ctx, "premature end in bitmap data in bmp image");
 
-		height = (end - ssp) / sstride;
-		if (height == 0 || height > SHRT_MAX)
+		int32_t h = (end - ssp) / sstride;
+		if (h == 0 || h > SHRT_MAX)
 		{
 			fz_free(ctx, decompressed);
 			fz_throw(ctx, FZ_ERROR_GENERIC, "image dimensions out of range in bmp image");
@@ -1232,7 +1232,7 @@ fz_load_bmp(fz_context *ctx, const unsigned char *p, size_t total)
 }
 
 void
-fz_load_bmp_info(fz_context *ctx, const unsigned char *p, size_t total, int *wp, int *hp, int *xresp, int *yresp, fz_colorspace **cspacep)
+fz_load_bmp_info(fz_context *ctx, const unsigned char *p, size_t total, int *wp, int *hp, int *xresp, int *yresp, fz_colorspace **cspacep, uint8_t *orientationp)
 {
 	struct info info;
 
@@ -1240,6 +1240,7 @@ fz_load_bmp_info(fz_context *ctx, const unsigned char *p, size_t total, int *wp,
 	{
 		bmp_read_image(ctx, &info, p, p + total, p, 1);
 		*cspacep = fz_keep_colorspace(ctx, info.cs);
+		*orientationp = 1;
 		*wp = info.width;
 		*hp = info.height;
 		*xresp = info.xres;

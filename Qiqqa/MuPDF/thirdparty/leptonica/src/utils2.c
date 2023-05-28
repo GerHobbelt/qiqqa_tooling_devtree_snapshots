@@ -1353,7 +1353,8 @@ FILE     *fp;
         return (l_uint8 *)ERROR_PTR("filename not defined", __func__, NULL);
 
     if ((fp = fopenReadStream(filename)) == NULL)
-        return (l_uint8 *)ERROR_PTR("file stream not opened", __func__, NULL);
+        return (l_uint8 *)ERROR_PTR_1("file stream not opened",
+                                      filename, __func__, NULL);
     data = l_binaryReadStream(fp, pnbytes);
     fclose(fp);
     return data;
@@ -1468,7 +1469,8 @@ FILE     *fp;
         return (l_uint8 *)ERROR_PTR("filename not defined", __func__, NULL);
 
     if ((fp = fopenReadStream(filename)) == NULL)
-        return (l_uint8 *)ERROR_PTR("file stream not opened", __func__, NULL);
+        return (l_uint8 *)ERROR_PTR_1("file stream not opened",
+                                      filename, __func__, NULL);
     data = l_binaryReadSelectStream(fp, start, nbytes, pnread);
     fclose(fp);
     return data;
@@ -1575,7 +1577,7 @@ FILE  *fp;
     stringCat(actualOperation, 20, "b");
 
     if ((fp = fopenWriteStream(filename, actualOperation)) == NULL)
-        return ERROR_INT("stream not opened", __func__, 1);
+        return ERROR_INT_1("stream not opened", filename, __func__, 1);
     fwrite(data, 1, nbytes, fp);
     fclose(fp);
     return 0;
@@ -1597,7 +1599,7 @@ FILE   *fp;
     if (!filename)
         return ERROR_INT("filename not defined", __func__, 0);
     if ((fp = fopenReadStream(filename)) == NULL)
-        return ERROR_INT("stream not opened", __func__, 0);
+        return ERROR_INT_1("stream not opened", filename, __func__, 0);
     nbytes = fnbytesInFile(fp);
     fclose(fp);
     return nbytes;
@@ -1782,7 +1784,7 @@ FILE  *fp;
         return ERROR_INT("str not defined", __func__, 1);
 
     if ((fp = fopenWriteStream(filename, "a")) == NULL)
-        return ERROR_INT("stream not opened", __func__, 1);
+        return ERROR_INT_1("stream not opened", filename, __func__, 1);
     fprintf(fp, "%s", str);
     fclose(fp);
     return 0;
@@ -1912,14 +1914,12 @@ FILE  *fp;
 
         /* Else, strip directory and try locally */
     splitPathAtDirectory(filename, NULL, &tail);
-	if (tail == NULL)
-		return (FILE*)ERROR_PTR("allocation failure / out of memory / path tail extraction failure", __func__, NULL);
-	fp = fopen(tail, "rb");
-    LEPT_FREE(tail);
-	LEPT_FREE(fname);
-
+    if (!tail)
+        return (FILE*)ERROR_PTR_1("tail not found", filename, __func__, NULL);
+    fp = fopen(tail, "rb");
     if (!fp)
-        return (FILE *)ERROR_PTR("file not found", __func__, NULL);
+        fp = (FILE *)ERROR_PTR_1("file not found", tail, __func__, NULL);
+    LEPT_FREE(tail);
     return fp;
 }
 
@@ -1951,9 +1951,9 @@ FILE  *fp;
 
     fname = genPathname(filename, NULL);
     fp = fopen(fname, modestring);
-    LEPT_FREE(fname);
     if (!fp)
-        return (FILE *)ERROR_PTR("stream not opened", __func__, NULL);
+        fp = (FILE *)ERROR_PTR_1("stream not opened", fname, __func__, NULL);
+    LEPT_FREE(fname);
     return fp;
 }
 
@@ -1984,7 +1984,7 @@ FILE  *fp;
     if ((fp = fmemopen((void *)data, size, "rb")) == NULL)
         return (FILE *)ERROR_PTR("stream not opened", __func__, NULL);
 #else  /* write to tmp file */
-    L_INFO("work-around: writing to a temp file\n", __func__);
+    L_INFO("no fmemopen API --> work-around: write to temp file\n", __func__);
   #ifdef _WIN32
     if ((fp = fopenWriteWinTempfile()) == NULL)
         return (FILE *)ERROR_PTR("tmpfile stream not opened", __func__, NULL);
@@ -3121,10 +3121,9 @@ size_t   size;
         if ((cdir = getcwd(NULL, 0)) == NULL)
             return (char *)ERROR_PTR("no current dir found", __func__, NULL);
     } else {
-        cdir = stringNew(dir);
-		if (cdir == NULL)
-			return (char*)ERROR_PTR("allocation failure / out of memory", __func__, NULL);
-	}
+        if ((cdir = stringNew(dir)) == NULL)
+            return (char *)ERROR_PTR("stringNew failed", __func__, NULL);
+    }
 
         /* Convert to unix path separators, and remove the trailing
          * slash in the directory, except when dir == "/"  */
@@ -3136,7 +3135,7 @@ size_t   size;
     }
 
     namelen = (fname) ? strlen(fname) : 0;
-    size = dirlen + namelen + 256;
+    size = dirlen + namelen + L_MAX(256, MAX_PATH);
     if ((pathout = (char *)LEPT_CALLOC(size, sizeof(char))) == NULL) {
         LEPT_FREE(cdir);
         return (char *)ERROR_PTR("pathout not made", __func__, NULL);
@@ -3146,6 +3145,28 @@ size_t   size;
     is_win32 = TRUE;
 #endif  /* _WIN32 */
 
+#if defined(BUILD_MONOLITHIC)
+	if (strncmp(cdir, "/tmp", 4) == 0) {  /* in "/tmp" */
+		const char* cds = getcwd(NULL, 0);
+		if (cds == NULL)
+			return (char*)ERROR_PTR("no current dir found", __func__, NULL);
+		stringCopy(pathout, cds, size);
+		convertSepCharsInPath(pathout, UNIX_PATH_SEPCHAR);
+		LEPT_FREE(cds);
+
+		l_int32 plen = strlen(pathout);
+		if (plen > 1 && pathout[plen - 1] == '/') {
+			pathout[plen - 1] = '\0';
+		}
+
+		stringCat(pathout, size, "/lept-tmp");
+
+		/* Add the rest of cdir */
+		if (dirlen > 4)
+			stringCat(pathout, size, cdir + 4);
+	}
+	else
+#endif
         /* First handle %dir (which may be a full pathname).
          * There is no path rewriting on unix, and on win32, we do not
          * rewrite unless the specified directory is /tmp or

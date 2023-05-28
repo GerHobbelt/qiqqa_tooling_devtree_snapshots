@@ -11,11 +11,27 @@ on:
     - '*/ci'
     paths-ignore:
     - '**/*.md'
+    - '.azure-pipelines.yml'
+    - '.circleci/**'
+    - '.cirrus.yml'
+    - 'appveyor.yml'
+    - 'packages/**'
+    - 'plan9/**'
+    - 'projects/**'
+    - 'winbuild/**'
   pull_request:
     branches:
     - master
     paths-ignore:
     - '**/*.md'
+    - '.azure-pipelines.yml'
+    - '.circleci/**'
+    - '.cirrus.yml'
+    - 'appveyor.yml'
+    - 'packages/**'
+    - 'plan9/**'
+    - 'projects/**'
+    - 'winbuild/**'
 
 concurrency:
   # Hardcoded workflow filename as workflow name above is just Linux again
@@ -40,7 +56,7 @@ jobs:
       name: 'install prereqs and impacket'
 
     - run: |
-        curl -LO https://github.com/awslabs/aws-lc/archive/refs/tags/v1.3.0.tar.gz
+        curl -LOsSf --retry 6 --retry-connrefused --max-time 999 https://github.com/awslabs/aws-lc/archive/refs/tags/v1.3.0.tar.gz
         tar xzf v1.3.0.tar.gz
         mkdir aws-lc-1.3.0-build
         cd aws-lc-1.3.0-build
@@ -54,19 +70,23 @@ jobs:
     - run: autoreconf -fi
       name: 'autoreconf'
 
-    - run: ./configure --enable-warnings --enable-werror --with-openssl=$HOME/awslc
-      name: 'configure'
+    - run: |
+        mkdir build
+        cd build
+        ../configure --enable-warnings --enable-werror --with-openssl=$HOME/awslc
+        cd ..
+      name: 'configure out-of-tree'
 
-    - run: make -j 2 V=1
+    - run: make -C build -j 2 V=1
       name: 'make'
 
-    - run: make -j 2 V=1 examples
+    - run: make -C build -j 2 V=1 examples
       name: 'make examples'
 
-    - run: make -j 2 V=1 -C tests
+    - run: make -C build -j 2 V=1 -C tests
       name: 'make tests'
 
-    - run: make V=1 test-ci
+    - run: make -C build V=1 test-ci
       name: 'run tests'
 
   cmake:
@@ -84,7 +104,7 @@ jobs:
       name: 'install prereqs and impacket'
 
     - run: |
-        curl -LO https://github.com/awslabs/aws-lc/archive/refs/tags/v1.3.0.tar.gz
+        curl -LOsSf --retry 6 --retry-connrefused --max-time 999 https://github.com/awslabs/aws-lc/archive/refs/tags/v1.3.0.tar.gz
         tar xzf v1.3.0.tar.gz
         mkdir aws-lc-1.3.0-build
         cd aws-lc-1.3.0-build
@@ -97,7 +117,7 @@ jobs:
 
     # CMAKE_COMPILE_WARNING_AS_ERROR is available in cmake 3.24 or later
     - run: cmake -Bbuild -DOPENSSL_ROOT_DIR=$HOME/awslc -DBUILD_SHARED_LIBS=ON -DCMAKE_COMPILE_WARNING_AS_ERROR=ON .
-      name: 'cmake generate'
+      name: 'cmake generate out-of-tree'
 
     - run: cmake --build build --parallel
       name: 'cmake build'

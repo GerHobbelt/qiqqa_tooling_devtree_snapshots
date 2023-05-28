@@ -211,11 +211,6 @@ FT_BEGIN_HEADER
 
 #endif  /* FT_MAKE_OPTION_SINGLE_OBJECT */
 
-
-#ifndef FT_LOCAL
-#error Z
-#endif
-
   /*
    * Use `FT_LOCAL_ARRAY` and `FT_LOCAL_ARRAY_DEF` to declare and define,
    * respectively, a constant array that must be accessed from several

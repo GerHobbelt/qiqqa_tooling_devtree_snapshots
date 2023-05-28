@@ -1175,9 +1175,11 @@ schannel_connect_step1(struct Curl_cfilter *cf, struct Curl_easy *data)
   if(!backend->cred) {
     char *snihost;
     result = schannel_acquire_credential_handle(cf, data);
-    if(result != CURLE_OK) {
+    if(result)
       return result;
-    }
+    /* schannel_acquire_credential_handle() sets backend->cred accordingly or
+       it returns error otherwise. */
+
     /* A hostname associated with the credential is needed by
        InitializeSecurityContext for SNI and other reasons. */
     snihost = Curl_ssl_snihost(data, hostname, NULL);
@@ -1685,7 +1687,7 @@ add_cert_to_certinfo(const CERT_CONTEXT *ccert_context, void *raw_arg)
     /* Windows prior to 11 22H2 returned certificates in reverse order. */
     if(curlx_verify_windows_version(10, 0, 22621, PLATFORM_WINNT,
                                     VERSION_LESS_THAN)) {
-      insert_index += args->certs_count - 1;
+      insert_index = (args->certs_count - 1) - insert_index;
     }
     args->result = Curl_extract_certinfo(args->data, insert_index,
                                          beg, end);
@@ -2375,7 +2377,7 @@ schannel_recv(struct Curl_cfilter *cf, struct Curl_easy *data,
                "schannel: decrypted data buffer: offset %zu length %zu",
                backend->decdata_offset, backend->decdata_length));
 
-  cleanup:
+cleanup:
   /* Warning- there is no guarantee the encdata state is valid at this point */
   DEBUGF(infof(data, "schannel: schannel_recv cleanup"));
 

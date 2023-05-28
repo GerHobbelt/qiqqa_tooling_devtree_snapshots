@@ -7,7 +7,7 @@
 #                            | (__| |_| |  _ <| |___
 #                             \___|\___/|_| \_\_____|
 #
-# Copyright (C) 2008 - 2022, Daniel Stenberg, <daniel@haxx.se>, et al.
+# Copyright (C) Daniel Stenberg, <daniel@haxx.se>, et al.
 #
 # This software is licensed as described in the file COPYING, which
 # you should have received as part of this distribution. The terms
@@ -126,10 +126,8 @@ class Caddy:
             r = curl.http_get(url=check_url)
             if r.exit_code == 0:
                 return True
-            log.error(f'curl: {r}')
-            log.debug(f'waiting for caddy to become responsive: {r}')
             time.sleep(.1)
-        log.error(f"Server still not responding after {timeout}")
+        log.error(f"Caddy still not responding after {timeout}")
         return False
 
     def _rmf(self, path):

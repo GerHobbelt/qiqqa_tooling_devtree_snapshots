@@ -288,10 +288,7 @@ wxPrintNativeDataBase *wxNativePrintFactory::CreatePrintNativeData()
 
 wxIMPLEMENT_ABSTRACT_CLASS(wxPrintNativeDataBase, wxObject);
 
-wxPrintNativeDataBase::wxPrintNativeDataBase()
-{
-    m_ref = 1;
-}
+wxPrintNativeDataBase::~wxPrintNativeDataBase() = default;
 
 //----------------------------------------------------------------------------
 // wxPrintFactoryModule
@@ -633,6 +630,11 @@ void wxPrintout::GetPageInfo(int *minPage, int *maxPage, int *fromPage, int *toP
     *maxPage = DEFAULT_MAX_PAGES;
     *fromPage = 1;
     *toPage = 1;
+}
+
+bool wxPrintout::IsPageSelected(int WXUNUSED(page))
+{
+    return false;
 }
 
 bool wxPrintout::SetUp(wxDC& dc)
@@ -1517,8 +1519,8 @@ public:
         // We don't use (smaller) images inside a button with a text label but
         // rather toolbar-like bitmap buttons hence use wxART_TOOLBAR and not
         // wxART_BUTTON here.
-        wxBitmap bmp = wxArtProvider::GetBitmap(artId, wxART_TOOLBAR);
-        wxBitmapButton * const btn = new wxBitmapButton(m_parent, btnId, bmp);
+        wxBitmapBundle bb = wxArtProvider::GetBitmapBundle(artId, wxART_TOOLBAR);
+        wxBitmapButton * const btn = new wxBitmapButton(m_parent, btnId, bb);
         btn->SetToolTip(tooltip);
 
         Add(btn);

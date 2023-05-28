@@ -19,10 +19,11 @@
     #include "wx/dcclient.h"
 #endif
 
-#include "wx/scopedptr.h"
 #include "wx/taskbar.h"
 
 #include "wx/osx/private.h"
+
+#include <memory>
 
 class wxTaskBarIconWindow;
 
@@ -105,7 +106,7 @@ protected:
 private:
     wxTaskBarIconDockImpl();
     wxMenu             *m_pMenu;
-    wxScopedPtr<wxMenu> m_menuDeleter;
+    std::unique_ptr<wxMenu> m_menuDeleter;
 };
 
 class wxTaskBarIconCustomStatusItemImpl;
@@ -334,7 +335,13 @@ bool wxTaskBarIconDockImpl::PopupMenu(wxMenu *WXUNUSED(menu))
 - (void) clickedAction: (id) sender
 {
     wxUnusedVar(sender);
-    wxMenu *menu = impl->CreatePopupMenu();
+    wxMenu *menu = impl->GetPopupMenu();
+    if (menu)
+    {
+        impl->PopupMenu(menu);
+        return;
+    }
+    menu = impl->CreatePopupMenu();
     if (menu)
     {
         impl->PopupMenu(menu);
@@ -377,13 +384,22 @@ bool wxTaskBarIconCustomStatusItemImpl::SetIcon(const wxBitmapBundle& icon, cons
         [m_target setImplementation:this];
         [[m_statusItem button] setTarget:m_target];
         [[m_statusItem button] setAction:@selector(clickedAction:)];
+#if __MAC_OS_X_VERSION_MAX_ALLOWED >= MAC_OS_X_VERSION_10_12
         [[m_statusItem button] sendActionOn: NSEventMaskLeftMouseDown | NSEventMaskRightMouseDown];
+#endif
     }
 
     m_icon = IconFromBundle(icon);
     NSImage* nsimage = m_icon.GetNSImage();
     [[m_statusItem button] setImageScaling: NSImageScaleProportionallyUpOrDown];
-    [[m_statusItem button] setImage: nsimage];
+
+    CGFloat statusBarThickness = [[NSStatusBar systemStatusBar] thickness];
+    NSSize statusBarSize = NSMakeSize(statusBarThickness, statusBarThickness);
+    NSImage* statusBarScaledImage = [NSImage imageWithSize:statusBarSize flipped:NO drawingHandler:^BOOL(NSRect dstRect) {
+        [nsimage drawInRect:dstRect fromRect:NSZeroRect operation:NSCompositingOperationSourceOver fraction:1];
+        return YES;
+    }];
+    [[m_statusItem button] setImage:statusBarScaledImage];
     
     wxCFStringRef cfTooltip(tooltip);
     [[m_statusItem button] setToolTip:cfTooltip.AsNSString()];

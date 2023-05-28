@@ -613,6 +613,7 @@
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)msw_%(Filename).obj</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='DLL Release|x64'">$(IntDir)msw_%(Filename).obj</ObjectFileName>
     </ClCompile>
+    <ClCompile Include="..\..\src\msw\darkmode.cpp" />
     <ClCompile Include="..\..\src\msw\graphicsd2d.cpp" />
     <ClCompile Include="..\..\src\msw\ole\access.cpp" />
     <ClCompile Include="..\..\src\msw\ole\activex.cpp" />
@@ -753,7 +754,6 @@
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)msw_%(Filename).obj</ObjectFileName>
     </ClCompile>
     <ClCompile Include="..\..\src\msw\gdiimage.cpp" />
-    <ClCompile Include="..\..\src\msw\gdiobj.cpp" />
     <ClCompile Include="..\..\src\msw\gdiplus.cpp" />
     <ClCompile Include="..\..\src\msw\graphics.cpp" />
     <ClCompile Include="..\..\src\msw\headerctrl.cpp" />
@@ -1078,6 +1078,7 @@
     <ClCompile Include="..\..\src\common\bmpcboxcmn.cpp" />
     <ClCompile Include="..\..\src\generic\rowheightcache.cpp" />
     <ClCompile Include="..\..\src\generic\creddlgg.cpp" />
+    <ClCompile Include="..\..\src\msw\overlay.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\..\src\msw\version.rc">
@@ -1515,6 +1516,8 @@
     <ClInclude Include="..\..\include\wx\creddlg.h" />
     <ClInclude Include="..\..\include\wx\generic\creddlgg.h" />
     <ClInclude Include="..\..\include\wx\filedlgcustomize.h" />
+    <ClInclude Include="..\..\include\wx\compositebookctrl.h" />
+    <ClInclude Include="..\..\include\wx\msw\darkmode.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

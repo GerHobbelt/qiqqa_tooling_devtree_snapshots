@@ -126,6 +126,7 @@ check_PROGRAMS = \
 	unit/local/basic_endpoint \
 	unit/local/connect_pair \
 	unit/local/datagram_protocol \
+	unit/local/seq_packet_protocol \
 	unit/local/stream_protocol \
 	unit/packaged_task \
 	unit/placeholders \
@@ -147,6 +148,7 @@ check_PROGRAMS = \
 	unit/serial_port \
 	unit/serial_port_base \
 	unit/signal_set \
+	unit/signal_set_base \
 	unit/socket_base \
 	unit/static_thread_pool \
 	unit/steady_timer \
@@ -195,7 +197,7 @@ noinst_PROGRAMS = \
 	performance/server
 endif
 
-if HAVE_CXX17
+if HAVE_CXX11
 check_PROGRAMS += \
 	unit/experimental/basic_channel \
 	unit/experimental/basic_concurrent_channel \
@@ -344,6 +346,7 @@ TESTS = \
 	unit/local/basic_endpoint \
 	unit/local/connect_pair \
 	unit/local/datagram_protocol \
+	unit/local/seq_packet_protocol \
 	unit/local/stream_protocol \
 	unit/packaged_task \
 	unit/placeholders \
@@ -365,6 +368,7 @@ TESTS = \
 	unit/serial_port \
 	unit/serial_port_base \
 	unit/signal_set \
+	unit/signal_set_base \
 	unit/socket_base \
 	unit/static_thread_pool \
 	unit/steady_timer \
@@ -403,7 +407,7 @@ TESTS = \
 	unit/write \
 	unit/write_at
 
-if HAVE_CXX17
+if HAVE_CXX11
 TESTS += \
 	unit/experimental/basic_channel \
 	unit/experimental/basic_concurrent_channel \
@@ -572,6 +576,7 @@ unit_is_write_buffered_SOURCES = unit/is_write_buffered.cpp
 unit_local_basic_endpoint_SOURCES = unit/local/basic_endpoint.cpp
 unit_local_connect_pair_SOURCES = unit/local/connect_pair.cpp
 unit_local_datagram_protocol_SOURCES = unit/local/datagram_protocol.cpp
+unit_local_seq_packet_protocol_SOURCES = unit/local/seq_packet_protocol.cpp
 unit_local_stream_protocol_SOURCES = unit/local/stream_protocol.cpp
 unit_packaged_task_SOURCES = unit/packaged_task.cpp
 unit_placeholders_SOURCES = unit/placeholders.cpp
@@ -593,6 +598,7 @@ unit_registered_buffer_SOURCES = unit/registered_buffer.cpp
 unit_serial_port_SOURCES = unit/serial_port.cpp
 unit_serial_port_base_SOURCES = unit/serial_port_base.cpp
 unit_signal_set_SOURCES = unit/signal_set.cpp
+unit_signal_set_base_SOURCES = unit/signal_set_base.cpp
 unit_socket_base_SOURCES = unit/socket_base.cpp
 unit_static_thread_pool_SOURCES = unit/static_thread_pool.cpp
 unit_steady_timer_SOURCES = unit/steady_timer.cpp
@@ -631,7 +637,7 @@ unit_writable_pipe_SOURCES = unit/writable_pipe.cpp
 unit_write_SOURCES = unit/write.cpp
 unit_write_at_SOURCES = unit/write_at.cpp
 
-if HAVE_CXX17
+if HAVE_CXX11
 unit_experimental_basic_channel_SOURCES = unit/experimental/basic_channel.cpp
 unit_experimental_basic_concurrent_channel_SOURCES = unit/experimental/basic_concurrent_channel.cpp
 unit_experimental_channel_SOURCES = unit/experimental/channel.cpp

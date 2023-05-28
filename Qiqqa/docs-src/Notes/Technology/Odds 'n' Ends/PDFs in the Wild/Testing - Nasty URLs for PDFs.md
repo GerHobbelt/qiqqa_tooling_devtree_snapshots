@@ -2,9 +2,11 @@
 
 > **Note**: Also check these for more PDF download/fetching woes:
 >
-> - [[curl - commandline and notes]] (sections about *nasty PDFs*)
-> - [[PDF cannot be Saved.As in browser (Microsoft Edge)]]
+> - [[../curl - command-line and notes|curl - command-line and notes]] (sections about *nasty PDFs*)
+> - [[PDF cannot be Saved.As in browser (Microsoft Edge)|PDF cannot be 'Saved As' in browser (Microsoft Edge)]]
 > - [[Testing - PDF URLs with problems]]
+> - [[MuPDF testing notes - particular PDFs]]
+> - [[../../../Progress in Development/Testing & Evaluating/PDF `bulktest` test run notes at the bleeding edge|PDF `bulktest` test run notes at the bleeding edge]]
 > 
  
 - http://dspace.bracu.ac.bd/xmlui/bitstream/handle/10361/7620/12201001%20&%2013101230_CSE.pdf?sequence=1
@@ -154,10 +156,36 @@
 ```
 
 - https://www.dizinot.com/upload/files/2016/12/AOS-AO4606.pdf : this one at least dumps the raw PDF binary content to screen in any browser due to incorrect(?) mimetype setup server-side. Only produces the PDF when done via "save as" popup menu entry in your web browser. Hence we can expect trouble when downloading this one using other tools, such as `curl`.
-- 
+- https://www.pnas.org/doi/epdf/10.1073/pnas.1708279115 : linux firefox requires popups to be enabled for the PDF to be downloaded.
+- https://opengrey.eu/
+
+ * https://www.proceedings.aaai.org/Papers/ICML/2003/ICML03-102.pdf : browser opens this one, after you explicitly accept to visit the site due to expired/wrong SSL certificate, but `wget` barfs with a HTTP 403 (access denied) error! Very strange indeed.
+   BTW: `cUrl` spits back HTTP ERROR 406 Not Acceptable.
+ 
+   PDFs with this problem, all from the same site:
+   - https://www.proceedings.aaai.org/Papers/ICML/2003/ICML03-000.pdf
+   - https://www.proceedings.aaai.org/Papers/ICML/2003/ICML03-001.pdf
+   - https://www.proceedings.aaai.org/Papers/ICML/2003/ICML03-002.pdf
+   - https://www.proceedings.aaai.org/Papers/ICML/2003/ICML03-011.pdf
+   - https://www.proceedings.aaai.org/Papers/ICML/2003/ICML03-102.pdf
+
+
 
 
 ## HTML pages with problems
 
 * [Irreducible and Aperiodic Markov Chains (uni-ulm.de)](https://www.mathematik.uni-ulm.de/stochastik/lehre/ss06/markov/skript_engl/node12.html) -- expired certificate gets you blocked
-* 
+
+
+## Download / fetch weirdnesses & miscellaneous oddities
+
+- https://epubs.siam.org/doi/epdf/10.1137/1.9781611976472.5
+
+  Linux/firefox b0rks on this one with 'popup blocked' warning. However, the 'popup' is what will allow you to get the PDF, so you'll have allow popups for the given siam.org website.
+
+- Academia.com of course is a nuisance as it always wants you to log in with either google or facebook: one big tracking hazard.
+
+* https://ietresearch.onlinelibrary.wiley.com/doi/epdf/10.1049/iet-epa.2016.0190 : Linux/Firefox report that it blocked popup(s) when you click on the download button in this page to get an actual copy of the PDF: you need to enable popups for the Wiley subdomain for the PDF file to be actually downloaded. See if we can circumvent this with cURL?
+
+
+

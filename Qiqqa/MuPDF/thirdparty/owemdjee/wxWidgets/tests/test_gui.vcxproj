@@ -521,6 +521,7 @@
     <ClCompile Include="controls\ownerdrawncomboboxtest.cpp" />
     <ClCompile Include="controls\pickerbasetest.cpp" />
     <ClCompile Include="controls\pickertest.cpp" />
+    <ClCompile Include="controls\propgridtest.cpp" />
     <ClCompile Include="controls\radioboxtest.cpp" />
     <ClCompile Include="controls\radiobuttontest.cpp" />
     <ClCompile Include="controls\rearrangelisttest.cpp" />
@@ -566,6 +567,7 @@
     <ClCompile Include="graphics\bitmap.cpp" />
     <ClCompile Include="graphics\bmpbundle.cpp" />
     <ClCompile Include="graphics\boundingbox.cpp" />
+    <ClCompile Include="graphics\clipper.cpp" />
     <ClCompile Include="graphics\clippingbox.cpp" />
     <ClCompile Include="graphics\coords.cpp" />
     <ClCompile Include="graphics\graphbitmap.cpp" />

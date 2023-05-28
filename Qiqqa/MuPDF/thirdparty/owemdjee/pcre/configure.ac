@@ -9,20 +9,20 @@ dnl The PCRE2_PRERELEASE feature is for identifying release candidates. It might
 dnl be defined as -RC2, for example. For real releases, it should be empty.
 
 m4_define(pcre2_major, [10])
-m4_define(pcre2_minor, [41])
-m4_define(pcre2_prerelease, [])
-m4_define(pcre2_date, [2022-12-06])
+m4_define(pcre2_minor, [43])
+m4_define(pcre2_prerelease, [-DEV])
+m4_define(pcre2_date, [2023-01-15])
 
 # Libtool shared library interface versions (current:revision:age)
-m4_define(libpcre2_8_version,     [11:1:11])
-m4_define(libpcre2_16_version,    [11:1:11])
-m4_define(libpcre2_32_version,    [11:1:11])
-m4_define(libpcre2_posix_version, [3:3:0])
+m4_define(libpcre2_8_version,     [11:2:11])
+m4_define(libpcre2_16_version,    [11:2:11])
+m4_define(libpcre2_32_version,    [11:2:11])
+m4_define(libpcre2_posix_version, [3:4:0])
 
 # NOTE: The CMakeLists.txt file searches for the above variables in the first
 # 50 lines of this file. Please update that if the variables above are moved.
 
-AC_PREREQ([2.60])
+AC_PREREQ([2.62])
 AC_INIT([PCRE2],pcre2_major.pcre2_minor[]pcre2_prerelease,[],[pcre2])
 AC_CONFIG_SRCDIR([src/pcre2.h.in])
 AM_INIT_AUTOMAKE([dist-bzip2 dist-zip])
@@ -42,7 +42,7 @@ AC_CONFIG_MACRO_DIR([m4])
 
 remember_set_CFLAGS="$CFLAGS"
 
-AC_PROG_CC
+m4_version_prereq(2.70, [AC_PROG_CC], [AC_PROG_CC_C99])
 AM_PROG_CC_C_O
 AC_USE_SYSTEM_EXTENSIONS
 
@@ -72,6 +72,28 @@ AC_SYS_LARGEFILE
 # Check for GCC visibility feature
 
 PCRE2_VISIBILITY
+
+# Check for the mul_overflow() builtin
+
+AC_MSG_CHECKING([for __builtin_mul_overflow()])
+AC_LANG_PUSH([C])
+AC_LINK_IFELSE([AC_LANG_PROGRAM([[
+		#ifdef HAVE_SYS_TYPES_H
+		#include <sys/types.h>
+		#endif
+		#include <stddef.h>
+
+		int a, b;
+		size_t m;
+	]], [[__builtin_mul_overflow(a, b, &m)]])],
+	[pcre2_cc_cv_builtin_mul_overflow=yes],
+	[pcre2_cc_cv_builtin_mul_overflow=no])
+AC_MSG_RESULT([$pcre2_cc_cv_builtin_mul_overflow])
+if test "$pcre2_cc_cv_builtin_mul_overflow" = yes; then
+	AC_DEFINE([HAVE_BUILTIN_MUL_OVERFLOW], 1,
+		[Define this if your compiler provides __builtin_mul_overflow()])
+fi
+AC_LANG_POP([C])
 
 # Check for Clang __attribute__((uninitialized)) feature
 

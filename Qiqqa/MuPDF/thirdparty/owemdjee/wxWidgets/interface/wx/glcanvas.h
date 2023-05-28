@@ -786,6 +786,15 @@ class wxGLCanvas : public wxWindow
 {
 public:
     /**
+        Default constructor not creating the window.
+
+        Create() must be used to actually create it later.
+
+        @since 3.3.0
+     */
+    wxGLCanvas();
+
+    /**
         Creates a window with the given parameters. Notice that you need to
         create and use a wxGLContext to output to this window.
 
@@ -877,6 +886,19 @@ public:
                long style = 0,
                const wxString& name = "GLCanvas",
                const wxPalette& palette = wxNullPalette);
+
+
+    /**
+       Re-creates EGLSurface. To be used after a reparent or other
+       changes that may invalidate the EGL drawing surface.
+
+       Only available when wxUSE_GLCANVAS_EGL is enabled.
+
+       @return @true if surface is successfully recreated
+
+       @since 3.2.3
+    */
+    bool CreateSurface();
 
     /**
         Determines if a canvas having the specified attributes is available.

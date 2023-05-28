@@ -82,6 +82,7 @@
 #include "wx/recguard.h"
 #include "wx/scopeguard.h"
 #include "wx/private/rescale.h"
+#include "wx/scopeguard.h"
 #include "wx/private/window.h"
 
 #if defined(__WXOSX__)
@@ -198,7 +199,6 @@ wxFLAGS_MEMBER(wxBORDER)
 // standard window styles
 wxFLAGS_MEMBER(wxTAB_TRAVERSAL)
 wxFLAGS_MEMBER(wxCLIP_CHILDREN)
-wxFLAGS_MEMBER(wxTRANSPARENT_WINDOW)
 wxFLAGS_MEMBER(wxWANTS_CHARS)
 wxFLAGS_MEMBER(wxFULL_REPAINT_ON_RESIZE)
 wxFLAGS_MEMBER(wxALWAYS_SHOW_SB )

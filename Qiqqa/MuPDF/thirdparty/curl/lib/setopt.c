@@ -115,7 +115,11 @@ static CURLcode setstropt_userpwd(char *option, char **userp, char **passwdp)
   /* Parse the login details if specified. It not then we treat NULL as a hint
      to clear the existing data */
   if(option) {
-    result = Curl_parse_login_details(option, strlen(option),
+    size_t len = strlen(option);
+    if(len > CURL_MAX_INPUT_LENGTH)
+      return CURLE_BAD_FUNCTION_ARGUMENT;
+
+    result = Curl_parse_login_details(option, len,
                                       (userp ? &user : NULL),
                                       (passwdp ? &passwd : NULL),
                                       NULL);
@@ -1162,7 +1166,7 @@ CURLcode Curl_vsetopt(struct Curl_easy *data, CURLoption option, va_list param)
 
   case CURLOPT_PROXYTYPE:
     /*
-     * Set proxy type. HTTP/HTTP_1_0/SOCKS4/SOCKS4a/SOCKS5/SOCKS5_HOSTNAME
+     * Set proxy type.
      */
     arg = va_arg(param, long);
     if((arg < CURLPROXY_HTTP) || (arg > CURLPROXY_SOCKS5_HOSTNAME))
@@ -1298,7 +1302,7 @@ CURLcode Curl_vsetopt(struct Curl_easy *data, CURLoption option, va_list param)
 
   case CURLOPT_FTP_SKIP_PASV_IP:
     /*
-     * Set up how to handle the IP that is returned by the server for PASV
+     * Set up how to handle the IP address that is returned by the server for PASV responses.
      */
     data->set.ftp_pasvp_ip_rule = va_arg(param, long);
     break;

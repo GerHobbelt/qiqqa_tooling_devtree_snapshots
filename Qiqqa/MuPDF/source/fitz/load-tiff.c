@@ -93,11 +93,14 @@ struct tiff
 	unsigned g3opts;
 	unsigned g4opts;
 	unsigned predictor;
+	unsigned orientation;
 
 	unsigned ycbcrsubsamp[2];
 
 	const unsigned char *jpegtables; /* point into "file" buffer */
 	unsigned jpegtableslen;
+	unsigned jpegofs;
+	unsigned jpeglen;
 
 	unsigned char *profile;
 	int profilesize;
@@ -129,6 +132,7 @@ enum
 #define PhotometricInterpretation 262
 #define FillOrder 266
 #define StripOffsets 273
+#define Orientation 274
 #define SamplesPerPixel 277
 #define RowsPerStrip 278
 #define StripByteCounts 279
@@ -146,6 +150,8 @@ enum
 #define TileByteCounts 325
 #define ExtraSamples 338
 #define JPEGTables 347
+#define JPEGInterchangeFormat 513
+#define JPEGInterchangeFormatLength 514
 #define YCbCrSubSampling 530
 #define ICCProfile 34675
 
@@ -982,6 +988,18 @@ tiff_read_tag(fz_context *ctx, struct tiff *tiff, unsigned offset, unsigned last
 		tiff->jpegtableslen = count;
 		break;
 
+	case JPEGInterchangeFormat:
+		if (value > (size_t)(tiff->ep - tiff->bp))
+			fz_throw(ctx, FZ_ERROR_GENERIC, "TIFF JPEG image offset out of range");
+		tiff_read_tag_value(&tiff->jpegofs, tiff, type, value, 1);
+		break;
+
+	case JPEGInterchangeFormatLength:
+		if (tiff->jpegofs + value > (size_t)(tiff->ep - tiff->bp))
+			fz_throw(ctx, FZ_ERROR_GENERIC, "TIFF JPEG image length out of range");
+		tiff_read_tag_value(&tiff->jpeglen, tiff, type, value, 1);
+		break;
+
 	case StripOffsets:
 		if (tiff->stripoffsets)
 			fz_throw(ctx, FZ_ERROR_GENERIC, "at most one strip offsets tag allowed");
@@ -997,6 +1015,10 @@ tiff_read_tag(fz_context *ctx, struct tiff *tiff, unsigned offset, unsigned last
 		tiff->stripoffsets = Memento_label(fz_malloc_array(ctx, count, unsigned), "tiff_stripoffsets");
 		tiff_read_tag_value(tiff->stripoffsets, tiff, type, value, count);
 		tiff->stripoffsetslen = count;
+		break;
+
+	case Orientation:
+		tiff_read_tag_value(&tiff->orientation, tiff, type, value, 1);
 		break;
 
 	case StripByteCounts:
@@ -1465,6 +1487,35 @@ tiff_decode_ifd(fz_context *ctx, struct tiff *tiff)
 }
 
 static void
+tiff_decode_jpeg(fz_context *ctx, struct tiff *tiff)
+{
+	size_t wlen = (size_t)tiff->imagelength * tiff->stride;
+	size_t size = 0;
+	fz_stream *rawstm = NULL;
+	fz_stream *stm = NULL;
+
+	fz_var(rawstm);
+	fz_var(stm);
+
+	fz_try(ctx)
+	{
+		rawstm = fz_open_memory(ctx, tiff->bp + tiff->jpegofs, tiff->jpeglen);
+		stm = fz_open_dctd(ctx, rawstm, -1, 0, NULL);
+		size = (unsigned)fz_read(ctx, stm, tiff->samples, wlen);
+	}
+	fz_always(ctx)
+	{
+		fz_drop_stream(ctx, stm);
+		fz_drop_stream(ctx, rawstm);
+	}
+	fz_catch(ctx)
+		fz_rethrow(ctx);
+
+	if (size < wlen)
+		fz_warn(ctx, "premature end of data in jpeg");
+}
+
+static void
 tiff_decode_samples(fz_context *ctx, struct tiff *tiff)
 {
 	unsigned i;
@@ -1478,8 +1529,10 @@ tiff_decode_samples(fz_context *ctx, struct tiff *tiff)
 		tiff_decode_tiles(ctx, tiff);
 	else if (tiff->rowsperstrip && tiff->stripoffsets && tiff->stripbytecounts)
 		tiff_decode_strips(ctx, tiff);
+	else if (tiff->jpegofs && tiff->jpeglen)
+		tiff_decode_jpeg(ctx, tiff);
 	else
-		fz_throw(ctx, FZ_ERROR_GENERIC, "image is missing both strip and tile data");
+		fz_throw(ctx, FZ_ERROR_GENERIC, "image is missing strip, tile and jpeg data");
 
 	/* Predictor (only for LZW and Flate) */
 	if ((tiff->compression == 5 || tiff->compression == 8 || tiff->compression == 32946) && tiff->predictor == 2)
@@ -1598,8 +1651,10 @@ fz_load_tiff(fz_context *ctx, const unsigned char *buf, size_t len)
 	return fz_load_tiff_subimage(ctx, buf, len, 0);
 }
 
+static uint8_t tiff_orientation_to_mupdf[9] = { 0, 1, 5, 3, 7, 6, 4, 8, 2 };
+
 void
-fz_load_tiff_info_subimage(fz_context *ctx, const unsigned char *buf, size_t len, int *wp, int *hp, int *xresp, int *yresp, fz_colorspace **cspacep, int subimage)
+fz_load_tiff_info_subimage(fz_context *ctx, const unsigned char *buf, size_t len, int *wp, int *hp, int *xresp, int *yresp, fz_colorspace **cspacep, uint8_t *orientationp, int subimage)
 {
 	struct tiff tiff = { 0 };
 
@@ -1621,6 +1676,10 @@ fz_load_tiff_info_subimage(fz_context *ctx, const unsigned char *buf, size_t len
 			tiff.colorspace = fz_keep_colorspace(ctx, fz_device_rgb(ctx));
 		}
 		*cspacep = fz_keep_colorspace(ctx, tiff.colorspace);
+
+		*orientationp = 0;
+		if (tiff.orientation >= 1 && tiff.orientation <= 8)
+			*orientationp = tiff_orientation_to_mupdf[tiff.orientation];
 	}
 	fz_always(ctx)
 	{
@@ -1643,9 +1702,9 @@ fz_load_tiff_info_subimage(fz_context *ctx, const unsigned char *buf, size_t len
 }
 
 void
-fz_load_tiff_info(fz_context *ctx, const unsigned char *buf, size_t len, int *wp, int *hp, int *xresp, int *yresp, fz_colorspace **cspacep)
+fz_load_tiff_info(fz_context *ctx, const unsigned char *buf, size_t len, int *wp, int *hp, int *xresp, int *yresp, fz_colorspace **cspacep, uint8_t *orientationp)
 {
-	fz_load_tiff_info_subimage(ctx, buf, len, wp, hp, xresp, yresp, cspacep, 0);
+	fz_load_tiff_info_subimage(ctx, buf, len, wp, hp, xresp, yresp, cspacep, orientationp, 0);
 }
 
 int

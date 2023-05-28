@@ -474,6 +474,7 @@ typedef struct compiler_common {
   jump_list *stackalloc;
   jump_list *revertframes;
   jump_list *wordboundary;
+  jump_list *ucp_wordboundary;
   jump_list *anynewline;
   jump_list *hspace;
   jump_list *vspace;
@@ -963,6 +964,8 @@ switch(*cc)
   case OP_ASSERT_ACCEPT:
   case OP_CLOSE:
   case OP_SKIPZERO:
+  case OP_NOT_UCP_WORD_BOUNDARY:
+  case OP_UCP_WORD_BOUNDARY:
   return cc + PRIV(OP_lengths)[*cc];
 
   case OP_CHAR:
@@ -1282,6 +1285,8 @@ do
       case OP_CIRCM:
       case OP_DOLL:
       case OP_DOLLM:
+      case OP_NOT_UCP_WORD_BOUNDARY:
+      case OP_UCP_WORD_BOUNDARY:
       /* Zero width assertions. */
       cc++;
       continue;
@@ -2105,6 +2110,9 @@ while (cc < ccend)
 
     case OP_CALLOUT:
     case OP_CALLOUT_STR:
+
+    case OP_NOT_UCP_WORD_BOUNDARY:
+    case OP_UCP_WORD_BOUNDARY:
 
     cc = next_opcode(common, cc);
     SLJIT_ASSERT(cc != NULL);
@@ -4399,7 +4407,7 @@ of the character (>= 0xc0). Return char value in TMP1. */
 DEFINE_COMPILER;
 struct sljit_jump *jump;
 
-sljit_emit_fast_enter(compiler, RETURN_ADDR, 0);
+sljit_emit_op_dst(compiler, SLJIT_FAST_ENTER, RETURN_ADDR, 0);
 OP1(MOV_UCHAR, TMP2, 0, SLJIT_MEM1(STR_PTR), IN_UCHARS(0));
 OP2(SLJIT_SHL, TMP1, 0, TMP1, 0, SLJIT_IMM, 6);
 OP2(SLJIT_AND, TMP2, 0, TMP2, 0, SLJIT_IMM, 0x3f);
@@ -4445,7 +4453,7 @@ DEFINE_COMPILER;
 struct sljit_jump *jump;
 struct sljit_jump *compare;
 
-sljit_emit_fast_enter(compiler, RETURN_ADDR, 0);
+sljit_emit_op_dst(compiler, SLJIT_FAST_ENTER, RETURN_ADDR, 0);
 
 OP2U(SLJIT_AND | SLJIT_SET_Z, TMP2, 0, SLJIT_IMM, 0x20);
 jump = JUMP(SLJIT_NOT_ZERO);
@@ -4487,7 +4495,7 @@ struct sljit_label *three_byte_entry;
 struct sljit_label *exit_invalid_label;
 struct sljit_jump *exit_invalid[11];
 
-sljit_emit_fast_enter(compiler, RETURN_ADDR, 0);
+sljit_emit_op_dst(compiler, SLJIT_FAST_ENTER, RETURN_ADDR, 0);
 
 OP2(SLJIT_SUB, TMP1, 0, TMP1, 0, SLJIT_IMM, 0xc2);
 
@@ -4643,7 +4651,7 @@ struct sljit_label *skip_start;
 struct sljit_label *three_byte_exit;
 struct sljit_jump *jump[5];
 
-sljit_emit_fast_enter(compiler, RETURN_ADDR, 0);
+sljit_emit_op_dst(compiler, SLJIT_FAST_ENTER, RETURN_ADDR, 0);
 
 if (common->nltype != NLTYPE_ANY)
   {
@@ -4734,7 +4742,7 @@ struct sljit_label *exit_ok_label;
 struct sljit_label *exit_invalid_label;
 struct sljit_jump *exit_invalid[7];
 
-sljit_emit_fast_enter(compiler, RETURN_ADDR, 0);
+sljit_emit_op_dst(compiler, SLJIT_FAST_ENTER, RETURN_ADDR, 0);
 
 OP2(SLJIT_SUB, STR_PTR, 0, STR_PTR, 0, SLJIT_IMM, IN_UCHARS(3));
 exit_invalid[0] = CMP(SLJIT_GREATER_EQUAL, TMP1, 0, SLJIT_IMM, 0xc0);
@@ -4825,7 +4833,7 @@ static void do_utfpeakcharback(compiler_common *common)
 DEFINE_COMPILER;
 struct sljit_jump *jump[2];
 
-sljit_emit_fast_enter(compiler, RETURN_ADDR, 0);
+sljit_emit_op_dst(compiler, SLJIT_FAST_ENTER, RETURN_ADDR, 0);
 
 OP1(MOV_UCHAR, TMP1, 0, SLJIT_MEM1(STR_PTR), IN_UCHARS(-2));
 OP2(SLJIT_SUB, TMP1, 0, TMP1, 0, SLJIT_IMM, 0xc0);
@@ -4868,7 +4876,7 @@ struct sljit_label *three_byte_entry;
 struct sljit_label *exit_invalid_label;
 struct sljit_jump *exit_invalid[8];
 
-sljit_emit_fast_enter(compiler, RETURN_ADDR, 0);
+sljit_emit_op_dst(compiler, SLJIT_FAST_ENTER, RETURN_ADDR, 0);
 
 OP2(SLJIT_ADD, TMP2, 0, TMP2, 0, SLJIT_IMM, IN_UCHARS(3));
 exit_invalid[0] = CMP(SLJIT_GREATER_EQUAL, TMP1, 0, SLJIT_IMM, 0xc0);
@@ -5000,7 +5008,7 @@ undefined for invalid characters. */
 DEFINE_COMPILER;
 struct sljit_jump *exit_invalid[3];
 
-sljit_emit_fast_enter(compiler, RETURN_ADDR, 0);
+sljit_emit_op_dst(compiler, SLJIT_FAST_ENTER, RETURN_ADDR, 0);
 
 /* TMP2 contains the high surrogate. */
 exit_invalid[0] = CMP(SLJIT_GREATER_EQUAL, TMP1, 0, SLJIT_IMM, 0xdc00);
@@ -5033,7 +5041,7 @@ char value in TMP1. */
 DEFINE_COMPILER;
 struct sljit_jump *exit_invalid[2];
 
-sljit_emit_fast_enter(compiler, RETURN_ADDR, 0);
+sljit_emit_op_dst(compiler, SLJIT_FAST_ENTER, RETURN_ADDR, 0);
 
 /* TMP2 contains the high surrogate. */
 exit_invalid[0] = CMP(SLJIT_GREATER_EQUAL, STR_PTR, 0, STR_END, 0);
@@ -5062,7 +5070,7 @@ static void do_utfmoveback_invalid(compiler_common *common)
 DEFINE_COMPILER;
 struct sljit_jump *exit_invalid[3];
 
-sljit_emit_fast_enter(compiler, RETURN_ADDR, 0);
+sljit_emit_op_dst(compiler, SLJIT_FAST_ENTER, RETURN_ADDR, 0);
 
 exit_invalid[0] = CMP(SLJIT_LESS, TMP1, 0, SLJIT_IMM, 0x400);
 exit_invalid[1] = CMP(SLJIT_GREATER_EQUAL, TMP2, 0, STR_PTR, 0);
@@ -5091,7 +5099,7 @@ DEFINE_COMPILER;
 struct sljit_jump *jump;
 struct sljit_jump *exit_invalid[3];
 
-sljit_emit_fast_enter(compiler, RETURN_ADDR, 0);
+sljit_emit_op_dst(compiler, SLJIT_FAST_ENTER, RETURN_ADDR, 0);
 
 jump = CMP(SLJIT_GREATER_EQUAL, TMP1, 0, SLJIT_IMM, 0xe000);
 OP2(SLJIT_ADD, TMP2, 0, TMP2, 0, SLJIT_IMM, IN_UCHARS(1));
@@ -5140,7 +5148,7 @@ SLJIT_ASSERT(record->caseset == 0 && record->other_case == 0);
 
 SLJIT_ASSERT(UCD_BLOCK_SIZE == 128 && sizeof(ucd_record) == 12);
 
-sljit_emit_fast_enter(compiler, RETURN_ADDR, 0);
+sljit_emit_op_dst(compiler, SLJIT_FAST_ENTER, RETURN_ADDR, 0);
 
 #if PCRE2_CODE_UNIT_WIDTH == 32
 if (!common->utf)
@@ -5180,7 +5188,7 @@ SLJIT_ASSERT(record->caseset == 0 && record->other_case == 0);
 
 SLJIT_ASSERT(UCD_BLOCK_SIZE == 128 && sizeof(ucd_record) == 12);
 
-sljit_emit_fast_enter(compiler, RETURN_ADDR, 0);
+sljit_emit_op_dst(compiler, SLJIT_FAST_ENTER, RETURN_ADDR, 0);
 
 #if PCRE2_CODE_UNIT_WIDTH == 32
 if (!common->utf)
@@ -5486,6 +5494,8 @@ while (TRUE)
     case OP_CIRCM:
     case OP_DOLL:
     case OP_DOLLM:
+    case OP_NOT_UCP_WORD_BOUNDARY:
+    case OP_UCP_WORD_BOUNDARY:
     /* Zero width assertions. */
     cc++;
     continue;
@@ -6567,7 +6577,7 @@ DEFINE_COMPILER;
 struct sljit_jump *jump;
 struct sljit_label *mainloop;
 
-sljit_emit_fast_enter(compiler, RETURN_ADDR, 0);
+sljit_emit_op_dst(compiler, SLJIT_FAST_ENTER, RETURN_ADDR, 0);
 GET_LOCAL_BASE(TMP1, 0, 0);
 
 /* Drop frames until we reach STACK_TOP. */
@@ -6615,7 +6625,7 @@ else
 JUMPTO(SLJIT_JUMP, mainloop);
 }
 
-static void check_wordboundary(compiler_common *common)
+static void check_wordboundary(compiler_common *common, BOOL ucp)
 {
 DEFINE_COMPILER;
 struct sljit_jump *skipread;
@@ -6629,9 +6639,10 @@ jump_list *invalid_utf2 = NULL;
 struct sljit_jump *jump;
 #endif /* PCRE2_CODE_UNIT_WIDTH != 8 || SUPPORT_UNICODE */
 
+SLJIT_UNUSED_ARG(ucp);
 SLJIT_COMPILE_ASSERT(ctype_word == 0x10, ctype_word_must_be_16);
 
-sljit_emit_fast_enter(compiler, SLJIT_MEM1(SLJIT_SP), LOCALS0);
+sljit_emit_op_dst(compiler, SLJIT_FAST_ENTER, SLJIT_MEM1(SLJIT_SP), LOCALS0);
 /* Get type of the previous char, and put it to TMP3. */
 OP1(SLJIT_MOV, TMP1, 0, ARGUMENTS, 0);
 OP1(SLJIT_MOV, TMP2, 0, SLJIT_MEM1(TMP1), SLJIT_OFFSETOF(jit_arguments, begin));
@@ -6668,7 +6679,7 @@ else
 
 /* Testing char type. */
 #ifdef SUPPORT_UNICODE
-if (common->ucp)
+if (ucp)
   {
   OP1(SLJIT_MOV, TMP2, 0, SLJIT_IMM, 1);
   jump = CMP(SLJIT_EQUAL, TMP1, 0, SLJIT_IMM, CHAR_UNDERSCORE);
@@ -6714,7 +6725,7 @@ peek_char(common, READ_CHAR_MAX, SLJIT_MEM1(SLJIT_SP), LOCALS1, &invalid_utf2);
 
 valid_utf = LABEL();
 
-if (common->ucp)
+if (ucp)
   {
   OP1(SLJIT_MOV, TMP2, 0, SLJIT_IMM, 1);
   jump = CMP(SLJIT_EQUAL, TMP1, 0, SLJIT_IMM, CHAR_UNDERSCORE);
@@ -7042,7 +7053,7 @@ static void check_anynewline(compiler_common *common)
 /* Check whether TMP1 contains a newline character. TMP2 destroyed. */
 DEFINE_COMPILER;
 
-sljit_emit_fast_enter(compiler, RETURN_ADDR, 0);
+sljit_emit_op_dst(compiler, SLJIT_FAST_ENTER, RETURN_ADDR, 0);
 
 OP2(SLJIT_SUB, TMP1, 0, TMP1, 0, SLJIT_IMM, 0x0a);
 OP2U(SLJIT_SUB | SLJIT_SET_LESS_EQUAL, TMP1, 0, SLJIT_IMM, 0x0d - 0x0a);
@@ -7069,7 +7080,7 @@ static void check_hspace(compiler_common *common)
 /* Check whether TMP1 contains a newline character. TMP2 destroyed. */
 DEFINE_COMPILER;
 
-sljit_emit_fast_enter(compiler, RETURN_ADDR, 0);
+sljit_emit_op_dst(compiler, SLJIT_FAST_ENTER, RETURN_ADDR, 0);
 
 OP2U(SLJIT_SUB | SLJIT_SET_Z, TMP1, 0, SLJIT_IMM, 0x09);
 OP_FLAGS(SLJIT_MOV, TMP2, 0, SLJIT_EQUAL);
@@ -7108,7 +7119,7 @@ static void check_vspace(compiler_common *common)
 /* Check whether TMP1 contains a newline character. TMP2 destroyed. */
 DEFINE_COMPILER;
 
-sljit_emit_fast_enter(compiler, RETURN_ADDR, 0);
+sljit_emit_op_dst(compiler, SLJIT_FAST_ENTER, RETURN_ADDR, 0);
 
 OP2(SLJIT_SUB, TMP1, 0, TMP1, 0, SLJIT_IMM, 0x0a);
 OP2U(SLJIT_SUB | SLJIT_SET_LESS_EQUAL, TMP1, 0, SLJIT_IMM, 0x0d - 0x0a);
@@ -7150,7 +7161,7 @@ else
   char2_reg = RETURN_ADDR;
   }
 
-sljit_emit_fast_enter(compiler, SLJIT_MEM1(SLJIT_SP), LOCALS0);
+sljit_emit_op_dst(compiler, SLJIT_FAST_ENTER, SLJIT_MEM1(SLJIT_SP), LOCALS0);
 OP2(SLJIT_SUB, STR_PTR, 0, STR_PTR, 0, TMP2, 0);
 
 if (char1_reg == STR_END)
@@ -7237,7 +7248,7 @@ if (sljit_emit_mem_update(compiler, MOV_UCHAR | SLJIT_MEM_SUPP | SLJIT_MEM_POST,
 else if (sljit_emit_mem_update(compiler, MOV_UCHAR | SLJIT_MEM_SUPP | SLJIT_MEM_PRE, char1_reg, SLJIT_MEM1(TMP1), IN_UCHARS(1)) == SLJIT_SUCCESS)
   opt_type = 2;
 
-sljit_emit_fast_enter(compiler, SLJIT_MEM1(SLJIT_SP), LOCALS0);
+sljit_emit_op_dst(compiler, SLJIT_FAST_ENTER, SLJIT_MEM1(SLJIT_SP), LOCALS0);
 OP2(SLJIT_SUB, STR_PTR, 0, STR_PTR, 0, TMP2, 0);
 
 OP1(SLJIT_MOV, SLJIT_MEM1(SLJIT_SP), LOCALS1, char1_reg, 0);
@@ -8276,16 +8287,18 @@ switch(type)
 
   case OP_NOT_WORD_BOUNDARY:
   case OP_WORD_BOUNDARY:
-  add_jump(compiler, &common->wordboundary, JUMP(SLJIT_FAST_CALL));
+  case OP_NOT_UCP_WORD_BOUNDARY:
+  case OP_UCP_WORD_BOUNDARY:
+  add_jump(compiler, (type == OP_NOT_WORD_BOUNDARY || type == OP_WORD_BOUNDARY) ? &common->wordboundary : &common->ucp_wordboundary, JUMP(SLJIT_FAST_CALL));
 #ifdef SUPPORT_UNICODE
   if (common->invalid_utf)
     {
-    add_jump(compiler, backtracks, CMP((type == OP_NOT_WORD_BOUNDARY) ? SLJIT_NOT_EQUAL : SLJIT_SIG_LESS_EQUAL, TMP2, 0, SLJIT_IMM, 0));
+    add_jump(compiler, backtracks, CMP((type == OP_NOT_WORD_BOUNDARY || type == OP_NOT_UCP_WORD_BOUNDARY) ? SLJIT_NOT_EQUAL : SLJIT_SIG_LESS_EQUAL, TMP2, 0, SLJIT_IMM, 0));
     return cc;
     }
 #endif /* SUPPORT_UNICODE */
   sljit_set_current_flags(compiler, SLJIT_SET_Z);
-  add_jump(compiler, backtracks, JUMP(type == OP_NOT_WORD_BOUNDARY ? SLJIT_NOT_ZERO : SLJIT_ZERO));
+  add_jump(compiler, backtracks, JUMP((type == OP_NOT_WORD_BOUNDARY || type == OP_NOT_UCP_WORD_BOUNDARY) ? SLJIT_NOT_ZERO : SLJIT_ZERO));
   return cc;
 
   case OP_EODN:
@@ -9841,6 +9854,8 @@ while (TRUE)
     case OP_DOLLM:
     case OP_CALLOUT:
     case OP_ALT:
+    case OP_NOT_UCP_WORD_BOUNDARY:
+    case OP_UCP_WORD_BOUNDARY:
     cc += PRIV(OP_lengths)[*cc];
     break;
 
@@ -12116,6 +12131,8 @@ while (cc < ccend)
     case OP_CIRC:
     case OP_CIRCM:
     case OP_REVERSE:
+    case OP_NOT_UCP_WORD_BOUNDARY:
+    case OP_UCP_WORD_BOUNDARY:
     cc = compile_simple_assertion_matchingpath(common, *cc, cc + 1, parent->top != NULL ? &parent->top->nextbacktracks : &parent->topbacktracks);
     break;
 
@@ -13502,7 +13519,7 @@ SLJIT_ASSERT(common->currententry->entry_label == NULL && common->recursive_head
 common->currententry->entry_label = LABEL();
 set_jumps(common->currententry->entry_calls, common->currententry->entry_label);
 
-sljit_emit_fast_enter(compiler, TMP2, 0);
+sljit_emit_op_dst(compiler, SLJIT_FAST_ENTER, TMP2, 0);
 count_match(common);
 
 local_size = (alt_max > 1) ? 2 : 1;
@@ -13564,7 +13581,7 @@ while (1)
     common->currententry->backtrack_label = LABEL();
     set_jumps(common->currententry->backtrack_calls, common->currententry->backtrack_label);
 
-    sljit_emit_fast_enter(compiler, TMP1, 0);
+    sljit_emit_op_dst(compiler, SLJIT_FAST_ENTER, TMP1, 0);
 
     if (recurse_flags & recurse_flag_accept_found)
       accept_exit = CMP(SLJIT_EQUAL, SLJIT_MEM1(STACK_TOP), STACK(1), SLJIT_IMM, -1);
@@ -13827,7 +13844,7 @@ common->ovector_start += sizeof(sljit_sw);
 if (!check_opcode_types(common, common->start, ccend))
   {
   SLJIT_FREE(common->optimized_cbracket, allocator_data);
-  return PCRE2_ERROR_NOMEMORY;
+  return PCRE2_ERROR_JIT_UNSUPPORTED;
   }
 
 /* Checking flags and updating ovector_start. */
@@ -13902,7 +13919,7 @@ if (private_data_size > SLJIT_MAX_LOCAL_SIZE)
   {
   SLJIT_FREE(common->private_data_ptrs, allocator_data);
   SLJIT_FREE(common->optimized_cbracket, allocator_data);
-  return PCRE2_ERROR_NOMEMORY;
+  return PCRE2_ERROR_JIT_UNSUPPORTED;
   }
 
 if (common->has_then)
@@ -14187,7 +14204,7 @@ common->quit_label = quit_label;
 /* This is a (really) rare case. */
 set_jumps(common->stackalloc, LABEL());
 /* RETURN_ADDR is not a saved register. */
-sljit_emit_fast_enter(compiler, SLJIT_MEM1(SLJIT_SP), LOCALS0);
+sljit_emit_op_dst(compiler, SLJIT_FAST_ENTER, SLJIT_MEM1(SLJIT_SP), LOCALS0);
 
 SLJIT_ASSERT(TMP1 == SLJIT_R0 && STR_PTR == SLJIT_R1);
 
@@ -14225,7 +14242,12 @@ if (common->revertframes != NULL)
 if (common->wordboundary != NULL)
   {
   set_jumps(common->wordboundary, LABEL());
-  check_wordboundary(common);
+  check_wordboundary(common, FALSE);
+  }
+if (common->ucp_wordboundary != NULL)
+  {
+  set_jumps(common->ucp_wordboundary, LABEL());
+  check_wordboundary(common, TRUE);
   }
 if (common->anynewline != NULL)
   {

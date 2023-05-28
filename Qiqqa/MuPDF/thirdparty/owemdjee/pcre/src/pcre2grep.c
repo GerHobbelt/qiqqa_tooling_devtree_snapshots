@@ -13,7 +13,7 @@ distribution because other apparatus is needed to compile pcre2grep for z/OS.
 The header can be found in the special z/OS distribution, which is available
 from www.zaconsultants.net or from www.cbttape.org.
 
-           Copyright (c) 1997-2022 University of Cambridge
+           Copyright (c) 1997-2023 University of Cambridge
 
 -----------------------------------------------------------------------------
 Redistribution and use in source and binary forms, with or without
@@ -269,6 +269,7 @@ static uint32_t offset_size;
 static uint32_t capture_max = DEFAULT_CAPTURE_MAX;
 
 static BOOL all_matches = FALSE;
+static BOOL case_restrict = FALSE;
 static BOOL count_only = FALSE;
 static BOOL do_colour = FALSE;
 #ifdef WIN32
@@ -280,6 +281,7 @@ static BOOL invert = FALSE;
 static BOOL line_buffered = FALSE;
 static BOOL line_offsets = FALSE;
 static BOOL multiline = FALSE;
+static BOOL no_ucp = FALSE;
 static BOOL number = FALSE;
 static BOOL omit_zero_count = FALSE;
 static BOOL resource_error = FALSE;
@@ -438,6 +440,7 @@ static option_item optionlist[] = {
   { OP_NODATA,     'c',      NULL,              "count",         "print only a count of matching lines per FILE" },
   { OP_STRING,     'D',      &DEE_option,       "devices=action","how to handle devices, FIFOs, and sockets" },
   { OP_STRING,     'd',      &dee_option,       "directories=action", "how to handle directories" },
+  { OP_NODATA,     'E',      NULL,              "case-restrict", "restrict case matching (no mix ASCII/non-ASCII)" },
   { OP_PATLIST,    'e',      &match_patdata,    "regex(p)=pattern", "specify pattern (may be used more than once)" },
   { OP_NODATA,     'F',      NULL,              "fixed-strings", "patterns are sets of newline-separated strings" },
   { OP_FILELIST,   'f',      &pattern_files_data, "file=path",   "read patterns from file" },
@@ -470,6 +473,7 @@ static option_item optionlist[] = {
   { OP_OP_NUMBERS, 'o',      &only_matching_data, "only-matching=n", "show only the part of the line that matched" },
   { OP_STRING,     N_OM_SEPARATOR, &om_separator, "om-separator=text", "set separator for multiple -o output" },
   { OP_U32NUMBER,  N_OM_CAPTURE, &capture_max,  "om-capture=n",  "set capture count for --only-matching" },
+  { OP_NODATA,     'P',      NULL,              "no-ucp",        "do not set PCRE2_UCP in Unicode mode" },
   { OP_NODATA,     'q',      NULL,              "quiet",         "suppress output, just set return code" },
   { OP_NODATA,     'r',      NULL,              "recursive",     "recursively scan sub-directories" },
   { OP_PATLIST,    N_EXCLUDE,&exclude_patdata,  "exclude=pattern","exclude matching files when recursing" },
@@ -480,8 +484,8 @@ static option_item optionlist[] = {
   { OP_FILELIST,   N_INCLUDE_FROM,&include_from_data, "include-from=path", "read include list from file" },
   { OP_NODATA,    's',      NULL,              "no-messages",   "suppress error messages" },
   { OP_NODATA,    't',      NULL,              "total-count",   "print total count of matching lines" },
-  { OP_NODATA,    'u',      NULL,              "utf",           "use UTF mode" },
-  { OP_NODATA,    'U',      NULL,              "utf-allow-invalid", "use UTF mode, allow for invalid code units" },
+  { OP_NODATA,    'u',      NULL,              "utf",           "use UTF/Unicode" },
+  { OP_NODATA,    'U',      NULL,              "utf-allow-invalid", "use UTF/Unicode, allow for invalid code units" },
   { OP_NODATA,    'V',      NULL,              "version",       "print version information and exit" },
   { OP_NODATA,    'v',      NULL,              "invert-match",  "select non-matching lines" },
   { OP_NODATA,    'w',      NULL,              "word-regex(p)", "force patterns to match only as words"  },
@@ -1778,8 +1782,8 @@ Returns:            nothing
 */
 
 static void
-do_after_lines(unsigned long int lastmatchnumber, char *lastmatchrestart,
-  char *endptr, const char *printname)
+do_after_lines(unsigned long int lastmatchnumber, const char *lastmatchrestart,
+  const char *endptr, const char *printname)
 {
 if (after_context > 0 && lastmatchnumber > 0)
   {
@@ -2647,7 +2651,7 @@ while (ptr < endptr)
   unsigned int options = 0;
   BOOL match;
   BOOL line_matched = FALSE;
-  char *t = ptr;
+  const char *t = ptr;
   PCRE2_SIZE length, linelength;
   PCRE2_SIZE startoffset = 0;
 
@@ -2959,7 +2963,7 @@ while (ptr < endptr)
       if (before_context > 0)
         {
         int linecount = 0;
-        char *p = ptr;
+        const char *p = ptr;
 
         while (p > main_buffer &&
                (lastmatchnumber == 0 || p > lastmatchrestart) &&
@@ -2975,7 +2979,7 @@ while (ptr < endptr)
         while (p < ptr)
           {
           int ellength;
-          char *pp = p;
+          const char *pp = p;
           if (printname != NULL) fprintf(stdout, "%s%c", printname,
             printname_hyphen);
           if (number) fprintf(stdout, "%lu-", linenumber - linecount--);
@@ -3184,7 +3188,7 @@ while (ptr < endptr)
   }     /* Loop through the whole file */
 
 /* End of file; print final "after" lines if wanted; do_after_lines sets
-hyphenpending if it prints something. */
+hyphen pending if it prints something. */
 
 if (only_matching_count == 0 && !(count_only|show_total_count))
   {
@@ -3421,9 +3425,9 @@ if (iswild(pathname))
 	  return 0;
   }
 
-  for (nextfile = name = path; *nextfile != 0; nextfile++)
-    if (*nextfile == '/' || *nextfile == '\\')
-      name = nextfile + 1;
+  for (char *nextname = name = path; *nextname != 0; nextname++)
+    if (*nextname == '/' || *nextname == '\\')
+      name = nextname + 1;
   *name = 0;
 
   while ((nextfile = readdirectory(dir)) != NULL)
@@ -3594,6 +3598,7 @@ switch(letter)
   case N_ALLABSK: extra_options |= PCRE2_EXTRA_ALLOW_LOOKAROUND_BSK; break;
   case 'a': binary_files = BIN_TEXT; break;
   case 'c': count_only = TRUE; break;
+  case 'E': case_restrict = TRUE; break;
   case 'F': options |= PCRE2_LITERAL; break;
   case 'H': filenames = FN_FORCE; break;
   case 'I': binary_files = BIN_NOMATCH; break;
@@ -3609,12 +3614,14 @@ switch(letter)
   if (only_matching == NULL) only_matching = only_matching_last;
   break;
 
+  case 'P': no_ucp = TRUE; break;
   case 'q': quiet = TRUE; break;
   case 'r': dee_action = dee_RECURSE; break;
   case 's': silent = TRUE; break;
   case 't': show_total_count = TRUE; break;
-  case 'u': options |= PCRE2_UTF; utf = TRUE; break;
-  case 'U': options |= PCRE2_UTF|PCRE2_MATCH_INVALID_UTF; utf = TRUE; break;
+  case 'u': options |= PCRE2_UTF | PCRE2_UCP; utf = TRUE; break;
+  case 'U': options |= PCRE2_UTF|PCRE2_MATCH_INVALID_UTF|PCRE2_UCP;
+            utf = TRUE; break;
   case 'v': invert = TRUE; break;
 
   case 'V':
@@ -4233,13 +4240,13 @@ offsets = offsets_pair[0];
 match_data_toggle = 0;
 
 /* If string (script) callouts are supported, set up the callout processing
-function. */
+function in the match context. */
 
 #ifdef SUPPORT_PCRE2GREP_CALLOUT
 pcre2_set_callout(match_context, pcre2grep_callout, NULL);
 #endif
 
-/* Put limits into the match data block. */
+/* Put limits into the match context. */
 
 if (heap_limit != PCRE2_UNSET) pcre2_set_heap_limit(match_context, heap_limit);
 if (match_limit > 0) pcre2_set_match_limit(match_context, match_limit);
@@ -4365,7 +4372,15 @@ if (DEE_option != NULL)
     }
   }
 
-/* Set the extra options */
+/* If no_ucp is set, remove PCRE2_UCP from the compile options. */
+
+if (no_ucp) pcre2_options &= ~PCRE2_UCP;
+
+/* If case_restrict is set, adjust the extra options. */
+
+if (case_restrict) extra_options |= PCRE2_EXTRA_CASELESS_RESTRICT;
+
+/* Set the extra options in the compile context. */
 
 (void)pcre2_set_compile_extra_options(compile_context, extra_options);
 

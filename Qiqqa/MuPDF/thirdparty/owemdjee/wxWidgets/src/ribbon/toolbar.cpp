@@ -17,7 +17,6 @@
 #include "wx/ribbon/art.h"
 #include "wx/ribbon/bar.h"
 #include "wx/dcbuffer.h"
-#include "wx/scopedptr.h"
 
 #ifndef WX_PRECOMP
 #endif
@@ -25,6 +24,8 @@
 #ifdef __WXMSW__
 #include "wx/msw/private.h"
 #endif
+
+#include <memory>
 
 class wxRibbonToolBarToolBase
 {
@@ -242,7 +243,7 @@ wxRibbonToolBarToolBase* wxRibbonToolBar::InsertTool(
     wxASSERT(bitmap.IsOk());
 
     // Create the wxRibbonToolBarToolBase with parameters
-    wxScopedPtr<wxRibbonToolBarToolBase> tool(new wxRibbonToolBarToolBase);
+    std::unique_ptr<wxRibbonToolBarToolBase> tool(new wxRibbonToolBarToolBase);
     tool->id = tool_id;
     tool->bitmap = bitmap;
     if(bitmap_disabled.IsOk())
@@ -530,7 +531,7 @@ wxRect wxRibbonToolBar::GetToolRect(int tool_id)const
 {
     size_t group_count = m_groups.GetCount();
     size_t g, t;
-    int pos = 0;
+
     for(g = 0; g < group_count; ++g)
     {
         wxRibbonToolBarToolGroup* group = m_groups.Item(g);
@@ -542,9 +543,7 @@ wxRect wxRibbonToolBar::GetToolRect(int tool_id)const
             {
                 return wxRect(group->position + tool->position, tool->size);
             }
-            ++pos;
         }
-        ++pos; // Increment pos for group separator.
     }
     return wxRect();
 }

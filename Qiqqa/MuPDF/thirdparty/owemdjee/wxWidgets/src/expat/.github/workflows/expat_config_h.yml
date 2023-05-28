@@ -35,12 +35,15 @@ on:
   schedule:
     - cron: '0 2 * * 5'  # Every Friday at 2am
 
+permissions:
+  contents: read
+
 jobs:
   checks:
     name: Check expat_config.h.{in,cmake} for regressions
     runs-on: ubuntu-20.04
     steps:
-    - uses: actions/checkout@v3.3.0
+    - uses: actions/checkout@v3.4.0
     - name: Check expat_config.h.{in,cmake} for regressions
       run: |
         set -v

@@ -24,16 +24,14 @@
 
 #include "wx/msw/private.h"
 #include "wx/msw/taskbarbutton.h"
-#include "wx/scopedptr.h"
+#include "wx/dynlib.h"
 #include "wx/msw/private/comptr.h"
 #include "wx/msw/private/cotaskmemptr.h"
 
 #include <shlwapi.h>
 #include <initguid.h>
 
-#if wxUSE_DYNLIB_CLASS
-    #include "wx/dynlib.h"
-#endif // wxUSE_DYNLIB_CLASS
+#include <memory>
 
 // ----------------------------------------------------------------------------
 // Redefine the interfaces: ITaskbarList3, IObjectCollection,
@@ -369,7 +367,6 @@ inline HRESULT InitPropVariantFromString(PCWSTR psz, PROPVARIANT *ppropvar)
     HRESULT hr = E_FAIL;
     ppropvar->vt = VT_LPWSTR;
 
-#if wxUSE_DYNLIB_CLASS
     typedef HRESULT (WINAPI *SHStrDupW_t)(LPCWSTR, LPWSTR*);
     static SHStrDupW_t s_pfnSHStrDupW = nullptr;
     if ( !s_pfnSHStrDupW )
@@ -385,11 +382,6 @@ inline HRESULT InitPropVariantFromString(PCWSTR psz, PROPVARIANT *ppropvar)
     {
         hr = s_pfnSHStrDupW(psz, &ppropvar->pwszVal);
     }
-#elif defined (_MSC_VER)
-    hr = SHStrDupW(psz, &ppropvar->pwszVal);
-#else
-    wxUnusedVar(psz);
-#endif
 
     if ( FAILED(hr) )
     {
@@ -622,9 +614,9 @@ private:
     wxCOMPtr<ICustomDestinationList>    m_destinationList;
     wxCOMPtr<IObjectArray>              m_objectArray;
 
-    wxScopedPtr<wxTaskBarJumpListCategory> m_tasks;
-    wxScopedPtr<wxTaskBarJumpListCategory> m_frequent;
-    wxScopedPtr<wxTaskBarJumpListCategory> m_recent;
+    std::unique_ptr<wxTaskBarJumpListCategory> m_tasks;
+    std::unique_ptr<wxTaskBarJumpListCategory> m_frequent;
+    std::unique_ptr<wxTaskBarJumpListCategory> m_recent;
     wxTaskBarJumpListCategories m_customCategories;
     bool m_recent_visible;
     bool m_frequent_visible;

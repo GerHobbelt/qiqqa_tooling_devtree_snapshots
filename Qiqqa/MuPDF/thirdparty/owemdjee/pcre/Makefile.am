@@ -46,6 +46,7 @@ dist_html_DATA = \
   doc/html/pcre2_general_context_free.html \
   doc/html/pcre2_get_error_message.html \
   doc/html/pcre2_get_mark.html \
+  doc/html/pcre2_get_match_data_heapframes_size.html \
   doc/html/pcre2_get_match_data_size.html \
   doc/html/pcre2_get_ovector_count.html \
   doc/html/pcre2_get_ovector_pointer.html \
@@ -142,6 +143,7 @@ dist_man_MANS = \
   doc/pcre2_general_context_free.3 \
   doc/pcre2_get_error_message.3 \
   doc/pcre2_get_mark.3 \
+  doc/pcre2_get_match_data_heapframes_size.3 \
   doc/pcre2_get_match_data_size.3 \
   doc/pcre2_get_ovector_count.3 \
   doc/pcre2_get_ovector_pointer.3 \
@@ -351,6 +353,7 @@ NODIST_SOURCES = src/pcre2_chartables.c
 
 COMMON_SOURCES = \
   src/pcre2_auto_possess.c \
+  src/pcre2_chkdint.c \
   src/pcre2_compile.c \
   src/pcre2_config.c \
   src/pcre2_context.c \
@@ -440,7 +443,6 @@ CLEANFILES += src/pcre2_chartables.c
 EXTRA_DIST += \
   src/sljit/sljitConfig.h \
   src/sljit/sljitConfigInternal.h \
-  src/sljit/sljitExecAllocator.c \
   src/sljit/sljitLir.c \
   src/sljit/sljitLir.h \
   src/sljit/sljitNativeARM_32.c \
@@ -459,9 +461,16 @@ EXTRA_DIST += \
   src/sljit/sljitNativeX86_32.c \
   src/sljit/sljitNativeX86_64.c \
   src/sljit/sljitNativeX86_common.c \
-  src/sljit/sljitProtExecAllocator.c \
   src/sljit/sljitUtils.c \
-  src/sljit/sljitWXExecAllocator.c
+  src/sljit/allocator_src/sljitExecAllocatorApple.c \
+  src/sljit/allocator_src/sljitExecAllocatorCore.c \
+  src/sljit/allocator_src/sljitExecAllocatorFreeBSD.c \
+  src/sljit/allocator_src/sljitExecAllocatorPosix.c \
+  src/sljit/allocator_src/sljitExecAllocatorWindows.c \
+  src/sljit/allocator_src/sljitProtExecAllocatorNetBSD.c \
+  src/sljit/allocator_src/sljitProtExecAllocatorPosix.c \
+  src/sljit/allocator_src/sljitWXExecAllocatorPosix.c \
+  src/sljit/allocator_src/sljitWXExecAllocatorWindows.c
 
 # Some of the JIT sources are also in separate files that are #included.
 
@@ -553,6 +562,17 @@ endif # WITH FUZZ_SUPPORT
 endif # WITH_PCRE2_8
 
 ## -------- Testing ----------
+
+## If the 8-bit library is enabled, build the POSIX wrapper test program and
+## arrange for it to run.
+
+if WITH_PCRE2_8
+TESTS += pcre2posix_test
+noinst_PROGRAMS += pcre2posix_test
+pcre2posix_test_SOURCES = src/pcre2posix_test.c
+pcre2posix_test_CFLAGS = $(AM_CFLAGS)
+pcre2posix_test_LDADD = libpcre2-posix.la libpcre2-8.la
+endif # WITH_PCRE2_8
 
 ## If JIT support is enabled, arrange for the JIT test program to run.
 

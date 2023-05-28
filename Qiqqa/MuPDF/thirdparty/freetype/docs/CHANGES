@@ -1,3 +1,16 @@
+CHANGES BETWEEN 2.13.0 and 2.13.1 (2023-XXX-XX)
+
+  I. MISCELLANEOUS
+
+  - New function  `FT_Get_Default_Named_Instance` to get the  index of
+    the default named instance of an OpenType Variation Font.
+
+  - A new load flag `FT_LOAD_NO_SVG` to make FreeType ignore glyphs in
+    an 'SVG ' table.
+
+
+======================================================================
+
 CHANGES BETWEEN 2.12.1 and 2.13.0 (2023-Feb-09)
 
   I. IMPORTANT CHANGES
@@ -12,7 +25,7 @@ CHANGES BETWEEN 2.12.1 and 2.13.0 (2023-Feb-09)
       https://learn.microsoft.com/en-us/typography/opentype/spec/colr
 
 
-  III. MISCELLANEOUS
+  II. MISCELLANEOUS
 
   - For  OpenType  Variable Fonts,  `avar`  table  format 2.0  is  now
     supported.  The code was contributed by Behdad Esfahbod.
@@ -2424,7 +2437,7 @@ CHANGES BETWEEN 2.3.8 and 2.3.7
       is provided for x86 and ARM.  See FT_CONFIG_OPTION_INLINE_MULFIX
       and FT_CONFIG_OPTION_NO_ASSEMBLER (in ftoption.h) for more.
 
-    - The handling of `tricky' fonts  (this is, fonts which don't work
+    - The handling of `tricky' fonts  (that is, fonts which don't work
       with the  autohinter, needing the font  format's hinting engine)
       has been generalized and changed slightly:
 
@@ -2881,7 +2894,7 @@ CHANGES BETWEEN 2.2 and 2.1.10
 
   II. IMPORTANT CHANGES
 
-    - Version 2.2 no longer exposes its internals, this is, the header
+    - Version 2.2 no longer exposes its internals, that is, the header
       files  located in  the `include/freetype/internal'  directory of
       the source package are not  copied anymore by the `make install'
       command.  Consequently, a number of rogue clients which directly

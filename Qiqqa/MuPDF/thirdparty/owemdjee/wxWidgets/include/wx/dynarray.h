@@ -15,6 +15,8 @@
 
 #include "wx/vector.h"
 
+#include <initializer_list>
+
 /*
   This header defines legacy dynamic arrays and object arrays (i.e. arrays
   which own their elements) classes.
@@ -104,6 +106,12 @@ public:
     wxBaseArray(InputIterator first, InputIterator last)
         : base_vec(first, last)
     { }
+
+    template<typename U>
+    wxBaseArray(std::initializer_list<U> list) : base_vec(list.begin(), list.end()) {}
+
+    wxBaseArray(const std::vector<T>& vec) : base_vec(vec) { }
+    wxBaseArray(std::vector<T>&& vec) : base_vec(std::move(vec)) { }
 
     void Empty() { this->clear(); }
     void Clear() { this->clear(); }
@@ -520,6 +528,8 @@ private:
         name(size_t n, Base::const_reference v) : Base(n, v) { }              \
         template <class InputIterator>                                        \
         name(InputIterator first, InputIterator last) : Base(first, last) { } \
+        template<typename U>                                                  \
+        name(std::initializer_list<U> list) : Base(list.begin(), list.end()) { } \
     }
 
 

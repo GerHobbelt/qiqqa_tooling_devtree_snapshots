@@ -2,12 +2,13 @@
 * A program for testing the Unicode property table *
 ***************************************************/
 
-/* Copyright (c) University of Cambridge 2008-2022 */
+/* Copyright (c) University of Cambridge 2008-2023 */
 
 /* Compile thus:
 
-   gcc -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -o ucptest \
-     ucptest.c ../src/pcre2_ucd.c ../src/pcre2_tables.c
+   gcc -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 \
+     -fvisibility=hidden -o ucptest ucptest.c \
+     ../src/pcre2_ord2utf.c ../src/pcre2_ucd.c ../src/pcre2_tables.c
 
    Add -lreadline or -ledit if PCRE2 was configured with readline or libedit
    support in pcre2test.
@@ -87,7 +88,7 @@ type, gbreak or bidi. The defined values for that property are listed. */
 #endif
 
 #ifndef SUPPORT_UNICODE
-#define SUPPORT_UNICODE
+#error "Unicode support not enabled"
 #endif
 
 #include <ctype.h>
@@ -136,7 +137,6 @@ static inline int strcasecmp(const char* a, const char* b)
 #define CSS  (char **)
 #define US   (unsigned char *)
 #define CUS  (const unsigned char *)
-#define USS  (unsigned char **)
 
 /* -------------------------------------------------------------------*/
 
@@ -194,105 +194,30 @@ static const unsigned char *gb_names[] = {
 };
 
 static const unsigned char *bd_names[] = {
-  US"AL",   US"Arabic letter",
-  US"AN",   US"Arabid number",
-  US"B",    US"Paragraph separator",
-  US"BN",   US"Boundary neutral",
-  US"CS",   US"Common separator",
-  US"EN",   US"European number",
-  US"ES",   US"European separator",
-  US"ET",   US"European terminator",
-  US"FSI",  US"First string isolate",
-  US"L",    US"Left-to-right",
-  US"LRE",  US"Left-to-right embedding",
-  US"LRI",  US"Left-to-right isolate",
-  US"LRO",  US"Left-to-right override",
-  US"NSM",  US"Non-spacing mark",
-  US"ON",   US"Other neutral",
-  US"PDF",  US"Pop directional format",
-  US"PDI",  US"Pop directional isolate",
-  US"R",    US"Right-to-left",
-  US"RLE",  US"Right-to-left embedding",
-  US"RLI",  US"Right-to-left isolate",
-  US"RLO",  US"Right-to-left override",
-  US"S",    US"Segment separator",
-  US"WS",   US"White space"
+  US"AL",   US"ArabicLetter",
+  US"AN",   US"ArabicNumber",
+  US"B",    US"ParagraphSeparator",
+  US"BN",   US"BoundaryNeutral",
+  US"CS",   US"CommonSeparator",
+  US"EN",   US"EuropeanNumber",
+  US"ES",   US"EuropeanSeparator",
+  US"ET",   US"EuropeanTerminator",
+  US"FSI",  US"FirstStrongIsolate",
+  US"L",    US"LeftToRight",
+  US"LRE",  US"LeftToRightEmbedding",
+  US"LRI",  US"LeftToRightIsolate",
+  US"LRO",  US"LeftToRightOverride",
+  US"NSM",  US"NonspacingMark",
+  US"ON",   US"OtherNeutral",
+  US"PDF",  US"PopDirectionalFormat",
+  US"PDI",  US"PopDirectionalIsolate",
+  US"R",    US"RightToLeft",
+  US"RLE",  US"RightToLeftEmbedding",
+  US"RLI",  US"RightToLeftIsolate",
+  US"RLO",  US"RightToLeftOverride",
+  US"S",    US"SegmentSeparator",
+  US"WS",   US"WhiteSpace"
 };
-
-static const unsigned int utf8_table1[] = {
-  0x0000007f, 0x000007ff, 0x0000ffff, 0x001fffff, 0x03ffffff, 0x7fffffff};
-
-static const int utf8_table2[] = {
-  0, 0xc0, 0xe0, 0xf0, 0xf8, 0xfc};
-
-/* Macro to pick up the remaining bytes of a UTF-8 character, advancing
-the pointer. */
-
-#define GETUTF8INC(c, eptr) \
-    { \
-    if ((c & 0x20u) == 0) \
-      c = ((c & 0x1fu) << 6) | (*eptr++ & 0x3fu); \
-    else if ((c & 0x10u) == 0) \
-      { \
-      c = ((c & 0x0fu) << 12) | ((*eptr & 0x3fu) << 6) | (eptr[1] & 0x3fu); \
-      eptr += 2; \
-      } \
-    else if ((c & 0x08u) == 0) \
-      { \
-      c = ((c & 0x07u) << 18) | ((*eptr & 0x3fu) << 12) | \
-          ((eptr[1] & 0x3fu) << 6) | (eptr[2] & 0x3fu); \
-      eptr += 3; \
-      } \
-    else if ((c & 0x04u) == 0) \
-      { \
-      c = ((c & 0x03u) << 24) | ((*eptr & 0x3fu) << 18) | \
-          ((eptr[1] & 0x3fu) << 12) | ((eptr[2] & 0x3fu) << 6) | \
-          (eptr[3] & 0x3fu); \
-      eptr += 4; \
-      } \
-    else \
-      { \
-      c = ((c & 0x01u) << 30) | ((*eptr & 0x3fu) << 24) | \
-          ((eptr[1] & 0x3fu) << 18) | ((eptr[2] & 0x3fu) << 12) | \
-          ((eptr[3] & 0x3fu) << 6) | (eptr[4] & 0x3fu); \
-      eptr += 5; \
-      } \
-    }
-
-
-
-/*************************************************
-*       Convert character value to UTF-8         *
-*************************************************/
-
-/* This function takes an unsigned long integer value in the range 0 -
-0x7fffffff and encodes it as a UTF-8 character in 1 to 6 bytes.
-
-Arguments:
-  cvalue     the character value
-  buffer     pointer to buffer for result - at least 6 bytes long
-
-Returns:     number of bytes placed in the buffer
-             0 if input code point is too big
-*/
-
-static size_t
-ord2utf8(unsigned int cvalue, unsigned char *buffer)
-{
-size_t i, j;
-for (i = 0; i < sizeof(utf8_table1)/sizeof(int); i++)
-  if (cvalue <= utf8_table1[i]) break;
-if (i >= sizeof(utf8_table1)/sizeof(int)) return 0;
-buffer += i;
-for (j = i; j > 0; j--)
- {
- *buffer-- = 0x80 | (cvalue & 0x3f);
- cvalue >>= 6;
- }
-*buffer = utf8_table2[i] | cvalue;
-return i + 1;
-}
-
 
 
 /*************************************************
@@ -368,7 +293,7 @@ return yield;
 static void
 print_prop(unsigned int c, BOOL is_just_one)
 {
-int type = UCD_CATEGORY(c);
+unsigned int type = UCD_CATEGORY(c);
 int fulltype = UCD_CHARTYPE(c);
 int script = UCD_SCRIPT(c);
 int scriptx = UCD_SCRIPTX(c);
@@ -482,9 +407,9 @@ switch(bidi)
 printf("U+%04X %s %s: %s, %s, %s", c, bidiclass, typename, fulltypename,
   scriptname, graphbreak);
 
-if (is_just_one && othercase != c)
+if (is_just_one && (othercase != c || caseset != 0))
   {
-  printf(", U+%04X", othercase);
+  if (othercase != c) printf(", U+%04X", othercase);
   if (caseset != 0)
     {
     const uint32_t *p = PRIV(ucd_caseless_sets) + caseset - 1;
@@ -513,8 +438,7 @@ if (scriptx != 0)
 if (bprops != 0)
   {
   const char *sep = "";
-  const uint32_t *p = PRIV(ucd_boolprop_sets) + 
-    bprops * ucd_boolprop_sets_item_size;
+  const uint32_t *p = PRIV(ucd_boolprop_sets) + bprops;
   printf(", [");
   for (int i = 0; i < ucp_Bprop_Count; i++)
   if (MAPBIT(p, i) != 0)
@@ -528,8 +452,8 @@ if (bprops != 0)
 if (show_character && is_just_one)
   {
   unsigned char buffer[8];
-  size_t len = ord2utf8(c, buffer);
-  printf(", >%.*s<", (int)len, buffer);
+  int len = (int)PRIV(ord2utf_8)(c, buffer);
+  printf(", >%.*s<", len, buffer);
   }
 
 printf("\n");
@@ -568,7 +492,6 @@ const char *pad = "        ";
 while (*s != 0)
   {
   unsigned int offset = 0;
-  BOOL scriptx_not = FALSE;
 
   for (t = name; *s != 0 && !isspace(*s); s++) *t++ = *s;
   *t = 0;
@@ -584,12 +507,13 @@ while (*s != 0)
   if (strcmp(CS name, "script") == 0 ||
       strcmp(CS name, "scriptx") == 0)
     {
+    BOOL x = (name[6] == 'x');
+    BOOL scriptx_not = FALSE;
     for (t = value; *t != 0; t++) *t = tolower(*t);
  
     if (value[0] == '!')
       {
-      if (name[6] == 'x') scriptx_not = TRUE;
-        else script_not = TRUE;
+      if (x) scriptx_not = TRUE; else script_not = TRUE;
       offset = 1;
       }
 
@@ -600,7 +524,21 @@ while (*s != 0)
             PRIV(utt_names) + u->name_offset) == 0)
         {
         c = u->value;
-        if (name[6] == 'x')
+        if (x && !scriptx_not && u->type == PT_SC)
+          {
+          if (script < 0)
+            {
+            x = FALSE;
+            script = -1;
+            script_not = scriptx_not;
+            }
+          else if (!script_not)
+            {
+            printf("No characters found\n");
+            return;
+            }
+          }
+        if (x)
           {
           scriptx_list[scriptx_count++] = scriptx_not? (-c):c;
           }
@@ -667,7 +605,7 @@ while (*s != 0)
 
       for (i = 0; i < sizeof(type_names)/sizeof(char *); i += 2)
         {
-        if (strcmp(CS (value + offset), CS type_names[i]) == 0)
+        if (strcmp(CS (value + offset), CCS type_names[i]) == 0)
           {
           type = i/2;
           break;
@@ -698,7 +636,7 @@ while (*s != 0)
 
       for (i = 0; i < sizeof(gb_names)/sizeof(char *); i += 2)
         {
-        if (strcmp(CS (value + offset), CS gb_names[i]) == 0)
+        if (strcmp(CS (value + offset), CCS gb_names[i]) == 0)
           {
           gbreak = i/2;
           break;
@@ -728,9 +666,9 @@ while (*s != 0)
         bidiclass_not = TRUE;
         offset = 1;
         }
-      for (i = 0; i < sizeof(bd_names)/sizeof(char *); i += 2)
+      for (i = 0; i < sizeof(bd_names)/sizeof(char *); i++)
         {
-        if (strcasecmp(CS (value + offset), CS bd_names[i]) == 0)
+        if (strcasecmp(CS (value + offset), CCS bd_names[i]) == 0)
           {
           bidiclass = i/2;
           break;
@@ -775,12 +713,15 @@ for (c = 0; c <= 0x10ffff; c++)
       /* Positive requirment */
       if (scriptx_list[i] >= 0)
         {
-        if ((bits_scriptx[x] & (1u<<y)) != 0) found++;
+        if (scriptx_list[i] == UCD_SCRIPT(c) ||
+            ((scriptx_list[i] < ucp_Unknown) &&
+             (bits_scriptx[x] & (1u<<y)) != 0)) found++;
         }
       /* Negative requirement */
       else
         {
-        if ((bits_scriptx[x] & (1u<<y)) == 0) found++;
+        if ((-(scriptx_list[i]) < ucp_Unknown) &&
+            (bits_scriptx[x] & (1u<<y)) == 0) found++;
         }
       }
 
@@ -789,8 +730,7 @@ for (c = 0; c <= 0x10ffff; c++)
 
   if (bprop_count > 0)
     {
-    const uint32_t *bits_bprop = PRIV(ucd_boolprop_sets) + 
-      UCD_BPROPS(c) * ucd_boolprop_sets_item_size;
+    const uint32_t *bits_bprop = PRIV(ucd_boolprop_sets) + UCD_BPROPS(c);
     unsigned int found = 0;
 
     for (i = 0; i < bprop_count; i++)
@@ -914,13 +854,14 @@ if (strcmp(CS name, "findprop") == 0)
       if (c > 0x7fu)
         {
         GETCHARINC(c, t);
+        endptr = t;
         }
-      endptr = t+1;
+      else endptr = t+1;
       }
     else
       {
-      if (strncmp(CS t, "U+", 2) == 0) t += 2;
-      c = strtoul(CS t, CSS(&endptr), 16);
+      if (memcmp(t, "U+", 2) == 0) t += 2;
+      c = (uint32_t)strtoul(CS t, CSS(&endptr), 16);
       }
 
     if (*endptr != 0 && !isspace(*endptr))
@@ -1032,7 +973,7 @@ if (argc > first_arg)
   const char *arg = argv[first_arg];
   unsigned char *s = buffer;
 
-  if (*arg != '+' && strncmp(arg, "U+", 2) != 0 && !isdigit(*arg))
+  if (*arg != '+' && memcmp(arg, "U+", 2) != 0 && !isdigit(*arg))
     {
     while (*arg != 0)
       {

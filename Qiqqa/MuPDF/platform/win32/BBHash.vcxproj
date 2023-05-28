@@ -228,14 +228,6 @@
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ItemGroup>
-    <ProjectReference Include="libuint128.vcxproj">
-      <Project>{a60d8644-5a1c-4d29-8970-7518ffb1257e}</Project>
-    </ProjectReference>
-    <ProjectReference Include="pthread_lib.2019.vcxproj">
-      <Project>{c431b5c5-ff25-4450-a13c-ea3123456789}</Project>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="../../thirdparty/owemdjee/BBHash/bootest.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/BBHash/bootestFile.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/BBHash/example.cpp" />

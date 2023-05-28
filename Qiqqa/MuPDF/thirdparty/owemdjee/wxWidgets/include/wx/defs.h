@@ -553,14 +553,16 @@ typedef short int WXTYPE;
 #define wxDEPRECATED_ACCESSOR(func, what) wxDEPRECATED_INLINE(func, return what;)
 
 /*
-   Special variant of the macro above which should be used for the functions
+   Special variant of the macros above which should be used for the functions
    which are deprecated but called by wx itself: this often happens with
    deprecated virtual functions which are called by the library.
  */
 #ifdef WXBUILDING
 #   define wxDEPRECATED_BUT_USED_INTERNALLY(x) x
+#   define wxDEPRECATED_BUT_USED_INTERNALLY_MSG(x)
 #else
 #   define wxDEPRECATED_BUT_USED_INTERNALLY(x) wxDEPRECATED(x)
+#   define wxDEPRECATED_BUT_USED_INTERNALLY_MSG(x) wxDEPRECATED_MSG(x)
 #endif
 
 /*
@@ -627,7 +629,7 @@ typedef short int WXTYPE;
 /*
     Similar macros but for gcc-specific warnings.
  */
-#ifdef __GNUC__
+#if defined(__GNUC__) && !defined(__clang__)
 #   define wxGCC_ONLY_WARNING_SUPPRESS(x) wxGCC_WARNING_SUPPRESS(x)
 #   define wxGCC_ONLY_WARNING_RESTORE(x) wxGCC_WARNING_RESTORE(x)
 #else
@@ -838,21 +840,11 @@ typedef short int WXTYPE;
 /*  compiler specific settings */
 /*  ---------------------------------------------------------------------------- */
 
-/*  where should i put this? we need to make sure of this as it breaks */
-/*  the <iostream> code. */
-#if !defined(__VISUALC__)
-#if defined(__WXDEBUG__)
-#    undef wxUSE_DEBUG_NEW_ALWAYS
-#    define wxUSE_DEBUG_NEW_ALWAYS 0
-#endif
-#endif
-
-
 #if defined(__VISUALC__)
 // Including this file redefines new and allows leak reports to
 // contain line numbers
 #include "wx/msw/msvcrt.h"
-#endif // wxUSE_DEBUG_NEW_ALWAYS
+#endif
 
 #include "wx/types.h"
 
@@ -1397,7 +1389,7 @@ wxALLOW_COMBINING_ENUMS(wxSizerFlagBits, wxStretch)
       |  |  |  |  |  |  |  |  |  |  |  |  |  |  \____ wxPOPUP_WINDOW
       |  |  |  |  |  |  |  |  |  |  |  |  |  \_______ wxWANTS_CHARS
       |  |  |  |  |  |  |  |  |  |  |  |  \__________ wxTAB_TRAVERSAL
-      |  |  |  |  |  |  |  |  |  |  |  \_____________ wxTRANSPARENT_WINDOW
+      |  |  |  |  |  |  |  |  |  |  |  \_____________ (ex-wxTRANSPARENT_WINDOW)
       |  |  |  |  |  |  |  |  |  |  \________________ wxBORDER_NONE
       |  |  |  |  |  |  |  |  |  \___________________ wxCLIP_CHILDREN
       |  |  |  |  |  |  |  |  \______________________ wxALWAYS_SHOW_SB
@@ -1454,7 +1446,8 @@ wxALLOW_COMBINING_ENUMS(wxSizerFlagBits, wxStretch)
 /*  for subwindows/controls */
 #define wxCLIP_SIBLINGS         0x20000000
 
-#define wxTRANSPARENT_WINDOW    0x00100000
+/* This style is obsolete and doesn't do anything. */
+#define wxTRANSPARENT_WINDOW    0
 
 /*  Add this style to a panel to get tab traversal working outside of dialogs */
 /*  (on by default for wxPanel, wxDialog, wxScrolledWindow) */
@@ -1487,7 +1480,7 @@ wxALLOW_COMBINING_ENUMS(wxSizerFlagBits, wxStretch)
  */
 #define wxWINDOW_STYLE_MASK     \
     (wxVSCROLL|wxHSCROLL|wxBORDER_MASK|wxALWAYS_SHOW_SB|wxCLIP_CHILDREN| \
-     wxCLIP_SIBLINGS|wxTRANSPARENT_WINDOW|wxTAB_TRAVERSAL|wxWANTS_CHARS| \
+     wxCLIP_SIBLINGS|wxTAB_TRAVERSAL|wxWANTS_CHARS| \
      wxRETAINED|wxPOPUP_WINDOW|wxFULL_REPAINT_ON_RESIZE)
 
 /*
@@ -2584,11 +2577,6 @@ typedef int (* LINKAGEMODE wxListIterateFunction)(void *current);
 /*  ---------------------------------------------------------------------------- */
 /*  miscellaneous */
 /*  ---------------------------------------------------------------------------- */
-
-/*  define this macro if font handling is done using the X font names */
-#if defined(__X__)
-    #define _WX_X_FONTLIKE
-#endif
 
 /*  macro to specify "All Files" on different platforms */
 #if defined(__WXMSW__)

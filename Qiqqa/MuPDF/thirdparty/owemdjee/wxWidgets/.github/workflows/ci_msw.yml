@@ -6,6 +6,7 @@ on:
     branches:
       - master
     paths-ignore:
+      - '.circleci/**'
       - '.github/ISSUE_TEMPLATE/**'
       - '.github/workflows/ci.yml'
       - '.github/workflows/ci_cmake.yml'
@@ -29,6 +30,7 @@ on:
     branches:
       - master
     paths-ignore:
+      - '.circleci/**'
       - '.github/ISSUE_TEMPLATE/**'
       - '.github/workflows/ci.yml'
       - '.github/workflows/ci_cmake.yml'
@@ -49,6 +51,10 @@ on:
       - '*.yml'
       - 'CMakeLists.txt'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
@@ -63,6 +69,7 @@ jobs:
           - configuration: 'DLL Debug'
             platform: 'x64'
             vsversion: 2022
+            use_utf8: true
           - configuration: 'Debug'
             platform: 'Win32'
             vsversion: 2019
@@ -77,17 +84,21 @@ jobs:
         with:
           submodules: 'recursive'
 
-      - name: Configure to use STL
-        if: matrix.use_stl
+      - name: Configure build options
         working-directory: include/wx/msw
         run: |
-            $txt = Get-Content setup.h
-            Write-Output $txt |
-            %{$_ -replace "define wxUSE_STL 0", "define wxUSE_STL 1"} |
-            Set-Content setup.h
+            $use_stl = "${{ matrix.use_stl }}" ? 1 : 0
+            $use_utf8 = "${{ matrix.use_utf8 }}" ? 1 : 0
+            if ( $use_stl -or $use_utf8 ) {
+              $txt = Get-Content setup.h
+              Write-Output $txt |
+              %{$_ -replace "define wxUSE_STL 0", "define wxUSE_STL $use_stl"} |
+              %{$_ -replace "define wxUSE_UNICODE_UTF8 0", "define wxUSE_UNICODE_UTF8 $use_utf8"} |
+              Set-Content setup.h
+            }
 
       - name: Add MSBuild to PATH
-        uses: microsoft/setup-msbuild@v1.0.3
+        uses: microsoft/setup-msbuild@v1.1.3
         with:
             vs-prerelease: true
 
@@ -148,7 +159,16 @@ jobs:
           cmake --version
           mkdir build_cmake
           pushd build_cmake
-          cmake -G "MinGW Makefiles" -DCMAKE_C_COMPILER=clang.exe -DCMAKE_CXX_COMPILER=clang++.exe -DwxBUILD_SAMPLES=ALL -DwxBUILD_TESTS=ALL -DwxBUILD_DEMOS=ON -DCMAKE_BUILD_TYPE=Release ..
+          cmake -G "MinGW Makefiles" \
+                -DCMAKE_C_COMPILER=clang.exe \
+                -DCMAKE_CXX_COMPILER=clang++.exe \
+                -DCMAKE_CXX_FLAGS=-Werror \
+                -DCMAKE_BUILD_TYPE=Release \
+                -DwxBUILD_SAMPLES=ALL \
+                -DwxBUILD_TESTS=ALL \
+                -DwxBUILD_DEMOS=ON \
+                -DwxUSE_WEBVIEW_EDGE=ON \
+                ..
 
       - name: Building
         working-directory: build_cmake

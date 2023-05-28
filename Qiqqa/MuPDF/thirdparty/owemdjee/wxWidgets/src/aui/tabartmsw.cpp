@@ -20,6 +20,7 @@
 #include "wx/aui/auibook.h"
 #include "wx/msw/uxtheme.h"
 #include "wx/msw/private.h"
+#include "wx/msw/private/darkmode.h"
 #include "wx/renderer.h"
 
 wxAuiMSWTabArt::wxAuiMSWTabArt()
@@ -27,7 +28,7 @@ wxAuiMSWTabArt::wxAuiMSWTabArt()
     m_closeBtnSize = wxDefaultSize;
     m_maxTabHeight = 0;
 
-    m_themed = wxUxThemeIsActive();
+    m_themed = wxUxThemeIsActive() && !wxMSWDarkMode::IsActive();
 }
 
 wxAuiMSWTabArt::~wxAuiMSWTabArt()
@@ -457,5 +458,9 @@ bool wxAuiMSWTabArt::IsThemed() const
         !(m_flags & wxAUI_NB_BOTTOM); // Native theme does not support bottom tabs
 }
 
+void wxAuiMSWTabArt::UpdateDpi()
+{
+    m_closeBtnSize = wxDefaultSize;
+}
 
 #endif // wxUSE_AUI && wxUSE_UXTHEME && !defined(__WXUNIVERSAL__)

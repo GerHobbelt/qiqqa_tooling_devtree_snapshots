@@ -41,7 +41,6 @@
 
 #include "wx/dynlib.h"
 #include "wx/filename.h"
-#include "wx/scopedptr.h"
 #include "wx/scopeguard.h"
 #include "wx/tokenzr.h"
 #include "wx/modalhook.h"
@@ -66,6 +65,8 @@
 
     #include "wx/msw/private/cotaskmemptr.h"
 #endif // wxUSE_IFILEOPENDIALOG
+
+#include <memory>
 
 // ----------------------------------------------------------------------------
 // constants
@@ -96,8 +97,6 @@ wxIMPLEMENT_CLASS(wxFileDialog, wxFileDialogBase);
 namespace
 {
 
-#if wxUSE_DYNLIB_CLASS
-
 typedef BOOL (WINAPI *GetProcessUserModeExceptionPolicy_t)(LPDWORD);
 typedef BOOL (WINAPI *SetProcessUserModeExceptionPolicy_t)(DWORD);
 
@@ -111,8 +110,6 @@ DWORD gs_oldExceptionPolicyFlags = 0;
 
 bool gs_changedPolicy = false;
 
-#endif // #if wxUSE_DYNLIB_CLASS
-
 /*
 Since Windows 7 by default (callback) exceptions aren't swallowed anymore
 with native x64 applications. Exceptions can occur in a file dialog when
@@ -122,7 +119,6 @@ by using SetProcessUserModeExceptionPolicy.
 */
 void ChangeExceptionPolicy()
 {
-#if wxUSE_DYNLIB_CLASS
     gs_changedPolicy = false;
 
     wxLoadedDLL dllKernel32(wxT("kernel32.dll"));
@@ -146,19 +142,15 @@ void ChangeExceptionPolicy()
     {
         gs_changedPolicy = true;
     }
-
-#endif // wxUSE_DYNLIB_CLASS
 }
 
 void RestoreExceptionPolicy()
 {
-#if wxUSE_DYNLIB_CLASS
     if (gs_changedPolicy)
     {
         gs_changedPolicy = false;
         (void) gs_pfnSetProcessUserModeExceptionPolicy(gs_oldExceptionPolicyFlags);
     }
-#endif // wxUSE_DYNLIB_CLASS
 }
 
 #if wxUSE_IFILEOPENDIALOG
@@ -588,7 +580,7 @@ public:
 
         // We pass the ID of the first control that will be added to the
         // combobox as the ctor argument.
-        wxScopedPtr<wxFileDialogChoiceImplFDC>
+        std::unique_ptr<wxFileDialogChoiceImplFDC>
             impl(new wxFileDialogChoiceImplFDC(m_fdc, m_lastId, m_lastAuxId - 1));
 
         for ( size_t i = 0; i < n; ++i )
@@ -730,7 +722,7 @@ public:
 
     // IUnknown
 
-    wxSTDMETHODIMP QueryInterface(REFIID iid, void** ppv)
+    wxSTDMETHODIMP QueryInterface(REFIID iid, void** ppv) override
     {
         if ( iid == IID_IUnknown || iid == IID_IFileDialogEvents )
         {
@@ -758,8 +750,8 @@ public:
     }
 
     // Dummy implementations because we're not really ref-counted.
-    STDMETHODIMP_(ULONG) AddRef() { return 1; }
-    STDMETHODIMP_(ULONG) Release() { return 1; }
+    STDMETHODIMP_(ULONG) AddRef() override { return 1; }
+    STDMETHODIMP_(ULONG) Release() override { return 1; }
 
 
     // IFileDialogEvents
@@ -1171,7 +1163,7 @@ static bool DoShowCommFileDialog(OPENFILENAME *of, long style, DWORD *err)
 {
     // Extra controls do not handle per-monitor DPI, fall back to system DPI
     // so entire file-dialog is resized.
-    wxScopedPtr<wxMSWImpl::AutoSystemDpiAware> dpiAwareness;
+    std::unique_ptr<wxMSWImpl::AutoSystemDpiAware> dpiAwareness;
     if ( of->Flags & OFN_ENABLEHOOK )
         dpiAwareness.reset(new wxMSWImpl::AutoSystemDpiAware());
 
@@ -1606,7 +1598,11 @@ int wxFileDialog::ShowIFileDialog(WXHWND hWndParent)
         wxString defExt =
             wildFilters[m_filterIndex].BeforeFirst(';').AfterFirst('.');
         if ( !defExt.empty() && defExt != wxS("*") )
-            fileDialog->SetDefaultExtension(defExt.wc_str());
+        {
+            hr = fileDialog->SetDefaultExtension(defExt.wc_str());
+            if ( FAILED(hr) )
+                wxLogApiError(wxS("IFileDialog::SetDefaultExtension"), hr);
+        }
     }
 
     if ( !m_dir.empty() )

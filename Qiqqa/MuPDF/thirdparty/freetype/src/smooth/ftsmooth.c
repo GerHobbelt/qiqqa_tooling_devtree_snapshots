@@ -88,8 +88,10 @@
 
   /* initialize renderer -- init its raster */
   static FT_Error
-  ft_smooth_init( FT_Renderer  render )
+  ft_smooth_init( FT_Module  module )   /* FT_Renderer */
   {
+    FT_Renderer  render = (FT_Renderer)module;
+
     FT_Vector*  sub = render->root.library->lcd_geometry;
 
 
@@ -112,8 +114,10 @@
   ft_smooth_lcd_spans( int             y,
                        int             count,
                        const FT_Span*  spans,
-                       TOrigin*        target )
+                       void*           target_ )   /* TOrigin* */
   {
+    TOrigin*  target = (TOrigin*)target_;
+
     unsigned char*  dst_line = target->origin - y * target->pitch;
     unsigned char*  dst;
     unsigned short  w;
@@ -142,7 +146,7 @@
     /* Set up direct rendering to record them on each third byte. */
     params.source     = outline;
     params.flags      = FT_RASTER_FLAG_AA | FT_RASTER_FLAG_DIRECT;
-    params.gray_spans = (FT_SpanFunc)ft_smooth_lcd_spans;
+    params.gray_spans = ft_smooth_lcd_spans;
     params.user       = &target;
 
     params.clip_box.xMin = 0;
@@ -257,8 +261,11 @@
 
   /* initialize renderer -- init its raster */
   static FT_Error
-  ft_smooth_init( FT_Renderer  render )
+  ft_smooth_init( FT_Module  module )   /* FT_Renderer */
   {
+    FT_Renderer  render = (FT_Renderer)module;
+
+
     /* set up default LCD filtering */
     FT_Library_SetLcdFilter( render->root.library, FT_LCD_FILTER_DEFAULT );
 
@@ -341,8 +348,11 @@
   ft_smooth_overlap_spans( int             y,
                            int             count,
                            const FT_Span*  spans,
-                           TOrigin*        target )
+                           void*           target_ )
   {
+    TOrigin*  target = (TOrigin*)target_;
+
+
     unsigned char*  dst = target->origin - ( y / SCALE ) * target->pitch;
     unsigned short  x;
     unsigned int    cover, sum;
@@ -387,7 +397,7 @@
     /* Set up direct rendering to average oversampled spans. */
     params.source     = outline;
     params.flags      = FT_RASTER_FLAG_AA | FT_RASTER_FLAG_DIRECT;
-    params.gray_spans = (FT_SpanFunc)ft_smooth_overlap_spans;
+    params.gray_spans = ft_smooth_overlap_spans;
     params.user       = &target;
 
     params.clip_box.xMin = 0;

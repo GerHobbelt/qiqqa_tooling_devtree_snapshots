@@ -23,9 +23,11 @@
 #include "wx/stdpaths.h"
 #include "wx/thread.h"
 #include "wx/tokenzr.h"
+#include "wx/uilocale.h"
 #include "wx/uri.h"
 #include "wx/private/jsscriptwrapper.h"
 #include "wx/private/json.h"
+#include "wx/private/webview.h"
 #include "wx/msw/private.h"
 #include "wx/msw/private/cotaskmemptr.h"
 #include "wx/msw/private/webview_edge.h"
@@ -183,8 +185,8 @@ class wxWebViewEdgeHandlerResponseStream : public wxCOMInputStreamAdapter
 {
 public:
     wxWebViewEdgeHandlerResponseStream(wxSharedPtr<wxWebViewHandlerResponseData> data):
-        m_data(data),
-        wxCOMInputStreamAdapter(data->GetStream())
+        wxCOMInputStreamAdapter(data->GetStream()),
+        m_data(data)
     { }
 
     wxSharedPtr<wxWebViewHandlerResponseData> m_data;
@@ -193,23 +195,28 @@ public:
 class wxWebViewEdgeHandlerResponse : public wxWebViewHandlerResponse
 {
 public:
-    wxWebViewEdgeHandlerResponse(ICoreWebView2WebResourceRequestedEventArgs* args, ICoreWebView2Environment* env):
-        m_args(args),
-        m_env(env)
+    wxWebViewEdgeHandlerResponse(ICoreWebView2WebResourceRequestedEventArgs* args, ICoreWebView2WebResourceResponse* response):
+        m_response(response),
+        m_args(args)
     {
-        m_args->GetDeferral(&m_deferral);
-
-        // Create response
-        HRESULT hr = m_env->CreateWebResourceResponse(nullptr, 200, nullptr, nullptr, &m_response);
+        HRESULT hr = m_args->GetDeferral(&m_deferral);
         if (FAILED(hr))
-            wxLogApiError("CreateWebResourceResponse", hr);
+            wxLogApiError("GetDeferral", hr);
     }
 
     void SetReason(const wxString& reason)
-    { m_response->put_ReasonPhrase(reason.wc_str()); }
+    {
+        HRESULT hr = m_response->put_ReasonPhrase(reason.wc_str());
+        if (FAILED(hr))
+            wxLogApiError("put_ReasonPhrase", hr);
+    }
 
     virtual void SetStatus(int status) override
-    { m_response->put_StatusCode(status); }
+    {
+        HRESULT hr = m_response->put_StatusCode(status);
+        if (FAILED(hr))
+            wxLogApiError("put_StatusCode", hr);
+    }
 
     virtual void SetContentType(const wxString& contentType) override
     { SetHeader("Content-Type", contentType); }
@@ -241,6 +248,8 @@ public:
         return true;
     }
 
+    using wxWebViewHandlerResponse::Finish;
+
     virtual void Finish(wxSharedPtr<wxWebViewHandlerResponseData> data) override
     {
         SetReason("OK");
@@ -262,27 +271,171 @@ public:
         SendResponse();
     }
 
-    int m_status;
     wxCOMPtr<ICoreWebView2WebResourceResponse> m_response;
     wxCOMPtr<ICoreWebView2Deferral> m_deferral;
-    wxCOMPtr<ICoreWebView2Environment> m_env;
     wxCOMPtr<ICoreWebView2WebResourceRequestedEventArgs> m_args;
+};
+
+// wxWebViewConfigurationImplEdge
+class wxWebViewConfigurationImplEdge : public wxWebViewConfigurationImpl
+{
+public:
+    wxWebViewConfigurationImplEdge(ICoreWebView2Environment* environment = nullptr):
+        m_webViewEnvironment(environment)
+    {
+        m_dataPath = wxStandardPaths::Get().GetUserLocalDataDir();
+#ifdef __VISUALC__
+        m_webViewEnvironmentOptions = Make<CoreWebView2EnvironmentOptions>().Get();
+        m_webViewEnvironmentOptions->put_Language(wxUILocale::GetCurrent().GetLocaleId().GetName().wc_str());
+#endif
+    }
+
+    virtual void* GetNativeConfiguration() const override
+    {
+        return m_webViewEnvironmentOptions;
+    }
+
+    virtual void SetDataPath(const wxString& path) override { m_dataPath = path;}
+    virtual wxString GetDataPath() const override { return m_dataPath; }
+
+    bool CreateOrGetEnvironment(wxWebViewEdgeImpl* impl)
+    {
+        if (!m_webViewEnvironment)
+        {
+            m_webViewsWaitingForEnvironment.push_back(impl);
+            HRESULT hr = wxCreateCoreWebView2EnvironmentWithOptions(
+                ms_browserExecutableDir.wc_str(),
+                GetDataPath().wc_str(),
+                m_webViewEnvironmentOptions,
+                Callback<ICoreWebView2CreateCoreWebView2EnvironmentCompletedHandler>(this,
+                    &wxWebViewConfigurationImplEdge::OnEnvironmentCreated).Get());
+            if (FAILED(hr))
+            {
+                wxLogApiError("CreateWebView2EnvironmentWithOptions", hr);
+                return false;
+            }
+            else
+                return true;
+        }
+        else
+        {
+            impl->EnvironmentAvailable(m_webViewEnvironment);
+            return true;
+        }
+    }
+
+    HRESULT OnEnvironmentCreated(HRESULT WXUNUSED(result), ICoreWebView2Environment* environment)
+    {
+        m_webViewEnvironment = environment;
+        for (auto impl : m_webViewsWaitingForEnvironment)
+            impl->EnvironmentAvailable(m_webViewEnvironment);
+        m_webViewsWaitingForEnvironment.clear();
+        return S_OK;
+    }
+
+    static wxString ms_browserExecutableDir;
+    std::vector<wxWebViewEdgeImpl*> m_webViewsWaitingForEnvironment;
+    wxCOMPtr<ICoreWebView2EnvironmentOptions> m_webViewEnvironmentOptions;
+    wxCOMPtr<ICoreWebView2Environment> m_webViewEnvironment;
+    wxString m_dataPath;
+};
+
+wxString wxWebViewConfigurationImplEdge::ms_browserExecutableDir;
+
+// wxWebViewWindowFeaturesEdge
+
+class wxWebViewWindowFeaturesEdge : public wxWebViewWindowFeatures
+{
+public:
+    wxWebViewWindowFeaturesEdge(wxWebView* childWebView, ICoreWebView2NewWindowRequestedEventArgs* args):
+        wxWebViewWindowFeatures(childWebView),
+        m_args(args)
+    {
+        m_args->get_WindowFeatures(&m_windowFeatures);
+    }
+
+    virtual wxPoint GetPosition() const override
+    {
+        wxPoint result(-1, -1);
+        BOOL hasPosition;
+        if (SUCCEEDED(m_windowFeatures->get_HasPosition(&hasPosition)) && hasPosition)
+        {
+            UINT32 x, y;
+            if (SUCCEEDED(m_windowFeatures->get_Left(&x)) &&
+                SUCCEEDED(m_windowFeatures->get_Top(&y)))
+                result = wxPoint(x, y);
+        }
+        return result;
+    }
+
+    virtual wxSize GetSize() const override
+    {
+        wxSize result(-1, -1);
+        BOOL hasSize;
+        if (SUCCEEDED(m_windowFeatures->get_HasSize(&hasSize)) && hasSize)
+        {
+            UINT32 width, height;
+            if (SUCCEEDED(m_windowFeatures->get_Width(&width)) &&
+                SUCCEEDED(m_windowFeatures->get_Height(&height)))
+                result = wxSize(width, height);
+        }
+        return result;
+    }
+
+    virtual bool ShouldDisplayMenuBar() const override
+    {
+        BOOL result;
+        if (SUCCEEDED(m_windowFeatures->get_ShouldDisplayMenuBar(&result)))
+            return result;
+        else
+            return true;
+    }
+
+    virtual bool ShouldDisplayStatusBar() const override
+    {
+        BOOL result;
+        if (SUCCEEDED(m_windowFeatures->get_ShouldDisplayStatus(&result)))
+            return result;
+        else
+            return true;
+    }
+    virtual bool ShouldDisplayToolBar() const override
+    {
+        BOOL result;
+        if (SUCCEEDED(m_windowFeatures->get_ShouldDisplayToolbar(&result)))
+            return result;
+        else
+            return true;
+    }
+
+    virtual bool ShouldDisplayScrollBars() const override
+    {
+        BOOL result;
+        if (SUCCEEDED(m_windowFeatures->get_ShouldDisplayScrollBars(&result)))
+            return result;
+        else
+            return true;
+    }
+
+private:
+    wxCOMPtr<ICoreWebView2NewWindowRequestedEventArgs> m_args;
+    wxCOMPtr<ICoreWebView2WindowFeatures> m_windowFeatures;
 };
 
 #define wxWEBVIEW_EDGE_EVENT_HANDLER_METHOD \
     m_inEventCallback = true; \
     wxON_BLOCK_EXIT_SET(m_inEventCallback, false);
 
-wxString wxWebViewEdgeImpl::ms_browserExecutableDir;
-
-FZ_HEAPDBG_TRACKER_SECTION_END_MARKER(_110)
-
-wxWebViewEdgeImpl::wxWebViewEdgeImpl(wxWebViewEdge* webview):
-    m_ctrl(webview)
+wxWebViewEdgeImpl::wxWebViewEdgeImpl(wxWebViewEdge* webview, const wxWebViewConfiguration& config):
+    m_ctrl(webview),
+    m_config(config)
 {
-#ifdef __VISUALC__
-    m_webViewEnvironmentOptions = Make<CoreWebView2EnvironmentOptions>().Get();
-#endif
+}
+
+wxWebViewEdgeImpl::wxWebViewEdgeImpl(wxWebViewEdge* webview) :
+    m_ctrl(webview),
+    m_config(wxWebViewConfiguration(wxWebViewBackendEdge, new wxWebViewConfigurationImplEdge))
+{
 }
 
 wxWebViewEdgeImpl::~wxWebViewEdgeImpl()
@@ -292,12 +445,14 @@ wxWebViewEdgeImpl::~wxWebViewEdgeImpl()
         m_webView->remove_NavigationCompleted(m_navigationCompletedToken);
         m_webView->remove_SourceChanged(m_sourceChangedToken);
         m_webView->remove_NavigationStarting(m_navigationStartingToken);
+        m_webView->remove_FrameNavigationStarting(m_frameNavigationStartingToken);
         m_webView->remove_NewWindowRequested(m_newWindowRequestedToken);
         m_webView->remove_DocumentTitleChanged(m_documentTitleChangedToken);
         m_webView->remove_DOMContentLoaded(m_DOMContentLoadedToken);
         m_webView->remove_ContainsFullScreenElementChanged(m_containsFullScreenElementChangedToken);
         m_webView->remove_WebMessageReceived(m_webMessageReceivedToken);
         m_webView->remove_WebResourceRequested(m_webResourceRequestedToken);
+        m_webView->remove_WindowCloseRequested(m_windowCloseRequestedToken);
     }
 }
 
@@ -308,41 +463,23 @@ bool wxWebViewEdgeImpl::Create()
     m_inEventCallback = false;
     m_pendingContextMenuEnabled = -1;
     m_pendingAccessToDevToolsEnabled = 0;
+    m_pendingEnableBrowserAcceleratorKeys = -1;
 
     m_historyLoadingFromList = false;
     m_historyEnabled = true;
     m_historyPosition = -1;
 
-    wxString userDataPath = wxStandardPaths::Get().GetUserLocalDataDir();
-
-    if (m_webViewEnvironmentOptions && !m_customUserAgent.empty())
-        m_webViewEnvironmentOptions->put_AdditionalBrowserArguments(
-            wxString::Format("--user-agent=\"%s\"", m_customUserAgent).wc_str());
-
-    HRESULT hr = wxCreateCoreWebView2EnvironmentWithOptions(
-        ms_browserExecutableDir.wc_str(),
-        userDataPath.wc_str(),
-        m_webViewEnvironmentOptions,
-        Callback<ICoreWebView2CreateCoreWebView2EnvironmentCompletedHandler>(this,
-            &wxWebViewEdgeImpl::OnEnvironmentCreated).Get());
-    if (FAILED(hr))
-    {
-        wxLogApiError("CreateWebView2EnvironmentWithOptions", hr);
-        return false;
-    }
-    else
-        return true;
+    return static_cast<wxWebViewConfigurationImplEdge*>(m_config.GetImpl())->
+        CreateOrGetEnvironment(this);
 }
 
-HRESULT wxWebViewEdgeImpl::OnEnvironmentCreated(
-    HRESULT WXUNUSED(result), ICoreWebView2Environment* environment)
+void wxWebViewEdgeImpl::EnvironmentAvailable(ICoreWebView2Environment* environment)
 {
     environment->QueryInterface(IID_PPV_ARGS(&m_webViewEnvironment));
     m_webViewEnvironment->CreateCoreWebView2Controller(
         m_ctrl->GetHWND(),
         Callback<ICoreWebView2CreateCoreWebView2ControllerCompletedHandler>(
             this, &wxWebViewEdgeImpl::OnWebViewCreated).Get());
-    return S_OK;
 }
 
 bool wxWebViewEdgeImpl::Initialize()
@@ -370,7 +507,7 @@ bool wxWebViewEdgeImpl::Initialize()
     // Check if a Edge browser can be found by the loader DLL
     wxCoTaskMemPtr<wchar_t> versionStr;
     HRESULT hr = wxGetAvailableCoreWebView2BrowserVersionString(
-        ms_browserExecutableDir.wc_str(), &versionStr);
+        wxWebViewConfigurationImplEdge::ms_browserExecutableDir.wc_str(), &versionStr);
     if (FAILED(hr) || !versionStr)
     {
         wxLogApiError("GetCoreWebView2BrowserVersionInfo", hr);
@@ -401,6 +538,16 @@ void wxWebViewEdgeImpl::UpdateBounds()
 
 HRESULT wxWebViewEdgeImpl::OnNavigationStarting(ICoreWebView2* WXUNUSED(sender), ICoreWebView2NavigationStartingEventArgs* args)
 {
+    return HandleNavigationStarting(args, true);
+}
+
+HRESULT wxWebViewEdgeImpl::OnFrameNavigationStarting(ICoreWebView2* WXUNUSED(sender), ICoreWebView2NavigationStartingEventArgs* args)
+{
+    return HandleNavigationStarting(args, false);
+}
+
+HRESULT wxWebViewEdgeImpl::HandleNavigationStarting(ICoreWebView2NavigationStartingEventArgs* args, bool mainFrame)
+{
     wxWEBVIEW_EDGE_EVENT_HANDLER_METHOD
     m_isBusy = true;
     wxString evtURL;
@@ -410,12 +557,26 @@ HRESULT wxWebViewEdgeImpl::OnNavigationStarting(ICoreWebView2* WXUNUSED(sender),
 
     wxWebViewEvent event(wxEVT_WEBVIEW_NAVIGATING, m_ctrl->GetId(), evtURL, wxString());
     event.SetEventObject(m_ctrl);
+    if (mainFrame)
+        event.SetInt(1);
     m_ctrl->HandleWindowEvent(event);
 
     if (!event.IsAllowed())
         args->put_Cancel(true);
 
     return S_OK;
+}
+
+void wxWebViewEdgeImpl::SendErrorEventForAPI(const wxString& api, HRESULT errorCode)
+{
+    wxLogApiError(api, errorCode);
+
+    wxWebViewEvent event(wxEVT_WEBVIEW_ERROR, m_ctrl->GetId(), wxString(), wxString());
+    event.SetEventObject(m_ctrl);
+    event.SetInt(wxWEBVIEW_NAV_ERR_OTHER);
+    event.SetString(wxSysErrorMsgStr(errorCode));
+
+    m_ctrl->GetEventHandler()->AddPendingEvent(event);
 }
 
 HRESULT wxWebViewEdgeImpl::OnSourceChanged(ICoreWebView2 * WXUNUSED(sender), ICoreWebView2SourceChangedEventArgs * args)
@@ -508,6 +669,7 @@ HRESULT wxWebViewEdgeImpl::OnNavigationCompleted(ICoreWebView2* WXUNUSED(sender)
 
 HRESULT wxWebViewEdgeImpl::OnNewWindowRequested(ICoreWebView2* WXUNUSED(sender), ICoreWebView2NewWindowRequestedEventArgs* args)
 {
+    wxWEBVIEW_EDGE_EVENT_HANDLER_METHOD
     wxCoTaskMemPtr<wchar_t> uri;
     wxString evtURL;
     if (SUCCEEDED(args->get_Uri(&uri)))
@@ -518,9 +680,31 @@ HRESULT wxWebViewEdgeImpl::OnNewWindowRequested(ICoreWebView2* WXUNUSED(sender),
     if (SUCCEEDED(args->get_IsUserInitiated(&isUserInitiated)) && isUserInitiated)
         navFlags = wxWEBVIEW_NAV_ACTION_USER;
 
-    wxWebViewEvent evt(wxEVT_WEBVIEW_NEWWINDOW, m_ctrl->GetId(), evtURL, wxString(), navFlags);
-    m_ctrl->GetEventHandler()->AddPendingEvent(evt);
+    wxWebViewEvent newWindowEvent(wxEVT_WEBVIEW_NEWWINDOW, m_ctrl->GetId(), evtURL, wxString(), navFlags, "");
+    m_ctrl->HandleWindowEvent(newWindowEvent);
     args->put_Handled(true);
+
+    if (newWindowEvent.IsAllowed())
+    {
+        wxWebViewEdge* childWebView = new wxWebViewEdge(m_config);
+        childWebView->m_impl->m_newWindowArgs = args;
+        HRESULT hr = args->GetDeferral(&childWebView->m_impl->m_newWindowDeferral);
+        if (FAILED(hr))
+            wxLogApiError("GetDeferral", hr);
+
+        wxWebViewWindowFeaturesEdge windowFeatures(childWebView, args);
+        wxWebViewEvent featuresEvent(wxEVT_WEBVIEW_NEWWINDOW_FEATURES, m_ctrl->GetId(), evtURL, wxString(), navFlags, "");
+        featuresEvent.SetClientData(&windowFeatures);
+        m_ctrl->HandleWindowEvent(featuresEvent);
+    }
+
+    return S_OK;
+}
+
+HRESULT wxWebViewEdgeImpl::OnWindowCloseRequested(ICoreWebView2* WXUNUSED(sender), IUnknown* WXUNUSED(args))
+{
+    wxWebViewEvent evt(wxEVT_WEBVIEW_WINDOW_CLOSE_REQUESTED, m_ctrl->GetId(), m_ctrl->GetCurrentURL(), "");
+    m_ctrl->GetEventHandler()->AddPendingEvent(evt);
     return S_OK;
 }
 
@@ -607,7 +791,16 @@ HRESULT wxWebViewEdgeImpl::OnWebResourceRequested(ICoreWebView2* WXUNUSED(sender
         return E_INVALIDARG;
     request.SetHandler(handler.get());
 
-    wxSharedPtr<wxWebViewHandlerResponse> resp(new wxWebViewEdgeHandlerResponse(args, m_webViewEnvironment));
+    // Create response
+    wxCOMPtr<ICoreWebView2WebResourceResponse> runtimeResponse;
+    hr = m_webViewEnvironment->CreateWebResourceResponse(nullptr, 200, L"OK", nullptr, &runtimeResponse);
+    if (FAILED(hr))
+    {
+        wxLogApiError("CreateWebResourceResponse", hr);
+        return hr;
+    }
+
+    wxSharedPtr<wxWebViewHandlerResponse> resp(new wxWebViewEdgeHandlerResponse(args, runtimeResponse));
     handler->StartRequest(request, resp);
     return S_OK;
 }
@@ -616,7 +809,7 @@ HRESULT wxWebViewEdgeImpl::OnWebViewCreated(HRESULT result, ICoreWebView2Control
 {
     if (FAILED(result))
     {
-        wxLogApiError("WebView2::WebViewCreated", result);
+        SendErrorEventForAPI("WebView2::WebViewCreated", result);
         return result;
     }
 
@@ -624,13 +817,13 @@ HRESULT wxWebViewEdgeImpl::OnWebViewCreated(HRESULT result, ICoreWebView2Control
     HRESULT hr = webViewController->get_CoreWebView2(&baseWebView);
     if (FAILED(hr))
     {
-        wxLogApiError("WebView2::WebViewCreated (get_CoreWebView2)", hr);
+        SendErrorEventForAPI("WebView2::WebViewCreated (get_CoreWebView2)", hr);
         return result;
     }
     hr = baseWebView->QueryInterface(IID_PPV_ARGS(&m_webView));
     if (FAILED(hr))
     {
-        wxLogApiError("WebView2::WebViewCreated (QueryInterface)", hr);
+        SendErrorEventForAPI("WebView2::WebViewCreated (QueryInterface)", hr);
         return result;
     }
 
@@ -645,6 +838,10 @@ HRESULT wxWebViewEdgeImpl::OnWebViewCreated(HRESULT result, ICoreWebView2Control
         Callback<ICoreWebView2NavigationStartingEventHandler>(
             this, &wxWebViewEdgeImpl::OnNavigationStarting).Get(),
         &m_navigationStartingToken);
+    m_webView->add_FrameNavigationStarting(
+        Callback<ICoreWebView2NavigationStartingEventHandler>(
+            this, &wxWebViewEdgeImpl::OnFrameNavigationStarting).Get(),
+        &m_frameNavigationStartingToken);
     m_webView->add_SourceChanged(
         Callback<ICoreWebView2SourceChangedEventHandler>(
             this, &wxWebViewEdgeImpl::OnSourceChanged).Get(),
@@ -677,6 +874,10 @@ HRESULT wxWebViewEdgeImpl::OnWebViewCreated(HRESULT result, ICoreWebView2Control
         Callback<ICoreWebView2WebResourceRequestedEventHandler>(
             this, &wxWebViewEdgeImpl::OnWebResourceRequested).Get(),
         &m_webResourceRequestedToken);
+    m_webView->add_WindowCloseRequested(
+        Callback<ICoreWebView2WindowCloseRequestedEventHandler>(
+            this, &wxWebViewEdgeImpl::OnWindowCloseRequested).Get(),
+        &m_windowCloseRequestedToken);
 
     // Register handlers
     for (wxStringToWebHandlerMap::iterator it = m_handlers.begin(); it != m_handlers.end(); it++)
@@ -697,6 +898,18 @@ HRESULT wxWebViewEdgeImpl::OnWebViewCreated(HRESULT result, ICoreWebView2Control
         m_pendingContextMenuEnabled = -1;
     }
 
+    if (m_pendingEnableBrowserAcceleratorKeys != -1)
+    {
+        m_ctrl->EnableBrowserAcceleratorKeys(m_pendingEnableBrowserAcceleratorKeys == 1);
+        m_pendingEnableBrowserAcceleratorKeys = -1;
+    }
+
+    if (!m_pendingUserAgent.empty())
+    {
+        m_ctrl->SetUserAgent(m_pendingUserAgent);
+        m_pendingUserAgent.clear();
+    }
+
     wxCOMPtr<ICoreWebView2Settings> settings(GetSettings());
     if (settings)
     {
@@ -710,6 +923,18 @@ HRESULT wxWebViewEdgeImpl::OnWebViewCreated(HRESULT result, ICoreWebView2Control
             it != m_pendingUserScripts.end(); ++it)
             m_ctrl->AddUserScript(*it);
         m_pendingUserScripts.clear();
+    }
+
+    if (m_newWindowArgs)
+    {
+        if (FAILED(m_newWindowArgs->put_NewWindow(baseWebView)))
+            SendErrorEventForAPI("WebView2::WebViewCreated (put_NewWindow)", hr);
+        if (FAILED(m_newWindowDeferral->Complete()))
+            SendErrorEventForAPI("WebView2::WebViewCreated (Complete)", hr);
+        m_newWindowArgs.reset();
+        m_newWindowDeferral.reset();
+
+        return S_OK;
     }
 
     if (!m_pendingURL.empty())
@@ -761,10 +986,32 @@ ICoreWebView2Settings* wxWebViewEdgeImpl::GetSettings()
     return settings;
 }
 
+ICoreWebView2Settings3* wxWebViewEdgeImpl::GetSettings3()
+{
+    ICoreWebView2Settings3* settings3 = nullptr;
+    wxCOMPtr<ICoreWebView2Settings> settings(GetSettings());
+    if (settings)
+    {
+        HRESULT hr = settings->QueryInterface(IID_PPV_ARGS(&settings3));
+        if (FAILED(hr))
+        {
+            wxLogApiError("WebView2::get_Settings3", hr);
+            return nullptr;
+        }
+    }
+
+    return settings3;
+}
+
 wxWebViewEdge::wxWebViewEdge():
     m_impl(new wxWebViewEdgeImpl(this))
 {
 
+}
+
+wxWebViewEdge::wxWebViewEdge(const wxWebViewConfiguration& config):
+    m_impl(new wxWebViewEdgeImpl(this, config))
+{
 }
 
 wxWebViewEdge::wxWebViewEdge(wxWindow* parent,
@@ -803,6 +1050,8 @@ bool wxWebViewEdge::Create(wxWindow* parent,
     {
         return false;
     }
+
+    MSWDisableComposited();
 
     if (!m_impl->Create())
         return false;
@@ -1088,33 +1337,64 @@ bool wxWebViewEdge::IsAccessToDevToolsEnabled() const
     return true;
 }
 
+void wxWebViewEdge::EnableBrowserAcceleratorKeys(bool enable)
+{
+    wxCOMPtr<ICoreWebView2Settings3> settings(m_impl->GetSettings3());
+    if (settings)
+        settings->put_AreBrowserAcceleratorKeysEnabled(enable);
+    else
+        m_impl->m_pendingEnableBrowserAcceleratorKeys = enable ? 1 : 0;
+}
+
+bool wxWebViewEdge::AreBrowserAcceleratorKeysEnabled() const
+{
+    wxCOMPtr<ICoreWebView2Settings3> settings(m_impl->GetSettings3());
+    if (settings)
+    {
+        BOOL browserAcceleratorKeysEnabled = TRUE;
+        settings->get_AreBrowserAcceleratorKeysEnabled(&browserAcceleratorKeysEnabled);
+
+        if (!browserAcceleratorKeysEnabled)
+            return false;
+    }
+
+    return true;
+}
+
+
 bool wxWebViewEdge::SetUserAgent(const wxString& userAgent)
 {
-    m_impl->m_customUserAgent = userAgent;
-    // Can currently only be set before Create()
-    wxCHECK_MSG(!m_impl->m_webViewController, false, "Can't be called after Create()");
-    if (m_impl->m_webViewController)
-        return false;
+    wxCOMPtr<ICoreWebView2Settings3> settings(m_impl->GetSettings3());
+    if (settings)
+        return SUCCEEDED(settings->put_UserAgent(userAgent.wc_str()));
     else
-        return true;
+        m_impl->m_pendingUserAgent = userAgent;
 
-    // TODO: As of Edge SDK 1.0.790 an experimental API to set the user agent
-    // is available. Reimplement using m_impl->GetSettings() when it's stable.
+    return true;
 }
+
+wxString wxWebViewEdge::GetUserAgent() const
+{
+    wxCOMPtr<ICoreWebView2Settings3> settings(m_impl->GetSettings3());
+    if (settings)
+    {
+        wxCoTaskMemPtr<wchar_t> userAgent;
+        if (SUCCEEDED(settings->get_UserAgent(&userAgent)))
+            return wxString(userAgent);
+    }
+
+    return wxString{};
+}
+
 
 void* wxWebViewEdge::GetNativeBackend() const
 {
     return m_impl->m_webView;
 }
 
-void* wxWebViewEdge::GetNativeConfiguration() const
-{
-    return m_impl->m_webViewEnvironmentOptions;
-}
-
 void wxWebViewEdge::MSWSetBrowserExecutableDir(const wxString & path)
 {
-    wxWebViewEdgeImpl::ms_browserExecutableDir = path;
+    wxWebViewConfigurationImplEdge::ms_browserExecutableDir = path;
 }
 
 bool wxWebViewEdge::RunScript(const wxString& javascript, wxString* output) const
@@ -1252,6 +1532,11 @@ void wxWebViewEdge::DoSetPage(const wxString& html, const wxString& WXUNUSED(bas
 
 // wxWebViewFactoryEdge
 
+wxWebView* wxWebViewFactoryEdge::CreateWithConfig(const wxWebViewConfiguration& config)
+{
+    return new wxWebViewEdge(config);
+}
+
 bool wxWebViewFactoryEdge::IsAvailable()
 {
     return wxWebViewEdgeImpl::Initialize();
@@ -1268,7 +1553,7 @@ wxVersionInfo wxWebViewFactoryEdge::GetVersionInfo()
     {
         wxCoTaskMemPtr<wchar_t> nativeVersionStr;
         HRESULT hr = wxGetAvailableCoreWebView2BrowserVersionString(
-            wxWebViewEdgeImpl::ms_browserExecutableDir.wc_str(), &nativeVersionStr);
+            wxWebViewConfigurationImplEdge::ms_browserExecutableDir.wc_str(), &nativeVersionStr);
         if (SUCCEEDED(hr) && nativeVersionStr)
         {
             wxStringTokenizer tk(wxString(nativeVersionStr), ". ");
@@ -1283,6 +1568,11 @@ wxVersionInfo wxWebViewFactoryEdge::GetVersionInfo()
     }
 
     return wxVersionInfo("Microsoft Edge WebView2", major, minor, micro, revision);
+}
+
+wxWebViewConfiguration wxWebViewFactoryEdge::CreateConfiguration()
+{
+    return wxWebViewConfiguration(wxWebViewBackendEdge, new wxWebViewConfigurationImplEdge);
 }
 
 // ----------------------------------------------------------------------------

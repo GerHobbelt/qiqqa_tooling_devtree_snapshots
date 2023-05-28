@@ -1,5 +1,6 @@
 find script Han
 find type Pe script Common scriptx Hangul
+find script !latin scriptx sundanese
 find type Sk
 find type Pd
 find gbreak LVT
@@ -14,6 +15,7 @@ find bidi RLI
 find bidi RLO
 find bidi S
 find bidi WS
+find bidi white_space bool ascii
 find script bopo
 find bool prependedconcatenationmark
 find bool pcm

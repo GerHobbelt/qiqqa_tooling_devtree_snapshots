@@ -79,6 +79,54 @@
 #define wxUSE_REPRODUCIBLE_BUILD 0
 
 // ----------------------------------------------------------------------------
+// wxString encoding settings
+// ----------------------------------------------------------------------------
+
+// If set to 1, wxString uses UTF-8 internally instead of UTF-32 (Unix) or
+// UTF-16 (MSW).
+//
+// This option can be set to 1 if you want to avoid the overhead of converting
+// between wchar_t encoding (UTF-32 or UTF-16) used by wxString by default and
+// UTF-8, i.e. it makes functions such as wxString::FromUTF8() and utf8_str()
+// much more efficient and constant time, as they don't perform any conversion
+// any longer, which is especially interesting in wxGTK where these functions
+// are used every time a GTK function is called. But this is compensated by
+// making all the non-UTF-8 functions less efficient, notably requiring a
+// conversion when passing any string to Win32 API.
+//
+// Moreover, accessing strings by character index becomes, in general, a O(N)
+// iteration, where N is the index, so only enable this option if you don't use
+// index access for arbitrary characters (unless it is done inside a loop
+// consecutively for all characters as this special access pattern is optimized
+// by caching the last accessed index -- but using iterate, or range for loop,
+// is still better even in this case), as otherwise you may observe significant
+// slowdown in your program performance.
+//
+// Default is 0
+//
+// Recommended setting: 0 but can be set to 1 for optimization purposes and if
+// you're sure that you're not using loops using indices to iterate over
+// strings in your code.
+#define wxUSE_UNICODE_UTF8 0
+
+// If set to 1, assume that all narrow strings use UTF-8.
+//
+// By default, wxWidgets assumes that all "char*" strings use the encoding of
+// the current locale, which is commonly, but not always, UTF-8 under Unix but
+// rarely UTF-8 under MSW. This option tells the library that all strings
+// always use UTF-8, avoiding the need to perform any conversions between them
+// and wxString internal representation when wxUSE_UNICODE_UTF8 is set to 1.
+//
+// In fact, using this option only makes sense when wxUSE_UNICODE_UTF8==1 and
+// it must not be enabled without the other option.
+//
+// Default is 0
+//
+// Recommended setting: 0 but can be set to 1 if your program is always run in
+// an UTF-8 locale.
+#define wxUSE_UTF8_LOCALE_ONLY 0
+
+// ----------------------------------------------------------------------------
 // debugging settings
 // ----------------------------------------------------------------------------
 
@@ -125,60 +173,6 @@
 // Recommended setting: 1, it is compiled into a separate library so there
 //                         is no overhead if you don't use it
 #define wxUSE_DEBUGREPORT 1
-
-// Generic comment about debugging settings: they are very useful if you don't
-// use any other memory leak detection tools such as Purify/BoundsChecker, but
-// are probably redundant otherwise. Also, Visual C++ CRT has the same features
-// as wxWidgets memory debugging subsystem built in since version 5.0 and you
-// may prefer to use it instead of built in memory debugging code because it is
-// faster and more fool proof.
-//
-// Using VC++ CRT memory debugging is enabled by default in debug build (_DEBUG
-// is defined) if wxUSE_GLOBAL_MEMORY_OPERATORS is *not* enabled (i.e. is 0)
-// and if __NO_VC_CRTDBG__ is not defined.
-
-// The rest of the options in this section are obsolete and not supported,
-// enable them at your own risk.
-
-// If 1, enables wxDebugContext, for writing error messages to file, etc. If
-// __WXDEBUG__ is not defined, will still use the normal memory operators.
-//
-// Default is 0
-//
-// Recommended setting: 0
-#define wxUSE_DEBUG_CONTEXT 0
-
-// If 1, enables debugging versions of wxObject::new and wxObject::delete *IF*
-// __WXDEBUG__ is also defined.
-//
-// WARNING: this code may not work with all architectures, especially if
-// alignment is an issue. This switch is currently ignored for mingw / cygwin
-//
-// Default is 0
-//
-// Recommended setting: 1 if you are not using a memory debugging tool, else 0
-#define wxUSE_MEMORY_TRACING 0
-
-// In debug mode, cause new and delete to be redefined globally.
-// If this causes problems (e.g. link errors which is a common problem
-// especially if you use another library which also redefines the global new
-// and delete), set this to 0.
-// This switch is currently ignored for mingw / cygwin
-//
-// Default is 0
-//
-// Recommended setting: 0
-#define wxUSE_GLOBAL_MEMORY_OPERATORS 0
-
-// In debug mode, causes new to be defined to be WXDEBUG_NEW (see object.h). If
-// this causes problems (e.g. link errors), set this to 0. You may need to set
-// this to 0 if using templates (at least for VC++). This switch is currently
-// ignored for MinGW/Cygwin.
-//
-// Default is 0
-//
-// Recommended setting: 0
-#define wxUSE_DEBUG_NEW_ALWAYS 1
 
 
 // ----------------------------------------------------------------------------
@@ -309,10 +303,10 @@
 
 // Use standard C++ containers to implement all wx container classes.
 //
-// Default is 0 for compatibility reasons.
+// Default is 1.
 //
-// Recommended setting: 1 unless compatibility with the official wxWidgets
-// build and/or the existing code is a concern.
+// Recommended setting: 1 unless you really need to set it to 0 to preserve
+// compatibility with the existing code.
 #define wxUSE_STD_CONTAINERS 1
 
 // Use standard C++ streams if 1 instead of wx streams in some places. If
@@ -507,9 +501,11 @@
 #define wxUSE_DIALUP_MANAGER   1
 
 // Compile in classes for run-time DLL loading and function calling.
-// Required by wxUSE_DIALUP_MANAGER.
 //
-// This setting is for Win32 only
+// This is required by wxMSW implementation and so is always enabled there,
+// regardless of the value here. For the other ports this option can be
+// disabled to save a tiny amount of code, but there is typically no reason to
+// do it.
 //
 // Default is 1.
 //

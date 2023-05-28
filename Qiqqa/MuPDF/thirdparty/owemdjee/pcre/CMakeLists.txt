@@ -99,11 +99,15 @@
 #            build in one go.
 # 2021-08-28 PH increased minimum version
 # 2021-08-28 PH added test for realpath()
+# 2022-12-10 PH added support for pcre2posix_test
+# 2023-01-15 Carlo added C99 as the minimum required
 
 # Increased minimum to 2.8.5 to support GNUInstallDirs.
 # Increased minimum to 3.1 to support imported targets.
 CMAKE_MINIMUM_REQUIRED(VERSION 3.1)
 PROJECT(PCRE2 C)
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD_REQUIRED TRUE)
 
 # Set policy CMP0026 to avoid warnings for the use of LOCATION in
 # GET_TARGET_PROPERTY. This should no longer be required.
@@ -158,6 +162,13 @@ CHECK_C_SOURCE_COMPILES(
 
 set(ORIG_CMAKE_REQUIRED_FLAGS ${CMAKE_REQUIRED_FLAGS})
 set(CMAKE_REQUIRED_FLAGS "${CMAKE_REQUIRED_FLAGS} -Werror")
+
+CHECK_C_SOURCE_COMPILES(
+  "#include <stddef.h>
+   int main() { int a,b; size_t m; __builtin_mul_overflow(a,b,&m); return 0; }"
+  HAVE_BUILTIN_MUL_OVERFLOW
+)
+
 CHECK_C_SOURCE_COMPILES(
   "int main() { char buf[128] __attribute__((uninitialized)); (void)buf; return 0; }"
   HAVE_ATTRIBUTE_UNINITIALIZED
@@ -610,6 +621,7 @@ SET(PCRE2_HEADERS ${PROJECT_BINARY_DIR}/pcre2.h)
 SET(PCRE2_SOURCES
   src/pcre2_auto_possess.c
   ${PROJECT_BINARY_DIR}/pcre2_chartables.c
+  src/pcre2_chkdint.c
   src/pcre2_compile.c
   src/pcre2_config.c
   src/pcre2_context.c
@@ -945,10 +957,16 @@ IF(PCRE2_BUILD_TESTS)
   ENDIF(PCRE2_BUILD_PCRE2_32)
   TARGET_LINK_LIBRARIES(pcre2test ${PCRE2TEST_LIBS} ${PCRE2TEST_LINKER_FLAGS})
 
+  IF(PCRE2_BUILD_PCRE2_8)
+    ADD_EXECUTABLE(pcre2posix_test src/pcre2posix_test.c)
+    SET(targets ${targets} pcre2posix_test)
+    TARGET_LINK_LIBRARIES(pcre2posix_test pcre2-posix pcre2-8)
+  ENDIF(PCRE2_BUILD_PCRE2_8)
+
   IF(PCRE2_SUPPORT_JIT)
     ADD_EXECUTABLE(pcre2_jit_test src/pcre2_jit_test.c)
     SET(targets ${targets} pcre2_jit_test)
-    SET(PCRE2_JIT_TEST_LIBS )
+    SET(PCRE2_JIT_TEST_LIBS)
     IF(PCRE2_BUILD_PCRE2_8)
       LIST(APPEND PCRE2_JIT_TEST_LIBS pcre2-8)
     ENDIF(PCRE2_BUILD_PCRE2_8)
@@ -1059,6 +1077,11 @@ echo RunTest.bat tests successfully completed
   IF(PCRE2_SUPPORT_JIT)
     ADD_TEST(pcre2_jit_test pcre2_jit_test)
   ENDIF(PCRE2_SUPPORT_JIT)
+
+  IF(PCRE2_BUILD_PCRE2_8)
+    ADD_TEST(pcre2posix_test pcre2posix_test)
+  ENDIF(PCRE2_BUILD_PCRE2_8)
+
 
 ENDIF(PCRE2_BUILD_TESTS)
 

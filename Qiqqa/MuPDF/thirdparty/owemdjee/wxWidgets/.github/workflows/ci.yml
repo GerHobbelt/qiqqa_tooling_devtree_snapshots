@@ -6,6 +6,7 @@ on:
     branches:
       - master
     paths-ignore:
+      - '.circleci/**'
       - '.github/ISSUE_TEMPLATE/**'
       - '.github/workflows/ci_mac.yml'
       - '.github/workflows/ci_cmake.yml'
@@ -29,6 +30,7 @@ on:
     branches:
       - master
     paths-ignore:
+      - '.circleci/**'
       - '.github/ISSUE_TEMPLATE/**'
       - '.github/workflows/ci_mac.yml'
       - '.github/workflows/ci_cmake.yml'
@@ -48,6 +50,17 @@ on:
       - '*.yml'
       - 'CMakeLists.txt'
       - 'wxwidgets.props'
+  workflow_dispatch:
+    inputs:
+      debug_tests:
+        type: boolean
+        description: 'Enable ssh server before running the tests'
+        required: false
+        default: false
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: read
@@ -56,7 +69,11 @@ jobs:
   build:
     runs-on: ${{ matrix.runner }}
     name: ${{ matrix.name }}
-    container: ${{ matrix.container }}
+    container:
+      image: ${{ matrix.container }}
+      # We need to make container privileged just to allow writing to
+      # /proc/sys/kernel/core* files below.
+      options: --privileged
     strategy:
       fail-fast: false
       matrix:
@@ -80,23 +97,28 @@ jobs:
           - name: Ubuntu 18.04 wxGTK 3 STL
             runner: ubuntu-latest
             container: ubuntu:18.04
-            configure_flags: --enable-stl --disable-compat30
+            configure_flags: --enable-stl --enable-compat30
             use_xvfb: true
           - name: Ubuntu 20.04 wxGTK 3 with clang
             runner: ubuntu-20.04
             compiler: clang++-10
             configure_flags: --disable-sys-libs
             use_xvfb: true
+          - name: Ubuntu 22.04 wxGTK with wx containers
+            runner: ubuntu-22.04
+            configure_flags: --enable-compat30 --disable-std_containers
+            use_xvfb: true
           - name: Ubuntu 22.04 wxGTK with ASAN
             runner: ubuntu-22.04
-            configure_flags: --disable-compat30 --disable-sys-libs --disable-webview
+            configure_flags: --disable-compat32 --disable-sys-libs
             skip_samples: true
             use_asan: true
             use_xvfb: true
-          - name: Ubuntu 22.04 wxGTK C++20
+          - name: Ubuntu 22.04 wxGTK UTF-8 C++20
             runner: ubuntu-22.04
-            configure_flags: --with-cxx=20
-            skip_samples: true
+            configure_flags: --with-cxx=20 --enable-utf8 --enable-utf8only
+            use_asan: true
+            use_xvfb: true
           - name: Ubuntu 18.04 wxX11
             runner: ubuntu-latest
             container: ubuntu:18.04
@@ -141,13 +163,15 @@ jobs:
 
               # Explanation for installing some less obvious packages:
               #   - coreutils contains nproc used in proc_count.sh called below.
-              #   - locales contains locale-gen also used below.
               #   - Python can't be installed using the action as usual because
               #     it installs an ABI-incompatible version, see (wrongly, IMO)
               #     closed https://github.com/actions/setup-python/issues/370
+              #   - And python3-cffi can't be installed by pip because it can't
+              #     be built from source with gcc 4.8 any longer (its build
+              #     script uses -Wdate-time option unknown to this compiler).
               #   - xvfb is used for running the GUI tests.
               apt-get update -qq
-              apt-get install -qq coreutils ${compiler-g++} git locales make pkg-config python3 python3-pip sudo xvfb
+              apt-get install -qq coreutils ${compiler-g++} git make pkg-config python3 python3-cffi python3-pip sudo xvfb
               ;;
 
             '')
@@ -164,7 +188,7 @@ jobs:
           submodules: 'recursive'
 
       - name: Install CCache
-        uses: hendrikmuhs/ccache-action@578e14bc3f06099346125f52ed0008433eccbedf
+        uses: hendrikmuhs/ccache-action@v1.2.3
         with:
           key: ${{ matrix.name }}
 
@@ -216,10 +240,6 @@ jobs:
 
           echo "wxMAKEFILE_CXXFLAGS=$wxMAKEFILE_CXXFLAGS $error_opts" >> $GITHUB_ENV
 
-          # Install locales used by our tests to run all the tests instead of
-          # skipping them.
-          sudo locale-gen de_DE.utf8 de_CH.utf8 en_US.utf8 fr_FR.utf8 sv_SE.utf8
-
           ./build/tools/before_install.sh
 
       - name: Show build environment
@@ -263,6 +283,17 @@ jobs:
 
       - name: Building
         run: |
+          if [ ${{ matrix.use_asan }} ]; then
+            # This is a horrible hack needed to prevent ASAN from being used
+            # for the WebKit extension shared library: this wouldn't work
+            # because this library is loaded in a separate WebKit process not
+            # using ASAN. This should really be fixed at makefile level, but
+            # for now just work around the problem here by manually building
+            # this library without ASAN: get the compile and link commands
+            # (the only ones that should contain ASAN flags) and filter these
+            # flags out from them before running them.
+            /bin/sh -xc "`make -n install_webkit2_ext | sed -n -e 's/-fsanitize=address//gp'`"
+          fi
           make -k $wxBUILD_ARGS "CXXFLAGS=$wxMAKEFILE_ERROR_CXXFLAGS"
 
       - name: Building tests
@@ -270,6 +301,10 @@ jobs:
         run: |
           make $wxBUILD_ARGS failtest
           make -k $wxBUILD_ARGS "CXXFLAGS=$wxMAKEFILE_CXXFLAGS" "LDFLAGS=$wxMAKEFILE_LDFLAGS"
+
+      - name: Setup tmate
+        uses: mxschmitt/action-tmate@v3
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.debug_tests }}
 
       - name: Setup Python
         if: matrix.container == ''
@@ -323,15 +358,21 @@ jobs:
             # RichTextCtrlTestCase whose Table sub-test seems to be problematic.
             wx_tests_selection='~[.] ~RichTextCtrlTestCase'
           fi
+
+          # Configure the system to create core files and create them in the
+          # current directory instead of using apport to handle them, as
+          # Ubuntu does by default (even in a container where apport is not
+          # only not running but not even installed). Also turn off appending
+          # PID to the core files names which is on by default.
           ulimit -c unlimited
+          echo core | sudo tee /proc/sys/kernel/core_pattern
+          echo 0 | sudo tee /proc/sys/kernel/core_uses_pid
 
           # This is exceedingly weird, but for some reason the first test using
-          # wxWebView in the build using clang under Ubuntu 20.04 fails (even
-          # if the timeout in the test is increased), so run it before really
-          # running the tests -- then they will succeed.
-          if [ '${{ matrix.compiler }}' = 'clang++-10' ]; then
-            xvfb-run -a -s '-screen 0 1600x1200x24' ./test_gui -c Title WebView >/dev/null 2>&1 || echo 'First wxWebView test failure ignored.'
-          fi
+          # wxWebView sometimes fails (even if the timeout in the test is
+          # increased), so run it before really running the tests -- then they
+          # will succeed.
+          xvfb-run -a -s '-screen 0 1600x1200x24' ./test_gui -c Title WebView >/dev/null 2>&1 || echo 'First wxWebView test failure ignored.'
 
           /bin/bash -o pipefail -c "xvfb-run -a -s '-screen 0 1600x1200x24' ./test_gui -d 1 $wx_tests_selection 2>&1 | tee -a test_gui.out" || rc=$?
           if [ -n "$rc" ]; then

@@ -1,5 +1,99 @@
-Change Log for PCRE2 - see also the Git log
--------------------------------------------
+Change Log for PCRE2
+--------------------
+
+Before the move to GitHub, this was the only record of changes to PCRE2. Now
+there is often more detail in the pull requests.
+
+
+Version 10.43 xx-xxx-202x
+-------------------------
+
+1. The test program added by change 2 of 10.42 didn't work when the default
+newline setting didn't include \n as a newline. One test needed (*LF) to ensure
+that it worked.
+
+2. Added the new freestanding POSIX test program to the ManyConfigTests script
+in the maint directory (overlooked in 2 below). Also improved the selection
+facilities in that script, and added a test with JIT in a non-source directory,
+fixing an oversight that would have made such a test fail before.
+
+3. Added pcre2_get_match_data_heapframes_size() and related pcre2test flags
+to allow for finer control of the heap used when pcre2_match() without JIT is
+used and the match_data might be reused. This began as PR #191, but has had
+further refinement and documentation edits.
+
+4. Applied PR #181, which tidies some casts in pcre2_valid_utf.c.
+
+5. Applied PR #184, which avoids overflow issues with the heap limit (introduced
+in 10.41/9.
+
+6. Applied PR #192, which changes the timing units for pcre2test from
+milliseconds to microseconds. This is more useful for modern CPUs.
+
+7. Applied PR #193, which makes the requirement for C99 explicit in
+configure.ac and CMakeLists.txt.
+
+8. Fixed a bug in pcre2test when a ridiculously large string repeat required a
+stupid amount of memory. It now gives a clean realloc() failure error.
+
+9. Updates to restrict the interaction between ASCII and non-ASCII characters
+for caseless matching and items like \d:
+
+   (a) Added PCRE2_EXTRA_CASELESS_RESTRICT to lock out mixing of ASCII and
+       non-ASCII when matching caselessly. This is also /r in pcre2test and
+       (?r) within patterns.
+
+   (b) Added PCRE2_EXTRA_ASCII_{BSD,BSS,BSW,POSIX} and corresponding (?aD) etc
+       in patterns and /a in pcre2test.
+
+   (c) Corresponding updates to pcre2test.
+
+10. Unicode has been updated to 15.0.0.
+
+11. The Python scripts and ucptest.c in maint have been updated (a) a minor
+change needed for 9(a) above; (b) fix bugs in ucptest,
+
+12. Integer overflow testing is now centralized in a new function.
+
+13. Made PCRE2_UCP the default in UTF mode in pcre2grep, and added new options 
+--case-restrict and --no-ucp.
+
+14. In the debugging printint module (which is normally only linked into 
+pcre2test), avoid the use of a variable called "not" because that's deprecated 
+in C and forbidden in C++. Also rewrite some code to avoid a goto into a block 
+that bypassed its initialization (though it didn't actually matter).
+
+15. More minor code adjustments to avoid using reserved C++ words as variable 
+names ("new" and "typename") and another jump that bypassed an (irrelevant) 
+initialization.
+
+16. Merged a pull request that removed pcre2_ucptables.c from the list of files 
+to compile in NON-AUTOTOOLS-BUILD because it is #included in pcre2_tables.c. 
+Also adjusted the BUILD.bazel and build.zig files, which had the same issue. At 
+the same time, fixed a typo in the Bazel file.
+
+
+Version 10.42 11-December-2022
+------------------------------
+
+1. Change 19 of 10.41 wasn't quite right; it put the definition of a default,
+empty value for PCRE2_CALL_CONVENTION in src/pcre2posix.c instead of
+src/pcre2posix.h, which meant that programs that included pcre2posix.h but not
+pcre2.h failed to compile.
+
+2. To catch similar issues to the above in future, a new small test program
+that includes pcre2posix.h but not pcre2.h has been added to the test suite.
+
+3. When the -S option of pcre2test was used to set a stack size greater than
+the allowed maximum, the error message displayed the hard limit incorrectly.
+This was pointed out on GitHub pull request #171, but the suggested patch
+didn't cope with all cases. Some further modification was required.
+
+4. Supplying an ovector count of more than 65535 to pcre2_match_data_create()
+caused a crash because the field in the match data block is only 16 bits. A
+maximum of 65535 is now silently applied.
+
+5. Merged @carenas patch #175 which fixes #86 - segfault on aarch64 (ARM),
 
 
 Version 10.41 06-December-2022

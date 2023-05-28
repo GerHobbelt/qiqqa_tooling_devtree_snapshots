@@ -82,6 +82,7 @@ static struct tool_spec {
 
 	const char *name;
     const char *desc;
+	int keep_path;              // 1: copy the argv[0] path into the tool's argv[0]; i.e. the tool needs the full path to the executable.
 } tools[] = {
 #if FZ_ENABLE_PDF
 	{ {.fa = pdfclean_main }, "clean", "rewrite pdf file" },
@@ -219,7 +220,7 @@ static struct tool_spec {
 	{ {.fa = lept_adaptmap_reg_main }, "lept_adaptmap", "leptonica adaptmap_reg test/tool" },
 	{ {.fa = lept_adaptnorm_reg_main }, "lept_adaptnorm", "leptonica adaptnorm_reg test/tool" },
 	{ {.fa = lept_affine_reg_main }, "lept_affine", "leptonica affine_reg test/tool" },
-	{ {.fa = lept_alltests_reg_main }, "lept_alltests", "leptonica alltests_reg test/tool" },
+	{ {.fa = lept_alltests_reg_main }, "lept_alltests", "leptonica alltests_reg test/tool", 1 },
 	{ {.fa = lept_alphaops_reg_main }, "lept_alphaops", "leptonica alphaops_reg test/tool" },
 	{ {.fa = lept_alphaxform_reg_main }, "lept_alphaxform", "leptonica alphaxform_reg test/tool" },
 	{ {.fa = lept_arabic_lines_main }, "lept_arabic_lines", "leptonica arabic_lines test/tool" },
@@ -473,6 +474,7 @@ static struct tool_spec {
 	{ {.fa = lept_scaleandtile_main }, "lept_scaleandtile", "leptonica scaleandtile test/tool" },
 	{ {.fa = lept_scaletest1_main }, "lept_scaletest1", "leptonica scaletest1 test/tool" },
 	{ {.fa = lept_scaletest2_main }, "lept_scaletest2", "leptonica scaletest2 test/tool" },
+	{ {.fa = lept_scaleimages_main }, "lept_scaleimages", "leptonica scaleimages test/tool" },
 	{ {.fa = lept_seedfilltest_main }, "lept_seedfilltest", "leptonica seedfilltest test/tool" },
 	{ {.fa = lept_seedspread_reg_main }, "lept_seedspread", "leptonica seedspread_reg test/tool" },
 	{ {.fa = lept_selio_reg_main }, "lept_selio", "leptonica selio_reg test/tool" },
@@ -513,6 +515,7 @@ static struct tool_spec {
 	{ {.fa = lept_writetext_reg_main }, "lept_writetext", "leptonica writetext_reg test/tool" },
 	{ {.fa = lept_xformbox_reg_main }, "lept_xformbox", "leptonica xformbox_reg test/tool" },
 	{ {.fa = lept_yuvtest_main }, "lept_yuvtest", "leptonica yuvtest test/tool" },
+	{ {.fa = lept_issue675_check_main }, "lept_issue675", "leptonica BMP test for leptonica issue #675" },
 #endif
 
 #if defined(MUTOOL_EX)
@@ -861,6 +864,9 @@ static void mu_drop_context(void)
         // so the atexit handler won't have to bother with it.
         ASSERT_AND_CONTINUE(fz_has_global_context());
         ctx = fz_get_global_context();
+
+		ocr_clear_leptonica_mem(ctx);
+
         fz_drop_context_locks(ctx);
     }
 
@@ -878,28 +884,46 @@ static void mu_drop_context(void)
     }
 }
 
-static int run_tool(struct tool_spec *spec, int argc, const char **argv, int time_the_run, int show_heap_leakage)
+static int run_tool(struct tool_spec *spec, int argc, const char **argv, int time_the_run, int show_heap_leakage, const char *app_argv0)
 {
 	void* snapshot = fz_TakeHeapSnapshot();
+	char* exe_path = NULL;
+	const char** argarr = fz_malloc(ctx, (argc + 2) * sizeof(argarr[0]));
 
-#define MAX_ARGV_SIZE   500
-
-	const char* argarr[MAX_ARGV_SIZE];
-	if (!argv[0] && argc <= MAX_ARGV_SIZE - 1)
-	{
 		// do NOT damage the original argv[] array any further: plugging in arbitrary strings in there
 		// would cause memory corruption later on as we'll attempt to free() the elements at the end.
 		//
 		// So we make a local copy of the argv[] set and feed that one to the destination tool...
-		argarr[0] = spec->name;
+		switch (spec->keep_path)
+		{
+		default:
+			argarr[0] = spec->name;
+			break;
+
+		case 1:
+			const char *xp = app_argv0;
+			const char* pe = fz_basename(xp);
+			int plen = (pe - xp);
+			exe_path = fz_asprintf(ctx, "%.*s%s%s", plen, xp, spec->name,
+#if defined(_WIN32)
+				".exe"
+#else
+				""
+#endif
+				);
+			argarr[0] = exe_path;
+			break;
+
+		case 2:
+			argarr[0] = app_argv0;
+			break;
+		}
+
 		if (argc > 1)
 			memcpy(argarr + 1, argv + 1, (argc - 1) * sizeof(argarr[0]));
 		argarr[argc] = NULL;
 
 		argv = argarr;
-	}
-
-#undef MAX_ARGV_SIZE 
 
 	nanotimer_data_t timer;
 	nanotimer(&timer);
@@ -916,6 +940,9 @@ static int run_tool(struct tool_spec *spec, int argc, const char **argv, int tim
 	{
 		fz_info(ctx, "### Elapsed time: %f milliseconds\n", dt);
 	}
+
+	fz_free(ctx, exe_path);
+	fz_free(ctx, argarr);
 	return rv;
 }
 
@@ -980,8 +1007,15 @@ int mutool_main(int argc, const char** argv)
         ctx = fz_get_global_context();
     }
 
-	// registeer a mupdf-aligned default heap memory manager for jpeg/jpeg-turbo
-	fz_set_default_jpeg_sys_mem_mgr();
+	if (tool_is_toplevel_ctx)
+	{
+		// register a mupdf-aligned default heap memory manager for jpeg/jpeg-turbo
+		fz_set_default_jpeg_sys_mem_mgr();
+
+		ocr_set_leptonica_mem(ctx);
+
+		ocr_set_leptonica_stderr_handler(ctx);
+	}
 
 	atexit(mu_drop_context);
 
@@ -1025,8 +1059,7 @@ int mutool_main(int argc, const char** argv)
 			if (namematch(end, start, buf) || namematch(end, start, buf + 2))
 			{
 				argstart--;
-				argv[argstart] = argv[0];
-				return run_tool(&tools[i], argc - argstart, argv + argstart, time_the_run, show_heap_leakage);
+				return run_tool(&tools[i], argc - argstart, argv + argstart, time_the_run, show_heap_leakage, argv[0]);
 			}
             strcpy(buf, "mu");
             strcat(buf, tools[i].name);
@@ -1034,8 +1067,7 @@ int mutool_main(int argc, const char** argv)
             if (namematch(end, start, buf) || namematch(end, start, buf + 2))
 			{
 				argstart--;
-				argv[argstart] = argv[0];
-				return run_tool(&tools[i], argc - argstart, argv + argstart, time_the_run, show_heap_leakage);
+				return run_tool(&tools[i], argc - argstart, argv + argstart, time_the_run, show_heap_leakage, argv[0]);
 			}
         }
     }
@@ -1054,16 +1086,14 @@ int mutool_main(int argc, const char** argv)
             assert(strlen(buf) < sizeof(buf));
             if (namematch(end, start, buf) || namematch(end, start, buf + 2))
 			{
-				argv[argstart] = NULL;
-				return run_tool(&tools[i], argc - argstart, argv + argstart, time_the_run, show_heap_leakage);
+				return run_tool(&tools[i], argc - argstart, argv + argstart, time_the_run, show_heap_leakage, argv[0]);
 			}
             strcpy(buf, "mu");
             strcat(buf, tools[i].name);
             assert(strlen(buf) < sizeof(buf));
             if (namematch(end, start, buf) || namematch(end, start, buf + 2))
 			{
-				argv[argstart] = NULL;
-				return run_tool(&tools[i], argc - argstart, argv + argstart, time_the_run, show_heap_leakage);
+				return run_tool(&tools[i], argc - argstart, argv + argstart, time_the_run, show_heap_leakage, argv[0]);
 			}
 		}
         if (!strcmp(argv[argstart], "-v"))

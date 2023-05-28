@@ -45,6 +45,7 @@ endif()
 if(UNIX)
     wx_setup_definition(wxUSE_UNIX)
     wx_setup_definition(__UNIX__)
+    list(APPEND CMAKE_REQUIRED_DEFINITIONS -D_FILE_OFFSET_BITS=64)
 endif()
 
 if(UNIX AND NOT APPLE)
@@ -346,6 +347,10 @@ if(UNIX)
 
     wx_check_funcs(fdopen)
 
+    if(wxBUILD_LARGEFILE_SUPPORT)
+        wx_check_funcs(fseeko)
+    endif()
+
     if(wxUSE_TARSTREAM)
         wx_check_funcs(sysconf)
 
@@ -541,10 +546,6 @@ wx_check_funcs(fsync
 if(MSVC)
     check_symbol_exists(vsscanf stdio.h HAVE_VSSCANF)
 endif()
-
-# at least under IRIX with mipsPro the C99 round() function is available when
-# building using the C compiler but not when using C++ one
-check_cxx_symbol_exists(round math.h HAVE_ROUND)
 
 # Check includes
 check_include_file(fcntl.h HAVE_FCNTL_H)

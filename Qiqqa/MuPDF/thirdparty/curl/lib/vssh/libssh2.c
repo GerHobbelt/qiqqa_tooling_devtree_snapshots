@@ -762,11 +762,10 @@ static CURLcode ssh_check_fingerprint(struct Curl_easy *data)
      */
     if((pub_pos != b64_pos) ||
        strncmp(fingerprint_b64, pubkey_sha256, pub_pos)) {
-      free(fingerprint_b64);
-
       failf(data,
             "Denied establishing ssh session: mismatch sha256 fingerprint. "
             "Remote %s is not equal to %s", fingerprint_b64, pubkey_sha256);
+      free(fingerprint_b64);
       state(data, SSH_SESSION_FREE);
       sshc->actualcode = CURLE_PEER_FAILED_VERIFICATION;
       return sshc->actualcode;
@@ -2439,7 +2438,6 @@ static CURLcode ssh_statemach_act(struct Curl_easy *data, bool *block)
       result = Curl_dyn_addf(&sshp->readdir, " -> %s", sshp->readdir_filename);
 
       if(result) {
-        sshc->readdir_line = NULL;
         Curl_safefree(sshp->readdir_filename);
         Curl_safefree(sshp->readdir_longentry);
         state(data, SSH_SFTP_CLOSE);
@@ -3044,12 +3042,9 @@ static CURLcode ssh_statemach_act(struct Curl_easy *data, bool *block)
 
       Curl_safefree(sshc->rsa_pub);
       Curl_safefree(sshc->rsa);
-
       Curl_safefree(sshc->quote_path1);
       Curl_safefree(sshc->quote_path2);
-
       Curl_safefree(sshc->homedir);
-      Curl_safefree(sshc->readdir_line);
 
       /* the code we are about to return */
       result = sshc->actualcode;
@@ -3313,12 +3308,22 @@ static CURLcode ssh_connect(struct Curl_easy *data, bool *done)
                                               my_libssh2_free,
                                               my_libssh2_realloc, data);
 #else
-  sshc->ssh_session = libssh2_session_init();
+  sshc->ssh_session = libssh2_session_init_ex(NULL, NULL, NULL, data);
 #endif
   if(!sshc->ssh_session) {
     failf(data, "Failure initialising ssh session");
     return CURLE_FAILED_INIT;
   }
+
+#ifdef HAVE_LIBSSH2_VERSION
+  /* Set the packet read timeout if the libssh2 version supports it */
+#if LIBSSH2_VERSION_NUM >= 0x010B00
+  if(data->set.server_response_timeout > 0) {
+    libssh2_session_set_read_timeout(sshc->ssh_session,
+                                     data->set.server_response_timeout / 1000);
+  }
+#endif
+#endif
 
 #ifndef CURL_DISABLE_PROXY
   if(conn->http_proxy.proxytype == CURLPROXY_HTTPS) {

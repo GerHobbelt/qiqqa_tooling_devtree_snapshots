@@ -3890,9 +3890,11 @@ TIFFReadDirectory(TIFF* tif)
         int color_channels;
 
 	if (tif->tif_nextdiroff == 0) {
-		/* In this special case, tif_diroff needs also to be set to 0. */
+        /* In this special case, tif_diroff needs also to be set to 0.
+         * This is behind the last IFD, thus no checking or reading necessary.
+         */
 		tif->tif_diroff = tif->tif_nextdiroff;
-		return 0;           /* last offset, thus no checking necessary */
+        return 0;
 	}
 
 	nextdiroff = tif->tif_nextdiroff;
@@ -4871,6 +4873,8 @@ TIFFReadCustomDirectory(TIFF* tif, toff_t diroff,
 			} /*-- if (!dp->tdir_ignore) */
 		}
 	}
+    /* To be able to return from SubIFD or custom-IFD to main-IFD */
+    tif->tif_setdirectory_force_absolute = TRUE;
 	if (dir)
 		_TIFFfreeExt(tif, dir);
 	return 1;
@@ -5246,6 +5250,7 @@ int _TIFFGetDirNumberFromOffset(TIFF *tif, uint64_t diroff, tdir_t *dirn)
         return 1;
     }
 
+    /* This updates the directory list for all main-IFDs in the file. */
     TIFFNumberOfDirectories(tif);
 
     foundEntry = (TIFFOffsetAndDirNumber *)TIFFHashSetLookup(
@@ -5258,6 +5263,83 @@ int _TIFFGetDirNumberFromOffset(TIFF *tif, uint64_t diroff, tdir_t *dirn)
 
     return 0;
 } /*--- _TIFFGetDirNumberFromOffset() ---*/
+
+/*
+ * Retrieve the matching IFD directory offset of a given IFD number
+ * from the list of directories already seen.
+ * Returns 1 if the offset was in the list of already seen IFDs and the
+ * directory offset can be returned. The directory list is not updated.
+ * Otherwise returns 0 or if an error occurred.
+ */
+int _TIFFGetOffsetFromDirNumber(TIFF *tif, tdir_t dirn, uint64_t *diroff)
+{
+
+    if (tif->tif_map_dir_number_to_offset == NULL)
+        return 0;
+    TIFFOffsetAndDirNumber entry;
+    entry.offset = 0; /* not used */
+    entry.dirNumber = dirn;
+
+    TIFFOffsetAndDirNumber *foundEntry =
+        (TIFFOffsetAndDirNumber *)TIFFHashSetLookup(
+            tif->tif_map_dir_number_to_offset, &entry);
+    if (foundEntry)
+    {
+        *diroff = foundEntry->offset;
+        return 1;
+    }
+
+    return 0;
+} /*--- _TIFFGetOffsetFromDirNumber() ---*/
+
+/*
+ * Remove an entry from the directory list of already seen directories
+ * by directory offset.
+ * If an entry is to be removed from the list, it is also okay if the entry
+ * is not in the list or the list does not exist.
+ */
+int _TIFFRemoveEntryFromDirectoryListByOffset(TIFF *tif, uint64_t diroff)
+{
+    if (tif->tif_map_dir_offset_to_number == NULL)
+        return 1;
+
+    TIFFOffsetAndDirNumber entryOld;
+    entryOld.offset = diroff;
+    entryOld.dirNumber = 0;
+    /* We must remove first from tif_map_dir_number_to_offset as the
+     * entry is owned (and thus freed) by tif_map_dir_offset_to_number.
+     * However, we need firstly to find the directory number from offset. */
+
+    TIFFOffsetAndDirNumber *foundEntryOldOff =
+        (TIFFOffsetAndDirNumber *)TIFFHashSetLookup(
+            tif->tif_map_dir_offset_to_number, &entryOld);
+    if (foundEntryOldOff)
+    {
+        entryOld.dirNumber = foundEntryOldOff->dirNumber;
+        if (tif->tif_map_dir_number_to_offset != NULL)
+        {
+            TIFFOffsetAndDirNumber *foundEntryOldDir =
+                (TIFFOffsetAndDirNumber *)TIFFHashSetLookup(
+                    tif->tif_map_dir_number_to_offset, &entryOld);
+            if (foundEntryOldDir)
+            {
+                TIFFHashSetRemove(tif->tif_map_dir_number_to_offset,
+                                  foundEntryOldDir);
+                TIFFHashSetRemove(tif->tif_map_dir_offset_to_number,
+                                  foundEntryOldOff);
+                return 1;
+            }
+        }
+        else
+        {
+            TIFFErrorExtR(tif, "_TIFFRemoveEntryFromDirectoryListByOffset",
+                          "Unexpectedly tif_map_dir_number_to_offset is "
+                          "missing but tif_map_dir_offset_to_number exists.");
+            return 0;
+        }
+    }
+    return 1;
+} /*--- _TIFFRemoveEntryFromDirectoryListByOffset() ---*/
 
 
 /*

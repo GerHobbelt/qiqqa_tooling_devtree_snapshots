@@ -5,6 +5,7 @@
 //#define CROW_JSON_NO_ERROR_CHECK
 #define CROW_JSON_USE_MAP
 
+#include <stdint.h>
 #include <string>
 #ifdef CROW_JSON_USE_MAP
 #include <map>
@@ -1299,6 +1300,9 @@ namespace crow
 
             type t() const { return t_; }
 
+            /// Create an empty json value (outputs "{}" instead of a "null" string)
+            static crow::json::wvalue empty_object() { return crow::json::wvalue(std::move(crow::json::wvalue::object())); }
+
         private:
             type t_{type::Null};         ///< The type of the value.
             num_type nt{num_type::Null}; ///< The specific type of the number if \ref t_ is a number.
@@ -1341,8 +1345,10 @@ namespace crow
               returnable("application/json"), t_(type::Number), nt(num_type::Unsigned_integer), num(static_cast<std::uint64_t>(value)) {}
             wvalue(std::uint64_t value):
               returnable("application/json"), t_(type::Number), nt(num_type::Unsigned_integer), num(static_cast<std::uint64_t>(value)) {}
-			wvalue(unsigned long value): 
-			  returnable("application/json"), t_(type::Number), nt(num_type::Unsigned_integer), num(static_cast<std::uint64_t>(value)) {}
+#if defined(__LLP64__)   //#if defined(_MSC_VER)  // any LLP64 compiler, really; https://stackoverflow.com/questions/7456902/long-vs-int-c-c-whats-the-point
+			wvalue(unsigned long value):
+              returnable("application/json"), t_(type::Number), nt(num_type::Unsigned_integer), num(static_cast<std::uint64_t>(value)) {}
+#endif
 
             wvalue(std::int8_t value):
               returnable("application/json"), t_(type::Number), nt(num_type::Signed_integer), num(static_cast<std::int64_t>(value)) {}
@@ -1352,8 +1358,10 @@ namespace crow
               returnable("application/json"), t_(type::Number), nt(num_type::Signed_integer), num(static_cast<std::int64_t>(value)) {}
             wvalue(std::int64_t value):
               returnable("application/json"), t_(type::Number), nt(num_type::Signed_integer), num(static_cast<std::int64_t>(value)) {}
-			wvalue(long value):
-			  returnable("application/json"), t_(type::Number), nt(num_type::Signed_integer), num(static_cast<std::int64_t>(value)) {}
+#if defined(__LLP64__) //#if defined(_MSC_VER)  // any LLP64 compiler, really; https://stackoverflow.com/questions/7456902/long-vs-int-c-c-whats-the-point
+            wvalue(long value):
+              returnable("application/json"), t_(type::Number), nt(num_type::Signed_integer), num(static_cast<std::int64_t>(value)) {}
+#endif
 
             wvalue(float value):
               returnable("application/json"), t_(type::Number), nt(num_type::Floating_point), num(static_cast<double>(value)) {}

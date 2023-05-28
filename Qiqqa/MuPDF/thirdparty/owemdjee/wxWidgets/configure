@@ -673,7 +673,6 @@ COND_wxUSE_EXPAT_builtin
 COND_WXUNIV_1
 COND_WITH_PLUGIN_SDL_1
 COND_WINDOWS_IMPLIB_1
-COND_USE_XRC_1
 COND_USE_XML_1
 COND_USE_WEBVIEW_WEBKIT2_1
 COND_USE_THREADS_1
@@ -948,6 +947,8 @@ GSPELL_CFLAGS
 LIBSECRET_LIBS
 LIBSECRET_CFLAGS
 GXX_VERSION
+XKBCOMMON_LIBS
+XKBCOMMON_CFLAGS
 LIBICONV
 CXXFLAGS_VISIBILITY
 CFLAGS_VISIBILITY
@@ -1116,8 +1117,6 @@ enable_debug
 enable_debug_flag
 enable_debug_info
 enable_debug_gdb
-enable_debug_cntxt
-enable_mem_tracing
 enable_shared
 enable_cxx11
 with_cxx
@@ -1421,6 +1420,8 @@ WAYLAND_EGL_CFLAGS
 WAYLAND_EGL_LIBS
 MesaGL_CFLAGS
 MesaGL_LIBS
+XKBCOMMON_CFLAGS
+XKBCOMMON_LIBS
 LIBSECRET_CFLAGS
 LIBSECRET_LIBS
 GSPELL_CFLAGS
@@ -2085,17 +2086,15 @@ Optional Features:
   --disable-debug_flag    disable all debugging support
   --enable-debug_info     generate debug information
   --enable-debug_gdb      create code with extra GDB debugging information
-  --enable-debug_cntxt    obsolete, don't use: use wxDebugContext
-  --enable-mem_tracing    obsolete, don't use: create code with memory tracing
   --disable-shared        create static library instead of shared
   --enable-cxx11          obsolete option doing nothing
   --enable-stl            use standard C++ classes for everything
-  --enable-std_containers use standard C++ container classes
+  --disable-std_containers disable use of standard C++ container classes
   --disable-std_iostreams  disable use of standard C++ stream classes
  --enable-std_string_conv_in_wxstring     provide implicit conversion to std::string in wxString
  --disable-unsafe_conv_in_wxstring        disable unsafe implicit conversions in wxString
-  --enable-utf8           use UTF-8 representation for strings (Unix only)
-  --enable-utf8only       only support UTF-8 locales in UTF-8 build (Unix only)
+  --enable-utf8           use UTF-8 representation for strings
+  --enable-utf8only       only support UTF-8 locales in UTF-8 build
   --enable-extended_rtti  use extended RTTI (XTI)
   --disable-optimise      compile without optimisations
   --enable-profile        create code with profiling information
@@ -2139,8 +2138,8 @@ Optional Features:
   --enable-datetime       use wxDateTime class
   --enable-debugreport    use wxDebugReport class
   --enable-dialupman      use dialup network classes
-  --enable-dynlib         use wxLibrary class for DLL loading
-  --enable-dynamicloader  use (new) wxDynamicLibrary class
+  --enable-dynlib         use wxDynamicLibrary class for DLL loading
+  --enable-dynamicloader  use wxPluginLibrary and wxPluginManager classes
   --enable-exceptions     build exception-safe library
   --enable-ffile          use wxFFile class
   --enable-file           use wxFile class
@@ -2456,6 +2455,10 @@ Some influential environment variables:
   MesaGL_CFLAGS
               C compiler flags for MesaGL, overriding pkg-config
   MesaGL_LIBS linker flags for MesaGL, overriding pkg-config
+  XKBCOMMON_CFLAGS
+              C compiler flags for XKBCOMMON, overriding pkg-config
+  XKBCOMMON_LIBS
+              linker flags for XKBCOMMON, overriding pkg-config
   LIBSECRET_CFLAGS
               C compiler flags for LIBSECRET, overriding pkg-config
   LIBSECRET_LIBS
@@ -3864,22 +3867,10 @@ case "${host}" in
     USE_LINUX=1
     $as_echo "#define __LINUX__ 1" >>confdefs.h
 
-    TMP=`uname -m`
-    if test "x$TMP" = "xalpha"; then
-      USE_ALPHA=1
-      $as_echo "#define __ALPHA__ 1" >>confdefs.h
-
-    fi
     DEFAULT_DEFAULT_wxUSE_GTK=1
   ;;
   *-*-gnu* | *-*-k*bsd*-gnu )
     USE_GNU=1
-    TMP=`uname -m`
-    if test "x$TMP" = "xalpha"; then
-      USE_ALPHA=1
-      $as_echo "#define __ALPHA__ 1" >>confdefs.h
-
-    fi
     DEFAULT_DEFAULT_wxUSE_GTK=1
   ;;
   *-*-irix5* | *-*-irix6* )
@@ -3953,20 +3944,14 @@ case "${host}" in
             CPPFLAGS="-D_NETBSD_SOURCE -D_LIBC $CPPFLAGS"
   ;;
   *-*-osf* )
-    USE_ALPHA=1
     USE_OSF=1
-    $as_echo "#define __ALPHA__ 1" >>confdefs.h
-
     $as_echo "#define __OSF__ 1" >>confdefs.h
 
     DEFAULT_DEFAULT_wxUSE_GTK=1
     NEEDS_D_REENTRANT_FOR_R_FUNCS=1
   ;;
   *-*-dgux5* )
-    USE_ALPHA=1
     USE_SVR4=1
-    $as_echo "#define __ALPHA__ 1" >>confdefs.h
-
     $as_echo "#define __SVR4__ 1" >>confdefs.h
 
     DEFAULT_DEFAULT_wxUSE_GTK=1
@@ -4042,8 +4027,6 @@ esac
 
 
 DEFAULT_wxUSE_ALL_FEATURES=yes
-
-DEFAULT_wxUSE_STD_CONTAINERS=no
 
 DEFAULT_wxUSE_DMALLOC=no
 DEFAULT_wxUSE_LIBCURL=auto
@@ -5529,64 +5512,6 @@ fi
           eval "$wx_cv_use_debug_gdb"
 
 
-          enablestring=
-          defaultval=
-          if test -z "$defaultval"; then
-              if test x"$enablestring" = xdisable; then
-                  defaultval=yes
-              else
-                  defaultval=no
-              fi
-          fi
-
-          # Check whether --enable-debug_cntxt was given.
-if test "${enable_debug_cntxt+set}" = set; then :
-  enableval=$enable_debug_cntxt;
-                          if test "$enableval" = yes; then
-                            wx_cv_use_debug_cntxt='wxUSE_DEBUG_CONTEXT=yes'
-                          else
-                            wx_cv_use_debug_cntxt='wxUSE_DEBUG_CONTEXT=no'
-                          fi
-
-else
-
-                          wx_cv_use_debug_cntxt='wxUSE_DEBUG_CONTEXT=${'DEFAULT_wxUSE_DEBUG_CONTEXT":-$defaultval}"
-
-fi
-
-
-          eval "$wx_cv_use_debug_cntxt"
-
-
-          enablestring=
-          defaultval=
-          if test -z "$defaultval"; then
-              if test x"$enablestring" = xdisable; then
-                  defaultval=yes
-              else
-                  defaultval=no
-              fi
-          fi
-
-          # Check whether --enable-mem_tracing was given.
-if test "${enable_mem_tracing+set}" = set; then :
-  enableval=$enable_mem_tracing;
-                          if test "$enableval" = yes; then
-                            wx_cv_use_mem_tracing='wxUSE_MEM_TRACING=yes'
-                          else
-                            wx_cv_use_mem_tracing='wxUSE_MEM_TRACING=no'
-                          fi
-
-else
-
-                          wx_cv_use_mem_tracing='wxUSE_MEM_TRACING=${'DEFAULT_wxUSE_MEM_TRACING":-$defaultval}"
-
-fi
-
-
-          eval "$wx_cv_use_mem_tracing"
-
-
 
 
           enablestring=disable
@@ -5657,11 +5582,8 @@ fi
 
           eval "$wx_cv_use_stl"
 
-if test "$wxUSE_STL" = "yes"; then
-    DEFAULT_wxUSE_STD_CONTAINERS=yes
-fi
 
-          enablestring=
+          enablestring=disable
           defaultval=
           if test -z "$defaultval"; then
               if test x"$enablestring" = xdisable; then
@@ -23229,38 +23151,6 @@ if test "x$USE_AIX" = "x1"; then
 fi
 
 case "${host}" in
-  powerpc-*-darwin* )
-    { $as_echo "$as_me:${as_lineno-$LINENO}: checking if __POWERPC__ is already defined" >&5
-$as_echo_n "checking if __POWERPC__ is already defined... " >&6; }
-    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-/* end confdefs.h.  */
-
-int
-main ()
-{
-#ifndef __POWERPC__
-        choke me for lack of PowerPC
-#endif
-
-  ;
-  return 0;
-}
-_ACEOF
-if ac_fn_c_try_compile "$LINENO"; then :
-  { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
-$as_echo "yes" >&6; }
-else
-  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
-$as_echo "no" >&6; }
-        $as_echo "#define __POWERPC__ 1" >>confdefs.h
-
-
-fi
-rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
-  ;;
-esac
-
-case "${host}" in
   *-*-darwin* )
     { $as_echo "$as_me:${as_lineno-$LINENO}: checking if CoreFoundation/CFBase.h is usable" >&5
 $as_echo_n "checking if CoreFoundation/CFBase.h is usable... " >&6; }
@@ -25116,6 +25006,32 @@ $as_echo "no" >&6; }
 
 fi
 
+if test "$build" != "$host"; then
+            case "${host}" in
+        *-linux-*)
+            ;;
+
+        * )
+                                    case "$PKG_CONFIG" in
+                */$host-pkg-config )
+                    ;;
+
+                * )
+                    { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Not using native pkg-config when cross-compiling." >&5
+$as_echo "$as_me: WARNING: Not using native pkg-config when cross-compiling." >&2;}
+
+
+
+                                                                                if test -z "$PKG_CONFIG_LIBDIR"; then
+                        PKG_CONFIG_LIBDIR=/dev/null
+                        export PKG_CONFIG_LIBDIR
+                    fi
+                    ;;
+            esac
+            ;;
+    esac
+fi
+
 
 
 if test "$wxUSE_REGEX" != "no"; then
@@ -26840,7 +26756,6 @@ if test "$wxUSE_GUI" = "yes"; then
 
     GUI_TK_LIBRARY=
 
-    WXGTK2=
     WXGTK3=
     WXGTK4=
 
@@ -27830,8 +27745,7 @@ $as_echo "$wx_cv_lib_gtk" >&6; }
             3)      WXGTK3=1
                     TOOLKIT_VERSION=3
                     ;;
-            2.0)    WXGTK2=1
-                    TOOLKIT_VERSION=2
+            2.0)    TOOLKIT_VERSION=2
                     ;;
             *)      as_fn_error $? "
 The development files for GTK+ were not found. Please
@@ -33001,51 +32915,6 @@ _ACEOF
 
 fi
 
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for round" >&5
-$as_echo_n "checking for round... " >&6; }
-if ${wx_cv_func_round+:} false; then :
-  $as_echo_n "(cached) " >&6
-else
-
-ac_ext=cpp
-ac_cpp='$CXXCPP $CPPFLAGS'
-ac_compile='$CXX -c $CXXFLAGS $CPPFLAGS conftest.$ac_ext >&5'
-ac_link='$CXX -o conftest$ac_exeext $CXXFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS >&5'
-ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
-
-cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-/* end confdefs.h.  */
-#include <math.h>
-int
-main ()
-{
-return int(round(0.0))
-  ;
-  return 0;
-}
-_ACEOF
-if ac_fn_cxx_try_link "$LINENO"; then :
-  wx_cv_func_round=yes
-else
-  wx_cv_func_round=no
-fi
-rm -f core conftest.err conftest.$ac_objext \
-    conftest$ac_exeext conftest.$ac_ext
-ac_ext=c
-ac_cpp='$CPP $CPPFLAGS'
-ac_compile='$CC -c $CFLAGS $CPPFLAGS conftest.$ac_ext >&5'
-ac_link='$CC -o conftest$ac_exeext $CFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS >&5'
-ac_compiler_gnu=$ac_cv_c_compiler_gnu
-
-
-fi
-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $wx_cv_func_round" >&5
-$as_echo "$wx_cv_func_round" >&6; }
-if test "$wx_cv_func_round" = yes; then
-    $as_echo "#define HAVE_ROUND 1" >>confdefs.h
-
-fi
-
 if test "$TOOLKIT" != "MSW"; then
 
 if test "$wxUSE_LIBICONV" != "no" ; then
@@ -35378,53 +35247,6 @@ $as_echo "$wx_cv_type_abi_forced_unwind" >&6; }
         fi
     fi
 
-else
-    if test "$wxUSE_THREADS" = "yes" ; then
-      case "${host}" in
-        x86_64-*-mingw* )
-        ;;
-        *-*-mingw32* )
-                        { $as_echo "$as_me:${as_lineno-$LINENO}: checking if compiler supports -mthreads" >&5
-$as_echo_n "checking if compiler supports -mthreads... " >&6; }
-if ${wx_cv_cflags_mthread+:} false; then :
-  $as_echo_n "(cached) " >&6
-else
-
-                    CFLAGS_OLD="$CFLAGS"
-                    CFLAGS="-mthreads $CFLAGS"
-                    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-/* end confdefs.h.  */
-
-int
-main ()
-{
-
-  ;
-  return 0;
-}
-_ACEOF
-if ac_fn_c_try_compile "$LINENO"; then :
-  wx_cv_cflags_mthread=yes
-else
-  wx_cv_cflags_mthread=no
-
-fi
-rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
-
-
-fi
-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $wx_cv_cflags_mthread" >&5
-$as_echo "$wx_cv_cflags_mthread" >&6; }
-
-            if test "$wx_cv_cflags_mthread" = "yes"; then
-                                WXCONFIG_CFLAGS="$WXCONFIG_CFLAGS -mthreads"
-                LDFLAGS="$LDFLAGS -mthreads"
-            else
-                                CFLAGS="$CFLAGS_OLD"
-            fi
-        ;;
-      esac
-    fi
 fi
 
 ac_fn_c_check_func "$LINENO" "localtime_r" "ac_cv_func_localtime_r"
@@ -35847,12 +35669,10 @@ _ACEOF
 _ACEOF
 
     fi
-    if test "$WXGTK2" = 1 ; then
-      cat >>confdefs.h <<_ACEOF
+            cat >>confdefs.h <<_ACEOF
 #define __WXGTK20__ 1
 _ACEOF
 
-    fi
 fi
 
 if test "$WXQT" = 1 ; then
@@ -35880,22 +35700,8 @@ if test "$wxUSE_DEBUG_FLAG" = "no" ; then
     WXCONFIG_CPPFLAGS="$WXCONFIG_CPPFLAGS -DwxDEBUG_LEVEL=0"
 
     if test "$wxUSE_GTK" = 1 ; then
-        if test "$WXGTK2" = 1 ; then
-            CPPFLAGS="$CPPFLAGS -DG_DISABLE_CAST_CHECKS"
-        else
-            CPPFLAGS="-DGTK_NO_CHECK_CASTS $CPPFLAGS"
-        fi
+        CPPFLAGS="$CPPFLAGS -DG_DISABLE_CAST_CHECKS"
     fi
-fi
-
-if test "$wxUSE_MEM_TRACING" = "yes" ; then
-    $as_echo "#define wxUSE_MEMORY_TRACING 1" >>confdefs.h
-
-    $as_echo "#define wxUSE_GLOBAL_MEMORY_OPERATORS 1" >>confdefs.h
-
-    $as_echo "#define wxUSE_DEBUG_NEW_ALWAYS 1" >>confdefs.h
-
-    SAMPLES_SUBDIRS="$SAMPLES_SUBDIRS memcheck"
 fi
 
 if test "$wxUSE_DMALLOC" = "yes" ; then
@@ -35978,8 +35784,13 @@ if test "$wxUSE_UNIX" = "yes"; then
 fi
 
 
-if test "$TOOLKIT" != "MSW"; then
-
+if test "$TOOLKIT" = "MSW"; then
+    if test "$wxUSE_DYNLIB_CLASS" != "yes" ; then
+        { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Not disabling wxDynamicLibrary support required by wxMSW" >&5
+$as_echo "$as_me: WARNING: Not disabling wxDynamicLibrary support required by wxMSW" >&2;}
+        wxUSE_DYNLIB_CLASS=yes
+    fi
+else
     HAVE_DL_FUNCS=0
     HAVE_SHL_FUNCS=0
     if test "$wxUSE_DYNAMIC_LOADER" = "yes" -o "$wxUSE_DYNLIB_CLASS" = "yes" ; then
@@ -36126,8 +35937,8 @@ $as_echo "$as_me: WARNING: Missing dynamic loading support, several features wil
                   wxUSE_DYNAMIC_LOADER=no
                   wxUSE_DYNLIB_CLASS=no
               else
-                  { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Assuming wxLibrary class works on this platform" >&5
-$as_echo "$as_me: WARNING: Assuming wxLibrary class works on this platform" >&2;}
+                  { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Assuming wxDynamicLibrary class works on this platform" >&5
+$as_echo "$as_me: WARNING: Assuming wxDynamicLibrary class works on this platform" >&2;}
               fi
             fi
         fi
@@ -36241,6 +36052,94 @@ $as_echo "$as_me: WARNING: wxFileSystemWatcher disabled due to --disable-threads
     else
         { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: wxFileSystemWatcher won't be available on this platform" >&5
 $as_echo "$as_me: WARNING: wxFileSystemWatcher won't be available on this platform" >&2;}
+    fi
+fi
+
+if test "$wxUSE_GTK" = 1; then
+    if test "$USE_WIN32" != 1 -a "$USE_DARWIN" != 1; then
+
+pkg_failed=no
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for XKBCOMMON" >&5
+$as_echo_n "checking for XKBCOMMON... " >&6; }
+
+if test -n "$PKG_CONFIG"; then
+    if test -n "$XKBCOMMON_CFLAGS"; then
+        pkg_cv_XKBCOMMON_CFLAGS="$XKBCOMMON_CFLAGS"
+    else
+        if test -n "$PKG_CONFIG" && \
+    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"xkbcommon\""; } >&5
+  ($PKG_CONFIG --exists --print-errors "xkbcommon") 2>&5
+  ac_status=$?
+  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+  test $ac_status = 0; }; then
+  pkg_cv_XKBCOMMON_CFLAGS=`$PKG_CONFIG --cflags "xkbcommon" 2>/dev/null`
+else
+  pkg_failed=yes
+fi
+    fi
+else
+	pkg_failed=untried
+fi
+if test -n "$PKG_CONFIG"; then
+    if test -n "$XKBCOMMON_LIBS"; then
+        pkg_cv_XKBCOMMON_LIBS="$XKBCOMMON_LIBS"
+    else
+        if test -n "$PKG_CONFIG" && \
+    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"xkbcommon\""; } >&5
+  ($PKG_CONFIG --exists --print-errors "xkbcommon") 2>&5
+  ac_status=$?
+  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+  test $ac_status = 0; }; then
+  pkg_cv_XKBCOMMON_LIBS=`$PKG_CONFIG --libs "xkbcommon" 2>/dev/null`
+else
+  pkg_failed=yes
+fi
+    fi
+else
+	pkg_failed=untried
+fi
+
+
+
+if test $pkg_failed = yes; then
+
+if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
+        _pkg_short_errors_supported=yes
+else
+        _pkg_short_errors_supported=no
+fi
+        if test $_pkg_short_errors_supported = yes; then
+	        XKBCOMMON_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "xkbcommon"`
+        else
+	        XKBCOMMON_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "xkbcommon"`
+        fi
+	# Put the nasty error message in config.log where it belongs
+	echo "$XKBCOMMON_PKG_ERRORS" >&5
+
+
+                { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: libxkbcommon not found, key codes in key events may be incorrect" >&5
+$as_echo "$as_me: WARNING: libxkbcommon not found, key codes in key events may be incorrect" >&2;}
+
+
+elif test $pkg_failed = untried; then
+
+                { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: libxkbcommon not found, key codes in key events may be incorrect" >&5
+$as_echo "$as_me: WARNING: libxkbcommon not found, key codes in key events may be incorrect" >&2;}
+
+
+else
+	XKBCOMMON_CFLAGS=$pkg_cv_XKBCOMMON_CFLAGS
+	XKBCOMMON_LIBS=$pkg_cv_XKBCOMMON_LIBS
+        { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+$as_echo "yes" >&6; }
+
+                CFLAGS="$XKBCOMMON_CFLAGS $CFLAGS"
+                CXXFLAGS="$XKBCOMMON_CFLAGS $CXXFLAGS"
+                GUI_TK_LIBRARY="$GUI_TK_LIBRARY $XKBCOMMON_LIBS"
+                $as_echo "#define HAVE_XKBCOMMON 1" >>confdefs.h
+
+
+fi
     fi
 fi
 
@@ -37151,7 +37050,7 @@ if test "$wxUSE_SOUND" = "yes"; then
   SAMPLES_SUBDIRS="$SAMPLES_SUBDIRS sound"
 fi
 
-if test "$WXGTK2" = 1; then
+if test "$wxUSE_GTK" = 1; then
     if test "$wxUSE_PRINTING_ARCHITECTURE" = "yes" ; then
 
         if test "$wxUSE_GTKPRINT" = "yes" ; then
@@ -39796,6 +39695,24 @@ fi
 
 USE_STC=0
 if test "$wxUSE_STC" = "yes"; then
+   if ! test -f "$srcdir/src/stc/scintilla/include/Scintilla.h" ; then
+       as_fn_error $? "
+   The required Scintilla header not found. You probably need to run
+
+       git submodule update --init src/stc/scintilla
+
+   to fix this." "$LINENO" 5
+   fi
+
+   if ! test -f "$srcdir/src/stc/lexilla/include/Lexilla.h" ; then
+       as_fn_error $? "
+   The required Lexilla header not found. You probably need to run
+
+       git submodule update --init src/stc/lexilla
+
+   to fix this." "$LINENO" 5
+   fi
+
    $as_echo "#define wxUSE_STC 1" >>confdefs.h
 
    USE_STC=1
@@ -40384,12 +40301,12 @@ if test -n "$PKG_CONFIG"; then
         pkg_cv_CAIRO_CFLAGS="$CAIRO_CFLAGS"
     else
         if test -n "$PKG_CONFIG" && \
-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"cairo\""; } >&5
-  ($PKG_CONFIG --exists --print-errors "cairo") 2>&5
+    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"cairo >= 1.2\""; } >&5
+  ($PKG_CONFIG --exists --print-errors "cairo >= 1.2") 2>&5
   ac_status=$?
   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
   test $ac_status = 0; }; then
-  pkg_cv_CAIRO_CFLAGS=`$PKG_CONFIG --cflags "cairo" 2>/dev/null`
+  pkg_cv_CAIRO_CFLAGS=`$PKG_CONFIG --cflags "cairo >= 1.2" 2>/dev/null`
 else
   pkg_failed=yes
 fi
@@ -40402,12 +40319,12 @@ if test -n "$PKG_CONFIG"; then
         pkg_cv_CAIRO_LIBS="$CAIRO_LIBS"
     else
         if test -n "$PKG_CONFIG" && \
-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"cairo\""; } >&5
-  ($PKG_CONFIG --exists --print-errors "cairo") 2>&5
+    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"cairo >= 1.2\""; } >&5
+  ($PKG_CONFIG --exists --print-errors "cairo >= 1.2") 2>&5
   ac_status=$?
   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
   test $ac_status = 0; }; then
-  pkg_cv_CAIRO_LIBS=`$PKG_CONFIG --libs "cairo" 2>/dev/null`
+  pkg_cv_CAIRO_LIBS=`$PKG_CONFIG --libs "cairo >= 1.2" 2>/dev/null`
 else
   pkg_failed=yes
 fi
@@ -40426,9 +40343,9 @@ else
         _pkg_short_errors_supported=no
 fi
         if test $_pkg_short_errors_supported = yes; then
-	        CAIRO_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "cairo"`
+	        CAIRO_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "cairo >= 1.2"`
         else
-	        CAIRO_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "cairo"`
+	        CAIRO_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "cairo >= 1.2"`
         fi
 	# Put the nasty error message in config.log where it belongs
 	echo "$CAIRO_PKG_ERRORS" >&5
@@ -40445,28 +40362,8 @@ else
 	CAIRO_LIBS=$pkg_cv_CAIRO_LIBS
         { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 $as_echo "yes" >&6; }
-	wx_has_cairo=1
-fi
-    if test "$wx_has_cairo" = 1; then
-                                save_LIBS="$LIBS"
-        LIBS="$LIBS $CAIRO_LIBS"
-        for ac_func in cairo_push_group
-do :
-  ac_fn_c_check_func "$LINENO" "cairo_push_group" "ac_cv_func_cairo_push_group"
-if test "x$ac_cv_func_cairo_push_group" = xyes; then :
-  cat >>confdefs.h <<_ACEOF
-#define HAVE_CAIRO_PUSH_GROUP 1
-_ACEOF
 
-fi
-done
-
-        LIBS="$save_LIBS"
-        if test "$ac_cv_func_cairo_push_group" = "no"; then
-            wx_has_cairo=0
-            { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Cairo library is too old and misses cairo_push_group()" >&5
-$as_echo "$as_me: WARNING: Cairo library is too old and misses cairo_push_group()" >&2;}
-        else
+            wx_has_cairo=1
             $as_echo "#define wxUSE_CAIRO 1" >>confdefs.h
 
 
@@ -40474,8 +40371,8 @@ $as_echo "$as_me: WARNING: Cairo library is too old and misses cairo_push_group(
                 CXXFLAGS="$CXXFLAGS $CAIRO_CFLAGS"
                 GUI_TK_LIBRARY="$GUI_TK_LIBRARY $CAIRO_LIBS"
             fi
-        fi
-    fi
+
+fi
 fi
 
 if test "$wxUSE_GRAPHICS_CONTEXT" = "yes"; then
@@ -41352,12 +41249,8 @@ TOOLKIT_LOWERCASE=`echo $TOOLKIT | tr '[A-Z]' '[a-z]'`
 case "$TOOLKIT" in
     GTK)
         TOOLKIT_DESC="GTK+"
-        if test "$WXGTK2" = 1; then
-            if test "$WXGTK3" = 1; then
-                TOOLKIT_DESC="$TOOLKIT_DESC ${TOOLKIT_VERSION}"
-            else
-                TOOLKIT_DESC="$TOOLKIT_DESC 2"
-            fi
+        if test "$wxUSE_GTK" = 1; then
+            TOOLKIT_DESC="$TOOLKIT_DESC ${TOOLKIT_VERSION}"
             if test "$wxUSE_GTKPRINT" = "yes" ; then
                 TOOLKIT_EXTRA="$TOOLKIT_EXTRA GTK+ printing";
             fi
@@ -43531,11 +43424,6 @@ EOF
         COND_USE_XML_1=""
     fi
 
-    COND_USE_XRC_1="#"
-    if test "x$USE_XRC" = "x1" ; then
-        COND_USE_XRC_1=""
-    fi
-
     COND_WINDOWS_IMPLIB_1="#"
     if test "x$WINDOWS_IMPLIB" = "x1" ; then
         COND_WINDOWS_IMPLIB_1=""
@@ -43667,7 +43555,11 @@ dedup_flags()
 {
     printf "%s " "$@" |
         awk 'BEGIN { RS=" "; ORS=" " }
-            { if ($0=="-arch" || $0=="-framework" || !seen[$0]++) print }'
+        {
+            if ($0=="") next
+            if ($0=="-arch" || $0=="-framework") { x=$0; next }
+            if (x!="") x=x " " $0; else x=$0; if (!seen[x]++) print x; x=""
+        }'
 }
 
 WX_CPPFLAGS=`dedup_flags "$CPPFLAGS"`

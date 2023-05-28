@@ -23,8 +23,6 @@
 
 #include "wx/debugheap.h"
 
-#define __wxPG_SOURCE_FILE__
-
 #include "wx/propgrid/propgrid.h"
 
 #if wxPG_INCLUDE_ADVPROPS
@@ -32,8 +30,9 @@
 #include "wx/propgrid/advprops.h"
 
 #include "wx/odcombo.h"
-
 #include "wx/uilocale.h"
+
+#include <limits>
 
 // Drawing ARGB on standard DC is supported by OSX and GTK3
 #if defined(__WXOSX__) || defined(__WXGTK3__)
@@ -67,6 +66,8 @@
     #define wxPG_CAN_DRAW_CURSOR           0
 #endif
 
+constexpr int wxPG_INT_MIN = std::numeric_limits<int>::min();
+constexpr int wxPG_INT_MAX = std::numeric_limits<int>::max();
 
 // -----------------------------------------------------------------------
 // Value type related
@@ -263,7 +264,7 @@ wxPGWindowList wxPGSpinCtrlEditor::CreateControls( wxPropertyGrid* propgrid, wxP
 #endif
         tcSz.Set(sz.x - butWidth - margin, sz.y);
         wnd2->SetSize(pos.x + tcSz.x + margin, pos.y, butWidth, sz.y);
-        wnd2->SetRange(INT_MIN, INT_MAX);
+        wnd2->SetRange(wxPG_INT_MIN, wxPG_INT_MAX);
         wnd2->SetValue(0);
     }
     else
@@ -467,7 +468,7 @@ void wxPGDatePickerCtrlEditor::SetValueToUnspecified( wxPGProperty* property,
     wxDateProperty* prop = wxDynamicCast(property, wxDateProperty);
     wxCHECK_RET(prop, "wxDatePickerCtrl editor can only be used with wxDateProperty or derivative.");
 
-    int datePickerStyle = prop->GetDatePickerStyle();
+    long datePickerStyle = prop->GetDatePickerStyle();
     if ( datePickerStyle & wxDP_ALLOWNONE )
         ctrl->SetValue(wxInvalidDateTime);
 }
@@ -613,8 +614,6 @@ wxFontProperty::wxFontProperty( const wxString& label, const wxString& name,
                      font.GetFamily()) );
 }
 
-wxFontProperty::~wxFontProperty() { }
-
 void wxFontProperty::OnSetValue()
 {
     wxFont font;
@@ -693,13 +692,13 @@ wxVariant wxFontProperty::ChildChanged( wxVariant& thisValue,
 
     if ( ind == 0 )
     {
-        font.SetPointSize( childValue.GetLong() );
+        font.SetPointSize( static_cast<int>(childValue.GetLong()) );
     }
     else if ( ind == 1 )
     {
 #if wxUSE_FONTENUM
 		wxString faceName;
-        int faceIndex = childValue.GetLong();
+        int faceIndex = static_cast<int>(childValue.GetLong());
 
         if ( faceIndex >= 0 )
             faceName = wxPGGlobalVars->m_fontFamilyChoices->GetLabel(faceIndex);
@@ -709,7 +708,7 @@ wxVariant wxFontProperty::ChildChanged( wxVariant& thisValue,
 	}
     else if ( ind == 2 )
     {
-        int st = childValue.GetLong();
+        int st = static_cast<int>(childValue.GetLong());
         if ( st != wxFONTSTYLE_NORMAL &&
              st != wxFONTSTYLE_SLANT &&
              st != wxFONTSTYLE_ITALIC )
@@ -718,7 +717,7 @@ wxVariant wxFontProperty::ChildChanged( wxVariant& thisValue,
     }
     else if ( ind == 3 )
     {
-        int wt = childValue.GetLong();
+        int wt = static_cast<int>(childValue.GetLong());
         if ( wt < wxFONTWEIGHT_THIN || wt > wxFONTWEIGHT_MAX )
              wt = wxFONTWEIGHT_NORMAL;
         font.SetWeight( static_cast<wxFontWeight>(wt) );
@@ -729,7 +728,7 @@ wxVariant wxFontProperty::ChildChanged( wxVariant& thisValue,
     }
     else if ( ind == 5 )
     {
-        int fam = childValue.GetLong();
+        int fam = static_cast<int>(childValue.GetLong());
         if ( fam < wxFONTFAMILY_DEFAULT ||
              fam > wxFONTFAMILY_TELETYPE )
              fam = wxFONTFAMILY_DEFAULT;
@@ -912,10 +911,6 @@ wxSystemColourProperty::wxSystemColourProperty( const wxString& label, const wxS
 {
         Init( wxPG_COLOUR_CUSTOM, value );
 }
-
-
-wxSystemColourProperty::~wxSystemColourProperty() { }
-
 
 wxColourPropertyValue wxSystemColourProperty::GetVal( const wxVariant* pVariant ) const
 {
@@ -1174,7 +1169,7 @@ bool wxSystemColourProperty::QueryColourFromUser( wxVariant& variant ) const
     wxASSERT( propgrid );
 
     // Must only occur when user triggers event
-    if ( !propgrid->HasInternalFlag(wxPG_FL_IN_HANDLECUSTOMEDITOREVENT) )
+    if ( !propgrid->HasInternalFlag(wxPropertyGrid::wxPG_FL_IN_HANDLECUSTOMEDITOREVENT) )
         return res;
 
     wxColourPropertyValue val = GetVal();
@@ -1631,10 +1626,6 @@ wxColourProperty::wxColourProperty( const wxString& label,
     m_flags |= wxPG_PROP_TRANSLATE_CUSTOM;
 }
 
-wxColourProperty::~wxColourProperty()
-{
-}
-
 void wxColourProperty::Init( wxColour colour )
 {
     if ( !colour.IsOk() )
@@ -1757,10 +1748,6 @@ wxCursorProperty::wxCursorProperty( const wxString& label, const wxString& name,
     m_flags |= wxPG_PROP_STATIC_CHOICES; // Cursor selection cannot be changed.
 }
 
-wxCursorProperty::~wxCursorProperty()
-{
-}
-
 wxString wxCursorProperty::ValueToString(wxVariant& value, int argFlags) const
 {
     return wxGetTranslation(wxEnumProperty::ValueToString(value, argFlags),
@@ -1839,9 +1826,9 @@ const wxString& wxPGGetDefaultImageWildcard()
         wxList& handlers = wxImage::GetHandlers();
 
         // Let's iterate over the image handler list.
-        for (wxList::iterator node = handlers.begin(); node != handlers.end(); ++node)
+        for ( auto node : handlers )
         {
-            wxImageHandler *handler = (wxImageHandler*)*node;
+            wxImageHandler *handler = static_cast<wxImageHandler*>(node);
 
             wxString ext_lo = handler->GetExtension();
             wxString ext_up = ext_lo.Upper();
@@ -1871,10 +1858,6 @@ wxImageFileProperty::wxImageFileProperty( const wxString& label, const wxString&
     m_wildcard = wxPGGetDefaultImageWildcard();
 
     LoadImageFromFile();
-}
-
-wxImageFileProperty::~wxImageFileProperty()
-{
 }
 
 void wxImageFileProperty::OnSetValue()
@@ -1993,10 +1976,6 @@ wxMultiChoiceProperty::wxMultiChoiceProperty( const wxString& label,
     SetValue(value);
 }
 
-wxMultiChoiceProperty::~wxMultiChoiceProperty()
-{
-}
-
 void wxMultiChoiceProperty::OnSetValue()
 {
     m_display = GenerateValueAsString(m_value);
@@ -2039,21 +2018,19 @@ wxArrayInt wxMultiChoiceProperty::GetValueAsIndices() const
 {
     wxVariant variant = GetValue();
     const wxArrayInt& valueArr = wxArrayIntRefFromVariant(variant);
-    unsigned int i;
 
     // Translate values to string indices.
     wxArrayInt selections;
 
     if ( !m_choices.IsOk() || !m_choices.GetCount() )
     {
-        for ( i=0; i<valueArr.size(); i++ )
-            selections.Add(-1);
+        selections.Add(-1, valueArr.size());
     }
     else
     {
-        for ( i=0; i<valueArr.size(); i++ )
+        for( int val : valueArr )
         {
-            int sIndex = m_choices.Index(valueArr[i]);
+            int sIndex = m_choices.Index(val);
             if ( sIndex >= 0 )
                 selections.Add(sIndex);
         }
@@ -2097,20 +2074,19 @@ bool wxMultiChoiceProperty::DisplayEditorDialog(wxPropertyGrid* pg, wxVariant& v
 
         // Translate string indices to strings
 
-        size_t n;
         if ( m_userStringMode == 1 )
         {
-            for (n=0;n<extraStrings.size();n++)
-                newValue.push_back(extraStrings[n]);
+            for( wxString& str : extraStrings )
+                newValue.push_back(str);
         }
 
-        for ( size_t i = 0; i < arrInt.size(); i++ )
-            newValue.push_back(m_choices.GetLabel(arrInt[i]));
+        for( int ind : arrInt )
+            newValue.push_back(m_choices.GetLabel(ind));
 
         if ( m_userStringMode == 2 )
         {
-            for (n=0;n<extraStrings.size();n++)
-                newValue.push_back(extraStrings[n]);
+            for ( wxString& str : extraStrings )
+                newValue.push_back(str);
         }
 
         value = wxVariant(newValue);
@@ -2128,8 +2104,7 @@ bool wxMultiChoiceProperty::StringToValue( wxVariant& variant, const wxString& t
             arr.Add(token);
     WX_PG_TOKENIZER2_END()
 
-    wxVariant v(arr);
-    variant = v;
+    variant = wxVariant(arr);
 
     return true;
 }
@@ -2189,10 +2164,6 @@ wxDateProperty::wxDateProperty( const wxString& label,
     SetValue( value );
 }
 
-wxDateProperty::~wxDateProperty()
-{
-}
-
 void wxDateProperty::OnSetValue()
 {
     //
@@ -2233,7 +2204,7 @@ wxString wxDateProperty::ValueToString( wxVariant& value,
     if ( ms_defaultDateFormat.empty() )
     {
 #if wxUSE_DATEPICKCTRL
-        bool showCentury = m_dpStyle & wxDP_SHOWCENTURY ? true : false;
+        bool showCentury = (m_dpStyle & wxDP_SHOWCENTURY) != 0;
 #else
         bool showCentury = true;
 #endif

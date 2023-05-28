@@ -21,7 +21,6 @@
     #include "wx/frame.h"
     #include "wx/icon.h"
     #include "wx/dialog.h"
-    #include "wx/memory.h"
     #include "wx/gdicmn.h"
     #include "wx/module.h"
     #include "wx/crt.h"
@@ -218,6 +217,8 @@ wxApp::wxApp()
 #if !wxUSE_NANOX
     m_visualInfo = nullptr;
 #endif
+
+    WXAppConstructed();
 }
 
 wxApp::~wxApp()

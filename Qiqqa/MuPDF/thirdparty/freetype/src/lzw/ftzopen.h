@@ -25,9 +25,6 @@
 #include <freetype/freetype.h>
 #include <freetype/internal/compiler-macros.h>
 
-#ifndef FT_LOCAL
-#error X
-#endif
 
 FT_BEGIN_HEADER
 

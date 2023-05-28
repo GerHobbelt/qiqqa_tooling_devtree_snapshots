@@ -19,6 +19,7 @@
     #include "wx/colour.h"
     #include "wx/font.h"
     #include "wx/log.h"
+    #include "wx/textctrl.h"
     #include "wx/validate.h"
 #endif
 
@@ -130,7 +131,7 @@ wxPGProperty* wxPropertyGridInterface::RemoveProperty( wxPGPropArg id )
 {
     wxPG_PROP_ARG_CALL_PROLOG_RETVAL(wxNullProperty)
 
-    wxCHECK( !p->GetChildCount() || p->HasFlag(wxPG_PROP_AGGREGATE),
+    wxCHECK( !p->HasAnyChild() || p->HasFlag(wxPG_PROP_AGGREGATE),
              wxNullProperty);
 
     wxPropertyGridPageState* state = p->GetParentState();
@@ -183,7 +184,7 @@ wxPGProperty* wxPropertyGridInterface::GetSelection() const
 
 bool wxPropertyGridInterface::ClearSelection( bool validation )
 {
-    bool res = DoClearSelection(validation, wxPG_SEL_DONT_SEND_EVENT);
+    bool res = DoClearSelection(validation, wxPGSelectPropertyFlags::DontSendEvent);
     wxPropertyGrid* pg = GetPropertyGrid();
     if ( pg )
         pg->Refresh();
@@ -193,10 +194,10 @@ bool wxPropertyGridInterface::ClearSelection( bool validation )
 // -----------------------------------------------------------------------
 
 bool wxPropertyGridInterface::DoClearSelection( bool validation,
-                                                int selFlags )
+                                                wxPGSelectPropertyFlags selFlags )
 {
     if ( !validation )
-        selFlags |= wxPG_SEL_NOVALIDATE;
+        selFlags |= wxPGSelectPropertyFlags::NoValidate;
 
     wxPropertyGridPageState* state = m_pState;
 
@@ -238,7 +239,7 @@ bool wxPropertyGridInterface::EnableProperty( wxPGPropArg id, bool enable )
 
         // If active, Set active Editor.
         if ( grid && grid->GetState() == state && p == grid->GetSelection() )
-            grid->DoSelectProperty( p, wxPG_SEL_FORCE );
+            grid->DoSelectProperty( p, wxPGSelectPropertyFlags::Force );
     }
     else
     {
@@ -247,7 +248,7 @@ bool wxPropertyGridInterface::EnableProperty( wxPGPropArg id, bool enable )
 
         // If active, Disable as active Editor.
         if ( grid && grid->GetState() == state && p == grid->GetSelection() )
-            grid->DoSelectProperty( p, wxPG_SEL_FORCE );
+            grid->DoSelectProperty( p, wxPGSelectPropertyFlags::Force );
     }
 
     p->DoEnable(enable);
@@ -257,11 +258,11 @@ bool wxPropertyGridInterface::EnableProperty( wxPGPropArg id, bool enable )
     return true;
 }
 
-void wxPropertyGridInterface::SetPropertyReadOnly( wxPGPropArg id, bool set, int flags)
+void wxPropertyGridInterface::SetPropertyReadOnly( wxPGPropArg id, bool set, wxPGPropertyValuesFlags flags)
 {
     wxPG_PROP_ARG_CALL_PROLOG()
 
-    if ( flags & wxPG_RECURSE )
+    if ( !!(flags & wxPGPropertyValuesFlags::Recurse) )
     {
         p->SetFlagRecursively(wxPG_PROP_READONLY, set);
     }
@@ -291,7 +292,7 @@ bool wxPropertyGridInterface::ExpandAll( bool doExpand )
 {
     wxPropertyGridPageState* state = m_pState;
 
-    if ( !state->DoGetRoot()->GetChildCount() )
+    if ( !state->DoGetRoot()->HasAnyChild() )
         return true;
 
     wxPropertyGrid* pg = state->GetGrid();
@@ -307,7 +308,7 @@ bool wxPropertyGridInterface::ExpandAll( bool doExpand )
     for ( it = GetVIterator( wxPG_ITERATE_ALL ); !it.AtEnd(); it.Next() )
     {
         wxPGProperty* p = it.GetProperty();
-        if ( p->GetChildCount() )
+        if ( p->HasAnyChild() )
         {
             if ( doExpand )
             {
@@ -405,7 +406,7 @@ void wxPropertyGridInterface::SetPropertyValueString( wxPGPropArg id, const wxSt
 
 // -----------------------------------------------------------------------
 
-void wxPropertyGridInterface::SetValidationFailureBehavior( int vfbFlags )
+void wxPropertyGridInterface::SetValidationFailureBehavior( wxPGVFBFlags vfbFlags )
 {
     GetPropertyGrid()->m_permanentValidationFailureBehavior = vfbFlags;
 }
@@ -429,13 +430,13 @@ wxPGProperty* wxPropertyGridInterface::GetPropertyByLabel( const wxString& label
 // ----------------------------------------------------------------------------
 
 void wxPropertyGridInterface::DoSetPropertyAttribute( wxPGPropArg id, const wxString& name,
-                                                      wxVariant& value, long argFlags )
+                                                      wxVariant& value, wxPGPropertyValuesFlags argFlags )
 {
     wxPG_PROP_ARG_CALL_PROLOG()
 
     p->SetAttribute( name, value ); // property is also refreshed here
 
-    if ( argFlags & wxPG_RECURSE )
+    if ( !!(argFlags & wxPGPropertyValuesFlags::Recurse) )
     {
         for ( unsigned int i = 0; i < p->GetChildCount(); i++ )
             DoSetPropertyAttribute(p->Item(i), name, value, argFlags);
@@ -452,7 +453,7 @@ void wxPropertyGridInterface::SetPropertyAttributeAll( const wxString& attrName,
     wxPropertyGridPageState* page;
     while ( (page = GetPageState(pageIndex)) != nullptr )
     {
-        DoSetPropertyAttribute(page->DoGetRoot(), attrName, value, wxPG_RECURSE);
+        DoSetPropertyAttribute(page->DoGetRoot(), attrName, value, wxPGPropertyValuesFlags::Recurse);
 
         pageIndex++;
     }
@@ -509,7 +510,7 @@ wxPGProperty* wxPropertyGridInterface::GetPropertyByName( const wxString& name,
                                                              const wxString& subname ) const
 {
     wxPGProperty* p = DoGetPropertyByName(name);
-    if ( !p || !p->GetChildCount() )
+    if ( !p || !p->HasAnyChild() )
         return wxNullProperty;
 
     return p->GetPropertyByName(subname);
@@ -536,12 +537,12 @@ wxPGProperty* wxPropertyGridInterface::GetPropertyByName( const wxString& name )
 
 // -----------------------------------------------------------------------
 
-bool wxPropertyGridInterface::HideProperty( wxPGPropArg id, bool hide, int flags )
+bool wxPropertyGridInterface::HideProperty(wxPGPropArg id, bool hide, wxPGPropertyValuesFlags flags)
 {
     wxPG_PROP_ARG_CALL_PROLOG_RETVAL(false)
 
     // Do nothing if single property is already hidden/visible as requested.
-    if ( !(flags & wxPG_RECURSE) )
+    if ( !(flags & wxPGPropertyValuesFlags::Recurse) )
     {
         if ( hide && p->HasFlag(wxPG_PROP_HIDDEN) )
             return false;
@@ -585,7 +586,7 @@ bool wxPropertyGridInterface::Expand( wxPGPropArg id )
 
 // -----------------------------------------------------------------------
 
-void wxPropertyGridInterface::Sort( int flags )
+void wxPropertyGridInterface::Sort(wxPGPropertyValuesFlags flags)
 {
     wxPropertyGrid* pg = GetPropertyGrid();
 
@@ -664,10 +665,8 @@ bool wxPropertyGridInterface::SetPropertyMaxLength( wxPGPropArg id, int maxLen )
 
 // -----------------------------------------------------------------------
 
-void
-wxPropertyGridInterface::SetPropertyBackgroundColour( wxPGPropArg id,
-                                                      const wxColour& colour,
-                                                      int flags )
+void wxPropertyGridInterface::SetPropertyBackgroundColour(wxPGPropArg id, const wxColour& colour,
+                                                          wxPGPropertyValuesFlags flags )
 {
     wxPG_PROP_ARG_CALL_PROLOG()
     p->SetBackgroundColour(colour, flags);
@@ -676,7 +675,7 @@ wxPropertyGridInterface::SetPropertyBackgroundColour( wxPGPropArg id,
     wxPropertyGrid* pg = m_pState->GetGrid();
     if ( pg == p->GetGrid() )
     {
-        if ( flags & wxPG_RECURSE )
+        if ( !!(flags & wxPGPropertyValuesFlags::Recurse) )
             pg->DrawItemAndChildren(p);
         else
             pg->DrawItem(p);
@@ -685,9 +684,8 @@ wxPropertyGridInterface::SetPropertyBackgroundColour( wxPGPropArg id,
 
 // -----------------------------------------------------------------------
 
-void wxPropertyGridInterface::SetPropertyTextColour( wxPGPropArg id,
-                                                     const wxColour& colour,
-                                                     int flags )
+void wxPropertyGridInterface::SetPropertyTextColour(wxPGPropArg id, const wxColour& colour,
+                                                    wxPGPropertyValuesFlags flags)
 {
     wxPG_PROP_ARG_CALL_PROLOG()
     p->SetTextColour(colour, flags);
@@ -696,7 +694,7 @@ void wxPropertyGridInterface::SetPropertyTextColour( wxPGPropArg id,
     wxPropertyGrid* pg = m_pState->GetGrid();
     if ( pg == p->GetGrid() )
     {
-        if ( flags & wxPG_RECURSE )
+        if ( !!(flags & wxPGPropertyValuesFlags::Recurse) )
             pg->DrawItemAndChildren(p);
         else
             pg->DrawItem(p);
@@ -705,14 +703,7 @@ void wxPropertyGridInterface::SetPropertyTextColour( wxPGPropArg id,
 
 // -----------------------------------------------------------------------
 
-#if WXWIN_COMPATIBILITY_3_0
-void wxPropertyGridInterface::SetPropertyColoursToDefault(wxPGPropArg id)
-{
-    SetPropertyColoursToDefault(id, wxPG_DONT_RECURSE);
-}
-#endif // WXWIN_COMPATIBILITY_3_0
-
-void wxPropertyGridInterface::SetPropertyColoursToDefault(wxPGPropArg id, int flags)
+void wxPropertyGridInterface::SetPropertyColoursToDefault(wxPGPropArg id, wxPGPropertyValuesFlags flags)
 {
     wxPG_PROP_ARG_CALL_PROLOG()
     p->SetDefaultColours(flags);
@@ -721,7 +712,7 @@ void wxPropertyGridInterface::SetPropertyColoursToDefault(wxPGPropArg id, int fl
     wxPropertyGrid* pg = m_pState->GetGrid();
     if ( pg == p->GetGrid() )
     {
-        if ( flags & wxPG_RECURSE )
+        if ( !!(flags & wxPGPropertyValuesFlags::Recurse) )
             pg->DrawItemAndChildren(p);
         else
             pg->DrawItem(p);
@@ -893,8 +884,9 @@ public:
     {
         m_it.Init( state, flags );
     }
-    virtual ~wxPGVIteratorBase_State() { }
+    virtual ~wxPGVIteratorBase_State() = default;
     virtual void Next() override { m_it.Next(); }
+    virtual bool AtEnd() const override { return m_it.AtEnd(); }
 };
 
 wxPGVIterator wxPropertyGridInterface::GetVIterator( int flags ) const
@@ -915,9 +907,8 @@ static wxString EscapeDelimiters(const wxString& s)
     wxString result;
     result.reserve(s.length());
 
-    for (wxString::const_iterator it = s.begin(); it != s.end(); ++it)
+    for ( wxStringCharType ch : s )
     {
-        wxStringCharType ch = *it;
         if ( ch == wxS(';') || ch == wxS('|') || ch == wxS(',') )
             result += wxS('\\');
         result += ch;
@@ -932,7 +923,7 @@ wxString wxPropertyGridInterface::SaveEditableState( int includedStates ) const
 
     //
     // Save state on page basis
-    wxVector<wxPropertyGridPageState*> pageStates;
+    std::vector<wxPropertyGridPageState*> pageStates;
     unsigned int pageIndex = 0;
     wxPropertyGridPageState* page;
     while ( (page = GetPageState(pageIndex)) != nullptr )
@@ -941,11 +932,8 @@ wxString wxPropertyGridInterface::SaveEditableState( int includedStates ) const
         pageIndex++;
     }
 
-    for (wxVector<wxPropertyGridPageState*>::const_iterator it_ps = pageStates.begin();
-         it_ps != pageStates.end(); ++it_ps)
+    for( wxPropertyGridPageState* pageState : pageStates )
     {
-        wxPropertyGridPageState* pageState = *it_ps;
-
         if ( includedStates & SelectionState )
         {
             wxString sel;
@@ -1045,9 +1033,8 @@ bool wxPropertyGridInterface::RestoreEditableState( const wxString& src, int res
 
         wxArrayString kvpairStrings = ::wxSplit(pageStrings[pageIndex], wxS(';'), wxS('\\'));
 
-        for ( size_t i=0; i<kvpairStrings.size(); i++ )
+        for( const wxString& kvs : kvpairStrings )
         {
-            const wxString& kvs = kvpairStrings[i];
             int eq_pos = kvs.Find(wxS('='));
             if ( eq_pos != wxNOT_FOUND )
             {
@@ -1074,9 +1061,8 @@ bool wxPropertyGridInterface::RestoreEditableState( const wxString& src, int res
                         }
 
                         // Then expand those which names are in values
-                        for ( size_t n=0; n<values.size(); n++ )
+                        for( const wxString& name : values )
                         {
-                            const wxString& name = values[n];
                             wxPGProperty* prop = GetPropertyByName(name);
                             if ( prop )
                                 pageState->DoExpand(prop);
@@ -1107,7 +1093,7 @@ bool wxPropertyGridInterface::RestoreEditableState( const wxString& src, int res
                             long pos = 0;
                             values[n].ToLong(&pos);
                             if ( pos > 0 )
-                                pageState->DoSetSplitterPosition(pos, n);
+                                pageState->DoSetSplitter(pos, n);
                         }
                     }
                 }

@@ -1256,7 +1256,7 @@ TEST_CASE("template_false_tag")
 {
     auto t = crow::mustache::compile(R"---({{false_value}})---");
     crow::mustache::context ctx;
-    ctx["false_value"] = false;d
+    ctx["false_value"] = false;
     auto result = t.render_string(ctx);
     CHECK("false" == result);
 } // template_false_tag
@@ -2542,6 +2542,11 @@ TEST_CASE("websocket")
           else if (isbin && message == "Hello bin")
               conn.send_binary("Hello back bin");
       })
+      .ontimeout([&](websocket::connection& conn, const std::string&) {
+          CROW_LOG_INFO << "Websocket Time Out";
+          conn.send_text("TimeOut");
+      },
+                 2 /* seconds */)
       .onclose([&](websocket::connection&, const std::string&) {
           CROW_LOG_INFO << "Closing websocket";
       });
@@ -2665,6 +2670,17 @@ TEST_CASE("websocket")
         std::string checkstring(std::string(buf).substr(0, 12));
         CHECK(checkstring == "\x81\x0AHello back");
     }
+
+    //----------TimeOut----------
+    {
+        std::fill_n(buf, 2048, 0);
+        CROW_LOG_INFO << "Waiting Time Out";
+        c.receive(asio::buffer(buf, 2048));
+        std::this_thread::sleep_for(std::chrono::milliseconds(5));
+        std::string checkstring(std::string(buf).substr(0, 10));
+        CHECK(checkstring == "\x81\x07TimeOut");
+    }
+
     //----------Close----------
     {
         std::fill_n(buf, 2048, 0);

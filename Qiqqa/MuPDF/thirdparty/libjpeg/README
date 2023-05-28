@@ -1,5 +1,5 @@
 The Independent JPEG Group's JPEG software
 ==========================================
 
-This branch is 'nilled' to ensure we'll get compiler errors / file not found errors while wee finalize the transition towards using jpeg-turbo.
+This branch is 'nilled' to ensure we'll get compiler errors / file not found errors while we finalize the transition towards using jpeg-turbo.
 

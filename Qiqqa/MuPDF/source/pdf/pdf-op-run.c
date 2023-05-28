@@ -1046,7 +1046,7 @@ pdf_show_char(fz_context *ctx, pdf_run_processor *pr, int cid, fz_text_language 
 	pdf_font_desc *fontdesc = gstate->text.font;
 	fz_matrix trm;
 	int gid;
-	int ucsbuf[8];
+	int ucsbuf[PDF_MRANGE_CAP];
 	int ucslen;
 	int i;
 	int render_direct;
@@ -1069,7 +1069,12 @@ pdf_show_char(fz_context *ctx, pdf_run_processor *pr, int cid, fz_text_language 
 		 * type3 glyphs that seem to inherit current graphics
 		 * attributes, or type 3 glyphs within type3 glyphs). */
 		fz_matrix composed = fz_concat(trm, gstate->ctm);
+		pdf_gsave(ctx, pr);
+		gstate = pr->gstate + pr->gtop;
+		pdf_drop_font(ctx, gstate->text.font);
+		gstate->text.font = NULL; /* don't inherit the current font... */
 		fz_render_t3_glyph_direct(ctx, pr->dev, fontdesc->font, gid, composed, gstate, pr->default_cs);
+		pdf_grestore(ctx, pr);
 		/* Render text invisibly so that it can still be extracted. */
 		pr->tos.text_mode = 3;
 	}
@@ -1077,6 +1082,11 @@ pdf_show_char(fz_context *ctx, pdf_run_processor *pr, int cid, fz_text_language 
 	ucslen = 0;
 	if (fontdesc->to_unicode)
 		ucslen = pdf_lookup_cmap_full(fontdesc->to_unicode, cid, ucsbuf);
+
+	/* ignore obviously bad values in ToUnicode, fall back to the cid_to_ucs table */
+	if (ucslen == 1 && (ucsbuf[0] < 32 || (ucsbuf[0] >= 127 && ucsbuf[0] < 160)))
+		ucslen = 0;
+
 	if (ucslen == 0 && (size_t)cid < fontdesc->cid_to_ucs_len)
 	{
 		ucsbuf[0] = fontdesc->cid_to_ucs[cid];

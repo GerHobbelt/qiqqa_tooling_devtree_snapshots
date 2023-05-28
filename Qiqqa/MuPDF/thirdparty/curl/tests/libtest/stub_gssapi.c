@@ -57,20 +57,6 @@ static const char *min_err_table[] = {
   NULL
 };
 
-#if defined(_MSC_VER)
-// provide missing strndup
-char* strndup(const char* src, size_t maxlen)
-{
-	size_t len = strnlen(src, maxlen);
-	char* p = malloc(len + 1);
-	if (p) {
-		memcpy(p, src, len);
-		p[len] = 0;
-	}
-	return p;
-}
-#endif
-
 struct gss_ctx_id_t_desc_struct {
   enum { NONE, KRB5, NTLM1, NTLM3 } sent;
   int have_krb5;
@@ -78,6 +64,17 @@ struct gss_ctx_id_t_desc_struct {
   OM_uint32 flags;
   char creds[MAX_CREDS_LENGTH];
 };
+
+/* simple implementation of strndup(), which isn't portable */
+static char *my_strndup(const char *ptr, size_t len)
+{
+  char *copy = malloc(len + 1);
+  if(!copy)
+    return NULL;
+  memcpy(copy, ptr, len);
+  copy[len] = '\0';
+  return copy;
+}
 
 OM_uint32 gss_init_sec_context(OM_uint32 *min,
             gss_const_cred_id_t initiator_cred_handle,
@@ -294,7 +291,7 @@ OM_uint32 gss_import_name(OM_uint32 *min,
     return GSS_S_FAILURE;
   }
 
-  name = strndup(input_name_buffer->value, input_name_buffer->length);
+  name = my_strndup(input_name_buffer->value, input_name_buffer->length);
   if(!name) {
     *min = GSS_NO_MEMORY;
     return GSS_S_FAILURE;

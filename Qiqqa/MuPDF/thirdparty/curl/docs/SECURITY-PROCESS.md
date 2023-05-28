@@ -55,7 +55,8 @@ announcement.
 - Write a security advisory draft about the problem that explains what the
   problem is, its impact, which versions it affects, solutions or workarounds,
   when the release is out and make sure to credit all contributors properly.
-  Figure out the CWE (Common Weakness Enumeration) number for the flaw.
+  Figure out the CWE (Common Weakness Enumeration) number for the flaw. See
+  [SECURITY-ADVISORY](SECURITY-ADVISORY.md) for help on creating the advisory.
 
 - Request a CVE number from
   [HackerOne](https://docs.hackerone.com/programs/cve-requests.html)
@@ -260,3 +261,11 @@ security vulnerabilities.
  - virtually every argument can contain sensitive data, depending on use
  - blanking all arguments would make it impractical for users to differentiate
    curl command lines in process listings
+
+## Busy-loops
+
+Busy-loops that consume 100% CPU time but eventually end (perhaps due to a set
+timeout value or otherwise) are not considered security problems. Applications
+are supposed to already handle situations when the transfer loop legitimately
+consumes 100% CPU time, so while a prolonged such busy-loop is a nasty bug, we
+do not consider it a security problem.

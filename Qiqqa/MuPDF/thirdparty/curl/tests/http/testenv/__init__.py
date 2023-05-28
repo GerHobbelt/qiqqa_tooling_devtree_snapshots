@@ -7,7 +7,7 @@
 #                            | (__| |_| |  _ <| |___
 #                             \___|\___/|_| \_\_____|
 #
-# Copyright (C) 2008 - 2022, Daniel Stenberg, <daniel@haxx.se>, et al.
+# Copyright (C) Daniel Stenberg, <daniel@haxx.se>, et al.
 #
 # This software is licensed as described in the file COPYING, which
 # you should have received as part of this distribution. The terms
@@ -24,9 +24,15 @@
 #
 ###########################################################################
 #
+import pytest
+pytest.register_assert_rewrite("testenv.env", "testenv.curl", "testenv.caddy",
+                               "testenv.httpd", "testenv.nghttpx")
+
 from .env import Env
 from .certs import TestCA, Credentials
 from .caddy import Caddy
 from .httpd import Httpd
 from .curl import CurlClient, ExecResult
+from .client import LocalClient
 from .nghttpx import Nghttpx
+from .nghttpx import Nghttpx, NghttpxQuic, NghttpxFwd

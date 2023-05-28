@@ -4,7 +4,7 @@
 
 ### Prerequisites: selected technologies
 
-- the core backend work (PDF rendering, text extraction, OCR, SQL metadata base processing) is done in C/C++. This uses:
+- the core back-end work (PDF rendering, text extraction, OCR, SQL metadata base processing) is done in C/C++. This uses:
 	- Artifex' mupdf (forked & augmented)
 	- Tesseract
 	- cURL
@@ -19,16 +19,16 @@
 	- libzlib
 	- crow (for the local webserver core)
 	- QuickJS, once we introduce [[scripting the OCR + text extraction process]] (faster and supporting modern JS idiom (ES2017), contrary to `mujs` which is ES5. CPython has been considered, but turned out to be a very rough animal to compile on Windows at least.)
-- the new UI frontend will be quite similar to a web browser, really. Due to special needs (Qiqqa Sniffer, mostly) and security reasons (*probably safe* library content vs. *probably un-safe* on-line browsing while you look for additional info, such as related publications and document metadata to import/scrape) we still will need a bit of a wrapper as we'll be housing **two** web viewer instances at least: one for *outside world accesses*, one for **local access**.
+- the new UI front-end will be quite similar to a web browser, really. Due to special needs (Qiqqa Sniffer, mostly) and security reasons (*probably safe* library content vs. *probably un-safe* on-line browsing while you look for additional info, such as related publications and document metadata to import/scrape) we still will need a bit of a wrapper as we'll be housing **two** web viewer instances at least: one for *outside world accesses*, one for **local access**.
 
    The UI (cross-platform) will be mostly web-technologies-based, so:
 	1. we don't have to worry about porting the intricacies of an **advanced, complex, UI** to multiple major platforms (Windows, Linux, Apple)
-	2. **we can use different, and more *available*, skillsets for important sections of the Qiqqa application development process: you don't need to be a C#/C/C++/WPF/etc. *unicorn* to do important UI/UX work: this is now quite similar to web development.** 
+	2. **we can use different, and more *available*, skill sets for important sections of the Qiqqa application development process: you don't need to be a C#/C/C++/WPF/etc. *unicorn* to do important UI/UX work: this is now quite similar to web development.** 
 	3. giving the application a fresh layer of paint, or doing stuff like ergonomic "dark mode", is now almost entirely relegated to the web technology layer, making it less costly in the long run to do UI 'cosmetic' changes. (CSS *theme*, anyone?)
 
    > And *that* is why it's important that the embedded browser fully supports F12 Developer Mode debugging, as do the major brand browsers themselves: Qiqqa sniffer is a complex animal today, thanks to Google search engine engineers being very counter-productive.
 
-   The new frontend is envisioned as a C++-based wrapper, because that one has the tightest, most elaborate interface to the embedded browser instances, adds a *minimal* bit of UI itself and delegates the main job to the web browser instances.
+   The new front-end is envisioned as a C++-based wrapper, because that one has the tightest, most elaborate interface to the embedded browser instances, adds a *minimal* bit of UI itself and delegates the main job to the web browser instances.
    
    It uses:
    
@@ -39,11 +39,11 @@
 	1. we don't have to bother with coding any Java to make it happen
 	2. users can invent their own smart ideas accessing and using the collected metadata: we are opening up Qiqqa!
 
-- What's left for the old C# codebase then, you ask?
+- What's left for the old C# code-base then, you ask?
 
-   WPF/.NET is **very** *non*-portable so most of it will have to go. What we untangle and isn't replaced by Core Technologies (see above: LuceneNET is out and so will be a couple of other libs and tools) will stay on a "useful middleware" which will be commandline / socket-interface based so **not facing users directly, i.e. no need for any GUI work any more**: all that should be handled by the new web-based GUI above.
+   WPF/.NET is **very** *non*-portable so most of it will have to go. What we untangle and isn't replaced by Core Technologies (see above: LuceneNET is out and so will be a couple of other libs and tools) will stay on a "useful middle-ware" which will be command-line / socket-interface based so **not facing users directly, i.e. no need for any GUI work any more**: all that should be handled by the new web-based GUI above.
    
-   This part will then become cross-platform portable as the remains would fit the bill of C#/.NET.Core which is touted as cross-platform able *today*. We'll see what remains as "middleware" as we work on the other components and discover its relative usefulness along the way. I expect all sorts of import/export jobs will stay in C#/.NET.Core as there's little benefit to re-coding those processes in a otherwise-critical Core Server component, which already does the PDF and Library Database handling then.
+   This part will then become cross-platform portable as the remains would fit the bill of C#/.NET.Core which is touted as cross-platform able *today*. We'll see what remains as "middle-ware" as we work on the other components and discover its relative usefulness along the way. I expect all sorts of import/export jobs will stay in C#/.NET.Core as there's little benefit to re-coding those processes in a otherwise-critical Core Server component, which already does the PDF and Library Database handling then.
 
 ### Demarcated Projects = producing a Tool or a Procedure To Use A Tool:
 

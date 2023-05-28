@@ -13,9 +13,11 @@ cat > utils/tmp.lst  <<EOF
 
 # A-MNS_TemplateMatching
 # abseil-cpp
+# adaptiveqf
 # annoy
 # ApprovalTestsCpp
 # arangodb
+# archive-hocr-tools
 argparse
 # arrayfire
 asio
@@ -48,6 +50,7 @@ brotli
 # cairo
 # cairo-demos
 # calibre
+# Capture2Text
 # catboost
 # cctz
 # ccv-nnc
@@ -79,13 +82,16 @@ clipp
 # coost
 # cpp-btree
 # cpp-ipc
+# cpp-terminal
 # cppflow
 # cppjieba
+# cpplocate
 # cpptoml
 # cppzmq
 # cpp_rest_sdk
 # cpuinfo
 # cpython
+# cqf
 # cr
 # createprocess-windows
 # CRFpp
@@ -117,6 +123,8 @@ cryptopp
 # DCF-cuckoo-index
 # debugbreak
 # delegate
+# density
+# densityxx
 # DGM-CRF
 # diffutils
 dirent
@@ -125,16 +133,17 @@ dlfcn-win32
 # dlib
 # docxBox
 # doh
+# doxa
 # drogon
 # dtl-diff-template-library
 # dtoa-benchmark
 # dynet
+# easyloggingpp
 # ecal
 # ECMA262
 # efsw
 # emphf-hash
 # enkiTS-TaskScheduler
-# EOT
 # EtwExplorer
 # eventpp
 # everything-curl
@@ -142,7 +151,9 @@ dlfcn-win32
 # expected-lite
 # Extensible-Storage-Engine
 # faiss
+# fast-lzma2
 # fastBPE
+# fastfilter_cpp
 # fastPRNG
 # fastText
 # fast_float
@@ -150,15 +161,20 @@ dlfcn-win32
 # fatal
 # fftw3
 # file
+# filecopyex3
 # filesystem
 # flat_hash_map
 # fluent-bit
+# fmem
+# fmemopen_windows
 fmt
 # fmtlog
 # folly
+# FreeFileSync
 # fribidi
 # friso
 # frozen
+# fswatch
 gbenchmark
 # gdbm
 # gettext
@@ -176,6 +192,7 @@ googletest
 gperf-hash
 # GraphicsMagick
 # graphit
+# grok-jpeg2000
 # gtn
 # gumbo-libxml
 # gumbo-query
@@ -195,6 +212,7 @@ highway
 # honggfuzz
 # hopscotch-map
 # horsejs
+# hsluv-c
 # html2openxml
 # htmlstreamparser
 # http-parser
@@ -203,8 +221,10 @@ highway
 # hunspell-hyphen
 # hyperscan
 # hypertextcpp
+# iceberghashtable
 # iceoryx
 # id3-tagparser
+# IdGenerator
 # ImageMagick
 # indicators
 # infoware
@@ -216,6 +236,7 @@ highway
 # JabRef-Browser-Extension
 # JamSpell
 # jasper
+# jbig2enc
 # jemalloc
 # jerryscript
 jpeg-xl
@@ -234,6 +255,7 @@ jpeg-xl
 # lda-bigartm
 # lda-Familia
 # LDCF-hash
+# LeptonicaDocsSite
 # lerc
 # libaco
 # libalg
@@ -264,6 +286,7 @@ libcpr
 # libdeflate
 # libdi-dependency-injection
 # libdist
+# libdivide
 # libdivsufsort
 # libdtm
 # libeigen
@@ -271,6 +294,7 @@ libeternaltimestamp
 # libevent
 # libevt
 # libexpat
+# libfann
 # libffi
 # libfolia
 # libfort
@@ -290,13 +314,16 @@ libjpeg-turbo
 libjxl
 # liblinear
 # libmdbx
+# libmetalink
 # libmio
 # libmlpp
 # libmobi
 # libngt-ann
 # libocca
 # libpinyin
+# libpmemobj-cpp
 # libpopcnt
+# libprecog
 # libpsl
 # libq
 libqrencode
@@ -309,6 +336,7 @@ libqrencode
 # libsigcplusplus
 # libsmile
 # libsptag
+# libsql
 # libsqlfs
 # libstb
 # libstemmer
@@ -340,6 +368,7 @@ lib_nas_lockfile
 # ligra-graph
 linenoise
 # line_detector
+# lizard
 # lmdb
 # lmdb-safe
 # lmdb-store
@@ -348,6 +377,8 @@ linenoise
 # localmemcache
 # lrucache11
 lz4
+# lzbench
+# lzham_codec
 # mace
 # magic_enum
 # mammut
@@ -363,6 +394,8 @@ lz4
 # merror
 # mesh-allocator
 # messagebox-windows
+# metalink-cli
+# metalink-mini-downloader
 # mht-rip
 # microsoft-performance-toolkit-sdk
 # midas
@@ -409,6 +442,7 @@ nanosvg
 # nuspell
 # ocreval
 # OfficeIMO
+# ogdf
 # oiio
 # olena
 # oneTBB
@@ -425,10 +459,12 @@ nanosvg
 # openpbs
 # openssl
 # opentelemetry-cpp
+# openvino
 # oppat
 # OptimizationTemplateLibrary
 # osquery
 # otl
+# p7zip
 # PaddlePaddle
 # pagerank
 # palanteer
@@ -444,7 +480,6 @@ pcre
 # pdfgrep
 # pdfium
 # pelikan
-# percona-server
 # pevents
 # PGM-index
 # pHash
@@ -460,6 +495,10 @@ pcre
 # pixman
 # PlatformFolders
 plf_nanotimer
+# pmdk
+# pmdk-tests
+# pmemkv
+# pmemkv-bench
 pmt-png-tools
 # podofo
 # poppler
@@ -481,6 +520,7 @@ pthread-win32
 # pytorch_cpp_demo
 # QCBOR
 # qlever
+# qpdf
 QuickJS
 QuickJS-C++-Wrapper
 QuickJS-C++-Wrapper2
@@ -493,12 +533,12 @@ QuickJS-C++-Wrapper2
 # recycle
 # refl-cpp
 replxx
-# research
 # restc-cpp
 # result-cpp
 # resumable-assert
 # robin-hood-hashing
 # robin-map
+# rotate_detection
 # rsync
 # RuntimeCompiledCPlusPlus
 # RxCpp
@@ -522,12 +562,14 @@ replxx
 # sioyek
 # smhasher
 # snap
+# snappy
 # snmalloc
 # snowball
 # sparsehash
 # spdlog
 # spdlog_setup
 splitmerge
+# spookyhash
 # spy-build-sysinfo
 # sqlcipher
 # sqlean
@@ -545,6 +587,7 @@ sqlite-amalgamation
 # sqlite_wrapper
 # sqlite_zstd_vfs
 # sqlpp11
+# squash
 # ssdeep
 # ssimulacra2
 # stan
@@ -600,6 +643,7 @@ tinyexpr
 # tre
 # tsf
 tvision
+# twain_library
 # txiki.js
 # typesense
 # uberlog
@@ -607,24 +651,31 @@ tvision
 # ucto
 # uctodata
 # ucx
+# ugrep
 # UIforETW
 uint128_t
 # unicode-cldr
 # unicode-icu
 # universal-numbers
 # unixODBC
+# UnofficialLeptDocs
 # unpaper
+# unqlite
 # upscaledb
 upskirt-markdown
 # url
 # userver
 # utfcpp
 # variadic_table
+vcopy
 # velocypack
 # Verify
 # VisualScriptEngine
+# vmem
+# vmemcache
 # VQMT
 # VSNASM
+# vtm
 # vxl
 # warc2text
 # warp-ctc
@@ -632,6 +683,7 @@ upskirt-markdown
 # websocket-sharp
 # webview
 # wget
+# wget2
 # wil-Win32-Interface-Library
 # win32-dpi
 # Win32_read_directory_changes
@@ -644,6 +696,7 @@ upskirt-markdown
 # wordfreq
 # wordfrequency
 wxCharts
+# wxCurl
 # wxDatabase
 # wxExamples
 wxFormBuilder
@@ -660,6 +713,7 @@ wxWidgets
 # xml-pugixml
 # XMP-Toolkit-SDK
 # xnnpack
+# xor-and-binary-fuse-filter
 # Xoshiro-cpp
 # xpdf
 # xsimd
@@ -697,20 +751,9 @@ zstd
 # zsv
 # zsync2
 # zxing-cpp
+
 __docs
 __docs_src
-
-# SymSpell
-# wordfreq
-# wordfrequency
-# libdtm
-# prvhash
-# vxl
-# metalink-cli
-# libmetalink
-# metalink-mini-downloader
-# wget2
-# wxCurl
 
 jpeg-xl\third_party\lodepng
 jpeg-xl\third_party\highway
@@ -795,39 +838,51 @@ EOF
 
 cd Qiqqa/MuPDF
 
-for f in 					\
+for f in 							\
 	platform/win32/*.pdf			\
 	platform/win32/*-files			\
 	platform/win32/*.dump			\
 	platform/win32/unnamed*			\
 	platform/win32/files 			\
 	platform/win32/text*.xml		\
+	../../Qiqqa/thirdparty/libs 	\
 	__git_lazy_remotes__			\
 ; do
 	rm "$f"                        2> /dev/null
 done
 
-for f in 										\
-	thirdparty/libWebP.Net/src/Imazen.WebP/obj/					\
-	thirdparty/owemdjee/QuickJS/test262/	         				\
+for f in 																			\
+	thirdparty/libWebP.Net/src/Imazen.WebP/obj/										\
+	thirdparty/owemdjee/QuickJS/test262/	         								\
 	thirdparty/owemdjee/libiconv/build-VS2022/iconv-static/x64/                     \
+	platform/win32/lept-tmp/                                             			\
+	platform/win32/lept/demo-data/                                      			\
+	../../Qiqqa/docs-src/Notes/.trash												\
 ; do
 	rm -rf "$f"                    2> /dev/null
 done
 
-find ../.. -name dirlist.txt -delete
-find ../.. -name 'db*.sql' -delete
-find ../ -name '.gitignore*' -type f -delete
-find ../ -name '.gitattr*' -type f -delete
+for f in $( find ../ -type d -name '.deps' ) ; do
+	rm -rf "$f"                    2> /dev/null
+done
+
+find ../.. -name dirlist.txt           -delete
+find ../.. -name 'db*.sql'             -delete
+find ../   -name '.gitignore*' -type f -delete
+find ../   -name '.gitattr*'   -type f -delete
+find ../.. -name '*.log'       -type f -a ! -name 'gperf.log' -a ! -name 'run.log' -a ! -name 'size.log' -a ! -name 'change.log' -delete
+find       -name '.dirstamp'   -type f -delete
 
 # plus some last-minute compensations, filling up the potholes left by the bulk /XF & /XD rejections:
-for f in 									\
+for f in 															\
 	/z/lib/tooling/qiqqa/MuPDF/platform/win32/*fuzz*proj*			\
 ; do
 	DSTFILE="$( echo "$f" | sed -E -e 's/^.*[^q]+qiqqa\//..\/..\/Qiqqa\//' )"
 	echo "$f --> $DSTFILE"
 	cp "$f" "$DSTFILE"
 done
+
+find       -name '*.vcxproj.user'     -type f -delete
 
 cd ../..
 		

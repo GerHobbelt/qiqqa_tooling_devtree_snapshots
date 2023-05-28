@@ -1,5 +1,6 @@
 tests = [
   'basics',
+  'preprocess',
   'full-font',
   'cff-full-font',
   'japanese',
@@ -60,6 +61,8 @@ tests = [
   'instance_comp_glyph_empty_child',
   'post_apply_mvar_delta',
   'apply_cvar_delta',
+  'collect_name_ids',
+  'instantiate_colrv1',
 ]
 
 repack_tests = [

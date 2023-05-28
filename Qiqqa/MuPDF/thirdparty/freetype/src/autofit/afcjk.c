@@ -635,10 +635,11 @@
   /* Initialize global metrics. */
 
   FT_LOCAL_DEF( FT_Error )
-  af_cjk_metrics_init( AF_CJKMetrics  metrics,
-                       FT_Face        face )
+  af_cjk_metrics_init( AF_StyleMetrics  metrics_,  /* AF_CJKMetrics */
+                       FT_Face          face )
   {
-    FT_CharMap  oldmap = face->charmap;
+    AF_CJKMetrics  metrics = (AF_CJKMetrics)metrics_;
+    FT_CharMap     oldmap  = face->charmap;
 
 
     metrics->units_per_em = face->units_per_EM;
@@ -756,9 +757,12 @@
   /* Scale global values in both directions. */
 
   FT_LOCAL_DEF( void )
-  af_cjk_metrics_scale( AF_CJKMetrics  metrics,
-                        AF_Scaler      scaler )
+  af_cjk_metrics_scale( AF_StyleMetrics  metrics_,   /* AF_CJKMetrics */
+                        AF_Scaler        scaler )
   {
+    AF_CJKMetrics  metrics = (AF_CJKMetrics)metrics_;
+
+
     /* we copy the whole structure since the x and y scaling values */
     /* are not modified, contrary to e.g. the `latin' auto-hinter   */
     metrics->root.scaler = *scaler;
@@ -771,11 +775,14 @@
   /* Extract standard_width from writing system/script specific */
   /* metrics class.                                             */
 
-  FT_LOCAL_DEF( void )
-  af_cjk_get_standard_widths( AF_CJKMetrics  metrics,
-                              FT_Pos*        stdHW,
-                              FT_Pos*        stdVW )
+  FT_CALLBACK_DEF( void )
+  af_cjk_get_standard_widths( AF_StyleMetrics  metrics_,  /* AF_CJKMetrics */
+                              FT_Pos*          stdHW,
+                              FT_Pos*          stdVW )
   {
+    AF_CJKMetrics  metrics = (AF_CJKMetrics)metrics_;
+
+
     if ( stdHW )
       *stdHW = metrics->axis[AF_DIMENSION_VERT].standard_width;
 
@@ -1376,9 +1383,10 @@
   /* Initalize hinting engine. */
 
   FT_LOCAL_DEF( FT_Error )
-  af_cjk_hints_init( AF_GlyphHints  hints,
-                     AF_CJKMetrics  metrics )
+  af_cjk_hints_init( AF_GlyphHints    hints,
+                     AF_StyleMetrics  metrics_ )   /* AF_CJKMetrics */
   {
+    AF_CJKMetrics   metrics = (AF_CJKMetrics)metrics_;
     FT_Render_Mode  mode;
     FT_UInt32       scaler_flags, other_flags;
 
@@ -2268,11 +2276,13 @@
   /* Apply the complete hinting algorithm to a CJK glyph. */
 
   FT_LOCAL_DEF( FT_Error )
-  af_cjk_hints_apply( FT_UInt        glyph_index,
-                      AF_GlyphHints  hints,
-                      FT_Outline*    outline,
-                      AF_CJKMetrics  metrics )
+  af_cjk_hints_apply( FT_UInt          glyph_index,
+                      AF_GlyphHints    hints,
+                      FT_Outline*      outline,
+                      AF_StyleMetrics  metrics_ )   /* AF_CJKMetrics */
   {
+    AF_CJKMetrics  metrics = (AF_CJKMetrics)metrics_;
+
     FT_Error  error;
     int       dim;
 

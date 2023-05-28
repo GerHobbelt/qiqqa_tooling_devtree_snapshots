@@ -542,6 +542,7 @@ nobase_include_HEADERS = \
 	asio/local/datagram_protocol.hpp \
 	asio/local/detail/endpoint.hpp \
 	asio/local/detail/impl/endpoint.ipp \
+	asio/local/seq_packet_protocol.hpp \
 	asio/local/stream_protocol.hpp \
 	asio/multiple_exceptions.hpp \
 	asio/packaged_task.hpp \
@@ -567,6 +568,7 @@ nobase_include_HEADERS = \
 	asio/require_concept.hpp \
 	asio/serial_port_base.hpp \
 	asio/serial_port.hpp \
+	asio/signal_set_base.hpp \
 	asio/signal_set.hpp \
 	asio/socket_base.hpp \
 	asio/spawn.hpp \

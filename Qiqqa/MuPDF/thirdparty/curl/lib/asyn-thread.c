@@ -44,6 +44,10 @@
 #include <inet.h>
 #endif
 
+#if defined(USE_THREADS_POSIX) && defined(HAVE_PTHREAD_H)
+#  include <pthread.h>
+#endif
+
 #ifdef HAVE_GETADDRINFO
 #  define RESOLVER_ENOMEM  EAI_MEMORY
 #else
@@ -247,7 +251,7 @@ int init_thread_sync_data(struct thread_data *td,
 
   return 1;
 
- err_exit:
+err_exit:
 #ifndef CURL_DISABLE_SOCKETPAIR
   if(tsd->sock_pair[0] != CURL_SOCKET_BAD) {
     sclose(tsd->sock_pair[0]);
@@ -465,10 +469,10 @@ static bool init_resolve_thread(struct Curl_easy *data,
 
   return TRUE;
 
- err_exit:
+err_exit:
   destroy_async_data(asp);
 
- errno_exit:
+errno_exit:
   errno = err;
   return FALSE;
 }

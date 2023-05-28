@@ -128,9 +128,9 @@ char         *testname, *vers;
 char          errormsg[64];
 L_REGPARAMS  *rp;
 
-    if (argc != 1 && argc != 2) {
+    if (argc != 1 && argc != 2 && argc != 3) {
         snprintf(errormsg, sizeof(errormsg),
-            "Syntax: %s [ [compare] | generate | display ]", argv[0]);
+            "Syntax: %s [ [compare] | generate | display ] ...", argv[0]);
         return ERROR_INT(errormsg, __func__, 1);
     }
 
@@ -158,7 +158,8 @@ L_REGPARAMS  *rp;
         rp->fp = fopenWriteStream(rp->tempfile, "wb");
         if (rp->fp == NULL) {
             rp->success = FALSE;
-            return ERROR_INT("stream not opened for tempfile", __func__, 1);
+            return ERROR_INT_1("stream not opened for tempfile",
+                               rp->tempfile, __func__, 1);
         }
     } else if (!strcmp(argv[1], "generate")) {
         rp->mode = L_REG_GENERATE;
@@ -866,5 +867,9 @@ char    *root;
 #endif  /* ! _WIN32 */
 
     root[len] = '\0';  /* terminate */
-    return root;
+
+	if (strncmp(root, "lept_", 5) == 0)
+		memmove(root, root + 5, strlen(root + 5) + 1);
+
+	return root;
 }

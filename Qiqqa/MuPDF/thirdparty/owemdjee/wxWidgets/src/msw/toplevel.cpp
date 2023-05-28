@@ -41,6 +41,7 @@
 #include "wx/tooltip.h"
 
 #include "wx/msw/private.h"
+#include "wx/msw/private/darkmode.h"
 #include "wx/msw/private/winstyle.h"
 
 #include "wx/msw/winundef.h"
@@ -517,6 +518,8 @@ bool wxTopLevelWindowMSW::Create(wxWindow *parent,
     // make the keyboard indicators (such as underlines for accelerators and
     // focus rectangles) work under Win2k+
     MSWUpdateUIState(UIS_INITIALIZE);
+
+    wxMSWDarkMode::EnableForTLW(GetHwnd());
 
     return true;
 }
@@ -1073,7 +1076,6 @@ void wxTopLevelWindowMSW::DoSetIcons()
 
 wxContentProtection wxTopLevelWindowMSW::GetContentProtection() const
 {
-#if wxUSE_DYNLIB_CLASS
     typedef BOOL(WINAPI *GetWindowDisplayAffinity_t)(HWND, DWORD *);
 
     wxDynamicLibrary dllUser32("user32.dll");
@@ -1087,13 +1089,12 @@ wxContentProtection wxTopLevelWindowMSW::GetContentProtection() const
         else if (affinity & WDA_MONITOR)
             return wxCONTENT_PROTECTION_ENABLED;
     }
-#endif
+
     return wxCONTENT_PROTECTION_NONE;
 }
 
 bool wxTopLevelWindowMSW::SetContentProtection(wxContentProtection contentProtection)
 {
-#if wxUSE_DYNLIB_CLASS
     typedef BOOL(WINAPI *SetWindowDisplayAffinity_t)(HWND, DWORD);
 
     wxDynamicLibrary dllUser32("user32.dll");
@@ -1108,7 +1109,7 @@ bool wxTopLevelWindowMSW::SetContentProtection(wxContentProtection contentProtec
         else
             wxLogLastError("SetWindowDisplayAffinity");
     }
-#endif
+
     return false;
 }
 
