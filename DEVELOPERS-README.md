@@ -52,7 +52,20 @@ You need to install the *NASM for Visual Studio add-on*:
   + add `nasm` to your system `PATH` via: Windows Explorer > This PC (right-click) > Properties > Advanced System Settings > (Advanced Tab) \[Environment Variables\] > System Variables > Edit > Add
   + verify that `nasm` is found by opening a `CMD` console window and typing `nasm -v` --> expected output: `NASM version 2.16.01 compiled on Dec 21 2022`
 
+  + add the `NASMPATH` system environment variable pointing out your `nasm.exe` *path* via: Windows Explorer > This PC (right-click) > Properties > Advanced System Settings > (Advanced Tab) \[Environment Variables\] > System Variables > New 
+    
+	so that the next command lists that path like this (DO NOT forget to add the trailing backslash!):
+	
+	```sh 
+	set | grep NASM
+    # --> NASMPATH='C:\Program Files\NASM\'
+	```
+	
+	The `NASMPATH` environment variable is used by the visual Studio NASM add-on (see below) to run the installed `nasm.exe`.
+
+
 - Then you can install the required Visual Studio 2022 add-on (VSNASM), which can be found at: https://github.com/ShiftMediaProject/VSNASM -- for install instruction, see the README there.
+  + it is ADVISED to grab the patched version here: https://github.com/GerHobbelt/VSNASM instead, at least until pullreq 
   + you MAY want to edit the install `.bat` script first, changing the listed NASM version from 2.16 to 2.16.01 (*iff* t hasn't been updated at the repo already)
   + you MAY want to edit the install `.bat` script first, adding a check for an already present `nasm` -- which you previously installed. (*iff* t hasn't been updated at the repo already)
   + extract the VSNASM.zip file to a fresh directory, e.g. `"C:\Users\Ger\Downloads\VSNASM"` and then run a MSVC2022 CMD **as Administrator** via: Start > Visual Studio 2022 (open submenu in Start) > Developer Command Prompt for VS 2022 (right click) > More > Run as Administrator
