@@ -186,7 +186,7 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPTHREAD_WIN32;HAVE_CONFIG_H;__CLEANUP_SEH;PTW32_STATIC_LIB;PTHREAD_WIN32_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPTHREAD_WIN32;HAVE_CONFIG_H;__CLEANUP_SEH;PTW32_STATIC_LIB;PTHREAD_WIN32_STATICLIB;PTW32_RC_MSC;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
       <AdditionalIncludeDirectories>..\..\thirdparty\owemdjee\pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
@@ -208,7 +208,7 @@
     <ClCompile>
       <Optimization>Custom</Optimization>
       <AdditionalIncludeDirectories>..\..\thirdparty\owemdjee\pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPTHREAD_WIN32;HAVE_CONFIG_H;__CLEANUP_SEH;PTW32_STATIC_LIB;PTHREAD_WIN32_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;MONOLITHIC_PTHREAD_TESTS;BUILDING_LIBPTHREAD_WIN32;HAVE_CONFIG_H;__CLEANUP_SEH;PTW32_STATIC_LIB;PTHREAD_WIN32_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
@@ -233,9 +233,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/pthread-win32/dll.c" />
     <ClCompile Include="../../thirdparty/owemdjee/pthread-win32/errno.c" />
     <ClCompile Include="../../thirdparty/owemdjee/pthread-win32/global.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/pthread-win32/pthread-EH.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/pthread-win32/pthread-JMP.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/pthread-win32/pthread.c" />
     <ClCompile Include="../../thirdparty/owemdjee/pthread-win32/pthread_attr_destroy.c" />
     <ClCompile Include="../../thirdparty/owemdjee/pthread-win32/pthread_attr_getaffinity_np.c" />
     <ClCompile Include="../../thirdparty/owemdjee/pthread-win32/pthread_attr_getdetachstate.c" />
@@ -559,7 +556,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/pthread-win32/windows/VS2017/resource.h" />
     <ClInclude Include="../../thirdparty/owemdjee/pthread-win32/windows/VS2019/resource.h" />
     <ClInclude Include="../../thirdparty/owemdjee/pthread-win32/windows/VS2022/resource.h" />
-    <ResourceCompile Include="../../thirdparty/owemdjee/pthread-win32/version.rc" />
     <Text Include="../../thirdparty/owemdjee/pthread-win32/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/pthread-win32/ChangeLog.md" />
     <Text Include="../../thirdparty/owemdjee/pthread-win32/GNUmakefile.in" />
@@ -567,7 +563,6 @@
     <Text Include="../../thirdparty/owemdjee/pthread-win32/builddmc.bat" />
     <Text Include="../../thirdparty/owemdjee/pthread-win32/cmake/get_version.cmake" />
     <Text Include="../../thirdparty/owemdjee/pthread-win32/cmake/target_arch.cmake" />
-    <Text Include="../../thirdparty/owemdjee/pthread-win32/cmake/version.rc.in" />
     <Text Include="../../thirdparty/owemdjee/pthread-win32/configure.ac" />
     <Text Include="../../thirdparty/owemdjee/pthread-win32/docs/ANNOUNCE.md" />
     <Text Include="../../thirdparty/owemdjee/pthread-win32/docs/BUGS.md" />

@@ -425,6 +425,10 @@ void extract_span_free(extract_alloc_t *alloc, span_t **pspan);
 /* Returns last character in span. */
 char_t *extract_span_char_last(span_t *span);
 
+/* Returns last character in span with a non-zero advance (or NULL
+ * if there is no one with a non-zero advance). */
+char_t *extract_span_char_last_adv(span_t *span);
+
 /* Appends new char_t to an span_t with .ucs=c and all other
 fields zeroed. Returns pointer to new char_t record, or NULL if allocation
 failed. */
@@ -506,12 +510,17 @@ struct image_t
 	char                    *type;   /* jpg, png etc. */
 	char                    *name;   /* Name of image file within docx. */
 	char                    *id;     /* ID of image within docx. */
+	double                   a;
+	double                   b;
+	double                   c;
+	double                   d;
 	double                   x;
 	double                   y;
 	double                   w;
 	double                   h;
 	void                    *data;
 	size_t                   data_size;
+	structure_t             *structure;
 
 	extract_image_data_free *data_free;
 	void                    *data_free_handle;
@@ -729,6 +738,12 @@ static inline content_t *content_tree_iterator_next(content_tree_iterator *it)
 		break;
 	case content_paragraph:
 		it->next = ((paragraph_t *)next)->content.base.next;
+		break;
+	case content_image:
+		it->next = next->next;
+		break;
+	case content_block:
+		it->next = ((block_t *)next)->content.base.next;
 		break;
 	}
 

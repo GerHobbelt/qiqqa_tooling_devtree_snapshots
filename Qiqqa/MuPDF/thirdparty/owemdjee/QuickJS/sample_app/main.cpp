@@ -1,6 +1,8 @@
 #include <iostream>
 #include <quickjspp.hpp>
 
+#include "../monolithic_examples.h"
+
 
 class ChartXY
 {
@@ -54,7 +56,8 @@ try_eval_module(
       try
       {
           return context.eval(code, "<eval>", JS_EVAL_TYPE_MODULE);
-      } catch( const qjs::exception& ex)
+      }
+	  catch( const qjs::exception& ex)
       {
             //js_std_dump_error(ctx);
             auto exc = context.getException();
@@ -65,11 +68,10 @@ try_eval_module(
             js_std_free_handlers(runtime.rt);
             return context.newObject();
       }
-
 }
 
 #if defined(BUILD_MONOLITHIC)
-#define main		quickjs_sample_app_main
+#define main		qjs_sample_app_main
 #endif
 
 int main(int argc, const char** argv)
@@ -127,7 +129,8 @@ int main(int argc, const char** argv)
     try
     {
          context.eval(str); //, "", JS_EVAL_TYPE_MODULE);
-    } catch( const qjs::exception& ex)
+    }
+	catch( const qjs::exception& ex)
     {
           //js_std_dump_error(ctx);
           auto exc = context.getException();
@@ -140,7 +143,6 @@ int main(int argc, const char** argv)
     }
 
     std::fprintf(stderr, " [TRACE] After loading code. \n");
-
 
     int number = (int) context.eval(" 10 * (3 + 1 + 10 ) - 1000 * 2");                               
     std::cout << " [RESULT] number = " << number << '\n';

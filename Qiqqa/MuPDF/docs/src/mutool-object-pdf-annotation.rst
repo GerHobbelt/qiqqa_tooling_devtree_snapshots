@@ -4,6 +4,8 @@
 
 .. default-domain:: js
 
+.. include:: html_tags.rst
+
 .. _mutool_object_pdf_annotation:
 
 
@@ -115,6 +117,19 @@
 
     :arg hot: `Boolean`.
 
+
+.. method:: getHiddenForEditing()
+
+    Get a special annotation hidden flag for editing. This flag prevents the annotation from being rendered.
+
+    :return: `Boolean`.
+
+
+.. method:: setHiddenForEditing(hidden)
+
+    Set a special annotation hidden flag for editing. This flag prevents the annotation from being rendered.
+
+    :arg hidden: `Boolean`.
 
 ----
 

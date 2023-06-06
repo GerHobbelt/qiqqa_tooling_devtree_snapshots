@@ -70,31 +70,28 @@ namespace boost { namespace stl_interfaces {
     };
 
     namespace detail {
-        template<typename Pointer, typename T>
+        template<typename Pointer, typename Reference, typename T>
         auto make_pointer(
             T && value,
-            std::enable_if_t<std::is_pointer<Pointer>::value, int> = 0)
-            -> decltype(std::addressof(value))
+            std::enable_if_t<
+                std::is_pointer<Pointer>::value &&
+                    std::is_reference<Reference>::value,
+                int> = 0) -> decltype(std::addressof(value))
         {
             return std::addressof(value);
         }
 
-        template<typename Pointer, typename T>
+        template<typename Pointer, typename Reference, typename T>
         auto make_pointer(
             T && value,
-            std::enable_if_t<!std::is_pointer<Pointer>::value, int> = 0)
+            std::enable_if_t<
+                !std::is_pointer<Pointer>::value &&
+                    !std::is_same<Pointer, void>::value &&
+                    std::is_reference<Reference>::value,
+                int> = 0)
         {
             return Pointer(std::forward<T>(value));
         }
-
-        template<typename IteratorConcept>
-        struct concept_category
-        {
-            using type = IteratorConcept;
-        };
-        template<typename IteratorConcept>
-        using concept_category_t =
-            typename concept_category<IteratorConcept>::type;
 
         template<typename Pointer, typename IteratorConcept>
         struct pointer
@@ -277,7 +274,7 @@ namespace boost { namespace stl_interfaces { BOOST_STL_INTERFACES_NAMESPACE_V1 {
 
     public:
         using iterator_concept = IteratorConcept;
-        using iterator_category = detail::concept_category_t<iterator_concept>;
+        using iterator_category = iterator_concept;
         using value_type = std::remove_const_t<ValueType>;
         using reference = Reference;
         using pointer = detail::pointer_t<Pointer, iterator_concept>;
@@ -299,20 +296,22 @@ namespace boost { namespace stl_interfaces { BOOST_STL_INTERFACES_NAMESPACE_V1 {
         }
 
         template<typename D = Derived>
-        constexpr auto operator-> () noexcept(
-            noexcept(detail::make_pointer<pointer>(*std::declval<D &>())))
+        constexpr auto operator->() noexcept(noexcept(
+            detail::make_pointer<pointer, reference>(*std::declval<D &>())))
             -> decltype(
-                detail::make_pointer<pointer>(*std::declval<D &>()))
+                detail::make_pointer<pointer, reference>(*std::declval<D &>()))
         {
-            return detail::make_pointer<pointer>(*derived());
+            return detail::make_pointer<pointer, reference>(*derived());
         }
         template<typename D = Derived>
-        constexpr auto operator-> () const noexcept(
-            noexcept(detail::make_pointer<pointer>(*std::declval<D const &>())))
+        constexpr auto operator->() const noexcept(noexcept(
+            detail::make_pointer<pointer, reference>(
+                *std::declval<D const &>())))
             -> decltype(
-                detail::make_pointer<pointer>(*std::declval<D const &>()))
+                detail::make_pointer<pointer, reference>(
+                    *std::declval<D const &>()))
         {
-            return detail::make_pointer<pointer>(*derived());
+            return detail::make_pointer<pointer, reference>(*derived());
         }
 
         template<typename D = Derived>
@@ -627,7 +626,11 @@ namespace boost { namespace stl_interfaces { BOOST_STL_INTERFACES_NAMESPACE_V2 {
         template<typename D>
         // clang-format off
         concept base_3way =
+#if defined(__cpp_impl_three_way_comparison)
             requires (D d) { access::base(d) <=> access::base(d); };
+#else
+            false;
+#endif
         // clang-format on
 
         template<typename D1, typename D2 = D1>
@@ -638,8 +641,64 @@ namespace boost { namespace stl_interfaces { BOOST_STL_INTERFACES_NAMESPACE_V2 {
 
         template<typename D>
         // clang-format off
-        concept sub = requires (D d) { d - d; };
+        concept iter_sub = requires (D d) {
+            typename D::difference_type;
+            {d - d} -> std::convertible_to<typename D::difference_type>;
+        };
         // clang-format on
+
+        // This iterator concept -> category mapping scheme follows the one
+        // from zip_transform_view; see
+        // https://eel.is/c++draft/range.zip.transform.iterator#1.
+
+        template<typename IteratorConcept, typename ReferenceType>
+        constexpr auto category_tag()
+        {
+            if constexpr (std::is_base_of_v<
+                              std::forward_iterator_tag,
+                              IteratorConcept>) {
+                if constexpr (!std::is_reference_v<ReferenceType>) {
+                    return std::input_iterator_tag{};
+                } else if constexpr (std::is_base_of_v<
+                                         std::random_access_iterator_tag,
+                                         IteratorConcept>) {
+                    return std::random_access_iterator_tag{};
+                } else if constexpr (std::is_base_of_v<
+                                         std::bidirectional_iterator_tag,
+                                         IteratorConcept>) {
+                    return std::bidirectional_iterator_tag{};
+                } else {
+                    return std::forward_iterator_tag{};
+                }
+            } else {
+                return 0; // int means "no tag"
+            }
+        }
+        template<
+            typename IteratorConcept,
+            typename ReferenceType,
+            typename IteratorCategory =
+                decltype(v2_dtl::
+                             category_tag<IteratorConcept, ReferenceType>())>
+        struct iterator_category_base
+        {
+            using iterator_category = IteratorCategory;
+        };
+
+        template<typename IteratorConcept, typename ReferenceType>
+        struct iterator_category_base<IteratorConcept, ReferenceType, int>
+        {};
+
+        template<typename IteratorConcept, typename ReferenceType>
+        constexpr bool non_input_tag()
+        {
+            if (std::same_as<IteratorConcept, std::input_iterator_tag>)
+                return false;
+            using tag_t =
+                decltype(v2_dtl::
+                             category_tag<IteratorConcept, ReferenceType>());
+            return !std::same_as<tag_t, std::input_iterator_tag>;
+        }
     }
 
     // clang-format off
@@ -661,6 +720,7 @@ namespace boost { namespace stl_interfaces { BOOST_STL_INTERFACES_NAMESPACE_V2 {
       typename DifferenceType = std::ptrdiff_t>
       requires std::is_class_v<D> && std::same_as<D, std::remove_cv_t<D>>
     struct iterator_interface
+        : v2_dtl::iterator_category_base<IteratorConcept, Reference>
     {
     private:
       constexpr D& derived() noexcept {
@@ -672,7 +732,6 @@ namespace boost { namespace stl_interfaces { BOOST_STL_INTERFACES_NAMESPACE_V2 {
 
     public:
       using iterator_concept = IteratorConcept;
-      using iterator_category = detail::concept_category_t<iterator_concept>;
       using value_type = std::remove_const_t<ValueType>;
       using reference = Reference;
       using pointer = detail::pointer_t<Pointer, iterator_concept>;
@@ -688,11 +747,13 @@ namespace boost { namespace stl_interfaces { BOOST_STL_INTERFACES_NAMESPACE_V2 {
         }
 
       constexpr auto operator->()
-        requires requires (D d) { *d; } {
+        requires (!std::same_as<pointer, void> && std::is_reference_v<reference> &&
+                  requires (D d) { *d; }) {
           return detail::make_pointer<pointer>(*derived());
         }
       constexpr auto operator->() const
-        requires requires (D const d) { *d; } {
+        requires (!std::same_as<pointer, void> && std::is_reference_v<reference> &&
+                  requires (D const d) { *d; }) {
           return detail::make_pointer<pointer>(*derived());
         }
 
@@ -714,9 +775,13 @@ namespace boost { namespace stl_interfaces { BOOST_STL_INTERFACES_NAMESPACE_V2 {
           return derived() += difference_type(1);
         }
       constexpr auto operator++(int) requires requires (D d) { ++d; } {
-        D retval = derived();
-        ++derived();
-        return retval;
+        if constexpr (std::is_same_v<IteratorConcept, std::input_iterator_tag>){
+          ++derived();
+        } else {
+          D retval = derived();
+          ++derived();
+          return retval;
+        }
       }
       constexpr decltype(auto) operator+=(difference_type n)
         requires requires (D d) { access::base(d) += n; } {
@@ -760,39 +825,35 @@ namespace boost { namespace stl_interfaces { BOOST_STL_INTERFACES_NAMESPACE_V2 {
           return it += -n;
         }
 
-#if 0 // TODO: This appears to work, but as of this writing (and using GCC
-      // 10), op<=> is not yet being used to evaluate op==, op<, etc.
-      friend constexpr std::strong_ordering operator<=>(D lhs, D rhs)
-        requires v2_dtl::base_3way<D> || v2_dtl::sub<D> {
-            if constexpr (requires { access::base(lhs) <=> access::base(rhs); }) {
-              return access::base(lhs) <=> access::base(rhs);
-            } else {
-              auto delta = lhs - rhs;
-              if (delta < 0)
-                  return std::strong_ordering::less;
-              if (0 < delta)
-                  return std::strong_ordering::greater;
-              return  std::strong_ordering::equal;
-            }
+#if defined(__cpp_lib_three_way_comparison)
+      friend constexpr auto operator<=>(D lhs, D rhs)
+        requires v2_dtl::base_3way<D> || v2_dtl::iter_sub<D> {
+          if constexpr (v2_dtl::base_3way<D>) {
+            return access::base(lhs) <=> access::base(rhs);
+          } else {
+            difference_type const diff = rhs - lhs;
+            return diff < difference_type(0) ? std::strong_ordering::less :
+              difference_type(0) < diff ? std::strong_ordering::greater :
+              std::strong_ordering::equal;
           }
-#else
-      friend constexpr bool operator<(D lhs, D rhs)
-        requires std::equality_comparable<D> {
-          return (lhs - rhs) < typename D::difference_type(0);
-        }
-      friend constexpr bool operator<=(D lhs, D rhs)
-        requires std::equality_comparable<D> {
-          return (lhs - rhs) <= typename D::difference_type(0);
-        }
-      friend constexpr bool operator>(D lhs, D rhs)
-        requires std::equality_comparable<D> {
-          return (lhs - rhs) > typename D::difference_type(0);
-        }
-      friend constexpr bool operator>=(D lhs, D rhs)
-        requires std::equality_comparable<D> {
-          return (lhs - rhs) >= typename D::difference_type(0);
         }
 #endif
+      friend constexpr bool operator<(D lhs, D rhs)
+        requires v2_dtl::iter_sub<D> {
+          return (lhs - rhs) < difference_type(0);
+        }
+      friend constexpr bool operator<=(D lhs, D rhs)
+        requires v2_dtl::iter_sub<D> {
+          return (lhs - rhs) <= difference_type(0);
+        }
+      friend constexpr bool operator>(D lhs, D rhs)
+        requires v2_dtl::iter_sub<D> {
+          return (lhs - rhs) > difference_type(0);
+        }
+      friend constexpr bool operator>=(D lhs, D rhs)
+        requires v2_dtl::iter_sub<D> {
+          return (lhs - rhs) >= difference_type(0);
+        }
     };
 
     namespace v2_dtl {
@@ -819,10 +880,10 @@ namespace boost { namespace stl_interfaces { BOOST_STL_INTERFACES_NAMESPACE_V2 {
     constexpr bool operator==(D1 lhs, D2 rhs)
       requires v2_dtl::derived_iter<D1> && v2_dtl::derived_iter<D2> &&
                detail::interoperable<D1, D2>::value &&
-               (v2_dtl::base_eq<D1, D2> || v2_dtl::sub<D1>) {
+               (v2_dtl::base_eq<D1, D2> || v2_dtl::iter_sub<D1>) {
       if constexpr (v2_dtl::base_eq<D1, D2>) {
         return (access::base(lhs) == access::base(rhs));
-      } else if constexpr (v2_dtl::sub<D1>) {
+      } else if constexpr (v2_dtl::iter_sub<D1>) {
         return (lhs - rhs) == typename D1::difference_type(0);
       }
     }
@@ -898,11 +959,6 @@ namespace boost { namespace stl_interfaces { BOOST_STL_INTERFACES_NAMESPACE_V2 {
     iter, category, value_t, ref, ptr, diff_t)                                 \
     static_assert(                                                             \
         std::is_same<                                                          \
-            typename std::iterator_traits<iter>::iterator_category,            \
-            category>::value,                                                  \
-        "");                                                                   \
-    static_assert(                                                             \
-        std::is_same<                                                          \
             typename std::iterator_traits<iter>::value_type,                   \
             value_t>::value,                                                   \
         "");                                                                   \
@@ -920,23 +976,10 @@ namespace boost { namespace stl_interfaces { BOOST_STL_INTERFACES_NAMESPACE_V2 {
             diff_t>::value,                                                    \
         "");
 
-#if BOOST_STL_INTERFACES_USE_CONCEPTS
-#define BOOST_STL_INTERFACES_STATIC_ASSERT_ITERATOR_TRAITS(                    \
-    iter, category, concept, value_type, reference, pointer, difference_type)  \
-    static_assert(                                                             \
-        std::is_same_v<                                                        \
-            boost::stl_interfaces::v2::v2_dtl::iter_concept_t<iter>,           \
-            concept>,                                                          \
-        "");                                                                   \
-    BOOST_STL_INTERFACES_STATIC_ASSERT_ITERATOR_TRAITS_IMPL(                   \
-        iter, category, value_type, reference, pointer, difference_type)
-#else
 #define BOOST_STL_INTERFACES_STATIC_ASSERT_ITERATOR_TRAITS(                    \
     iter, category, concept, value_type, reference, pointer, difference_type)  \
     BOOST_STL_INTERFACES_STATIC_ASSERT_ITERATOR_TRAITS_IMPL(                   \
         iter, category, value_type, reference, pointer, difference_type)
-#endif
-
 #endif
 
 #endif

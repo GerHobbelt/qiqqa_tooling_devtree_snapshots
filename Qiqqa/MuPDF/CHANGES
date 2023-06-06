@@ -1,10 +1,11 @@
-List of changes in MuPDF 1.21.1 (Source only release for PyMuPDF)
+List of changes in MuPDF 1.22.1
 
-	Miscelleneous bug fixes, including:
-		Garbage collection problem causing file bloat on clean.
-		Don't assume sorted objects in pdf_objcmp.
-		Don't layout empty documents.
-		Type 3 font char bboxes.
+	This is a bug fix release only.
+
+	Unfortunately a bug slipped into the 1.22.0 release that affects redactions.
+	A mistake in a bugfix meant that we failed to correctly redact some images.
+
+	If you use MuPDF for redactions, it is imperative that you upgrade!
 
 List of changes in MuPDF 1.22.0
 
@@ -38,6 +39,14 @@ List of changes in MuPDF 1.22.0
 	Moved WASM project into separate repository.
 
 	Added Java and "mutool run" bindings for many more functions.
+
+List of changes in MuPDF 1.21.1 (Source only release for PyMuPDF)
+
+	Miscelleneous bug fixes, including:
+		Garbage collection problem causing file bloat on clean.
+		Don't assume sorted objects in pdf_objcmp.
+		Don't layout empty documents.
+		Type 3 font char bboxes.
 
 List of changes in MuPDF 1.21.0
 

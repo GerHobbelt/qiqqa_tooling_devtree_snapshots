@@ -17,8 +17,8 @@
 //
 // Alternative licensing terms are available from the licensor.
 // For commercial licensing, see <https://www.artifex.com/> or contact
-// Artifex Software, Inc., 1305 Grant Avenue - Suite 200, Novato,
-// CA 94945, U.S.A., +1(415)492-9861, for further information.
+// Artifex Software, Inc., 39 Mesa Street, Suite 108A, San Francisco,
+// CA 94129, USA, for further information.
 
 #include "mupdf/fitz.h"
 #include "mupdf/pdf.h"
@@ -613,7 +613,7 @@ pdf_redact_image_imp(fz_context *ctx, fz_matrix ctm, fz_image *image, fz_pixmap 
 	 * image. We might have just a small section of the image
 	 * being covered, and setting the whole thing to white
 	 * will blank stuff outside the desired area. */
-	if (mask && (pixmap->w > 1 || pixmap->h > 1))
+	if (!mask || pixmap->w > 1 || pixmap->h > 1)
 	{
 		n = pixmap->n - pixmap->alpha;
 		bpp = pixmap->n;
@@ -992,11 +992,13 @@ pdf_redact_page(fz_context *ctx, pdf_document *doc, pdf_page *page, pdf_redact_o
 		}
 
 		doc->redacted = 1;
-	}
-	fz_always(ctx)
 		pdf_end_operation(ctx, doc);
+	}
 	fz_catch(ctx)
+	{
+		pdf_abandon_operation(ctx, doc);
 		fz_rethrow(ctx);
+	}
 
 	return 1;
 }

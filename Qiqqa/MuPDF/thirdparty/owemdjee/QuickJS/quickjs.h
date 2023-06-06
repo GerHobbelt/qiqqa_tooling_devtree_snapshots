@@ -40,11 +40,15 @@
 #include "quickjs_version.h"
 
 #ifndef JS_EXPORT
-#ifdef _WIN32
-  #define JS_EXPORT __declspec(dllexport)
-#else
+ #ifdef _WIN32
+  #ifdef JS_SHARED_LIBRARY
+   #define JS_EXPORT __declspec(dllexport)
+  #else
+   #define JS_EXPORT /* nothing */
+  #endif
+ #else
   #define JS_EXPORT /* nothing */
-#endif
+ #endif
 #endif
 
 #if defined(__ANDROID__)

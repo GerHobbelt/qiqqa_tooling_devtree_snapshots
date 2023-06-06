@@ -463,9 +463,21 @@ void TessBaseAPI::PrintFontsTable(FILE *fp) const {
 
 #endif
 
-/** Print Tesseract parameters to the given file. */
+/** 
+ * Print Tesseract parameters to the given file with descriptions of each option. 
+ * Cannot be used as Tesseract configuration file due to descriptions 
+ * (use DumpVariables instead to create config files).
+ */
 void TessBaseAPI::PrintVariables(FILE *fp) const {
-  ParamUtils::PrintParams(fp, tesseract_->params());
+  ParamUtils::PrintParams(fp, tesseract_->params(), true);
+}
+
+/** 
+ * Print Tesseract parameters to the given file without descriptions. 
+ * Can be used as Tesseract configuration file.
+*/
+void TessBaseAPI::DumpVariables(FILE *fp) const {
+  ParamUtils::PrintParams(fp, tesseract_->params(), false);
 }
 
 // Report parameters' usage statistics, i.e. report which params have been
@@ -545,7 +557,7 @@ int TessBaseAPI::InitFullWithReader(const char *data, int data_size, const char 
     if (data_size != 0) {
       mgr.LoadMemBuffer(language, data, data_size);
     }
-    if (tesseract_->init_tesseract(datapath.c_str(), output_file_.c_str(), language, oem, configs,
+    if (tesseract_->init_tesseract(datapath, output_file_, language, oem, configs,
                                    configs_size, vars_vec, vars_values, set_only_non_debug_params,
                                    &mgr) != 0) {
       return -1;
@@ -1584,7 +1596,7 @@ bool TessBaseAPI::ProcessPage(Pix *pix, int page_index, const char *filename,
     if (fp == nullptr) {
       tprintf("ERROR: Failed to open file \"{}\"\n", kOldVarsFile);
     } else {
-      PrintVariables(fp);
+      DumpVariables(fp);
       fclose(fp);
     }
     // Switch to alternate mode for retry.
@@ -2578,7 +2590,7 @@ int TessBaseAPI::FindLines() {
             " but data path is undefined\n");
         delete osd_tesseract_;
         osd_tesseract_ = nullptr;
-      } else if (osd_tesseract_->init_tesseract(datapath_.c_str(), "", "osd", OEM_TESSERACT_ONLY,
+      } else if (osd_tesseract_->init_tesseract(datapath_, "", "osd", OEM_TESSERACT_ONLY,
                                                 nullptr, 0, nullptr, nullptr, false, &mgr) == 0) {
         osd_tess = osd_tesseract_;
         osd_tesseract_->set_source_resolution(thresholder_->GetSourceYResolution());
@@ -2723,7 +2735,7 @@ void TessBaseAPI::GetBlockTextOrientations(int **block_orientation, bool **verti
     tprintf("WARNING: Found no blocks\n");
     return;
   }
-  * block_orientation = new int[num_blocks];
+  *block_orientation = new int[num_blocks];
   *vertical_writing = new bool[num_blocks];
   block_it.move_to_first();
   int i = 0;
@@ -2743,7 +2755,7 @@ void TessBaseAPI::GetBlockTextOrientations(int **block_orientation, bool **verti
     (*block_orientation)[i] = num_rotations;
     // The classify_rotation is non-zero only if the text has vertical
     // writing direction.
-    (*vertical_writing)[i] = classify_rotation.y() != 0.0f;
+    (*vertical_writing)[i] = (classify_rotation.y() != 0.0f);
     ++i;
   }
 }

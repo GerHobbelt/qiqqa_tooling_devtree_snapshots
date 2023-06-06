@@ -1,4 +1,4 @@
-/* Copyright (c) 2008, Google Inc.
+/* Copyright (c) 2023, Google Inc.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -146,8 +146,12 @@ extern int GOOGLE_GLOG_DLL_DECL safe_vsnprintf(char* str, size_t size,
 #define DEFAULT_TEMPLATE_ROOTDIR  ".."
 
 // ----------------------------------- SYSTEM/PROCESS
+#if defined __MINGW64__ || defined WIN64 || defined _WIN64
+typedef __int64 pid_t;
+#else
 typedef int pid_t;
-#define getpid  _getpid
+#endif
+#define getpid _getpid
 
 #endif  // _MSC_VER
 
@@ -164,15 +168,15 @@ enum { PTHREAD_ONCE_INIT = 0 };   // important that this be 0! for SpinLock
 #endif // HAVE_PTHREAD
 
 #ifndef HAVE_LOCALTIME_R
-extern GOOGLE_GLOG_DLL_DECL struct tm* localtime_r(const time_t* timep,
-                                          struct tm* result);
+extern GOOGLE_GLOG_DLL_DECL std::tm* localtime_r(const std::time_t* timep,
+                                          std::tm* result);
 #endif // not HAVE_LOCALTIME_R
 
 #ifndef HAVE_GMTIME_R
-extern GOOGLE_GLOG_DLL_DECL struct tm* gmtime_r(const time_t* timep, struct tm* result);
+extern GOOGLE_GLOG_DLL_DECL std::tm* gmtime_r(const std::time_t* timep, std::tm* result);
 #endif // not HAVE_GMTIME_R
 
-inline char* strerror_r(int errnum, char* buf, size_t buflen) {
+inline char* strerror_r(int errnum, char* buf, std::size_t buflen) {
   strerror_s(buf, buflen, errnum);
   return buf;
 }

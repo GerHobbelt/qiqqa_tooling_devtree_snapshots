@@ -230,22 +230,14 @@
   <ItemGroup>
     <ClCompile Include="../../thirdparty/owemdjee/vcopy/src/lib1-priv-impl.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/vcopy/src/lib1-pub-impl.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/vcopy/test/main.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/vcopy/test/monolithic-main.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/vcopy/test/test.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/vcopy/test/testpp.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/vcopy/tool/main.cpp" />
     <ClInclude Include="../../thirdparty/owemdjee/vcopy/include/eternal_timestamp/eternal_timestamp.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vcopy/include/eternal_timestamp/eternal_timestamp.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/vcopy/include/eternal_timestamp/lib1-pub-header.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vcopy/src/lib1-priv-header.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/vcopy/test/monolithic_examples.h" />
     <Text Include="../../thirdparty/owemdjee/vcopy/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/vcopy/DESIGN.md" />
     <Text Include="../../thirdparty/owemdjee/vcopy/README.md" />
     <Text Include="../../thirdparty/owemdjee/vcopy/src/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/vcopy/test/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/vcopy/tool/CMakeLists.txt" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

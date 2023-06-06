@@ -170,6 +170,19 @@ char_t *extract_span_char_last(span_t *span)
 	return &span->chars[span->chars_num-1];
 }
 
+char_t *extract_span_char_last_adv(span_t *span)
+{
+	int i = span->chars_num;
+
+	while (i > 0)
+	{
+		if (span->chars[--i].adv != 0)
+			return &span->chars[i];
+	}
+
+	return NULL;
+}
+
 /* Returns first span in a line. */
 span_t *extract_line_span_last(line_t *line)
 {
@@ -961,6 +974,10 @@ int extract_read_intermediate(extract_t *extract, extract_buffer_t *buffer)
 					if (extract_add_image(
 							extract,
 							type,
+							0 /*a*/,
+							0 /*b*/,
+							0 /*c*/,
+							0 /*d*/,
 							0 /*x*/,
 							0 /*y*/,
 							0 /*w*/,
@@ -1287,7 +1304,7 @@ int extract_add_char(
 
 		/* Arbitrary fractions here; ideally we should consult the font bbox, but we don't currently
 		 * have that. */
-		if (fabs(perp) > 3*space_guess/2 || fabs(dist) > space_guess * 8)
+		if (fabs(perp) > 3*space_guess/2 || fabs(dist) > space_guess * 4)
 		{
 			/* Create new span. */
 			if (span->chars_num > 0)
@@ -1380,6 +1397,10 @@ int extract_span_end(extract_t *extract)
 int extract_add_image(
 		extract_t               *extract,
 		const char              *type,
+		double                   a,
+		double                   b,
+		double                   c,
+		double                   d,
 		double                   x,
 		double                   y,
 		double                   w,
@@ -1396,6 +1417,10 @@ int extract_add_image(
 
 	extract->image_n += 1;
 	if (content_append_new_image(extract->alloc, &subpage->content, &image)) goto end;
+	image->a = a;
+	image->b = b;
+	image->c = c;
+	image->d = d;
 	image->x = x;
 	image->y = y;
 	image->w = w;
@@ -1736,7 +1761,8 @@ int extract_moveto(extract_t *extract, double x, double y)
 		if (extract->path.fill.n == -1) return 0;
 		if (extract->path.fill.n != 0)
 		{
-			outf0("returning error. extract->path.fill.n=%i", extract->path.fill.n);
+			/* This code is broken, really. Certainly don't give an error here,
+			 * cos it's just confusing noise. Refactor this when I get a chance. */
 			extract->path.fill.n = -1;
 			return 0;
 		}
@@ -1771,7 +1797,8 @@ int extract_lineto(extract_t *extract, double x, double y)
 		if (extract->path.fill.n == -1)	return 0;
 		if (extract->path.fill.n == 0 || extract->path.fill.n >= 4)
 		{
-			outf0("returning error. extract->path.fill.n=%i", extract->path.fill.n);
+			/* This code is broken, really. Certainly don't give an error here,
+			 * cos it's just confusing noise. Refactor this when I get a chance. */
 			extract->path.fill.n = -1;
 			return 0;
 		}
@@ -1956,7 +1983,11 @@ int extract_end_struct(extract_t *extract)
 {
 	document_t *document = &extract->document;
 
-	assert(document->current != NULL);
+	if (document->current == NULL)
+	{
+		fprintf(stderr, "Unbalanced end struct!\n");
+		return 0;
+	}
 
 	document->current = document->current->parent;
 
@@ -2087,6 +2118,24 @@ const char *extract_struct_string(extract_struct_t type)
 		return "FORM";
 	case extract_struct_ARTIFACT:
 		return "ARTIFACT";
+	case extract_struct_ABSTRACT:
+		return "ABSTRACT";
+	case extract_struct_EQUATION:
+		return "EQUATION";
+	case extract_struct_AUTHOR:
+		return "AUTHOR";
+	case extract_struct_DATE:
+		return "DATE";
+	case extract_struct_COLUMN:
+		return "COLUMN";
+	case extract_struct_ROW:
+		return "ROW";
+	case extract_struct_COLUMN_HEADER:
+		return "COLUMN_HEADER";
+	case extract_struct_PROJECTED_ROW_HEADER:
+		return "PROJECTED_ROW_HEADER";
+	case extract_struct_SPANNING_CELL:
+		return "SPANNING_CELL";
 	}
 }
 
@@ -2433,7 +2482,7 @@ int extract_write(extract_t *extract, extract_buffer_t *buffer)
 	case extract_format_JSON:
 	{
 		int first = 1;
-		if (extract_buffer_cat(buffer, "{\n\"elements\" : "))
+		if (extract_buffer_cat(buffer, "{\n\"elements\" : [\n"))
 			goto end;
 		for (i=0; i<extract->contentss_num; ++i)
 		{
@@ -2443,7 +2492,7 @@ int extract_write(extract_t *extract, extract_buffer_t *buffer)
 				first = 0;
 			if (extract_buffer_write(buffer, extract->contentss[i].chars, extract->contentss[i].chars_num, NULL)) goto end;
 		}
-		if (extract_buffer_cat(buffer, "\n}\n"))
+		if (extract_buffer_cat(buffer, "]\n\n}\n"))
 			goto end;
 		break;
 	}
@@ -2806,9 +2855,20 @@ map_classify(
 		{
 			span_t *span = (span_t *)content;
 			rect_t rect = extract_span_rect(span);
-			if (rect.min.x >= x0 && rect.min.y >= y0 && rect.max.x <= x1 && rect.max.y <= y1)
+			rect_t intersect;
+			intersect.min.x = max(rect.min.x, x0);
+			intersect.min.y = max(rect.min.y, y0);
+			intersect.max.x = min(rect.max.x, x1);
+			intersect.max.y = min(rect.max.y, y1);
+			if (intersect.min.x < intersect.max.x && intersect.min.y < intersect.max.y)
 			{
-				span->structure = structure;
+				float iarea = (intersect.max.x - intersect.min.x) * (intersect.max.y - intersect.min.y);
+				float area = (rect.max.x - rect.min.x) * (rect.max.y - rect.min.y);
+				if (iarea / area > 0.8)
+				{
+					/* At least 80% of the region intersects. */
+					span->structure = structure;
+				}
 			}
 			break;
 		}

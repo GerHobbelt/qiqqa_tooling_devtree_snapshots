@@ -356,18 +356,6 @@
     <ClCompile Include="../../thirdparty/freetype/src/type42/t42parse.c" />
     <ClCompile Include="../../thirdparty/freetype/src/type42/type42.c" />
     <ClCompile Include="../../thirdparty/freetype/src/winfonts/winfnt.c" />
-    <ClCompile Include="../../thirdparty/freetype/subprojects/dlg/docs/dlg_android.c" />
-    <ClCompile Include="../../thirdparty/freetype/subprojects/dlg/docs/examples/chain.c" />
-    <ClCompile Include="../../thirdparty/freetype/subprojects/dlg/docs/examples/example.c" />
-    <ClCompile Include="../../thirdparty/freetype/subprojects/dlg/docs/examples/example.cpp" />
-    <ClCompile Include="../../thirdparty/freetype/subprojects/dlg/docs/tests/core.c" />
-    <ClCompile Include="../../thirdparty/freetype/subprojects/dlg/docs/tests/cpp.cpp" />
-    <ClCompile Include="../../thirdparty/freetype/subprojects/dlg/docs/tests/disabled.c" />
-    <ClCompile Include="../../thirdparty/freetype/subprojects/dlg/docs/tests/disabled.cpp" />
-    <ClCompile Include="../../thirdparty/freetype/subprojects/dlg/docs/tests/level.c" />
-    <ClCompile Include="../../thirdparty/freetype/subprojects/dlg/docs/tests/outputf.cpp" />
-    <ClCompile Include="../../thirdparty/freetype/subprojects/dlg/docs/tests/threads.cpp" />
-    <ClCompile Include="../../thirdparty/freetype/subprojects/dlg/src/dlg/dlg.c" />
     <ClInclude Include="../../thirdparty/freetype/devel/ft2build.h" />
     <ClInclude Include="../../thirdparty/freetype/devel/ftoption.h" />
     <ClInclude Include="../../thirdparty/freetype/include/freetype/config/ftconfig.h" />
@@ -625,11 +613,7 @@
     <ClInclude Include="../../thirdparty/freetype/src/type42/t42types.h" />
     <ClInclude Include="../../thirdparty/freetype/src/winfonts/fnterrs.h" />
     <ClInclude Include="../../thirdparty/freetype/src/winfonts/winfnt.h" />
-    <ClInclude Include="../../thirdparty/freetype/subprojects/dlg/include/dlg/dlg.h" />
-    <ClInclude Include="../../thirdparty/freetype/subprojects/dlg/include/dlg/dlg.hpp" />
-    <ClInclude Include="../../thirdparty/freetype/subprojects/dlg/include/dlg/output.h" />
     <Image Include="../../thirdparty/freetype/docs/markdown/images/favico.ico" />
-    <Image Include="../../thirdparty/freetype/subprojects/dlg/docs/examples/example.png" />
     <ResourceCompile Include="../../thirdparty/freetype/src/base/ftver.rc" />
     <Text Include="../../thirdparty/freetype/CMakeLists.txt" />
     <Text Include="../../thirdparty/freetype/LICENSE.TXT" />
@@ -671,12 +655,6 @@
     <Text Include="../../thirdparty/freetype/src/bdf/README" />
     <Text Include="../../thirdparty/freetype/src/gxvalid/README" />
     <Text Include="../../thirdparty/freetype/src/pcf/README" />
-    <Text Include="../../thirdparty/freetype/subprojects/dlg/README.md" />
-    <Text Include="../../thirdparty/freetype/subprojects/dlg/docs/api.md" />
-    <Text Include="../../thirdparty/freetype/subprojects/dlg/docs/changelog.md" />
-    <Text Include="../../thirdparty/freetype/subprojects/dlg/docs/notes.md" />
-    <Text Include="../../thirdparty/freetype/subprojects/dlg/docs/todo.md" />
-    <Text Include="../../thirdparty/freetype/subprojects/dlg/meson_options.txt" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

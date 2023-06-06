@@ -17,8 +17,8 @@
 //
 // Alternative licensing terms are available from the licensor.
 // For commercial licensing, see <https://www.artifex.com/> or contact
-// Artifex Software, Inc., 1305 Grant Avenue - Suite 200, Novato,
-// CA 94945, U.S.A., +1(415)492-9861, for further information.
+// Artifex Software, Inc., 39 Mesa Street, Suite 108A, San Francisco,
+// CA 94129, USA, for further information.
 
 #include "mupdf/fitz.h"
 #include "mupdf/ucdn.h"
@@ -76,9 +76,9 @@ static const char *html_default_css =
 "sup{font-size:0.83em;vertical-align:super}"
 "table{display:table;border-spacing:2px}"
 "tbody{display:table-row-group}"
-"td{display:table-cell;padding:1px}"
+"td{display:table-cell;padding:1px;background-color:inherit}"
 "tfoot{display:table-footer-group}"
-"th{display:table-cell;font-weight:bold;padding:1px;text-align:center}"
+"th{display:table-cell;font-weight:bold;padding:1px;text-align:center;background-color:inherit}"
 "thead{display:table-header-group}"
 "tr{display:table-row}"
 "ul{display:block;list-style-type:disc;margin:1em 0;padding:0 0 0 30pt}"
@@ -1953,7 +1953,7 @@ fz_debug_html_flow(fz_context *ctx, fz_output* out, fz_html_flow *flow, int leve
 		}
 		// fz_write_printf(ctx, out, " y=%g x=%g w=%g", flow->y, flow->x, flow->w);
 		if (flow->type == FLOW_IMAGE)
-			fz_write_printf(ctx, out, " h=%g", flow->h);
+			fz_write_printf(ctx, out, " w=%g h=%g", flow->w, flow->h);
 		if (flow->type == FLOW_WORD)
 			fz_write_printf(ctx, out, " text='%s'", flow->content.text);
 		fz_write_printf(ctx, out, "\n");
@@ -2087,8 +2087,8 @@ fz_debug_html_box(fz_context *ctx, fz_output *out, fz_html_box *box, int level)
 #ifndef NDEBUG
 		fz_write_printf(ctx, out, " <%s>", box->tag);
 #endif
-		// fz_write_printf(ctx, out, " em=%g", box->em);
-		// fz_write_printf(ctx, out, " x=%g y=%g w=%g b=%g", box->x, box->y, box->w, box->b);
+		fz_write_printf(ctx, out, " em=%g", box->s.layout.em);
+		fz_write_printf(ctx, out, " x=%g y=%g w=%g b=%g", box->s.layout.x, box->s.layout.y, box->s.layout.w, box->s.layout.b);
 		if (box->structure != FZ_HTML_STRUCT_UNKNOWN)
 			fz_write_printf(ctx, out, " struct=(%s)", fz_html_structure_to_string(box->structure));
 
@@ -2102,13 +2102,18 @@ fz_debug_html_box(fz_context *ctx, fz_output *out, fz_html_box *box, int level)
 			fz_write_printf(ctx, out, " href=(%s)", box->href);
 		fz_write_printf(ctx, out, "\n");
 
+#ifndef NDEBUG
+		if (fz_atoi(getenv("FZ_DEBUG_HTML_STYLE")))
+			fz_debug_css_style(ctx, box->style);
+#endif
+
 		if (box->type == BOX_BLOCK || box->type == BOX_TABLE) {
 			indent(level+1);
 			fz_write_printf(ctx, out, ">margin=(%g %g %g %g)\n", box->u.block.margin[0], box->u.block.margin[1], box->u.block.margin[2], box->u.block.margin[3]);
-			//indent(level+1);
-			//fz_write_printf(ctx, out, ">padding=(%g %g %g %g)\n", box->u.block.padding[0], box->u.block.padding[1], box->u.block.padding[2], box->u.block.padding[3]);
-			//indent(level+1);
-			//fz_write_printf(ctx, out, ">border=(%g %g %g %g)\n", box->u.block.border[0], box->u.block.border[1], box->u.block.border[2], box->u.block.border[3]);
+			indent(level+1);
+			fz_write_printf(ctx, out, ">padding=(%g %g %g %g)\n", box->u.block.padding[0], box->u.block.padding[1], box->u.block.padding[2], box->u.block.padding[3]);
+			indent(level+1);
+			fz_write_printf(ctx, out, ">border=(%g %g %g %g)\n", box->u.block.border[0], box->u.block.border[1], box->u.block.border[2], box->u.block.border[3]);
 		}
 
 		if (box->down)

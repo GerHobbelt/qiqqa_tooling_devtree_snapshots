@@ -4,6 +4,8 @@
 
 .. default-domain:: js
 
+.. include:: html_tags.rst
+
 .. _mutool_object_document:
 
 
@@ -16,16 +18,14 @@
 :title:`MuPDF` can open many document types (:title:`PDF`, :title:`XPS`, :title:`CBZ`, :title:`EPUB`, :title:`FB2` and a handful of image formats).
 
 
-
-
-.. method:: new Document(fileName)
+.. method:: new Document.openDocument(fileName, fileType)
 
     *Constructor method*.
 
     Open the named document.
 
-    :arg fileName: Filename to open.
-
+    :arg fileName: File name to open.
+    :arg fileType: File type.
 
     :return: `Document`.
 
@@ -34,15 +34,24 @@
 
     .. code-block:: javascript
 
-        var document = new Document("my_pdf.pdf");
+        var document = new mupdf.Document.openDocument("my_pdf.pdf", "application/pdf");
 
 
+----
+
+**Instance methods**
 
 .. method:: needsPassword()
 
-    Returns *true* if a password is required to open this password protected PDF.
+    Returns *true* if a password is required to open a password protected PDF.
 
     :return: `Boolean`.
+
+    **Example**
+
+    .. code-block:: javascript
+
+        var needsPassword = document.needsPassword();
 
 
 .. method:: authenticatePassword(password)
@@ -52,13 +61,25 @@
     :arg password: The password to attempt authentication with.
     :return: `Boolean`.
 
+    **Example**
+
+    .. code-block:: javascript
+
+        var auth = document.authenticatePassword("abracadabra");
+
 
 .. method:: hasPermission(permission)
 
-    Returns *true* if the document has permission for "print", "annotate", "edit" or "copy".
+    Returns *true* if the document has permission for "print", "annotate", "edit", "copy", "form", "accessbility", "assemble" or "print-hq".
 
     :arg permission: `String` The permission to seek for, e.g. "edit".
     :return: `Boolean`.
+
+    **Example**
+
+    .. code-block:: javascript
+
+        var canEdit = document.hasPermission("edit");
 
 
 .. method:: getMetaData(key)
@@ -68,6 +89,12 @@
     :arg key: `String`.
     :return: `String`.
 
+    **Example**
+
+    .. code-block:: javascript
+
+        var metaData = document.getMetaData("format");
+
 
 .. method:: setMetaData(key, value)
 
@@ -76,11 +103,28 @@
     :arg key: `String`.
     :arg value: `String`.
 
+    **Example**
+
+    .. code-block:: javascript
+
+        document.setMetaData("info:Author", "My Name");
+
+
 .. method:: isReflowable()
 
     Returns true if the document is reflowable, such as :title:`EPUB`, :title:`FB2` or :title:`XHTML`.
 
     :return: `Boolean`.
+
+    **Example**
+
+    .. code-block:: javascript
+
+        var isReflowable = document.isReflowable();
+
+    .. note::
+
+        This will always return `false` in the :title:`WASM` context as there is no :title:`HTML`/:title:`EPUB` support in :title:`WASM`.
 
 
 .. method:: layout(pageWidth, pageHeight, fontSize)
@@ -91,17 +135,37 @@
     :arg pageHeight: `Int`.
     :arg fontSize: `Int`.
 
+    **Example**
+
+    .. code-block:: javascript
+
+        document.layout(300,300,16);
+
+
 .. method:: countPages()
 
     Count the number of pages in the document. This may change if you call the layout function with different parameters.
 
     :return: `Int`.
 
+    **Example**
+
+    .. code-block:: javascript
+
+        var numPages = document.countPages();
+
+
 .. method:: loadPage(number)
 
-    Returns a `Page` (or `PDFPage`) object for the given page number. Page number zero (0) is the first page in the document.
+    Returns a `Page`_ (or `PDFPage`_) object for the given page number. Page number zero (0) is the first page in the document.
 
     :return: `Page` or `PDFPage`.
+
+    **Example**
+
+    .. code-block:: javascript
+
+        var page = document.loadPage(0); // loads the 1st page of the document
 
 .. method:: loadOutline()
 
@@ -110,12 +174,26 @@
     :return: `[]`.
 
 
+    **Example**
+
+    .. code-block:: javascript
+
+        var outline = document.loadOutline();
+
 
 .. method:: outlineIterator()
+
+    |mutool_tag|
 
     Returns an :ref:`OutlineIterator<mutool_object_outline_iterator>` for the document outline.
 
     :return: `OutlineIterator`.
+
+    **Example**
+
+    .. code-block:: javascript
+
+        var obj = document.outlineIterator();
 
 
 .. _mutool_run_js_api_document_resolveLink:
@@ -128,13 +206,12 @@
     :arg uri: `String`.
     :return: :ref:`Link destination<mutool_run_js_api_link_dest>`.
 
+    **Example**
 
-.. method:: formatLinkURI(linkDestination)
+    .. code-block:: javascript
 
-    Format a document internal link destination object to a :title:`URI` string suitable for :ref:`createLink()<mutool_run_js_api_page_create_link>`.
+        var linkDestination = document.resolveLink(my_link);
 
-    :arg linkDestination: :ref:`Link destination<mutool_run_js_api_link_dest>`.
-    :return: `String`.
 
 
 .. method:: isPDF()
@@ -142,3 +219,28 @@
     Returns *true* if the document is a :title:`PDF` document.
 
     :return: `Boolean`.
+
+    **Example**
+
+    .. code-block:: javascript
+
+        var isPDF = document.isPDF();
+
+
+.. method:: formatLinkURI(linkDestination)
+
+    |mutool_tag|
+
+    Format a document internal link destination object to a :title:`URI` string suitable for :ref:`createLink()<mutool_run_js_api_page_create_link>`.
+
+    :arg linkDestination: :ref:`Link destination<mutool_run_js_api_link_dest>`.
+    :return: `String`.
+
+
+    **Example**
+
+    .. code-block:: javascript
+
+        var str = document.formatLinkURI(linkDestination);
+
+

@@ -18,50 +18,14 @@
     <Filter Include="Header Files\include\eternal_timestamp">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0001}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\src">
+    <Filter Include="Misc Files\tool">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0003}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\src">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\tool">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\src">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0009}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\tool">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0010}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="../../thirdparty/owemdjee/vcopy/src/lib1-priv-impl.cpp">
-      <Filter>Source Files\src</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/vcopy/src/lib1-pub-impl.cpp">
-      <Filter>Source Files\src</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/vcopy/test/main.cpp">
-      <Filter>Source Files\test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/vcopy/test/monolithic-main.c">
-      <Filter>Source Files\test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/vcopy/test/test.c">
-      <Filter>Source Files\test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/vcopy/test/testpp.cpp">
-      <Filter>Source Files\test</Filter>
-    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/vcopy/tool/main.cpp">
       <Filter>Source Files\tool</Filter>
     </ClCompile>
@@ -74,12 +38,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/vcopy/include/eternal_timestamp/lib1-pub-header.h">
       <Filter>Header Files\include\eternal_timestamp</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/vcopy/src/lib1-priv-header.h">
-      <Filter>Header Files\src</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/vcopy/test/monolithic_examples.h">
-      <Filter>Header Files\test</Filter>
-    </ClInclude>
     <Text Include="../../thirdparty/owemdjee/vcopy/CMakeLists.txt">
       <Filter>Misc Files</Filter>
     </Text>
@@ -88,12 +46,6 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/vcopy/README.md">
       <Filter>Misc Files</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/vcopy/src/CMakeLists.txt">
-      <Filter>Misc Files\src</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/vcopy/test/CMakeLists.txt">
-      <Filter>Misc Files\test</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/vcopy/tool/CMakeLists.txt">
       <Filter>Misc Files\tool</Filter>

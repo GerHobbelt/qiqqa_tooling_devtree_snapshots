@@ -80,6 +80,20 @@ static int flush(extract_alloc_t *alloc, extract_astring_t *content, span_t *spa
 	return 0;
 }
 
+static rect_t
+extract_image_rect(image_t *image)
+{
+	rect_t rect;
+
+	rect.min.x = image->x;
+	rect.min.y = image->y;
+	/* Check I've got this right for rotated images! */
+	rect.max.x = rect.min.x + image->a + image->c;
+	rect.max.y = rect.min.y + image->b + image->d;
+
+	return rect;
+}
+
 int extract_document_to_json_content(
 		extract_alloc_t   *alloc,
 		document_t        *document,
@@ -120,13 +134,40 @@ int extract_document_to_json_content(
 				case content_span:
 				{
 					int j;
+					int do_flush = 0;
 					span_t *span = (span_t *)cont;
+					rect_t span_bbox;
+
+					if (span->chars_num == 0)
+						continue;
+
 					if (last_span &&
 						(structure != span->structure ||
 						 last_span->flags.font_bold != span->flags.font_bold ||
 						 last_span->flags.font_italic != span->flags.font_italic ||
 						 last_span->flags.wmode != span->flags.wmode ||
 						 strcmp(last_span->font_name, span->font_name)))
+					{
+						do_flush = 1;
+					}
+					span_bbox = extract_rect_empty;
+					for (j = 0; j < span->chars_num; j++)
+					{
+						if (span->chars[j].ucs == (unsigned int)-1)
+							continue;
+						span_bbox = extract_rect_union(span_bbox, span->chars[j].bbox);
+					}
+#if 0 // Enable this to keep lines separate, which aids debugging
+					{
+						double mid_y = (span_bbox.min.y+span_bbox.max.y)/2;
+
+						/* If the midpoint of this spans bbox does not fall within the bbox
+						 * so far, then we're a new line. */
+						if (last_span && (bbox.min.y > mid_y || bbox.max.y < mid_y))
+							do_flush = 1;
+					}
+#endif
+					if (do_flush)
 					{
 						// flush stored text.
 						flush(alloc, content, last_span, structure, &text, &bbox);
@@ -139,11 +180,29 @@ int extract_document_to_json_content(
 							continue;
 						if (extract_astring_catc_unicode(alloc, &text, span->chars[j].ucs, 1, 0, 0, 0))
 							goto end;
-						bbox = extract_rect_union(bbox, span->chars[j].bbox);
 					}
+					bbox = extract_rect_union(bbox, span_bbox);
 					break;
 				}
 				case content_image:
+				{
+					image_t *image = (image_t *)cont;
+					rect_t image_bbox = extract_image_rect(image);
+					// flush stored text.
+					flush(alloc, content, last_span, structure, &text, &bbox);
+					last_span = NULL;
+					if (content->chars_num)
+						if (extract_astring_cat(alloc, content, ",\n"))
+							return -1;
+					if (extract_astring_catf(alloc, content, "{\n\"Bounds\": [ %f, %f, %f, %f ],\n\"Image\": true",
+									image_bbox.min.x, image_bbox.min.y, image_bbox.max.x, image_bbox.max.y))
+						return -1;
+					if (output_structure_path(alloc, content, structure))
+						return -1;
+					if (extract_astring_cat(alloc, content, "\n}"))
+						return -1;
+					break;
+				}
 				case content_table:
 				case content_block:
 				case content_line:

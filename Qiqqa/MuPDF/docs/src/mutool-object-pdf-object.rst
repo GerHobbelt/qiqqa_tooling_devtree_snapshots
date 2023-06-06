@@ -4,6 +4,8 @@
 
 .. default-domain:: js
 
+.. include:: html_tags.rst
+
 .. _mutool_object_pdf_object:
 
 
@@ -65,6 +67,14 @@ All functions that take `PDFObjects`, do automatic translation between :title:`J
     If the object is an indirect reference, return the object it points to; otherwise return the object itself.
 
     :return: Object.
+
+
+.. method:: compare(other)
+
+    Compare the object to another one. Returns 0 on match, non-zero on mismatch. Streams always mismatch.
+
+    :arg other: `PDFObject`.
+    :return: `Integer`.
 
 .. method:: isArray()
 

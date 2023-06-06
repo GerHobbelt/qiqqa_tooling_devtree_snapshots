@@ -17,8 +17,8 @@
 //
 // Alternative licensing terms are available from the licensor.
 // For commercial licensing, see <https://www.artifex.com/> or contact
-// Artifex Software, Inc., 1305 Grant Avenue - Suite 200, Novato,
-// CA 94945, U.S.A., +1(415)492-9861, for further information.
+// Artifex Software, Inc., 39 Mesa Street, Suite 108A, San Francisco,
+// CA 94129, USA, for further information.
 
 #ifndef SOURCE_HTML_IMP_H
 #define SOURCE_HTML_IMP_H
@@ -542,6 +542,7 @@ void fz_parse_css(fz_context *ctx, fz_css *css, const char *source, const char *
 fz_css_property *fz_parse_css_properties(fz_context *ctx, fz_pool *pool, const char *source);
 void fz_drop_css(fz_context *ctx, fz_css *css);
 void fz_debug_css(fz_context *ctx, fz_output *out, fz_css *css);
+void fz_debug_css_style(fz_context *ctx, const fz_css_style *style);
 const char *fz_css_property_name(int name);
 
 void fz_match_css(fz_context *ctx, fz_css_match *match, fz_css_match *up, fz_css *css, fz_xml *node);

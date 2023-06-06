@@ -17,8 +17,8 @@
 //
 // Alternative licensing terms are available from the licensor.
 // For commercial licensing, see <https://www.artifex.com/> or contact
-// Artifex Software, Inc., 1305 Grant Avenue - Suite 200, Novato,
-// CA 94945, U.S.A., +1(415)492-9861, for further information.
+// Artifex Software, Inc., 39 Mesa Street, Suite 108A, San Francisco,
+// CA 94129, USA, for further information.
 
 #include "mupdf/fitz.h"
 #include "mupdf/pdf.h"
@@ -1406,11 +1406,13 @@ pdf_delete_page(fz_context *ctx, pdf_document *doc, int at)
 
 		/* Adjust page labels */
 		pdf_adjust_page_labels(ctx, doc, at, -1);
-	}
-	fz_always(ctx)
 		pdf_end_operation(ctx, doc);
+	}
 	fz_catch(ctx)
+	{
+		pdf_abandon_operation(ctx, doc);
 		fz_rethrow(ctx);
+	}
 }
 
 void
@@ -1458,13 +1460,11 @@ pdf_add_page(fz_context *ctx, pdf_document *doc, fz_rect mediabox, int rotate, p
 		if (contents && contents->len > 0)
 			pdf_dict_put_drop(ctx, page_obj, PDF_NAME(Contents), pdf_add_stream(ctx, doc, contents, NULL, 0));
 		page_ref = pdf_add_object_drop(ctx, doc, page_obj);
-	}
-	fz_always(ctx)
-	{
 		pdf_end_operation(ctx, doc);
 	}
 	fz_catch(ctx)
 	{
+		pdf_abandon_operation(ctx, doc);
 		pdf_drop_obj(ctx, page_obj);
 		fz_rethrow(ctx);
 	}
@@ -1527,11 +1527,13 @@ pdf_insert_page(fz_context *ctx, pdf_document *doc, int at, pdf_obj *page_ref)
 
 		/* Adjust page labels */
 		pdf_adjust_page_labels(ctx, doc, at, 1);
-	}
-	fz_always(ctx)
 		pdf_end_operation(ctx, doc);
+	}
 	fz_catch(ctx)
+	{
+		pdf_abandon_operation(ctx, doc);
 		fz_rethrow(ctx);
+	}
 }
 
 /*
@@ -1780,11 +1782,13 @@ pdf_set_page_labels(fz_context *ctx, pdf_document *doc,
 				pdf_create_page_label(ctx, doc, style, prefix, start),
 				range.nums_ix + 3);
 		}
-	}
-	fz_always(ctx)
 		pdf_end_operation(ctx, doc);
+	}
 	fz_catch(ctx)
+	{
+		pdf_abandon_operation(ctx, doc);
 		fz_rethrow(ctx);
+	}
 }
 
 void
@@ -1812,11 +1816,13 @@ pdf_delete_page_labels(fz_context *ctx, pdf_document *doc, int index)
 			pdf_array_delete(ctx, range.nums, range.nums_ix);
 			pdf_array_delete(ctx, range.nums, range.nums_ix);
 		}
-	}
-	fz_always(ctx)
 		pdf_end_operation(ctx, doc);
+	}
 	fz_catch(ctx)
+	{
+		pdf_abandon_operation(ctx, doc);
 		fz_rethrow(ctx);
+	}
 }
 
 static const char *roman_uc[3][10] = {

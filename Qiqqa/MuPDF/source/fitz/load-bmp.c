@@ -17,8 +17,8 @@
 //
 // Alternative licensing terms are available from the licensor.
 // For commercial licensing, see <https://www.artifex.com/> or contact
-// Artifex Software, Inc., 1305 Grant Avenue - Suite 200, Novato,
-// CA 94945, U.S.A., +1(415)492-9861, for further information.
+// Artifex Software, Inc., 39 Mesa Street, Suite 108A, San Francisco,
+// CA 94129, USA, for further information.
 
 #include "mupdf/fitz.h"
 
@@ -1108,15 +1108,15 @@ bmp_read_image(fz_context *ctx, struct info *info, const unsigned char *begin, c
 
 	p = bmp_read_info_header(ctx, info, begin, end, p);
 
+	/* clamp bitmap offset to buffer size */
+	if ((uint32_t)(end - begin) < info->bitmapoffset)
+		info->bitmapoffset = end - begin;
+
 	if (has_palette(info))
 		p = bmp_read_palette(ctx, info, begin, end, p);
 
 	if (has_color_masks(info))
 		p = bmp_read_color_masks(ctx, info, begin, end, p);
-
-	/* clamp bitmap offset to buffer size */
-	if ((uint32_t)(end - begin) < info->bitmapoffset)
-		info->bitmapoffset = end - begin;
 
 	info->xres = DPM_TO_DPI(info->xres);
 	info->yres = DPM_TO_DPI(info->yres);
@@ -1212,14 +1212,14 @@ bmp_read_image(fz_context *ctx, struct info *info, const unsigned char *begin, c
 }
 
 fz_pixmap *
-fz_load_bmp(fz_context *ctx, const unsigned char *p, size_t total)
+fz_load_bmp(fz_context *ctx, const unsigned char *buf, size_t len)
 {
 	struct info info;
 	fz_pixmap *image;
 
 	fz_try(ctx)
 	{
-		image = (fz_pixmap *) bmp_read_image(ctx, &info, p, p + total, p, 0);
+		image = (fz_pixmap *) bmp_read_image(ctx, &info, buf, buf + len, buf, 0);
 		image->xres = info.xres;
 		image->yres = info.yres;
 	}
@@ -1232,13 +1232,68 @@ fz_load_bmp(fz_context *ctx, const unsigned char *p, size_t total)
 }
 
 void
-fz_load_bmp_info(fz_context *ctx, const unsigned char *p, size_t total, int *wp, int *hp, int *xresp, int *yresp, fz_colorspace **cspacep, uint8_t *orientationp)
+fz_load_bmp_info(fz_context *ctx, const unsigned char *buf, size_t len, int *wp, int *hp, int *xresp, int *yresp, fz_colorspace **cspacep, uint8_t *orientationp)
 {
 	struct info info;
 
 	fz_try(ctx)
 	{
-		bmp_read_image(ctx, &info, p, p + total, p, 1);
+		bmp_read_image(ctx, &info, buf, buf + len, buf, 1);
+		*cspacep = fz_keep_colorspace(ctx, info.cs);
+		*orientationp = 1;
+		*wp = info.width;
+		*hp = info.height;
+		*xresp = info.xres;
+		*yresp = info.yres;
+	}
+	fz_always(ctx)
+		fz_drop_colorspace(ctx, info.cs);
+	fz_catch(ctx)
+		fz_rethrow(ctx);
+}
+
+void
+fz_load_bmp_info_subimage(fz_context *ctx, const unsigned char *buf, size_t len, int *wp, int *hp, int *xresp, int *yresp, fz_colorspace **cspacep, uint8_t *orientationp, int subimage)
+{
+	const unsigned char *begin = buf;
+	const unsigned char *end = buf + len;
+	const unsigned char *p = begin;
+	struct info info;
+	int nextoffset = 0;
+	int origidx = subimage;
+
+	do
+	{
+		p = begin + nextoffset;
+
+		if (is_bitmap_array(p))
+		{
+			/* read16(p+0) == type */
+			/* read32(p+2) == size of this header in bytes */
+			nextoffset = read32(p + 6);
+			/* read16(p+10) == suitable pelx dimensions */
+			/* read16(p+12) == suitable pely dimensions */
+			p += 14;
+		}
+		else if (nextoffset > 0)
+			fz_throw(ctx, FZ_ERROR_GENERIC, "unexpected bitmap array magic (%02x%02x) in bmp image", p[0], p[1]);
+
+		if (end - begin < nextoffset)
+		{
+			fz_warn(ctx, "treating invalid next subimage offset as end of file");
+			nextoffset = 0;
+		}
+
+		subimage--;
+
+	} while (subimage >= 0 && nextoffset > 0);
+
+	if (subimage != -1)
+		fz_throw(ctx, FZ_ERROR_GENERIC, "subimage index (%d) out of range in bmp image", origidx);
+
+	fz_try(ctx)
+	{
+		bmp_read_image(ctx, &info, begin, end, p, 1);
 		*cspacep = fz_keep_colorspace(ctx, info.cs);
 		*orientationp = 1;
 		*wp = info.width;
@@ -1331,8 +1386,8 @@ fz_load_bmp_subimage_count(fz_context *ctx, const unsigned char *buf, size_t len
 			fz_warn(ctx, "treating invalid next subimage offset as end of file");
 			nextoffset = 0;
 		}
-
-		count++;
+		else
+			count++;
 
 	} while (nextoffset > 0);
 

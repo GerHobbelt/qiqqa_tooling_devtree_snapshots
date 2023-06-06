@@ -4,6 +4,8 @@
 
 .. default-domain:: js
 
+.. include:: html_tags.rst
+
 .. _mutool_object_pdf_document:
 
 
@@ -48,6 +50,11 @@ With :title:`MuPDF` it is also possible to create, edit and manipulate :title:`P
         var pdfDocument = new PDFDocument("my-file.pdf");
 
 
+.. method:: getVersion()
+
+    Returns the :title:`PDF` document version as an integer multiplied by 10, so e.g. a PDF-1.4 document would return 14.
+
+    :return: `Integer`.
 
 
 .. method:: save(fileName, options)
@@ -101,6 +108,39 @@ With :title:`MuPDF` it is also possible to create, edit and manipulate :title:`P
 
     :return: `Boolean`.
 
+.. method:: setPageLabels(index, style, prefix, start)
+
+    Sets the page label numbering for the page and all pages following it, until the next page with an attached label.
+
+    :arg index: `Integer`.
+    :arg style: `String` Can be one of the following strings: `""`, `"D"`, `"R"`, `"r"`, `"A"`, or `"a"`.
+    :arg prefix: `String`.
+    :arg start: `Integer` The ordinal with which to start numbering.
+
+
+.. method:: deletePageLabels(index)
+
+    Removes any associated page label from the page.
+
+    :arg index: `Integer`.
+
+
+.. method:: setPageLabels(index, style, prefix, start)
+
+    Sets the page label numbering for the page and all pages following it, until the next page with an attached label.
+
+    :arg index: `Integer`.
+    :arg style: `String` Can be one of the following strings: "", "D", "R", "r", "A", or "a".
+    :arg prefix: `String`.
+    :arg start: `Integer` The ordinal with which to start numbering.
+
+
+.. method:: deletePageLabels(index)
+
+    Removes any associated page label from the page.
+
+    :arg index: `Integer`.
+
 
 .. method:: getTrailer()
 
@@ -126,6 +166,10 @@ With :title:`MuPDF` it is also possible to create, edit and manipulate :title:`P
     Delete the object referred to by the indirect reference.
 
     :arg obj: The object to delete.
+
+.. method:: formatRemoteLinkURI(linkDestination, file, name, isURL)
+
+    Format a remote link destination object to an :title:`URI` string suitable for :ref:`createLink()<mutool_run_js_api_page_create_link>`.
 
 ----
 

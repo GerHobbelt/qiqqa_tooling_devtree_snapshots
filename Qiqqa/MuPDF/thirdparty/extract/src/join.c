@@ -237,28 +237,43 @@ make_lines(
 
 			{
 				span_t *span_b = extract_line_span_first(line_b);
-				char_t *last_a = extract_span_char_last(span_a);
-				/* Predict the end of span_a. */
-				point_t dir = { last_a->adv * (1 - span_a->flags.wmode), last_a->adv * span_a->flags.wmode };
-				point_t tdir = extract_matrix4_transform_point(span_a->ctm, dir);
-				point_t span_a_end = { last_a->x + tdir.x, last_a->y + tdir.y };
-				/* Find the difference between the end of span_a and the start of span_b. */
-				char_t *first_b = span_char_first(span_b);
-				point_t diff = { first_b->x - span_a_end.x, first_b->y - span_a_end.y };
-				double scale_squared = ((span_a->flags.wmode) ?
-										(span_a->ctm.c * span_a->ctm.c + span_a->ctm.d * span_a->ctm.d) :
-										(span_a->ctm.a * span_a->ctm.a + span_a->ctm.b * span_a->ctm.b));
-				/* Now find the differences in position, both colinear and perpendicular. */
-				double colinear = (diff.x * tdir.x + diff.y * tdir.y) / last_a->adv / scale_squared;
-				double perp     = (diff.x * tdir.y - diff.y * tdir.x) / last_a->adv / scale_squared;
+				char_t *last_a = extract_span_char_last_adv(span_a);
+				point_t dir;
+				point_t tdir;
+				point_t span_a_end;
+				char_t *first_b;
+				point_t diff;
+				double scale_squared, colinear, perp, score, space_guess;
+				static int rjw = 0;
+
+				if (last_a == NULL)
+					continue;
+				/* Predict the end of span_a (after ctm). */
+				dir.x = (1 - span_a->flags.wmode);
+				dir.y = span_a->flags.wmode;
+				tdir = extract_matrix4_transform_point(span_a->ctm, dir);
+				span_a_end.x = last_a->x + tdir.x * last_a->adv;
+				span_a_end.y = last_a->y + tdir.y * last_a->adv;
+				/* Find the difference between the end of span_a and the start of span_b (after ctm). */
+				first_b = span_char_first(span_b);
+				diff.x = first_b->x - span_a_end.x;
+				diff.y = first_b->y - span_a_end.y;
+				/* Transforming by by ctm effectively scales diff. We want to undo that scaling, so
+				 * get a value for the scale. */
+				scale_squared = ((span_a->flags.wmode) ?
+							(span_a->ctm.c * span_a->ctm.c + span_a->ctm.d * span_a->ctm.d) :
+							(span_a->ctm.a * span_a->ctm.a + span_a->ctm.b * span_a->ctm.b));
+				/* Now find the differences in position, both colinear and perpendicular (pre ctm). */
+				/* diff is post ctm, so is tdir. So the cross products are scaled by scaled_squared. */
+				colinear = (diff.x * tdir.x + diff.y * tdir.y) / scale_squared;
+				perp     = (diff.x * tdir.y - diff.y * tdir.x) / scale_squared;
 				/* colinear and perp are now both pre-transform space distances, to match adv etc. */
-				double score;
-				double space_guess = (last_a->adv + first_b->adv)/4;
+				space_guess = (last_a->adv + first_b->adv)/4;
 
 				/* Heuristic: perpendicular distance larger than half of adv rules it out as a match. */
 				/* Ideally we should be using font bbox here, but we don't have that, currently. */
 				/* NOTE: We should match the logic in extract_add_char here! */
-				if (fabs(perp) > 3*space_guess/2 || fabs(colinear) > space_guess * 8)
+				if (fabs(perp) > 3*space_guess/2 || fabs(colinear) > space_guess * 4)
 					 continue;
 
 				/* We now form a score for this match. */
@@ -583,6 +598,13 @@ make_paragraphs(
 					{
 						/* The span is now empty, unlink and free it. */
 						extract_span_free(alloc, &a_span);
+
+						/* If this leaves the line empty, remove the line. */
+						if (line_a->content.base.next == &line_a->content.base)
+						{
+							extract_line_free(alloc, &line_a);
+							a--; /* Keep the index correct. */
+						}
 					}
 				}
 				else if (extract_span_char_last(a_span)->ucs == ' ')

@@ -52,7 +52,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Progress in Development/Considering the Way Forward/Fingerprinting Documents/Fingerprinting - moving forward and away from b0rked SHA1.md",
+                "file": "Technology/Odds 'n' Ends/Filesystems - caveat emptor - and then I thought NTFS was a little nasty.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -115,7 +115,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "stopwords",
+                "query": "LPT",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -161,7 +161,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Progress in Development/Considering the Way Forward/Fingerprinting Documents/Fingerprinting - moving forward and away from b0rked SHA1.md",
+                "file": "Technology/Odds 'n' Ends/Filesystems - caveat emptor - and then I thought NTFS was a little nasty.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -178,7 +178,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Progress in Development/Considering the Way Forward/Fingerprinting Documents/Fingerprinting - moving forward and away from b0rked SHA1.md",
+                "file": "Technology/Odds 'n' Ends/Filesystems - caveat emptor - and then I thought NTFS was a little nasty.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -201,7 +201,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Progress in Development/Considering the Way Forward/Fingerprinting Documents/Fingerprinting - moving forward and away from b0rked SHA1.md"
+                "file": "Technology/Odds 'n' Ends/Filesystems - caveat emptor - and then I thought NTFS was a little nasty.md"
               }
             }
           }
@@ -233,13 +233,14 @@
   },
   "active": "b273b9a128e100a6",
   "lastOpenFiles": [
-    "Technology/Odds 'n' Ends/PDFs in the Wild/Testing - Nasty URLs for PDFs.md",
-    "Progress in Development/Considering the Way Forward/Full Text Search - Exit Lucene.NET, Enter SOLR/trigrams etc - considering the relevant atomic search unit.md",
+    "Progress in Development/Testing & Evaluating/Collected RAW logbook notes - PDF bulktest + mutool_ex PDF + URL tests/notes 017-of-N.md",
+    "Progress in Development/Testing & Evaluating/PDF `bulktest` test run notes at the bleeding edge.md",
     "Progress in Development/Considering the Way Forward/vcopy - a dedicated tool for local and cloud synchronization of Qiqqa libraries.md",
     "Progress in Development/Considering the Way Forward/Fingerprinting Documents/Fingerprinting - moving forward and away from b0rked SHA1.md",
+    "Technology/Odds 'n' Ends/PDFs in the Wild/Testing - Nasty URLs for PDFs.md",
+    "Progress in Development/Considering the Way Forward/Full Text Search - Exit Lucene.NET, Enter SOLR/trigrams etc - considering the relevant atomic search unit.md",
     "Progress in Development/Considering the Way Forward/Full Text Search - Exit Lucene.NET, Enter SOLR/Detecting near-duplicate articles.md",
     "Progress in Development/Considering the Way Forward/Database Design/Storing a wide range of date+time-stamps of arbitrary precision in a 64-bit number.md",
-    "Progress in Development/Testing & Evaluating/Collected RAW logbook notes - PDF bulktest + mutool_ex PDF + URL tests/notes 017-of-N.md",
     "Progress in Development/Testing & Evaluating/Collected RAW logbook notes - PDF bulktest + mutool_ex PDF + URL tests/notes 016-of-N.md",
     "Technology/Odds 'n' Ends/Filesystems - caveat emptor - and then I thought NTFS was a little nasty.md",
     "Technology/Odds 'n' Ends/File copy oddities observed elsewhere - stuff to be reckoned with.md",
@@ -248,7 +249,6 @@
     "Progress in Development/Considering the Way Forward/Document OCR & Text Extraction/Unexpected Hurdles Producing Decent Text And Images From PDF Documents.md",
     "Progress in Development/Considering the Way Forward/Full Text Search - Exit Lucene.NET, Enter SOLR/Why it might be smart to treat 64-bit document id integer as a 63-bit one instead.md",
     "Progress in Development/Considering the Way Forward/Full Text Search - Exit Lucene.NET, Enter SOLR/Can and should we use our BLAKE3+BASE58X based unique identifier as unique document id.md",
-    "Progress in Development/Testing & Evaluating/PDF `bulktest` test run notes at the bleeding edge.md",
     "Progress in Development/Testing & Evaluating/Collected RAW logbook notes - PDF bulktest + mutool_ex PDF + URL tests/notes 015-of-N.md",
     "Progress in Development/Considering the Way Forward/Database Design/Document metadata - flattened table or what.md",
     "Progress in Development/Considering the Way Forward/Specific Tools and Tasks to Research and Produce for Cross-platform Qiqqa.md",

@@ -59,7 +59,6 @@ brotli
 # ceres-solver
 # CHM-lib
 # CImg
-# circlehash
 # citation-abbreviations
 # citation-journals
 # citation-styles

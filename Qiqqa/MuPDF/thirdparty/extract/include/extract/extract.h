@@ -134,8 +134,10 @@ typedef void (extract_image_data_free)(void *handle, void *image_data);
 
 	type
 		E.g. 'png'. Is copied so no need to persist after we return.
-	x y w h
-		Location and size of image.
+	a b c d x y
+		Matrix and Location of image.
+	w h
+		Size of image.
 	data data_size
 		The raw image data.
 	data_free
@@ -146,6 +148,10 @@ typedef void (extract_image_data_free)(void *handle, void *image_data);
 int extract_add_image(
 		extract_t               *extract,
 		const char              *type,
+		double                   a,
+		double                   b,
+		double                   c,
+		double                   d,
 		double                   x,
 		double                   y,
 		double                   w,
@@ -329,7 +335,18 @@ typedef enum
 	extract_struct_FORM,
 
 	/* Artifact structure type (PDF 2.0 - Table 375) */
-	extract_struct_ARTIFACT
+	extract_struct_ARTIFACT,
+
+	/* Extra ones from ML categories. */
+	extract_struct_ABSTRACT,
+	extract_struct_EQUATION,
+	extract_struct_AUTHOR,
+	extract_struct_DATE,
+	extract_struct_COLUMN,
+	extract_struct_ROW,
+	extract_struct_COLUMN_HEADER,
+	extract_struct_PROJECTED_ROW_HEADER,
+	extract_struct_SPANNING_CELL
 } extract_struct_t;
 
 int extract_begin_struct(extract_t *extract, extract_struct_t type, int uid, int score);
@@ -400,6 +417,16 @@ void extract_end(extract_t **pextract);
 
 /* Enables/Disables the layout analysis phase. */
 int extract_set_layout_analysis(extract_t *extract, int enable);
+
+typedef enum
+{
+	EXTRACT_CLASSIFY_UNKNOWN = 0,
+	EXTRACT_CLASSIFY_TEXT,
+	EXTRACT_CLASSIFY_TITLE,
+	EXTRACT_CLASSIFY_LIST,
+	EXTRACT_CLASSIFY_TABLE,
+	EXTRACT_CLASSIFY_FIGURE
+} extract_classification_t;
 
 void extract_classify_region(
 		extract_t *extract,
