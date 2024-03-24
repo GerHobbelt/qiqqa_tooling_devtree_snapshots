@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['fcoord_8479',['FCOORD',['../a02866.html',1,'']]],
+  ['feature_5fdefs_5fstruct_8480',['FEATURE_DEFS_STRUCT',['../a03218.html',1,'']]],
+  ['feature_5fdesc_5fstruct_8481',['FEATURE_DESC_STRUCT',['../a03318.html',1,'']]],
+  ['feature_5fset_5fstruct_8482',['FEATURE_SET_STRUCT',['../a03326.html',1,'']]],
+  ['feature_5fstruct_8483',['FEATURE_STRUCT',['../a03322.html',1,'']]],
+  ['ffunc_8484',['FFunc',['../a03442.html',1,'tesseract']]],
+  ['file_8485',['file',['../a04138.html',1,'file'],['../a03850.html',1,'tesseract::File']]],
+  ['fill_5fspec_8486',['FILL_SPEC',['../a03258.html',1,'']]],
+  ['fill_5fswitch_8487',['FILL_SWITCH',['../a03250.html',1,'']]],
+  ['floatunion_8488',['FLOATUNION',['../a03198.html',1,'']]],
+  ['floatvec_8489',['FloatVec',['../a03530.html',1,'tesseract::NetworkScratch']]],
+  ['floatwordfeature_8490',['FloatWordFeature',['../a02762.html',1,'tesseract']]],
+  ['fontinfo_8491',['FontInfo',['../a02746.html',1,'tesseract']]],
+  ['fontinfotable_8492',['FontInfoTable',['../a02754.html',1,'tesseract']]],
+  ['fontset_8493',['FontSet',['../a02750.html',1,'tesseract']]],
+  ['fontspacinginfo_8494',['FontSpacingInfo',['../a02742.html',1,'tesseract']]],
+  ['fontutils_8495',['FontUtils',['../a03906.html',1,'tesseract']]],
+  ['fpcutpt_8496',['FPCUTPT',['../a03746.html',1,'']]],
+  ['fpoint_8497',['FPOINT',['../a03222.html',1,'']]],
+  ['fprime_8498',['FPrime',['../a03446.html',1,'tesseract']]],
+  ['fpsegpt_8499',['FPSEGPT',['../a03750.html',1,'']]],
+  ['fragment_8500',['FRAGMENT',['../a04054.html',1,'tesseract']]],
+  ['frect_8501',['FRECT',['../a03894.html',1,'']]],
+  ['fullyconnected_8502',['FullyConnected',['../a03438.html',1,'tesseract']]]
+];

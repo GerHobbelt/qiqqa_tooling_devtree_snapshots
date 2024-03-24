@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['dangerr_5finfo_8446',['DANGERR_INFO',['../a03422.html',1,'']]],
+  ['dawg_8447',['Dawg',['../a03382.html',1,'tesseract']]],
+  ['dawgargs_8448',['DawgArgs',['../a03410.html',1,'tesseract']]],
+  ['dawgcache_8449',['DawgCache',['../a03402.html',1,'tesseract']]],
+  ['dawgloader_8450',['DawgLoader',['../a03398.html',1,'tesseract']]],
+  ['dawgposition_8451',['DawgPosition',['../a03386.html',1,'tesseract']]],
+  ['dawgpositionvector_8452',['DawgPositionVector',['../a03390.html',1,'tesseract']]],
+  ['debugpixa_8453',['DebugPixa',['../a02718.html',1,'tesseract']]],
+  ['denorm_8454',['DENORM',['../a02798.html',1,'']]],
+  ['detlinefit_8455',['DetLineFit',['../a02722.html',1,'tesseract']]],
+  ['dict_8456',['Dict',['../a03414.html',1,'tesseract']]],
+  ['dir128_8457',['DIR128',['../a02794.html',1,'']]],
+  ['documentcache_8458',['DocumentCache',['../a02774.html',1,'tesseract']]],
+  ['documentdata_8459',['DocumentData',['../a02770.html',1,'tesseract']]],
+  ['doubleparam_8460',['DoubleParam',['../a03070.html',1,'tesseract']]],
+  ['doubleptr_8461',['DoublePtr',['../a02966.html',1,'tesseract']]],
+  ['dppoint_8462',['DPPoint',['../a02730.html',1,'tesseract']]]
+];
