@@ -77,6 +77,7 @@ option(WITH_GZFILEOP "Compile with support for gzFile related functions" ON)
 option(ZLIB_COMPAT "Compile with zlib compatible API" OFF)
 option(ZLIB_ENABLE_TESTS "Build test binaries" ON)
 option(ZLIBNG_ENABLE_TESTS "Test zlib-ng specific API" ON)
+option(WITH_GTEST "Build gtest_zlib" ON)
 option(WITH_FUZZERS "Build test/fuzz" OFF)
 option(WITH_BENCHMARKS "Build test/benchmarks" OFF)
 option(WITH_BENCHMARK_APPS "Build application benchmarks" OFF)
@@ -111,7 +112,6 @@ elseif(BASEARCH_S360_FOUND)
     option(WITH_DFLTCC_INFLATE "Build with DFLTCC intrinsics for decompression on IBM Z" OFF)
     option(WITH_CRC32_VX "Build with vectorized CRC32 on IBM Z" ON)
 elseif(BASEARCH_X86_FOUND)
-    option(FORCE_TZCNT "Always assume CPU is TZCNT capable" OFF)
     option(WITH_AVX2 "Build with AVX2" ON)
     option(WITH_AVX512 "Build with AVX512" ON)
     option(WITH_AVX512VNNI "Build with AVX512 VNNI extensions" ON)
@@ -199,7 +199,7 @@ elseif(MSVC)
 elseif(CMAKE_C_COMPILER_ID MATCHES "GNU" OR CMAKE_C_COMPILER_ID MATCHES "Clang")
     # Enable warnings in GCC and Clang
     set(WARNFLAGS -Wall)
-    set(WARNFLAGS_MAINTAINER -Wextra -Wpedantic)
+    set(WARNFLAGS_MAINTAINER -Wextra)
     set(WARNFLAGS_DISABLE)
     if(WITH_NATIVE_INSTRUCTIONS)
         if(BASEARCH_PPC_FOUND)
@@ -818,10 +818,6 @@ if(WITH_OPTIM)
                 set(WITH_SSE4 OFF)
             endif()
         endif()
-        if(FORCE_TZCNT)
-            add_definitions(-DX86_NOCHECK_TZCNT)
-        endif()
-        add_feature_info(FORCE_TZCNT FORCE_TZCNT "Assume CPU is TZCNT capable")
         if(WITH_SSE2)
             check_sse2_intrinsics()
             if(HAVE_SSE2_INTRIN)
@@ -881,6 +877,11 @@ if(WITH_OPTIM)
         else()
             set(WITH_PCLMULQDQ OFF)
             set(WITH_VPCLMULQDQ OFF)
+        endif()
+        check_xsave_intrinsics()
+        if(HAVE_XSAVE_INTRIN)
+            add_feature_info(XSAVE 1 "Support XSAVE intrinsics using \"${XSAVEFLAG}\"")
+            set_property(SOURCE ${ARCHDIR}/x86_features.c PROPERTY COMPILE_FLAGS "${XSAVEFLAG}")
         endif()
     endif()
 endif()
@@ -961,7 +962,7 @@ set(ZLIB_PRIVATE_HDRS
     deflate.h
     deflate_p.h
     functable.h
-    inffast.h
+    inffast_tpl.h
     inffixed_tbl.h
     inflate.h
     inflate_p.h
@@ -995,7 +996,6 @@ set(ZLIB_SRCS
     deflate_stored.c
     functable.c
     infback.c
-    inffast.c
     inflate.c
     inftrees.c
     insert_string.c
@@ -1179,6 +1179,19 @@ option(ZLIB_ENABLE_TESTS "Build test binaries" ON)
 if(ZLIB_ENABLE_TESTS)
     enable_testing()
 
+    if(BUILD_SHARED_LIBS)
+        if(ZLIBNG_ENABLE_TESTS)
+            message(STATUS "Disabling zlib-ng tests because shared libraries are enabled")
+            set(ZLIBNG_ENABLE_TESTS OFF)
+        endif()
+
+        if(WITH_BENCHMARKS OR WITH_BENCHMARK_APPS)
+            message(STATUS "Disabling benchmarks because shared libraries are enabled")
+            set(WITH_BENCHMARKS OFF)
+            set(WITH_BENCHMARK_APPS OFF)
+        endif()
+    endif()
+
     add_subdirectory(test)
 endif()
 
@@ -1187,6 +1200,7 @@ add_feature_info(ZLIB_COMPAT ZLIB_COMPAT "Compile with zlib compatible API")
 add_feature_info(ZLIB_ENABLE_TESTS ZLIB_ENABLE_TESTS "Build test binaries")
 add_feature_info(ZLIBNG_ENABLE_TESTS ZLIBNG_ENABLE_TESTS "Test zlib-ng specific API")
 add_feature_info(WITH_SANITIZER WITH_SANITIZER "Enable sanitizer support")
+add_feature_info(WITH_GTEST WITH_GTEST "Build gtest_zlib")
 add_feature_info(WITH_FUZZERS WITH_FUZZERS "Build test/fuzz")
 add_feature_info(WITH_BENCHMARKS WITH_BENCHMARKS "Build test/benchmarks")
 add_feature_info(WITH_BENCHMARK_APPS WITH_BENCHMARK_APPS "Build application benchmarks")

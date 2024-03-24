@@ -23,12 +23,16 @@
  *   http://www.mozilla.org/MPL/                                           *
  ***************************************************************************/
 
-
-#include "tdebug.h"
 #include "modfilebase.h"
 
 using namespace TagLib;
 using namespace Mod;
+
+class Mod::FileBase::FileBasePrivate
+{
+};
+
+Mod::FileBase::~FileBase() = default;
 
 Mod::FileBase::FileBase(FileName file) : TagLib::File(file)
 {

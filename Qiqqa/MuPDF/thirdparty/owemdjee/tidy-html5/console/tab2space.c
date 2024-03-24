@@ -3,6 +3,7 @@
 #include <string.h>
 
 #include "tidyplatform.h"
+#include "monolithic_examples.h"
 
 #define true       1
 #define false      0
@@ -37,7 +38,7 @@ static Bool tabs = false;
  mechanisms up provides for greater flexibility and allows
  out of memory conditions to be detected in one place.
 */
-void *MemAlloc(size_t size)
+static void *MemAlloc(size_t size)
 {
     void *p;
 
@@ -52,7 +53,7 @@ void *MemAlloc(size_t size)
     return p;
 }
 
-void *MemRealloc(void *old, size_t size)
+static void *MemRealloc(void *old, size_t size)
 {
     void *p;
 
@@ -67,7 +68,7 @@ void *MemRealloc(void *old, size_t size)
     return p;
 }
 
-void MemFree(void *p)
+static void MemFree(void *p)
 {
     free(p);
     p = NULL;
@@ -245,7 +246,7 @@ static void WriteFile(Stream *in, FILE *fout)
     }
 }
 
-static void HelpText(FILE *errout, char *prog)
+static void HelpText(FILE *errout, const char *prog)
 {
     fprintf(errout, "%s: [options] [infile [outfile]] ...\n", prog);
     fprintf(errout, "Utility to expand tabs and ensure consistent line endings\n");
@@ -259,10 +260,15 @@ static void HelpText(FILE *errout, char *prog)
     fprintf(errout, "\nNote this utility doesn't map spaces to tabs!\n");
 }
 
-int main(int argc, char **argv)
+
+#if defined(BUILD_MONOLITHIC)
+#define main         tidy_tab2space_main
+#endif
+
+int main(int argc, const char **argv)
 {
     char const *infile, *outfile;
-    char *prog;
+    const char *prog;
     FILE *fin, *fout;
     Stream *in = NULL;
 

@@ -112,6 +112,7 @@ with Tesseract `5.x.x`. These are available from:
 
 - [Tips to Improve Recognition](ImproveQuality.md)
 - [Command Line Usage](Command-Line-Usage.md)
+- [Input Formats](InputFormats.md)
 - [Viewer Debugging](ViewerDebugging.md)
 - [Common Errors and Resolutions](Common-Errors-and-Resolutions.md)
 - [Frequently Asked Questions](FAQ.md)
@@ -145,17 +146,20 @@ have information about LSTM integration in Tesseract 4.0x.
 ### Training for Tesseract 5
 
 Training with `tesstrain.sh` (a.k.a tesseract 4 training) in unsupported/abandoned.
-Please use scripts from https://github.com/tesseract-ocr/tesstrain for training.
+Please use scripts from [tesseract-ocr/tesstrain](https://github.com/tesseract-ocr/tesstrain) for training.
 
 - [Train Tesseract LSTM with make from Single Line Images and Groundtruth Transcription](https://github.com/tesseract-ocr/tesstrain)
     * [Examples of Training using tesstrain Makefile](https://github.com/tesseract-ocr/tesstrain/wiki)
 - [Training LSTM Tesseract 5](tess5/TrainingTesseract-5.md) - based on [detailed Tesseract 4 tutorial and guide by Ray Smith](tess4/TrainingTesseract-4.00.md)
 
 ### Testing
+
+- [Benchmarks](Benchmarks.md)
 - [TestingTesseract](TestingTesseract.md)
 - [UNLV Testing of Tesseract](UNLV-Testing-of-Tesseract.md)
 
 ### External Projects
+
 - [AddOns](AddOns.md)
 - [User Projects - 3rdParty](User-Projects-–-3rdParty.md)
 

@@ -20,6 +20,7 @@
 #define TESSERACT_CCMAIN_THRESHOLDER_H_
 
 #include <tesseract/export.h>
+#include <tesseract/fmt-support.h>
 
 #include <vector> // for std::vector
 
@@ -42,6 +43,8 @@ enum class ThresholdMethod {
   Nlbin,         // NLbin
   Max,           // Number of Thresholding methods
 };
+DECL_FMT_FORMAT_TESSENUMTYPE(ThresholdMethod);
+
 
 static inline const char* ThresholdMethodName(ThresholdMethod method)
 {
@@ -54,13 +57,15 @@ static inline const char* ThresholdMethodName(ThresholdMethod method)
   case ThresholdMethod::Sauvola:
     return "Sauvola (Leptonica)";
   case ThresholdMethod::OtsuOnNormalizedBackground:
-    return "OtsuOnNormalizedBackground";
+    return "Otsu (on Normalized Background)";
   case ThresholdMethod::MaskingAndOtsuOnNormalizedBackground:
-    return "MaskingAndOtsuOnNormalizedBackground";
+    return "Masking.And.Otsu (on Normalized Background)";
   case ThresholdMethod::Nlbin:
-    return "Nlbin";
+    return "NLbin";
+  case ThresholdMethod::Max:
+    return "Threshold::MaxOfList";
   default:
-    return "Unknown::NonOtsu";
+    return "Threshold::Unknown";
   }
 }
 
@@ -92,7 +97,7 @@ public:
   /// byte packed with the MSB of the first byte being the first pixel, and a
   /// one pixel is WHITE. For binary images set bytes_per_pixel=0.
   void SetImage(const unsigned char *imagedata, int width, int height, int bytes_per_pixel,
-                int bytes_per_line, float angle = 0);
+                int bytes_per_line, int exif = 1, const float angle = 0);
 
   /// Store the coordinates of the rectangle to process for later use.
   /// Doesn't actually do any thresholding.
@@ -151,7 +156,7 @@ public:
   /// SetImage for Pix clones its input, so the source pix may be pixDestroyed
   /// immediately after, but may not go away until after the Thresholder has
   /// finished with it.
-  void SetImage(const Image pix, float angle = 0);
+  void SetImage(const Image pix, int exif = 1, const float angle = 0);
 
   /// Threshold the source image as efficiently as possible to the output Pix.
   /// Creates a Pix and sets pix to point to the resulting pointer.

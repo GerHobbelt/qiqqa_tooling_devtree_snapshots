@@ -28,6 +28,8 @@
 
 #include <gumbo.h>
 
+#define FZ_XML_MAX_DEPTH 152
+
 /* #define FZ_XML_SEQ */
 
 static const struct { const char *name; int c; } html_entities[] = {
@@ -145,9 +147,15 @@ static void xml_printf(struct fmtbuf* out, const char* s, ...)
 	va_end(ap);
 }
 
+static void xml_fz_output_emit(fz_context* ctx, void* user, int c)
+{
+	fz_output *out = (fz_output *)user;
+	fz_write_byte(ctx, out, c);
+}
+
 static void xml_print_xml(struct fmtbuf* out, fz_xml *item, int level)
 {
-	const char *s;
+	char *s;
 
 	if (item == NULL)
 		return;
@@ -160,10 +168,10 @@ static void xml_print_xml(struct fmtbuf* out, fz_xml *item, int level)
 	}
 
 	s = fz_xml_text(item);
+	xml_indent(out, level);
 	if (s)
 	{
 		int c;
-		xml_indent(out, level);
 		xml_putc(out, '"');
 		while (*s) {
 			int l = fz_chartorune_unsafe(&c, s);
@@ -200,7 +208,6 @@ static void xml_print_xml(struct fmtbuf* out, fz_xml *item, int level)
 		fz_xml *child;
 		struct attribute *att;
 
-		xml_indent(out, level);
 #ifdef FZ_XML_SEQ
 		xml_printf(out, "(%s <%d>\n", item->u.node.u.d.name, item->u.node.seq);
 #else
@@ -220,6 +227,23 @@ static void xml_print_xml(struct fmtbuf* out, fz_xml *item, int level)
 		xml_printf(out, ")%s\n", item->u.node.u.d.name);
 #endif
 	}
+}
+
+void fz_output_xml(fz_context *ctx, fz_output *stream, fz_xml *item, int level)
+{
+	struct fmtbuf out;
+
+	out.ctx = ctx;
+	out.user = stream;
+	out.emit = xml_fz_output_emit;
+
+	// Note: can't use the fzoutput_lock() critical section for these, as they will
+	// be calling the lower level APIs (buffered I/O) internally, and quite legally so.
+	//
+	// That's why we need two mutexes per `fz_output` instance.
+	//printf_lock(out);
+	xml_print_xml(&out, item, level);
+	//printf_unlock(out);
 }
 
 void fz_debug_xml(fz_context* ctx, void* user, void (*emit)(fz_context* ctx, void* user, int c), fz_xml* item, int level)
@@ -614,6 +638,8 @@ static void xml_emit_open_tag(fz_context *ctx, struct parser *parser, const char
 
 	parser->head = head;
 	parser->depth++;
+	if (parser->depth >= FZ_XML_MAX_DEPTH)
+		fz_throw(ctx, FZ_ERROR_SYNTAX, "too deep xml element nesting");
 }
 
 static void xml_emit_att_name(fz_context *ctx, struct parser *parser, const char *a, const char *b)
@@ -821,6 +847,8 @@ parse_closing_element:
 	p = jump_past_white(p);
 	mark = p;
 	p = jump_past_name(p);
+	if (!isname(mark))
+		return "syntax error in closing element";
 	if (close_tag(ctx, parser, mark, p))
 		return "opening and closing tag mismatch";
 	p = jump_past_white(p);
@@ -891,7 +919,8 @@ parse_attribute_value:
 	return "end of data in attribute value";
 }
 
-static int fast_tolower(int c) {
+static int fast_tolower(int c)
+{
 	if ((unsigned)c - 'A' < 26)
 		return c | 32;
 	return c;
@@ -924,11 +953,82 @@ static int startswith(const char *a, const char *b)
 	return !fast_strncasecmp(a, b, strlen(b));
 }
 
-// Look for encoding in <meta http-equiv="content-type" content="text/html; charset=XXX"> tags
-static const unsigned short *find_meta_encoding(char *s)
+/* https://encoding.spec.whatwg.org/#names-and-labels */
+static struct { char *encoding; char *alias; } encoding_aliases[] = {
+	{ "big5", "big5" },
+	{ "big5", "big5-hkscs" },
+	{ "big5", "cn-big5" },
+	{ "big5", "csbig5" },
+	{ "big5", "x-x-big5" },
+	{ "euc-cn", "euc-cn" },
+	{ "euc-jp", "cseucpkdfmtjapanese" },
+	{ "euc-jp", "euc-jp" },
+	{ "euc-jp", "x-euc-jp" },
+	{ "euc-kr", "cseuckr" },
+	{ "euc-kr", "csksc56011987" },
+	{ "euc-kr", "euc-kr" },
+	{ "euc-kr", "iso-ir-149" },
+	{ "euc-kr", "korean" },
+	{ "euc-kr", "ks_c_5601" },
+	{ "euc-kr", "ksc5601" },
+	{ "euc-kr", "ksc_5601" },
+	{ "euc-kr", "windows-949" },
+	{ "euc-tw", "euc-tw" },
+	{ "gb18030", "chinese" },
+	{ "gb18030", "csgb2312" },
+	{ "gb18030", "csiso58gb231280" },
+	{ "gb18030", "gb18030" },
+	{ "gb18030", "gb2312" },
+	{ "gb18030", "gb_2312" },
+	{ "gb18030", "gbk" },
+	{ "gb18030", "iso-ir-58" },
+	{ "gb18030", "x-gbk" },
+	{ "iso-8859-1", "ascii" },
+	{ "iso-8859-1", "iso-8859-1" },
+	{ "iso-8859-1", "iso8859-1" },
+	{ "iso-8859-1", "latin1" },
+	{ "iso-8859-1", "us-ascii" },
+	{ "iso-8859-7", "greek" },
+	{ "iso-8859-7", "greek8" },
+	{ "iso-8859-7", "iso-8859-1" },
+	{ "iso-8859-7", "iso8859-1" },
+	{ "koi8-r", "koi" },
+	{ "koi8-r", "koi8" },
+	{ "koi8-r", "koi8-r" },
+	{ "koi8-r", "koi8-ru" },
+	{ "koi8-r", "koi8-u" },
+	{ "koi8-r", "koi8_r" },
+	{ "shift_jis", "csshiftjis" },
+	{ "shift_jis", "ms932" },
+	{ "shift_jis", "ms_kanji" },
+	{ "shift_jis", "shift-jis" },
+	{ "shift_jis", "shift_jis" },
+	{ "shift_jis", "sjis" },
+	{ "shift_jis", "windows-31j" },
+	{ "shift_jis", "x-sjis" },
+	{ "windows-1250", "cp1250" },
+	{ "windows-1250", "windows-1250" },
+	{ "windows-1251", "cp1251" },
+	{ "windows-1251", "windows-1251" },
+	{ "windows-1252", "cp1252" },
+	{ "windows-1252", "cp819" },
+	{ "windows-1252", "windows-1252" },
+};
+
+static char *match_encoding_name(char *enc)
 {
-	const unsigned short *table = NULL;
-	char *end, *meta;
+	size_t i;
+	for (i = 0; i < nelem(encoding_aliases); ++i)
+		if (startswith(enc, encoding_aliases[i].alias))
+			return encoding_aliases[i].encoding;
+	return NULL;
+}
+
+// Look for encoding in <meta http-equiv="content-type" content="text/html; charset=XXX"> tags
+static const char *find_meta_encoding(char *s)
+{
+	const char *table = NULL;
+	char *end, *meta, *charset, *enc;
 
 	meta = fast_strcasestr(s, "<meta");
 	while (meta && !table)
@@ -939,22 +1039,12 @@ static const unsigned short *find_meta_encoding(char *s)
 			*end = 0;
 			if (fast_strcasestr(meta, "http-equiv") && fast_strcasestr(meta, "content-type"))
 			{
-				char *charset = fast_strcasestr(meta, "charset=");
+				charset = fast_strcasestr(meta, "charset=");
 				if (charset)
 				{
-					char *enc = charset + 8;
-					if (startswith(enc, "iso-8859-1") || startswith(enc, "latin1"))
-						table = fz_unicode_from_iso8859_1;
-					else if (startswith(enc, "iso-8859-7") || startswith(enc, "greek"))
-						table = fz_unicode_from_iso8859_7;
-					else if (startswith(enc, "koi8"))
-						table = fz_unicode_from_koi8u;
-					else if (startswith(enc, "windows-1250"))
-						table = fz_unicode_from_windows_1250;
-					else if (startswith(enc, "windows-1251"))
-						table = fz_unicode_from_windows_1251;
-					else if (startswith(enc, "windows-1252"))
-						table = fz_unicode_from_windows_1252;
+					enc = match_encoding_name(charset + 8);
+					if (enc)
+						table = enc;
 				}
 			}
 			*end = '>';
@@ -965,9 +1055,9 @@ static const unsigned short *find_meta_encoding(char *s)
 	return table;
 }
 
-static const unsigned short *find_xml_encoding(char *s)
+static const char *find_xml_encoding(char *s)
 {
-	const unsigned short *table = NULL;
+	const char *table = NULL;
 	char *end, *xml, *enc;
 
 	end = strchr(s, '>');
@@ -980,19 +1070,9 @@ static const unsigned short *find_xml_encoding(char *s)
 			enc = strstr(xml, "encoding=");
 			if (enc)
 			{
-				enc += 10;
-				if (startswith(enc, "iso-8859-1") || startswith(enc, "latin1"))
-					table = fz_unicode_from_iso8859_1;
-				else if (startswith(enc, "iso-8859-7") || startswith(enc, "greek"))
-					table = fz_unicode_from_iso8859_7;
-				else if (startswith(enc, "koi8"))
-					table = fz_unicode_from_koi8u;
-				else if (startswith(enc, "windows-1250"))
-					table = fz_unicode_from_windows_1250;
-				else if (startswith(enc, "windows-1251"))
-					table = fz_unicode_from_windows_1251;
-				else if (startswith(enc, "windows-1252"))
-					table = fz_unicode_from_windows_1252;
+				enc = match_encoding_name(enc + 10);
+				if (enc)
+					table = enc;
 			}
 		}
 		*end = '>';
@@ -1006,9 +1086,11 @@ static const unsigned short *find_xml_encoding(char *s)
 
 static char *convert_to_utf8(fz_context *ctx, unsigned char *s, size_t n, int *dofree)
 {
-	const unsigned short *table;
+	fz_text_decoder dec;
+	const char *enc;
 	const unsigned char *e = s + n;
 	char *dst, *d;
+	int m;
 	int c;
 
 	if (s[0] == 0xFE && s[1] == 0xFF) {
@@ -1037,14 +1119,14 @@ static char *convert_to_utf8(fz_context *ctx, unsigned char *s, size_t n, int *d
 		return dst;
 	}
 
-	table = find_xml_encoding((char*)s);
-	if (table) {
-		dst = d = Memento_label(fz_malloc(ctx, n * FZ_UTFMAX), "utf8");
-		while (*s) {
-			c = table[*s++];
-			d += fz_runetochar(d, c);
-		}
-		*d = 0;
+	enc = find_xml_encoding((char*)s);
+	if (enc)
+	{
+		fz_init_text_decoder(ctx, &dec, enc);
+		// NOTE: use decode_size if memory is more important than speed
+		m = dec.decode_bound(&dec, s, n);
+		dst = Memento_label(fz_malloc(ctx, m), "utf8");
+		dec.decode(&dec, dst, s, n);
 		*dofree = 1;
 		return dst;
 	}
@@ -1075,10 +1157,9 @@ fz_parse_xml_stream(fz_context *ctx, fz_stream *stm, int preserve_white)
 	return xml;
 }
 
-fz_xml *
-fz_parse_xml_archive_entry(fz_context *ctx, fz_archive *arch, const char *filename, int preserve_white)
+static fz_xml *
+parse_and_drop_buffer(fz_context *ctx, fz_buffer *buf, int preserve_white)
 {
-	fz_buffer *buf = fz_read_archive_entry(ctx, arch, filename);
 	fz_xml *xml = NULL;
 
 	fz_var(xml);
@@ -1091,6 +1172,25 @@ fz_parse_xml_archive_entry(fz_context *ctx, fz_archive *arch, const char *filena
 		fz_rethrow(ctx);
 
 	return xml;
+}
+
+fz_xml *
+fz_parse_xml_archive_entry(fz_context *ctx, fz_archive *arch, const char *filename, int preserve_white)
+{
+	fz_buffer *buf = fz_read_archive_entry(ctx, arch, filename);
+
+	return parse_and_drop_buffer(ctx, buf, preserve_white);
+}
+
+fz_xml *
+fz_try_parse_xml_archive_entry(fz_context *ctx, fz_archive *arch, const char *filename, int preserve_white)
+{
+	fz_buffer *buf = fz_try_read_archive_entry(ctx, arch, filename);
+
+	if (buf == NULL)
+		return NULL;
+
+	return parse_and_drop_buffer(ctx, buf, preserve_white);
 }
 
 fz_xml *

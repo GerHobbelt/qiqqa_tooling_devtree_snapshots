@@ -28,10 +28,10 @@
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\data">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\data\dragon_stand">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\data\dragon_stand\sum">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
@@ -281,11 +281,17 @@
     <Text Include="../../thirdparty/owemdjee/GMMreg/C++/CMakeLists.txt">
       <Filter>Misc Files\C++</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/C++/config_example.ini">
+      <Filter>Misc Files\C++</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/C++/readme.txt">
       <Filter>Misc Files\C++</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/C++/setup.py">
       <Filter>Misc Files\C++</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/LICENSE">
+      <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/README.md">
       <Filter>Misc Files</Filter>
@@ -323,7 +329,13 @@
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/dragonStandRight.conf">
       <Filter>Misc Files\data\dragon_stand</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/room1.ply">
+      <Filter>Misc Files\data\dragon_stand</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/room1.txt">
+      <Filter>Misc Files\data\dragon_stand</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/room2.ply">
       <Filter>Misc Files\data\dragon_stand</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/room2.txt">
@@ -332,77 +344,152 @@
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/sum/CMakeLists.txt">
       <Filter>Misc Files\data\dragon_stand\sum</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v1.ply">
+      <Filter>Misc Files\data\dragon_stand</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v1.txt">
+      <Filter>Misc Files\data\dragon_stand</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v10.ply">
       <Filter>Misc Files\data\dragon_stand</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v10.txt">
       <Filter>Misc Files\data\dragon_stand</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v11.ply">
+      <Filter>Misc Files\data\dragon_stand</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v11.txt">
+      <Filter>Misc Files\data\dragon_stand</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v12.ply">
       <Filter>Misc Files\data\dragon_stand</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v12.txt">
       <Filter>Misc Files\data\dragon_stand</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v13.ply">
+      <Filter>Misc Files\data\dragon_stand</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v13.txt">
+      <Filter>Misc Files\data\dragon_stand</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v14.ply">
       <Filter>Misc Files\data\dragon_stand</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v14.txt">
       <Filter>Misc Files\data\dragon_stand</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v15.ply">
+      <Filter>Misc Files\data\dragon_stand</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v15.txt">
+      <Filter>Misc Files\data\dragon_stand</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v16.ply">
       <Filter>Misc Files\data\dragon_stand</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v16.txt">
       <Filter>Misc Files\data\dragon_stand</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v17.ply">
+      <Filter>Misc Files\data\dragon_stand</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v17.txt">
+      <Filter>Misc Files\data\dragon_stand</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v18.ply">
       <Filter>Misc Files\data\dragon_stand</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v18.txt">
       <Filter>Misc Files\data\dragon_stand</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v19.ply">
+      <Filter>Misc Files\data\dragon_stand</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v19.txt">
+      <Filter>Misc Files\data\dragon_stand</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v2.ply">
       <Filter>Misc Files\data\dragon_stand</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v2.txt">
       <Filter>Misc Files\data\dragon_stand</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v20.ply">
+      <Filter>Misc Files\data\dragon_stand</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v20.txt">
+      <Filter>Misc Files\data\dragon_stand</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v21.ply">
       <Filter>Misc Files\data\dragon_stand</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v21.txt">
       <Filter>Misc Files\data\dragon_stand</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v22.ply">
+      <Filter>Misc Files\data\dragon_stand</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v22.txt">
+      <Filter>Misc Files\data\dragon_stand</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v23.ply">
       <Filter>Misc Files\data\dragon_stand</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v23.txt">
       <Filter>Misc Files\data\dragon_stand</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v24.ply">
+      <Filter>Misc Files\data\dragon_stand</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v24.txt">
+      <Filter>Misc Files\data\dragon_stand</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v3.ply">
       <Filter>Misc Files\data\dragon_stand</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v3.txt">
       <Filter>Misc Files\data\dragon_stand</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v4.ply">
+      <Filter>Misc Files\data\dragon_stand</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v4.txt">
+      <Filter>Misc Files\data\dragon_stand</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v5.ply">
       <Filter>Misc Files\data\dragon_stand</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v5.txt">
       <Filter>Misc Files\data\dragon_stand</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v6.ply">
+      <Filter>Misc Files\data\dragon_stand</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v6.txt">
+      <Filter>Misc Files\data\dragon_stand</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v7.ply">
       <Filter>Misc Files\data\dragon_stand</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v7.txt">
       <Filter>Misc Files\data\dragon_stand</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v8.ply">
+      <Filter>Misc Files\data\dragon_stand</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v8.txt">
+      <Filter>Misc Files\data\dragon_stand</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v9.ply">
       <Filter>Misc Files\data\dragon_stand</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/dragon_stand/v9.txt">
       <Filter>Misc Files\data\dragon_stand</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/face.ini">
+      <Filter>Misc Files\data</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/face_data/face_X.txt">
       <Filter>Misc Files\data\face_data</Filter>
@@ -428,6 +515,15 @@
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/fish_data/fish_ctrl_pts.txt">
       <Filter>Misc Files\data\fish_data</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/fish_full.ini">
+      <Filter>Misc Files\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/fish_full_test.ini">
+      <Filter>Misc Files\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/data/fish_partial.ini">
+      <Filter>Misc Files\data</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/data/lounge/ReadMe.txt">
       <Filter>Misc Files\data\lounge</Filter>
     </Text>
@@ -444,6 +540,12 @@
       <Filter>Misc Files\expts</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/expts/dragon_expts.py">
+      <Filter>Misc Files\expts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/expts/dragon_stand.ini">
+      <Filter>Misc Files\expts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/expts/lounge.ini">
       <Filter>Misc Files\expts</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/expts/lounge_expts.py">
@@ -469,6 +571,9 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/expts/tmp/txt2pcd/CMakeLists.txt">
       <Filter>Misc Files\expts\tmp\txt2pcd</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GMMreg/gmmreg_PAMI_preprint.pdf">
+      <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/GMMreg/gmmreg_bib.txt">
       <Filter>Misc Files</Filter>

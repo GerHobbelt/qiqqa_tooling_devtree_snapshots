@@ -51,13 +51,6 @@ __inline int c99_vsnprintf(char *outBuf, size_t size, const char *format, va_lis
 #define vsnprintf trio_vsnprintf
 #endif
 
-/* #define DEBUG */
-/* #define DEBUG_XPATH */
-/* #define DEBUG_ERROR */
-/* #define DEBUG_MEMORY */
-/* #define DEBUG_EXTENSIONS */
-/* #define DEBUG_EXTENSIONS */
-
 #if PY_MAJOR_VERSION >= 3
 PyObject* PyInit_libxsltmod(void);
 #else
@@ -1284,7 +1277,6 @@ void initlibxsltmod(void) {
      * Specific XSLT initializations
      */
     libxslt_xsltErrorInitialize();
-    xmlLoadExtDtdDefaultValue = XML_DETECT_IDS | XML_COMPLETE_ATTRS;
     /*
      * Register the EXSLT extensions and the test module
      */

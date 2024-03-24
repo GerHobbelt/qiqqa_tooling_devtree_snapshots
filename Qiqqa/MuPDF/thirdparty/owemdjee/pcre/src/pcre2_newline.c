@@ -48,7 +48,7 @@ and NLTYPE_ANY. The full list of Unicode newline characters is taken from
 http://unicode.org/unicode/reports/tr18/. */
 
 
-#ifdef HAVE_CONFIG_H
+#if defined(HAVE_CONFIG_H) && !defined(PCRE2_AMALGAMETE)
 #include "config.h"
 #endif
 

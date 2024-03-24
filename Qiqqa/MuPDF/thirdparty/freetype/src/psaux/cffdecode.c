@@ -18,6 +18,7 @@
 #if defined(FT_MAKE_OPTION_SINGLE_OBJECT) && defined(BUILD_MONOLITHIC)
 
 #include <freetype/freetype.h>
+#include <freetype/internal/ftcalc.h>
 #include <freetype/internal/ftdebug.h>
 #include <freetype/internal/ftserv.h>
 #include <freetype/internal/services/svcfftl.h>
@@ -1753,22 +1754,9 @@
 
           /* without upper limit the loop below might not finish */
           if ( args[0] > 0x7FFFFFFFL )
-            args[0] = 46341;
+            args[0] = 0xB504F4L;    /* sqrt( 32768.0044 ) */
           else if ( args[0] > 0 )
-          {
-            FT_Fixed  root = args[0];
-            FT_Fixed  new_root;
-
-
-            for (;;)
-            {
-              new_root = ( root + FT_DivFix( args[0], root ) + 1 ) >> 1;
-              if ( new_root == root )
-                break;
-              root = new_root;
-            }
-            args[0] = new_root;
-          }
+            args[0] = (FT_Fixed)FT_SqrtFixed( args[0] );
           else
             args[0] = 0;
           args++;
@@ -2154,7 +2142,7 @@
                                       decoder->locals_bias );
 
 
-            FT_TRACE4(( " callsubr (idx %d, entering level %ld)\n",
+            FT_TRACE4(( " callsubr (idx %d, entering level %td)\n",
                         idx,
                         zone - decoder->zones + 1 ));
 
@@ -2198,7 +2186,7 @@
                                       decoder->globals_bias );
 
 
-            FT_TRACE4(( " callgsubr (idx %d, entering level %ld)\n",
+            FT_TRACE4(( " callgsubr (idx %d, entering level %td)\n",
                         idx,
                         zone - decoder->zones + 1 ));
 
@@ -2237,7 +2225,7 @@
           break;
 
         case cff_op_return:
-          FT_TRACE4(( " return (leaving level %ld)\n",
+          FT_TRACE4(( " return (leaving level %td)\n",
                       decoder->zone - decoder->zones ));
 
           if ( decoder->zone <= decoder->zones )

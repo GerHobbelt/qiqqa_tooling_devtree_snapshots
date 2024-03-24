@@ -131,14 +131,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../scripts/libfamilia;../../thirdparty/owemdjee/lda-Familia/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAMILIA;FAMILIA_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libfamilia;../../thirdparty/owemdjee/lda-Familia/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAMILIA;FAMILIA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAMILIA;FAMILIA_STATICLIB;CHM_NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../scripts/libfamilia;../../thirdparty/owemdjee/lda-Familia/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libfamilia;../../thirdparty/owemdjee/lda-Familia/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -157,15 +157,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../scripts/libfamilia;../../thirdparty/owemdjee/lda-Familia/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAMILIA;FAMILIA_STATICLIB;GLOG_NO_ABBREVIATED_SEVERITIES;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libfamilia;../../thirdparty/owemdjee/lda-Familia/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAMILIA;FAMILIA_STATICLIB;GLOG_NO_ABBREVIATED_SEVERITIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAMILIA;FAMILIA_STATICLIB;CHM__DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../scripts/libfamilia;../../thirdparty/owemdjee/lda-Familia/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libfamilia;../../thirdparty/owemdjee/lda-Familia/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -186,14 +186,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../scripts/libfamilia;../../thirdparty/owemdjee/lda-Familia/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAMILIA;FAMILIA_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libfamilia;../../thirdparty/owemdjee/lda-Familia/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAMILIA;FAMILIA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAMILIA;FAMILIA_STATICLIB;CHM_NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../scripts/libfamilia;../../thirdparty/owemdjee/lda-Familia/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libfamilia;../../thirdparty/owemdjee/lda-Familia/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -212,15 +212,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../scripts/libfamilia;../../thirdparty/owemdjee/lda-Familia/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAMILIA;FAMILIA_STATICLIB;GLOG_NO_ABBREVIATED_SEVERITIES;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libfamilia;../../thirdparty/owemdjee/lda-Familia/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAMILIA;FAMILIA_STATICLIB;GLOG_NO_ABBREVIATED_SEVERITIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAMILIA;FAMILIA_STATICLIB;CHM__DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../scripts/libfamilia;../../thirdparty/owemdjee/lda-Familia/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libfamilia;../../thirdparty/owemdjee/lda-Familia/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -259,12 +259,18 @@
     <ClInclude Include="../../thirdparty/owemdjee/lda-Familia/include/familia/util.h" />
     <ClInclude Include="../../thirdparty/owemdjee/lda-Familia/include/familia/vocab.h" />
     <ClInclude Include="../../thirdparty/owemdjee/lda-Familia/include/familia/vose_alias.h" />
+    <Text Include="../../thirdparty/owemdjee/lda-Familia/AUTHORS" />
+    <Text Include="../../thirdparty/owemdjee/lda-Familia/LICENSE" />
+    <Text Include="../../thirdparty/owemdjee/lda-Familia/Makefile" />
     <Text Include="../../thirdparty/owemdjee/lda-Familia/README.EN.md" />
     <Text Include="../../thirdparty/owemdjee/lda-Familia/README.md" />
     <Text Include="../../thirdparty/owemdjee/lda-Familia/build.sh" />
+    <Text Include="../../thirdparty/owemdjee/lda-Familia/depends.mk" />
     <Text Include="../../thirdparty/owemdjee/lda-Familia/model/README.EN.md" />
     <Text Include="../../thirdparty/owemdjee/lda-Familia/model/README.md" />
     <Text Include="../../thirdparty/owemdjee/lda-Familia/model/download_model.sh" />
+    <Text Include="../../thirdparty/owemdjee/lda-Familia/papers/FTM.pdf" />
+    <Text Include="../../thirdparty/owemdjee/lda-Familia/papers/Familia.pdf" />
     <Text Include="../../thirdparty/owemdjee/lda-Familia/python/README.EN.md" />
     <Text Include="../../thirdparty/owemdjee/lda-Familia/python/README.md" />
     <Text Include="../../thirdparty/owemdjee/lda-Familia/python/app.py" />

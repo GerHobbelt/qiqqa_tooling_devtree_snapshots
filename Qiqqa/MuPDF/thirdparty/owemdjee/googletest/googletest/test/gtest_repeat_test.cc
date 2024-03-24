@@ -36,6 +36,8 @@
 #include "gtest/gtest.h"
 #include "src/gtest-internal-inl.h"
 
+#include "googletest/include/monolithic_examples.h"
+
 namespace {
 
 // We need this when we are testing Google Test itself and therefore
@@ -61,7 +63,7 @@ int g_environment_tear_down_count = 0;
 
 class MyEnvironment : public testing::Environment {
  public:
-  MyEnvironment() {}
+  MyEnvironment() = default;
   void SetUp() override { g_environment_set_up_count++; }
   void TearDown() override { g_environment_tear_down_count++; }
 };

@@ -19,26 +19,6 @@
 
 #define BEYOND_THRESHHOLD 40
 
-static int
-fz_mkdir(char *path)
-{
-#ifdef _WIN32
-	int ret;
-	wchar_t *wpath = fz_wchar_from_utf8(path);
-
-	if (wpath == NULL)
-		return -1;
-
-	ret = _wmkdir(wpath);
-
-	free(wpath);
-
-	return ret;
-#else
-	return mkdir(path, S_IRWXU | S_IRWXG | S_IRWXO);
-#endif
-}
-
 static int create_accel_path(fz_context *ctx, char outname[], size_t len, int create, const char *absname, ...)
 {
 	va_list args;
@@ -55,7 +35,7 @@ static int create_accel_path(fz_context *ctx, char outname[], size_t len, int cr
 			goto fail; /* won't fit */
 
 		if (create)
-			fz_mkdir(outname);
+			(void) fz_mkdir(ctx, outname);
 		if (!fz_is_directory(ctx, outname))
 			goto fail; /* directory creation failed, or that dir doesn't exist! */
 #ifdef _WIN32
@@ -458,6 +438,7 @@ void pdfapp_open_progressive(pdfapp_t *app, const char *filename, int reload, in
 				{
 					if (fz_caught(ctx) == FZ_ERROR_TRYLATER)
 					{
+						fz_ignore_error(ctx);
 						pdfapp_sleep(100);
 						continue;
 					}
@@ -480,6 +461,7 @@ void pdfapp_open_progressive(pdfapp_t *app, const char *filename, int reload, in
 				{
 					if (fz_caught(ctx) == FZ_ERROR_TRYLATER)
 					{
+						fz_ignore_error(ctx);
 						pdfapp_sleep(100);
 						continue;
 					}
@@ -512,7 +494,7 @@ void pdfapp_open_progressive(pdfapp_t *app, const char *filename, int reload, in
 				else
 				{
 					/* Accelerator data is out of date */
-					fz_remove_utf8(ctx, accelpath);
+					(void)fz_remove_utf8(ctx, accelpath);
 					accel = NULL; /* In case we have jumped up from below */
 				}
 			}
@@ -574,6 +556,7 @@ void pdfapp_open_progressive(pdfapp_t *app, const char *filename, int reload, in
 			{
 				if (fz_caught(ctx) == FZ_ERROR_TRYLATER)
 				{
+					fz_ignore_error(ctx);
 					continue;
 				}
 				fz_rethrow(ctx);
@@ -590,9 +573,15 @@ void pdfapp_open_progressive(pdfapp_t *app, const char *filename, int reload, in
 			{
 				app->outline = NULL;
 				if (fz_caught(ctx) == FZ_ERROR_TRYLATER)
+				{
+					fz_ignore_error(ctx);
 					app->outline_deferred = PDFAPP_OUTLINE_DEFERRED;
+				}
 				else
+				{
+					fz_report_error(ctx);
 					pdfapp_warn(app, "Failed to load outline. %s", fz_caught_message(ctx));
+				}
 			}
 			break;
 		}
@@ -851,9 +840,15 @@ static void pdfapp_loadpage(pdfapp_t *app, int no_cache)
 	fz_catch(app->ctx)
 	{
 		if (fz_caught(app->ctx) == FZ_ERROR_TRYLATER)
+		{
+			fz_ignore_error(app->ctx);
 			app->incomplete = 1;
+		}
 		else
+		{
+			fz_report_error(app->ctx);
 			pdfapp_warn(app, "Failed to load page. %s", fz_caught_message(app->ctx));
+		}
 		return;
 	}
 
@@ -892,9 +887,15 @@ static void pdfapp_loadpage(pdfapp_t *app, int no_cache)
 		fz_catch(app->ctx)
 		{
 			if (fz_caught(app->ctx) == FZ_ERROR_TRYLATER)
+			{
+				fz_ignore_error(app->ctx);
 				app->incomplete = 1;
+			}
 			else
+			{
+				fz_report_error(app->ctx);
 				pdfapp_warn(app, "Failed to load page. %s", fz_caught_message(app->ctx));
+			}
 			errored = 1;
 		}
 	}
@@ -931,9 +932,15 @@ static void pdfapp_loadpage(pdfapp_t *app, int no_cache)
 	fz_catch(app->ctx)
 	{
 		if (fz_caught(app->ctx) == FZ_ERROR_TRYLATER)
+		{
+			fz_ignore_error(app->ctx);
 			app->incomplete = 1;
+		}
 		else
+		{
+			fz_report_error(app->ctx);
 			pdfapp_warn(app, "Failed to load page. %s", fz_caught_message(app->ctx));
+		}
 		errored = 1;
 	}
 
@@ -1012,8 +1019,8 @@ static void pdfapp_showpage(pdfapp_t *app, int loadpage, int drawpage, int repai
 				mediabox = fz_bound_page(app->ctx, app->page);
 			fz_catch(app->ctx)
 			{
-				if (fz_caught(app->ctx) != FZ_ERROR_TRYLATER)
-					fz_rethrow(app->ctx);
+				fz_rethrow_unless(app->ctx, FZ_ERROR_TRYLATER);
+				fz_ignore_error(app->ctx);
 				mediabox = fz_make_rect(0, 0, 100, 100);
 				app->incomplete = 1;
 			}

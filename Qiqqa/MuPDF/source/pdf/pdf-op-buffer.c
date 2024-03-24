@@ -427,7 +427,7 @@ pdf_out_TJ(fz_context *ctx, pdf_processor *proc, pdf_obj *array)
 }
 
 static void
-pdf_out_Tj(fz_context *ctx, pdf_processor *proc, char *str, size_t len)
+pdf_out_Tj(fz_context *ctx, pdf_processor *proc, const char *str, size_t len)
 {
 	fz_output *out = ((pdf_output_processor*)proc)->out;
 	fz_write_pdf_string(ctx, out, (const unsigned char *)str, len);
@@ -435,7 +435,7 @@ pdf_out_Tj(fz_context *ctx, pdf_processor *proc, char *str, size_t len)
 }
 
 static void
-pdf_out_squote(fz_context *ctx, pdf_processor *proc, char *str, size_t len)
+pdf_out_squote(fz_context *ctx, pdf_processor *proc, const char *str, size_t len)
 {
 	fz_output *out = ((pdf_output_processor*)proc)->out;
 	fz_write_pdf_string(ctx, out, (const unsigned char *)str, len);
@@ -443,7 +443,7 @@ pdf_out_squote(fz_context *ctx, pdf_processor *proc, char *str, size_t len)
 }
 
 static void
-pdf_out_dquote(fz_context *ctx, pdf_processor *proc, float aw, float ac, char *str, size_t len)
+pdf_out_dquote(fz_context *ctx, pdf_processor *proc, float aw, float ac, const char *str, size_t len)
 {
 	fz_output *out = ((pdf_output_processor*)proc)->out;
 	fz_write_printf(ctx, out, "%g %g ", aw, ac);
@@ -616,7 +616,7 @@ pdf_out_BI(fz_context *ctx, pdf_processor *proc, fz_image *img, const char *colo
 	else if (colorspace)
 		fz_write_printf(ctx, out, "/CS%n\n", colorspace);
 	else
-		fz_throw(ctx, FZ_ERROR_GENERIC, "BI operator can only show ImageMask, Gray, RGB, or CMYK images");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "BI operator can only show ImageMask, Gray, RGB, or CMYK images");
 	if (img->interpolate)
 		fz_write_string(ctx, out, "/I true\n");
 	fz_write_string(ctx, out, "/D[");
@@ -631,14 +631,15 @@ pdf_out_BI(fz_context *ctx, pdf_processor *proc, fz_image *img, const char *colo
 	switch (cbuf->params.type)
 	{
 	default:
-		fz_throw(ctx, FZ_ERROR_GENERIC, "unknown compressed buffer type %d", cbuf->params.type);
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "unknown compressed buffer type %d", cbuf->params.type);
 		break;
 
 	case FZ_IMAGE_JPEG:
 		fz_write_string(ctx, out, ahx ? "/F[/AHx/DCT]\n" : "/F/DCT\n");
 		if (cbuf->params.u.jpeg.color_transform >= 0)
-			fz_write_printf(ctx, out, "/DP<</ColorTransform %d>>\n",
-				cbuf->params.u.jpeg.color_transform);
+			fz_write_printf(ctx, out, "/DP<</ColorTransform %d>>\n", cbuf->params.u.jpeg.color_transform);
+		if (cbuf->params.u.jpeg.invert_cmyk && img->n == 4)
+			fz_write_printf(ctx, out, "/D[1 0 1 0 1 0 1 0]\n");
 		break;
 
 	case FZ_IMAGE_FAX:

@@ -28,6 +28,8 @@
 #if    !defined(BOOST_MPL_CFG_NO_PREPROCESSED_HEADERS) \
     && !defined(BOOST_MPL_PREPROCESSING_MODE)
 
+#   undef  BOOST_MPL_PREPROCESSED_HEADER
+
 #   define BOOST_MPL_PREPROCESSED_HEADER advance_backward.hpp
 #   include <boost/mpl/aux_/include_preprocessed.hpp>
 
@@ -45,6 +47,8 @@ namespace boost { namespace mpl { namespace aux {
 
 // forward declaration
 template< BOOST_MPL_AUX_NTTP_DECL(long, N) > struct advance_backward;
+
+#   undef  BOOST_PP_ITERATION_PARAMS_1 
 
 #   define BOOST_PP_ITERATION_PARAMS_1 \
     (3,(0, BOOST_MPL_LIMIT_UNROLLING, <boost/mpl/aux_/advance_backward.hpp>))

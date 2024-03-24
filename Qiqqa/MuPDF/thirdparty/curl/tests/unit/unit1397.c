@@ -36,7 +36,7 @@ static void unit_stop(void)
 }
 
 /* only these backends define the tested functions */
-#if defined(USE_OPENSSL) || defined(USE_GSKIT) || defined(USE_SCHANNEL)
+#if defined(USE_OPENSSL) || defined(USE_SCHANNEL)
 #include "vtls/hostcheck.h"
 struct testcase {
   const char *host;
@@ -173,3 +173,6 @@ fail_unless(Curl_cert_hostcheck(STRCONST("fe80::3285:a9ff:fe46:b619"),
   /* you end the test code like this: */
 
 UNITTEST_STOP
+
+#endif	// OPENSSL || USE_SCHANNEL
+

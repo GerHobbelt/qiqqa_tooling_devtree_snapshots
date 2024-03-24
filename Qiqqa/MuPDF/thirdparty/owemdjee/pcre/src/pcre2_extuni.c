@@ -45,7 +45,7 @@ compiled. Nevertheless, we provide a dummy function when there is no Unicode
 support, because some compilers do not like functionless source files. */
 
 
-#ifdef HAVE_CONFIG_H
+#if defined(HAVE_CONFIG_H) && !defined(PCRE2_AMALGAMETE)
 #include "config.h"
 #endif
 

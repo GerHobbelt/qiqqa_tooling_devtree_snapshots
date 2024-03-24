@@ -27,12 +27,16 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+#include <string>
+
 #include "gtest/gtest.h"
 
 #if defined(_MSC_VER)
 #include <eh.h>
 #include <windows.h>
 #endif
+
+#include "googletest/include/monolithic_examples.h"
 
 namespace {
 class DummyInvalidName2Test : public ::testing::TestWithParam<const char *> {};

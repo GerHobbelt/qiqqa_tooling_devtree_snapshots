@@ -26,11 +26,10 @@
 #ifndef TAGLIB_FLACFILE_H
 #define TAGLIB_FLACFILE_H
 
-#include "taglib_export.h"
 #include "tfile.h"
 #include "tlist.h"
+#include "taglib_export.h"
 #include "tag.h"
-
 #include "flacpicture.h"
 #include "flacproperties.h"
 
@@ -104,7 +103,7 @@ namespace TagLib {
        *
        * \note In the current implementation, \a propertiesStyle is ignored.
        */
-      // BIC: merge with the above constructor
+      // BIC: merge with the above constructor, kept for source compatibility
       File(FileName file, ID3v2::FrameFactory *frameFactory,
            bool readProperties = true,
            Properties::ReadStyle propertiesStyle = Properties::Average);
@@ -121,7 +120,6 @@ namespace TagLib {
        *
        * \note In the current implementation, \a propertiesStyle is ignored.
        */
-      // BIC: merge with the above constructor
       File(IOStream *stream, ID3v2::FrameFactory *frameFactory,
            bool readProperties = true,
            Properties::ReadStyle propertiesStyle = Properties::Average);
@@ -129,7 +127,10 @@ namespace TagLib {
       /*!
        * Destroys this instance of the File.
        */
-      virtual ~File();
+      ~File() override;
+
+      File(const File &) = delete;
+      File &operator=(const File &) = delete;
 
       /*!
        * Returns the Tag for this file.  This will be a union of XiphComment,
@@ -139,7 +140,7 @@ namespace TagLib {
        * \see ID3v1Tag()
        * \see XiphComment()
        */
-      virtual TagLib::Tag *tag() const;
+      TagLib::Tag *tag() const override;
 
       /*!
        * Implements the unified property interface -- export function.
@@ -147,9 +148,9 @@ namespace TagLib {
        * only the first one (in the order XiphComment, ID3v2, ID3v1) will be
        * converted to the PropertyMap.
        */
-      PropertyMap properties() const;
+      PropertyMap properties() const override;
 
-      void removeUnsupportedProperties(const StringList &);
+      void removeUnsupportedProperties(const StringList &) override;
 
       /*!
        * Implements the unified property interface -- import function.
@@ -158,13 +159,30 @@ namespace TagLib {
        * Ignores any changes to ID3v1 or ID3v2 comments since they are not allowed
        * in the FLAC specification.
        */
-      PropertyMap setProperties(const PropertyMap &);
+      PropertyMap setProperties(const PropertyMap &) override;
+
+      /*!
+       * Returns ["PICTURE"] if any picture is stored in METADATA_BLOCK_PICTURE.
+       */
+      StringList complexPropertyKeys() const override;
+
+      /*!
+       * Get the pictures stored in METADATA_BLOCK_PICTURE as complex properties
+       * for \a key "PICTURE".
+       */
+      List<VariantMap> complexProperties(const String &key) const override;
+
+      /*!
+       * Set the complex properties \a value as pictures in METADATA_BLOCK_PICTURE
+       * for \a key "PICTURE".
+       */
+      bool setComplexProperties(const String &key, const List<VariantMap> &value) override;
 
       /*!
        * Returns the FLAC::Properties for this file.  If no audio properties
        * were read then this will return a null pointer.
        */
-      virtual Properties *audioProperties() const;
+      Properties *audioProperties() const override;
 
       /*!
        * Save the file.  This will primarily save the XiphComment, but
@@ -173,7 +191,7 @@ namespace TagLib {
        *
        * This returns true if the save was successful.
        */
-      virtual bool save();
+      bool save() override;
 
       /*!
        * Returns a pointer to the ID3v2 tag of the file.
@@ -231,32 +249,6 @@ namespace TagLib {
        * \see hasXiphComment()
        */
       Ogg::XiphComment *xiphComment(bool create = false);
-
-      /*!
-       * Set the ID3v2::FrameFactory to something other than the default.  This
-       * can be used to specify the way that ID3v2 frames will be interpreted
-       * when
-       *
-       * \see ID3v2FrameFactory
-       * \deprecated This value should be passed in via the constructor.
-       */
-      TAGLIB_DEPRECATED void setID3v2FrameFactory(const ID3v2::FrameFactory *factory);
-
-      /*!
-       * Returns the block of data used by FLAC::Properties for parsing the
-       * stream properties.
-       *
-       * \deprecated Always returns an empty vector.
-       */
-      TAGLIB_DEPRECATED ByteVector streamInfoData(); // BIC: remove
-
-      /*!
-       * Returns the length of the audio-stream, used by FLAC::Properties for
-       * calculating the bitrate.
-       *
-       * \deprecated Always returns zero.
-       */
-      TAGLIB_DEPRECATED long streamLength();  // BIC: remove
 
       /*!
        * Returns a list of pictures attached to the FLAC file.
@@ -328,14 +320,11 @@ namespace TagLib {
       static bool isSupported(IOStream *stream);
 
     private:
-      File(const File &);
-      File &operator=(const File &);
-
       void read(bool readProperties);
       void scan();
 
       class FilePrivate;
-      FilePrivate *d;
+      std::unique_ptr<FilePrivate> d;
     };
   }  // namespace FLAC
 }  // namespace TagLib

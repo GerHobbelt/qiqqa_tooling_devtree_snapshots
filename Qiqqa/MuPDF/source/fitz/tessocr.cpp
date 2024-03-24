@@ -1,3 +1,24 @@
+// Copyright (C) 2020-2023 Artifex Software, Inc.
+//
+// This file is part of MuPDF.
+//
+// MuPDF is free software: you can redistribute it and/or modify it under the
+// terms of the GNU Affero General Public License as published by the Free
+// Software Foundation, either version 3 of the License, or (at your option)
+// any later version.
+//
+// MuPDF is distributed in the hope that it will be useful, but WITHOUT ANY
+// WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+// FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more
+// details.
+//
+// You should have received a copy of the GNU Affero General Public License
+// along with MuPDF. If not, see <https://www.gnu.org/licenses/agpl-3.0.en.html>
+//
+// Alternative licensing terms are available from the licensor.
+// For commercial licensing, see <https://www.artifex.com/> or contact
+// Artifex Software, Inc., 39 Mesa Street, Suite 108A, San Francisco,
+// CA 94129, USA, for further information.
 
 #include "mupdf/fitz.h"
 #include "mupdf/helpers/dir.h"
@@ -13,62 +34,12 @@
 #include "tesseract/baseapi.h"
 #include "tesseract/capi.h"          // for ETEXT_DESC
 
-#define DEBUG_ALLOCS   0
-
 
 extern "C" {
 
-#include "allheaders.h"
-
+#include "leptonica/allheaders.h"
 #include "tessocr.h"
-
-/* Now the actual allocations to be used for leptonica. Unfortunately
- * we have to use a nasty global here. */
-static fz_context *leptonica_mem = NULL;
-
-#if DEBUG_ALLOCS
-static int event = 0;
-#endif
-
-void *leptonica_malloc(size_t size)
-{
-	void *ret = Memento_label(fz_malloc_no_throw(leptonica_mem, size), "leptonica_malloc");
-#if DEBUG_ALLOCS
-	fz_info(leptonica_mem, "dbg: %d LEPTONICA_MALLOC(%p) %d -> %p\n", event++, leptonica_mem, (int)size, ret);
-#endif
-	return ret;
-}
-
-void leptonica_free(void *ptr)
-{
-#if DEBUG_ALLOCS
-	fz_info(leptonica_mem, "dbg: %d LEPTONICA_FREE(%p) %p\n", event++, leptonica_mem, ptr);
-#endif
-	fz_free(leptonica_mem, ptr);
-}
-
-void *leptonica_calloc(size_t numelm, size_t elemsize)
-{
-	void *ret = leptonica_malloc(numelm * elemsize);
-
-	if (ret)
-		memset(ret, 0, numelm * elemsize);
-#if DEBUG_ALLOCS
-	fz_info(leptonica_mem, "dbg: %d LEPTONICA_CALLOC %d,%d -> %p\n", event++, (int)numelm, (int)elemsize, ret);
-#endif
-	return ret;
-}
-
-/* Not currently actually used */
-void *leptonica_realloc(void *ptr, size_t blocksize)
-{
-	void *ret = fz_realloc_no_throw(leptonica_mem, ptr, blocksize);
-
-#if DEBUG_ALLOCS
-	fz_info(leptonica_mem, "dbg: %d LEPTONICA_REALLOC %p,%d -> %p\n", event++, ptr, (int)blocksize, ret);
-#endif
-	return ret;
-}
+#include "leptonica-wrap.h"
 
 #if FZ_ENABLE_OCR 
 
@@ -78,7 +49,7 @@ static bool
 load_file(const char* filename, std::vector<char>* data)
 {
 	bool result = false;
-	FILE *fp = fz_fopen_utf8(leptonica_mem, filename, "rb");
+	FILE *fp = fz_fopen_utf8(get_leptonica_ctx(), filename, "rb");
 	if (fp == NULL)
 		return false;
 
@@ -106,7 +77,7 @@ tess_file_reader(const char *fname, std::vector<char> *out)
 	/* FIXME: Look for inbuilt ones. */
 
 	/* Then under TESSDATA */
-	fz_info(leptonica_mem, "tesseract %d.%d.%d used by mupdf as tesseract >= 5\n", TESSERACT_MAJOR_VERSION, TESSERACT_MINOR_VERSION, TESSERACT_MICRO_VERSION);
+	fz_info(get_leptonica_ctx(), "tesseract %d.%d.%d used by mupdf as tesseract >= 5\n", TESSERACT_MAJOR_VERSION, TESSERACT_MINOR_VERSION, TESSERACT_MICRO_VERSION);
 	return load_file(fname, out);
 }
 
@@ -142,79 +113,44 @@ tess_file_reader(const STRING& fname, GenericVector<char> *out)
 	/* FIXME: Look for inbuilt ones. */
 
 	/* Then under TESSDATA */
-	fz_info(leptonica_mem, "tesseract %d.%d.%d used by mupdf as tesseract <= 4\n", TESSERACT_MAJOR_VERSION, TESSERACT_MINOR_VERSION, TESSERACT_MICRO_VERSION);
+	fz_info(get_leptonica_ctx(), "tesseract %d.%d.%d used by mupdf as tesseract <= 4\n", TESSERACT_MAJOR_VERSION, TESSERACT_MINOR_VERSION, TESSERACT_MICRO_VERSION);
 	return load_file(fname.c_str(), out);
 }
 
 #endif
 
-#endif // FZ_ENABLE_OCR 
-
-
-void
-ocr_set_leptonica_mem(fz_context *ctx)
-{
-	int die = 0;
-
-	fz_lock(ctx, FZ_LOCK_ALLOC);
-	die = (leptonica_mem != NULL) && (leptonica_mem != ctx);
-	if (!die)
-		leptonica_mem = ctx;
-	fz_unlock(ctx, FZ_LOCK_ALLOC);
-	if (die)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "Attempt to use Tesseract from 2 threads at once!");
-}
-
-void
-ocr_clear_leptonica_mem(fz_context *ctx)
-{
-	int die = 0;
-
-	fz_lock(ctx, FZ_LOCK_ALLOC);
-	die = (leptonica_mem == NULL);
-	if (!die)
-		leptonica_mem = NULL;
-	fz_unlock(ctx, FZ_LOCK_ALLOC);
-	if (die)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "Attempt to use Tesseract from 2 threads at once!");
-}
-
-
-#if FZ_ENABLE_OCR 
 
 void *ocr_init(fz_context *ctx, const char *language, const char *datadir)
 {
 	tesseract::TessBaseAPI *api;
 
-	ocr_set_leptonica_mem(ctx);
-	ocr_set_leptonica_stderr_handler(ctx);
+	fz_set_leptonica_mem(ctx);
 
-	setPixMemoryManager(leptonica_malloc, leptonica_free);
 	api = new tesseract::TessBaseAPI();
 
 	if (api == NULL)
 	{
-		ocr_clear_leptonica_mem(ctx);
-		setPixMemoryManager(malloc, free);
-		fz_throw(ctx, FZ_ERROR_GENERIC, "Tesseract initialisation failed");
+		fz_clear_leptonica_mem(ctx);
+		fz_throw(ctx, FZ_ERROR_LIBRARY, "Tesseract initialisation failed");
 	}
 
 	if (language == NULL || language[0] == 0)
 		language = "eng";  // "eng+rus+chi_sim+chi_tra+deu+fra+por+jpn+hin+urd+vie+osd"
 
 	// Initialize tesseract-ocr with English, without specifying tessdata path
-	if (api->InitFullWithReader(datadir, 0, /* data, data_size */
+	std::vector<std::string> nil;
+
+	if (api->InitFullWithReader(datadir, 
 		language,
 		tesseract::OcrEngineMode::OEM_DEFAULT,
-		NULL, 0, /* configs, configs_size */
-		NULL, NULL, /* vars_vec */
+		nil, /* configs, */
+		nil, nil, /* vars_vec */
 		false, /* set_only_non_debug_params */
 		&tess_file_reader))
 	{
 		delete api;
-		ocr_clear_leptonica_mem(ctx);
-		setPixMemoryManager(malloc, free);
-		fz_throw(ctx, FZ_ERROR_GENERIC, "Tesseract initialisation failed");
+		fz_clear_leptonica_mem(ctx);
+		fz_throw(ctx, FZ_ERROR_LIBRARY, "Tesseract initialisation failed");
 	}
 
 	return api;
@@ -229,8 +165,7 @@ void ocr_fin(fz_context *ctx, void *api_)
 
 	api->End();
 	delete api;
-	ocr_clear_leptonica_mem(ctx);
-	setPixMemoryManager(malloc, free);
+	fz_clear_leptonica_mem(ctx);
 }
 
 static inline int isbigendian(void)
@@ -246,7 +181,7 @@ ocr_set_image(fz_context *ctx, tesseract::TessBaseAPI *api, fz_pixmap *pix)
 	Pix *image = pixCreateHeader(pix->w, pix->h, 8);
 
 	if (image == NULL)
-		fz_throw(ctx, FZ_ERROR_MEMORY, "Tesseract image creation failed");
+		fz_throw(ctx, FZ_ERROR_LIBRARY, "Tesseract image creation failed");
 	pixSetData(image, (l_uint32 *)pix->samples);
 	pixSetPadBits(image, 1);
 	pixSetXRes(image, pix->xres);
@@ -354,7 +289,7 @@ void ocr_recognise(fz_context *ctx,
 	if (code < 0)
 	{
 		ocr_clear_image(ctx, image);
-		fz_throw(ctx, FZ_ERROR_GENERIC, "OCR recognise failed");
+		fz_throw(ctx, FZ_ERROR_LIBRARY, "OCR recognise failed");
 	}
 
 	if (!isbigendian())
@@ -438,18 +373,5 @@ void ocr_recognise(fz_context *ctx,
 }
 
 #endif // FZ_ENABLE_OCR 
-
-static void lept_stderr_print(const char *msg)
-{
-	fz_context *ctx = fz_get_global_context();
-
-	fz_write_string(ctx, fz_stderr(ctx), msg);
-}
-
-
-void ocr_set_leptonica_stderr_handler(fz_context *ctx)
-{
-	leptSetStderrHandler(lept_stderr_print);
-}
 
 }

@@ -105,8 +105,11 @@ webp_from_pixmap(fz_context *ctx, fz_pixmap *pix, fz_color_params color_params, 
 		if (drop)
 			fz_drop_pixmap(ctx, pix);
 		if (!cookie->d.ignore_minor_errors)
+		{
+			cookie->d.errors++;
 			fz_throw(ctx, FZ_ERROR_GENERIC, "content error: image dimensions are specified as (0 x 0)");
-#pragma message("TODO: throw exception in strict mode. Also check out 'ignore_errors' in mudraw tool and link this to that setting.")
+#pragma message(FZPM_TODO "throw exception in strict mode. Also check out 'ignore_errors' in mudraw tool and link this to that setting.")
+		}
 		return NULL;
 	}
 
@@ -206,7 +209,7 @@ webp_drop_band_writer(fz_context *ctx, fz_band_writer *writer_)
 	fz_free(ctx, writer->data);
 }
 
-fz_band_writer *fz_new_webp_band_writer(fz_context *ctx, fz_output *out)
+fz_band_writer *fz_new_webp_band_writer(fz_context *ctx, fz_output *out, int compression_effort)
 {
 	webp_band_writer *writer = fz_new_band_writer(ctx, webp_band_writer, out);
 
@@ -214,6 +217,8 @@ fz_band_writer *fz_new_webp_band_writer(fz_context *ctx, fz_output *out)
 	writer->super.band = webp_write_band;
 	writer->super.close = webp_close_band_writer;
 	writer->super.drop = webp_drop_band_writer;
+
+	writer->super.compression_effort = compression_effort;
 
 	return &writer->super;
 }

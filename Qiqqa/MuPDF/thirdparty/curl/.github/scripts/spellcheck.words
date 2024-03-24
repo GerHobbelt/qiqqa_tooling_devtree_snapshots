@@ -14,6 +14,7 @@ allocator
 alnum
 ALPN
 Altera
+AltSvc
 ALTSVC
 amiga
 AmigaOS
@@ -38,6 +39,7 @@ auth
 autobuild
 autobuilds
 Autoconf
+autoconf
 Automake
 Autotools
 autotools
@@ -49,6 +51,7 @@ backend
 backends
 backoff
 backticks
+balancers
 Baratov
 basename
 bashrc
@@ -77,10 +80,12 @@ buildconf
 Caddy
 calloc
 CAPA
+capath
 CCC
 CDN
 CentOS
 CFLAGS
+cflags
 CGI's
 CHACHA
 chacha
@@ -108,6 +113,7 @@ cliget
 closesocket
 CMake
 cmake
+CMake's
 cmake's
 CMakeLists
 CodeQL
@@ -136,9 +142,11 @@ cshrc
 CTRL
 cURL
 CURLcode
+curldown
 CURLE
 CURLH
 curlimages
+CURLINFO
 curlrc
 curltest
 customizable
@@ -150,11 +158,16 @@ cyassl
 Cygwin
 daniel
 datatracker
+dbg
+Debian
+DEBUGBUILD
 decrypt
 deepcode
 DELE
 DER
 deselectable
+deserialization
+Deserialized
 destructor
 detections
 dev
@@ -186,6 +199,7 @@ EBCDIC
 ECC
 ECDHE
 ECH
+ECONNREFUSED
 eCOS
 EFnet
 EGD
@@ -216,6 +230,7 @@ Falkeborn
 Fandrich
 Fastly
 fcpp
+Fedora
 Feltzing
 ffi
 filesize
@@ -243,6 +258,7 @@ gcc
 GCM
 gdb
 Genode
+Gentoo
 Gergely
 getaddrinfo
 getenv
@@ -256,6 +272,7 @@ ggcov
 Ghedini
 Gisle
 Glesys
+globbed
 globbing
 gmail
 GnuTLS
@@ -267,12 +284,14 @@ GPL
 GPLed
 Greear
 groff
+gsasl
 GSKit
 gskit
 GSS
 GSSAPI
 GTFO
 Guenter
+GUIs
 Gunderson
 Gustafsson
 gzip
@@ -301,9 +320,9 @@ hsts
 HTC
 html
 http
+HTTPAUTH
 httpd
 HTTPD
-HTTPAUTH
 httpget
 HttpGet
 HTTPS
@@ -322,6 +341,7 @@ ifdef
 ifdefed
 Ifdefs
 ifdefs
+IIS
 ILE
 Illumos
 IMAP
@@ -332,11 +352,15 @@ impacket
 init
 initializer
 inlined
+interop
 interoperable
 interoperates
 IoT
 ipadOS
 IPCXN
+IPFS
+ipld
+IPNS
 IPv
 IPv4
 IPv4/6
@@ -361,6 +385,7 @@ keepalive
 Keil
 kerberos
 Keychain
+keychain
 KiB
 kickstart
 Kirei
@@ -425,6 +450,7 @@ Makefile
 makefiles
 malloc
 mallocs
+manpage
 maprintf
 Marek
 Mavrogiannopoulos
@@ -497,6 +523,7 @@ NEC
 Necko
 NetBSD
 netrc
+netstat
 Netware
 NFS
 nghttp
@@ -555,6 +582,7 @@ permafailing
 PINGs
 pipelining
 PKCS
+pkcs
 PKGBUILD
 PKI
 pluggable
@@ -588,6 +616,7 @@ PTR
 ptr
 punycode
 PWD
+pwd
 py
 pycurl
 pytest
@@ -605,6 +634,7 @@ RBS
 ReactOS
 README
 realloc
+Realtime
 rebase
 RECV
 recv
@@ -621,9 +651,11 @@ Relatedly
 repo
 reprioritized
 resending
+resends
 RETR
 retransmit
 retrigger
+RHEL
 RICS
 Rikard
 rmdir
@@ -765,6 +797,7 @@ Tekniska
 testability
 TFTP
 tftp
+threadsafe
 Tizen
 TLS
 tlsv
@@ -777,7 +810,9 @@ toolset
 toplevel
 TPF
 TrackMemory
+transcode
 Tru
+trustless
 Tse
 Tsujikawa
 TTL
@@ -785,6 +820,7 @@ tvOS
 txt
 typedef
 typedefed
+Ubuntu
 ucLinux
 UDP
 UI
@@ -793,9 +829,13 @@ UIDL
 Ultrix
 Unary
 unassign
+UNC
 uncompress
+unencoded
 unencrypted
 unescape
+Unglobbed
+Unicode
 UNICOS
 unix
 UnixSockets
@@ -821,6 +861,7 @@ USD
 userdata
 Userinfo
 userinfo
+USERPROFILE
 UTF
 UX
 valgrind
@@ -833,6 +874,9 @@ Viktor
 VM
 VMS
 VMware
+vnd
+VRF
+VRFY
 VSE
 vsprintf
 vt
@@ -844,7 +888,9 @@ watchOS
 WAV
 WB
 web page
+WebDAV
 WebOS
+webpage
 WebSocket
 WEBSOCKET
 WHATWG
@@ -863,10 +909,12 @@ winssl
 Wireshark
 wolfSSH
 wolfSSL
+ws
 WS
 WSS
 www
 Xbox
+XDG
 xdigit
 Xilinx
 XP

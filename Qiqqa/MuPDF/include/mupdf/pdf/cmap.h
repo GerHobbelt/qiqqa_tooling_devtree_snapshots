@@ -103,6 +103,8 @@ void pdf_map_range_to_range(fz_context *ctx, pdf_cmap *cmap, unsigned int srclo,
 
 /*
 	Add a single one-to-many mapping.
+
+	len <= 256.
 */
 void pdf_map_one_to_many(fz_context *ctx, pdf_cmap *cmap, unsigned int one, int *many, size_t len);
 void pdf_sort_cmap(fz_context *ctx, pdf_cmap *cmap);
@@ -117,7 +119,7 @@ int pdf_lookup_cmap_full(pdf_cmap *cmap, unsigned int cpt, int *out);
 	Use the codespace ranges to extract a codepoint from a
 	multi-byte encoded string.
 */
-int pdf_decode_cmap(pdf_cmap *cmap, unsigned char *s, unsigned char *e, unsigned int *cpt);
+int pdf_decode_cmap(pdf_cmap *cmap, const unsigned char *s, const unsigned char *e, unsigned int *cpt);
 
 /*
 	Create an Identity-* CMap (for both 1 and 2-byte encodings)

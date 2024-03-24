@@ -55,6 +55,7 @@ See the [release notes](ReleaseNotes.md).
 
 See also the discussion for [issue #1423](https://github.com/tesseract-ocr/tesseract/issues/1423).
 
+
 ### Open issues which should be fixed
 
 * #### Issues with the "bug" label (see [list here](https://github.com/tesseract-ocr/tesseract/labels/bug))
@@ -71,10 +72,12 @@ See also the discussion for [issue #1423](https://github.com/tesseract-ocr/tesse
 
 * #### mgr_.Init(traineddata_path.c_str()):Error:Assert failed: #1075 (see [issue 1075](https://github.com/tesseract-ocr/tesseract/issues/1075))
 
+
 ### Features wanted for this release
 
 * #### Script for installing only selected languages from github (see [issue](https://github.com/tesseract-ocr/tesseract/issues/1440))
   https://github.com/zdenop/tessdata_downloader
+
 
 ### To be discussed
 
@@ -89,7 +92,8 @@ Depending on available resources and opinions, these suggestions will either be 
 
 * #### Add option to optionally select implementation for dot product (CPU, SSE, AVX, ...)
 
-* #### Relative includes for traineddata 
+* #### Relative includes for traineddata
+
   tessedit_load_sublangs should search for the sublangs relative to the parent, not starting in tessdata dir.
 
 * #### More fixes for compiler warnings and issues reported by Coverity Scan
@@ -97,14 +101,17 @@ Depending on available resources and opinions, these suggestions will either be 
 * #### Add a simple bash script for building tesseract
 
 * #### New traineddata format 
+
   In addition to the current proprietary format Tesseract could also support ZIP archives (see [discussion](https://github.com/tesseract-ocr/tesseract/pull/911)).
-A possible implementation using libarchive is [available](https://github.com/stweil/tesseract/tree/libarchive), but needs more testing.
+
+  A possible implementation using libarchive is [available](https://github.com/stweil/tesseract/tree/libarchive), but needs more testing.
 
 * #### "Training light" - Learning by doing (see [issue](https://github.com/tesseract-ocr/tesseract/issues/1442))
 
 * #### Modify text2image to use PrepareDistortedPix() [#1052](https://github.com/tesseract-ocr/tesseract/issues/1052)
 
 * #### Schedule date
+
 
 ### Regression of features from 3.0x
 
@@ -121,12 +128,13 @@ Tesseract 4.0 should be a full replacement for Tesseract 3.05 and have the same 
 
 These features still work with the old OCR engine (`--oem 0`), but are missing and desired for LSTM.
 
-* #### Black list / White list (See [issue](https://github.com/tesseract-ocr/tesseract/issues/751)). Here is a [workaround](https://github.com/tesseract-ocr/tesseract/issues/751#issuecomment-333904808). [Fixed in 4.1.0](https://github.com/tesseract-ocr/tesseract/pull/2294).
-
+* ~~#### Black list / White list (See [issue](https://github.com/tesseract-ocr/tesseract/issues/751)). Here is a [workaround](https://github.com/tesseract-ocr/tesseract/issues/751#issuecomment-333904808).~~ [Fixed in 4.1.0](https://github.com/tesseract-ocr/tesseract/pull/2294).
 
 * #### hOCR font info (See [comment](https://github.com/tesseract-ocr/tesseract/issues/1074#issuecomment-3278142444))
 
+
 ## Future release
+
 Here we collect important issues and features for the release(s) following 4.0.0.
 
 * #### New LSTM-based OSD detector (see [comment](https://github.com/tesseract-ocr/tesseract/issues/707#issuecomment-374465989)).
@@ -143,8 +151,10 @@ Here we collect important issues and features for the release(s) following 4.0.0
   This does not include OpenCL or the old Tesseract engine.
 
 * #### Tesseract creates output for missing input (see [issue 1023](https://github.com/tesseract-ocr/tesseract/issues/1023)).
+
   Mostly solved, but could be improved.
 
-
 * ####  Issue 1353: Patch for /training/tessopt.cpp (see [pull request 13](https://github.com/tesseract-ocr/tesseract/pull/13))
+
   It looks like it is not possible to run more than one training in the same process. The pull request describes a possible fix, but does not include a complete implementation (low priority).
+

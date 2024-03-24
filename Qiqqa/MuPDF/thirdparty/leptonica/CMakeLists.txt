@@ -42,12 +42,20 @@ set_property(GLOBAL PROPERTY PREDEFINED_TARGETS_FOLDER "CMake Targets")
 
 project(
   leptonica
-  LANGUAGES C CXX
+  LANGUAGES C
   VERSION 1.84.0)
+set(CMAKE_C_STANDARD 17)
+set(CMAKE_C_STANDARD_REQUIRED ON)
+
+# Testing support
+include(CTest)
+# Standard installation paths
+include(GNUInstallDirs)
 
 set(MINIMUM_WEBPMUX_VERSION 0.5.0)
 
 option(BUILD_PROG "Build utility programs" OFF)
+option(BUILD_TEST "Build tests" OFF)
 if(WIN32)
   option(SW_BUILD "Build with sw" OFF)
 else()
@@ -227,7 +235,7 @@ set(libs_private "${libs_private} -lm")
 #
 # ##############################################################################
 
-if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+if(CMAKE_C_COMPILER_ID MATCHES "Clang")
   set(CLANG 1)
 endif()
 
@@ -243,12 +251,10 @@ else()
 endif()
 
 include(CheckCCompilerFlag)
-include(CheckCXXCompilerFlag)
 
 # Check for valid compiler flags
 macro(CHECK_CCXX_COMPILER_FLAG flag_ result_)
   check_c_compiler_flag(${flag_} C_HAS${result_})
-  check_cxx_compiler_flag(${flag_} CXX_HAS${result_})
 endmacro()
 
 if(MSVC)
@@ -256,7 +262,7 @@ if(MSVC)
   add_compile_options("$<$<CONFIG:Release>:/W1;/Ox>")
   add_compile_options("$<$<CONFIG:Debug>:/W4;/DDEBUG>")
   if(NOT CLANG)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /MP")
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /MP")
   endif()
 else()
   if(CMAKE_BUILD_TYPE MATCHES "[Dd][Ee][Bb][Uu][Gg]")
@@ -274,9 +280,6 @@ else()
       check_ccxx_compiler_flag(${flag_} ${flag_var})
       if(C_HAS${flag_var})
         set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} ${flag_}")
-      endif()
-      if(CXX_HAS${flag_var})
-        set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} ${flag_}")
       endif()
     endforeach()
     add_definitions(-DDEBUG)
@@ -323,6 +326,7 @@ message(STATUS "Install directory: ${CMAKE_INSTALL_PREFIX}")
 message(STATUS)
 message(STATUS "Build with sw [SW_BUILD]: ${SW_BUILD}")
 message(STATUS "Build utility programs [BUILD_PROG]: ${BUILD_PROG}")
+message(STATUS "Build tests [BUILD_TEST]: ${BUILD_TEST}")
 if(NOT SW_BUILD)
   message(STATUS "Used ZLIB library: ${ZLIB_LIBRARIES}")
   message(STATUS "Used PNG library:  ${PNG_LIBRARIES}")
@@ -346,7 +350,7 @@ add_definitions(-DHAVE_CONFIG_H)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src)
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/src)
 
-if(BUILD_PROG)
+if(BUILD_PROG OR BUILD_TEST)
   add_subdirectory(prog)
 endif()
 

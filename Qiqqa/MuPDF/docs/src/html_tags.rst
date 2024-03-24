@@ -1,4 +1,23 @@
+.. |instance_props| raw:: html
+
+   <span class="instance_props_tag">Instance properties</span>
+
+
+.. |instance_methods| raw:: html
+
+   <span class="instance_methods_tag">Instance methods</span>
+
+
+.. |example_tag| raw:: html
+
+   <span class="example_tag">EXAMPLE</span>
+
+
 .. |mutool_tag| raw:: html
+
+   <span class="mutool_tag">mutool only</span>
+
+.. |mutool_tag_wasm_soon| raw:: html
 
    <span class="mutool_tag">mutool only</span>
 

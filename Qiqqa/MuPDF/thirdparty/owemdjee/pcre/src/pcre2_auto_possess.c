@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
 repeats into possessive repeats where possible. */
 
 
-#ifdef HAVE_CONFIG_H
+#if defined(HAVE_CONFIG_H) && !defined(PCRE2_AMALGAMETE)
 #include "config.h"
 #endif
 

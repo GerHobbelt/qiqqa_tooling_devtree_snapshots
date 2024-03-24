@@ -23,34 +23,34 @@
  *   http://www.mozilla.org/MPL/                                           *
  ***************************************************************************/
 
-#include <tdebug.h>
-#include <tstring.h>
-#include <tpropertymap.h>
-#include "mp4atom.h"
 #include "mp4tag.h"
+
+#include <array>
+#include <utility>
+
+#include "tdebug.h"
+#include "tpropertymap.h"
 #include "id3v1genres.h"
+#include "mp4atom.h"
+#include "mp4coverart.h"
 
 using namespace TagLib;
 
 class MP4::Tag::TagPrivate
 {
 public:
-  TagPrivate() :
-    file(0),
-    atoms(0) {}
-
-  TagLib::File *file;
-  Atoms *atoms;
+  TagLib::File *file { nullptr };
+  Atoms *atoms { nullptr };
   ItemMap items;
 };
 
 MP4::Tag::Tag() :
-  d(new TagPrivate())
+  d(std::make_unique<TagPrivate>())
 {
 }
 
 MP4::Tag::Tag(TagLib::File *file, MP4::Atoms *atoms) :
-  d(new TagPrivate())
+  d(std::make_unique<TagPrivate>())
 {
   d->file = file;
   d->atoms = atoms;
@@ -61,8 +61,7 @@ MP4::Tag::Tag(TagLib::File *file, MP4::Atoms *atoms) :
     return;
   }
 
-  for(AtomList::ConstIterator it = ilst->children.begin(); it != ilst->children.end(); ++it) {
-    MP4::Atom *atom = *it;
+  for(const auto &atom : std::as_const(ilst->children)) {
     file->seek(atom->offset + 8);
     if(atom->name == "----") {
       parseFreeForm(atom);
@@ -114,10 +113,7 @@ MP4::Tag::Tag(TagLib::File *file, MP4::Atoms *atoms) :
   }
 }
 
-MP4::Tag::~Tag()
-{
-  delete d;
-}
+MP4::Tag::~Tag() = default;
 
 MP4::AtomDataList
 MP4::Tag::parseData2(const MP4::Atom *atom, int expectedFlags, bool freeForm)
@@ -127,14 +123,14 @@ MP4::Tag::parseData2(const MP4::Atom *atom, int expectedFlags, bool freeForm)
   int i = 0;
   unsigned int pos = 0;
   while(pos < data.size()) {
-    const int length = static_cast<int>(data.toUInt(pos));
+    const auto length = static_cast<int>(data.toUInt(pos));
     if(length < 12) {
       debug("MP4: Too short atom");
       return result;
     }
 
     const ByteVector name = data.mid(pos + 4, 4);
-    const int flags = static_cast<int>(data.toUInt(pos + 8));
+    const auto flags = static_cast<int>(data.toUInt(pos + 8));
     if(freeForm && i < 2) {
       if(i == 0 && name != "mean") {
         debug("MP4: Unexpected atom \"" + name + "\", expecting \"mean\"");
@@ -164,10 +160,10 @@ MP4::Tag::parseData2(const MP4::Atom *atom, int expectedFlags, bool freeForm)
 ByteVectorList
 MP4::Tag::parseData(const MP4::Atom *atom, int expectedFlags, bool freeForm)
 {
-  AtomDataList data = parseData2(atom, expectedFlags, freeForm);
+  const AtomDataList data = parseData2(atom, expectedFlags, freeForm);
   ByteVectorList result;
-  for(AtomDataList::ConstIterator it = data.begin(); it != data.end(); ++it) {
-    result.append(it->data);
+  for(const auto &atom : data) {
+    result.append(atom.data);
   }
   return result;
 }
@@ -236,7 +232,7 @@ MP4::Tag::parseBool(const MP4::Atom *atom)
 {
   ByteVectorList data = parseData(atom);
   if(!data.isEmpty()) {
-    bool value = data[0].size() ? data[0][0] != '\0' : false;
+    bool value = !data[0].isEmpty() && data[0][0] != '\0';
     addItem(atom->name, value);
   }
 }
@@ -244,11 +240,11 @@ MP4::Tag::parseBool(const MP4::Atom *atom)
 void
 MP4::Tag::parseText(const MP4::Atom *atom, int expectedFlags)
 {
-  ByteVectorList data = parseData(atom, expectedFlags);
+  const ByteVectorList data = parseData(atom, expectedFlags);
   if(!data.isEmpty()) {
     StringList value;
-    for(ByteVectorList::ConstIterator it = data.begin(); it != data.end(); ++it) {
-      value.append(String(*it, String::UTF8));
+    for(const auto &byte : data) {
+      value.append(String(byte, String::UTF8));
     }
     addItem(atom->name, value);
   }
@@ -257,9 +253,9 @@ MP4::Tag::parseText(const MP4::Atom *atom, int expectedFlags)
 void
 MP4::Tag::parseFreeForm(const MP4::Atom *atom)
 {
-  AtomDataList data = parseData2(atom, -1, true);
+  const AtomDataList data = parseData2(atom, -1, true);
   if(data.size() > 2) {
-    AtomDataList::ConstIterator itBegin = data.begin();
+    auto itBegin = data.begin();
 
     String name = "----:";
     name += String((itBegin++)->data, String::UTF8);  // data[0].data
@@ -268,7 +264,7 @@ MP4::Tag::parseFreeForm(const MP4::Atom *atom)
 
     AtomDataType type = itBegin->type; // data[2].type
 
-    for(AtomDataList::ConstIterator it = itBegin; it != data.end(); ++it) {
+    for(auto it = itBegin; it != data.end(); ++it) {
       if(it->type != type) {
         debug("MP4: We currently don't support values with multiple types");
         break;
@@ -276,7 +272,7 @@ MP4::Tag::parseFreeForm(const MP4::Atom *atom)
     }
     if(type == TypeUTF8) {
       StringList value;
-      for(AtomDataList::ConstIterator it = itBegin; it != data.end(); ++it) {
+      for(auto it = itBegin; it != data.end(); ++it) {
         value.append(String(it->data, String::UTF8));
       }
       Item item(value);
@@ -285,7 +281,7 @@ MP4::Tag::parseFreeForm(const MP4::Atom *atom)
     }
     else {
       ByteVectorList value;
-      for(AtomDataList::ConstIterator it = itBegin; it != data.end(); ++it) {
+      for(auto it = itBegin; it != data.end(); ++it) {
         value.append(it->data);
       }
       Item item(value);
@@ -347,8 +343,8 @@ ByteVector
 MP4::Tag::renderData(const ByteVector &name, int flags, const ByteVectorList &data) const
 {
   ByteVector result;
-  for(ByteVectorList::ConstIterator it = data.begin(); it != data.end(); ++it) {
-    result.append(renderAtom("data", ByteVector::fromUInt(flags) + ByteVector(4, '\0') + *it));
+  for(const auto &byte : data) {
+    result.append(renderAtom("data", ByteVector::fromUInt(flags) + ByteVector(4, '\0') + byte));
   }
   return renderAtom(name, result);
 }
@@ -418,9 +414,9 @@ ByteVector
 MP4::Tag::renderText(const ByteVector &name, const MP4::Item &item, int flags) const
 {
   ByteVectorList data;
-  StringList value = item.toStringList();
-  for(StringList::ConstIterator it = value.begin(); it != value.end(); ++it) {
-    data.append(it->data(String::UTF8));
+  const StringList values = item.toStringList();
+  for(const auto &value : values) {
+    data.append(value.data(String::UTF8));
   }
   return renderData(name, flags, data);
 }
@@ -429,10 +425,10 @@ ByteVector
 MP4::Tag::renderCovr(const ByteVector &name, const MP4::Item &item) const
 {
   ByteVector data;
-  MP4::CoverArtList value = item.toCoverArtList();
-  for(MP4::CoverArtList::ConstIterator it = value.begin(); it != value.end(); ++it) {
-    data.append(renderAtom("data", ByteVector::fromUInt(it->format()) +
-                                   ByteVector(4, '\0') + it->data()));
+  const MP4::CoverArtList values = item.toCoverArtList();
+  for(const auto &value : values) {
+    data.append(renderAtom("data", ByteVector::fromUInt(value.format()) +
+                                   ByteVector(4, '\0') + value.data()));
   }
   return renderAtom(name, data);
 }
@@ -458,15 +454,17 @@ MP4::Tag::renderFreeForm(const String &name, const MP4::Item &item) const
     }
   }
   if(type == TypeUTF8) {
-    StringList value = item.toStringList();
-    for(StringList::ConstIterator it = value.begin(); it != value.end(); ++it) {
-      data.append(renderAtom("data", ByteVector::fromUInt(type) + ByteVector(4, '\0') + it->data(String::UTF8)));
+    const StringList values = item.toStringList();
+    for(const auto &value : values) {
+      data.append(renderAtom("data", ByteVector::fromUInt(type) +
+                                     ByteVector(4, '\0') + value.data(String::UTF8)));
     }
   }
   else {
-    ByteVectorList value = item.toByteVectorList();
-    for(ByteVectorList::ConstIterator it = value.begin(); it != value.end(); ++it) {
-      data.append(renderAtom("data", ByteVector::fromUInt(type) + ByteVector(4, '\0') + *it));
+    const ByteVectorList values = item.toByteVectorList();
+    for(const auto &value : values) {
+      data.append(renderAtom("data", ByteVector::fromUInt(type) +
+                                     ByteVector(4, '\0') + value));
     }
   }
   return renderAtom("----", data);
@@ -476,26 +474,24 @@ bool
 MP4::Tag::save()
 {
   ByteVector data;
-  for(MP4::ItemMap::ConstIterator it = d->items.begin(); it != d->items.end(); ++it) {
-    const String name = it->first;
+  for(const auto &[name, item] : std::as_const(d->items)) {
     if(name.startsWith("----")) {
-      data.append(renderFreeForm(name, it->second));
+      data.append(renderFreeForm(name, item));
     }
     else if(name == "trkn") {
-      data.append(renderIntPair(name.data(String::Latin1), it->second));
+      data.append(renderIntPair(name.data(String::Latin1), item));
     }
     else if(name == "disk") {
-      data.append(renderIntPairNoTrailing(name.data(String::Latin1), it->second));
+      data.append(renderIntPairNoTrailing(name.data(String::Latin1), item));
     }
     else if(name == "cpil" || name == "pgap" || name == "pcst" || name == "hdvd" ||
             name == "shwm") {
-      data.append(renderBool(name.data(String::Latin1), it->second));
+      data.append(renderBool(name.data(String::Latin1), item));
     }
     else if(name == "tmpo" || name == "\251mvi" || name == "\251mvc") {
-      data.append(renderInt(name.data(String::Latin1), it->second));
+      data.append(renderInt(name.data(String::Latin1), item));
     }
-    else if (name == "rate") {
-      const MP4::Item& item = it->second;
+    else if(name == "rate") {
       StringList value = item.toStringList();
       if (value.isEmpty()) {
         data.append(renderInt(name.data(String::Latin1), item));
@@ -507,22 +503,22 @@ MP4::Tag::save()
     else if(name == "tvsn" || name == "tves" || name == "cnID" ||
             name == "sfID" || name == "atID" || name == "geID" ||
             name == "cmID") {
-      data.append(renderUInt(name.data(String::Latin1), it->second));
+      data.append(renderUInt(name.data(String::Latin1), item));
     }
     else if(name == "plID") {
-      data.append(renderLongLong(name.data(String::Latin1), it->second));
+      data.append(renderLongLong(name.data(String::Latin1), item));
     }
     else if(name == "stik" || name == "rtng" || name == "akID") {
-      data.append(renderByte(name.data(String::Latin1), it->second));
+      data.append(renderByte(name.data(String::Latin1), item));
     }
     else if(name == "covr") {
-      data.append(renderCovr(name.data(String::Latin1), it->second));
+      data.append(renderCovr(name.data(String::Latin1), item));
     }
     else if(name == "purl" || name == "egid") {
-      data.append(renderText(name.data(String::Latin1), it->second, TypeImplicit));
+      data.append(renderText(name.data(String::Latin1), item, TypeImplicit));
     }
     else if(name.size() == 4){
-      data.append(renderText(name.data(String::Latin1), it->second));
+      data.append(renderText(name.data(String::Latin1), item));
     }
     else {
       debug("MP4: Unknown item name \"" + name + "\"");
@@ -555,15 +551,15 @@ MP4::Tag::strip()
 }
 
 void
-MP4::Tag::updateParents(const AtomList &path, long delta, int ignore)
+MP4::Tag::updateParents(const AtomList &path, offset_t delta, int ignore)
 {
   if(static_cast<int>(path.size()) <= ignore)
     return;
 
-  AtomList::ConstIterator itEnd = path.end();
+  auto itEnd = path.end();
   std::advance(itEnd, 0 - ignore);
 
-  for(AtomList::ConstIterator it = path.begin(); it != itEnd; ++it) {
+  for(auto it = path.begin(); it != itEnd; ++it) {
     d->file->seek((*it)->offset);
     long size = d->file->readBlock(4).toUInt();
     // 64-bit
@@ -577,19 +573,18 @@ MP4::Tag::updateParents(const AtomList &path, long delta, int ignore)
     // 32-bit
     else {
       d->file->seek((*it)->offset);
-      d->file->writeBlock(ByteVector::fromUInt(size + delta));
+      d->file->writeBlock(ByteVector::fromUInt(static_cast<unsigned int>(size + delta)));
     }
   }
 }
 
 void
-MP4::Tag::updateOffsets(long delta, long offset)
+MP4::Tag::updateOffsets(offset_t delta, offset_t offset)
 {
   MP4::Atom *moov = d->atoms->find("moov");
   if(moov) {
-    MP4::AtomList stco = moov->findall("stco", true);
-    for(MP4::AtomList::ConstIterator it = stco.begin(); it != stco.end(); ++it) {
-      MP4::Atom *atom = *it;
+    const MP4::AtomList stco = moov->findall("stco", true);
+    for(const auto &atom : stco) {
       if(atom->offset > offset) {
         atom->offset += delta;
       }
@@ -599,18 +594,17 @@ MP4::Tag::updateOffsets(long delta, long offset)
       d->file->seek(atom->offset + 16);
       unsigned int pos = 4;
       while(count--) {
-        long o = static_cast<long>(data.toUInt(pos));
+        auto o = static_cast<offset_t>(data.toUInt(pos));
         if(o > offset) {
           o += delta;
         }
-        d->file->writeBlock(ByteVector::fromUInt(o));
+        d->file->writeBlock(ByteVector::fromUInt(static_cast<unsigned int>(o)));
         pos += 4;
       }
     }
 
-    MP4::AtomList co64 = moov->findall("co64", true);
-    for(MP4::AtomList::ConstIterator it = co64.begin(); it != co64.end(); ++it) {
-      MP4::Atom *atom = *it;
+    const MP4::AtomList co64 = moov->findall("co64", true);
+    for(const auto &atom : co64) {
       if(atom->offset > offset) {
         atom->offset += delta;
       }
@@ -632,9 +626,8 @@ MP4::Tag::updateOffsets(long delta, long offset)
 
   MP4::Atom *moof = d->atoms->find("moof");
   if(moof) {
-    MP4::AtomList tfhd = moof->findall("tfhd", true);
-    for(MP4::AtomList::ConstIterator it = tfhd.begin(); it != tfhd.end(); ++it) {
-      MP4::Atom *atom = *it;
+    const MP4::AtomList tfhd = moof->findall("tfhd", true);
+    for(const auto &atom : tfhd) {
       if(atom->offset > offset) {
         atom->offset += delta;
       }
@@ -667,7 +660,7 @@ MP4::Tag::saveNew(ByteVector data)
     data = renderAtom("udta", data);
   }
 
-  long offset = path.back()->offset + 8;
+  offset_t offset = path.back()->offset + 8;
   d->file->insert(data, offset, 0);
 
   updateParents(path, data.size());
@@ -682,19 +675,18 @@ MP4::Tag::saveNew(ByteVector data)
 void
 MP4::Tag::saveExisting(ByteVector data, const AtomList &path)
 {
-  AtomList::ConstIterator it = path.end();
+  auto it = path.end();
 
   MP4::Atom *ilst = *(--it);
-  long offset = ilst->offset;
-  long length = ilst->length;
+  offset_t offset = ilst->offset;
+  offset_t length = ilst->length;
 
   MP4::Atom *meta = *(--it);
-  AtomList::ConstIterator index = meta->children.find(ilst);
+  auto index = meta->children.cfind(ilst);
 
   // check if there is an atom before 'ilst', and possibly use it as padding
-  if(index != meta->children.begin()) {
-    AtomList::ConstIterator prevIndex = index;
-    prevIndex--;
+  if(index != meta->children.cbegin()) {
+    auto prevIndex = std::prev(index);
     MP4::Atom *prev = *prevIndex;
     if(prev->name == "free") {
       offset = prev->offset;
@@ -702,23 +694,22 @@ MP4::Tag::saveExisting(ByteVector data, const AtomList &path)
     }
   }
   // check if there is an atom after 'ilst', and possibly use it as padding
-  AtomList::ConstIterator nextIndex = index;
-  nextIndex++;
-  if(nextIndex != meta->children.end()) {
+  auto nextIndex = std::next(index);
+  if(nextIndex != meta->children.cend()) {
     MP4::Atom *next = *nextIndex;
     if(next->name == "free") {
       length += next->length;
     }
   }
 
-  long delta = data.size() - length;
+  offset_t delta = data.size() - length;
   if(!data.isEmpty()) {
     if(delta > 0 || (delta < 0 && delta > -8)) {
       data.append(padIlst(data));
       delta = data.size() - length;
     }
     else if(delta < 0) {
-      data.append(padIlst(data, -delta - 8));
+      data.append(padIlst(data, static_cast<int>(-delta - 8)));
       delta = 0;
     }
 
@@ -731,9 +722,9 @@ MP4::Tag::saveExisting(ByteVector data, const AtomList &path)
   }
   else {
     // Strip meta if data is empty, only the case when called from strip().
-    MP4::Atom *udta = *(--it);
+    MP4::Atom *udta = *std::prev(it);
     AtomList &udtaChildren = udta->children;
-    AtomList::Iterator metaIt = udtaChildren.find(meta);
+    auto metaIt = udtaChildren.find(meta);
     if(metaIt != udtaChildren.end()) {
       offset = meta->offset;
       delta = - meta->length;
@@ -872,11 +863,6 @@ bool MP4::Tag::isEmpty() const
   return d->items.isEmpty();
 }
 
-MP4::ItemMap &MP4::Tag::itemListMap()
-{
-  return d->items;
-}
-
 const MP4::ItemMap &MP4::Tag::itemMap() const
 {
   return d->items;
@@ -904,84 +890,83 @@ bool MP4::Tag::contains(const String &key) const
 
 namespace
 {
-  const std::pair<const char *, const char *> keyTranslation[] = {
-    std::make_pair("\251nam", "TITLE"),
-    std::make_pair("\251ART", "ARTIST"),
-    std::make_pair("\251alb", "ALBUM"),
-    std::make_pair("\251cmt", "COMMENT"),
-    std::make_pair("\251gen", "GENRE"),
-    std::make_pair("\251day", "DATE"),
-    std::make_pair("\251wrt", "COMPOSER"),
-    std::make_pair("\251grp", "GROUPING"),
-    std::make_pair("aART", "ALBUMARTIST"),
-    std::make_pair("trkn", "TRACKNUMBER"),
-    std::make_pair("disk", "DISCNUMBER"),
-    std::make_pair("cpil", "COMPILATION"),
-    std::make_pair("tmpo", "BPM"),
-    std::make_pair("cprt", "COPYRIGHT"),
-    std::make_pair("\251lyr", "LYRICS"),
-    std::make_pair("\251too", "ENCODEDBY"),
-    std::make_pair("soal", "ALBUMSORT"),
-    std::make_pair("soaa", "ALBUMARTISTSORT"),
-    std::make_pair("soar", "ARTISTSORT"),
-    std::make_pair("sonm", "TITLESORT"),
-    std::make_pair("soco", "COMPOSERSORT"),
-    std::make_pair("sosn", "SHOWSORT"),
-    std::make_pair("shwm", "SHOWWORKMOVEMENT"),
-    std::make_pair("pgap", "GAPLESSPLAYBACK"),
-    std::make_pair("pcst", "PODCAST"),
-    std::make_pair("catg", "PODCASTCATEGORY"),
-    std::make_pair("desc", "PODCASTDESC"),
-    std::make_pair("egid", "PODCASTID"),
-    std::make_pair("purl", "PODCASTURL"),
-    std::make_pair("tves", "TVEPISODE"),
-    std::make_pair("tven", "TVEPISODEID"),
-    std::make_pair("tvnn", "TVNETWORK"),
-    std::make_pair("tvsn", "TVSEASON"),
-    std::make_pair("tvsh", "TVSHOW"),
-    std::make_pair("\251wrk", "WORK"),
-    std::make_pair("\251mvn", "MOVEMENTNAME"),
-    std::make_pair("\251mvi", "MOVEMENTNUMBER"),
-    std::make_pair("\251mvc", "MOVEMENTCOUNT"),
-    std::make_pair("----:com.apple.iTunes:MusicBrainz Track Id", "MUSICBRAINZ_TRACKID"),
-    std::make_pair("----:com.apple.iTunes:MusicBrainz Artist Id", "MUSICBRAINZ_ARTISTID"),
-    std::make_pair("----:com.apple.iTunes:MusicBrainz Album Id", "MUSICBRAINZ_ALBUMID"),
-    std::make_pair("----:com.apple.iTunes:MusicBrainz Album Artist Id", "MUSICBRAINZ_ALBUMARTISTID"),
-    std::make_pair("----:com.apple.iTunes:MusicBrainz Release Group Id", "MUSICBRAINZ_RELEASEGROUPID"),
-    std::make_pair("----:com.apple.iTunes:MusicBrainz Release Track Id", "MUSICBRAINZ_RELEASETRACKID"),
-    std::make_pair("----:com.apple.iTunes:MusicBrainz Work Id", "MUSICBRAINZ_WORKID"),
-    std::make_pair("----:com.apple.iTunes:MusicBrainz Album Release Country", "RELEASECOUNTRY"),
-    std::make_pair("----:com.apple.iTunes:MusicBrainz Album Status", "RELEASESTATUS"),
-    std::make_pair("----:com.apple.iTunes:MusicBrainz Album Type", "RELEASETYPE"),
-    std::make_pair("----:com.apple.iTunes:ARTISTS", "ARTISTS"),
-    std::make_pair("----:com.apple.iTunes:originaldate", "ORIGINALDATE"),
-    std::make_pair("----:com.apple.iTunes:ASIN", "ASIN"),
-    std::make_pair("----:com.apple.iTunes:LABEL", "LABEL"),
-    std::make_pair("----:com.apple.iTunes:LYRICIST", "LYRICIST"),
-    std::make_pair("----:com.apple.iTunes:CONDUCTOR", "CONDUCTOR"),
-    std::make_pair("----:com.apple.iTunes:REMIXER", "REMIXER"),
-    std::make_pair("----:com.apple.iTunes:ENGINEER", "ENGINEER"),
-    std::make_pair("----:com.apple.iTunes:PRODUCER", "PRODUCER"),
-    std::make_pair("----:com.apple.iTunes:DJMIXER", "DJMIXER"),
-    std::make_pair("----:com.apple.iTunes:MIXER", "MIXER"),
-    std::make_pair("----:com.apple.iTunes:SUBTITLE", "SUBTITLE"),
-    std::make_pair("----:com.apple.iTunes:DISCSUBTITLE", "DISCSUBTITLE"),
-    std::make_pair("----:com.apple.iTunes:MOOD", "MOOD"),
-    std::make_pair("----:com.apple.iTunes:ISRC", "ISRC"),
-    std::make_pair("----:com.apple.iTunes:CATALOGNUMBER", "CATALOGNUMBER"),
-    std::make_pair("----:com.apple.iTunes:BARCODE", "BARCODE"),
-    std::make_pair("----:com.apple.iTunes:SCRIPT", "SCRIPT"),
-    std::make_pair("----:com.apple.iTunes:LANGUAGE", "LANGUAGE"),
-    std::make_pair("----:com.apple.iTunes:LICENSE", "LICENSE"),
-    std::make_pair("----:com.apple.iTunes:MEDIA", "MEDIA"),
+  constexpr std::array keyTranslation {
+    std::pair("\251nam", "TITLE"),
+    std::pair("\251ART", "ARTIST"),
+    std::pair("\251alb", "ALBUM"),
+    std::pair("\251cmt", "COMMENT"),
+    std::pair("\251gen", "GENRE"),
+    std::pair("\251day", "DATE"),
+    std::pair("\251wrt", "COMPOSER"),
+    std::pair("\251grp", "GROUPING"),
+    std::pair("aART", "ALBUMARTIST"),
+    std::pair("trkn", "TRACKNUMBER"),
+    std::pair("disk", "DISCNUMBER"),
+    std::pair("cpil", "COMPILATION"),
+    std::pair("tmpo", "BPM"),
+    std::pair("cprt", "COPYRIGHT"),
+    std::pair("\251lyr", "LYRICS"),
+    std::pair("\251too", "ENCODEDBY"),
+    std::pair("soal", "ALBUMSORT"),
+    std::pair("soaa", "ALBUMARTISTSORT"),
+    std::pair("soar", "ARTISTSORT"),
+    std::pair("sonm", "TITLESORT"),
+    std::pair("soco", "COMPOSERSORT"),
+    std::pair("sosn", "SHOWSORT"),
+    std::pair("shwm", "SHOWWORKMOVEMENT"),
+    std::pair("pgap", "GAPLESSPLAYBACK"),
+    std::pair("pcst", "PODCAST"),
+    std::pair("catg", "PODCASTCATEGORY"),
+    std::pair("desc", "PODCASTDESC"),
+    std::pair("egid", "PODCASTID"),
+    std::pair("purl", "PODCASTURL"),
+    std::pair("tves", "TVEPISODE"),
+    std::pair("tven", "TVEPISODEID"),
+    std::pair("tvnn", "TVNETWORK"),
+    std::pair("tvsn", "TVSEASON"),
+    std::pair("tvsh", "TVSHOW"),
+    std::pair("\251wrk", "WORK"),
+    std::pair("\251mvn", "MOVEMENTNAME"),
+    std::pair("\251mvi", "MOVEMENTNUMBER"),
+    std::pair("\251mvc", "MOVEMENTCOUNT"),
+    std::pair("----:com.apple.iTunes:MusicBrainz Track Id", "MUSICBRAINZ_TRACKID"),
+    std::pair("----:com.apple.iTunes:MusicBrainz Artist Id", "MUSICBRAINZ_ARTISTID"),
+    std::pair("----:com.apple.iTunes:MusicBrainz Album Id", "MUSICBRAINZ_ALBUMID"),
+    std::pair("----:com.apple.iTunes:MusicBrainz Album Artist Id", "MUSICBRAINZ_ALBUMARTISTID"),
+    std::pair("----:com.apple.iTunes:MusicBrainz Release Group Id", "MUSICBRAINZ_RELEASEGROUPID"),
+    std::pair("----:com.apple.iTunes:MusicBrainz Release Track Id", "MUSICBRAINZ_RELEASETRACKID"),
+    std::pair("----:com.apple.iTunes:MusicBrainz Work Id", "MUSICBRAINZ_WORKID"),
+    std::pair("----:com.apple.iTunes:MusicBrainz Album Release Country", "RELEASECOUNTRY"),
+    std::pair("----:com.apple.iTunes:MusicBrainz Album Status", "RELEASESTATUS"),
+    std::pair("----:com.apple.iTunes:MusicBrainz Album Type", "RELEASETYPE"),
+    std::pair("----:com.apple.iTunes:ARTISTS", "ARTISTS"),
+    std::pair("----:com.apple.iTunes:originaldate", "ORIGINALDATE"),
+    std::pair("----:com.apple.iTunes:ASIN", "ASIN"),
+    std::pair("----:com.apple.iTunes:LABEL", "LABEL"),
+    std::pair("----:com.apple.iTunes:LYRICIST", "LYRICIST"),
+    std::pair("----:com.apple.iTunes:CONDUCTOR", "CONDUCTOR"),
+    std::pair("----:com.apple.iTunes:REMIXER", "REMIXER"),
+    std::pair("----:com.apple.iTunes:ENGINEER", "ENGINEER"),
+    std::pair("----:com.apple.iTunes:PRODUCER", "PRODUCER"),
+    std::pair("----:com.apple.iTunes:DJMIXER", "DJMIXER"),
+    std::pair("----:com.apple.iTunes:MIXER", "MIXER"),
+    std::pair("----:com.apple.iTunes:SUBTITLE", "SUBTITLE"),
+    std::pair("----:com.apple.iTunes:DISCSUBTITLE", "DISCSUBTITLE"),
+    std::pair("----:com.apple.iTunes:MOOD", "MOOD"),
+    std::pair("----:com.apple.iTunes:ISRC", "ISRC"),
+    std::pair("----:com.apple.iTunes:CATALOGNUMBER", "CATALOGNUMBER"),
+    std::pair("----:com.apple.iTunes:BARCODE", "BARCODE"),
+    std::pair("----:com.apple.iTunes:SCRIPT", "SCRIPT"),
+    std::pair("----:com.apple.iTunes:LANGUAGE", "LANGUAGE"),
+    std::pair("----:com.apple.iTunes:LICENSE", "LICENSE"),
+    std::pair("----:com.apple.iTunes:MEDIA", "MEDIA"),
   };
-  const size_t keyTranslationSize = sizeof(keyTranslation) / sizeof(keyTranslation[0]);
 
   String translateKey(const String &key)
   {
-    for(size_t i = 0; i < keyTranslationSize; ++i) {
-      if(key == keyTranslation[i].first)
-        return keyTranslation[i].second;
+    for(const auto &[k, t] : keyTranslation) {
+      if(key == k)
+        return t;
     }
 
     return String();
@@ -991,31 +976,31 @@ namespace
 PropertyMap MP4::Tag::properties() const
 {
   PropertyMap props;
-  for(MP4::ItemMap::ConstIterator it = d->items.begin(); it != d->items.end(); ++it) {
-    const String key = translateKey(it->first);
+  for(const auto &[k, t] : std::as_const(d->items)) {
+    const String key = translateKey(k);
     if(!key.isEmpty()) {
       if(key == "TRACKNUMBER" || key == "DISCNUMBER") {
-        MP4::Item::IntPair ip = it->second.toIntPair();
-        String value = String::number(ip.first);
-        if(ip.second) {
-          value += "/" + String::number(ip.second);
+        auto [vn, tn] = t.toIntPair();
+        String value  = String::number(vn);
+        if(tn) {
+          value += "/" + String::number(tn);
         }
         props[key] = value;
       }
       else if(key == "BPM" || key == "MOVEMENTNUMBER" || key == "MOVEMENTCOUNT" ||
               key == "TVEPISODE" || key == "TVSEASON") {
-        props[key] = String::number(it->second.toInt());
+        props[key] = String::number(t.toInt());
       }
       else if(key == "COMPILATION" || key == "SHOWWORKMOVEMENT" ||
               key == "GAPLESSPLAYBACK" || key == "PODCAST") {
-        props[key] = String::number(it->second.toBool());
+        props[key] = String::number(t.toBool());
       }
       else {
-        props[key] = it->second.toStringList();
+        props[key] = t.toStringList();
       }
     }
     else {
-      props.unsupportedData().append(it->first);
+      props.unsupportedData().append(k);
     }
   }
   return props;
@@ -1023,32 +1008,32 @@ PropertyMap MP4::Tag::properties() const
 
 void MP4::Tag::removeUnsupportedProperties(const StringList &props)
 {
-  for(StringList::ConstIterator it = props.begin(); it != props.end(); ++it)
-    d->items.erase(*it);
+  for(const auto &prop : props)
+    d->items.erase(prop);
 }
 
 PropertyMap MP4::Tag::setProperties(const PropertyMap &props)
 {
   static Map<String, String> reverseKeyMap;
   if(reverseKeyMap.isEmpty()) {
-    for(size_t i = 0; i < keyTranslationSize; i++) {
-      reverseKeyMap[keyTranslation[i].second] = keyTranslation[i].first;
+    for(const auto &[k, t] : keyTranslation) {
+      reverseKeyMap[t] = k;
     }
   }
 
-  PropertyMap origProps = properties();
-  for(PropertyMap::ConstIterator it = origProps.begin(); it != origProps.end(); ++it) {
-    if(!props.contains(it->first) || props[it->first].isEmpty()) {
-      d->items.erase(reverseKeyMap[it->first]);
+  const PropertyMap origProps = properties();
+  for(const auto &[prop, _] : origProps) {
+    if(!props.contains(prop) || props[prop].isEmpty()) {
+      d->items.erase(reverseKeyMap[prop]);
     }
   }
 
   PropertyMap ignoredProps;
-  for(PropertyMap::ConstIterator it = props.begin(); it != props.end(); ++it) {
-    if(reverseKeyMap.contains(it->first)) {
-      String name = reverseKeyMap[it->first];
-      if((it->first == "TRACKNUMBER" || it->first == "DISCNUMBER") && !it->second.isEmpty()) {
-        StringList parts = StringList::split(it->second.front(), "/");
+  for(const auto &[prop, val] : props) {
+    if(reverseKeyMap.contains(prop)) {
+      String name = reverseKeyMap[prop];
+      if((prop == "TRACKNUMBER" || prop == "DISCNUMBER") && !val.isEmpty()) {
+        StringList parts = StringList::split(val.front(), "/");
         if(!parts.isEmpty()) {
           int first = parts[0].toInt();
           int second = 0;
@@ -1058,28 +1043,100 @@ PropertyMap MP4::Tag::setProperties(const PropertyMap &props)
           d->items[name] = MP4::Item(first, second);
         }
       }
-      else if((it->first == "BPM" || it->first == "MOVEMENTNUMBER" ||
-               it->first == "MOVEMENTCOUNT" || it->first == "TVEPISODE" ||
-               it->first == "TVSEASON") && !it->second.isEmpty()) {
-        int value = it->second.front().toInt();
+      else if((prop == "BPM" || prop == "MOVEMENTNUMBER" ||
+               prop == "MOVEMENTCOUNT" || prop == "TVEPISODE" ||
+               prop == "TVSEASON") && !val.isEmpty()) {
+        int value = val.front().toInt();
         d->items[name] = MP4::Item(value);
       }
-      else if((it->first == "COMPILATION" || it->first == "SHOWWORKMOVEMENT" ||
-               it->first == "GAPLESSPLAYBACK" || it->first == "PODCAST") &&
-              !it->second.isEmpty()) {
-        bool value = (it->second.front().toInt() != 0);
+      else if((prop == "COMPILATION" || prop == "SHOWWORKMOVEMENT" ||
+               prop == "GAPLESSPLAYBACK" || prop == "PODCAST") &&
+              !val.isEmpty()) {
+        bool value = (val.front().toInt() != 0);
         d->items[name] = MP4::Item(value);
       }
       else {
-        d->items[name] = it->second;
+        d->items[name] = val;
       }
     }
     else {
-      ignoredProps.insert(it->first, it->second);
+      ignoredProps.insert(prop, val);
     }
   }
 
   return ignoredProps;
+}
+
+StringList MP4::Tag::complexPropertyKeys() const
+{
+  StringList keys;
+  if(d->items.contains("covr")) {
+    keys.append("PICTURE");
+  }
+  return keys;
+}
+
+List<VariantMap> MP4::Tag::complexProperties(const String &key) const
+{
+  List<VariantMap> properties;
+  const String uppercaseKey = key.upper();
+  if(uppercaseKey == "PICTURE") {
+    const CoverArtList pictures = d->items.value("covr").toCoverArtList();
+    for(const CoverArt &picture : pictures) {
+      String mimeType = "image/";
+      switch(picture.format()) {
+      case CoverArt::BMP:
+        mimeType.append("bmp");
+        break;
+      case CoverArt::JPEG:
+        mimeType.append("jpeg");
+        break;
+      case CoverArt::GIF:
+        mimeType.append("gif");
+        break;
+      case CoverArt::PNG:
+        mimeType.append("png");
+        break;
+      case CoverArt::Unknown:
+        break;
+      }
+
+      VariantMap property;
+      property.insert("data", picture.data());
+      property.insert("mimeType", mimeType);
+      properties.append(property);
+    }
+  }
+  return properties;
+}
+
+bool MP4::Tag::setComplexProperties(const String &key, const List<VariantMap> &value)
+{
+  const String uppercaseKey = key.upper();
+  if(uppercaseKey == "PICTURE") {
+    CoverArtList pictures;
+    for(auto property : value) {
+      String mimeType = property.value("mimeType").value<String>();
+      CoverArt::Format format;
+      if(mimeType == "image/bmp") {
+        format = CoverArt::BMP;
+      } else if(mimeType == "image/png") {
+        format = CoverArt::PNG;
+      } else if(mimeType == "image/gif") {
+        format = CoverArt::GIF;
+      } else if(mimeType == "image/jpeg") {
+        format = CoverArt::JPEG;
+      } else {
+        format = CoverArt::Unknown;
+      }
+      pictures.append(CoverArt(format, property.value("data").value<ByteVector>()));
+    }
+    d->items["covr"] = pictures;
+  }
+  else {
+    return false;
+  }
+  return true;
 }
 
 void MP4::Tag::addItem(const String &name, const Item &value)

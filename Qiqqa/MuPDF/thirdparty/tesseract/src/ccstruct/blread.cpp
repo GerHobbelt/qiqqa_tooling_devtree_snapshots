@@ -51,20 +51,20 @@ bool read_unlv_file(   // print list of sides
     name += UNLV_EXT; // add extension
   }
   if ((pdfp = fopen(name.c_str(), "rb")) == nullptr) {
-    tprintf("ERROR: Cannot read UZN file {}.\n", name);
+    tprintError("Cannot read UZN file {}.\n", name);
     return false; // didn't read one
   } else {
     while (tfscanf(pdfp, "%d %d %d %d %*s", &x, &y, &width, &height) >= 4) {
       // make rect block
-      block = new BLOCK(name.c_str(), true, 0, 0, static_cast<int16_t>(x),
-                        static_cast<int16_t>(ysize - y - height), static_cast<int16_t>(x + width),
-                        static_cast<int16_t>(ysize - y));
+      block = new BLOCK(name.c_str(), true, 0, 0, static_cast<TDimension>(x),
+                        static_cast<TDimension>(ysize - y - height), static_cast<TDimension>(x + width),
+                        static_cast<TDimension>(ysize - y));
       // on end of list
       block_it.add_to_end(block);
     }
     fclose(pdfp);
   }
-  tprintf("UZN file {} loaded.\n", name);
+  tprintDebug("UZN file {} loaded.\n", name);
   return true;
 }
 
@@ -91,7 +91,7 @@ bool write_unlv_file(   // print list of sides
     name += UNLV_EXT; // add extension
   }
   if ((pdfp = fopen(name.c_str(), "wb")) == nullptr) {
-    tprintf("ERROR: Cannot create UZN file {}.\n", name);
+    tprintError("Cannot create UZN file {}.\n", name);
     return false; // didn't write one
   }
   else {
@@ -116,15 +116,15 @@ bool write_unlv_file(   // print list of sides
         auto pagebounds = pdblk.bounding_box();
 
         x = box.left();
-        width = box.right() - x;
+        width = box.width();
         y = box.bottom();
-        height = box.top() - y;
+        height = box.height();
 
-        auto y2 = ysize - y;
-
-        int l = fprintf(pdfp, "%d %d %d %d\n", x, y, width, height);
-        if (l < 8) { 
-          tprintf("ERROR: Write error while producing UZN file {}.\n", name);
+        std::string s = fmt::format("{} {} {} {}\n", x, y, width, height);
+        auto len = s.length();
+        int l = fwrite(s.c_str(), 1, len, pdfp);
+        if (l != len) { 
+          tprintError("Write error while producing UZN file {}.\n", name);
           fclose(pdfp);
           return false; // didn't write one
         }
@@ -134,7 +134,7 @@ bool write_unlv_file(   // print list of sides
       fclose(pdfp);
     }
   }
-  tprintf("UZN file {} saved.\n", name);
+  tprintDebug("UZN file {} saved.\n", name);
   return true;
 }
 

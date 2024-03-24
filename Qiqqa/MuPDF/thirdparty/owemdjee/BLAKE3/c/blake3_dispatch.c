@@ -102,7 +102,7 @@ enum blake3_cpu_feature
     if (*edx & (1UL << 26))
       features |= SSE2;
 #endif
-    if (*ecx & (1UL << 0))
+    if (*ecx & (1UL << 9))
       features |= SSSE3;
     if (*ecx & (1UL << 19))
       features |= SSE41;

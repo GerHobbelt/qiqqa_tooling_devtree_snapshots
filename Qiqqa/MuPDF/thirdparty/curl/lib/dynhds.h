@@ -152,14 +152,14 @@ CURLcode Curl_dynhds_cset(struct dynhds *dynhds,
 
 /**
  * Add a single header from a HTTP/1.1 formatted line at the end. Line
- * may contain a delimiting \r\n or just \n. Any characters after
+ * may contain a delimiting `\r\n` or just `\n`. Any characters after
  * that will be ignored.
  */
 CURLcode Curl_dynhds_h1_cadd_line(struct dynhds *dynhds, const char *line);
 
 /**
  * Add a single header from a HTTP/1.1 formatted line at the end. Line
- * may contain a delimiting \r\n or just \n. Any characters after
+ * may contain a delimiting `\r\n` or just `\n`. Any characters after
  * that will be ignored.
  */
 CURLcode Curl_dynhds_h1_add_line(struct dynhds *dynhds,
@@ -170,5 +170,14 @@ CURLcode Curl_dynhds_h1_add_line(struct dynhds *dynhds,
  * cr+lf line endings. Will NOT output a last empty line.
  */
 CURLcode Curl_dynhds_h1_dprint(struct dynhds *dynhds, struct dynbuf *dbuf);
+
+#ifdef USE_NGHTTP2
+
+#include <stdint.h>
+#include <nghttp2/nghttp2.h>
+
+nghttp2_nv *Curl_dynhds_to_nva(struct dynhds *dynhds, size_t *pcount);
+
+#endif /* USE_NGHTTP2 */
 
 #endif /* HEADER_CURL_DYNHDS_H */

@@ -24,14 +24,9 @@ include_directories(
   ${CMAKE_CURRENT_SOURCE_DIR}/s3m
   ${CMAKE_CURRENT_SOURCE_DIR}/it
   ${CMAKE_CURRENT_SOURCE_DIR}/xm
-  ${taglib_SOURCE_DIR}/3rdparty
+  ${CMAKE_CURRENT_SOURCE_DIR}/dsf
+  ${CMAKE_CURRENT_SOURCE_DIR}/dsdiff
 )
-
-if(ZLIB_FOUND)
-  include_directories(${ZLIB_INCLUDE_DIR})
-elseif(HAVE_ZLIB_SOURCE)
-  include_directories(${ZLIB_SOURCE})
-endif()
 
 set(tag_HDRS
   tag.h
@@ -46,15 +41,17 @@ set(tag_HDRS
   toolkit/tstringlist.h
   toolkit/tbytevector.h
   toolkit/tbytevectorlist.h
+  toolkit/tvariant.h
   toolkit/tbytevectorstream.h
   toolkit/tiostream.h
   toolkit/tfile.h
   toolkit/tfilestream.h
   toolkit/tmap.h
   toolkit/tmap.tcc
+  toolkit/tpicturetype.h
   toolkit/tpropertymap.h
-  toolkit/trefcounter.h
   toolkit/tdebuglistener.h
+  toolkit/tversionnumber.h
   mpeg/mpegfile.h
   mpeg/mpegproperties.h
   mpeg/mpegheader.h
@@ -139,6 +136,11 @@ set(tag_HDRS
   s3m/s3mproperties.h
   xm/xmfile.h
   xm/xmproperties.h
+  dsf/dsffile.h
+  dsf/dsfproperties.h
+  dsdiff/dsdifffile.h
+  dsdiff/dsdiffproperties.h
+  dsdiff/dsdiffdiintag.h
 )
 
 set(mpeg_SRCS
@@ -294,39 +296,41 @@ set(xm_SRCS
   xm/xmproperties.cpp
 )
 
+set(dsf_SRCS
+  dsf/dsffile.cpp
+  dsf/dsfproperties.cpp
+)
+
+set(dsdiff_SRCS
+  dsdiff/dsdifffile.cpp
+  dsdiff/dsdiffproperties.cpp
+  dsdiff/dsdiffdiintag.cpp
+)
+
 set(toolkit_SRCS
   toolkit/tstring.cpp
   toolkit/tstringlist.cpp
   toolkit/tbytevector.cpp
   toolkit/tbytevectorlist.cpp
+  toolkit/tvariant.cpp
   toolkit/tbytevectorstream.cpp
   toolkit/tiostream.cpp
   toolkit/tfile.cpp
   toolkit/tfilestream.cpp
   toolkit/tdebug.cpp
+  toolkit/tpicturetype.cpp
   toolkit/tpropertymap.cpp
-  toolkit/trefcounter.cpp
   toolkit/tdebuglistener.cpp
   toolkit/tzlib.cpp
+  toolkit/tversionnumber.cpp
 )
-
-if(HAVE_ZLIB_SOURCE)
-  set(zlib_SRCS
-    ${ZLIB_SOURCE}/adler32.c
-    ${ZLIB_SOURCE}/crc32.c
-    ${ZLIB_SOURCE}/inffast.c
-    ${ZLIB_SOURCE}/inflate.c
-    ${ZLIB_SOURCE}/inftrees.c
-    ${ZLIB_SOURCE}/zutil.c
-  )
-endif()
 
 set(tag_LIB_SRCS
   ${mpeg_SRCS} ${id3v1_SRCS} ${id3v2_SRCS} ${frames_SRCS} ${ogg_SRCS}
   ${vorbis_SRCS} ${oggflacs_SRCS} ${mpc_SRCS} ${ape_SRCS} ${toolkit_SRCS} ${flacs_SRCS}
   ${wavpack_SRCS} ${speex_SRCS} ${trueaudio_SRCS} ${riff_SRCS} ${aiff_SRCS} ${wav_SRCS}
   ${asf_SRCS} ${mp4_SRCS} ${mod_SRCS} ${s3m_SRCS} ${it_SRCS} ${xm_SRCS} ${opus_SRCS}
-  ${zlib_SRCS}
+  ${dsf_SRCS} ${dsdiff_SRCS}
   tag.cpp
   tagunion.cpp
   fileref.cpp
@@ -335,11 +339,9 @@ set(tag_LIB_SRCS
 )
 
 add_library(tag ${tag_LIB_SRCS} ${tag_HDRS})
-set_property(TARGET tag PROPERTY CXX_STANDARD 98)
 
-if(HAVE_ZLIB AND NOT HAVE_ZLIB_SOURCE)
-  target_link_libraries(tag ${ZLIB_LIBRARIES})
-endif()
+target_link_libraries(tag $<$<TARGET_EXISTS:utf8::cpp>:utf8::cpp>)
+target_link_libraries(tag $<$<TARGET_EXISTS:ZLIB::ZLIB>:ZLIB::ZLIB>)
 
 set_target_properties(tag PROPERTIES
   VERSION ${TAGLIB_SOVERSION_MAJOR}.${TAGLIB_SOVERSION_MINOR}.${TAGLIB_SOVERSION_PATCH}
@@ -355,7 +357,7 @@ endif()
 
 if(BUILD_FRAMEWORK)
   unset(INSTALL_NAME_DIR)
-  set_target_properties(tag PROPERTIES 
+  set_target_properties(tag PROPERTIES
       FRAMEWORK TRUE
       MACOSX_RPATH 1
       VERSION "A"

@@ -60,10 +60,10 @@
     <Filter Include="Misc Files\crypto\includes">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0016}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\crypto\openssl">
+    <Filter Include="Misc Files\crypto\picotls">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0017}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\crypto\picotls">
+    <Filter Include="Misc Files\crypto\quictls">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\crypto\wolfssl">
@@ -75,107 +75,74 @@
     <Filter Include="Misc Files\doc\source">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\doc\source\_themes">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\doc\source\_themes\sphinx_rtd_theme">
+    <Filter Include="Misc Files\examples">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\doc\source\_themes\sphinx_rtd_theme\static">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\doc\source\_themes\sphinx_rtd_theme\static\js">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\examples">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0026}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Misc Files\examples\tests">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\examples\tests\ngtcp2test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\interop">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0029}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\lib">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0030}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0026}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\lib\includes">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0031}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\lib\includes\ngtcp2">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0032}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\m4">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0029}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\tests">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0033}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0030}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\third-party">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0034}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0031}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\third-party\http-parser">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0035}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0036}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\doc">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0043}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\doc\source">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0042}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\doc\source\_themes">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0041}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\doc\source\_themes\sphinx_rtd_theme">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0040}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\doc\source\_themes\sphinx_rtd_theme\static">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0039}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\doc\source\_themes\sphinx_rtd_theme\static\css">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0038}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\doc\source\_themes\sphinx_rtd_theme\static\css\fonts">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0037}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0032}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\crypto">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0044}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0033}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\crypto\boringssl">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0045}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0034}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\crypto\gnutls">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0046}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\crypto\openssl">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0047}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0035}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\crypto\picotls">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0048}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0036}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\crypto\quictls">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0037}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\crypto\wolfssl">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0049}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0038}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\examples">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0050}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0039}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\lib">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0051}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0040}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\tests">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0052}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0041}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\third-party">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0054}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0043}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\third-party\http-parser">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0053}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0042}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\third-party\http-parser\contrib">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0055}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0044}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -185,11 +152,11 @@
     <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/crypto/gnutls/gnutls.c">
       <Filter>Source Files\crypto\gnutls</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/crypto/openssl/openssl.c">
-      <Filter>Source Files\crypto\openssl</Filter>
-    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/crypto/picotls/picotls.c">
       <Filter>Source Files\crypto\picotls</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/crypto/quictls/quictls.c">
+      <Filter>Source Files\crypto\quictls</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/crypto/shared.c">
       <Filter>Source Files\crypto</Filter>
@@ -239,10 +206,10 @@
     <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_client_context_gnutls.cc">
       <Filter>Source Files\examples</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_client_context_openssl.cc">
+    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_client_context_picotls.cc">
       <Filter>Source Files\examples</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_client_context_picotls.cc">
+    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_client_context_quictls.cc">
       <Filter>Source Files\examples</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_client_context_wolfssl.cc">
@@ -254,10 +221,10 @@
     <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_client_session_gnutls.cc">
       <Filter>Source Files\examples</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_client_session_openssl.cc">
+    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_client_session_picotls.cc">
       <Filter>Source Files\examples</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_client_session_picotls.cc">
+    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_client_session_quictls.cc">
       <Filter>Source Files\examples</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_client_session_wolfssl.cc">
@@ -269,10 +236,10 @@
     <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_server_context_gnutls.cc">
       <Filter>Source Files\examples</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_server_context_openssl.cc">
+    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_server_context_picotls.cc">
       <Filter>Source Files\examples</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_server_context_picotls.cc">
+    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_server_context_quictls.cc">
       <Filter>Source Files\examples</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_server_context_wolfssl.cc">
@@ -284,10 +251,10 @@
     <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_server_session_gnutls.cc">
       <Filter>Source Files\examples</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_server_session_openssl.cc">
+    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_server_session_picotls.cc">
       <Filter>Source Files\examples</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_server_session_picotls.cc">
+    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_server_session_quictls.cc">
       <Filter>Source Files\examples</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_server_session_wolfssl.cc">
@@ -296,10 +263,10 @@
     <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_session_base_gnutls.cc">
       <Filter>Source Files\examples</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_session_base_openssl.cc">
+    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_session_base_picotls.cc">
       <Filter>Source Files\examples</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_session_base_picotls.cc">
+    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_session_base_quictls.cc">
       <Filter>Source Files\examples</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_session_base_wolfssl.cc">
@@ -335,9 +302,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/lib/ngtcp2_bbr.c">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/lib/ngtcp2_bbr2.c">
-      <Filter>Source Files\lib</Filter>
-    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/lib/ngtcp2_buf.c">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
@@ -353,10 +317,16 @@
     <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/lib/ngtcp2_conv.c">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/lib/ngtcp2_conversion.c">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/lib/ngtcp2_crypto.c">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/lib/ngtcp2_err.c">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/lib/ngtcp2_frame_chain.c">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/lib/ngtcp2_gaptr.c">
@@ -443,10 +413,16 @@
     <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/tests/ngtcp2_acktr_test.c">
       <Filter>Source Files\tests</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/tests/ngtcp2_cc_test.c">
+      <Filter>Source Files\tests</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/tests/ngtcp2_conn_test.c">
       <Filter>Source Files\tests</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/tests/ngtcp2_conv_test.c">
+      <Filter>Source Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/tests/ngtcp2_conversion_test.c">
       <Filter>Source Files\tests</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/tests/ngtcp2_crypto_test.c">
@@ -473,6 +449,9 @@
     <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/tests/ngtcp2_pv_test.c">
       <Filter>Source Files\tests</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/tests/ngtcp2_qlog_test.c">
+      <Filter>Source Files\tests</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/tests/ngtcp2_range_test.c">
       <Filter>Source Files\tests</Filter>
     </ClCompile>
@@ -492,6 +471,9 @@
       <Filter>Source Files\tests</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/tests/ngtcp2_test_helper.c">
+      <Filter>Source Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/tests/ngtcp2_tstamp_test.c">
       <Filter>Source Files\tests</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/ngtcp2/tests/ngtcp2_vec_test.c">
@@ -521,10 +503,10 @@
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/crypto/includes/ngtcp2/ngtcp2_crypto_gnutls.h">
       <Filter>Header Files\crypto\includes\ngtcp2</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/crypto/includes/ngtcp2/ngtcp2_crypto_openssl.h">
+    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/crypto/includes/ngtcp2/ngtcp2_crypto_picotls.h">
       <Filter>Header Files\crypto\includes\ngtcp2</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/crypto/includes/ngtcp2/ngtcp2_crypto_picotls.h">
+    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/crypto/includes/ngtcp2/ngtcp2_crypto_quictls.h">
       <Filter>Header Files\crypto\includes\ngtcp2</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/crypto/includes/ngtcp2/ngtcp2_crypto_wolfssl.h">
@@ -575,10 +557,10 @@
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_client_context_gnutls.h">
       <Filter>Header Files\examples</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_client_context_openssl.h">
+    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_client_context_picotls.h">
       <Filter>Header Files\examples</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_client_context_picotls.h">
+    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_client_context_quictls.h">
       <Filter>Header Files\examples</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_client_context_wolfssl.h">
@@ -593,10 +575,10 @@
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_client_session_gnutls.h">
       <Filter>Header Files\examples</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_client_session_openssl.h">
+    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_client_session_picotls.h">
       <Filter>Header Files\examples</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_client_session_picotls.h">
+    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_client_session_quictls.h">
       <Filter>Header Files\examples</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_client_session_wolfssl.h">
@@ -611,10 +593,10 @@
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_server_context_gnutls.h">
       <Filter>Header Files\examples</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_server_context_openssl.h">
+    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_server_context_picotls.h">
       <Filter>Header Files\examples</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_server_context_picotls.h">
+    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_server_context_quictls.h">
       <Filter>Header Files\examples</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_server_context_wolfssl.h">
@@ -629,10 +611,10 @@
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_server_session_gnutls.h">
       <Filter>Header Files\examples</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_server_session_openssl.h">
+    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_server_session_picotls.h">
       <Filter>Header Files\examples</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_server_session_picotls.h">
+    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_server_session_quictls.h">
       <Filter>Header Files\examples</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_server_session_wolfssl.h">
@@ -641,10 +623,10 @@
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_session_base_gnutls.h">
       <Filter>Header Files\examples</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_session_base_openssl.h">
+    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_session_base_picotls.h">
       <Filter>Header Files\examples</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_session_base_picotls.h">
+    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_session_base_quictls.h">
       <Filter>Header Files\examples</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/examples/tls_session_base_wolfssl.h">
@@ -674,9 +656,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/lib/ngtcp2_bbr.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/lib/ngtcp2_bbr2.h">
-      <Filter>Header Files\lib</Filter>
-    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/lib/ngtcp2_buf.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
@@ -689,13 +668,22 @@
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/lib/ngtcp2_conn.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/lib/ngtcp2_conn_stat.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/lib/ngtcp2_conv.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/lib/ngtcp2_conversion.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/lib/ngtcp2_crypto.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/lib/ngtcp2_err.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/lib/ngtcp2_frame_chain.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/lib/ngtcp2_gaptr.h">
@@ -732,6 +720,9 @@
       <Filter>Header Files\lib</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/lib/ngtcp2_pkt.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/lib/ngtcp2_pktns_id.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/lib/ngtcp2_pmtud.h">
@@ -773,6 +764,9 @@
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/lib/ngtcp2_strm.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/lib/ngtcp2_tstamp.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/lib/ngtcp2_unreachable.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
@@ -785,10 +779,16 @@
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/tests/ngtcp2_acktr_test.h">
       <Filter>Header Files\tests</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/tests/ngtcp2_cc_test.h">
+      <Filter>Header Files\tests</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/tests/ngtcp2_conn_test.h">
       <Filter>Header Files\tests</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/tests/ngtcp2_conv_test.h">
+      <Filter>Header Files\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/tests/ngtcp2_conversion_test.h">
       <Filter>Header Files\tests</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/tests/ngtcp2_crypto_test.h">
@@ -815,6 +815,9 @@
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/tests/ngtcp2_pv_test.h">
       <Filter>Header Files\tests</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/tests/ngtcp2_qlog_test.h">
+      <Filter>Header Files\tests</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/tests/ngtcp2_range_test.h">
       <Filter>Header Files\tests</Filter>
     </ClInclude>
@@ -836,15 +839,18 @@
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/tests/ngtcp2_test_helper.h">
       <Filter>Header Files\tests</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/tests/ngtcp2_tstamp_test.h">
+      <Filter>Header Files\tests</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/tests/ngtcp2_vec_test.h">
       <Filter>Header Files\tests</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/ngtcp2/third-party/http-parser/http_parser.h">
       <Filter>Header Files\third-party\http-parser</Filter>
     </ClInclude>
-    <Font Include="../../thirdparty/owemdjee/ngtcp2/doc/source/_themes/sphinx_rtd_theme/static/css/fonts/fontawesome-webfont.ttf">
-      <Filter>Resource Files\doc\source\_themes\sphinx_rtd_theme\static\css\fonts</Filter>
-    </Font>
+    <Text Include="../../thirdparty/owemdjee/ngtcp2/AUTHORS">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/ngtcp2/CMakeLists.txt">
       <Filter>Misc Files</Filter>
     </Text>
@@ -872,13 +878,10 @@
     <Text Include="../../thirdparty/owemdjee/ngtcp2/ci/build_nghttp3.sh">
       <Filter>Misc Files\ci</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/ngtcp2/ci/build_openssl1.sh">
+    <Text Include="../../thirdparty/owemdjee/ngtcp2/ci/build_openssl.sh">
       <Filter>Misc Files\ci</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/ngtcp2/ci/build_openssl1_cross.sh">
-      <Filter>Misc Files\ci</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/ngtcp2/ci/build_openssl3.sh">
       <Filter>Misc Files\ci</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/ngtcp2/ci/build_picotls.sh">
@@ -889,9 +892,6 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/ngtcp2/ci/gen-certificate.sh">
       <Filter>Misc Files\ci</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/ngtcp2/cmake/ExtractValidFlags.cmake">
-      <Filter>Misc Files\cmake</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/ngtcp2/cmake/FindCUnit.cmake">
       <Filter>Misc Files\cmake</Filter>
@@ -906,6 +906,12 @@
       <Filter>Misc Files\cmake</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/ngtcp2/cmake/Findwolfssl.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/ngtcp2/cmake/PickyWarningsC.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/ngtcp2/cmake/PickyWarningsCXX.cmake">
       <Filter>Misc Files\cmake</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/ngtcp2/cmake/Version.cmake">
@@ -947,15 +953,6 @@
     <Text Include="../../thirdparty/owemdjee/ngtcp2/crypto/includes/Makefile.am">
       <Filter>Misc Files\crypto\includes</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/ngtcp2/crypto/openssl/CMakeLists.txt">
-      <Filter>Misc Files\crypto\openssl</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/ngtcp2/crypto/openssl/Makefile.am">
-      <Filter>Misc Files\crypto\openssl</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/ngtcp2/crypto/openssl/libngtcp2_crypto_openssl.pc.in">
-      <Filter>Misc Files\crypto\openssl</Filter>
-    </Text>
     <Text Include="../../thirdparty/owemdjee/ngtcp2/crypto/picotls/CMakeLists.txt">
       <Filter>Misc Files\crypto\picotls</Filter>
     </Text>
@@ -964,6 +961,15 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/ngtcp2/crypto/picotls/libngtcp2_crypto_picotls.pc.in">
       <Filter>Misc Files\crypto\picotls</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/ngtcp2/crypto/quictls/CMakeLists.txt">
+      <Filter>Misc Files\crypto\quictls</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/ngtcp2/crypto/quictls/Makefile.am">
+      <Filter>Misc Files\crypto\quictls</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/ngtcp2/crypto/quictls/libngtcp2_crypto_quictls.pc.in">
+      <Filter>Misc Files\crypto\quictls</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/ngtcp2/crypto/wolfssl/CMakeLists.txt">
       <Filter>Misc Files\crypto\wolfssl</Filter>
@@ -982,18 +988,6 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/ngtcp2/doc/mkapiref.py">
       <Filter>Misc Files\doc</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/ngtcp2/doc/source/_themes/sphinx_rtd_theme/__init__.py">
-      <Filter>Misc Files\doc\source\_themes\sphinx_rtd_theme</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/ngtcp2/doc/source/_themes/sphinx_rtd_theme/static/js/badge_only.js">
-      <Filter>Misc Files\doc\source\_themes\sphinx_rtd_theme\static\js</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/ngtcp2/doc/source/_themes/sphinx_rtd_theme/static/js/theme.js">
-      <Filter>Misc Files\doc\source\_themes\sphinx_rtd_theme\static\js</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/ngtcp2/doc/source/_themes/sphinx_rtd_theme/theme.conf">
-      <Filter>Misc Files\doc\source\_themes\sphinx_rtd_theme</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/ngtcp2/doc/source/conf.py.in">
       <Filter>Misc Files\doc\source</Filter>
@@ -1079,6 +1073,15 @@
     <Text Include="../../thirdparty/owemdjee/ngtcp2/lib/libngtcp2.pc.in">
       <Filter>Misc Files\lib</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/ngtcp2/m4/ax_check_compile_flag.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/ngtcp2/m4/ax_cxx_compile_stdcxx.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/ngtcp2/makerelease.sh">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/ngtcp2/tests/CMakeLists.txt">
       <Filter>Misc Files\tests</Filter>
     </Text>
@@ -1090,6 +1093,12 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/ngtcp2/third-party/Makefile.am">
       <Filter>Misc Files\third-party</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/ngtcp2/third-party/http-parser/AUTHORS">
+      <Filter>Misc Files\third-party\http-parser</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/ngtcp2/third-party/http-parser/Makefile">
+      <Filter>Misc Files\third-party\http-parser</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/ngtcp2/third-party/http-parser/README.md">
       <Filter>Misc Files\third-party\http-parser</Filter>

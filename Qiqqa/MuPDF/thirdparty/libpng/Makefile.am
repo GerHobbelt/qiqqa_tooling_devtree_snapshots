@@ -1,6 +1,6 @@
 # Makefile.am, the source file for Makefile.in (and hence Makefile), is
 #
-# Copyright (c) 2018 Cosmin Truta
+# Copyright (c) 2018-2023 Cosmin Truta
 # Copyright (c) 2004-2016 Glenn Randers-Pehrson
 #
 # This code is released under the libpng license.
@@ -12,13 +12,21 @@ PNGLIB_BASENAME= libpng@PNGLIB_MAJOR@@PNGLIB_MINOR@
 ACLOCAL_AMFLAGS = -I scripts
 
 # test programs - run on make check, make distcheck
+if ENABLE_TESTS
 check_PROGRAMS= pngtest pngunknown pngstest pngvalid pngimage pngcp pngadhoc
 if HAVE_CLOCK_GETTIME
 check_PROGRAMS += timepng
 endif
+else
+check_PROGRAMS=
+endif
 
 # Utilities - installed
+if ENABLE_TOOLS
 bin_PROGRAMS= pngfix png-fix-itxt
+else
+bin_PROGRAMS=
+endif
 
 # This ensures that pnglibconf.h gets built at the start of 'make all' or
 # 'make check', but it does not add dependencies to the individual programs,
@@ -30,6 +38,7 @@ bin_PROGRAMS= pngfix png-fix-itxt
 # always wrong and always very confusing.
 BUILT_SOURCES = pnglibconf.h
 
+if ENABLE_TESTS
 pngtest_SOURCES = pngtest.c
 pngtest_LDADD = libpng@PNGLIB_MAJOR@@PNGLIB_MINOR@.la
 
@@ -48,19 +57,23 @@ pngimage_LDADD = libpng@PNGLIB_MAJOR@@PNGLIB_MINOR@.la
 timepng_SOURCES = contrib/libtests/timepng.c
 timepng_LDADD = libpng@PNGLIB_MAJOR@@PNGLIB_MINOR@.la
 
+pngcp_SOURCES = contrib/tools/pngcp.c
+pngcp_LDADD = libpng@PNGLIB_MAJOR@@PNGLIB_MINOR@.la
+endif
+
+if ENABLE_TOOLS
 pngfix_SOURCES = contrib/tools/pngfix.c
 pngfix_LDADD = libpng@PNGLIB_MAJOR@@PNGLIB_MINOR@.la
 
 png_fix_itxt_SOURCES = contrib/tools/png-fix-itxt.c
-
-pngcp_SOURCES = contrib/tools/pngcp.c
-pngcp_LDADD = libpng@PNGLIB_MAJOR@@PNGLIB_MINOR@.la
+endif
 
 pngadhoc_SOURCES = contrib/libtests/pngadhoc.c
 pngadhoc_LDADD = libpng@PNGLIB_MAJOR@@PNGLIB_MINOR@.la
 
 # Generally these are single line shell scripts to run a test with a particular
 # set of parameters:
+if ENABLE_TESTS
 TESTS =\
    tests/pngtest-all\
    tests/pngtest-nonpng\
@@ -79,6 +92,7 @@ TESTS =\
    tests/pngunknown-discard tests/pngunknown-if-safe tests/pngunknown-sAPI\
    tests/pngunknown-sTER tests/pngunknown-save tests/pngunknown-vpAg\
    tests/pngimage-quick tests/pngimage-full tests/pngadhoc
+endif
 
 # man pages
 dist_man_MANS= libpng.3 libpngpf.3 png.5

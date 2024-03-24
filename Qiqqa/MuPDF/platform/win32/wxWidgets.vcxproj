@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WXWIDGETS;WXWIDGETS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WXWIDGETS;WXWIDGETS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,16 +126,16 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/wxWidgets/include;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/include;../../thirdparty/owemdjee/libjpeg-turbo;../../thirdparty/libpng;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/pcre/src/wx;../../thirdparty/curl/include;../../thirdparty/owemdjee/libexpat/expat/lib;../../thirdparty/zlib;../../scripts/libjpeg-turbo;../../scripts/zlib;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/src;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/lexlib;../../scripts/wxWidgets/webview2/build/native/include;../../include;../../thirdparty/owemdjee/nanosvg/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WXWIDGETS;WXBUILDING;WXWIDGETS_STATICLIB;HAVE_MUPDF;XML_UNICODE;XML_UNICODE_WCHAR_T;XML_STATIC;CURL_STATICLIB;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/wxWidgets/include;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/include;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/libpng;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/pcre/src/wx;../../thirdparty/curl/include;../../thirdparty/owemdjee/libexpat/expat/lib;../../thirdparty/zlib;../../scripts/libjpeg-turbo;../../scripts/zlib;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/src;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/lexlib;../../scripts/wxWidgets/webview2/build/native/include;../../include;../../thirdparty/owemdjee/nanosvg/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WXWIDGETS;WXBUILDING;WXWIDGETS_STATICLIB;HAVE_MUPDF;XML_UNICODE;XML_UNICODE_WCHAR_T;XML_STATIC;CURL_STATICLIB;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WXWIDGETS;WXWIDGETS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WXWIDGETS;WXWIDGETS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/wxWidgets/include;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/include;../../thirdparty/owemdjee/libjpeg-turbo;../../thirdparty/libpng;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/pcre/src/wx;../../thirdparty/curl/include;../../thirdparty/owemdjee/libexpat/expat/lib;../../thirdparty/zlib;../../scripts/libjpeg-turbo;../../scripts/zlib;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/src;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/lexlib;../../scripts/wxWidgets/webview2/build/native/include;../../include;../../thirdparty/owemdjee/nanosvg/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/wxWidgets/include;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/include;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/libpng;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/pcre/src/wx;../../thirdparty/curl/include;../../thirdparty/owemdjee/libexpat/expat/lib;../../thirdparty/zlib;../../scripts/libjpeg-turbo;../../scripts/zlib;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/src;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/lexlib;../../scripts/wxWidgets/webview2/build/native/include;../../include;../../thirdparty/owemdjee/nanosvg/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>Shcore.lib;Rpcrt4.lib;Winmm.lib;Ws2_32.lib;Comctl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -152,7 +152,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WXWIDGETS;WXWIDGETS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WXWIDGETS;WXWIDGETS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -160,17 +160,17 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/wxWidgets/include;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/include;../../thirdparty/owemdjee/libjpeg-turbo;../../thirdparty/libpng;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/pcre/src/wx;../../thirdparty/curl/include;../../thirdparty/owemdjee/libexpat/expat/lib;../../thirdparty/zlib;../../scripts/libjpeg-turbo;../../scripts/zlib;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/src;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/lexlib;../../scripts/wxWidgets/webview2/build/native/include;../../include;../../thirdparty/owemdjee/nanosvg/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WXWIDGETS;WXBUILDING;WXWIDGETS_STATICLIB;HAVE_MUPDF;XML_UNICODE;XML_UNICODE_WCHAR_T;XML_STATIC;CURL_STATICLIB;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/wxWidgets/include;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/include;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/libpng;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/pcre/src/wx;../../thirdparty/curl/include;../../thirdparty/owemdjee/libexpat/expat/lib;../../thirdparty/zlib;../../scripts/libjpeg-turbo;../../scripts/zlib;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/src;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/lexlib;../../scripts/wxWidgets/webview2/build/native/include;../../include;../../thirdparty/owemdjee/nanosvg/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WXWIDGETS;WXBUILDING;WXWIDGETS_STATICLIB;HAVE_MUPDF;XML_UNICODE;XML_UNICODE_WCHAR_T;XML_STATIC;CURL_STATICLIB;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WXWIDGETS;WXWIDGETS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WXWIDGETS;WXWIDGETS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/wxWidgets/include;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/include;../../thirdparty/owemdjee/libjpeg-turbo;../../thirdparty/libpng;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/pcre/src/wx;../../thirdparty/curl/include;../../thirdparty/owemdjee/libexpat/expat/lib;../../thirdparty/zlib;../../scripts/libjpeg-turbo;../../scripts/zlib;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/src;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/lexlib;../../scripts/wxWidgets/webview2/build/native/include;../../include;../../thirdparty/owemdjee/nanosvg/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/wxWidgets/include;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/include;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/libpng;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/pcre/src/wx;../../thirdparty/curl/include;../../thirdparty/owemdjee/libexpat/expat/lib;../../thirdparty/zlib;../../scripts/libjpeg-turbo;../../scripts/zlib;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/src;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/lexlib;../../scripts/wxWidgets/webview2/build/native/include;../../include;../../thirdparty/owemdjee/nanosvg/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>Shcore.lib;Rpcrt4.lib;Winmm.lib;Ws2_32.lib;Comctl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -187,7 +187,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WXWIDGETS;WXWIDGETS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WXWIDGETS;WXWIDGETS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -197,16 +197,16 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/wxWidgets/include;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/include;../../thirdparty/owemdjee/libjpeg-turbo;../../thirdparty/libpng;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/pcre/src/wx;../../thirdparty/curl/include;../../thirdparty/owemdjee/libexpat/expat/lib;../../thirdparty/zlib;../../scripts/libjpeg-turbo;../../scripts/zlib;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/src;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/lexlib;../../scripts/wxWidgets/webview2/build/native/include;../../include;../../thirdparty/owemdjee/nanosvg/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WXWIDGETS;WXBUILDING;WXWIDGETS_STATICLIB;HAVE_MUPDF;XML_UNICODE;XML_UNICODE_WCHAR_T;XML_STATIC;CURL_STATICLIB;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/wxWidgets/include;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/include;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/libpng;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/pcre/src/wx;../../thirdparty/curl/include;../../thirdparty/owemdjee/libexpat/expat/lib;../../thirdparty/zlib;../../scripts/libjpeg-turbo;../../scripts/zlib;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/src;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/lexlib;../../scripts/wxWidgets/webview2/build/native/include;../../include;../../thirdparty/owemdjee/nanosvg/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WXWIDGETS;WXBUILDING;WXWIDGETS_STATICLIB;HAVE_MUPDF;XML_UNICODE;XML_UNICODE_WCHAR_T;XML_STATIC;CURL_STATICLIB;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WXWIDGETS;WXWIDGETS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WXWIDGETS;WXWIDGETS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/wxWidgets/include;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/include;../../thirdparty/owemdjee/libjpeg-turbo;../../thirdparty/libpng;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/pcre/src/wx;../../thirdparty/curl/include;../../thirdparty/owemdjee/libexpat/expat/lib;../../thirdparty/zlib;../../scripts/libjpeg-turbo;../../scripts/zlib;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/src;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/lexlib;../../scripts/wxWidgets/webview2/build/native/include;../../include;../../thirdparty/owemdjee/nanosvg/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/wxWidgets/include;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/include;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/libpng;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/pcre/src/wx;../../thirdparty/curl/include;../../thirdparty/owemdjee/libexpat/expat/lib;../../thirdparty/zlib;../../scripts/libjpeg-turbo;../../scripts/zlib;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/src;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/lexlib;../../scripts/wxWidgets/webview2/build/native/include;../../include;../../thirdparty/owemdjee/nanosvg/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>Shcore.lib;Rpcrt4.lib;Winmm.lib;Ws2_32.lib;Comctl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -223,7 +223,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WXWIDGETS;WXWIDGETS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WXWIDGETS;WXWIDGETS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -231,17 +231,17 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/wxWidgets/include;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/include;../../thirdparty/owemdjee/libjpeg-turbo;../../thirdparty/libpng;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/pcre/src/wx;../../thirdparty/curl/include;../../thirdparty/owemdjee/libexpat/expat/lib;../../thirdparty/zlib;../../scripts/libjpeg-turbo;../../scripts/zlib;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/src;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/lexlib;../../scripts/wxWidgets/webview2/build/native/include;../../include;../../thirdparty/owemdjee/nanosvg/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WXWIDGETS;WXBUILDING;WXWIDGETS_STATICLIB;HAVE_MUPDF;XML_UNICODE;XML_UNICODE_WCHAR_T;XML_STATIC;CURL_STATICLIB;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/wxWidgets/include;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/include;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/libpng;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/pcre/src/wx;../../thirdparty/curl/include;../../thirdparty/owemdjee/libexpat/expat/lib;../../thirdparty/zlib;../../scripts/libjpeg-turbo;../../scripts/zlib;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/src;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/lexlib;../../scripts/wxWidgets/webview2/build/native/include;../../include;../../thirdparty/owemdjee/nanosvg/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WXWIDGETS;WXBUILDING;WXWIDGETS_STATICLIB;HAVE_MUPDF;XML_UNICODE;XML_UNICODE_WCHAR_T;XML_STATIC;CURL_STATICLIB;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WXWIDGETS;WXWIDGETS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_WXWIDGETS;WXWIDGETS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/wxWidgets/include;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/include;../../thirdparty/owemdjee/libjpeg-turbo;../../thirdparty/libpng;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/pcre/src/wx;../../thirdparty/curl/include;../../thirdparty/owemdjee/libexpat/expat/lib;../../thirdparty/zlib;../../scripts/libjpeg-turbo;../../scripts/zlib;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/src;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/lexlib;../../scripts/wxWidgets/webview2/build/native/include;../../include;../../thirdparty/owemdjee/nanosvg/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/wxWidgets/include;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/include;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/libpng;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/pcre/src/wx;../../thirdparty/curl/include;../../thirdparty/owemdjee/libexpat/expat/lib;../../thirdparty/zlib;../../scripts/libjpeg-turbo;../../scripts/zlib;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/src;../../thirdparty/owemdjee/wxWidgets/src/stc/scintilla/lexlib;../../scripts/wxWidgets/webview2/build/native/include;../../include;../../thirdparty/owemdjee/nanosvg/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>Shcore.lib;Rpcrt4.lib;Winmm.lib;Ws2_32.lib;Comctl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -2532,6 +2532,9 @@
     <Text Include="../../thirdparty/owemdjee/wxWidgets/Makefile.in" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/README-GIT.md" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/README.md" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/acinclude.m4" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/aclocal.m4" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/appveyor.yml" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/art/addbookm.xpm" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/art/back.xpm" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/art/cdrom.xpm" />
@@ -2587,10 +2590,14 @@
     <Text Include="../../thirdparty/owemdjee/wxWidgets/art/toparent.xpm" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/art/undo.xpm" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/art/up.xpm" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/art/wxlogo.svg" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/art/wxwin16x16.xpm" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/art/wxwin32x32.xpm" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/autoconf_inc.m4" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/autogen.sh" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/config.guess" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/configure.in" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/descrip.mms" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/base/readme.txt" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/changes.txt" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/changes_30.txt" />
@@ -2612,9 +2619,18 @@
     <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/contributing/translators-guide.md" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/contributing/wxmsw-contributor-guide.md" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/dfb/install.txt" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/doxygen/Doxyfile" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/doxygen/custom_footer.html" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/doxygen/custom_header.html" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/doxygen/custom_header_simple.html" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/doxygen/doxygen-awesome-css/README.md" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/doxygen/doxygen-awesome-css/doxygen-awesome-darkmode-toggle.js" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/doxygen/doxygen-awesome-css/doxygen-awesome-fragment-copy-button.js" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/doxygen/doxygen-awesome-css/doxygen-awesome.css" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/doxygen/extra_stylesheet.css" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/doxygen/images/main_wxlogo.pdf" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/doxygen/images/main_wxlogo.svg" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/doxygen/latex_header.tex" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/doxygen/overviews/cmake.md" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/doxygen/overviews/high_dpi.md" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/doxygen/overviews/install.md" />
@@ -2632,6 +2648,7 @@
     <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/gtk/install.md" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/gtk/nonnative.txt" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/gtk/readme.txt" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/index.htm" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/ios/install.md" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/ios/readme.txt" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/lgpl.txt" />
@@ -2665,13 +2682,80 @@
     <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/x11/install.md" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/x11/readme.txt" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/docs/xserver.txt" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/include/wx/msw/blank.cur" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/include/wx/msw/bullseye.cur" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/include/wx/msw/cross.cur" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/include/wx/msw/hand.cur" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/include/wx/msw/magnif1.cur" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/include/wx/msw/pbrush.cur" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/include/wx/msw/pencil.cur" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/include/wx/msw/pntleft.cur" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/include/wx/msw/pntright.cur" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/include/wx/msw/roller.cur" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/include/wx/msw/wx.manifest" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/include/wx/msw/wx_dpi_aware.manifest" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/include/wx/msw/wx_dpi_aware_pmv2.manifest" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/include/wx/richtext/bitmaps/image_placeholder24x24.xpm" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/interface/check_syntax.sh" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/lib/abicheck.sh" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/lib/vms.opt" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/lib/vms_gtk.opt" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/lib/vms_gtk2.opt" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/lib/vms_x11_univ.opt" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/af.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/an.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/ar.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/ca.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/ca@valencia.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/co.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/cs.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/da.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/de.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/el.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/es.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/eu.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/fa_IR.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/fi.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/fr.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/gl_ES.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/hi.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/hr.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/hu.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/id.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/it.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/ja.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/ka.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/ko_KR.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/lt.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/lv.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/ms.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/nb.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/ne.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/nl.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/pl.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/pt.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/pt_BR.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/ro.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/ru.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/sk.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/sl.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/sq.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/sr.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/sv.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/ta.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/tr.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/uk.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/vi.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/zh_CN.po" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/locale/zh_TW.po" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/setup.h.in" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/setup.h_vms" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/version-script.in" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/wx-config-inplace.in" />
     <Text Include="../../thirdparty/owemdjee/wxWidgets/wx-config.in" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/wxwidgets.props" />
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/wxwin.m4" />
     <Xml Include="../../thirdparty/owemdjee/wxWidgets/docs/doxygen/DoxygenLayout.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -2725,6 +2809,29 @@
     <ClInclude Include="../../scripts/wxWidgets/webview2/build/native/include/WebView2ExperimentalEnvironmentOptions.h" />
     <Text Include="../../scripts/wxWidgets/copy_webview_package.js" />
     <Text Include="../../scripts/wxWidgets/webview2/LICENSE.txt" />
+    <Text Include="../../scripts/wxWidgets/webview2/WebView2.idl" />
+    <Text Include="../../scripts/wxWidgets/webview2/WebView2Experimental.idl" />
+    <Text Include="../../scripts/wxWidgets/webview2/build/Common.targets" />
+    <Text Include="../../scripts/wxWidgets/webview2/build/Microsoft.Web.WebView2.targets" />
+    <Text Include="../../scripts/wxWidgets/webview2/build/native/Microsoft.Web.WebView2.targets" />
+    <Text Include="../../scripts/wxWidgets/webview2/build/native/arm64/WebView2Loader.dll" />
+    <Text Include="../../scripts/wxWidgets/webview2/build/native/include-winrt/WebView2Interop.idl" />
+    <Text Include="../../scripts/wxWidgets/webview2/build/native/x64/WebView2Loader.dll" />
+    <Text Include="../../scripts/wxWidgets/webview2/build/native/x86/WebView2Loader.dll" />
+    <Text Include="../../scripts/wxWidgets/webview2/lib/Microsoft.Web.WebView2.Core.winmd" />
+    <Text Include="../../scripts/wxWidgets/webview2/lib/net45/Microsoft.Web.WebView2.Core.dll" />
+    <Text Include="../../scripts/wxWidgets/webview2/lib/net45/Microsoft.Web.WebView2.WinForms.dll" />
+    <Text Include="../../scripts/wxWidgets/webview2/lib/net45/Microsoft.Web.WebView2.Wpf.dll" />
+    <Text Include="../../scripts/wxWidgets/webview2/lib/netcoreapp3.0/" />
+    <Text Include="../../scripts/wxWidgets/webview2/lib/netcoreapp3.0/Microsoft.Web.WebView2.Core.dll" />
+    <Text Include="../../scripts/wxWidgets/webview2/lib/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.dll" />
+    <Text Include="../../scripts/wxWidgets/webview2/lib/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll" />
+    <Text Include="../../scripts/wxWidgets/webview2/runtimes/win-arm64/native/WebView2Loader.dll" />
+    <Text Include="../../scripts/wxWidgets/webview2/runtimes/win-arm64/native_uap/Microsoft.Web.WebView2.Core.dll" />
+    <Text Include="../../scripts/wxWidgets/webview2/runtimes/win-x64/native/WebView2Loader.dll" />
+    <Text Include="../../scripts/wxWidgets/webview2/runtimes/win-x64/native_uap/Microsoft.Web.WebView2.Core.dll" />
+    <Text Include="../../scripts/wxWidgets/webview2/runtimes/win-x86/native/WebView2Loader.dll" />
+    <Text Include="../../scripts/wxWidgets/webview2/runtimes/win-x86/native_uap/Microsoft.Web.WebView2.Core.dll" />
     <Xml Include="../../scripts/wxWidgets/webview2/lib/net45/Microsoft.Web.WebView2.Core.xml" />
     <Xml Include="../../scripts/wxWidgets/webview2/lib/net45/Microsoft.Web.WebView2.WinForms.xml" />
     <Xml Include="../../scripts/wxWidgets/webview2/lib/net45/Microsoft.Web.WebView2.Wpf.xml" />

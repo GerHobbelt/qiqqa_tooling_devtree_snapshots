@@ -53,7 +53,6 @@
 
 namespace GFLAGS_NAMESPACE {
 
-
 // This is used for unittests for death-testing.  It is defined in gflags.cc.
 extern GFLAGS_DLL_DECL void (*gflags_exitfunc)(int);
 
@@ -98,11 +97,23 @@ template <> struct CompileAssert<true> {};
 
 // -- logging and testing ---------------------------------------------------
 
+#define GFLAGS_TEST_STDERROSTREAM()  GFLAGS_NAMESPACE::gflags_stderr_ostream()
+#define GFLAGS_TEST_STDERR_PRINTF    GFLAGS_NAMESPACE::gflags_stderr_printf
+#define GFLAGS_TEST_STD_EXIT(v)      GFLAGS_NAMESPACE::gflags_std_exit(v)
+
+
+std::ostream & gflags_stderr_ostream();
+void gflags_stderr_printf(const char *msg, ...);
+void gflags_std_exit(int retval);
+
+
+// -- logging and testing ---------------------------------------------------
+
 // For now, we ignore the level for logging, and don't show *VLOG's at
 // all, except by hand-editing the lines below
-#define LOG(level)    std::cerr
-#define VLOG(level)   if (true) {} else std::cerr
-#define DVLOG(level)  if (true) {} else std::cerr
+#define LOG(level)    GFLAGS_TEST_STDERROSTREAM()
+#define VLOG(level)   if (true) {} else GFLAGS_TEST_STDERROSTREAM()
+#define DVLOG(level)  if (true) {} else GFLAGS_TEST_STDERROSTREAM()
 
 // CHECK dies with a fatal error if condition is not true.  It is *not*
 // controlled by NDEBUG, so the check will be executed regardless of
@@ -112,16 +123,16 @@ template <> struct CompileAssert<true> {};
 #define EXPECT_TRUE(condition)                                  \
   if (true) {                                                   \
     if (!(condition)) {                                         \
-      fprintf(stderr, "Check failed: %s\n", #condition);        \
-      exit(1);                                                  \
+      GFLAGS_TEST_STDERR_PRINTF("%s:%d] Check failed: %s\n", __FILE__, __LINE__, #condition);    \
+      GFLAGS_TEST_STD_EXIT(1);                                        \
     }                                                           \
   } else std::cerr << ""
 
 #define EXPECT_OP(op, val1, val2)                                       \
   if (true) {                                                           \
     if (!((val1) op (val2))) {                                          \
-      fprintf(stderr, "Check failed: %s %s %s\n", #val1, #op, #val2);   \
-      exit(1);                                                          \
+      GFLAGS_TEST_STDERR_PRINTF("%s:%d] Check failed: %s %s %s\n", __FILE__, __LINE__, #val1, #op, #val2);   \
+      GFLAGS_TEST_STD_EXIT(1);                                                \
     }                                                                   \
   } else std::cerr << ""
 
@@ -141,8 +152,8 @@ template <> struct CompileAssert<true> {};
 #define EXPECT_NAN(arg)                                         \
   do {                                                          \
     if (!isnan(arg)) {                                          \
-      fprintf(stderr, "Check failed: isnan(%s)\n", #arg);       \
-      exit(1);                                                  \
+      GFLAGS_TEST_STDERR_PRINTF("Check failed: isnan(%s)\n", #arg);   \
+      GFLAGS_TEST_STD_EXIT(1);                                        \
     }                                                           \
   } while (0)
 #else
@@ -153,8 +164,8 @@ template <> struct CompileAssert<true> {};
 #define EXPECT_INF(arg)                                         \
   do {                                                          \
     if (!isinf(arg)) {                                          \
-      fprintf(stderr, "Check failed: isinf(%s)\n", #arg);       \
-      exit(1);                                                  \
+      GFLAGS_TEST_STDERR_PRINTF("Check failed: isinf(%s)\n", #arg);   \
+      GFLAGS_TEST_STD_EXIT(1);                                        \
     }                                                           \
   } while (0)
 #else
@@ -164,16 +175,16 @@ template <> struct CompileAssert<true> {};
 #define EXPECT_DOUBLE_EQ(val1, val2)                                    \
   do {                                                                  \
     if (((val1) < (val2) - 0.001 || (val1) > (val2) + 0.001)) {         \
-      fprintf(stderr, "Check failed: %s == %s\n", #val1, #val2);        \
-      exit(1);                                                          \
+      GFLAGS_TEST_STDERR_PRINTF("Check failed: %s == %s\n", #val1, #val2);    \
+      GFLAGS_TEST_STD_EXIT(1);                                                \
     }                                                                   \
   } while (0)
 
 #define EXPECT_STREQ(val1, val2)                                        \
   do {                                                                  \
     if (strcmp((val1), (val2)) != 0) {                                  \
-      fprintf(stderr, "Check failed: streq(%s, %s)\n", #val1, #val2);   \
-      exit(1);                                                          \
+      GFLAGS_TEST_STDERR_PRINTF("Check failed: streq(%s, %s)\n", #val1, #val2);   \
+      GFLAGS_TEST_STD_EXIT(1);                                                \
     }                                                                   \
   } while (0)
 
@@ -185,7 +196,7 @@ template <> struct CompileAssert<true> {};
     for (it = g_testlist.begin(); it != g_testlist.end(); ++it) {       \
       (*it)();   /* The test will error-exit if there's a problem. */   \
     }                                                                   \
-    fprintf(stderr, "\nPassed %d tests\n\nPASS\n",                      \
+    GFLAGS_TEST_STDERR_PRINTF("\nPassed %d tests\n\nPASS\n",                  \
             static_cast<int>(g_testlist.size()));                       \
     return 0;                                                           \
   }
@@ -196,7 +207,7 @@ template <> struct CompileAssert<true> {};
     Test_##a##_##b() { g_testlist.push_back(&Run); }    \
     static void Run() {                                 \
       FlagSaver fs;                                     \
-      fprintf(stderr, "Running test %s/%s\n", #a, #b);  \
+      GFLAGS_TEST_STDERR_PRINTF("Running test %s/%s\n", #a, #b);  \
       RunTest();                                        \
     }                                                   \
     static void RunTest();                              \
@@ -214,17 +225,22 @@ class Test {};
   static bool g_called_exit;                            \
   static void CalledExit(int) { g_called_exit = true; }
 
-#define EXPECT_DEATH(fn, msg)                                           \
-  do {                                                                  \
-    g_called_exit = false;                                              \
-    gflags_exitfunc = &CalledExit;                            \
-    fn;                                                                 \
-    gflags_exitfunc = &exit;    /* set back to its default */ \
-    if (!g_called_exit) {                                               \
-      fprintf(stderr, "Function didn't die (%s): %s\n", msg, #fn);      \
-      exit(1);                                                          \
-    }                                                                   \
+#define EXPECT_DEATH(fn, msg)													\
+  do {																			\
+    auto old_gflags_exit = gflags_exitfunc;										\
+    g_called_exit = false;														\
+    gflags_exitfunc = &CalledExit;												\
+    fn;																			\
+    gflags_exitfunc = old_gflags_exit;    /* set back to its default */         \
+    if (!g_called_exit) {														\
+      GFLAGS_TEST_STDERR_PRINTF("Function didn't die (%s): %s\n", msg, #fn);	\
+      GFLAGS_TEST_STD_EXIT(1);													\
+    }																			\
   } while (0)
+
+#ifdef GTEST_HAS_DEATH_TEST
+#error "GTEST_HAS_DEATH_TEST has already been defined previously; make sure gflags header is included before gtest headers."
+#endif
 
 #define GTEST_HAS_DEATH_TEST 1
 

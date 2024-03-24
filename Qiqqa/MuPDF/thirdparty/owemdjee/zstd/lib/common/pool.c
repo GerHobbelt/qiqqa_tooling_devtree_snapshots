@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Yann Collet, Facebook, Inc.
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
  * All rights reserved.
  *
  * This source code is licensed under both the BSD-style license (found in the
@@ -10,9 +10,9 @@
 
 
 /* ======   Dependencies   ======= */
+#include "../common/allocations.h"  /* ZSTD_customCalloc, ZSTD_customFree */
 #include "zstd_deps.h" /* size_t */
 #include "debug.h"     /* assert */
-#include "zstd_internal.h"  /* ZSTD_customCalloc, ZSTD_customFree */
 #include "pool.h"
 
 /* ======   Compiler specifics   ====== */
@@ -173,7 +173,7 @@ static void POOL_join(POOL_ctx* ctx) {
     /* Join all of the threads */
     {   size_t i;
         for (i = 0; i < ctx->threadCapacity; ++i) {
-            ZSTD_pthread_join(ctx->threads[i], NULL);  /* note : could fail */
+            ZSTD_pthread_join(ctx->threads[i]);  /* note : could fail */
     }   }
 }
 
@@ -223,7 +223,7 @@ static int POOL_resize_internal(POOL_ctx* ctx, size_t numThreads)
     {   ZSTD_pthread_t* const threadPool = (ZSTD_pthread_t*)ZSTD_customCalloc(numThreads * sizeof(ZSTD_pthread_t), ctx->customMem);
         if (!threadPool) return 1;
         /* replace existing thread pool */
-        ZSTD_memcpy(threadPool, ctx->threads, ctx->threadCapacity * sizeof(*threadPool));
+        ZSTD_memcpy(threadPool, ctx->threads, ctx->threadCapacity * sizeof(ZSTD_pthread_t));
         ZSTD_customFree(ctx->threads, ctx->customMem);
         ctx->threads = threadPool;
         /* Initialize additional threads */
@@ -271,7 +271,9 @@ static int isQueueFull(POOL_ctx const* ctx) {
 static void
 POOL_add_internal(POOL_ctx* ctx, POOL_function function, void *opaque)
 {
-    POOL_job const job = {function, opaque};
+    POOL_job job;
+    job.function = function;
+    job.opaque = opaque;
     assert(ctx != NULL);
     if (ctx->shutdown) return;
 

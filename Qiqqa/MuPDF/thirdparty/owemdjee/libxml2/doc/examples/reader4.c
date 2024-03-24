@@ -63,7 +63,7 @@ int main(int argc, char **argv) {
      * between the version it was compiled for and the actual shared
      * library used.
      */
-    LIBXML_TEST_VERSION
+    LIBXML_TEST_VERSION();
 
     /*
      * Create a new reader for the first file and process the
@@ -103,14 +103,6 @@ int main(int argc, char **argv) {
      */
     xmlFreeTextReader(readerPtr);
 
-    /*
-     * Cleanup function for the XML library.
-     */
-    xmlCleanupParser();
-    /*
-     * this is to debug memory for regression tests
-     */
-    xmlMemoryDump();
     return(0);
 }
 

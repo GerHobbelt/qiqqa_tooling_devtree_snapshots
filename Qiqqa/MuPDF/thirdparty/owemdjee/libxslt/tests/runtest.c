@@ -10,6 +10,7 @@
 #include "config.h"
 #endif
 
+#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include <fcntl.h>
@@ -32,6 +33,8 @@
 #include <libxslt/xsltlocale.h>
 #include <libxslt/xsltutils.h>
 #include <libexslt/exslt.h>
+
+#include "../examples/monolithic_examples.h"
 
 /*
  * O_BINARY is just for Windows compatibility - if it isn't defined
@@ -58,7 +61,7 @@ struct testDesc {
 };
 
 static int update_results = 0;
-static char* temp_directory = NULL;
+static const char* temp_directory = NULL;
 static int checkTestFile(const char *filename);
 
 #if defined(_WIN32)
@@ -273,7 +276,7 @@ xmlParserPrintFileContextInternal(xmlParserInputPtr input ,
 }
 
 static void
-testStructuredErrorHandler(void *ctx  ATTRIBUTE_UNUSED, xmlErrorPtr err) {
+testStructuredErrorHandler(void *ctx ATTRIBUTE_UNUSED, const xmlError *err) {
     char *file = NULL;
     int line = 0;
     int code = -1;
@@ -460,7 +463,8 @@ initializeLibxml2(void) {
     xmlSetExternalEntityLoader(xmlNoNetExternalEntityLoader);
     xmlSetGenericErrorFunc(NULL, testErrorHandler);
     xsltSetGenericErrorFunc(NULL, testErrorHandler);
-    xmlSetStructuredErrorFunc(NULL, testStructuredErrorHandler);
+    xmlSetStructuredErrorFunc(NULL,
+            (xmlStructuredErrorFunc) testStructuredErrorHandler);
     exsltRegisterAll();
     xsltRegisterTestModule();
     xsltMaxDepth = 200;
@@ -598,10 +602,28 @@ xsltTest(const char *filename, int options) {
 
     if (strcmp(filename, "./test-10-3.xsl") == 0) {
         void *locale = xsltNewLocale(BAD_CAST "de", 0);
+        xmlChar *str1, *str2;
+
         /* Skip test requiring "de" locale */
         if (locale == NULL)
             return(0);
+
+        /*
+         * Some C libraries like musl or older macOS don't support
+         * collation with locales.
+         */
+        str1 = xsltStrxfrm(locale, BAD_CAST "\xC3\xA4");
+        str2 = xsltStrxfrm(locale, BAD_CAST "b");
+        res = xmlStrcmp(str1, str2);
+        xmlFree(str1);
+        xmlFree(str2);
         xsltFreeLocale(locale);
+
+        if (res >= 0) {
+            fprintf(stderr, "Warning: Your C library doesn't seem to support "
+                    "collation with locales\n");
+            return(0);
+        }
     }
 
     styleDoc = xmlReadFile(filename, NULL, XSLT_PARSE_OPTIONS | options);
@@ -829,8 +851,13 @@ runtest(int i) {
     return(ret);
 }
 
+
+#if defined(BUILD_MONOLITHIC)
+#define main      xslt_runtest_main
+#endif
+
 int
-main(int argc ATTRIBUTE_UNUSED, char **argv ATTRIBUTE_UNUSED) {
+main(int argc, const char **argv) {
     int i, a, ret = 0;
     int subset = 0;
 

@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.12)
+cmake_minimum_required(VERSION 3.5)
 project(dirent LANGUAGES C CXX)
 
 # User options
@@ -51,6 +51,7 @@ if(DIRENT_BUILD_TESTS)
         add_executable(${TEST_NAME} EXCLUDE_FROM_ALL ${ARGN})
         add_test(NAME ${TEST_NAME} WORKING_DIRECTORY ${CMAKE_SOURCE_DIR} COMMAND $<TARGET_FILE:${TEST_NAME}>)
         add_dependencies(check ${TEST_NAME})
+        set_property(TEST ${TEST_NAME} PROPERTY SKIP_RETURN_CODE 77)
     endfunction(add_test_executable)
 
     add_test_executable(t-compile tests/t-compile.c)
@@ -61,4 +62,5 @@ if(DIRENT_BUILD_TESTS)
     add_test_executable(t-telldir tests/t-telldir.c)
     add_test_executable(t-strverscmp tests/t-strverscmp.c)
     add_test_executable(t-utf8 tests/t-utf8.c)
+    add_test_executable(t-symlink tests/t-symlink.c)
 endif(DIRENT_BUILD_TESTS)

@@ -34,6 +34,8 @@
 #endif
 #include <dirent.h>
 
+#include "monolithic_examples.h"
+
 /* File name and location of database file */
 #define DB_LOCATION L"locate.db"
 
@@ -52,7 +54,7 @@ static FILE *db = NULL;
 #define wmain		main
 #endif
 
-#ifdef _MSC_VER
+#if defined(_MSC_VER) && !defined(BUILD_MONOLITHIC)
 int
 wmain(int argc, const wchar_t **argv)
 {
@@ -84,7 +86,7 @@ wmain(int argc, const wchar_t **argv)
 }
 #else
 int
-main(int argc, char *argv[])
+main(int argc, const char **argv)
 {
 	printf("updatedb only works on Microsoft Windows\n");
 	return EXIT_SUCCESS;
@@ -200,8 +202,7 @@ db_open(void)
 
 /* Close database file */
 static void
-db_close(
-	void)
+db_close(void)
 {
 	if (!db)
 		return;

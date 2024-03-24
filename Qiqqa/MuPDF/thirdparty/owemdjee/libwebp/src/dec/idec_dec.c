@@ -329,6 +329,7 @@ static VP8StatusCode DecodeWebPHeaders(WebPIDecoder* const idec) {
     if (dec == NULL) {
       return VP8_STATUS_OUT_OF_MEMORY;
     }
+    dec->incremental_ = 1;
     idec->dec_ = dec;
     dec->alpha_data_ = headers.alpha_data;
     dec->alpha_data_size_ = headers.alpha_data_size;

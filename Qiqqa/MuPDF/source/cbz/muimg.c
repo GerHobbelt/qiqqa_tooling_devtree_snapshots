@@ -60,7 +60,7 @@ img_count_pages(fz_context *ctx, fz_document *doc_, int chapter)
 }
 
 static fz_rect
-img_bound_page(fz_context *ctx, fz_page *page_)
+img_bound_page(fz_context *ctx, fz_page *page_, fz_box_type box)
 {
 	img_page *page = (img_page*)page_;
 	fz_image *image = page->image;
@@ -138,7 +138,7 @@ img_load_page(fz_context *ctx, fz_document *doc_, int chapter, int number)
 	fz_colorspace *cs = NULL;
 
 	if (number < 0 || number >= doc->page_count)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "cannot load page %d", number);
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "invalid page number %d", number);
 
 	fz_var(pixmap);
 	fz_var(image);
@@ -193,7 +193,7 @@ img_load_page(fz_context *ctx, fz_document *doc_, int chapter, int number)
 }
 
 static int
-img_lookup_metadata(fz_context *ctx, fz_document *doc_, const char *key, char *buf, int size)
+img_lookup_metadata(fz_context *ctx, fz_document *doc_, const char *key, char *buf, size_t size)
 {
 	img_document *doc = (img_document*)doc_;
 	if (!strcmp(key, FZ_META_FORMAT))
@@ -202,11 +202,9 @@ img_lookup_metadata(fz_context *ctx, fz_document *doc_, const char *key, char *b
 }
 
 static fz_document *
-img_open_document_with_stream(fz_context *ctx, fz_stream *file)
+img_open_document(fz_context *ctx, fz_stream *file, fz_stream *accel, fz_archive *dir)
 {
-	img_document *doc = NULL;
-
-	doc = fz_new_derived_document(ctx, img_document);
+	img_document *doc = fz_new_derived_document(ctx, img_document);
 
 	doc->super.drop_document = img_drop_document;
 	doc->super.count_pages = img_count_pages;
@@ -274,11 +272,16 @@ img_open_document_with_stream(fz_context *ctx, fz_stream *file)
 }
 
 static int
-img_recognize_content(fz_context *ctx, fz_stream *stream)
+img_recognize_content(fz_context *ctx, fz_stream *stream, fz_archive *dir)
 {
 	unsigned char data[16];
-	size_t n = fz_read(ctx, stream, data, sizeof(data));
+	size_t n;
 	int fmt;
+
+	if (stream == NULL)
+		return 0;
+
+	n = fz_read(ctx, stream, data, sizeof(data));
 
 	if (n != 8)
 		return 0;
@@ -352,12 +355,9 @@ static const char *img_mimetypes[] =
 fz_document_handler img_document_handler =
 {
 	NULL,
-	NULL,
-	img_open_document_with_stream,
+	img_open_document,
 	img_extensions,
 	img_mimetypes,
-	NULL,
-	NULL,
 	img_recognize_content
 };
 

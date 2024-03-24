@@ -23,12 +23,11 @@
  *   http://www.mozilla.org/MPL/                                           *
  ***************************************************************************/
 
-#include <tstring.h>
-#include <tdebug.h>
-
-#include <oggpageheader.h>
-
 #include "vorbisproperties.h"
+
+#include "tstring.h"
+#include "tdebug.h"
+#include "oggpageheader.h"
 #include "vorbisfile.h"
 
 using namespace TagLib;
@@ -36,24 +35,14 @@ using namespace TagLib;
 class Vorbis::Properties::PropertiesPrivate
 {
 public:
-  PropertiesPrivate() :
-    length(0),
-    bitrate(0),
-    sampleRate(0),
-    channels(0),
-    vorbisVersion(0),
-    bitrateMaximum(0),
-    bitrateNominal(0),
-    bitrateMinimum(0) {}
-
-  int length;
-  int bitrate;
-  int sampleRate;
-  int channels;
-  int vorbisVersion;
-  int bitrateMaximum;
-  int bitrateNominal;
-  int bitrateMinimum;
+  int length { 0 };
+  int bitrate { 0 };
+  int sampleRate { 0 };
+  int channels { 0 };
+  int vorbisVersion { 0 };
+  int bitrateMaximum { 0 };
+  int bitrateNominal { 0 };
+  int bitrateMinimum { 0 };
 };
 
 namespace TagLib {
@@ -70,25 +59,12 @@ namespace TagLib {
 
 Vorbis::Properties::Properties(File *file, ReadStyle style) :
   AudioProperties(style),
-  d(new PropertiesPrivate())
+  d(std::make_unique<PropertiesPrivate>())
 {
   read(file);
 }
 
-Vorbis::Properties::~Properties()
-{
-  delete d;
-}
-
-int Vorbis::Properties::length() const
-{
-  return lengthInSeconds();
-}
-
-int Vorbis::Properties::lengthInSeconds() const
-{
-  return d->length / 1000;
-}
+Vorbis::Properties::~Properties() = default;
 
 int Vorbis::Properties::lengthInMilliseconds() const
 {
@@ -186,7 +162,7 @@ void Vorbis::Properties::read(File *file)
 
       if(frameCount > 0) {
         const double length = frameCount * 1000.0 / d->sampleRate;
-        long fileLengthWithoutOverhead = file->length();
+        offset_t fileLengthWithoutOverhead = file->length();
         // Ignore the three initial header packets, see "1.3.1. Decode Setup" in
         // https://xiph.org/vorbis/doc/Vorbis_I_spec.html
         for (unsigned int i = 0; i < 3; ++i) {

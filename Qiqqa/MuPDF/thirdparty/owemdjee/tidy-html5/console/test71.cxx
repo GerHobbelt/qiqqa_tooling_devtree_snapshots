@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include "tidybuffio.h"
 #include "tidy.h"
+#include "monolithic_examples.h"
 
 static const char *sample =
     "<!DOCTYPE html>\n"
@@ -20,7 +21,12 @@ static const char *sample =
     "<body>something &amp; escaped</body>\n"
     "</html>";
 
-int main() {
+
+#if defined(BUILD_MONOLITHIC)
+#define main         tidy_test71_main
+#endif
+
+int main(void) {
     printf("\nSimple example of HTML Tidy API use.\n");
     TidyDoc tdoc = tidyCreate();
     TidyBuffer buff;

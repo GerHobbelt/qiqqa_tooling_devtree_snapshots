@@ -33,12 +33,24 @@
     <Filter Include="Misc Files\src\plugins">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\images">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0009}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <Image Include="../../thirdparty/owemdjee/neutralinoJS-CLI/images/logo.png">
+      <Filter>Resource Files\images</Filter>
+    </Image>
     <Text Include="../../thirdparty/owemdjee/neutralinoJS-CLI/CHANGELOG.md">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/neutralinoJS-CLI/CONTRIBUTING.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/neutralinoJS-CLI/LICENSE">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/neutralinoJS-CLI/README.md">
@@ -54,12 +66,6 @@
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/neutralinoJS-CLI/scripts/rz.py">
-      <Filter>Misc Files\scripts</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/neutralinoJS-CLI/scripts/test_commands.sh">
-      <Filter>Misc Files\scripts</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/neutralinoJS-CLI/scripts/test_plugins.sh">
       <Filter>Misc Files\scripts</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/neutralinoJS-CLI/spec/build.spec.js">

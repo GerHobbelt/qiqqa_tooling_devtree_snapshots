@@ -37,6 +37,8 @@
 #include <errno.h>
 #include <locale.h>
 
+#include "monolithic_examples.h"
+
 static long long list_directory(const char *dirname, int level);
 static int _main(int argc, const char *argv[]);
 
@@ -64,7 +66,7 @@ list_directory(const char *dirname, int level)
 	char buffer[PATH_MAX + 2];
 	char *p = buffer;
 	char *end = &buffer[PATH_MAX];
-	
+
 	/* Copy directory name to buffer */
 	const char *src = dirname;
 	while (p < end && *src != '\0') {
@@ -204,4 +206,3 @@ main(int argc, const char **argv)
 	return _main(argc, argv);
 }
 #endif
-

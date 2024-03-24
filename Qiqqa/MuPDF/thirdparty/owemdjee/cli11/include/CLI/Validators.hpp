@@ -1,4 +1,4 @@
-// Copyright (c) 2017-2022, University of Cincinnati, developed by Henry Schreiner
+// Copyright (c) 2017-2023, University of Cincinnati, developed by Henry Schreiner
 // under NSF AWARD 1414736 and by the respective contributors.
 // All rights reserved.
 //
@@ -25,34 +25,6 @@
 // [CLI11:public_includes:end]
 
 // [CLI11:validators_hpp_filesystem:verbatim]
-
-// C standard library
-// Only needed for existence checking
-#if defined CLI11_CPP17 && defined __has_include && !defined CLI11_HAS_FILESYSTEM
-#if __has_include(<filesystem>)
-// Filesystem cannot be used if targeting macOS < 10.15
-#if defined __MAC_OS_X_VERSION_MIN_REQUIRED && __MAC_OS_X_VERSION_MIN_REQUIRED < 101500
-#define CLI11_HAS_FILESYSTEM 0
-#elif defined(__wasi__)
-// As of wasi-sdk-14, filesystem is not implemented
-#define CLI11_HAS_FILESYSTEM 0
-#else
-#include <filesystem>
-#if defined __cpp_lib_filesystem && __cpp_lib_filesystem >= 201703
-#if defined _GLIBCXX_RELEASE && _GLIBCXX_RELEASE >= 9
-#define CLI11_HAS_FILESYSTEM 1
-#elif defined(__GLIBCXX__)
-// if we are using gcc and Version <9 default to no filesystem
-#define CLI11_HAS_FILESYSTEM 0
-#else
-#define CLI11_HAS_FILESYSTEM 1
-#endif
-#else
-#define CLI11_HAS_FILESYSTEM 0
-#endif
-#endif
-#endif
-#endif
 
 #if defined CLI11_HAS_FILESYSTEM && CLI11_HAS_FILESYSTEM > 0
 #include <filesystem>  // NOLINT(build/include)
@@ -270,8 +242,9 @@ template <typename DesiredType> class TypeValidator : public Validator {
   public:
     explicit TypeValidator(const std::string &validator_name)
         : Validator(validator_name, [](std::string &input_string) {
+              using CLI::detail::lexical_cast;
               auto val = DesiredType();
-              if(!detail::lexical_cast(input_string, val)) {
+              if(!lexical_cast(input_string, val)) {
                   return std::string("Failed parsing ") + input_string + " as a " + detail::type_name<DesiredType>();
               }
               return std::string();
@@ -305,8 +278,9 @@ class Range : public Validator {
         }
 
         func_ = [min_val, max_val](std::string &input) {
+            using CLI::detail::lexical_cast;
             T val;
-            bool converted = detail::lexical_cast(input, val);
+            bool converted = lexical_cast(input, val);
             if((!converted) || (val < min_val || val > max_val)) {
                 std::stringstream out;
                 out << "Value " << input << " not in range [";
@@ -342,8 +316,9 @@ class Bound : public Validator {
         description(out.str());
 
         func_ = [min_val, max_val](std::string &input) {
+            using CLI::detail::lexical_cast;
             T val;
-            bool converted = detail::lexical_cast(input, val);
+            bool converted = lexical_cast(input, val);
             if(!converted) {
                 return std::string("Value ") + input + " could not be converted";
             }
@@ -534,8 +509,9 @@ class IsMember : public Validator {
         // This is the function that validates
         // It stores a copy of the set pointer-like, so shared_ptr will stay alive
         func_ = [set, filter_fn](std::string &input) {
+            using CLI::detail::lexical_cast;
             local_item_t b;
-            if(!detail::lexical_cast(input, b)) {
+            if(!lexical_cast(input, b)) {
                 throw ValidationError(input);  // name is added later
             }
             if(filter_fn) {
@@ -602,8 +578,9 @@ class Transformer : public Validator {
         desc_function_ = [mapping]() { return detail::generate_map(detail::smart_deref(mapping)); };
 
         func_ = [mapping, filter_fn](std::string &input) {
+            using CLI::detail::lexical_cast;
             local_item_t b;
-            if(!detail::lexical_cast(input, b)) {
+            if(!lexical_cast(input, b)) {
                 return std::string();
                 // there is no possible way we can match anything in the mapping if we can't convert so just return
             }
@@ -671,8 +648,9 @@ class CheckedTransformer : public Validator {
         desc_function_ = tfunc;
 
         func_ = [mapping, tfunc, filter_fn](std::string &input) {
+            using CLI::detail::lexical_cast;
             local_item_t b;
-            bool converted = detail::lexical_cast(input, b);
+            bool converted = lexical_cast(input, b);
             if(converted) {
                 if(filter_fn) {
                     b = filter_fn(b);
@@ -774,7 +752,8 @@ class AsNumberWithUnit : public Validator {
                 unit = detail::to_lower(unit);
             }
             if(unit.empty()) {
-                if(!detail::lexical_cast(input, num)) {
+                using CLI::detail::lexical_cast;
+                if(!lexical_cast(input, num)) {
                     throw ValidationError(std::string("Value ") + input + " could not be converted to " +
                                           detail::type_name<Number>());
                 }
@@ -792,7 +771,8 @@ class AsNumberWithUnit : public Validator {
             }
 
             if(!input.empty()) {
-                bool converted = detail::lexical_cast(input, num);
+                using CLI::detail::lexical_cast;
+                bool converted = lexical_cast(input, num);
                 if(!converted) {
                     throw ValidationError(std::string("Value ") + input + " could not be converted to " +
                                           detail::type_name<Number>());

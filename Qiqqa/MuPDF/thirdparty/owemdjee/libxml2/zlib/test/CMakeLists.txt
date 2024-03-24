@@ -92,16 +92,26 @@ if(WITH_FUZZERS)
     add_subdirectory(fuzz)
 endif()
 
-if(CMAKE_VERSION VERSION_LESS 3.12)
-    message(WARNING "Minimum cmake version of 3.12 not met for GoogleTest or benchmarks!")
-else()
-    enable_language(CXX)
+if(WITH_GTEST OR WITH_BENCHMARKS)
+    if(CMAKE_VERSION VERSION_LESS 3.12)
+        message(WARNING "Minimum cmake version of 3.12 not met for GoogleTest or benchmarks!")
 
-    include(FetchContent)
+        set(WITH_GTEST OFF)
+        set(WITH_GTEST OFF PARENT_SCOPE)
 
-    if(WITH_BENCHMARKS)
-        add_subdirectory(benchmarks)
+        set(WITH_BENCHMARKS OFF)
+        set(WITH_BENCHMARKS OFF PARENT_SCOPE)
+    else()
+        enable_language(CXX)
     endif()
+endif()
+
+if(WITH_BENCHMARKS)
+    add_subdirectory(benchmarks)
+endif()
+
+if(WITH_GTEST)
+    include(FetchContent)
 
     # Google test requires at least C++11
     set(CMAKE_CXX_STANDARD 11)
@@ -167,7 +177,9 @@ else()
         test_dict.cc
         test_inflate_adler32.cc
         test_large_buffers.cc
+        test_raw.cc
         test_small_buffers.cc
+        test_small_window.cc
         )
 
     if(WITH_GZFILEOP)
@@ -218,12 +230,15 @@ else()
         target_link_libraries(gtest_zlib external_zlib)
     endif()
 
-    if((NOT ZLIBNG_ENABLE_TESTS) AND ZLIB_COMPAT AND (NOT DEFINED BUILD_SHARED_LIBS OR BUILD_SHARED_LIBS))
-        # Link dynamically in order to be able to substitute zlib-ng with zlib.
-        target_link_libraries(gtest_zlib zlib GTest::Main)
-    else()
+    if(NOT DEFINED BUILD_SHARED_LIBS)
         # Link statically in order to test internal zlib-ng functions.
         target_link_libraries(gtest_zlib zlibstatic)
+    else()
+        target_link_libraries(gtest_zlib zlib)
+    endif()
+
+    if(BUILD_SHARED_LIBS)
+        target_link_libraries(gtest_zlib GTest::Main)
     endif()
     target_link_libraries(gtest_zlib GTest::GTest)
 

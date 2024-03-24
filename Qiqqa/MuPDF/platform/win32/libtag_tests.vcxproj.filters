@@ -21,8 +21,11 @@
     <Filter Include="Misc Files\tests">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0003}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\tests">
+    <Filter Include="Misc Files\tests\data">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tests">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -48,6 +51,15 @@
       <Filter>Source Files\tests</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/taglib/tests/test_bytevectorstream.cpp">
+      <Filter>Source Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/taglib/tests/test_complexproperties.cpp">
+      <Filter>Source Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/taglib/tests/test_dsdiff.cpp">
+      <Filter>Source Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/taglib/tests/test_dsf.cpp">
       <Filter>Source Files\tests</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/taglib/tests/test_file.cpp">
@@ -119,6 +131,9 @@
     <ClCompile Include="../../thirdparty/owemdjee/taglib/tests/test_s3m.cpp">
       <Filter>Source Files\tests</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/taglib/tests/test_sizes.cpp">
+      <Filter>Source Files\tests</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/taglib/tests/test_speex.cpp">
       <Filter>Source Files\tests</Filter>
     </ClCompile>
@@ -128,7 +143,16 @@
     <ClCompile Include="../../thirdparty/owemdjee/taglib/tests/test_synchdata.cpp">
       <Filter>Source Files\tests</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/taglib/tests/test_tag_c.cpp">
+      <Filter>Source Files\tests</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/taglib/tests/test_trueaudio.cpp">
+      <Filter>Source Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/taglib/tests/test_variant.cpp">
+      <Filter>Source Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/taglib/tests/test_versionnumber.cpp">
       <Filter>Source Files\tests</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/taglib/tests/test_wav.cpp">
@@ -149,7 +173,16 @@
     <ClInclude Include="../../thirdparty/owemdjee/taglib/tests/utils.h">
       <Filter>Header Files\tests</Filter>
     </ClInclude>
+    <Text Include="../../thirdparty/owemdjee/taglib/AUTHORS">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/taglib/CMakeLists.txt">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/COPYING.LGPL">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/COPYING.MPL">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/taglib/ConfigureChecks.cmake">
@@ -176,6 +209,15 @@
     <Text Include="../../thirdparty/owemdjee/taglib/doc/README">
       <Filter>Misc Files\doc</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/doc/api-footer.html">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/doc/api-header.html">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/doc/taglib.svg">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/taglib/taglib-config.cmake">
       <Filter>Misc Files</Filter>
     </Text>
@@ -187,6 +229,132 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/taglib/tests/CMakeLists.txt">
       <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/005411.id3">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/64bit.mp4">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/ape-id3v1.mp3">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/ape-id3v2.mp3">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/ape.mp3">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/bladeenc.mp3">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/broken-tenc.id3">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/compressed_id3_frame.mp3">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/correctness_gain_silent_output.opus">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/duplicate_id3v2.aiff">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/duplicate_id3v2.mp3">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/empty-seektable.flac">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/empty.aiff">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/empty.spx">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/empty10ms.dff">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/empty10ms.dsf">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/excessive_alloc.aif">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/excessive_alloc.mp3">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/extended-header.mp3">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/garbage.mp3">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/id3v22-tda.mp3">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/invalid-frames1.mp3">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/invalid-frames2.mp3">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/invalid-frames3.mp3">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/lame_cbr.mp3">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/lame_vbr.mp3">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/mpeg2.mp3">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/multiple-vc.flac">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/no-tags.3g2">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/no-tags.flac">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/noise.aif">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/noise_odd.aif">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/rare_frames.mp3">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/segfault.aif">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/silence-44-s.flac">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/sinewave.flac">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/toc_many_children.mp3">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/unsupported-extension.xx">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/unsynch.id3">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/w000.mp3">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/xing.mp3">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/taglib/tests/data/zero-sized-padding.flac">
+      <Filter>Misc Files\tests\data</Filter>
     </Text>
   </ItemGroup>
 </Project>

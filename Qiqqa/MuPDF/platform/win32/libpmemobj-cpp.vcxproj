@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMOBJ_CPP;PMEMOBJ_CPP_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMOBJ_CPP;PMEMOBJ_CPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMOBJ_CPP;PMEMOBJ_CPP_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/pmdk/src/include;../../thirdparty/owemdjee/libpmemobj-cpp/include;../../thirdparty/owemdjee/libpmemobj-cpp/examples;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMOBJ_CPP;PMEMOBJ_CPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMOBJ_CPP;PMEMOBJ_CPP_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMOBJ_CPP;PMEMOBJ_CPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/pmdk/src/include;../../thirdparty/owemdjee/libpmemobj-cpp/include;../../thirdparty/owemdjee/libpmemobj-cpp/examples;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMOBJ_CPP;PMEMOBJ_CPP_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMOBJ_CPP;PMEMOBJ_CPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMOBJ_CPP;PMEMOBJ_CPP_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/pmdk/src/include;../../thirdparty/owemdjee/libpmemobj-cpp/include;../../thirdparty/owemdjee/libpmemobj-cpp/examples;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMOBJ_CPP;PMEMOBJ_CPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMOBJ_CPP;PMEMOBJ_CPP_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMOBJ_CPP;PMEMOBJ_CPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/pmdk/src/include;../../thirdparty/owemdjee/libpmemobj-cpp/include;../../thirdparty/owemdjee/libpmemobj-cpp/examples;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMOBJ_CPP;PMEMOBJ_CPP_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMOBJ_CPP;PMEMOBJ_CPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMOBJ_CPP;PMEMOBJ_CPP_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/pmdk/src/include;../../thirdparty/owemdjee/libpmemobj-cpp/include;../../thirdparty/owemdjee/libpmemobj-cpp/examples;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMOBJ_CPP;PMEMOBJ_CPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMOBJ_CPP;PMEMOBJ_CPP_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMOBJ_CPP;PMEMOBJ_CPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/pmdk/src/include;../../thirdparty/owemdjee/libpmemobj-cpp/include;../../thirdparty/owemdjee/libpmemobj-cpp/examples;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMOBJ_CPP;PMEMOBJ_CPP_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMOBJ_CPP;PMEMOBJ_CPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMOBJ_CPP;PMEMOBJ_CPP_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/pmdk/src/include;../../thirdparty/owemdjee/libpmemobj-cpp/include;../../thirdparty/owemdjee/libpmemobj-cpp/examples;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMOBJ_CPP;PMEMOBJ_CPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMOBJ_CPP;PMEMOBJ_CPP_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMOBJ_CPP;PMEMOBJ_CPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/pmdk/src/include;../../thirdparty/owemdjee/libpmemobj-cpp/include;../../thirdparty/owemdjee/libpmemobj-cpp/examples;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -890,7 +890,9 @@
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/CONTRIBUTING.md" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/ChangeLog" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/README.md" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/appveyor.yml" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/benchmarks/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/benchmarks/readme.md" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/cmake/FindLIBPMEM.cmake" />
@@ -903,8 +905,10 @@
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/cmake/packages.cmake" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/cmake/tbb.cmake" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/cmake/version.hpp.in" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/codecov.yml" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/doc/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/doc/RELEASE_STEPS.md" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/doc/groups_definitions.dox" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/doc/libpmemobj++.Doxyfile.in" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/doc/shared/pointer_requirements.txt" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/doc/shared/self_relative_pointer_implementation.txt" />
@@ -958,11 +962,16 @@
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/concurrent_hash_map_pmreorder_erase/concurrent_hash_map_pmreorder_erase_0.cmake" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/concurrent_hash_map_pmreorder_erase/pmreorder.conf" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/concurrent_hash_map_pmreorder_multiple_buckets/pmreorder.conf" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/concurrent_hash_map_rehash_break/break_in_rehash_0.gdb" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/concurrent_hash_map_rehash_break/break_in_rehash_1.gdb" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/concurrent_hash_map_rehash_break/concurrent_hash_map_rehash_break.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/concurrent_map/pmreorder.conf" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/concurrent_map_mt_gdb/concurrent_map_mt_gdb_0.cmake" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/concurrent_map_mt_gdb/concurrent_map_mt_gdb_0.gdb" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/concurrent_map_mt_gdb/concurrent_map_mt_gdb_1.cmake" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/concurrent_map_mt_gdb/concurrent_map_mt_gdb_1.gdb" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/concurrent_map_mt_gdb/concurrent_map_mt_gdb_2.cmake" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/concurrent_map_mt_gdb/concurrent_map_mt_gdb_2.gdb" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/concurrent_map_pmreorder_break_insert/break_before_set_next.gdb.in" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/concurrent_map_pmreorder_break_insert/concurrent_map_pmreorder_break_insert.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/concurrent_map_pmreorder_break_insert/pmreorder.conf" />
@@ -980,6 +989,37 @@
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/CREDITS.TXT" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/LICENSE.TXT" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/README.md" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/array/array.cons/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/array/array.fill/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/array/array.special/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/basic_string/string.access/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/basic_string/string.capacity/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/basic_string/string.cons/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/basic_string/string.iterators/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/basic_string/string.modifiers/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/basic_string/string.nonmembers/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/basic_string/string.nonmembers/string.special/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/basic_string/string.ops/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/basic_string/string.ops/string.accessors/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/basic_string/string.ops/string_find.first.not.of/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/basic_string/string.ops/string_find.first.of/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/basic_string/string.ops/string_find.last.not.of/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/basic_string/string.ops/string_find.last.of/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/map/map.access/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/map/map.cons/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/map/map.modifiers/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/map/map.ops/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/map/map.special/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/string.view/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/string.view/string.view.access/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/string.view/string.view.capacity/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/string.view/string.view.iterators/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/string.view/string.view.modifiers/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/string.view/string.view.ops/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/vector/vector.capacity/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/vector/vector.cons/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/vector/vector.modifiers/" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/external/libcxx/vector/vector.special/" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/helpers.cmake" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/mpsc_queue/basic.cmake" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/mpsc_queue/mpsc_queue_consume_interrupt.cmake" />
@@ -1010,9 +1050,19 @@
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/ptr/atomic_pmreorder_1.cmake" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/ptr/atomic_pmreorder_2.cmake" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/tests/true.cmake" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/utils/check_license/" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/utils/check_license/check-headers.sh" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/utils/check_license/file-exceptions.sh" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/utils/docker/build.sh" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/utils/docker/images/Dockerfile.almalinux-8" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/utils/docker/images/Dockerfile.fedora-33" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/utils/docker/images/Dockerfile.fedora-34" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/utils/docker/images/Dockerfile.fedora-35" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/utils/docker/images/Dockerfile.ubuntu-18.04" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/utils/docker/images/Dockerfile.ubuntu-20.04" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/utils/docker/images/Dockerfile.ubuntu-21.04" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/utils/docker/images/Dockerfile.ubuntu-21.10" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/utils/docker/images/Dockerfile.ubuntu-devel" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/utils/docker/images/README.md" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/utils/docker/images/build-image.sh" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/utils/docker/images/download-scripts.sh" />
@@ -1026,6 +1076,7 @@
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/utils/docker/run-coverity.sh" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/utils/docker/run-doc-update.sh" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/utils/docker/set-ci-vars.sh" />
+    <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/utils/jenkins/libpmemobj-cpp.jenkins" />
     <Text Include="../../thirdparty/owemdjee/libpmemobj-cpp/utils/make_release.sh" />
     <Xml Include="../../thirdparty/owemdjee/libpmemobj-cpp/doc/DoxygenLayout.xml" />
   </ItemGroup>

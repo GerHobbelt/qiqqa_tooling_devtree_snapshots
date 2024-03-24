@@ -1,8 +1,9 @@
 .. Copyright (C) 2001-2023 Artifex Software, Inc.
 .. All Rights Reserved.
 
-.. default-domain:: js
+----
 
+.. default-domain:: js
 
 .. include:: html_tags.rst
 
@@ -54,12 +55,12 @@
 
     Create a new `ColorSpace`.
 
-    :arg from: As used by users (and not internally) should be a buffer containing an ICC profile.
+    :arg from: A buffer containing an ICC profile.
     :arg name: A user descriptive name.
 
     :return: `ColorSpace`.
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
@@ -71,12 +72,12 @@
     A grayscale colorspace has one component, RGB has 3, CMYK has 4, and DeviceN may have any number of components.
 
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
         var cs = mupdf.ColorSpace.DeviceRGB;
-        var num = cs.getNumberOfComponents(); //3
+        var num = cs.getNumberOfComponents(); // 3
 
 
 .. method:: toString()
@@ -88,12 +89,11 @@
     .. code-block:: javascript
 
         var cs = mupdf.ColorSpace.DeviceRGB;
-        var num = cs.toString(); //DeviceRGB
+        var num = cs.toString(); // "DeviceRGB"
 
 
 .. method:: isGray()
 
-    |mutool_tag|
 
     Returns true if the object is a gray color space.
 
@@ -103,12 +103,9 @@
 
         var bool = colorSpace.isGray();
 
-    |tor_todo| Make wasm method to match this.
-
 
 .. method:: isRGB()
 
-    |mutool_tag|
 
     Returns true if the object is an RGB color space.
 
@@ -118,12 +115,9 @@
 
         var bool = colorSpace.isRGB();
 
-    |tor_todo| Make wasm method to match this.
-
 
 .. method:: isCMYK()
 
-    |mutool_tag|
 
     Returns true if the object is a CMYK color space.
 
@@ -133,11 +127,8 @@
 
         var bool = colorSpace.isCMYK();
 
-    |tor_todo| Make wasm method to match this.
-
 .. method:: isIndexed()
 
-    |mutool_tag|
 
     Returns true if the object is an Indexed color space.
 
@@ -147,11 +138,8 @@
 
         var bool = colorSpace.isIndexed();
 
-    |tor_todo| Make wasm method to match this.
-
 .. method:: isLab()
 
-    |mutool_tag|
 
     Returns true if the object is a Lab color space.
 
@@ -161,11 +149,8 @@
 
         var bool = colorSpace.isLab();
 
-    |tor_todo| Make wasm method to match this.
-
 .. method:: isDeviceN()
 
-    |mutool_tag|
 
     Returns true if the object is a Device N color space.
 
@@ -176,12 +161,9 @@
         var bool = colorSpace.isDeviceN();
 
 
-    |tor_todo| Make wasm method to match this.
-
 
 .. method:: isSubtractive()
 
-    |mutool_tag|
 
     Returns true if the object is a subtractive color space.
 
@@ -192,19 +174,14 @@
         var bool = colorSpace.isSubtractive();
 
 
-    |tor_todo| Make wasm method to match this.
-
 
 .. method:: getType()
 
-    |wasm_tag|
 
     Returns a string indicating the type.
 
     :return: `String` One of "None", "Gray", "RGB", "BGR", "CMYK", "Lab", "Indexed", "Separation".
 
-
-    |tor_todo| Make mutool run method match this.
 
 
 
@@ -214,7 +191,7 @@
 ------------------------------
 
 
-|tor_todo| I couldn't get any of this "DefaultColorSpaces" stuff to run in mutool - I guess it is redundant?
+|jamie_todo| Look into the Device interfaces and see how DefaultColorSpaces is used there.
 
 
 `DefaultColorSpaces` is an object with keys for:

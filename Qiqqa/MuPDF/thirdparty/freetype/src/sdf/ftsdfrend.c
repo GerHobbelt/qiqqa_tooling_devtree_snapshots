@@ -301,7 +301,7 @@
 
     /* nothing to render */
     if ( !bitmap->rows || !bitmap->pitch )
-      return FT_Err_Ok;
+      goto Exit;
 
     /* the padding will simply be equal to the `spread' */
     x_pad = sdf_module->spread;
@@ -509,6 +509,10 @@
       goto Exit;
     }
 
+    /* nothing to render */
+    if ( !bitmap->rows || !bitmap->pitch )
+      goto Exit;
+
     /* Do not generate SDF if the bitmap is not owned by the       */
     /* glyph: it might be that the source buffer is already freed. */
     if ( !( slot->internal->flags & FT_GLYPH_OWN_BITMAP ) )
@@ -519,10 +523,6 @@
       error = FT_THROW( Invalid_Argument );
       goto Exit;
     }
-
-    /* nothing to render */
-    if ( !bitmap->rows || !bitmap->pitch )
-      return FT_Err_Ok;
 
     FT_Bitmap_New( &target );
 
@@ -558,15 +558,14 @@
     {
       /* the glyph is successfully converted to a SDF */
       if ( slot->internal->flags & FT_GLYPH_OWN_BITMAP )
-      {
         FT_FREE( bitmap->buffer );
-        slot->internal->flags &= ~FT_GLYPH_OWN_BITMAP;
-      }
 
-      slot->bitmap           = target;
-      slot->bitmap_top      += y_pad;
-      slot->bitmap_left     -= x_pad;
-      slot->internal->flags |= FT_GLYPH_OWN_BITMAP;
+      slot->bitmap       = target;
+      slot->bitmap_top  += y_pad;
+      slot->bitmap_left -= x_pad;
+
+      if ( target.buffer )
+        slot->internal->flags |= FT_GLYPH_OWN_BITMAP;
     }
     else if ( target.buffer )
       FT_FREE( target.buffer );

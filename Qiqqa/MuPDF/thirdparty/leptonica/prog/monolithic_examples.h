@@ -70,7 +70,7 @@ int lept_comparepages_main(int argc, const char **argv);
 int lept_comparepixa_main(int argc, const char **argv);
 int lept_comparetest_main(int argc, const char **argv);
 int lept_compfilter_reg_main(int argc, const char **argv);
-int lept_concatpdf_main(int argc, const char **argv);
+int lept_compresspdf_main(int argc, const char **argv);
 int lept_conncomp_reg_main(int argc, const char **argv);
 int lept_contrasttest_main(int argc, const char **argv);
 int lept_conversion_reg_main(int argc, const char **argv);
@@ -86,6 +86,7 @@ int lept_convolve_reg_main(int argc, const char **argv);
 int lept_cornertest_main(int argc, const char **argv);
 int lept_corrupttest_main(int argc, const char **argv);
 int lept_crop_reg_main(int argc, const char **argv);
+int lept_croppdf_main(int argc, const char **argv);
 int lept_croptext_main(int argc, const char **argv);
 int lept_custom_log_plot_test_main(int argc, const char **argv);
 int lept_deskew_it_main(int argc, const char **argv);
@@ -307,6 +308,8 @@ int lept_writetext_reg_main(int argc, const char **argv);
 int lept_xformbox_reg_main(int argc, const char **argv);
 int lept_yuvtest_main(int argc, const char **argv);
 int lept_issue675_check_main(int argc, const char **argv);
+
+int lept_demo_pix_apis_main(int argc, const char **argv);
 
 #ifdef __cplusplus
 }

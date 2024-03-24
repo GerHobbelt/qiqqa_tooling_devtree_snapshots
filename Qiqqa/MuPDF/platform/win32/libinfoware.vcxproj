@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBINFOWARE;INFOWARE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBINFOWARE;INFOWARE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/infoware/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBINFOWARE;INFOWARE_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/infoware/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBINFOWARE;INFOWARE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBINFOWARE;INFOWARE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBINFOWARE;INFOWARE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/infoware/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/infoware/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBINFOWARE;INFOWARE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBINFOWARE;INFOWARE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/infoware/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBINFOWARE;INFOWARE_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/infoware/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBINFOWARE;INFOWARE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBINFOWARE;INFOWARE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBINFOWARE;INFOWARE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/infoware/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/infoware/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBINFOWARE;INFOWARE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBINFOWARE;INFOWARE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/infoware/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBINFOWARE;INFOWARE_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/infoware/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBINFOWARE;INFOWARE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBINFOWARE;INFOWARE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBINFOWARE;INFOWARE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/infoware/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/infoware/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBINFOWARE;INFOWARE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBINFOWARE;INFOWARE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/infoware/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBINFOWARE;INFOWARE_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/infoware/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBINFOWARE;INFOWARE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBINFOWARE;INFOWARE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBINFOWARE;INFOWARE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/infoware/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/infoware/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -238,21 +238,22 @@
     <ClCompile Include="../../thirdparty/owemdjee/infoware/src/cpu/frequency/frequency_darwin.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/infoware/src/cpu/frequency/frequency_non_windows_non_darwin.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/infoware/src/cpu/frequency/frequency_windows.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/infoware/src/cpu/instruction_set/instruction_set.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/infoware/src/cpu/instruction_set/instruction_set_darwin.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/infoware/src/cpu/instruction_set/instruction_set_darwin_arm.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/infoware/src/cpu/instruction_set/instruction_set_non_windows_non_darwin.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/infoware/src/cpu/instruction_set/instruction_set_windows.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/infoware/src/cpu/instruction_set/instruction_set_x86.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/infoware/src/cpu/quantities_cache/quantities_cache_darwin.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/infoware/src/cpu/quantities_cache/quantities_cache_non_windows_non_darwin.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/infoware/src/cpu/quantities_cache/quantities_cache_windows.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/infoware/src/cpu/vendor_model_name/vendor_id.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/infoware/src/cpu/vendor_model_name/vendor_id_darwin_arm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/infoware/src/cpu/vendor_model_name/vendor_id_x86.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/infoware/src/cpu/vendor_model_name/vendor_model_name_darwin.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/infoware/src/cpu/vendor_model_name/vendor_model_name_non_windows_non_darwin.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/infoware/src/cpu/vendor_model_name/vendor_model_name_windows.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/infoware/src/detail/cpuid_non_windows.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/infoware/src/detail/cpuid_non_windows_x86.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/infoware/src/detail/cpuid_windows.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/infoware/src/detail/sysctl_darwin.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/infoware/src/detail/sysctl_non_darwin.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/infoware/src/detail/winstring_non_windows.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/infoware/src/detail/winstring_windows.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/infoware/src/gpu/OpenCL.cpp" />
@@ -286,9 +287,11 @@
     <ClInclude Include="../../thirdparty/owemdjee/infoware/include/infoware/infoware.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/infoware/include/infoware/linkage.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/infoware/include/infoware/pci.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/infoware/include/infoware/platform.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/infoware/include/infoware/system.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/infoware/include/infoware/version.hpp" />
     <Text Include="../../thirdparty/owemdjee/infoware/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/infoware/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/infoware/README.md" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >

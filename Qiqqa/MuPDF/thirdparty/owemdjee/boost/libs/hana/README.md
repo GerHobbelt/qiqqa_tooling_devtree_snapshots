@@ -1,4 +1,4 @@
-# Boost.Hana <a target="_blank" href="http://semver.org">![Version][badge.version]</a> <a target="_blank" href="https://travis-ci.org/boostorg/hana">![Travis status][badge.Travis]</a> <a target="_blank" href="https://ci.appveyor.com/project/ldionne/hana">![Appveyor status][badge.Appveyor]</a> <a target="_blank" href="http://melpon.org/wandbox/permlink/g4ozIK33ITDtyGa3">![Try it online][badge.wandbox]</a> <a target="_blank" href="https://gitter.im/boostorg/hana">![Gitter Chat][badge.Gitter]</a>
+# Boost.Hana <a target="_blank" href="http://semver.org">![Version][badge.version]</a> <a target="_blank" href="https://travis-ci.org/boostorg/hana">![Travis status][badge.Travis]</a> <a target="_blank" href="https://ci.appveyor.com/project/ldionne/hana">![Appveyor status][badge.Appveyor]</a> <a target="_blank" href="https://godbolt.org/z/36MvzMb7n">![Try it online][badge.tryit]</a> <a target="_blank" href="https://gitter.im/boostorg/hana">![Gitter Chat][badge.Gitter]</a>
 
 > Your standard library for metaprogramming
 
@@ -130,7 +130,7 @@ re-run the CMake generation step, a new target named `path.to.file` will be
 created, and a test of the same name will also be created. Hence,
 ```shell
 cmake --build build --target path.to.file # Builds the program associated to path/to/file.cpp
-cd build && ctest -R path.to.file # Runs the program as a test
+ctest --test-dir build -R path.to.file # Runs the program as a test
 ```
 
 > #### Tip for Sublime Text users
@@ -178,7 +178,7 @@ separate releases of Hana since the library is now pretty stable.
 [badge.Gitter]: https://img.shields.io/badge/gitter-join%20chat-blue.svg
 [badge.Travis]: https://travis-ci.org/boostorg/hana.svg?branch=master
 [badge.version]: https://badge.fury.io/gh/boostorg%2Fhana.svg
-[badge.Wandbox]: https://img.shields.io/badge/try%20it-online-blue.svg
+[badge.tryit]: https://img.shields.io/badge/try%20it-online-blue.svg
 [CMake]: http://www.cmake.org
 [Doxygen]: http://www.doxygen.org
 [eRuby]: http://en.wikipedia.org/wiki/ERuby

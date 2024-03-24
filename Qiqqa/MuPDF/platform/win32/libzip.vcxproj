@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZIP;ZIP_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZIP;ZIP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libzip/lib;../../thirdparty/owemdjee/libzip/src;../../scripts/libzip;../../thirdparty/owemdjee/bzip2;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/xz-utils/src/liblzma/api;../../thirdparty/owemdjee/openssl/include;../../thirdparty/zlib;../../scripts/zlib;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZIP;ZIP_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libzip/lib;../../thirdparty/owemdjee/libzip/src;../../scripts/libzip;../../thirdparty/owemdjee/bzip2;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/xz-utils/src/liblzma/api;../../thirdparty/owemdjee/openssl/include;../../thirdparty/zlib;../../scripts/zlib;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZIP;ZIP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZIP;ZIP_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZIP;ZIP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libzip/lib;../../thirdparty/owemdjee/libzip/src;../../scripts/libzip;../../thirdparty/owemdjee/bzip2;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/xz-utils/src/liblzma/api;../../thirdparty/owemdjee/openssl/include;../../thirdparty/zlib;../../scripts/zlib;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libzip/lib;../../thirdparty/owemdjee/libzip/src;../../scripts/libzip;../../thirdparty/owemdjee/bzip2;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/xz-utils/src/liblzma/api;../../thirdparty/owemdjee/openssl/include;../../thirdparty/zlib;../../scripts/zlib;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZIP;ZIP_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZIP;ZIP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libzip/lib;../../thirdparty/owemdjee/libzip/src;../../scripts/libzip;../../thirdparty/owemdjee/bzip2;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/xz-utils/src/liblzma/api;../../thirdparty/owemdjee/openssl/include;../../thirdparty/zlib;../../scripts/zlib;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZIP;ZIP_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libzip/lib;../../thirdparty/owemdjee/libzip/src;../../scripts/libzip;../../thirdparty/owemdjee/bzip2;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/xz-utils/src/liblzma/api;../../thirdparty/owemdjee/openssl/include;../../thirdparty/zlib;../../scripts/zlib;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZIP;ZIP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZIP;ZIP_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZIP;ZIP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libzip/lib;../../thirdparty/owemdjee/libzip/src;../../scripts/libzip;../../thirdparty/owemdjee/bzip2;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/xz-utils/src/liblzma/api;../../thirdparty/owemdjee/openssl/include;../../thirdparty/zlib;../../scripts/zlib;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libzip/lib;../../thirdparty/owemdjee/libzip/src;../../scripts/libzip;../../thirdparty/owemdjee/bzip2;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/xz-utils/src/liblzma/api;../../thirdparty/owemdjee/openssl/include;../../thirdparty/zlib;../../scripts/zlib;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZIP;ZIP_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZIP;ZIP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libzip/lib;../../thirdparty/owemdjee/libzip/src;../../scripts/libzip;../../thirdparty/owemdjee/bzip2;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/xz-utils/src/liblzma/api;../../thirdparty/owemdjee/openssl/include;../../thirdparty/zlib;../../scripts/zlib;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZIP;ZIP_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libzip/lib;../../thirdparty/owemdjee/libzip/src;../../scripts/libzip;../../thirdparty/owemdjee/bzip2;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/xz-utils/src/liblzma/api;../../thirdparty/owemdjee/openssl/include;../../thirdparty/zlib;../../scripts/zlib;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZIP;ZIP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZIP;ZIP_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZIP;ZIP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libzip/lib;../../thirdparty/owemdjee/libzip/src;../../scripts/libzip;../../thirdparty/owemdjee/bzip2;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/xz-utils/src/liblzma/api;../../thirdparty/owemdjee/openssl/include;../../thirdparty/zlib;../../scripts/zlib;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libzip/lib;../../thirdparty/owemdjee/libzip/src;../../scripts/libzip;../../thirdparty/owemdjee/bzip2;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/xz-utils/src/liblzma/api;../../thirdparty/owemdjee/openssl/include;../../thirdparty/zlib;../../scripts/zlib;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZIP;ZIP_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZIP;ZIP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libzip/lib;../../thirdparty/owemdjee/libzip/src;../../scripts/libzip;../../thirdparty/owemdjee/bzip2;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/xz-utils/src/liblzma/api;../../thirdparty/owemdjee/openssl/include;../../thirdparty/zlib;../../scripts/zlib;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZIP;ZIP_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libzip/lib;../../thirdparty/owemdjee/libzip/src;../../scripts/libzip;../../thirdparty/owemdjee/bzip2;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/xz-utils/src/liblzma/api;../../thirdparty/owemdjee/openssl/include;../../thirdparty/zlib;../../scripts/zlib;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZIP;ZIP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZIP;ZIP_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZIP;ZIP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libzip/lib;../../thirdparty/owemdjee/libzip/src;../../scripts/libzip;../../thirdparty/owemdjee/bzip2;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/xz-utils/src/liblzma/api;../../thirdparty/owemdjee/openssl/include;../../thirdparty/zlib;../../scripts/zlib;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libzip/lib;../../thirdparty/owemdjee/libzip/src;../../scripts/libzip;../../thirdparty/owemdjee/bzip2;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/xz-utils/src/liblzma/api;../../thirdparty/owemdjee/openssl/include;../../thirdparty/zlib;../../scripts/zlib;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -395,14 +395,17 @@
     <ClInclude Include="../../thirdparty/owemdjee/libzip/src/diff_output.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libzip/src/getopt.h" />
     <Text Include="../../thirdparty/owemdjee/libzip/API-CHANGES.md" />
+    <Text Include="../../thirdparty/owemdjee/libzip/AUTHORS" />
     <Text Include="../../thirdparty/owemdjee/libzip/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libzip/INSTALL.md" />
+    <Text Include="../../thirdparty/owemdjee/libzip/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/libzip/NEWS.md" />
     <Text Include="../../thirdparty/owemdjee/libzip/README.md" />
     <Text Include="../../thirdparty/owemdjee/libzip/SECURITY.md" />
     <Text Include="../../thirdparty/owemdjee/libzip/TODO.md" />
     <Text Include="../../thirdparty/owemdjee/libzip/android/do.sh" />
     <Text Include="../../thirdparty/owemdjee/libzip/android/readme.txt" />
+    <Text Include="../../thirdparty/owemdjee/libzip/appveyor.yml" />
     <Text Include="../../thirdparty/owemdjee/libzip/cmake-compat/CMakePushCheckState.cmake" />
     <Text Include="../../thirdparty/owemdjee/libzip/cmake-compat/CheckLibraryExists.cmake" />
     <Text Include="../../thirdparty/owemdjee/libzip/cmake-compat/CheckSymbolExists.cmake" />
@@ -417,16 +420,333 @@
     <Text Include="../../thirdparty/owemdjee/libzip/cmake/Dist.cmake" />
     <Text Include="../../thirdparty/owemdjee/libzip/cmake/FindMbedTLS.cmake" />
     <Text Include="../../thirdparty/owemdjee/libzip/cmake/FindNettle.cmake" />
-    <Text Include="../../thirdparty/owemdjee/libzip/cmake/FindZstd.cmake" />
+    <Text Include="../../thirdparty/owemdjee/libzip/cmake/Findzstd.cmake" />
+    <Text Include="../../thirdparty/owemdjee/libzip/cmake/GenerateZipErrorStrings.cmake" />
     <Text Include="../../thirdparty/owemdjee/libzip/examples/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libzip/lib/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libzip/libzip-config.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/libzip/libzip.pc.in" />
     <Text Include="../../thirdparty/owemdjee/libzip/man/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/ZIP_SOURCE_GET_ARGS.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/ZIP_SOURCE_GET_ARGS.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/ZIP_SOURCE_GET_ARGS.mdoc" />
     <Text Include="../../thirdparty/owemdjee/libzip/man/fix-man-links.sh" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/libzip.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/libzip.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/libzip.mdoc" />
     <Text Include="../../thirdparty/owemdjee/libzip/man/make_zip_errors.sh" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/mkdocset.pl" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/nih-man.css" />
     <Text Include="../../thirdparty/owemdjee/libzip/man/update-html.cmake" />
     <Text Include="../../thirdparty/owemdjee/libzip/man/update-man.cmake" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_add.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_add.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_add.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_add_dir.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_add_dir.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_add_dir.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_close.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_close.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_close.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_compression_method_supported.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_compression_method_supported.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_compression_method_supported.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_delete.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_delete.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_delete.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_dir_add.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_dir_add.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_dir_add.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_discard.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_discard.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_discard.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_encryption_method_supported.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_encryption_method_supported.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_encryption_method_supported.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_clear.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_clear.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_clear.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_code_system.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_code_system.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_code_system.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_code_zip.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_code_zip.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_code_zip.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_fini.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_fini.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_fini.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_get.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_get.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_get.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_get_sys_type.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_get_sys_type.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_get_sys_type.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_init.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_init.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_init.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_set.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_set.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_set.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_set_from_source.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_strerror.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_strerror.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_strerror.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_system_type.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_system_type.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_system_type.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_to_data.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_to_data.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_to_data.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_to_str.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_to_str.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_to_str.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_errors.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_errors.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_errors.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fclose.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fclose.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fclose.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fdopen.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fdopen.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fdopen.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_add.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_add.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_add.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_attributes_init.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_attributes_init.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_attributes_init.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_extra_field_delete.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_extra_field_delete.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_extra_field_delete.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_extra_field_get.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_extra_field_get.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_extra_field_get.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_extra_field_set.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_extra_field_set.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_extra_field_set.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_extra_fields_count.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_extra_fields_count.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_extra_fields_count.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_get_comment.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_get_comment.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_get_comment.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_get_error.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_get_error.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_get_error.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_get_external_attributes.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_get_external_attributes.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_get_external_attributes.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_rename.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_rename.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_rename.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_set_comment.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_set_comment.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_set_comment.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_set_encryption.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_set_encryption.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_set_encryption.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_set_external_attributes.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_set_external_attributes.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_set_external_attributes.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_set_mtime.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_set_mtime.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_set_mtime.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_strerror.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_strerror.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_strerror.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fopen.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fopen.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fopen.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fopen_encrypted.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fopen_encrypted.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fopen_encrypted.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fread.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fread.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fread.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fseek.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fseek.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fseek.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_ftell.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_ftell.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_ftell.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_archive_comment.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_archive_comment.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_archive_comment.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_archive_flag.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_archive_flag.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_archive_flag.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_error.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_error.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_error.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_file_comment.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_file_comment.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_file_comment.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_name.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_name.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_name.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_num_entries.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_num_entries.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_num_entries.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_num_files.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_num_files.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_num_files.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_libzip_version.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_libzip_version.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_libzip_version.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_name_locate.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_name_locate.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_name_locate.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_open.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_open.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_open.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_register_cancel_callback_with_state.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_register_cancel_callback_with_state.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_register_cancel_callback_with_state.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_register_progress_callback.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_register_progress_callback.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_register_progress_callback.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_register_progress_callback_with_state.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_register_progress_callback_with_state.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_register_progress_callback_with_state.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_rename.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_rename.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_rename.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_archive_comment.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_archive_comment.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_archive_comment.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_archive_flag.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_archive_flag.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_archive_flag.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_default_password.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_default_password.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_default_password.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_file_comment.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_file_comment.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_file_comment.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_file_compression.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_file_compression.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_file_compression.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_begin_write.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_begin_write.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_begin_write.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_buffer.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_buffer.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_buffer.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_buffer_fragment.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_buffer_fragment.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_buffer_fragment.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_close.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_close.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_close.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_commit_write.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_commit_write.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_commit_write.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_error.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_error.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_error.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_file.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_file.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_file.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_filep.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_filep.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_filep.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_free.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_free.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_free.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_function.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_function.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_function.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_is_deleted.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_is_deleted.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_is_deleted.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_is_seekable.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_is_seekable.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_is_seekable.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_keep.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_keep.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_keep.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_layered.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_layered.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_layered.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_make_command_bitmap.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_make_command_bitmap.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_make_command_bitmap.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_open.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_open.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_open.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_pass_to_lower_layer.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_read.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_read.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_read.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_rollback_write.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_rollback_write.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_rollback_write.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_seek.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_seek.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_seek.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_seek_compute_offset.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_seek_compute_offset.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_seek_compute_offset.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_seek_write.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_seek_write.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_seek_write.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_stat.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_stat.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_stat.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_tell.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_tell.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_tell.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_tell_write.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_tell_write.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_tell_write.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_win32a.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_win32a.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_win32a.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_win32handle.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_win32handle.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_win32handle.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_win32w.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_win32w.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_win32w.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_window_create.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_window_create.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_window_create.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_write.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_write.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_write.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_zip.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_zip.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_zip.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_zip_file.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_zip_file.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_zip_file.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_stat.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_stat.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_stat.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_stat_init.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_stat_init.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_stat_init.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_unchange.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_unchange.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_unchange.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_unchange_all.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_unchange_all.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_unchange_all.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_unchange_archive.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_unchange_archive.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_unchange_archive.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zipcmp.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zipcmp.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zipcmp.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zipmerge.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zipmerge.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zipmerge.mdoc" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/ziptool.html" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/ziptool.man" />
+    <Text Include="../../thirdparty/owemdjee/libzip/man/ziptool.mdoc" />
     <Text Include="../../thirdparty/owemdjee/libzip/regress/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libzip/regress/cleanup.cmake" />
     <Text Include="../../thirdparty/owemdjee/libzip/regress/nihtest.conf.in" />

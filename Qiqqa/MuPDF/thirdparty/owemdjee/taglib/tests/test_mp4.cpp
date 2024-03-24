@@ -24,16 +24,17 @@
  ***************************************************************************/
 
 #include <string>
-#include <stdio.h>
-#include <tag.h>
-#include <mp4tag.h>
-#include <tbytevectorlist.h>
-#include <tbytevectorstream.h>
-#include <tpropertymap.h>
-#include <mp4atom.h>
-#include <mp4file.h>
-#include <cppunit/extensions/HelperMacros.h>
+#include <cstdio>
+
+#include "tbytevectorlist.h"
+#include "tbytevectorstream.h"
+#include "tpropertymap.h"
+#include "tag.h"
+#include "mp4tag.h"
+#include "mp4atom.h"
+#include "mp4file.h"
 #include "plainfile.h"
+#include <cppunit/extensions/HelperMacros.h>
 #include "utils.h"
 
 using namespace std;
@@ -298,7 +299,7 @@ public:
 
       MP4::Atoms atoms(&f);
       MP4::Atom *moov = atoms.atoms[0];
-      CPPUNIT_ASSERT_EQUAL(long(77), moov->length);
+      CPPUNIT_ASSERT_EQUAL(static_cast<offset_t>(77), moov->length);
 
       f.tag()->setItem("pgap", true);
       f.save();
@@ -311,7 +312,7 @@ public:
       MP4::Atoms atoms(&f);
       MP4::Atom *moov = atoms.atoms[0];
       // original size + 'pgap' size + padding
-      CPPUNIT_ASSERT_EQUAL(long(77 + 25 + 974), moov->length);
+      CPPUNIT_ASSERT_EQUAL(static_cast<offset_t>(77 + 25 + 974), moov->length);
     }
   }
 
@@ -326,11 +327,11 @@ public:
     MP4::File f(TEST_FILE_PATH_C("has-tags.m4a"));
     CPPUNIT_ASSERT(f.tag()->contains("covr"));
     MP4::CoverArtList l = f.tag()->item("covr").toCoverArtList();
-    CPPUNIT_ASSERT_EQUAL((unsigned int)2, l.size());
+    CPPUNIT_ASSERT_EQUAL(static_cast<unsigned int>(2), l.size());
     CPPUNIT_ASSERT_EQUAL(MP4::CoverArt::PNG, l[0].format());
-    CPPUNIT_ASSERT_EQUAL((unsigned int)79, l[0].data().size());
+    CPPUNIT_ASSERT_EQUAL(static_cast<unsigned int>(79), l[0].data().size());
     CPPUNIT_ASSERT_EQUAL(MP4::CoverArt::JPEG, l[1].format());
-    CPPUNIT_ASSERT_EQUAL((unsigned int)287, l[1].data().size());
+    CPPUNIT_ASSERT_EQUAL(static_cast<unsigned int>(287), l[1].data().size());
   }
 
   void testCovrWrite()
@@ -350,13 +351,13 @@ public:
       MP4::File f(filename.c_str());
       CPPUNIT_ASSERT(f.tag()->contains("covr"));
       MP4::CoverArtList l = f.tag()->item("covr").toCoverArtList();
-      CPPUNIT_ASSERT_EQUAL((unsigned int)3, l.size());
+      CPPUNIT_ASSERT_EQUAL(static_cast<unsigned int>(3), l.size());
       CPPUNIT_ASSERT_EQUAL(MP4::CoverArt::PNG, l[0].format());
-      CPPUNIT_ASSERT_EQUAL((unsigned int)79, l[0].data().size());
+      CPPUNIT_ASSERT_EQUAL(static_cast<unsigned int>(79), l[0].data().size());
       CPPUNIT_ASSERT_EQUAL(MP4::CoverArt::JPEG, l[1].format());
-      CPPUNIT_ASSERT_EQUAL((unsigned int)287, l[1].data().size());
+      CPPUNIT_ASSERT_EQUAL(static_cast<unsigned int>(287), l[1].data().size());
       CPPUNIT_ASSERT_EQUAL(MP4::CoverArt::PNG, l[2].format());
-      CPPUNIT_ASSERT_EQUAL((unsigned int)3, l[2].data().size());
+      CPPUNIT_ASSERT_EQUAL(static_cast<unsigned int>(3), l[2].data().size());
     }
   }
 
@@ -365,11 +366,11 @@ public:
     MP4::File f(TEST_FILE_PATH_C("covr-junk.m4a"));
     CPPUNIT_ASSERT(f.tag()->contains("covr"));
     MP4::CoverArtList l = f.tag()->item("covr").toCoverArtList();
-    CPPUNIT_ASSERT_EQUAL((unsigned int)2, l.size());
+    CPPUNIT_ASSERT_EQUAL(static_cast<unsigned int>(2), l.size());
     CPPUNIT_ASSERT_EQUAL(MP4::CoverArt::PNG, l[0].format());
-    CPPUNIT_ASSERT_EQUAL((unsigned int)79, l[0].data().size());
+    CPPUNIT_ASSERT_EQUAL(static_cast<unsigned int>(79), l[0].data().size());
     CPPUNIT_ASSERT_EQUAL(MP4::CoverArt::JPEG, l[1].format());
-    CPPUNIT_ASSERT_EQUAL((unsigned int)287, l[1].data().size());
+    CPPUNIT_ASSERT_EQUAL(static_cast<unsigned int>(287), l[1].data().size());
   }
 
   void testProperties()
@@ -575,7 +576,10 @@ public:
   void testFuzzedFile()
   {
     MP4::File f(TEST_FILE_PATH_C("infloop.m4a"));
-    CPPUNIT_ASSERT(f.isValid());
+    // The file has an invalid atom length of 2775 in the last atom
+    // ("free", offset 0xc521, 00000ad7 66726565), whereas the remaining file
+    // length is 2727 bytes, therefore the file is now considered invalid.
+    CPPUNIT_ASSERT(!f.isValid());
   }
 
   void testRepeatedSave()
@@ -586,8 +590,8 @@ public:
     f.tag()->setTitle("0123456789");
     f.save();
     f.save();
-    CPPUNIT_ASSERT_EQUAL(2862L, f.find("0123456789"));
-    CPPUNIT_ASSERT_EQUAL(-1L, f.find("0123456789", 2863));
+    CPPUNIT_ASSERT_EQUAL(static_cast<offset_t>(2862), f.find("0123456789"));
+    CPPUNIT_ASSERT_EQUAL(static_cast<offset_t>(-1), f.find("0123456789", 2863));
   }
 
   void testWithZeroLengthAtom()
@@ -697,11 +701,11 @@ public:
 
       CPPUNIT_ASSERT(f.tag()->contains("covr"));
       MP4::CoverArtList l = f.tag()->item("covr").toCoverArtList();
-      CPPUNIT_ASSERT_EQUAL((unsigned int)2, l.size());
+      CPPUNIT_ASSERT_EQUAL(static_cast<unsigned int>(2), l.size());
       CPPUNIT_ASSERT_EQUAL(MP4::CoverArt::PNG, l[0].format());
-      CPPUNIT_ASSERT_EQUAL((unsigned int)79, l[0].data().size());
+      CPPUNIT_ASSERT_EQUAL(static_cast<unsigned int>(79), l[0].data().size());
       CPPUNIT_ASSERT_EQUAL(MP4::CoverArt::JPEG, l[1].format());
-      CPPUNIT_ASSERT_EQUAL((unsigned int)287, l[1].data().size());
+      CPPUNIT_ASSERT_EQUAL(static_cast<unsigned int>(287), l[1].data().size());
 
       PropertyMap properties = f.properties();
       CPPUNIT_ASSERT_EQUAL(StringList("Test Artist!!!!"), properties["ARTIST"]);

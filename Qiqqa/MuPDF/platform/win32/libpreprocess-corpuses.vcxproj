@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPREPROCESS_CORPUSES;PREPROCESS_CORPUSES_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPREPROCESS_CORPUSES;PREPROCESS_CORPUSES_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPREPROCESS_CORPUSES;PREPROCESS_CORPUSES_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/preprocess-corpuses;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPREPROCESS_CORPUSES;PREPROCESS_CORPUSES_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPREPROCESS_CORPUSES;PREPROCESS_CORPUSES_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPREPROCESS_CORPUSES;PREPROCESS_CORPUSES_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/preprocess-corpuses;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPREPROCESS_CORPUSES;PREPROCESS_CORPUSES_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPREPROCESS_CORPUSES;PREPROCESS_CORPUSES_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPREPROCESS_CORPUSES;PREPROCESS_CORPUSES_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/preprocess-corpuses;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPREPROCESS_CORPUSES;PREPROCESS_CORPUSES_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPREPROCESS_CORPUSES;PREPROCESS_CORPUSES_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPREPROCESS_CORPUSES;PREPROCESS_CORPUSES_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/preprocess-corpuses;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPREPROCESS_CORPUSES;PREPROCESS_CORPUSES_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPREPROCESS_CORPUSES;PREPROCESS_CORPUSES_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPREPROCESS_CORPUSES;PREPROCESS_CORPUSES_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/preprocess-corpuses;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPREPROCESS_CORPUSES;PREPROCESS_CORPUSES_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPREPROCESS_CORPUSES;PREPROCESS_CORPUSES_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPREPROCESS_CORPUSES;PREPROCESS_CORPUSES_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/preprocess-corpuses;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPREPROCESS_CORPUSES;PREPROCESS_CORPUSES_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPREPROCESS_CORPUSES;PREPROCESS_CORPUSES_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPREPROCESS_CORPUSES;PREPROCESS_CORPUSES_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/preprocess-corpuses;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPREPROCESS_CORPUSES;PREPROCESS_CORPUSES_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPREPROCESS_CORPUSES;PREPROCESS_CORPUSES_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPREPROCESS_CORPUSES;PREPROCESS_CORPUSES_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/preprocess-corpuses;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -333,12 +333,35 @@
     <ClInclude Include="../../thirdparty/owemdjee/preprocess-corpuses/util/utf8.hh" />
     <ClInclude Include="../../thirdparty/owemdjee/preprocess-corpuses/util/utf8_icu.hh" />
     <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/COPYING.LESSER" />
     <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/FindICU.cmake" />
+    <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/README.md" />
     <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/moses/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/moses/ems/support/split-sentences.perl" />
     <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/moses/share/nonbreaking_prefixes/README.txt" />
+    <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/moses/share/nonbreaking_prefixes/nonbreaking_prefix.as" />
+    <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/moses/share/nonbreaking_prefixes/nonbreaking_prefix.cs" />
+    <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/moses/share/nonbreaking_prefixes/nonbreaking_prefix.el" />
+    <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/moses/share/nonbreaking_prefixes/nonbreaking_prefix.es" />
+    <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/moses/share/nonbreaking_prefixes/nonbreaking_prefix.fr" />
+    <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/moses/share/nonbreaking_prefixes/nonbreaking_prefix.hu" />
+    <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/moses/share/nonbreaking_prefixes/nonbreaking_prefix.is" />
+    <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/moses/share/nonbreaking_prefixes/nonbreaking_prefix.ml" />
+    <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/moses/share/nonbreaking_prefixes/nonbreaking_prefix.mr" />
+    <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/moses/share/nonbreaking_prefixes/nonbreaking_prefix.nl" />
+    <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/moses/share/nonbreaking_prefixes/nonbreaking_prefix.or" />
+    <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/moses/share/nonbreaking_prefixes/nonbreaking_prefix.pl" />
+    <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/moses/share/nonbreaking_prefixes/nonbreaking_prefix.sl" />
+    <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/moses/tokenizer/deescape-special-chars.perl" />
+    <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/moses/tokenizer/detokenizer.perl" />
+    <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/moses/tokenizer/escape-special-chars.perl" />
+    <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/moses/tokenizer/lowercase.perl" />
+    <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/moses/tokenizer/normalize-punctuation.perl" />
+    <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/moses/tokenizer/tokenizer.perl" />
     <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/preprocess/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/preprocess/gigaword_extract.sh" />
+    <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/preprocess/heuristics.perl" />
     <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/preprocess/resplit.sh" />
     <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/preprocess/tests/cache/run.sh" />
     <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/preprocess/tests/cache/space_ref.py" />
@@ -348,8 +371,11 @@
     <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/preprocess/tests/run.sh" />
     <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/preprocess/tests/shard/run.sh" />
     <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/preprocess/text.sh" />
+    <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/preprocess/unescape_html.perl" />
     <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/util/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/util/double-conversion/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/util/double-conversion/Jamfile" />
+    <Text Include="../../thirdparty/owemdjee/preprocess-corpuses/util/double-conversion/LICENSE" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

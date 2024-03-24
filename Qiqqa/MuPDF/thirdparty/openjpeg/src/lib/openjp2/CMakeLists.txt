@@ -56,7 +56,6 @@ set(OPENJPEG_SRCS
   ${CMAKE_CURRENT_SOURCE_DIR}/opj_intmath.h
   ${CMAKE_CURRENT_SOURCE_DIR}/opj_malloc.c
   ${CMAKE_CURRENT_SOURCE_DIR}/opj_malloc.h
-  ${CMAKE_CURRENT_SOURCE_DIR}/opj_stdint.h
   ${CMAKE_CURRENT_SOURCE_DIR}/sparse_array.c
   ${CMAKE_CURRENT_SOURCE_DIR}/sparse_array.h
 )
@@ -100,14 +99,14 @@ else()
     add_library(openjp2_static STATIC ${OPENJPEG_SRCS})
     set_target_properties(openjp2_static PROPERTIES OUTPUT_NAME ${OPENJPEG_LIBRARY_NAME})
     set(INSTALL_LIBS ${OPENJPEG_LIBRARY_NAME} openjp2_static)
-    target_include_directories(openjp2_static PUBLIC $<INSTALL_INTERFACE:${OPENJPEG_INSTALL_INCLUDE_DIR}>)
+    target_include_directories(openjp2_static PUBLIC $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/${OPENJPEG_INSTALL_SUBDIR}>)
   else()
     add_library(${OPENJPEG_LIBRARY_NAME} ${OPENJPEG_SRCS})
     set(INSTALL_LIBS ${OPENJPEG_LIBRARY_NAME})
   endif()
 endif()
 
-target_include_directories(${OPENJPEG_LIBRARY_NAME} PUBLIC $<INSTALL_INTERFACE:${OPENJPEG_INSTALL_INCLUDE_DIR}>)
+target_include_directories(${OPENJPEG_LIBRARY_NAME} PUBLIC $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/${OPENJPEG_INSTALL_SUBDIR}>)
 if(UNIX)
   target_link_libraries(${OPENJPEG_LIBRARY_NAME} m)
 endif()
@@ -126,7 +125,7 @@ if(NOT OPENJPEG_SKIP_INSTALL)
   )
   
   # Install includes files
-  install(FILES openjpeg.h opj_stdint.h
+  install(FILES openjpeg.h
     DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/${OPENJPEG_INSTALL_SUBDIR} COMPONENT Headers
   )
 endif()

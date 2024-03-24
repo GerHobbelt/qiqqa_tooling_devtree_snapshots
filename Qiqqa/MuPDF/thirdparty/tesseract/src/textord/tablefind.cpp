@@ -27,11 +27,12 @@
 #include <utility>
 #include "tablefind.h"
 
-#include <allheaders.h>
+#include <leptonica/allheaders.h>
 
 #include "colpartitionset.h"
 #include "tablerecog.h"
 #include "tabletransfer.h"
+#include "tesseractclass.h"
 
 
 namespace tesseract {
@@ -166,8 +167,9 @@ void DeleteObject(T *object) {
   delete object;
 }
 
-TableFinder::TableFinder()
-    : resolution_(0),
+TableFinder::TableFinder(Tesseract *tess)
+    : tesseract_(tess),
+      resolution_(0),
       global_median_xheight_(0),
       global_median_blob_width_(0),
       global_median_ledding_(0),
@@ -275,15 +277,15 @@ void TableFinder::LocateTables(ColPartitionGrid *grid,
 
 #if !GRAPHICS_DISABLED
   if (textord_show_tables) {
-    ScrollView *table_win = MakeWindow(0, 300, "Step 1: Column Partitions & Neighbors");
-    DisplayColPartitions(table_win, &clean_part_grid_, ScrollView::BLUE);
+    ScrollViewReference table_win(MakeWindow(tesseract_, 0, 300, "Step 1: Column Partitions & Neighbors"));
+    DisplayColPartitions(table_win, &clean_part_grid_, Diagnostics::BLUE);
     DisplayColPartitions(table_win, &leader_and_ruling_grid_,
-                         ScrollView::AQUAMARINE);
+                         Diagnostics::AQUAMARINE);
     DisplayColPartitionConnections(table_win, &clean_part_grid_,
-                                   ScrollView::ORANGE);
+                                   Diagnostics::ORANGE);
 
-    table_win = MakeWindow(100, 300, "Step 2: Fragmented Text");
-    DisplayColPartitions(table_win, &fragmented_text_grid_, ScrollView::BLUE);
+    table_win = MakeWindow(tesseract_, 100, 300, "Step 2: Fragmented Text");
+    DisplayColPartitions(table_win, &fragmented_text_grid_, Diagnostics::BLUE);
   }
 #endif // !GRAPHICS_DISABLED
 
@@ -317,9 +319,9 @@ void TableFinder::LocateTables(ColPartitionGrid *grid,
 
 #if !GRAPHICS_DISABLED
   if (textord_tablefind_show_mark) {
-    ScrollView *table_win = MakeWindow(1200, 300, "Step 7: Table Columns and Regions");
-    DisplayColSegments(table_win, &table_columns, ScrollView::DARK_TURQUOISE);
-    DisplayColSegments(table_win, &table_regions, ScrollView::YELLOW);
+    ScrollViewReference table_win(MakeWindow(tesseract_, 1200, 300, "Step 7: Table Columns and Regions"));
+    DisplayColSegments(table_win, &table_columns, Diagnostics::DARK_TURQUOISE);
+    DisplayColSegments(table_win, &table_regions, Diagnostics::YELLOW);
   }
 #endif // !GRAPHICS_DISABLED
 
@@ -339,9 +341,9 @@ void TableFinder::LocateTables(ColPartitionGrid *grid,
 
 #if !GRAPHICS_DISABLED
     if (textord_show_tables) {
-      ScrollView *table_win = MakeWindow(1200, 300, "Step 8: Detected Table Locations");
-      DisplayColPartitions(table_win, &clean_part_grid_, ScrollView::BLUE);
-      DisplayColSegments(table_win, &table_columns, ScrollView::KHAKI);
+      ScrollViewReference table_win(MakeWindow(tesseract_, 1200, 300, "Step 8: Detected Table Locations"));
+      DisplayColPartitions(table_win, &clean_part_grid_, Diagnostics::BLUE);
+      DisplayColSegments(table_win, &table_columns, Diagnostics::KHAKI);
       table_grid_.DisplayBoxes(table_win);
     }
 #endif // !GRAPHICS_DISABLED
@@ -353,9 +355,9 @@ void TableFinder::LocateTables(ColPartitionGrid *grid,
 
 #if !GRAPHICS_DISABLED
     if (textord_show_tables) {
-      ScrollView *table_win = MakeWindow(1400, 600, "Step 10: Recognized Tables");
-      DisplayColPartitions(table_win, &clean_part_grid_, ScrollView::BLUE,
-                           ScrollView::BLUE);
+      ScrollViewReference table_win(MakeWindow(tesseract_, 1400, 600, "Step 10: Recognized Tables"));
+      DisplayColPartitions(table_win, &clean_part_grid_, Diagnostics::BLUE,
+                           Diagnostics::BLUE);
       table_grid_.DisplayBoxes(table_win);
     }
 #endif // !GRAPHICS_DISABLED
@@ -368,9 +370,9 @@ void TableFinder::LocateTables(ColPartitionGrid *grid,
 
 #if !GRAPHICS_DISABLED
     if (textord_show_tables) {
-      ScrollView *table_win = MakeWindow(1500, 300, "Step 11: Detected Tables");
-      DisplayColPartitions(table_win, &clean_part_grid_, ScrollView::BLUE,
-                           ScrollView::BLUE);
+      ScrollViewReference table_win(MakeWindow(tesseract_, 1500, 300, "Step 11: Detected Tables"));
+      DisplayColPartitions(table_win, &clean_part_grid_, Diagnostics::BLUE,
+                           Diagnostics::BLUE);
       table_grid_.DisplayBoxes(table_win);
     }
 #endif // !GRAPHICS_DISABLED
@@ -441,7 +443,7 @@ void TableFinder::InsertImagePartition(ColPartition *part) {
 // text lines on the page. The assumption is that a table
 // will have several lines with similar overlapping whitespace
 // whereas text will not have this type of property.
-// Note: The code Assumes that blobs are sorted by the left side x!
+// Note: The code assumes that blobs are sorted by the left side x!
 // This will not work (as well) if the blobs are sorted by center/right.
 void TableFinder::SplitAndInsertFragmentedTextPartition(ColPartition *part) {
   ASSERT_HOST(part != nullptr);
@@ -525,8 +527,8 @@ bool TableFinder::AllowBlob(const BLOBNBOX &blob) const {
 // clean_part_grid_ instead of a useful object. This is a temporary solution
 // for the debug windows created by the TableFinder.
 #if !GRAPHICS_DISABLED
-ScrollView *TableFinder::MakeWindow(int x, int y, const char *window_name) {
-  return clean_part_grid_.MakeWindow(x, y, window_name);
+ScrollViewReference TableFinder::MakeWindow(Tesseract* tess, int x, int y, const char *window_name) {
+  return clean_part_grid_.MakeWindow(tess, x, y, window_name);
 }
 #endif
 
@@ -761,10 +763,10 @@ void TableFinder::SetGlobalSpacings(ColPartitionGrid *grid) {
 #if !GRAPHICS_DISABLED
   if (textord_tablefind_show_stats) {
     const char *kWindowName = "X-height (R), X-width (G), and ledding (B)";
-    ScrollView *stats_win = MakeWindow(500, 10, kWindowName);
-    xheight_stats.plot(stats_win, 10, 200, 2, 15, ScrollView::RED);
-    width_stats.plot(stats_win, 10, 200, 2, 15, ScrollView::GREEN);
-    ledding_stats.plot(stats_win, 10, 200, 2, 15, ScrollView::BLUE);
+    ScrollViewReference stats_win(MakeWindow(tesseract_, 500, 10, kWindowName));
+    xheight_stats.plot(stats_win, 10, 200, 2, 15, Diagnostics::RED);
+    width_stats.plot(stats_win, 10, 200, 2, 15, Diagnostics::GREEN);
+    ledding_stats.plot(stats_win, 10, 200, 2, 15, Diagnostics::BLUE);
   }
 #endif // !GRAPHICS_DISABLED
 }
@@ -808,37 +810,37 @@ void TableFinder::MarkTablePartitions() {
   MarkPartitionsUsingLocalInformation();
 #if !GRAPHICS_DISABLED
   if (textord_tablefind_show_mark) {
-    ScrollView *table_win = MakeWindow(300, 300, "Step 3: Initial Table Partitions");
-    DisplayColPartitions(table_win, &clean_part_grid_, ScrollView::BLUE);
+    ScrollViewReference table_win(MakeWindow(tesseract_, 300, 300, "Step 3: Initial Table Partitions"));
+    DisplayColPartitions(table_win, &clean_part_grid_, Diagnostics::BLUE);
     DisplayColPartitions(table_win, &leader_and_ruling_grid_,
-                         ScrollView::AQUAMARINE);
+                         Diagnostics::AQUAMARINE);
   }
 #endif
   FilterFalseAlarms();
 #if !GRAPHICS_DISABLED
   if (textord_tablefind_show_mark) {
-    ScrollView *table_win = MakeWindow(600, 300, "Step 4: Filtered Table Partitions");
-    DisplayColPartitions(table_win, &clean_part_grid_, ScrollView::BLUE);
+    ScrollViewReference table_win(MakeWindow(tesseract_, 600, 300, "Step 4: Filtered Table Partitions"));
+    DisplayColPartitions(table_win, &clean_part_grid_, Diagnostics::BLUE);
     DisplayColPartitions(table_win, &leader_and_ruling_grid_,
-                         ScrollView::AQUAMARINE);
+                         Diagnostics::AQUAMARINE);
   }
 #endif
   SmoothTablePartitionRuns();
 #if !GRAPHICS_DISABLED
   if (textord_tablefind_show_mark) {
-    ScrollView *table_win = MakeWindow(900, 300, "Step 5: Smoothed Table Partitions");
-    DisplayColPartitions(table_win, &clean_part_grid_, ScrollView::BLUE);
+    ScrollViewReference table_win(MakeWindow(tesseract_, 900, 300, "Step 5: Smoothed Table Partitions"));
+    DisplayColPartitions(table_win, &clean_part_grid_, Diagnostics::BLUE);
     DisplayColPartitions(table_win, &leader_and_ruling_grid_,
-                         ScrollView::AQUAMARINE);
+                         Diagnostics::AQUAMARINE);
   }
 #endif
   FilterFalseAlarms();
 #if !GRAPHICS_DISABLED
   if (textord_tablefind_show_mark || textord_show_tables) {
-    ScrollView *table_win = MakeWindow(900, 300, "Step 6: Final Table Partitions");
-    DisplayColPartitions(table_win, &clean_part_grid_, ScrollView::BLUE);
+    ScrollViewReference table_win(MakeWindow(tesseract_, 900, 300, "Step 6: Final Table Partitions"));
+    DisplayColPartitions(table_win, &clean_part_grid_, Diagnostics::BLUE);
     DisplayColPartitions(table_win, &leader_and_ruling_grid_,
-                         ScrollView::AQUAMARINE);
+                         Diagnostics::AQUAMARINE);
   }
 #endif
 }
@@ -1662,7 +1664,7 @@ void TableFinder::GrowTableToIncludeLines(const TBOX &table_box,
 }
 
 // Checks whether the horizontal line belong to the table by looking at the
-// side spacing of extra ColParitions that will be included in the table
+// side spacing of extra ColPartitions that will be included in the table
 // due to expansion
 bool TableFinder::HLineBelongsToTable(const ColPartition &part,
                                       const TBOX &table_box) {
@@ -1898,11 +1900,11 @@ bool TableFinder::GapInXProjection(int *xprojection, int length) {
 // Overall, this just needs some more work.
 void TableFinder::RecognizeTables() {
 #if !GRAPHICS_DISABLED
-  ScrollView *table_win = nullptr;
+  ScrollViewReference table_win = nullptr;
   if (textord_show_tables) {
-    table_win = MakeWindow(0, 0, "Step 9: Table Structure");
-    DisplayColPartitions(table_win, &fragmented_text_grid_, ScrollView::BLUE,
-                         ScrollView::LIGHT_BLUE);
+    table_win = MakeWindow(tesseract_, 0, 0, "Step 9: Table Structure");
+    DisplayColPartitions(table_win, &fragmented_text_grid_, Diagnostics::BLUE,
+                         Diagnostics::LIGHT_BLUE);
     // table_grid_.DisplayBoxes(table_win);
   }
 #endif
@@ -1934,7 +1936,7 @@ void TableFinder::RecognizeTables() {
     if (table_structure != nullptr) {
 #if !GRAPHICS_DISABLED
       if (textord_show_tables) {
-        table_structure->Display(table_win, ScrollView::LIME_GREEN);
+        table_structure->Display(table_win, Diagnostics::LIME_GREEN);
       }
 #endif
       found_table->set_bounding_box(table_structure->bounding_box());
@@ -1956,10 +1958,10 @@ void TableFinder::RecognizeTables() {
 #if !GRAPHICS_DISABLED
 
 // Displays the column segments in some window.
-void TableFinder::DisplayColSegments(ScrollView *win, ColSegment_LIST *segments,
-                                     ScrollView::Color color) {
+void TableFinder::DisplayColSegments(ScrollViewReference &win, ColSegment_LIST *segments,
+                                     Diagnostics::Color color) {
   win->Pen(color);
-  win->Brush(ScrollView::NONE);
+  win->Brush(Diagnostics::NONE);
   ColSegment_IT it(segments);
   for (it.mark_cycle_pt(); !it.cycled_list(); it.forward()) {
     ColSegment *col = it.data();
@@ -1976,10 +1978,10 @@ void TableFinder::DisplayColSegments(ScrollView *win, ColSegment_LIST *segments,
 // Displays the colpartitions using a new coloring on an existing window.
 // Note: This method is only for debug purpose during development and
 // would not be part of checked in code
-void TableFinder::DisplayColPartitions(ScrollView *win, ColPartitionGrid *grid,
-                                       ScrollView::Color default_color,
-                                       ScrollView::Color table_color) {
-  ScrollView::Color color = default_color;
+void TableFinder::DisplayColPartitions(ScrollViewReference &win, ColPartitionGrid *grid,
+                                       Diagnostics::Color default_color,
+                                       Diagnostics::Color table_color) {
+  Diagnostics::Color color = default_color;
   // Iterate the ColPartitions in the grid.
   GridSearch<ColPartition, ColPartition_CLIST, ColPartition_C_IT> gsearch(grid);
   gsearch.StartFullSearch();
@@ -1995,21 +1997,21 @@ void TableFinder::DisplayColPartitions(ScrollView *win, ColPartitionGrid *grid,
     int right_x = box.right();
     int top_y = box.top();
     int bottom_y = box.bottom();
-    win->Brush(ScrollView::NONE);
+    win->Brush(Diagnostics::NONE);
     win->Pen(color);
     win->Rectangle(left_x, bottom_y, right_x, top_y);
   }
   win->UpdateWindow();
 }
 
-void TableFinder::DisplayColPartitions(ScrollView *win, ColPartitionGrid *grid,
-                                       ScrollView::Color default_color) {
-  DisplayColPartitions(win, grid, default_color, ScrollView::YELLOW);
+void TableFinder::DisplayColPartitions(ScrollViewReference &win, ColPartitionGrid *grid,
+                                       Diagnostics::Color default_color) {
+  DisplayColPartitions(win, grid, default_color, Diagnostics::YELLOW);
 }
 
-void TableFinder::DisplayColPartitionConnections(ScrollView *win,
+void TableFinder::DisplayColPartitionConnections(ScrollViewReference &win,
                                                  ColPartitionGrid *grid,
-                                                 ScrollView::Color color) {
+                                                 Diagnostics::Color color) {
   // Iterate the ColPartitions in the grid.
   GridSearch<ColPartition, ColPartition_CLIST, ColPartition_C_IT> gsearch(grid);
   gsearch.StartFullSearch();
@@ -2028,7 +2030,7 @@ void TableFinder::DisplayColPartitionConnections(ScrollView *win,
       int mid_y = (top_y + bottom_y) / 2;
       int other_x = (upper_box.left() + upper_box.right()) / 2;
       int other_y = (upper_box.top() + upper_box.bottom()) / 2;
-      win->Brush(ScrollView::NONE);
+      win->Brush(Diagnostics::NONE);
       win->Pen(color);
       win->Line(mid_x, mid_y, other_x, other_y);
     }
@@ -2039,7 +2041,7 @@ void TableFinder::DisplayColPartitionConnections(ScrollView *win,
       int mid_y = (top_y + bottom_y) / 2;
       int other_x = (lower_box.left() + lower_box.right()) / 2;
       int other_y = (lower_box.top() + lower_box.bottom()) / 2;
-      win->Brush(ScrollView::NONE);
+      win->Brush(Diagnostics::NONE);
       win->Pen(color);
       win->Line(mid_x, mid_y, other_x, other_y);
     }
@@ -2056,11 +2058,11 @@ void TableFinder::MakeTableBlocks(ColPartitionGrid *grid,
                                   ColPartitionSet **all_columns,
                                   const WidthCallback &width_cb) {
 #if !GRAPHICS_DISABLED
-  ScrollView* table_win = nullptr;
+  ScrollViewReference table_win;
   if (textord_show_tables) {
-    table_win = MakeWindow(0, 0, "Step 12: Final tables");
+    table_win = MakeWindow(tesseract_, 0, 0, "Step 12: Final tables");
     DisplayColPartitions(table_win, &fragmented_text_grid_,
-                         ScrollView::BLUE, ScrollView::LIGHT_BLUE);
+                         Diagnostics::BLUE, Diagnostics::LIGHT_BLUE);
   }
 #endif  // GRAPHICS_DISABLED
 
@@ -2137,7 +2139,7 @@ void TableFinder::MakeTableBlocks(ColPartitionGrid *grid,
       if (table_structure != nullptr) {
 #if !GRAPHICS_DISABLED
       if (textord_show_tables) {
-        table_structure->Display(table_win, ScrollView::LIME_GREEN);
+        table_structure->Display(table_win, Diagnostics::LIME_GREEN);
       }
 #endif  // GRAPHICS_DISABLED
 
@@ -2167,12 +2169,12 @@ ColSegment::ColSegment()
       type_(COL_UNKNOWN) {}
 
 // Provides a color for BBGrid to draw the rectangle.
-ScrollView::Color ColSegment::BoxColor() const {
-  const ScrollView::Color kBoxColors[PT_COUNT] = {
-      ScrollView::YELLOW,
-      ScrollView::BLUE,
-      ScrollView::YELLOW,
-      ScrollView::MAGENTA,
+Diagnostics::Color ColSegment::BoxColor() const {
+  const Diagnostics::Color kBoxColors[PT_COUNT] = {
+      Diagnostics::YELLOW,
+      Diagnostics::BLUE,
+      Diagnostics::YELLOW,
+      Diagnostics::MAGENTA,
   };
   return kBoxColors[type_];
 }

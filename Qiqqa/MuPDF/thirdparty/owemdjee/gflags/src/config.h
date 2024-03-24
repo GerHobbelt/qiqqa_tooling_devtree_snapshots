@@ -55,5 +55,10 @@
 #  include "windows_port.h"
 #endif
 
+#ifndef GFLAGS_DEBUG_BUILD
+#  if defined(_DEBUG)
+#    define GFLAGS_DEBUG_BUILD 1
+#  endif
+#endif
 
 #endif // GFLAGS_CONFIG_H_

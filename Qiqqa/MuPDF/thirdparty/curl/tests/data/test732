@@ -1,48 +1,49 @@
 <testcase>
 <info>
 <keywords>
-HTTPS
-HTTP GET
-HTTP Basic auth
-SAFEAUTH
+IPFS
 </keywords>
 </info>
+
 #
 # Server-side
 <reply>
-<data>
+<data nocheck="yes">
 HTTP/1.1 200 OK
 Date: Tue, 09 Nov 2010 14:49:00 GMT
-Server: test-server/fake swsclose
-Content-Type: text/html
+Server: test-server/fake
+Last-Modified: Tue, 13 Jun 2000 12:10:00 GMT
+ETag: "21025-dc7-39462498"
+Accept-Ranges: bytes
+Content-Length: 21
+Connection: close
+Content-Type: text/plain
+Funny-head: yesyes
 
+Hello curl from IPFS
 </data>
 </reply>
 
 #
 # Client-side
 <client>
-<features>
-SSL
-</features>
 <server>
-https
+http
 </server>
- <name>
-HTTPS GET with user and clear password protection
- </name>
- <command>
- -u fake:user --safe-auth -k https://%HOSTIP:%HTTPSPORT/%TESTNUMBER
+<name>
+IPFS with path
+</name>
+<command>
+--ipfs-gateway http://%HOSTIP:%HTTPPORT "ipfs://bafybeidecnvkrygux6uoukouzps5ofkeevoqland7kopseiod6pzqvjg7u/a/b"
 </command>
 </client>
 
 #
 # Verify data after the test has been "shot"
 <verify>
-<protocol>
-GET /%TESTNUMBER HTTP/1.1
-Host: %HOSTIP:%HTTPSPORT
-Authorization: Basic ZmFrZTp1c2Vy
+<protocol crlf="yes">
+GET /ipfs/bafybeidecnvkrygux6uoukouzps5ofkeevoqland7kopseiod6pzqvjg7u/a/b HTTP/1.1
+Host: %HOSTIP:%HTTPPORT
 User-Agent: curl/%VERSION
 Accept: */*
 

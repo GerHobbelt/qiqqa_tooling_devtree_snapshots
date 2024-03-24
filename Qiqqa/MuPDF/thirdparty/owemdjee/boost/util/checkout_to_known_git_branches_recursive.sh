@@ -32,7 +32,7 @@ checkout_to_known_git_branches_recursive.sh options
 
 Options:
 
--h      : print this help 
+-h      : print this help
 -l      : LIST the branch/commit for each git repository (directory) registered in this script.
 -c      : CHECKOUT each git repository to the BRANCH registered in this script.
 -r      : CHECKOUT/REVERT each git repository to the COMMIT registered in this script.
@@ -40,7 +40,7 @@ Options:
 Note:
 
 Use the '-r' option to set each repository to an exact commit position, which is useful if,
-for instance, you wish to reproduce this registered previous software state (which may 
+for instance, you wish to reproduce this registered previous software state (which may
 represent a software release) which you wish to analyze/debug.
 
 EOH
@@ -65,14 +65,40 @@ git_repo_checkout_branch() {
       printf "%-43s :: %s / %s\n" "$1" "$2" "$3"
       if test "$mode" = "c" ; then
         if test -n "$3" ; then
-          # make sure the branch is created locally and is a tracking branch:
-          git branch --track "$3" "remotes/origin/$3"                          2> /dev/null  > /dev/null
-          git branch --set-upstream-to=remotes/origin/$3 master                2> /dev/null  > /dev/null
-          git checkout "$3"
+          # make sure the branch is created locally and is a tracking branch, if it isn't already:
+          # https://www.cyberciti.biz/faq/bash-remove-whitespace-from-string/
+          current_branch=$( git branch --show-current )
+          if test -z "$current_branch" -o "$current_branch" != "$3" ; then
+            git checkout "$3"
+          fi
+
+          shopt -s extglob
+          remote_branch=$( git branch -vv --list $3 '--format=%(upstream)' )
+          # Trim leading whitespaces
+          remote_branch="${remote_branch##*( )}"
+          # Trim trailing whitespaces
+          remote_branch="${remote_branch%%*( )}"
+          echo "=${remote_branch}="
+          shopt -u extglob
+
+          if test -z "$remote_branch" ; then
+            echo "No remote branch registered for local branch: $3 --> setting up the remote."
+            git branch --track "$3" "remotes/origin/$3"                          2> /dev/null  > /dev/null
+            git branch --set-upstream-to=remotes/origin/$3 $3                    2> /dev/null  > /dev/null
+            git checkout "$3"
+          fi
         else
-          git checkout master
-          if test $? -ne 0 ; then
-            git checkout main
+          current_branch=$( git branch --show-current )
+          echo "=${current_branch}="
+          if test -z "$current_branch" -o "$current_branch" != "master" ; then
+            # checkout to the first of `master` or `main` in case we're not checked out to either right now:
+            if test "$current_branch" != "main" -a "$current_branch" != "master" ; then
+              echo "Checking out to master/main:"
+              git checkout master
+              if test $? -ne 0 ; then
+                git checkout main
+              fi
+            fi
           fi
         fi
       else
@@ -102,165 +128,166 @@ pushd $(dirname $0)                                                            2
 # The registered repositories:
 #
 
-git_repo_checkout_branch "../libs/accumulators"                   4df0de9b47ef1415a7ccf0310250d6e15e132537 master    
-git_repo_checkout_branch "../libs/algorithm"                      1c5f74ae255f7fee667955ae05cb7203a5f40c83 master    
-git_repo_checkout_branch "../libs/align"                          bef21416a3bbd46f3f5de4f9254bf4c46ec752fe master    
-git_repo_checkout_branch "../libs/any"                            06eaa82dbfb6bc3e3842f9c1e1c8151f4858f56a master    
-git_repo_checkout_branch "../libs/array"                          9cc63ae0dd32dbb4031272f9536b66919e5d9928 master    
-git_repo_checkout_branch "../libs/asio"                           6d6d5a53d2f9559f398954cde2ab093288edecfc master    
-git_repo_checkout_branch "../libs/assert"                         7dea14cf7f21dcd5bc5d4cedfd22935878634cdf master    
-git_repo_checkout_branch "../libs/assign"                         058d07720ceff6bd6c4321cb967a27869a5af3a0 master    
-git_repo_checkout_branch "../libs/atomic"                         581dd7953f467c938aeb7d17f9ff32e3269e3fbe master    
-git_repo_checkout_branch "../libs/beast"                          76043dec2cf67a2ba33b32bdcc129f5f0027b8be master    
-git_repo_checkout_branch "../libs/bimap"                          85f0f02537d71794a415ef4b992629b2edebfbff master    
-git_repo_checkout_branch "../libs/bind"                           edc56d844225106a13334fefb2bfcbbfdb8e8d84 master    
-git_repo_checkout_branch "../libs/callable_traits"                2a56a3a2496cdb66496f844db55085dd992d5e49 master    
-git_repo_checkout_branch "../libs/chrono"                         f13b061053a28a8bd122529b85d6782e0fed4983 master    
-git_repo_checkout_branch "../libs/circular_buffer"                d4fbf446b903fb6651b56bbd5931a9b902ef962c master    
-git_repo_checkout_branch "../libs/compatibility"                  47ce71af6b018764c9ba74c0bfcb4f3151b81aa7 master    
-git_repo_checkout_branch "../libs/compute"                        36350b7de849300bd3d72a05d8bf890ca405a014 master    
-git_repo_checkout_branch "../libs/concept_check"                  5656ffe0ac76ad58fbaff45baff20c39924a1278 master    
-git_repo_checkout_branch "../libs/config"                         de00ddd50aa4b3263a3de10e7974a5c4d343bf07 master    
-git_repo_checkout_branch "../libs/container"                      725d95b314ac8693b64fb2c53f6f772fd8c4dc95 master    
-git_repo_checkout_branch "../libs/container_hash"                 53c12550fa11221975f58a6c23581b4563153e04 master    
-git_repo_checkout_branch "../libs/context"                        87135f923efe28a4c477be817d23f08d8e937713 master    
-git_repo_checkout_branch "../libs/contract"                       eca93d24b5d3bb909ed64c12b5feb5296c5cc070 master    
-git_repo_checkout_branch "../libs/conversion"                     4ae8b4d49547126264f0b80c528fcfd26cdf5e7d master    
-git_repo_checkout_branch "../libs/convert"                        39bcd6e60c3a74c15689d4b2db612f8fe654161d master    
-git_repo_checkout_branch "../libs/core"                           414dfb466878af427d33b36e6ccf84d21c0e081b master    
-git_repo_checkout_branch "../libs/coroutine"                      1e1347c0b1910b9310ec1719edad8b0bf2fd03c8 master    
-git_repo_checkout_branch "../libs/coroutine2"                     d7e1c1c4abcf8c1e90097279e485edea0b253a80 master    
-git_repo_checkout_branch "../libs/crc"                            96daae9fcdf965298077ed12a9304ea24713bb40 master    
-git_repo_checkout_branch "../libs/date_time"                      b280ef1506dbf3a927750cb6c4631b9b2e552768 master    
-git_repo_checkout_branch "../libs/describe"                       ef9c38f90c876b7bcb98d4280d7f79684afeb6fc master    
-git_repo_checkout_branch "../libs/detail"                         f9888ad0517774aee9f7588284a3eb452a0f3546 master    
-git_repo_checkout_branch "../libs/dll"                            9f9471cc3351273d73c2cd7328d37010f5708115 master    
-git_repo_checkout_branch "../libs/dynamic_bitset"                 8e20aa1462bf6dcadc338835df529a6d568431b1 master    
-git_repo_checkout_branch "../libs/endian"                         0dab6737ebd60e49bb1bede55c85a191a90010e5 master    
-git_repo_checkout_branch "../libs/exception"                      54f2228f78dae86335558e67cbec496693907bfc master    
-git_repo_checkout_branch "../libs/fiber"                          3e1770607c88a7a67869bd50fdd70f6da7be19c0 master    
-git_repo_checkout_branch "../libs/filesystem"                     77b45ff9349c1f136eef18c0f197cd075bd27a4d master    
-git_repo_checkout_branch "../libs/flyweight"                      af4fd3e8eb532099cec51bb6f199029b65e7998d master    
-git_repo_checkout_branch "../libs/foreach"                        cc2f75ae30492b9de69b3b692f5c59afcb7dea5e master    
-git_repo_checkout_branch "../libs/format"                         78ef371d2d90462671b90c3af407fae07820b193 master    
-git_repo_checkout_branch "../libs/function"                       16fca8368b5da14c4bcad977c2738dc6e482e1b7 master    
-git_repo_checkout_branch "../libs/function_types"                 895335874d67987ada0d8bf6ca1725e70642ed49 master    
-git_repo_checkout_branch "../libs/functional"                     075c2e089a50d6a2f566d0415c62aa9a6e09f765 master    
-git_repo_checkout_branch "../libs/fusion"                         65395679522d853fa7f845a5120dd84d2ba9354e master    
-git_repo_checkout_branch "../libs/geometry"                       ca14e7840f73ceda4ee70304040774379f0d43e9 master    
-git_repo_checkout_branch "../libs/gil"                            0919fde35e3fbc90eaccfd0e2c35d59965ad1aa2 master    
-git_repo_checkout_branch "../libs/graph"                          a649be53bd90ab3365c6c0c44414c80907cfd8a1 master    
-git_repo_checkout_branch "../libs/graph_parallel"                 5520a5617d2763c48a06a4ff277ad76e665c7cf3 master    
-git_repo_checkout_branch "../libs/hana"                           998033e9dba8c82e3c9496c274a3ad1acf4a2f36 master    
-git_repo_checkout_branch "../libs/headers"                        017c3cd1338b5437f28506cd14119b7dcfb1a86d master    
-git_repo_checkout_branch "../libs/heap"                           dc2f19f8815cbe0654df61bfc5f31ad8b06fc883 master    
-git_repo_checkout_branch "../libs/histogram"                      b62d38051e0e73436be2642f372c5d01620bb51a master    
-git_repo_checkout_branch "../libs/hof"                            0a28586156eb6cc7db1fbe74ae2a220daf40df14 master    
-git_repo_checkout_branch "../libs/icl"                            e6c06ddee1e2320f11c4ec5cd2661c4abe9bca53 master    
-git_repo_checkout_branch "../libs/integer"                        721fe9f562048fdcdbd5dddf2a3fdac5b2fd5297 master    
-git_repo_checkout_branch "../libs/interprocess"                   41018201d6b7a34f38a0303a1ad591d978989cb8 master    
-git_repo_checkout_branch "../libs/intrusive"                      f439778dc7a851bf3ba8929fd5ecf199b0d13dcd master    
-git_repo_checkout_branch "../libs/io"                             932dd480263d06d00bf4b40a323dc3f4ace266e2 master    
-git_repo_checkout_branch "../libs/iostreams"                      bfaf96eea6f4198b837f04cf5c9b0e4d21e5cda0 master    
-git_repo_checkout_branch "../libs/iterator"                       ce52aee3ceaf4e37d171fb811000f28bb80f91cd master    
-git_repo_checkout_branch "../libs/json"                           43d04d1d214e29d1ad890c5f9237ae0201726166 master    
-git_repo_checkout_branch "../libs/lambda"                         ac26514243521513d33be23aaa92a85b858ddf51 master    
-git_repo_checkout_branch "../libs/lambda2"                        4b68743cf06516de1375b83a379b2a3af2d8e545 master    
-git_repo_checkout_branch "../libs/leaf"                           e16e0cf417463ec992846078099d317495c2bc5e master    
-git_repo_checkout_branch "../libs/lexical_cast"                   a9f296115967335aaa9f4a4cadfd900f131a60d1 master    
-git_repo_checkout_branch "../libs/local_function"                 099e96bef0e5f2d513940c5987958121ca6f6e02 master    
-git_repo_checkout_branch "../libs/locale"                         76f6226fb12c900d0cc5c5744c30dc36a36d5b9f master    
-git_repo_checkout_branch "../libs/lockfree"                       fdd4d0632dd0904f6e9c656c45397fe8ef985bc9 master    
-git_repo_checkout_branch "../libs/log"                            93174ac2c69e9909025287fbb5b99ed43e49c1af master    
-git_repo_checkout_branch "../libs/logic"                          145778490c2d332c1411df6a5274a4b53ec3e091 master    
-git_repo_checkout_branch "../libs/math"                           db2a7cbb44a84c4c9cba62232c07f18b22bd965d master    
-git_repo_checkout_branch "../libs/metaparse"                      0ef448c1a7ce22b5de514f9cd504c323c28f4379 master    
-git_repo_checkout_branch "../libs/move"                           19bb08cf17cffba726875a906ba0be8fdfa15cd0 master    
-git_repo_checkout_branch "../libs/mp11"                           f6133a9f1f965d89676a33c4a39b3df09373b929 master    
-git_repo_checkout_branch "../libs/mpi"                            79e261101a13789ee88e793c5ad406ca893c22a7 master    
-git_repo_checkout_branch "../libs/mpl"                            db09fb1dce010e172072a1ba62858b2155285444 master    
-git_repo_checkout_branch "../libs/msm"                            03f58ead6d0ec23d52e5c7b382e2c98df1d943d5 master    
-git_repo_checkout_branch "../libs/multi_array"                    0c5348bef71b890c4bd06eff1ee5ebda69e7b27a master    
-git_repo_checkout_branch "../libs/multi_index"                    e7c489b323f7067c9138bc41623807630a6f5fe3 master    
-git_repo_checkout_branch "../libs/multiprecision"                 3b333b1634a3bf92ded87732ad3a6f7f68b22229 master    
-git_repo_checkout_branch "../libs/nowide"                         211213a3a85694487693a659406ab09f61dca1c2 master    
-git_repo_checkout_branch "../libs/numeric/conversion"             db44689f4f4f74d6572a868e13f523c82fca5a55 master    
-git_repo_checkout_branch "../libs/numeric/interval"               2eda7413ac16dd4158005446438daf8a7e435dd9 master    
-git_repo_checkout_branch "../libs/numeric/odeint"                 db8f91a51da630957d6bfa1ff87be760b0be97a6 master    
-git_repo_checkout_branch "../libs/numeric/ublas"                  f0e55caf310d5e01c7e9f2190b2422e113ddeedb master    
-git_repo_checkout_branch "../libs/optional"                       c809700d6a5fdcbb39e1bf8e9df3433a1615ad02 master    
-git_repo_checkout_branch "../libs/outcome"                        338f8c4d17cedac735c056304dee2615d6ca05e6 master    
-git_repo_checkout_branch "../libs/parameter"                      665cdbc94c3b04b5f9dbabffdcb551c3c2f7955f master    
-git_repo_checkout_branch "../libs/parameter_python"               1f7f9ce9930119f0dda7dcd5e1ec3b5ed7c6b091 master    
-git_repo_checkout_branch "../libs/pfr"                            8a8b5bc8d3ff673c4b278d145f6bf6973844d8e9 master    
-git_repo_checkout_branch "../libs/phoenix"                        15500aec2187ab59e51d05addab0fdba7e788dbb master    
-git_repo_checkout_branch "../libs/poly_collection"                0b8bfc4cff012d0f23049fc5a0009ac4abadceb4 master    
-git_repo_checkout_branch "../libs/polygon"                        8ba35b57c1436c4b36f7544aadd78c2b24acc7db master    
-git_repo_checkout_branch "../libs/pool"                           600bcb027379b0670ccecf14f380f77e1264037f master    
-git_repo_checkout_branch "../libs/predef"                         392e4e767469e3469c9390f0d9cca16724dc3fc8 master    
-git_repo_checkout_branch "../libs/preprocessor"                   667e87b3392db338a919cbe0213979713aca52e3 master    
-git_repo_checkout_branch "../libs/process"                        ee945a6b9524fe59f3985c9a8c3d74944ce4f99f master    
-git_repo_checkout_branch "../libs/program_options"                7bcbb4ea23c958800694436b411669f80c543e18 master    
-git_repo_checkout_branch "../libs/property_map"                   e3a3c3655f4118fd15a02d8315f86a48db7390fd master    
-git_repo_checkout_branch "../libs/property_map_parallel"          a2f90e9660e4e7e012c0b54a1338d8e69fb71906 master    
-git_repo_checkout_branch "../libs/property_tree"                  d30ff9404bd6af5cc8922a177865e566f4846b19 master    
-git_repo_checkout_branch "../libs/proto"                          7f924934689b940f3a72212ab0f714ec6fd6e34b master    
-git_repo_checkout_branch "../libs/ptr_container"                  943730c349f5af0814cc16c44d63850de5bfc697 master    
-git_repo_checkout_branch "../libs/python"                         8dd151177374dbf0aa5cb86bd350cf1ad13e2160 master    
-git_repo_checkout_branch "../libs/qvm"                            5791440b346232c391ab8d16f559ca5b2d7ae9b3 master    
-git_repo_checkout_branch "../libs/random"                         a2740d4b30178cb187fabca163e5be7803a577b9 master    
-git_repo_checkout_branch "../libs/range"                          88c6199aedf8bbb5a6a8966e534f9de99943cde2 master    
-git_repo_checkout_branch "../libs/ratio"                          00073b7d5896603b2036a334253dc9784285355c master    
-git_repo_checkout_branch "../libs/rational"                       564623136417068916495e2b24737054d607347c master    
-git_repo_checkout_branch "../libs/regex"                          a851f2141f644eb7cd9cdbe086c36491e52cbfb2 master    
-git_repo_checkout_branch "../libs/safe_numerics"                  777e0be5ec763d0333a717c5e421a4f7c5e5bdc9 master    
-git_repo_checkout_branch "../libs/scope_exit"                     60baaae454b2da887a31cf939e22015b6263c9e4 master    
-git_repo_checkout_branch "../libs/serialization"                  0ca603daf99888bf059c01ae1bab1b27dbc35ebe master    
-git_repo_checkout_branch "../libs/signals2"                       49ed1573fa91bb8c60d0a20a5d5e36d8b6d94ea9 master    
-git_repo_checkout_branch "../libs/smart_ptr"                      59b5b17e813c238187d568450b7155e7398fdf18 master    
-git_repo_checkout_branch "../libs/sort"                           72a3ae870c59980dadd757f5f63e6be16ab61c1b master    
-git_repo_checkout_branch "../libs/spirit"                         15539bbf92967e5b733b37070cfde1b9d8dd347d master    
-git_repo_checkout_branch "../libs/stacktrace"                     75b7986f9799184ecd679d86273532cb54e6a0dc master    
-git_repo_checkout_branch "../libs/statechart"                     586445b824c5cf0e7e6ce4ff2df620fda5d0f0d7 master    
-git_repo_checkout_branch "../libs/static_assert"                  ba72d3340f3dc6e773868107f35902292f84b07e master    
-git_repo_checkout_branch "../libs/static_string"                  5d6fefdd2acd70c34d8ba4590ab888d8481532af master    
-git_repo_checkout_branch "../libs/stl_interfaces"                 24f9450297cb6dc4eb9df019cd9a1c7f4379e720 master    
-git_repo_checkout_branch "../libs/system"                         cb8eba7a7fef7ee8efd6c7efb221c1d28b5165d0 master    
-git_repo_checkout_branch "../libs/test"                           d2895ebfdfdf16074c58c9801d53e190c4654fcb master    
-git_repo_checkout_branch "../libs/thread"                         743d19d7d337af9705a882f55907e3b7622514b3 master    
-git_repo_checkout_branch "../libs/throw_exception"                d307a2d4a75efb0999f97f559f2df83cb9841b8d master    
-git_repo_checkout_branch "../libs/timer"                          fb88e7758e1fe2d1f81fca51df5b21b94ee3edf4 master    
-git_repo_checkout_branch "../libs/tokenizer"                      90106f155bd72b62aaca0d9ad826f4132030dba0 master    
-git_repo_checkout_branch "../libs/tti"                            03734c54a51b6372ac3296d2fe5103b7360bcd3f master    
-git_repo_checkout_branch "../libs/tuple"                          500e4fa0a2845b96c0dd919e7485e0f216438a01 master    
-git_repo_checkout_branch "../libs/type_erasure"                   fc39ca9936bd7ac37afa8fadf3be3b62ee378f39 master    
-git_repo_checkout_branch "../libs/type_index"                     cca370a91834d331e3143ac4d023fb0f178e512b master    
-git_repo_checkout_branch "../libs/type_traits"                    d2a4a6bf0a3900e11faaf6904b95183115bac54d master    
-git_repo_checkout_branch "../libs/typeof"                         46c7a05f826fc020ee88210ea2a5cd9278b930ab master    
-git_repo_checkout_branch "../libs/units"                          45787015dd8c11653eb988260acf05c4af9d42e5 master    
-git_repo_checkout_branch "../libs/unordered"                      6b87a4316216460364a6d122e7f9c94d5717bcca master    
-git_repo_checkout_branch "../libs/utility"                        3fe40554dfcf05ae55848b783edd083807529a38 master    
-git_repo_checkout_branch "../libs/uuid"                           bd835638a5179cc1fb55b9f95377bedce4e47e1d master    
-git_repo_checkout_branch "../libs/variant"                        d2fdf2384b146b0c764077f5539f5f6ed7c40f20 master    
-git_repo_checkout_branch "../libs/variant2"                       c633a953dea46a8f146b35f37986f660b07ac101 master    
-git_repo_checkout_branch "../libs/vmd"                            34cad2c1a574d445812c7c2432d3a5a5c843b412 master    
-git_repo_checkout_branch "../libs/wave"                           c524b58847ce7c6948260bc422422b54096008b2 master    
-git_repo_checkout_branch "../libs/winapi"                         7a37250e1364aa99ae3db20ee6843b0c2c57a895 master    
-git_repo_checkout_branch "../libs/xpressive"                      4679fbd23f962bfa78d44acf5fa48f6f790642c0 master    
-git_repo_checkout_branch "../libs/yap"                            ae49bf2744586e6bd6c0cedff4500a58a4386860 master    
-git_repo_checkout_branch "../more"                                3f58b37f6fc5e8dc1417af5b193f690f26cccf25 master    
-git_repo_checkout_branch "../tools/auto_index"                    e98a81769364f56b272e510c876df874af514b29 master    
-git_repo_checkout_branch "../tools/bcp"                           a86fdce7885babae3ff625de36aa2dfacf983f8c master    
-git_repo_checkout_branch "../tools/boost_install"                 0dffa522de55126767c0f464c14da3eb5b8acd61 master    
-git_repo_checkout_branch "../tools/boostbook"                     a6701f5d278daba797697a1e5000ee41f25bcaff master    
-git_repo_checkout_branch "../tools/boostdep"                      7f601b865a80db5854523d114ad7539c1e14fe18 master    
-git_repo_checkout_branch "../tools/build"                         405d34a04d29519625c5edfe1f3bac3bc3dc3534 master    
-git_repo_checkout_branch "../tools/check_build"                   9c3fc263fc3203e566c4b632c1b124e57dafbed5 master    
-git_repo_checkout_branch "../tools/cmake"                         60599c6a5914d4ba14401b4ae00d90e65574b7ff master    
-git_repo_checkout_branch "../tools/docca"                         6680b8d0553071ea9decb4850145b08770b7cc8d master    
-git_repo_checkout_branch "../tools/inspect"                       db423bf897bcc6aa34231e5266442b75ee2a5666 master    
-git_repo_checkout_branch "../tools/litre"                         564d4d8d30b7e03ac5e25d78e14d2c19fa321c83 master    
-git_repo_checkout_branch "../tools/quickbook"                     5f2e8c24cb813b4b0b94d3316e664b971c5b71dd master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/accumulators" 9d9e5dae2202660f57e2dc91efb620aa001525b3 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/algorithm" 32c5a6327cfdca5d41ce0f1d8849b811886daa2f master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/align" 5ad7df63cd792fbdb801d600b93cad1a432f0151 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/any" a25b013d53c3af489f4f331753fecf19227ce357 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/array" ecc47cb42c98261d6abf39fb5575c38eac6db748 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/asio" 6bf14b8dba468fe119453bfd7ae29c62ca01f883 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/assert" 5227f10a99442da67415e9649be2b4d9df53b61e master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/assign" ababd47970e8a5fa1bebc8ccad526c4f25bd867a master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/atomic" 607c57bdce154c3ec02ce77f477cb1e2d5d47396 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/beast" 788e07916ce36c8f400c2dd60c2081bf8c8fd51c master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/bimap" e5c2657a9e2d6184622ad4ccd1373e6c60a7efca master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/bind" 586d4e1fb0d52ca0943779182bba6e87d5f04a75 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/callable_traits" 2a56a3a2496cdb66496f844db55085dd992d5e49 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/chrono" 7fb03662e547b962f002f06cac404af7b66e301e master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/circular_buffer" a08a5b55ee82e0c2487523471379ac53a23935dc master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/compatibility" d0caac5c346f7e24b4f8ec1e55110119492b64bd master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/compute" 36350b7de849300bd3d72a05d8bf890ca405a014 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/concept_check" 37c9bddf0bdefaaae0ca5852c1a153d9fc43f278 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/config" c4b13e90f169daa61470818f3ede4be681c9b10f master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/container" 22357b34b7a5ad94a307fb0df69ff5a1f05f0c83 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/container_hash" 48a306dcf236ae460d9ba55648d449ed7bea1dee master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/context" d0e7afc1816f34d49a4b0a2b65c1bfae03064c9e master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/contract" eca93d24b5d3bb909ed64c12b5feb5296c5cc070 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/conversion" 5cf5f78376c8562c168e322ba64b5a94c1f29a6c master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/convert" 1dd2ca23cb74991d420ea85b9b764f0ac76367c1 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/core" ba6360e8edcc053c226e924af86996c79494c796 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/coroutine" 1e1347c0b1910b9310ec1719edad8b0bf2fd03c8 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/coroutine2" d7e1c1c4abcf8c1e90097279e485edea0b253a80 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/crc" e3b1e56890a701ded5e66929579fb7fa62ac6bcc master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/date_time" 75be56b4c85d8e2dcbc22a1eb251d18cc942fceb master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/describe" c89e4dd3db81eb4f2867b2bc965d161f51cc316c master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/detail" b75c261492862448cdc5e1c0d5900203497122d6 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/dll" 482c5b3b033c4480b80def793045d4681b8ab35e master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/dynamic_bitset" 8e20aa1462bf6dcadc338835df529a6d568431b1 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/endian" c9b436e5dfce85e8ae365e5aabbb872dd35c29eb master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/exception" 11f102a9872f2d12f4a75bca8c5daafaded2eb97 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/fiber" 88b8304e78dfab4baee5d6beca09938d2826061a master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/filesystem" 90d8644e35c0beaa9e674fcb227a20ace4557a7e master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/flyweight" e9f3a0a005eca8baa377f13423107b35985d9119 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/foreach" cc2f75ae30492b9de69b3b692f5c59afcb7dea5e master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/format" 78ef371d2d90462671b90c3af407fae07820b193 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/function" d56678401d3c720b6f24a23bca239157eacbf1b1 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/function_types" 895335874d67987ada0d8bf6ca1725e70642ed49 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/functional" 6a573e4b8333ee63ee62ce95558c3667348db233 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/fusion" 7d4c03fa032299f2d46149b7b3136c9fd43e4f81 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/geometry" 600bac84313440ff9fe89a280ebbf6a8e613628f master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/gil" e2714cc5821c5cf8e759c1ff1c1b611b6464d222 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/graph" a649be53bd90ab3365c6c0c44414c80907cfd8a1 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/graph_parallel" 5520a5617d2763c48a06a4ff277ad76e665c7cf3 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/hana" 38b79171120c7fd93f6b2ea89c8a6cd94ca6d1f7 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/headers" 0456900fadde4b07c84760eadea4ccc9f948fe28 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/heap" dc2f19f8815cbe0654df61bfc5f31ad8b06fc883 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/histogram" a29729e6682652800b06dc8aded29bbeb4acea61 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/hof" 63ac019fca325038bfb4f56db17fbb281d2b5f49 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/icl" 2741c3a1b7b79f7326360c26c3e1588b385c9e53 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/integer" becbd39cc48c312f4b8ad546ae4f4557d338a921 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/interprocess" a0c5a8ff176434c9024d4540ce092a2eebb8c5c3 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/intrusive" 1014e97fb28ec0b512cb875579fd43c9189a3ec3 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/io" 342e4c6d10d586058818daa84201a2d301357a53 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/iostreams" 7f706bce43155fff182f7b4edac00b13fff9ccc6 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/iterator" 80bb1ac9e401d0d679718e29bef2f2aaf0123fcb master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/json" ae4fdf153f983ad4ecb177f46a7077f02cfc1c4b master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/lambda" 2cff5d9dd04f0df032d95492e2fa3eb659f7f30d master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/lambda2" 62815a69bfaf6d0fac5ace703737e7a9b4899139 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/leaf" d8aae791332a1307ee5a14561a9f7636649e62b9 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/lexical_cast" 1ca93a8e275c88efd83b3d622547faef697e0f42 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/local_function" 099e96bef0e5f2d513940c5987958121ca6f6e02 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/locale" 1d74d03f97b056196af4011bf77f0bcd7836fe16 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/lockfree" fdd4d0632dd0904f6e9c656c45397fe8ef985bc9 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/log" ae9bf80017b881ca7b1575093ec98cf130619492 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/logic" 145778490c2d332c1411df6a5274a4b53ec3e091 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/math" 42273bc4a2f347bd11d3e9f0fd15c65cc0377dc8 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/metaparse" 0ef448c1a7ce22b5de514f9cd504c323c28f4379 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/move" f1fbb45134065deebe95249c616a967d4b66c809 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/mp11" 391e23ae716aec4d59f6c7272e49e1dd8c01dcdb master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/mpi" 74e740d0c12298c6ea2b969ce2e71ebcb5749479 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/mpl" 08ba533825e014eb52d48098b5becc55d4f4e78e master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/msm" f932a51ef0f7a136312c7d2949fb69963cb46830 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/multi_array" 0c5348bef71b890c4bd06eff1ee5ebda69e7b27a master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/multi_index" fab1601a4239e957c128d7d113b812dfaddc06fd master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/multiprecision" 1fc9f77d8d8c7e4bad378823949287b6035fbbfe master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/nowide" aff261986867fa206110881900aaeb56cad2d7c8 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/numeric/conversion" 50a1eae942effb0a9b90724323ef8f2a67e7984a master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/numeric/interval" 2eda7413ac16dd4158005446438daf8a7e435dd9 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/numeric/odeint" db8f91a51da630957d6bfa1ff87be760b0be97a6 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/numeric/ublas" f0e55caf310d5e01c7e9f2190b2422e113ddeedb master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/optional" c60db27762ff9cc16529e069c3c15f2fa898f994 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/outcome" 9563bb3080cfc2c7f25e447296402adde949ca07 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/parameter" 6538609cf5e390b6e7cbcb73173d86d18af73281 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/parameter_python" 1f7f9ce9930119f0dda7dcd5e1ec3b5ed7c6b091 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/pfr" 294a4976bd04829dd204aaf9e9fd30338a5d3199 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/phoenix" 8913607a3788cb82d48ed461ea59c919b7bad3df master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/poly_collection" 0b8bfc4cff012d0f23049fc5a0009ac4abadceb4 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/polygon" 8ba35b57c1436c4b36f7544aadd78c2b24acc7db master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/pool" 8ec1be1e82ba559744ecfa3c6ec13f71f9c175cc master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/predef" 0fdfb49c3a6789e50169a44e88a07cc889001106 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/preprocessor" 667e87b3392db338a919cbe0213979713aca52e3 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/process" 1873f34435b87f99c2073543bf9f5d67f74cbdb8 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/program_options" dd6f27272aa7bc9a91348986da8f5bffddcd95b1 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/property_map" e3a3c3655f4118fd15a02d8315f86a48db7390fd master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/property_map_parallel" a2f90e9660e4e7e012c0b54a1338d8e69fb71906 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/property_tree" 4748bdb7b2acc7a5634187efd8d708ef9417ff0c master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/proto" 7f924934689b940f3a72212ab0f714ec6fd6e34b master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/ptr_container" cf94735c87e073b33e54887a3d5e33598177ee1a master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/python" 47d5bc76f69e20625214381c930a2fad5765e2b3 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/qvm" c6b61349b2b4f493497272f94f2624e4631af875 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/random" 1c8e9acf2668b9d7d47068e620253120876d9088 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/range" 88c6199aedf8bbb5a6a8966e534f9de99943cde2 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/ratio" d5b33caa7d564be9be6d962b18659b7741d764ac master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/rational" 564623136417068916495e2b24737054d607347c master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/regex" 4cbcd3078e6ae10d05124379623a1bf03fcb9350 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/safe_numerics" 777e0be5ec763d0333a717c5e421a4f7c5e5bdc9 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/scope_exit" 60baaae454b2da887a31cf939e22015b6263c9e4 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/serialization" a20c4d97c37e5f437c8ba78f296830edb79cff9e master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/signals2" 9bcd76256a76a0cb89c5e0f047a8386c230e7b78 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/smart_ptr" 763c7f56cde9d029233cb03d574bc7e2b9e8864d master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/sort" d12ad000fc63d9c21e299c9ef420ccf85cba8548 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/spirit" 59515f0e56aebdf958eadab30be99cac8872e723 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/stacktrace" 4f2da0e653f93a2f6398b7f816f667bbe9699db9 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/statechart" 586445b824c5cf0e7e6ce4ff2df620fda5d0f0d7 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/static_assert" ba72d3340f3dc6e773868107f35902292f84b07e master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/static_string" ac84c4f40ec38f7a7237255738e3e5259aa4a1a8 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/stl_interfaces" df9e186bd6a755221b170786d5917ac259fb5192 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/system" b001dc85d33b0629b0cccb6ce8cc281b2a250689 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/test" ee721298d41dc429878e2d5df15eaa69a58eff14 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/thread" aec18d337f41d8e3081ee65f5cf3b5090179ab0e master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/throw_exception" 23dd41e920ecd91237500ac6428f7d392a7a875c master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/timer" 85b2642a42e55706c98fd5227be162747547aea5 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/tokenizer" 90106f155bd72b62aaca0d9ad826f4132030dba0 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/tti" a09ad0a24c982096c102847411c37045865a8098 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/tuple" b67941dd7d03536a854b96f001954792311ab515 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/type_erasure" 729f3e739abc65d36d46df470c5bab735599d042 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/type_index" 29ab3258a73215c67598383696c927887fc0cfeb master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/type_traits" 89f5011b4a79d91e42735670e39f72cb25c86c72 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/typeof" 4bc9de322cd44373435540d4e6c8f207892fc9a0 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/units" 45787015dd8c11653eb988260acf05c4af9d42e5 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/unordered" 1c0e54ee3eced7f5fe29d70316d13899af993a2d master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/url" 4ba283540db5c5fb662bcb159d6260480056ef50 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/utility" a95a4f6580c65be5861cf4c40dbf9ed64a344ee6 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/uuid" 2bc0c8e71677f387afdc09bc4f8d609d2c74e80e master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/variant" 9d1e62f33cf75486fc12ab11aca9a3036623119e master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/variant2" 9e4234bfd5688c0272b641954ab2f23f8ce9c613 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/vmd" 34cad2c1a574d445812c7c2432d3a5a5c843b412 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/wave" e02cda69e4d070fd9b16a39282d6b5c717cb3da4 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/winapi" 39396bd78254053f3137510478e8f956bd2b83d4 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/xpressive" 4679fbd23f962bfa78d44acf5fa48f6f790642c0 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/libs/yap" ae49bf2744586e6bd6c0cedff4500a58a4386860 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/more" 0d59bab432e94fc6c42035401e5c07ef3d95e64d master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/tools/auto_index" d7fbfe23f77be21fec6330984a19496112a734f2 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/tools/bcp" e0b9262f6ff4778973a29b601183f3f9367e69d2 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/tools/boost_install" 93bd5adb2363112a3da015af356537cbe10d4bb6 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/tools/boostbook" 46c7732d061a33381e6593139d10fb3d032845a4 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/tools/boostdep" df0647fef2ed465cd08da61da67b2a7dd4104538 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/tools/build" 8d86b9a85407d73d6e8c631771f18c2a237d2d71 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/tools/check_build" 9c3fc263fc3203e566c4b632c1b124e57dafbed5 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/tools/cmake" ff2f83eaac0a04000bd4dcbdd2cba7ad1bba6f43 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/tools/docca" 0ce4e198398dbb52f1de0029f4ed9b7d2bded273 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/tools/inspect" db423bf897bcc6aa34231e5266442b75ee2a5666 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/tools/litre" 564d4d8d30b7e03ac5e25d78e14d2c19fa321c83 master    
+git_repo_checkout_branch "../../../../../../../../../../../../../i/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost/tools/quickbook" f9f14bd3cf0b7ac263af26f55ea9b808b367c3d2 master    
 
 # --- all done ---
 

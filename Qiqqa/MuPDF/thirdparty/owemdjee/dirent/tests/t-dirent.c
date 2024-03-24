@@ -22,6 +22,8 @@
 #undef NDEBUG
 #include <assert.h>
 
+#include "../examples/monolithic_examples.h"
+
 static void test_macros(void);
 static void test_retrieval(void);
 static void test_nonexistent(void);
@@ -32,6 +34,8 @@ static void test_chdir(void);
 static void test_filename(void);
 static void test_readdir(void);
 static void test_wreaddir(void);
+static void initialize(void);
+static void cleanup(void);
 
 
 #if defined(BUILD_MONOLITHIC)
@@ -39,12 +43,10 @@ static void test_wreaddir(void);
 #endif
 
 int
-main(int argc, const char **argv)
+main(void)
 {
-	(void) argc;
-	(void) argv;
+	initialize();
 
-	/* Execute tests */
 	test_macros();
 	test_retrieval();
 	test_nonexistent();
@@ -56,7 +58,7 @@ main(int argc, const char **argv)
 	test_readdir();
 	test_wreaddir();
 
-	printf("OK\n");
+	cleanup();
 	return EXIT_SUCCESS;
 }
 
@@ -419,17 +421,15 @@ test_readdir(void)
 	struct dirent *entry;
 	size_t i = 0;
 	size_t n = 0;
-	while (readdir_r(dir, &ent[n], &entry) == /*OK*/0 && entry != 0) {
+	while (n < 10 && readdir_r(dir, &ent[n], &entry) == /*OK*/0 && entry != NULL)
 		n++;
-		assert(n <= 4);
-	}
 
 	/* Make sure that we got all the files from directory */
 	assert(n == 4);
 
 	/* Check entries in memory */
 	int found = 0;
-	for (i = 0; i < 4; i++) {
+	for (i = 0; i < n; i++) {
 		entry = &ent[i];
 
 		/* Check each file */
@@ -524,17 +524,15 @@ test_wreaddir(void)
 	struct _wdirent *entry;
 	size_t i = 0;
 	size_t n = 0;
-	while (_wreaddir_r(dir, &ent[n], &entry) == /*OK*/0 && entry != 0) {
+	while (n < 10 && _wreaddir_r(dir, &ent[n], &entry) == /*OK*/0 && entry != NULL)
 		n++;
-		assert(n <= 4);
-	}
 
 	/* Make sure that we got all the files from directory */
 	assert(n == 4);
 
 	/* Check entries in memory */
 	int found = 0;
-	for (i = 0; i < 4; i++) {
+	for (i = 0; i < n; i++) {
 		entry = &ent[i];
 
 		/* Check each file */
@@ -610,4 +608,16 @@ test_wreaddir(void)
 
 	_wclosedir(dir);
 #endif
+}
+
+static void
+initialize(void)
+{
+	/*NOP*/;
+}
+
+static void
+cleanup(void)
+{
+	printf("OK\n");
 }

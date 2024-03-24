@@ -1,4 +1,4 @@
-// Copyright (c) 2017-2022, University of Cincinnati, developed by Henry Schreiner
+// Copyright (c) 2017-2023, University of Cincinnati, developed by Henry Schreiner
 // under NSF AWARD 1414736 and by the respective contributors.
 // All rights reserved.
 //
@@ -24,6 +24,43 @@ TEST_CASE("THelp: Basic", "[help]") {
     CHECK_THAT(help, Contains("-h,--help"));
     CHECK_THAT(help, Contains("Options:"));
     CHECK_THAT(help, Contains("Usage:"));
+}
+
+TEST_CASE("THelp: Usage", "[help]") {
+    CLI::App app{"My prog"};
+    app.usage("use: just use it");
+
+    std::string help = app.help();
+
+    CHECK_THAT(help, Contains("My prog"));
+    CHECK_THAT(help, Contains("-h,--help"));
+    CHECK_THAT(help, Contains("Options:"));
+    CHECK_THAT(help, Contains("use: just use it"));
+}
+
+TEST_CASE("THelp: UsageCallback", "[help]") {
+    CLI::App app{"My prog"};
+    app.usage([]() { return "use: just use it"; });
+
+    std::string help = app.help();
+
+    CHECK_THAT(help, Contains("My prog"));
+    CHECK_THAT(help, Contains("-h,--help"));
+    CHECK_THAT(help, Contains("Options:"));
+    CHECK_THAT(help, Contains("use: just use it"));
+}
+
+TEST_CASE("THelp: UsageCallbackBoth", "[help]") {
+    CLI::App app{"My prog"};
+    app.usage([]() { return "use: just use it"; });
+    app.usage("like 1, 2, and 3");
+    std::string help = app.help();
+
+    CHECK_THAT(help, Contains("My prog"));
+    CHECK_THAT(help, Contains("-h,--help"));
+    CHECK_THAT(help, Contains("Options:"));
+    CHECK_THAT(help, Contains("use: just use it"));
+    CHECK_THAT(help, Contains("like 1, 2, and 3"));
 }
 
 TEST_CASE("THelp: Footer", "[help]") {

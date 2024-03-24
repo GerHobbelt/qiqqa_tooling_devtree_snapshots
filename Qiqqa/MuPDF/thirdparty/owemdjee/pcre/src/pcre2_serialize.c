@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
 a sequence of compiled codes. */
 
 
-#ifdef HAVE_CONFIG_H
+#if defined(HAVE_CONFIG_H) && !defined(PCRE2_AMALGAMETE)
 #include "config.h"
 #endif
 

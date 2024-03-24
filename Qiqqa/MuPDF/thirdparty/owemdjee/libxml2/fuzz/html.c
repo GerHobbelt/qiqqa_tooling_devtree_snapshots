@@ -12,9 +12,11 @@
 int
 LLVMFuzzerInitialize(int *argc ATTRIBUTE_UNUSED,
                      char ***argv ATTRIBUTE_UNUSED) {
+    xmlFuzzMemSetup();
     xmlInitParser();
 #ifdef LIBXML_CATALOG_ENABLED
     xmlInitializeCatalog();
+    xmlCatalogSetDefaults(XML_CATA_ALLOW_NONE);
 #endif
     xmlSetGenericErrorFunc(NULL, xmlFuzzErrorFunc);
 
@@ -23,16 +25,15 @@ LLVMFuzzerInitialize(int *argc ATTRIBUTE_UNUSED,
 
 int
 LLVMFuzzerTestOneInput(const char *data, size_t size) {
-    static const size_t maxChunkSize = 128;
+    xmlParserCtxtPtr ctxt;
     htmlDocPtr doc;
-    htmlParserCtxtPtr ctxt;
-    xmlOutputBufferPtr out;
     const char *docBuffer;
-    size_t docSize, consumed, chunkSize;
+    size_t maxAlloc, docSize;
     int opts;
 
     xmlFuzzDataInit(data, size);
-    opts = xmlFuzzReadInt();
+    opts = (int) xmlFuzzReadInt(4);
+    maxAlloc = xmlFuzzReadInt(4) % (size + 100);
 
     docBuffer = xmlFuzzReadRemaining(&docSize);
     if (docBuffer == NULL) {
@@ -42,38 +43,79 @@ LLVMFuzzerTestOneInput(const char *data, size_t size) {
 
     /* Pull parser */
 
-    doc = htmlReadMemory(docBuffer, docSize, NULL, NULL, opts);
+    xmlFuzzMemSetLimit(maxAlloc);
+    ctxt = htmlNewParserCtxt();
+    if (ctxt != NULL) {
+        doc = htmlCtxtReadMemory(ctxt, docBuffer, docSize, NULL, NULL, opts);
+        xmlFuzzCheckMallocFailure("htmlCtxtReadMemory",
+                                  ctxt->errNo == XML_ERR_NO_MEMORY);
 
-    /*
-     * Also test the serializer. Call htmlDocContentDumpOutput with our
-     * own buffer to avoid encoding the output. The HTML encoding is
-     * excruciatingly slow (see htmlEntityValueLookup).
-     */
-    out = xmlAllocOutputBuffer(NULL);
-    htmlDocContentDumpOutput(out, doc, NULL);
-    xmlOutputBufferClose(out);
+        if (doc != NULL) {
+            xmlDocPtr copy;
 
-    xmlFreeDoc(doc);
+#ifdef LIBXML_OUTPUT_ENABLED
+            xmlOutputBufferPtr out;
+            const xmlChar *content;
+
+            /*
+             * Also test the serializer. Call htmlDocContentDumpOutput with our
+             * own buffer to avoid encoding the output. The HTML encoding is
+             * excruciatingly slow (see htmlEntityValueLookup).
+             */
+            xmlFuzzResetMallocFailed();
+            out = xmlAllocOutputBuffer(NULL);
+            htmlDocContentDumpOutput(out, doc, NULL);
+            content = xmlOutputBufferGetContent(out);
+            xmlFuzzCheckMallocFailure("htmlDocContentDumpOutput",
+                                      content == NULL);
+            xmlOutputBufferClose(out);
+#endif
+
+            xmlFuzzResetMallocFailed();
+            copy = xmlCopyDoc(doc, 1);
+            xmlFuzzCheckMallocFailure("xmlCopyNode", copy == NULL);
+            xmlFreeDoc(copy);
+
+            xmlFreeDoc(doc);
+        }
+
+        htmlFreeParserCtxt(ctxt);
+    }
+
 
     /* Push parser */
 
-    ctxt = htmlCreatePushParserCtxt(NULL, NULL, NULL, 0, NULL,
-                                    XML_CHAR_ENCODING_NONE);
-    htmlCtxtUseOptions(ctxt, opts);
+#ifdef LIBXML_PUSH_ENABLED
+    {
+        static const size_t maxChunkSize = 128;
+        size_t consumed, chunkSize;
 
-    for (consumed = 0; consumed < docSize; consumed += chunkSize) {
-        chunkSize = docSize - consumed;
-        if (chunkSize > maxChunkSize)
-            chunkSize = maxChunkSize;
-        htmlParseChunk(ctxt, docBuffer + consumed, chunkSize, 0);
+        xmlFuzzMemSetLimit(maxAlloc);
+        ctxt = htmlCreatePushParserCtxt(NULL, NULL, NULL, 0, NULL,
+                                        XML_CHAR_ENCODING_NONE);
+
+        if (ctxt != NULL) {
+            htmlCtxtUseOptions(ctxt, opts);
+
+            for (consumed = 0; consumed < docSize; consumed += chunkSize) {
+                chunkSize = docSize - consumed;
+                if (chunkSize > maxChunkSize)
+                    chunkSize = maxChunkSize;
+                htmlParseChunk(ctxt, docBuffer + consumed, chunkSize, 0);
+            }
+
+            htmlParseChunk(ctxt, NULL, 0, 1);
+            xmlFuzzCheckMallocFailure("htmlParseChunk",
+                                      ctxt->errNo == XML_ERR_NO_MEMORY);
+            xmlFreeDoc(ctxt->myDoc);
+            htmlFreeParserCtxt(ctxt);
+        }
     }
-
-    htmlParseChunk(ctxt, NULL, 0, 1);
-    xmlFreeDoc(ctxt->myDoc);
-    htmlFreeParserCtxt(ctxt);
+#endif
 
     /* Cleanup */
 
+    xmlFuzzMemSetLimit(0);
     xmlFuzzDataCleanup();
     xmlResetLastError();
 

@@ -157,9 +157,58 @@ void *fz_memmem(const void *haystack, size_t haystacklen, const void *needle, si
 void fz_dirname(char *dir, const char *path, size_t dirsize);
 
 /**
-	decode url escapes.
+    Skip directory/(Windows)drive separators.
+
+    Returns pointer to basename part in the input string.
+*/
+const char* fz_basename(const char* path);
+
+/**
+	Returns pointer to the filename extension, *including the leading '.' dot*, in the input string.
+
+	Returns the empty string (reference to the *end* of the input string, in fact) when
+	the filename does not have a file name extension.
+
+	Note: this routine handles 'dotfiles', a.k.a. 'hidden files' for UNIX systems, across
+	all platforms: those files won't report a file extension -- unless they have one, e.g.
+	'.dotfile.org' --> extension = '.org'.
+*/
+const char* fz_name_extension(const char* path);
+
+/**
+	Like fz_decode_uri_component but in-place.
 */
 char *fz_urldecode(char *url);
+
+/**
+ * Return a new string representing the unencoded version of the given URI.
+ * This decodes all escape sequences except those that would result in a reserved
+ * character that are part of the URI syntax (; / ? : @ & = + $ , #).
+ */
+char *fz_decode_uri(fz_context *ctx, const char *s);
+
+/**
+ * Return a new string representing the unencoded version of the given URI component.
+ * This decodes all escape sequences!
+ */
+char *fz_decode_uri_component(fz_context *ctx, const char *s);
+
+/**
+ * Return a new string representing the provided string encoded as a URI.
+ */
+char *fz_encode_uri(fz_context *ctx, const char *s);
+
+/**
+ * Return a new string representing the provided string encoded as an URI component.
+ * This also encodes the special reserved characters (; / ? : @ & = + $ , #).
+ */
+char *fz_encode_uri_component(fz_context *ctx, const char *s);
+
+/**
+ * Return a new string representing the provided string encoded as an URI path name.
+ * This also encodes the special reserved characters except /.
+ */
+char *fz_encode_uri_pathname(fz_context *ctx, const char *s);
 
 /**
 	create output file name using a template.
@@ -247,25 +296,6 @@ void fz_format_output_path(fz_context *ctx, char *path, size_t size, const char 
 void fz_format_output_path_ex(fz_context* ctx, char* path, size_t size, const char* fmt, int chapter, int page, int sequence_number, const char *label, const char *extension);
 
 /**
-    Skip directory/(Windows)drive separators.
-
-    Returns pointer to basename part in the input string.
-*/
-const char* fz_basename(const char* path);
-
-/**
-	Returns pointer to the filename extension, *including the leading '.' dot*, in the input string.
-
-	Returns the empty string (reference to the *end* of the input string, in fact) when
-	the filename does not have a file name extension.
-
-	Note: this routine handles 'dotfiles', a.k.a. 'hidden files' for UNIX systems, across
-	all platforms: those files won't report a file extension -- unless they have one, e.g.
-	'.dotfile.org' --> extension = '.org'.
-*/
-const char* fz_name_extension(const char* path);
-
-/**
 	rewrite path to the shortest string that names the same path.
 
 	Eliminates multiple and trailing slashes, interprets "." and
@@ -274,10 +304,18 @@ const char* fz_name_extension(const char* path);
 char *fz_cleanname(char *name);
 
 /**
+	rewrite path to the shortest string that names the same path.
+
+	Eliminates multiple and trailing slashes, interprets "." and
+	"..". Allocates a new string that the caller must free.
+*/
+char *fz_cleanname_strdup(fz_context *ctx, const char *name);
+
+/**
 	Resolve a path to an absolute file name.
 	The resolved path buffer must be of at least PATH_MAX size.
 */
-char *fz_realpath(const char *path, char *resolved_path);
+char *fz_realpath(const char *path, char resolved_path[PATH_MAX]);
 
 /**
 	Case insensitive (ASCII only) string comparison.
@@ -380,6 +418,16 @@ const char *fz_runeptr(const char *str, int idx);
 	Returns the number of runes in the string.
 */
 int fz_utflen(const char *s);
+
+/**
+	Convert a wchar string into a new heap allocated utf8 one.
+*/
+char *fz_utf8_from_wchar(fz_context *ctx, const wchar_t *s);
+
+/**
+	Convert an utf8 string into a new heap allocated wchar one.
+*/
+wchar_t *fz_wchar_from_utf8(fz_context *ctx, const char *s);
 
 /**
 	Locale-independent decimal to binary conversion. On overflow

@@ -269,6 +269,7 @@ static const TidyOptionImpl option_defs[] =
     { TidyWrapScriptlets,          PP, "wrap-script-literals",        BL, no,              ParsePickList,     &boolPicks          },
     { TidyWrapSection,             PP, "wrap-sections",               BL, yes,             ParsePickList,     &boolPicks          },
     { TidyWriteBack,               IO, "write-back",                  BL, no,              ParsePickList,     &boolPicks          },
+    { TidyWriteEntities,           ME, "write-entities",              BL, yes,             ParsePickList,     &boolPicks           },
     { TidyXhtmlOut,                DT, "output-xhtml",                BL, no,              ParsePickList,     &boolPicks          },
     { TidyXmlDecl,                 DT, "add-xml-decl",                BL, no,              ParsePickList,     &boolPicks          },
     { TidyXmlOut,                  DT, "output-xml",                  BL, no,              ParsePickList,     &boolPicks          },
@@ -894,7 +895,7 @@ static ctmbstr ExpandTilde( TidyDocImpl* doc, ctmbstr filename )
             char * hd = getenv("HOMEDRIVE");
             char * hp = getenv("HOMEPATH");
             if (hd && hp) {
-                ctmbstr s = TidyDocAlloc(doc, _MAX_PATH);
+                tmbstr s = TidyDocAlloc(doc, _MAX_PATH);
                 strcpy(s, hd);
                 strcat(s, hp);
                 strcat(s, "\\");
@@ -1599,7 +1600,10 @@ Bool ParsePickList( TidyDocImpl* doc, const TidyOptionImpl* entry )
         return yes;
     }
   
-    TY_(ReportBadArgument)( doc, entry->name );
+    /* Is. #921 - this service calls 'GetParsePickListValue', which already emits
+     *  'ReportBadArgument' if it fails, so eliminate this duplicate call
+     * TY_(ReportBadArgument)( doc, entry->name );
+     */
     return no;
 }
 

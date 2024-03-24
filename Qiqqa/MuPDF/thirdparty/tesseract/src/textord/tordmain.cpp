@@ -24,7 +24,7 @@
 
 #include "tordmain.h"
 
-#include "arrayaccess.h" // for GET_DATA_BYTE
+#include <leptonica/arrayaccess.h> // for GET_DATA_BYTE
 #include "blobbox.h"     // for BLOBNBOX_IT, BLOBNBOX, TO_BLOCK, TO_B...
 #include "ccstruct.h"    // for CCStruct, CCStruct::kXHeightFraction
 #include "clst.h"        // for CLISTIZE
@@ -42,7 +42,7 @@
 #include "quadratc.h"    // for QUAD_COEFFS
 #include "quspline.h"    // for QSPLINE, tweak_row_baseline
 #include "rect.h"        // for TBOX
-#include "scrollview.h"  // for ScrollView, ScrollView::WHITE
+#include "scrollview.h"  // for ScrollView, Diagnostics::WHITE
 #include "statistc.h"    // for STATS
 #include "stepblob.h"    // for C_BLOB_IT, C_BLOB, C_BLOB_LIST
 #include "textord.h"     // for Textord, WordWithBox, WordGrid, WordS...
@@ -51,7 +51,7 @@
 #include "diagnostics_io.h"
 #include "tesseractclass.h"
 
-#include <allheaders.h> // for pixDestroy, pixGetHeight, boxCreate
+#include <leptonica/allheaders.h> // for pixDestroy, pixGetHeight, boxCreate
 
 #include <cfloat>  // for FLT_MAX
 #include <cmath>   // for ceil, floor, M_PI
@@ -240,7 +240,7 @@ void Textord::filter_blobs(ICOORD page_tr,        // top right
   TO_BLOCK *block;                                // created block
 
 #if !GRAPHICS_DISABLED
-  if (to_win != nullptr) {
+  if (to_win) {
     to_win->Clear();
   }
 #endif // !GRAPHICS_DISABLED
@@ -262,56 +262,21 @@ void Textord::filter_blobs(ICOORD page_tr,        // top right
 
 #if !GRAPHICS_DISABLED
     if (textord_show_blobs) {
-      if (!tesseract_->debug_do_not_use_scrollview_app) {
-        if (to_win == nullptr) {
+        if (!to_win) {
           create_to_win(page_tr);
         }
+        to_win->Comment("filter_blobs: Rejected blobs");
         block->plot_graded_blobs(to_win);
-      }
-      else {
-        const char* name = "filter_blobs: Rejected blobs";
-        auto width = tesseract_->ImageWidth();
-        auto height = tesseract_->ImageHeight();
-
-        Image pix = pixCreate(width, height, 32 /* RGBA */);
-        pixSetAll(pix);
-
-        block->plot_graded_blobs(pix);
-
-        tesseract_->AddPixDebugPage(pix, name, false);
-      }
     }
     if (textord_show_boxes) {
-      if (!tesseract_->debug_do_not_use_scrollview_app) {
-        if (to_win == nullptr) {
+        if (!to_win) {
           create_to_win(page_tr);
         }
-        plot_box_list(to_win, &block->noise_blobs, ScrollView::WHITE);
-        plot_box_list(to_win, &block->small_blobs, ScrollView::WHITE);
-        plot_box_list(to_win, &block->large_blobs, ScrollView::WHITE);
-        plot_box_list(to_win, &block->blobs, ScrollView::WHITE);
-      }
-      else {
-        const char* name = "filter_blobs: Rejected blobs";
-        auto width = tesseract_->ImageWidth();
-        auto height = tesseract_->ImageHeight();
-
-        Image pix = pixCreate(width, height, 32 /* RGBA */);
-        pixClearAll(pix);
-
-        auto cmap = initDiagPlotColorMap();
-
-        int cmap_offset = 0;
-        plot_box_list(pix, &block->noise_blobs, cmap, cmap_offset, true);
-        cmap_offset = 64;
-        plot_box_list(pix, &block->small_blobs, cmap, cmap_offset, false);
-        cmap_offset = 2 * 64;
-        plot_box_list(pix, &block->large_blobs, cmap, cmap_offset, false);
-        cmap_offset = 3 * 64;
-        plot_box_list(pix, &block->blobs, cmap, cmap_offset, false);
-
-        tesseract_->AddPixDebugPage(pix, name, false);
-      }
+        to_win->Comment("filter_blobs: Rejected blobs");
+        plot_box_list(to_win, &block->noise_blobs, Diagnostics::WHITE);
+        plot_box_list(to_win, &block->small_blobs, Diagnostics::WHITE);
+        plot_box_list(to_win, &block->large_blobs, Diagnostics::WHITE);
+        plot_box_list(to_win, &block->blobs, Diagnostics::WHITE);
     }
 #endif // !GRAPHICS_DISABLED
   }
@@ -384,13 +349,13 @@ float Textord::filter_noise_blobs(BLOBNBOX_LIST *src_list,     // original list
     }
   }
   max_height = size_stats.ile(textord_initialasc_ile);
-  //      tprintf("max_y={}, min_y={}, initial_x={}, max_height={},",
+  //      tprintDebug("max_y={}, min_y={}, initial_x={}, max_height={},",
   //              max_y,min_y,initial_x,max_height);
   max_height *= tesseract::CCStruct::kXHeightCapRatio;
   if (max_height > initial_x) {
     initial_x = max_height;
   }
-  //      tprintf(" ret={}\n",initial_x);
+  //      tprintDebug(" ret={}\n",initial_x);
   return initial_x;
 }
 
@@ -483,11 +448,11 @@ void Textord::cleanup_blocks(bool clean_noise, BLOCK_LIST *blocks) {
     }
     ++num_blocks_all;
     if (textord_noise_debug) {
-      tprintf("cleanup_blocks: # rows = {} / {}\n", num_rows, num_rows_all);
+      tprintDebug("cleanup_blocks: # rows = {} / {}\n", num_rows, num_rows_all);
     }
   }
   if (textord_noise_debug) {
-    tprintf("cleanup_blocks: # blocks = {} / {}\n", num_blocks, num_blocks_all);
+    tprintDebug("cleanup_blocks: # blocks = {} / {}\n", num_blocks, num_blocks_all);
   }
 }
 
@@ -562,15 +527,15 @@ bool Textord::clean_noise_from_row( // remove empties
         dot_count += 2;
       }
       if (testing_on) {
-        tprintf("Blob at ({},{}) -> ({},{}), ols={}, tc={}, bldiff={}\n", blob_box.left(),
+        tprintDebug("Blob at ({},{}) -> ({},{}), ols={}, tc={}, bldiff={}\n", blob_box.left(),
                 blob_box.bottom(), blob_box.right(), blob_box.top(), blob->out_list()->length(),
                 trans_count, blob_box.bottom() - row->base_line(blob_box.left()));
       }
     }
   }
   if (textord_noise_debug) {
-    tprintf("Row ending at ({},{}):", blob_box.right(), row->base_line(blob_box.right()));
-    tprintf(" R={}, dc={}, nc={}, {}\n",
+    tprintDebug("Row ending at ({},{}):", blob_box.right(), row->base_line(blob_box.right()));
+    tprintDebug(" R={}, dc={}, nc={}, {}\n",
             norm_count > 0 ? static_cast<float>(dot_count) / norm_count : 9999, dot_count,
             norm_count,
             dot_count > norm_count * textord_noise_normratio && dot_count > 2 ? "REJECTED"

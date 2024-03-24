@@ -1,4 +1,4 @@
-// Copyright (c) 2017-2022, University of Cincinnati, developed by Henry Schreiner
+// Copyright (c) 2017-2023, University of Cincinnati, developed by Henry Schreiner
 // under NSF AWARD 1414736 and by the respective contributors.
 // All rights reserved.
 //
@@ -35,9 +35,9 @@ namespace CLI {
 // [CLI11:app_hpp:verbatim]
 
 #ifndef CLI11_PARSE
-#define CLI11_PARSE(app, argc, argv)                                                                                   \
+#define CLI11_PARSE(app, ...)                                                                                          \
     try {                                                                                                              \
-        (app).parse((argc), (argv));                                                                                   \
+        (app).parse(__VA_ARGS__);                                                                                      \
     } catch(const CLI::ParseError &e) {                                                                                \
         return (app).exit(e);                                                                                          \
     }
@@ -49,8 +49,11 @@ struct AppFriend;
 }  // namespace detail
 
 namespace FailureMessage {
-std::string simple(const App *app, const Error &e);
-std::string help(const App *app, const Error &e);
+/// Printout a clean, simple message on error (the default in CLI11 1.5+)
+CLI11_INLINE std::string simple(const App *app, const Error &e);
+
+/// Printout the full help string on error (if this fn is set, the old default for CLI11)
+CLI11_INLINE std::string help(const App *app, const Error &e);
 }  // namespace FailureMessage
 
 /// enumeration of modes of how to deal with extras in config files
@@ -146,6 +149,12 @@ class App {
     ///@}
     /// @name Help
     ///@{
+
+    /// Usage to put after program/subcommand description in the help output INHERITABLE
+    std::string usage_{};
+
+    /// This is a function that generates a usage to put after program/subcommand description in help output
+    std::function<std::string()> usage_callback_{};
 
     /// Footer to put after all options in the help output INHERITABLE
     std::string footer_{};
@@ -623,7 +632,8 @@ class App {
                      std::string flag_description = "") {
 
         CLI::callback_t fun = [&flag_result](const CLI::results_t &res) {
-            return CLI::detail::lexical_cast(res[0], flag_result);
+            using CLI::detail::lexical_cast;
+            return lexical_cast(res[0], flag_result);
         };
         auto *opt = _add_flag_internal(flag_name, std::move(fun), std::move(flag_description));
         return detail::default_flag_modifiers<T>(opt);
@@ -639,8 +649,9 @@ class App {
         CLI::callback_t fun = [&flag_results](const CLI::results_t &res) {
             bool retval = true;
             for(const auto &elem : res) {
+                using CLI::detail::lexical_cast;
                 flag_results.emplace_back();
-                retval &= detail::lexical_cast(elem, flag_results.back());
+                retval &= lexical_cast(elem, flag_results.back());
             }
             return retval;
         };
@@ -826,15 +837,25 @@ class App {
     /// Reset the parsed data
     void clear();
 
+    /// Parse the command-line arguments passed to the main function of the executable.
+    /// This overload will correctly parse unicode arguments on Windows.
+    void parse();
+
     /// Parses the command line - throws errors.
     /// This must be called after the options are in but before the rest of the program.
     void parse(int argc, const char *const *argv);
+    void parse(int argc, const wchar_t *const *argv);
 
+  private:
+    template <class CharT> void parse_char_t(int argc, const CharT *const *argv);
+
+  public:
     /// Parse a single string as if it contained command line arguments.
     /// This function splits the string into arguments then calls parse(std::vector<std::string> &)
     /// the function takes an optional boolean argument specifying if the programName is included in the string to
     /// process
     void parse(std::string commandline, bool program_name_included = false);
+    void parse(std::wstring commandline, bool program_name_included = false);
 
     /// The real work is done here. Expects a reversed vector.
     /// Changes the vector to the remaining options.
@@ -942,6 +963,16 @@ class App {
     /// @name Help
     ///@{
 
+    /// Set usage.
+    App *usage(std::string usage_string) {
+        usage_ = std::move(usage_string);
+        return this;
+    }
+    /// Set usage.
+    App *usage(std::function<std::string()> usage_function) {
+        usage_callback_ = std::move(usage_function);
+        return this;
+    }
     /// Set footer.
     App *footer(std::string footer_string) {
         footer_ = std::move(footer_string);
@@ -1049,6 +1080,11 @@ class App {
 
     /// Get the group of this subcommand
     CLI11_NODISCARD const std::string &get_group() const { return group_; }
+
+    /// Generate and return the usage.
+    CLI11_NODISCARD std::string get_usage() const {
+        return (usage_callback_) ? usage_callback_() + '\n' + usage_ : usage_;
+    }
 
     /// Generate and return the footer.
     CLI11_NODISCARD std::string get_footer() const {
@@ -1259,8 +1295,9 @@ class App {
     bool _parse_subcommand(std::vector<std::string> &args);
 
     /// Parse a short (false) or long (true) argument, must be at the top of the list
+    /// if local_processing_only is set to true then fallthrough is disabled will return false if not found
     /// return true if the argument was processed or false if nothing was done
-    bool _parse_arg(std::vector<std::string> &args, detail::Classifier current_type);
+    bool _parse_arg(std::vector<std::string> &args, detail::Classifier current_type, bool local_processing_only);
 
     /// Trigger the pre_parse callback if needed
     void _trigger_pre_parse(std::size_t remaining_args);
@@ -1351,16 +1388,6 @@ CLI11_INLINE void retire_option(App *app, const std::string &option_name);
 
 /// Helper function to mark an option as retired
 CLI11_INLINE void retire_option(App &app, const std::string &option_name);
-
-namespace FailureMessage {
-
-/// Printout a clean, simple message on error (the default in CLI11 1.5+)
-CLI11_INLINE std::string simple(const App *app, const Error &e);
-
-/// Printout the full help string on error (if this fn is set, the old default for CLI11)
-CLI11_INLINE std::string help(const App *app, const Error &e);
-
-}  // namespace FailureMessage
 
 namespace detail {
 /// This class is simply to allow tests access to App's protected functions

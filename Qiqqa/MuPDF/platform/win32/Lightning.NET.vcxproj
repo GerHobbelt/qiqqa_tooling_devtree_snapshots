@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIGHTNING.NET;LIGHTNING.NET_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIGHTNING.NET;LIGHTNING.NET_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIGHTNING.NET;LIGHTNING.NET_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIGHTNING.NET;LIGHTNING.NET_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIGHTNING.NET;LIGHTNING.NET_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIGHTNING.NET;LIGHTNING.NET_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIGHTNING.NET;LIGHTNING.NET_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIGHTNING.NET;LIGHTNING.NET_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIGHTNING.NET;LIGHTNING.NET_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIGHTNING.NET;LIGHTNING.NET_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIGHTNING.NET;LIGHTNING.NET_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIGHTNING.NET;LIGHTNING.NET_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIGHTNING.NET;LIGHTNING.NET_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIGHTNING.NET;LIGHTNING.NET_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIGHTNING.NET;LIGHTNING.NET_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIGHTNING.NET;LIGHTNING.NET_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIGHTNING.NET;LIGHTNING.NET_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIGHTNING.NET;LIGHTNING.NET_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIGHTNING.NET;LIGHTNING.NET_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIGHTNING.NET;LIGHTNING.NET_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIGHTNING.NET;LIGHTNING.NET_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIGHTNING.NET;LIGHTNING.NET_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIGHTNING.NET;LIGHTNING.NET_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIGHTNING.NET;LIGHTNING.NET_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -228,7 +228,59 @@
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ItemGroup>
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/Lightning.NET/README.md" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/lmdb/compile-lmdb-macos.sh" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/lmdb/readme.md" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB.Benchmarks/" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB.Benchmarks/BenchmarkBase.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB.Benchmarks/KeyBatch.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB.Benchmarks/Main.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB.Benchmarks/ReadBenchmarks.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB.Benchmarks/WriteBenchmarks.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB.Tests/" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB.Tests/ConditionalFacts.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB.Tests/CursorTests.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB.Tests/DatabaseIOTests.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB.Tests/DatabaseTests.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB.Tests/EnvironmentTests.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB.Tests/MultiProcessTests.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB.Tests/SharedFileSystem.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB.Tests/TestHelperExtensions.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB.Tests/TransactionTests.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/CursorDeleteOption.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/CursorOperation.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/CursorPutOptions.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/DatabaseConfiguration.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/DatabaseOpenFlags.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/EnvironmentConfiguration.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/EnvironmentCopyFlags.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/EnvironmentInfo.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/EnvironmentOpenFlags.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/LightningCursor.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/LightningDB.targets" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/LightningDatabase.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/LightningEnvironment.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/LightningException.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/LightningExtensions.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/LightningTransaction.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/LightningTransactionState.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/LightningVersionInfo.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/MDBResultCode.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/MDBValue.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/Native/CompareFunction.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/Native/Lmdb.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/Native/MDBEnvInfo.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/Native/MDBStat.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/PutOptions.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/Stats.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/TransactionBeginFlags.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/UnixAccessMode.cs" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/runtimes/win-x64/native/lmdb.dll" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/runtimes/win-x64/native/lmdbautoresize.dll" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/runtimes/win-x86/native/lmdb.dll" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/LightningDB/runtimes/win-x86/native/lmdbautoresize.dll" />
+    <Text Include="../../thirdparty/owemdjee/Lightning.NET/src/SecondProcess/Program.cs" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

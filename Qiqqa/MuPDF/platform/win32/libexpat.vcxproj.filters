@@ -63,35 +63,26 @@
     <Filter Include="Misc Files\testdata\largefiles">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0017}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\expat">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0020}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\expat\win32">
+    <Filter Include="Source Files\expat">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0019}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\expat">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\expat\examples">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\expat\gennmtab">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0020}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\expat\lib">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\expat\tests">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\expat\tests\benchmark">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0026}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\expat\xmlwf">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -239,9 +230,15 @@
     <ClInclude Include="../../thirdparty/owemdjee/libexpat/expat/xmlwf/xmltchar.h">
       <Filter>Header Files\expat\xmlwf</Filter>
     </ClInclude>
-    <ResourceCompile Include="../../thirdparty/owemdjee/libexpat/expat/win32/version.rc">
-      <Filter>Resource Files\expat\win32</Filter>
-    </ResourceCompile>
+    <Text Include="../../thirdparty/owemdjee/libexpat/SECURITY.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libexpat/appveyor.yml">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/AUTHORS">
+      <Filter>Misc Files\expat</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/CMake.README">
       <Filter>Misc Files\expat</Filter>
     </Text>
@@ -258,6 +255,9 @@
       <Filter>Misc Files\expat</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/README.md">
+      <Filter>Misc Files\expat</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/acinclude.m4">
       <Filter>Misc Files\expat</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/apply-clang-format.sh">
@@ -299,6 +299,30 @@
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/configure.ac">
       <Filter>Misc Files\expat</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/conftools/ax-append-compile-flags.m4">
+      <Filter>Misc Files\expat\conftools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/conftools/ax-append-flag.m4">
+      <Filter>Misc Files\expat\conftools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/conftools/ax-append-link-flags.m4">
+      <Filter>Misc Files\expat\conftools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/conftools/ax-check-compile-flag.m4">
+      <Filter>Misc Files\expat\conftools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/conftools/ax-check-link-flag.m4">
+      <Filter>Misc Files\expat\conftools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/conftools/ax-require-defined.m4">
+      <Filter>Misc Files\expat\conftools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/conftools/expat.m4">
+      <Filter>Misc Files\expat\conftools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/conftools/expatcfg-compiler-supports-visibility.m4">
+      <Filter>Misc Files\expat\conftools</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/conftools/get-version.sh">
       <Filter>Misc Files\expat\conftools</Filter>
     </Text>
@@ -309,6 +333,15 @@
       <Filter>Misc Files\expat</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/doc/Makefile.am">
+      <Filter>Misc Files\expat\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/doc/ok.min.css">
+      <Filter>Misc Files\expat\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/doc/reference.html">
+      <Filter>Misc Files\expat\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/doc/style.css">
       <Filter>Misc Files\expat\doc</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/examples/Makefile.am">
@@ -374,6 +407,9 @@
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/win32/build_expat_iss.bat">
       <Filter>Misc Files\expat\win32</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/win32/expat.iss">
+      <Filter>Misc Files\expat\win32</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/xmlwf/Makefile.am">
       <Filter>Misc Files\expat\xmlwf</Filter>
     </Text>
@@ -390,6 +426,9 @@
       <Filter>Misc Files\testdata</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libexpat/testdata/largefiles/README.txt">
+      <Filter>Misc Files\testdata\largefiles</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libexpat/testdata/largefiles/wordnet_glossary-20010201.rdf">
       <Filter>Misc Files\testdata\largefiles</Filter>
     </Text>
     <Xml Include="../../thirdparty/owemdjee/libexpat/expat/doc/xmlwf.xml">

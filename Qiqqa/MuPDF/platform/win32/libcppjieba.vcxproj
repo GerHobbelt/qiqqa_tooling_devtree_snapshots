@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPPJIEBA;CPPJIEBA_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPPJIEBA;CPPJIEBA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPPJIEBA;CPPJIEBA_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPPJIEBA;CPPJIEBA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPPJIEBA;CPPJIEBA_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPPJIEBA;CPPJIEBA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPPJIEBA;CPPJIEBA_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPPJIEBA;CPPJIEBA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPPJIEBA;CPPJIEBA_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPPJIEBA;CPPJIEBA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPPJIEBA;CPPJIEBA_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPPJIEBA;CPPJIEBA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPPJIEBA;CPPJIEBA_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPPJIEBA;CPPJIEBA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPPJIEBA;CPPJIEBA_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPPJIEBA;CPPJIEBA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPPJIEBA;CPPJIEBA_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPPJIEBA;CPPJIEBA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPPJIEBA;CPPJIEBA_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPPJIEBA;CPPJIEBA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPPJIEBA;CPPJIEBA_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPPJIEBA;CPPJIEBA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPPJIEBA;CPPJIEBA_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPPJIEBA;CPPJIEBA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -228,31 +228,97 @@
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ItemGroup>
-    <ClCompile Include="../../thirdparty/owemdjee/libcppjieba/demo.cpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/libcppjieba/include/Application.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/libcppjieba/include/DictTrie.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/libcppjieba/include/FullSegment.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/libcppjieba/include/HMMModel.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/libcppjieba/include/HMMSegment.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/libcppjieba/include/ISegment.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/libcppjieba/include/KeywordExtractor.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/libcppjieba/include/Limonp/Config.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/libcppjieba/include/Limonp/HandyMacro.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/libcppjieba/include/Limonp/InitOnOff.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/libcppjieba/include/Limonp/LocalVector.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/libcppjieba/include/Limonp/Logger.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/libcppjieba/include/Limonp/MysqlClient.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/libcppjieba/include/Limonp/NonCopyable.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/libcppjieba/include/Limonp/StdExtension.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/libcppjieba/include/Limonp/StringUtil.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/libcppjieba/include/MPSegment.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/libcppjieba/include/MixSegment.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/libcppjieba/include/PosTagger.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/libcppjieba/include/QuerySegment.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/libcppjieba/include/SegmentBase.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/libcppjieba/include/TransCode.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/libcppjieba/include/Trie.hpp" />
-    <Text Include="../../thirdparty/owemdjee/libcppjieba/README.md" />
+    <ClCompile Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/src/gtest-all.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/src/gtest-death-test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/src/gtest-filepath.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/src/gtest-port.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/src/gtest-printers.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/src/gtest-test-part.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/src/gtest-typed-test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/src/gtest.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/src/gtest_main.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/cppjieba/test/demo.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/cppjieba/test/load_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/cppjieba/test/unittest/gtest_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/cppjieba/test/unittest/jieba_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/cppjieba/test/unittest/keyword_extractor_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/cppjieba/test/unittest/pos_tagger_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/cppjieba/test/unittest/pre_filter_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/cppjieba/test/unittest/segments_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/cppjieba/test/unittest/textrank_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/cppjieba/test/unittest/trie_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/cppjieba/test/unittest/unicode_test.cpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/include/gtest/gtest-death-test.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/include/gtest/gtest-message.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/include/gtest/gtest-param-test.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/include/gtest/gtest-printers.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/include/gtest/gtest-spi.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/include/gtest/gtest-test-part.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/include/gtest/gtest-typed-test.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/include/gtest/gtest.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/include/gtest/gtest_pred_impl.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/include/gtest/gtest_prod.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/include/gtest/internal/gtest-death-test-internal.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/include/gtest/internal/gtest-filepath.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/include/gtest/internal/gtest-internal.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/include/gtest/internal/gtest-linked_ptr.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/include/gtest/internal/gtest-param-util-generated.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/include/gtest/internal/gtest-param-util.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/include/gtest/internal/gtest-port.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/include/gtest/internal/gtest-string.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/include/gtest/internal/gtest-tuple.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/include/gtest/internal/gtest-type-util.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/src/gtest-internal-inl.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/include/cppjieba/DictTrie.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/include/cppjieba/FullSegment.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/include/cppjieba/HMMModel.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/include/cppjieba/HMMSegment.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/include/cppjieba/Jieba.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/include/cppjieba/KeywordExtractor.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/include/cppjieba/MPSegment.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/include/cppjieba/MixSegment.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/include/cppjieba/PosTagger.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/include/cppjieba/PreFilter.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/include/cppjieba/QuerySegment.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/include/cppjieba/SegmentBase.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/include/cppjieba/SegmentTagged.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/include/cppjieba/TextRankExtractor.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/include/cppjieba/Trie.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/cppjieba/include/cppjieba/Unicode.hpp" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/ChangeLog.md" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/LICENSE" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/README.md" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/README_EN.md" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/deps/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/deps/gtest/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/dict/README.md" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/dict/hmm_model.utf8" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/dict/idf.utf8" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/dict/jieba.dict.utf8" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/dict/pos_dict/char_state_tab.utf8" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/dict/pos_dict/prob_emit.utf8" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/dict/pos_dict/prob_start.utf8" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/dict/pos_dict/prob_trans.utf8" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/dict/stop_words.utf8" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/dict/user.dict.utf8" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/test/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/test/testdata/curl.res" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/test/testdata/extra_dict/jieba.dict.small.utf8" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/test/testdata/jieba.dict.0.1.utf8" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/test/testdata/jieba.dict.0.utf8" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/test/testdata/jieba.dict.1.utf8" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/test/testdata/jieba.dict.2.utf8" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/test/testdata/load_test.urls" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/test/testdata/review.100" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/test/testdata/review.100.res" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/test/testdata/server.conf" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/test/testdata/testlines.utf8" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/test/testdata/userdict.2.utf8" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/test/testdata/userdict.english" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/test/testdata/userdict.utf8" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/test/testdata/weicheng.utf8" />
+    <Text Include="../../thirdparty/owemdjee/cppjieba/test/unittest/CMakeLists.txt" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

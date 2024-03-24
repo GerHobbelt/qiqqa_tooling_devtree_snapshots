@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/fast_pfor/headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAST_PFOR;FAST_PFOR_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/fast_pfor/headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAST_PFOR;FAST_PFOR_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAST_PFOR;FAST_PFOR_STATICLIB;CHM_NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/fast_pfor/headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/fast_pfor/headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/fast_pfor/headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAST_PFOR;FAST_PFOR_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/fast_pfor/headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAST_PFOR;FAST_PFOR_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAST_PFOR;FAST_PFOR_STATICLIB;CHM__DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/fast_pfor/headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/fast_pfor/headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/fast_pfor/headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAST_PFOR;FAST_PFOR_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/fast_pfor/headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAST_PFOR;FAST_PFOR_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAST_PFOR;FAST_PFOR_STATICLIB;CHM_NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/fast_pfor/headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/fast_pfor/headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/fast_pfor/headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAST_PFOR;FAST_PFOR_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/fast_pfor/headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAST_PFOR;FAST_PFOR_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAST_PFOR;FAST_PFOR_STATICLIB;CHM__DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/fast_pfor/headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/fast_pfor/headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -233,6 +233,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/fast_pfor/src/bitpacking.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/fast_pfor/src/bitpackingaligned.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/fast_pfor/src/bitpackingunaligned.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/fast_pfor/src/codecfactory.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/fast_pfor/src/codecs.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/fast_pfor/src/csv2maropu.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/fast_pfor/src/entropy.cpp" />
@@ -298,14 +299,18 @@
     <ClInclude Include="../../thirdparty/owemdjee/fast_pfor/headers/varintgb.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fast_pfor/headers/vsencoding.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fast_pfor/headers/ztimer.h" />
+    <Text Include="../../thirdparty/owemdjee/fast_pfor/AUTHORS" />
     <Text Include="../../thirdparty/owemdjee/fast_pfor/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fast_pfor/CMakeLists.txt.in" />
     <Text Include="../../thirdparty/owemdjee/fast_pfor/FastPFORConfig.cmake.in" />
+    <Text Include="../../thirdparty/owemdjee/fast_pfor/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/fast_pfor/README.md" />
     <Text Include="../../thirdparty/owemdjee/fast_pfor/TODO.md" />
+    <Text Include="../../thirdparty/owemdjee/fast_pfor/appveyor.yml" />
     <Text Include="../../thirdparty/owemdjee/fast_pfor/cmake_modules/AppendCompilerFlags.cmake" />
     <Text Include="../../thirdparty/owemdjee/fast_pfor/cmake_modules/DetectCPUFeatures.cmake" />
     <Text Include="../../thirdparty/owemdjee/fast_pfor/cmake_modules/Findsnappy.cmake" />
+    <Text Include="../../thirdparty/owemdjee/fast_pfor/data/ClueWeb09LogSizeFreqs.1" />
     <Text Include="../../thirdparty/owemdjee/fast_pfor/data/README" />
     <Text Include="../../thirdparty/owemdjee/fast_pfor/fastpfor.pc.in" />
     <Text Include="../../thirdparty/owemdjee/fast_pfor/tools/clang-format.sh" />

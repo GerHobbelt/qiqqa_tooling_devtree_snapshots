@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAISS;FAISS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAISS;FAISS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/faiss;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAISS;FAISS_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/faiss;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAISS;FAISS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAISS;FAISS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAISS;FAISS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/faiss;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/faiss;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAISS;FAISS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAISS;FAISS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/faiss;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAISS;FAISS_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/faiss;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAISS;FAISS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAISS;FAISS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAISS;FAISS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/faiss;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/faiss;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAISS;FAISS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAISS;FAISS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/faiss;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAISS;FAISS_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/faiss;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAISS;FAISS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAISS;FAISS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAISS;FAISS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/faiss;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/faiss;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAISS;FAISS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAISS;FAISS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/faiss;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAISS;FAISS_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/faiss;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAISS;FAISS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAISS;FAISS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFAISS;FAISS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/faiss;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/faiss;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -291,6 +291,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/faiss/faiss/IndexIVFAdditiveQuantizerFastScan.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/faiss/faiss/IndexIVFFastScan.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/faiss/faiss/IndexIVFFlat.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/faiss/faiss/IndexIVFIndependentQuantizer.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/faiss/faiss/IndexIVFPQ.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/faiss/faiss/IndexIVFPQFastScan.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/faiss/faiss/IndexIVFPQR.cpp" />
@@ -354,6 +355,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/faiss/faiss/impl/pq4_fast_scan.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/faiss/faiss/impl/pq4_fast_scan_search_1.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/faiss/faiss/impl/pq4_fast_scan_search_qbs.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/faiss/faiss/impl/residual_quantizer_encode_steps.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/faiss/faiss/index_factory.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/faiss/faiss/invlists/BlockInvertedLists.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/faiss/faiss/invlists/DirectMap.cpp" />
@@ -379,9 +381,13 @@
     <ClCompile Include="../../thirdparty/owemdjee/faiss/tests/test_RCQ_cropping.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/faiss/tests/test_approx_topk.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/faiss/tests/test_binary_flat.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/faiss/tests/test_code_distance.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/faiss/tests/test_cppcontrib_sa_decode.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/faiss/tests/test_cppcontrib_uintreader.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/faiss/tests/test_dealloc_invlists.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/faiss/tests/test_distances_simd.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/faiss/tests/test_heap.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/faiss/tests/test_hnsw.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/faiss/tests/test_ivfpq_codec.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/faiss/tests/test_ivfpq_indexing.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/faiss/tests/test_lowlevel_ivf.cpp" />
@@ -391,6 +397,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/faiss/tests/test_ondisk_ivf.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/faiss/tests/test_pairs_decoding.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/faiss/tests/test_params_override.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/faiss/tests/test_partitioning.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/faiss/tests/test_pq_encoding.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/faiss/tests/test_simdlib.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/faiss/tests/test_sliding_ivf.cpp" />
@@ -455,6 +462,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/IndexIVFAdditiveQuantizerFastScan.h" />
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/IndexIVFFastScan.h" />
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/IndexIVFFlat.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/IndexIVFIndependentQuantizer.h" />
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/IndexIVFPQ.h" />
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/IndexIVFPQFastScan.h" />
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/IndexIVFPQR.h" />
@@ -506,6 +514,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/gpu/StandardGpuResources.h" />
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/gpu/impl/IndexUtils.h" />
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/gpu/impl/InterleavedCodes.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/gpu/impl/RaftUtils.h" />
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/gpu/impl/RemapIndices.h" />
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/gpu/perf/IndexWrapper-inl.h" />
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/gpu/perf/IndexWrapper.h" />
@@ -546,6 +555,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/impl/lattice_Zn.h" />
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/impl/platform_macros.h" />
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/impl/pq4_fast_scan.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/impl/residual_quantizer_encode_steps.h" />
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/impl/simd_result_handlers.h" />
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/index_factory.h" />
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/index_io.h" />
@@ -561,6 +571,8 @@
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/utils/approx_topk/approx_topk.h" />
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/utils/approx_topk/avx2-inl.h" />
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/utils/approx_topk/generic.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/utils/approx_topk/mode.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/utils/approx_topk_hamming/approx_topk_hamming.h" />
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/utils/distances.h" />
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/utils/distances_fused/avx512.h" />
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/utils/distances_fused/distances_fused.h" />
@@ -572,8 +584,14 @@
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/utils/fp16.h" />
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/utils/hamming-inl.h" />
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/utils/hamming.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/utils/hamming_distance/avx2-inl.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/utils/hamming_distance/common.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/utils/hamming_distance/generic-inl.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/utils/hamming_distance/hamdis-inl.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/utils/hamming_distance/neon-inl.h" />
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/utils/ordered_key_value.h" />
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/utils/partitioning.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/utils/prefetch.h" />
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/utils/quantize_lut.h" />
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/utils/random.h" />
     <ClInclude Include="../../thirdparty/owemdjee/faiss/faiss/utils/simdlib.h" />
@@ -587,7 +605,9 @@
     <Text Include="../../thirdparty/owemdjee/faiss/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/faiss/CODE_OF_CONDUCT.md" />
     <Text Include="../../thirdparty/owemdjee/faiss/CONTRIBUTING.md" />
+    <Text Include="../../thirdparty/owemdjee/faiss/Doxyfile" />
     <Text Include="../../thirdparty/owemdjee/faiss/INSTALL.md" />
+    <Text Include="../../thirdparty/owemdjee/faiss/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/faiss/README.md" />
     <Text Include="../../thirdparty/owemdjee/faiss/benchs/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/faiss/benchs/README.md" />
@@ -598,10 +618,16 @@
     <Text Include="../../thirdparty/owemdjee/faiss/benchs/bench_all_ivf/datasets_oss.py" />
     <Text Include="../../thirdparty/owemdjee/faiss/benchs/bench_all_ivf/make_groundtruth.py" />
     <Text Include="../../thirdparty/owemdjee/faiss/benchs/bench_all_ivf/parse_bench_all_ivf.py" />
+    <Text Include="../../thirdparty/owemdjee/faiss/benchs/bench_all_ivf/run_on_cluster_generic.bash" />
     <Text Include="../../thirdparty/owemdjee/faiss/benchs/bench_big_batch_ivf.py" />
     <Text Include="../../thirdparty/owemdjee/faiss/benchs/bench_for_interrupt.py" />
+    <Text Include="../../thirdparty/owemdjee/faiss/benchs/bench_fw/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/faiss/benchs/bench_fw/benchmark.py" />
+    <Text Include="../../thirdparty/owemdjee/faiss/benchs/bench_fw/benchmark_io.py" />
+    <Text Include="../../thirdparty/owemdjee/faiss/benchs/bench_fw/descriptors.py" />
     <Text Include="../../thirdparty/owemdjee/faiss/benchs/bench_gpu_1bn.py" />
     <Text Include="../../thirdparty/owemdjee/faiss/benchs/bench_gpu_sift1m.py" />
+    <Text Include="../../thirdparty/owemdjee/faiss/benchs/bench_hamming_knn.py" />
     <Text Include="../../thirdparty/owemdjee/faiss/benchs/bench_hnsw.py" />
     <Text Include="../../thirdparty/owemdjee/faiss/benchs/bench_hybrid_cpu_gpu.py" />
     <Text Include="../../thirdparty/owemdjee/faiss/benchs/bench_index_flat.py" />
@@ -625,6 +651,7 @@
     <Text Include="../../thirdparty/owemdjee/faiss/benchs/distributed_ondisk/make_index_vslice.py" />
     <Text Include="../../thirdparty/owemdjee/faiss/benchs/distributed_ondisk/make_trained_index.py" />
     <Text Include="../../thirdparty/owemdjee/faiss/benchs/distributed_ondisk/merge_to_ondisk.py" />
+    <Text Include="../../thirdparty/owemdjee/faiss/benchs/distributed_ondisk/run_on_cluster.bash" />
     <Text Include="../../thirdparty/owemdjee/faiss/benchs/distributed_ondisk/search_server.py" />
     <Text Include="../../thirdparty/owemdjee/faiss/benchs/kmeans_mnist.py" />
     <Text Include="../../thirdparty/owemdjee/faiss/benchs/link_and_code/README.md" />
@@ -636,18 +663,28 @@
     <Text Include="../../thirdparty/owemdjee/faiss/c_api/gpu/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/faiss/cmake/FindMKL.cmake" />
     <Text Include="../../thirdparty/owemdjee/faiss/cmake/faiss-config.cmake.in" />
+    <Text Include="../../thirdparty/owemdjee/faiss/conda/conda_build_config.yaml" />
+    <Text Include="../../thirdparty/owemdjee/faiss/conda/faiss-gpu-raft/build-lib.sh" />
+    <Text Include="../../thirdparty/owemdjee/faiss/conda/faiss-gpu-raft/build-pkg.sh" />
+    <Text Include="../../thirdparty/owemdjee/faiss/conda/faiss-gpu-raft/meta.yaml" />
+    <Text Include="../../thirdparty/owemdjee/faiss/conda/faiss-gpu-raft/test_cpu_dispatch.sh" />
     <Text Include="../../thirdparty/owemdjee/faiss/conda/faiss-gpu/build-lib.sh" />
     <Text Include="../../thirdparty/owemdjee/faiss/conda/faiss-gpu/build-pkg.sh" />
-    <Text Include="../../thirdparty/owemdjee/faiss/conda/faiss-gpu/install-cmake.sh" />
+    <Text Include="../../thirdparty/owemdjee/faiss/conda/faiss-gpu/meta.yaml" />
     <Text Include="../../thirdparty/owemdjee/faiss/conda/faiss-gpu/test_cpu_dispatch.sh" />
+    <Text Include="../../thirdparty/owemdjee/faiss/conda/faiss/build-lib-arm64.sh" />
+    <Text Include="../../thirdparty/owemdjee/faiss/conda/faiss/build-lib-osx.sh" />
     <Text Include="../../thirdparty/owemdjee/faiss/conda/faiss/build-lib.bat" />
     <Text Include="../../thirdparty/owemdjee/faiss/conda/faiss/build-lib.sh" />
+    <Text Include="../../thirdparty/owemdjee/faiss/conda/faiss/build-pkg-arm64.sh" />
+    <Text Include="../../thirdparty/owemdjee/faiss/conda/faiss/build-pkg-osx.sh" />
     <Text Include="../../thirdparty/owemdjee/faiss/conda/faiss/build-pkg.bat" />
     <Text Include="../../thirdparty/owemdjee/faiss/conda/faiss/build-pkg.sh" />
-    <Text Include="../../thirdparty/owemdjee/faiss/conda/faiss/install-cmake.sh" />
+    <Text Include="../../thirdparty/owemdjee/faiss/conda/faiss/meta.yaml" />
     <Text Include="../../thirdparty/owemdjee/faiss/conda/faiss/test_cpu_dispatch.sh" />
     <Text Include="../../thirdparty/owemdjee/faiss/contrib/README.md" />
     <Text Include="../../thirdparty/owemdjee/faiss/contrib/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/faiss/contrib/big_batch_search.py" />
     <Text Include="../../thirdparty/owemdjee/faiss/contrib/client_server.py" />
     <Text Include="../../thirdparty/owemdjee/faiss/contrib/clustering.py" />
     <Text Include="../../thirdparty/owemdjee/faiss/contrib/datasets.py" />
@@ -675,6 +712,7 @@
     <Text Include="../../thirdparty/owemdjee/faiss/faiss/gpu/test/test_gpu_index_ivfsq.py" />
     <Text Include="../../thirdparty/owemdjee/faiss/faiss/gpu/test/test_gpu_index_serialize.py" />
     <Text Include="../../thirdparty/owemdjee/faiss/faiss/gpu/test/test_multi_gpu.py" />
+    <Text Include="../../thirdparty/owemdjee/faiss/faiss/gpu/test/test_raft.py" />
     <Text Include="../../thirdparty/owemdjee/faiss/faiss/gpu/test/torch_test_contrib_gpu.py" />
     <Text Include="../../thirdparty/owemdjee/faiss/faiss/python/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/faiss/faiss/python/__init__.py" />

@@ -25,7 +25,7 @@ Pulling in the header ensures that the array gets flagged as "someone
 outside this compilation unit might reference this" and so it will always
 be supplied to the linker. */
 
-#ifdef HAVE_CONFIG_H
+#if defined(HAVE_CONFIG_H) && !defined(PCRE2_AMALGAMETE)
 #include "config.h"
 #endif
 

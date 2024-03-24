@@ -1,5 +1,147 @@
-3.0 beta2
-=========
+3.1 pre-beta
+============
+
+### Significant changes relative to 3.0.2:
+
+1. The libjpeg-turbo source tree has been reorganized to make it easier to find
+the README files, license information, and build instructions.  The
+documentation for the libjpeg API library and associated programs has been
+moved into the **doc/** subdirectory, and all C source code and headers have
+been moved into a new **src/** subdirectory.
+
+
+3.0.3
+=====
+
+### Significant changes relative to 3.0.2:
+
+1. Fixed an issue in the build system, introduced in 3.0.2, that caused all
+libjpeg-turbo components to depend on the Visual C++ run-time DLL when built
+with Visual C++ and CMake 3.15 or later, regardless of value of the
+`WITH_CRT_DLL` CMake variable.
+
+
+3.0.2
+=====
+
+### Significant changes relative to 3.0.1:
+
+1. Fixed a signed integer overflow in the `tj3CompressFromYUV8()`,
+`tj3DecodeYUV8()`, `tj3DecompressToYUV8()`, and `tj3EncodeYUV8()` functions,
+detected by the Clang and GCC undefined behavior sanitizers, that could be
+triggered by setting the `align` parameter to an unreasonably large value.
+This issue did not pose a security threat, but removing the warning made it
+easier to detect actual security issues, should they arise in the future.
+
+2. Introduced a new parameter (`TJPARAM_MAXMEMORY` in the TurboJPEG C API and
+`TJ.PARAM_MAXMEMORY` in the TurboJPEG Java API) and a corresponding TJBench
+option (`-maxmemory`) for specifying the maximum amount of memory (in
+megabytes) that will be allocated for intermediate buffers, which are used with
+progressive JPEG compression and decompression, optimized baseline entropy
+coding, lossless JPEG compression, and lossless transformation.  The new
+parameter and option serve the same purpose as the `max_memory_to_use` field in
+the `jpeg_memory_mgr` struct in the libjpeg API, the `JPEGMEM` environment
+variable, and the cjpeg/djpeg/jpegtran `-maxmemory` option.
+
+3. Introduced a new parameter (`TJPARAM_MAXPIXELS` in the TurboJPEG C API and
+`TJ.PARAM_MAXPIXELS` in the TurboJPEG Java API) and a corresponding TJBench
+option (`-maxpixels`) for specifying the maximum number of pixels that the
+decompression, lossless transformation, and packed-pixel image loading
+functions/methods will process.
+
+4. Fixed an error ("Unsupported color conversion request") that occurred when
+attempting to decompress a 3-component lossless JPEG image without an Adobe
+APP14 marker.  The decompressor now assumes that a 3-component lossless JPEG
+image without an Adobe APP14 marker uses the RGB colorspace if its component
+IDs are 1, 2, and 3.
+
+
+3.0.1
+=====
+
+### Significant changes relative to 3.0.0:
+
+1. The x86-64 SIMD functions now use a standard stack frame, prologue, and
+epilogue so that debuggers and profilers can reliably capture backtraces from
+within the functions.
+
+2. Fixed two minor issues in the interblock smoothing algorithm that caused
+mathematical (but not necessarily perceptible) edge block errors when
+decompressing progressive JPEG images exactly two MCU blocks in width or that
+use vertical chrominance subsampling.
+
+3. Fixed a regression introduced by 3.0 beta2[6] that, in rare cases, caused
+the C Huffman encoder (which is not used by default on x86 and Arm CPUs) to
+generate incorrect results if the Neon SIMD extensions were explicitly disabled
+at build time (by setting the `WITH_SIMD` CMake variable to `0`) in an AArch64
+build of libjpeg-turbo.
+
+
+3.0.0
+=====
+
+### Significant changes relative to 3.0 beta2:
+
+1. The TurboJPEG API now supports 4:4:1 (transposed 4:1:1) chrominance
+subsampling, which allows losslessly transposed or rotated 4:1:1 JPEG images to
+be losslessly cropped, partially decompressed, or decompressed to planar YUV
+images.
+
+2. Fixed various segfaults and buffer overruns (CVE-2023-2804) that occurred
+when attempting to decompress various specially-crafted malformed
+12-bit-per-component and 16-bit-per-component lossless JPEG images using color
+quantization or merged chroma upsampling/color conversion.  The underlying
+cause of these issues was that the color quantization and merged chroma
+upsampling/color conversion algorithms were not designed with lossless
+decompression in mind.  Since libjpeg-turbo explicitly does not support color
+conversion when compressing or decompressing lossless JPEG images, merged
+chroma upsampling/color conversion never should have been enabled for such
+images.  Color quantization is a legacy feature that serves little or no
+purpose with lossless JPEG images, so it is also now disabled when
+decompressing such images.  (As a result, djpeg can no longer decompress a
+lossless JPEG image into a GIF image.)
+
+3. Fixed an oversight in 1.4 beta1[8] that caused various segfaults and buffer
+overruns when attempting to decompress various specially-crafted malformed
+12-bit-per-component JPEG images using djpeg with both color quantization and
+RGB565 color conversion enabled.
+
+4. Fixed an issue whereby `jpeg_crop_scanline()` sometimes miscalculated the
+downsampled width for components with 4x2 or 2x4 subsampling factors if
+decompression scaling was enabled.  This caused the components to be upsampled
+incompletely, which caused the color converter to read from uninitialized
+memory.  With 12-bit data precision, this caused a buffer overrun or underrun
+and subsequent segfault if the sample value read from uninitialized memory was
+outside of the valid sample range.
+
+5. Fixed a long-standing issue whereby the `tj3Transform()` function, when used
+with the `TJXOP_TRANSPOSE`, `TJXOP_TRANSVERSE`, `TJXOP_ROT90`, or
+`TJXOP_ROT270` transform operation and without automatic JPEG destination
+buffer (re)allocation or lossless cropping, computed the worst-case transformed
+JPEG image size based on the source image dimensions rather than the
+transformed image dimensions.  If a calling program allocated the JPEG
+destination buffer based on the transformed image dimensions, as the API
+documentation instructs, and attempted to transform a specially-crafted 4:2:2,
+4:4:0, 4:1:1, or 4:4:1 JPEG source image containing a large amount of metadata,
+the issue caused `tj3Transform()` to overflow the JPEG destination buffer
+rather than fail gracefully.  The issue could be worked around by setting
+`TJXOPT_COPYNONE`.  Note that, irrespective of this issue, `tj3Transform()`
+cannot reliably transform JPEG source images that contain a large amount of
+metadata unless automatic JPEG destination buffer (re)allocation is used or
+`TJXOPT_COPYNONE` is set.
+
+6. Fixed a regression introduced by 3.0 beta2[6] that prevented the djpeg
+`-map` option from working when decompressing 12-bit-per-component lossy JPEG
+images.
+
+7. Fixed an issue that caused the C Huffman encoder (which is not used by
+default on x86 and Arm CPUs) to read from uninitialized memory when attempting
+to transform a specially-crafted malformed arithmetic-coded JPEG source image
+into a baseline Huffman-coded JPEG destination image.
+
+
+2.1.91 (3.0 beta2)
+==================
 
 ### Significant changes relative to 2.1.5.1:
 
@@ -102,8 +244,8 @@ information.
 `TJPARAM_LOSSLESSPT`/`TJ.PARAM_LOSSLESSPT`), and a cjpeg/TJBench option
 (`-lossless`) can be used to create a lossless JPEG image.  (Decompression of
 lossless JPEG images is handled automatically.)  Refer to
-[libjpeg.txt](libjpeg.txt), [usage.txt](usage.txt), and the TurboJPEG API
-documentation for more details.
+[libjpeg.txt](doc/libjpeg.txt), [usage.txt](doc/usage.txt), and the TurboJPEG
+API documentation for more details.
 
 6. Added support for 12-bit-per-component (lossy and lossless) and
 16-bit-per-component (lossless) JPEG images to the libjpeg and TurboJPEG APIs:
@@ -130,8 +272,8 @@ to create a 12-bit-per-component or 16-bit-per-component JPEG image.
 (Decompression and transformation of 12-bit-per-component and
 16-bit-per-component JPEG images is handled automatically.)
 
-    Refer to [libjpeg.txt](libjpeg.txt), [usage.txt](usage.txt), and the
-TurboJPEG API documentation for more details.
+    Refer to [libjpeg.txt](doc/libjpeg.txt), [usage.txt](doc/usage.txt), and
+the TurboJPEG API documentation for more details.
 
 
 2.1.5.1
@@ -335,8 +477,8 @@ transform a specially-crafted malformed JPEG image.
 
 ### Significant changes relative to 2.1 beta1:
 
-1. Fixed a regression introduced by 2.1 beta1[6(b)] whereby attempting to
-decompress certain progressive JPEG images with one or more component planes of
+1. Fixed a regression (CVE-2021-29390) introduced by 2.1 beta1[6(b)] whereby
+attempting to decompress certain progressive JPEG images with one or more
 width 8 or less caused a buffer overrun.
 
 2. Fixed a regression introduced by 2.1 beta1[6(b)] whereby attempting to
@@ -1210,7 +1352,7 @@ use of AltiVec instructions.
 
 2. Added two new libjpeg API functions (`jpeg_skip_scanlines()` and
 `jpeg_crop_scanline()`) that can be used to partially decode a JPEG image.  See
-[libjpeg.txt](libjpeg.txt) for more details.
+[libjpeg.txt](doc/libjpeg.txt) for more details.
 
 3. The TJCompressor and TJDecompressor classes in the TurboJPEG Java API now
 implement the Closeable interface, so those classes can be used with a
@@ -2079,7 +2221,7 @@ and unit tests now work on those architectures.
 0.0.93
 ======
 
-### Significant changes since 0.0.91:
+### Significant changes relative to 0.0.91:
 
 1. 2982659: Fixed x86-64 build on FreeBSD systems
 

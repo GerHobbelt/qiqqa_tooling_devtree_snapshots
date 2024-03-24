@@ -88,6 +88,9 @@ sure both macros are undefined; an emulation function will then be used. */
 /* Define to 1 if you have the `memmove' function. */
 /* #undef HAVE_MEMMOVE */
 
+/* Define to 1 if you have the <memory.h> header file. */
+/* #undef HAVE_MEMORY_H */
+
 /* Define to 1 if you have the <minix/config.h> header file. */
 /* #undef HAVE_MINIX_CONFIG_H */
 
@@ -184,7 +187,7 @@ sure both macros are undefined; an emulation function will then be used. */
    matching attempt. The value is also used to limit a loop counter in
    pcre2_dfa_match(). There is a runtime interface for setting a different
    limit. The limit exists in order to catch runaway regular expressions that
-   take for ever to determine that they do not match. The default is set very
+   take forever to determine that they do not match. The default is set very
    large so that it does not accidentally catch legitimate cases. */
 #ifndef MATCH_LIMIT
 #define MATCH_LIMIT 10000000
@@ -218,6 +221,12 @@ sure both macros are undefined; an emulation function will then be used. */
 #define MAX_NAME_SIZE 32
 #endif
 
+/* The value of MAX_VARLOOKBEHIND specifies the default maximum length, in
+   characters, for a variable-length lookbehind assertion. */
+#ifndef MAX_VARLOOKBEHIND
+#define MAX_VARLOOKBEHIND 255
+#endif
+
 /* Defining NEVER_BACKSLASH_C locks out the use of \C in all patterns. */
 /* #undef NEVER_BACKSLASH_C */
 
@@ -239,7 +248,7 @@ sure both macros are undefined; an emulation function will then be used. */
 #define PACKAGE_NAME "PCRE2"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "PCRE2 10.42"
+#define PACKAGE_STRING "PCRE2 10.43-DEV"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "pcre2"
@@ -248,7 +257,7 @@ sure both macros are undefined; an emulation function will then be used. */
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "10.42"
+#define PACKAGE_VERSION "10.43-DEV"
 
 /* The value of PARENS_NEST_LIMIT specifies the maximum depth of nested
    parentheses (of any kind) in a pattern. This limits the amount of system
@@ -278,12 +287,17 @@ sure both macros are undefined; an emulation function will then be used. */
 /* Define to any value to include debugging code. */
 /* #undef PCRE2_DEBUG */
 
+/* to make a symbol visible */
+#define PCRE2_EXPORT
+
+
 /* If you are compiling for a system other than a Unix-like system or
    Win32, and it needs some magic to be inserted before the definition
    of a function that is exported by the library, define this macro to
    contain the relevant magic. If you do not define this macro, a suitable
-    __declspec value is used for Windows systems; in other environments
-   "extern" is used for a C compiler and "extern C" for a C++ compiler.
+   __declspec value is used for Windows systems; in other environments
+   a compiler relevant "extern" is used with any "visibility" related
+   attributes from PCRE2_EXPORT included.
    This macro apears at the start of every exported function that is part
    of the external API. It does not appear on functions that are "external"
    in the C sense, but which are internal to the library. */
@@ -322,6 +336,7 @@ sure both macros are undefined; an emulation function will then be used. */
 /* Define to any value to allow pcre2grep to be linked with libz, so that it
    is able to handle .gz files. */
 /* #undef SUPPORT_LIBZ */
+/* #undef SUPPORT_LIBZ_NG */
 
 /* Define to any value to enable callout script support in pcre2grep. */
 /* #undef SUPPORT_PCRE2GREP_CALLOUT */
@@ -439,9 +454,14 @@ sure both macros are undefined; an emulation function will then be used. */
 #ifndef _XOPEN_SOURCE
 /* # undef _XOPEN_SOURCE */
 #endif
+/* Enable general extensions on Solaris.  */
+#ifndef __EXTENSIONS__
+# define __EXTENSIONS__ 1
+#endif
+
 
 /* Version number of package */
-#define VERSION "10.42"
+#define VERSION "10.43-DEV"
 
 /* Number of bits in a file offset, on hosts where this is settable. */
 /* #undef _FILE_OFFSET_BITS */

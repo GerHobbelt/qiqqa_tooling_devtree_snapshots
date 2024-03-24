@@ -29,9 +29,6 @@
 extern "C" {
 #endif
 
-void ocr_set_leptonica_mem(fz_context* ctx);
-void ocr_clear_leptonica_mem(fz_context* ctx);
-
 void *ocr_init(fz_context *ctx, const char *language, const char *datadir);
 
 void ocr_fin(fz_context *ctx, void *api);
@@ -54,14 +51,21 @@ void ocr_recognise(fz_context *ctx,
 
 // --------
 
-void ocr_set_leptonica_stderr_handler(fz_context *ctx);
-
 #if defined(BUILD_MONOLITHIC)
+
 int tesseract_tool_main(int argc, const char** argv);
+int tesseract_get_page_gradient_main(int argc, const char** argv);
+int tesseract_svpaint_main(int argc, const char** argv);
+int tesseract_test_issue_845_main(int argc, const char **argv);
+int tesseract_test_issue_ML_1bba6c_main(int argc, const char **argv);
+int tesseract_basic_example_main(int argc, const char **argv);
+
 #endif
 
 #ifdef __cplusplus
 }
 #endif
+
+#include "../../thirdparty/tesseract/include/tesseract/capi_training_tools.h"
 
 #endif

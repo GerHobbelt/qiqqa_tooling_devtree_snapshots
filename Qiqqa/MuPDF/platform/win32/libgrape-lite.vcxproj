@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPE_LITE;GRAPE_LITE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPE_LITE;GRAPE_LITE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPE_LITE;GRAPE_LITE_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libgrape-lite;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPE_LITE;GRAPE_LITE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPE_LITE;GRAPE_LITE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPE_LITE;GRAPE_LITE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libgrape-lite;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPE_LITE;GRAPE_LITE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPE_LITE;GRAPE_LITE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPE_LITE;GRAPE_LITE_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libgrape-lite;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPE_LITE;GRAPE_LITE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPE_LITE;GRAPE_LITE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPE_LITE;GRAPE_LITE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libgrape-lite;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPE_LITE;GRAPE_LITE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPE_LITE;GRAPE_LITE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPE_LITE;GRAPE_LITE_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libgrape-lite;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPE_LITE;GRAPE_LITE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPE_LITE;GRAPE_LITE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPE_LITE;GRAPE_LITE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libgrape-lite;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPE_LITE;GRAPE_LITE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPE_LITE;GRAPE_LITE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPE_LITE;GRAPE_LITE_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libgrape-lite;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPE_LITE;GRAPE_LITE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPE_LITE;GRAPE_LITE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGRAPE_LITE;GRAPE_LITE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libgrape-lite;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -241,16 +241,26 @@
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/bfs/bfs_auto.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/bfs/bfs_auto_context.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/bfs/bfs_context.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/bfs/bfs_opt.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/bfs/bfs_opt_context.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/cdlp/cdlp.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/cdlp/cdlp_auto.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/cdlp/cdlp_auto_context.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/cdlp/cdlp_context.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/cdlp/cdlp_opt.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/cdlp/cdlp_opt_context.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/cdlp/cdlp_opt_ud.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/cdlp/cdlp_opt_ud_dense.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/cdlp/cdlp_utils.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/cuda/app_config.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/cuda/bfs/bfs.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/cuda/cdlp/cdlp.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/cuda/lcc/lcc.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/cuda/lcc/lcc_directed.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/cuda/lcc/lcc_directed_opt.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/cuda/lcc/lcc_directed_preprocess.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/cuda/lcc/lcc_opt.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/cuda/lcc/lcc_preprocess.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/cuda/pagerank/pagerank.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/cuda/sssp/sssp.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/cuda/wcc/wcc.h" />
@@ -259,28 +269,45 @@
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/lcc/lcc.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/lcc/lcc_auto.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/lcc/lcc_auto_context.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/lcc/lcc_beta.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/lcc/lcc_beta_context.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/lcc/lcc_context.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/lcc/lcc_directed.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/lcc/lcc_directed_context.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/lcc/lcc_opt.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/lcc/lcc_opt_context.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/pagerank/pagerank.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/pagerank/pagerank_auto.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/pagerank/pagerank_auto_context.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/pagerank/pagerank_context.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/pagerank/pagerank_directed.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/pagerank/pagerank_local.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/pagerank/pagerank_local_context.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/pagerank/pagerank_local_parallel.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/pagerank/pagerank_local_parallel_context.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/pagerank/pagerank_opt.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/pagerank/pagerank_parallel.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/pagerank/pagerank_parallel_context.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/pagerank/pagerank_push.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/pagerank/pagerank_push_context.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/pagerank/pagerank_push_opt.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/pagerank/pagerank_push_opt_context.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/run_app.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/run_app_opt.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/run_cuda_app.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/sssp/sssp.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/sssp/sssp_auto.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/sssp/sssp_auto_context.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/sssp/sssp_context.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/sssp/sssp_opt.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/sssp/sssp_opt_context.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/timer.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/wcc/wcc.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/wcc/wcc_auto.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/wcc/wcc_auto_context.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/wcc/wcc_context.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/wcc/wcc_opt.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/wcc/wcc_opt_context.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/gnn_sampler/append_only_edgecut_fragment.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/gnn_sampler/flags.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/examples/gnn_sampler/fragment_indices.h" />
@@ -337,13 +364,13 @@
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/grape/fragment/edgecut_fragment_base.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/grape/fragment/ev_fragment_loader.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/grape/fragment/ev_fragment_mutator.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/grape/fragment/ev_fragment_rebalance_loader.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/grape/fragment/fragment_base.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/grape/fragment/id_parser.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/grape/fragment/immutable_edgecut_fragment.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/grape/fragment/loader.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/grape/fragment/mutable_edgecut_fragment.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/grape/fragment/partitioner.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/grape/fragment/rebalancer.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/grape/grape.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/grape/graph/adj_list.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/grape/graph/de_mutable_csr.h" />
@@ -365,6 +392,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/grape/parallel/parallel_engine.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/grape/parallel/parallel_engine_spec.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/grape/parallel/parallel_message_manager.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/grape/parallel/parallel_message_manager_opt.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/grape/parallel/sync_buffer.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/grape/parallel/thread_local_message_buffer.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/grape/serialization/in_archive.h" />
@@ -380,6 +408,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/grape/utils/iterator_pair.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/grape/utils/string_view_vector.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/grape/utils/thread_pool.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/grape/utils/varint.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/grape/utils/vertex_array.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/grape/utils/vertex_set.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libgrape-lite/grape/vertex_map/global_vertex_map.h" />
@@ -391,6 +420,7 @@
     <Text Include="../../thirdparty/owemdjee/libgrape-lite/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libgrape-lite/CONTRIBUTING.md" />
     <Text Include="../../thirdparty/owemdjee/libgrape-lite/CPPLINT.cfg" />
+    <Text Include="../../thirdparty/owemdjee/libgrape-lite/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/libgrape-lite/NOTICE.txt" />
     <Text Include="../../thirdparty/owemdjee/libgrape-lite/Performance.md" />
     <Text Include="../../thirdparty/owemdjee/libgrape-lite/README.md" />
@@ -408,12 +438,30 @@
     <Text Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/sssp/README.md" />
     <Text Include="../../thirdparty/owemdjee/libgrape-lite/examples/analytical_apps/wcc/README.md" />
     <Text Include="../../thirdparty/owemdjee/libgrape-lite/examples/gnn_sampler/README.md" />
+    <Text Include="../../thirdparty/owemdjee/libgrape-lite/ldbc_driver/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/libgrape-lite/ldbc_driver/README.md" />
     <Text Include="../../thirdparty/owemdjee/libgrape-lite/ldbc_driver/bin/sh/compile-benchmark.sh" />
     <Text Include="../../thirdparty/owemdjee/libgrape-lite/ldbc_driver/bin/sh/prepare-benchmark.sh" />
     <Text Include="../../thirdparty/owemdjee/libgrape-lite/ldbc_driver/bin/sh/run-benchmark.sh" />
+    <Text Include="../../thirdparty/owemdjee/libgrape-lite/ldbc_driver/bin/sh/run-mpi.cpu.sh" />
+    <Text Include="../../thirdparty/owemdjee/libgrape-lite/ldbc_driver/bin/sh/run-mpi.gpu.sh" />
     <Text Include="../../thirdparty/owemdjee/libgrape-lite/ldbc_driver/bin/sh/run-mpi.sh" />
+    <Text Include="../../thirdparty/owemdjee/libgrape-lite/ldbc_driver/config-template/benchmark.properties" />
+    <Text Include="../../thirdparty/owemdjee/libgrape-lite/ldbc_driver/config-template/benchmarks/custom.properties" />
+    <Text Include="../../thirdparty/owemdjee/libgrape-lite/ldbc_driver/config-template/environment.properties" />
+    <Text Include="../../thirdparty/owemdjee/libgrape-lite/ldbc_driver/config-template/graphs.properties" />
+    <Text Include="../../thirdparty/owemdjee/libgrape-lite/ldbc_driver/config-template/graphs/p2p-31.properties" />
+    <Text Include="../../thirdparty/owemdjee/libgrape-lite/ldbc_driver/config-template/platform.properties" />
     <Text Include="../../thirdparty/owemdjee/libgrape-lite/ldbc_driver/run_ldbc.sh" />
+    <Text Include="../../thirdparty/owemdjee/libgrape-lite/ldbc_driver/src/main/java/science/atlarge/graphalytics/libgrape/LibgrapeJob.java" />
+    <Text Include="../../thirdparty/owemdjee/libgrape-lite/ldbc_driver/src/main/java/science/atlarge/graphalytics/libgrape/LibgrapePlatform.java" />
+    <Text Include="../../thirdparty/owemdjee/libgrape-lite/ldbc_driver/src/main/java/science/atlarge/graphalytics/libgrape/algorithms/bfs/BreadthFirstSearchJob.java" />
+    <Text Include="../../thirdparty/owemdjee/libgrape-lite/ldbc_driver/src/main/java/science/atlarge/graphalytics/libgrape/algorithms/cdlp/CommunityDetectionJob.java" />
+    <Text Include="../../thirdparty/owemdjee/libgrape-lite/ldbc_driver/src/main/java/science/atlarge/graphalytics/libgrape/algorithms/lcc/LocalClusteringCoefficientJob.java" />
+    <Text Include="../../thirdparty/owemdjee/libgrape-lite/ldbc_driver/src/main/java/science/atlarge/graphalytics/libgrape/algorithms/pr/PageRankJob.java" />
+    <Text Include="../../thirdparty/owemdjee/libgrape-lite/ldbc_driver/src/main/java/science/atlarge/graphalytics/libgrape/algorithms/sssp/SingleSourceShortestPathsJob.java" />
+    <Text Include="../../thirdparty/owemdjee/libgrape-lite/ldbc_driver/src/main/java/science/atlarge/graphalytics/libgrape/algorithms/wcc/ConnectedComponentsJob.java" />
+    <Text Include="../../thirdparty/owemdjee/libgrape-lite/ldbc_driver/src/main/resources/project/build/platform.properties" />
     <Text Include="../../thirdparty/owemdjee/libgrape-lite/libgrapelite-config-version.in.cmake" />
     <Text Include="../../thirdparty/owemdjee/libgrape-lite/libgrapelite-config.in.cmake" />
     <Text Include="../../thirdparty/owemdjee/libgrape-lite/misc/app_tests.sh" />
@@ -421,7 +469,6 @@
     <Text Include="../../thirdparty/owemdjee/libgrape-lite/misc/cuda_app_tests.sh" />
     <Text Include="../../thirdparty/owemdjee/libgrape-lite/misc/sampler_test.sh" />
     <Xml Include="../../thirdparty/owemdjee/libgrape-lite/ldbc_driver/pom.xml" />
-    <Xml Include="../../thirdparty/owemdjee/libgrape-lite/ldbc_driver/src/main/assembly/bin-granula.xml" />
     <Xml Include="../../thirdparty/owemdjee/libgrape-lite/ldbc_driver/src/main/assembly/bin.xml" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >

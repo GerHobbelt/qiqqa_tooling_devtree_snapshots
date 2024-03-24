@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------
 //
 //  Little Color Management System
-//  Copyright (c) 1998-2021 Marti Maria Saguer
+//  Copyright (c) 1998-2023 Marti Maria Saguer
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the "Software"),
@@ -25,6 +25,9 @@
 //
 
 #include "testcms2.h"
+
+#include "monolithic_examples.h"
+
 
 // A single check. Returns 1 if success, 0 if failed
 typedef cmsInt32Number (*TestFn)(cmsContext);
@@ -892,8 +895,8 @@ cmsBool  IsGoodWordPrec(const char *title, cmsUInt16Number in, cmsUInt16Number o
 static
 cmsInt32Number TestSingleFixed15_16(cmsContext ContextID, cmsFloat64Number d)
 {
-    cmsS15Fixed16Number f = _cmsDoubleTo15Fixed16(ContextID, d);
-    cmsFloat64Number RoundTrip = _cms15Fixed16toDouble(ContextID, f);
+    cmsS15Fixed16Number f = _cmsDoubleTo15Fixed16(d);
+    cmsFloat64Number RoundTrip = _cms15Fixed16toDouble(f);
     cmsFloat64Number Error     = fabs(d - RoundTrip);
 
     return ( Error <= FIXED_PRECISION_15_16);
@@ -919,8 +922,8 @@ cmsInt32Number CheckFixedPoint15_16(cmsContext ContextID)
 static
 cmsInt32Number TestSingleFixed8_8(cmsContext ContextID, cmsFloat64Number d)
 {
-    cmsS15Fixed16Number f = _cmsDoubleTo8Fixed8(ContextID, d);
-    cmsFloat64Number RoundTrip = _cms8Fixed8toDouble(ContextID, (cmsUInt16Number) f);
+    cmsS15Fixed16Number f = _cmsDoubleTo8Fixed8(d);
+    cmsFloat64Number RoundTrip = _cms8Fixed8toDouble((cmsUInt16Number) f);
     cmsFloat64Number Error     = fabs(d - RoundTrip);
 
     return ( Error <= FIXED_PRECISION_8_8);
@@ -948,13 +951,13 @@ cmsInt32Number CheckD50Roundtrip(cmsContext ContextID)
     cmsFloat64Number cmsD50Y_2 =  1.0;
     cmsFloat64Number cmsD50Z_2 = 0.82490540;
 
-    cmsS15Fixed16Number xe = _cmsDoubleTo15Fixed16(ContextID, cmsD50X);
-    cmsS15Fixed16Number ye = _cmsDoubleTo15Fixed16(ContextID, cmsD50Y);
-    cmsS15Fixed16Number ze = _cmsDoubleTo15Fixed16(ContextID, cmsD50Z);
+    cmsS15Fixed16Number xe = _cmsDoubleTo15Fixed16(cmsD50X);
+    cmsS15Fixed16Number ye = _cmsDoubleTo15Fixed16(cmsD50Y);
+    cmsS15Fixed16Number ze = _cmsDoubleTo15Fixed16(cmsD50Z);
 
-    cmsFloat64Number x =  _cms15Fixed16toDouble(ContextID, xe);
-    cmsFloat64Number y =  _cms15Fixed16toDouble(ContextID, ye);
-    cmsFloat64Number z =  _cms15Fixed16toDouble(ContextID, ze);
+    cmsFloat64Number x =  _cms15Fixed16toDouble(xe);
+    cmsFloat64Number y =  _cms15Fixed16toDouble(ye);
+    cmsFloat64Number z =  _cms15Fixed16toDouble(ze);
 
     double dx = fabs(cmsD50X - x);
     double dy = fabs(cmsD50Y - y);
@@ -968,13 +971,13 @@ cmsInt32Number CheckD50Roundtrip(cmsContext ContextID)
         return 0;
     }
 
-    xe = _cmsDoubleTo15Fixed16(ContextID, cmsD50X_2);
-    ye = _cmsDoubleTo15Fixed16(ContextID, cmsD50Y_2);
-    ze = _cmsDoubleTo15Fixed16(ContextID, cmsD50Z_2);
+    xe = _cmsDoubleTo15Fixed16(cmsD50X_2);
+    ye = _cmsDoubleTo15Fixed16(cmsD50Y_2);
+    ze = _cmsDoubleTo15Fixed16(cmsD50Z_2);
 
-    x =  _cms15Fixed16toDouble(ContextID, xe);
-    y =  _cms15Fixed16toDouble(ContextID, ye);
-    z =  _cms15Fixed16toDouble(ContextID, ze);
+    x =  _cms15Fixed16toDouble(xe);
+    y =  _cms15Fixed16toDouble(ye);
+    z =  _cms15Fixed16toDouble(ze);
 
     dx = fabs(cmsD50X_2 - x);
     dy = fabs(cmsD50Y_2 - y);
@@ -3992,11 +3995,11 @@ cmsInt32Number CheckFormatters16(cmsContext ContextID)
    C( TYPE_KYMC5_8           );
    C( TYPE_KYMC5_16          );
    C( TYPE_KYMC5_16_SE       );
-   C( TYPE_CMYK6_8          );
-   C( TYPE_CMYK6_8_PLANAR   );
-   C( TYPE_CMYK6_16         );
-   C( TYPE_CMYK6_16_PLANAR  );
-   C( TYPE_CMYK6_16_SE      );
+   C( TYPE_CMYK6_8           );
+   C( TYPE_CMYK6_8_PLANAR    );
+   C( TYPE_CMYK6_16          );
+   C( TYPE_CMYK6_16_PLANAR   );
+   C( TYPE_CMYK6_16_SE       );
    C( TYPE_CMYK7_8           );
    C( TYPE_CMYK7_16          );
    C( TYPE_CMYK7_16_SE       );
@@ -4192,7 +4195,7 @@ cmsInt32Number CheckFormattersFloat(cmsContext ContextID)
     C( TYPE_RGB_DBL  );
     C( TYPE_BGR_DBL  );
     C( TYPE_CMYK_DBL );
-    C( TYPE_XYZ_FLT );
+    C( TYPE_XYZ_FLT  );
 
 #ifndef CMS_NO_HALF_SUPPORT
    C( TYPE_GRAY_HALF_FLT );
@@ -4354,7 +4357,6 @@ cmsInt32Number CheckGamma(cmsContext ContextID, cmsInt32Number Pass, cmsHPROFILE
     switch (Pass) {
 
         case 1:
-
             g = cmsBuildGamma(ContextID, 1.0);
             rc = cmsWriteTag(ContextID, hProfile, tag, g);
             cmsFreeToneCurve(ContextID, g);
@@ -4496,7 +4498,6 @@ cmsInt32Number CheckDateTime(cmsContext ContextID, cmsInt32Number Pass,  cmsHPRO
     switch (Pass) {
 
         case 1:
-
             Holder.tm_hour = 1;
             Holder.tm_min = 2;
             Holder.tm_sec = 3;
@@ -4538,7 +4539,6 @@ cmsInt32Number CheckNamedColor(cmsContext ContextID, cmsInt32Number Pass,  cmsHP
     switch (Pass) {
 
     case 1:
-
         nc = cmsAllocNamedColorList(ContextID, 0, 4, "prefix", "suffix");
         if (nc == NULL) return 0;
 
@@ -4556,7 +4556,6 @@ cmsInt32Number CheckNamedColor(cmsContext ContextID, cmsInt32Number Pass,  cmsHP
         return rc;
 
     case 2:
-
         nc = (cmsNAMEDCOLORLIST *) cmsReadTag(ContextID, hProfile, tag);
         if (nc == NULL) return 0;
 
@@ -4601,7 +4600,6 @@ cmsInt32Number CheckLUT(cmsContext ContextID, cmsInt32Number Pass,  cmsHPROFILE 
     switch (Pass) {
 
         case 1:
-
             Lut = cmsPipelineAlloc(ContextID, 3, 3);
             if (Lut == NULL) return 0;
 
@@ -5336,7 +5334,7 @@ cmsInt32Number Check_cicp(cmsContext ContextID, cmsInt32Number Pass, cmsHPROFILE
         s.TransferCharacteristics = 13;
         s.MatrixCoefficients = 0;
         s.VideoFullRangeFlag = 1;
-        
+
         if (!cmsWriteTag(ContextID, hProfile, cmsSigcicpTag, &s)) return 0;
         return 1;
 
@@ -5355,6 +5353,73 @@ cmsInt32Number Check_cicp(cmsContext ContextID, cmsInt32Number Pass, cmsHPROFILE
     }
 
 }
+
+
+static
+void SetMHC2Matrix(cmsFloat64Number XYZ2XYZmatrix[3][4])
+{
+    XYZ2XYZmatrix[0][0] = 0.5; XYZ2XYZmatrix[0][1] = 0.1; XYZ2XYZmatrix[0][2] = 0.1; XYZ2XYZmatrix[0][3] = 0.0;
+    XYZ2XYZmatrix[1][0] = 0.0; XYZ2XYZmatrix[1][1] = 1.0; XYZ2XYZmatrix[1][2] = 0.0; XYZ2XYZmatrix[1][3] = 0.0;
+    XYZ2XYZmatrix[2][0] = 0.3; XYZ2XYZmatrix[2][1] = 0.2; XYZ2XYZmatrix[2][2] = 0.4; XYZ2XYZmatrix[2][3] = 0.0;
+}
+
+static
+cmsBool CloseEnough(cmsFloat64Number a, cmsFloat64Number b)
+{
+    return fabs(b - a) < (1.0 / 65535.0);
+}
+
+static
+cmsBool IsOriginalMHC2Matrix(cmsContext ContextID, cmsFloat64Number XYZ2XYZmatrix[3][4])
+{
+    cmsFloat64Number m[3][4];
+    int i, j;
+
+    SetMHC2Matrix(m);
+
+    for (i = 0; i < 3; i++)
+        for (j = 0; j < 4; j++)
+            if (!CloseEnough(XYZ2XYZmatrix[i][j], m[i][j])) return FALSE;
+
+    return TRUE;
+}
+
+
+static
+cmsInt32Number Check_MHC2(cmsContext ContextID, cmsInt32Number Pass, cmsHPROFILE hProfile)
+{
+    cmsMHC2Type* v;
+    cmsMHC2Type  s;
+    double curve[] = { 0, 0.5, 1.0 };
+
+    switch (Pass) {
+
+    case 1:
+        SetMHC2Matrix(s.XYZ2XYZmatrix);
+        s.CurveEntries = 3;
+        s.GreenCurve = curve;
+        s.RedCurve = curve;
+        s.BlueCurve = curve;
+        s.MinLuminance = 0.1;
+        s.PeakLuminance = 100.0;
+        
+        if (!cmsWriteTag(ContextID, hProfile, cmsSigMHC2Tag, &s)) return 0;
+        return 1;
+
+    case 2:
+        v = (cmsMHC2Type*)cmsReadTag(ContextID, hProfile, cmsSigMHC2Tag);
+        if (v == NULL) return 0;
+
+        if (!IsOriginalMHC2Matrix(ContextID, v->XYZ2XYZmatrix)) return 0;
+        if (v->CurveEntries != 3) return 0;
+        return 1;
+
+    default:
+        return 0;
+    }
+
+}
+
 
 // This is a very big test that checks every single tag
 static
@@ -5503,6 +5568,10 @@ cmsInt32Number CheckProfileCreation(cmsContext ContextID)
 
         SubTest("cicp Video Signal Type");
         if (!Check_cicp(ContextID, Pass, h)) goto Error;
+
+        SubTest("Microsoft MHC2 tag");
+        if (!Check_MHC2(ContextID, Pass, h)) goto Error;
+
 
         if (Pass == 1) {
             cmsSaveProfileToFile(ContextID, h, "alltags.icc");
@@ -7913,9 +7982,9 @@ cmsInt32Number CheckMeta(cmsContext ContextID)
     //ERROR: Corrupted tag 'meta'
     //test: test.c:59: main: Assertion `dict' failed.
     dict = cmsReadTag(ContextID, p, cmsSigMetaTag);
-   if (dict == NULL) return 0;
+    if (dict == NULL) return 0;
 
-   cmsCloseProfile(ContextID, p);
+    cmsCloseProfile(ContextID, p);
     return 1;
 }
 
@@ -8376,6 +8445,65 @@ int Check_sRGB_Rountrips(cmsContext contextID)
     return 1;
 }
 
+/**
+* Check OKLab colorspace
+*/
+static
+int Check_OkLab(cmsContext ContextID)
+{
+    cmsHPROFILE hOkLab = cmsCreate_OkLabProfile(ContextID);
+    cmsHPROFILE hXYZ = cmsCreateXYZProfile(ContextID);
+    cmsCIEXYZ xyz, xyz2;
+    cmsCIELab okLab;
+	cmsFloat64Number dist, Max = 0;
+
+    cmsHTRANSFORM xform  = cmsCreateTransform(ContextID, hXYZ, TYPE_XYZ_DBL,  hOkLab, TYPE_OKLAB_DBL, INTENT_RELATIVE_COLORIMETRIC, 0);
+    cmsHTRANSFORM xform2 = cmsCreateTransform(ContextID, hOkLab, TYPE_OKLAB_DBL, hXYZ, TYPE_XYZ_DBL,  INTENT_RELATIVE_COLORIMETRIC, 0);
+
+    /**
+    * D50 should be converted to white by PCS definition
+    */
+    xyz.X = 0.9642; xyz.Y = 1.0000; xyz.Z = 0.8249;
+    cmsDoTransform(ContextID, xform, &xyz, &okLab, 1);
+    cmsDoTransform(ContextID, xform2, &okLab, &xyz2, 1);
+
+	// XYZ to OkLab and back should be performed at 1E-12 accuracy at least
+	dist = cmsXYZDeltaE(ContextID, &xyz, &xyz2);
+	if (dist > Max) Max = dist;
+
+
+    xyz.X = 1.0; xyz.Y = 0.0; xyz.Z = 0.0;
+    cmsDoTransform(ContextID, xform, &xyz, &okLab, 1);
+    cmsDoTransform(ContextID, xform2, &okLab, &xyz2, 1);
+
+	dist = cmsXYZDeltaE(ContextID, &xyz, &xyz2);
+	if (dist > Max) Max = dist;
+
+
+    xyz.X = 0.0; xyz.Y = 1.0; xyz.Z = 0.0;
+    cmsDoTransform(ContextID, xform, &xyz, &okLab, 1);
+    cmsDoTransform(ContextID, xform2, &okLab, &xyz2, 1);
+
+	dist = cmsXYZDeltaE(ContextID, &xyz, &xyz2);
+	if (dist > Max) Max = dist;
+
+
+    xyz.X = 0.0; xyz.Y = 0.0; xyz.Z = 1.0;
+    cmsDoTransform(ContextID, xform, &xyz, &okLab, 1);
+    cmsDoTransform(ContextID, xform2, &okLab, &xyz2, 1);
+
+	dist = cmsXYZDeltaE(ContextID, &xyz, &xyz2);
+	if (dist > Max) Max = dist;
+
+
+    cmsDeleteTransform(ContextID, xform);
+    cmsDeleteTransform(ContextID, xform2);
+    cmsCloseProfile(ContextID, hOkLab);
+    cmsCloseProfile(ContextID, hXYZ);
+
+	return Max < 1E-12;
+}
+
 static
 cmsHPROFILE createRgbGamma(cmsContext contextID, cmsFloat64Number g)
 {
@@ -8505,6 +8633,40 @@ int CheckLinearSpacesOptimization(cmsContext contextID)
 #endif
 
 
+
+static
+int CheckBadCGATS(cmsContext ContextID)
+{
+    const char* bad_it8 =
+        " \"\"\n"
+        "NUMBER_OF_FIELDS 4\n"
+        "BEGIN_DATA_FORMAT\n"
+        "I R G G\n"
+        "END_DATA_FORMAT\n"
+        "NUMBER_OF_FIELDS 9\n"
+        "NUMBER_OF_SETS 2\n"
+        "BEGIN_DATA\n"
+        "d\n"
+        "0 0Bd\n"
+        "0Ba	$ $ t .";
+
+    cmsHANDLE hIT8;
+    
+    cmsSetLogErrorHandler(ContextID, NULL);
+
+    hIT8 = cmsIT8LoadFromMem(ContextID, bad_it8, (cmsUInt32Number) strlen(bad_it8));
+    
+    ResetFatalError(ContextID);
+
+    if (hIT8 != NULL)
+    {
+        Fail("Wrong IT8 accepted as ok");
+        cmsIT8Free(ContextID, hIT8);
+    }
+
+    return 1;
+}
+
 static
 int CheckIntToFloatTransform(cmsContext ContextID)
 {
@@ -8521,6 +8683,7 @@ int CheckIntToFloatTransform(cmsContext ContextID)
 
     cmsDoTransform(ContextID, xform, rgb8, rgbDBL, 1);
 
+
     cmsDeleteTransform(ContextID, xform);
 
     if (rgbDBL[0] < 0 && rgbDBL[2] < 0) return 1;
@@ -8529,6 +8692,73 @@ int CheckIntToFloatTransform(cmsContext ContextID)
 
     return 0;
 }
+
+static
+int CheckSaveLinearizationDevicelink(cmsContext ContextID)
+{
+	int rc = 1;
+    const cmsFloat32Number table[] = { 0, 0.5f, 1.0f };
+
+    cmsToneCurve* tone = cmsBuildTabulatedToneCurveFloat(ContextID, 3, table);
+
+    cmsToneCurve* rgb_curves[3] = { tone, tone, tone };
+
+    cmsHPROFILE hDeviceLink = cmsCreateLinearizationDeviceLink(ContextID, cmsSigRgbData, rgb_curves);
+
+    cmsBool result;
+    cmsHTRANSFORM xform;
+    int i;
+    
+    cmsFreeToneCurve(ContextID, tone);
+
+    result = cmsSaveProfileToFile(ContextID, hDeviceLink, "lin_rgb.icc");
+
+    cmsCloseProfile(ContextID, hDeviceLink);
+
+    if (!result)
+    {
+        remove("lin_rgb.icc");
+        Fail("Couldn't save linearization devicelink");        
+		rc = 0;
+    }
+
+
+    hDeviceLink = cmsOpenProfileFromFile(ContextID, "lin_rgb.icc", "r");
+
+    if (hDeviceLink == NULL)
+    {
+        remove("lin_rgb.icc");
+        Fail("Could't open devicelink");
+		rc = 0;
+	}
+
+    xform = cmsCreateTransform(ContextID, hDeviceLink, TYPE_RGB_8, NULL, TYPE_RGB_8, INTENT_PERCEPTUAL, 0);
+    cmsCloseProfile(ContextID, hDeviceLink);
+
+    for (i = 0; i < 256; i++)
+    {
+        cmsUInt8Number rgb_in[3] = { i, i, i };
+        cmsUInt8Number rgb_out[3];
+
+        cmsDoTransform(ContextID, xform, rgb_in, rgb_out, 1);
+
+        if (rgb_in[0] != rgb_out[0] ||
+            rgb_in[1] != rgb_out[1] ||
+            rgb_in[2] != rgb_out[2])
+        {
+            remove("lin_rgb.icc");
+            Fail("Saved devicelink was not working");
+			rc = 0;
+		}
+    }
+
+
+    cmsDeleteTransform(ContextID, xform);
+    remove("lin_rgb.icc");
+
+    return rc;
+}
+
 
 // --------------------------------------------------------------------------------------------------
 // P E R F O R M A N C E   C H E C K S
@@ -9469,9 +9699,12 @@ int main(int argc, const char** argv)
     Check(ctx, "Proofing intersection", CheckProofingIntersection);
     Check(ctx, "Empty MLUC", CheckEmptyMLUC);
     Check(ctx, "sRGB round-trips", Check_sRGB_Rountrips);
+    Check(ctx, "OkLab color space", Check_OkLab);
     Check(ctx, "Gamma space detection", CheckGammaSpaceDetection);
     Check(ctx, "Unbounded mode w/ integer output", CheckIntToFloatTransform);
     Check(ctx, "Corrupted built-in by using cmsWriteRawTag", CheckInducedCorruption);
+    Check(ctx, "Bad CGATS file", CheckBadCGATS);
+    Check(ctx, "Saving linearization devicelink", CheckSaveLinearizationDevicelink);
     }
 
     if (DoPluginTests)

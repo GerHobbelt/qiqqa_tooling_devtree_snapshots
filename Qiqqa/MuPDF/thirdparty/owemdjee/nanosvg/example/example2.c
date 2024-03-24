@@ -26,12 +26,13 @@
 #define NANOSVGRAST_IMPLEMENTATION
 #include "nanosvgrast.h"
 
+#include "monolithic_examples.h"
 
 #if defined(BUILD_MONOLITHIC)
 #define main      nanosvg_example2_main
 #endif
 
-int main()
+int main(void)
 {
 	NSVGimage *image = NULL;
 	NSVGrasterizer *rast = NULL;

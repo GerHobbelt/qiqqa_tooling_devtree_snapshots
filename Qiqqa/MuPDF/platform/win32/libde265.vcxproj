@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDE265;DE265_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDE265;DE265_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDE265;DE265_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libde265/libde265;../../thirdparty/owemdjee/libde265;../../scripts/libde265;../../thirdparty/owemdjee/getopt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>LIBDE265_STATIC_BUILD;BUILD_MONOLITHIC;BUILDING_LIBDE265;DE265_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDE265;DE265_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDE265;DE265_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libde265/libde265;../../thirdparty/owemdjee/libde265;../../scripts/libde265;../../thirdparty/owemdjee/getopt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDE265;DE265_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDE265;DE265_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDE265;DE265_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libde265/libde265;../../thirdparty/owemdjee/libde265;../../scripts/libde265;../../thirdparty/owemdjee/getopt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>LIBDE265_STATIC_BUILD;BUILD_MONOLITHIC;BUILDING_LIBDE265;DE265_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDE265;DE265_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDE265;DE265_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libde265/libde265;../../thirdparty/owemdjee/libde265;../../scripts/libde265;../../thirdparty/owemdjee/getopt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDE265;DE265_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDE265;DE265_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDE265;DE265_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libde265/libde265;../../thirdparty/owemdjee/libde265;../../scripts/libde265;../../thirdparty/owemdjee/getopt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>LIBDE265_STATIC_BUILD;BUILD_MONOLITHIC;BUILDING_LIBDE265;DE265_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDE265;DE265_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDE265;DE265_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libde265/libde265;../../thirdparty/owemdjee/libde265;../../scripts/libde265;../../thirdparty/owemdjee/getopt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDE265;DE265_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDE265;DE265_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDE265;DE265_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libde265/libde265;../../thirdparty/owemdjee/libde265;../../scripts/libde265;../../thirdparty/owemdjee/getopt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>LIBDE265_STATIC_BUILD;BUILD_MONOLITHIC;BUILDING_LIBDE265;DE265_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDE265;DE265_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDE265;DE265_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libde265/libde265;../../thirdparty/owemdjee/libde265;../../scripts/libde265;../../thirdparty/owemdjee/getopt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -318,8 +318,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/libde265/enc265/image-io-png.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libde265/extra/getopt.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libde265/extra/libde265/de265-version.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/libde265/extra/stdbool.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/libde265/extra/stdint.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libde265/extra/win32cond.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libde265/libde265/acceleration.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libde265/libde265/alloc_pool.h" />
@@ -387,23 +385,29 @@
     <ClInclude Include="../../thirdparty/owemdjee/libde265/sherlock265/VideoPlayer.hh" />
     <ClInclude Include="../../thirdparty/owemdjee/libde265/sherlock265/VideoWidget.hh" />
     <Image Include="../../thirdparty/owemdjee/libde265/libde265.png" />
+    <Text Include="../../thirdparty/owemdjee/libde265/AUTHORS" />
     <Text Include="../../thirdparty/owemdjee/libde265/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libde265/ChangeLog" />
     <Text Include="../../thirdparty/owemdjee/libde265/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/libde265/Makefile.vc7" />
     <Text Include="../../thirdparty/owemdjee/libde265/NEWS" />
     <Text Include="../../thirdparty/owemdjee/libde265/README" />
     <Text Include="../../thirdparty/owemdjee/libde265/README.md" />
     <Text Include="../../thirdparty/owemdjee/libde265/acceleration-speed/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/libde265/appveyor.yml" />
     <Text Include="../../thirdparty/owemdjee/libde265/autogen.sh" />
     <Text Include="../../thirdparty/owemdjee/libde265/build.bat" />
     <Text Include="../../thirdparty/owemdjee/libde265/configure.ac" />
     <Text Include="../../thirdparty/owemdjee/libde265/dec265/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libde265/dec265/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/libde265/dec265/Makefile.vc7" />
     <Text Include="../../thirdparty/owemdjee/libde265/enc265/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libde265/enc265/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/libde265/enc265/Makefile.vc7" />
     <Text Include="../../thirdparty/owemdjee/libde265/libde265.pc.in" />
     <Text Include="../../thirdparty/owemdjee/libde265/libde265/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libde265/libde265/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/libde265/libde265/Makefile.vc7" />
     <Text Include="../../thirdparty/owemdjee/libde265/libde265/arm/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libde265/libde265/arm/asm.S" />
     <Text Include="../../thirdparty/owemdjee/libde265/libde265/arm/cpudetect.S" />
@@ -416,6 +420,11 @@
     <Text Include="../../thirdparty/owemdjee/libde265/libde265/encoder/algo/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libde265/libde265/x86/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libde265/libde265/x86/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/libde265/m4/ax_compare_version.m4" />
+    <Text Include="../../thirdparty/owemdjee/libde265/m4/ax_cxx_compile_stdcxx_11.m4" />
+    <Text Include="../../thirdparty/owemdjee/libde265/m4/m4_ax_check_compile_flag.m4" />
+    <Text Include="../../thirdparty/owemdjee/libde265/m4/visibility.m4" />
+    <Text Include="../../thirdparty/owemdjee/libde265/scripts/build-android-libs.sh" />
     <Text Include="../../thirdparty/owemdjee/libde265/scripts/check_licenses.sh" />
     <Text Include="../../thirdparty/owemdjee/libde265/scripts/ci-before-install-linux.sh" />
     <Text Include="../../thirdparty/owemdjee/libde265/scripts/ci-before-install-osx.sh" />
@@ -424,6 +433,7 @@
     <Text Include="../../thirdparty/owemdjee/libde265/scripts/decodestreams.py" />
     <Text Include="../../thirdparty/owemdjee/libde265/sherlock265/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libde265/sherlock265/README" />
+    <Text Include="../../thirdparty/owemdjee/libde265/testdata/girlshy.h265" />
     <Text Include="../../thirdparty/owemdjee/libde265/tools/Makefile.am" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >

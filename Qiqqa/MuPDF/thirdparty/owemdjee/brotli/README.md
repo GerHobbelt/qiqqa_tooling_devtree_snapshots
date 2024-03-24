@@ -1,10 +1,8 @@
+<p align="center">
+  <img src="https://github.com/google/brotli/actions/workflows/build_test.yml/badge.svg" alt="GitHub Actions Build Status" href="https://github.com/google/brotli/actions?query=branch%3Amaster">
+  <img src="https://oss-fuzz-build-logs.storage.googleapis.com/badges/brotli.svg" alt="Fuzzing Status" href="https://oss-fuzz-build-logs.storage.googleapis.com/index.html#brotli">
+</p>
 <p align="center"><img src="https://brotli.org/brotli.svg" alt="Brotli" width="64"></p>
-
-# SECURITY NOTE
-
-Please consider updating brotli to version 1.0.9 (latest).
-
-Version 1.0.9 contains a fix to "integer overflow" problem. This happens when "one-shot" decoding API is used (or input chunk for streaming API is not limited), input size (chunk size) is larger than 2GiB, and input contains uncompressed blocks. After the overflow happens, `memcpy` is invoked with a gigantic `num` value, that will likely cause the crash.
 
 ### Introduction
 
@@ -23,12 +21,6 @@ Brotli is open-sourced under the MIT License, see the LICENSE file.
 > to modify "raw" ranges of the compressed stream and the decoder will not
 > notice that.
 
-Brotli mailing list:
-https://groups.google.com/forum/#!forum/brotli
-
-![GitHub Actions Build Status](https://github.com/google/brotli/actions/workflows/build_test.yml/badge.svg)
-[![Fuzzing Status](https://oss-fuzz-build-logs.storage.googleapis.com/badges/brotli.svg)](https://oss-fuzz-build-logs.storage.googleapis.com/index.html#brotli)
-
 ### Build instructions
 
 #### Vcpkg
@@ -42,21 +34,6 @@ You can download and install brotli using the [vcpkg](https://github.com/Microso
     ./vcpkg install brotli
 
 The brotli port in vcpkg is kept up to date by Microsoft team members and community contributors. If the version is out of date, please [create an issue or pull request](https://github.com/Microsoft/vcpkg) on the vcpkg repository.
-
-#### Autotools-style CMake
-
-[configure-cmake](https://github.com/nemequ/configure-cmake) is an
-autotools-style configure script for CMake-based projects (not supported on Windows).
-
-The basic commands to build, test and install brotli are:
-
-    $ mkdir out && cd out
-    $ ../configure-cmake
-    $ make
-    $ make test
-    $ make install
-
-By default, debug binaries are built. To generate "release" `Makefile` specify `--disable-debug` option to `configure-cmake`.
 
 #### Bazel
 
@@ -72,10 +49,6 @@ The basic commands to build and install brotli are:
 
 You can use other [CMake](https://cmake.org/) configuration.
 
-#### Premake5
-
-See [Premake5](https://premake.github.io/)
-
 #### Python
 
 To install the latest release of the Python module, run the following:
@@ -88,6 +61,18 @@ To install the tip-of-the-tree version, run:
 
 See the [Python readme](python/README.md) for more details on installing
 from source, development, and testing.
+
+### Contributing
+
+We glad to answer/library related questions in
+[brotli mailing list](https://groups.google.com/forum/#!forum/brotli).
+
+Regular issues / feature requests should be reported in
+[issue tracker](https://github.com/google/brotli/issues).
+
+For reporting vulnerability please read [SECURITY](SECURITY.md).
+
+For contributing changes please read [CONTRIBUTING](CONTRIBUTING.md).
 
 ### Benchmarks
 * [Squash Compression Benchmark](https://quixdb.github.io/squash-benchmark/) / [Unstable Squash Compression Benchmark](https://quixdb.github.io/squash-benchmark/unstable/)

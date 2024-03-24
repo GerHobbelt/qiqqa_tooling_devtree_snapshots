@@ -263,7 +263,11 @@ elseif(CMAKE_SYSTEM_PROCESSOR MATCHES "arm.*")
   set(HAVE_AVX512F FALSE)
   set(HAVE_FMA FALSE)
   set(HAVE_SSE4_1 FALSE)
+
   check_cxx_compiler_flag("-mfpu=neon" HAVE_NEON)
+  if(HAVE_NEON)
+    set(NEON_COMPILE_FLAGS "-mfpu=neon")
+  endif(HAVE_NEON)
 
 else()
 
@@ -277,7 +281,6 @@ else()
 endif(CMAKE_SYSTEM_PROCESSOR MATCHES "x86|x86_64|AMD64|amd64|i386|i686")
 
 if(HAVE_NEON)
-  set(NEON_COMPILE_FLAGS "-mfpu=neon")
   message(STATUS "LTO build is not supported on arm/RBPi.")
   set(ENABLE_LTO FALSE)  # enable LTO cause fatal error on arm/RBPi
 endif()
@@ -329,7 +332,7 @@ if(OPENMP_BUILD)
   if(NOT OpenMP_FOUND
      AND CLANG
      AND WIN32)
-    # workaroung because find_package(OpenMP) does not work for clang-cl
+    # workaround because find_package(OpenMP) does not work for clang-cl
     # https://gitlab.kitware.com/cmake/cmake/issues/19404
     check_include_file_cxx(omp.h HAVE_OMP_H_INCLUDE)
     find_library(OpenMP_LIBRARY NAMES omp libomp.lib)
@@ -410,10 +413,10 @@ else()
   include_directories(${Leptonica_INCLUDE_DIRS})
 
   check_leptonica_tiff_support()
-  if (NOT LEPT_TIFF_RESULT EQUAL 0)
+  if ((NOT LEPT_TIFF_RESULT EQUAL 0) AND LEPT_TIFF_COMPILE_SUCCESS)
     message(NOTICE "Leptonica was build without TIFF support! Disabling TIFF support...")
     set(DISABLE_TIFF ON)
-  else()
+  elseif(NOT ${CMAKE_VERSION} VERSION_LESS "3.25")
     message(STATUS "Leptonica was build with TIFF support.")
   endif()
 
@@ -486,9 +489,7 @@ else()
   set(DOTPRODUCT_FLAGS "${DOTPRODUCT_FLAGS} -O3 -ffast-math")
 endif()
 
-if(NOT DEFINED CMAKE_INSTALL_LIBDIR)
-  set(CMAKE_INSTALL_LIBDIR lib)
-endif(NOT DEFINED CMAKE_INSTALL_LIBDIR)
+include (GNUInstallDirs)
 
 set(AUTOCONFIG_SRC ${CMAKE_CURRENT_BINARY_DIR}/config_auto.h.in)
 set(AUTOCONFIG ${CMAKE_CURRENT_BINARY_DIR}/config_auto.h)
@@ -499,13 +500,13 @@ if(GRAPHICS_DISABLED)
 endif()
 set(CMAKE_REQUIRED_INCLUDES
     ${CMAKE_REQUIRED_INCLUDES} "${CMAKE_PREFIX_PATH}/include"
-    "${CMAKE_INSTALL_PREFIX}/include")
+    ${CMAKE_INSTALL_INCLUDEDIR})
 include(Configure)
 
 configure_file(${AUTOCONFIG_SRC} ${AUTOCONFIG} @ONLY)
 
-set(INCLUDE_DIR "${CMAKE_INSTALL_PREFIX}/include")
-set(LIBRARY_DIRS "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}")
+set(INCLUDE_DIR ${CMAKE_INSTALL_INCLUDEDIR})
+set(LIBRARY_DIRS ${CMAKE_INSTALL_LIBDIR})
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/include/tesseract/version.h.in
                ${CMAKE_CURRENT_BINARY_DIR}/include/tesseract/version.h @ONLY)
@@ -990,9 +991,9 @@ install(
 
 if(INSTALL_CONFIGS)
   install(FILES ${TESSERACT_CONFIGS}
-          DESTINATION ${CMAKE_INSTALL_PREFIX}/share/tessdata/configs)
+          DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/tessdata/configs)
   install(FILES ${TESSERACT_TESSCONFIGS}
-          DESTINATION ${CMAKE_INSTALL_PREFIX}/share/tessdata/tessconfigs)
+          DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/tessdata/tessconfigs)
 endif()
 
 # ##############################################################################

@@ -42,65 +42,68 @@
     <Filter Include="Misc Files\doc\doxygen\theme">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0010}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0013}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\test\data">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0012}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\test\data\json">
+    <Filter Include="Misc Files\doc\images">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0011}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\data\json\test_checker">
+    <Filter Include="Misc Files\test">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0014}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\data\json\test_encoding">
+    <Filter Include="Misc Files\test\data">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0013}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\data\json">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\data\json\test_checker">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0015}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\data\json\test_parsing">
+    <Filter Include="Misc Files\test\data\json\test_encoding">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0016}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\data\json\test_roundtrip">
+    <Filter Include="Misc Files\test\data\json\test_parsing">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0017}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\data\json\test_transform">
+    <Filter Include="Misc Files\test\data\json\test_roundtrip">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\data\json\test_yyjson">
+    <Filter Include="Misc Files\test\data\json\test_transform">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0019}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\data\num">
+    <Filter Include="Misc Files\test\data\json\test_yyjson">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0020}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\xctest">
+    <Filter Include="Misc Files\test\data\num">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
+    <Filter Include="Misc Files\test\xctest">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\doc">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\doc\doxygen">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\doc\doxygen\html">
+    <Filter Include="Resource Files">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\doc\doxygen\html\search">
+    <Filter Include="Resource Files\doc">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0026}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\misc">
+    <Filter Include="Resource Files\doc\doxygen">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\doc\doxygen\html">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\doc\doxygen\html\search">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\src">
+    <Filter Include="Source Files\misc">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\test">
+    <Filter Include="Source Files\src">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0029}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\test\util">
+    <Filter Include="Source Files\test">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0030}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test\util">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0031}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -122,10 +125,16 @@
     <ClCompile Include="../../thirdparty/owemdjee/yyjson/test/test_allocator.c">
       <Filter>Source Files\test</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/yyjson/test/test_err_code.c">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/yyjson/test/test_json_merge_patch.c">
       <Filter>Source Files\test</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/yyjson/test/test_json_mut_val.c">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/yyjson/test/test_json_patch.c">
       <Filter>Source Files\test</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/yyjson/test/test_json_pointer.c">
@@ -233,6 +242,9 @@
     <Text Include="../../thirdparty/owemdjee/yyjson/CMakeLists.txt">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/LICENSE">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/README.md">
       <Filter>Misc Files</Filter>
     </Text>
@@ -260,34 +272,109 @@
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/Doxyfile.in">
       <Filter>Misc Files\doc\doxygen</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/annotated.html">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/annotated_dup.js">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/classes.html">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/deprecated.html">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/dir_68267d1309a1af8e8297ef4c3efbcdba.html">
       <Filter>Misc Files\doc\doxygen\html</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/dir_68267d1309a1af8e8297ef4c3efbcdba.js">
       <Filter>Misc Files\doc\doxygen\html</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/dir_e68e8157741866f444e17edd764ebbae.html">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/doxygen-awesome-darkmode-toggle.js">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/doxygen-awesome-sidebar-only-darkmode-toggle.css">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/doxygen-awesome-sidebar-only.css">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/doxygen-awesome.css">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/doxygen.css">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/doxygen.svg">
       <Filter>Misc Files\doc\doxygen\html</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/dynsections.js">
       <Filter>Misc Files\doc\doxygen\html</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/files.html">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/files_dup.js">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/functions.html">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/functions_vars.html">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/globals.html">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/globals_defs.html">
       <Filter>Misc Files\doc\doxygen\html</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/globals_dup.js">
       <Filter>Misc Files\doc\doxygen\html</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/globals_func.html">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/globals_func.js">
       <Filter>Misc Files\doc\doxygen\html</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/globals_type.html">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/globals_vars.html">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/globals_y.html">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/index.html">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/jquery.js">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/md__c_h_a_n_g_e_l_o_g.html">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/md_doc__a_p_i.html">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/md_doc__build_and_test.html">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/md_doc__data_structure.html">
       <Filter>Misc Files\doc\doxygen\html</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/menu.js">
       <Filter>Misc Files\doc\doxygen\html</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/menudata.js">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/navtree.css">
       <Filter>Misc Files\doc\doxygen\html</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/navtree.js">
@@ -302,88 +389,193 @@
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/navtreeindex1.js">
       <Filter>Misc Files\doc\doxygen\html</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/navtreeindex2.js">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/pages.html">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/perf_reader_a14.svg">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/perf_reader_ec2.svg">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/resize.js">
       <Filter>Misc Files\doc\doxygen\html</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_0.html">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_0.js">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_1.html">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_1.js">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_10.html">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_10.js">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_2.html">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_2.js">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_3.html">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_3.js">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_4.html">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_4.js">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_5.html">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_5.js">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_6.html">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_6.js">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_7.html">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_7.js">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_8.html">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_8.js">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_9.html">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_9.js">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_a.html">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_a.js">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_b.html">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_b.js">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_c.html">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_c.js">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_d.html">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_d.js">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_e.html">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_e.js">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_f.html">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/all_f.js">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/classes_0.html">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/classes_0.js">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/close.svg">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/defines_0.html">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/defines_0.js">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/defines_1.html">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/defines_1.js">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/files_0.html">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/files_0.js">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/functions_0.html">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/functions_0.js">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/mag_sel.svg">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/nomatches.html">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/pages_0.html">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/pages_0.js">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/pages_1.html">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/pages_1.js">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/pages_2.html">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/pages_2.js">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/pages_3.html">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/pages_3.js">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/pages_4.html">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/pages_4.js">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/search.css">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/search.js">
@@ -392,55 +584,130 @@
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/searchdata.js">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/typedefs_0.html">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/typedefs_0.js">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_0.html">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_0.js">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_1.html">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_1.js">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_2.html">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_2.js">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_3.html">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_3.js">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_4.html">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_4.js">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_5.html">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_5.js">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_6.html">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_6.js">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_7.html">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_7.js">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_8.html">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_8.js">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_9.html">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_9.js">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_a.html">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_a.js">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_b.html">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_b.js">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_c.html">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_c.js">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_d.html">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_d.js">
+      <Filter>Misc Files\doc\doxygen\html\search</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_e.html">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/search/variables_e.js">
       <Filter>Misc Files\doc\doxygen\html\search</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/struct_idoc1.svg">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/struct_idoc2.svg">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/struct_ival.svg">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/struct_mdoc.svg">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/struct_mval.svg">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/structyyjson__alc.html">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/structyyjson__alc.js">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/tabs.css">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/yyjson-style.css">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/yyjson_8h.html">
       <Filter>Misc Files\doc\doxygen\html</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/yyjson_8h.js">
@@ -467,6 +734,15 @@
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/yyjson_8h_structyyjson__obj__iter.js">
       <Filter>Misc Files\doc\doxygen\html</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/yyjson_8h_structyyjson__patch__err.js">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/yyjson_8h_structyyjson__ptr__ctx.js">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/yyjson_8h_structyyjson__ptr__err.js">
+      <Filter>Misc Files\doc\doxygen\html</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/html/yyjson_8h_structyyjson__read__err.js">
       <Filter>Misc Files\doc\doxygen\html</Filter>
     </Text>
@@ -478,6 +754,45 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/theme/doxygen-awesome-darkmode-toggle.js">
       <Filter>Misc Files\doc\doxygen\theme</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/theme/doxygen-awesome-sidebar-only-darkmode-toggle.css">
+      <Filter>Misc Files\doc\doxygen\theme</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/theme/doxygen-awesome-sidebar-only.css">
+      <Filter>Misc Files\doc\doxygen\theme</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/theme/doxygen-awesome.css">
+      <Filter>Misc Files\doc\doxygen\theme</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/theme/yyjson-footer.html">
+      <Filter>Misc Files\doc\doxygen\theme</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/theme/yyjson-header.html">
+      <Filter>Misc Files\doc\doxygen\theme</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/doxygen/theme/yyjson-style.css">
+      <Filter>Misc Files\doc\doxygen\theme</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/images/perf_reader_a14.svg">
+      <Filter>Misc Files\doc\images</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/images/perf_reader_ec2.svg">
+      <Filter>Misc Files\doc\images</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/images/struct_idoc1.svg">
+      <Filter>Misc Files\doc\images</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/images/struct_idoc2.svg">
+      <Filter>Misc Files\doc\images</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/images/struct_ival.svg">
+      <Filter>Misc Files\doc\images</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/images/struct_mdoc.svg">
+      <Filter>Misc Files\doc\images</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/yyjson/doc/images/struct_mval.svg">
+      <Filter>Misc Files\doc\images</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/yyjson/test/data/json/README.md">
       <Filter>Misc Files\test\data\json</Filter>

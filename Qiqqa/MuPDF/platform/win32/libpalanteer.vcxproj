@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPALANTEER;PALANTEER_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPALANTEER;PALANTEER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPALANTEER;PALANTEER_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/palanteer/c++;../../thirdparty/owemdjee/palanteer/server/base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPALANTEER;PALANTEER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPALANTEER;PALANTEER_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPALANTEER;PALANTEER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/palanteer/c++;../../thirdparty/owemdjee/palanteer/server/base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPALANTEER;PALANTEER_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPALANTEER;PALANTEER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPALANTEER;PALANTEER_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/palanteer/c++;../../thirdparty/owemdjee/palanteer/server/base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPALANTEER;PALANTEER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPALANTEER;PALANTEER_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPALANTEER;PALANTEER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/palanteer/c++;../../thirdparty/owemdjee/palanteer/server/base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPALANTEER;PALANTEER_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPALANTEER;PALANTEER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPALANTEER;PALANTEER_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/palanteer/c++;../../thirdparty/owemdjee/palanteer/server/base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPALANTEER;PALANTEER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPALANTEER;PALANTEER_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPALANTEER;PALANTEER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/palanteer/c++;../../thirdparty/owemdjee/palanteer/server/base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPALANTEER;PALANTEER_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPALANTEER;PALANTEER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPALANTEER;PALANTEER_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/palanteer/c++;../../thirdparty/owemdjee/palanteer/server/base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPALANTEER;PALANTEER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPALANTEER;PALANTEER_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPALANTEER;PALANTEER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/palanteer/c++;../../thirdparty/owemdjee/palanteer/server/base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -391,6 +391,7 @@
     <Text Include="../../thirdparty/owemdjee/palanteer/LICENSE.md" />
     <Text Include="../../thirdparty/owemdjee/palanteer/README.md" />
     <Text Include="../../thirdparty/owemdjee/palanteer/c++/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/palanteer/c++/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/palanteer/c++/README.md" />
     <Text Include="../../thirdparty/owemdjee/palanteer/c++/test/README.md" />
     <Text Include="../../thirdparty/owemdjee/palanteer/c++/test/test_base.py" />
@@ -403,8 +404,18 @@
     <Text Include="../../thirdparty/owemdjee/palanteer/cmake/FindLibDw.cmake" />
     <Text Include="../../thirdparty/owemdjee/palanteer/cmake/FindLibUnwind.cmake" />
     <Text Include="../../thirdparty/owemdjee/palanteer/cmake/pip_install_whl_package.py" />
+    <Text Include="../../thirdparty/owemdjee/palanteer/docs/base_concepts.md.html" />
+    <Text Include="../../thirdparty/owemdjee/palanteer/docs/getting_started.md.html" />
+    <Text Include="../../thirdparty/owemdjee/palanteer/docs/index.html" />
+    <Text Include="../../thirdparty/owemdjee/palanteer/docs/instrumentation_api_cpp.md.html" />
+    <Text Include="../../thirdparty/owemdjee/palanteer/docs/instrumentation_api_python.md.html" />
+    <Text Include="../../thirdparty/owemdjee/palanteer/docs/instrumentation_configuration_cpp.md.html" />
     <Text Include="../../thirdparty/owemdjee/palanteer/docs/markdeep.min.js" />
+    <Text Include="../../thirdparty/owemdjee/palanteer/docs/more.md.html" />
+    <Text Include="../../thirdparty/owemdjee/palanteer/docs/palanteer.css" />
+    <Text Include="../../thirdparty/owemdjee/palanteer/docs/scripting_api.md.html" />
     <Text Include="../../thirdparty/owemdjee/palanteer/python/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/palanteer/python/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/palanteer/python/MANIFEST.in" />
     <Text Include="../../thirdparty/owemdjee/palanteer/python/README.md" />
     <Text Include="../../thirdparty/owemdjee/palanteer/python/palanteer/__init__.py" />
@@ -414,10 +425,14 @@
     <Text Include="../../thirdparty/owemdjee/palanteer/python/testprogram/README.md" />
     <Text Include="../../thirdparty/owemdjee/palanteer/python/testprogram/testprogram.py" />
     <Text Include="../../thirdparty/owemdjee/palanteer/server/README.md" />
+    <Text Include="../../thirdparty/owemdjee/palanteer/server/base/LICENSE" />
+    <Text Include="../../thirdparty/owemdjee/palanteer/server/common/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/palanteer/server/external/imgui/LICENSE.txt" />
     <Text Include="../../thirdparty/owemdjee/palanteer/server/external/imgui/README.md" />
+    <Text Include="../../thirdparty/owemdjee/palanteer/server/external/zstd/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/palanteer/server/external/zstd/README.md" />
     <Text Include="../../thirdparty/owemdjee/palanteer/server/scripting/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/palanteer/server/scripting/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/palanteer/server/scripting/MANIFEST.in" />
     <Text Include="../../thirdparty/owemdjee/palanteer/server/scripting/README.md" />
     <Text Include="../../thirdparty/owemdjee/palanteer/server/scripting/palanteer_scripting/__init__.py" />
@@ -425,6 +440,7 @@
     <Text Include="../../thirdparty/owemdjee/palanteer/server/scripting/setup.py" />
     <Text Include="../../thirdparty/owemdjee/palanteer/server/scripting/setup.py.in" />
     <Text Include="../../thirdparty/owemdjee/palanteer/server/viewer/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/palanteer/server/viewer/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/palanteer/tools/README.md" />
     <Text Include="../../thirdparty/owemdjee/palanteer/tools/extStringDecoder.py" />
     <Text Include="../../thirdparty/owemdjee/palanteer/tools/palanteer_stub.py" />

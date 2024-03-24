@@ -72,18 +72,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <NMakeOutput>collection-1.exe</NMakeOutput>
     <NMakePreprocessorDefinitions>NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <NMakeOutput>collection-1.exe</NMakeOutput>
     <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <NMakeOutput>collection-1.exe</NMakeOutput>
     <NMakePreprocessorDefinitions>_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <NMakeOutput>collection-1.exe</NMakeOutput>
     <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
   </PropertyGroup>
 <ItemDefinitionGroup>
     <ClCompile>
@@ -125,6 +129,7 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
   <ItemGroup>
+    <Text Include="../../thirdparty/owemdjee/ipa-dict/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/ipa-dict/README.md" />
     <Text Include="../../thirdparty/owemdjee/ipa-dict/data/ar.txt" />
     <Text Include="../../thirdparty/owemdjee/ipa-dict/data/de.txt" />
@@ -144,6 +149,7 @@
     <Text Include="../../thirdparty/owemdjee/ipa-dict/data/ko.txt" />
     <Text Include="../../thirdparty/owemdjee/ipa-dict/data/ma.txt" />
     <Text Include="../../thirdparty/owemdjee/ipa-dict/data/nb.txt" />
+    <Text Include="../../thirdparty/owemdjee/ipa-dict/data/nl.txt" />
     <Text Include="../../thirdparty/owemdjee/ipa-dict/data/or.txt" />
     <Text Include="../../thirdparty/owemdjee/ipa-dict/data/pt_BR.txt" />
     <Text Include="../../thirdparty/owemdjee/ipa-dict/data/ro.txt" />

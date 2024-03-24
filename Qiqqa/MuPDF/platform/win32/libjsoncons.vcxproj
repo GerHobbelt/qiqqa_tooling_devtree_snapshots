@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/jsoncons/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/jsoncons/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/jsoncons/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/jsoncons/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/jsoncons/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/jsoncons/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/jsoncons/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/jsoncons/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/jsoncons/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/jsoncons/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/jsoncons/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/jsoncons/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/jsoncons/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/jsoncons/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSONCONS;JSONCONS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/jsoncons/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/jsoncons/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -246,6 +246,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/examples/src/json_cursor_examples.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/examples/src/json_filter_examples.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/examples/src/json_merge_patch_examples.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/examples/src/json_parse_examples.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/examples/src/json_parser_examples.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/examples/src/json_reader_examples.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/examples/src/json_traits_bitset_examples.cpp" />
@@ -269,7 +270,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/examples/src/unicode_examples.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/examples/src/update_json_in_place_examples.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/examples/src/wjson_examples.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/examples_boost/interprocess_allocator/interprocess_allocator.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/examples_boost/interprocess_allocator/shared_memory.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/examples_boost/interprocess_allocator2/shared_memory.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/examples_boost/more_examples/src/extensibility.cpp" />
@@ -283,10 +283,10 @@
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/bson/src/bson_test_suite.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/bson/src/encode_decode_bson_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/cbor/src/cbor_bitset_traits_tests.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/cbor/src/cbor_cursor2_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/cbor/src/cbor_cursor_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/cbor/src/cbor_encoder_tests.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/cbor/src/cbor_json_visitor2_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/cbor/src/cbor_event_reader_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/cbor/src/cbor_event_visitor_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/cbor/src/cbor_reader_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/cbor/src/cbor_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/cbor/src/cbor_typed_array_tests.cpp" />
@@ -297,10 +297,10 @@
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/byte_string_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/decode_traits_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/detail/from_integer_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/detail/heap_string_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/detail/optional_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/detail/span_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/detail/string_view_tests.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/detail/string_wrapper_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/detail/to_integer_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/detect_encoding_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/double_round_trip_tests.cpp" />
@@ -309,6 +309,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/encode_decode_json_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/encode_traits_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/error_recovery_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/extension_traits_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/issue355_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/json_array_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/json_as_tests.cpp" />
@@ -347,17 +348,18 @@
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/json_type_traits_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/json_validation_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/jsoncons_tests.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/ojson_object_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/ojson_tests.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/order_preserving_json_object_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/parse_string_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/polymorphic_allocator_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/read_encoded_data_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/scoped_allocator_adaptor_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/short_string_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/source_adaptor_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/source_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/staj_iterator_tests.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/stateful_allocator_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/string_to_double_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/testmain.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/unicode_conv_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/uri_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/value_converter_tests.cpp" />
@@ -375,6 +377,8 @@
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/jsonpath/src/jsonpath_flatten_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/jsonpath/src/jsonpath_json_query_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/jsonpath/src/jsonpath_json_replace_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/jsonpath/src/jsonpath_make_expression_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/jsonpath/src/jsonpath_stateful_allocator_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/jsonpath/src/jsonpath_test_suite.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/jsonpointer/src/jsonpointer_flatten_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/jsonpointer/src/jsonpointer_tests.cpp" />
@@ -388,18 +392,19 @@
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/msgpack/src/decode_msgpack_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/msgpack/src/encode_msgpack_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/msgpack/src/msgpack_bitset_traits_tests.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/msgpack/src/msgpack_cursor2_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/msgpack/src/msgpack_cursor_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/msgpack/src/msgpack_encoder_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/msgpack/src/msgpack_event_reader_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/msgpack/src/msgpack_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/msgpack/src/msgpack_timestamp_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/ubjson/src/decode_ubjson_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/ubjson/src/encode_ubjson_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/ubjson/src/ubjson_cursor_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/jsoncons/test/ubjson/src/ubjson_encoder_tests.cpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/examples/src/sample_allocators.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/examples/src/FreeListAllocator.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/examples/src/sample_types.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/allocator_holder.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/allocator_set.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/basic_json.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/bigint.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/byte_string.hpp" />
@@ -412,14 +417,17 @@
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/decode_traits.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/detail/endian.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/detail/grisu3.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/detail/heap_string.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/detail/optional.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/detail/parse_number.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/detail/span.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/detail/string_view.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/detail/string_wrapper.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/detail/write_number.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/encode_json.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/encode_traits.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/extension_traits.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/item_event_reader.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/item_event_visitor.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/json.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/json_array.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/json_content_handler.hpp" />
@@ -439,18 +447,15 @@
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/json_type.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/json_type_traits.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/json_visitor.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/json_visitor2.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/pretty_print.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/ser_context.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/sink.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/source.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/source_adaptor.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/staj2_cursor.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/staj_cursor.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/staj_iterator.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/tag_type.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/text_source_adaptor.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/traits_extension.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/typed_array_view.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/unicode_traits.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons/uri.hpp" />
@@ -469,10 +474,10 @@
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/bson/encode_bson.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/cbor/cbor.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/cbor/cbor_cursor.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/cbor/cbor_cursor2.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/cbor/cbor_detail.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/cbor/cbor_encoder.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/cbor/cbor_error.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/cbor/cbor_event_reader.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/cbor/cbor_options.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/cbor/cbor_parser.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/cbor/cbor_reader.hpp" />
@@ -500,27 +505,29 @@
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/jsonpath/jsonpath_error.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/jsonpath/jsonpath_expression.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/jsonpath/jsonpath_selector.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/jsonpath/jsonpath_utilities.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/jsonpointer/jsonpointer.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/jsonpointer/jsonpointer_error.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/jsonschema/compilation_context.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/jsonschema/draft7/keyword_factory.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/jsonschema/draft7/schema_draft7.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/jsonschema/format_validator.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/jsonschema/json_validator.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/jsonschema/jsonschema.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/jsonschema/jsonschema_error.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/jsonschema/jsonschema_version.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/jsonschema/keyword_validator.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/jsonschema/keyword_validator_factory.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/jsonschema/schema_draft7.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/jsonschema/keywords.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/jsonschema/schema.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/jsonschema/schema_location.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/jsonschema/schema_version.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/jsonschema/subschema.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/mergepatch/mergepatch.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/msgpack/decode_msgpack.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/msgpack/encode_msgpack.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/msgpack/msgpack.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/msgpack/msgpack_cursor.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/msgpack/msgpack_cursor2.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/msgpack/msgpack_encoder.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/msgpack/msgpack_error.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/msgpack/msgpack_event_reader.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/msgpack/msgpack_options.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/msgpack/msgpack_parser.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/msgpack/msgpack_reader.hpp" />
@@ -535,23 +542,22 @@
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/ubjson/ubjson_parser.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/ubjson/ubjson_reader.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/include/jsoncons_ext/ubjson/ubjson_type.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/test/common/FreeListAllocator.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/jsoncons/test/common/test_utilities.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/test/corelib/src/freelist_allocator.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/jsoncons/test/csv/src/csv_sample_allocators.hpp" />
     <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/bson/diagrams/basic_bson_encoder.png" />
     <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/bson/diagrams/bson_options.png" />
     <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/cbor/diagrams/basic_cbor_encoder.png" />
     <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/cbor/diagrams/cbor_options.png" />
+    <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/diagrams/basic_default_json_visitor.png" />
+    <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/diagrams/basic_json_encoder.png" />
+    <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/diagrams/basic_json_filter.png" />
+    <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/diagrams/basic_json_options.png" />
+    <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/diagrams/conv_error.png" />
+    <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/diagrams/json_decoder.png" />
+    <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/diagrams/rename_object_key_filter.png" />
+    <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/diagrams/ser_error.png" />
     <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/csv/diagrams/basic_csv_encoder.png" />
     <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/csv/diagrams/basic_csv_options.png" />
-    <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/diagrams/basic_default_json_visitor.png" />
-    <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/diagrams/basic_json_encoder.png" />
-    <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/diagrams/basic_json_filter.png" />
-    <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/diagrams/basic_json_options.png" />
-    <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/diagrams/conv_error.png" />
-    <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/diagrams/json_decoder.png" />
-    <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/diagrams/rename_object_key_filter.png" />
-    <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/diagrams/ser_error.png" />
     <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/jmespath/diagrams/jmespath_error.png" />
     <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/jsonpatch/diagrams/jsonpatch_error.png" />
     <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/jsonpath/diagrams/jsonpath_error.png" />
@@ -564,6 +570,7 @@
     <Image Include="../../thirdparty/owemdjee/jsoncons/doc/ref/ubjson/diagrams/ubjson_options.png" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/CHANGELOG.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/README.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/Roadmap.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/acknowledgements.md" />
@@ -575,35 +582,95 @@
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/Tutorials/Custom Allocators.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/Tutorials/Unicode support.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/build.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/basic_default_json_visitor.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/basic_json.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/basic_json_cursor.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/basic_json_encoder.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/basic_json_filter.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/basic_json_options.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/basic_json_reader.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/basic_json_visitor.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/basic_staj_event.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/big_integer_chars_format.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/bigint.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/bson/basic_bson_cursor.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/bson/basic_bson_encoder.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/bson/bson.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/bson/bson_options.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/bson/decode_bson.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/bson/encode_bson.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/byte_string.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/byte_string_arg.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/byte_string_arg_t.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/byte_string_chars_format.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/byte_string_view.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/cbor/basic_cbor_cursor.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/cbor/basic_cbor_encoder.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/cbor/cbor.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/cbor/cbor_options.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/cbor/decode_cbor.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/cbor/encode_cbor.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/conv_error.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/allocator_set.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/basic_default_json_visitor.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/basic_json.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/basic_json_cursor.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/basic_json_encoder.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/basic_json_filter.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/basic_json_options.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/basic_json_reader.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/basic_json_visitor.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/basic_staj_event.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/big_integer_chars_format.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/bigint.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/byte_string.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/byte_string_arg.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/byte_string_arg_t.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/byte_string_chars_format.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/byte_string_view.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/conv_error.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/data-model.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/decode_json.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/deprecated.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/encode_json.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/err_handler.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/float_chars_format.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/half_arg.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/half_arg_t.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/indenting.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json/array_range.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json/as.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json/at.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json/constructor.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json/destructor.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json/dump.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json/emplace.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json/emplace_back.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json/erase.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json/get_value_or.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json/insert.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json/insert_or_assign.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json/is.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json/key_value.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json/make_array.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json/merge.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json/merge_or_update.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json/object_range.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json/operator=.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json/operator_at.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json/parse.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json/push_back.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json/range.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json/try_emplace.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json_array_arg.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json_array_arg_t.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json_decoder.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json_error.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json_object_arg.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json_object_arg_t.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json_parser.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json_type.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json_type_traits.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json_type_traits/built-in-specializations.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json_type_traits/convenience-macros.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/json_type_traits/custom-specializations.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/line_split_kind.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/ojson.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/rename_object_key_filter.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/semantic_tag.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/ser_context.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/ser_error.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/spaces_option.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/staj_array_iterator.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/staj_cursor.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/staj_event_type.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/staj_object_iterator.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/wjson.md" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/corelib/wojson.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/csv/basic_csv_cursor.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/csv/basic_csv_encoder.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/csv/basic_csv_options.md" />
@@ -613,57 +680,12 @@
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/csv/decode_csv.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/csv/encode_csv.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/csv/quote_style_kind.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/data-model.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/decode_json.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/deprecated.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/encode_json.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/float_chars_format.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/half_arg.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/half_arg_t.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/indenting.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/jmespath/jmespath.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/jmespath/jmespath_errc.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/jmespath/jmespath_error.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/jmespath/jmespath_expression.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/jmespath/make_expression.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/jmespath/search.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json/array_range.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json/as.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json/at.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json/constructor.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json/destructor.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json/dump.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json/emplace.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json/emplace_back.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json/erase.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json/get_value_or.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json/insert.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json/insert_or_assign.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json/is.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json/key_value.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json/make_array.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json/merge.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json/merge_or_update.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json/object_range.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json/operator=.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json/operator_at.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json/parse.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json/push_back.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json/range.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json/try_emplace.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json_array_arg.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json_array_arg_t.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json_decoder.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json_error.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json_object_arg.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json_object_arg_t.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json_parser.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json_type.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json_type_traits.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json_type_traits/built-in-specializations.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json_type_traits/convenience-macros.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/json_type_traits/custom-specializations.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/jsonpatch/apply_patch.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/jsonpatch/from_diff.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/jsonpatch/jsonpatch.md" />
@@ -714,7 +736,6 @@
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/jsonschema/schema_error.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/jsonschema/validation_error.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/jsonschema/validation_output.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/line_split_kind.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/mergepatch/apply_merge_patch.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/mergepatch/from_diff.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/mergepatch/mergepatch.md" />
@@ -724,25 +745,12 @@
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/msgpack/encode_msgpack.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/msgpack/msgpack.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/msgpack/msgpack_options.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/ojson.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/parse_error_handler.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/rename_object_key_filter.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/semantic_tag.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/ser_context.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/ser_error.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/spaces_option.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/staj_array_iterator.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/staj_cursor.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/staj_event_type.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/staj_object_iterator.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/ubjson/basic_ubjson_cursor.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/ubjson/basic_ubjson_encoder.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/ubjson/decode_ubjson.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/ubjson/encode_ubjson.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/ubjson/ubjson.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/ubjson/ubjson_options.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/wjson.md" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/doc/ref/wojson.md" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/examples/build/cmake/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/examples/build/cmake/README.txt" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/examples/build/cmake/build_vc140x64.cmd" />
@@ -1128,8 +1136,11 @@
     <Text Include="../../thirdparty/owemdjee/jsoncons/test/corelib/input/locations.json" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/test/corelib/input/members.json" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/test/corelib/input/persons.json" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/test/corelib/output/address-book-new.json" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/test/corelib/output/store.cbor" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/test/csv/input/countries.csv" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/test/csv/input/countries.json" />
+    <Text Include="../../thirdparty/owemdjee/jsoncons/test/csv/input/desktop.ini" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/test/csv/input/employees.json" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/test/csv/input/employees.txt" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/test/jmespath/input/compliance/basic.json" />
@@ -1237,8 +1248,6 @@
     <Text Include="../../thirdparty/owemdjee/jsoncons/test/jsonschema/input/remotes/subSchemas-defs.json" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/test/jsonschema/input/remotes/subSchemas.json" />
     <Text Include="../../thirdparty/owemdjee/jsoncons/test/mergepatch/input/compliance/rfc7396-test-cases.json" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/test/output/address-book-new.json" />
-    <Text Include="../../thirdparty/owemdjee/jsoncons/test/output/test.json" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

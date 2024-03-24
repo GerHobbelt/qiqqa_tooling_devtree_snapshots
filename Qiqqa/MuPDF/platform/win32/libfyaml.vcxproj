@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFYAML;FYAML_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFYAML;FYAML_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libfyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFYAML;FYAML_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libfyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFYAML;FYAML_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFYAML;FYAML_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFYAML;FYAML_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libfyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libfyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFYAML;FYAML_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFYAML;FYAML_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libfyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFYAML;FYAML_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libfyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFYAML;FYAML_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFYAML;FYAML_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFYAML;FYAML_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libfyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libfyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFYAML;FYAML_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFYAML;FYAML_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libfyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFYAML;FYAML_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libfyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFYAML;FYAML_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFYAML;FYAML_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFYAML;FYAML_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libfyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libfyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFYAML;FYAML_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFYAML;FYAML_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libfyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFYAML;FYAML_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libfyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFYAML;FYAML_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFYAML;FYAML_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFYAML;FYAML_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libfyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libfyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -228,11 +228,23 @@
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_avx2.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_avx512.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_backend.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_be_cpusimd.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_host_state.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_neon.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_portable.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_sse2.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_sse41.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/blake3/fy-blake3.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/internal/fy-b3sum.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/internal/fy-thread.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/internal/libfyaml-parser.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-accel.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-atom.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-composer.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-ctype.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-diag.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-doc.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-docbuilder.c" />
@@ -245,21 +257,27 @@
     <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-path.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-token.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-types.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-utf8.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-utils.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-walk.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/thread/fy-thread.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/tool/fy-tool.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/util/fy-blob.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/util/fy-ctype.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/util/fy-utf8.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/util/fy-utils.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/xxhash/xxhash.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libfyaml/test/libfyaml-test-core.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libfyaml/test/libfyaml-test-emit.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libfyaml/test/libfyaml-test-meta.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/test/libfyaml-test-private-id.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libfyaml/test/libfyaml-test-private.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libfyaml/test/libfyaml-test.c" />
     <ClInclude Include="../../thirdparty/owemdjee/libfyaml/include/libfyaml.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_impl.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_internal.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-accel.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-atom.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-composer.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-ctype.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-diag.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-doc.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-docbuilder.h" />
@@ -269,18 +287,28 @@
     <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-emit.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-event.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-input.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-list.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-parse.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-path.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-token.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-typelist.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-types.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-utf8.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-utils.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-walk.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/thread/fy-thread.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/util/fy-align.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/util/fy-bit64.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/util/fy-blob.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/util/fy-ctype.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/util/fy-endian.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/util/fy-id.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/util/fy-list.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/util/fy-typelist.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/util/fy-utf8.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/util/fy-utils.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/valgrind/fy-valgrind.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/xxhash/xxhash.h" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/AUTHORS" />
     <Text Include="../../thirdparty/owemdjee/libfyaml/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/Dockerfile.centos" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/libfyaml/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libfyaml/README.md" />
     <Text Include="../../thirdparty/owemdjee/libfyaml/bootstrap.sh" />
@@ -289,12 +317,24 @@
     <Text Include="../../thirdparty/owemdjee/libfyaml/cmake/fyaml-config.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/libfyaml/configure.ac" />
     <Text Include="../../thirdparty/owemdjee/libfyaml/doc/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/doc/canned-man/fy-tool.1" />
     <Text Include="../../thirdparty/owemdjee/libfyaml/doc/conf.py" />
     <Text Include="../../thirdparty/owemdjee/libfyaml/doc/index.rst" />
     <Text Include="../../thirdparty/owemdjee/libfyaml/doc/intro.rst" />
     <Text Include="../../thirdparty/owemdjee/libfyaml/doc/libfyaml.rst" />
     <Text Include="../../thirdparty/owemdjee/libfyaml/doc/man/fy-tool.rst" />
     <Text Include="../../thirdparty/owemdjee/libfyaml/libfyaml.pc.in" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/m4/ax_check_compile_flag.m4" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/m4/ax_check_define.m4" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/m4/ax_check_enable_debug.m4" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/m4/ax_check_flag.m4" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/m4/ax_cxx_compile_stdcxx.m4" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/m4/ax_cxx_compile_stdcxx_11.m4" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/m4/ax_define_dir.m4" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/m4/ax_is_release.m4" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/m4/ax_pthread.m4" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/m4/ax_tls.m4" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/m4/shave.m4" />
     <Text Include="../../thirdparty/owemdjee/libfyaml/scripts/get-gpg-key-id-by-email.sh" />
     <Text Include="../../thirdparty/owemdjee/libfyaml/scripts/install-linuxdoc.sh" />
     <Text Include="../../thirdparty/owemdjee/libfyaml/scripts/run-check-errors.sh" />
@@ -311,7 +351,206 @@
     <Text Include="../../thirdparty/owemdjee/libfyaml/scripts/run-valgrind.sh" />
     <Text Include="../../thirdparty/owemdjee/libfyaml/scripts/show-desc.sh" />
     <Text Include="../../thirdparty/owemdjee/libfyaml/src/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_avx2_x86-64_unix.S" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_avx512_x86-64_unix.S" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_sse2_x86-64_unix.S" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_sse41_x86-64_unix.S" />
     <Text Include="../../thirdparty/owemdjee/libfyaml/test/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/anchors-1.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/anchors-2.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/anchors-3.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/anchors-4.1.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/anchors-4.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/anchors-on-empty-scalars.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/anchors-on-empty-scalars1.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/anchors-on-empty-scalars2.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/anchors-on-empty-scalars3.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/anchors-on-empty-scalars4.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/anchors.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/array.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/block.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/block2.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/block3.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/block4.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/block6.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/block7.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/blocked.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/blockind.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/c1.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/c10.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/c11.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/c12.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/c13.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/c2.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/c3.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/c4.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/c5.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/c6.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/c7.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/c8.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/c9.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/compact1.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/compactblockmap.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/complexkey.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/complexkey2.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/complexkey3.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/complexkey4.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/complexkey5.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/complexkey6.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/complexkey7.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/complexkey8.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/complexkey9.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/docstartend.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/dqscalar.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/dqzero.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/emoji.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/emptydoc.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/emptykey.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/emptystream.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/flow.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/flow1.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/flow2.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/fold-tricky.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/fold.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/fold2.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/fold3.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/fold4.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/fold5.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/folded-endbreaks.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/folded.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/folded2.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/folding.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/global-tag.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/invoice.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/json.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/keyflow.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/keykey.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/keykey2.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/line.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/literal-endbreaks.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/literal.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/literal1.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/literal2.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/literal3.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/literal4.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/mapping.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/mergekeyspec.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/multi-document.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/multiline-quoted-key.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/multiline-simple-key.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/nodeprop.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/nodeprop2.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/numbers-flow.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/numbers.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/plain-scalars-with-commas.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/plainlines.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/plainscalar.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/quoted.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/quotedbackslash.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scalar-multiline.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scalar-singlequoted.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scalar-space.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scalar-space1.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scalars.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scalars2.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scanner-c-1.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scanner-c-10.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scanner-c-11.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scanner-c-12.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scanner-c-13.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scanner-c-2.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scanner-c-3.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scanner-c-4.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scanner-c-5.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scanner-c-6.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scanner-c-7.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scanner-c-8-2.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scanner-c-8.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scanner-c-9.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/seq.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/seq1.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/seq2.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/seq3.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/seq4.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/seq5.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/seq6.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/sets.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simple.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simple1.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simple2.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simpleanchor.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simpleanchor1.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simpleanchor2.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simpleanchor3.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simpleanchor4.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simplefolded.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simplekey.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simplekey1.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simplekey2.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simplekey3.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simplekey4.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simplekey5.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simpleliteral.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simpleseq.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simpleseq1.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/singlepairimp.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/singlepairimp2.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/sqscalar.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/sqscalarspace.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/strings.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/t.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/t1.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/t2.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/t3.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/t4.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/t5.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/tabsmix.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/tagdirective.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/tagesc.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/tags-1.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/tags.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/test.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/test1.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/test2.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/u.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/u1.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/u2.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/u3.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/utf8-simple.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/utf8.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/v.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/v1.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/v2.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/version.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/weirdplain.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/ws0.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/ws1.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/ws2.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/ws3.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/y.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/yaml-version.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/yy.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/zeroexplicit.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0002/in.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0002/test.error" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0003/in.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0003/test.error" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0004/in.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0004/test.error" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0005/in.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0005/test.error" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0006/in.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0006/test.error" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0007/in.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0007/test.error" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0008/in.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0008/test.error" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0009/in.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0009/test.error" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0010/in.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0010/test.error" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0011/in.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0011/test.error" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

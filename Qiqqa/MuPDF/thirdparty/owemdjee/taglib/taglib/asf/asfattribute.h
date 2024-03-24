@@ -106,7 +106,7 @@ namespace TagLib
       /*!
        * Construct an attribute as a copy of \a other.
        */
-      Attribute(const Attribute &item);
+      Attribute(const Attribute &other);
 
       /*!
        * Copies the contents of \a other into this item.
@@ -197,7 +197,7 @@ namespace TagLib
       ByteVector render(const String &name, int kind = 0) const;
 
       class AttributePrivate;
-      AttributePrivate *d;
+      std::shared_ptr<AttributePrivate> d;
     };
   }  // namespace ASF
 }  // namespace TagLib

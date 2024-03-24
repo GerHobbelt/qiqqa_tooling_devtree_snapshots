@@ -1409,7 +1409,7 @@ def command_env_text( command, env_extra):
 
 def system(
         command,
-        verbose=None,
+        verbose=True,
         raise_errors=True,
         out=sys.stdout,
         prefix=None,
@@ -1539,6 +1539,25 @@ def system(
     out_log = 0
 
     outs = out if isinstance(out, list) else [out]
+    decoders = dict()
+    def decoders_ensure(encoding):
+        d = decoders.get(encoding)
+        if d is None:
+            class D:
+                pass
+            d = D()
+            # subprocess's universal_newlines and codec.streamreader seem to
+            # always use buffering even with bufsize=0, so they don't reliably
+            # display prompts or other text that doesn't end with a newline.
+            #
+            # So we create our own incremental decode, which seems to work
+            # better.
+            #
+            d.decoder = codecs.getincrementaldecoder(encoding)(errors)
+            d.out = ''
+            decoders[ encoding] = d
+        return d
+
     for i, o in enumerate(outs):
         if o is None:
             out_none += 1
@@ -1551,28 +1570,36 @@ def system(
                 o, o_prefix = o
                 assert o not in (None, subprocess.DEVNULL), f'out[]={o} does not make sense with a prefix ({o_prefix})'
             assert not isinstance(o, (tuple, list))
+            o_decoder = None
             if o == 'return':
                 assert not out_return, f'"return" specified twice does not make sense'
                 out_return = io.StringIO()
-                outs[i] = out_return.write
+                o_fn = out_return.write
             elif o == 'log':
                 assert not out_log, f'"log" specified twice does not make sense'
                 out_log += 1
                 out_frame_record = inspect.stack()[caller]
-                outs[i] = lambda text: log( text, caller=out_frame_record, nv=False, raw=True)
+                o_fn = lambda text: log( text, caller=out_frame_record, nv=False, raw=True)
             elif isinstance(o, int):
-                outs[i] = lambda text: os.write( o, text)
+                o_fn = lambda text: os.write( o, text)
             elif callable(o):
-                outs[i] = o
+                o_fn = o
             else:
                 assert hasattr(o, 'write') and callable(o.write), (
                         f'Do not understand o={o}, must be one of:'
                             ' None, subprocess.DEVNULL, "return", "log", <int>,'
                             ' or support o() or o.write().'
                             )
-                outs[i] = o.write
+                o_decoder = decoders_ensure(o.encoding)
+                def fn(text):
+                    o.write(text)
+                    o.flush()   # Seems to be necessary on Windows.
+                o_fn = fn
             if o_prefix:
-                outs[i] = StreamPrefix( outs[i], o_prefix).write
+                o_fn = StreamPrefix( o_fn, o_prefix).write
+            if not o_decoder:
+                o_decoder = decoders_ensure(encoding)
+            outs[i] = o_fn, o_decoder
 
     if out_pipe:
         stdout = subprocess.PIPE
@@ -1607,16 +1634,6 @@ def system(
             )
 
     if out_pipe:
-        decoder = None
-        if encoding:
-            # subprocess's universal_newlines and codec.streamreader seem to
-            # always use buffering even with bufsize=0, so they don't reliably
-            # display prompts or other text that doesn't end with a newline.
-            #
-            # So we create our own incremental decode, which seems to work
-            # better.
-            #
-            decoder = codecs.getincrementaldecoder(encoding)(errors)
         while 1:
             # os.read() seems to be better for us than child.stdout.read()
             # because it returns a short read if data is not available. Where
@@ -1627,13 +1644,13 @@ def system(
             # multipe calls to write() - it returns all available data, not
             # just from the first unread write() call.
             #
-            output = os.read( child.stdout.fileno(), 10000)
-            if decoder:
-                final = not output
-                output = decoder.decode(output, final)
-            for o in outs:
-                o(output)
-            if not output:
+            output0 = os.read( child.stdout.fileno(), 10000)
+            final = not output0
+            for _, decoder in decoders.items():
+                decoder.out = decoder.decoder.decode(output0, final)
+            for o_fn, o_decoder in outs:
+                o_fn( o_decoder.out)
+            if not output0:
                 break
 
     e = child.wait()
@@ -1824,6 +1841,8 @@ def fs_update( text, filename, return_different=False):
 
     If `return_different` is true, we return existing contents if `filename`
     already exists and differs from `text`.
+
+    Otherwise we return true if file has changed.
     '''
     try:
         with open( filename) as f:
@@ -1833,15 +1852,15 @@ def fs_update( text, filename, return_different=False):
     if text != text0:
         if return_different and text0 is not None:
             return text
-        log( 'Updating:  ' + filename)
         # Write to temp file and rename, to ensure we are atomic.
         filename_temp = f'{filename}-jlib-temp'
         with open( filename_temp, 'w') as f:
             f.write( text)
         fs_rename( filename_temp, filename)
+        return True
 
 
-def fs_find_in_paths( name, paths=None):
+def fs_find_in_paths( name, paths=None, verbose=False):
     '''
     Looks for `name` in paths and returns complete path. `paths` is list/tuple
     or `os.pathsep`-separated string; if `None` we use `$PATH`. If `name`
@@ -1851,12 +1870,22 @@ def fs_find_in_paths( name, paths=None):
         return name if os.path.isfile( name) else None
     if paths is None:
         paths = os.environ.get( 'PATH', '')
+        if verbose:
+            log('From os.environ["PATH"]: {paths=}')
     if isinstance( paths, str):
         paths = paths.split( os.pathsep)
+        if verbose:
+            log('After split: {paths=}')
     for path in paths:
         p = os.path.join( path, name)
+        if verbose:
+            log('Checking {p=}')
         if os.path.isfile( p):
+            if verbose:
+                log('Returning because is file: {p!r}')
             return p
+    if verbose:
+        log('Returning None because not found: {name!r}')
 
 
 def fs_mtime( filename, default=0):
@@ -2151,7 +2180,7 @@ def build(
         except Exception:
             command0 = None
         if command != command0:
-           reasons.append( 'command has changed')
+           reasons.append( f'command has changed:\n{command0}\n=>\n{command}')
 
     if not reasons or all_reasons:
         reason = fs_any_newer( infiles, outfiles)
@@ -2181,8 +2210,12 @@ def build(
     if os.path.exists( command_filename):
         fs_rename(command_filename, command_filename_temp)
     fs_update( command, command_filename_temp)
+    assert os.path.isfile( command_filename_temp)
 
     system( command, out=out, verbose=verbose, executable=executable, caller=2)
+
+    assert os.path.isfile( command_filename_temp), \
+            f'Command seems to have deleted {command_filename_temp=}: {command!r}'
 
     fs_rename( command_filename_temp, command_filename)
 
@@ -2196,10 +2229,11 @@ def link_l_flags( sos, ld_origin=None):
     We return -L flags for each unique parent directory and -l flags for each
     leafname.
 
-    In addition on Linux and OpenBSD we append " -Wl,-rpath='$ORIGIN,-z,origin"
+    In addition on non-Windows we append " -Wl,-rpath,'$ORIGIN,-z,origin"
     so that libraries will be searched for next to each other. This can be
     disabled by setting ld_origin to false.
     '''
+    darwin = (platform.system() == 'Darwin')
     dirs = set()
     names = []
     if isinstance( sos, str):
@@ -2211,9 +2245,14 @@ def link_l_flags( sos, ld_origin=None):
         dir_ = os.path.dirname( so)
         name = os.path.basename( so)
         assert name.startswith( 'lib'), f'name={name}'
-        if name.endswith( '.so'):
+        m = re.search( '(.so[.0-9]*)$', name)
+        if m:
+            l = len(m.group(1))
             dirs.add( dir_)
-            names.append( f'-l {name[3:-3]}')
+            names.append( f'-l {name[3:-l]}')
+        elif darwin and name.endswith( '.dylib'):
+            dirs.add( dir_)
+            names.append( f'-l {name[3:-6]}')
         elif name.endswith( '.a'):
             names.append( so)
         else:
@@ -2222,13 +2261,19 @@ def link_l_flags( sos, ld_origin=None):
     # Important to use sorted() here, otherwise ordering from set() is
     # arbitrary causing occasional spurious rebuilds.
     for dir_ in sorted(dirs):
-        ret += f' -L {dir_}'
+        ret += f' -L {os.path.relpath(dir_)}'
     for name in names:
         ret += f' {name}'
     if ld_origin is None:
-        if os.uname()[0] in ( 'Linux', 'OpenBSD'):
+        if platform.system() != 'Windows':
             ld_origin = True
     if ld_origin:
-        ret += " -Wl,-rpath='$ORIGIN',-z,origin"
+        if darwin:
+            # As well as this link flag, it is also necessary to use
+            # `install_name_tool -change` to rename internal names to
+            # `@rpath/<leafname>`.
+            ret += ' -Wl,-rpath,@loader_path/.'
+        else:
+            ret += " -Wl,-rpath,'$ORIGIN',-z,origin"
     #log('{sos=} {ld_origin=} {ret=}')
-    return ret
+    return ret.strip()

@@ -22,6 +22,7 @@
 #include "lcms2mt.h"
 #include <math.h>
 
+#include "monolithic_examples.h"
 
 
 static
@@ -37,14 +38,17 @@ double VecDist(cmsUInt8Number bin[3], cmsUInt8Number bout[3])
 }
 
 
-int main(int  argc, char* argv[])
-{
+#if defined(BUILD_MONOLITHIC)
+#define main(cnt, arr)      lcms2_roundtrip_example_main(cnt, arr)
+#endif
 
+int main(int  argc, const char* argv[])
+{
     int r, g, b;
     cmsUInt8Number RGB[3], RGB_OUT[3];
     cmsHTRANSFORM xform;
     cmsHPROFILE hProfile;
-    double err, SumX=0, SumX2=0, Peak = 0, n = 0;
+    double err, SumX = 0, SumX2 = 0, Peak = 0, n = 0;
 
 
     if (argc != 2) {
@@ -52,14 +56,16 @@ int main(int  argc, char* argv[])
         return 1;
     }
 
-    hProfile = cmsOpenProfileFromFile(argv[1], "r");
+    cmsContext ContextID = cmsCreateContext(NULL, NULL);
+
+    hProfile = cmsOpenProfileFromFile(ContextID, argv[1], "r");
     if (hProfile == NULL)
     {
         printf("invalid profile\n");
         return 1;
     }
 
-    xform = cmsCreateTransform(hProfile,TYPE_RGB_8, hProfile, TYPE_RGB_8, INTENT_RELATIVE_COLORIMETRIC, cmsFLAGS_NOOPTIMIZE);
+    xform = cmsCreateTransform(ContextID, hProfile, TYPE_RGB_8, hProfile, TYPE_RGB_8, INTENT_RELATIVE_COLORIMETRIC, cmsFLAGS_NOOPTIMIZE);
     if (xform == NULL)
     {
         printf("Not a valid RGB profile\n");
@@ -75,7 +81,7 @@ int main(int  argc, char* argv[])
                 RGB[1] = g;
                 RGB[2] = b;
 
-                cmsDoTransform(xform, RGB, RGB_OUT, 1);
+                cmsDoTransform(ContextID, xform, RGB, RGB_OUT, 1);
 
                 err = VecDist(RGB, RGB_OUT);
 
@@ -92,8 +98,10 @@ int main(int  argc, char* argv[])
     printf("Average %g\n", SumX / n);
     printf("Max %g\n", Peak);
     printf("Std  %g\n", sqrt((n*SumX2 - SumX * SumX) / (n*(n-1))));
-    cmsCloseProfile(hProfile);
-    cmsDeleteTransform(xform);
+    cmsCloseProfile(ContextID, hProfile);
+    cmsDeleteTransform(ContextID, xform);
+
+    cmsDeleteContext(ContextID);
 
     return 0;
 }

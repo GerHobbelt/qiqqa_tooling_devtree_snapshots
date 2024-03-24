@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRFSUITE;CRFSUITE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRFSUITE;CRFSUITE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRFSUITE;CRFSUITE_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/crfsuite/include;../../thirdparty/owemdjee/crfsuite/lib/cqdb/include;../../thirdparty/owemdjee/crfsuite/win32/liblbfgs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRFSUITE;CRFSUITE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRFSUITE;CRFSUITE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRFSUITE;CRFSUITE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/crfsuite/include;../../thirdparty/owemdjee/crfsuite/lib/cqdb/include;../../thirdparty/owemdjee/crfsuite/win32/liblbfgs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRFSUITE;CRFSUITE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRFSUITE;CRFSUITE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRFSUITE;CRFSUITE_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/crfsuite/include;../../thirdparty/owemdjee/crfsuite/lib/cqdb/include;../../thirdparty/owemdjee/crfsuite/win32/liblbfgs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRFSUITE;CRFSUITE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRFSUITE;CRFSUITE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRFSUITE;CRFSUITE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/crfsuite/include;../../thirdparty/owemdjee/crfsuite/lib/cqdb/include;../../thirdparty/owemdjee/crfsuite/win32/liblbfgs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRFSUITE;CRFSUITE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRFSUITE;CRFSUITE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRFSUITE;CRFSUITE_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/crfsuite/include;../../thirdparty/owemdjee/crfsuite/lib/cqdb/include;../../thirdparty/owemdjee/crfsuite/win32/liblbfgs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRFSUITE;CRFSUITE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRFSUITE;CRFSUITE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRFSUITE;CRFSUITE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/crfsuite/include;../../thirdparty/owemdjee/crfsuite/lib/cqdb/include;../../thirdparty/owemdjee/crfsuite/win32/liblbfgs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRFSUITE;CRFSUITE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRFSUITE;CRFSUITE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRFSUITE;CRFSUITE_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/crfsuite/include;../../thirdparty/owemdjee/crfsuite/lib/cqdb/include;../../thirdparty/owemdjee/crfsuite/win32/liblbfgs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRFSUITE;CRFSUITE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRFSUITE;CRFSUITE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRFSUITE;CRFSUITE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/crfsuite/include;../../thirdparty/owemdjee/crfsuite/lib/cqdb/include;../../thirdparty/owemdjee/crfsuite/win32/liblbfgs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -236,8 +236,8 @@
     <ClCompile Include="../../thirdparty/owemdjee/crfsuite/frontend/reader.c" />
     <ClCompile Include="../../thirdparty/owemdjee/crfsuite/frontend/tag.c" />
     <ClCompile Include="../../thirdparty/owemdjee/crfsuite/lib/cqdb/src/cqdb.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/crfsuite/lib/cqdb/src/dbmain.c" />
     <ClCompile Include="../../thirdparty/owemdjee/crfsuite/lib/cqdb/src/lookup3.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/crfsuite/lib/cqdb/src/main.c" />
     <ClCompile Include="../../thirdparty/owemdjee/crfsuite/lib/crf/src/crf1d_context.c" />
     <ClCompile Include="../../thirdparty/owemdjee/crfsuite/lib/crf/src/crf1d_encode.c" />
     <ClCompile Include="../../thirdparty/owemdjee/crfsuite/lib/crf/src/crf1d_feature.c" />
@@ -278,7 +278,9 @@
     <ClInclude Include="../../thirdparty/owemdjee/crfsuite/win32/inttypes.h" />
     <ClInclude Include="../../thirdparty/owemdjee/crfsuite/win32/liblbfgs/lbfgs.h" />
     <ClInclude Include="../../thirdparty/owemdjee/crfsuite/win32/stdint.h" />
+    <Text Include="../../thirdparty/owemdjee/crfsuite/AUTHORS" />
     <Text Include="../../thirdparty/owemdjee/crfsuite/ChangeLog" />
+    <Text Include="../../thirdparty/owemdjee/crfsuite/INSTALL" />
     <Text Include="../../thirdparty/owemdjee/crfsuite/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/crfsuite/README" />
     <Text Include="../../thirdparty/owemdjee/crfsuite/autogen.sh" />
@@ -294,20 +296,28 @@
     <Text Include="../../thirdparty/owemdjee/crfsuite/bench/crfsuite_to_mallet.py" />
     <Text Include="../../thirdparty/owemdjee/crfsuite/bench/plot_performance.py" />
     <Text Include="../../thirdparty/owemdjee/crfsuite/configure.in" />
+    <Text Include="../../thirdparty/owemdjee/crfsuite/doc/Doxyfile" />
+    <Text Include="../../thirdparty/owemdjee/crfsuite/doc/footer.html" />
+    <Text Include="../../thirdparty/owemdjee/crfsuite/doc/header.html" />
     <Text Include="../../thirdparty/owemdjee/crfsuite/example/chunking.py" />
     <Text Include="../../thirdparty/owemdjee/crfsuite/example/crfutils.py" />
     <Text Include="../../thirdparty/owemdjee/crfsuite/example/ner.py" />
     <Text Include="../../thirdparty/owemdjee/crfsuite/example/pos.py" />
     <Text Include="../../thirdparty/owemdjee/crfsuite/example/template.py" />
     <Text Include="../../thirdparty/owemdjee/crfsuite/frontend/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/crfsuite/frontend/crfsuite.1" />
     <Text Include="../../thirdparty/owemdjee/crfsuite/genbinary.sh.in" />
     <Text Include="../../thirdparty/owemdjee/crfsuite/include/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/crfsuite/lib/cqdb/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/crfsuite/lib/cqdb/doc/doxyfile" />
+    <Text Include="../../thirdparty/owemdjee/crfsuite/lib/cqdb/doc/footer.html" />
     <Text Include="../../thirdparty/owemdjee/crfsuite/lib/cqdb/makedist.sh" />
     <Text Include="../../thirdparty/owemdjee/crfsuite/lib/crf/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/crfsuite/swig/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/crfsuite/swig/perl/Makefile.PL.in" />
     <Text Include="../../thirdparty/owemdjee/crfsuite/swig/perl/prepare.sh" />
+    <Text Include="../../thirdparty/owemdjee/crfsuite/swig/perl/sample_tag.pl" />
+    <Text Include="../../thirdparty/owemdjee/crfsuite/swig/perl/sample_train.pl" />
     <Text Include="../../thirdparty/owemdjee/crfsuite/swig/python/README" />
     <Text Include="../../thirdparty/owemdjee/crfsuite/swig/python/crfsuite.py" />
     <Text Include="../../thirdparty/owemdjee/crfsuite/swig/python/prepare.sh" />

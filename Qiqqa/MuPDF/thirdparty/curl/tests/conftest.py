@@ -26,10 +26,10 @@ import sys, os
 
 sys.path.append(os.path.join(os.path.dirname(__file__), 'http'))
 
-import pytest
 from testenv import Env
 
-def pytest_report_header(config, startdir):
+
+def pytest_report_header(config):
     # Env inits its base properties only once, we can report them here
     env = Env()
     report = [
@@ -58,5 +58,3 @@ def pytest_generate_tests(metafunc):
         count = int(metafunc.config.getoption("repeat"))
         metafunc.fixturenames.append('tmp_ct')
         metafunc.parametrize('repeat', range(count))
-
-

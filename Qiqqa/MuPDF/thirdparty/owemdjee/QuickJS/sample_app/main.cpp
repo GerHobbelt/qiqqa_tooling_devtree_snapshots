@@ -1,7 +1,9 @@
 #include <iostream>
-#include <quickjspp.hpp>
 
-#include "../monolithic_examples.h"
+#include <quickjspp.hpp>
+#include <quickjs-libc.h>
+
+#include "monolithic_examples.h"
 
 
 class ChartXY
@@ -18,7 +20,7 @@ public:
 
     void show() const 
     {
-      std::cout << " [ĆhartXY Object] x = " << x << " ; y = " << y 
+      std::cout << " [ChartXY Object] x = " << x << " ; y = " << y 
                 << " ; width = " << width << " height = " << height 
                 << '\n';
     }
@@ -56,18 +58,18 @@ try_eval_module(
       try
       {
           return context.eval(code, "<eval>", JS_EVAL_TYPE_MODULE);
-      }
-	  catch( const qjs::exception& ex)
+      } catch( const qjs::exception& ex)
       {
             //js_std_dump_error(ctx);
             auto exc = context.getException();
-            std::cerr << (exc.isError() ? "Error: " : "Throw: ") << (std::string)exc << std::endl;
+            std::cerr << (exc.isError() ? "Error: " : "Throw: ") << exc.toJSON() << std::endl;
             if((bool)exc["stack"])
                 std::cerr << (std::string)exc["stack"] << std::endl;
 
             js_std_free_handlers(runtime.rt);
             return context.newObject();
       }
+
 }
 
 #if defined(BUILD_MONOLITHIC)
@@ -79,6 +81,10 @@ int main(int argc, const char** argv)
     std::cout << " [INFO] Started Ok" << std::endl; 
     
     using namespace qjs;
+
+	qjs_clear_dump_flags();
+	qjs_set_dump_flags(QJS_DUMP_FLAG_LEAKS);
+	qjs_set_dump_flags(QJS_DUMP_FLAG_GC_FREE);
 
     Runtime runtime;
     //JSRuntime* rt = runtime.rt;
@@ -107,7 +113,7 @@ int main(int argc, const char** argv)
             globalThis.os = os;
             */
 
-            console.log(" [QUICJS] => =>> Script loaded. Ok. \n");
+            console.log(" [QUICKJS] => =>> Script loaded. Ok. \n");
 
             for(n = 1; n <= 5; n++){
                 console.log(` [QUICKJS-TRACE] n = ${n}/5 `);
@@ -129,12 +135,11 @@ int main(int argc, const char** argv)
     try
     {
          context.eval(str); //, "", JS_EVAL_TYPE_MODULE);
-    }
-	catch( const qjs::exception& ex)
+    } catch( const qjs::exception& ex)
     {
           //js_std_dump_error(ctx);
           auto exc = context.getException();
-          std::cerr << (exc.isError() ? "Error: " : "Throw: ") << (std::string)exc << std::endl;
+          std::cerr << (exc.isError() ? "Error: " : "Throw: ") << exc.toJSON() << std::endl;
           if((bool)exc["stack"])
               std::cerr << (std::string)exc["stack"] << std::endl;
 
@@ -143,6 +148,7 @@ int main(int argc, const char** argv)
     }
 
     std::fprintf(stderr, " [TRACE] After loading code. \n");
+
 
     int number = (int) context.eval(" 10 * (3 + 1 + 10 ) - 1000 * 2");                               
     std::cout << " [RESULT] number = " << number << '\n';
@@ -198,8 +204,8 @@ int main(int argc, const char** argv)
       .property<&ChartXY::get_height, &ChartXY::set_height>("height")      
       ;  
 
-    module.add("user_path", "/Users/data/assets/game/score/marks");
-    module.add("user_points", 1023523);
+    module.add("user_path", js_traits<const char *>::wrap(context.ctx, "/Users/data/assets/game/score/marks"));
+    module.add("user_points", js_traits<int>::wrap(context.ctx, 1023523));
 
     module.function("myfunc", [](double x, double y){ return 4.61 * x + 10 * y * y; });
 
@@ -234,6 +240,6 @@ int main(int argc, const char** argv)
     js_std_loop(context.ctx);
     // ----- Shutdown virtual machine ---------------// 
     js_std_free_handlers(runtime.rt);
-    
+
     return 0;
 }

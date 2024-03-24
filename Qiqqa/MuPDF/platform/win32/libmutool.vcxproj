@@ -112,8 +112,8 @@
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>..\..\include;..\..\thirdparty\mujs;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\thirdparty\owemdjee\sqlite-amalgamation;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;HAVE_TESSERACT;HAVE_LEPTONICA;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../thirdparty/mujs;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../thirdparty/owemdjee/sqlite-amalgamation;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;HAVE_TESSERACT;HAVE_LEPTONICA;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
@@ -128,8 +128,8 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>..\..\include;..\..\thirdparty\mujs;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\thirdparty\owemdjee\sqlite-amalgamation;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;HAVE_TESSERACT;HAVE_LEPTONICA;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../thirdparty/mujs;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../thirdparty/owemdjee/sqlite-amalgamation;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;HAVE_TESSERACT;HAVE_LEPTONICA;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
@@ -142,8 +142,8 @@
     <ClCompile>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories>..\..\include;..\..\thirdparty\mujs;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\thirdparty\owemdjee\sqlite-amalgamation;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;HAVE_TESSERACT;HAVE_LEPTONICA;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../thirdparty/mujs;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../thirdparty/owemdjee/sqlite-amalgamation;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;HAVE_TESSERACT;HAVE_LEPTONICA;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Lib>
@@ -158,8 +158,8 @@
     <ClCompile>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories>..\..\include;..\..\thirdparty\mujs;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\thirdparty\owemdjee\sqlite-amalgamation;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;HAVE_TESSERACT;HAVE_LEPTONICA;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../thirdparty/mujs;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../thirdparty/owemdjee/sqlite-amalgamation;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;HAVE_TESSERACT;HAVE_LEPTONICA;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Lib>
@@ -247,6 +247,24 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="../../source/tools/tesseract_tool.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../source/tools/muannot.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../source/tools/mucontent.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../source/tools/muserver.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../source/tools/pdfbake.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../source/tools/pdfdump.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../source/tools/extract_text.c" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

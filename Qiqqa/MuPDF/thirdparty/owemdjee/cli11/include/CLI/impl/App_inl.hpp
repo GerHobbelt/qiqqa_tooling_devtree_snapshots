@@ -1,4 +1,4 @@
-// Copyright (c) 2017-2022, University of Cincinnati, developed by Henry Schreiner
+// Copyright (c) 2017-2023, University of Cincinnati, developed by Henry Schreiner
 // under NSF AWARD 1414736 and by the respective contributors.
 // All rights reserved.
 //
@@ -8,6 +8,9 @@
 
 // This include is only needed for IDEs to discover symbols
 #include <CLI/App.hpp>
+
+#include <CLI/Argv.hpp>
+#include <CLI/Encoding.hpp>
 
 // [CLI11:public_includes:set]
 #include <algorithm>
@@ -46,6 +49,7 @@ CLI11_INLINE App::App(std::string app_description, std::string app_name, App *pa
         configurable_ = parent_->configurable_;
         allow_windows_style_options_ = parent_->allow_windows_style_options_;
         group_ = parent_->group_;
+        usage_ = parent_->usage_;
         footer_ = parent_->footer_;
         formatter_ = parent_->formatter_;
         config_formatter_ = parent_->config_formatter_;
@@ -265,8 +269,9 @@ CLI11_INLINE Option *App::add_flag_callback(std::string flag_name,
                                             std::string flag_description) {
 
     CLI::callback_t fun = [function](const CLI::results_t &res) {
+        using CLI::detail::lexical_cast;
         bool trigger{false};
-        auto result = CLI::detail::lexical_cast(res[0], trigger);
+        auto result = lexical_cast(res[0], trigger);
         if(result && trigger) {
             function();
         }
@@ -281,8 +286,9 @@ App::add_flag_function(std::string flag_name,
                        std::string flag_description) {
 
     CLI::callback_t fun = [function](const CLI::results_t &res) {
+        using CLI::detail::lexical_cast;
         std::int64_t flag_count{0};
-        CLI::detail::lexical_cast(res[0], flag_count);
+        lexical_cast(res[0], flag_count);
         function(flag_count);
         return true;
     };
@@ -471,17 +477,31 @@ CLI11_INLINE void App::clear() {
     }
 }
 
-CLI11_INLINE void App::parse(int argc, const char *const *argv) {
+CLI11_INLINE void App::parse() { parse(argc(), argv()); }  // LCOV_EXCL_LINE
+
+CLI11_INLINE void App::parse(int argc, const char *const *argv) { parse_char_t(argc, argv); }
+CLI11_INLINE void App::parse(int argc, const wchar_t *const *argv) { parse_char_t(argc, argv); }
+
+namespace detail {
+
+// Do nothing or perform narrowing
+CLI11_INLINE const char *maybe_narrow(const char *str) { return str; }
+CLI11_INLINE std::string maybe_narrow(const wchar_t *str) { return narrow(str); }
+
+}  // namespace detail
+
+template <class CharT> CLI11_INLINE void App::parse_char_t(int argc, const CharT *const *argv) {
     // If the name is not set, read from command line
     if(name_.empty() || has_automatic_name_) {
         has_automatic_name_ = true;
-        name_ = argv[0];
+        name_ = detail::maybe_narrow(argv[0]);
     }
 
     std::vector<std::string> args;
     args.reserve(static_cast<std::size_t>(argc) - 1U);
     for(auto i = static_cast<std::size_t>(argc) - 1U; i > 0U; --i)
-        args.emplace_back(argv[i]);
+        args.emplace_back(detail::maybe_narrow(argv[i]));
+
     parse(std::move(args));
 }
 
@@ -510,6 +530,10 @@ CLI11_INLINE void App::parse(std::string commandline, bool program_name_included
     std::reverse(args.begin(), args.end());
 
     parse(std::move(args));
+}
+
+CLI11_INLINE void App::parse(std::wstring commandline, bool program_name_included) {
+    parse(narrow(commandline), program_name_included);
 }
 
 CLI11_INLINE void App::parse(std::vector<std::string> &args) {
@@ -666,7 +690,7 @@ CLI11_NODISCARD CLI11_INLINE std::string App::help(std::string prev, AppFormatMo
     // Delegate to subcommand if needed
     auto selected_subcommands = get_subcommands();
     if(!selected_subcommands.empty()) {
-        return selected_subcommands.at(0)->help(prev, mode);
+        return selected_subcommands.back()->help(prev, mode);
     }
     return formatter_->make_help(this, prev, mode);
 }
@@ -973,6 +997,16 @@ CLI11_NODISCARD CLI11_INLINE detail::Classifier App::_recognize(const std::strin
         return detail::Classifier::WINDOWS_STYLE;
     if((current == "++") && !name_.empty() && parent_ != nullptr)
         return detail::Classifier::SUBCOMMAND_TERMINATOR;
+    auto dotloc = current.find_first_of('.');
+    if(dotloc != std::string::npos) {
+        auto *cm = _find_subcommand(current.substr(0, dotloc), true, ignore_used_subcommands);
+        if(cm != nullptr) {
+            auto res = cm->_recognize(current.substr(dotloc + 1), ignore_used_subcommands);
+            if(res == detail::Classifier::SUBCOMMAND) {
+                return res;
+            }
+        }
+    }
     return detail::Classifier::NONE;
 }
 
@@ -1380,6 +1414,9 @@ CLI11_INLINE bool App::_parse_single_config(const ConfigItem &item, std::size_t 
         if(get_allow_config_extras() == config_extras_mode::capture)
             // Should we worry about classifying the extras properly?
             missing_.emplace_back(detail::Classifier::NONE, item.fullname());
+        for(const auto &input : item.inputs) {
+            missing_.emplace_back(detail::Classifier::NONE, input);
+        }
         return false;
     }
 
@@ -1455,7 +1492,7 @@ CLI11_INLINE bool App::_parse_single(std::vector<std::string> &args, bool &posit
     case detail::Classifier::SHORT:
     case detail::Classifier::WINDOWS_STYLE:
         // If already parsed a subcommand, don't accept options_
-        _parse_arg(args, classifier);
+        _parse_arg(args, classifier, false);
         break;
     case detail::Classifier::NONE:
         // Probably a positional or something for a parent (sub)command
@@ -1643,6 +1680,17 @@ CLI11_INLINE bool App::_parse_subcommand(std::vector<std::string> &args) {
         return true;
     }
     auto *com = _find_subcommand(args.back(), true, true);
+    if(com == nullptr) {
+        // the main way to get here is using .notation
+        auto dotloc = args.back().find_first_of('.');
+        if(dotloc != std::string::npos) {
+            com = _find_subcommand(args.back().substr(0, dotloc), true, true);
+            if(com != nullptr) {
+                args.back() = args.back().substr(dotloc + 1);
+                args.push_back(com->get_display_name());
+            }
+        }
+    }
     if(com != nullptr) {
         args.pop_back();
         if(!com->silent_) {
@@ -1665,7 +1713,8 @@ CLI11_INLINE bool App::_parse_subcommand(std::vector<std::string> &args) {
     return false;
 }
 
-CLI11_INLINE bool App::_parse_arg(std::vector<std::string> &args, detail::Classifier current_type) {
+CLI11_INLINE bool
+App::_parse_arg(std::vector<std::string> &args, detail::Classifier current_type, bool local_processing_only) {
 
     std::string current = args.back();
 
@@ -1707,7 +1756,7 @@ CLI11_INLINE bool App::_parse_arg(std::vector<std::string> &args, detail::Classi
     if(op_ptr == std::end(options_)) {
         for(auto &subc : subcommands_) {
             if(subc->name_.empty() && !subc->disabled_) {
-                if(subc->_parse_arg(args, current_type)) {
+                if(subc->_parse_arg(args, current_type, local_processing_only)) {
                     if(!subc->pre_parse_called_) {
                         subc->_trigger_pre_parse(args.size());
                     }
@@ -1721,9 +1770,57 @@ CLI11_INLINE bool App::_parse_arg(std::vector<std::string> &args, detail::Classi
             return false;
         }
 
+        // now check for '.' notation of subcommands
+        auto dotloc = arg_name.find_first_of('.', 1);
+        if(dotloc != std::string::npos) {
+            // using dot notation is equivalent to single argument subcommand
+            auto *sub = _find_subcommand(arg_name.substr(0, dotloc), true, false);
+            if(sub != nullptr) {
+                auto v = args.back();
+                args.pop_back();
+                arg_name = arg_name.substr(dotloc + 1);
+                if(arg_name.size() > 1) {
+                    args.push_back(std::string("--") + v.substr(dotloc + 3));
+                    current_type = detail::Classifier::LONG;
+                } else {
+                    auto nval = v.substr(dotloc + 2);
+                    nval.front() = '-';
+                    if(nval.size() > 2) {
+                        // '=' not allowed in short form arguments
+                        args.push_back(nval.substr(3));
+                        nval.resize(2);
+                    }
+                    args.push_back(nval);
+                    current_type = detail::Classifier::SHORT;
+                }
+                auto val = sub->_parse_arg(args, current_type, true);
+                if(val) {
+                    if(!sub->silent_) {
+                        parsed_subcommands_.push_back(sub);
+                    }
+                    // deal with preparsing
+                    increment_parsed();
+                    _trigger_pre_parse(args.size());
+                    // run the parse complete callback since the subcommand processing is now complete
+                    if(sub->parse_complete_callback_) {
+                        sub->_process_env();
+                        sub->_process_callbacks();
+                        sub->_process_help_flags();
+                        sub->_process_requirements();
+                        sub->run_callback(false, true);
+                    }
+                    return true;
+                }
+                args.pop_back();
+                args.push_back(v);
+            }
+        }
+        if(local_processing_only) {
+            return false;
+        }
         // If a subcommand, try the main command
         if(parent_ != nullptr && fallthrough_)
-            return _get_fallthrough_parent()->_parse_arg(args, current_type);
+            return _get_fallthrough_parent()->_parse_arg(args, current_type, false);
 
         // Otherwise, add to missing
         args.pop_back();

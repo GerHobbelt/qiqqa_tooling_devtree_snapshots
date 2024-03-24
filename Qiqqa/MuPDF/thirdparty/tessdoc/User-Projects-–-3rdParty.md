@@ -30,6 +30,8 @@
 | [TesseractStudio.Net Github](https://github.com/OpaitSoftware/TesseractStudio.Net) |          |         | X           | Proprietary     | (Exe, SourceCode Not Available,Site Urls are Dead) A graphical interface to tesseract 4.0 |
 | [TesseractStudio.Net](https://www.opait.com/TessStudio/index.html) |          |         | X           | Proprietary     |  A graphical interface to tesseract 4.0 |
 | [ImageTrans](https://www.basiccat.org/imagetrans) | X        | X       | X           | Proprietary     |  An image translation tool which can use Tesseract to OCR a whole page, a selected region of an image or a screenshot |
+| [NAPS2](https://www.naps2.com/) | X        | X       | X           | GLP2     |  Scan documents to PDF and more, as simply as possible. |
+| [Ave React OCR](https://github.com/rerender2021/ocr) |         |        | X           | MIT     |  A simple ocr app powered by avernakis react. |
 
 ## 2. Online OCR services
 
@@ -55,6 +57,7 @@
     * [Tesseract-OCR-iOS](https://github.com/gali8/Tesseract-OCR-iOS) - Tesseract OCR iOS is a Framework for iOS7+, compiled also for armv7s and arm64.
     * [OCR-iOS-Example](https://github.com/robmathews/OCR-iOS-Example) - a simple example of how to do optical character recognition (OCR) on iOS.
     * [Tesseract-iPhone-Demo ](https://github.com/nolanbrown/Tesseract-iPhone-Demo) - example based on tesseract 2.04.
+
   * _More OS_:
     * [ScanBizCards](http://www.scanbizcards.com): Mobile solution for business card scanning. _Requirements:_ iPhone 4/iPhone 3/Android 2.0
 
@@ -64,6 +67,7 @@
 ## 4. Others (Utilities, Tools, Command-Line Interfaces [CLI], etc)
 
 ### A. PDF to Searchable PDF tools 
+
 (ie: any tool which can also handle a non-searchable PDF as an input):
 
   1. [OCRmyPDF](https://github.com/jbarlow83/OCRmyPDF) - Adds OCR text layer to scanned PDF files and images, allowing them to be searched. Processes pages in parallel on multi-core CPUs. Keeps exact resolution of original embedded images without recompressing JPEGs, when possible. Includes image several preprocessing options, detailed documentation, and support for many exotic PDFs.
@@ -71,6 +75,7 @@
   1. [pdf2searchablepdf](https://github.com/ElectricRCAircraftGuy/PDF2SearchablePDF) - a tool which allows converting any non-searchable PDF, OR any entire directory of images, to a searchable PDF
   
 ### B. Others:
+
   1. [ocr-fileformat](https://github.com/UB-Mannheim/ocr-fileformat) - Validate and transform between OCR file formats (hOCR, ALTO, PAGE, FineReader)
   1. [Tess4J](https://github.com/nguyenq/tess4j) - A Java JNA wrapper for Tesseract OCR API.
   1. [Traineddata inspector](https://mazoea.com/te/traineddata/) -  to inspect some of the internals of traineddata files 

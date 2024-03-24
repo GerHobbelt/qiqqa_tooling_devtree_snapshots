@@ -634,13 +634,13 @@ opj_image_t       *image = NULL;
         const char comment2[] = "; using OpenJPEG, version ";
         size_t len1 = strlen(comment1);
         size_t len2 = strlen(comment2);
-        char *version1 = getLeptonicaVersion();
+        const char *version1 = getLeptonicaVersion();
         const char *version2 = opj_version();
         len1 += len2 + strlen(version1) + strlen(version2) + 1;
         parameters.cp_comment = (char *)LEPT_MALLOC(len1);
         snprintf(parameters.cp_comment, len1, "%s%s%s%s", comment1, version1,
                  comment2, version2);
-        LEPT_FREE(version1);
+        stringDestroy(&version1);
     }
 
         /* Get the encoder handle */
@@ -749,7 +749,6 @@ opj_image_cmptparm_t  cmptparm[4];
     memset(&cmptparm[0], 0, 4 * sizeof(opj_image_cmptparm_t));
     for (i = 0; i < spp; i++) {
         cmptparm[i].prec = 8;
-        cmptparm[i].bpp = 8;
         cmptparm[i].sgnd = 0;
         cmptparm[i].dx = 1;
         cmptparm[i].dy = 1;
@@ -961,11 +960,10 @@ opj_stream_t  *l_stream;
     if (!l_stream)
         return (opj_stream_t *)ERROR_PTR("stream not made", __func__, NULL);
 
-#if OPJ_VERSION_MINOR == 0
+#if 0
     opj_stream_set_user_data(l_stream, fp);
 #else
-    opj_stream_set_user_data(l_stream, fp,
-                             (opj_stream_free_user_data_fn)NULL);
+    opj_stream_set_user_data(l_stream, fp, (opj_stream_free_user_data_fn)NULL);
 #endif
     opj_stream_set_user_data_length(l_stream, opj_get_user_data_length(fp));
     opj_stream_set_read_function(l_stream,

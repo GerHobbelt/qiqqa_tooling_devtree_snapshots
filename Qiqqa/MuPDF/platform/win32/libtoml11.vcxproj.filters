@@ -239,7 +239,13 @@
     <Text Include="../../thirdparty/owemdjee/toml11/CMakeLists.txt">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/toml11/LICENSE">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/toml11/README.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/toml11/appveyor.yml">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/toml11/cmake/toml11Config.cmake.in">

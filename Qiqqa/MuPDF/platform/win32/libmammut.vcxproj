@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMAMMUT;MAMMUT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMAMMUT;MAMMUT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMAMMUT;MAMMUT_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/mammut/include;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMAMMUT;MAMMUT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMAMMUT;MAMMUT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMAMMUT;MAMMUT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/mammut/include;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMAMMUT;MAMMUT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMAMMUT;MAMMUT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMAMMUT;MAMMUT_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/mammut/include;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMAMMUT;MAMMUT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMAMMUT;MAMMUT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMAMMUT;MAMMUT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/mammut/include;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMAMMUT;MAMMUT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMAMMUT;MAMMUT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMAMMUT;MAMMUT_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/mammut/include;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMAMMUT;MAMMUT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMAMMUT;MAMMUT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMAMMUT;MAMMUT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/mammut/include;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMAMMUT;MAMMUT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMAMMUT;MAMMUT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMAMMUT;MAMMUT_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/mammut/include;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMAMMUT;MAMMUT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMAMMUT;MAMMUT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMAMMUT;MAMMUT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/mammut/include;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -323,18 +323,30 @@
     <Text Include="../../thirdparty/owemdjee/mammut/cmake/gtest_download.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/mammut/demo/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/mammut/demo/cpufreq/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/mammut/demo/cpufreq/Makefile" />
     <Text Include="../../thirdparty/owemdjee/mammut/demo/energy/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/mammut/demo/energy/Makefile" />
     <Text Include="../../thirdparty/owemdjee/mammut/demo/energy/joules.py" />
     <Text Include="../../thirdparty/owemdjee/mammut/demo/task/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/mammut/demo/task/Makefile" />
     <Text Include="../../thirdparty/owemdjee/mammut/demo/topology/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/mammut/demo/topology/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/mammut/include/mammut/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/mammut/include/mammut/buildlib.ar" />
     <Text Include="../../thirdparty/owemdjee/mammut/src/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/mammut/src/external/Makefile" />
     <Text Include="../../thirdparty/owemdjee/mammut/src/external/README.md" />
+    <Text Include="../../thirdparty/owemdjee/mammut/src/external/libusb-1.0.9/" />
+    <Text Include="../../thirdparty/owemdjee/mammut/src/external/libusb-1.0.9/AUTHORS" />
     <Text Include="../../thirdparty/owemdjee/mammut/src/external/libusb-1.0.9/ChangeLog" />
+    <Text Include="../../thirdparty/owemdjee/mammut/src/external/libusb-1.0.9/INSTALL" />
     <Text Include="../../thirdparty/owemdjee/mammut/src/external/libusb-1.0.9/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/mammut/src/external/libusb-1.0.9/Makefile.in" />
     <Text Include="../../thirdparty/owemdjee/mammut/src/external/libusb-1.0.9/NEWS" />
     <Text Include="../../thirdparty/owemdjee/mammut/src/external/libusb-1.0.9/README" />
     <Text Include="../../thirdparty/owemdjee/mammut/src/external/libusb-1.0.9/TODO" />
+    <Text Include="../../thirdparty/owemdjee/mammut/src/external/libusb-1.0.9/aclocal.m4" />
+    <Text Include="../../thirdparty/owemdjee/mammut/src/external/libusb-1.0.9/config.guess" />
     <Text Include="../../thirdparty/owemdjee/mammut/src/external/libusb-1.0.9/config.h.in" />
     <Text Include="../../thirdparty/owemdjee/mammut/src/external/libusb-1.0.9/configure.ac" />
     <Text Include="../../thirdparty/owemdjee/mammut/src/external/libusb-1.0.9/doc/Makefile.am" />
@@ -345,8 +357,15 @@
     <Text Include="../../thirdparty/owemdjee/mammut/src/external/libusb-1.0.9/libusb-1.0.pc.in" />
     <Text Include="../../thirdparty/owemdjee/mammut/src/external/libusb-1.0.9/libusb/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/mammut/src/external/libusb-1.0.9/libusb/Makefile.in" />
+    <Text Include="../../thirdparty/owemdjee/mammut/src/external/libusb-1.0.9/libusb/libusb-1.0.def" />
     <Text Include="../../thirdparty/owemdjee/mammut/src/external/libusb-1.0.9/ltmain.sh" />
     <Text Include="../../thirdparty/owemdjee/mammut/src/external/libusb-1.0.9/msvc/ddk_build.cmd" />
+    <Text Include="../../thirdparty/owemdjee/mammut/src/external/libusb-1.0.9/msvc/libusb.dsw" />
+    <Text Include="../../thirdparty/owemdjee/mammut/src/external/libusb-1.0.9/msvc/libusb_dll.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/mammut/src/external/libusb-1.0.9/msvc/libusb_static.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/mammut/src/external/libusb-1.0.9/msvc/listdevs.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/mammut/src/external/odroid-smartpower-linux/LICENSE" />
+    <Text Include="../../thirdparty/owemdjee/mammut/src/external/odroid-smartpower-linux/Makefile" />
     <Text Include="../../thirdparty/owemdjee/mammut/src/external/odroid-smartpower-linux/README.md" />
     <Text Include="../../thirdparty/owemdjee/mammut/test/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/mammut/test/archs/README.md" />

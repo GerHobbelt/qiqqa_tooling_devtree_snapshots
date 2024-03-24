@@ -662,6 +662,7 @@ typedef enum
     TidyWrapScriptlets,          /**< Wrap within JavaScript string literals */
     TidyWrapSection,             /**< Wrap within <![ ... ]> section tags */
     TidyWriteBack,               /**< If true then output tidied markup */
+    TidyWriteEntities,           /**< Output character references as e.g. &quot; and &#123;. Default is yes. */
     TidyXhtmlOut,                /**< Output extensible HTML */
     TidyXmlDecl,                 /**< Add <?xml?> for XML docs */
     TidyXmlOut,                  /**< Create output as XML */
@@ -1129,6 +1130,7 @@ typedef enum
   TidyAttr_PROMPT,                 /**< PROMPT= */
   TidyAttr_RBSPAN,                 /**< RBSPAN= */
   TidyAttr_READONLY,               /**< READONLY= */
+  TidyAttr_REFERRERPOLICY,         /**< REFERRERPOLICY= */
   TidyAttr_REL,                    /**< REL= */
   TidyAttr_REV,                    /**< REV= */
   TidyAttr_RIGHTMARGIN,            /**< RIGHTMARGIN= */

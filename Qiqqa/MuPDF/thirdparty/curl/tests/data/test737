@@ -1,9 +1,7 @@
 <testcase>
 <info>
 <keywords>
-IMAP
-Clear Text
-SAFEAUTH
+IPFS
 </keywords>
 </info>
 
@@ -11,13 +9,18 @@ SAFEAUTH
 # Server-side
 <reply>
 <data nocheck="yes">
-From: me@somewhere
-To: fake@nowhere
+HTTP/1.1 200 OK
+Date: Tue, 09 Nov 2010 14:49:00 GMT
+Server: test-server/fake
+Last-Modified: Tue, 13 Jun 2000 12:10:00 GMT
+ETag: "21025-dc7-39462498"
+Accept-Ranges: bytes
+Content-Length: 21
+Connection: close
+Content-Type: text/plain
+Funny-head: yesyes
 
-body
-
---
-  yours sincerely
+Hello curl from IPFS
 </data>
 </reply>
 
@@ -25,25 +28,31 @@ body
 # Client-side
 <client>
 <server>
-imap
+http
 </server>
- <name>
-IMAP login with clear password disabled
- </name>
- <command>
-'imap://%HOSTIP:%IMAPPORT/%TESTNUMBER/;MAILINDEX=1' -u user:secret --safe-auth
+<setenv>
+IPFS_PATH=%LOGDIR/.ipfs/
+</setenv>
+<name>
+IPFS with IPFS_PATH set, with trailing slash
+</name>
+<command>
+ipfs://bafybeidecnvkrygux6uoukouzps5ofkeevoqland7kopseiod6pzqvjg7u
 </command>
+<file name="%LOGDIR/.ipfs/gateway" >
+http://%HOSTIP:%HTTPPORT
+</file>
 </client>
 
 #
 # Verify data after the test has been "shot"
 <verify>
-# 67 is CURLE_LOGIN_DENIED
-<errorcode>
-67
-</errorcode>
-<protocol>
-A001 CAPABILITY
+<protocol crlf="yes">
+GET /ipfs/bafybeidecnvkrygux6uoukouzps5ofkeevoqland7kopseiod6pzqvjg7u HTTP/1.1
+Host: %HOSTIP:%HTTPPORT
+User-Agent: curl/%VERSION
+Accept: */*
+
 </protocol>
 </verify>
 </testcase>

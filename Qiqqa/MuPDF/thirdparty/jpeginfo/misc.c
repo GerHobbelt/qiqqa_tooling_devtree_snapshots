@@ -38,11 +38,10 @@
 
 int is_dir(FILE *fp)
 {
-	struct stat buf;
-
 	if (!fp)
 		return 0;
 
+	struct stat buf;
 	if (fstat(fileno(fp), &buf))
 		return 0;
 
@@ -52,11 +51,10 @@ int is_dir(FILE *fp)
 
 long long filesize(FILE *fp)
 {
-	struct stat buf;
-
 	if (!fp)
 		return -1;
 
+	struct stat buf;
 	if (fstat(fileno(fp), &buf))
 		return -1;
 
@@ -76,17 +74,15 @@ void delete_file(const char *name, int verbose_mode, int quiet_mode)
 }
 
 
-char *fgetstr(char *s, int n, FILE *stream)
+char *fgetstr(char *s, size_t size, FILE *stream)
 {
-	char *p;
-
-	if (!stream || !s || n < 1)
+	if (!s || size < 1 || !stream)
 		return NULL;
 
-	if (!fgets(s,n,stream))
+	if (!fgets(s, size, stream))
 		return NULL;
 
-	p=&s[strlen(s)-1];
+	char *p = s + strnlen(s, size) - 1;
 	while ((p >= s) && ((*p == 10) || (*p == 13)))
 		*p--=0;
 
@@ -96,19 +92,92 @@ char *fgetstr(char *s, int n, FILE *stream)
 
 char *digest2str(unsigned char *digest, char *s, unsigned int len)
 {
-	int i;
-	char *r;
+	char *output = s;
 
 	if (!digest || !s)
 		return NULL;
 
-	r = s;
-	for (i = 0; i < len; i++) {
-		snprintf(r, 3, "%02x", digest[i]);
-		r += 2;
+	*output = 0;
+	for (int i = 0; i < len; i++) {
+		snprintf(output, 3, "%02x", digest[i]);
+		output += 2;
 	}
 
 	return s;
+}
+
+
+const size_t MIN_READ_BUFFER_SIZE=512;
+
+long long read_file(FILE *fp, size_t buf_size, unsigned char **bufptr)
+{
+	if (!fp || !bufptr)
+		return -1;
+
+	/* Allocate initial buffer for reading the file */
+	if (buf_size < MIN_READ_BUFFER_SIZE)
+		buf_size = MIN_READ_BUFFER_SIZE;
+	if ((*bufptr = realloc(*bufptr, buf_size)) == NULL)
+		return -2;
+
+	size_t buf_used = 0;
+	size_t bytes_read;
+
+	/* Read file into the buffer */
+	do {
+		bytes_read = fread(*bufptr + buf_used, 1, buf_size - buf_used, fp);
+		buf_used += bytes_read;
+		if (buf_used >= buf_size) {
+			/* Expand buffer if needed */
+			buf_size *= 2;
+			*bufptr = realloc(*bufptr, buf_size);
+			if (! *bufptr)
+				return -3;
+		}
+	} while (bytes_read > 0);
+
+	return buf_used;
+}
+
+
+char *strncopy(char *dst, const char *src, size_t size)
+{
+	if (!dst || !src || size < 1)
+		return dst;
+
+	if (size > 1)
+		strncpy(dst, src, size - 1);
+	dst[size - 1] = 0;
+
+	return dst;
+}
+
+
+char *strncatenate(char *dst, const char *src, size_t size)
+{
+
+	if (!dst || !src || size < 1)
+		return dst;
+
+	/* Check if dst string is already "full" ... */
+	const int used = strnlen(dst, size);
+	const int free = size - used;
+	if (free <= 1)
+		return dst;
+
+	return strncat(dst + used, src, free - 1);
+}
+
+
+char *str_add_list(char *dst, size_t size, const char *src, const char *delim)
+{
+	if (!dst || !src || !delim || size < 1)
+		return dst;
+
+	if (strnlen(dst, size) > 0)
+		strncatenate(dst, delim, size);
+
+	return strncatenate(dst, src, size);
 }
 
 /* eof :-) */

@@ -144,3 +144,12 @@ main(void)
 	}
 }
 
+#if defined(BUNDLE_BIBUTILS_TESTS) && defined(BUILD_MONOLITHIC)
+int
+main(void)
+{
+	return entities_test();
+}
+#endif
+
+

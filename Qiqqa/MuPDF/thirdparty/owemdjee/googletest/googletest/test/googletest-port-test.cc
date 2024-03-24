@@ -97,7 +97,7 @@ class Base {
   explicit Base(int n) : member_(n) {}
   Base(const Base&) = default;
   Base& operator=(const Base&) = default;
-  virtual ~Base() {}
+  virtual ~Base() = default;
   int member() { return member_; }
 
  private:
@@ -281,9 +281,11 @@ TEST(FormatCompilerIndependentFileLocationTest, FormatsUknownFileAndLine) {
   EXPECT_EQ("unknown file", FormatCompilerIndependentFileLocation(nullptr, -1));
 }
 
-#if GTEST_OS_LINUX || GTEST_OS_MAC || GTEST_OS_QNX || GTEST_OS_FUCHSIA || \
-    GTEST_OS_DRAGONFLY || GTEST_OS_FREEBSD || GTEST_OS_GNU_KFREEBSD ||    \
-    GTEST_OS_NETBSD || GTEST_OS_OPENBSD || GTEST_OS_GNU_HURD
+#if GTEST_OS_LINUX || GTEST_OS_MAC ||           \
+    GTEST_OS_QNX || GTEST_OS_FUCHSIA ||         \
+    GTEST_OS_DRAGONFLY || GTEST_OS_FREEBSD ||   \
+    GTEST_OS_GNU_KFREEBSD || GTEST_OS_NETBSD || \
+    GTEST_OS_OPENBSD || GTEST_OS_GNU_HURD
 void* ThreadFunc(void* data) {
   internal::Mutex* mutex = static_cast<internal::Mutex*>(data);
   mutex->Lock();
@@ -294,7 +296,7 @@ void* ThreadFunc(void* data) {
 TEST(GetThreadCountTest, ReturnsCorrectValue) {
   size_t starting_count;
   size_t thread_count_after_create;
-  size_t thread_count_after_join;
+  size_t thread_count_after_join = 0;
 
   // We can't guarantee that no other thread was created or destroyed between
   // any two calls to GetThreadCount(). We make multiple attempts, hoping that
@@ -314,9 +316,9 @@ TEST(GetThreadCountTest, ReturnsCorrectValue) {
       const int status = pthread_create(&thread_id, &attr, &ThreadFunc, &mutex);
       ASSERT_EQ(0, pthread_attr_destroy(&attr));
       ASSERT_EQ(0, status);
-    }
 
-    thread_count_after_create = GetThreadCount();
+      thread_count_after_create = GetThreadCount();
+    }
 
     void* dummy;
     ASSERT_EQ(0, pthread_join(thread_id, &dummy));
@@ -977,14 +979,14 @@ TEST(ThreadLocalTest, SingleParamConstructorInitializesToParam) {
   EXPECT_EQ(&i, t2.get());
 }
 
-class NoDefaultContructor {
+class NoDefaultConstructor {
  public:
-  explicit NoDefaultContructor(const char*) {}
-  NoDefaultContructor(const NoDefaultContructor&) {}
+  explicit NoDefaultConstructor(const char*) {}
+  NoDefaultConstructor(const NoDefaultConstructor&) = default;
 };
 
 TEST(ThreadLocalTest, ValueDefaultContructorIsNotRequiredForParamVersion) {
-  ThreadLocal<NoDefaultContructor> bar(NoDefaultContructor("foo"));
+  ThreadLocal<NoDefaultConstructor> bar(NoDefaultConstructor("foo"));
   bar.pointer();
 }
 
@@ -1102,9 +1104,9 @@ TEST(MutexTest, OnlyOneThreadCanLockAtATime) {
   // Creates and runs kThreadCount threads that increment locked_counter
   // kCycleCount times each.
   for (int i = 0; i < kThreadCount; ++i) {
-    counting_threads[i].reset(new ThreadType(
+    counting_threads[i] = std::make_unique<ThreadType>(
         &CountingThreadFunc, make_pair(&locked_counter, kCycleCount),
-        &threads_can_start));
+        &threads_can_start);
   }
   threads_can_start.Notify();
   for (int i = 0; i < kThreadCount; ++i) counting_threads[i]->Join();

@@ -17,7 +17,7 @@
 // file that you cloned/copied from another project. Use `patch-vcxproj.js` to set up
 // an empty, FRESH project.
 //
-// Use `update-vcxprroj.js` to UPDATE/UPGRADE your existing project(s) WITHOUT altering
+// Use `update-vcxproj.js` to UPDATE/UPGRADE your existing project(s) WITHOUT altering
 // the source files set listed in these projects.
 //
 
@@ -60,12 +60,13 @@ function collect_warning_codes(src) {
 }
 let warnings = collect_warning_codes(src);
 
+
 src = src
 //    <ProjectName>libcurl</ProjectName>
 //    <RootNamespace>libcurl</RootNamespace>
 .replace(/<ProjectName>[^]*?<\/ProjectName>/g, (m) => `<ProjectName>${projectName}</ProjectName>`)
 .replace(/<RootNamespace>[^]*?<\/RootNamespace>/g, (m) => `<RootNamespace>${projectName}</RootNamespace>`)
-//      <TypeLibraryName>.\Release/libcurl.tlb</TypeLibraryName>
+//      <TypeLibraryName>./Release/libcurl.tlb</TypeLibraryName>
 .replace(/<TypeLibraryName>[^]*?<\/TypeLibraryName>/g, "<TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>")
 //       <PreprocessorDefinitions>BUILDING_LIBCURL;CURL_STATICLIB;CURL_DISABLE_LDAP;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;_USRDLL;BUILDING_LIBCURL;CURL_STATICLIB;CURL_DISABLE_LDAP;USE_SCHANNEL;USE_WINDOWS_SSPI;USE_SCHANNEL;USE_WINDOWS_SSPI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
 .replace(/<PreprocessorDefinitions>([^]*?)<\/PreprocessorDefinitions>/g, (m, p1) => {
@@ -73,24 +74,58 @@ src = src
 	// so Visual Studio will show us the common ones when we look at the project properties for "All Environments"
 	let a = p1.split(';').map((l) => l.trim());
 
+	// deduplicate the preprocessor defines set:
+	let pp_set_hash = {};
+
 	// also clean up some mistakes that we know we've made in some projects:
 	a = a.map((l) => {
 		if (/[A_Z_-]+_CRT_SECURE_NO_WARNINGS/.test(l))
 			return "_CRT_SECURE_NO_WARNINGS";
 		if ("MAIN_IS_MONOLITHIC" === l)
 			return "BUILD_MONOLITHIC";
+		
+		// also remove defines which now reside in the project's *.props files already:
+		if ("NDEBUG" === l)
+			return "";
+		if ("_DEBUG" === l)
+			return "";
+		if ("WIN32" === l)
+			return "";
+		if ("WIN64" === l)
+			return "";
+		if ("_CRT_SECURE_NO_WARNINGS" === l)
+			return "";
+		if ("_CRT_NONSTDC_NO_WARNINGS" === l)
+			return "";
+		if ("_CRTDBG_MAP_ALLOC" === l)
+			return "";
+		if (l[0] === '%')
+			return "";
+		
 		return l;
 	})
-
+	.map(function (el) {
+		if (pp_set_hash[el])
+			return "";
+		
+		pp_set_hash[el] = true;
+		return el;
+	})
+	.filter((l) => l.trim().length > 0);
+	
 	let pnu = projectName.toUpperCase();
 
-	return `<PreprocessorDefinitions>${a.join(';')}</PreprocessorDefinitions>`;
+	let defs = `${a.join(';')};%(PreprocessorDefinitions)`
+	.replace(/;;/g, ';')
+	.replace(/^;/g, '')
+
+	return `<PreprocessorDefinitions>${defs}</PreprocessorDefinitions>`;
 })
-.replace(/<BrowseInformation>[^]*?<\/BrowseInformation>/g, (m) => `<BrowseInformation>false</BrowseInformation>`)
+.replace(/<BrowseInformation>[^]*?<\/BrowseInformation>/g, `<BrowseInformation>false</BrowseInformation>`)
 //     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-.replace(/<OutDir>[^]*?<\/OutDir>/g, (m) => `<OutDir>$(SolutionDir)bin\\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\\</OutDir>`)
+.replace(/<OutDir>[^]*?<\/OutDir>/g, `<OutDir>$(SolutionDir)bin\\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\\</OutDir>`)
 //    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
-.replace(/<IntDir>[^]*?<\/IntDir>/g, (m) => `<IntDir>$(SolutionDir)obj\\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\\</IntDir>`)
+.replace(/<IntDir>[^]*?<\/IntDir>/g, `<IntDir>$(SolutionDir)obj\\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\\</IntDir>`)
 //       <OmitFramePointers>true</OmitFramePointers>
 .replace(/<OmitFramePointers>[^]*?<\/OmitFramePointers>/g, '')
 .replace(/<CopyLocalDeploymentContent>[^]*?<\/CopyLocalDeploymentContent>/g, '')
@@ -135,7 +170,7 @@ src = src
       <TargetMachine>MachineX86</TargetMachine>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>               // /OPT:NOICF : Because /OPT:ICF can cause the same address to be assigned to different functions or read-only data members (that is, const variables when compiled by using /Gy), it can break a program that depends on unique addresses for functions or read-only data members.
       <LinkTimeCodeGeneration>UseFastLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <ForceFileOutput>MultiplyDefinedSymbolOnly</ForceFileOutput>
 </Link>
@@ -163,7 +198,7 @@ src = src
 
 	p1 = p1
 	.replace(/<LinkTimeCodeGeneration>[^]*?<\/LinkTimeCodeGeneration>/g, '<LinkTimeCodeGeneration>UseFastLinkTimeCodeGeneration</LinkTimeCodeGeneration>')
-	.replace(/<EnableCOMDATFolding>[^]*?<\/EnableCOMDATFolding>/g, '<EnableCOMDATFolding>true</EnableCOMDATFolding>')
+	.replace(/<EnableCOMDATFolding>[^]*?<\/EnableCOMDATFolding>/g, '<EnableCOMDATFolding>false</EnableCOMDATFolding>')
 	.replace(/<OptimizeReferences>[^]*?<\/OptimizeReferences>/g, '<OptimizeReferences>true</OptimizeReferences>')
 	.replace(/<GenerateDebugInformation>[^]*?<\/GenerateDebugInformation>/g, '<GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>')
 
@@ -397,10 +432,15 @@ ${m}
 });
 
 // make sure all include path sets are the same: pick up the set from the largest entry and copy it around:
+//
+// Note: ResourceCmpiler SHOULD follow, NOT lead. This means we SHOULD NOT look at the include path listed for the 
+// (sometimes hidden) ResourceCompiler as this will thwart our editing efforts (done in the ClCompile section, etc.)
+// when we actually REDUCE the paths' set! (We ran into this issue while editing the libleptonica paths for example)
 let include_paths = '.;%(AdditionalIncludeDirectories)';
 const inc_re = /<AdditionalIncludeDirectories>([^]*?)<\/AdditionalIncludeDirectories>/g;
+let search_src = src.replace(/<ResourceCompile>[^]*?<\/ResourceCompile>/g, '');
 for (;;) {
-	let m = inc_re.exec(src);
+	let m = inc_re.exec(search_src);
 	if (!m)
 		break;
 	let p1 = m[1].trim();
@@ -409,6 +449,166 @@ for (;;) {
 	}
 }
 
+// make sure the searchdir list has these entries and at the priority position where we want them (front = first):
+// - clean up
+// - append/prepend the required paths
+include_paths = `;${include_paths.trim()};`
+	.replace(/\\/g, '/')
+	.replace(/;..\/..\/include\/system-override;/g, ';')
+	.replace(/;%\(AdditionalIncludeDirectories\);/g, ';')
+	.replace(/;.;/g, ';')
+
+// patch: when there's a single /boost/ reference in there, get the whole damn bunch:
+if (/\/owemdjee\/boost\//.test(include_paths) || /\/scripts\/boost\//.test(include_paths)) {
+	include_paths = `${include_paths}
+	../../scripts/boost/include
+	../../thirdparty/owemdjee/boost
+	../../thirdparty/owemdjee/boost/libs/algorithm/include
+	../../thirdparty/owemdjee/boost/libs/any/include
+	../../thirdparty/owemdjee/boost/libs/array/include
+	../../thirdparty/owemdjee/boost/libs/asio/include
+	../../thirdparty/owemdjee/boost/libs/assert/include
+	../../thirdparty/owemdjee/boost/libs/atomic/include
+	../../thirdparty/owemdjee/boost/libs/bind/include
+	../../thirdparty/owemdjee/boost/libs/chrono/include
+	../../thirdparty/owemdjee/boost/libs/concept_check/include
+	../../thirdparty/owemdjee/boost/libs/config/include
+	../../thirdparty/owemdjee/boost/libs/container/include
+	../../thirdparty/owemdjee/boost/libs/container_hash/include
+	../../thirdparty/owemdjee/boost/libs/core/include
+	../../thirdparty/owemdjee/boost/libs/crc/include
+	../../thirdparty/owemdjee/boost/libs/date_time/include
+	../../thirdparty/owemdjee/boost/libs/detail/include
+	../../thirdparty/owemdjee/boost/libs/dll/include
+	../../thirdparty/owemdjee/boost/libs/fiber/include
+	../../thirdparty/owemdjee/boost/libs/filesystem/include
+	../../thirdparty/owemdjee/boost/libs/function/include
+	../../thirdparty/owemdjee/boost/libs/fusion/include
+	../../thirdparty/owemdjee/boost/libs/integer/include
+	../../thirdparty/owemdjee/boost/libs/io/include
+	../../thirdparty/owemdjee/boost/libs/iterator/include
+	../../thirdparty/owemdjee/boost/libs/lexical_cast/include
+	../../thirdparty/owemdjee/boost/libs/locale/include
+	../../thirdparty/owemdjee/boost/libs/lockfree/include
+	../../thirdparty/owemdjee/boost/libs/log/include
+	../../thirdparty/owemdjee/boost/libs/logic/include
+	../../thirdparty/owemdjee/boost/libs/move/include
+	../../thirdparty/owemdjee/boost/libs/mp11/include
+	../../thirdparty/owemdjee/boost/libs/mp11/include/
+	../../thirdparty/owemdjee/boost/libs/mpl/include
+	../../thirdparty/owemdjee/boost/libs/multiprecision/include
+	../../thirdparty/owemdjee/boost/libs/numeric/conversion/include
+	../../thirdparty/owemdjee/boost/libs/optional/include
+	../../thirdparty/owemdjee/boost/libs/parameter/include
+	../../thirdparty/owemdjee/boost/libs/phoenix/include
+	../../thirdparty/owemdjee/boost/libs/predef/include
+	../../thirdparty/owemdjee/boost/libs/preprocessor/include
+	../../thirdparty/owemdjee/boost/libs/program_options/include
+	../../thirdparty/owemdjee/boost/libs/proto/include
+	../../thirdparty/owemdjee/boost/libs/range/include
+	../../thirdparty/owemdjee/boost/libs/ratio/include
+	../../thirdparty/owemdjee/boost/libs/regex/include
+	../../thirdparty/owemdjee/boost/libs/smart_ptr/include
+	../../thirdparty/owemdjee/boost/libs/static_assert/include
+	../../thirdparty/owemdjee/boost/libs/system/include
+	../../thirdparty/owemdjee/boost/libs/test/include
+	../../thirdparty/owemdjee/boost/libs/thread/include
+	../../thirdparty/owemdjee/boost/libs/throw_exception/include
+	../../thirdparty/owemdjee/boost/libs/type_index/include
+	../../thirdparty/owemdjee/boost/libs/type_traits/include
+	../../thirdparty/owemdjee/boost/libs/typeof/include
+	../../thirdparty/owemdjee/boost/libs/utility/include
+	../../thirdparty/owemdjee/boost/libs/uuid/include
+	../../thirdparty/owemdjee/boost/libs/winapi/include
+	`.replace(/\n/g, ';')
+	.replace(/\s+/g, '');
+}
+
+// patch: when there's a single /openCV/ reference in there, get the whole damn bunch:
+if (/\/owemdjee\/opencv\//.test(include_paths) || /\/scripts\/OpenCV\//.test(include_paths)) {
+	include_paths = `${include_paths}
+	../../scripts/OpenCV
+	../../scripts/OpenCV/modules/core
+	../../scripts/OpenCV/modules/stitching
+	../../thirdparty/owemdjee/opencv/include
+	../../thirdparty/owemdjee/opencv/modules/calib3d/include
+	../../thirdparty/owemdjee/opencv/modules/core/include
+	../../thirdparty/owemdjee/opencv/modules/dnn
+	../../thirdparty/owemdjee/opencv/modules/dnn/include
+	../../thirdparty/owemdjee/opencv/modules/features2d/include
+	../../thirdparty/owemdjee/opencv/modules/flann/include
+	../../thirdparty/owemdjee/opencv/modules/gapi/include
+	../../thirdparty/owemdjee/opencv/modules/gapi/src
+	../../thirdparty/owemdjee/opencv/modules/highgui/include
+	../../thirdparty/owemdjee/opencv/modules/imgcodecs/include
+	../../thirdparty/owemdjee/opencv/modules/imgproc/include
+	../../thirdparty/owemdjee/opencv/modules/ml/include
+	../../thirdparty/owemdjee/opencv/modules/objdetect/include
+	../../thirdparty/owemdjee/opencv/modules/photo/include
+	../../thirdparty/owemdjee/opencv/modules/stitching/include
+	../../thirdparty/owemdjee/opencv/modules/ts/include
+	../../thirdparty/owemdjee/opencv/modules/ts/include/
+	../../thirdparty/owemdjee/opencv/modules/video/include
+	../../thirdparty/owemdjee/opencv/modules/videoio/include
+	../../thirdparty/owemdjee/opencv/modules/world/include
+	../../thirdparty/owemdjee/opencv_contrib/modules/alphamat/include
+	../../thirdparty/owemdjee/opencv_contrib/modules/aruco/include
+	../../thirdparty/owemdjee/opencv_contrib/modules/bgsegm/include
+	../../thirdparty/owemdjee/opencv_contrib/modules/bioinspired/include
+	../../thirdparty/owemdjee/opencv_contrib/modules/ccalib/include
+	../../thirdparty/owemdjee/opencv_contrib/modules/cnn_3dobj/include
+	../../thirdparty/owemdjee/opencv_contrib/modules/cudaarithm/include
+	../../thirdparty/owemdjee/opencv_contrib/modules/cudacodec/include
+	../../thirdparty/owemdjee/opencv_contrib/modules/cudalegacy/include
+	../../thirdparty/owemdjee/opencv_contrib/modules/cudaoptflow/include
+	../../thirdparty/owemdjee/opencv_contrib/modules/cvv/include
+	../../thirdparty/owemdjee/opencv_contrib/modules/sfm/src/libmv_light
+	../../thirdparty/owemdjee/opencv_contrib/modules/viz/include
+	../../thirdparty/owemdjee/opencv_contrib/modules/xphoto/include
+	../../thirdparty/owemdjee/opencv_contrib/modules/xfeatures2d/include
+	../../thirdparty/owemdjee/opencv_contrib/modules/ximgproc/include
+	../../thirdparty/owemdjee/opencv_contrib/modules/intensity_transform/include
+	../../scripts/OpenCV/modules/imgproc
+	../../thirdparty/owemdjee/opencv_contrib/modules/optflow/include
+	../../thirdparty/owemdjee/opencv_contrib/modules/freetype/include
+	../../thirdparty/owemdjee/opencv_contrib/modules/hdf/include
+	../../thirdparty/owemdjee/opencv_contrib/modules/img_hash/include
+	../../thirdparty/owemdjee/opencv_contrib/modules/face/include
+	../../thirdparty/owemdjee/opencv/3rdparty/openvx/include
+	`.replace(/\n/g, ';')
+	.replace(/\s+/g, '');
+}
+
+
+include_paths = `../../include/system-override;.;${include_paths};`;
+	
+
+// deduplicate the include paths set:
+let inc_set_hash = {};
+include_paths = include_paths.split(';')
+.filter(function flt(el) {
+	if (el.trim().length === 0)
+		return false;
+	if (el === `%(AdditionalIncludeDirectories)`)
+		return false;
+	return true;
+})
+.map(function (el) {
+	if (inc_set_hash[el])
+		return "";
+	
+	inc_set_hash[el] = true;
+	return el;
+})
+.filter(function flt(el) {
+	return (el.trim().length > 0);
+})
+.join(';');
+
+include_paths = `${include_paths};%(AdditionalIncludeDirectories)`
+	.replace(/;;/g, ';')
+	.replace(/^;/g, '')
+	
 src = src
 .replace(/<AdditionalIncludeDirectories>[^]*?<\/AdditionalIncludeDirectories>/g, `<AdditionalIncludeDirectories>${include_paths}</AdditionalIncludeDirectories>`);
 

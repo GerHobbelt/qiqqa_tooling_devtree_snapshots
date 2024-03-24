@@ -47,6 +47,9 @@
     <ClCompile Include="../../thirdparty/owemdjee/fast_pfor/src/bitpackingunaligned.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/fast_pfor/src/codecfactory.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/fast_pfor/src/codecs.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
@@ -242,6 +245,9 @@
     <ClInclude Include="../../thirdparty/owemdjee/fast_pfor/headers/ztimer.h">
       <Filter>Header Files\headers</Filter>
     </ClInclude>
+    <Text Include="../../thirdparty/owemdjee/fast_pfor/AUTHORS">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/fast_pfor/CMakeLists.txt">
       <Filter>Misc Files</Filter>
     </Text>
@@ -251,10 +257,16 @@
     <Text Include="../../thirdparty/owemdjee/fast_pfor/FastPFORConfig.cmake.in">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/fast_pfor/LICENSE">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/fast_pfor/README.md">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/fast_pfor/TODO.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fast_pfor/appveyor.yml">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/fast_pfor/cmake_modules/AppendCompilerFlags.cmake">
@@ -265,6 +277,9 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/fast_pfor/cmake_modules/Findsnappy.cmake">
       <Filter>Misc Files\cmake_modules</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fast_pfor/data/ClueWeb09LogSizeFreqs.1">
+      <Filter>Misc Files\data</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/fast_pfor/data/README">
       <Filter>Misc Files\data</Filter>

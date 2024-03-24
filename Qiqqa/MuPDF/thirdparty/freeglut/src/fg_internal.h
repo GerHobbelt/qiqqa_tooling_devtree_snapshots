@@ -160,7 +160,7 @@
 
 /* M_PI is non-standard (defined by BSD, not ISO-C) */
 #ifndef M_PI
-#    define  M_PI  3.14159265358979323846
+#define M_PI    3.14159265358979323846264338327950
 #endif
 
 #ifdef HAVE_STDBOOL_H

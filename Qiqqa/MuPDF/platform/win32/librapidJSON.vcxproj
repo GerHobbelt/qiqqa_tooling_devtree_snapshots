@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBRAPIDJSON;RAPIDJSON_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBRAPIDJSON;RAPIDJSON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/rapidJSON/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBRAPIDJSON;RAPIDJSON_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/rapidJSON/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBRAPIDJSON;RAPIDJSON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBRAPIDJSON;RAPIDJSON_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBRAPIDJSON;RAPIDJSON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/rapidJSON/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/rapidJSON/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBRAPIDJSON;RAPIDJSON_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBRAPIDJSON;RAPIDJSON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/rapidJSON/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBRAPIDJSON;RAPIDJSON_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/rapidJSON/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBRAPIDJSON;RAPIDJSON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBRAPIDJSON;RAPIDJSON_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBRAPIDJSON;RAPIDJSON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/rapidJSON/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/rapidJSON/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBRAPIDJSON;RAPIDJSON_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBRAPIDJSON;RAPIDJSON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/rapidJSON/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBRAPIDJSON;RAPIDJSON_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/rapidJSON/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBRAPIDJSON;RAPIDJSON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBRAPIDJSON;RAPIDJSON_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBRAPIDJSON;RAPIDJSON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/rapidJSON/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/rapidJSON/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBRAPIDJSON;RAPIDJSON_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBRAPIDJSON;RAPIDJSON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/rapidJSON/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBRAPIDJSON;RAPIDJSON_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/rapidJSON/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBRAPIDJSON;RAPIDJSON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBRAPIDJSON;RAPIDJSON_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBRAPIDJSON;RAPIDJSON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/rapidJSON/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/rapidJSON/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -249,40 +249,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/example/sortkeys/sortkeys.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/example/traverseaspointer.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/example/tutorial/tutorial.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/perftest/misctest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/perftest/perfplatformtest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/perftest/perfschematest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/perftest/perftest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/perftest/rapidjsontest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/allocatorstest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/bigintegertest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/clzlltest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/cursorstreamwrappertest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/documenttest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/dtoatest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/encodedstreamtest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/encodingstest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/filestreamtest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/fwdtest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/istreamwrappertest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/itoatest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/jsoncheckertest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/namespacetest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/ostreamwrappertest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/platformtest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/pointertest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/prettywritertest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/readertest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/regextest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/schematest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/simdtest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/strfunctest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/stringbuffertest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/strtodtest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/unittest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/uritest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/valuetest.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/writertest.cpp" />
     <ClInclude Include="../../thirdparty/owemdjee/rapidJSON/example/archiver/archiver.h" />
     <ClInclude Include="../../thirdparty/owemdjee/rapidJSON/include/rapidjson/allocators.h" />
     <ClInclude Include="../../thirdparty/owemdjee/rapidJSON/include/rapidjson/cursorstreamwrapper.h" />
@@ -322,8 +288,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/rapidJSON/include/rapidjson/stringbuffer.h" />
     <ClInclude Include="../../thirdparty/owemdjee/rapidJSON/include/rapidjson/uri.h" />
     <ClInclude Include="../../thirdparty/owemdjee/rapidJSON/include/rapidjson/writer.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/rapidJSON/test/perftest/perftest.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/unittest.h" />
     <Image Include="../../thirdparty/owemdjee/rapidJSON/doc/diagram/architecture.png" />
     <Image Include="../../thirdparty/owemdjee/rapidJSON/doc/diagram/insituparsing.png" />
     <Image Include="../../thirdparty/owemdjee/rapidJSON/doc/diagram/iterative-parser-states-diagram.png" />
@@ -340,6 +304,7 @@
     <Text Include="../../thirdparty/owemdjee/rapidJSON/RapidJSON.pc.in" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/RapidJSONConfig.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/RapidJSONConfigVersion.cmake.in" />
+    <Text Include="../../thirdparty/owemdjee/rapidJSON/appveyor.yml" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/bin/data/abcde.txt" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/bin/data/glossary.json" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/bin/data/menu.json" />
@@ -394,6 +359,7 @@
     <Text Include="../../thirdparty/owemdjee/rapidJSON/bin/jsonchecker/pass2.json" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/bin/jsonchecker/pass3.json" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/bin/jsonchecker/readme.txt" />
+    <Text Include="../../thirdparty/owemdjee/rapidJSON/bin/jsonschema/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/bin/jsonschema/README.md" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/bin/jsonschema/remotes/folder/folderInteger.json" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/bin/jsonschema/remotes/integer.json" />
@@ -456,6 +422,7 @@
     <Text Include="../../thirdparty/owemdjee/rapidJSON/bin/jsonschema/tests/draft4/required.json" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/bin/jsonschema/tests/draft4/type.json" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/bin/jsonschema/tests/draft4/uniqueItems.json" />
+    <Text Include="../../thirdparty/owemdjee/rapidJSON/bin/jsonschema/tox.ini" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/bin/types/alotofkeys.json" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/bin/types/booleans.json" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/bin/types/floats.json" />
@@ -470,10 +437,23 @@
     <Text Include="../../thirdparty/owemdjee/rapidJSON/bin/unittestschema/anyOf_address.json" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/bin/unittestschema/idandref.json" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/bin/unittestschema/oneOf_address.json" />
+    <Text Include="../../thirdparty/owemdjee/rapidJSON/contrib/natvis/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/contrib/natvis/README.md" />
+    <Text Include="../../thirdparty/owemdjee/rapidJSON/contrib/natvis/rapidjson.natvis" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/doc/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/doc/Doxyfile.in" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/doc/Doxyfile.zh-cn.in" />
+    <Text Include="../../thirdparty/owemdjee/rapidJSON/doc/diagram/architecture.dot" />
+    <Text Include="../../thirdparty/owemdjee/rapidJSON/doc/diagram/insituparsing.dot" />
+    <Text Include="../../thirdparty/owemdjee/rapidJSON/doc/diagram/iterative-parser-states-diagram.dot" />
+    <Text Include="../../thirdparty/owemdjee/rapidJSON/doc/diagram/makefile" />
+    <Text Include="../../thirdparty/owemdjee/rapidJSON/doc/diagram/move1.dot" />
+    <Text Include="../../thirdparty/owemdjee/rapidJSON/doc/diagram/move2.dot" />
+    <Text Include="../../thirdparty/owemdjee/rapidJSON/doc/diagram/move3.dot" />
+    <Text Include="../../thirdparty/owemdjee/rapidJSON/doc/diagram/normalparsing.dot" />
+    <Text Include="../../thirdparty/owemdjee/rapidJSON/doc/diagram/simpledom.dot" />
+    <Text Include="../../thirdparty/owemdjee/rapidJSON/doc/diagram/tutorial.dot" />
+    <Text Include="../../thirdparty/owemdjee/rapidJSON/doc/diagram/utilityclass.dot" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/doc/dom.md" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/doc/dom.zh-cn.md" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/doc/encoding.md" />
@@ -484,6 +464,10 @@
     <Text Include="../../thirdparty/owemdjee/rapidJSON/doc/features.zh-cn.md" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/doc/internals.md" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/doc/internals.zh-cn.md" />
+    <Text Include="../../thirdparty/owemdjee/rapidJSON/doc/logo/rapidjson.svg" />
+    <Text Include="../../thirdparty/owemdjee/rapidJSON/doc/misc/doxygenextra.css" />
+    <Text Include="../../thirdparty/owemdjee/rapidJSON/doc/misc/footer.html" />
+    <Text Include="../../thirdparty/owemdjee/rapidJSON/doc/misc/header.html" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/doc/npm.md" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/doc/performance.md" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/doc/performance.zh-cn.md" />
@@ -504,9 +488,6 @@
     <Text Include="../../thirdparty/owemdjee/rapidJSON/package.json" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/readme.md" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/readme.zh-cn.md" />
-    <Text Include="../../thirdparty/owemdjee/rapidJSON/test/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/rapidJSON/test/perftest/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/rapidJSON/test/unittest/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/rapidJSON/travis-doxygen.sh" />
     <Xml Include="../../thirdparty/owemdjee/rapidJSON/doc/misc/DoxygenLayout.xml" />
   </ItemGroup>

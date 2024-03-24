@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZMQ;ZMQ_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZMQ;ZMQ_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libzmq/include;../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc;../../thirdparty/owemdjee/libzmq/tests;../../thirdparty/owemdjee/libzmq/external/unity;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZMQ;ZMQ_STATICLIB;ZMQ_CUSTOM_PLATFORM_HPP;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libzmq/include;../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc;../../thirdparty/owemdjee/libzmq/tests;../../thirdparty/owemdjee/libzmq/external/unity;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZMQ;ZMQ_STATICLIB;ZMQ_CUSTOM_PLATFORM_HPP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZMQ;ZMQ_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZMQ;ZMQ_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libzmq/include;../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc;../../thirdparty/owemdjee/libzmq/tests;../../thirdparty/owemdjee/libzmq/external/unity;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libzmq/include;../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc;../../thirdparty/owemdjee/libzmq/tests;../../thirdparty/owemdjee/libzmq/external/unity;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZMQ;ZMQ_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZMQ;ZMQ_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libzmq/include;../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc;../../thirdparty/owemdjee/libzmq/tests;../../thirdparty/owemdjee/libzmq/external/unity;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZMQ;ZMQ_STATICLIB;ZMQ_CUSTOM_PLATFORM_HPP;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libzmq/include;../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc;../../thirdparty/owemdjee/libzmq/tests;../../thirdparty/owemdjee/libzmq/external/unity;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZMQ;ZMQ_STATICLIB;ZMQ_CUSTOM_PLATFORM_HPP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZMQ;ZMQ_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZMQ;ZMQ_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libzmq/include;../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc;../../thirdparty/owemdjee/libzmq/tests;../../thirdparty/owemdjee/libzmq/external/unity;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libzmq/include;../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc;../../thirdparty/owemdjee/libzmq/tests;../../thirdparty/owemdjee/libzmq/external/unity;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZMQ;ZMQ_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZMQ;ZMQ_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libzmq/include;../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc;../../thirdparty/owemdjee/libzmq/tests;../../thirdparty/owemdjee/libzmq/external/unity;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZMQ;ZMQ_STATICLIB;ZMQ_CUSTOM_PLATFORM_HPP;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libzmq/include;../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc;../../thirdparty/owemdjee/libzmq/tests;../../thirdparty/owemdjee/libzmq/external/unity;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZMQ;ZMQ_STATICLIB;ZMQ_CUSTOM_PLATFORM_HPP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZMQ;ZMQ_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZMQ;ZMQ_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libzmq/include;../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc;../../thirdparty/owemdjee/libzmq/tests;../../thirdparty/owemdjee/libzmq/external/unity;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libzmq/include;../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc;../../thirdparty/owemdjee/libzmq/tests;../../thirdparty/owemdjee/libzmq/external/unity;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZMQ;ZMQ_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZMQ;ZMQ_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libzmq/include;../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc;../../thirdparty/owemdjee/libzmq/tests;../../thirdparty/owemdjee/libzmq/external/unity;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZMQ;ZMQ_STATICLIB;ZMQ_CUSTOM_PLATFORM_HPP;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libzmq/include;../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc;../../thirdparty/owemdjee/libzmq/tests;../../thirdparty/owemdjee/libzmq/external/unity;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZMQ;ZMQ_STATICLIB;ZMQ_CUSTOM_PLATFORM_HPP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZMQ;ZMQ_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBZMQ;ZMQ_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libzmq/include;../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc;../../thirdparty/owemdjee/libzmq/tests;../../thirdparty/owemdjee/libzmq/external/unity;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libzmq/include;../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc;../../thirdparty/owemdjee/libzmq/tests;../../thirdparty/owemdjee/libzmq/external/unity;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -341,7 +341,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/libzmq/src/tipc_connecter.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libzmq/src/tipc_listener.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libzmq/src/trie.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/libzmq/src/tweetnacl.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libzmq/src/udp_address.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libzmq/src/udp_engine.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libzmq/src/v1_decoder.cpp" />
@@ -423,6 +422,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/libzmq/tests/test_proxy.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libzmq/tests/test_proxy_hwm.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libzmq/tests/test_proxy_single_socket.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libzmq/tests/test_proxy_steerable.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libzmq/tests/test_proxy_terminate.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libzmq/tests/test_pub_invert_matching.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libzmq/tests/test_pubsub.cpp" />
@@ -486,6 +486,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/libzmq/tests/test_xpub_manual.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libzmq/tests/test_xpub_manual_last_value.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libzmq/tests/test_xpub_nodrop.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libzmq/tests/test_xpub_topic.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libzmq/tests/test_xpub_verbose.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libzmq/tests/test_xpub_welcome_msg.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libzmq/tests/test_xsub_verbose.cpp" />
@@ -639,7 +640,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/libzmq/src/tipc_connecter.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libzmq/src/tipc_listener.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libzmq/src/trie.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/libzmq/src/tweetnacl.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libzmq/src/udp_address.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libzmq/src/udp_engine.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libzmq/src/v1_decoder.hpp" />
@@ -680,337 +680,29 @@
     <Image Include="../../thirdparty/owemdjee/libzmq/branding.bmp" />
     <Image Include="../../thirdparty/owemdjee/libzmq/installer.ico" />
     <ResourceCompile Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/resource.rc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/AUTHORS" />
     <Text Include="../../thirdparty/owemdjee/libzmq/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libzmq/Doxygen.cfg" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/INSTALL" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/libzmq/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libzmq/NEWS" />
     <Text Include="../../thirdparty/owemdjee/libzmq/README.cygwin.md" />
     <Text Include="../../thirdparty/owemdjee/libzmq/README.doxygen.md" />
     <Text Include="../../thirdparty/owemdjee/libzmq/README.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/AnCaPepe.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/AndreLouisCaron.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/Asmod4n.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/AxelNennker.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/Bklyn.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/Botje.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/C-Sir.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/CommanderBubble.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/Cziken.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/DaiyuHurst.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/Eelis.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/FrancoFichtner.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/FredTreg.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/Hugne.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/Jasper-Bekkers.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/JohanMabille.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/JonDyte.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/KLNikita.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/MartinGrigorov.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/NLeScienceCenter.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/Neopallium.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/PaulThiele.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/Quuxplusone.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/README.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/RPGillespie6.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/Ricardicus.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/SRombauts.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/SergheiNovac.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/StephaneVales.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/SylvainCorlay.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/TTimo.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/Teebonne.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/ThePrez.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/TobiSchluter.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/WenbinHou.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/a4z.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/abbradar.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/ackalker.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/acsearle.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/agronholm.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/aixxe.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/ambitslix.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/amuraru.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/analogist.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/answeroo.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/antonrd.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/ardrabczyk.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/arsenm.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/asafkahlon.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/aseering.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/atomashpolskiy.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/banburybill.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/bbdb68.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/bebopagogo.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/benjdero.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/bjoto.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/bjovke.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/bl0x.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/bluca.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/boscosiu.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/boxkey.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/bprager.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/brett-cameron.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/brian-peloton.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/brocade_communications_systems.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/brubakerjeff.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/bwbuchanan.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/c-rack.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/c-zhao-3g.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/calid.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/camachat.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/casaroli.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/cbusbey.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/cdolan.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/chickenkiller.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/chrisstaite.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/christhrasher.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/chuckremes.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/chuggafan.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/chymanfx.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/cjuniet.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/ckamm.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/claws.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/clkao.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/colletted.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/cowo78.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/crocket.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/cwsmith.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/daira.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/danielhtshih.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/danriegsecker.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/darkdragon-001.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/demozon.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/dennisklein.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/dfons.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/dhammika.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/dimpase.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/diorcety.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/djelenc.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/djolemanojlovic.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/dkrikun.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/dmeehan1968.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/drbobbeaty.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/drodri.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/drolevar.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/eburkitt.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/egomotion.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/eldruin.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/emtr.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/eponsko.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/ericsson.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/evoskuil.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/ezhikus.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/f18m.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/fanquake.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/febeling.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/ferdnyc.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/ffontaine.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/fidlej.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/flub.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/gabm.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/garlick.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/gavinmcniff.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/gcsideal.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/gena-moscow.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/ghpu.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/gitfoxi.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/glemercier.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/gonzus.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/goodfella.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/google.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/grmt.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/guidovranken.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/guillon.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/gummif.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/hangao.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/herbrechtsmeier.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/hewlett_packard_enterprise.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/hgourvest.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/hitstergtd.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/hnwyllmm.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/hoditohod.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/hpsaturn.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/hsw.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/ianbarber.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/imatix.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/imkcy9.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/inuik.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/ipa.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/ipechorin.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/jackpimbert.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/jacquesg.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/jakecobb.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/jbreams.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/jcfr.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/jcourreges.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/jean-airoldie.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/jemc.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/jens.auer.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/jimenezrick.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/jimklimov.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/jkryl.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/jlauenercern.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/jlsantiago0.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/johntconklin.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/jruffin.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/jsyoo5b.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/kaczmarj.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/kalantar.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/kanonet.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/kentzo.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/kfish.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/kobolog.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/kreuzberger.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/kurdybacha.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/laplaceyang.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/latchmoor-services-carcich.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/leonarf.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/liedtkeInTUM.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/linville.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/loachfish.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/lodagro.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/lourens.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/lstacul.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/madebr.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/malexzx.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/mancasg.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/martin-ksti.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/martindelille.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/mattconnolly.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/mauri-melato.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/mbarbisan.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/mdionisio.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/mditzel.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/meox.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/mesegura.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/mgatny.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/michicc.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/micromass-ricnewton.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/mileschet.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/miniway.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/minrk.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/mipaaa.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/mjvk.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/mkluwe.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/mkoppanen.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/mloy.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/mongodb.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/montoyaedu.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/moretromain.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/mrvn.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/msune.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/murphybytes.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/mvilim.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/mystfit.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/naos_ltd.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/natano.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/neheb.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/nevalsar.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/nfware.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/ninoles.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/nixman.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/niyassait.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/nokia.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/normano.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/ojura.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/olafmandel.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/omegastick.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/opedroso.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/opensource-kymetacorp.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/paddor.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/panlinux.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/patrickvolante.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/pavel-pimenov.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/philippeleite.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/phreed.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/pijyoi.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/pmienk.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/pnnl.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/prarrot.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/psl-felipefarinon.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/ptroja.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/rcxdude.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/reunanen.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/rex4539.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/reza-ebrahimi.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/rgagnon24.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/rikvdh.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/rlenferink.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/roalz.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/rodgert.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/rotty.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/sab24.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/sabotagebeats.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/sappo.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/saschavv.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/scemama.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/schulzch.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/sdrsdr.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/serg06.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/sergeyfedorov.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/shancat.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/sheremetyev.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/shripchenko.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/sigiesec.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/simias.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/skaes.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/skaller.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/skicc.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/somdoron.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/sonoware.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/soulik.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/spotify.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/sradomski.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/ssbl.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/stanpl.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/staticfloat.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/std-any-emplace.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/stephan57160.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/steve-o.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/straubar.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/suudy.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/swansontec.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/t-b.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/tSed.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/tabe.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/tailhook.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/taotetek.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/tarmo.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/tberkey.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/td-krzysiek.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/templates/relicense-template-mplv2-any-osi.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/templates/relicense-template-mplv2-share-alike-osi.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/templates/relicense-template-mplv2.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/thompsa.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/thxkiwi.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/timblechmann.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/tommd.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/tomzbench.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/tongsong-cai.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/toonetown.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/tranthamp.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/trevorbernard.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/trya.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/twhittock.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/ulikoehler.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/viciious.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/vortechs2000.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/vtellier.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/vyskocilm.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/wallstprog.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/willstrang.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/xantares.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/xaqq.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/yan12125.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/yitzchak.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/yunye-pu.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/yuvallanger.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/zedalaye.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/zoedberg.md" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/RELICENSE/zoobab.md" />
     <Text Include="../../thirdparty/owemdjee/libzmq/SECURITY.md" />
     <Text Include="../../thirdparty/owemdjee/libzmq/SupportedPlatforms.md" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/acinclude.m4" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/appveyor.yml" />
     <Text Include="../../thirdparty/owemdjee/libzmq/autogen.sh" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/build_qnx/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/build_qnx/common.mk" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/build_qnx/nto/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/build_qnx/nto/aarch64/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/build_qnx/nto/aarch64/le/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/build_qnx/nto/x86_64/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/build_qnx/nto/x86_64/o/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/build_qnx/qnx.nto.toolchain.cmake" />
     <Text Include="../../thirdparty/owemdjee/libzmq/builds/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libzmq/builds/README" />
     <Text Include="../../thirdparty/owemdjee/libzmq/builds/abi-compliance-checker/ci_build.sh" />
@@ -1019,9 +711,9 @@
     <Text Include="../../thirdparty/owemdjee/libzmq/builds/android/build.sh" />
     <Text Include="../../thirdparty/owemdjee/libzmq/builds/android/ci_build.sh" />
     <Text Include="../../thirdparty/owemdjee/libzmq/builds/cmake/Modules/ClangFormat.cmake" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/builds/cmake/Modules/FindAsciiDoc.cmake" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/cmake/Modules/FindAsciiDoctor.cmake" />
     <Text Include="../../thirdparty/owemdjee/libzmq/builds/cmake/Modules/FindNSS3.cmake" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/builds/cmake/Modules/FindSodium.cmake" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/cmake/Modules/Findsodium.cmake" />
     <Text Include="../../thirdparty/owemdjee/libzmq/builds/cmake/Modules/TestZMQVersion.cmake" />
     <Text Include="../../thirdparty/owemdjee/libzmq/builds/cmake/Modules/ZMQSourceRunChecks.cmake" />
     <Text Include="../../thirdparty/owemdjee/libzmq/builds/cmake/Modules/ZMQSupportMacros.cmake" />
@@ -1032,14 +724,92 @@
     <Text Include="../../thirdparty/owemdjee/libzmq/builds/cmake/clang-format-check.sh.in" />
     <Text Include="../../thirdparty/owemdjee/libzmq/builds/cmake/platform.hpp.in" />
     <Text Include="../../thirdparty/owemdjee/libzmq/builds/coverage/ci_build.sh" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/cygwin/Makefile.cygwin" />
     <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/build/build.bat" />
     <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/build/buildall.bat" />
     <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/build/buildbase.bat" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/properties/Common.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/properties/DLL.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/properties/Debug.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/properties/DebugDEXE.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/properties/DebugDLL.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/properties/DebugLEXE.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/properties/DebugLIB.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/properties/DebugLTCG.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/properties/DebugSEXE.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/properties/EXE.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/properties/LIB.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/properties/LTCG.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/properties/Link.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/properties/Messages.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/properties/Output.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/properties/Release.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/properties/ReleaseDEXE.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/properties/ReleaseDLL.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/properties/ReleaseLEXE.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/properties/ReleaseLIB.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/properties/ReleaseLTCG.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/properties/ReleaseSEXE.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/properties/Win32.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/properties/x64.props" />
     <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/readme.txt" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2010/inproc_lat/inproc_lat.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2010/inproc_thr/inproc_thr.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2010/libsodium.import.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2010/libzmq.import.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2010/libzmq/libzmq.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2010/libzmq/libzmq.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2010/local_lat/local_lat.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2010/local_thr/local_thr.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2010/remote_lat/remote_lat.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2010/remote_thr/remote_thr.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2012/inproc_lat/inproc_lat.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2012/inproc_thr/inproc_thr.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2012/libsodium.import.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2012/libzmq.import.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2012/libzmq/libzmq.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2012/libzmq/libzmq.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2012/local_lat/local_lat.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2012/local_thr/local_thr.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2012/remote_lat/remote_lat.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2012/remote_thr/remote_thr.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2013/inproc_lat/inproc_lat.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2013/inproc_thr/inproc_thr.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2013/libsodium.import.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2013/libzmq.import.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2013/libzmq/libzmq.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2013/libzmq/libzmq.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2013/local_lat/local_lat.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2013/local_thr/local_thr.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2013/remote_lat/remote_lat.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2013/remote_thr/remote_thr.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2015/inproc_lat/inproc_lat.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2015/inproc_thr/inproc_thr.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2015/libsodium.import.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2015/libzmq.import.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2015/libzmq/libzmq.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2015/libzmq/libzmq.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2015/local_lat/local_lat.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2015/local_thr/local_thr.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2015/remote_lat/remote_lat.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2015/remote_thr/remote_thr.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2017/inproc_lat/inproc_lat.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2017/inproc_thr/inproc_thr.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2017/libsodium.import.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2017/libzmq.import.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2017/libzmq/libzmq.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2017/libzmq/libzmq.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2017/local_lat/local_lat.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2017/local_thr/local_thr.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2017/remote_lat/remote_lat.props" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/deprecated-msvc/vs2017/remote_thr/remote_thr.props" />
     <Text Include="../../thirdparty/owemdjee/libzmq/builds/gyp/build.bat" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/gyp/project-tests.gsl" />
     <Text Include="../../thirdparty/owemdjee/libzmq/builds/ios/build_ios.sh" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/mingw32/Makefile.mingw32" />
     <Text Include="../../thirdparty/owemdjee/libzmq/builds/nuget/readme.nuget" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/builds/openwrt/Makefile" />
     <Text Include="../../thirdparty/owemdjee/libzmq/builds/qnx/ToolchainQNX6.6_x86.cmake" />
     <Text Include="../../thirdparty/owemdjee/libzmq/builds/valgrind/ci_build.sh" />
     <Text Include="../../thirdparty/owemdjee/libzmq/builds/zos/README.md" />
@@ -1048,95 +818,107 @@
     <Text Include="../../thirdparty/owemdjee/libzmq/config.sh" />
     <Text Include="../../thirdparty/owemdjee/libzmq/configure.ac" />
     <Text Include="../../thirdparty/owemdjee/libzmq/doc/Makefile.am" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/asciidoc.conf" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_atomic_counter_dec.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_atomic_counter_destroy.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_atomic_counter_inc.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_atomic_counter_new.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_atomic_counter_set.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_atomic_counter_value.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_bind.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_close.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_connect.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_connect_peer.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_ctx_destroy.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_ctx_get.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_ctx_get_ext.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_ctx_new.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_ctx_set.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_ctx_set_ext.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_ctx_shutdown.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_ctx_term.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_curve.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_curve_keypair.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_curve_public.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_disconnect.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_errno.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_getsockopt.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_gssapi.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_has.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_init.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_inproc.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_ipc.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_close.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_copy.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_data.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_get.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_gets.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_init.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_init_buffer.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_init_data.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_init_size.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_more.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_move.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_recv.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_routing_id.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_send.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_set.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_set_routing_id.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_size.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_null.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_pgm.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_plain.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_poll.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_poller.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_ppoll.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_proxy.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_proxy_steerable.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_recv.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_recvmsg.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_send.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_send_const.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_sendmsg.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_setsockopt.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_socket.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_socket_monitor.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_socket_monitor_versioned.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_strerror.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_tcp.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_term.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_timers.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_tipc.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_udp.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_unbind.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_version.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_vmci.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_z85_decode.txt" />
-    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_z85_encode.txt" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_atomic_counter_dec.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_atomic_counter_destroy.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_atomic_counter_inc.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_atomic_counter_new.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_atomic_counter_set.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_atomic_counter_value.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_bind.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_close.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_connect.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_connect_peer.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_ctx_get.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_ctx_get_ext.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_ctx_new.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_ctx_set.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_ctx_set_ext.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_ctx_shutdown.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_ctx_term.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_curve.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_curve_keypair.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_curve_public.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_disconnect.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_errno.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_getsockopt.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_gssapi.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_has.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_inproc.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_ipc.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_close.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_copy.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_data.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_get.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_gets.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_init.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_init_buffer.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_init_data.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_init_size.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_more.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_move.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_recv.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_routing_id.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_send.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_set.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_set_routing_id.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_msg_size.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_null.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_pgm.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_plain.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_poll.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_poller.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_ppoll.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_proxy.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_proxy_steerable.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_recv.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_recvmsg.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_send.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_send_const.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_sendmsg.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_setsockopt.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_socket.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_socket_monitor.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_socket_monitor_versioned.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_strerror.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_tcp.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_timers.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_tipc.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_udp.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_unbind.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_version.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_vmci.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_z85_decode.adoc" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/doc/zmq_z85_encode.adoc" />
     <Text Include="../../thirdparty/owemdjee/libzmq/external/sha1/license.txt" />
     <Text Include="../../thirdparty/owemdjee/libzmq/external/unity/license.txt" />
     <Text Include="../../thirdparty/owemdjee/libzmq/external/unity/version.txt" />
     <Text Include="../../thirdparty/owemdjee/libzmq/external/wepoll/README.md" />
     <Text Include="../../thirdparty/owemdjee/libzmq/external/wepoll/license.txt" />
     <Text Include="../../thirdparty/owemdjee/libzmq/external/wepoll/version.txt" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/m4/ax_check_compile_flag.m4" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/m4/ax_check_vscript.m4" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/m4/ax_code_coverage.m4" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/m4/ax_cxx_compile_stdcxx.m4" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/m4/ax_cxx_compile_stdcxx_11.m4" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/m4/ax_func_posix_memalign.m4" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/m4/ax_valgrind_check.m4" />
     <Text Include="../../thirdparty/owemdjee/libzmq/packaging/README" />
     <Text Include="../../thirdparty/owemdjee/libzmq/packaging/debian/changelog" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/packaging/debian/libzmq3-dev.install" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/packaging/debian/libzmq3-dev.manpages" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/packaging/debian/libzmq5.docs" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/packaging/debian/libzmq5.install" />
     <Text Include="../../thirdparty/owemdjee/libzmq/packaging/nuget/package.bat" />
     <Text Include="../../thirdparty/owemdjee/libzmq/packaging/nuget/package.config" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/packaging/nuget/package.gsl" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/packaging/nuget/package.nuspec" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/packaging/nuget/package.targets" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/packaging/redhat/zeromq.spec" />
     <Text Include="../../thirdparty/owemdjee/libzmq/perf/generate_csv.sh" />
     <Text Include="../../thirdparty/owemdjee/libzmq/perf/generate_graphs.py" />
     <Text Include="../../thirdparty/owemdjee/libzmq/src/libzmq.pc.in" />
+    <Text Include="../../thirdparty/owemdjee/libzmq/src/libzmq.vers" />
     <Text Include="../../thirdparty/owemdjee/libzmq/src/version.rc.in" />
     <Text Include="../../thirdparty/owemdjee/libzmq/tests/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libzmq/tests/README.md" />

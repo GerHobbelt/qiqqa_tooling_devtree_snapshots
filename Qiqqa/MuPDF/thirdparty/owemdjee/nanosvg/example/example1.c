@@ -24,10 +24,18 @@
 
 #include <GLFW/glfw3.h>
 
+#if !defined(BUILD_MONOLITHIC)
 #define NANOSVG_IMPLEMENTATION
+#endif
 #include "nanosvg.h"
 
-NSVGimage* g_image = NULL;
+#include "monolithic_examples.h"
+
+#ifndef NSVG_NOTUSED
+#define NSVG_NOTUSED(v) (void)0
+#endif
+
+static NSVGimage* g_image = NULL;
 
 static unsigned char bgColor[4] = {205,202,200,255};
 static unsigned char lineColor[4] = {0,160,192,255};
@@ -80,7 +88,7 @@ static void cubicBez(float x1, float y1, float x2, float y2,
 	}
 }
 
-void drawPath(float* pts, int npts, char closed, float tol)
+static void drawPath(float* pts, int npts, char closed, float tol)
 {
 	int i;
 	glBegin(GL_LINE_STRIP);
@@ -96,7 +104,7 @@ void drawPath(float* pts, int npts, char closed, float tol)
 	glEnd();
 }
 
-void drawControlPts(float* pts, int npts)
+static void drawControlPts(float* pts, int npts)
 {
 	int i;
 
@@ -141,7 +149,7 @@ void drawControlPts(float* pts, int npts)
 	glEnd();
 }
 
-void drawframe(GLFWwindow* window)
+static void drawframe(GLFWwindow* window)
 {
 	int width = 0, height = 0;
 	float view[4], cx, cy, hw, hh, aspect, px;
@@ -210,7 +218,7 @@ void drawframe(GLFWwindow* window)
 	glfwSwapBuffers(window);
 }
 
-void resizecb(GLFWwindow* window, int width, int height)
+static void resizecb(GLFWwindow* window, int width, int height)
 {
 	// Update and render
 	NSVG_NOTUSED(width);
@@ -223,7 +231,7 @@ void resizecb(GLFWwindow* window, int width, int height)
 #define main      nanosvg_example1_main
 #endif
 
-int main()
+int main(void)
 {
 	GLFWwindow* window;
 	const GLFWvidmode* mode;

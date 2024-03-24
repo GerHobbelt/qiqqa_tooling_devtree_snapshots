@@ -32,17 +32,32 @@
     <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/dnd/d_and_d.txt">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/dnd/descrip.mms">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/dnd/dnd.bkl">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/dnd/dnd_copy.cur">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/dnd/dnd_copy.xpm">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/dnd/dnd_move.cur">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/dnd/dnd_move.xpm">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/dnd/dnd_none.cur">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/dnd/dnd_none.xpm">
       <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/dnd/dnd_vc9.vcxproj.filters">
+      <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/dnd/makefile.gcc">
       <Filter>Misc Files</Filter>

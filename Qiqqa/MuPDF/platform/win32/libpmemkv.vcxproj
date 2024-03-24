@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMKV;PMEMKV_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMKV;PMEMKV_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMKV;PMEMKV_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMKV;PMEMKV_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMKV;PMEMKV_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMKV;PMEMKV_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMKV;PMEMKV_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMKV;PMEMKV_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMKV;PMEMKV_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMKV;PMEMKV_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMKV;PMEMKV_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMKV;PMEMKV_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMKV;PMEMKV_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMKV;PMEMKV_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMKV;PMEMKV_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMKV;PMEMKV_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMKV;PMEMKV_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMKV;PMEMKV_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMKV;PMEMKV_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMKV;PMEMKV_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMKV;PMEMKV_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMKV;PMEMKV_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMKV;PMEMKV_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPMEMKV;PMEMKV_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -371,6 +371,7 @@
     <Text Include="../../thirdparty/owemdjee/pmemkv/CONTRIBUTING.md" />
     <Text Include="../../thirdparty/owemdjee/pmemkv/ChangeLog" />
     <Text Include="../../thirdparty/owemdjee/pmemkv/INSTALLING.md" />
+    <Text Include="../../thirdparty/owemdjee/pmemkv/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/pmemkv/README.md" />
     <Text Include="../../thirdparty/owemdjee/pmemkv/cmake/FindLIBPMEM.cmake" />
     <Text Include="../../thirdparty/owemdjee/pmemkv/cmake/FindLIBPMEMOBJ.cmake" />
@@ -381,6 +382,7 @@
     <Text Include="../../thirdparty/owemdjee/pmemkv/cmake/packages.cmake" />
     <Text Include="../../thirdparty/owemdjee/pmemkv/cmake/rapidjson.cmake" />
     <Text Include="../../thirdparty/owemdjee/pmemkv/cmake/tbb.cmake" />
+    <Text Include="../../thirdparty/owemdjee/pmemkv/codecov.yml" />
     <Text Include="../../thirdparty/owemdjee/pmemkv/doc/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/pmemkv/doc/ENGINES-experimental.md" />
     <Text Include="../../thirdparty/owemdjee/pmemkv/doc/ENGINES-testing.md" />
@@ -440,9 +442,20 @@
     <Text Include="../../thirdparty/owemdjee/pmemkv/tests/engines/pmemobj_based/pmreorder/recover.cmake" />
     <Text Include="../../thirdparty/owemdjee/pmemkv/tests/helpers.cmake" />
     <Text Include="../../thirdparty/owemdjee/pmemkv/tests/true.cmake" />
+    <Text Include="../../thirdparty/owemdjee/pmemkv/utils/check_license/" />
     <Text Include="../../thirdparty/owemdjee/pmemkv/utils/check_license/check-headers.sh" />
     <Text Include="../../thirdparty/owemdjee/pmemkv/utils/check_license/file-exceptions.sh" />
     <Text Include="../../thirdparty/owemdjee/pmemkv/utils/docker/build.sh" />
+    <Text Include="../../thirdparty/owemdjee/pmemkv/utils/docker/images/Dockerfile.almalinux-8" />
+    <Text Include="../../thirdparty/owemdjee/pmemkv/utils/docker/images/Dockerfile.fedora-33" />
+    <Text Include="../../thirdparty/owemdjee/pmemkv/utils/docker/images/Dockerfile.fedora-34" />
+    <Text Include="../../thirdparty/owemdjee/pmemkv/utils/docker/images/Dockerfile.fedora-35" />
+    <Text Include="../../thirdparty/owemdjee/pmemkv/utils/docker/images/Dockerfile.ubuntu-18.04" />
+    <Text Include="../../thirdparty/owemdjee/pmemkv/utils/docker/images/Dockerfile.ubuntu-20.04" />
+    <Text Include="../../thirdparty/owemdjee/pmemkv/utils/docker/images/Dockerfile.ubuntu-20.04_bindings" />
+    <Text Include="../../thirdparty/owemdjee/pmemkv/utils/docker/images/Dockerfile.ubuntu-21.04" />
+    <Text Include="../../thirdparty/owemdjee/pmemkv/utils/docker/images/Dockerfile.ubuntu-21.10" />
+    <Text Include="../../thirdparty/owemdjee/pmemkv/utils/docker/images/Dockerfile.ubuntu-devel" />
     <Text Include="../../thirdparty/owemdjee/pmemkv/utils/docker/images/README.md" />
     <Text Include="../../thirdparty/owemdjee/pmemkv/utils/docker/images/build-image.sh" />
     <Text Include="../../thirdparty/owemdjee/pmemkv/utils/docker/images/download-scripts.sh" />
@@ -464,9 +477,14 @@
     <Text Include="../../thirdparty/owemdjee/pmemkv/utils/docker/run-test-building.sh" />
     <Text Include="../../thirdparty/owemdjee/pmemkv/utils/docker/set-ci-vars.sh" />
     <Text Include="../../thirdparty/owemdjee/pmemkv/utils/jenkins/README.md" />
+    <Text Include="../../thirdparty/owemdjee/pmemkv/utils/jenkins/lib/api.groovy" />
+    <Text Include="../../thirdparty/owemdjee/pmemkv/utils/jenkins/lib/snapshots.groovy" />
+    <Text Include="../../thirdparty/owemdjee/pmemkv/utils/jenkins/pmemkv_linux.jenkins" />
+    <Text Include="../../thirdparty/owemdjee/pmemkv/utils/jenkins/restore_snapshot.jenkins" />
     <Text Include="../../thirdparty/owemdjee/pmemkv/utils/jenkins/scripts/common.sh" />
     <Text Include="../../thirdparty/owemdjee/pmemkv/utils/jenkins/scripts/createNamespace.sh" />
     <Text Include="../../thirdparty/owemdjee/pmemkv/utils/jenkins/scripts/removeNamespaces.sh" />
+    <Text Include="../../thirdparty/owemdjee/pmemkv/utils/md2man/default.man" />
     <Text Include="../../thirdparty/owemdjee/pmemkv/utils/md2man/md2man.sh" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >

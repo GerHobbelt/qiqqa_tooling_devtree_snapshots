@@ -74,7 +74,7 @@ struct tagSFG_PlatformDisplay
 {
     HINSTANCE       Instance;           /* The application's instance */
     DEVMODE         DisplayMode;        /* Desktop's display settings */
-    char           *DisplayName;        /* Display name for multi display support*/ 
+    TCHAR          *DisplayName;        /* Display name for multi display support*/
 };
 
 /*
@@ -108,8 +108,8 @@ struct tagSFG_PlatformWindowState
      * one title associated with a window and we need to swap
      * them out based on the window's iconic state
      */
-    char*           WindowTitle;
-    char*           IconTitle;
+    TCHAR*          WindowTitle;
+    TCHAR*          IconTitle;
 };
 
 
@@ -146,5 +146,7 @@ void fgSpaceballHandleWinEvent(HWND hwnd, WPARAM wParam, LPARAM lParam);
 /* Function to be called on exit */
 extern void (__cdecl *__glutExitFunc)( int return_value );
 
+// Defined in fg_window_mswin.c
+TCHAR* fghTstrFromStr(const char* str);
 
 #endif  /* FREEGLUT_INTERNAL_MSWIN_H */

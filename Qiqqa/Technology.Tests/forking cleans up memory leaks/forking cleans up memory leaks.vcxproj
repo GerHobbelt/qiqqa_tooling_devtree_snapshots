@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{d60370db-184a-4fb4-ac09-a0cd7e0f34fa}</ProjectGuid>
+    <ProjectGuid>{D60370DB-184A-4FB4-AC09-A0CD7E0F34FA}</ProjectGuid>
     <RootNamespace>fork-me</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>

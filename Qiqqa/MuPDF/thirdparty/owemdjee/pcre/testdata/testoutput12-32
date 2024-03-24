@@ -1520,6 +1520,28 @@ Partial match: ab
     ab\x{df00}cdef\=ph
 No match
 
+/.a/match_invalid_utf
+    ab\=ph
+Partial match: b
+    ab\=ps
+Partial match: b
+\= Expect no match
+    b\x{df00}\=ph
+No match
+    b\x{df00}\=ps
+No match
+
+/.a$/match_invalid_utf
+    ab\=ph
+Partial match: b
+    ab\=ps
+Partial match: b
+\= Expect no match
+    b\x{df00}\=ph
+No match
+    b\x{df00}\=ps
+No match
+
 /ab$/match_invalid_utf
     ab\x{df00}cdeab
  0: ab
@@ -1583,6 +1605,10 @@ No match
 /aa/utf,ucp,match_invalid_utf,global
     \x{d800}aa
  0: aa
+    
+/A\z/utf,match_invalid_utf
+    A\x{df00}\n
+No match
 
 # ---------------------------------------------------- 
 
@@ -1778,5 +1804,17 @@ No match
 No match
 
 # ---------------------------------------------------- 
+
+# Quantifier after a literal that has the value of META_ACCEPT (not UTF). This
+# fails in 16-bit mode, but is OK for 32-bit.
+
+/\x{802a0000}*/
+    \x{802a0000}\x{802a0000}
+ 0: \x{802a0000}\x{802a0000}
+
+# UTF matching without UTF, check invalid UTF characters
+/\X++/
+    a\x{110000}\x{ffffffff}
+ 0: a\x{110000}\x{ffffffff}
 
 # End of testinput12

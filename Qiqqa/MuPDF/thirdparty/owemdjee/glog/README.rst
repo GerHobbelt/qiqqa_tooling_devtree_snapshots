@@ -202,7 +202,7 @@ You can download and install glog using the `conan
 .. code:: bash
 
    pip install conan
-   conan install -r conancenter glob/<glob-version>@
+   conan install -r conancenter glog/<glog-version>@
 
 The glog recipe in conan center is kept up to date by conan center index community
 contributors. If the version is out of date, please create an
@@ -539,11 +539,11 @@ severity level.
          "program with --v=1 or more";
    VLOG_EVERY_N(1, 10)
       << "I’m printed every 10th occurrence, and when you run the program "
-         "with --v=1 or more. Present occurence is " << google::COUNTER;
+         "with --v=1 or more. Present occurrence is " << google::COUNTER;
    VLOG_IF_EVERY_N(1, (size > 1024), 10)
-      << "I’m printed on every 10th occurence of case when size is more "
+      << "I’m printed on every 10th occurrence of case when size is more "
          " than 1024, when you run the program with --v=1 or more. ";
-         "Present occurence is " << google::COUNTER;
+         "Present occurrence is " << google::COUNTER;
 
 
 Custom Log Prefix Format

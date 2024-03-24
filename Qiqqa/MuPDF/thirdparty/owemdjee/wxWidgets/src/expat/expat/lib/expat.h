@@ -42,6 +42,7 @@
 #define Expat_INCLUDED 1
 
 #include <stdlib.h>
+#include <stdint.h>
 #include "expat_external.h"
 
 #ifdef __cplusplus
@@ -913,7 +914,7 @@ XML_SetParamEntityParsing(XML_Parser parser,
    Note: If parser == NULL, the function will do nothing and return 0.
 */
 XMLPARSEAPI(int)
-XML_SetHashSalt(XML_Parser parser, unsigned long hash_salt);
+XML_SetHashSalt(XML_Parser parser, uint64_t hash_salt);
 
 /* If XML_Parse or XML_ParseBuffer have returned XML_STATUS_ERROR, then
    XML_GetErrorCode returns information about the error.

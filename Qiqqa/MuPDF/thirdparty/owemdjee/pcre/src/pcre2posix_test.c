@@ -26,6 +26,8 @@ to stdout. */
 #include <string.h>
 #include <pcre2posix.h>
 
+#include "monolithic_examples.h"
+
 #define CAPCOUNT 5               /* Number of captures supported */
 #define PRINTF if (v) printf     /* Shorthand for testing output */
 
@@ -118,7 +120,11 @@ static int *results[] = {
 
 /* And here is the program */
 
-int main(int argc, char **argv)
+#if defined(BUILD_MONOLITHIC)
+#define main      pcre2posix_test_main
+#endif
+
+int main(int argc, const char **argv)
 {
 regex_t re;
 regmatch_t match[CAPCOUNT];

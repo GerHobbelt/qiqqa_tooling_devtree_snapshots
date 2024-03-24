@@ -47,20 +47,20 @@
     <UseDebugLibraries>true</UseDebugLibraries>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <ImportGroup Label="PropertySheets" >
+  <ImportGroup Label="PropertySheets">
     <Import Project="$(SolutionDir)\common-project.props" Label="SolutionWideSettings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
+    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props" Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Import Project="$(SolutionDir)\common-project-Release-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
+    <Import Project="$(SolutionDir)\common-project-Release-Win32.props" Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
+    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props" Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <Import Project="$(SolutionDir)\common-project-Release-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
+    <Import Project="$(SolutionDir)\common-project-Release-Win64.props" Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
   </ImportGroup>
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
@@ -74,7 +74,7 @@
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
-<ItemDefinitionGroup>
+  <ItemDefinitionGroup>
     <ClCompile>
       <Optimization>Custom</Optimization>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -108,12 +108,12 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
-</ItemDefinitionGroup>
-<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>..\..\include;..\..\thirdparty\mujs;..\..\thirdparty\owemdjee\libwebp\src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>HAVE_CURL;CURL_STATICLIB;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../thirdparty/mujs;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>HAVE_CURL;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
@@ -122,14 +122,14 @@
       <TargetMachine>MachineX86</TargetMachine>
       <AdditionalDependencies>ws2_32.lib;Normaliz.lib;Shlwapi.lib;glu32.lib;opengl32.lib;gdi32.lib;winmm.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <Profile>true</Profile>
       <GenerateMapFile>true</GenerateMapFile>
       <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
       <MapExports>true</MapExports>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>..\..\include;..\..\thirdparty\mujs;..\..\thirdparty\owemdjee\libwebp\src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../thirdparty/mujs;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -138,8 +138,8 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>..\..\include;..\..\thirdparty\mujs;..\..\thirdparty\owemdjee\libwebp\src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>HAVE_CURL;CURL_STATICLIB;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../thirdparty/mujs;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>HAVE_CURL;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
@@ -148,28 +148,28 @@
       <TargetMachine>MachineX64</TargetMachine>
       <AdditionalDependencies>ws2_32.lib;Normaliz.lib;Shlwapi.lib;glu32.lib;opengl32.lib;gdi32.lib;winmm.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <Profile>true</Profile>
       <GenerateMapFile>true</GenerateMapFile>
       <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
       <MapExports>true</MapExports>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>..\..\include;..\..\thirdparty\mujs;..\..\thirdparty\owemdjee\libwebp\src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../thirdparty/mujs;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories>..\..\include;..\..\thirdparty\mujs;..\..\thirdparty\owemdjee\libwebp\src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>HAVE_CURL;CURL_STATICLIB;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../thirdparty/mujs;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>HAVE_CURL;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
       <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <TargetMachine>MachineX86</TargetMachine>
       <AdditionalDependencies>ws2_32.lib;Normaliz.lib;Shlwapi.lib;glu32.lib;opengl32.lib;gdi32.lib;winmm.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <Profile>true</Profile>
@@ -178,7 +178,7 @@
       <MapExports>true</MapExports>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>..\..\include;..\..\thirdparty\mujs;..\..\thirdparty\owemdjee\libwebp\src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../thirdparty/mujs;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -188,14 +188,14 @@
     <ClCompile>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories>..\..\include;..\..\thirdparty\mujs;..\..\thirdparty\owemdjee\libwebp\src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>HAVE_CURL;CURL_STATICLIB;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../thirdparty/mujs;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>HAVE_CURL;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
       <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <TargetMachine>MachineX64</TargetMachine>
       <AdditionalDependencies>ws2_32.lib;Normaliz.lib;Shlwapi.lib;glu32.lib;opengl32.lib;gdi32.lib;winmm.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <Profile>true</Profile>
@@ -204,7 +204,7 @@
       <MapExports>true</MapExports>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>..\..\include;..\..\thirdparty\mujs;..\..\thirdparty\owemdjee\libwebp\src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../thirdparty/mujs;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -212,11 +212,17 @@
     <ClCompile Include="..\..\source\tools\mutool_ex.c" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="cryptlib.vcxproj">
+      <Project>{424334e5-addf-490d-ba7b-46cf3686b48d}</Project>
+    </ProjectReference>
     <ProjectReference Include="libarchive.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff18377f}</Project>
     </ProjectReference>
     <ProjectReference Include="libbf.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff45d7d4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libbf_tests.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffd7494b}</Project>
     </ProjectReference>
     <ProjectReference Include="libbibutils.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff09284b}</Project>
@@ -224,11 +230,50 @@
     <ProjectReference Include="libbrotli_tools.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7428ffd7760d}</Project>
     </ProjectReference>
+    <ProjectReference Include="libcpp-terminal.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff2367fa}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libcrow_examples.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-8518fff84e35}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libcsv2.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff214747}</Project>
+    </ProjectReference>
     <ProjectReference Include="libdirent.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff47ce6b}</Project>
     </ProjectReference>
+    <ProjectReference Include="libexpat.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff83ffca}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libfilesystem.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff38a587}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libfontconfig.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff69837f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libgetopt.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518110e57b1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libglfw.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff878bbf}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libglob.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff518d62}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libgumbo-parser_examples.vcxproj">
+      <Project>{f69bff26-21a8-4a22-bc20-888f1e3a1979}</Project>
+    </ProjectReference>
     <ProjectReference Include="libhighway.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff021a57}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libicu.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518fff6b65d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libjpeginfo.vcxproj">
+      <Project>{e74f29fa-f143-4adc-b92c-6af1a8e4a403}</Project>
+    </ProjectReference>
+    <ProjectReference Include="liblcms2_tests.vcxproj">
+      <Project>{5edcf4fd-0291-4fb9-8d96-1589571fcc89}</Project>
     </ProjectReference>
     <ProjectReference Include="libleptonica-test-prep.vcxproj">
       <Project>{5c7e17ff-c529-46b8-b358-de27b8efe464}</Project>
@@ -236,8 +281,29 @@
     <ProjectReference Include="libleptonica_tools.vcxproj">
       <Project>{ca0bda38-89b9-4703-a77d-8049acf23027}</Project>
     </ProjectReference>
+    <ProjectReference Include="libnanosvg.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-751bff971987}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libopencv-core.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff8062fc}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libopencv-highgui.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffdcb969}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libopencv-imgcodecs.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffa6c777}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libopencv-imgproc.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff77fea3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libplf_nanotimer.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffe7ea82}</Project>
+    </ProjectReference>
     <ProjectReference Include="libpthread-win32.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff8df2c2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libpthread-win32_tests.vcxproj">
+      <Project>{1a5821d4-5d56-455b-9b16-3bd0fbee75d6}</Project>
     </ProjectReference>
     <ProjectReference Include="libqjscalc.vcxproj">
       <Project>{64726826-d4bd-4a18-91c8-7b4905af7bc7}</Project>
@@ -248,11 +314,11 @@
     <ProjectReference Include="libqjsrunner.vcxproj">
       <Project>{eb6b45ed-1f50-43a8-91ff-046a7203c46e}</Project>
     </ProjectReference>
-    <ProjectReference Include="libQuickJSpp.vcxproj">
-      <Project>{a60d8644-5a1c-4d29-8970-7518ff2ef6ed}</Project>
+    <ProjectReference Include="libQuickJS-C++-Wrapper.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff361594}</Project>
     </ProjectReference>
-    <ProjectReference Include="libQuickJSpp2.vcxproj">
-      <Project>{a60d8644-5a1c-4d29-8970-7518ffb7b249}</Project>
+    <ProjectReference Include="libQuickJS-C++-Wrapper2.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff9f13e5}</Project>
     </ProjectReference>
     <ProjectReference Include="libQuickJS_examples.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff0e57b3}</Project>
@@ -266,20 +332,29 @@
     <ProjectReference Include="libsqlite_tools.vcxproj">
       <Project>{6e890463-3eeb-4cce-b8bd-5aa89148c35a}</Project>
     </ProjectReference>
+    <ProjectReference Include="libsystem_override.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8318-7518ff7ef82f}</Project>
+    </ProjectReference>
     <ProjectReference Include="libtesslinesplit.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ffa952e8}</Project>
     </ProjectReference>
     <ProjectReference Include="libtvision.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff5340c1}</Project>
     </ProjectReference>
+    <ProjectReference Include="libuchardet.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff0ed130}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libxsimd.vcxproj">
+      <Project>{45d2c855-d670-463c-bab2-1c9d012e3f7b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libxslt.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffce99e8}</Project>
+    </ProjectReference>
     <ProjectReference Include="lib_nas_lockfile.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff0a15c6}</Project>
     </ProjectReference>
     <ProjectReference Include="MuPDFLib_static.vcxproj">
       <Project>{a60d8644-5815-4d29-8970-7518ff518d62}</Project>
-    </ProjectReference>
-    <ProjectReference Include="cryptlib.vcxproj">
-      <Project>{c39f4b46-6e89-4074-902e-ca57073044d2}</Project>
     </ProjectReference>
     <ProjectReference Include="libbase58x.vcxproj">
       <Project>{0501bedf-3191-46a9-9997-288466675b82}</Project>
@@ -404,12 +479,14 @@
     <ProjectReference Include="png-pmt-tools-lib.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff1147a4}</Project>
     </ProjectReference>
+    <ProjectReference Include="tesseract_ocr_test.vcxproj">
+      <Project>{3644e12d-d934-41fd-bf7e-83745aaf4bc1}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
-  <ImportGroup Label="PropertySheets" >
+  <ImportGroup Label="PropertySheets">
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />
   </ImportGroup>
 </Project>
-  

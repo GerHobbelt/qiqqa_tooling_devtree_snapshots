@@ -103,13 +103,13 @@
 #undef  PTW32_LEVEL_MAX
 #define PTW32_LEVEL_MAX  3
 
-#if _POSIX_C_SOURCE >= 200112L			/* POSIX.1-2001 and later */
+#if defined _POSIX_C_SOURCE && _POSIX_C_SOURCE >= 200112L        /* POSIX.1-2001 and later */
 # define PTW32_LEVEL  PTW32_LEVEL_MAX	/* include everything     */
 
 #elif defined INCLUDE_NP			/* earlier than POSIX.1-2001, but... */
 # define PTW32_LEVEL  2			/* include non-portable extensions   */
 
-#elif _POSIX_C_SOURCE >= 199309L		/* POSIX.1-1993           */
+#elif defined _POSIX_C_SOURCE && _POSIX_C_SOURCE >= 199309L	     /* POSIX.1-1993           */
 # define PTW32_LEVEL  1 			/* include 1b, 1c, and 1d */
 
 #elif defined _POSIX_SOURCE			/* early POSIX     */
@@ -654,6 +654,8 @@ struct ptw32_cleanup_t
 
 #if defined(PTW32_CLEANUP_CXX)
 
+#if defined(__cplusplus)
+
         /*
          * C++ version of cancel cleanup.
          * - John E. Bossom.
@@ -727,6 +729,8 @@ struct ptw32_cleanup_t
 #define pthread_cleanup_pop( _execute ) \
             cleanup.execute( _execute ); \
         }
+
+#endif  // __cplusplus
 
 #else
 

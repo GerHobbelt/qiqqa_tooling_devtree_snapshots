@@ -29,6 +29,9 @@
 
 #include "utils.h"
 
+#include "monolithic_examples.h"
+
+
 
 // The toggles stuff
 
@@ -95,16 +98,16 @@ void Help(void)
 
 
 static
-void ShowWhitePoint(cmsCIEXYZ* WtPt)
+void ShowWhitePoint(cmsContext ContextID, cmsCIEXYZ* WtPt)
 {
        cmsCIELab Lab;
        cmsCIELCh LCh;
        cmsCIExyY xyY;
 
 
-       cmsXYZ2Lab(NULL, &Lab, WtPt);
-       cmsLab2LCh(&LCh, &Lab);
-       cmsXYZ2xyY(&xyY, WtPt);
+       cmsXYZ2Lab(ContextID, NULL, &Lab, WtPt);
+       cmsLab2LCh(ContextID, &LCh, &Lab);
+       cmsXYZ2xyY(ContextID, &xyY, WtPt);
 
 
        if (lShowXYZ) printf("XYZ=(%3.1f, %3.1f, %3.1f)\n", WtPt->X, WtPt->Y, WtPt->Z);
@@ -118,11 +121,17 @@ void ShowWhitePoint(cmsCIEXYZ* WtPt)
 }
 
 
-int main(int argc, char *argv[])
+#if defined(BUILD_MONOLITHIC)
+#define main(cnt, arr)      lcms2_wtpt_example_main(cnt, arr)
+#endif
+
+int main(int argc, const char *argv[])
 {
        int nargs;
 
-       InitUtils("wtpt");
+       cmsContext ContextID = cmsCreateContext(NULL, NULL);
+
+       InitUtils(ContextID, "wtpt");
        
        HandleSwitches(argc, argv);
 
@@ -133,14 +142,16 @@ int main(int argc, char *argv[])
 
        else {
               cmsCIEXYZ* WtPt;
-              cmsHPROFILE hProfile = cmsOpenProfileFromFile(argv[xoptind], "r");  
+              cmsHPROFILE hProfile = cmsOpenProfileFromFile(ContextID, argv[xoptind], "r");  
               if (hProfile == NULL) return 1;
 
-              WtPt = cmsReadTag(hProfile, cmsSigMediaWhitePointTag);
-              ShowWhitePoint(WtPt);
-              cmsCloseProfile(hProfile);
+              WtPt = cmsReadTag(ContextID, hProfile, cmsSigMediaWhitePointTag);
+              ShowWhitePoint(ContextID, WtPt);
+              cmsCloseProfile(ContextID, hProfile);
        }
-       
+
+       cmsDeleteContext(ContextID);
+
        return 0;
 }
 

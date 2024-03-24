@@ -43,7 +43,7 @@ skip_bytes(fz_context *ctx, fz_stream *stm, size_t len)
 {
 	size_t skipped = fz_skip(ctx, stm, len);
 	if (skipped < len)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "premature end in data");
+		fz_throw(ctx, FZ_ERROR_FORMAT, "premature end in data");
 }
 
 static void
@@ -52,7 +52,7 @@ mobi_read_text_none(fz_context *ctx, fz_buffer *out, fz_stream *stm, uint32_t si
 	unsigned char buf[4096];
 	size_t n;
 	if (size > 4096)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "text block too large");
+		fz_throw(ctx, FZ_ERROR_FORMAT, "text block too large");
 	n = fz_read(ctx, stm, buf, size);
 	if (n < size)
 		fz_warn(ctx, "premature end in mobi uncompressed text data");
@@ -152,11 +152,11 @@ mobi_read_data(fz_context *ctx, fz_buffer *out, fz_stream *stm, uint32_t *offset
 		fz_rethrow(ctx);
 
 	if (compression != COMPRESSION_NONE && compression != COMPRESSION_PALMDOC)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "unknown compression method");
+		fz_throw(ctx, FZ_ERROR_FORMAT, "unknown compression method");
 	if (text_encoding != TEXT_ENCODING_LATIN_1 &&
 		text_encoding != TEXT_ENCODING_1252 &&
 		text_encoding != TEXT_ENCODING_UTF8)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "unknown text encoding");
+		fz_throw(ctx, FZ_ERROR_FORMAT, "unknown text encoding");
 
 	for (i = 1; i <= record_count && i < total_count; ++i)
 	{
@@ -192,7 +192,7 @@ mobi_read_data(fz_context *ctx, fz_buffer *out, fz_stream *stm, uint32_t *offset
 		size_t i, n = fz_buffer_extract(ctx, out, &p);
 		fz_resize_buffer(ctx, out, 0);
 		if (format == FORMAT_TEXT)
-			fz_append_string(ctx, out, "<html><head><style>body{white-space:pre-wrap}</style></head><body>");
+			fz_append_string(ctx, out, "<html><head><meta charset=\"utf-8\"><style>body{white-space:pre-wrap}</style></head><body>");
 		for (i = 0; i < n; ++i)
 		{
 			int c = p[i];
@@ -242,10 +242,11 @@ fz_extract_html_from_mobi(fz_context *ctx, fz_buffer *mobi)
 	fz_tree *tree = NULL;
 	uint32_t *offsets = NULL;
 	char buf[32];
-	uint32_t i, k, n, extra;
+	uint32_t i, k, extra;
 	uint32_t recindex;
 	uint32_t minoffset, maxoffset;
 	int format = FORMAT_TEXT;
+	size_t n;
 
 	// https://wiki.mobileread.com/wiki/PalmDOC
 
@@ -278,7 +279,7 @@ fz_extract_html_from_mobi(fz_context *ctx, fz_buffer *mobi)
 		// record info list count
 		n = fz_read_uint16(ctx, stm);
 
-		minoffset = fz_tell(ctx, stm) + n * 2 * sizeof (uint32_t) - 1;
+		minoffset = (uint32_t)fz_tell(ctx, stm) + n * 2 * sizeof (uint32_t) - 1;
 		maxoffset = (uint32_t)mobi->len;
 
 		// record info list
@@ -299,7 +300,7 @@ fz_extract_html_from_mobi(fz_context *ctx, fz_buffer *mobi)
 		// adjust n in case some out of bound offsets were skipped
 		n = k;
 		if (n == 0)
-			fz_throw(ctx, FZ_ERROR_GENERIC, "no mobi records to read");
+			fz_throw(ctx, FZ_ERROR_FORMAT, "no mobi records to read");
 
 		// decompress text data
 		buffer = fz_new_buffer(ctx, 128 << 10);

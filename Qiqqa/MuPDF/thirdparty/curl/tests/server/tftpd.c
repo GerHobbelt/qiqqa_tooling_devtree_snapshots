@@ -55,9 +55,7 @@
 #ifdef HAVE_SYS_IOCTL_H
 #include <sys/ioctl.h>
 #endif
-#ifdef HAVE_SIGNAL_H
 #include <signal.h>
-#endif
 #ifdef HAVE_FCNTL_H
 #include <fcntl.h>
 #endif
@@ -67,11 +65,6 @@
 #ifdef HAVE_ARPA_INET_H
 #include <arpa/inet.h>
 #endif
-#ifdef HAVE_ARPA_TFTP_H
-#include <arpa/tftp.h>
-#else
-#include "tftp.h"
-#endif
 #ifdef HAVE_NETDB_H
 #include <netdb.h>
 #endif
@@ -80,9 +73,7 @@
 #include <sys/filio.h>
 #endif
 
-#ifdef HAVE_SETJMP_H
 #include <setjmp.h>
-#endif
 
 #ifdef HAVE_PWD_H
 #include <pwd.h>
@@ -97,6 +88,7 @@
 #include "getpart.h"
 #include "util.h"
 #include "server_sockaddr.h"
+#include "tftp.h"
 
 /* include memdebug.h last */
 #include "memdebug.h"
@@ -214,9 +206,9 @@ static bool use_ipv6 = FALSE;
 #endif
 static const char *ipv_inuse = "IPv4";
 
-const  char *serverlogfile = DEFAULT_LOGFILE;
-const char *logdir = "log";
-char loglockfile[256];
+const char *serverlogfile = DEFAULT_LOGFILE;
+static const char *logdir = "log";
+static char loglockfile[256];
 static const char *pidname = ".tftpd.pid";
 static const char *portname = NULL; /* none by default */
 static int serverlogslocked = 0;
@@ -461,7 +453,7 @@ static ssize_t write_behind(struct testcase *test, int convert)
   if(!test->ofile) {
     char outfile[256];
     msnprintf(outfile, sizeof(outfile), "%s/upload.%ld", logdir, test->testno);
-#ifdef WIN32
+#ifdef _WIN32
     test->ofile = open(outfile, O_CREAT|O_RDWR|O_BINARY, 0777);
 #else
     test->ofile = open(outfile, O_CREAT|O_RDWR, 0777);
@@ -651,10 +643,10 @@ int main(int argc, const char** argv)
     }
   }
 
-  msnprintf(loglockfile, sizeof(loglockfile), "%s/%s",
-            logdir, SERVERLOGS_LOCK);
+  msnprintf(loglockfile, sizeof(loglockfile), "%s/%s/tftp-%s.lock",
+            logdir, SERVERLOGS_LOCKDIR, ipv_inuse);
 
-#ifdef WIN32
+#ifdef _WIN32
   win32_init();
   atexit(win32_cleanup);
 #endif
@@ -672,8 +664,7 @@ int main(int argc, const char** argv)
 
   if(CURL_SOCKET_BAD == sock) {
     error = SOCKERRNO;
-    logmsg("Error creating socket: (%d) %s",
-           error, strerror(error));
+    logmsg("Error creating socket: (%d) %s", error, sstrerror(error));
     result = 1;
     goto tftpd_cleanup;
   }
@@ -683,7 +674,7 @@ int main(int argc, const char** argv)
             (void *)&flag, sizeof(flag))) {
     error = SOCKERRNO;
     logmsg("setsockopt(SO_REUSEADDR) failed with error: (%d) %s",
-           error, strerror(error));
+           error, sstrerror(error));
     result = 1;
     goto tftpd_cleanup;
   }
@@ -708,8 +699,8 @@ int main(int argc, const char** argv)
 #endif /* ENABLE_IPV6 */
   if(0 != rc) {
     error = SOCKERRNO;
-    logmsg("Error binding socket on port %hu: (%d) %s",
-           port, error, strerror(error));
+    logmsg("Error binding socket on port %hu: (%d) %s", port, error,
+           sstrerror(error));
     result = 1;
     goto tftpd_cleanup;
   }
@@ -731,7 +722,7 @@ int main(int argc, const char** argv)
     if(getsockname(sock, &localaddr.sa, &la_size) < 0) {
       error = SOCKERRNO;
       logmsg("getsockname() failed with error: (%d) %s",
-             error, strerror(error));
+             error, sstrerror(error));
       sclose(sock);
       goto tftpd_cleanup;
     }
@@ -1142,7 +1133,7 @@ static int validate_access(struct testcase *test,
     if(!stream) {
       int error = errno;
       logmsg("fopen() failed with error: %d %s", error, strerror(error));
-      logmsg("Couldn't open test file for test : %d", testno);
+      logmsg("Couldn't open test file for test: %ld", testno);
       return EACCESS;
     }
     else {

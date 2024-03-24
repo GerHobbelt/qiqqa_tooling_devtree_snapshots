@@ -39,9 +39,9 @@ set(MINIDEFLATE_COMMAND ${CMAKE_CROSSCOMPILING_EMULATOR} $<TARGET_FILE:minidefla
 
 if(INSTALL_UTILS)
     install(TARGETS minigzip minideflate
-        RUNTIME DESTINATION "${BIN_INSTALL_DIR}"
-        ARCHIVE DESTINATION "${LIB_INSTALL_DIR}"
-        LIBRARY DESTINATION "${LIB_INSTALL_DIR}")
+        RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
+        ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}"
+        LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}")
 endif()
 
 add_executable(switchlevels switchlevels.c)
@@ -92,17 +92,25 @@ if(WITH_FUZZERS)
     add_subdirectory(fuzz)
 endif()
 
-if(CMAKE_VERSION VERSION_LESS 3.12)
-    message(WARNING "Minimum cmake version of 3.12 not met for GoogleTest or benchmarks!")
-else()
-    enable_language(CXX)
+if(WITH_GTEST OR WITH_BENCHMARKS)
+    if(CMAKE_VERSION VERSION_LESS 3.12)
+        message(WARNING "Minimum cmake version of 3.12 not met for GoogleTest or benchmarks!")
 
-    include(FetchContent)
+        set(WITH_GTEST OFF)
+        set(WITH_GTEST OFF PARENT_SCOPE)
 
-    if(WITH_BENCHMARKS)
-        add_subdirectory(benchmarks)
+        set(WITH_BENCHMARKS OFF)
+        set(WITH_BENCHMARKS OFF PARENT_SCOPE)
+    else()
+        enable_language(CXX)
     endif()
+endif()
 
+if(WITH_BENCHMARKS)
+    add_subdirectory(benchmarks)
+endif()
+
+if(WITH_GTEST)
     # Google test requires at least C++11
     set(CMAKE_CXX_STANDARD 11)
 
@@ -115,9 +123,13 @@ else()
         # Must set include and compile options before fetching googletest
         include_directories($ENV{LLVM_BUILD_DIR}/include $ENV{LLVM_BUILD_DIR}/include/c++/v1)
         add_compile_options(-stdlib=libc++ -g)
+    elseif(NOT TARGET GTest::GTest)
+        find_package(GTest)
     endif()
 
     if(NOT TARGET GTest::GTest)
+        include(FetchContent)
+
         # Prevent overriding the parent project's compiler/linker settings for Windows
         set(gtest_force_shared_crt ON CACHE BOOL
             "Use shared (DLL) run-time lib even when Google Test is built as static lib." FORCE)
@@ -167,7 +179,9 @@ else()
         test_dict.cc
         test_inflate_adler32.cc
         test_large_buffers.cc
+        test_raw.cc
         test_small_buffers.cc
+        test_small_window.cc
         )
 
     if(WITH_GZFILEOP)
@@ -198,7 +212,7 @@ else()
             -fsanitize-memory-track-origins)
     endif()
 
-    if(NOT ZLIB_COMPAT AND DEFINED ZLIB_LIBRARIES AND DEFINED ZLIB_INCLUDE_DIR)
+    if(NOT ZLIB_COMPAT AND DEFINED ZLIB_LIBRARIES AND DEFINED ZLIB_INCLUDE_DIRS)
         if(NOT IS_ABSOLUTE ${ZLIB_LIBRARIES})
             get_filename_component(ZLIB_ABSOLUTE_PATH
                 "${CMAKE_CURRENT_SOURCE_DIR}/${ZLIB_LIBRARIES}"
@@ -210,20 +224,23 @@ else()
         add_library(external_zlib STATIC IMPORTED)
         set_property(TARGET external_zlib PROPERTY IMPORTED_LOCATION ${ZLIB_ABSOLUTE_PATH})
         message(STATUS "Added dual linking tests against zlib")
-        message(STATUS "  Zlib include dir: ${ZLIB_INCLUDE_DIR}")
+        message(STATUS "  Zlib include dirs: ${ZLIB_INCLUDE_DIRS}")
         message(STATUS "  Zlib libraries: ${ZLIB_ABSOLUTE_PATH}")
 
         target_sources(gtest_zlib PRIVATE test_compress_dual.cc)
-        target_include_directories(gtest_zlib PRIVATE ${ZLIB_INCLUDE_DIR})
+        target_include_directories(gtest_zlib PRIVATE ${ZLIB_INCLUDE_DIRS})
         target_link_libraries(gtest_zlib external_zlib)
     endif()
 
-    if((NOT ZLIBNG_ENABLE_TESTS) AND ZLIB_COMPAT AND (NOT DEFINED BUILD_SHARED_LIBS OR BUILD_SHARED_LIBS))
-        # Link dynamically in order to be able to substitute zlib-ng with zlib.
-        target_link_libraries(gtest_zlib zlib GTest::Main)
-    else()
+    if(NOT DEFINED BUILD_SHARED_LIBS)
         # Link statically in order to test internal zlib-ng functions.
         target_link_libraries(gtest_zlib zlibstatic)
+    else()
+        target_link_libraries(gtest_zlib zlib)
+    endif()
+
+    if(BUILD_SHARED_LIBS)
+        target_link_libraries(gtest_zlib GTest::Main)
     endif()
     target_link_libraries(gtest_zlib GTest::GTest)
 

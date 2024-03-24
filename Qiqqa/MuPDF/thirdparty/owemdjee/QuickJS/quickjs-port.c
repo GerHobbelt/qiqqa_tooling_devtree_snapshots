@@ -186,9 +186,24 @@ int64_t qjs_get_time_ms(void)
     clock_gettime(CLOCK_MONOTONIC, &ts);
     return (int64_t)ts.tv_sec * 1000 + (ts.tv_nsec / 1000000);
 #else
-    struct qjs_timeval tv;
+	/* more portable, but does not work if the date is updated */
+	struct qjs_timeval tv;
     qjs_gettimeofday(&tv);
     return (int64_t)tv.tv_sec * 1000 + (tv.tv_usec / 1000);
+#endif
+}
+
+int64_t qjs_get_time_ns(void)
+{
+#if defined(__linux__) || defined(__APPLE__)
+	struct timespec ts;
+	clock_gettime(CLOCK_MONOTONIC, &ts);
+	return (int64_t)ts.tv_sec * 1000000000 + (ts.tv_nsec);
+#else
+	/* more portable, but does not work if the date is updated */
+	struct qjs_timeval tv;
+	qjs_gettimeofday(&tv);
+	return (int64_t)tv.tv_sec * 1000000000 + (tv.tv_usec * 1000);
 #endif
 }
 
@@ -420,7 +435,7 @@ extern force_inline size_t qjs_port_malloc_usable_size(const void *ptr)
     return malloc_usable_size((void*)ptr);
 #else
     /* change this to `return 0;` if compilation fails */
-    return malloc_usable_size(ptr);
+    return malloc_usable_size((void*)ptr);
 #endif
 }
 
@@ -447,7 +462,7 @@ int qjs_thread_create(qjs_thread* thread, qjs_thread_method method, void* data, 
     {
         params->i_method = method;
         params->i_data   = data;
-        *thread = CreateThread(NULL, 0, internal_method_ptr, params, 0, NULL);
+        *thread = CreateThread(NULL, 2 << 20 /* 2 MB, glibc default */, internal_method_ptr, params, 0, NULL);
         if(*thread == NULL)
         {
             free(params);
@@ -469,6 +484,7 @@ int qjs_thread_join(qjs_thread* thread)
     }
     return 1;
 }
+
 #else
 
 int qjs_thread_create(qjs_thread* thread, qjs_thread_method method, void* data, int detached)
@@ -480,7 +496,10 @@ int qjs_thread_create(qjs_thread* thread, qjs_thread_method method, void* data, 
     if (detached) {
         pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_DETACHED);
     }
-    ret = pthread_create(thread, &attr, (void *)method, data);
+	// musl libc gives threads 80 kb stacks, much smaller than
+	// JS_DEFAULT_STACK_SIZE (256 kb)
+	pthread_attr_setstacksize(&attr, 2 << 20); // 2 MB, glibc default
+	ret = pthread_create(thread, &attr, (void *)method, data);
     pthread_attr_destroy(&attr);
     return ret;
 }
@@ -549,6 +568,7 @@ int qjs_mutex_destroy(qjs_mutex* mutex)
 }
 
 #if defined(_WIN32)
+
 int qjs_condition_init(qjs_condition* cond)
 {
     cond->Ptr = 0;
@@ -631,4 +651,5 @@ int qjs_condition_destroy(qjs_condition* cond)
     int result = pthread_cond_destroy(cond);
     return result;
 }
+
 #endif

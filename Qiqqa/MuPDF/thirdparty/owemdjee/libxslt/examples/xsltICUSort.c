@@ -11,6 +11,8 @@
 #include <unicode/ucnv.h>
 #include <unicode/ucol.h>
 
+#include "../examples/monolithic_examples.h"
+
 /**
  * xsltICUNewLocale:
  * @lang:  lang
@@ -99,6 +101,11 @@ error:
     xmlFree(ustr);
     return result;
 }
+
+
+#if defined(BUILD_MONOLITHIC)
+#define main      xslt_icu_sort_sample_main
+#endif
 
 int main(void) {
     xmlDocPtr sourceDoc = xmlReadDoc(

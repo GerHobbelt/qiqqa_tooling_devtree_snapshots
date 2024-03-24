@@ -3,7 +3,7 @@
 #define BUILD_MONOLITHIC  1
 #include "../../thirdparty/owemdjee/glog/src/testing.h"
 
-#define BUILD_MONOLITHIC_SINGLE_INSTANCE_NOW   1
+//#define BUILD_MONOLITHIC_SINGLE_INSTANCE_NOW   1
 #include "../../thirdparty/owemdjee/glog/src/googletest.h"
 
 
@@ -70,8 +70,6 @@ int run_all_tests_glog(void)
 	const char** lcl_argv;
 	init_test_argv(lcl_argc, lcl_argv);
 	rv |= glog_demangle_unittest_main(lcl_argc, lcl_argv);
-	init_test_argv(lcl_argc, lcl_argv);
-	rv |= glog_logging_custom_prefix_unittest_main(lcl_argc, lcl_argv);
 	init_test_argv(lcl_argc, lcl_argv);
 	rv |= glog_logging_unittest_main(lcl_argc, lcl_argv);
 	init_test_argv(lcl_argc, lcl_argv);

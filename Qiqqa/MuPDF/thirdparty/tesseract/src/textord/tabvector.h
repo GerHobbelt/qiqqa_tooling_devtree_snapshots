@@ -36,8 +36,8 @@ class ScrollView;
 
 namespace tesseract {
 
-extern double_VAR_H(textord_tabvector_vertical_gap_fraction);
-extern double_VAR_H(textord_tabvector_vertical_box_ratio);
+extern DOUBLE_VAR_H(textord_tabvector_vertical_gap_fraction);
+extern DOUBLE_VAR_H(textord_tabvector_vertical_box_ratio);
 
 // The alignment type that a tab vector represents.
 // Keep this enum synced with kAlignmentNames in tabvector.cpp.
@@ -349,10 +349,7 @@ public:
   void Debug(const char *prefix);
 
   // Draw this tabvector in place in the given window.
-  void Display(ScrollView *tab_win);
-
-  // Draw this tabvector in place in the given window.
-  void Display(Image &pix, uint32_t* data, int wpl, int w, int h);
+  void Display(ScrollViewReference tab_win);
 
   // Refit the line and/or re-evaluate the vector if the dirty flags are set.
   void FitAndEvaluateIfNeeded(const ICOORD &vertical, TabFind *finder);

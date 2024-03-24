@@ -16,12 +16,15 @@
 #include <stdlib.h>
 #include <string.h>
 #include <dirent.h>
-#include <errno.h>
 
 #undef NDEBUG
 #include <assert.h>
 
+#include "../examples/monolithic_examples.h"
+
 static void test_telldir(void);
+static void initialize(void);
+static void cleanup(void);
 
 
 #if defined(BUILD_MONOLITHIC)
@@ -29,22 +32,23 @@ static void test_telldir(void);
 #endif
 
 int
-main(int argc, const char **argv)
+main(void)
 {
-	(void) argc;
-	(void) argv;
+	initialize();
 
 	test_telldir();
 
+	cleanup();
 	return EXIT_SUCCESS;
 }
 
 static void
 test_telldir(void)
 {
+	/* Read test directory */
 	DIR *dir = opendir("tests/4");
 	if (dir == NULL) {
-		fprintf(stderr, "Directory tests/4 not found\n");
+		perror("Cannot open directory");
 		abort();
 	}
 
@@ -168,5 +172,19 @@ test_telldir(void)
 	assert(telldir(dir) == posx);
 	ent = readdir(dir);
 	assert(ent == NULL);
+
+	/* Close directory stream */
+	closedir(dir);
 }
 
+static void
+initialize(void)
+{
+	/*NOP*/;
+}
+
+static void
+cleanup(void)
+{
+	printf("OK\n");
+}

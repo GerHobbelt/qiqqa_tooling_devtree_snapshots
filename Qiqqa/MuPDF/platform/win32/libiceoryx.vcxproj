@@ -93,7 +93,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <DisableSpecificWarnings>4018;4100;4127;4180;4206;4244;4267;5105;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4018;4100;4127;4180;4206;4244;4267;4324;5105;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <SupportJustMyCode>false</SupportJustMyCode>
@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBICEORYX;ICEORYX_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBICEORYX;ICEORYX_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/iceoryx/iceoryx_binding_c/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/primitives/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/buffer/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/utility/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/time/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include;../../thirdparty/owemdjee/iceoryx/iceoryx_examples/icediscovery/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include;../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/container/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include;../../thirdparty/owemdjee/iceoryx/tools/introspection/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/testing/include;../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/include;../../scripts/iceoryx/include;../../scripts/iceoryx/include/iceoryx_posh;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/time/include;../../thirdparty/owemdjee/cpptoml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBICEORYX;ICEORYX_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/iceoryx/iceoryx_binding_c/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/primitives/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/buffer/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/utility/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/time/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include;../../thirdparty/owemdjee/iceoryx/iceoryx_examples/icediscovery/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include;../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/container/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include;../../thirdparty/owemdjee/iceoryx/tools/introspection/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/testing/include;../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/include;../../scripts/iceoryx/include;../../scripts/iceoryx/include/iceoryx_posh;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/time/include;../../thirdparty/owemdjee/cpptoml/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/functional/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/reporting/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/filesystem/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/design/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/vocabulary/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/filesystem/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/roudi_env/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBICEORYX;ICEORYX_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBICEORYX;ICEORYX_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBICEORYX;ICEORYX_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/iceoryx/iceoryx_binding_c/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/primitives/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/buffer/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/utility/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/time/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include;../../thirdparty/owemdjee/iceoryx/iceoryx_examples/icediscovery/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include;../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/container/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include;../../thirdparty/owemdjee/iceoryx/tools/introspection/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/testing/include;../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/include;../../scripts/iceoryx/include;../../scripts/iceoryx/include/iceoryx_posh;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/time/include;../../thirdparty/owemdjee/cpptoml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/iceoryx/iceoryx_binding_c/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/primitives/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/buffer/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/utility/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/time/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include;../../thirdparty/owemdjee/iceoryx/iceoryx_examples/icediscovery/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include;../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/container/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include;../../thirdparty/owemdjee/iceoryx/tools/introspection/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/testing/include;../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/include;../../scripts/iceoryx/include;../../scripts/iceoryx/include/iceoryx_posh;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/time/include;../../thirdparty/owemdjee/cpptoml/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/functional/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/reporting/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/filesystem/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/design/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/vocabulary/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/filesystem/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/roudi_env/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBICEORYX;ICEORYX_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBICEORYX;ICEORYX_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/iceoryx/iceoryx_binding_c/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/primitives/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/buffer/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/utility/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/time/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include;../../thirdparty/owemdjee/iceoryx/iceoryx_examples/icediscovery/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include;../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/container/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include;../../thirdparty/owemdjee/iceoryx/tools/introspection/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/testing/include;../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/include;../../scripts/iceoryx/include;../../scripts/iceoryx/include/iceoryx_posh;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/time/include;../../thirdparty/owemdjee/cpptoml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBICEORYX;ICEORYX_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/iceoryx/iceoryx_binding_c/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/primitives/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/buffer/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/utility/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/time/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include;../../thirdparty/owemdjee/iceoryx/iceoryx_examples/icediscovery/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include;../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/container/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include;../../thirdparty/owemdjee/iceoryx/tools/introspection/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/testing/include;../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/include;../../scripts/iceoryx/include;../../scripts/iceoryx/include/iceoryx_posh;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/time/include;../../thirdparty/owemdjee/cpptoml/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/functional/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/reporting/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/filesystem/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/design/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/vocabulary/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/filesystem/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/roudi_env/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBICEORYX;ICEORYX_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBICEORYX;ICEORYX_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBICEORYX;ICEORYX_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/iceoryx/iceoryx_binding_c/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/primitives/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/buffer/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/utility/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/time/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include;../../thirdparty/owemdjee/iceoryx/iceoryx_examples/icediscovery/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include;../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/container/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include;../../thirdparty/owemdjee/iceoryx/tools/introspection/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/testing/include;../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/include;../../scripts/iceoryx/include;../../scripts/iceoryx/include/iceoryx_posh;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/time/include;../../thirdparty/owemdjee/cpptoml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/iceoryx/iceoryx_binding_c/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/primitives/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/buffer/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/utility/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/time/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include;../../thirdparty/owemdjee/iceoryx/iceoryx_examples/icediscovery/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include;../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/container/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include;../../thirdparty/owemdjee/iceoryx/tools/introspection/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/testing/include;../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/include;../../scripts/iceoryx/include;../../scripts/iceoryx/include/iceoryx_posh;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/time/include;../../thirdparty/owemdjee/cpptoml/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/functional/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/reporting/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/filesystem/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/design/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/vocabulary/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/filesystem/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/roudi_env/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBICEORYX;ICEORYX_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBICEORYX;ICEORYX_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/iceoryx/iceoryx_binding_c/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/primitives/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/buffer/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/utility/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/time/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include;../../thirdparty/owemdjee/iceoryx/iceoryx_examples/icediscovery/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include;../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/container/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include;../../thirdparty/owemdjee/iceoryx/tools/introspection/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/testing/include;../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/include;../../scripts/iceoryx/include;../../scripts/iceoryx/include/iceoryx_posh;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/time/include;../../thirdparty/owemdjee/cpptoml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBICEORYX;ICEORYX_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/iceoryx/iceoryx_binding_c/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/primitives/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/buffer/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/utility/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/time/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include;../../thirdparty/owemdjee/iceoryx/iceoryx_examples/icediscovery/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include;../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/container/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include;../../thirdparty/owemdjee/iceoryx/tools/introspection/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/testing/include;../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/include;../../scripts/iceoryx/include;../../scripts/iceoryx/include/iceoryx_posh;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/time/include;../../thirdparty/owemdjee/cpptoml/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/functional/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/reporting/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/filesystem/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/design/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/vocabulary/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/filesystem/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/roudi_env/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBICEORYX;ICEORYX_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBICEORYX;ICEORYX_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBICEORYX;ICEORYX_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/iceoryx/iceoryx_binding_c/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/primitives/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/buffer/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/utility/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/time/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include;../../thirdparty/owemdjee/iceoryx/iceoryx_examples/icediscovery/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include;../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/container/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include;../../thirdparty/owemdjee/iceoryx/tools/introspection/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/testing/include;../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/include;../../scripts/iceoryx/include;../../scripts/iceoryx/include/iceoryx_posh;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/time/include;../../thirdparty/owemdjee/cpptoml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/iceoryx/iceoryx_binding_c/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/primitives/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/buffer/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/utility/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/time/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include;../../thirdparty/owemdjee/iceoryx/iceoryx_examples/icediscovery/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include;../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/container/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include;../../thirdparty/owemdjee/iceoryx/tools/introspection/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/testing/include;../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/include;../../scripts/iceoryx/include;../../scripts/iceoryx/include/iceoryx_posh;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/time/include;../../thirdparty/owemdjee/cpptoml/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/functional/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/reporting/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/filesystem/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/design/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/vocabulary/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/filesystem/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/roudi_env/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBICEORYX;ICEORYX_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBICEORYX;ICEORYX_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/iceoryx/iceoryx_binding_c/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/primitives/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/buffer/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/utility/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/time/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include;../../thirdparty/owemdjee/iceoryx/iceoryx_examples/icediscovery/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include;../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/container/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include;../../thirdparty/owemdjee/iceoryx/tools/introspection/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/testing/include;../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/include;../../scripts/iceoryx/include;../../scripts/iceoryx/include/iceoryx_posh;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/time/include;../../thirdparty/owemdjee/cpptoml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBICEORYX;ICEORYX_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/iceoryx/iceoryx_binding_c/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/primitives/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/buffer/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/utility/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/time/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include;../../thirdparty/owemdjee/iceoryx/iceoryx_examples/icediscovery/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include;../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/container/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include;../../thirdparty/owemdjee/iceoryx/tools/introspection/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/testing/include;../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/include;../../scripts/iceoryx/include;../../scripts/iceoryx/include/iceoryx_posh;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/time/include;../../thirdparty/owemdjee/cpptoml/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/functional/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/reporting/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/filesystem/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/design/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/vocabulary/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/filesystem/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/roudi_env/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBICEORYX;ICEORYX_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBICEORYX;ICEORYX_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBICEORYX;ICEORYX_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/iceoryx/iceoryx_binding_c/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/primitives/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/buffer/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/utility/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/time/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include;../../thirdparty/owemdjee/iceoryx/iceoryx_examples/icediscovery/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include;../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/container/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include;../../thirdparty/owemdjee/iceoryx/tools/introspection/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/testing/include;../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/include;../../scripts/iceoryx/include;../../scripts/iceoryx/include/iceoryx_posh;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/time/include;../../thirdparty/owemdjee/cpptoml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/iceoryx/iceoryx_binding_c/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/primitives/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/buffer/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/utility/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/time/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include;../../thirdparty/owemdjee/iceoryx/iceoryx_examples/icediscovery/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include;../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/container/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include;../../thirdparty/owemdjee/iceoryx/tools/introspection/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/testing/include;../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/include;../../scripts/iceoryx/include;../../scripts/iceoryx/include/iceoryx_posh;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/time/include;../../thirdparty/owemdjee/cpptoml/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/functional/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/reporting/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/filesystem/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/design/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/vocabulary/include;../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/filesystem/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/iceoryx/iceoryx_posh/roudi_env/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -304,6 +304,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/iceperf/base.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/iceperf/iceoryx.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/iceperf/iceoryx_c.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/iceperf/iceoryx_wait.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/iceperf/iceperf_follower.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/iceperf/iceperf_leader.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/iceperf/main_follower.cpp" />
@@ -341,20 +342,27 @@
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/waitset_in_c/ice_c_waitset_publisher.c" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/waitset_in_c/ice_c_waitset_timer_driven_execution.c" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/source/functional_interface.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/filesystem/source/filesystem.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/source/bump_allocator.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/source/memory.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/source/relative_pointer_data.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/design/source/file_management_interface.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/filesystem/source/filebuilder.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/time/source/adaptive_wait.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/time/source/deadline_timer.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/vocabulary/source/file_name.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/vocabulary/source/file_path.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/vocabulary/source/group_name.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/vocabulary/source/path.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/vocabulary/source/user_name.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/primitives/source/type_traits.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/reporting/source/log/building_blocks/console_logger.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/reporting/source/log/building_blocks/logger.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/source/concurrent/loffli.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/source/cxx/filesystem.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/source/cxx/requires.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/source/cxx/type_traits.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/source/cxx/unique_id.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/source/error_handling/error_handler.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/source/error_handling/hoofs_error_handling.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/source/log/building_blocks/console_logger.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/source/log/building_blocks/logger.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/source/memory/relative_pointer_data.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/source/error_reporting/custom/default/default_error_handler.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/source/posix_wrapper/access_control.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/source/posix_wrapper/file_lock.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/source/posix_wrapper/mutex.cpp" />
@@ -371,12 +379,15 @@
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/source/posix_wrapper/types.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/source/posix_wrapper/unix_domain_socket.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/source/posix_wrapper/unnamed_semaphore.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/source/units/duration.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/compile_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/error_reporting/testing_error_handler.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/error_reporting/testing_support.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/mocks/error_handler_mock.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/mocks/time_mock.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/testing_logger.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/timing_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/time/source/duration.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/utility/source/unique_id.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/source/file.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/source/fnctl.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/source/getopt.cpp" />
@@ -388,10 +399,14 @@
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/source/semaphore.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/source/signal.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/source/socket.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/source/stat.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/source/time.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/source/unique_system_id.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/source/unistd.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/source/win32_errorHandling.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/roudi_env/source/minimal_roudi_config.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/roudi_env/source/roudi_env.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/roudi_env/source/runtime_test_interface.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/source/capro/capro_message.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/source/capro/service_description.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/source/error_handling/posh_error_handling.cpp" />
@@ -481,8 +496,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/source/runtime/service_discovery.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/source/runtime/shared_memory_user.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/source/version/version_info.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/testing/roudi_environment/roudi_environment.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/testing/roudi_environment/runtime_test_interface.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/testing/source/roudi_gtest.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/tools/introspection/source/iceoryx_introspection_app.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/tools/introspection/source/introspection_app.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iceoryx/tools/introspection/source/introspection_main.cpp" />
@@ -517,15 +531,15 @@
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_binding_c/include/iceoryx_binding_c/types.h" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_binding_c/include/iceoryx_binding_c/user_trigger.h" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_binding_c/include/iceoryx_binding_c/wait_set.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/container/include/iox/fixed_position_container.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include/iceoryx_dust/cli/command_line_argument_definition.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include/iceoryx_dust/cli/types.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include/iceoryx_dust/cxx/convert.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include/iceoryx_dust/cxx/file_reader.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include/iceoryx_dust/cxx/forward_list.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include/iceoryx_dust/cxx/objectpool.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include/iceoryx_dust/cxx/serialization.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include/iceoryx_dust/cxx/std_chrono_support.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include/iceoryx_dust/cxx/std_string_support.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include/iceoryx_dust/design/creation.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include/iceoryx_dust/internal/cli/arguments.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include/iceoryx_dust/internal/cli/command_line_parser.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include/iceoryx_dust/internal/cli/option.hpp" />
@@ -536,6 +550,8 @@
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include/iceoryx_dust/posix_wrapper/named_pipe.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include/iceoryx_dust/posix_wrapper/signal_watcher.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include/iceoryx_dust/relocatable_pointer/relocatable_ptr.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/vocabulary/include/iox/detail/span_iterator.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/vocabulary/include/iox/span.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/callbacks/topic_data.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/callbacks_in_c/sleep_for.h" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/callbacks_in_c/topic_data.h" />
@@ -553,6 +569,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/iceperf/example_common.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/iceperf/iceoryx.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/iceperf/iceoryx_c.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/iceperf/iceoryx_wait.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/iceperf/iceperf_follower.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/iceperf/iceperf_leader.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/iceperf/mq.hpp" />
@@ -568,36 +585,51 @@
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/waitset_in_c/sleep_for.h" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/waitset_in_c/topic_data.h" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/buffer/include/iox/stack.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/container/include/iox/detail/uninitialized_array_type_traits.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/container/include/iox/list.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/container/include/iox/uninitialized_array.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/container/include/iox/vector.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include/iox/builder.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include/iox/detail/newtype/arithmetic.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include/iox/detail/newtype/assignment.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include/iox/detail/newtype/comparable.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include/iox/detail/newtype/constructor.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include/iox/detail/newtype/convertable.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include/iox/detail/newtype/decrementable.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include/iox/detail/newtype/incrementable.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include/iox/detail/newtype/internal.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include/iox/detail/newtype/protected_constructor.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include/iox/detail/newtype/sortable.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include/iox/functional_interface.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include/iox/newtype.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include/iox/polymorphic_handler.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include/iox/static_lifetime_guard.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/filesystem/include/iox/filesystem.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/functional/include/iox/detail/storable_function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/functional/include/iox/function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/functional/include/iox/function_ref.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/concurrent/lockfree_queue.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/concurrent/resizeable_lockfree_queue.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/cxx/algorithm.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/cxx/attributes.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/cxx/filesystem.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/cxx/function.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/cxx/function_ref.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/cxx/list.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/cxx/requires.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/cxx/scope_guard.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/cxx/scoped_static.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/cxx/type_traits.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/cxx/variant_queue.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/design_pattern/polymorphic_handler.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/design_pattern/static_lifetime_guard.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/error_handling/error_handler.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/error_handling/error_handling.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/iceoryx_hoofs_types.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/error_reporting/configuration.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/error_reporting/custom/default/configuration.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/error_reporting/custom/default/default_error_handler.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/error_reporting/custom/default/error_handler.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/error_reporting/custom/default/error_handler_interface.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/error_reporting/custom/error_kind.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/error_reporting/custom/error_reporting.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/error_reporting/error_forwarding.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/error_reporting/error_kind.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/error_reporting/error_logging.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/error_reporting/error_reporting_macros.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/error_reporting/errors.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/error_reporting/modules/hoofs/error_reporting.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/error_reporting/modules/hoofs/errors.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/error_reporting/source_location.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/error_reporting/types.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/concurrent/fifo.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/concurrent/lockfree_queue/cyclic_index.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/concurrent/lockfree_queue/index_queue.hpp" />
@@ -605,10 +637,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/concurrent/periodic_task.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/concurrent/smart_lock.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/concurrent/sofi.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/cxx/storable_function.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/cxx/unique_id.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/memory/pointer_repository.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/memory/relative_pointer_data.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/posix_wrapper/access_control.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/posix_wrapper/ipc_channel.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/posix_wrapper/mutex.hpp" />
@@ -618,13 +646,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/posix_wrapper/shared_memory_object/shared_memory.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/posix_wrapper/system_configuration.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/posix_wrapper/unix_domain_socket.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/log/building_blocks/console_logger.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/log/building_blocks/logformat.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/log/building_blocks/logger.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/log/logger.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/log/logging.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/log/logstream.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/memory/relative_pointer.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/posix_wrapper/file_lock.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/posix_wrapper/named_semaphore.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/posix_wrapper/posix_access_rights.hpp" />
@@ -634,25 +655,61 @@
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/posix_wrapper/thread.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/posix_wrapper/types.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/posix_wrapper/unnamed_semaphore.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_versions.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include/iceoryx_hoofs/cxx/algorithm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include/iceoryx_hoofs/cxx/attributes.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include/iceoryx_hoofs/cxx/deadline_timer.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include/iceoryx_hoofs/cxx/expected.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include/iceoryx_hoofs/cxx/filesystem.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include/iceoryx_hoofs/cxx/function.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include/iceoryx_hoofs/cxx/function_ref.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include/iceoryx_hoofs/cxx/functional_interface.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include/iceoryx_hoofs/cxx/list.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include/iceoryx_hoofs/cxx/newtype.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include/iceoryx_hoofs/cxx/optional.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include/iceoryx_hoofs/cxx/scope_guard.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include/iceoryx_hoofs/cxx/scoped_static.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include/iceoryx_hoofs/cxx/stack.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include/iceoryx_hoofs/cxx/string.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include/iceoryx_hoofs/cxx/type_traits.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include/iceoryx_hoofs/cxx/unique_ptr.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include/iceoryx_hoofs/cxx/variant.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include/iceoryx_hoofs/cxx/vector.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include/iceoryx_hoofs/design_pattern/builder.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/legacy/include/iceoryx_hoofs/iceoryx_hoofs_types.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include/iox/bump_allocator.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include/iox/detail/pointer_repository.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include/iox/detail/relative_pointer_data.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include/iox/memory.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include/iox/relative_pointer.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include/iox/scope_guard.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include/iox/scoped_static.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include/iox/unique_ptr.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/design/include/iox/file_management_interface.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/filesystem/include/iox/file.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/time/include/iox/deadline_timer.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/time/include/iox/detail/adaptive_wait.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/vocabulary/include/iox/file_name.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/vocabulary/include/iox/file_path.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/vocabulary/include/iox/group_name.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/vocabulary/include/iox/path.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/vocabulary/include/iox/user_name.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/primitives/include/iox/algorithm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/primitives/include/iox/attributes.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/primitives/include/iox/iceoryx_hoofs_types.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/primitives/include/iox/size.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/primitives/include/iox/type_traits.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/reporting/include/iox/log/building_blocks/console_logger.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/reporting/include/iox/log/building_blocks/logformat.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/reporting/include/iox/log/building_blocks/logger.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/reporting/include/iox/log/logger.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/reporting/include/iox/log/logstream.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/reporting/include/iox/logging.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/include/iceoryx_hoofs/testing/barrier.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/include/iceoryx_hoofs/testing/compile_test.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/include/iceoryx_hoofs/testing/ctor_and_assignment_operator_test_class.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/include/iceoryx_hoofs/testing/error_reporting/testing_error_handler.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/include/iceoryx_hoofs/testing/error_reporting/testing_support.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/include/iceoryx_hoofs/testing/fatal_failure.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/include/iceoryx_hoofs/testing/mocks/error_handler_mock.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/include/iceoryx_hoofs/testing/mocks/logger_mock.hpp" />
@@ -664,13 +721,17 @@
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/include/iceoryx_hoofs/testing/timing_test.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/include/iceoryx_hoofs/testing/watch_dog.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/time/include/iox/duration.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/utility/include/iox/detail/deprecation_marker.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/utility/include/iox/detail/unique_id.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/utility/include/iox/into.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include/iox/detail/expected_helper.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include/iox/detail/string_internal.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include/iox/detail/string_type_traits.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include/iox/detail/variant_internal.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include/iox/expected.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include/iox/not_null.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include/iox/optional.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include/iox/semantic_string.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include/iox/string.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include/iox/variant.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/include/iceoryx_platform/acl.hpp" />
@@ -696,6 +757,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/include/iceoryx_platform/signal.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/include/iceoryx_platform/socket.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/include/iceoryx_platform/stat.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/include/iceoryx_platform/stdio.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/include/iceoryx_platform/time.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/include/iceoryx_platform/types.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/include/iceoryx_platform/un.hpp" />
@@ -715,7 +777,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/iceoryx_posh_config.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/iceoryx_posh_types.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/capro/capro_message.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/log/posh_logging.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/mepoo/chunk_management.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/mepoo/mem_pool.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/mepoo/memory_manager.hpp" />
@@ -856,10 +917,12 @@
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/runtime/service_discovery.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/version/compatibility_check_level.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/version/version_info.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/roudi_env/include/iceoryx_posh/roudi_env/minimal_roudi_config.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/roudi_env/include/iceoryx_posh/roudi_env/roudi_env.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/roudi_env/include/iceoryx_posh/roudi_env/runtime_test_interface.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/testing/include/iceoryx_posh/testing/mocks/chunk_mock.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/testing/include/iceoryx_posh/testing/mocks/posh_runtime_mock.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/testing/include/iceoryx_posh/testing/roudi_environment/roudi_environment.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/testing/include/iceoryx_posh/testing/roudi_environment/runtime_test_interface.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/testing/include/iceoryx_posh/testing/roudi_gtest.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/tools/introspection/include/iceoryx_introspection/iceoryx_introspection_app.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iceoryx/tools/introspection/include/iceoryx_introspection/introspection_app.hpp" />
@@ -877,6 +940,7 @@
     <Text Include="../../thirdparty/owemdjee/iceoryx/BUILD.bazel" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/CONTRIBUTING.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/GOVERNANCE.md" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/NOTICE.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/PLANNED_FEATURES.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/QUALITY_DECLARATION.md" />
@@ -884,21 +948,60 @@
     <Text Include="../../thirdparty/owemdjee/iceoryx/WORKSPACE.bazel" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/bazel/BUILD.bazel" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/bazel/bazelbuild/BUILD.bazel" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/bazel/bazelbuild/repositories.bzl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/bazel/bazelbuild/setup.bzl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/bazel/configure_file.bzl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/bazel/configure_version.bzl" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/bazel/cpptoml/BUILD.bazel" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/bazel/cpptoml/repositories.bzl" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/bazel/googletest/BUILD.bazel" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/bazel/googletest/repositories.bzl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/bazel/load_repositories.bzl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/bazel/setup_repositories.bzl" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/cmake/googletest/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/cmake/googletest/googletest.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/cmake/package/package.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/3rd_party_licenses/googletest/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/aspice_swe3_4/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/aspice_swe3_4/example/iceoryx_component/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/aspice_swe3_4/example/iceoryx_component/source/example_module/example_base_class.inl" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/aspice_swe3_4/swe_docu_guidelines.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/README.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/_template.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/chunk_header.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/command-line-parser.md" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/determinism.md" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/diagrams/command_line_parser/command_line_parser_class_overview.puml" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/diagrams/command_line_parser/command_line_parser_macro_usage.puml" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/diagrams/command_line_parser/command_line_parser_usage.puml" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/diagrams/iceoryx_components_diagram_v2_0_0.puml" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/diagrams/iceoryx_components_diagram_v3_0_0.puml" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/diagrams/iceoryx_software_layers_v2_0_0.puml" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/diagrams/iceoryx_software_layers_v3_0_0.puml" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/diagrams/logging/logger_compile_time_replacement.puml" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/diagrams/logging/logger_runtime_replacement.puml" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/diagrams/logging/logger_testing_classes.puml" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/diagrams/logging/logger_testing_sequence.puml" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/diagrams/logging/logging_classes.puml" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/diagrams/logging/logging_with_logstream.puml" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/diagrams/puml_github_workflow.puml" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/diagrams/request_response/client_and_server_options.puml" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/diagrams/request_response/client_and_server_service_discovery.puml" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/diagrams/request_response/client_port.puml" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/diagrams/request_response/client_state_machine.puml" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/diagrams/request_response/overview_class.puml" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/diagrams/request_response/request_response_header.puml" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/diagrams/request_response/server_port.puml" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/diagrams/request_response/typed_api.puml" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/diagrams/request_response/untyped_api.puml" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/diagrams/service-discovery/overview-alternative-b.puml" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/diagrams/service-discovery/overview-alternative-d.puml" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/diagrams/service-discovery/sequence-diagram-alternative-b.puml" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/diagrams/service-discovery/sequence-diagram-alternative-d.puml" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/draft/README.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/draft/service-discovery.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/error-handling.md" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/error_reporting.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/listener.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/lockfree_queue.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/logging.md" />
@@ -906,6 +1009,7 @@
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/relocatable_pointer.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/design/request_response_communication.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/goals-non-goals.md" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/iceoryx-plantuml-config.puml" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/shared-memory-communication.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/API-cheatsheet.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/FAQ.md" />
@@ -943,7 +1047,40 @@
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/getting-started/installation.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/getting-started/overview.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/getting-started/what-is-iceoryx.md" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/avoid-polling.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/client_and_server_options.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/client_and_server_service_discovery.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/client_port.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/client_state_machine.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/command_line_parser_class_overview.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/command_line_parser_macro_usage.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/command_line_parser_usage.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/eclipse-logo.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/iceoryx_components_diagram_nextgen_release.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/iceoryx_components_diagram_v2_0_0.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/iceoryx_components_diagram_v3_0_0.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/iceoryx_software_layers_v2_0_0.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/iceoryx_software_layers_v3_0_0.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/logger_compile_time_replacement.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/logger_runtime_replacement.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/logger_testing_classes.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/logger_testing_sequence.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/logging_classes.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/logging_with_logstream.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/memory-segment-visualization.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/overview-alternative-b.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/overview-alternative-d.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/overview_class.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/puml_github_workflow.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/request_response_header.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/sequence-diagram-alternative-b.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/sequence-diagram-alternative-d.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/server_port.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/shared-memory-mapping.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/typed_api.svg" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/images/untyped_api.svg" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/index.md" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/overrides/partials/footer.html" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/release-notes/iceoryx-unreleased.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/release-notes/iceoryx-v1-0-0.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/release-notes/iceoryx-v1-0-1.md" />
@@ -951,8 +1088,10 @@
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/release-notes/iceoryx-v2-0-0.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/release-notes/iceoryx-v2-0-1.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/release-notes/iceoryx-v2-0-2.md" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/doc/website/stylesheets/extra.css" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_binding_c/BUILD.bazel" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_binding_c/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_binding_c/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_binding_c/README.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_binding_c/cmake/Config.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_binding_c/cmake/iceoryx_binding_cConfig.cmake" />
@@ -960,8 +1099,21 @@
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/README.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/cmake/Config.cmake.in" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/cmake/IceoryxDustDeployment.cmake" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/cmake/iceoryx_dustConfig.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/cmake/iceoryx_dust_deployment.hpp.in" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/cmake/iceoryx_dust_testingConfig.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/container/include/iox/detail/fixed_position_container.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include/iceoryx_dust/internal/cli/arguments.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include/iceoryx_dust/internal/cli/option_manager.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include/iceoryx_dust/internal/cxx/convert.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include/iceoryx_dust/internal/cxx/forward_list.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include/iceoryx_dust/internal/cxx/serialization.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include/iceoryx_dust/internal/cxx/static_storage.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include/iceoryx_dust/internal/cxx/std_chrono_support.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include/iceoryx_dust/internal/cxx/std_string_support.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/include/iceoryx_dust/relocatable_pointer/relocatable_ptr.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_dust/vocabulary/include/iox/detail/span.inl" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/README.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/callbacks/BUILD.bazel" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/callbacks/CMakeLists.txt" />
@@ -990,6 +1142,7 @@
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/icediscovery_in_c/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/icediscovery_in_c/README.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/icedocker/README.md" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/icedocker/docker-compose.yml" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/iceensemble/README.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/iceensemble/run_iceensemble.sh" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/icehello/BUILD.bazel" />
@@ -1012,6 +1165,7 @@
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/singleprocess/README.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/small_memory/README.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/small_memory/options.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/small_memory/roudi_config.toml" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/user_header/BUILD.bazel" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/user_header/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/user_header/README.md" />
@@ -1023,7 +1177,9 @@
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_examples/waitset_in_c/README.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/BUILD.bazel" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/README.md" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/buffer/include/iox/detail/stack.inl" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/cmake/Config.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/cmake/IceoryxHoofsDeployment.cmake" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/cmake/IceoryxPlatform.cmake" />
@@ -1031,7 +1187,55 @@
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/cmake/iceoryx_hoofsConfig.cmake" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/cmake/iceoryx_hoofs_deployment.hpp.in" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/cmake/iceoryx_hoofs_testingConfig.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/cmake/iceoryx_versions.h.in" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/cmake/iceoryxversions.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/container/include/iox/detail/list.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/container/include/iox/detail/uninitialized_array.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/container/include/iox/detail/vector.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include/iox/detail/functional_interface.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include/iox/detail/newtype.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include/iox/detail/polymorphic_handler.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/design/include/iox/detail/static_lifetime_guard.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/filesystem/include/iox/detail/filesystem.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/functional/include/iox/detail/function_ref.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/functional/include/iox/detail/storable_function.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/error_reporting/custom/default/error_reporting.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/concurrent/fifo.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/concurrent/lockfree_queue/cyclic_index.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/concurrent/lockfree_queue/index_queue.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/concurrent/lockfree_queue/lockfree_queue.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/concurrent/lockfree_queue/resizeable_lockfree_queue.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/concurrent/loffli.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/concurrent/periodic_task.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/concurrent/smart_lock.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/concurrent/sofi.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/cxx/variant_queue.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/error_handling/error_handler.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/posix_wrapper/posix_call.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/include/iceoryx_hoofs/internal/posix_wrapper/types.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include/iox/detail/pointer_repository.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include/iox/detail/relative_pointer.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include/iox/detail/relative_pointer_data.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include/iox/detail/scope_guard.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include/iox/detail/scoped_static.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/memory/include/iox/detail/unique_ptr.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/posix/design/include/iox/detail/file_management_interface.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/primitives/include/iox/detail/algorithm.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/primitives/include/iox/detail/iceoryx_hoofs_types.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/reporting/include/iox/detail/log/building_blocks/console_logger.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/reporting/include/iox/detail/log/building_blocks/logformat.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/reporting/include/iox/detail/log/building_blocks/logger.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/reporting/include/iox/detail/log/logstream.inl" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/include/iceoryx_hoofs/testing/fatal_failure.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/testing/include/iceoryx_hoofs/testing/mocks/mocks.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/time/include/iox/detail/duration.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/utility/include/iox/detail/into.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include/iox/detail/expected.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include/iox/detail/optional.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include/iox/detail/semantic_string.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include/iox/detail/string.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_hoofs/vocabulary/include/iox/detail/variant.inl" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_integrationtest/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_integrationtest/Readme.md" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_integrationtest/iceoryx_integrationtest/test_callback_example.py" />
@@ -1061,6 +1265,7 @@
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_meta/tests.cmake" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_platform/BUILD.bazel" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_platform/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_platform/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_platform/cmake/Config.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_platform/cmake/IceoryxPackageHelper.cmake" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_platform/cmake/IceoryxPlatformSettings.cmake" />
@@ -1068,22 +1273,77 @@
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_platform/win/IceoryxPlatformSettings.cmake" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/BUILD.bazel" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/cmake/Config.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/cmake/IceoryxPoshDeployment.cmake" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/cmake/cpptoml/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/cmake/cpptoml/cpptoml.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/cmake/iceoryx_poshConfig.cmake" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/cmake/iceoryx_posh_deployment.hpp.in" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/cmake/iceoryx_posh_roudi_env.cmake" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/cmake/iceoryx_posh_testingConfig.cmake" />
-    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/cmake/iceoryx_versions.hpp.in" />
-    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/cmake/iceoryxversions.cmake" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/doc/3rd_party_licenses/cpptoml/LICENSE" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/etc/iceoryx/roudi_config_example.toml" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/iceoryx_posh_types.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/capro/capro_message.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/gateway/channel.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/gateway/gateway_generic.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/mepoo/memory_manager.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/mepoo/mepoo_segment.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/mepoo/segment_manager.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/mepoo/shared_pointer.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/mepoo/typed_mem_pool.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/base_client.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/base_publisher.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/base_server.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/base_subscriber.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/building_blocks/chunk_distributor.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/building_blocks/chunk_distributor_data.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/building_blocks/chunk_queue_data.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/building_blocks/chunk_queue_popper.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/building_blocks/chunk_queue_pusher.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/building_blocks/chunk_receiver.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/building_blocks/chunk_receiver_data.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/building_blocks/chunk_sender.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/building_blocks/chunk_sender_data.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/client_impl.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/listener.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/notification_attorney.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/notification_callback.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/notification_info.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/ports/base_port.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/ports/client_port_user.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/ports/server_port_user.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/publisher_impl.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/request.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/response.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/sample.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/server_impl.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/smart_chunk.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/subscriber_impl.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/trigger.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/untyped_client_impl.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/untyped_publisher_impl.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/untyped_server_impl.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/untyped_subscriber_impl.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/used_chunk_list.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/popo/wait_set.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/roudi/introspection/mempool_introspection.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/roudi/introspection/port_introspection.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/roudi/introspection/process_introspection.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/roudi/memory/generic_memory_block.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/roudi/port_manager.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/roudi/port_pool_data.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/internal/runtime/ipc_message.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/include/iceoryx_posh/roudi/port_pool.inl" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/roudi_env/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/iceoryx_posh/testing/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/mkdocs.yml" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/tools/apache2_header.txt" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/tools/ci/build-test-freebsd.sh" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/tools/ci/build-test-macos-with-sanitizers.sh" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/tools/ci/build-test-macos.sh" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/tools/ci/build-test-ubuntu-bazel.sh" />
-    <Text Include="../../thirdparty/owemdjee/iceoryx/tools/ci/build-test-ubuntu-with-gcc5.sh" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/tools/ci/build-test-ubuntu-with-sanitizers.sh" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/tools/ci/build-test-ubuntu.sh" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/tools/ci/build-test-windows.ps1" />
@@ -1104,6 +1364,7 @@
     <Text Include="../../thirdparty/owemdjee/iceoryx/tools/run_tests.sh" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/tools/scripts/add_test_users.sh" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/tools/scripts/analyse_blacklisted_namespaces_in_binary.sh" />
+    <Text Include="../../thirdparty/owemdjee/iceoryx/tools/scripts/check_invalid_characters.sh" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/tools/scripts/check_test_ids.sh" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/tools/scripts/clang_format.sh" />
     <Text Include="../../thirdparty/owemdjee/iceoryx/tools/scripts/clang_tidy_check.sh" />

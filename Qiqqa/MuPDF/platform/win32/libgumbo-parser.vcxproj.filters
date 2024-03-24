@@ -30,8 +30,11 @@
     <Filter Include="Misc Files\src">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\src">
+    <Filter Include="Misc Files\visualc">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -92,6 +95,9 @@
     <ClInclude Include="../../thirdparty/gumbo-parser/src/string_piece.h">
       <Filter>Header Files\src</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/gumbo-parser/src/string_util.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/gumbo-parser/src/tag_enum.h">
       <Filter>Header Files\src</Filter>
     </ClInclude>
@@ -134,10 +140,16 @@
     <Text Include="../../thirdparty/gumbo-parser/DEBUGGING.md">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/gumbo-parser/Doxyfile">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/gumbo-parser/Makefile.am">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/gumbo-parser/README.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/gumbo-parser/appveyor.yml">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/gumbo-parser/autogen.sh">
@@ -182,8 +194,17 @@
     <Text Include="../../thirdparty/gumbo-parser/setup.py">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/gumbo-parser/src/char_ref.rl">
+      <Filter>Misc Files\src</Filter>
+    </Text>
     <Text Include="../../thirdparty/gumbo-parser/src/tag.in">
       <Filter>Misc Files\src</Filter>
+    </Text>
+    <Text Include="../../thirdparty/gumbo-parser/visualc/gumbo.vcxproj.filters">
+      <Filter>Misc Files\visualc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/gumbo-parser/visualc/gumbo.vcxproj.user">
+      <Filter>Misc Files\visualc</Filter>
     </Text>
   </ItemGroup>
 </Project>

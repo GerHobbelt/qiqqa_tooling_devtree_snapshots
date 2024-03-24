@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016-2021, Przemyslaw Skibinski, Yann Collet, Facebook, Inc.
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
  * All rights reserved.
  *
  * This source code is licensed under both the BSD-style license (found in the
@@ -717,8 +717,10 @@ Z_EXTERN int Z_EXPORT z_inflateSetDictionary (zng_streamp strm,
 
     {   ZWRAP_DCtx* const zwd = (ZWRAP_DCtx*) strm->state;
         if (zwd == NULL || zwd->zbd == NULL) return Z_STREAM_ERROR;
-        { size_t const initErr = ZSTD_initDStream_usingDict(zwd->zbd, dictionary, dictLength);
-          if (ZSTD_isError(initErr)) return ZWRAPD_finishWithError(zwd, strm, 0); }
+        { size_t const resetErr = ZSTD_DCtx_reset(zwd->zbd, ZSTD_reset_session_only);
+          if (ZSTD_isError(resetErr)) return ZWRAPD_finishWithError(zwd, strm, 0); }
+        { size_t const loadErr = ZSTD_DCtx_loadDictionary(zwd->zbd, dictionary, dictLength);
+          if (ZSTD_isError(loadErr)) return ZWRAPD_finishWithError(zwd, strm, 0); }
         zwd->decompState = ZWRAP_useReset;
 
         if (zwd->totalInBytes == ZSTD_HEADERSIZE) {

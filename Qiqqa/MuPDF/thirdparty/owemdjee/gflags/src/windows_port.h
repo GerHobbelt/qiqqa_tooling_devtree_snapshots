@@ -78,7 +78,7 @@ extern int GFLAGS_DLL_DECL safe_vsnprintf(char *str, size_t size,
 #  pragma warning(disable: 4996) // ignore getenv security warning
 #endif
 #if !defined(_POSIX_C_SOURCE) || _POSIX_C_SOURCE < 200112L
-inline void setenv(const char* name, const char* value, int) {
+inline void setenv(const char* name, const char* value, int overwrite) {
   // In windows, it's impossible to set a variable to the empty string.
   // We handle this by setting it to "0" and the NUL-ing out the \0.
   // That is, we putenv("FOO=0") and then find out where in memory the

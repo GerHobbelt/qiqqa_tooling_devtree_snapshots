@@ -112,8 +112,8 @@
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CPPLOCATE;CPPLOCATE_STATICLIB;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/cpplocate/source/cpplocate/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CPPLOCATE;CPPLOCATE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
@@ -122,14 +122,14 @@
       <TargetMachine>MachineX86</TargetMachine>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <Profile>true</Profile>
       <GenerateMapFile>true</GenerateMapFile>
       <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
       <MapExports>true</MapExports>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/cpplocate/source/cpplocate/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -138,8 +138,8 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CPPLOCATE;CPPLOCATE_STATICLIB;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/cpplocate/source/cpplocate/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CPPLOCATE;CPPLOCATE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
@@ -148,28 +148,28 @@
       <TargetMachine>MachineX64</TargetMachine>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <Profile>true</Profile>
       <GenerateMapFile>true</GenerateMapFile>
       <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
       <MapExports>true</MapExports>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/cpplocate/source/cpplocate/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CPPLOCATE;CPPLOCATE_STATICLIB;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/cpplocate/source/cpplocate/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CPPLOCATE;CPPLOCATE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
       <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <TargetMachine>MachineX86</TargetMachine>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <Profile>true</Profile>
@@ -178,7 +178,7 @@
       <MapExports>true</MapExports>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/cpplocate/source/cpplocate/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -188,14 +188,14 @@
     <ClCompile>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CPPLOCATE;CPPLOCATE_STATICLIB;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/cpplocate/source/cpplocate/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CPPLOCATE;CPPLOCATE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
       <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <TargetMachine>MachineX64</TargetMachine>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <Profile>true</Profile>
@@ -204,7 +204,7 @@
       <MapExports>true</MapExports>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/cpplocate/source/cpplocate/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -363,16 +363,13 @@
     <ClCompile Include="../../thirdparty/owemdjee/cpplocate/source/cpplocate/source/cpplocate.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/cpplocate/source/liblocate/source/liblocate.c" />
     <ClCompile Include="../../thirdparty/owemdjee/cpplocate/source/liblocate/source/utils.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/cpplocate/source/tests/cpplocate-test/cpplocate_test.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/cpplocate/source/tests/cpplocate-test/main.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/cpplocate/source/tests/liblocate-test/liblocate_test.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/cpplocate/source/tests/liblocate-test/main.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/cpplocate/source/tests/liblocate-test/utils_test.cpp" />
     <ClInclude Include="../../thirdparty/owemdjee/cpplocate/source/cpplocate/include/cpplocate/cpplocate.h" />
     <ClInclude Include="../../thirdparty/owemdjee/cpplocate/source/liblocate/include/liblocate/liblocate.h" />
     <ClInclude Include="../../thirdparty/owemdjee/cpplocate/source/liblocate/source/utils.h" />
     <Image Include="../../thirdparty/owemdjee/cpplocate/cpplocate-logo.png" />
+    <Text Include="../../thirdparty/owemdjee/cpplocate/AUTHORS" />
     <Text Include="../../thirdparty/owemdjee/cpplocate/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/cpplocate/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/cpplocate/README.md" />
     <Text Include="../../thirdparty/owemdjee/cpplocate/cmake/CheckTemplate.cmake" />
     <Text Include="../../thirdparty/owemdjee/cpplocate/cmake/ClangTidy.cmake" />
@@ -392,6 +389,7 @@
     <Text Include="../../thirdparty/owemdjee/cpplocate/cmake/HealthCheck.cmake" />
     <Text Include="../../thirdparty/owemdjee/cpplocate/cmake/RuntimeDependencies.cmake" />
     <Text Include="../../thirdparty/owemdjee/cpplocate/cpplocate-config.cmake" />
+    <Text Include="../../thirdparty/owemdjee/cpplocate/cpplocate-logo.svg" />
     <Text Include="../../thirdparty/owemdjee/cpplocate/deploy/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/cpplocate/deploy/packages/pack-cpplocate.cmake" />
     <Text Include="../../thirdparty/owemdjee/cpplocate/deploy/ubuntu-ppa/debian/changelog" />
@@ -405,9 +403,6 @@
     <Text Include="../../thirdparty/owemdjee/cpplocate/source/codegeneration/template_msvc_api.h.in" />
     <Text Include="../../thirdparty/owemdjee/cpplocate/source/cpplocate/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/cpplocate/source/liblocate/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/cpplocate/source/tests/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/cpplocate/source/tests/cpplocate-test/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/cpplocate/source/tests/liblocate-test/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/cpplocate/source/version.h.in" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >

@@ -67,6 +67,9 @@ sure both macros are undefined; an emulation function will then be used. */
 /* Define to 1 if you have the `bcopy' function. */
 /* #undef HAVE_BCOPY */
 
+/* Define this if your compiler provides __builtin_mul_overflow() */
+/* #undef HAVE_BUILTIN_MUL_OVERFLOW */
+
 /* Define to 1 if you have the <bzlib.h> header file. */
 /* #undef HAVE_BZLIB_H */
 
@@ -86,7 +89,7 @@ sure both macros are undefined; an emulation function will then be used. */
 /* #undef HAVE_INTTYPES_H */
 
 /* Define to 1 if you have the <limits.h> header file. */
-/* #undef HAVE_LIMITS_H */
+#define HAVE_LIMITS_H 1
 
 /* Define to 1 if you have the `memfd_create' function. */
 /* #undef HAVE_MEMFD_CREATE */
@@ -104,16 +107,22 @@ sure both macros are undefined; an emulation function will then be used. */
 /* #undef HAVE_MKOSTEMP */
 
 /* Define if you have POSIX threads libraries and header files. */
-/* #undef HAVE_PTHREAD */
+#define HAVE_PTHREAD 1
 
 /* Have PTHREAD_PRIO_INHERIT. */
 /* #undef HAVE_PTHREAD_PRIO_INHERIT */
+
+/* Define to 1 if you have the <readline.h> header file. */
+#undef HAVE_READLINE_H
 
 /* Define to 1 if you have the <readline/history.h> header file. */
 /* #undef HAVE_READLINE_HISTORY_H */
 
 /* Define to 1 if you have the <readline/readline.h> header file. */
 /* #undef HAVE_READLINE_READLINE_H */
+
+/* Define to 1 if you have the `realpath' function. */
+/* #undef HAVE_REALPATH */
 
 /* Define to 1 if you have the `secure_getenv' function. */
 /* #undef HAVE_SECURE_GETENV */
@@ -187,7 +196,7 @@ sure both macros are undefined; an emulation function will then be used. */
    matching attempt. The value is also used to limit a loop counter in
    pcre2_dfa_match(). There is a runtime interface for setting a different
    limit. The limit exists in order to catch runaway regular expressions that
-   take for ever to determine that they do not match. The default is set very
+   take forever to determine that they do not match. The default is set very
    large so that it does not accidentally catch legitimate cases. */
 #ifndef MATCH_LIMIT
 #define MATCH_LIMIT 10000000
@@ -221,6 +230,12 @@ sure both macros are undefined; an emulation function will then be used. */
 #define MAX_NAME_SIZE 32
 #endif
 
+/* The value of MAX_VARLOOKBEHIND specifies the default maximum length, in
+   characters, for a variable-length lookbehind assertion. */
+#ifndef MAX_VARLOOKBEHIND 
+#define MAX_VARLOOKBEHIND	255
+#endif
+
 /* Defining NEVER_BACKSLASH_C locks out the use of \C in all patterns. */
 /* #undef NEVER_BACKSLASH_C */
 
@@ -242,7 +257,7 @@ sure both macros are undefined; an emulation function will then be used. */
 #define PACKAGE_NAME "PCRE2"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "PCRE2 10.37"
+#define PACKAGE_STRING "PCRE2 10.43-DEV"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "pcre2"
@@ -251,7 +266,7 @@ sure both macros are undefined; an emulation function will then be used. */
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "10.37"
+#define PACKAGE_VERSION "10.43-DEV"
 
 /* The value of PARENS_NEST_LIMIT specifies the maximum depth of nested
    parentheses (of any kind) in a pattern. This limits the amount of system
@@ -277,6 +292,7 @@ sure both macros are undefined; an emulation function will then be used. */
 #ifndef PCRE2GREP_MAX_BUFSIZE
 #define PCRE2GREP_MAX_BUFSIZE 1048576
 #endif
+
 #if !defined(_MSC_VER)
 
 /* to make a symbol visible */
@@ -286,7 +302,13 @@ sure both macros are undefined; an emulation function will then be used. */
 #define PCRE2POSIX_EXP_DEFN extern __attribute__ ((visibility ("default")))
 
 /* Define to any value to include debugging code. */
-/* #undef PCRE2_DEBUG */
+#undef PCRE2_DEBUG
+
+/* to make a symbol visible */
+#define PCRE2_EXPORT
+
+/* to make a symbol visible */
+#define PCRE2_EXPORT extern __attribute__ ((visibility ("default")))
 
 /* to make a symbol visible */
 #define PCRE2_EXP_DECL extern __attribute__ ((visibility ("default")))
@@ -295,12 +317,29 @@ sure both macros are undefined; an emulation function will then be used. */
    Win32, and it needs some magic to be inserted before the definition
    of a function that is exported by the library, define this macro to
    contain the relevant magic. If you do not define this macro, a suitable
-    __declspec value is used for Windows systems; in other environments
-   "extern" is used for a C compiler and "extern C" for a C++ compiler.
+   __declspec value is used for Windows systems; in other environments
+   a compiler relevant "extern" is used with any "visibility" related
+   attributes from PCRE2_EXPORT included.
    This macro apears at the start of every exported function that is part
    of the external API. It does not appear on functions that are "external"
    in the C sense, but which are internal to the library. */
 #define PCRE2_EXP_DEFN __attribute__ ((visibility ("default")))
+
+#else // _MSC_VER
+
+#define PCRE2POSIX_EXP_DECL extern 
+#define PCRE2POSIX_EXP_DEFN 
+
+/* Define to any value to include debugging code. */
+#if !defined(NDEBUG)
+#define PCRE2_DEBUG 1
+#endif
+
+/* to make a symbol visible */
+#define PCRE2_EXPORT extern 
+
+#define PCRE2_EXP_DECL extern 
+#define PCRE2_EXP_DEFN 
 
 #endif
 
@@ -326,7 +365,7 @@ sure both macros are undefined; an emulation function will then be used. */
 
 /* Define to any value to allow pcre2grep to be linked with libbz2, so that it
    is able to handle .bz2 files. */
-/* #undef SUPPORT_LIBBZ2 */
+/* #undef SUPPORT_LIBBZ2 1*/
 
 /* Define to any value to allow pcre2test to be linked with libedit. */
 /* #undef SUPPORT_LIBEDIT */
@@ -336,7 +375,8 @@ sure both macros are undefined; an emulation function will then be used. */
 
 /* Define to any value to allow pcre2grep to be linked with libz, so that it
    is able to handle .gz files. */
-/* #undef SUPPORT_LIBZ */
+#define SUPPORT_LIBZ 1
+#define SUPPORT_LIBZ_NG 1
 
 /* Define to any value to enable callout script support in pcre2grep. */
 #define SUPPORT_PCRE2GREP_CALLOUT /**/
@@ -348,22 +388,24 @@ sure both macros are undefined; an emulation function will then be used. */
 
 /* Define to any value to enable JIT support in pcre2grep. Note that this will
    have no effect unless SUPPORT_JIT is also defined. */
-/* #undef SUPPORT_PCRE2GREP_JIT */
+#define SUPPORT_PCRE2GREP_JIT 1
 
 /* Define to any value to enable the 16 bit PCRE2 library. */
-#define SUPPORT_PCRE2_16 /**/
+#define SUPPORT_PCRE2_16 1
 
 /* Define to any value to enable the 32 bit PCRE2 library. */
-/* #undef SUPPORT_PCRE2_32 */
+#define SUPPORT_PCRE2_32 1
 
 /* Define to any value to enable the 8 bit PCRE2 library. */
-/* #undef SUPPORT_PCRE2_8 */
+#define SUPPORT_PCRE2_8 1
 
 /* Define to any value to enable support for Unicode and UTF encoding. This
    will work even in an EBCDIC environment, but it is incompatible with the
    EBCDIC macro. That is, PCRE2 can support *either* EBCDIC code *or*
    ASCII/Unicode, but not both at once. */
-// #define SUPPORT_UNICODE /**/
+#ifndef SUPPORT_UNICODE 
+#define SUPPORT_UNICODE 1
+#endif
 
 /* Define to any value for valgrind support to find invalid memory reads. */
 /* #undef SUPPORT_VALGRIND */
@@ -461,7 +503,13 @@ sure both macros are undefined; an emulation function will then be used. */
 
 
 /* Version number of package */
-#define VERSION "10.37"
+#define VERSION "10.43-DEV"
+
+/* Number of bits in a file offset, on hosts where this is settable. */
+/* #undef _FILE_OFFSET_BITS */
+
+/* Define for large files, on AIX-style hosts. */
+/* #undef _LARGE_FILES */
 
 /* Define to 1 if on MINIX. */
 /* #undef _MINIX */

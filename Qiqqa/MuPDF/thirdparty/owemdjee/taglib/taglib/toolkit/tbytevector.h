@@ -26,11 +26,12 @@
 #ifndef TAGLIB_BYTEVECTOR_H
 #define TAGLIB_BYTEVECTOR_H
 
+#include <iostream>
+#include <memory>
+#include <vector>
+
 #include "taglib.h"
 #include "taglib_export.h"
-
-#include <vector>
-#include <iostream>
 
 namespace TagLib {
 
@@ -46,10 +47,10 @@ namespace TagLib {
   {
   public:
 #ifndef DO_NOT_DOCUMENT
-    typedef std::vector<char>::iterator Iterator;
-    typedef std::vector<char>::const_iterator ConstIterator;
-    typedef std::vector<char>::reverse_iterator ReverseIterator;
-    typedef std::vector<char>::const_reverse_iterator ConstReverseIterator;
+    using Iterator = std::vector<char>::iterator;
+    using ConstIterator = std::vector<char>::const_iterator;
+    using ReverseIterator = std::vector<char>::reverse_iterator;
+    using ConstReverseIterator = std::vector<char>::const_reverse_iterator;
 #endif
 
     /*!
@@ -95,12 +96,12 @@ namespace TagLib {
     /*!
      * Destroys this ByteVector instance.
      */
-    virtual ~ByteVector();
+    ~ByteVector();
 
     /*!
-     * Sets the data for the byte array using the first \a length bytes of \a data
+     * Sets the data for the byte array using the first \a length bytes of \a s
      */
-    ByteVector &setData(const char *data, unsigned int length);
+    ByteVector &setData(const char *s, unsigned int length);
 
     /*!
      * Sets the data for the byte array copies \a data up to the first null
@@ -241,6 +242,11 @@ namespace TagLib {
     ConstIterator begin() const;
 
     /*!
+     * Returns a ConstIterator that points to the front of the vector.
+     */
+    ConstIterator cbegin() const;
+
+    /*!
      * Returns an Iterator that points to the back of the vector.
      */
     Iterator end();
@@ -249,6 +255,11 @@ namespace TagLib {
      * Returns a ConstIterator that points to the back of the vector.
      */
     ConstIterator end() const;
+
+    /*!
+     * Returns a ConstIterator that points to the back of the vector.
+     */
+    ConstIterator cend() const;
 
     /*!
      * Returns a ReverseIterator that points to the front of the vector.
@@ -271,33 +282,11 @@ namespace TagLib {
     ConstReverseIterator rend() const;
 
     /*!
-     * Returns true if the vector is null.
-     *
-     * \note A vector may be empty without being null.  So do not use this
-     * method to check if the vector is empty.
-     *
-     * \see isEmpty()
-     *
-     * \deprecated Use isEmpty(), do not differentiate between null and empty.
-     */
-     // BIC: remove
-    TAGLIB_DEPRECATED bool isNull() const;
-
-    /*!
      * Returns true if the ByteVector is empty.
      *
      * \see size()
-     * \see isNull()
      */
     bool isEmpty() const;
-
-    /*!
-     * Returns a CRC checksum of the byte vector's data.
-     *
-     * \note This uses an uncommon variant of CRC32 specializes in Ogg.
-     */
-    // BIC: Remove or make generic.
-    unsigned int checksum() const;
 
     /*!
      * Converts the first 4 bytes of the vector to an unsigned integer.
@@ -360,24 +349,24 @@ namespace TagLib {
     short toShort(unsigned int offset, bool mostSignificantByteFirst = true) const;
 
     /*!
-     * Converts the first 2 bytes of the vector to a unsigned short.
+     * Converts the first 2 bytes of the vector to an unsigned short.
      *
      * If \a mostSignificantByteFirst is true this will operate left to right
      * evaluating the integer.  For example if \a mostSignificantByteFirst is
      * true then $00 $01 == 0x0001 == 1, if false, $01 00 == 0x01000000 == 1.
      *
-     * \see fromShort()
+     * \see fromUShort()
      */
     unsigned short toUShort(bool mostSignificantByteFirst = true) const;
 
     /*!
-     * Converts the 2 bytes at \a offset of the vector to a unsigned short.
+     * Converts the 2 bytes at \a offset of the vector to an unsigned short.
      *
      * If \a mostSignificantByteFirst is true this will operate left to right
      * evaluating the integer.  For example if \a mostSignificantByteFirst is
      * true then $00 $01 == 0x0001 == 1, if false, $01 00 == 0x01000000 == 1.
      *
-     * \see fromShort()
+     * \see fromUShort()
      */
     unsigned short toUShort(unsigned int offset, bool mostSignificantByteFirst = true) const;
 
@@ -389,7 +378,7 @@ namespace TagLib {
      * true then $00 00 00 00 00 00 00 01 == 0x0000000000000001 == 1,
      * if false, $01 00 00 00 00 00 00 00 == 0x0100000000000000 == 1.
      *
-     * \see fromUInt()
+     * \see fromLongLong()
      */
     long long toLongLong(bool mostSignificantByteFirst = true) const;
 
@@ -401,9 +390,33 @@ namespace TagLib {
      * true then $00 00 00 00 00 00 00 01 == 0x0000000000000001 == 1,
      * if false, $01 00 00 00 00 00 00 00 == 0x0100000000000000 == 1.
      *
-     * \see fromUInt()
+     * \see fromLongLong()
      */
     long long toLongLong(unsigned int offset, bool mostSignificantByteFirst = true) const;
+
+    /*!
+     * Converts the first 8 bytes of the vector to an unsigned long long.
+     *
+     * If \a mostSignificantByteFirst is true this will operate left to right
+     * evaluating the integer.  For example if \a mostSignificantByteFirst is
+     * true then $00 00 00 00 00 00 00 01 == 0x0000000000000001 == 1,
+     * if false, $01 00 00 00 00 00 00 00 == 0x0100000000000000 == 1.
+     *
+     * \see fromULongLong()
+     */
+    unsigned long long toULongLong(bool mostSignificantByteFirst = true) const;
+
+    /*!
+     * Converts the 8 bytes at \a offset of the vector to an unsigned long long.
+     *
+     * If \a mostSignificantByteFirst is true this will operate left to right
+     * evaluating the integer.  For example if \a mostSignificantByteFirst is
+     * true then $00 00 00 00 00 00 00 01 == 0x0000000000000001 == 1,
+     * if false, $01 00 00 00 00 00 00 00 == 0x0100000000000000 == 1.
+     *
+     * \see fromULongLong()
+     */
+    unsigned long long toULongLong(unsigned int offset, bool mostSignificantByteFirst = true) const;
 
     /*
      * Converts the 4 bytes at \a offset of the vector to a float as an IEEE754
@@ -467,6 +480,16 @@ namespace TagLib {
     static ByteVector fromShort(short value, bool mostSignificantByteFirst = true);
 
     /*!
+     * Creates a 2 byte ByteVector based on \a value.  If
+     * \a mostSignificantByteFirst is true, then this will operate left to right
+     * in building the ByteVector.  For example if \a mostSignificantByteFirst is
+     * true then $00 01 == 0x0001 == 1, if false, $01 00 == 0x0100 == 1.
+     *
+     * \see toUShort()
+     */
+    static ByteVector fromUShort(unsigned short value, bool mostSignificantByteFirst = true);
+
+    /*!
      * Creates a 8 byte ByteVector based on \a value.  If
      * \a mostSignificantByteFirst is true, then this will operate left to right
      * in building the ByteVector.  For example if \a mostSignificantByteFirst is
@@ -476,6 +499,17 @@ namespace TagLib {
      * \see toLongLong()
      */
     static ByteVector fromLongLong(long long value, bool mostSignificantByteFirst = true);
+
+    /*!
+     * Creates a 8 byte ByteVector based on \a value.  If
+     * \a mostSignificantByteFirst is true, then this will operate left to right
+     * in building the ByteVector.  For example if \a mostSignificantByteFirst is
+     * true then $00 00 00 01 == 0x0000000000000001 == 1, if false,
+     * $01 00 00 00 00 00 00 00 == 0x0100000000000000 == 1.
+     *
+     * \see toULongLong()
+     */
+    static ByteVector fromULongLong(unsigned long long value, bool mostSignificantByteFirst = true);
 
     /*!
      * Creates a 4 byte ByteVector based on \a value as an IEEE754 32-bit
@@ -586,18 +620,6 @@ namespace TagLib {
     void swap(ByteVector &v);
 
     /*!
-     * A static, empty ByteVector which is convenient and fast (since returning
-     * an empty or "null" value does not require instantiating a new ByteVector).
-     *
-     * \warning Do not modify this variable.  It will mess up the internal state
-     * of TagLib.
-     *
-     * \deprecated Use ByteVector().
-     */
-    // BIC: remove
-    TAGLIB_DEPRECATED static ByteVector null;
-
-    /*!
      * Returns a hex-encoded copy of the byte vector.
      */
     ByteVector toHex() const;
@@ -622,7 +644,7 @@ namespace TagLib {
 
   private:
     class ByteVectorPrivate;
-    ByteVectorPrivate *d;
+    std::unique_ptr<ByteVectorPrivate> d;
   };
 }  // namespace TagLib
 

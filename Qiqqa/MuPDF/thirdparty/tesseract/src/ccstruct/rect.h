@@ -20,7 +20,7 @@
 #define RECT_H
 
 #include "points.h"     // for ICOORD, FCOORD
-#include "scrollview.h" // for ScrollView, ScrollView::Color
+#include "scrollview.h" // for ScrollView, Diagnostics::Color
 #include "tesstypes.h"  // for TDimension
 #include "tprintf.h"    // for tprintf
 
@@ -41,8 +41,8 @@ class TESS_API TBOX { // bounding box
 public:
   TBOX()
       : // empty constructor making a null box
-      bot_left(INT16_MAX, INT16_MAX)
-      , top_right(-INT16_MAX, -INT16_MAX) {}
+        bot_left(TDIMENSION_MAX, TDIMENSION_MAX),
+        top_right(TDIMENSION_MIN, TDIMENSION_MIN) {}
 
   TBOX(                  // constructor
       const ICOORD pt1,  // one corner
@@ -59,6 +59,8 @@ public:
 
   TBOX( // box around FCOORD
       const FCOORD pt);
+
+  TBOX(const Image &pix);
 
   bool null_box() const { // Is box null
     return ((left() >= right()) || (top() <= bottom()));
@@ -213,10 +215,10 @@ public:
   void rotate(const FCOORD &vec) { // by vector
     ICOORD top_left(bot_left.x(), top_right.y());
     bot_left -= top_left;
-    bot_left.rotate(vec);
-    bot_left += top_left;
     top_right -= top_left;
+    bot_left.rotate(vec);
     top_right.rotate(vec);
+    bot_left += top_left;
     top_right += top_left;
   }
   // rotate_large constructs the containing bounding box of all 4
@@ -294,14 +296,14 @@ public:
   }
 
   void print() const { // print
-    tprintf("Bounding box=({},{})->({},{})\n", left(), bottom(), right(), top());
+    tprintDebug("Bounding box=(l:{},b:{}->r:{},t:{})\n", left(), bottom(), right(), top());
   }
   // Appends the bounding box as (%d,%d)->(%d,%d) to a string.
   void print_to_str(std::string &str) const;
 
 #if !GRAPHICS_DISABLED
   void plot(                  // use current settings
-      ScrollView *fd) const { // where to paint
+      ScrollViewReference &fd) const { // where to paint
     fd->Rectangle(bot_left.x(), bot_left.y(), top_right.x(), top_right.y());
   }
 #endif
@@ -311,9 +313,9 @@ public:
 
 #if !GRAPHICS_DISABLED
   void plot(                                  // paint box
-      ScrollView *fd,                         // where to paint
-      ScrollView::Color fill_colour,          // colour for inside
-      ScrollView::Color border_colour) const; // colour for border
+      ScrollViewReference &fd,                         // where to paint
+      Diagnostics::Color fill_colour,          // colour for inside
+      Diagnostics::Color border_colour) const; // colour for border
 #endif
   // Writes to the given file. Returns false in case of error.
   bool Serialize(FILE *fp) const;

@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPHASH_GPL;PHASH_GPL_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPHASH_GPL;PHASH_GPL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPHASH_GPL;PHASH_GPL_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/phash-gpl/phash-win32/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>USE_IMAGE_HASH;BUILD_MONOLITHIC;BUILDING_LIBPHASH_GPL;PHASH_GPL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPHASH_GPL;PHASH_GPL_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPHASH_GPL;PHASH_GPL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/phash-gpl/phash-win32/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPHASH_GPL;PHASH_GPL_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPHASH_GPL;PHASH_GPL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPHASH_GPL;PHASH_GPL_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/phash-gpl/phash-win32/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>USE_IMAGE_HASH;BUILD_MONOLITHIC;BUILDING_LIBPHASH_GPL;PHASH_GPL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPHASH_GPL;PHASH_GPL_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPHASH_GPL;PHASH_GPL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/phash-gpl/phash-win32/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPHASH_GPL;PHASH_GPL_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPHASH_GPL;PHASH_GPL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPHASH_GPL;PHASH_GPL_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/phash-gpl/phash-win32/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>USE_IMAGE_HASH;BUILD_MONOLITHIC;BUILDING_LIBPHASH_GPL;PHASH_GPL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPHASH_GPL;PHASH_GPL_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPHASH_GPL;PHASH_GPL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/phash-gpl/phash-win32/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPHASH_GPL;PHASH_GPL_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPHASH_GPL;PHASH_GPL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPHASH_GPL;PHASH_GPL_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/phash-gpl/phash-win32/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>USE_IMAGE_HASH;BUILD_MONOLITHIC;BUILDING_LIBPHASH_GPL;PHASH_GPL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPHASH_GPL;PHASH_GPL_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPHASH_GPL;PHASH_GPL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/phash-gpl/phash-win32/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -301,21 +301,50 @@
     <Image Include="../../thirdparty/owemdjee/phash-gpl/resources/img2.jpg" />
     <Image Include="../../thirdparty/owemdjee/phash-gpl/resources/img3.jpg" />
     <Image Include="../../thirdparty/owemdjee/phash-gpl/resources/imghash-test-results.png" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/AUTHORS" />
     <Text Include="../../thirdparty/owemdjee/phash-gpl/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/phash-gpl/ChangeLog" />
     <Text Include="../../thirdparty/owemdjee/phash-gpl/NEWS" />
     <Text Include="../../thirdparty/owemdjee/phash-gpl/README.md" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/c_sharp/pHash.cs" />
     <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/java/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/java/pHash-jni.h.cmake" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/java/phash-jni/src/main/java/org/phash/ni/audio/AudioHash.java" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/java/phash-jni/src/main/java/org/phash/ni/image/BMBHash.java" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/java/phash-jni/src/main/java/org/phash/ni/image/Digest.java" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/java/phash-jni/src/main/java/org/phash/ni/image/Features.java" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/java/phash-jni/src/main/java/org/phash/ni/image/ImageHash.java" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/java/phash-jni/src/main/java/org/phash/ni/image/MHash.java" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/java/phash-jni/src/main/java/org/phash/ni/text/TextHash.java" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/java/phash-jni/src/main/java/org/phash/ni/text/TxtHashPoint.java" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/java/phash-jni/src/main/java/org/phash/ni/text/TxtMatch.java" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/java/phash-jni/src/main/java/org/phash/ni/video/VideoHash.java" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/java/phash-jni/src/test/java/org/phash/ni/image/ImageHashTest.java" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/php/LICENSE" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/php/Makefile.global" />
     <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/php/README" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/php/acinclude.m4" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/php/aclocal.m4" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/php/build/libtool.m4" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/php/build/mkdep.awk" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/php/build/scan_makefile_in.awk" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/php/config.guess" />
     <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/php/config.h.in" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/php/config.m4" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/php/config.w32" />
     <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/php/configure.in" />
     <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/php/ltmain.sh" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/php/manual/Makefile" />
     <Text Include="../../thirdparty/owemdjee/phash-gpl/bindings/php/manual/manual.xml.in" />
     <Text Include="../../thirdparty/owemdjee/phash-gpl/phash-win32/README.rtf" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/phash-win32/examples/testimagehash.vcproj.user" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/phash-win32/pHash.vcproj.user" />
     <Text Include="../../thirdparty/owemdjee/phash-gpl/phash-win32/src/Makefile.in" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/phash-win32/src/pHash.vcproj.user" />
     <Text Include="../../thirdparty/owemdjee/phash-gpl/resources/alice.txt" />
     <Text Include="../../thirdparty/owemdjee/phash-gpl/resources/aliceparag.txt" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/resources/video.mp4" />
+    <Text Include="../../thirdparty/owemdjee/phash-gpl/resources/videoclip.mp4" />
     <Text Include="../../thirdparty/owemdjee/phash-gpl/src/audiophash.h.cmake" />
     <Text Include="../../thirdparty/owemdjee/phash-gpl/src/cimgffmpeg.h.cmake" />
     <Text Include="../../thirdparty/owemdjee/phash-gpl/src/pHash.h.cmake" />

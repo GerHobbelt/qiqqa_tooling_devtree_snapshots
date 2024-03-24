@@ -55,6 +55,9 @@
 #include <sys/timeb.h>
 #endif
 
+#include "../examples/monolithic_examples.h"
+
+
 #ifdef LIBXML_DEBUG_ENABLED
 static int debug = 0;
 #endif
@@ -68,7 +71,7 @@ static int nodict = 0;
 #ifdef LIBXML_HTML_ENABLED
 static int html = 0;
 #endif
-static char *encoding = NULL;
+static const char *encoding = NULL;
 static int load_trace = 0;
 #ifdef LIBXML_XINCLUDE_ENABLED
 static int xinclude = 0;
@@ -476,7 +479,6 @@ static void usage(const char *name) {
     printf("\t--noout: do not dump the result\n");
     printf("\t--maxdepth val : increase the maximum depth (default %d)\n", xsltMaxDepth);
     printf("\t--maxvars val : increase the maximum variables (default %d)\n", xsltMaxVars);
-    printf("\t--maxparserdepth val : increase the maximum parser depth\n");
     printf("\t--huge: relax any hardcoded limit from the parser\n");
     printf("\t             fixes \"parser error : internal error: Huge input lookup\"\n");
     printf("\t--seed-rand val : initialize pseudo random number generator with specific seed\n");
@@ -509,8 +511,13 @@ static void usage(const char *name) {
     printf("\nProject libxslt home page: https://gitlab.gnome.org/GNOME/libxslt\n");
 }
 
+
+#if defined(BUILD_MONOLITHIC)
+#define main      xsltproc_main
+#endif
+
 int
-main(int argc, char **argv)
+main(int argc, const char **argv)
 {
     int i;
     xsltStylesheetPtr cur = NULL;
@@ -532,7 +539,7 @@ main(int argc, char **argv)
     _set_output_format(_TWO_DIGIT_EXPONENT);
 #endif
 
-    LIBXML_TEST_VERSION
+    LIBXML_TEST_VERSION();
 
     sec = xsltNewSecurityPrefs();
     xsltSetDefaultSecurityPrefs(sec);
@@ -720,20 +727,6 @@ main(int argc, char **argv)
                 if (value > 0)
                     xsltMaxVars = value;
             }
-        } else if ((!strcmp(argv[i], "-maxparserdepth")) ||
-                   (!strcmp(argv[i], "--maxparserdepth"))) {
-            int value;
-
-            i++;
-            if (i == argc) {
-                fprintf(stderr, "XML maxparserdepth value not specified!\n");
-                return (2);
-            }
-
-            if (sscanf(argv[i], "%d", &value) == 1) {
-                if (value > 0)
-                    xmlParserMaxDepth = value;
-            }
         } else if ((!strcmp(argv[i], "-huge")) ||
                    (!strcmp(argv[i], "--huge"))) {
             options |= XML_PARSE_HUGE;
@@ -780,10 +773,6 @@ main(int argc, char **argv)
             continue;
         } else if ((!strcmp(argv[i], "-maxvars")) ||
             (!strcmp(argv[i], "--maxvars"))) {
-            i++;
-            continue;
-        } else if ((!strcmp(argv[i], "-maxparserdepth")) ||
-            (!strcmp(argv[i], "--maxparserdepth"))) {
             i++;
             continue;
         } else if ((!strcmp(argv[i], "-seed-rand")) ||

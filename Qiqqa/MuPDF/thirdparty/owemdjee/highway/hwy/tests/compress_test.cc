@@ -13,13 +13,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include <stddef.h>
-#include <stdint.h>
+#include <stdio.h>
 #include <string.h>  // memset
 
 #include <array>  // IWYU pragma: keep
-
-#include "hwy/base.h"
 
 #undef HWY_TARGET_INCLUDE
 #define HWY_TARGET_INCLUDE "tests/compress_test.cc"
@@ -70,10 +67,10 @@ struct TestCompress {
     RandomState rng;
 
     using TI = MakeSigned<T>;  // For mask > 0 comparison
+    using TU = MakeUnsigned<T>;
     const Rebind<TI, D> di;
     const size_t N = Lanes(d);
-
-    const T zero{0};
+    const size_t bits_size = RoundUpTo((N + 7) / 8, 8);
 
     for (int frac : {0, 2, 3}) {
       // For CompressStore
@@ -81,12 +78,14 @@ struct TestCompress {
 
       auto in_lanes = AllocateAligned<T>(N);
       auto mask_lanes = AllocateAligned<TI>(N);
+      auto garbage = AllocateAligned<TU>(N);
       auto expected = AllocateAligned<T>(N);
       auto actual_a = AllocateAligned<T>(misalign + N);
-      T* actual_u = actual_a.get() + misalign;
-
-      const size_t bits_size = RoundUpTo((N + 7) / 8, 8);
       auto bits = AllocateAligned<uint8_t>(bits_size);
+      HWY_ASSERT(in_lanes && mask_lanes && garbage && expected && actual_a &&
+                 bits);
+
+      T* actual_u = actual_a.get() + misalign;
       memset(bits.get(), 0, bits_size);  // for MSAN
 
       // Each lane should have a chance of having mask=true.
@@ -100,6 +99,7 @@ struct TestCompress {
           if (mask_lanes[i] > 0) {
             expected[expected_pos++] = in_lanes[i];
           }
+          garbage[i] = static_cast<TU>(Random64(&rng));
         }
         size_t num_to_check;
         if (CompressIsPartition<T>::value) {
@@ -145,7 +145,7 @@ struct TestCompress {
                     in_lanes, mask_lanes, expected, actual_u, __LINE__);
 
         // CompressBlendedStore
-        memset(actual_u, 0, N * sizeof(T));
+        memcpy(actual_u, garbage.get(), N * sizeof(T));
         const size_t size2 = CompressBlendedStore(in, mask, d, actual_u);
         // expected_pos instead of num_to_check because this op only writes
         // the mask=true lanes.
@@ -154,7 +154,11 @@ struct TestCompress {
                     __LINE__);
         // Subsequent lanes are untouched.
         for (size_t i = size2; i < N; ++i) {
-          HWY_ASSERT_EQ(zero, actual_u[i]);
+#if HWY_COMPILER_MSVC && HWY_TARGET == HWY_AVX2
+          // TODO(eustas): re-enable when compiler is fixed
+#else
+          HWY_ASSERT_EQ(garbage[i], reinterpret_cast<TU*>(actual_u)[i]);
+#endif
         }
 
         // CompressBits
@@ -198,6 +202,7 @@ struct TestCompressBlocks {
     auto mask_lanes = AllocateAligned<TI>(N);
     auto expected = AllocateAligned<T>(N);
     auto actual = AllocateAligned<T>(N);
+    HWY_ASSERT(in_lanes && mask_lanes && expected && actual);
 
     // Each lane should have a chance of having mask=true.
     for (size_t rep = 0; rep < AdjustedReps(200); ++rep) {

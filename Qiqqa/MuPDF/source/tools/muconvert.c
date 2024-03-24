@@ -52,6 +52,7 @@ static const char *options = "";
 static fz_context *ctx;
 static fz_document *doc;
 static fz_document_writer *out;
+static fz_box_type page_box = FZ_CROP_BOX;
 static int count;
 
 static int usage(void)
@@ -60,6 +61,7 @@ static int usage(void)
 		"Usage: mutool convert [options] file [pages]\n"
 		"  -p -   password\n"
 		"\n"
+		"  -b -    use named page box (MediaBox, CropBox, BleedBox, TrimBox, or ArtBox)\n"
 		"  -A -    number of bits of antialiasing (0 to 8)\n"
 		"  -W -    page width for EPUB layout\n"
 		"  -H -    page height for EPUB layout\n"
@@ -93,9 +95,10 @@ static int usage(void)
 
 static void runpage(int number)
 {
-	fz_rect mediabox;
+	fz_rect box;
 	fz_page *page;
 	fz_device *dev = NULL;
+	fz_matrix ctm;
 
 	fz_info(ctx, "processing page %d\n", number);
 
@@ -105,9 +108,14 @@ static void runpage(int number)
 
 	fz_try(ctx)
 	{
-		mediabox = fz_bound_page(ctx, page);
-		dev = fz_begin_page(ctx, out, mediabox);
-        fz_run_page(ctx, page, dev, fz_identity);
+		box = fz_bound_page_box(ctx, page, page_box);
+
+		// Realign page box on 0,0
+		ctm = fz_translate(-box.x0, -box.y0);
+		box = fz_transform_rect(box, ctm);
+
+		dev = fz_begin_page(ctx, out, box);
+		fz_run_page(ctx, page, dev, ctm);
 		fz_end_page(ctx, out);
 	}
 	fz_always(ctx)
@@ -155,10 +163,11 @@ int muconvert_main(int argc, const char** argv)
 	ctx = NULL;
 	doc = NULL;
 	out = NULL;
+	page_box = FZ_MEDIA_BOX;
 	count = 0;
 
 	fz_getopt_reset();
-	while ((c = fz_getopt(argc, argv, "p:A:W:H:S:U:Xo:F:O:")) != -1)
+	while ((c = fz_getopt(argc, argv, "p:A:W:H:S:U:Xo:F:O:b:")) != -1)
 	{
 		switch (c)
 		{
@@ -175,6 +184,15 @@ int muconvert_main(int argc, const char** argv)
 		case 'o': output = fz_optarg; break;
 		case 'F': format = fz_optarg; break;
 		case 'O': options = fz_optarg; break;
+
+		case 'b':
+			page_box = fz_box_type_from_string(fz_optarg);
+			if (page_box == FZ_UNKNOWN_BOX)
+			{
+				fprintf(stderr, "Invalid box type: %s\n", fz_optarg);
+				return 1;
+			}
+			break;
 		}
 	}
 
@@ -210,7 +228,7 @@ int muconvert_main(int argc, const char** argv)
 		fz_register_document_handlers(ctx);
 	fz_catch(ctx)
 	{
-		fz_log_error(ctx, fz_caught_message(ctx));
+		fz_report_error(ctx);
 		fz_log_error(ctx, "cannot register document handlers.");
 		fz_drop_context(ctx);
 		return EXIT_FAILURE;
@@ -245,11 +263,13 @@ int muconvert_main(int argc, const char** argv)
     }
 	fz_catch(ctx)
 	{
-		fz_log_error(ctx, fz_caught_message(ctx));
+		fz_report_error(ctx);
 		fz_log_error_printf(ctx, "cannot create document: %s", output);
 		fz_drop_context(ctx);
 		return EXIT_FAILURE;
 	}
+
+	fz_var(doc);
 
 	assert(retval == EXIT_SUCCESS);
 	{
@@ -263,7 +283,7 @@ int muconvert_main(int argc, const char** argv)
 				doc = fz_open_document(ctx, infname);
 				if (fz_needs_password(ctx, doc))
 					if (!fz_authenticate_password(ctx, doc, password))
-						fz_throw(ctx, FZ_ERROR_GENERIC, "cannot authenticate password: %s", infname);
+						fz_throw(ctx, FZ_ERROR_ARGUMENT, "cannot authenticate password: %s", infname);
 				fz_layout_document(ctx, doc, layout_w, layout_h, layout_em);
 				count = fz_count_pages(ctx, doc);
 
@@ -284,7 +304,7 @@ int muconvert_main(int argc, const char** argv)
 		}
 		fz_catch(ctx)
 		{
-			fz_log_error(ctx, fz_caught_message(ctx));
+			fz_report_error(ctx);
 			fz_log_error_printf(ctx, "cannot load document: %s", infname);
 			retval = EXIT_FAILURE;
 		}

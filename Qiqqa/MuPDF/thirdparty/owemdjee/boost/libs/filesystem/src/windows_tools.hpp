@@ -14,7 +14,6 @@
 #ifndef BOOST_FILESYSTEM_SRC_WINDOWS_TOOLS_HPP_
 #define BOOST_FILESYSTEM_SRC_WINDOWS_TOOLS_HPP_
 
-#include <cstddef>
 #include <boost/filesystem/config.hpp>
 #include <boost/filesystem/path.hpp>
 #include <boost/filesystem/file_status.hpp>
@@ -62,14 +61,14 @@ inline boost::filesystem::perms make_permissions(boost::filesystem::path const& 
     boost::filesystem::perms prms = boost::filesystem::owner_read | boost::filesystem::group_read | boost::filesystem::others_read;
     if ((attr & FILE_ATTRIBUTE_READONLY) == 0u)
         prms |= boost::filesystem::owner_write | boost::filesystem::group_write | boost::filesystem::others_write;
-    boost::filesystem::path ext = p.extension();
+    boost::filesystem::path ext = detail::path_algorithms::extension_v4(p);
     wchar_t const* q = ext.c_str();
     if (equal_extension(q, L".exe", L".EXE") || equal_extension(q, L".com", L".COM") || equal_extension(q, L".bat", L".BAT") || equal_extension(q, L".cmd", L".CMD"))
         prms |= boost::filesystem::owner_exe | boost::filesystem::group_exe | boost::filesystem::others_exe;
     return prms;
 }
 
-ULONG get_reparse_point_tag_ioctl(HANDLE h);
+ULONG get_reparse_point_tag_ioctl(HANDLE h, boost::filesystem::path const& p, boost::system::error_code* ec);
 
 inline bool is_reparse_point_tag_a_symlink(ULONG reparse_point_tag)
 {
@@ -87,13 +86,6 @@ inline bool is_reparse_point_tag_a_symlink(ULONG reparse_point_tag)
         // may return a volume path or NT path for such symlinks.
         || reparse_point_tag == IO_REPARSE_TAG_MOUNT_POINT; // aka "directory junction" or "junction"
 }
-
-inline bool is_reparse_point_a_symlink_ioctl(HANDLE h)
-{
-    return detail::is_reparse_point_tag_a_symlink(detail::get_reparse_point_tag_ioctl(h));
-}
-
-#if !defined(UNDER_CE)
 
 //! Platform-specific parameters for directory iterator construction
 struct directory_iterator_params
@@ -217,8 +209,6 @@ typedef boost::winapi::NTSTATUS_ (NTAPI NtQueryDirectoryFile_t)(
 
 extern NtQueryDirectoryFile_t* nt_query_directory_file_api;
 
-#endif // !defined(UNDER_CE)
-
 //! FILE_INFO_BY_HANDLE_CLASS enum entries
 enum file_info_by_handle_class
 {
@@ -255,27 +245,25 @@ struct handle_wrapper
 {
     HANDLE handle;
 
-    handle_wrapper() BOOST_NOEXCEPT : handle(INVALID_HANDLE_VALUE) {}
-    explicit handle_wrapper(HANDLE h) BOOST_NOEXCEPT : handle(h) {}
-    ~handle_wrapper() BOOST_NOEXCEPT
+    handle_wrapper() noexcept : handle(INVALID_HANDLE_VALUE) {}
+    explicit handle_wrapper(HANDLE h) noexcept : handle(h) {}
+    ~handle_wrapper() noexcept
     {
         if (handle != INVALID_HANDLE_VALUE)
             ::CloseHandle(handle);
     }
-    BOOST_DELETED_FUNCTION(handle_wrapper(handle_wrapper const&))
-    BOOST_DELETED_FUNCTION(handle_wrapper& operator=(handle_wrapper const&))
+    handle_wrapper(handle_wrapper const&) = delete;
+    handle_wrapper& operator=(handle_wrapper const&) = delete;
 };
 
 //! Creates a file handle
-inline HANDLE create_file_handle(boost::filesystem::path const& p, DWORD dwDesiredAccess, DWORD dwShareMode, LPSECURITY_ATTRIBUTES lpSecurityAttributes, DWORD dwCreationDisposition, DWORD dwFlagsAndAttributes, HANDLE hTemplateFile = NULL)
+inline HANDLE create_file_handle(boost::filesystem::path const& p, DWORD dwDesiredAccess, DWORD dwShareMode, LPSECURITY_ATTRIBUTES lpSecurityAttributes, DWORD dwCreationDisposition, DWORD dwFlagsAndAttributes, HANDLE hTemplateFile = nullptr)
 {
     return ::CreateFileW(p.c_str(), dwDesiredAccess, dwShareMode, lpSecurityAttributes, dwCreationDisposition, dwFlagsAndAttributes, hTemplateFile);
 }
 
-#if !defined(UNDER_CE)
 //! Creates a file handle for a file relative to a previously opened base directory. The file path must be relative and in preferred format.
 boost::winapi::NTSTATUS_ nt_create_file_handle_at(HANDLE& out, HANDLE basedir_handle, boost::filesystem::path const& p, ULONG FileAttributes, ACCESS_MASK DesiredAccess, ULONG ShareMode, ULONG CreateDisposition, ULONG CreateOptions);
-#endif // !defined(UNDER_CE)
 
 } // namespace detail
 } // namespace filesystem

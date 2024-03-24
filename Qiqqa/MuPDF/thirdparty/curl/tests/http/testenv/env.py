@@ -31,6 +31,7 @@ import socket
 import subprocess
 import sys
 from configparser import ConfigParser, ExtendedInterpolation
+from datetime import timedelta
 from typing import Optional
 
 import pytest
@@ -133,7 +134,7 @@ class EnvConfig:
         self.cert_specs = [
             CertificateSpec(domains=[self.domain1, 'localhost'], key_type='rsa2048'),
             CertificateSpec(domains=[self.domain2], key_type='rsa2048'),
-            CertificateSpec(domains=[self.proxy_domain], key_type='rsa2048'),
+            CertificateSpec(domains=[self.proxy_domain, '127.0.0.1'], key_type='rsa2048'),
             CertificateSpec(name="clientsX", sub_specs=[
                CertificateSpec(name="user1", client=True),
             ]),
@@ -439,6 +440,15 @@ class Env:
     def nghttpx(self) -> Optional[str]:
         return self.CONFIG.nghttpx
 
+    @property
+    def slow_network(self) -> bool:
+        return "CURL_DBG_SOCK_WBLOCK" in os.environ or \
+               "CURL_DBG_SOCK_WPARTIAL" in os.environ
+
+    @property
+    def ci_run(self) -> bool:
+        return "CURL_CI" in os.environ
+
     def authority_for(self, domain: str, alpn_proto: Optional[str] = None):
         if alpn_proto is None or \
                 alpn_proto in ['h2', 'http/1.1', 'http/1.0', 'http/0.9']:
@@ -469,4 +479,3 @@ class Env:
             pytest.exit(f"`make`in {client_dir} failed:\n{p.stderr}")
             return False
         return True
-

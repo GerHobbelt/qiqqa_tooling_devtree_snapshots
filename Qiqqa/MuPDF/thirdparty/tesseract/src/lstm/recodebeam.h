@@ -131,7 +131,7 @@ struct RecodeNode {
   RecodeNode &operator=(const RecodeNode &src) {
     delete dawgs;
     memcpy(this, &src, sizeof(src));
-    ((RecodeNode &)src).dawgs = nullptr;
+    src.dawgs = nullptr;
     return *this;
   }
   ~RecodeNode() {
@@ -169,7 +169,7 @@ struct RecodeNode {
   // The previous node in this chain. Borrowed pointer.
   const RecodeNode *prev;
   // The currently active dawgs at this position. Owned pointer.
-  DawgPositionVector *dawgs;
+  mutable DawgPositionVector *dawgs;
   // A hash of all codes in the prefix and this->code as well. Used for
   // duplicate path removal.
   uint64_t code_hash;
@@ -193,8 +193,7 @@ public:
               double worst_dict_cert, const UNICHARSET *charset);
 
   void DecodeSecondaryBeams(const NetworkIO &output, double dict_ratio, double cert_offset,
-                            double worst_dict_cert, const UNICHARSET *charset,
-                            int lstm_choice_mode);
+                            double worst_dict_cert, const UNICHARSET *charset);
 
   // Returns the best path as labels/scores/xcoords similar to simple CTC.
   void ExtractBestPathAsLabels(std::vector<int> *labels, std::vector<int> *xcoords) const;
@@ -206,8 +205,7 @@ public:
 
   // Returns the best path as a set of WERD_RES.
   void ExtractBestPathAsWords(const TBOX &line_box, float scale_factor, 
-                              const UNICHARSET *unicharset, PointerVector<WERD_RES> *words,
-                              int lstm_choice_mode);
+                              const UNICHARSET *unicharset, PointerVector<WERD_RES> *words);
 
   // Generates debug output of the content of the beams after a Decode.
   void DebugBeams(const UNICHARSET *unicharset) const;
@@ -221,12 +219,14 @@ public:
 
   // Generates debug output of the content of the beams after a Decode.
   void PrintBeam2(bool uids, int num_outputs, const UNICHARSET *charset, bool secondary) const;
+
   // Segments the timestep bundle by the character_boundaries.
   void segmentTimestepsByCharacters();
-  std::vector<std::vector<std::pair<const char *, float>>>
+
   // Unions the segmented timestep character bundles to one big bundle.
-  combineSegmentedTimesteps(
-      std::vector<std::vector<std::vector<std::pair<const char *, float>>>> *segmentedTimesteps);
+  std::vector<std::vector<std::pair<const char *, float>>>
+  combineSegmentedTimesteps(std::vector<std::vector<std::vector<std::pair<const char *, float>>>> *segmentedTimesteps);
+
   // Stores the alternative characters of every timestep together with their
   // probability.
   std::vector<std::vector<std::pair<const char *, float>>> timesteps;
@@ -237,11 +237,12 @@ public:
   std::vector<std::unordered_set<int>> excludedUnichars;
   // Stores the character boundaries regarding timesteps.
   std::vector<int> character_boundaries_;
+
   // Clipping value for certainty inside Tesseract. Reflects the minimum value
   // of certainty that will be returned by ExtractBestPathAsUnicharIds.
   // Supposedly on a uniform scale that can be compared across languages and
   // engines.
-  static constexpr float kMinCertainty = -20.0f;
+  static constexpr float kMinCertainty = -20.0f;   
   // Number of different code lengths for which we have a separate beam.
   static const int kNumLengths = RecodedCharID::kMaxCodeLen + 1;
   // Total number of beams: dawg/nodawg * number of NodeContinuation * number
@@ -264,7 +265,7 @@ public:
 
 private:
   // Struct for the Re-encode beam search. This struct holds the data for
-  // a single time-step position of the output. Use a vector<RecodeBeam>
+  // a single time-step position of the output. Use a std::vector<RecodeBeam>
   // to hold all the timesteps and prevent reallocation of the individual heaps.
   struct RecodeBeam {
     // Resets to the initial state without deleting all the memory.
@@ -363,7 +364,7 @@ private:
   // current worst element if already full.
   void PushDupOrNoDawgIfBetter(int length, bool dup, int code, int unichar_id, float cert,
                                float worst_dict_cert, float dict_ratio, bool use_dawgs,
-                               NodeContinuation cont, const RecodeNode *prev, RecodeBeam *step);
+                               NodeContinuation cont, const RecodeNode *prev, RecodeBeam *step, const UNICHARSET *charset);
   // Adds a RecodeNode composed of the args to the correct heap in step if there
   // is room or if better than the current worst element if already full.
   void PushHeapIfBetter(int max_size, int code, int unichar_id, PermuterType permuter,
@@ -425,13 +426,13 @@ private:
   int null_char_;
 
   // == Debugging parameters.==
-  bool debug_ = false;
+  int debug_ = 0;
 
 public:
-	void SetDebug(bool v) {
-		debug_ = v;
+	void SetDebug(int v) {
+		debug_ = std::max(0, v);
 	}
-	bool HasDebug() const {
+	int HasDebug() const {
 		return debug_;
 	}
 };

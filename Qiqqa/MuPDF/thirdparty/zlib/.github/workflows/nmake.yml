@@ -48,10 +48,12 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
+      with:
+        show-progress: 'false'
 
     - name: Setup development environment
-      uses: ilammy/msvc-dev-cmd@v1.10.0
+      uses: ilammy/msvc-dev-cmd@v1.12.1
       with:
         arch: ${{ matrix.arch }}
 

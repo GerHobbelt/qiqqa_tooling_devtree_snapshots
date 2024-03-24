@@ -24,119 +24,143 @@
     <Filter Include="Header Files\include\boost\locale\boundary">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\include\boost\locale\util">
+    <Filter Include="Header Files\include\boost\locale\detail">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\src">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0009}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\src\boost">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\src\boost\locale">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\src\boost\locale\encoding">
+    <Filter Include="Header Files\include\boost\locale\util">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\src\boost\locale\icu">
+    <Filter Include="Header Files\src">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0010}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\src\boost\locale\posix">
+    <Filter Include="Header Files\src\boost">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0009}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\boost\locale">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\boost\locale\encoding">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\boost\locale\icu">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0011}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\src\boost\locale\shared">
+    <Filter Include="Header Files\src\boost\locale\posix">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0012}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\src\boost\locale\std">
+    <Filter Include="Header Files\src\boost\locale\shared">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0013}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\src\boost\locale\util">
+    <Filter Include="Header Files\src\boost\locale\std">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0014}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\src\boost\locale\win32">
+    <Filter Include="Header Files\src\boost\locale\util">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0015}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\test\boostLocale">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0017}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\test\boostLocale\test">
+    <Filter Include="Header Files\src\boost\locale\win32">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0016}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\doc">
+    <Filter Include="Header Files\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\test\boostLocale">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0019}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\examples">
+    <Filter Include="Header Files\test\boostLocale\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\build">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0020}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\meta">
+    <Filter Include="Misc Files\doc">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test">
+    <Filter Include="Misc Files\doc\style">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\cmake_test">
+    <Filter Include="Misc Files\doc\templates">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tools">
+    <Filter Include="Misc Files\examples">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
+    <Filter Include="Misc Files\meta">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\doc">
+    <Filter Include="Misc Files\test">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0026}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\doc\style">
+    <Filter Include="Misc Files\test\cmake_test">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\build">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\examples">
+    <Filter Include="Misc Files\test\he">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0029}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\examples\performance">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0030}</UniqueIdentifier>
+    <Filter Include="Misc Files\test\he\LC_MESSAGES">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\src">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0034}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\src\boost">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0033}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\src\boost\locale">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0032}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\src\boost\locale\encoding">
+    <Filter Include="Misc Files\test\he_IL">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0031}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\src\boost\locale\icu">
+    <Filter Include="Misc Files\test\he_IL\LC_MESSAGES">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0030}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\tools">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0032}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0033}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\doc">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0034}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\doc\style">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0035}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\src\boost\locale\posix">
+    <Filter Include="Source Files\build">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0036}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\src\boost\locale\shared">
+    <Filter Include="Source Files\examples">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0037}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\src\boost\locale\std">
+    <Filter Include="Source Files\examples\performance">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0038}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\src\boost\locale\util">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0039}</UniqueIdentifier>
+    <Filter Include="Source Files\src">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0042}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\src\boost\locale\win32">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0040}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\test">
+    <Filter Include="Source Files\src\boost">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0041}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\src\boost\locale">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0040}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\boost\locale\encoding">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0039}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\boost\locale\icu">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0043}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\boost\locale\posix">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0044}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\boost\locale\shared">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0045}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\boost\locale\std">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0046}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\boost\locale\util">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0047}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\boost\locale\win32">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0048}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0049}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files\test\cmake_test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0042}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0050}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -317,10 +341,10 @@
     <ClCompile Include="../../thirdparty/owemdjee/boost/libs/locale/test/test_boundary.cpp">
       <Filter>Source Files\test</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/locale/test/test_codecvt.cpp">
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/locale/test/test_catalog.cpp">
       <Filter>Source Files\test</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/locale/test/test_codepage.cpp">
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/locale/test/test_codecvt.cpp">
       <Filter>Source Files\test</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/boost/libs/locale/test/test_codepage_converter.cpp">
@@ -333,6 +357,9 @@
       <Filter>Source Files\test</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/boost/libs/locale/test/test_date_time.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/locale/test/test_encoding.cpp">
       <Filter>Source Files\test</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/boost/libs/locale/test/test_formatting.cpp">
@@ -372,6 +399,9 @@
       <Filter>Source Files\test</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/boost/libs/locale/test/test_std_formatting.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/boost/libs/locale/test/test_stream_io.cpp">
       <Filter>Source Files\test</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/boost/libs/locale/test/test_utf.cpp">
@@ -424,6 +454,15 @@
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/boost/libs/locale/include/boost/locale/date_time_facet.hpp">
       <Filter>Header Files\include\boost\locale</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/locale/include/boost/locale/detail/encoding.hpp">
+      <Filter>Header Files\include\boost\locale\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/locale/include/boost/locale/detail/facet_id.hpp">
+      <Filter>Header Files\include\boost\locale\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/locale/include/boost/locale/detail/is_supported_char.hpp">
+      <Filter>Header Files\include\boost\locale\detail</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/boost/libs/locale/include/boost/locale/encoding.hpp">
       <Filter>Header Files\include\boost\locale</Filter>
@@ -479,7 +518,13 @@
     <ClInclude Include="../../thirdparty/owemdjee/boost/libs/locale/include/boost/locale/util/string.hpp">
       <Filter>Header Files\include\boost\locale\util</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/locale/src/boost/locale/encoding/conv.hpp">
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/locale/src/boost/locale/encoding/iconv_converter.hpp">
+      <Filter>Header Files\src\boost\locale\encoding</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/locale/src/boost/locale/encoding/uconv_converter.hpp">
+      <Filter>Header Files\src\boost\locale\encoding</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/locale/src/boost/locale/encoding/wconv_converter.hpp">
       <Filter>Header Files\src\boost\locale\encoding</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/boost/libs/locale/src/boost/locale/icu/all_generator.hpp">
@@ -521,6 +566,9 @@
     <ClInclude Include="../../thirdparty/owemdjee/boost/libs/locale/src/boost/locale/shared/ios_prop.hpp">
       <Filter>Header Files\src\boost\locale\shared</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/locale/src/boost/locale/shared/message.hpp">
+      <Filter>Header Files\src\boost\locale\shared</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/boost/libs/locale/src/boost/locale/shared/mo_hash.hpp">
       <Filter>Header Files\src\boost\locale\shared</Filter>
     </ClInclude>
@@ -536,10 +584,16 @@
     <ClInclude Include="../../thirdparty/owemdjee/boost/libs/locale/src/boost/locale/util/encoding.hpp">
       <Filter>Header Files\src\boost\locale\util</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/locale/src/boost/locale/util/foreach_char.hpp">
+      <Filter>Header Files\src\boost\locale\util</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/boost/libs/locale/src/boost/locale/util/gregorian.hpp">
       <Filter>Header Files\src\boost\locale\util</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/boost/libs/locale/src/boost/locale/util/iconv.hpp">
+      <Filter>Header Files\src\boost\locale\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/locale/src/boost/locale/util/make_std_unique.hpp">
       <Filter>Header Files\src\boost\locale\util</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/boost/libs/locale/src/boost/locale/util/numeric.hpp">
@@ -575,6 +629,9 @@
     <ClInclude Include="../../thirdparty/owemdjee/boost/libs/locale/test/boostLocale/test/unit_test.hpp">
       <Filter>Header Files\test\boostLocale\test</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/boost/libs/locale/test/case_convert_test.hpp">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
     <Image Include="../../thirdparty/owemdjee/boost/libs/locale/doc/boost-small.png">
       <Filter>Resource Files\doc</Filter>
     </Image>
@@ -593,8 +650,20 @@
     <Text Include="../../thirdparty/owemdjee/boost/libs/locale/CMakeLists.txt">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/boost/libs/locale/LICENSE">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/boost/libs/locale/README.md">
       <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/boost/libs/locale/build/Jamfile.v2">
+      <Filter>Misc Files\build</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/boost/libs/locale/doc/Doxyfile">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/boost/libs/locale/doc/Jamfile.v2">
+      <Filter>Misc Files\doc</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/boost/libs/locale/doc/appendix.txt">
       <Filter>Misc Files\doc</Filter>
@@ -671,6 +740,18 @@
     <Text Include="../../thirdparty/owemdjee/boost/libs/locale/doc/std_locales.txt">
       <Filter>Misc Files\doc</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/boost/libs/locale/doc/style/header.css">
+      <Filter>Misc Files\doc\style</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/boost/libs/locale/doc/style/header_grass.css">
+      <Filter>Misc Files\doc\style</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/boost/libs/locale/doc/style/section-basic.css">
+      <Filter>Misc Files\doc\style</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/boost/libs/locale/doc/templates/footer.html">
+      <Filter>Misc Files\doc\templates</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/boost/libs/locale/doc/tested_compilers_and_platforms.txt">
       <Filter>Misc Files\doc</Filter>
     </Text>
@@ -686,10 +767,16 @@
     <Text Include="../../thirdparty/owemdjee/boost/libs/locale/examples/CMakeLists.txt">
       <Filter>Misc Files\examples</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/boost/libs/locale/index.html">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/boost/libs/locale/meta/libraries.json">
       <Filter>Misc Files\meta</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/boost/libs/locale/test/CMakeLists.txt">
+      <Filter>Misc Files\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/boost/libs/locale/test/Jamfile.v2">
       <Filter>Misc Files\test</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/boost/libs/locale/test/cmake_test/CMakeLists.txt">
@@ -697,6 +784,18 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/boost/libs/locale/test/generate_catalogs.sh">
       <Filter>Misc Files\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/boost/libs/locale/test/he/LC_MESSAGES/default.po">
+      <Filter>Misc Files\test\he\LC_MESSAGES</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/boost/libs/locale/test/he/LC_MESSAGES/fall.po">
+      <Filter>Misc Files\test\he\LC_MESSAGES</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/boost/libs/locale/test/he/LC_MESSAGES/simple.po">
+      <Filter>Misc Files\test\he\LC_MESSAGES</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/boost/libs/locale/test/he_IL/LC_MESSAGES/full.po">
+      <Filter>Misc Files\test\he_IL\LC_MESSAGES</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/boost/libs/locale/tools/cross-compile-gettext.sh">
       <Filter>Misc Files\tools</Filter>

@@ -41,11 +41,19 @@ Original creation data: unknown
 Code extended and tidied to avoid compiler warnings: 26 March 2020
 */
 
+#ifdef HAVE_CONFIG_H
+#include "config.h"
+#endif
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 #include <ctype.h>
 #include <string.h>
+
+#include "pcre2_internal.h"
+
+#include "monolithic_examples.h"
 
 /* The valid ranges for UTF-8 characters are:
 
@@ -60,6 +68,7 @@ Code extended and tidied to avoid compiler warnings: 26 March 2020
 
 static const unsigned int utf8_table1[] = {
   0x0000007f, 0x000007ff, 0x0000ffff, 0x001fffff, 0x03ffffff, 0x7fffffff};
+static const int utf8_table1_size = sizeof(utf8_table1) / sizeof(utf8_table1[0]);
 
 static const int utf8_table2[] = {
   0, 0xc0, 0xe0, 0xf0, 0xf8, 0xfc};
@@ -77,27 +86,28 @@ static const int utf8_table3[] = {
 
 Arguments:
   cvalue     the character value
-  buffer     pointer to buffer for result - at least 6 bytes long
+  utf8bytes  pointer to buffer for result - at least 6 bytes long
 
 Returns:     number of bytes placed in the buffer
              0 if input code point is too big
 */
 
-static size_t
-ord2utf8(unsigned long int cvalue, unsigned char *buffer)
+int
+_pcre_ord2utf8(uint32_t cvalue, uint8_t *utf8bytes)
 {
-size_t i, j;
-for (i = 0; i < sizeof(utf8_table1)/sizeof(int); i++)
-  if (cvalue <= utf8_table1[i]) break;
-if (i >= sizeof(utf8_table1)/sizeof(int)) return 0;
-buffer += i;
-for (j = i; j > 0; j--)
- {
- *buffer-- = 0x80 | (cvalue & 0x3f);
- cvalue >>= 6;
- }
-*buffer = utf8_table2[i] | cvalue;
-return i + 1;
+	int i, j;
+	if (cvalue > 0x7fffffffu)
+		return -1;
+	for (i = 0; i < utf8_table1_size; i++)
+		if (cvalue <= (uint32_t)utf8_table1[i]) break;
+	utf8bytes += i;
+	for (j = i; j > 0; j--)
+	{
+		*utf8bytes-- = 0x80 | (cvalue & 0x3f);
+		cvalue >>= 6;
+	}
+	*utf8bytes = utf8_table2[i] | cvalue;
+	return i + 1;
 }
 
 
@@ -209,7 +219,7 @@ return i + 1;
 
 
 #if defined(BUILD_MONOLITHIC)
-#define main(cnt, arr)      pcre2_utf8_main(cnt, arr)
+#define main      pcre2_utf8_main
 #endif
 
 int main(int argc, const char** argv)
@@ -237,7 +247,7 @@ for (; i < argc; i++)
       printf("** Invalid hex number %s\n", x);
       continue;   /* With next argument */
       }
-    rc = ord2utf8(d, buffer);
+    rc = _pcre_ord2utf8(d, buffer);
     printf("U+%08lx => ", d);
     if (rc == 0)
       printf("** Code point greater than 0x7fffffff cannot be encoded");

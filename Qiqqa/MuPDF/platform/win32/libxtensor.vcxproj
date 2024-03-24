@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTENSOR;XTENSOR_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -251,6 +251,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_extended_xmath_reducers.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_extended_xsort.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_sfinae.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_strided_assign.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xaccumulator.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xadapt.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/xtensor/test/test_xadaptor_semantic.cpp" />
@@ -403,17 +404,22 @@
     <Image Include="../../thirdparty/owemdjee/xtensor/notebooks/images/xtensor-blas.png" />
     <Image Include="../../thirdparty/owemdjee/xtensor/notebooks/images/xtensor.png" />
     <Text Include="../../thirdparty/owemdjee/xtensor/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/xtensor/README.md" />
     <Text Include="../../thirdparty/owemdjee/xtensor/benchmark/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/xtensor/benchmark/copyGBenchmark.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/xtensor/benchmark/downloadGBenchmark.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/xtensor/cmake/FindTBB.cmake" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/Doxyfile" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/ghp_environment.yml" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/make.bat" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/rtd_environment.yml" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/_static/goatcounter.js" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/_static/main_stylesheet.css" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/adaptor.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/accumulating_functions.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/basic_functions.rst" />
-    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/chunked_array.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/classif_functions.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/container_index.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/error_functions.rst" />
@@ -429,14 +435,17 @@
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/operators.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/power_functions.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/reducing_functions.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/shape.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/trigonometric_functions.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xaccumulator.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xadapt.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xarray.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xarray_adaptor.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xaxis_iterator.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xaxis_slice_iterator.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xbroadcast.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xbuilder.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xchunked_array.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xcontainer.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xcontainer_semantic.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xcsv.rst" />
@@ -472,20 +481,36 @@
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xtensor_adaptor.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xview.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/api/xview_semantic.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/binder-logo.svg" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/bindings.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/build-options.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/builder.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/changelog.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/closure-semantics.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/cmake.svg" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/compilers.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/conda.svg" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/conf.py" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/container.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/debian.svg" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/dev-build-options.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/assign_xexpression.svg" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/assignment.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/computed_assign.svg" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/concepts.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/expression_tree.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/extended_copy_semantic.svg" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/implementation_classes.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/iterating_expression.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/iteration.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/stepper_basic.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/stepper_broadcasting.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/stepper_iterating.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/stepper_to_end.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/xarray_uml.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/xcontainer_classes.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/xfunction_tree.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/xsemantic_classes.svg" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/developer/xtensor_internals.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/expression.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/external-structures.rst" />
@@ -498,8 +523,10 @@
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/missing.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/numpy-differences.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/numpy.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/numpy.svg" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/operator.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/pitfall.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/quantstack-white.svg" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/quickref/basic.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/quickref/builder.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/quickref/chunked_arrays.rst" />
@@ -513,8 +540,35 @@
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/related.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/releasing.rst" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/scalar.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/spack.svg" />
     <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/view.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/xframe.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/xsimd-small.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/xsimd.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/xtensor-blas-small.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/xtensor-blas.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/xtensor-cookiecutter.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/xtensor-fftw.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/xtensor-io-small.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/xtensor-io.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/xtensor-julia-small.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/xtensor-julia.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/xtensor-python-small.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/xtensor-python.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/xtensor-r-small.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/xtensor-r.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/xtensor-ros.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/xtensor.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/docs/source/xtl.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/environment-dev.yml" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/environment.yml" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/readthedocs.yml" />
     <Text Include="../../thirdparty/owemdjee/xtensor/test/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/cppy_source/test_extended_broadcast_view.cppy" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/cppy_source/test_extended_xhistogram.cppy" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/cppy_source/test_extended_xmath_interp.cppy" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/cppy_source/test_extended_xmath_reducers.cppy" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/cppy_source/test_extended_xsort.cppy" />
     <Text Include="../../thirdparty/owemdjee/xtensor/test/files/generate.py" />
     <Text Include="../../thirdparty/owemdjee/xtensor/test/files/preprocess.py" />
     <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/big_exp.txt" />
@@ -534,6 +588,20 @@
     <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/random_strings.txt" />
     <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/threed_double.txt" />
     <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xio_expected_results/twod_double.txt" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xnpy_files/bool.be.npy" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xnpy_files/bool.le.npy" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xnpy_files/bool_fortran.be.npy" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xnpy_files/bool_fortran.le.npy" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xnpy_files/double.be.npy" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xnpy_files/double.le.npy" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xnpy_files/double_fortran.be.npy" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xnpy_files/double_fortran.le.npy" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xnpy_files/int.be.npy" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xnpy_files/int.le.npy" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xnpy_files/unsignedlong.be.npy" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xnpy_files/unsignedlong.le.npy" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xnpy_files/unsignedlong_fortran.be.npy" />
+    <Text Include="../../thirdparty/owemdjee/xtensor/test/files/xnpy_files/unsignedlong_fortran.le.npy" />
     <Text Include="../../thirdparty/owemdjee/xtensor/test/set_compiler_flag.cmake" />
     <Text Include="../../thirdparty/owemdjee/xtensor/tools/check_circular.py" />
     <Text Include="../../thirdparty/owemdjee/xtensor/xtensor.pc.in" />

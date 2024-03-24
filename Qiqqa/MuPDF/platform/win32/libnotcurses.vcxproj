@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNOTCURSES;NOTCURSES_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNOTCURSES;NOTCURSES_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/notcurses/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNOTCURSES;NOTCURSES_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/notcurses/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNOTCURSES;NOTCURSES_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNOTCURSES;NOTCURSES_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNOTCURSES;NOTCURSES_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/notcurses/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/notcurses/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNOTCURSES;NOTCURSES_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNOTCURSES;NOTCURSES_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/notcurses/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNOTCURSES;NOTCURSES_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/notcurses/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNOTCURSES;NOTCURSES_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNOTCURSES;NOTCURSES_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNOTCURSES;NOTCURSES_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/notcurses/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/notcurses/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNOTCURSES;NOTCURSES_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNOTCURSES;NOTCURSES_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/notcurses/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNOTCURSES;NOTCURSES_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/notcurses/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNOTCURSES;NOTCURSES_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNOTCURSES;NOTCURSES_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNOTCURSES;NOTCURSES_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/notcurses/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/notcurses/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNOTCURSES;NOTCURSES_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNOTCURSES;NOTCURSES_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/notcurses/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNOTCURSES;NOTCURSES_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/notcurses/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNOTCURSES;NOTCURSES_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNOTCURSES;NOTCURSES_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNOTCURSES;NOTCURSES_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/notcurses/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/notcurses/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -574,10 +574,18 @@
     <Text Include="../../thirdparty/owemdjee/notcurses/cffi/src/notcurses/__init__.py" />
     <Text Include="../../thirdparty/owemdjee/notcurses/cffi/src/notcurses/build_notcurses.py" />
     <Text Include="../../thirdparty/owemdjee/notcurses/cffi/src/notcurses/notcurses.py" />
+    <Text Include="../../thirdparty/owemdjee/notcurses/data/changes.xcf" />
+    <Text Include="../../thirdparty/owemdjee/notcurses/data/natasha-blur.xcf" />
+    <Text Include="../../thirdparty/owemdjee/notcurses/data/normal.xcf" />
+    <Text Include="../../thirdparty/owemdjee/notcurses/data/tetris-background.xcf" />
     <Text Include="../../thirdparty/owemdjee/notcurses/doc/CURSES.md" />
+    <Text Include="../../thirdparty/owemdjee/notcurses/doc/Doxyfile" />
     <Text Include="../../thirdparty/owemdjee/notcurses/doc/HACKING.md" />
     <Text Include="../../thirdparty/owemdjee/notcurses/doc/HISTORY.md" />
     <Text Include="../../thirdparty/owemdjee/notcurses/doc/OTHERS.md" />
+    <Text Include="../../thirdparty/owemdjee/notcurses/doc/analytics-header.html" />
+    <Text Include="../../thirdparty/owemdjee/notcurses/doc/examples/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/notcurses/doc/examples/book.toml" />
     <Text Include="../../thirdparty/owemdjee/notcurses/doc/examples/src/SUMMARY.md" />
     <Text Include="../../thirdparty/owemdjee/notcurses/doc/examples/src/basics.md" />
     <Text Include="../../thirdparty/owemdjee/notcurses/doc/examples/src/boxes.md" />
@@ -594,6 +602,7 @@
     <Text Include="../../thirdparty/owemdjee/notcurses/doc/examples/src/rendered.md" />
     <Text Include="../../thirdparty/owemdjee/notcurses/doc/examples/src/selectors.md" />
     <Text Include="../../thirdparty/owemdjee/notcurses/doc/examples/src/writetext.md" />
+    <Text Include="../../thirdparty/owemdjee/notcurses/doc/man/index.html" />
     <Text Include="../../thirdparty/owemdjee/notcurses/doc/man/man1/ncls.1.md" />
     <Text Include="../../thirdparty/owemdjee/notcurses/doc/man/man1/ncneofetch.1.md" />
     <Text Include="../../thirdparty/owemdjee/notcurses/doc/man/man1/ncplayer.1.md" />
@@ -635,11 +644,15 @@
     <Text Include="../../thirdparty/owemdjee/notcurses/doc/man/man3/notcurses_tree.3.md" />
     <Text Include="../../thirdparty/owemdjee/notcurses/doc/man/man3/notcurses_util.3.md" />
     <Text Include="../../thirdparty/owemdjee/notcurses/doc/man/man3/notcurses_visual.3.md" />
+    <Text Include="../../thirdparty/owemdjee/notcurses/doc/model.dot" />
     <Text Include="../../thirdparty/owemdjee/notcurses/doc/proposed-terminfo.md" />
     <Text Include="../../thirdparty/owemdjee/notcurses/doc/release-checklist.md" />
+    <Text Include="../../thirdparty/owemdjee/notcurses/doc/sexblitter-perfection.xcf" />
     <Text Include="../../thirdparty/owemdjee/notcurses/doc/testing-checklist.md" />
+    <Text Include="../../thirdparty/owemdjee/notcurses/doc/worldmap-sexblitter.xcf" />
     <Text Include="../../thirdparty/owemdjee/notcurses/python/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/notcurses/python/HACKING.md" />
+    <Text Include="../../thirdparty/owemdjee/notcurses/python/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/notcurses/python/docs/conf.py" />
     <Text Include="../../thirdparty/owemdjee/notcurses/python/docs/index.rst" />
     <Text Include="../../thirdparty/owemdjee/notcurses/python/docs/nc_context.rst" />
@@ -672,6 +685,7 @@
     <Text Include="../../thirdparty/owemdjee/notcurses/tools/notcurses++.pc.in" />
     <Text Include="../../thirdparty/owemdjee/notcurses/tools/notcurses-core.pc.in" />
     <Text Include="../../thirdparty/owemdjee/notcurses/tools/notcurses-ffi.pc.in" />
+    <Text Include="../../thirdparty/owemdjee/notcurses/tools/notcurses.guix" />
     <Text Include="../../thirdparty/owemdjee/notcurses/tools/notcurses.pc.in" />
     <Text Include="../../thirdparty/owemdjee/notcurses/tools/release.sh" />
     <Text Include="../../thirdparty/owemdjee/notcurses/tools/setup.cfg.in" />

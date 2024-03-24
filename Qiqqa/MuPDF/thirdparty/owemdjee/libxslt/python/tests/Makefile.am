@@ -6,7 +6,7 @@ TESTSPY =	\
     extfunc.py
 
 exampledir = $(docdir)/python/examples
-dist_example_DATA = test.xml test.xsl pyxsltproc.py $(TESTSPY)
+dist_example_DATA = test.xml test.xsl pyxsltproc.py setup_test.py $(TESTSPY)
 
 check-local: $(TESTSPY)
 	@(export PYTHONPATH="..:../.libs:$(srcdir)/..:$$PYTHONPATH"; \
@@ -21,7 +21,7 @@ check-local: $(TESTSPY)
           fi; \
 	  for test in $(TESTSPY) ; do \
 	    echo "-- $$test" ; \
-	    $(PYTHON) $(srcdir)/$$test; \
+	    LIBXML_SRC="$(LIBXML_SRC)" $(PYTHON) $(srcdir)/$$test; \
 	  done)
 endif
 

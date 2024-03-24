@@ -4936,7 +4936,7 @@ START_TEST(test_hash_collision) {
    * tests invoked from qa.sh usually provide a hash collision, but
    * not always.  This is an attempt to provide insurance.
    */
-#define COLLIDING_HASH_SALT (unsigned long)SIP_ULL(0xffffffffU, 0xff99fc90U)
+#define COLLIDING_HASH_SALT (uint64_t)SIP_ULL(0xffffffffU, 0xff99fc90U)
   const char *text
       = "<doc>\n"
         "<a1/><a2/><a3/><a4/><a5/><a6/><a7/><a8/>\n"

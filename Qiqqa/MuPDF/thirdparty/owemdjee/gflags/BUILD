@@ -15,6 +15,13 @@ config_setting(
 )
 
 config_setting(
+    name = "debug_build",
+    values = {
+        "compilation_mode": "dbg",
+    },
+)
+
+config_setting(
     name = "android",
     values = {"crosstool_top": "//external:android/crosstool"},
 )

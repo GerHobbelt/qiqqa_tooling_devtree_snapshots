@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.18)
 
 file(STRINGS "configure.ac" CONFIGURE_AC_LINES)
 foreach(line ${CONFIGURE_AC_LINES})
@@ -16,9 +16,11 @@ include(CheckCSourceCompiles)
 include(CheckFunctionExists)
 include(CheckIncludeFiles)
 include(CheckLibraryExists)
+include(CheckLinkerFlag)
 include(CheckStructHasMember)
 include(CheckSymbolExists)
 include(CMakePackageConfigHelpers)
+include(FindPkgConfig)
 include(GNUInstallDirs)
 
 option(BUILD_SHARED_LIBS "Build shared libraries" ON)
@@ -50,8 +52,8 @@ option(LIBXML2_WITH_SCHEMATRON "Add Schematron support" ON)
 option(LIBXML2_WITH_TESTS "Build tests" ON)
 option(LIBXML2_WITH_THREADS "Add multithread support" ON)
 option(LIBXML2_WITH_THREAD_ALLOC "Add per-thread memory" OFF)
+option(LIBXML2_WITH_TLS "Enable thread-local storage" OFF)
 option(LIBXML2_WITH_TREE "Add the DOM like tree manipulation APIs" ON)
-set(LIBXML2_WITH_TRIO OFF)
 set(LIBXML2_WITH_UNICODE ON)
 option(LIBXML2_WITH_VALID "Add the DTD validation support" ON)
 option(LIBXML2_WITH_WRITER "Add the xmlWriter saving interface" ON)
@@ -62,18 +64,6 @@ option(LIBXML2_WITH_XPTR_LOCS "Add support for XPointer locations" OFF)
 option(LIBXML2_WITH_ZLIB "Use libz" ON)
 set(LIBXML2_XMLCONF_WORKING_DIR ${CMAKE_CURRENT_BINARY_DIR} CACHE PATH "Working directory for XML Conformance Test Suite")
 
-if(LIBXML2_WITH_ICONV)
-	find_package(Iconv REQUIRED)
-endif()
-
-if(LIBXML2_WITH_ICU)
-	find_package(ICU REQUIRED COMPONENTS data i18n uc)
-endif()
-
-if(LIBXML2_WITH_LZMA)
-	find_package(LibLZMA REQUIRED)
-endif()
-
 if(LIBXML2_WITH_PYTHON)
 	check_include_files(unistd.h HAVE_UNISTD_H)
 	check_symbol_exists(F_GETFL fcntl.h HAVE_F_GETFL)
@@ -83,15 +73,7 @@ if(LIBXML2_WITH_PYTHON)
 	    CACHE PATH "Python bindings install directory")
 endif()
 
-if(LIBXML2_WITH_THREADS)
-	find_package(Threads REQUIRED)
-endif()
-
-if(LIBXML2_WITH_ZLIB)
-	find_package(ZLIB REQUIRED)
-endif()
-
-foreach(VARIABLE IN ITEMS WITH_AUTOMATA WITH_C14N WITH_CATALOG WITH_DEBUG WITH_EXPR WITH_FTP WITH_HTML WITH_HTTP WITH_ICONV WITH_ICU WITH_ISO8859X WITH_LEGACY WITH_LZMA WITH_MEM_DEBUG WITH_MODULES WITH_OUTPUT WITH_PATTERN WITH_PUSH WITH_READER WITH_REGEXPS WITH_SAX1 WITH_SCHEMAS WITH_SCHEMATRON WITH_THREADS WITH_THREAD_ALLOC WITH_TREE WITH_TRIO WITH_UNICODE WITH_VALID WITH_WRITER WITH_XINCLUDE WITH_XPATH WITH_XPTR WITH_XPTR_LOCS WITH_ZLIB)
+foreach(VARIABLE IN ITEMS WITH_AUTOMATA WITH_C14N WITH_CATALOG WITH_DEBUG WITH_EXPR WITH_FTP WITH_HTML WITH_HTTP WITH_ICONV WITH_ICU WITH_ISO8859X WITH_LEGACY WITH_LZMA WITH_MEM_DEBUG WITH_MODULES WITH_OUTPUT WITH_PATTERN WITH_PUSH WITH_READER WITH_REGEXPS WITH_SAX1 WITH_SCHEMAS WITH_SCHEMATRON WITH_THREADS WITH_THREAD_ALLOC WITH_TREE WITH_UNICODE WITH_VALID WITH_WRITER WITH_XINCLUDE WITH_XPATH WITH_XPTR WITH_XPTR_LOCS WITH_ZLIB)
 	if(LIBXML2_${VARIABLE})
 		set(${VARIABLE} 1)
 	else()
@@ -110,23 +92,32 @@ math(EXPR LIBXML_VERSION_NUMBER "
 set(MODULE_EXTENSION "${CMAKE_SHARED_LIBRARY_SUFFIX}")
 
 set(PACKAGE "libxml2")
-set(PACKAGE_BUGREPORT "xml@gnome.org")
 set(PACKAGE_NAME "libxml2")
 set(PACKAGE_STRING "libxml2 ${VERSION}")
 set(PACKAGE_TARNAME "libxml2")
 set(PACKAGE_URL "https://gitlab.gnome.org/GNOME/libxml2")
 set(PACKAGE_VERSION ${VERSION})
 
-if(LIBLZMA_FOUND)
-	list(APPEND CMAKE_REQUIRED_LIBRARIES LibLZMA::LibLZMA)
+if(LIBXML2_WITH_ICONV)
+	find_package(Iconv REQUIRED)
 endif()
 
-if(Threads_FOUND)
+if(LIBXML2_WITH_ICU)
+	find_package(ICU REQUIRED COMPONENTS data i18n uc)
+endif()
+
+if(LIBXML2_WITH_LZMA)
+	find_package(LibLZMA REQUIRED)
+endif()
+
+if(LIBXML2_WITH_THREADS)
+	find_package(Threads REQUIRED)
+	set(THREAD_LIBS ${CMAKE_THREAD_LIBS_INIT})
 	list(APPEND CMAKE_REQUIRED_LIBRARIES Threads::Threads)
 endif()
 
-if(ZLIB_FOUND)
-	list(APPEND CMAKE_REQUIRED_LIBRARIES ZLIB::ZLIB)
+if(LIBXML2_WITH_ZLIB)
+	find_package(ZLIB REQUIRED)
 endif()
 
 if (NOT MSVC)
@@ -146,6 +137,7 @@ if (NOT MSVC)
 	check_include_files(fcntl.h HAVE_FCNTL_H)
 	check_function_exists(fpclass HAVE_FPCLASS)
 	check_function_exists(ftime HAVE_FTIME)
+        check_function_exists(getentropy HAVE_GETENTROPY)
 	check_function_exists(gettimeofday HAVE_GETTIMEOFDAY)
 	check_include_files(inttypes.h HAVE_INTTYPES_H)
 	check_function_exists(isascii HAVE_ISASCII)
@@ -156,31 +148,17 @@ if (NOT MSVC)
 	check_include_files(netdb.h HAVE_NETDB_H)
 	check_include_files(netinet/in.h HAVE_NETINET_IN_H)
 	check_include_files(poll.h HAVE_POLL_H)
-	check_function_exists(putenv HAVE_PUTENV)
-	check_function_exists(rand_r HAVE_RAND_R)
 	check_library_exists(dld shl_load "" HAVE_SHLLOAD)
 	check_function_exists(stat HAVE_STAT)
 	check_include_files(stdint.h HAVE_STDINT_H)
 	check_include_files(sys/mman.h HAVE_SYS_MMAN_H)
+        check_include_files(sys/random.h HAVE_SYS_RANDOM_H)
 	check_include_files(sys/select.h HAVE_SYS_SELECT_H)
 	check_include_files(sys/socket.h HAVE_SYS_SOCKET_H)
 	check_include_files(sys/stat.h HAVE_SYS_STAT_H)
 	check_include_files(sys/timeb.h HAVE_SYS_TIMEB_H)
 	check_include_files(sys/time.h HAVE_SYS_TIME_H)
 	check_include_files(unistd.h HAVE_UNISTD_H)
-	check_function_exists(va_copy HAVE_VA_COPY)
-	check_function_exists(__va_copy HAVE___VA_COPY)
-	set(LT_OBJDIR ".libs/")
-	check_c_source_compiles("
-		#include <stdarg.h>
-		void a(va_list* ap) {};
-		int main() { va_list ap1, ap2; a(&ap1); ap2 = (va_list) ap1; return 0; }
-	" VA_LIST_IS_ARRAY_TEST)
-	if(VA_LIST_IS_ARRAY_TEST)
-		set(VA_LIST_IS_ARRAY FALSE)
-	else()
-		set(VA_LIST_IS_ARRAY TRUE)
-	endif()
 	check_c_source_compiles("
 		#include <stddef.h>
 		#include <sys/socket.h>
@@ -203,6 +181,32 @@ if (NOT MSVC)
 				int main() { (void) getsockopt (1, 1, 1, NULL, (int*) NULL); return 0; }
 			" XML_SOCKLEN_T_INT)
 			set(XML_SOCKLEN_T int)
+		endif()
+	endif()
+endif()
+
+if(LIBXML2_WITH_TLS)
+	check_c_source_compiles(
+		"_Thread_local int v; int main(){return 0;}"
+		XML_THREAD_LOCAL_C11
+	)
+	if (XML_THREAD_LOCAL_C11)
+		set(XML_THREAD_LOCAL "_Thread_local")
+	else()
+		check_c_source_compiles(
+			"__thread int v; int main(){return 0;}"
+			XML_THREAD_LOCAL_THREAD
+		)
+		if (XML_THREAD_LOCAL_THREAD)
+			set(XML_THREAD_LOCAL "__thread")
+		else()
+			check_c_source_compiles(
+				"__declspec(thread) int v; int main(){return 0;}"
+				XML_THREAD_LOCAL_DECLSPEC
+			)
+			if (XML_THREAD_LOCAL_DECLSPEC)
+				set(XML_THREAD_LOCAL "__declspec(thread)")
+			endif()
 		endif()
 	endif()
 endif()
@@ -316,30 +320,10 @@ if(WIN32)
 	)
 endif()
 
-if(LIBXML2_WITH_TRIO)
-	list(APPEND LIBXML2_SRCS trio.c triostr.c)
-endif()
-
 add_library(LibXml2 ${LIBXML2_HDRS} ${LIBXML2_SRCS})
 add_library(LibXml2::LibXml2 ALIAS LibXml2)
 
 target_compile_definitions(LibXml2 PRIVATE SYSCONFDIR="${CMAKE_INSTALL_FULL_SYSCONFDIR}")
-
-if(NOT BUILD_SHARED_LIBS)
-	target_compile_definitions(LibXml2 PUBLIC LIBXML_STATIC)
-	set(XML_CFLAGS "-DLIBXML_STATIC")
-endif()
-
-if(CMAKE_C_COMPILER_ID MATCHES "Clang" OR CMAKE_C_COMPILER_ID STREQUAL "GNU")
-	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -pedantic -Wall -Wextra -Wshadow \
--Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return \
--Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline \
--Wredundant-decls -Wno-long-long -Wno-format-extra-args")
-
-	if(BUILD_SHARED_LIBS AND UNIX AND NOT APPLE)
-		target_link_options(LibXml2 PRIVATE "-Wl,--version-script=${CMAKE_CURRENT_SOURCE_DIR}/libxml2.syms")
-	endif()
-endif()
 
 if(LIBXML2_WITH_THREADS)
 	target_compile_definitions(LibXml2 PRIVATE _REENTRANT)
@@ -376,6 +360,8 @@ endif()
 if(WIN32)
 	target_link_libraries(LibXml2 PRIVATE ws2_32)
 	set(WINSOCK_LIBS "-lws2_32")
+	target_link_libraries(LibXml2 PRIVATE bcrypt)
+        set(CRYPTO_LIBS "-lbcrypt")
 endif()
 
 if(LIBXML2_WITH_ICONV)
@@ -388,25 +374,61 @@ endif()
 if(LIBXML2_WITH_ICU)
 	target_link_libraries(LibXml2 PRIVATE ICU::data ICU::i18n ICU::uc)
 	if(WIN32)
-		set(ICU_LIBS "-licudt -licuin -licuuc")
+		set(ICU_LDFLAGS "-licudt -licuin -licuuc")
 	else()
-		set(ICU_LIBS "-licudata -licui18n -licuuc")
+		set(ICU_LDFLAGS "-licudata -licui18n -licuuc")
+	endif()
+	list(APPEND XML_PRIVATE_LIBS "${ICU_LDFLAGS}")
+	pkg_check_modules(ICU_PC IMPORTED_TARGET icu-i18n)
+	if(ICU_PC_FOUND)
+		list(APPEND XML_PC_REQUIRES icu-i18n)
+	else()
+		list(APPEND XML_PC_LIBS "${ICU_LDFLAGS}")
 	endif()
 endif()
 
 if(LIBXML2_WITH_LZMA)
 	target_link_libraries(LibXml2 PRIVATE LibLZMA::LibLZMA)
-	set(LZMA_LIBS "-llzma")
+	set(LibLZMA_LDFLAGS "-llzma")
+	list(APPEND XML_PRIVATE_LIBS "${LibLZMA_LDFLAGS}")
+	pkg_check_modules(LibLZMA_PC IMPORTED_TARGET liblzma)
+	if(LibLZMA_PC_FOUND)
+		list(APPEND XML_PC_REQUIRES liblzma)
+	else()
+		list(APPEND XML_PC_LIBS "${LibLZMA_LDFLAGS}")
+	endif()
 endif()
 
 if(LIBXML2_WITH_THREADS)
 	target_link_libraries(LibXml2 PRIVATE Threads::Threads)
-	set(THREAD_LIBS ${CMAKE_THREAD_LIBS_INIT})
 endif()
 
 if(LIBXML2_WITH_ZLIB)
 	target_link_libraries(LibXml2 PRIVATE ZLIB::ZLIB)
-	set(Z_LIBS "-lz")
+	set(ZLIB_LDFLAGS "-lz")
+	list(APPEND XML_PRIVATE_LIBS "${ZLIB_LDFLAGS}")
+	pkg_check_modules(ZLIB_PC IMPORTED_TARGET zlib)
+	if(ZLIB_PC_FOUND)
+		list(APPEND XML_PC_REQUIRES zlib)
+	else()
+		list(APPEND XML_PC_LIBS "${ZLIB_LDFLAGS}")
+	endif()
+endif()
+
+if(CMAKE_C_COMPILER_ID MATCHES "Clang" OR CMAKE_C_COMPILER_ID STREQUAL "GNU")
+	# These compiler flags can break the checks above so keep them here.
+	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -pedantic -Wall -Wextra -Wshadow \
+-Wpointer-arith -Wcast-align -Wwrite-strings \
+-Wstrict-prototypes -Wmissing-prototypes \
+-Wno-long-long -Wno-format-extra-args")
+
+	if(BUILD_SHARED_LIBS AND UNIX AND NOT APPLE)
+		check_linker_flag(C "LINKER:--undefined-version" FLAG_UNDEFINED_VERSION)
+		if (FLAG_UNDEFINED_VERSION)
+			target_link_options(LibXml2 PRIVATE "LINKER:--undefined-version")
+		endif()
+		target_link_options(LibXml2 PRIVATE "LINKER:--version-script=${CMAKE_CURRENT_SOURCE_DIR}/libxml2.syms")
+	endif()
 endif()
 
 set_target_properties(
@@ -486,6 +508,7 @@ if(LIBXML2_WITH_TESTS)
 		testdict
 		testModule
 		testlimits
+		testparser
 		testrecurse
 		testThreads
 	)
@@ -509,6 +532,7 @@ if(LIBXML2_WITH_TESTS)
 	endif()
 	add_test(NAME testchar COMMAND testchar)
 	add_test(NAME testdict COMMAND testdict)
+	add_test(NAME testparser COMMAND testparser)
 	add_test(NAME testrecurse COMMAND testrecurse WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
 	add_test(NAME testThreads COMMAND testThreads WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
 endif()
@@ -621,10 +645,29 @@ if(LIBXML2_WITH_PYTHON)
 	configure_file(python/setup.py.in setup.py @ONLY)
 endif()
 
+set(NON_PC_LIBS "${THREAD_LIBS} ${ICONV_LIBS} ${LIBM} ${WINSOCK_LIBS} ${CRYPTO_LIBS}")
+list(APPEND XML_PC_LIBS "${NON_PC_LIBS}")
+list(APPEND XML_PRIVATE_LIBS "${NON_PC_LIBS}")
+list(REMOVE_DUPLICATES XML_PC_LIBS)
+list(REMOVE_DUPLICATES XML_PRIVATE_LIBS)
+
+list(JOIN XML_PC_REQUIRES " " XML_PC_REQUIRES)
+list(JOIN XML_PC_LIBS " " XML_PC_LIBS)
+list(JOIN XML_PRIVATE_LIBS " " XML_PRIVATE_LIBS)
+
 set(XML_INCLUDEDIR "-I\${includedir}/libxml2")
 set(XML_LIBDIR "-L\${libdir}")
 set(XML_LIBS "-lxml2")
-set(XML_PRIVATE_LIBS "${Z_LIBS} ${LZMA_LIBS} ${THREAD_LIBS} ${ICONV_LIBS} ${ICU_LIBS} ${LIBM} ${WINSOCK_LIBS}")
+
+if(BUILD_SHARED_LIBS)
+	set(XML_PC_PRIVATE ".private")
+	set(XML_PC_LIBS_PRIVATE "
+Libs.private:")
+else()
+	target_compile_definitions(LibXml2 PUBLIC LIBXML_STATIC)
+	set(XML_CFLAGS "-DLIBXML_STATIC")
+	set(XML_PRIVATE_LIBS_NO_SHARED "${XML_PRIVATE_LIBS}")
+endif()
 
 file(RELATIVE_PATH PACKAGE_RELATIVE_PATH "${CMAKE_INSTALL_FULL_LIBDIR}/pkgconfig" "${CMAKE_INSTALL_PREFIX}")
 string(REGEX REPLACE "/$" "" PACKAGE_RELATIVE_PATH "${PACKAGE_RELATIVE_PATH}")
@@ -670,7 +713,6 @@ set(CPACK_DEBIAN_RUNTIME_PACKAGE_RECOMMENDS "${PACKAGE_TARNAME}-utils")
 set(CPACK_DEBIAN_RUNTIME_PACKAGE_SECTION "libs")
 set(CPACK_NSIS_PACKAGE_NAME ${PACKAGE_STRING})
 set(CPACK_NSIS_URL_INFO_ABOUT ${PACKAGE_URL})
-set(CPACK_PACKAGE_CONTACT ${PACKAGE_BUGREPORT})
 set(CPACK_PACKAGE_DISPLAY_NAME ${PACKAGE_STRING})
 set(CPACK_PACKAGE_INSTALL_DIRECTORY "${PACKAGE_TARNAME}-${PACKAGE_VERSION}")
 set(CPACK_PACKAGE_NAME ${PACKAGE_TARNAME})

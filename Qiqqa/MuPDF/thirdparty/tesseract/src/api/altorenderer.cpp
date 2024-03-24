@@ -171,6 +171,7 @@ char *TessBaseAPI::GetAltoText(ETEXT_DESC *monitor, int page_number) {
       case PT_HEADING_IMAGE:
       case PT_PULLOUT_IMAGE: {
         // Handle all kinds of images.
+    //
         // TODO: optionally add TYPE, for example TYPE="photo".
         alto_str << "\t\t\t\t<Illustration ID=\"cblock_" << bcnt++ << "\"";
         AddBoxToAlto(res_it, RIL_BLOCK, alto_str);
@@ -187,7 +188,7 @@ char *TessBaseAPI::GetAltoText(ETEXT_DESC *monitor, int page_number) {
         res_it->Next(RIL_BLOCK);
         continue;
       case PT_NOISE:
-        tprintf("TODO: Please report image which triggers the noise case.\n");
+        tprintError("TODO: Please report image which triggers the noise case.\n");
         ASSERT_HOST(false);
       default:
         break;
@@ -260,7 +261,7 @@ char *TessBaseAPI::GetAltoText(ETEXT_DESC *monitor, int page_number) {
            << "\t\t</Page>\n";
   const std::string &text = alto_str.str();
 
-  char* result = new char[text.length() + 1];
+  char *result = new char[text.length() + 1];
   strcpy(result, text.c_str());
   delete res_it;
   return result;

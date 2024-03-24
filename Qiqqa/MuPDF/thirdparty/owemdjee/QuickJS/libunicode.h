@@ -43,6 +43,7 @@ typedef enum {
 } UnicodeNormalizationEnum;
 
 int lre_case_conv(uint32_t *res, uint32_t c, int conv_type);
+int lre_canonicalize(uint32_t c, LRE_BOOL is_unicode);
 LRE_BOOL lre_is_cased(uint32_t c);
 LRE_BOOL lre_is_case_ignorable(uint32_t c);
 
@@ -73,6 +74,9 @@ static inline int cr_add_point(CharRange *cr, uint32_t v)
         if (cr_realloc(cr, cr->len + 1))
             return -1;
     }
+    if (!cr->points) {
+        return -1;
+    }
     cr->points[cr->len++] = v;
     return 0;
 }
@@ -102,6 +106,8 @@ int cr_op(CharRange *cr, const uint32_t *a_pt, int a_len,
           const uint32_t *b_pt, int b_len, int op);
 
 int cr_invert(CharRange *cr);
+
+int cr_regexp_canonicalize(CharRange *cr, LRE_BOOL is_unicode);
 
 #ifdef CONFIG_ALL_UNICODE
 

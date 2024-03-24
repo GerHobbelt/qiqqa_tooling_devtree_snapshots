@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNGT_ANN;NGT_ANN_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNGT_ANN;NGT_ANN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libngt-ann/lib;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNGT_ANN;NGT_ANN_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libngt-ann/lib;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNGT_ANN;NGT_ANN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNGT_ANN;NGT_ANN_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNGT_ANN;NGT_ANN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libngt-ann/lib;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libngt-ann/lib;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNGT_ANN;NGT_ANN_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNGT_ANN;NGT_ANN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libngt-ann/lib;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNGT_ANN;NGT_ANN_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libngt-ann/lib;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNGT_ANN;NGT_ANN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNGT_ANN;NGT_ANN_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNGT_ANN;NGT_ANN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libngt-ann/lib;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libngt-ann/lib;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNGT_ANN;NGT_ANN_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNGT_ANN;NGT_ANN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libngt-ann/lib;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNGT_ANN;NGT_ANN_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libngt-ann/lib;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNGT_ANN;NGT_ANN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNGT_ANN;NGT_ANN_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNGT_ANN;NGT_ANN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libngt-ann/lib;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libngt-ann/lib;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNGT_ANN;NGT_ANN_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNGT_ANN;NGT_ANN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libngt-ann/lib;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNGT_ANN;NGT_ANN_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libngt-ann/lib;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNGT_ANN;NGT_ANN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNGT_ANN;NGT_ANN_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNGT_ANN;NGT_ANN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libngt-ann/lib;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libngt-ann/lib;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -237,6 +237,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/libngt-ann/lib/NGT/Index.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libngt-ann/lib/NGT/MmapManager.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libngt-ann/lib/NGT/NGTQ/Capi.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libngt-ann/lib/NGT/NGTQ/HierarchicalKmeans.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libngt-ann/lib/NGT/NGTQ/Optimizer.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libngt-ann/lib/NGT/NGTQ/QbgCli.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libngt-ann/lib/NGT/NGTQ/QuantizedGraph.cpp" />
@@ -251,6 +252,8 @@
     <ClCompile Include="../../thirdparty/owemdjee/libngt-ann/samples/jaccard-sparse/jaccard-sparse.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libngt-ann/samples/l2-uint8-range-search/l2-uint8-range-search.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libngt-ann/samples/l2-uint8/l2-uint8.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libngt-ann/samples/qbg-capi/qbg-capi.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libngt-ann/samples/qg-capi/qg-capi.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libngt-ann/samples/qg-l2-float/qg-l2-float.cpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libngt-ann/lib/NGT/ArrayFile.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libngt-ann/lib/NGT/Capi.h" />
@@ -295,9 +298,11 @@
     <Image Include="../../thirdparty/owemdjee/libngt-ann/tests/ann-benchmarks-results/nytimes-256-angular.png" />
     <Image Include="../../thirdparty/owemdjee/libngt-ann/tests/ann-benchmarks-results/sift-128-euclidean.png" />
     <Text Include="../../thirdparty/owemdjee/libngt-ann/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libngt-ann/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/libngt-ann/README-jp.md" />
     <Text Include="../../thirdparty/owemdjee/libngt-ann/README.jp" />
     <Text Include="../../thirdparty/owemdjee/libngt-ann/README.md" />
+    <Text Include="../../thirdparty/owemdjee/libngt-ann/assets/logo.svg" />
     <Text Include="../../thirdparty/owemdjee/libngt-ann/bin/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libngt-ann/bin/ngt/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libngt-ann/bin/ngt/README-jp.md" />
@@ -309,6 +314,7 @@
     <Text Include="../../thirdparty/owemdjee/libngt-ann/lib/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libngt-ann/lib/NGT/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libngt-ann/lib/NGT/defines.h.in" />
+    <Text Include="../../thirdparty/owemdjee/libngt-ann/python/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/libngt-ann/python/MANIFEST.in" />
     <Text Include="../../thirdparty/owemdjee/libngt-ann/python/README-jp.md" />
     <Text Include="../../thirdparty/owemdjee/libngt-ann/python/README-ngtpy-jp.md" />
@@ -325,6 +331,8 @@
     <Text Include="../../thirdparty/owemdjee/libngt-ann/samples/jaccard-sparse/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libngt-ann/samples/l2-uint8-range-search/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libngt-ann/samples/l2-uint8/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libngt-ann/samples/qbg-capi/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libngt-ann/samples/qg-capi/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libngt-ann/samples/qg-l2-float/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libngt-ann/utils/mk_version_defs_h.sh" />
   </ItemGroup>

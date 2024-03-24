@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCROW;CROW_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCROW;CROW_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty\owemdjee\crow\include;../../thirdparty/owemdjee/asio/asio/include;../../thirdparty\owemdjee\boost;../../thirdparty\zlib;../../scripts/libcrow;..\..\scripts\zlib;../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>CROW_ENABLE_COMPRESSION;BUILD_MONOLITHIC;BUILDING_LIBCROW;CROW_STATICLIB;HAVE_MUPDF;BOOST_AUTO_LINK_DISABLED;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/crow/include;../../thirdparty/owemdjee/asio/asio/include;../../thirdparty/owemdjee/boost;../../thirdparty/zlib;../../scripts/libcrow;../../scripts/zlib;../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CROW_ENABLE_COMPRESSION;BUILD_MONOLITHIC;BUILDING_LIBCROW;CROW_STATICLIB;HAVE_MUPDF;BOOST_AUTO_LINK_DISABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCROW;CROW_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCROW;CROW_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty\owemdjee\crow\include;../../thirdparty/owemdjee/asio/asio/include;../../thirdparty\owemdjee\boost;../../thirdparty\zlib;../../scripts/libcrow;..\..\scripts\zlib;../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/crow/include;../../thirdparty/owemdjee/asio/asio/include;../../thirdparty/owemdjee/boost;../../thirdparty/zlib;../../scripts/libcrow;../../scripts/zlib;../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCROW;CROW_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCROW;CROW_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty\owemdjee\crow\include;../../thirdparty/owemdjee/asio/asio/include;../../thirdparty\owemdjee\boost;../../thirdparty\zlib;../../scripts/libcrow;..\..\scripts\zlib;../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>CROW_ENABLE_COMPRESSION;BUILD_MONOLITHIC;BUILDING_LIBCROW;CROW_STATICLIB;HAVE_MUPDF;BOOST_AUTO_LINK_DISABLED;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/crow/include;../../thirdparty/owemdjee/asio/asio/include;../../thirdparty/owemdjee/boost;../../thirdparty/zlib;../../scripts/libcrow;../../scripts/zlib;../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CROW_ENABLE_COMPRESSION;BUILD_MONOLITHIC;BUILDING_LIBCROW;CROW_STATICLIB;HAVE_MUPDF;BOOST_AUTO_LINK_DISABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCROW;CROW_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCROW;CROW_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty\owemdjee\crow\include;../../thirdparty/owemdjee/asio/asio/include;../../thirdparty\owemdjee\boost;../../thirdparty\zlib;../../scripts/libcrow;..\..\scripts\zlib;../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/crow/include;../../thirdparty/owemdjee/asio/asio/include;../../thirdparty/owemdjee/boost;../../thirdparty/zlib;../../scripts/libcrow;../../scripts/zlib;../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCROW;CROW_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCROW;CROW_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty\owemdjee\crow\include;../../thirdparty/owemdjee/asio/asio/include;../../thirdparty\owemdjee\boost;../../thirdparty\zlib;../../scripts/libcrow;..\..\scripts\zlib;../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>CROW_ENABLE_COMPRESSION;BUILD_MONOLITHIC;BUILDING_LIBCROW;CROW_STATICLIB;HAVE_MUPDF;BOOST_AUTO_LINK_DISABLED;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/crow/include;../../thirdparty/owemdjee/asio/asio/include;../../thirdparty/owemdjee/boost;../../thirdparty/zlib;../../scripts/libcrow;../../scripts/zlib;../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CROW_ENABLE_COMPRESSION;BUILD_MONOLITHIC;BUILDING_LIBCROW;CROW_STATICLIB;HAVE_MUPDF;BOOST_AUTO_LINK_DISABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCROW;CROW_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCROW;CROW_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty\owemdjee\crow\include;../../thirdparty/owemdjee/asio/asio/include;../../thirdparty\owemdjee\boost;../../thirdparty\zlib;../../scripts/libcrow;..\..\scripts\zlib;../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/crow/include;../../thirdparty/owemdjee/asio/asio/include;../../thirdparty/owemdjee/boost;../../thirdparty/zlib;../../scripts/libcrow;../../scripts/zlib;../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCROW;CROW_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCROW;CROW_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty\owemdjee\crow\include;../../thirdparty/owemdjee/asio/asio/include;../../thirdparty\owemdjee\boost;../../thirdparty\zlib;../../scripts/libcrow;..\..\scripts\zlib;../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>CROW_ENABLE_COMPRESSION;BUILD_MONOLITHIC;BUILDING_LIBCROW;CROW_STATICLIB;HAVE_MUPDF;BOOST_AUTO_LINK_DISABLED;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/crow/include;../../thirdparty/owemdjee/asio/asio/include;../../thirdparty/owemdjee/boost;../../thirdparty/zlib;../../scripts/libcrow;../../scripts/zlib;../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CROW_ENABLE_COMPRESSION;BUILD_MONOLITHIC;BUILDING_LIBCROW;CROW_STATICLIB;HAVE_MUPDF;BOOST_AUTO_LINK_DISABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCROW;CROW_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCROW;CROW_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty\owemdjee\crow\include;../../thirdparty/owemdjee/asio/asio/include;../../thirdparty\owemdjee\boost;../../thirdparty\zlib;../../scripts/libcrow;..\..\scripts\zlib;../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/crow/include;../../thirdparty/owemdjee/asio/asio/include;../../thirdparty/owemdjee/boost;../../thirdparty/zlib;../../scripts/libcrow;../../scripts/zlib;../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -275,11 +275,27 @@
     <Image Include="../../thirdparty/owemdjee/crow/docs/assets/pkg_logos/vcpkg.png" />
     <Image Include="../../thirdparty/owemdjee/crow/logo55.png" />
     <Text Include="../../thirdparty/owemdjee/crow/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/crow/Doxyfile" />
+    <Text Include="../../thirdparty/owemdjee/crow/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/crow/README.md" />
     <Text Include="../../thirdparty/owemdjee/crow/cmake/CrowConfig.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/crow/cmake/Findasio.cmake" />
     <Text Include="../../thirdparty/owemdjee/crow/cmake/cmake_uninstall.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/crow/cmake/compiler_options.cmake" />
+    <Text Include="../../thirdparty/owemdjee/crow/docs/assets/crowlogo.svg" />
+    <Text Include="../../thirdparty/owemdjee/crow/docs/assets/crowlogo_dual_color.svg" />
+    <Text Include="../../thirdparty/owemdjee/crow/docs/assets/crowlogo_inverted.svg" />
+    <Text Include="../../thirdparty/owemdjee/crow/docs/assets/crowlogo_main_color.svg" />
+    <Text Include="../../thirdparty/owemdjee/crow/docs/assets/crowlogo_main_light_color.svg" />
+    <Text Include="../../thirdparty/owemdjee/crow/docs/assets/fast_icon.svg" />
+    <Text Include="../../thirdparty/owemdjee/crow/docs/assets/fast_light_icon.svg" />
+    <Text Include="../../thirdparty/owemdjee/crow/docs/assets/favicon.svg" />
+    <Text Include="../../thirdparty/owemdjee/crow/docs/assets/header_icon.svg" />
+    <Text Include="../../thirdparty/owemdjee/crow/docs/assets/header_light_icon.svg" />
+    <Text Include="../../thirdparty/owemdjee/crow/docs/assets/typesafe_icon.svg" />
+    <Text Include="../../thirdparty/owemdjee/crow/docs/assets/typesafe_light_icon.svg" />
+    <Text Include="../../thirdparty/owemdjee/crow/docs/assets/websocket_icon.svg" />
+    <Text Include="../../thirdparty/owemdjee/crow/docs/assets/websocket_light_icon.svg" />
     <Text Include="../../thirdparty/owemdjee/crow/docs/getting_started/a_simple_webpage.md" />
     <Text Include="../../thirdparty/owemdjee/crow/docs/getting_started/setup/linux.md" />
     <Text Include="../../thirdparty/owemdjee/crow/docs/getting_started/setup/macos.md" />
@@ -305,7 +321,18 @@
     <Text Include="../../thirdparty/owemdjee/crow/docs/guides/testing.md" />
     <Text Include="../../thirdparty/owemdjee/crow/docs/guides/websockets.md" />
     <Text Include="../../thirdparty/owemdjee/crow/docs/index.md" />
+    <Text Include="../../thirdparty/owemdjee/crow/docs/overrides/home.html" />
+    <Text Include="../../thirdparty/owemdjee/crow/docs/overrides/main.html" />
+    <Text Include="../../thirdparty/owemdjee/crow/docs/overrides/partials/footer.html" />
+    <Text Include="../../thirdparty/owemdjee/crow/docs/overrides/partials/header.html" />
+    <Text Include="../../thirdparty/owemdjee/crow/docs/overrides/partials/integrations/analytics/matomo.html" />
+    <Text Include="../../thirdparty/owemdjee/crow/docs/overrides/partials/social.html" />
+    <Text Include="../../thirdparty/owemdjee/crow/docs/overrides/privacy_policy.html" />
+    <Text Include="../../thirdparty/owemdjee/crow/docs/stylesheets/colors.css" />
+    <Text Include="../../thirdparty/owemdjee/crow/docs/stylesheets/extra.css" />
+    <Text Include="../../thirdparty/owemdjee/crow/docs/stylesheets/latofonts.css" />
     <Text Include="../../thirdparty/owemdjee/crow/docs/versions.json" />
+    <Text Include="../../thirdparty/owemdjee/crow/mkdocs.yml" />
     <Text Include="../../thirdparty/owemdjee/crow/run_cmake.sh" />
     <Text Include="../../thirdparty/owemdjee/crow/scripts/generateDocumentationAndDeploy.sh" />
     <Text Include="../../thirdparty/owemdjee/crow/scripts/merge_all.py" />

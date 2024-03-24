@@ -302,13 +302,22 @@
     <ClInclude Include="../../thirdparty/owemdjee/re2/util/util.h">
       <Filter>Header Files\util</Filter>
     </ClInclude>
+    <Text Include="../../thirdparty/owemdjee/re2/BUILD.bazel">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/re2/CMakeLists.txt">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/re2/CONTRIBUTING.md">
       <Filter>Misc Files</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/re2/CONTRIBUTORS">
+    <Text Include="../../thirdparty/owemdjee/re2/LICENSE">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/re2/MODULE.bazel">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/re2/Makefile">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/re2/README">
@@ -317,14 +326,38 @@
     <Text Include="../../thirdparty/owemdjee/re2/SECURITY.md">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/re2/WORKSPACE.bazel">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/re2/benchlog/benchlog.c2">
+      <Filter>Misc Files\benchlog</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/re2/benchlog/benchlog.mini">
+      <Filter>Misc Files\benchlog</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/re2/benchlog/benchlog.r70">
+      <Filter>Misc Files\benchlog</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/re2/benchlog/benchplot.py">
       <Filter>Misc Files\benchlog</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/re2/doc/syntax.html">
+      <Filter>Misc Files\doc</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/re2/doc/syntax.txt">
       <Filter>Misc Files\doc</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/re2/libre2.symbols">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/re2/libre2.symbols.darwin">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/re2/re2.pc.in">
       <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/re2/re2/make_perl_groups.pl">
+      <Filter>Misc Files\re2</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/re2/re2/make_unicode_casefold.py">
       <Filter>Misc Files\re2</Filter>
@@ -336,6 +369,9 @@
       <Filter>Misc Files\re2</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/re2/re2Config.cmake.in">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/re2/ucs2.diff">
       <Filter>Misc Files</Filter>
     </Text>
   </ItemGroup>

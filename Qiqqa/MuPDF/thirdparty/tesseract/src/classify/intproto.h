@@ -130,7 +130,7 @@ struct INT_FEATURE_STRUCT {
   int8_t CP_misses;
 
   void print() const {
-    tprintf("({},{}):{}\n", X, Y, Theta);
+    tprintDebug("({},{}):{}\n", X, Y, Theta);
   }
 };
 
@@ -209,14 +209,14 @@ void ShowMatchDisplay();
 // Clears the given window and draws the featurespace guides for the
 // appropriate normalization method.
 TESS_API
-void ClearFeatureSpaceWindow(NORM_METHOD norm_method, ScrollView *window);
+void ClearFeatureSpaceWindow(NORM_METHOD norm_method, ScrollViewReference &window);
 #endif // !GRAPHICS_DISABLED
 
 /*----------------------------------------------------------------------------*/
 #if !GRAPHICS_DISABLED
 TESS_API
-void RenderIntFeature(ScrollView *window, const INT_FEATURE_STRUCT *Feature,
-                      ScrollView::Color color);
+void RenderIntFeature(ScrollViewReference &window, const INT_FEATURE_STRUCT *Feature,
+                      Diagnostics::Color color);
 
 void InitIntMatchWindowIfReqd();
 
@@ -227,7 +227,7 @@ void InitFeatureDisplayWindowIfReqd();
 // Creates a window of the appropriate size for displaying elements
 // in feature space.
 TESS_API
-ScrollView *CreateFeatureSpaceWindow(const char *name, int xpos, int ypos);
+ScrollViewReference CreateFeatureSpaceWindow(Tesseract* tesseract_, const char *name, int xpos, int ypos);
 #endif // !GRAPHICS_DISABLED
 
 } // namespace tesseract

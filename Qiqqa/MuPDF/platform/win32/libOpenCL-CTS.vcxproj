@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOPENCL_CTS;OPENCL_CTS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOPENCL_CTS;OPENCL_CTS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOPENCL_CTS;OPENCL_CTS_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOPENCL_CTS;OPENCL_CTS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOPENCL_CTS;OPENCL_CTS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOPENCL_CTS;OPENCL_CTS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOPENCL_CTS;OPENCL_CTS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOPENCL_CTS;OPENCL_CTS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOPENCL_CTS;OPENCL_CTS_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOPENCL_CTS;OPENCL_CTS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOPENCL_CTS;OPENCL_CTS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOPENCL_CTS;OPENCL_CTS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOPENCL_CTS;OPENCL_CTS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOPENCL_CTS;OPENCL_CTS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOPENCL_CTS;OPENCL_CTS_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOPENCL_CTS;OPENCL_CTS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOPENCL_CTS;OPENCL_CTS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOPENCL_CTS;OPENCL_CTS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOPENCL_CTS;OPENCL_CTS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOPENCL_CTS;OPENCL_CTS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOPENCL_CTS;OPENCL_CTS_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOPENCL_CTS;OPENCL_CTS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOPENCL_CTS;OPENCL_CTS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOPENCL_CTS;OPENCL_CTS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -304,7 +304,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/api/test_queue_properties_queries.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/api/test_retain.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/api/test_retain_program.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/api/test_semaphores.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/api/test_sub_group_dispatch.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/api/test_zero_sized_enqueue.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/atomics/main.cpp" />
@@ -330,7 +329,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/basic/test_enqueued_local_size.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/basic/test_explicit_s2v.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/basic/test_float2int.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/basic/test_fpmath_float.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/basic/test_fpmath.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/basic/test_get_linear_ids.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/basic/test_global_linear_id.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/basic/test_global_work_offsets.cpp" />
@@ -349,7 +348,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/basic/test_imagerandomcopy.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/basic/test_imagereadwrite.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/basic/test_imagereadwrite3d.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/basic/test_int2float.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/basic/test_int2fp.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/basic/test_intmath.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/basic/test_kernel_call_kernel_function.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/basic/test_kernel_memory_alignment.cpp" />
@@ -372,7 +371,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/basic/test_vector_creation.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/basic/test_vector_swizzle.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/basic/test_vloadstore.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/basic/test_wg_barrier.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/basic/test_work_item_functions.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/basic/test_writeimage.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/buffers/array_info.cpp" />
@@ -390,25 +388,17 @@
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/c11_atomics/host_atomics.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/c11_atomics/main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/c11_atomics/test_atomics.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/common/vulkan_wrapper/opencl_vulkan_wrapper.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/common/vulkan_wrapper/vulkan_list_map.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/common/vulkan_wrapper/vulkan_utility.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/common/vulkan_wrapper/vulkan_wrapper.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/commonfns/main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/commonfns/test_binary_fn.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/commonfns/test_clamp.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/commonfns/test_degrees.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/commonfns/test_fmax.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/commonfns/test_fmaxf.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/commonfns/test_fmin.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/commonfns/test_fminf.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/commonfns/test_max.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/commonfns/test_maxf.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/commonfns/test_min.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/commonfns/test_minf.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/commonfns/test_mix.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/commonfns/test_radians.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/commonfns/test_sign.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/commonfns/test_smoothstep.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/commonfns/test_smoothstepf.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/commonfns/test_step.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/commonfns/test_stepf.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/commonfns/test_unary_fn.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/compiler/main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/compiler/test_async_build.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/compiler/test_build_helpers.cpp" />
@@ -473,7 +463,28 @@
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_ext_cxx_for_opencl/cxx_for_opencl_ver.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_ext_cxx_for_opencl/main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/basic_command_buffer.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/cl_khr_command_buffer_mutable_dispatch/main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/cl_khr_command_buffer_mutable_dispatch/mutable_command_arguments.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/cl_khr_command_buffer_mutable_dispatch/mutable_command_global_offset.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/cl_khr_command_buffer_mutable_dispatch/mutable_command_global_size.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/cl_khr_command_buffer_mutable_dispatch/mutable_command_image_arguments.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/cl_khr_command_buffer_mutable_dispatch/mutable_command_info.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/cl_khr_command_buffer_mutable_dispatch/mutable_command_local_size.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/cl_khr_command_buffer_mutable_dispatch/mutable_command_out_of_order.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/command_buffer_event_sync.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/command_buffer_finalize.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/command_buffer_get_command_buffer_info.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/command_buffer_out_of_order.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/command_buffer_printf.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/command_buffer_profiling.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/command_buffer_queue_substitution.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/command_buffer_set_kernel_arg.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/command_buffer_test_barrier.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/command_buffer_test_copy.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/command_buffer_test_event_info.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/command_buffer_test_fill.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/svm_command_basic.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_dx9_media_sharing/main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_dx9_media_sharing/test_create_context.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_dx9_media_sharing/test_functions_api.cpp" />
@@ -484,6 +495,10 @@
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_dx9_media_sharing/test_other_data_types.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_dx9_media_sharing/utils.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_dx9_media_sharing/wrappers.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_external_semaphore/main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_external_semaphore/test_external_semaphore.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_semaphore/main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_semaphore/test_semaphores.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/generic_address_space/advanced_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/generic_address_space/basic_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/generic_address_space/main.cpp" />
@@ -592,6 +607,9 @@
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/integer_ops/test_abs.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/integer_ops/test_absdiff.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/integer_ops/test_add_sat.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/integer_ops/test_extended_bit_ops_extract.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/integer_ops/test_extended_bit_ops_insert.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/integer_ops/test_extended_bit_ops_reverse.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/integer_ops/test_int_basic_ops.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/integer_ops/test_integer_dot_product.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/integer_ops/test_integers.cpp" />
@@ -665,8 +683,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/profiling/writeArray.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/profiling/writeImage.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/relationals/main.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/relationals/test_comparisons_double.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/relationals/test_comparisons_float.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/relationals/test_comparisons_fp.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/relationals/test_relationals.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/relationals/test_shuffles.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/select/test_select.cpp" />
@@ -729,11 +746,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/vulkan/test_vulkan_interop_buffer.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/vulkan/test_vulkan_interop_image.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/vulkan/test_vulkan_platform_device_info.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/vulkan/vulkan_interop_common/opencl_vulkan_wrapper.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/vulkan/vulkan_interop_common/vulkan_interop_common.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/vulkan/vulkan_interop_common/vulkan_list_map.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/vulkan/vulkan_interop_common/vulkan_utility.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/vulkan/vulkan_interop_common/vulkan_wrapper.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/vulkan/vulkan_interop_common.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/workgroups/main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/workgroups/test_wg_all.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/workgroups/test_wg_any.cpp" />
@@ -771,8 +784,8 @@
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_common/harness/propertyHelpers.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_common/harness/ref_counting.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_common/harness/rounding_mode.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_common/harness/stringHelpers.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_common/harness/testHarness.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_common/harness/threadTesting.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_common/harness/typeWrappers.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_common/miniz/miniz.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/SVM/common.h" />
@@ -789,7 +802,14 @@
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/buffers/procs.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/c11_atomics/common.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/c11_atomics/host_atomics.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/common/vulkan_wrapper/opencl_vulkan_wrapper.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/common/vulkan_wrapper/vulkan_api_list.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/common/vulkan_wrapper/vulkan_list_map.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/common/vulkan_wrapper/vulkan_utility.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/common/vulkan_wrapper/vulkan_wrapper.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/common/vulkan_wrapper/vulkan_wrapper_types.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/commonfns/procs.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/commonfns/test_base.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/compiler/includeTestDirectory/testIncludeFile.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/compiler/procs.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/compiler/secondIncludeTestDirectory/testIncludeFile.h" />
@@ -797,6 +817,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/compiler/test_unload_platform_compiler_resources.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/conversions/Sleep.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/conversions/basic_test_conversions.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/conversions/conversions_data_info.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/conversions/fplib.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/d3d10/harness.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/d3d11/harness.h" />
@@ -809,11 +830,17 @@
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/events/procs.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/events/testBase.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_ext_cxx_for_opencl/procs.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/basic_command_buffer.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/cl_khr_command_buffer_mutable_dispatch/mutable_command_basic.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/cl_khr_command_buffer_mutable_dispatch/procs.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/command_buffer_test_base.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/procs.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/svm_command_basic.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_dx9_media_sharing/procs.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_dx9_media_sharing/utils.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_dx9_media_sharing/wrappers.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_external_semaphore/procs.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_semaphore/procs.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/generic_address_space/base.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/geometrics/procs.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/geometrics/testBase.h" />
@@ -862,6 +889,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/profiling/procs.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/relationals/procs.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/relationals/testBase.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/relationals/test_comparisons_fp.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/select/test_select.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spir/datagen.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spir/exceptions.h" />
@@ -883,13 +911,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/vectors/testBase.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/vectors/type_replacer.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/vulkan/procs.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/vulkan/vulkan_interop_common/opencl_vulkan_wrapper.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/vulkan/vulkan_interop_common/vulkan_api_list.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/vulkan/vulkan_interop_common/vulkan_interop_common.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/vulkan/vulkan_interop_common/vulkan_list_map.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/vulkan/vulkan_interop_common/vulkan_utility.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/vulkan/vulkan_interop_common/vulkan_wrapper.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/vulkan/vulkan_interop_common/vulkan_wrapper_types.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/vulkan/vulkan_interop_common.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/workgroups/procs.h" />
     <ClInclude Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/workgroups/testBase.h" />
     <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/CMakeLists.txt" />
@@ -911,8 +933,11 @@
     <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/basic/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/buffers/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/c11_atomics/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/common/vulkan_wrapper/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/commonfns/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/compiler/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/compiler/write_kernel.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/compiler/write_kernel.spvasm64" />
     <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/computeinfo/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/contractions/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/conversions/CMakeLists.txt" />
@@ -925,7 +950,10 @@
     <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_ext_cxx_for_opencl/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_command_buffer/cl_khr_command_buffer_mutable_dispatch/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_dx9_media_sharing/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_external_semaphore/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/extensions/cl_khr_semaphore/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/generate_spirv_offline.py" />
     <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/generic_address_space/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/geometrics/CMakeLists.txt" />
@@ -966,6 +994,368 @@
     <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/README.txt" />
     <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/assemble_spirv.py" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/atomic_dec_global.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/atomic_dec_global.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/atomic_inc_global.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/atomic_inc_global.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/branch_conditional.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/branch_conditional.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/branch_conditional_weighted.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/branch_conditional_weighted.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/branch_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/branch_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/composite_construct_int4.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/composite_construct_int4.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/composite_construct_struct.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/composite_construct_struct.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_char_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_char_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_double_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_double_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_false_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_false_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_float_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_float_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_half_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_half_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_int3_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_int3_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_int4_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_int4_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_int_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_int_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_long_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_long_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_short_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_short_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_struct_int_char_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_struct_int_char_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_struct_int_float_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_struct_int_float_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_struct_struct_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_struct_struct_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_true_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_true_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_uchar_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_uchar_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_uint_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_uint_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_ulong_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_ulong_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_ushort_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/constant_ushort_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_char_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_char_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_double_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_double_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_float_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_float_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_half_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_half_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_int3_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_int3_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_int4_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_int4_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_int_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_int_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_long_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_long_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_short_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_short_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_struct_int_char_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_struct_int_char_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_struct_int_float_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_struct_int_float_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_struct_struct_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_struct_struct_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_uchar_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_uchar_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_uint_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_uint_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_ulong_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_ulong_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_ushort_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/copy_ushort_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_aliased.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_aliased.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_alignment.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_alignment.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_constant.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_constant.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_constant_fail.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_constant_fail.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_cpacked.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_cpacked.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_restrict.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_restrict.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_rounding_rte_double_long.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_rounding_rte_double_long.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_rounding_rte_float_int.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_rounding_rte_float_int.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_rounding_rtn_double_long.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_rounding_rtn_double_long.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_rounding_rtn_float_int.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_rounding_rtn_float_int.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_rounding_rtp_double_long.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_rounding_rtp_double_long.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_rounding_rtp_float_int.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_rounding_rtp_float_int.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_rounding_rtz_double_long.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_rounding_rtz_double_long.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_rounding_rtz_float_int.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_rounding_rtz_float_int.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_saturated_conversion_char.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_saturated_conversion_char.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_saturated_conversion_int.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_saturated_conversion_int.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_saturated_conversion_short.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_saturated_conversion_short.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_saturated_conversion_uchar.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_saturated_conversion_uchar.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_saturated_conversion_uint.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_saturated_conversion_uint.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_saturated_conversion_ushort.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/decorate_saturated_conversion_ushort.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/ext_cl_khr_spirv_no_integer_wrap_decoration_fadd_int.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/ext_cl_khr_spirv_no_integer_wrap_decoration_fadd_int.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/ext_cl_khr_spirv_no_integer_wrap_decoration_fadd_uint.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/ext_cl_khr_spirv_no_integer_wrap_decoration_fadd_uint.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/ext_cl_khr_spirv_no_integer_wrap_decoration_fmul_int.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/ext_cl_khr_spirv_no_integer_wrap_decoration_fmul_int.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/ext_cl_khr_spirv_no_integer_wrap_decoration_fmul_uint.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/ext_cl_khr_spirv_no_integer_wrap_decoration_fmul_uint.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/ext_cl_khr_spirv_no_integer_wrap_decoration_fnegate_int.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/ext_cl_khr_spirv_no_integer_wrap_decoration_fnegate_int.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/ext_cl_khr_spirv_no_integer_wrap_decoration_fshiftleft_int.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/ext_cl_khr_spirv_no_integer_wrap_decoration_fshiftleft_int.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/ext_cl_khr_spirv_no_integer_wrap_decoration_fshiftleft_uint.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/ext_cl_khr_spirv_no_integer_wrap_decoration_fshiftleft_uint.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/ext_cl_khr_spirv_no_integer_wrap_decoration_fsub_int.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/ext_cl_khr_spirv_no_integer_wrap_decoration_fsub_int.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/ext_cl_khr_spirv_no_integer_wrap_decoration_fsub_uint.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/ext_cl_khr_spirv_no_integer_wrap_decoration_fsub_uint.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fadd_double.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fadd_double.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fadd_double2.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fadd_double2.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fadd_float.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fadd_float.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fadd_float4.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fadd_float4.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fadd_half.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fadd_half.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fdiv_double.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fdiv_double.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fdiv_double2.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fdiv_double2.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fdiv_float.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fdiv_float.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fdiv_float4.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fdiv_float4.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fdiv_half.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fdiv_half.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fmod_double.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fmod_double.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fmod_double2.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fmod_double2.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fmod_float.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fmod_float.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fmod_float4.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fmod_float4.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fmod_half.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fmod_half.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fmul_double.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fmul_double.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fmul_double2.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fmul_double2.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fmul_float.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fmul_float.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fmul_float4.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fmul_float4.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fmul_half.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fmul_half.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/frem_double.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/frem_double.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/frem_double2.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/frem_double2.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/frem_float.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/frem_float.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/frem_float4.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/frem_float4.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/frem_half.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/frem_half.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fsub_double.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fsub_double.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fsub_double2.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fsub_double2.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fsub_float.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fsub_float.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fsub_float4.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fsub_float4.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fsub_half.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/fsub_half.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/label_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/label_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/lifetime_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/lifetime_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/linkage_export.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/linkage_export.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/linkage_import.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/linkage_import.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/loop_merge_branch_conditional_dont_unroll.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/loop_merge_branch_conditional_dont_unroll.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/loop_merge_branch_conditional_none.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/loop_merge_branch_conditional_none.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/loop_merge_branch_conditional_unroll.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/loop_merge_branch_conditional_unroll.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/loop_merge_branch_dont_unroll.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/loop_merge_branch_dont_unroll.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/loop_merge_branch_none.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/loop_merge_branch_none.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/loop_merge_branch_unroll.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/loop_merge_branch_unroll.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_function_const.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_function_const.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_function_inline.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_function_inline.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_function_noinline.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_function_noinline.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_function_none.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_function_none.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_function_pure.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_function_pure.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_function_pure_ptr.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_function_pure_ptr.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_neg_double.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_neg_double.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_neg_float.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_neg_float.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_neg_float4.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_neg_float4.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_neg_half.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_neg_half.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_neg_int.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_neg_int.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_neg_int4.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_neg_int4.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_neg_long.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_neg_long.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_neg_short.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_neg_short.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_not_int.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_not_int.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_not_int4.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_not_int4.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_not_long.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_not_long.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_not_short.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_not_short.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_spec_constant_double_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_spec_constant_double_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_spec_constant_false_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_spec_constant_false_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_spec_constant_float_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_spec_constant_float_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_spec_constant_half_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_spec_constant_half_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_spec_constant_true_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_spec_constant_true_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_spec_constant_uchar_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_spec_constant_uchar_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_spec_constant_uint_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_spec_constant_uint_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_spec_constant_ulong_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_spec_constant_ulong_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_spec_constant_ushort_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/op_spec_constant_ushort_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/opaque.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/opaque.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/phi_2.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/phi_2.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/phi_3.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/phi_3.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/phi_4.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/phi_4.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/select_if_dont_flatten.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/select_if_dont_flatten.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/select_if_flatten.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/select_if_flatten.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/select_if_none.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/select_if_none.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/select_switch_dont_flatten.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/select_switch_dont_flatten.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/select_switch_flatten.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/select_switch_flatten.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/select_switch_none.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/select_switch_none.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_char_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_char_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_double_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_double_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_false_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_false_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_float_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_float_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_half_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_half_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_int3_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_int3_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_int4_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_int4_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_int_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_int_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_long_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_long_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_short_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_short_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_struct_int_char_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_struct_int_char_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_struct_int_float_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_struct_int_float_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_struct_struct_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_struct_struct_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_true_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_true_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_uchar_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_uchar_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_uint_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_uint_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_ulong_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_ulong_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_ushort_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/undef_ushort_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/unreachable_simple.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/unreachable_simple.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_char16_extract.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_char16_extract.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_char16_insert.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_char16_insert.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_double2_extract.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_double2_extract.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_double2_insert.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_double2_insert.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_float4_extract.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_float4_extract.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_float4_insert.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_float4_insert.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_half8_extract.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_half8_extract.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_half8_insert.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_half8_insert.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_int4_extract.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_int4_extract.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_int4_insert.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_int4_insert.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_long2_extract.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_long2_extract.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_long2_insert.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_long2_insert.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_times_scalar_double.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_times_scalar_double.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_times_scalar_float.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_times_scalar_float.spvasm64" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_times_scalar_half.spvasm32" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/spirv_new/spirv_asm/vector_times_scalar_half.spvasm64" />
     <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/subgroups/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/submission_details_template.txt" />
     <Text Include="../../thirdparty/owemdjee/OpenCL-CTS/test_conformance/thread_dimensions/CMakeLists.txt" />

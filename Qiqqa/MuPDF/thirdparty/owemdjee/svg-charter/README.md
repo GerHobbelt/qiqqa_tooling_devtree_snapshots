@@ -1,4 +1,5 @@
 # CHARTER
+
 A simple markdown **DSL** and **C Library** to generate *svg* and *pgfplot* (*LaTeX*)  plot from a minimal syntax.
 
 
@@ -61,7 +62,9 @@ Resutls in:
 **commas** and **spaces** are valid separator for arrays and the sytax in general.
 For the definitions **spaces**, **tabs** and **:** are equivalents. So ```x: 1 2 3``` is equal to ```x 1,2,3```.
 
+
 ## Use as a library
+
 if you want to include charter as a library here a simple example
 
 ```c
@@ -79,6 +82,7 @@ if you want to include charter as a library here a simple example
 \***\
 ```
 
+
 ## Use as SVG generator
 
 The build process generate as well an executable: ```charter```. It is capable of generate an svg plot from a charter dsl file:
@@ -86,6 +90,7 @@ The build process generate as well an executable: ```charter```. It is capable o
 ```
 charter your_dsl_file > output.svg
 ```
+
 
 ## Build and install
 
@@ -98,6 +103,8 @@ meson ..
 ninja 
 sudo ninja install
 ```
+
+
 ## Future improvements
 
 In the next future I will improve the svg quality, the memory performance, and the look and feel of the output plus the following features:
@@ -106,10 +113,13 @@ In the next future I will improve the svg quality, the memory performance, and t
  - more styling options
  - better typesettings
 
+
 ## Marker integration
+
 At the moment _charter_ is integrated in [Marker](https://github.com/fabiocolacio/Marker/)!
 
 ![marker and charter](marker_charter_support.png)
+
 
 ## Credits
 

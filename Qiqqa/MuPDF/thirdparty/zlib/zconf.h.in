@@ -35,6 +35,9 @@
  * created by gzip. (Files created by minigzip can still be extracted by
  * gzip.)
  */
+#ifndef MIN_WBITS
+#  define MIN_WBITS   8  /* 256 LZ77 window */
+#endif
 #ifndef MAX_WBITS
 #  define MAX_WBITS   15 /* 32K LZ77 window */
 #endif
@@ -79,6 +82,9 @@
  * Caution: the standard ZLIB1.DLL is NOT compiled using ZLIB_WINAPI.
  */
 #if defined(ZLIB_WINAPI) && defined(_WIN32)
+#  ifndef WIN32_LEAN_AND_MEAN
+#    define WIN32_LEAN_AND_MEAN
+#  endif
 #  include <windows.h>
    /* No need for _export, use ZLIB.DEF instead. */
    /* For complete Windows compatibility, use WINAPI, not __stdcall. */
@@ -191,5 +197,7 @@ typedef PTRDIFF_TYPE ptrdiff_t;
 #    define z_off64_t z_off_t
 #  endif
 #endif
+
+typedef size_t z_size_t;
 
 #endif /* ZCONF_H */

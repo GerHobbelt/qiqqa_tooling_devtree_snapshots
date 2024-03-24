@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWINFLEXBISON;WINFLEXBISON_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWINFLEXBISON;WINFLEXBISON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWINFLEXBISON;WINFLEXBISON_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWINFLEXBISON;WINFLEXBISON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWINFLEXBISON;WINFLEXBISON_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWINFLEXBISON;WINFLEXBISON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWINFLEXBISON;WINFLEXBISON_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWINFLEXBISON;WINFLEXBISON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWINFLEXBISON;WINFLEXBISON_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWINFLEXBISON;WINFLEXBISON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWINFLEXBISON;WINFLEXBISON_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWINFLEXBISON;WINFLEXBISON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWINFLEXBISON;WINFLEXBISON_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWINFLEXBISON;WINFLEXBISON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWINFLEXBISON;WINFLEXBISON_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWINFLEXBISON;WINFLEXBISON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWINFLEXBISON;WINFLEXBISON_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWINFLEXBISON;WINFLEXBISON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWINFLEXBISON;WINFLEXBISON_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWINFLEXBISON;WINFLEXBISON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWINFLEXBISON;WINFLEXBISON_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWINFLEXBISON;WINFLEXBISON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWINFLEXBISON;WINFLEXBISON_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWINFLEXBISON;WINFLEXBISON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -381,6 +381,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/winflexbison/common/misc/obstack.c" />
     <ClCompile Include="../../thirdparty/owemdjee/winflexbison/common/misc/obstack_printf.c" />
     <ClCompile Include="../../thirdparty/owemdjee/winflexbison/common/misc/path-join.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/winflexbison/common/misc/pid_tempname.c" />
     <ClCompile Include="../../thirdparty/owemdjee/winflexbison/common/misc/progname.c" />
     <ClCompile Include="../../thirdparty/owemdjee/winflexbison/common/misc/quotearg.c" />
     <ClCompile Include="../../thirdparty/owemdjee/winflexbison/common/misc/reallocarray.c" />
@@ -592,6 +593,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/winflexbison/common/misc/mbswidth.h" />
     <ClInclude Include="../../thirdparty/owemdjee/winflexbison/common/misc/obstack.h" />
     <ClInclude Include="../../thirdparty/owemdjee/winflexbison/common/misc/path-join.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/winflexbison/common/misc/pid_tempname.h" />
     <ClInclude Include="../../thirdparty/owemdjee/winflexbison/common/misc/progname.h" />
     <ClInclude Include="../../thirdparty/owemdjee/winflexbison/common/misc/quote.h" />
     <ClInclude Include="../../thirdparty/owemdjee/winflexbison/common/misc/quotearg.h" />
@@ -631,10 +633,31 @@
     <Image Include="../../thirdparty/owemdjee/winflexbison/custom_build_rules/docs/Verbosity.png" />
     <Text Include="../../thirdparty/owemdjee/winflexbison/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/winflexbison/CMakeSettings.json" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/COPYING.DOC" />
     <Text Include="../../thirdparty/owemdjee/winflexbison/README.md" />
     <Text Include="../../thirdparty/owemdjee/winflexbison/UNISTD_ERROR.readme" />
     <Text Include="../../thirdparty/owemdjee/winflexbison/bison/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/winflexbison/bison/data/README.md" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/bison/data/bison-default.css" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/bison/data/local.mk" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/bison/data/m4sugar/foreach.m4" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/bison/data/m4sugar/m4sugar.m4" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/bison/data/skeletons/bison.m4" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/bison/data/skeletons/c++-skel.m4" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/bison/data/skeletons/c++.m4" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/bison/data/skeletons/c-like.m4" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/bison/data/skeletons/c-skel.m4" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/bison/data/skeletons/c.m4" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/bison/data/skeletons/d-skel.m4" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/bison/data/skeletons/d.m4" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/bison/data/skeletons/java-skel.m4" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/bison/data/skeletons/java.m4" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/bison/data/skeletons/lalr1.java" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/bison/data/skeletons/traceon.m4" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/bison/data/xslt/bison.xsl" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/bison/data/xslt/xml2dot.xsl" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/bison/data/xslt/xml2text.xsl" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/bison/data/xslt/xml2xhtml.xsl" />
     <Text Include="../../thirdparty/owemdjee/winflexbison/bison/src/parse-gram.y" />
     <Text Include="../../thirdparty/owemdjee/winflexbison/bison/src/scan-code.l" />
     <Text Include="../../thirdparty/owemdjee/winflexbison/bison/src/scan-gram.l" />
@@ -645,9 +668,18 @@
     <Text Include="../../thirdparty/owemdjee/winflexbison/buildVS2022.bat" />
     <Text Include="../../thirdparty/owemdjee/winflexbison/changelog.md" />
     <Text Include="../../thirdparty/owemdjee/winflexbison/chocolatey/tools/chocolateyInstall.ps1" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/chocolatey/winflexbison3.nuspec" />
     <Text Include="../../thirdparty/owemdjee/winflexbison/common/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/common/misc/timevar.def" />
     <Text Include="../../thirdparty/owemdjee/winflexbison/custom_build_rules/README.md" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/custom_build_rules/win_bison_only/win_bison_custom_build.props" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/custom_build_rules/win_bison_only/win_bison_custom_build.targets" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/custom_build_rules/win_flex_bison/win_flex_bison_custom_build.props" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/custom_build_rules/win_flex_bison/win_flex_bison_custom_build.targets" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/custom_build_rules/win_flex_only/win_flex_custom_build.props" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/custom_build_rules/win_flex_only/win_flex_custom_build.targets" />
     <Text Include="../../thirdparty/owemdjee/winflexbison/flex/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/winflexbison/flex/src/flex.skl" />
     <Text Include="../../thirdparty/owemdjee/winflexbison/flex/src/parse.y" />
     <Text Include="../../thirdparty/owemdjee/winflexbison/flex/src/scan.l" />
     <Xml Include="../../thirdparty/owemdjee/winflexbison/custom_build_rules/win_bison_only/win_bison_custom_build.xml" />

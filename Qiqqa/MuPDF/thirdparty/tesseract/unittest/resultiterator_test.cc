@@ -1,5 +1,5 @@
 
-#include <allheaders.h>
+#include <leptonica/allheaders.h>
 #include <tesseract/baseapi.h>
 #include <tesseract/resultiterator.h>
 #include <string>
@@ -232,8 +232,8 @@ protected:
 //        new ScrollView(kIms[i], 100, 100, width / 2, height / 2, width, height);
 //    win->Image(src_pix_, 0, 0);
 //    it->Begin();
-//    ScrollView::Color color = ScrollView::RED;
-//    win->Brush(ScrollView::NONE);
+//    DebugView::Color color = DebugView::RED;
+//    win->Brush(DebugView::NONE);
 //    do {
 //      Pta* pts = it->BlockPolygon();
 //      if (pts != nullptr) {
@@ -249,7 +249,7 @@ protected:
 //      }
 //      ptaDestroy(&pts);
 //    } while (it->Next(tesseract::RIL_BLOCK));
-//    win->Update();
+//    win->UpdateWindow();
 //    delete win->AwaitEvent(SVET_DESTROY);
 //    delete win;
 //    delete it;

@@ -549,13 +549,13 @@ cmsBool  GrowNamedColorList(cmsContext ContextID, cmsNAMEDCOLORLIST* v)
 cmsNAMEDCOLORLIST* CMSEXPORT cmsAllocNamedColorList(cmsContext ContextID, cmsUInt32Number n, cmsUInt32Number ColorantCount, const char* Prefix, const char* Suffix)
 {
     cmsNAMEDCOLORLIST* v;
-    
-    if (ColorantCount > cmsMAXCHANNELS) 
+
+    if (ColorantCount > cmsMAXCHANNELS)
         return NULL;
-   
+
     v = (cmsNAMEDCOLORLIST*)_cmsMallocZero(ContextID, sizeof(cmsNAMEDCOLORLIST));
     if (v == NULL) return NULL;
-    
+
     v ->List      = NULL;
     v ->nColors   = 0;
 
@@ -818,13 +818,19 @@ void CMSEXPORT cmsFreeProfileSequenceDescription(cmsContext ContextID, cmsSEQ* p
 {
     cmsUInt32Number i;
 
-    for (i=0; i < pseq ->n; i++) {
-        if (pseq ->seq[i].Manufacturer != NULL) cmsMLUfree(ContextID, pseq ->seq[i].Manufacturer);
-        if (pseq ->seq[i].Model != NULL) cmsMLUfree(ContextID, pseq ->seq[i].Model);
-        if (pseq ->seq[i].Description != NULL) cmsMLUfree(ContextID, pseq ->seq[i].Description);
+    if (pseq == NULL)
+        return;
+
+    if (pseq ->seq != NULL) {
+        for (i=0; i < pseq ->n; i++) {
+	        if (pseq ->seq[i].Manufacturer != NULL) cmsMLUfree(ContextID, pseq ->seq[i].Manufacturer);
+	        if (pseq ->seq[i].Model != NULL) cmsMLUfree(ContextID, pseq ->seq[i].Model);
+	        if (pseq ->seq[i].Description != NULL) cmsMLUfree(ContextID, pseq ->seq[i].Description);
+        }
+
+        _cmsFree(ContextID, pseq ->seq);
     }
 
-    if (pseq ->seq != NULL) _cmsFree(ContextID, pseq ->seq);
     _cmsFree(ContextID, pseq);
 }
 

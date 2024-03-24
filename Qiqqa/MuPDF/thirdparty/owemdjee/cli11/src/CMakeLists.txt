@@ -2,7 +2,6 @@ set(CLI11_headerLoc "${PROJECT_SOURCE_DIR}/include/CLI")
 
 set(CLI11_headers
     ${CLI11_headerLoc}/App.hpp
-    ${CLI11_headerLoc}/CLI.hpp
     ${CLI11_headerLoc}/Config.hpp
     ${CLI11_headerLoc}/ConfigFwd.hpp
     ${CLI11_headerLoc}/Error.hpp
@@ -12,10 +11,11 @@ set(CLI11_headers
     ${CLI11_headerLoc}/Option.hpp
     ${CLI11_headerLoc}/Split.hpp
     ${CLI11_headerLoc}/StringTools.hpp
-    ${CLI11_headerLoc}/Timer.hpp
     ${CLI11_headerLoc}/TypeTools.hpp
     ${CLI11_headerLoc}/Validators.hpp
-    ${CLI11_headerLoc}/Version.hpp)
+    ${CLI11_headerLoc}/Version.hpp
+    ${CLI11_headerLoc}/Encoding.hpp
+    ${CLI11_headerLoc}/Argv.hpp)
 
 set(CLI11_implLoc "${PROJECT_SOURCE_DIR}/include/CLI/impl")
 
@@ -26,12 +26,17 @@ set(CLI11_impl_headers
     ${CLI11_implLoc}/Option_inl.hpp
     ${CLI11_implLoc}/Split_inl.hpp
     ${CLI11_implLoc}/StringTools_inl.hpp
-    ${CLI11_implLoc}/Validators_inl.hpp)
+    ${CLI11_implLoc}/Validators_inl.hpp
+    ${CLI11_implLoc}/Encoding_inl.hpp
+    ${CLI11_implLoc}/Argv_inl.hpp)
+
+set(CLI11_library_headers ${CLI11_headerLoc}/CLI.hpp ${CLI11_headerLoc}/Timer.hpp)
 
 if(CLI11_PRECOMPILED)
   # Create static lib
   file(GLOB CLI11_precompile_sources "${PROJECT_SOURCE_DIR}/src/*.cpp")
-  add_library(CLI11 STATIC ${CLI11_headers} ${CLI11_impl_headers} ${CLI11_precompile_sources})
+  add_library(CLI11 STATIC ${CLI11_headers} ${CLI11_library_headers} ${CLI11_impl_headers}
+                           ${CLI11_precompile_sources})
   target_compile_definitions(CLI11 PUBLIC -DCLI11_COMPILE)
 
   set(PUBLIC_OR_INTERFACE PUBLIC)
@@ -39,7 +44,7 @@ else()
   add_library(CLI11 INTERFACE)
   if(CMAKE_VERSION VERSION_GREATER 3.19)
     # This is only useful for visual studio and other IDE builds
-    target_sources(CLI11 PRIVATE ${CLI11_headers} ${CLI11_impl_headers})
+    target_sources(CLI11 PRIVATE ${CLI11_headers} ${CLI11_library_headers} ${CLI11_impl_headers})
   endif()
 
   set(PUBLIC_OR_INTERFACE INTERFACE)
@@ -48,9 +53,17 @@ endif()
 # Allow IDE's to group targets into folders
 add_library(CLI11::CLI11 ALIAS CLI11) # for add_subdirectory calls
 
+if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
+  set(SYSTEM_INCL "")
+else()
+  # If this project is included from somewhere else, we mark our headers as system headers to avoid
+  # the compiler emitting any warnings about them
+  set(SYSTEM_INCL "SYSTEM")
+endif()
+
 # Duplicated because CMake adds the current source dir if you don't.
 target_include_directories(
-  CLI11 ${PUBLIC_OR_INTERFACE} $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
+  CLI11 ${SYSTEM_INCL} ${PUBLIC_OR_INTERFACE} $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>)
 
 if(CMAKE_VERSION VERSION_LESS 3.8)
@@ -112,7 +125,8 @@ if(CLI11_INSTALL)
   # Make an export target
   install(TARGETS CLI11 EXPORT CLI11Targets)
   if(NOT CLI11_SINGLE_FILE)
-    install(FILES ${CLI11_headers} DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/CLI")
+    install(FILES ${CLI11_headers} ${CLI11_library_headers}
+            DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/CLI")
     if(NOT CLI11_COMPILE)
       install(FILES ${CLI11_impl_headers} DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/CLI/impl")
     endif()

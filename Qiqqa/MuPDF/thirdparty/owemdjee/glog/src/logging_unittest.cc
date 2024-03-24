@@ -1,4 +1,3 @@
-
 // Copyright (c) 2023, Google Inc.
 // All rights reserved.
 //
@@ -50,7 +49,6 @@
 #include <fstream>
 #include <iomanip>
 #include <iostream>
-#include <fstream>
 #include <memory>
 #include <queue>
 #include <sstream>
@@ -58,8 +56,8 @@
 #include <vector>
 
 #include "base/commandlineflags.h"
-#include <glog/logging.h>
-#include <glog/raw_logging.h>
+#include "glog/logging.h"
+#include "glog/raw_logging.h"
 #include "googletest.h"
 
 #include "testing.h"
@@ -200,7 +198,7 @@ static void PrefixAttacher(std::ostream &s, const LogMessageInfo &l, void* data)
     << setw(2) << l.time.day()
     << ' '
     << setw(2) << l.time.hour() << ':'
-    << setw(2) << l.time.min()  << ':'
+    << setw(2) << l.time.minute()  << ':'
     << setw(2) << l.time.sec() << "."
     << setw(6) << l.time.usec()
     << ' '
@@ -209,8 +207,6 @@ static void PrefixAttacher(std::ostream &s, const LogMessageInfo &l, void* data)
     << ' '
     << l.filename << ':' << l.line_number << "]";
 }
-
-int main(int argc, char **argv) {
 
 TEST(GoogleLog, golden_test) {
 	// TODO: The golden test portion of this test is very flakey.
@@ -389,7 +385,7 @@ void TestRawLogging() {
 
   FlagSaver saver;
 
-  // Check that RAW loggging does not use mallocs.
+  // Check that RAW logging does not use mallocs.
   NewHook new_hook;
 
   RAW_LOG(INFO, "%s%s%d%c%f", foo->c_str(), "bar ", 10, ' ', 3.4);
@@ -907,7 +903,7 @@ struct MyLogger : public base::Logger {
 
   void Flush() override {}
 
-  uint32 LogSize() override { return data.length(); }
+  std::size_t LogSize() override { return data.length(); }
 
  private:
   bool* set_on_destruction_;
@@ -1040,7 +1036,7 @@ struct RecordDeletionLogger : public base::Logger {
     wrapped_logger_->Write(force_flush, timestamp, message, length);
   }
   void Flush() override { wrapped_logger_->Flush(); }
-  uint32 LogSize() override { return wrapped_logger_->LogSize(); }
+  std::size_t LogSize() override { return wrapped_logger_->LogSize(); }
 
  private:
   bool* set_on_destruction_;
@@ -1419,7 +1415,7 @@ TEST(TestExitOnDFatal, ToBeOrNotToBe) {
   base::internal::SetExitOnDFatal(true);
   EXPECT_TRUE(base::internal::GetExitOnDFatal());
 
-#ifdef GTEST_HAS_DEATH_TEST
+#if GTEST_HAS_DEATH_TEST
   // Death comes on little cats' feet.
   EXPECT_DEBUG_DEATH({
       LOG(DFATAL) << "This should be fatal in debug mode";
@@ -1506,3 +1502,36 @@ TEST(LogMsgTime, gmtoff) {
   const long utc_max_offset = 50400;
   EXPECT_TRUE( (nGmtOff >= utc_min_offset) && (nGmtOff <= utc_max_offset) );
 }
+
+#if 0  // Mgt. Decision: permanently disabled feature: no mailing logging or
+       // anything. Hard Removal enforced. [GHo]
+
+TEST(EmailLogging, ValidAddress) {
+  FlagSaver saver;
+  FLAGS_logmailer = "/usr/bin/true";
+
+  EXPECT_TRUE(SendEmail("example@example.com", "Example subject", "Example body"));
+}
+
+TEST(EmailLogging, MultipleAddresses) {
+  FlagSaver saver;
+  FLAGS_logmailer = "/usr/bin/true";
+
+  EXPECT_TRUE(SendEmail("example@example.com,foo@bar.com", "Example subject", "Example body"));
+}
+
+TEST(EmailLogging, InvalidAddress) {
+  FlagSaver saver;
+  FLAGS_logmailer = "/usr/bin/true";
+
+  EXPECT_FALSE(SendEmail("hello world@foo", "Example subject", "Example body"));
+}
+
+TEST(EmailLogging, MaliciousAddress) {
+  FlagSaver saver;
+  FLAGS_logmailer = "/usr/bin/true";
+
+  EXPECT_FALSE(SendEmail("!/bin/true@example.com", "Example subject", "Example body"));
+}
+
+#endif

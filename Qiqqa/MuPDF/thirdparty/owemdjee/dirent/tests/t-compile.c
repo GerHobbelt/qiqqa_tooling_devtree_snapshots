@@ -15,6 +15,12 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "../examples/monolithic_examples.h"
+
+static void test_properties(void);
+static void test_length(void);
+static void initialize(void);
+static void cleanup(void);
 
 
 #if defined(BUILD_MONOLITHIC)
@@ -22,13 +28,20 @@
 #endif
 
 int
-main(int argc, const char **argv)
+main(void)
 {
-	struct dirent *dirp = NULL;
+	initialize();
 
-	(void) argc;
-	(void) argv;
+	test_properties();
+	test_length();
 
+	cleanup();
+	return EXIT_SUCCESS;
+}
+
+static void
+test_properties(void)
+{
 #ifdef _DIRENT_HAVE_D_TYPE
 	printf("Has d_type\n");
 #endif
@@ -44,9 +57,24 @@ main(int argc, const char **argv)
 #ifdef _D_ALLOC_NAMLEN
 	printf("Has _D_ALLOC_NAMLEN\n");
 #endif
+}
+
+static void
+test_length(void)
+{
+	struct dirent *dirp = NULL;
 	printf("Length of d_name with terminator: %d\n",
 		(int) sizeof(dirp->d_name));
+}
 
+static void
+initialize(void)
+{
+	/*NOP*/;
+}
+
+static void
+cleanup(void)
+{
 	printf("OK\n");
-	return EXIT_SUCCESS;
 }

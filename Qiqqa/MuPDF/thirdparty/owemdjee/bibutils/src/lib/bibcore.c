@@ -976,6 +976,7 @@ bibl_writefp( FILE *fp, bibl *b, param *p )
 	for ( i=0; i<b->n; ++i ) {
 		if ( p->assemblef ) {
 			fields_free( &out );
+			// Georgi TODO: it seems that xml2nbib crashes here:
 			status = p->assemblef( b->ref[i], &out, p, i );
 			if ( status!=BIBL_OK ) break;
 			if ( debug_set( p ) ) bibl_verbose_reference( &out, "", i+1 );
@@ -992,6 +993,11 @@ bibl_writefp( FILE *fp, bibl *b, param *p )
 	}
 
 	if ( p->footerf ) p->footerf( fp );
+
+	// Georgi: the above loop doesn't free the last reference
+	//         (fields_free is safe even if it is just initialised, which is the case here
+	fields_free( &out );
+	
 	return status;
 }
 

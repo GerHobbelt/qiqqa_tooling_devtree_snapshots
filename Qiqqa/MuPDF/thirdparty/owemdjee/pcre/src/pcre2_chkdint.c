@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
 /* This file contains functions to implement checked integer operation */
 
 #ifndef PCRE2_PCRE2TEST
-#ifdef HAVE_CONFIG_H
+#if defined(HAVE_CONFIG_H) && !defined(PCRE2_AMALGAMETE)
 #include "config.h"
 #endif
 

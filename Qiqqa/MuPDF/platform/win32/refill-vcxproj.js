@@ -15,7 +15,13 @@ if (process.argv.length !== 3) {
 const projpath = process.argv[2];
 const scriptpath = path.dirname(process.argv[1]);
 
-let projname = path.basename(projpath, ".vcxproj");
+let projname = path.basename(projpath, ".vcxproj")
+	.replace(/[_-]test[s]?$/, '')
+	.replace(/[_-]tool[s]?$/, '')
+	.replace(/[_-]demo[s]?$/, '')
+	.replace(/[_-]benchmark[s]?$/, '')
+	.replace(/[_-]example[s]?$/, '')
+	.replace(/^lib/, '');
 
 if (debug) 
 	console.error({projname, scriptpath})
@@ -33,8 +39,8 @@ function checkDirAndReportPlusExitOnSuccess(p) {
 
 let testpath;
 
-if (projname.startsWith("libboost-")) {
-	let tst_projname = projname.replace(/^libboost-/, '');
+if (projname.startsWith("boost-")) {
+	let tst_projname = projname.replace(/^boost-/, '');
 	testpath = `${scriptpath}/../../thirdparty/owemdjee/boost/libs/${tst_projname}`;
 
 	checkDirAndReportPlusExitOnSuccess(testpath);
@@ -61,6 +67,35 @@ if (projname.startsWith("wxw-samples-ipc-")) {
 	checkDirAndReportPlusExitOnSuccess(testpath);
 }
 
+if (projname.startsWith("wxw-samples-")) {
+	let wx_projname = projname.replace(/^wxw-samples-/, '');
+	testpath = `${scriptpath}/../../thirdparty/owemdjee/wxWidgets/samples/${wx_projname}`;
+
+	checkDirAndReportPlusExitOnSuccess(testpath);
+}
+
+if (projname.startsWith("wxw-demos-")) {
+	let wx_projname = projname.replace(/^wxw-demos-/, '');
+	testpath = `${scriptpath}/../../thirdparty/owemdjee/wxWidgets/demos/${wx_projname}`;
+
+	checkDirAndReportPlusExitOnSuccess(testpath);
+}
+
+if (projname.startsWith("wxw-utils-")) {
+	let wx_projname = projname.replace(/^wxw-utils-/, '');
+	testpath = `${scriptpath}/../../thirdparty/owemdjee/wxWidgets/utils/${wx_projname}`;
+
+	checkDirAndReportPlusExitOnSuccess(testpath);
+}
+
+if (projname.startsWith("wxCharts-sample-")) {
+	let wx_projname = projname.replace(/^wxCharts-sample-/, '');
+	testpath = `${scriptpath}/../../thirdparty/owemdjee/wxCharts/samples/${wx_projname}`;
+
+	checkDirAndReportPlusExitOnSuccess(testpath);
+}
+
+
 
 // now things get a little hairier: we need to MAP to projectname to a submodule directory path...
 
@@ -74,19 +109,17 @@ const projectMap = {
 	"binlog_brecovery": "binlog",
 	"libCHM": "CHM-lib",
 	"libdjvu": "djvulibre",
-	"libdtldiff": "dtl-diff-template-library",
 	"libenkiTaskScheduler": "enkiTS-TaskScheduler",
 	"libfamilia": "lda-Familia",
-	"libgdiff": "google-diff-match-patch",
 	"libhashmapbtree": "parallel-hashmap",
-	"libhdiff": "HDiffPatch",
+	"libJasPer": "jasper",
+	"libOpenSSL": "openssl",
 	"libmarl": "google-marl",
 	"libmarl_tests": "google-marl",
 	"libmegamime": "mime-mega",
+	"libOpenImageIO": "oiio",
 	"libprocess": "subprocess",
 	"libpromise": "promise-cpp",
-	"libQuickJSpp": "QuickJS-C++-Wrapper",
-	"libQuickJSpp2": "QuickJS-C++-Wrapper2",
 	"librobust-bibtex": "bibtex-robust-decoder",
 	"libsvgcharter": "svg-charter",
 	"libtbb": "oneTBB",
@@ -101,7 +134,6 @@ const projectMap = {
 	"libicu": "unicode-icu",
 	"libicu_tools": "unicode-icu",
 	"libicu_tests": "unicode-icu",
-	"liblcms2_tests": "lcms2",
 	"libleptonica_tools": "leptonica",
 	"libjansson": "json-jansson",
 	"libjpeg-xl-benchmark": "jpeg-xl",
@@ -110,7 +142,6 @@ const projectMap = {
 	"otl-ml": "OptimizationTemplateLibrary",
 	"gperf": "gperf-hash",
 	"manticore": "manticoresearch",
-	"libharfbuzz_tests": "harfbuzz",
 	"libopenjpeg_tools": "openjpeg",
 	"libYAC": "YACLib",
 	"libhnsw": "hnswlib",
@@ -119,12 +150,10 @@ const projectMap = {
 	"libtag_tests": "taglib",
 	"libsafestring": "safestringlib",
 	"libCache": "CacheLib",
-	"libyaml-tests": "libyaml",
 	"libtiff_contribs": "libtiff/contrib",
 	"libpng_contribs": "libpng/contrib",
 	//"libmupdf": "../../source;../../include",
 	"uberlogger": "uberlog",
-	"uberlog_test": "uberlog",
 	"filesystem_tests_exception": "filesystem/test",
 	"filesystem_tests_fs": "filesystem/test",
 	"filesystem_tests_fwd": "filesystem/test",
@@ -157,7 +186,7 @@ const projectMap = {
 	//wxw-samples-dll-exe
 	//wxw-samples-dll-test-exe
 	"wxw-samples-htmlbox": "wxWidgets/samples/htlbox",
-	"wxw-samples-maskedctrl": "wxWidgets\samples\maskededit",
+	"wxw-samples-maskedctrl": "wxWidgets/samples/maskededit",
 	//wxw-samples-minimal-static-build
 	//wxw-samples-propgrid-minimal-static-build
 	"wxw-tests-benchmarks": "wxWidgets/tests/benchmarks",
@@ -260,11 +289,14 @@ const projectMap = {
 	//"libpthread-win32-JMP": "pthread-win32",
 	
 	"sqlite_tools": "sqlite-amalgamation",
+
+	"protobuf_compiler": "protobuf",
+	"libprotobuf_conformance": "protobuf",
 };
 
 for (const key in projectMap) {
 	let value = projectMap[key];
-	if (projname === key) {
+	if (projname === key || `lib${projname}` === key || `${projname}-tools` === key) {
 		testpath = `${scriptpath}/../../thirdparty/owemdjee/${value}`;
 
 		checkDirAndReportPlusExitOnSuccess(testpath);
@@ -275,14 +307,15 @@ for (const key in projectMap) {
 	}
 }
 
-
-
 testpath = `${scriptpath}/../../thirdparty/owemdjee/${projname}`;
 
 checkDirAndReportPlusExitOnSuccess(testpath);
 
-let nonlib_projname = projname.replace(/^lib/, '');
-testpath = `${scriptpath}/../../thirdparty/owemdjee/${nonlib_projname}`;
+testpath = `${scriptpath}/../../thirdparty/owemdjee/lib${projname}`;
+
+checkDirAndReportPlusExitOnSuccess(testpath);
+
+testpath = `${scriptpath}/../../thirdparty/owemdjee/${projname}-tools`;
 
 checkDirAndReportPlusExitOnSuccess(testpath);
 
@@ -290,233 +323,9 @@ testpath = `${scriptpath}/../../thirdparty/${projname}`;
 
 checkDirAndReportPlusExitOnSuccess(testpath);
 
-testpath = `${scriptpath}/../../thirdparty/${nonlib_projname}`;
+testpath = `${scriptpath}/../../thirdparty/lib${projname}`;
 
 checkDirAndReportPlusExitOnSuccess(testpath);
-
-if (projname.startsWith("wxw-samples-")) {
-	let wx_projname = projname.replace(/^wxw-samples-/, '');
-	testpath = `${scriptpath}/../../thirdparty/owemdjee/wxWidgets/samples/${wx_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-}
-
-if (projname.startsWith("wxw-demos-")) {
-	let wx_projname = projname.replace(/^wxw-demos-/, '');
-	testpath = `${scriptpath}/../../thirdparty/owemdjee/wxWidgets/demos/${wx_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-}
-
-if (projname.startsWith("wxw-utils-")) {
-	let wx_projname = projname.replace(/^wxw-utils-/, '');
-	testpath = `${scriptpath}/../../thirdparty/owemdjee/wxWidgets/utils/${wx_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-}
-
-if (projname.startsWith("wxCharts-sample-")) {
-	let wx_projname = projname.replace(/^wxCharts-sample-/, '');
-	testpath = `${scriptpath}/../../thirdparty/owemdjee/wxCharts/samples/${wx_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-}
-
-if (/[_-]tests$/.test(projname)) {
-	let tst_projname = projname.replace(/[_-]tests$/, '');
-	testpath = `${scriptpath}/../../thirdparty/owemdjee/${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	testpath = `${scriptpath}/../../thirdparty/${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	tst_projname = nonlib_projname.replace(/[_-]tests$/, '');
-	testpath = `${scriptpath}/../../thirdparty/owemdjee/${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	testpath = `${scriptpath}/../../thirdparty/owemdjee/lib${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	testpath = `${scriptpath}/../../thirdparty/${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	testpath = `${scriptpath}/../../thirdparty/lib${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-}
-
-if (/[_-]test$/.test(projname)) {
-	let tst_projname = projname.replace(/[_-]test$/, '');
-	testpath = `${scriptpath}/../../thirdparty/owemdjee/${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	testpath = `${scriptpath}/../../thirdparty/${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	tst_projname = nonlib_projname.replace(/[_-]test$/, '');
-	testpath = `${scriptpath}/../../thirdparty/owemdjee/${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	testpath = `${scriptpath}/../../thirdparty/owemdjee/lib${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	testpath = `${scriptpath}/../../thirdparty/${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	testpath = `${scriptpath}/../../thirdparty/lib${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-}
-
-if (/[_-]tools$/.test(projname)) {
-	let tool_projname = projname.replace(/[_-]tools$/, '');
-	testpath = `${scriptpath}/../../thirdparty/owemdjee/${tool_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	testpath = `${scriptpath}/../../thirdparty/${tool_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	tool_projname = nonlib_projname.replace(/[_-]tools$/, '');
-	testpath = `${scriptpath}/../../thirdparty/owemdjee/${tool_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	testpath = `${scriptpath}/../../thirdparty/owemdjee/lib${tool_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	testpath = `${scriptpath}/../../thirdparty/${tool_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	testpath = `${scriptpath}/../../thirdparty/lib${tool_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-}
-
-if (/[_-]demos$/.test(projname)) {
-	let tst_projname = projname.replace(/[_-]demos$/, '');
-	testpath = `${scriptpath}/../../thirdparty/owemdjee/${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	testpath = `${scriptpath}/../../thirdparty/${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	tst_projname = nonlib_projname.replace(/[_-]demos$/, '');
-	testpath = `${scriptpath}/../../thirdparty/owemdjee/${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	testpath = `${scriptpath}/../../thirdparty/owemdjee/lib${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	testpath = `${scriptpath}/../../thirdparty/${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	testpath = `${scriptpath}/../../thirdparty/lib${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-}
-
-if (/[_-]demo$/.test(projname)) {
-	let tst_projname = projname.replace(/[_-]demo$/, '');
-	testpath = `${scriptpath}/../../thirdparty/owemdjee/${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	testpath = `${scriptpath}/../../thirdparty/${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	tst_projname = nonlib_projname.replace(/[_-]demo$/, '');
-	testpath = `${scriptpath}/../../thirdparty/owemdjee/${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	testpath = `${scriptpath}/../../thirdparty/owemdjee/lib${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	testpath = `${scriptpath}/../../thirdparty/${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	testpath = `${scriptpath}/../../thirdparty/lib${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-}
-
-if (/[_-]benchmark$/.test(projname)) {
-	let tst_projname = projname.replace(/[_-]benchmark$/, '');
-	testpath = `${scriptpath}/../../thirdparty/owemdjee/${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	testpath = `${scriptpath}/../../thirdparty/${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	tst_projname = nonlib_projname.replace(/[_-]benchmark$/, '');
-	testpath = `${scriptpath}/../../thirdparty/owemdjee/${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	testpath = `${scriptpath}/../../thirdparty/owemdjee/lib${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	testpath = `${scriptpath}/../../thirdparty/${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	testpath = `${scriptpath}/../../thirdparty/lib${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-}
-
-if (/[_-]examples$/.test(projname)) {
-	let tst_projname = projname.replace(/[_-]examples$/, '');
-	testpath = `${scriptpath}/../../thirdparty/owemdjee/${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	testpath = `${scriptpath}/../../thirdparty/${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	tst_projname = nonlib_projname.replace(/[_-]examples$/, '');
-	testpath = `${scriptpath}/../../thirdparty/owemdjee/${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	testpath = `${scriptpath}/../../thirdparty/owemdjee/lib${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	testpath = `${scriptpath}/../../thirdparty/${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-
-	testpath = `${scriptpath}/../../thirdparty/lib${tst_projname}`;
-
-	checkDirAndReportPlusExitOnSuccess(testpath);
-}
 
 if (projname.endsWith("_DLL")) {
 	let tst_projname = projname.replace(/_DLL$/, '');

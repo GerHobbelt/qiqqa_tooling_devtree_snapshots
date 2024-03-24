@@ -431,7 +431,7 @@ cmsFloat64Number XYZ2float(cmsContext ContextID, cmsUInt16Number v)
     fix32 = v << 1;
 
     // From fixed 15.16 to cmsFloat64Number
-    return _cms15Fixed16toDouble(ContextID, fix32);
+    return _cms15Fixed16toDouble(fix32);
 }
 
 
@@ -440,6 +440,20 @@ void CMSEXPORT cmsXYZEncoded2Float(cmsContext ContextID, cmsCIEXYZ* fXYZ, const 
     fXYZ -> X = XYZ2float(ContextID, XYZ[0]);
     fXYZ -> Y = XYZ2float(ContextID, XYZ[1]);
     fXYZ -> Z = XYZ2float(ContextID, XYZ[2]);
+}
+
+
+// Returns dE on two XYZ values
+cmsFloat64Number CMSEXPORT cmsXYZDeltaE(cmsContext ContextID, const cmsCIEXYZ* xyz1, const cmsCIEXYZ* xyz2)
+{
+	cmsFloat64Number dx, dy, dz;
+	cmsUNUSED_PARAMETER(ContextID);
+
+	dx = fabs(xyz1 -> X - xyz2 -> X);
+	dy = fabs(xyz1 -> Y - xyz2 -> Y);
+	dz = fabs(xyz1 -> Z - xyz2 -> Z);
+
+	return pow(Sqr(dx) + Sqr(dy) + Sqr(dy), 0.5);
 }
 
 

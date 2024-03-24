@@ -37,14 +37,16 @@ TIMEVAL = ../../lib/timeval.c ../../lib/timeval.h
 MULTIBYTE = ../../lib/curl_multibyte.c ../../lib/curl_multibyte.h
 
 # these files are used in every single test program below
-SUPPORTFILES = ../../lib/timediff.c ../../lib/timediff.h first.c test.h
+TIMEDIFF = ../../lib/timediff.c ../../lib/timediff.h
+SUPPORTFILES = $(TIMEDIFF) first.c test.h
 
 # These are all libcurl test programs
 noinst_PROGRAMS = chkhostname libauthretry libntlmconnect libprereq      \
  lib500 lib501 lib502 lib503 lib504 lib505 lib506 lib507 lib508 lib509   \
  lib510 lib511 lib512 lib513 lib514 lib515 lib516 lib517 lib518 lib519   \
  lib520 lib521 lib523 lib524 lib525 lib526 lib527 lib529 lib530 lib532   \
- lib533        lib537 lib539 lib540 lib541 lib542 lib543 lib544 lib545   \
+ lib533               lib536 lib537 lib539 lib540 lib541 lib542 lib543   \
+ lib544 lib545                                                           \
  lib547 lib548 lib549 lib552 lib553 lib554 lib555 lib556 lib557 lib558   \
  lib559 lib560 lib562 lib564 lib565 lib566 lib567 lib568 lib569 lib570   \
  lib571 lib572 lib573 lib574 lib575 lib576        lib578 lib579 lib582   \
@@ -60,25 +62,26 @@ noinst_PROGRAMS = chkhostname libauthretry libntlmconnect libprereq      \
  lib1518         lib1520 lib1521 lib1522 lib1523 \
  lib1525 lib1526 lib1527 lib1528 lib1529 lib1530 lib1531 lib1532 lib1533 \
  lib1534 lib1535 lib1536 lib1537 lib1538 lib1539 \
- lib1540         lib1542 lib1543 \
+ lib1540         lib1542 lib1543         lib1545 \
  lib1550 lib1551 lib1552 lib1553 lib1554 lib1555 lib1556 lib1557 \
  lib1558 lib1559 lib1560 lib1564 lib1565 lib1567 lib1568 lib1569 \
  lib1589 \
- lib1591 lib1592 lib1593 lib1594 lib1596 lib1597 \
+ lib1591 lib1592 lib1593 lib1594 lib1596 lib1597 lib1598 \
  \
  lib1662 \
  \
+ lib1900 \
  lib1903 lib1905 lib1906 lib1907 lib1908 lib1910 lib1911 lib1912 lib1913 \
          lib1915 lib1916 lib1917 lib1918 lib1919 \
  lib1933 lib1934 lib1935 lib1936 lib1937 lib1938 lib1939 lib1940 \
  lib1945 lib1946 lib1947 lib1948 lib1955 lib1956 lib1957 lib1958 lib1959 \
- lib1960 \
+ lib1960 lib1964 \
  lib1970 lib1971 lib1972 lib1973 lib1974 lib1975 \
  lib2301 lib2302 lib2304 lib2305 lib2306 \
- lib2402 \
+ lib2402 lib2404 \
  lib2502 \
  lib3010 lib3025 lib3026 lib3027 lib3028 \
- lib3100 lib3101
+ lib3100 lib3101 lib3102 lib3103
 
 chkhostname_SOURCES = chkhostname.c ../../lib/curl_gethostname.c
 chkhostname_LDADD = @CURL_NETWORK_LIBS@
@@ -169,6 +172,8 @@ lib532_CPPFLAGS = $(AM_CPPFLAGS) -DLIB532
 
 lib533_SOURCES = lib533.c $(SUPPORTFILES) $(TESTUTIL) $(WARNLESS)
 lib533_LDADD = $(TESTUTIL_LIBS)
+
+lib536_SOURCES = lib536.c $(SUPPORTFILES)
 
 lib537_SOURCES = lib537.c $(SUPPORTFILES) $(WARNLESS) $(MULTIBYTE)
 
@@ -469,6 +474,9 @@ lib1542_LDADD = $(TESTUTIL_LIBS)
 lib1543_SOURCES = lib1518.c $(SUPPORTFILES)
 lib1543_CPPFLAGS = $(AM_CPPFLAGS) -DLIB1543
 
+lib1545_SOURCES = lib1545.c $(SUPPORTFILES)
+lib1545_CPPFLAGS = $(AM_CPPFLAGS) -DCURL_DISABLE_DEPRECATION
+
 lib1550_SOURCES = lib1550.c $(SUPPORTFILES)
 
 lib1551_SOURCES = lib1551.c $(SUPPORTFILES)
@@ -533,8 +541,13 @@ lib1596_CPPFLAGS = $(AM_CPPFLAGS) -DLIB1596
 lib1597_SOURCES = lib1597.c $(SUPPORTFILES) $(TESTUTIL) $(WARNLESS)
 lib1597_LDADD = $(TESTUTIL_LIBS)
 
+lib1598_SOURCES = lib1598.c $(SUPPORTFILES) $(TESTUTIL) $(WARNLESS)
+lib1598_LDADD = $(TESTUTIL_LIBS)
+
 lib1662_SOURCES = lib1662.c $(SUPPORTFILES) $(TESTUTIL) $(WARNLESS)
 lib1662_LDADD = $(TESTUTIL_LIBS)
+
+lib1900_SOURCES = lib1900.c $(SUPPORTFILES)
 
 lib1903_SOURCES = lib1903.c $(SUPPORTFILES) $(TESTUTIL) $(WARNLESS)
 lib1903_LDADD = $(TESTUTIL_LIBS)
@@ -630,6 +643,9 @@ lib1959_LDADD = $(TESTUTIL_LIBS)
 lib1960_SOURCES = lib1960.c $(SUPPORTFILES)
 lib1960_LDADD = $(TESTUTIL_LIBS)
 
+lib1964_SOURCES = lib1964.c $(SUPPORTFILES) $(TESTUTIL) $(WARNLESS)
+lib1964_LDADD = $(TESTUTIL_LIBS)
+
 lib1970_SOURCES = lib1970.c $(SUPPORTFILES) $(TESTUTIL) $(WARNLESS)
 lib1970_LDADD = $(TESTUTIL_LIBS)
 
@@ -666,6 +682,9 @@ lib2306_LDADD = $(TESTUTIL_LIBS)
 lib2402_SOURCES = lib2402.c $(SUPPORTFILES) $(TESTUTIL) $(WARNLESS)
 lib2402_LDADD = $(TESTUTIL_LIBS)
 
+lib2404_SOURCES = lib2404.c $(SUPPORTFILES) $(TESTUTIL) $(WARNLESS)
+lib2404_LDADD = $(TESTUTIL_LIBS)
+
 lib2502_SOURCES = lib2502.c $(SUPPORTFILES) $(TESTUTIL) $(WARNLESS)
 lib2502_LDADD = $(TESTUTIL_LIBS)
 
@@ -691,3 +710,8 @@ lib3100_LDADD = $(TESTUTIL_LIBS)
 lib3101_SOURCES = lib3101.c $(SUPPORTFILES) $(TESTUTIL) $(WARNLESS)
 lib3101_LDADD = $(TESTUTIL_LIBS)
 
+lib3102_SOURCES = lib3102.c $(SUPPORTFILES) $(TESTUTIL) $(WARNLESS)
+lib3102_LDADD = $(TESTUTIL_LIBS)
+
+lib3103_SOURCES = lib3103.c $(SUPPORTFILES)
+lib3103_LDADD = $(TESTUTIL_LIBS)

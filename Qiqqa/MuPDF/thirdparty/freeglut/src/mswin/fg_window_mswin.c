@@ -90,14 +90,16 @@ static pRegisterTouchWindow fghRegisterTouchWindow = (pRegisterTouchWindow)(intp
  * Setup the pixel format for a Win32 window
  */
 
-wchar_t* fghWstrFromStr(const char* str)
+TCHAR* fghTstrFromStr(const char* str)
 {
-    int i,len=strlen(str);
-    wchar_t* wstr = (wchar_t*)malloc(2*len+2);
-    for(i=0; i<len; i++)
-        wstr[i] = str[i];
-    wstr[len] = 0;
+#ifdef UNICODE
+    int len = MultiByteToWideChar(CP_UTF8, 0, str, -1, NULL, 0);
+    wchar_t* wstr = (wchar_t*)calloc(len, sizeof(wchar_t));
+    MultiByteToWideChar(CP_UTF8, 0, str, -1, wstr, len);
     return wstr;
+#else
+    return strdup(str);
+#endif
 }
 
 
@@ -273,7 +275,7 @@ GLboolean fgSetupPixelFormat( SFG_Window* window, GLboolean checkOnly,
     /* windows hack for multismapling/sRGB */
     if ( ( fgState.DisplayMode & GLUT_MULTISAMPLE ) ||
          ( fgState.DisplayMode & GLUT_SRGB ) )
-    {        
+    {
         HGLRC rc, rc_before=wglGetCurrentContext();
         HWND hWnd;
         HDC hDC, hDC_before=wglGetCurrentDC();
@@ -424,7 +426,7 @@ void fghComputeWindowRectFromClientArea_UseStyle( RECT *clientRect, const DWORD 
         windowRect.left     = clientRect->left;
         windowRect.top      = clientRect->top;
     }
-    
+
     /* done, copy windowRect to output */
     CopyRect(clientRect,&windowRect);
 }
@@ -461,7 +463,7 @@ void fghGetClientArea( RECT *clientRect, const SFG_Window *window, BOOL posIsOut
     POINT topLeftClient = {0,0};
 
     freeglut_return_if_fail((window && window->Window.Handle));
-    
+
     /* Get size of client rect */
     GetClientRect(window->Window.Handle, clientRect);
     if (posIsOutside)
@@ -487,7 +489,7 @@ typedef struct
 {
       int *x;
       int *y;
-      const char *name;
+      const TCHAR *name;
 } m_proc_t;
 
 static BOOL CALLBACK m_proc(HMONITOR mon,
@@ -502,24 +504,17 @@ static BOOL CALLBACK m_proc(HMONITOR mon,
       res=GetMonitorInfo(mon,(LPMONITORINFO)&info);
       if( res )
       {
-  		  wchar_t* wstr = fghWstrFromStr(dp->name);
-
-		  if( wcscmp(wstr,info.szDevice)==0 )
-		  {
-			  free(wstr);
-
-			  *(dp->x)=info.rcMonitor.left;
-			  *(dp->y)=info.rcMonitor.top;
-			  return FALSE;
-		  }
-
-		  free(wstr);
-	  }
-
+          if( _tcscmp(dp->name,info.szDevice)==0 )
+          {
+              *(dp->x)=info.rcMonitor.left;
+              *(dp->y)=info.rcMonitor.top;
+              return FALSE;
+          }
+      }
       return TRUE;
 }
 
-/* 
+/*
  * this function returns the origin of the screen identified by
  * fgDisplay.pDisplay.DisplayName, and 0 otherwise.
  * This is used in fgOpenWindow to open the gamemode window on the screen
@@ -573,6 +568,7 @@ void fgPlatformOpenWindow( SFG_Window* window, const char* title,
     DWORD exFlags = 0;
     BOOL atom;
     HDC dc;
+    TCHAR* tstr = NULL;
 
     /* Grab the window class we have registered on glutInit(): */
     atom = GetClassInfo( fgDisplay.pDisplay.Instance, _T("FREEGLUT"), &wc );
@@ -666,48 +662,37 @@ void fgPlatformOpenWindow( SFG_Window* window, const char* title,
     }
 #endif /* !defined(_WIN32_WCE) */
 
+    tstr = fghTstrFromStr(title);
 #if defined(_WIN32_WCE)
-    {
-        wchar_t* wstr = fghWstrFromStr(title);
+    window->Window.Handle = CreateWindow(
+        _T("FREEGLUT"),
+        tstr,
+        WS_VISIBLE | WS_POPUP,
+        0,0, 240,320,
+        NULL,
+        NULL,
+        fgDisplay.pDisplay.Instance,
+        (LPVOID) window
+    );
 
-        window->Window.Handle = CreateWindow(
-            _T("FREEGLUT"),
-            wstr,
-            WS_VISIBLE | WS_POPUP,
-            0,0, 240,320,
-            NULL,
-            NULL,
-            fgDisplay.pDisplay.Instance,
-            (LPVOID) window
-        );
-
-        free(wstr);
-
-        SHFullScreen(window->Window.Handle, SHFS_HIDESTARTICON);
-        SHFullScreen(window->Window.Handle, SHFS_HIDESIPBUTTON);
-        SHFullScreen(window->Window.Handle, SHFS_HIDETASKBAR);
-        MoveWindow(window->Window.Handle, 0, 0, 240, 320, TRUE);
-        ShowWindow(window->Window.Handle, SW_SHOW);
-        UpdateWindow(window->Window.Handle);
-    }
+    SHFullScreen(window->Window.Handle, SHFS_HIDESTARTICON);
+    SHFullScreen(window->Window.Handle, SHFS_HIDESIPBUTTON);
+    SHFullScreen(window->Window.Handle, SHFS_HIDETASKBAR);
+    MoveWindow(window->Window.Handle, 0, 0, 240, 320, TRUE);
+    ShowWindow(window->Window.Handle, SW_SHOW);
+    UpdateWindow(window->Window.Handle);
 #else
-	{
-		wchar_t* wstr = fghWstrFromStr(title);
-
-		window->Window.Handle = CreateWindowEx(
-			exFlags,
-			_T("FREEGLUT"),
-			wstr,
-			flags,
-			x, y, w, h,
-			(HWND)window->Parent == NULL ? NULL : window->Parent->Window.Handle,
-			(HMENU)NULL,
-			fgDisplay.pDisplay.Instance,
-			(LPVOID)window
-		);
-
-		free(wstr);
-	}
+    window->Window.Handle = CreateWindowEx(
+        exFlags,
+        _T("FREEGLUT"),
+        tstr,
+        flags,
+        x, y, w, h,
+        (HWND) window->Parent == NULL ? NULL : window->Parent->Window.Handle,
+        (HMENU) NULL,
+        fgDisplay.pDisplay.Instance,
+        (LPVOID) window
+    );
 #endif /* defined(_WIN32_WCE) */
 
     /* WM_CREATE message got sent and was handled by window proc */
@@ -716,7 +701,7 @@ void fgPlatformOpenWindow( SFG_Window* window, const char* title,
         fgError( "Failed to create a window (%s)!", title );
 
     /* Store title */
-    window->State.pWState.WindowTitle = strdup(title);
+    window->State.pWState.WindowTitle = tstr;
 
 #if !defined(_WIN32_WCE)
     /* Need to set requested style again, apparently Windows doesn't listen when requesting windows without title bar or borders */
@@ -857,25 +842,18 @@ void fgPlatformHideWindow( SFG_Window* window )
  */
 void fgPlatformGlutSetWindowTitle( const char* title )
 {
+    TCHAR* newTitle = fghTstrFromStr(title);
 #ifdef _WIN32_WCE
-    {
-        wchar_t* wstr = fghWstrFromStr(title);
-        SetWindowText( fgStructure.CurrentWindow->Window.Handle, wstr );
-        free(wstr);
-    }
+    SetWindowText( fgStructure.CurrentWindow->Window.Handle, newTitle );
 #else
     if (!IsIconic(fgStructure.CurrentWindow->Window.Handle))
-	{
-		wchar_t* wstr = fghWstrFromStr(title);
-		SetWindowText(fgStructure.CurrentWindow->Window.Handle, wstr);
-		free(wstr);
-	}
+        SetWindowText( fgStructure.CurrentWindow->Window.Handle, newTitle );
 #endif
 
     /* Make copy of string to refer to later */
     if (fgStructure.CurrentWindow->State.pWState.WindowTitle)
         free(fgStructure.CurrentWindow->State.pWState.WindowTitle);
-    fgStructure.CurrentWindow->State.pWState.WindowTitle = strdup(title);
+    fgStructure.CurrentWindow->State.pWState.WindowTitle = newTitle;
 }
 
 /*
@@ -883,15 +861,16 @@ void fgPlatformGlutSetWindowTitle( const char* title )
  */
 void fgPlatformGlutSetIconTitle( const char* title )
 {
+    TCHAR* newTitle = fghTstrFromStr(title);
 #ifndef _WIN32_WCE
     if (IsIconic(fgStructure.CurrentWindow->Window.Handle))
-        SetWindowTextA( fgStructure.CurrentWindow->Window.Handle, title );
+        SetWindowText( fgStructure.CurrentWindow->Window.Handle, newTitle );
 #endif
 
     /* Make copy of string to refer to later */
     if (fgStructure.CurrentWindow->State.pWState.IconTitle)
         free(fgStructure.CurrentWindow->State.pWState.IconTitle);
-    fgStructure.CurrentWindow->State.pWState.IconTitle = strdup(title);
+    fgStructure.CurrentWindow->State.pWState.IconTitle = newTitle;
 }
 
 

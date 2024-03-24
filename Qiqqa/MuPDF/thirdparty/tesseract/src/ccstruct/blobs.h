@@ -24,7 +24,7 @@
 #include "normalis.h"   // for DENORM
 #include "points.h"     // for FCOORD, ICOORD
 #include "rect.h"       // for TBOX
-#include "scrollview.h" // for ScrollView, ScrollView::Color
+#include "scrollview.h" // for ScrollView, Diagnostics::Color
 
 #include <tesseract/publictypes.h> // for OcrEngineMode
 
@@ -269,7 +269,7 @@ struct TESSLINE {
   }
 
 #if !GRAPHICS_DISABLED
-  void plot(ScrollView *window, ScrollView::Color color, ScrollView::Color child_color);
+  void plot(ScrollViewReference &window, Diagnostics::Color color, Diagnostics::Color child_color);
 #endif // !GRAPHICS_DISABLED
 
   // Returns the first outline point that has a different src_outline to its
@@ -323,7 +323,7 @@ struct TBLOB {
   // this blob and the Pix for the full image.
   void Normalize(const BLOCK *block, const FCOORD *rotation, const DENORM *predecessor,
                  float x_origin, float y_origin, float x_scale, float y_scale, float final_xshift,
-                 float final_yshift, bool inverse, Image pix);
+                 float final_yshift, bool inverse);
   // Rotates by the given rotation in place.
   void Rotate(const FCOORD rotation);
   // Moves by the given vec in place.
@@ -370,7 +370,7 @@ struct TBLOB {
   }
 
 #if !GRAPHICS_DISABLED
-  void plot(ScrollView *window, ScrollView::Color color, ScrollView::Color child_color);
+  void plot(ScrollViewReference &window, Diagnostics::Color color, Diagnostics::Color child_color);
 #endif // !GRAPHICS_DISABLED
 
   int BBArea() const {
@@ -435,7 +435,7 @@ struct TWERD {
   static TWERD *PolygonalCopy(bool allow_detailed_fx, WERD *src);
   // Baseline normalizes the blobs in-place, recording the normalization in the
   // DENORMs in the blobs.
-  void BLNormalize(const BLOCK *block, const ROW *row, Image pix, bool inverse, float x_height,
+  void BLNormalize(const BLOCK *block, const ROW *row, bool inverse, float x_height,
                    float baseline_shift, bool numeric_mode, tesseract::OcrEngineMode hint,
                    const TBOX *norm_box, DENORM *word_denorm);
   // Copies the data and the blobs, but leaves next untouched.
@@ -456,7 +456,7 @@ struct TWERD {
   void MergeBlobs(unsigned start, unsigned end);
 
 #if !GRAPHICS_DISABLED
-  void plot(ScrollView *window);
+  void plot(ScrollViewReference &window);
 #endif // !GRAPHICS_DISABLED
 
   std::vector<TBLOB *> blobs; // Blobs in word.

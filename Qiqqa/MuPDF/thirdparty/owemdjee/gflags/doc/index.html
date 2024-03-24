@@ -469,7 +469,7 @@ the application to print some information about itself and exit.</p>
   <td>shows all flags from all files, sorted by file and then by name;
       shows the flagname, its default value, and its help string</td>
 </tr><tr valign=top>
-  <td><code>--helpfull</code></td>
+  <td><code>--helpful</code></td>
   <td>same as -help, but unambiguously asks for all flags
      (in case -help changes in the future)</td>
 </tr><tr valign=top>
@@ -477,7 +477,7 @@ the application to print some information about itself and exit.</p>
   <td>shows only flags for the file with the same name as the executable 
       (usually the one containing <code>main()</code>)</td>
 </tr><tr valign=top>
-  <td><code>--helpxml</code></td>
+  <td><code>--help-xml</code></td>
   <td>like --help, but output is in xml for easier parsing</td>
 </tr><tr valign=top>
   <td><code>--helpon=FILE &nbsp;</code></td>
@@ -506,7 +506,7 @@ the application to print some information about itself and exit.</p>
 
 <p>Third are the 'recursive' flags, that cause other flag values to be
 set: <code>--fromenv</code>, <code>--tryfromenv</code>,
-<code>--flagfile</code>.  These are described below in more
+<code>--flag_file</code>.  These are described below in more
 detail.</p>
 
 <h3> <code>--fromenv</code> </h3>
@@ -542,9 +542,9 @@ the application.</p>
 <p>Note it is still an error to say <code>--tryfromenv=foo</code> if
 <code>foo</code> is not DEFINED somewhere in the application.</p>
 
-<h3 id="flagfiles"> <code>--flagfile</code> </h3>
+<h3 id="flagfiles"> <code>--flag_file</code> </h3>
 
-<p><code>--flagfile=f</code> tells the commandlineflags module to read
+<p><code>--flag_file=f</code> tells the commandlineflags module to read
 the file <code>f</code>, and to run all the flag-assignments found in
 that file as if these flags had been specified on the commandline.</p>
 
@@ -560,7 +560,7 @@ flagfiles.  An example flagfile, <code>/tmp/myflags</code>:</p>
 <p>With this flagfile, the following two lines are equivalent:<p>
 <pre>
    ./myapp --foo --nobig_menus --languages=english,french --bar
-   ./myapp --foo --flagfile=/tmp/myflags --bar
+   ./myapp --foo --flag_file=/tmp/myflags --bar
 </pre>
 
 <p>Note that many errors are silently suppressed in flagfiles.  In
@@ -583,7 +583,7 @@ applied to the current executable no matter what it is.</p>
 Leading whitespace is also ignored in flagfiles, as are blank
 lines.</p>
 
-<p>It is possible for a flagfile to use the <code>--flagfile</code>
+<p>It is possible for a flagfile to use the <code>--flag_file</code>
 flag to include another flagfile.</p>
 
 <p>Flags are always processed in the expected order.  That is,

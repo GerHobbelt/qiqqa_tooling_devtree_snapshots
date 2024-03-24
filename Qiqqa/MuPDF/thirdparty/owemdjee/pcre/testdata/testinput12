@@ -413,6 +413,20 @@
 \= Expect no match
     ab\x{df00}cdef\=ph
 
+/.a/match_invalid_utf
+    ab\=ph
+    ab\=ps
+\= Expect no match
+    b\x{df00}\=ph
+    b\x{df00}\=ps
+
+/.a$/match_invalid_utf
+    ab\=ph
+    ab\=ps
+\= Expect no match
+    b\x{df00}\=ph
+    b\x{df00}\=ps
+
 /ab$/match_invalid_utf
     ab\x{df00}cdeab
 \= Expect no match
@@ -450,6 +464,9 @@
 
 /aa/utf,ucp,match_invalid_utf,global
     \x{d800}aa
+    
+/A\z/utf,match_invalid_utf
+    A\x{df00}\n
 
 # ---------------------------------------------------- 
 
@@ -545,5 +562,15 @@
     \x{17f} 
 
 # ---------------------------------------------------- 
+
+# Quantifier after a literal that has the value of META_ACCEPT (not UTF). This
+# fails in 16-bit mode, but is OK for 32-bit.
+
+/\x{802a0000}*/
+    \x{802a0000}\x{802a0000}
+
+# UTF matching without UTF, check invalid UTF characters
+/\X++/
+    a\x{110000}\x{ffffffff}
 
 # End of testinput12

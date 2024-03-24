@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVT;EVT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVT;EVT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libevt/include;../../thirdparty/owemdjee/libevt/common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVT;EVT_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libevt/include;../../thirdparty/owemdjee/libevt/common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVT;EVT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVT;EVT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVT;EVT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libevt/include;../../thirdparty/owemdjee/libevt/common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libevt/include;../../thirdparty/owemdjee/libevt/common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVT;EVT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVT;EVT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libevt/include;../../thirdparty/owemdjee/libevt/common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVT;EVT_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libevt/include;../../thirdparty/owemdjee/libevt/common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVT;EVT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVT;EVT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVT;EVT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libevt/include;../../thirdparty/owemdjee/libevt/common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libevt/include;../../thirdparty/owemdjee/libevt/common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVT;EVT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVT;EVT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libevt/include;../../thirdparty/owemdjee/libevt/common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVT;EVT_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libevt/include;../../thirdparty/owemdjee/libevt/common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVT;EVT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVT;EVT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVT;EVT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libevt/include;../../thirdparty/owemdjee/libevt/common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libevt/include;../../thirdparty/owemdjee/libevt/common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVT;EVT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVT;EVT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libevt/include;../../thirdparty/owemdjee/libevt/common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVT;EVT_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libevt/include;../../thirdparty/owemdjee/libevt/common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVT;EVT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVT;EVT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVT;EVT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libevt/include;../../thirdparty/owemdjee/libevt/common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libevt/include;../../thirdparty/owemdjee/libevt/common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -396,29 +396,70 @@
     <ClInclude Include="../../thirdparty/owemdjee/libevt/tests/evt_test_macros.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libevt/tests/evt_test_memory.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libevt/tests/evt_test_unused.h" />
+    <Text Include="../../thirdparty/owemdjee/libevt/AUTHORS" />
+    <Text Include="../../thirdparty/owemdjee/libevt/COPYING.LESSER" />
     <Text Include="../../thirdparty/owemdjee/libevt/ChangeLog" />
     <Text Include="../../thirdparty/owemdjee/libevt/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libevt/NEWS" />
     <Text Include="../../thirdparty/owemdjee/libevt/README" />
+    <Text Include="../../thirdparty/owemdjee/libevt/acinclude.m4" />
+    <Text Include="../../thirdparty/owemdjee/libevt/appveyor.yml" />
     <Text Include="../../thirdparty/owemdjee/libevt/autogen.ps1" />
     <Text Include="../../thirdparty/owemdjee/libevt/autogen.sh" />
     <Text Include="../../thirdparty/owemdjee/libevt/build.ps1" />
     <Text Include="../../thirdparty/owemdjee/libevt/common/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libevt/common/types.h.in" />
     <Text Include="../../thirdparty/owemdjee/libevt/configure.ac" />
+    <Text Include="../../thirdparty/owemdjee/libevt/documentation/Windows Event Log (EVT) format.asciidoc" />
     <Text Include="../../thirdparty/owemdjee/libevt/dpkg/changelog.in" />
+    <Text Include="../../thirdparty/owemdjee/libevt/dpkg/libevt-dev.install" />
+    <Text Include="../../thirdparty/owemdjee/libevt/dpkg/libevt-python3.install" />
+    <Text Include="../../thirdparty/owemdjee/libevt/dpkg/libevt-tools.install" />
+    <Text Include="../../thirdparty/owemdjee/libevt/dpkg/libevt.install" />
+    <Text Include="../../thirdparty/owemdjee/libevt/dtfabric.yaml" />
     <Text Include="../../thirdparty/owemdjee/libevt/evttools/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libevt/include/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libevt/include/libevt.h.in" />
     <Text Include="../../thirdparty/owemdjee/libevt/include/libevt/definitions.h.in" />
     <Text Include="../../thirdparty/owemdjee/libevt/include/libevt/features.h.in" />
     <Text Include="../../thirdparty/owemdjee/libevt/include/libevt/types.h.in" />
+    <Text Include="../../thirdparty/owemdjee/libevt/libevt.ini" />
+    <Text Include="../../thirdparty/owemdjee/libevt/libevt.nuspec" />
     <Text Include="../../thirdparty/owemdjee/libevt/libevt.pc.in" />
     <Text Include="../../thirdparty/owemdjee/libevt/libevt.spec.in" />
     <Text Include="../../thirdparty/owemdjee/libevt/libevt/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libevt/libevt/libevt.rc.in" />
     <Text Include="../../thirdparty/owemdjee/libevt/libevt/libevt_definitions.h.in" />
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/common.m4" />
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libbfio.m4" />
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libcdata.m4" />
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libcdirectory.m4" />
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libcerror.m4" />
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libcfile.m4" />
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libclocale.m4" />
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libcnotify.m4" />
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libcpath.m4" />
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libcsplit.m4" />
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libcthreads.m4" />
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libexe.m4" />
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libfcache.m4" />
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libfdata.m4" />
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libfdatetime.m4" />
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libfguid.m4" />
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libfvalue.m4" />
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libfwevt.m4" />
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libfwnt.m4" />
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libregf.m4" />
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libuna.m4" />
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libwrc.m4" />
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/pthread.m4" />
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/python.m4" />
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/tests.m4" />
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/types.m4" />
     <Text Include="../../thirdparty/owemdjee/libevt/manuals/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/libevt/manuals/evtexport.1" />
+    <Text Include="../../thirdparty/owemdjee/libevt/manuals/evtinfo.1" />
+    <Text Include="../../thirdparty/owemdjee/libevt/manuals/libevt.3" />
     <Text Include="../../thirdparty/owemdjee/libevt/msvscpp/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libevt/po/ChangeLog" />
     <Text Include="../../thirdparty/owemdjee/libevt/po/Makevars.in" />
@@ -426,17 +467,25 @@
     <Text Include="../../thirdparty/owemdjee/libevt/pyevt-python2/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libevt/pyevt-python3/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libevt/pyevt/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/libevt/pyproject.toml" />
     <Text Include="../../thirdparty/owemdjee/libevt/runtests.ps1" />
     <Text Include="../../thirdparty/owemdjee/libevt/runtests.sh" />
+    <Text Include="../../thirdparty/owemdjee/libevt/setup.cfg.in" />
     <Text Include="../../thirdparty/owemdjee/libevt/setup.py" />
     <Text Include="../../thirdparty/owemdjee/libevt/synclibs.ps1" />
     <Text Include="../../thirdparty/owemdjee/libevt/synclibs.sh" />
+    <Text Include="../../thirdparty/owemdjee/libevt/synctestdata.ps1" />
     <Text Include="../../thirdparty/owemdjee/libevt/synctestdata.sh" />
     <Text Include="../../thirdparty/owemdjee/libevt/tests/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libevt/tests/build.sh" />
+    <Text Include="../../thirdparty/owemdjee/libevt/tests/data/end_of_file_record.1" />
+    <Text Include="../../thirdparty/owemdjee/libevt/tests/data/event_record.1" />
+    <Text Include="../../thirdparty/owemdjee/libevt/tests/data/file_header.1" />
+    <Text Include="../../thirdparty/owemdjee/libevt/tests/lsan.suppressions" />
     <Text Include="../../thirdparty/owemdjee/libevt/tests/pkgbuild.sh" />
     <Text Include="../../thirdparty/owemdjee/libevt/tests/pyevt_test_file.py" />
     <Text Include="../../thirdparty/owemdjee/libevt/tests/pyevt_test_support.py" />
+    <Text Include="../../thirdparty/owemdjee/libevt/tests/runtests.py" />
     <Text Include="../../thirdparty/owemdjee/libevt/tests/runtests.sh" />
     <Text Include="../../thirdparty/owemdjee/libevt/tests/syncsharedlibs.sh" />
     <Text Include="../../thirdparty/owemdjee/libevt/tests/test_evtexport.sh" />
@@ -447,7 +496,9 @@
     <Text Include="../../thirdparty/owemdjee/libevt/tests/test_manpage.sh" />
     <Text Include="../../thirdparty/owemdjee/libevt/tests/test_python_module.sh" />
     <Text Include="../../thirdparty/owemdjee/libevt/tests/test_runner.sh" />
+    <Text Include="../../thirdparty/owemdjee/libevt/tests/test_tools.ps1" />
     <Text Include="../../thirdparty/owemdjee/libevt/tests/test_tools.sh" />
+    <Text Include="../../thirdparty/owemdjee/libevt/tox.ini" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

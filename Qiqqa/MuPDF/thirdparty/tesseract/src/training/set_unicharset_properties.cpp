@@ -12,6 +12,10 @@
 // object, fills it with properties about the unichars it contains and writes
 // the result back to a file.
 
+#ifdef HAVE_TESSERACT_CONFIG_H
+#  include "config_auto.h" // HAS_LIBICU
+#endif
+
 #include "common/commandlineflags.h"
 #include "common/commontraining.h" // CheckSharedLibraryVersion
 #include "tprintf.h"
@@ -25,24 +29,32 @@
 using namespace tesseract;
 
 // The directory that is searched for universal script unicharsets.
-static STRING_PARAM_FLAG(script_dir, "", "Directory name for input script unicharsets/xheights");
+#if !defined(BUILD_MONOLITHIC)
+STRING_PARAM_FLAG(script_dir, "", "Directory name for input script unicharsets/xheights");
+#else
+DECLARE_STRING_PARAM_FLAG(script_dir);        // already declared in combine_lang_model.cpp
+#endif
 
 #if defined(TESSERACT_STANDALONE) && !defined(BUILD_MONOLITHIC)
 extern "C" int main(int argc, const char** argv)
 #else
-extern "C" int tesseract_set_unicharset_properties_main(int argc, const char** argv)
+extern "C" TESS_API int tesseract_set_unicharset_properties_main(int argc, const char** argv)
 #endif
 {
   tesseract::CheckSharedLibraryVersion();
-  tesseract::ParseCommandLineFlags(argv[0], &argc, &argv, true);
+  (void)tesseract::SetConsoleModeToUTF8();
+
+  int rv = tesseract::ParseCommandLineFlags("-U file -O file -X file --script_dir path", &argc, &argv);
+  if (rv >= 0)
+	  return rv;
 
   // Check validity of input flags.
   if (FLAGS_U.empty() || FLAGS_O.empty()) {
-    tprintf("ERROR: Specify both input and output unicharsets!\n");
+    tprintError("Specify both input and output unicharsets!\n");
     return EXIT_FAILURE;
   }
   if (FLAGS_script_dir.empty()) {
-    tprintf("ERROR: Must specify a script_dir!\n");
+    tprintError("Must specify a script_dir!\n");
     return EXIT_FAILURE;
   }
 
@@ -56,7 +68,7 @@ extern "C" int tesseract_set_unicharset_properties_main(int argc, const char** a
 #if defined(TESSERACT_STANDALONE) && !defined(BUILD_MONOLITHIC)
 extern "C" int main(int argc, const char** argv)
 #else
-extern "C" int tesseract_set_unicharset_properties_main(int argc, const char** argv)
+extern "C" TESS_API int tesseract_set_unicharset_properties_main(int argc, const char** argv)
 #endif
 {
   fprintf(stderr, "set_unicharset_properties tool not supported in this non-ICU / Unicode build.\n");

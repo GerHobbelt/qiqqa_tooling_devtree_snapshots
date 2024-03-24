@@ -6,6 +6,16 @@ env:
   UBSAN_OPTIONS: print_stacktrace=1
 
 jobs:
+  runner-selection:
+    # runs-on: ubuntu-latest
+    runs-on: ${{ github.repository_owner == 'boostorg' && fromJSON('[ "self-hosted", "linux", "x64", "ubuntu-latest-aws" ]') || 'ubuntu-latest' }}
+    outputs:
+      labelmatrix: ${{ steps.aws_hosted_runners.outputs.labelmatrix }}
+    steps:
+      - name: AWS Hosted Runners
+        id: aws_hosted_runners
+        uses: cppalliance/aws-hosted-runners@v1.0.0
+
   posix:
     if: true
     defaults:
@@ -16,16 +26,6 @@ jobs:
       fail-fast: false
       matrix:
         include:
-# gcc 4.7 not supported by beast
-# minimum requirement is gcc 4.8
-          - toolset: gcc-4.8
-            cxxstd: "11"
-            os: ubuntu-22.04
-            container: ubuntu:16.04
-            install: g++-4.8
-            supported: true
-# gcc 4.9 not supported by beast
-# It dies with ICE when compiling
           - toolset: gcc-5
             cxxstd: "11,14,1z"
             os: ubuntu-22.04
@@ -190,7 +190,8 @@ jobs:
             os: macos-11
             supported: true
 
-    runs-on: ${{ matrix.os }}
+    needs: [runner-selection]
+    runs-on: ${{ fromJSON(needs.runner-selection.outputs.labelmatrix)[matrix.os] }}
     container: ${{ matrix.container }}
 
     steps:
@@ -284,6 +285,7 @@ jobs:
           standards=$(sed 's/,/ /g' <<<"${{matrix.cxxstd}}")
           variants="debug release"
           err=0
+          cd libs/$LIBRARY
           for toolset in ${toolsets} ; do
             for standard in ${standards} ; do
               for variant in ${variants} ; do
@@ -291,7 +293,7 @@ jobs:
                   echo "skipping: ${toolset} ${standard} ${variant}"
                 else
                   echo "running: ${toolset} ${standard} ${variant}"
-                  ./b2 -j3 libs/$LIBRARY/test toolset=${toolset} cxxstd=${standard} variant=${variant}
+                  ../../b2 -j3 test toolset=${toolset} cxxstd=${standard} variant=${variant}
                   err=$?
                 fi
               done
@@ -396,23 +398,37 @@ jobs:
             cxxflags: "cxxflags=-Wa,-mbig-obj"
             supported: "Too many unknowns to get this compiler working - gcc-8.1"
 
-    runs-on: ${{matrix.os}}
+    needs: [runner-selection]
+    runs-on: ${{ fromJSON(needs.runner-selection.outputs.labelmatrix)[matrix.os] }}
 
     steps:
       - uses: actions/checkout@v3
-
       - name: Setup OpenSSL
+        env:
+          OPENSSL_ROOT: "C:\\OpenSSL"
         shell: cmd
         run: |
           echo Install choco
           powershell -Command iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
           if "${{matrix.addrmd}}" == "64" (
             choco install --no-progress -y openssl --x64
-            mklink /D "C:\\OpenSSL" "C:\\Program Files\\OpenSSL-Win64"
-          ) else (
-            choco install --no-progress -y openssl --x86
-            mklink /D "C:\\OpenSSL" "C:\\Program Files (x86)\\OpenSSL-Win32"
           )
+          if "${{matrix.addrmd}}" == "32" (
+            ; as of 17.08.23 openssl 3 doesn't support x86
+            set openssl_install_dir="C:\\Program Files (x86)\\OpenSSL-Win32"
+            choco install --no-progress -y openssl --forcex86 --version 1.1.1.2100
+          )
+
+          if "${{matrix.addrmd}}" == "64" (
+            if exist "C:\Program Files\OpenSSL\" (
+            set openssl_install_dir="C:\\Program Files\\OpenSSL"
+            ) else (
+            set openssl_install_dir="C:\\Program Files\\OpenSSL-Win64"
+            )
+          )
+          mklink /D %OPENSSL_ROOT% %openssl_install_dir%
+          refreshenv
+          set
 
       - name: Setup Boost
         shell: cmd
@@ -440,10 +456,12 @@ jobs:
 
       - name: Run tests
         shell: bash
+        env:
+          OPENSSL_ROOT: "C:/OpenSSL"
         run: |
           echo "current directory: $(pwd)"
           cd ../boost-root
-          export OPENSSL_ROOT="C:\\OpenSSL"
+          export OPENSSL_ROOT="C:/OpenSSL"
           if [[ "${{matrix.supported}}" != "true" ]] ; then
             echo "This configuration is not supported because ${{matrix.supported}}"
             exit 0
@@ -452,12 +470,13 @@ jobs:
           standards=$(sed 's/,/ /g' <<<"${{matrix.cxxstd}}")
           address_models=$(sed 's/,/ /g' <<<"${{matrix.addrmd}}")
           variants="debug release"
+          cd libs/$LIBRARY
           for toolset in ${toolsets} ; do
             for standard in ${standards} ; do
               for address_model in ${address_models} ; do
                 for variant in ${variants} ; do
                   echo "running: ${toolset} ${standard} ${address_model} ${variant}"
-                  ./b2 -j3 ${{matrix.cxxflags}} libs/$LIBRARY/test toolset=${toolset} cxxstd=${standard} address-model=${address_model} variant=${variant} || exit $?
+                  ../../b2 -j3 ${{matrix.cxxflags}} test toolset=${toolset} cxxstd=${standard} address-model=${address_model} variant=${variant} || exit $?
                 done
               done
             done

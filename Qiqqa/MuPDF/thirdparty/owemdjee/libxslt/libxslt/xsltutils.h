@@ -13,6 +13,7 @@
 #define __XML_XSLTUTILS_H__
 
 #include <libxslt/xsltconfig.h>
+#include <libxml/xmlversion.h>
 #include <libxml/xpath.h>
 #include <libxml/dict.h>
 #include <libxml/xmlerror.h>
@@ -91,6 +92,13 @@ XSLTPUBFUN const xmlChar * XSLTCALL
 XSLTPUBFUN int XSLTCALL
 		xsltGetUTF8Char	(const unsigned char *utf,
 				 int *len);
+#ifdef IN_LIBXSLT
+/** DOC_DISABLE */
+XSLTPUBFUN int XSLTCALL
+		xsltGetUTF8CharZ (const unsigned char *utf,
+				  int *len);
+/** DOC_ENABLE */
+#endif
 
 /*
  * XSLT Debug Tracing Tracing Types
@@ -250,6 +258,7 @@ XSLTPUBFUN xmlXPathCompExprPtr XSLTCALL
 						 int flags);
 
 #ifdef IN_LIBXSLT
+/** DOC_DISABLE */
 #define XSLT_SOURCE_NODE_MASK       15u
 #define XSLT_SOURCE_NODE_HAS_KEY    1u
 #define XSLT_SOURCE_NODE_HAS_ID     2u
@@ -262,6 +271,7 @@ int
 xsltClearSourceNodeFlags(xmlNodePtr node, int flags);
 void **
 xsltGetPSVIPtr(xmlNodePtr cur);
+/** DOC_ENABLE */
 #endif
 
 #ifdef WITH_PROFILER

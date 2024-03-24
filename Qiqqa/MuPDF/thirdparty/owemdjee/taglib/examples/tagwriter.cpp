@@ -24,18 +24,20 @@
 
 #include <iostream>
 #include <iomanip>
-#include <string.h>
-
-#include <stdio.h>
+#include <fstream>
+#include <sstream>
+#include <cstring>
+#include <cstdio>
+#include <cstdlib>
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <stdlib.h>
 
-#include <tlist.h>
-#include <fileref.h>
-#include <tfile.h>
-#include <tag.h>
-#include <tpropertymap.h>
+#include "tlist.h"
+#include "tfile.h"
+#include "tpropertymap.h"
+#include "tvariant.h"
+#include "fileref.h"
+#include "tag.h"
 
 using namespace std;
 
@@ -70,6 +72,7 @@ static int usage()
   cout << "  -R <tagname> <tagvalue>"   << endl;
   cout << "  -I <tagname> <tagvalue>"   << endl;
   cout << "  -D <tagname>"   << endl;
+  cout << "  -p <picturefile> <description> (\"\" \"\" to remove)" << endl;
   cout << endl;
 
   return 1;
@@ -79,14 +82,14 @@ static void checkForRejectedProperties(const TagLib::PropertyMap &tags)
 { // stolen from tagreader.cpp
   if(tags.size() > 0) {
     unsigned int longest = 0;
-    for(TagLib::PropertyMap::ConstIterator i = tags.begin(); i != tags.end(); ++i) {
+    for(auto i = tags.begin(); i != tags.end(); ++i) {
       if(i->first.size() > longest) {
         longest = i->first.size();
       }
     }
     cout << "-- rejected TAGs (properties) --" << endl;
-    for(TagLib::PropertyMap::ConstIterator i = tags.begin(); i != tags.end(); ++i) {
-      for(TagLib::StringList::ConstIterator j = i->second.begin(); j != i->second.end(); ++j) {
+    for(auto i = tags.begin(); i != tags.end(); ++i) {
+      for(auto j = i->second.begin(); j != i->second.end(); ++j) {
         cout << left << std::setw(longest) << i->first << " - " << '"' << *j << '"' << endl;
       }
     }
@@ -115,17 +118,18 @@ int main(int argc, const char **argv)
   if(fileList.isEmpty())
     return usage();
 
-  for(int i = 1; i < argc - 1; i += 2) {
+  int i = 1;
+  while(i < argc - 1) {
 
     if(isArgument(argv[i]) && i + 1 < argc && !isArgument(argv[i + 1])) {
 
       char field = argv[i][1];
       TagLib::String value = argv[i + 1];
+      int numArgsConsumed = 2;
 
-      TagLib::List<TagLib::FileRef>::ConstIterator it;
-      for(it = fileList.begin(); it != fileList.end(); ++it) {
+      for(auto &f : fileList) {
 
-        TagLib::Tag *t = (*it).tag();
+        TagLib::Tag *t = f.tag();
 
         switch (field) {
         case 't':
@@ -152,39 +156,75 @@ int main(int argc, const char **argv)
         case 'R':
         case 'I':
           if(i + 2 < argc) {
-            TagLib::PropertyMap map = (*it).file()->properties ();
+            TagLib::PropertyMap map = f.properties();
             if(field == 'R') {
               map.replace(value, TagLib::String(argv[i + 2]));
             }
             else {
               map.insert(value, TagLib::String(argv[i + 2]));
             }
-            ++i;
-            checkForRejectedProperties((*it).file()->setProperties(map));
+            numArgsConsumed = 3;
+            checkForRejectedProperties(f.setProperties(map));
           }
           else {
             return usage();
           }
           break;
         case 'D': {
-          TagLib::PropertyMap map = (*it).file()->properties();
+          TagLib::PropertyMap map = f.properties();
           map.erase(value);
-          checkForRejectedProperties((*it).file()->setProperties(map));
+          checkForRejectedProperties(f.setProperties(map));
+          break;
+        }
+        case 'p': {
+          if(i + 2 < argc) {
+            numArgsConsumed = 3;
+            if(!value.isEmpty()) {
+              if(!isFile(value.toCString())) {
+                cout << value.toCString() << " not found." << endl;
+                return 1;
+              }
+              ifstream picture;
+              picture.open(value.toCString());
+              stringstream buffer;
+              buffer << picture.rdbuf();
+              picture.close();
+              TagLib::String buf(buffer.str());
+              TagLib::ByteVector data(buf.data(TagLib::String::Latin1));
+              TagLib::String mimeType = data.startsWith("\x89PNG\x0d\x0a\x1a\x0a")
+                ? "image/png" : "image/jpeg";
+              TagLib::String description(argv[i + 2]);
+              f.setComplexProperties("PICTURE", {
+                {
+                  {"data", data},
+                  {"pictureType", "Front Cover"},
+                  {"mimeType", mimeType},
+                  {"description", description}
+                }
+              });
+            }
+            else {
+              // empty value, remove pictures
+              f.setComplexProperties("PICTURE", {});
+            }
+          }
+          else {
+            usage();
+          }
           break;
         }
         default:
           return usage();
-          break;
         }
       }
+      i += numArgsConsumed;
     }
     else
       return usage();
   }
 
-  TagLib::List<TagLib::FileRef>::ConstIterator it;
-  for(it = fileList.begin(); it != fileList.end(); ++it)
-    (*it).file()->save();
+  for(auto &f : fileList)
+    f.save();
 
   return 0;
 }

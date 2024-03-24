@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.18)
 
 file(STRINGS "configure.ac" CONFIGURE_AC_LINES)
 foreach(line ${CONFIGURE_AC_LINES})
@@ -28,6 +28,7 @@ include(CheckCSourceCompiles)
 include(CheckFunctionExists)
 include(CheckIncludeFiles)
 include(CheckLibraryExists)
+include(CheckLinkerFlag)
 include(CheckSymbolExists)
 include(CMakePackageConfigHelpers)
 include(GNUInstallDirs)
@@ -39,7 +40,6 @@ endif()
 option(BUILD_SHARED_LIBS "Build shared libraries" ON)
 option(LIBXSLT_WITH_DEBUGGER "Add the debugging support" ON)
 option(LIBXSLT_WITH_CRYPTO "Add crypto support to exslt" OFF)
-option(LIBXSLT_WITH_MEM_DEBUG "Add the memory debugging module" OFF)
 option(LIBXSLT_WITH_MODULES "Add the module support" ON)
 option(LIBXSLT_WITH_PROFILER "Add the profiling support" ON)
 option(LIBXSLT_WITH_PYTHON "Build Python bindings" ON)
@@ -75,7 +75,7 @@ if(LIBXSLT_WITH_THREADS)
 	find_package(Threads REQUIRED)
 endif()
 
-foreach(VARIABLE IN ITEMS WITH_CRYPTO WITH_DEBUGGER WITH_MEM_DEBUG WITH_MODULES WITH_PROFILER WITH_PYTHON WITH_TRIO WITH_XSLT_DEBUG)
+foreach(VARIABLE IN ITEMS WITH_CRYPTO WITH_DEBUGGER WITH_MODULES WITH_PROFILER WITH_PYTHON WITH_TRIO WITH_XSLT_DEBUG)
 	if(LIBXSLT_${VARIABLE})
 		set(${VARIABLE} 1)
 	else()
@@ -84,13 +84,6 @@ foreach(VARIABLE IN ITEMS WITH_CRYPTO WITH_DEBUGGER WITH_MEM_DEBUG WITH_MODULES 
 endforeach()
 
 set(MODULE_EXTENSION "${CMAKE_SHARED_LIBRARY_SUFFIX}")
-
-if(CMAKE_C_COMPILER_ID MATCHES "Clang" OR CMAKE_C_COMPILER_ID STREQUAL "GNU")
-	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -Wshadow \
--Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return \
--Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline \
--Wredundant-decls -Wno-long-long -Wno-format-extra-args")
-endif()
 
 if(LIBXSLT_WITH_CRYPTO AND NOT WIN32)
 	list(APPEND CMAKE_REQUIRED_LIBRARIES Gcrypt::Gcrypt)
@@ -212,6 +205,21 @@ if(NOT BUILD_SHARED_LIBS)
 	target_compile_definitions(LibXslt INTERFACE LIBXSLT_STATIC)
 endif()
 
+if(CMAKE_C_COMPILER_ID MATCHES "Clang" OR CMAKE_C_COMPILER_ID STREQUAL "GNU")
+	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -Wshadow \
+-Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return \
+-Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline \
+-Wredundant-decls -Wno-long-long -Wno-format-extra-args")
+
+	if(BUILD_SHARED_LIBS AND UNIX AND NOT APPLE)
+		check_linker_flag(C "LINKER:--undefined-version" FLAG_UNDEFINED_VERSION)
+		if (FLAG_UNDEFINED_VERSION)
+			target_link_options(LibXslt PRIVATE "LINKER:--undefined-version")
+		endif()
+		target_link_options(LibXslt PRIVATE "LINKER:--version-script=${CMAKE_CURRENT_SOURCE_DIR}/libxslt/libxslt.syms")
+	endif()
+endif()
+
 target_include_directories(
 	LibXslt
 	PUBLIC
@@ -285,7 +293,7 @@ set(
 	libexslt/date.c
 	libexslt/dynamic.c
 	libexslt/exslt.c
-	libexslt/functions.c
+	libexslt/exfunctions.c
 	libexslt/libexslt.h
 	libexslt/math.c
 	libexslt/saxon.c

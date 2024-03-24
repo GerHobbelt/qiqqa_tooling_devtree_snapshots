@@ -112,23 +112,23 @@
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\include;..\..\thirdparty\zlib;..\..\include\mupdf;..\..\thirdparty\owemdjee\plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>CURL_DISABLE_LDAP;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../include;../../thirdparty/zlib;../../include/mupdf;../../thirdparty/owemdjee/plf_nanotimer;../../scripts/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CURL_DISABLE_LDAP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
       <TargetMachine>MachineX86</TargetMachine>
-      <AdditionalDependencies>ws2_32.lib;Normaliz.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;Normaliz.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <GenerateMapFile>true</GenerateMapFile>
       <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
       <MapExports>true</MapExports>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\include;..\..\thirdparty\zlib;..\..\include\mupdf;..\..\thirdparty\owemdjee\plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../include;../../thirdparty/zlib;../../include/mupdf;../../thirdparty/owemdjee/plf_nanotimer;../../scripts/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -137,45 +137,45 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\include;..\..\thirdparty\zlib;..\..\include\mupdf;..\..\thirdparty\owemdjee\plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>CURL_DISABLE_LDAP;WIN64;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../include;../../thirdparty/zlib;../../include/mupdf;../../thirdparty/owemdjee/plf_nanotimer;../../scripts/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CURL_DISABLE_LDAP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
       <TargetMachine>MachineX64</TargetMachine>
-      <AdditionalDependencies>ws2_32.lib;Normaliz.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;Normaliz.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <GenerateMapFile>true</GenerateMapFile>
       <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
       <MapExports>true</MapExports>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\include;..\..\thirdparty\zlib;..\..\include\mupdf;..\..\thirdparty\owemdjee\plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../include;../../thirdparty/zlib;../../include/mupdf;../../thirdparty/owemdjee/plf_nanotimer;../../scripts/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories>..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\include;..\..\thirdparty\zlib;..\..\include\mupdf;..\..\thirdparty\owemdjee\plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>CURL_DISABLE_LDAP;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../include;../../thirdparty/zlib;../../include/mupdf;../../thirdparty/owemdjee/plf_nanotimer;../../scripts/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CURL_DISABLE_LDAP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
       <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <TargetMachine>MachineX86</TargetMachine>
-      <AdditionalDependencies>ws2_32.lib;Normaliz.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;Normaliz.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateMapFile>true</GenerateMapFile>
       <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
       <MapExports>true</MapExports>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\include;..\..\thirdparty\zlib;..\..\include\mupdf;..\..\thirdparty\owemdjee\plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../include;../../thirdparty/zlib;../../include/mupdf;../../thirdparty/owemdjee/plf_nanotimer;../../scripts/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -185,30 +185,42 @@
     <ClCompile>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories>..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\include;..\..\thirdparty\zlib;..\..\include\mupdf;..\..\thirdparty\owemdjee\plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>CURL_DISABLE_LDAP;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../include;../../thirdparty/zlib;../../include/mupdf;../../thirdparty/owemdjee/plf_nanotimer;../../scripts/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CURL_DISABLE_LDAP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
       <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <TargetMachine>MachineX64</TargetMachine>
-      <AdditionalDependencies>ws2_32.lib;Normaliz.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;Normaliz.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateMapFile>true</GenerateMapFile>
       <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
       <MapExports>true</MapExports>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\include;..\..\thirdparty\zlib;..\..\include\mupdf;..\..\thirdparty\owemdjee\plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../include;../../thirdparty/zlib;../../include/mupdf;../../thirdparty/owemdjee/plf_nanotimer;../../scripts/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ProjectReference Include="libbrotli.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffd7760d}</Project>
+    </ProjectReference>
     <ProjectReference Include="libcurl.vcxproj">
       <Project>{87ee9da4-de1e-4448-8324-183c98dca588}</Project>
     </ProjectReference>
     <ProjectReference Include="libmupdf_minimal_core.vcxproj">
       <Project>{6f1ee8ba-ccb7-4f76-b9da-337c41dd6fc0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libsystem_override.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8318-7518ff7ef82f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libzlib.vcxproj">
+      <Project>{5edcf4fd-0291-4fb9-8d96-458957ca5e3c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libzstd.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518fffeb6e4}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
@@ -244,25 +256,79 @@
     <Text Include="../../thirdparty/curl/README" />
     <Text Include="../../thirdparty/curl/README.md" />
     <Text Include="../../thirdparty/curl/SECURITY.md" />
+    <Text Include="../../thirdparty/curl/acinclude.m4" />
+    <Text Include="../../thirdparty/curl/appveyor.sh" />
+    <Text Include="../../thirdparty/curl/appveyor.yml" />
     <Text Include="../../thirdparty/curl/buildconf.bat" />
     <Text Include="../../thirdparty/curl/configure.ac" />
     <Text Include="../../thirdparty/curl/curl-config.in" />
     <Text Include="../../thirdparty/curl/include/Makefile.am" />
     <Text Include="../../thirdparty/curl/include/README.md" />
     <Text Include="../../thirdparty/curl/include/curl/Makefile.am" />
+    <Text Include="../../thirdparty/curl/libcurl.def" />
     <Text Include="../../thirdparty/curl/libcurl.pc.in" />
+    <Text Include="../../thirdparty/curl/m4/curl-amissl.m4" />
+    <Text Include="../../thirdparty/curl/m4/curl-bearssl.m4" />
+    <Text Include="../../thirdparty/curl/m4/curl-compilers.m4" />
+    <Text Include="../../thirdparty/curl/m4/curl-confopts.m4" />
+    <Text Include="../../thirdparty/curl/m4/curl-functions.m4" />
+    <Text Include="../../thirdparty/curl/m4/curl-gnutls.m4" />
+    <Text Include="../../thirdparty/curl/m4/curl-mbedtls.m4" />
+    <Text Include="../../thirdparty/curl/m4/curl-openssl.m4" />
+    <Text Include="../../thirdparty/curl/m4/curl-override.m4" />
+    <Text Include="../../thirdparty/curl/m4/curl-reentrant.m4" />
+    <Text Include="../../thirdparty/curl/m4/curl-rustls.m4" />
+    <Text Include="../../thirdparty/curl/m4/curl-schannel.m4" />
+    <Text Include="../../thirdparty/curl/m4/curl-sectransp.m4" />
+    <Text Include="../../thirdparty/curl/m4/curl-sysconfig.m4" />
+    <Text Include="../../thirdparty/curl/m4/curl-wolfssl.m4" />
+    <Text Include="../../thirdparty/curl/m4/xc-am-iface.m4" />
+    <Text Include="../../thirdparty/curl/m4/xc-cc-check.m4" />
+    <Text Include="../../thirdparty/curl/m4/xc-lt-iface.m4" />
+    <Text Include="../../thirdparty/curl/m4/xc-translit.m4" />
+    <Text Include="../../thirdparty/curl/m4/xc-val-flgs.m4" />
+    <Text Include="../../thirdparty/curl/m4/zz40-xc-ovr.m4" />
+    <Text Include="../../thirdparty/curl/m4/zz50-xc-ovr.m4" />
+    <Text Include="../../thirdparty/curl/m4/zz60-xc-ovr.m4" />
     <Text Include="../../thirdparty/curl/plan9/README" />
     <Text Include="../../thirdparty/curl/projects/README.md" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC10/lib/libcurl.tmpl" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC10/lib/libcurl.vcxproj.filters" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC10/src/curl.tmpl" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC10/src/curl.vcxproj.filters" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC11/lib/libcurl.tmpl" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC11/lib/libcurl.vcxproj.filters" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC11/src/curl.tmpl" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC11/src/curl.vcxproj.filters" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC12/lib/libcurl.tmpl" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC12/lib/libcurl.vcxproj.filters" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC12/src/curl.tmpl" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC12/src/curl.vcxproj.filters" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC14.10/" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC14.10/lib/libcurl.tmpl" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC14.10/lib/libcurl.vcxproj.filters" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC14.10/src/curl.tmpl" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC14.10/src/curl.vcxproj.filters" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC14.20/" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC14.20/lib/libcurl.tmpl" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC14.20/lib/libcurl.vcxproj.filters" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC14.20/src/curl.tmpl" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC14.20/src/curl.vcxproj.filters" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC14.30/" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC14.30/lib/libcurl.tmpl" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC14.30/lib/libcurl.vcxproj.filters" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC14.30/src/curl.tmpl" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC14.30/src/curl.vcxproj.filters" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC14/lib/libcurl.tmpl" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC14/lib/libcurl.vcxproj.filters" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC14/src/curl.tmpl" />
+    <Text Include="../../thirdparty/curl/projects/Windows/VC14/src/curl.vcxproj.filters" />
     <Text Include="../../thirdparty/curl/projects/build-openssl.bat" />
     <Text Include="../../thirdparty/curl/projects/build-wolfssl.bat" />
     <Text Include="../../thirdparty/curl/projects/checksrc.bat" />
     <Text Include="../../thirdparty/curl/projects/generate.bat" />
-    <Text Include="../../thirdparty/curl/scripts/Makefile.am" />
-    <Text Include="../../thirdparty/curl/scripts/contributors.sh" />
-    <Text Include="../../thirdparty/curl/scripts/contrithanks.sh" />
-    <Text Include="../../thirdparty/curl/scripts/coverage.sh" />
-    <Text Include="../../thirdparty/curl/scripts/firefox-db2pem.sh" />
-    <Text Include="../../thirdparty/curl/scripts/installcheck.sh" />
+    <Text Include="../../thirdparty/curl/projects/wolfssl_override.props" />
+    <Text Include="../../thirdparty/curl/vs/vc8/lib/vc8libcurl.vcxproj.filters" />
     <Text Include="../../thirdparty/curl/winbuild/Makefile.vc" />
     <Text Include="../../thirdparty/curl/winbuild/MakefileBuild.vc" />
     <Text Include="../../thirdparty/curl/winbuild/README.md" />

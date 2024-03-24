@@ -27,40 +27,50 @@
  *   http://www.mozilla.org/MPL/                                           *
  ***************************************************************************/
 
-#include <cstring>
-
-#include <tfile.h>
-#include <tfilestream.h>
-#include <tstring.h>
-#include <tdebug.h>
-#include <trefcounter.h>
-
 #include "fileref.h"
-#include "asffile.h"
-#include "mpegfile.h"
-#include "vorbisfile.h"
-#include "flacfile.h"
-#include "oggflacfile.h"
-#include "mpcfile.h"
-#include "mp4file.h"
-#include "wavpackfile.h"
-#include "speexfile.h"
-#include "opusfile.h"
-#include "trueaudiofile.h"
+
+#include <cstring>
+#include <utility>
+
+#include "tfilestream.h"
+#include "tpropertymap.h"
+#include "tstringlist.h"
+#include "tvariant.h"
+#include "tdebug.h"
 #include "aifffile.h"
-#include "wavfile.h"
 #include "apefile.h"
-#include "modfile.h"
-#include "s3mfile.h"
+#include "asffile.h"
+#include "flacfile.h"
 #include "itfile.h"
+#include "modfile.h"
+#include "mp4file.h"
+#include "mpcfile.h"
+#include "mpegfile.h"
+#include "oggflacfile.h"
+#include "opusfile.h"
+#include "s3mfile.h"
+#include "speexfile.h"
+#include "trueaudiofile.h"
+#include "vorbisfile.h"
+#include "wavfile.h"
+#include "wavpackfile.h"
 #include "xmfile.h"
+#include "dsffile.h"
+#include "dsdifffile.h"
 
 using namespace TagLib;
 
+class FileRef::FileTypeResolver::FileTypeResolverPrivate
+{
+};
+
+class FileRef::StreamTypeResolver::StreamTypeResolverPrivate
+{
+};
+
 namespace
 {
-  typedef List<const FileRef::FileTypeResolver *> ResolverList;
-  ResolverList fileTypeResolvers;
+  List<const FileRef::FileTypeResolver *> fileTypeResolvers;
 
   // Detect the file type by user-defined resolvers.
 
@@ -68,36 +78,33 @@ namespace
                           AudioProperties::ReadStyle audioPropertiesStyle)
   {
 #ifdef _WIN32
-    if(::strlen(fileName) == 0 && ::wcslen(fileName) == 0)
-      return 0;
+    if(::wcslen(fileName) == 0)
+      return nullptr;
 #else
     if(::strlen(fileName) == 0)
-      return 0;
+      return nullptr;
 #endif
-    ResolverList::ConstIterator it = fileTypeResolvers.begin();
-    for(; it != fileTypeResolvers.end(); ++it) {
-      File *file = (*it)->createFile(fileName, readAudioProperties, audioPropertiesStyle);
+    for(const auto &resolver : std::as_const(fileTypeResolvers)) {
+      File *file = resolver->createFile(fileName, readAudioProperties, audioPropertiesStyle);
       if(file)
         return file;
     }
 
-    return 0;
+    return nullptr;
   }
 
   File *detectByResolvers(IOStream* stream, bool readAudioProperties,
                           AudioProperties::ReadStyle audioPropertiesStyle)
   {
-    for(ResolverList::ConstIterator it = fileTypeResolvers.begin();
-        it != fileTypeResolvers.end(); ++it) {
-      if(const FileRef::StreamTypeResolver *streamResolver =
-           dynamic_cast<const FileRef::StreamTypeResolver*>(*it)) {
+    for(const auto &resolver : std::as_const(fileTypeResolvers)) {
+      if(auto streamResolver = dynamic_cast<const FileRef::StreamTypeResolver *>(resolver)) {
         if(File *file = streamResolver->createFileFromStream(
              stream, readAudioProperties, audioPropertiesStyle))
           return file;
       }
     }
 
-    return 0;
+    return nullptr;
   }
 
   // Detect the file type based on the file extension.
@@ -121,16 +128,24 @@ namespace
     // that a default file type resolver is created.
 
     if(ext.isEmpty())
-      return 0;
+      return nullptr;
 
     // .oga can be any audio in the Ogg container. So leave it to content-based detection.
 
-    File *file = 0;
+    File *file = nullptr;
 
     if(ext == "MP3")
       file = new MPEG::File(stream, ID3v2::FrameFactory::instance(), readAudioProperties, audioPropertiesStyle);
     else if(ext == "OGG")
       file = new Ogg::Vorbis::File(stream, readAudioProperties, audioPropertiesStyle);
+    else if(ext == "OGA") {
+      /* .oga can be any audio in the Ogg container. First try FLAC, then Vorbis. */
+      file = new Ogg::FLAC::File(stream, readAudioProperties, audioPropertiesStyle);
+      if(!file->isValid()) {
+        delete file;
+        file = new Ogg::Vorbis::File(stream, readAudioProperties, audioPropertiesStyle);
+      }
+    }
     else if(ext == "FLAC")
       file = new FLAC::File(stream, ID3v2::FrameFactory::instance(), readAudioProperties, audioPropertiesStyle);
     else if(ext == "MPC")
@@ -162,6 +177,10 @@ namespace
       file = new IT::File(stream, readAudioProperties, audioPropertiesStyle);
     else if(ext == "XM")
       file = new XM::File(stream, readAudioProperties, audioPropertiesStyle);
+    else if(ext == "DSF")
+      file = new DSF::File(stream, readAudioProperties, audioPropertiesStyle);
+    else if(ext == "DFF" || ext == "DSDIFF")
+      file = new DSDIFF::File(stream, readAudioProperties, audioPropertiesStyle);
 
     // if file is not valid, leave it to content-based detection.
 
@@ -171,7 +190,7 @@ namespace
       delete file;
     }
 
-    return 0;
+    return nullptr;
   }
 
   // Detect the file type based on the actual content of the stream.
@@ -179,7 +198,7 @@ namespace
   File *detectByContent(IOStream *stream, bool readAudioProperties,
                         AudioProperties::ReadStyle audioPropertiesStyle)
   {
-    File *file = 0;
+    File *file = nullptr;
 
     if(MPEG::File::isSupported(stream))
       file = new MPEG::File(stream, ID3v2::FrameFactory::instance(), readAudioProperties, audioPropertiesStyle);
@@ -209,6 +228,10 @@ namespace
       file = new RIFF::WAV::File(stream, readAudioProperties, audioPropertiesStyle);
     else if(APE::File::isSupported(stream))
       file = new APE::File(stream, readAudioProperties, audioPropertiesStyle);
+    else if(DSF::File::isSupported(stream))
+      file = new DSF::File(stream, readAudioProperties, audioPropertiesStyle);
+    else if(DSDIFF::File::isSupported(stream))
+      file = new DSDIFF::File(stream, readAudioProperties, audioPropertiesStyle);
 
     // isSupported() only does a quick check, so double check the file here.
 
@@ -218,96 +241,40 @@ namespace
       delete file;
     }
 
-    return 0;
+    return nullptr;
   }
 
-  // Internal function that supports FileRef::create().
-  // This looks redundant, but necessary in order not to change the previous
-  // behavior of FileRef::create().
-
-  File* createInternal(FileName fileName, bool readAudioProperties,
-                       AudioProperties::ReadStyle audioPropertiesStyle)
-  {
-    File *file = detectByResolvers(fileName, readAudioProperties, audioPropertiesStyle);
-    if(file)
-      return file;
-
-#ifdef _WIN32
-    const String s = fileName.toString();
-#else
-    const String s(fileName);
-#endif
-
-    String ext;
-    const int pos = s.rfind(".");
-    if(pos != -1)
-      ext = s.substr(pos + 1).upper();
-
-    if(ext.isEmpty())
-      return 0;
-
-    if(ext == "MP3")
-      return new MPEG::File(fileName, ID3v2::FrameFactory::instance(), readAudioProperties, audioPropertiesStyle);
-    if(ext == "OGG")
-      return new Ogg::Vorbis::File(fileName, readAudioProperties, audioPropertiesStyle);
-    if(ext == "OGA") {
-      /* .oga can be any audio in the Ogg container. First try FLAC, then Vorbis. */
-      File *file = new Ogg::FLAC::File(fileName, readAudioProperties, audioPropertiesStyle);
-      if(file->isValid())
-        return file;
-      delete file;
-      return new Ogg::Vorbis::File(fileName, readAudioProperties, audioPropertiesStyle);
-    }
-    if(ext == "FLAC")
-      return new FLAC::File(fileName, ID3v2::FrameFactory::instance(), readAudioProperties, audioPropertiesStyle);
-    if(ext == "MPC")
-      return new MPC::File(fileName, readAudioProperties, audioPropertiesStyle);
-    if(ext == "WV")
-      return new WavPack::File(fileName, readAudioProperties, audioPropertiesStyle);
-    if(ext == "SPX")
-      return new Ogg::Speex::File(fileName, readAudioProperties, audioPropertiesStyle);
-    if(ext == "OPUS")
-      return new Ogg::Opus::File(fileName, readAudioProperties, audioPropertiesStyle);
-    if(ext == "TTA")
-      return new TrueAudio::File(fileName, readAudioProperties, audioPropertiesStyle);
-    if(ext == "M4A" || ext == "M4R" || ext == "M4B" || ext == "M4P" || ext == "MP4" || ext == "3G2" || ext == "M4V")
-      return new MP4::File(fileName, readAudioProperties, audioPropertiesStyle);
-    if(ext == "WMA" || ext == "ASF")
-      return new ASF::File(fileName, readAudioProperties, audioPropertiesStyle);
-    if(ext == "AIF" || ext == "AIFF" || ext == "AFC" || ext == "AIFC")
-      return new RIFF::AIFF::File(fileName, readAudioProperties, audioPropertiesStyle);
-    if(ext == "WAV")
-      return new RIFF::WAV::File(fileName, readAudioProperties, audioPropertiesStyle);
-    if(ext == "APE")
-      return new APE::File(fileName, readAudioProperties, audioPropertiesStyle);
-    // module, nst and wow are possible but uncommon extensions
-    if(ext == "MOD" || ext == "MODULE" || ext == "NST" || ext == "WOW")
-      return new Mod::File(fileName, readAudioProperties, audioPropertiesStyle);
-    if(ext == "S3M")
-      return new S3M::File(fileName, readAudioProperties, audioPropertiesStyle);
-    if(ext == "IT")
-      return new IT::File(fileName, readAudioProperties, audioPropertiesStyle);
-    if(ext == "XM")
-      return new XM::File(fileName, readAudioProperties, audioPropertiesStyle);
-
-    return 0;
-  }
 }  // namespace
 
-class FileRef::FileRefPrivate : public RefCounter
+class FileRef::FileRefPrivate
 {
 public:
-  FileRefPrivate() :
-    file(0),
-    stream(0) {}
-
-  ~FileRefPrivate() {
+  FileRefPrivate() = default;
+  ~FileRefPrivate()
+  {
     delete file;
     delete stream;
   }
 
-  File     *file;
-  IOStream *stream;
+  FileRefPrivate(const FileRefPrivate &) = delete;
+  FileRefPrivate &operator=(const FileRefPrivate &) = delete;
+
+  bool isNull() const
+  {
+    return !file || !file->isValid();
+  }
+
+  bool isNullWithDebugMessage(const String &methodName) const
+  {
+    if(isNull()) {
+      debug("FileRef::" + methodName + "() - Called without a valid file.");
+      return true;
+    }
+    return false;
+  }
+
+  File *file { nullptr };
+  IOStream *stream { nullptr };
 };
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -315,55 +282,93 @@ public:
 ////////////////////////////////////////////////////////////////////////////////
 
 FileRef::FileRef() :
-  d(new FileRefPrivate())
+  d(std::make_shared<FileRefPrivate>())
 {
 }
 
 FileRef::FileRef(FileName fileName, bool readAudioProperties,
                  AudioProperties::ReadStyle audioPropertiesStyle) :
-  d(new FileRefPrivate())
+  d(std::make_shared<FileRefPrivate>())
 {
   parse(fileName, readAudioProperties, audioPropertiesStyle);
 }
 
-FileRef::FileRef(IOStream* stream, bool readAudioProperties, AudioProperties::ReadStyle audioPropertiesStyle) :
-  d(new FileRefPrivate())
+FileRef::FileRef(IOStream *stream, bool readAudioProperties, AudioProperties::ReadStyle audioPropertiesStyle) :
+  d(std::make_shared<FileRefPrivate>())
 {
   parse(stream, readAudioProperties, audioPropertiesStyle);
 }
 
 FileRef::FileRef(File *file) :
-  d(new FileRefPrivate())
+  d(std::make_shared<FileRefPrivate>())
 {
   d->file = file;
 }
 
-FileRef::FileRef(const FileRef &ref) :
-  d(ref.d)
-{
-  d->ref();
-}
+FileRef::FileRef(const FileRef &) = default;
 
-FileRef::~FileRef()
-{
-  if(d->deref())
-    delete d;
-}
+FileRef::~FileRef() = default;
 
 Tag *FileRef::tag() const
 {
-  if(isNull()) {
-    debug("FileRef::tag() - Called without a valid file.");
-    return 0;
+  if(d->isNullWithDebugMessage(__func__)) {
+    return nullptr;
   }
   return d->file->tag();
 }
 
+PropertyMap FileRef::properties() const
+{
+  if(d->isNullWithDebugMessage(__func__)) {
+    return PropertyMap();
+  }
+  return d->file->properties();
+}
+
+void FileRef::removeUnsupportedProperties(const StringList& properties)
+{
+  if(d->isNullWithDebugMessage(__func__)) {
+    return;
+  }
+  return d->file->removeUnsupportedProperties(properties);
+}
+
+PropertyMap FileRef::setProperties(const PropertyMap &properties)
+{
+  if(d->isNullWithDebugMessage(__func__)) {
+    return PropertyMap();
+  }
+  return d->file->setProperties(properties);
+}
+
+StringList FileRef::complexPropertyKeys() const
+{
+  if(d->isNullWithDebugMessage(__func__)) {
+    return StringList();
+  }
+  return d->file->complexPropertyKeys();
+}
+
+List<VariantMap> FileRef::complexProperties(const String &key) const
+{
+  if(d->isNullWithDebugMessage(__func__)) {
+    return List<VariantMap>();
+  }
+  return d->file->complexProperties(key);
+}
+
+bool FileRef::setComplexProperties(const String &key, const List<VariantMap> &value)
+{
+  if(d->isNullWithDebugMessage(__func__)) {
+    return false;
+  }
+  return d->file->setComplexProperties(key, value);
+}
+
 AudioProperties *FileRef::audioProperties() const
 {
-  if(isNull()) {
-    debug("FileRef::audioProperties() - Called without a valid file.");
-    return 0;
+  if(d->isNullWithDebugMessage(__func__)) {
+    return nullptr;
   }
   return d->file->audioProperties();
 }
@@ -375,8 +380,7 @@ File *FileRef::file() const
 
 bool FileRef::save()
 {
-  if(isNull()) {
-    debug("FileRef::save() - Called without a valid file.");
+  if(d->isNullWithDebugMessage(__func__)) {
     return false;
   }
   return d->file->save();
@@ -386,6 +390,11 @@ const FileRef::FileTypeResolver *FileRef::addFileTypeResolver(const FileRef::Fil
 {
   fileTypeResolvers.prepend(resolver);
   return resolver;
+}
+
+void FileRef::clearFileTypeResolvers() // static
+{
+  fileTypeResolvers.clear();
 }
 
 StringList FileRef::defaultFileExtensions()
@@ -423,20 +432,19 @@ StringList FileRef::defaultFileExtensions()
   l.append("s3m");
   l.append("it");
   l.append("xm");
+  l.append("dsf");
+  l.append("dff");
+  l.append("dsdiff"); // alias for "dff"
 
   return l;
 }
 
 bool FileRef::isNull() const
 {
-  return (!d->file || !d->file->isValid());
+  return d->isNull();
 }
 
-FileRef &FileRef::operator=(const FileRef &ref)
-{
-  FileRef(ref).swap(*this);
-  return *this;
-}
+FileRef &FileRef::operator=(const FileRef &) = default;
 
 void FileRef::swap(FileRef &ref)
 {
@@ -453,12 +461,6 @@ bool FileRef::operator==(const FileRef &ref) const
 bool FileRef::operator!=(const FileRef &ref) const
 {
   return (ref.d->file != d->file);
-}
-
-File *FileRef::create(FileName fileName, bool readAudioProperties,
-                      AudioProperties::ReadStyle audioPropertiesStyle) // static
-{
-  return createInternal(fileName, readAudioProperties, audioPropertiesStyle);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -490,7 +492,7 @@ void FileRef::parse(FileName fileName, bool readAudioProperties,
   // Stream have to be closed here if failed to resolve file types.
 
   delete d->stream;
-  d->stream = 0;
+  d->stream = nullptr;
 }
 
 void FileRef::parse(IOStream *stream, bool readAudioProperties,
@@ -518,3 +520,9 @@ void FileRef::parse(IOStream *stream, bool readAudioProperties,
 
   d->file = detectByContent(stream, readAudioProperties, audioPropertiesStyle);
 }
+
+FileRef::FileTypeResolver::FileTypeResolver() = default;
+FileRef::FileTypeResolver::~FileTypeResolver() = default;
+
+FileRef::StreamTypeResolver::StreamTypeResolver() = default;
+FileRef::StreamTypeResolver::~StreamTypeResolver() = default;

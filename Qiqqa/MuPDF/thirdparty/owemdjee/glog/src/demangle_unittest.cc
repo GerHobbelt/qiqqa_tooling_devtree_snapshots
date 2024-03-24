@@ -31,15 +31,16 @@
 //
 // Unit tests for functions in demangle.c.
 
-#include "utilities.h"
-
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <glog/logging.h>
 #include "demangle.h"
-#include "googletest.h"
+
+#include <fstream>
+#include <iostream>
+#include <string>
+
 #include "config.h"
+#include "glog/logging.h"
+#include "googletest.h"
+#include "utilities.h"
 
 #include "testing.h"
 
@@ -82,7 +83,7 @@ TEST(Demangle, Windows) {
 
 #else
 
-// Test corner cases of bounary conditions.
+// Test corner cases of boundary conditions.
 TEST(Demangle, CornerCases) {
   const size_t size = 10;
   char tmp[size] = { 0 };

@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHIKYUU;HIKYUU_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHIKYUU;HIKYUU_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHIKYUU;HIKYUU_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHIKYUU;HIKYUU_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHIKYUU;HIKYUU_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHIKYUU;HIKYUU_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHIKYUU;HIKYUU_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHIKYUU;HIKYUU_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHIKYUU;HIKYUU_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHIKYUU;HIKYUU_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHIKYUU;HIKYUU_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHIKYUU;HIKYUU_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHIKYUU;HIKYUU_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHIKYUU;HIKYUU_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHIKYUU;HIKYUU_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHIKYUU;HIKYUU_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHIKYUU;HIKYUU_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHIKYUU;HIKYUU_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHIKYUU;HIKYUU_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHIKYUU;HIKYUU_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHIKYUU;HIKYUU_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHIKYUU;HIKYUU_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHIKYUU;HIKYUU_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHIKYUU;HIKYUU_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -255,6 +255,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/data_driver/kdata/cvs/KDataTempCsvDriver.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/data_driver/kdata/hdf5/H5KDataDriver.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/data_driver/kdata/mysql/MySQLKDataDriver.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/data_driver/kdata/sqlite/SQLiteKDataDriver.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/data_driver/kdata/tdx/TdxKDataDriver.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/datetime/Datetime.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/datetime/TimeDelta.cpp" />
@@ -263,6 +264,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/global/agent/SpotAgent.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/global/schedule/inner_tasks.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/global/schedule/scheduler.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/global/sysinfo.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/hikyuu.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/indicator/IndParam.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/indicator/Indicator.cpp" />
@@ -392,6 +394,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/trade_sys/signal/SignalBase.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/trade_sys/signal/crt/SG_Flex.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/trade_sys/signal/export.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/trade_sys/signal/imp/BandSignal.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/trade_sys/signal/imp/BoolSignal.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/trade_sys/signal/imp/CrossGoldSignal.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/trade_sys/signal/imp/CrossSignal.cpp" />
@@ -419,6 +422,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/utilities/db_connect/mysql/MySQLStatement.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/utilities/db_connect/sqlite/SQLiteConnect.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/utilities/db_connect/sqlite/SQLiteStatement.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/utilities/os.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/utilities/task/StealMasterQueue.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/utilities/task/StealRunnerQueue.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/utilities/task/StealTaskBase.cpp" />
@@ -467,6 +471,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/unit_test/hikyuu/indicator/test_BARSSINCE.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/unit_test/hikyuu/indicator/test_BETWEEN.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/unit_test/hikyuu/indicator/test_CEILING.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/unit_test/hikyuu/indicator/test_CORR.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/unit_test/hikyuu/indicator/test_COS.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/unit_test/hikyuu/indicator/test_COUNT.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/unit_test/hikyuu/indicator/test_CVAL.cpp" />
@@ -576,7 +581,9 @@
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/unit_test/hikyuu/utilities/test_Parameter.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/unit_test/hikyuu/utilities/test_ThreadPool.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/unit_test/hikyuu/utilities/test_TimerManager.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/unit_test/hikyuu/utilities/test_arithmetic.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/unit_test/hikyuu/utilities/test_iniparser.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/unit_test/hikyuu/utilities/test_os.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/unit_test/hikyuu/utilities/test_taskGroup.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/unit_test/hikyuu/utilities/test_util.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/hikyuu/hikyuu_pywrap/_Block.cpp" />
@@ -678,6 +685,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/data_driver/kdata/hdf5/H5Record.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/data_driver/kdata/mysql/KRecordTable.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/data_driver/kdata/mysql/MySQLKDataDriver.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/data_driver/kdata/sqlite/SQLiteKDataDriver.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/data_driver/kdata/tdx/TdxKDataDriver.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/datetime/Datetime.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/datetime/TimeDelta.h" />
@@ -690,6 +698,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/global/agent/spot_generated.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/global/schedule/inner_tasks.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/global/schedule/scheduler.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/global/sysinfo.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/hikyuu.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/indicator/IndParam.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/indicator/Indicator.h" />
@@ -759,6 +768,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/indicator/crt/ROUND.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/indicator/crt/ROUNDDOWN.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/indicator/crt/ROUNDUP.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/indicator/crt/RSI.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/indicator/crt/SAFTYLOSS.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/indicator/crt/SGN.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/indicator/crt/SIN.h" />
@@ -933,11 +943,13 @@
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/trade_sys/selector/imp/SignalSelector.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/trade_sys/signal/SignalBase.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/trade_sys/signal/build_in.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/trade_sys/signal/crt/SG_Band.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/trade_sys/signal/crt/SG_Bool.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/trade_sys/signal/crt/SG_Cross.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/trade_sys/signal/crt/SG_CrossGold.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/trade_sys/signal/crt/SG_Flex.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/trade_sys/signal/crt/SG_Single.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/trade_sys/signal/imp/BandSignal.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/trade_sys/signal/imp/BoolSignal.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/trade_sys/signal/imp/CrossGoldSignal.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/trade_sys/signal/imp/CrossSignal.h" />
@@ -982,6 +994,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/utilities/db_connect/sqlite/SQLiteConnect.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/utilities/db_connect/sqlite/SQLiteStatement.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/utilities/os.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/utilities/osdef.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/utilities/runtimeinfo.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/utilities/task/StealMasterQueue.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/utilities/task/StealRunnerQueue.h" />
@@ -1106,6 +1119,7 @@
     <Image Include="../../thirdparty/owemdjee/hikyuu/hikyuu/examples/notebook/images/008_02_tocsv_look.png" />
     <Image Include="../../thirdparty/owemdjee/hikyuu/hikyuu/examples/notebook/images/008_03_pickle.png" />
     <Image Include="../../thirdparty/owemdjee/hikyuu/hikyuu/gui/hikyuu.ico" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/LICENSE.996" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/LICENSE.txt" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/README.rst" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/config.h.in" />
@@ -1198,7 +1212,17 @@
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/admin/widget/__init__.py" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/admin/widget/tool.py" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/config/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/config/block/Zhbblk.ini" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/config/block/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/config/block/dybk.ini" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/config/block/ggbk.ini" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/config/block/gnbk.ini" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/config/block/hkzs.ini" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/config/block/hybk.ini" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/config/block/rdbk.ini" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/config/block/self.ini" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/config/block/sysblk.ini" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/config/block/zsbk.ini" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/cpp/__init__.py" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/__init__.py" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/common.py" />
@@ -1207,7 +1231,16 @@
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/common_pytdx.py" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/common_sqlite3.py" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/hku_config_template.py" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/mysql_upgrade/0001.sql" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/mysql_upgrade/0002.sql" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/mysql_upgrade/0003.sql" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/mysql_upgrade/0004.sql" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/mysql_upgrade/0005.sql" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/mysql_upgrade/0006.sql" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/mysql_upgrade/0007.sql" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/mysql_upgrade/0008.sql" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/mysql_upgrade/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/mysql_upgrade/createdb.sql" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/pytdx_finance_to_sqlite.py" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/pytdx_to_h5.py" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/pytdx_to_mysql.py" />
@@ -1215,7 +1248,19 @@
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/pytdx_weight_to_sqlite.py" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/sqlite_mem.py" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/sqlite_mem_sql/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/sqlite_mem_sql/createdb.sql" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/sqlite_upgrade/0001.sql" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/sqlite_upgrade/0002.sql" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/sqlite_upgrade/0003.sql" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/sqlite_upgrade/0004.sql" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/sqlite_upgrade/0005.sql" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/sqlite_upgrade/0006.sql" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/sqlite_upgrade/0007.sql" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/sqlite_upgrade/0008.sql" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/sqlite_upgrade/0009.sql" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/sqlite_upgrade/0010.sql" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/sqlite_upgrade/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/sqlite_upgrade/createdb.sql" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/tdx_to_h5.py" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/tdx_to_mysql.py" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/data/weight_to_mysql.py" />
@@ -1234,6 +1279,10 @@
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/draw/volume.py" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/examples/Turtle_SG.py" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/examples/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/examples/examples_init.py" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/examples/notebook/002-HowToGetStock.ipynb" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/examples/notebook/003-HowToGetKDataAndDraw.ipynb" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/examples/notebook/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/examples/notebook/README.md" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/examples/quick_crtsg.py" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/extend.py" />
@@ -1318,24 +1367,53 @@
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/util/mylog.py" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/util/singleton.py" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/util/slice.py" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu/util/timeout.py" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/Doxyfile" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/demo/xmake.lua" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/footer.html" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/header.html" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/LICENSE.txt" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/global/agent/spot.fbs" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu/xmake.lua" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu_server/extract_pot.bat" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu_server/i8n/POTFILES.in" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu_server/i8n/zh_CN.po" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/hikyuu_server/xmake.lua" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/unit_test/Doxyfile" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu_cpp/unit_test/xmake.lua" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu_extern_libs/packages/h/hdf5/xmake.lua" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu_extern_libs/packages/h/hdf5_D/xmake.lua" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu_extern_libs/packages/m/myboost/xmake.lua" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu_extern_libs/packages/m/mysql/xmake.lua" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu_pywrap/xmake.lua" />
-    <Text Include="../../thirdparty/owemdjee/hikyuu/hikyuu_pywrap/xmake_on_load.lua" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/requirements.txt" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/scripts/before_install.lua" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/scripts/before_run.lua" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/scripts/on_install.lua" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/setup.py" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/sub_setup.py" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/test_data/block/Zhbblk.ini" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/test_data/block/dybk.ini" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/test_data/block/ggbk.ini" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/test_data/block/gnbk.ini" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/test_data/block/hkzs.ini" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/test_data/block/hybk.ini" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/test_data/block/rdbk.ini" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/test_data/block/sysblk.ini" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/test_data/block/zsbk.ini" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/test_data/hikyuu_linux.ini" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/test_data/hikyuu_win.ini" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/test_data/logger.properties" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/test_data/sh_1min.h5" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/test_data/sh_5min.h5" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/test_data/sh_day.h5" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/test_data/sh_time.h5" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/test_data/sh_trans.h5" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/test_data/sz_1min.h5" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/test_data/sz_5min.h5" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/test_data/sz_day.h5" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/test_data/sz_time.h5" />
+    <Text Include="../../thirdparty/owemdjee/hikyuu/test_data/sz_trans.h5" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/test_data/test_day_data.csv" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/test_data/test_min_data.csv" />
     <Text Include="../../thirdparty/owemdjee/hikyuu/version.h.in" />

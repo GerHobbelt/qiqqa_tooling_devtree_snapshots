@@ -763,7 +763,7 @@ static int LogLuvEncodeTile(TIFF *tif, uint8_t *bp, tmsize_t cc, uint16_t s)
 #define M_LN2 0.69314718055994530942
 #endif
 #ifndef M_PI
-#define M_PI 3.14159265358979323846
+#define M_PI    3.14159265358979323846264338327950
 #endif
 #undef log2 /* Conflict with C'99 function */
 #define log2(x) ((1. / M_LN2) * log(x))
@@ -952,6 +952,13 @@ static
     uv_encode(double u, double v, int em) /* encode (u',v') coordinates */
 {
     register int vi, ui;
+
+    /* check for NaN */
+    if (u != u || v != v)
+    {
+        u = U_NEU;
+        v = V_NEU;
+    }
 
     if (v < UV_VSTART)
         return oog_encode(u, v);

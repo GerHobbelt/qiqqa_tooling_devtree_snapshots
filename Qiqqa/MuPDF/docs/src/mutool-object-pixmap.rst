@@ -1,13 +1,13 @@
 .. Copyright (C) 2001-2023 Artifex Software, Inc.
 .. All Rights Reserved.
 
+----
 
 .. default-domain:: js
 
 .. include:: html_tags.rst
 
 .. _mutool_object_pixmap:
-
 
 .. _mutool_run_js_api_pixmap:
 
@@ -29,27 +29,29 @@ A `Pixmap` object contains a color raster image (short for pixel map). The compo
 
     :return: `Pixmap`.
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
         var pixmap = new mupdf.Pixmap(mupdf.ColorSpace.DeviceRGB, [0,0,100,100], true);
 
 
-**Instance methods**
+
+|instance_methods|
 
 
 .. method:: clear(value)
 
-    Clear the pixels to the specified value. Pass `255` for white, or "undefined" for transparent.
+    Clear the pixels to the specified value. Pass `255` for white, or omit for transparent.
 
     :arg value: Pixel value.
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
-        pixmap.clear("undefined");
+        pixmap.clear(255);
+        pixmap.clear();
 
 
 .. method:: getBounds()
@@ -58,7 +60,7 @@ A `Pixmap` object contains a color raster image (short for pixel map). The compo
 
     :return: `[ulx,uly,lrx,lry]` :ref:`Rectangle<mutool_run_js_api_rectangle>`.
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
@@ -69,7 +71,7 @@ A `Pixmap` object contains a color raster image (short for pixel map). The compo
 
     :return: `Int` The width value.
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
@@ -78,6 +80,8 @@ A `Pixmap` object contains a color raster image (short for pixel map). The compo
 .. method:: getHeight()
 
     :return: `Int` The height value.
+
+    |example_tag|
 
     .. code-block:: javascript
 
@@ -89,28 +93,33 @@ A `Pixmap` object contains a color raster image (short for pixel map). The compo
 
     :return: `Int` Number of color components.
 
+    |example_tag|
+
     .. code-block:: javascript
 
         var num = pixmap.getNumberOfComponents();
 
 .. method:: getAlpha()
 
+
+
     *True* if alpha channel is present.
 
     :return: `Boolean`.
 
+    |example_tag|
+
     .. code-block:: javascript
 
         var alpha = pixmap.getAlpha();
-
-
-    |tor_todo| In WASM, TypeError: pixmap.getAlpha is not a function
 
 .. method:: getStride()
 
     Number of bytes per row.
 
     :return: `Int`.
+
+    |example_tag|
 
     .. code-block:: javascript
 
@@ -121,6 +130,8 @@ A `Pixmap` object contains a color raster image (short for pixel map). The compo
     Returns the `ColorSpace` for the `Pixmap`.
 
     :return: `ColorSpace`.
+
+    |example_tag|
 
     .. code-block:: javascript
 
@@ -134,6 +145,7 @@ A `Pixmap` object contains a color raster image (short for pixel map). The compo
     :arg xRes: `Int` X resolution in dots per inch.
     :arg yRes: `Int` Y resolution in dots per inch.
 
+    |example_tag|
 
     .. code-block:: javascript
 
@@ -146,6 +158,8 @@ A `Pixmap` object contains a color raster image (short for pixel map). The compo
 
     :return: `Int` Resolution in dots per inch.
 
+    |example_tag|
+
     .. code-block:: javascript
 
         var xRes = pixmap.getXResolution();
@@ -157,6 +171,8 @@ A `Pixmap` object contains a color raster image (short for pixel map). The compo
 
     :return: `Int` Resolution in dots per inch.
 
+    |example_tag|
+
     .. code-block:: javascript
 
         var yRes = pixmap.getYResolution();
@@ -166,12 +182,14 @@ A `Pixmap` object contains a color raster image (short for pixel map). The compo
 
     |mutool_tag|
 
-    Get the value of component `index` at position `x`, `y` (relative to the image origin: 0, 0 is the top left pixel).
+    Get the value of component ``index`` at position `x`, `y` (relative to the image origin: 0, 0 is the top left pixel).
 
     :arg x: X co-ordinate.
     :arg y: Y co-ordinate.
     :arg index: Component index. i.e. For CMYK ColorSpaces 0 = Cyan, for RGB 0 = Red etc.
     :return: `Int`.
+
+    |example_tag|
 
     .. code-block:: javascript
 
@@ -189,6 +207,8 @@ A `Pixmap` object contains a color raster image (short for pixel map). The compo
 
     :arg fileName: `String`.
 
+    |example_tag|
+
     .. code-block:: javascript
 
         pixmap.saveAsPNG("fileName.png");
@@ -203,9 +223,11 @@ A `Pixmap` object contains a color raster image (short for pixel map). The compo
     :arg fileName: `String`.
     :arg quality: `Int`.
 
+    |example_tag|
+
     .. code-block:: javascript
 
-        pixmap.saveAsPNG("fileName.jpg", 80);
+        pixmap.saveAsJPEG("fileName.jpg", 80);
 
 
 .. method:: saveAsPAM(fileName)
@@ -215,6 +237,8 @@ A `Pixmap` object contains a color raster image (short for pixel map). The compo
     Save the `Pixmap` as a :title:`PAM`.
 
     :arg fileName: `String`.
+
+    |example_tag|
 
     .. code-block:: javascript
 
@@ -228,6 +252,8 @@ A `Pixmap` object contains a color raster image (short for pixel map). The compo
 
     :arg fileName: `String`.
 
+    |example_tag|
+
     .. code-block:: javascript
 
         pixmap.saveAsPNM("fileName.pnm");
@@ -239,6 +265,8 @@ A `Pixmap` object contains a color raster image (short for pixel map). The compo
     Save the `Pixmap` as a :title:`PBM`. Only works for :title:`Gray` and :title:`RGB` images without alpha.
 
     :arg fileName: `String`.
+
+    |example_tag|
 
     .. code-block:: javascript
 
@@ -252,6 +280,8 @@ A `Pixmap` object contains a color raster image (short for pixel map). The compo
 
     :arg fileName: `String`.
 
+    |example_tag|
+
     .. code-block:: javascript
 
         pixmap.saveAsPKM("fileName.pkm");
@@ -262,6 +292,8 @@ A `Pixmap` object contains a color raster image (short for pixel map). The compo
 
     Invert all pixels. All components are processed, except alpha which is unchanged.
 
+    |example_tag|
+
     .. code-block:: javascript
 
         pixmap.invert();
@@ -269,6 +301,8 @@ A `Pixmap` object contains a color raster image (short for pixel map). The compo
 .. method:: invertLuminance()
 
     Transform all pixels so that luminance of each pixel is inverted, and the chrominance remains as unchanged as possible. All components are processed, except alpha which is unchanged.
+
+    |example_tag|
 
     .. code-block:: javascript
 
@@ -282,6 +316,8 @@ A `Pixmap` object contains a color raster image (short for pixel map). The compo
 
     :arg gamma: `Float`.
 
+    |example_tag|
+
     .. code-block:: javascript
 
         pixmap.gamma(3);
@@ -292,6 +328,8 @@ A `Pixmap` object contains a color raster image (short for pixel map). The compo
 
     :arg black: `Integer`.
     :arg white: `Integer`.
+
+    |example_tag|
 
     .. code-block:: javascript
 
@@ -310,6 +348,8 @@ A `Pixmap` object contains a color raster image (short for pixel map). The compo
     :arg height: `Int`.
 
     :return: `Pixmap`.
+
+    |example_tag|
 
     .. code-block:: javascript
 
@@ -331,7 +371,7 @@ A `Pixmap` object contains a color raster image (short for pixel map). The compo
     :return: `Pixmap`.
 
 
-    |tor_todo| Can't get any joy out of this one ...
+    |jamie_todo| Can't get any joy out of this one because of `DefaultColorSpaces` not working for me.
 
 
 .. method:: getPixels()
@@ -342,6 +382,8 @@ A `Pixmap` object contains a color raster image (short for pixel map). The compo
 
 
     :return: `[...]`.
+
+    |example_tag|
 
     .. code-block:: javascript
 
@@ -357,11 +399,11 @@ A `Pixmap` object contains a color raster image (short for pixel map). The compo
 
     :return: `Buffer`.
 
+    |example_tag|
+
     .. code-block:: javascript
 
         var buffer = pixmap.asPNG();
-
-    |tor_todo| TypeError: buffer.readByte is not a function
 
 
 .. method:: asPSD()
@@ -373,11 +415,11 @@ A `Pixmap` object contains a color raster image (short for pixel map). The compo
 
     :return: `Buffer`.
 
+    |example_tag|
+
     .. code-block:: javascript
 
         var buffer = pixmap.asPSD();
-
-    |tor_todo| TypeError: libmupdf._wasm_new_buffer_from_pixmap_as_psd is not a function
 
 
 .. method:: asPAM()
@@ -389,27 +431,28 @@ A `Pixmap` object contains a color raster image (short for pixel map). The compo
 
     :return: `Buffer`.
 
+    |example_tag|
+
     .. code-block:: javascript
 
         var buffer = pixmap.asPAM();
 
-    |tor_todo| TypeError: buffer.readByte is not a function
 
 
 .. method:: asJPEG(quality)
 
     |wasm_tag|
 
-    Returns a buffer of the `Pixmap` as a :title:`JPEG`. Note, if the`Pixmap` has an alpha channel then an exception will be thrown.
+    Returns a buffer of the `Pixmap` as a :title:`JPEG`. Note, if the `Pixmap` has an alpha channel then an exception will be thrown.
 
 
     :return: `Buffer`.
 
+    |example_tag|
+
     .. code-block:: javascript
 
         var buffer = pixmap.asJPEG(80);
-
-    |tor_todo| TypeError: buffer.readByte is not a function
 
 
 .. method:: md5()

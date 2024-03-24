@@ -27,7 +27,7 @@
 #include "rect.h"
 #include "scrollview.h"
 
-#include <allheaders.h>
+#include <leptonica/allheaders.h>
 
 #if defined(HAVE_MUPDF)
 #include "mupdf/assertions.h"     // for ASSERT
@@ -95,8 +95,6 @@ protected:
   int gridbuckets_; // Total cells in grid.
   ICOORD bleft_;    // Pixel coords of bottom-left of grid.
   ICOORD tright_;   // Pixel coords of top-right of grid.
-
-private:
 };
 
 // The IntGrid maintains a single int for each cell in a grid.
@@ -217,17 +215,12 @@ public:
 #if !GRAPHICS_DISABLED
 
   // Make a window of an appropriate size to display things in the grid.
-  ScrollView *MakeWindow(int x, int y, const char *window_name);
+  ScrollViewReference MakeWindow(Tesseract *tess, int x, int y, const char *window_name);
 
   // Display the bounding boxes of the BLOBNBOXes in this grid.
   // Use of this function requires an additional member of the BBC class:
-  // ScrollView::Color BBC::BoxColor() const.
-  void DisplayBoxes(ScrollView *window);
-
-  // Display the bounding boxes of the BLOBNBOXes in this grid.
-  // Use of this function requires an additional member of the BBC class:
-  // ScrollView::Color BBC::BoxColor() const.
-  void DisplayBoxes(Image &pix, uint32_t* data, int wpl, int w, int h);
+  // Diagnostics::Color BBC::BoxColor() const.
+  void DisplayBoxes(ScrollViewReference &window);
 
 #endif // !GRAPHICS_DISABLED
 
@@ -647,13 +640,15 @@ private:
 // Make a window of an appropriate size to display things in the grid.
 // Position the window at the given x,y.
 template <class BBC, class BBC_CLIST, class BBC_C_IT>
-ScrollView *BBGrid<BBC, BBC_CLIST, BBC_C_IT>::MakeWindow(int x, int y, const char *window_name) {
-  auto tab_win =
-      new ScrollView(window_name, x, y, tright_.x() - bleft_.x(), tright_.y() - bleft_.y(),
+ScrollViewReference BBGrid<BBC, BBC_CLIST, BBC_C_IT>::MakeWindow(Tesseract *tess, int x, int y, const char *window_name) {
+  ScrollViewReference tab_win = ScrollViewManager::
+      MakeScrollView(tess, window_name, x, y, tright_.x() - bleft_.x(), tright_.y() - bleft_.y(),
                      tright_.x() - bleft_.x(), tright_.y() - bleft_.y(), true);
-  auto *handler = new TabEventHandler<BBGrid<BBC, BBC_CLIST, BBC_C_IT>>(this);
-  tab_win->AddEventHandler(handler);
-  tab_win->Pen(ScrollView::GREY);
+  if (tab_win->HasInteractiveFeature()) {
+    auto *handler = new TabEventHandler<BBGrid<BBC, BBC_CLIST, BBC_C_IT>>(this);
+    tab_win->AddEventHandler(handler);
+  }
+  tab_win->Pen(Diagnostics::GREY);
   tab_win->Rectangle(0, 0, tright_.x() - bleft_.x(), tright_.y() - bleft_.y());
   return tab_win;
 }
@@ -661,11 +656,11 @@ ScrollView *BBGrid<BBC, BBC_CLIST, BBC_C_IT>::MakeWindow(int x, int y, const cha
 // Create a window at (x,y) and display the bounding boxes of the
 // BLOBNBOXes in this grid.
 // Use of this function requires an additional member of the BBC class:
-// ScrollView::Color BBC::BoxColor() const.
+// Diagnostics::Color BBC::BoxColor() const.
 template <class BBC, class BBC_CLIST, class BBC_C_IT>
-void BBGrid<BBC, BBC_CLIST, BBC_C_IT>::DisplayBoxes(ScrollView *tab_win) {
-  tab_win->Pen(ScrollView::BLUE);
-  tab_win->Brush(ScrollView::NONE);
+void BBGrid<BBC, BBC_CLIST, BBC_C_IT>::DisplayBoxes(ScrollViewReference &tab_win) {
+  tab_win->Pen(Diagnostics::BLUE);
+  tab_win->Brush(Diagnostics::NONE);
 
   // For every bbox in the grid, display it.
   GridSearch<BBC, BBC_CLIST, BBC_C_IT> gsearch(this);
@@ -677,37 +672,11 @@ void BBGrid<BBC, BBC_CLIST, BBC_C_IT>::DisplayBoxes(ScrollView *tab_win) {
     int right_x = box.right();
     int top_y = box.top();
     int bottom_y = box.bottom();
-    ScrollView::Color box_color = bbox->BoxColor();
+    Diagnostics::Color box_color = bbox->BoxColor();
     tab_win->Pen(box_color);
     tab_win->Rectangle(left_x, bottom_y, right_x, top_y);
   }
-  tab_win->Update();
-}
-
-// Create a window at (x,y) and display the bounding boxes of the
-// BLOBNBOXes in this grid.
-// Use of this function requires an additional member of the BBC class:
-// ScrollView::Color BBC::BoxColor() const.
-template <class BBC, class BBC_CLIST, class BBC_C_IT>
-void BBGrid<BBC, BBC_CLIST, BBC_C_IT>::DisplayBoxes(Image &pix, uint32_t *data, int wpl, int w, int h) {
-  //tab_win->Pen(ScrollView::BLUE);
-  //tab_win->Brush(ScrollView::NONE);
-
-  // For every bbox in the grid, display it.
-  GridSearch<BBC, BBC_CLIST, BBC_C_IT> gsearch(this);
-  gsearch.StartFullSearch();
-  BBC* bbox;
-  while ((bbox = gsearch.NextFullSearch()) != nullptr) {
-    const TBOX& box = bbox->bounding_box();
-    int left_x = box.left();
-    int right_x = box.right();
-    int top_y = box.top();
-    int bottom_y = box.bottom();
-    ScrollView::Color box_color = bbox->BoxColor();
-    //tab_win->Pen(box_color);
-    //tab_win->Rectangle(left_x, bottom_y, right_x, top_y);
-  }
-  //tab_win->Update();
+  tab_win->UpdateWindow();
 }
 
 #endif // !GRAPHICS_DISABLED
@@ -732,7 +701,7 @@ void BBGrid<BBC, BBC_CLIST, BBC_C_IT>::AssertNoDuplicates() {
 // Handle a click event in a display window.
 template <class BBC, class BBC_CLIST, class BBC_C_IT>
 void BBGrid<BBC, BBC_CLIST, BBC_C_IT>::HandleClick(int x, int y) {
-  tprintf("Click at ({}, {})\n", x, y);
+  tprintDebug("Click at ({}, {})\n", x, y);
 }
 
 ///////////////////////////////////////////////////////////////////////

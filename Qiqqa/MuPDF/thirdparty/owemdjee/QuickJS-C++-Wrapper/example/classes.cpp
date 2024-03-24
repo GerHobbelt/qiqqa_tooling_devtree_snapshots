@@ -5,6 +5,8 @@
 
 #include "monolithic_examples.h"
 
+#if 0
+
 static quickjs::value do_print(const quickjs::args& a)
 {
 	std::ostringstream oss;
@@ -354,6 +356,8 @@ static void classes_2()
 		std::cout << "get_my_class_shared() was never called!" << std::endl;
 }
 
+#endif
+
 
 #if defined(BUILD_MONOLITHIC)
 #define main      qjscpp_classes_example_main
@@ -361,8 +365,13 @@ static void classes_2()
 
 int main(int argc, const char** argv)
 {
+#if 0
 	classes_1();
 	classes_2();
 	return 0;
+#else
+	fprintf(stderr, "b0rked! class init code will invoke qjs_mutex_lock() before qjs_mutex_init() during app init code phase!\n");
+	return 7;
+#endif
 }
 

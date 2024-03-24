@@ -16,6 +16,8 @@
 
 #include <boost/mpl/long_fwd.hpp>
 
+#undef  AUX_WRAPPER_VALUE_TYPE
+
 #define AUX_WRAPPER_VALUE_TYPE long
 #include <boost/mpl/aux_/integral_wrapper.hpp>
 

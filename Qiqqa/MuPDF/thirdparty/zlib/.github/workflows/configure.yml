@@ -13,8 +13,8 @@ jobs:
             compiler: gcc
             configure-args: --warn
 
-          - name: Ubuntu 18.04 GCC
-            os: ubuntu-18.04
+          - name: Ubuntu 20.04 GCC
+            os: ubuntu-20.04
             compiler: gcc
             configure-args: --warn
 
@@ -100,6 +100,20 @@ jobs:
             chost: aarch64-linux-gnu
             packages: qemu qemu-user gcc-aarch64-linux-gnu libc-dev-arm64-cross
 
+          - name: Ubuntu GCC MIPS
+            os: ubuntu-latest
+            compiler: mips-linux-gnu-gcc
+            configure-args: --warn
+            chost: mips-linux-gnu
+            packages: qemu qemu-user gcc-mips-linux-gnu libc-dev-mips-cross
+
+          - name: Ubuntu GCC MIPS64
+            os: ubuntu-latest
+            compiler: mips64-linux-gnuabi64-gcc
+            configure-args: --warn
+            chost: mips64-linux-gnuabi64
+            packages: qemu qemu-user gcc-mips64-linux-gnuabi64 libc-dev-mips64-cross
+
           - name: Ubuntu GCC PPC
             os: ubuntu-latest
             compiler: powerpc-linux-gnu-gcc
@@ -171,22 +185,32 @@ jobs:
 
           - name: macOS GCC Symbol Prefix
             os: macOS-latest
-            compiler: gcc-9
+            compiler: gcc-11
             configure-args: --sprefix=zTest_
 
           - name: macOS GCC Symbol Prefix & Compat
             os: macOS-latest
-            compiler: gcc-9
+            compiler: gcc-11
             configure-args: --zlib-compat --sprefix=zTest_
 
           - name: macOS GCC
             os: macOS-latest
-            compiler: gcc-9
+            compiler: gcc-11
             configure-args: --warn
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
+      with:
+        show-progress: 'false'
+
+    - name: Add ubuntu mirrors
+      if: runner.os == 'Linux' && matrix.packages
+      run: |
+        # Github Actions caching proxy is at times unreliable
+        echo -e 'http://azure.archive.ubuntu.com/ubuntu\tpriority:1\n' | sudo tee /etc/apt/mirrors.txt
+        curl http://mirrors.ubuntu.com/mirrors.txt | sudo tee --append /etc/apt/mirrors.txt
+        sudo sed -i 's#http://azure.archive.ubuntu.com/ubuntu/#mirror+file:/etc/apt/mirrors.txt#' /etc/apt/sources.list
 
     - name: Install packages (Ubuntu)
       if: runner.os == 'Linux' && matrix.packages
@@ -196,7 +220,7 @@ jobs:
 
     - name: Install Emscripten
       if: contains(matrix.name, 'WASM32')
-      uses: mymindstorm/setup-emsdk@v11
+      uses: mymindstorm/setup-emsdk@v12
 
     - name: Generate project files
       run: |
@@ -220,7 +244,7 @@ jobs:
       working-directory: ${{ matrix.build-dir }}
 
     - name: Upload build errors
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       if: failure()
       with:
         name: ${{ matrix.name }} (configure)

@@ -1,9 +1,9 @@
 name: Build Debian Package
 on:
   push:
-      tags: [ '[0-9]+.[0-9]+.[0-9]+' ]
+      tags:
+        - 1.**
   pull_request:
-      tags: [ '[0-9]+.[0-9]+.[0-9]+' ]
 
 jobs:
   package-ubuntu-latest-amd64:
@@ -34,4 +34,3 @@ jobs:
       with:
         name: artifact-deb
         path: ./*.deb
-

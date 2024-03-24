@@ -17,9 +17,8 @@ in the source code repo
   the tag is GPG signed (using -s).
 
 - run `./maketgz 7.34.0` to build the release tarballs. It is important that
-  you run this on a machine with the correct set of autotools etc installed
-  as this is what then will be shipped and used by most users on \*nix like
-  systems.
+  you run this on a machine with the correct set of autotools etc installed as
+  this is what is shipped and used by most users on \*nix like systems.
 
 - push the git commits and the new tag
 
@@ -107,11 +106,11 @@ Coming dates
 Based on the description above, here are some planned release dates (at the
 time of this writing):
 
-- May 17, 2023
-- July 19, 2023
-- September 6, 2023
-- November 1, 2023
-- December 27, 2023
-- February 21, 2024
-- April 17, 2024
-- June 12, 2024
+- October 11, 2023
+- December 6, 2023
+- January 31, 2024
+- March 27, 2024
+- May 22, 2024
+- July 17, 2024
+- September 11, 2024
+- November 6, 2024

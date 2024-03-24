@@ -26,7 +26,7 @@
 #include "tool_setup.h"
 #include "tool_sdecls.h"
 #include "tool_urlglob.h"
-#include "tool_formparse.h"
+#include "var.h"
 
 struct GlobalConfig;
 
@@ -37,11 +37,11 @@ struct State {
   char *outfiles;
   char *httpgetfields;
   char *uploadfile;
-  unsigned long infilenum; /* number of files to upload */
-  unsigned long up;  /* upload file counter within a single upload glob */
-  unsigned long urlnum; /* how many iterations this single URL has with ranges
+  curl_off_t infilenum; /* number of files to upload */
+  curl_off_t up;        /* upload file counter within a single upload glob */
+  curl_off_t urlnum;    /* how many iterations this single URL has with ranges
                            etc */
-  unsigned long li;
+  curl_off_t li;
 };
 
 struct OperationConfig {
@@ -68,7 +68,7 @@ struct OperationConfig {
   char *proto_default;
   curl_off_t resume_from;
   char *postfields;
-  curl_off_t postfieldsize;
+  struct dynbuf postdata;
   char *referer;
   char *query;
   long timeout_ms;
@@ -128,6 +128,7 @@ struct OperationConfig {
   struct getout *url_get;   /* point to the node to fill in URL */
   struct getout *url_out;   /* point to the node to fill in outfile */
   struct getout *url_ul;    /* point to the node to fill in upload */
+  char *ipfs_gateway;
   char *doh_url;
   char *cipher_list;
   char *proxy_cipher_list;
@@ -176,6 +177,7 @@ struct OperationConfig {
   bool terminal_binary_ok;
   bool verifystatus;
   bool doh_verifystatus;
+  bool output_path_mimics_url;
   bool create_dirs;
   bool ftp_create_dirs;
   long ftp_pasvp_ip_rule;   /* how to handle the IP address the FTP server
@@ -264,7 +266,8 @@ struct OperationConfig {
   bool ssl_revoke_best_effort; /* ignore SSL revocation offline/missing
                                   revocation list errors */
 
-  bool native_ca_store;        /* use the native os ca store */
+  bool native_ca_store;        /* use the native OS CA store */
+  bool proxy_native_ca_store;  /* use the native OS CA store for proxy */
   bool ssl_auto_client_cert;   /* automatically locate and use a client
                                   certificate for authentication (Schannel) */
   bool proxy_ssl_auto_client_cert; /* proxy version of ssl_auto_client_cert */
@@ -282,6 +285,7 @@ struct OperationConfig {
   long happy_eyeballs_timeout_ms; /* happy eyeballs timeout in milliseconds.
                                      0 is valid. default: CURL_HET_DEFAULT. */
   bool haproxy_protocol;          /* whether to send HAProxy protocol v1 */
+  char *haproxy_clientip;         /* client IP for HAProxy protocol */
   bool disallow_username_in_url;  /* disallow usernames in URLs */
   char *aws_sigv4;
   file_clobber_mode_t file_clobber_mode;
@@ -312,6 +316,7 @@ struct GlobalConfig {
   bool trace_fopened;
   trace tracetype;
   bool tracetime;                 /* include timestamp? */
+  bool traceids;                  /* include xfer-/conn-id? */
   int progressmode;               /* CURL_PROGRESS_BAR / CURL_PROGRESS_STATS / CURL_PROGRESS_PERCENT */
   char *libcurl;                  /* Output libcurl code to this file name */
   bool fail_early;                /* exit on first transfer error */
@@ -322,9 +327,10 @@ struct GlobalConfig {
   bool test_event_based;
 #endif
   bool parallel;
-  long parallel_max;
+  unsigned short parallel_max; /* MAX_PARALLEL is the maximum */
   bool parallel_connect;
   char *help_category;            /* The help category, heap-allocated if set */
+  struct var *variables;
   struct OperationConfig *first;
   struct OperationConfig *current;
   struct OperationConfig *last;   /* Always last in the struct */

@@ -24,8 +24,8 @@ further refinement and documentation edits.
 
 4. Applied PR #181, which tidies some casts in pcre2_valid_utf.c.
 
-5. Applied PR #184, which avoids overflow issues with the heap limit (introduced
-in 10.41/9.
+5. Applied PR #184, which avoids overflow issues with the heap limit
+(introduced in 10.41/9).
 
 6. Applied PR #192, which changes the timing units for pcre2test from
 milliseconds to microseconds. This is more useful for modern CPUs.
@@ -55,22 +55,120 @@ change needed for 9(a) above; (b) fix bugs in ucptest,
 
 12. Integer overflow testing is now centralized in a new function.
 
-13. Made PCRE2_UCP the default in UTF mode in pcre2grep, and added new options 
+13. Made PCRE2_UCP the default in UTF mode in pcre2grep, and added new options
 --case-restrict and --no-ucp.
 
-14. In the debugging printint module (which is normally only linked into 
-pcre2test), avoid the use of a variable called "not" because that's deprecated 
-in C and forbidden in C++. Also rewrite some code to avoid a goto into a block 
+14. In the debugging printint module (which is normally only linked into
+pcre2test), avoid the use of a variable called "not" because that's deprecated
+in C and forbidden in C++. Also rewrite some code to avoid a goto into a block
 that bypassed its initialization (though it didn't actually matter).
 
-15. More minor code adjustments to avoid using reserved C++ words as variable 
-names ("new" and "typename") and another jump that bypassed an (irrelevant) 
+15. More minor code adjustments to avoid using reserved C++ words as variable
+names ("new" and "typename") and another jump that bypassed an (irrelevant)
 initialization.
 
-16. Merged a pull request that removed pcre2_ucptables.c from the list of files 
-to compile in NON-AUTOTOOLS-BUILD because it is #included in pcre2_tables.c. 
-Also adjusted the BUILD.bazel and build.zig files, which had the same issue. At 
+16. Merged a pull request that removed pcre2_ucptables.c from the list of files
+to compile in NON-AUTOTOOLS-BUILD because it is #included in pcre2_tables.c.
+Also adjusted the BUILD.bazel and build.zig files, which had the same issue. At
 the same time, fixed a typo in the Bazel file.
+
+17. Add PCRE2_EXTRA_ASCII_DIGIT to allow [:digit:] to be kept on sync with \d
+even in UCP mode.
+
+18. Fix an invalid match of ascii word classes when invalid utf is enabled.
+
+19. Add a --posix-digit to pcre2grep for compatibility with GNU grep, and
+other tools that prefer the POSIX compatible unicode definition for \d.
+
+20. Report the bit width of the library in use by pcre2test for usability.
+
+21. A pathological pattern conversion test could result in a string longer than
+the available input buffer. Cause such a test to fail.
+
+22. Add a check that forces a compiler error if PCRE2_CODE_UNIT_WIDTH is not 8,
+16, or 32 when compiling any of the library modules.
+
+23. Update pcre2_compile() to treat a NULL pattern with zero length as an empty
+string.
+
+24. Add support for limited-length variable-length lookbehind assertions, with
+default maximum length 255 characters (same as Perl) but with a function to
+adjust the limit.
+
+25. Applied pull request #260, which modernizes the CMake files, also #262,
+which updates the zig configuration, and #278 which fixes a bug with out-of-
+source-tree CMake build testing.
+
+26. Add support for LoongArch in JIT.
+
+27. Fixed a bug in pcre2_match() in the code for handling the vector of
+backtracking frames on the heap, which caused a heap overflow if *LIMIT_HEAP
+restricted an attempt to extend to less than the frame size. Generally tidy up
+the code for extending the heap frames vector. This fixes GitHub issue #275.
+
+28. Update pcre2_fuzzsupport.c to avoid clang sanitize complaint about shifting
+left by 16 when there are non-zeros in the top 16 bits.
+
+29. Perl 5.34.0 changed the meaning of (for example) {,3} which did not used to
+be treated as a quantifier. Now it is interpreted as {0,3} and PCRE2 has
+changed to match. Note that {,} is still not a quantifier.
+
+30. Perl allows spaces and/or horizontal tabs after { or before } in all items
+that use braces, and also before or after the comma in quantifiers. PCRE2 now
+does the same, except for \u{...}, which is recognized only when
+PCRE2_EXTRA_ALT_BSUX is set. This an ECMAScript, non-Perl compatible,
+extension, so PCRE2 follows ECMAScript rather than Perl.
+
+31. Applied pull request #300 by Carlo, which fixes #261. The bug was that
+pcre2_match() was not fully resetting all captures that had been set within a
+(possibly recursive) subroutine call such as (?3).
+
+32. Changed the meaning of \w (and its synonyms) in UCP mode to match Perl. It
+now matches characters whose general categories are L or N or whose particular
+categories are Mn (non-spacing mark) or Pc (combining puntuation). The latter
+includes underscore.
+
+33. Changed the meaning of [:xdigit:] in UCP mode to match Perl. It now also
+matches the "fullwidth" versions of the hex digits. Just like it is done for
+[:digit:], PCRE2_EXTRA_ASCII_DIGIT can be used to keep this class ASCII only
+without affecting other POSIX classes.
+
+34. GitHub PR305 fixes a potential integer overflow in pcre2_dfa_match().
+
+35. Updated handling of \b and \B in UCP mode to match the changes to \w in 32
+above because \b and \B are defined in terms of \w.
+
+36. Within a pattern (?aT) and (?-aT) set and reset the PCRE2_EXTRA_ASCII_DIGIT
+option, and (?aP) also sets (?aT) so that (?-aP) disables all ASCII
+restrictions on POSIX classes.
+
+37. If PCRE2_FIRSTLINE was set on an anchored pattern, pcre2_match() and
+pcre2_dfa_match() misbehaved. PCRE2_FIRSTLINE is now ignored for anchored
+patterns.
+
+38. Add a test for ridiculous ovector offset values to the substring extraction
+functions.
+
+39. Make OP_REVERSE use IMM2_SIZE for its data instead of LINK_SIZE, for
+consistency with OP_VREVERSE.
+
+40. In some legacy environments with a pre C99 snprintf, pcre2_regerror could
+return an incorrect value when the provided buffer was too small.
+
+41. Applied pull request #342 which adds sanity checks for ctype functions and
+locks out any accidental sign-extension.
+
+42. In the 32-bit library, in non-UTF mode, a quantifier that followed a
+literal character with a value greater than or equal to 0x80000000u caused
+undefined behaviour.
+
+43. \z was misbehaving when matching fragments inside invalid UTF strings.
+
+44. Implement --group-separator and --no-group-separator for pcre2grep.
+
+45. Fix \X matching in 32 bit mode without UTF in JIT.
+
+46. Fix backref iterators when PCRE2_MATCH_UNSET_BACKREF is set in JIT.
 
 
 Version 10.42 11-December-2022

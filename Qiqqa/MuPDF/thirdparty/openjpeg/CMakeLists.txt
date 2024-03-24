@@ -136,6 +136,13 @@ if (APPLE)
 	option(OPJ_USE_DSYMUTIL "Call dsymutil on binaries after build." OFF)
 endif()
 
+if (${CMAKE_SYSTEM_PROCESSOR} STREQUAL "loongarch64")
+    # Add -mlsx -mlasx flags to use simd optimizations on loongarch platform.
+    # Add -fno-expensive-optimizations option to avoid below three unit tests failure on Release version:
+    # (NR-C1P1-p1_05.j2k-compare2base (Failed), NR-JP2-file2.jp2-compare2base (Failed), NR-DEC-issue205.jp2-253-decode-md5 (Failed))
+    list (APPEND CMAKE_C_FLAGS ${CMAKE_C_FLAGS} " -mlsx -mlasx -fno-expensive-optimizations" )
+endif()
+
 #-----------------------------------------------------------------------------
 # Big endian test:
 if (NOT EMSCRIPTEN)
@@ -176,7 +183,7 @@ if(CMAKE_COMPILER_IS_GNUCC)
   # set(CMAKE_C_FLAGS "-Wall -std=c99 ${CMAKE_C_FLAGS}") # FIXME: this setting prevented us from setting a coverage build.
   # Do not use ffast-math for all build, it would produce incorrect results, only set for release:
   set(OPENJPEG_LIBRARY_COMPILE_OPTIONS ${OPENJPEG_LIBRARY_COMPILE_OPTIONS} "$<$<CONFIG:Release>:-ffast-math>")
-  set(OPENJP2_COMPILE_OPTIONS ${OPENJP2_COMPILE_OPTIONS} "$<$<CONFIG:Release>:-ffast-math>" -Wall -Wextra -Wconversion -Wunused-parameter -Wdeclaration-after-statement -Werror=declaration-after-statement)
+  set(OPENJP2_COMPILE_OPTIONS ${OPENJP2_COMPILE_OPTIONS} "$<$<CONFIG:Release>:-ffast-math>" -Wall -Wextra -Wconversion -Wunused-parameter -Wdeclaration-after-statement -Werror=declaration-after-statement -Wstrict-prototypes -Werror=strict-prototypes -Wmissing-prototypes -Werror=missing-prototypes)
 endif()
 
 #-----------------------------------------------------------------------------
@@ -185,20 +192,18 @@ endif()
 # Check if some include files are provided by the system
 include(EnsureFileInclude)
 # These files are mandatory
-ensure_file_include("string.h"   HAVE_STRING_H YES)
-ensure_file_include("memory.h"   HAVE_MEMORY_H YES)
-ensure_file_include("stdlib.h"   HAVE_STDLIB_H YES)
-ensure_file_include("stdio.h"    HAVE_STDIO_H  YES)
-ensure_file_include("math.h"     HAVE_MATH_H   YES)
-ensure_file_include("float.h"    HAVE_FLOAT_H  YES)
-ensure_file_include("time.h"     HAVE_TIME_H   YES)
-ensure_file_include("stdarg.h"   HAVE_STDARG_H YES)
-ensure_file_include("ctype.h"    HAVE_CTYPE_H  YES)
-ensure_file_include("assert.h"   HAVE_ASSERT_H YES)
-
-# For the following files, we provide an alternative, they are not mandatory
-ensure_file_include("stdint.h"   OPJ_HAVE_STDINT_H   NO)
-ensure_file_include("inttypes.h" OPJ_HAVE_INTTYPES_H NO)
+ensure_file_include("string.h"   HAVE_STRING_H   YES)
+ensure_file_include("memory.h"   HAVE_MEMORY_H   YES)
+ensure_file_include("stdlib.h"   HAVE_STDLIB_H   YES)
+ensure_file_include("stdio.h"    HAVE_STDIO_H    YES)
+ensure_file_include("math.h"     HAVE_MATH_H     YES)
+ensure_file_include("float.h"    HAVE_FLOAT_H    YES)
+ensure_file_include("time.h"     HAVE_TIME_H     YES)
+ensure_file_include("stdarg.h"   HAVE_STDARG_H   YES)
+ensure_file_include("ctype.h"    HAVE_CTYPE_H    YES)
+ensure_file_include("assert.h"   HAVE_ASSERT_H   YES)
+ensure_file_include("stdint.h"   HAVE_STDINT_H   YES)
+ensure_file_include("inttypes.h" HAVE_INTTYPES_H YES)
 
 # why check this one ? for openjpip ?
 include (${CMAKE_ROOT}/Modules/CheckIncludeFile.cmake)

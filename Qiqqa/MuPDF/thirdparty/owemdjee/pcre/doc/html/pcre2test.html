@@ -138,15 +138,15 @@ error.
 </P>
 <P>
 <b>-16</b>
-If the 16-bit library has been built, this option causes it to be used. If only
-the 16-bit library has been built, this is the default. If the 16-bit library
+If the 16-bit library has been built, this option causes it to be used. If the
+8-bit library has not been built, this is the default. If the 16-bit library
 has not been built, this option causes an error.
 </P>
 <P>
 <b>-32</b>
-If the 32-bit library has been built, this option causes it to be used. If only
-the 32-bit library has been built, this is the default. If the 32-bit library
-has not been built, this option causes an error.
+If the 32-bit library has been built, this option causes it to be used. If no
+other library has been built, this is the default. If the 32-bit library has
+not been built, this option causes an error.
 </P>
 <P>
 <b>-ac</b>
@@ -507,8 +507,8 @@ followed by a backslash, for example,
 <pre>
   /abc/\
 </pre>
-then a backslash is added to the end of the pattern. This is done to provide a
-way of testing the error condition that arises if a pattern finishes with a
+a backslash is added to the end of the pattern. This is done to provide a way
+of testing the error condition that arises if a pattern finishes with a
 backslash, because
 <pre>
   /abc\/
@@ -631,6 +631,7 @@ for a description of the effects of these options.
       ascii_bsd                 set PCRE2_EXTRA_ASCII_BSD
       ascii_bss                 set PCRE2_EXTRA_ASCII_BSS
       ascii_bsw                 set PCRE2_EXTRA_ASCII_BSW
+      ascii_digit               set PCRE2_EXTRA_ASCII_DIGIT
       ascii_posix               set PCRE2_EXTRA_ASCII_POSIX
       auto_callout              set PCRE2_AUTO_CALLOUT
       bad_escape_is_literal     set PCRE2_EXTRA_BAD_ESCAPE_IS_LITERAL
@@ -695,10 +696,12 @@ heavily used in the test files.
       jitfast                   use JIT fast path
       jitverify                 verify JIT use
       locale=&#60;name&#62;             use this locale
-      max_pattern_length=&#60;n&#62;    set the maximum pattern length
+      max_pattern_length=&#60;n&#62;    set maximum pattern length
+      max_varlookbehind=&#60;n&#62;     set maximum variable lookbehind length
       memory                    show memory used
       newline=&#60;type&#62;            set newline type
       null_context              compile with a NULL context
+      null_pattern              pass pattern as NULL
       parens_nest_limit=&#60;n&#62;     set maximum parentheses depth
       posix                     use the POSIX API
       posix_nosub               use the POSIX API with REG_NOSUB
@@ -800,6 +803,15 @@ testing that <b>pcre2_compile()</b> behaves correctly in this case (it uses
 default values).
 </P>
 <br><b>
+Passing a NULL pattern
+</b><br>
+<P>
+The <b>null_pattern</b> modifier is for testing the behaviour of
+<b>pcre2_compile()</b> when the pattern argument is NULL. The length value
+passed is the default PCRE2_ZERO_TERMINATED unless <b>use_length</b> is set.
+Any length other than zero causes an error.
+</P>
+<br><b>
 Specifying pattern characters in hexadecimal
 </b><br>
 <P>
@@ -835,6 +847,17 @@ because patterns specified in hexadecimal may contain binary zeros.
 If <b>hex</b> or <b>use_length</b> is used with the POSIX wrapper API (see
 <a href="#posixwrapper">"Using the POSIX wrapper API"</a>
 below), the REG_PEND extension is used to pass the pattern's length.
+</P>
+<br><b>
+Specifying a maximum for variable lookbehinds
+</b><br>
+<P>
+Variable lookbehind assertions are supported only if, for each one, there is a
+maximum length (in characters) that it can match. There is a limit on this,
+whose default can be set at build time, with an ultimate default of 255. The
+<b>max_varlookbehind</b> modifier uses the <b>pcre2_set_max_varlookbehind()</b>
+function to change the limit. Lookbehinds whose branches each match a fixed
+length are limited to 65535 characters per branch.
 </P>
 <br><b>
 Specifying wide characters in 16-bit and 32-bit modes
@@ -2170,7 +2193,7 @@ Cambridge, England.
 </P>
 <br><a name="SEC21" href="#TOC1">REVISION</a><br>
 <P>
-Last updated: 04 February 2023
+Last updated: 11 August 2023
 <br>
 Copyright &copy; 1997-2023 University of Cambridge.
 <br>

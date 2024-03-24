@@ -11,7 +11,7 @@ struct global_class
     ~global_class() {}
 };
 
-__attribute__ (init_priority(32767)))
+__attribute__ ((init_priority(32767)))
 global_class g_object;
 
 int main()

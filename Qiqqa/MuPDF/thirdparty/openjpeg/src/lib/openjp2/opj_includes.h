@@ -55,6 +55,8 @@
 #include <ctype.h>
 #include <assert.h>
 #include <limits.h>
+#include <stdint.h>
+#include <inttypes.h>
 #if defined(_MSC_VER)
 #ifndef _CRTDBG_MAP_ALLOC
 #define _CRTDBG_MAP_ALLOC
@@ -224,7 +226,6 @@ typedef unsigned int OPJ_BITFIELD;
 
 #define OPJ_UNUSED(x) (void)x
 
-#include "opj_inttypes.h"
 #include "opj_clock.h"
 #include "opj_malloc.h"
 #include "event.h"

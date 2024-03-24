@@ -45,6 +45,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <map>
+#include <new>
 #include <sstream>
 #include <string>
 #include <utility>
@@ -617,7 +618,8 @@ class Thread {
     pthread_join(th_, nullptr);
   }
 #else
-# error No thread implementation.
+  void Start() {}
+  void Join() {}
 #endif
 
  protected:
@@ -636,7 +638,7 @@ class Thread {
   }
   HANDLE handle_;
   DWORD th_;
-#else
+#elif defined(HAVE_PTHREAD)
   pthread_t th_;
 #endif
 };
@@ -677,11 +679,19 @@ void operator delete[](void* p);
 
 #else
 
-void* operator new(size_t size) GOOGLE_GLOG_THROW_BAD_ALLOC {
+void* operator new(size_t size, const std::nothrow_t&) noexcept {
   if (GOOGLE_NAMESPACE::g_new_hook) {
     GOOGLE_NAMESPACE::g_new_hook();
   }
   return malloc(size);
+}
+
+void* operator new(size_t size) GOOGLE_GLOG_THROW_BAD_ALLOC {
+  void* p = ::operator new(size, std::nothrow);
+  if (p == nullptr) {
+    throw std::bad_alloc{};
+  }
+  return p;
 }
 
 void* operator new[](size_t size) GOOGLE_GLOG_THROW_BAD_ALLOC {

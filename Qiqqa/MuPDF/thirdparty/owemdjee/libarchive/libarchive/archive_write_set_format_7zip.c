@@ -168,7 +168,7 @@ struct file {
 	mode_t			 mode;
 	uint32_t		 crc32;
 
-	signed int		 dir:1;
+	unsigned		 dir:1;
 };
 
 struct _7zip {

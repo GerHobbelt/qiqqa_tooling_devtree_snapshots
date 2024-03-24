@@ -107,11 +107,11 @@ int main(void)
 
     try
     {
+        js_std_init_handlers(rt);
+
         qjs_glue(context.addModule("test"));
 
-        js_std_init_handlers(rt);
         /* loader for ES6 modules */
-        JS_SetModuleLoaderFunc(rt, nullptr, js_module_loader, nullptr);
         js_std_add_helpers(ctx, 0, nullptr);
 
         /* system modules */
@@ -128,7 +128,10 @@ int main(void)
         context.eval(str, "<input>", JS_EVAL_TYPE_MODULE);
 
 
-        context.global()["assert"] = [](bool t) { if(!t) std::exit(2); };
+        context.global()["assert"] = [](bool t) { 
+			if(!t) 
+				std::exit(2); 
+		};
 
 
         auto xxx = context.eval("\"use strict\";"
@@ -172,9 +175,9 @@ int main(void)
     catch(exception)
     {
         auto exc = context.getException();
-        std::cerr << (exc.isError() ? "Error: " : "Throw: ") << (std::string)exc << std::endl;
+        std::cerr << (exc.isError() ? "Error: " : "Throw: ") << std::string(exc) << std::endl;
         if((bool)exc["stack"])
-            std::cerr << (std::string)exc["stack"] << std::endl;
+            std::cerr << std::string(exc["stack"]) << std::endl;
 
         js_std_free_handlers(rt);
         return 1;

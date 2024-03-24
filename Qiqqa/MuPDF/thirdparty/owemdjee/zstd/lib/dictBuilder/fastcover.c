@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Facebook, Inc.
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
  * All rights reserved.
  *
  * This source code is licensed under both the BSD-style license (found in the
@@ -545,7 +545,7 @@ FASTCOVER_convertToFastCoverParams(ZDICT_cover_params_t coverParams,
 }
 
 
-ZDICTLIB_API size_t
+ZDICTLIB_STATIC_API size_t
 ZDICT_trainFromBuffer_fastCover(void* dictBuffer, size_t dictBufferCapacity,
                                 const void* samplesBuffer,
                                 const size_t* samplesSizes, unsigned nbSamples,
@@ -614,7 +614,7 @@ ZDICT_trainFromBuffer_fastCover(void* dictBuffer, size_t dictBufferCapacity,
 }
 
 
-ZDICTLIB_API size_t
+ZDICTLIB_STATIC_API size_t
 ZDICT_optimizeTrainFromBuffer_fastCover(
                     void* dictBuffer, size_t dictBufferCapacity,
                     const void* samplesBuffer,

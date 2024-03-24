@@ -65,6 +65,9 @@
     <Text Include="../../thirdparty/owemdjee/robin-map/CMakeLists.txt">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/robin-map/LICENSE">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/robin-map/README.md">
       <Filter>Misc Files</Filter>
     </Text>
@@ -76,6 +79,9 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/robin-map/tests/CMakeLists.txt">
       <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/robin-map/tsl-robin-map.natvis">
+      <Filter>Misc Files</Filter>
     </Text>
   </ItemGroup>
 </Project>

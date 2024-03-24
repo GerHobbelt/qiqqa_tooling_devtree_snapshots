@@ -33,6 +33,7 @@
 #endif
 
 #include "libbf.h"
+#include "monolithic_examples.h"
 
 /* number of bits per base 10 digit */
 #define BITS_PER_DIGIT 3.32192809488736234786
@@ -322,7 +323,11 @@ static void mpfr_bench(double k_start, double k_end,
 
 #endif /* CONFIG_MPFR */
 
-int main(int argc, char **argv)
+#if defined (BUILD_MONOLITHIC)
+#define main			libbf_bench_main
+#endif
+
+int main(int argc, const char **argv)
 {
     const char *cmd;
     

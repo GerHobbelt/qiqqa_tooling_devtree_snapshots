@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBYAML_EXAMPLES;YAML_EXAMPLES_STATICLIB;CHM_NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBYAML;YAML_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBYAML_EXAMPLES;YAML_EXAMPLES_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libyaml/include;../../thirdparty/owemdjee/libyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>YAML_DECLARE_STATIC;BUILD_MONOLITHIC;BUILDING_LIBYAML;YAML_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBYAML_EXAMPLES;YAML_EXAMPLES_STATICLIB;CHM_NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBYAML;YAML_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libyaml/include;../../thirdparty/owemdjee/libyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBYAML_EXAMPLES;YAML_EXAMPLES_STATICLIB;CHM__DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBYAML;YAML_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBYAML_EXAMPLES;YAML_EXAMPLES_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libyaml/include;../../thirdparty/owemdjee/libyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>YAML_DECLARE_STATIC;BUILD_MONOLITHIC;BUILDING_LIBYAML;YAML_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBYAML_EXAMPLES;YAML_EXAMPLES_STATICLIB;CHM__DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBYAML;YAML_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libyaml/include;../../thirdparty/owemdjee/libyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBYAML_EXAMPLES;YAML_EXAMPLES_STATICLIB;CHM_NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBYAML;YAML_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBYAML_EXAMPLES;YAML_EXAMPLES_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libyaml/include;../../thirdparty/owemdjee/libyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>YAML_DECLARE_STATIC;BUILD_MONOLITHIC;BUILDING_LIBYAML;YAML_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBYAML_EXAMPLES;YAML_EXAMPLES_STATICLIB;CHM_NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBYAML;YAML_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libyaml/include;../../thirdparty/owemdjee/libyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBYAML_EXAMPLES;YAML_EXAMPLES_STATICLIB;CHM__DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBYAML;YAML_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBYAML_EXAMPLES;YAML_EXAMPLES_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libyaml/include;../../thirdparty/owemdjee/libyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>YAML_DECLARE_STATIC;BUILD_MONOLITHIC;BUILDING_LIBYAML;YAML_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBYAML_EXAMPLES;YAML_EXAMPLES_STATICLIB;CHM__DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBYAML;YAML_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libyaml/include;../../thirdparty/owemdjee/libyaml/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -233,13 +233,64 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="../../thirdparty/owemdjee/libyaml-examples/emit.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libyaml-examples/fruit.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libyaml-examples/parse.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libyaml-examples/scan.c" />
-    <ClInclude Include="../../thirdparty/owemdjee/libyaml-examples/fruit.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/libyaml-examples/monolithic_examples.h" />
-    <Text Include="../../thirdparty/owemdjee/libyaml-examples/README.md" />
+    <ClCompile Include="../../thirdparty/owemdjee/libyaml/src/api.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libyaml/src/dumper.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libyaml/src/emitter.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libyaml/src/loader.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libyaml/src/parser.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libyaml/src/reader.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libyaml/src/scanner.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libyaml/src/writer.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libyaml/tests/example-deconstructor-alt.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libyaml/tests/example-deconstructor.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libyaml/tests/example-reformatter-alt.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libyaml/tests/example-reformatter.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libyaml/tests/run-dumper.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libyaml/tests/run-emitter-test-suite.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libyaml/tests/run-emitter.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libyaml/tests/run-loader.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libyaml/tests/run-parser-test-suite.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libyaml/tests/run-parser.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libyaml/tests/run-scanner.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libyaml/tests/test-reader.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libyaml/tests/test-version.c" />
+    <ClInclude Include="../../thirdparty/owemdjee/libyaml/include/yaml.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libyaml/src/yaml_private.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libyaml/tests/monolithic_examples.h" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/Changes" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/License" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/ReadMe.md" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/announcement.msg" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/cmake/config.h.in" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/configure.ac" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/doc/doxygen.cfg" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/docker/README.mkd" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/docker/alpine-3.7" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/docker/ubuntu-14.04" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/docker/ubuntu-16.04" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/examples/anchors.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/examples/array.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/examples/global-tag.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/examples/json.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/examples/mapping.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/examples/numbers.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/examples/strings.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/examples/tags.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/examples/yaml-version.yaml" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/include/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/pkg/ReadMe.md" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/pkg/docker/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/pkg/docker/output/ReadMe" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/pkg/docker/scripts/libyaml-dist.sh" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/src/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/tests/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/tests/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/tests/ReadMe.md" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/tests/run-all-tests.sh" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/yaml-0.1.pc.in" />
+    <Text Include="../../thirdparty/owemdjee/libyaml/yamlConfig.cmake.in" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

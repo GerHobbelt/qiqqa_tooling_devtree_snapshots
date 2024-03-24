@@ -315,7 +315,10 @@ int main(int argc, const char** argv)
 		fz_drop_document(ctx, doc);
 	}
 	fz_catch(ctx)
-		fail(fz_caught_message(ctx));
+	{
+		fz_report_error(ctx);
+		fail("error");
+	}
 
 	fprintf(stderr, "finally!\n");
 	fflush(stderr);
@@ -340,7 +343,7 @@ int main(int argc, const char** argv)
 
 int main(int argc, const char** argv)
 {
-	fprintf(stderr, "%s: this tool is not supported in this build (multithreading has been disabled)\n", argv[0]);
+	fprintf(stderr, "%s: this tool is not supported in this build (multithreading has been disabled)\n", fz_basename(argv[0]));
 	return 1;
 }
 

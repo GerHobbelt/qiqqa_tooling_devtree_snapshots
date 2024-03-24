@@ -48,14 +48,15 @@ jobs:
       - name: Prepare coverage
         run: |
           lcov --directory . --capture --output-file coverage.info
-          lcov --remove coverage.info '*/tests/*' '*/examples/*' '/usr/*' --output-file coverage.info
+          lcov --remove coverage.info '*/tests/*' '*/examples/*' '/usr/*' '*/book/*' --output-file coverage.info
           lcov --list coverage.info
         working-directory: build
 
       - uses: codecov/codecov-action@v3
         with:
+          files: build/coverage.info
           fail_ci_if_error: true
-          working-directory: build
+          functionalities: fixes
 
   clang-tidy:
     name: Clang-Tidy
@@ -127,9 +128,9 @@ jobs:
       - name: Build
         run: meson compile -C build-meson
 
-  cmake-config:
-    name: CMake config check
-    runs-on: ubuntu-latest
+  cmake-config-ubuntu-1804:
+    name: CMake config check (Ubuntu 18.04)
+    runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v3
 
@@ -174,6 +175,12 @@ jobs:
           cmake-version: "3.10"
         if: success() || failure()
 
+  cmake-config-ubuntu-2004:
+    name: CMake config check (Ubuntu 20.04)
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+
       - name: Check CMake 3.11 (full)
         uses: ./.github/actions/quick_cmake
         with:
@@ -211,6 +218,12 @@ jobs:
           cmake-version: "3.16"
         if: success() || failure()
 
+  cmake-config-ubuntu-2204:
+    name: CMake config check (Ubuntu 22.04)
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+
       - name: Check CMake 3.17
         uses: ./.github/actions/quick_cmake
         with:
@@ -235,16 +248,28 @@ jobs:
           cmake-version: "3.20"
         if: success() || failure()
 
-      - name: Check CMake 3.21 (full)
+      - name: Check CMake 3.21
         uses: ./.github/actions/quick_cmake
         with:
           cmake-version: "3.21"
-          args: -DCLI11_SANITIZERS=ON -DCLI11_BUILD_EXAMPLES_JSON=ON
         if: success() || failure()
 
-      - name: Check CMake 3.22 (full)
+      - name: Check CMake 3.22
         uses: ./.github/actions/quick_cmake
         with:
           cmake-version: "3.22"
+        if: success() || failure()
+
+      - name: Check CMake 3.23 (full)
+        uses: ./.github/actions/quick_cmake
+        with:
+          cmake-version: "3.23"
+          args: -DCLI11_SANITIZERS=ON -DCLI11_BUILD_EXAMPLES_JSON=ON
+        if: success() || failure()
+
+      - name: Check CMake 3.24 (full)
+        uses: ./.github/actions/quick_cmake
+        with:
+          cmake-version: "3.24"
           args: -DCLI11_SANITIZERS=ON -DCLI11_BUILD_EXAMPLES_JSON=ON
         if: success() || failure()

@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMULTIVERSO;MULTIVERSO_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMULTIVERSO;MULTIVERSO_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMULTIVERSO;MULTIVERSO_STATICLIB;CHM_NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMULTIVERSO;MULTIVERSO_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMULTIVERSO;MULTIVERSO_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMULTIVERSO;MULTIVERSO_STATICLIB;CHM__DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMULTIVERSO;MULTIVERSO_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMULTIVERSO;MULTIVERSO_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMULTIVERSO;MULTIVERSO_STATICLIB;CHM_NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMULTIVERSO;MULTIVERSO_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMULTIVERSO;MULTIVERSO_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMULTIVERSO;MULTIVERSO_STATICLIB;CHM__DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -401,6 +401,7 @@
     <Image Include="../../thirdparty/owemdjee/multiverso/binding/python/docs/imgs/accuracy_time.png" />
     <Text Include="../../thirdparty/owemdjee/multiverso/Applications/KMeans/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/multiverso/Applications/LogisticRegression/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/multiverso/Applications/LogisticRegression/LogisticRegression.vcxproj.filters" />
     <Text Include="../../thirdparty/owemdjee/multiverso/Applications/LogisticRegression/README.md" />
     <Text Include="../../thirdparty/owemdjee/multiverso/Applications/LogisticRegression/example/README.md" />
     <Text Include="../../thirdparty/owemdjee/multiverso/Applications/LogisticRegression/example/convert.py" />
@@ -408,6 +409,7 @@
     <Text Include="../../thirdparty/owemdjee/multiverso/Applications/LogisticRegression/example/run.sh" />
     <Text Include="../../thirdparty/owemdjee/multiverso/Applications/WordEmbedding/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/multiverso/Applications/WordEmbedding/README.md" />
+    <Text Include="../../thirdparty/owemdjee/multiverso/Applications/WordEmbedding/WordEmbedding.vcxproj.filters" />
     <Text Include="../../thirdparty/owemdjee/multiverso/Applications/WordEmbedding/example/Readme.txt" />
     <Text Include="../../thirdparty/owemdjee/multiverso/Applications/WordEmbedding/example/run.bat" />
     <Text Include="../../thirdparty/owemdjee/multiverso/Applications/WordEmbedding/preprocess/Readme.txt" />
@@ -416,13 +418,19 @@
     <Text Include="../../thirdparty/owemdjee/multiverso/LICENSE.md" />
     <Text Include="../../thirdparty/owemdjee/multiverso/README.md" />
     <Text Include="../../thirdparty/owemdjee/multiverso/Test/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/multiverso/Test/Test.vcxproj.filters" />
     <Text Include="../../thirdparty/owemdjee/multiverso/Test/unittests/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/multiverso/Test/unittests/MultiversoTests.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/multiverso/binding/C#/MultiversoCLR/MultiversoCLR.vcxproj.filters" />
     <Text Include="../../thirdparty/owemdjee/multiverso/binding/C#/MultiversoCLR/ReadMe.txt" />
     <Text Include="../../thirdparty/owemdjee/multiverso/binding/C#/NuGet/GenerateNugetPackage.ps1" />
+    <Text Include="../../thirdparty/owemdjee/multiverso/binding/C#/NuGet/MultiversoCLR.nuspec" />
     <Text Include="../../thirdparty/owemdjee/multiverso/binding/lua/ArrayTableHandler.lua" />
     <Text Include="../../thirdparty/owemdjee/multiverso/binding/lua/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/multiverso/binding/lua/Makefile" />
     <Text Include="../../thirdparty/owemdjee/multiverso/binding/lua/MatrixTableHandler.lua" />
     <Text Include="../../thirdparty/owemdjee/multiverso/binding/lua/README.md" />
+    <Text Include="../../thirdparty/owemdjee/multiverso/binding/lua/demos/xor/Makefile" />
     <Text Include="../../thirdparty/owemdjee/multiverso/binding/lua/demos/xor/README.md" />
     <Text Include="../../thirdparty/owemdjee/multiverso/binding/lua/demos/xor/xor-multiverso.lua" />
     <Text Include="../../thirdparty/owemdjee/multiverso/binding/lua/demos/xor/xor.lua" />
@@ -430,6 +438,7 @@
     <Text Include="../../thirdparty/owemdjee/multiverso/binding/lua/docs/BENCHMARK.md" />
     <Text Include="../../thirdparty/owemdjee/multiverso/binding/lua/docs/TUTORIAL.md" />
     <Text Include="../../thirdparty/owemdjee/multiverso/binding/lua/init.lua" />
+    <Text Include="../../thirdparty/owemdjee/multiverso/binding/lua/multiverso-scm-1.rockspec" />
     <Text Include="../../thirdparty/owemdjee/multiverso/binding/lua/test.lua" />
     <Text Include="../../thirdparty/owemdjee/multiverso/binding/lua/util.lua" />
     <Text Include="../../thirdparty/owemdjee/multiverso/binding/python/README.md" />
@@ -441,6 +450,7 @@
     <Text Include="../../thirdparty/owemdjee/multiverso/binding/python/examples/theano/keras/README.md" />
     <Text Include="../../thirdparty/owemdjee/multiverso/binding/python/examples/theano/keras/addition_rnn_mv.py" />
     <Text Include="../../thirdparty/owemdjee/multiverso/binding/python/examples/theano/lasagne/Deep_Residual_Learning_CIFAR-10.py" />
+    <Text Include="../../thirdparty/owemdjee/multiverso/binding/python/examples/theano/lasagne/Makefile" />
     <Text Include="../../thirdparty/owemdjee/multiverso/binding/python/examples/theano/lasagne/__init__.py" />
     <Text Include="../../thirdparty/owemdjee/multiverso/binding/python/examples/theano/load_data.py" />
     <Text Include="../../thirdparty/owemdjee/multiverso/binding/python/examples/theano/logistic_regression.py" />
@@ -460,6 +470,7 @@
     <Text Include="../../thirdparty/owemdjee/multiverso/binding/python/setup.py" />
     <Text Include="../../thirdparty/owemdjee/multiverso/cmake_uninstall.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/multiverso/src/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/multiverso/src/Multiverso.vcxproj.filters" />
     <Text Include="../../thirdparty/owemdjee/multiverso/src/build_dll.bat" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >

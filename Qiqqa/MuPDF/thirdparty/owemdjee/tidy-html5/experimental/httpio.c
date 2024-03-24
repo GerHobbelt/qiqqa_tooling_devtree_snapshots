@@ -2,6 +2,7 @@
 
 #include "httpio.h"
 
+
 int
 makeConnection ( HTTPInputSource *pHttp )
 {
@@ -41,12 +42,12 @@ int parseURL( HTTPInputSource *pHttp, tmbstr url )
   int i, j = 0;
   ctmbstr pStr;
 
-    pStr = tmbsubstr( url, "://" );
+    pStr = TY_(tmbsubstr)( url, "://" );
 
     /* If protocol is there, but not http, bail out, else assume http.  */
     if (NULL != pStr)
     {
-        if (tmbstrncasecmp( url, "http://", 7 ))
+        if (TY_(tmbstrncasecmp)( url, "http://", 7 ))
             return -1;
     }
 
@@ -57,7 +58,7 @@ int parseURL( HTTPInputSource *pHttp, tmbstr url )
         return -1;
 
     /* Get the hostname.  */
-    pHttp->pHostName = tmbstrndup (&url[j], i - j );
+    pHttp->pHostName = TY_(tmbstrndup) (&url[j], i - j );
 
     if (url[i] == ':')
     {
@@ -86,7 +87,7 @@ int parseURL( HTTPInputSource *pHttp, tmbstr url )
     /* skip past the delimiting slash (we'll add it later )  */
     while (url[i] && url[i] == '/')
         i++;
-    pHttp->pResource = tmbstrdup (url + i );
+    pHttp->pResource = TY_(tmbstrdup) (url + i );
     return 0;
 }
 
@@ -126,10 +127,10 @@ int openURL( HTTPInputSource *in, tmbstr pUrl )
         char ch, lastCh = '\0';
         int blanks = 0;
 
-        char *getCmd = MemAlloc( 48 + strlen( in->pResource ));
+        char *getCmd = TidyAlloc( 48 + strlen( in->pResource ));
         sprintf( getCmd, "GET /%s HTTP/1.0\r\nAccept: text/html\r\n\r\n", in->pResource );
         send( in->s, getCmd, strlen( getCmd ), 0 );
-        MemFree( getCmd );
+        TidyFree( getCmd );
 
         /*  skip past the header information  */
         while (   in->nextBytePos >= in->nBufSize

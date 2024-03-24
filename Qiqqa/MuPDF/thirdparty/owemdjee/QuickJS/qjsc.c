@@ -83,9 +83,7 @@ static const FeatureEntry feature_list[] = {
     { "promise", "Promise" },
 #define FE_MODULE_LOADER 9
     { "module-loader", NULL },
-#ifdef CONFIG_BIGNUM
     { "bigint", "BigInt" },
-#endif
 };
 
 static void namelist_add(namelist_t *lp, const char *name, const char *short_name,
@@ -179,9 +177,9 @@ static void dump_hex(FILE *f, const uint8_t *buf, size_t len)
         fprintf(f, "\n");
 }
 
-static void output_object_code(JSContext *ctx,
-                               FILE *fo, JSValueConst obj, const char *c_name,
-                               BOOL load_only)
+static int output_object_code(JSContext *ctx,
+                              FILE *fo, JSValueConst obj, const char *c_name,
+                              BOOL load_only)
 {
     uint8_t *out_buf;
     size_t out_buf_len;
@@ -192,7 +190,7 @@ static void output_object_code(JSContext *ctx,
     out_buf = JS_WriteObject(ctx, &out_buf_len, obj, flags);
     if (!out_buf) {
         js_std_dump_error(ctx);
-        exit(1);
+        return -1;
     }
 
     namelist_add(&cname_list, c_name, NULL, load_only);
@@ -205,6 +203,7 @@ static void output_object_code(JSContext *ctx,
     fprintf(fo, "};\n\n");
 
     qjs_free(ctx, out_buf);
+	return 0;
 }
 
 static int js_module_dummy_init(JSContext *ctx, JSModuleDef *m)
@@ -244,6 +243,7 @@ JSModuleDef *jsc_module_loader(JSContext *ctx,
     JSModuleDef *m;
     namelist_entry_t *e;
     char *filename = js_find_module(ctx, module_name);
+	const char *name = filename ? filename : module_name;
 
     /* check if it is a declared C or system module */
     e = namelist_find(&cmodule_list, module_name);
@@ -252,10 +252,10 @@ JSModuleDef *jsc_module_loader(JSContext *ctx,
         namelist_add(&init_module_list, e->name, e->short_name, 0);
         /* create a dummy module */
         m = JS_NewCModule(ctx, module_name, js_module_dummy_init);
-    } else if (has_suffix(filename ? filename : module_name, ".so")) {
-        fprintf(stderr, "Warning: binary module '%s' will be dynamically loaded\n", filename ? filename : module_name);
+    } else if (has_suffix(name, ".so")) {
+        fprintf(stderr, "Warning: binary module '%s' will be dynamically loaded\n", name);
         /* create a dummy module */
-        m = JS_NewCModule(ctx, filename ? filename : module_name, js_module_dummy_init);
+        m = JS_NewCModule(ctx, name, js_module_dummy_init);
         /* the resulting executable will export its symbols for the
            dynamic library */
         dynamic_export = TRUE;
@@ -265,10 +265,9 @@ JSModuleDef *jsc_module_loader(JSContext *ctx,
         JSValue func_val;
         char cname[1024];
 
-        buf = js_load_file(ctx, &buf_len, filename ? filename : module_name);
+        buf = js_load_file(ctx, &buf_len, name);
         if (!buf) {
-            JS_ThrowReferenceError(ctx, "could not load module filename '%s'",
-                                   filename ? filename : module_name);
+            JS_ThrowReferenceError(ctx, "could not load module filename '%s'", name);
             return NULL;
         }
 
@@ -278,11 +277,14 @@ JSModuleDef *jsc_module_loader(JSContext *ctx,
         qjs_free(ctx, buf);
         if (JS_IsException(func_val))
             return NULL;
-        get_c_name(cname, sizeof(cname), filename ? filename : module_name);
+        get_c_name(cname, sizeof(cname), name);
         if (namelist_find(&cname_list, cname)) {
             find_unique_cname(cname, sizeof(cname));
         }
-        output_object_code(ctx, outfile, func_val, cname, TRUE);
+        if (output_object_code(ctx, outfile, func_val, cname, TRUE)) {
+            JS_ThrowReferenceError(ctx, "internal error occurred while processing module '%s'", name);
+            return NULL;
+		}
 
         /* the module is already referenced, so we must free it */
         m = JS_VALUE_GET_PTR(func_val);
@@ -293,7 +295,7 @@ JSModuleDef *jsc_module_loader(JSContext *ctx,
     return m;
 }
 
-static void compile_file(JSContext *ctx, FILE *fo,
+static int compile_file(JSContext *ctx, FILE *fo,
                          const char *filename,
                          const char *c_name1,
                          int module)
@@ -307,7 +309,7 @@ static void compile_file(JSContext *ctx, FILE *fo,
     buf = js_load_file(ctx, &buf_len, filename);
     if (!buf) {
         fprintf(stderr, "Could not load '%s'\n", filename);
-        exit(1);
+        return -1;
     }
     eval_flags = JS_EVAL_FLAG_COMPILE_ONLY;
     if (module < 0) {
@@ -321,7 +323,8 @@ static void compile_file(JSContext *ctx, FILE *fo,
     obj = JS_Eval(ctx, (const char *)buf, buf_len, filename, eval_flags);
     if (JS_IsException(obj)) {
         js_std_dump_error(ctx);
-        exit(1);
+		qjs_free(ctx, buf);
+		return -1;
     }
     qjs_free(ctx, buf);
     if (c_name1) {
@@ -329,8 +332,9 @@ static void compile_file(JSContext *ctx, FILE *fo,
     } else {
         get_c_name(c_name, sizeof(c_name), filename);
     }
-    output_object_code(ctx, fo, obj, c_name, FALSE);
+    int rv = output_object_code(ctx, fo, obj, c_name, FALSE);
     JS_FreeValue(ctx, obj);
+	return rv;
 }
 
 static const char main_c_template1[] =
@@ -345,6 +349,7 @@ static const char main_c_template1[] =
 
 static const char main_c_template2[] =
     "  js_std_loop(ctx);\n"
+    "  js_std_free_handlers(rt);\n"
     "  JS_FreeContext(ctx);\n"
     "  JS_FreeRuntime(rt);\n"
     "  return 0;\n"
@@ -359,8 +364,8 @@ static int help(void)
            "\n"
            "options are:\n"
            "-v          add verbosity\n"
-           "-c          only output bytecode in a C file\n"
-           "-e          output main() and bytecode in a C file (default = executable output)\n"
+           "-c          only output bytecode to a C file\n"
+           "-e          output main() and bytecode to a C file (default = executable output)\n"
            "-o output   set the output filename\n"
            "-N cname    set the C name of the generated data\n"
            "-m          compile as Javascript module (default=autodetect)\n"
@@ -721,7 +726,8 @@ int main(int argc, const char** argv)
 
     for(i = optind; i < argc; i++) {
         const char *filename = argv[i];
-        compile_file(ctx, fo, filename, cname, module);
+        if (compile_file(ctx, fo, filename, cname, module) < 0)
+			return EXIT_FAILURE;
         cname = NULL;
     }
 

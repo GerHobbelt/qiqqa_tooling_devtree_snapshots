@@ -36,6 +36,17 @@ ifeq ($(HAVE_WIN32),yes)
   WIN32_LDFLAGS := -Wl,-subsystem,windows
 endif
 
+VERSION_MAJOR = $(shell grep "define FZ_VERSION_MAJOR" include/mupdf/fitz/version.h | cut -d ' ' -f 3)
+VERSION_MINOR = $(shell grep "define FZ_VERSION_MINOR" include/mupdf/fitz/version.h | cut -d ' ' -f 3)
+VERSION_PATCH = $(shell grep "define FZ_VERSION_PATCH" include/mupdf/fitz/version.h | cut -d ' ' -f 3)
+
+ifeq ($(LINUX_OR_OPENBSD),yes)
+  SO_VERSION = .$(VERSION_MINOR).$(VERSION_PATCH)
+  ifeq ($(OS),Linux)
+    SO_VERSION_LINUX := yes
+  endif
+endif
+
 # --- Commands ---
 
 ifneq ($(verbose),yes)
@@ -63,16 +74,16 @@ ifdef RANLIB
   RANLIB_CMD = $(QUIET_RANLIB) $(RANLIB) $@
 endif
 LINK_CMD = $(QUIET_LINK) $(MKTGTDIR) ; $(CC) $(LDFLAGS) -o $@ $^ $(LIBS)
-TAGS_CMD = $(QUIET_TAGS) ctags -R --c-kinds=+p --exclude=platform/python --exclude=platform/c++
+TAGS_CMD = $(QUIET_TAGS) ctags
 WINDRES_CMD = $(QUIET_WINDRES) $(MKTGTDIR) ; $(WINDRES) $< $@
 GENDEF_CMD = $(QUIET_GENDEF) gendef - $< > $@
 DLLTOOL_CMD = $(QUIET_DLLTOOL) dlltool -d $< -D $(notdir $(^:%.def=%.dll)) -l $@
 
 ifeq ($(shared),yes)
 LINK_CMD = $(QUIET_LINK) $(MKTGTDIR) ; $(CC) $(LDFLAGS) -o $@ \
-	$(filter-out %.$(SO),$^) \
-	$(sort $(patsubst %,-L%,$(dir $(filter %.$(SO),$^)))) \
-	$(patsubst lib%.$(SO),-l%,$(notdir $(filter %.$(SO),$^))) \
+	$(filter-out %.$(SO)$(SO_VERSION),$^) \
+	$(sort $(patsubst %,-L%,$(dir $(filter %.$(SO)$(SO_VERSION),$^)))) \
+	$(patsubst lib%.$(SO)$(SO_VERSION),-l%,$(notdir $(filter %.$(SO)$(SO_VERSION),$^))) \
 	$(LIBS)
 endif
 
@@ -85,13 +96,18 @@ $(OUT)/%.a :
 $(OUT)/%.exe: %.c
 	$(LINK_CMD)
 
-$(OUT)/%.$(SO):
+$(OUT)/%.$(SO)$(SO_VERSION):
+ifeq ($(SO_VERSION_LINUX),yes)
+	$(LINK_CMD) -Wl,-soname,$(notdir $@) $(LIB_LDFLAGS) $(THIRD_LIBS) $(LIBCRYPTO_LIBS)
+	ln -sf $(notdir $@) $(patsubst %$(SO_VERSION), %, $@)
+else
 	$(LINK_CMD) $(LIB_LDFLAGS) $(THIRD_LIBS) $(LIBCRYPTO_LIBS)
+endif
 
-$(OUT)/%.def: $(OUT)/%.$(SO)
+$(OUT)/%.def: $(OUT)/%.$(SO)$(SO_VERSION)
 	$(GENDEF_CMD)
 
-$(OUT)/%_$(SO).a: $(OUT)/%.def
+$(OUT)/%_$(SO)$(SO_VERSION).a: $(OUT)/%.def
 	$(DLLTOOL_CMD)
 
 $(OUT)/source/helpers/mu-threads/%.o : source/helpers/mu-threads/%.c
@@ -101,7 +117,7 @@ $(OUT)/source/helpers/pkcs7/%.o : source/helpers/pkcs7/%.c
 	$(CC_CMD) $(WARNING_CFLAGS) $(LIB_CFLAGS) $(LIBCRYPTO_CFLAGS)
 
 $(OUT)/source/tools/%.o : source/tools/%.c
-	$(CC_CMD) $(WARNING_CFLAGS) $(THIRD_CFLAGS) $(THREADING_CFLAGS)
+	$(CC_CMD) $(LIB_CFLAGS) $(WARNING_CFLAGS) $(THIRD_CFLAGS) $(THREADING_CFLAGS)
 
 $(OUT)/generated/%.o : generated/%.c
 	$(CC_CMD) $(WARNING_CFLAGS) $(LIB_CFLAGS) -O0
@@ -132,6 +148,11 @@ $(OUT)/source/%.o : source/%.cpp
 ifeq ($(HAVE_TESSERACT),yes)
 $(OUT)/source/fitz/tessocr.o : source/fitz/tessocr.cpp
 	$(CXX_CMD) $(WARNING_CFLAGS) $(LIB_CFLAGS) $(THIRD_CFLAGS) $(TESSERACT_CFLAGS) $(TESSERACT_DEFINES) $(TESSERACT_LANGFLAGS)
+endif
+
+ifeq ($(HAVE_LEPTONICA),yes)
+$(OUT)/source/fitz/leptonica-wrap.o : source/fitz/leptonica-wrap.c
+	$(CC_CMD) $(WARNING_CFLAGS) $(LIB_CFLAGS) $(THIRD_CFLAGS) $(LEPTONICA_CFLAGS) $(LEPTONICA_DEFINES) $(LEPTONICA_BUILD_CFLAGS)
 endif
 
 $(OUT)/platform/%.o : platform/%.c
@@ -284,7 +305,7 @@ generate: source/html/css-properties.h
 # --- Library ---
 
 ifeq ($(shared),yes)
-MUPDF_LIB = $(OUT)/libmupdf.$(SO)
+MUPDF_LIB = $(OUT)/libmupdf.$(SO)$(SO_VERSION)
 ifeq ($(SO),dll)
 MUPDF_LIB_IMPORT = $(OUT)/libmupdf_$(SO).a
 LIBS_TO_INSTALL_IN_BIN = $(MUPDF_LIB)
@@ -336,21 +357,24 @@ MUTOOL_SRC += $(sort $(wildcard source/tools/pdf*.c))
 MUTOOL_OBJ := $(MUTOOL_SRC:%.c=$(OUT)/%.o)
 MUTOOL_EXE := $(OUT)/mutool$(EXE)
 $(MUTOOL_EXE) : $(MUTOOL_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(PKCS7_LIB) $(THREAD_LIB)
-	$(LINK_CMD) $(THIRD_LIBS) $(THREADING_LIBS) $(LIBCRYPTO_LIBS)
+	$(LINK_CMD) $(EXE_LDFLAGS) $(THIRD_LIBS) $(THREADING_LIBS) $(LIBCRYPTO_LIBS)
 TOOL_APPS += $(MUTOOL_EXE)
 
 MURASTER_OBJ := $(OUT)/source/tools/muraster.o
 MURASTER_EXE := $(OUT)/muraster$(EXE)
 $(MURASTER_EXE) : $(MURASTER_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(PKCS7_LIB) $(THREAD_LIB)
-	$(LINK_CMD) $(THIRD_LIBS) $(THREADING_LIBS) $(LIBCRYPTO_LIBS)
+	$(LINK_CMD) $(EXE_LDFLAGS) $(THIRD_LIBS) $(THREADING_LIBS) $(LIBCRYPTO_LIBS)
 TOOL_APPS += $(MURASTER_EXE)
 
 ifeq ($(HAVE_GLUT),yes)
   MUVIEW_GLUT_SRC += $(sort $(wildcard platform/gl/*.c))
   MUVIEW_GLUT_OBJ := $(MUVIEW_GLUT_SRC:%.c=$(OUT)/%.o)
+ifeq ($(HAVE_WIN32),yes)
+  MUVIEW_GLUT_OBJ += $(OUT)/platform/gl/gl-winres.o
+endif
   MUVIEW_GLUT_EXE := $(OUT)/mupdf-gl$(EXE)
   $(MUVIEW_GLUT_EXE) : $(MUVIEW_GLUT_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(THIRD_GLUT_LIB) $(PKCS7_LIB)
-	$(LINK_CMD) $(THIRD_LIBS) $(LIBCRYPTO_LIBS) $(WIN32_LDFLAGS) $(THIRD_GLUT_LIBS)
+	$(LINK_CMD) $(EXE_LDFLAGS) $(THIRD_LIBS) $(LIBCRYPTO_LIBS) $(WIN32_LDFLAGS) $(THIRD_GLUT_LIBS)
   VIEW_APPS += $(MUVIEW_GLUT_EXE)
 endif
 
@@ -384,7 +408,7 @@ ifeq ($(HAVE_PTHREAD),yes)
   MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/curl_stream.o
   MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/prog_stream.o
   $(MUVIEW_X11_CURL_EXE) : $(MUVIEW_X11_CURL_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(PKCS7_LIB) $(CURL_LIB)
-	$(LINK_CMD) $(THIRD_LIBS) $(X11_LIBS) $(LIBCRYPTO_LIBS) $(CURL_LIBS) $(PTHREAD_LIBS)
+	$(LINK_CMD) $(EXE_LDFLAGS) $(THIRD_LIBS) $(X11_LIBS) $(LIBCRYPTO_LIBS) $(CURL_LIBS) $(PTHREAD_LIBS)
   VIEW_APPS += $(MUVIEW_X11_CURL_EXE)
 endif
 endif
@@ -442,6 +466,8 @@ libdir ?= $(prefix)/lib
 incdir ?= $(prefix)/include
 mandir ?= $(prefix)/share/man
 docdir ?= $(prefix)/share/doc/mupdf
+pydir ?= $(shell python3 -c "import sysconfig; print(sysconfig.get_path('platlib'))")
+SO_INSTALL_MODE ?= 644
 
 third: $(THIRD_LIB)
 extra-libs: $(THIRD_GLUT_LIB)
@@ -449,13 +475,15 @@ libs: $(LIBS_TO_INSTALL_IN_BIN) $(LIBS_TO_INSTALL_IN_LIB)
 tools: $(TOOL_APPS)
 apps: $(TOOL_APPS) $(VIEW_APPS)
 
-install-libs: libs
+install-headers:
 	install -d $(DESTDIR)$(incdir)/mupdf
 	install -d $(DESTDIR)$(incdir)/mupdf/fitz
 	install -d $(DESTDIR)$(incdir)/mupdf/pdf
 	install -m 644 include/mupdf/*.h $(DESTDIR)$(incdir)/mupdf
 	install -m 644 include/mupdf/fitz/*.h $(DESTDIR)$(incdir)/mupdf/fitz
 	install -m 644 include/mupdf/pdf/*.h $(DESTDIR)$(incdir)/mupdf/pdf
+
+install-libs: libs install-headers
 ifneq ($(LIBS_TO_INSTALL_IN_LIB),)
 	install -d $(DESTDIR)$(libdir)
 	install -m 644 $(LIBS_TO_INSTALL_IN_LIB) $(DESTDIR)$(libdir)
@@ -471,7 +499,8 @@ install-docs:
 
 	install -d $(DESTDIR)$(docdir)
 	install -d $(DESTDIR)$(docdir)/examples
-	install -m 644 README COPYING CHANGES $(DESTDIR)$(docdir)
+	install -m 644 README CHANGES $(DESTDIR)$(docdir)
+	install -m 644 $(wildcard COPYING LICENSE) $(DESTDIR)$(docdir)
 	install -m 644 docs/examples/* $(DESTDIR)$(docdir)/examples
 
 install: install-libs install-apps install-docs
@@ -509,9 +538,6 @@ watch:
 watch-recompile:
 	@ while ! inotifywait -q -e modify $(WATCH_SRCS) ; do time -p $(MAKE) ; done
 
-wasm:
-	$(MAKE) -C platform/wasm
-
 java:
 	$(MAKE) -C platform/java build=$(build)
 
@@ -522,8 +548,13 @@ extract-test:
 	$(MAKE) debug
 	$(MAKE) -C thirdparty/extract mutool=../../build/debug/mutool test-mutool
 
+TAG_HDR_FILES=$(shell git ls-files | grep -v '^\(docs\|scripts\|generated\)' | grep '\.h$$')
+TAG_SRC_FILES=$(shell git ls-files | grep -v '^\(docs\|scripts\|generated\)' | grep -v '\.h$$')
+
 tags:
-	$(TAGS_CMD)
+	$(TAGS_CMD) --sort=no --c-kinds=+p-t $(TAG_SRC_FILES)
+	$(TAGS_CMD) -a --sort=no --c-kinds=+p-t $(TAG_HDR_FILES)
+	$(TAGS_CMD) -a --sort=no --c-kinds=t $(TAG_SRC_FILES) $(TAG_HDR_FILES)
 
 find-try-return:
 	@ bash scripts/find-try-return.sh
@@ -552,6 +583,30 @@ debug:
 sanitize:
 	$(MAKE) build=sanitize
 
+install-shared-c: shared
+	install -d $(DESTDIR)$(incdir)/mupdf
+	install -d $(DESTDIR)$(incdir)/mupdf/fitz
+	install -d $(DESTDIR)$(incdir)/mupdf/pdf
+	install -d $(DESTDIR)$(incdir)/mupdf/thirdparty/freetype/freetype/config
+	install -d $(DESTDIR)$(libdir)
+	install -m 644 build/shared-$(build)/libmupdf.so $(DESTDIR)$(libdir)
+	install -m 644 include/mupdf/*.h $(DESTDIR)$(incdir)/mupdf
+	install -m 644 include/mupdf/fitz/*.h $(DESTDIR)$(incdir)/mupdf/fitz
+	install -m 644 include/mupdf/pdf/*.h $(DESTDIR)$(incdir)/mupdf/pdf
+	install -m 644 thirdparty/freetype/include/*.h $(DESTDIR)$(incdir)/mupdf/thirdparty/freetype
+	install -m 644 thirdparty/freetype/include/freetype/*.h $(DESTDIR)$(incdir)/mupdf/thirdparty/freetype/freetype
+	install -m 644 thirdparty/freetype/include/freetype/config/*.h $(DESTDIR)$(incdir)/mupdf/thirdparty/freetype/freetype/config
+
+install-shared-c++: install-shared-c c++
+	install -m 644 build/shared-$(build)/libmupdfcpp.so $(DESTDIR)$(libdir)
+	install -m 644 platform/c++/include/mupdf/*.h $(DESTDIR)$(incdir)/mupdf
+
+install-shared-python: install-shared-c++ python
+	install -d $(DESTDIR)$(pydir)/mupdf
+	install -m 644 build/shared-$(build)/_mupdf.so $(DESTDIR)$(pydir)/mupdf
+	install -m 644 build/shared-$(build)/mupdf.py $(DESTDIR)$(pydir)/mupdf/__init__.py
+
+
 shared: shared-$(build)
 
 shared-release:
@@ -568,41 +623,85 @@ android: generate
 		APP_PLATFORM=android-16 \
 		APP_OPTIM=$(build)
 
+# --- C++, Python and C#, and system installation ---
+
 c++: c++-$(build)
-
-c++-release: shared-release
-	./scripts/mupdfwrap.py --venv pylocal -d build/shared-release -b 01
-
-c++-debug: shared-debug
-	./scripts/mupdfwrap.py --venv pylocal -d build/shared-debug -b 01
+python: python-$(build)
+csharp: csharp-$(build)
 
 c++-clean:
 	rm -rf platform/c++
-
-python: python-$(build)
-
-python-release: c++-release
-	./scripts/mupdfwrap.py -d build/shared-release -b 23
-
-python-debug: c++-debug
-	./scripts/mupdfwrap.py -d build/shared-debug -b 23
-
 python-clean:
 	rm -rf platform/python
-
-csharp: csharp-$(build)
-
-csharp-release: c++-release
-	./scripts/mupdfwrap.py -d build/shared-release -b --csharp 23
-
-csharp-debug: c++-debug
-	./scripts/mupdfwrap.py -d build/shared-debug -b --csharp 23
-
 csharp-clean:
 	rm -rf platform/csharp
 
+# $(OUT) only contains the `shared-` infix if shared=yes and targets that
+# require shared-libraries only work if shared=yes. So if this is not the case,
+# we re-run ourselves with `$(MAKE) shared=yes $@`.
+
+ifeq ($(shared),yes)
+
+# We can build targets that require shared libraries and use $(OUT).
+
+# Assert that $(OUT) contains `shared`.
+ifeq ($(findstring shared, $(OUT)),)
+$(error OUT=$(OUT) does not contain shared)
+endif
+
+# C++, Python and C# shared libraries.
+#
+# To disable automatic use of a venv, use `make VENV_FLAG= ...` or `VENV_FLAG=
+# make ...`.
+#
+VENV_FLAG ?= --venv
+c++-%: shared-%
+	./scripts/mupdfwrap.py $(VENV_FLAG) -d $(OUT) -b 01
+python-%: c++-%
+	./scripts/mupdfwrap.py $(VENV_FLAG) -d $(OUT) -b 23
+csharp-%: c++-%
+	./scripts/mupdfwrap.py $(VENV_FLAG) -d $(OUT) -b --csharp 23
+
+# Installs of C, C++, Python and C# shared libraries
+#
+# We only allow install of shared libraries if we are not using any libraries
+# in thirdparty/.
+install-shared-check:
+ifneq ($(USE_SYSTEM_LIBS),yes)
+	echo "install-shared-* requires that USE_SYSTEM_LIBS=yes."
+	false
+endif
+
+install-shared-c: install-shared-check shared install-headers
+	install -d $(DESTDIR)$(libdir)
+	install -m $(SO_INSTALL_MODE) $(OUT)/libmupdf.$(SO)$(SO_VERSION) $(DESTDIR)$(libdir)/
+ifneq ($(OS),OpenBSD)
+	ln -sf libmupdf.$(SO)$(SO_VERSION) $(DESTDIR)$(libdir)/libmupdf.$(SO)
+endif
+
+install-shared-c++: install-shared-c c++
+	install -m 644 platform/c++/include/mupdf/*.h $(DESTDIR)$(incdir)/mupdf
+	install -m $(SO_INSTALL_MODE) $(OUT)/libmupdfcpp.$(SO)$(SO_VERSION) $(DESTDIR)$(libdir)/
+ifneq ($(OS),OpenBSD)
+	ln -sf libmupdfcpp.$(SO)$(SO_VERSION) $(DESTDIR)$(libdir)/libmupdfcpp.$(SO)
+endif
+
+install-shared-python: install-shared-c++ python
+	install -d $(DESTDIR)$(pydir)/mupdf
+	install -m $(SO_INSTALL_MODE) $(OUT)/_mupdf.$(SO) $(DESTDIR)$(pydir)/mupdf
+	install -m 644 $(OUT)/mupdf.py $(DESTDIR)$(pydir)/mupdf/__init__.py
+
+else
+
+# $(shared) != yes. For all targets that require a shared-library build and use
+# $(OUT), we need to re-run ourselves with shared=yes.
+install-% c++-% python-% csharp-%:
+	# Running: $(MAKE) shared=yes $@
+	$(MAKE) shared=yes $@
+
+endif
+
 .PHONY: all clean nuke install third libs apps generate tags
 .PHONY: shared shared-debug shared-clean
-.PHONY: c++ c++-release c++-debug c++-clean
-.PHONY: python python-debug python-clean
-.PHONY: csharp csharp-debug csharp-clean
+.PHONY: c++-% python-% csharp-%
+.PHONY: c++-clean python-clean csharp-clean

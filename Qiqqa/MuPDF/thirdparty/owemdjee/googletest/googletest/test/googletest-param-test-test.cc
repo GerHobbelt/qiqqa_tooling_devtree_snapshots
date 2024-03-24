@@ -46,6 +46,8 @@
 #include "gtest/gtest.h"
 #include "src/gtest-internal-inl.h"  // for UnitTestOptions
 
+#include "googletest/include/monolithic_examples.h"
+
 using ::std::sort;
 using ::std::vector;
 
@@ -221,7 +223,7 @@ class DogAdder {
   }
   DogAdder operator+(const DogAdder& other) const {
     Message msg;
-    msg << value_.c_str() << other.value_.c_str();
+    msg << value_ << other.value_;
     return DogAdder(msg.GetString().c_str());
   }
   bool operator<(const DogAdder& other) const { return value_ < other.value_; }

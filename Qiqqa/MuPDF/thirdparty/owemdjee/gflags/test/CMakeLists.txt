@@ -77,8 +77,8 @@ add_gflags_test(changeable_string_var 1 "-changeable_string_var () type: string 
 add_gflags_test(nohelp     0 "PASS" ""  gflags_unittest  --nohelp)
 add_gflags_test(help=false 0 "PASS" ""  gflags_unittest  --help=false)
 
-# --helpfull is the same as help
-add_gflags_test(helpfull 1 "${SLASH}gflags_reporting.cc:" ""  gflags_unittest  --helpfull)
+# --helpful is the same as help
+add_gflags_test(helpful 1 "${SLASH}gflags_reporting.cc:" ""  gflags_unittest  --helpful)
 
 # --helpshort should show only flags from the  gflags_unittest  itself
 add_gflags_test(helpshort 1 "${SLASH}gflags_unittest.cc:" "${SLASH}gflags_reporting.cc:"  gflags_unittest  --helpshort)
@@ -113,7 +113,7 @@ add_gflags_test(helpon=nosuchmodule       1 "No modules matched" "${SLASH}gflags
 add_gflags_test(helppackage 1 "${SLASH}gflags_reporting.cc:" ""  gflags_unittest  --helppackage)
 
 # xml!
-add_gflags_test(helpxml 1 "${SLASH}gflags_unittest.cc</file>" "${SLASH}gflags_unittest.cc:"  gflags_unittest  --helpxml)
+add_gflags_test(help-xml 1 "${SLASH}gflags_unittest.cc</file>" "${SLASH}gflags_unittest.cc:"  gflags_unittest  --help-xml)
 
 # just print the version info and exit
 add_gflags_test(version-1 0 "gflags_unittest"      "${SLASH}gflags_unittest.cc:"  gflags_unittest  --version)
@@ -131,17 +131,17 @@ add_gflags_test(undefok-5 1 "unknown command line flag 'foo'" ""  gflags_unittes
 add_gflags_test(undefok-6 1 "unknown command line flag 'foo'" ""  gflags_unittest  --undefok=foot --foo --unused_bool)
 
 # See if we can successfully load our flags from the flagfile
-add_gflags_test(flagfile.1 0 "gflags_unittest" "${SLASH}gflags_unittest.cc:"  gflags_unittest  "--flagfile=flagfile.1")
-add_gflags_test(flagfile.2 0 "PASS" ""  gflags_unittest  "--flagfile=flagfile.2")
-add_gflags_test(flagfile.3 0 "PASS" ""  gflags_unittest  "--flagfile=flagfile.3")
+add_gflags_test(flag_file.1 0 "gflags_unittest" "${SLASH}gflags_unittest.cc:"  gflags_unittest  "--flag_file=flagfile.1")
+add_gflags_test(flag_file.2 0 "PASS" ""  gflags_unittest  "--flag_file=flagfile.2")
+add_gflags_test(flag_file.3 0 "PASS" ""  gflags_unittest  "--flag_file=flagfile.3")
 
 # Also try to load flags from the environment
 add_gflags_test(fromenv=version      0 "gflags_unittest" "${SLASH}gflags_unittest.cc:"  gflags_unittest  --fromenv=version)
 add_gflags_test(tryfromenv=version   0 "gflags_unittest" "${SLASH}gflags_unittest.cc:"  gflags_unittest  --tryfromenv=version)
 add_gflags_test(fromenv=help         0 "PASS" ""  gflags_unittest  --fromenv=help)
 add_gflags_test(tryfromenv=help      0 "PASS" ""  gflags_unittest  --tryfromenv=help)
-add_gflags_test(fromenv=helpfull     1 "helpfull not found in environment" ""  gflags_unittest  --fromenv=helpfull)
-add_gflags_test(tryfromenv=helpfull  0 "PASS" ""  gflags_unittest  --tryfromenv=helpfull)
+add_gflags_test(fromenv=helpful      1 "helpful not found in environment" ""  gflags_unittest  --fromenv=helpful)
+add_gflags_test(tryfromenv=helpful   0 "PASS" ""  gflags_unittest  --tryfromenv=helpful)
 add_gflags_test(tryfromenv=undefok   0 "PASS" ""  gflags_unittest  --tryfromenv=undefok --foo)
 add_gflags_test(tryfromenv=weirdo    1 "unknown command line flag" ""  gflags_unittest  --tryfromenv=weirdo)
 add_gflags_test(tryfromenv-multiple  0 "gflags_unittest" "${SLASH}gflags_unittest.cc:"  gflags_unittest  --tryfromenv=test_bool,version,unused_bool)

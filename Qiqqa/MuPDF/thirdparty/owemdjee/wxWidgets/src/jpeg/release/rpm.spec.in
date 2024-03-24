@@ -45,7 +45,7 @@ Version: @VERSION@
 Vendor: @PKGVENDOR@
 URL: @PKGURL@
 Group: System Environment/Libraries
-#-->Source0: http://prdownloads.sourceforge.net/@CMAKE_PROJECT_NAME@/@CMAKE_PROJECT_NAME@-%{version}.tar.gz
+#-->Source0: https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/%{version}/libjpeg-turbo-%{version}.tar.gz
 Release: @BUILD@
 License: BSD-style
 BuildRoot: %{_blddir}/%{name}-buildroot-%{version}-%{release}
@@ -77,7 +77,8 @@ derivative of libjpeg v6b developed by Miyasaka Masaru.  The TigerVNC and
 VirtualGL projects made numerous enhancements to the codec in 2009, and in
 early 2010, libjpeg-turbo spun off into an independent project, with the goal
 of making high-speed JPEG compression/decompression technology available to a
-broader range of users and developers.
+broader range of users and developers.  libjpeg-turbo is an ISO/IEC and ITU-T
+reference implementation of the JPEG standard.
 
 #-->%prep
 #-->%setup -q -n @CMAKE_PROJECT_NAME@-%{version}

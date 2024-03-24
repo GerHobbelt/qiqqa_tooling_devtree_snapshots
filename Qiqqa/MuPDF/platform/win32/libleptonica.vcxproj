@@ -117,10 +117,10 @@
     <ClCompile>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <Optimization>Custom</Optimization>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;HAVE_MUPDF=1;LEPTONICA_INTERCEPT_ALLOC=1;HAVE_LIBPNG=1;HAVE_LIBTIFF=1;HAVE_LIBJPEG=1;HAVE_LIBZ=1;HAVE_LIBZ_NG=1;HAVE_LIBGIF=1;HAVE_LIBUNGIF=0;HAVE_LIBWEBP=1;HAVE_LIBWEBP_ANIM=0;HAVE_LIBJP2K=1;_CRT_SECURE_NO_WARNINGS;OPJ_STATIC;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_LIB</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;HAVE_MUPDF=1;LEPTONICA_INTERCEPT_ALLOC=1;HAVE_LIBPNG=1;HAVE_LIBTIFF=1;HAVE_LIBJPEG=1;HAVE_LIBZ=1;HAVE_LIBZ_NG=1;HAVE_LIBGIF=1;HAVE_LIBUNGIF=0;HAVE_LIBWEBP=1;HAVE_LIBWEBP_ANIM=0;HAVE_LIBJP2K=1;OPJ_STATIC;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>..\..\include;..\..\scripts\leptonica/include/leptonica;..\..\scripts\libjpeg-turbo;..\..\scripts\libpng;..\..\scripts\libtiff;..\..\thirdparty\leptonica\src;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\libpng;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\zlib;..\..\scripts\zlib;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../scripts/leptonica/include;../../scripts/libjpeg-turbo;../../scripts/libpng;../../scripts/libtiff;../../thirdparty/leptonica/src;../../thirdparty/jbig2dec;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/openjpeg/src/lib/openjp2;../../thirdparty/libpng;../../thirdparty/libtiff/libtiff;../../thirdparty/zlib;../../scripts/zlib;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <UndefinePreprocessorDefinitions>
       </UndefinePreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -129,21 +129,21 @@
       <SubSystem>
       </SubSystem>
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>..\..\include;..\..\scripts\leptonica/include/leptonica;..\..\scripts\libjpeg-turbo;..\..\scripts\libpng;..\..\scripts\libtiff;..\..\thirdparty\leptonica\src;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\libpng;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\zlib;..\..\scripts\zlib;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../scripts/leptonica/include;../../scripts/libjpeg-turbo;../../scripts/libpng;../../scripts/libtiff;../../thirdparty/leptonica/src;../../thirdparty/jbig2dec;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/openjpeg/src/lib/openjp2;../../thirdparty/libpng;../../thirdparty/libtiff/libtiff;../../thirdparty/zlib;../../scripts/zlib;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;HAVE_MUPDF=1;LEPTONICA_INTERCEPT_ALLOC=1;HAVE_LIBPNG=1;HAVE_LIBTIFF=1;HAVE_LIBJPEG=1;HAVE_LIBZ=1;HAVE_LIBZ_NG=1;HAVE_LIBGIF=1;HAVE_LIBUNGIF=0;HAVE_LIBWEBP=1;HAVE_LIBWEBP_ANIM=0;HAVE_LIBJP2K=1;_CRT_SECURE_NO_WARNINGS;OPJ_STATIC;WIN32;NDEBUG;_LIB</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;HAVE_MUPDF=1;LEPTONICA_INTERCEPT_ALLOC=1;HAVE_LIBPNG=1;HAVE_LIBTIFF=1;HAVE_LIBJPEG=1;HAVE_LIBZ=1;HAVE_LIBZ_NG=1;HAVE_LIBGIF=1;HAVE_LIBUNGIF=0;HAVE_LIBWEBP=1;HAVE_LIBWEBP_ANIM=0;HAVE_LIBJP2K=1;OPJ_STATIC;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>..\..\include;..\..\scripts\leptonica/include/leptonica;..\..\scripts\libjpeg-turbo;..\..\scripts\libpng;..\..\scripts\libtiff;..\..\thirdparty\leptonica\src;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\libpng;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\zlib;..\..\scripts\zlib;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../scripts/leptonica/include;../../scripts/libjpeg-turbo;../../scripts/libpng;../../scripts/libtiff;../../thirdparty/leptonica/src;../../thirdparty/jbig2dec;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/openjpeg/src/lib/openjp2;../../thirdparty/libpng;../../thirdparty/libtiff/libtiff;../../thirdparty/zlib;../../scripts/zlib;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <UndefinePreprocessorDefinitions>
       </UndefinePreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -151,22 +151,22 @@
     <Link>
       <SubSystem>
       </SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>..\..\include;..\..\scripts\leptonica/include/leptonica;..\..\scripts\libjpeg-turbo;..\..\scripts\libpng;..\..\scripts\libtiff;..\..\thirdparty\leptonica\src;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\libpng;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\zlib;..\..\scripts\zlib;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../scripts/leptonica/include;../../scripts/libjpeg-turbo;../../scripts/libpng;../../scripts/libtiff;../../thirdparty/leptonica/src;../../thirdparty/jbig2dec;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/openjpeg/src/lib/openjp2;../../thirdparty/libpng;../../thirdparty/libtiff/libtiff;../../thirdparty/zlib;../../scripts/zlib;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <Optimization>Custom</Optimization>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;HAVE_MUPDF=1;LEPTONICA_INTERCEPT_ALLOC=1;HAVE_LIBPNG=1;HAVE_LIBTIFF=1;HAVE_LIBJPEG=1;HAVE_LIBZ=1;HAVE_LIBZ_NG=1;HAVE_LIBGIF=1;HAVE_LIBUNGIF=0;HAVE_LIBWEBP=1;HAVE_LIBWEBP_ANIM=0;HAVE_LIBJP2K=1;_CRT_SECURE_NO_WARNINGS;OPJ_STATIC;_CRTDBG_MAP_ALLOC;_DEBUG;_LIB</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;HAVE_MUPDF=1;LEPTONICA_INTERCEPT_ALLOC=1;HAVE_LIBPNG=1;HAVE_LIBTIFF=1;HAVE_LIBJPEG=1;HAVE_LIBZ=1;HAVE_LIBZ_NG=1;HAVE_LIBGIF=1;HAVE_LIBUNGIF=0;HAVE_LIBWEBP=1;HAVE_LIBWEBP_ANIM=0;HAVE_LIBJP2K=1;OPJ_STATIC;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>..\..\include;..\..\scripts\leptonica/include/leptonica;..\..\scripts\libjpeg-turbo;..\..\scripts\libpng;..\..\scripts\libtiff;..\..\thirdparty\leptonica\src;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\libpng;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\zlib;..\..\scripts\zlib;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../scripts/leptonica/include;../../scripts/libjpeg-turbo;../../scripts/libpng;../../scripts/libtiff;../../thirdparty/leptonica/src;../../thirdparty/jbig2dec;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/openjpeg/src/lib/openjp2;../../thirdparty/libpng;../../thirdparty/libtiff/libtiff;../../thirdparty/zlib;../../scripts/zlib;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <UndefinePreprocessorDefinitions>
       </UndefinePreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -175,21 +175,21 @@
       <SubSystem>
       </SubSystem>
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>..\..\include;..\..\scripts\leptonica/include/leptonica;..\..\scripts\libjpeg-turbo;..\..\scripts\libpng;..\..\scripts\libtiff;..\..\thirdparty\leptonica\src;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\libpng;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\zlib;..\..\scripts\zlib;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../scripts/leptonica/include;../../scripts/libjpeg-turbo;../../scripts/libpng;../../scripts/libtiff;../../thirdparty/leptonica/src;../../thirdparty/jbig2dec;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/openjpeg/src/lib/openjp2;../../thirdparty/libpng;../../thirdparty/libtiff/libtiff;../../thirdparty/zlib;../../scripts/zlib;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;HAVE_MUPDF=1;LEPTONICA_INTERCEPT_ALLOC=1;HAVE_LIBPNG=1;HAVE_LIBTIFF=1;HAVE_LIBJPEG=1;HAVE_LIBZ=1;HAVE_LIBZ_NG=1;HAVE_LIBGIF=1;HAVE_LIBUNGIF=0;HAVE_LIBWEBP=1;HAVE_LIBWEBP_ANIM=0;HAVE_LIBJP2K=1;_CRT_SECURE_NO_WARNINGS;OPJ_STATIC;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;HAVE_MUPDF=1;LEPTONICA_INTERCEPT_ALLOC=1;HAVE_LIBPNG=1;HAVE_LIBTIFF=1;HAVE_LIBJPEG=1;HAVE_LIBZ=1;HAVE_LIBZ_NG=1;HAVE_LIBGIF=1;HAVE_LIBUNGIF=0;HAVE_LIBWEBP=1;HAVE_LIBWEBP_ANIM=0;HAVE_LIBJP2K=1;OPJ_STATIC;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>..\..\include;..\..\scripts\leptonica/include/leptonica;..\..\scripts\libjpeg-turbo;..\..\scripts\libpng;..\..\scripts\libtiff;..\..\thirdparty\leptonica\src;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\libpng;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\zlib;..\..\scripts\zlib;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../scripts/leptonica/include;../../scripts/libjpeg-turbo;../../scripts/libpng;../../scripts/libtiff;../../thirdparty/leptonica/src;../../thirdparty/jbig2dec;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/openjpeg/src/lib/openjp2;../../thirdparty/libpng;../../thirdparty/libtiff/libtiff;../../thirdparty/zlib;../../scripts/zlib;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <UndefinePreprocessorDefinitions>
       </UndefinePreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -197,12 +197,12 @@
     <Link>
       <SubSystem>
       </SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>..\..\include;..\..\scripts\leptonica/include/leptonica;..\..\scripts\libjpeg-turbo;..\..\scripts\libpng;..\..\scripts\libtiff;..\..\thirdparty\leptonica\src;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\libpng;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\zlib;..\..\scripts\zlib;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../scripts/leptonica/include;../../scripts/libjpeg-turbo;../../scripts/libpng;../../scripts/libtiff;../../thirdparty/leptonica/src;../../thirdparty/jbig2dec;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/openjpeg/src/lib/openjp2;../../thirdparty/libpng;../../thirdparty/libtiff/libtiff;../../thirdparty/zlib;../../scripts/zlib;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
@@ -309,6 +309,8 @@
     <ClCompile Include="../../thirdparty/leptonica/src/parseprotos.c" />
     <ClCompile Include="../../thirdparty/leptonica/src/partify.c" />
     <ClCompile Include="../../thirdparty/leptonica/src/partition.c" />
+    <ClCompile Include="../../thirdparty/leptonica/src/pdfapp.c" />
+    <ClCompile Include="../../thirdparty/leptonica/src/pdfappstub.c" />
     <ClCompile Include="../../thirdparty/leptonica/src/pdfio1.c" />
     <ClCompile Include="../../thirdparty/leptonica/src/pdfio1stub.c" />
     <ClCompile Include="../../thirdparty/leptonica/src/pdfio2.c" />
@@ -425,6 +427,7 @@
     <ClInclude Include="../../thirdparty/leptonica/src/watershed.h" />
     <Image Include="../../thirdparty/leptonica/moller52.jpg" />
     <Text Include="../../thirdparty/leptonica/CMakeLists.txt" />
+    <Text Include="../../thirdparty/leptonica/Doxyfile" />
     <Text Include="../../thirdparty/leptonica/Makefile.am" />
     <Text Include="../../thirdparty/leptonica/README.html" />
     <Text Include="../../thirdparty/leptonica/README.md" />
@@ -438,6 +441,7 @@
     <Text Include="../../thirdparty/leptonica/lept.pc.in" />
     <Text Include="../../thirdparty/leptonica/leptonica-license.txt" />
     <Text Include="../../thirdparty/leptonica/lok.lua" />
+    <Text Include="../../thirdparty/leptonica/m4/ax_split_version.m4" />
     <Text Include="../../thirdparty/leptonica/run_cmake.sh" />
     <Text Include="../../thirdparty/leptonica/src/CMakeLists.txt" />
     <Text Include="../../thirdparty/leptonica/src/Makefile.am" />
@@ -453,6 +457,7 @@
     <Text Include="../../thirdparty/leptonica/src/stringtemplate1.txt" />
     <Text Include="../../thirdparty/leptonica/src/stringtemplate2.txt" />
     <Text Include="../../thirdparty/leptonica/style-guide.txt" />
+    <Text Include="../../thirdparty/leptonica/version-notes.html" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

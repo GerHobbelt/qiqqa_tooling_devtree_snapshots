@@ -74,7 +74,7 @@ int main(void)
         })();
     )xxx");
 
-    assert(!called && "Unhandled Promise rejection should not have been called yet");
+    assert_and_continue(!called && "Unhandled Promise rejection should not have been called yet");
 
     while (runtime.isJobPending()) {
         runtime.executePendingJob();

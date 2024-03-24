@@ -23,68 +23,40 @@
  *   http://www.mozilla.org/MPL/                                           *
  ***************************************************************************/
 
-#include <tstring.h>
-#include <tdebug.h>
-#include "aifffile.h"
 #include "aiffproperties.h"
+
+#include "tdebug.h"
+#include "aifffile.h"
 
 using namespace TagLib;
 
 class RIFF::AIFF::Properties::PropertiesPrivate
 {
 public:
-  PropertiesPrivate() :
-    length(0),
-    bitrate(0),
-    sampleRate(0),
-    channels(0),
-    bitsPerSample(0),
-    sampleFrames(0) {}
-
-  int length;
-  int bitrate;
-  int sampleRate;
-  int channels;
-  int bitsPerSample;
+  int length { 0 };
+  int bitrate { 0 };
+  int sampleRate { 0 };
+  int channels { 0 };
+  int bitsPerSample { 0 };
 
   ByteVector compressionType;
   String compressionName;
 
-  unsigned int sampleFrames;
+  unsigned int sampleFrames { 0 };
 };
 
 ////////////////////////////////////////////////////////////////////////////////
 // public members
 ////////////////////////////////////////////////////////////////////////////////
 
-RIFF::AIFF::Properties::Properties(const ByteVector &, ReadStyle style) :
-  AudioProperties(style),
-  d(new PropertiesPrivate())
-{
-  debug("RIFF::AIFF::Properties::Properties() - This constructor is no longer used.");
-}
-
 RIFF::AIFF::Properties::Properties(File *file, ReadStyle style) :
   AudioProperties(style),
-  d(new PropertiesPrivate())
+  d(std::make_unique<PropertiesPrivate>())
 {
   read(file);
 }
 
-RIFF::AIFF::Properties::~Properties()
-{
-  delete d;
-}
-
-int RIFF::AIFF::Properties::length() const
-{
-  return lengthInSeconds();
-}
-
-int RIFF::AIFF::Properties::lengthInSeconds() const
-{
-  return d->length / 1000;
-}
+RIFF::AIFF::Properties::~Properties() = default;
 
 int RIFF::AIFF::Properties::lengthInMilliseconds() const
 {
@@ -109,11 +81,6 @@ int RIFF::AIFF::Properties::channels() const
 int RIFF::AIFF::Properties::bitsPerSample() const
 {
   return d->bitsPerSample;
-}
-
-int RIFF::AIFF::Properties::sampleWidth() const
-{
-  return bitsPerSample();
 }
 
 unsigned int RIFF::AIFF::Properties::sampleFrames() const

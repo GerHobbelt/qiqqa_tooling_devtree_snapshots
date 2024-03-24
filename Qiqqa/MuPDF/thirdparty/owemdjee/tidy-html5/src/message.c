@@ -133,6 +133,8 @@ static void messageOut( TidyMessageImpl *message )
             break;
         case TidyWarning:
             doc->warnings++;
+            if ( message->muted )
+                doc->mutedWarningCount++;
             break;
         case TidyConfig:
             doc->optionErrors++;
@@ -142,6 +144,8 @@ static void messageOut( TidyMessageImpl *message )
             break;
         case TidyError:
             doc->errors++;
+            if ( message->muted )
+                doc->mutedErrorCount++;
             break;
         case TidyBadDocument:
             doc->docErrors++;
@@ -169,7 +173,7 @@ static void messageOut( TidyMessageImpl *message )
         go = go && message->code != STRING_CONTENT_LOOKS;
         go = go && message->code != STRING_NO_SYSID;
         go = go && message->level != TidyDialogueInfo;
-        go = go && message->level != TidyConfig;
+        /* go = go && message->level != TidyConfig; Is. #921 - these are errors, not informational! */
         go = go && message->level != TidyInfo;
         go = go && !(message->level >= TidyDialogueSummary &&
                             message->code != STRING_NEEDS_INTERVENTION);
@@ -1345,7 +1349,7 @@ void TY_(DefineMutedMessage)(TidyDocImpl* doc, const TidyOptionImpl* opt, ctmbst
 
     if ( !list->list )
     {
-        list->list = TidyAlloc(doc->allocator, sizeof(tidyStrings) * capacity );
+        list->list = TidyAlloc(doc->allocator, sizeof(tidyStrings) * (capacity + 1));
         list->list[0] = 0;
         list->capacity = capacity;
         list->count = 0;
@@ -1354,7 +1358,7 @@ void TY_(DefineMutedMessage)(TidyDocImpl* doc, const TidyOptionImpl* opt, ctmbst
     if ( list->count >= list->capacity )
     {
         list->capacity = list->capacity * 2;
-        list->list = TidyRealloc(doc->allocator, list->list, sizeof(tidyStrings) * list->capacity + 1 );
+        list->list = TidyRealloc(doc->allocator, list->list, sizeof(tidyStrings) * (list->capacity + 1) );
     }
 
     list->list[list->count] = message;
@@ -1462,7 +1466,7 @@ uint TY_(tidyErrorCodeFromKey)(ctmbstr code)
 /**
  *  Determines the number of error codes used by Tidy.
  */
-static const uint tidyErrorCodeListSize()
+static const uint tidyErrorCodeListSize( void )
 {
     static uint array_size = 0;
     
@@ -1481,7 +1485,7 @@ static const uint tidyErrorCodeListSize()
  *  in Tidy's list of error codes. Individual items must be
  *  retrieved with getNextErrorCode();
  */
-TidyIterator TY_(getErrorCodeList)()
+TidyIterator TY_(getErrorCodeList)( void )
 {
     return (TidyIterator)(size_t)1;
 }

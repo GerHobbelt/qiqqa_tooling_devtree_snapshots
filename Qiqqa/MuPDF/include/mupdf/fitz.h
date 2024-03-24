@@ -48,6 +48,8 @@
 #include "mupdf/fitz/compressed-buffer.h"
 #include "mupdf/fitz/filter.h"
 #include "mupdf/fitz/archive.h"
+#include "mupdf/fitz/heap.h"
+
 
 /* Resources */
 #include "mupdf/fitz/store.h"
@@ -85,5 +87,7 @@
 
 #include "mupdf/fitz/story.h"
 #include "mupdf/fitz/story-writer.h"
+
+#include "../../source/fitz/leptonica-wrap.h"
 
 #endif

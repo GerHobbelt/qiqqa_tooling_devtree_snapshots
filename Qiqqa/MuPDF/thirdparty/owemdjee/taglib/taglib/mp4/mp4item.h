@@ -27,8 +27,8 @@
 #define TAGLIB_MP4ITEM_H
 
 #include "tstringlist.h"
-#include "mp4coverart.h"
 #include "taglib_export.h"
+#include "mp4coverart.h"
 
 namespace TagLib {
   namespace MP4 {
@@ -52,14 +52,14 @@ namespace TagLib {
        */
       void swap(Item &item);
 
-      ~Item();
+      virtual ~Item();
 
       Item(int value);
       Item(unsigned char value);
       Item(unsigned int value);
       Item(long long value);
       Item(bool value);
-      Item(int first, int second);
+      Item(int value1, int value2);
       Item(const StringList &value);
       Item(const ByteVectorList &value);
       Item(const CoverArtList &value);
@@ -81,7 +81,7 @@ namespace TagLib {
 
     private:
       class ItemPrivate;
-      ItemPrivate *d;
+      std::shared_ptr<ItemPrivate> d;
     };
   }  // namespace MP4
 }  // namespace TagLib

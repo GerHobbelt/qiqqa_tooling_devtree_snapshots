@@ -3,7 +3,7 @@
 
 /* minigzip.c -- simulate gzip using the zlib compression library
  * Copyright (C) 1995-2006, 2010, 2011, 2016 Jean-loup Gailly
- * For conditions of distribution and use, see http://www.zlib.net/zlib_license.html
+ * For conditions of distribution and use, see https://www.zlib.net/zlib_license.html
  */
 
 /*
@@ -38,7 +38,7 @@
 
 #include "../programs/monolithic_examples.h"
 
-#if defined(_WIN32) || defined(__CYGWIN__)
+#if defined(MSDOS) || defined(OS2) || defined(_WIN32) || defined(__CYGWIN__)
 #  include <fcntl.h>
 #  include <io.h>
 #  define SET_BINARY_MODE(file) setmode(fileno(file), O_BINARY)

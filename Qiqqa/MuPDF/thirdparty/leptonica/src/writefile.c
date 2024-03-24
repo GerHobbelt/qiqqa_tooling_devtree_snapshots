@@ -120,7 +120,6 @@ static const l_float32  DefaultScaling = 1.0;
     /* because that makes it static.  The 'const' in the definition of   */
     /* the array refers to the strings in the array; the ptr to the      */
     /* array is not const and can be used 'extern' in other files.)      */
-LEPT_DLL l_int32  NumImageFileFormatExtensions = 20;  /* array size */
 LEPT_DLL const char *ImageFileFormatExtensions[] =
          {"unknown",
           "bmp",
@@ -142,6 +141,7 @@ LEPT_DLL const char *ImageFileFormatExtensions[] =
           "tif",
           "default",
           ""};
+LEPT_DLL l_int32 NumImageFileFormatExtensions = sizeof(ImageFileFormatExtensions) / sizeof(ImageFileFormatExtensions[0]); /* array size */
 
     /* Local map of image file name extension to output format */
 struct ExtensionMap
@@ -187,6 +187,7 @@ static l_int32  var_JPEG_QUALITY = 75;   /* default */
  *           pixWriteStream(...);
  *           l_jpegSetQuality(prev);   // resets to previous value
  *      (3) On error, logs a message and does not change the variable.
+ * </pre>
  */
 l_int32
 l_jpegSetQuality(l_int32  new_quality)
@@ -220,6 +221,7 @@ LEPT_DLL l_int32 LeptDebugOK = 0;  /* default value */
  *          are compiled in.
  *      (2) The default in the library distribution is 0.  Call with
  *          %allow = 1 for development and debugging.
+ * </pre>
  */
 void
 setLeptDebugOK(l_int32  allow)
@@ -924,7 +926,7 @@ pixDisplayWithTitle(PIX         *pixs,
 {
 char           *tempname;
 char            buffer[Bufsize];
-static l_int32  index = 0;  /* caution: not .so or thread safe */
+static l_atomic index = 0;  /* caution: not .so safe */
 l_int32         w, h, d, spp, maxheight, opaque, threeviews;
 l_float32       ratw, rath, ratmin;
 PIX            *pix0, *pix1, *pix2;

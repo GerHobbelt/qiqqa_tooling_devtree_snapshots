@@ -23,35 +23,21 @@
  *   http://www.mozilla.org/MPL/                                           *
  ***************************************************************************/
 
-#include <tbytevector.h>
-#include <tdebug.h>
-#include <id3v2tag.h>
-#include <tstringlist.h>
-#include <tpropertymap.h>
-#include <tagutils.h>
-
 #include "aifffile.h"
+
+#include "tdebug.h"
+#include "tpropertymap.h"
+#include "tagutils.h"
 
 using namespace TagLib;
 
 class RIFF::AIFF::File::FilePrivate
 {
 public:
-  FilePrivate() :
-    properties(0),
-    tag(0),
-    hasID3v2(false) {}
+  std::unique_ptr<Properties> properties;
+  std::unique_ptr<ID3v2::Tag> tag;
 
-  ~FilePrivate()
-  {
-    delete properties;
-    delete tag;
-  }
-
-  Properties *properties;
-  ID3v2::Tag *tag;
-
-  bool hasID3v2;
+  bool hasID3v2 { false };
 };
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -72,7 +58,7 @@ bool RIFF::AIFF::File::isSupported(IOStream *stream)
 
 RIFF::AIFF::File::File(FileName file, bool readProperties, Properties::ReadStyle) :
   RIFF::File(file, BigEndian),
-  d(new FilePrivate())
+  d(std::make_unique<FilePrivate>())
 {
   if(isOpen())
     read(readProperties);
@@ -80,20 +66,17 @@ RIFF::AIFF::File::File(FileName file, bool readProperties, Properties::ReadStyle
 
 RIFF::AIFF::File::File(IOStream *stream, bool readProperties, Properties::ReadStyle) :
   RIFF::File(stream, BigEndian),
-  d(new FilePrivate())
+  d(std::make_unique<FilePrivate>())
 {
   if(isOpen())
     read(readProperties);
 }
 
-RIFF::AIFF::File::~File()
-{
-  delete d;
-}
+RIFF::AIFF::File::~File() = default;
 
 ID3v2::Tag *RIFF::AIFF::File::tag() const
 {
-  return d->tag;
+  return d->tag.get();
 }
 
 PropertyMap RIFF::AIFF::File::properties() const
@@ -113,7 +96,7 @@ PropertyMap RIFF::AIFF::File::setProperties(const PropertyMap &properties)
 
 RIFF::AIFF::Properties *RIFF::AIFF::File::audioProperties() const
 {
-  return d->properties;
+  return d->properties.get();
 }
 
 bool RIFF::AIFF::File::save()
@@ -162,7 +145,7 @@ void RIFF::AIFF::File::read(bool readProperties)
     const ByteVector name = chunkName(i);
     if(name == "ID3 " || name == "id3 ") {
       if(!d->tag) {
-        d->tag = new ID3v2::Tag(this, chunkOffset(i));
+        d->tag = std::make_unique<ID3v2::Tag>(this, chunkOffset(i));
         d->hasID3v2 = true;
       }
       else {
@@ -172,8 +155,8 @@ void RIFF::AIFF::File::read(bool readProperties)
   }
 
   if(!d->tag)
-    d->tag = new ID3v2::Tag();
+    d->tag = std::make_unique<ID3v2::Tag>();
 
   if(readProperties)
-    d->properties = new Properties(this, Properties::Average);
+    d->properties = std::make_unique<Properties>(this, Properties::Average);
 }

@@ -94,11 +94,20 @@ sub clearlogs {
 
 
 #######################################################################
+
+sub includefile {
+    my ($f) = @_;
+    open(F, "<$f");
+    my @a = <F>;
+    close(F);
+    return join("", @a);
+}
+
 sub subbase64 {
     my ($thing) = @_;
 
     # cut out the base64 piece
-    if($$thing =~ s/%b64\[(.*)\]b64%/%%B64%%/i) {
+    while($$thing =~ s/%b64\[(.*?)\]b64%/%%B64%%/i) {
         my $d = $1;
         # encode %NN characters
         $d =~ s/%([0-9A-Fa-f]{2})/chr(hex($1))/eg;
@@ -107,19 +116,23 @@ sub subbase64 {
         $$thing =~ s/%%B64%%/$enc/;
     }
     # hex decode
-    if($$thing =~ s/%hex\[(.*)\]hex%/%%HEX%%/i) {
+    while($$thing =~ s/%hex\[(.*?)\]hex%/%%HEX%%/i) {
         # decode %NN characters
         my $d = $1;
         $d =~ s/%([0-9A-Fa-f]{2})/chr(hex($1))/eg;
         $$thing =~ s/%%HEX%%/$d/;
     }
-    if($$thing =~ s/%repeat\[(\d+) x (.*)\]%/%%REPEAT%%/i) {
+    # repeat
+    while($$thing =~ s/%repeat\[(\d+) x (.*?)\]%/%%REPEAT%%/i) {
         # decode %NN characters
         my ($d, $n) = ($2, $1);
         $d =~ s/%([0-9A-Fa-f]{2})/chr(hex($1))/eg;
         my $all = $d x $n;
         $$thing =~ s/%%REPEAT%%/$all/;
     }
+
+    # include a file
+    $$thing =~ s/%include ([^%]*)%[\n\r]+/includefile($1)/ge;
 }
 
 my $prevupdate;  # module scope so it remembers the last value

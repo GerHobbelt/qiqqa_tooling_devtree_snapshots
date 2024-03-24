@@ -35,6 +35,8 @@
 #include "jbig2_image.h"
 #include "jbig2_image_rw.h"
 
+#include "mupdf/fitz/string-util.h"
+
 #include "monolithic_examples.h"
 
 #if defined(BUILD_MONOLITHIC)
@@ -53,7 +55,7 @@ int main(int argc, const char** argv)
     ctx = jbig2_ctx_new(NULL, 0, NULL, NULL, NULL);
 
     if (argc != 3) {
-        fprintf(stderr, "usage: %s <in.pbm> <out.png>\n\n", argv[0]);
+        fprintf(stderr, "usage: %s <in.pbm> <out.png>\n\n", fz_basename(argv[0]));
         return 1;
     }
 
@@ -77,7 +79,7 @@ int main(int argc, const char** argv)
 
 int main(int argc, const char** argv)
 {
-    fprintf(stderr, "%s: this tool is not supported in this build (no PNG library built-in).\n", argv[0]);
+    fprintf(stderr, "%s: this tool is not supported in this build (no PNG library built-in).\n", fz_basename(argv[0]));
     return 1;
 }
 

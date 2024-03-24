@@ -313,7 +313,7 @@ fz_dirname(char *dir, const char *path, size_t n)
 
 #ifdef _WIN32
 
-char *fz_realpath(const char *path, char *buf)
+char *fz_realpath(const char *path, char buf[PATH_MAX])
 {
 	wchar_t wpath[PATH_MAX];
 	wchar_t wbuf[PATH_MAX + 4];
@@ -352,7 +352,7 @@ char *fz_realpath(const char *path, char *buf)
 
 #else
 
-char *fz_realpath(const char *path, char *buf)
+char *fz_realpath(const char *path, char buf[PATH_MAX])
 {
 	if (!realpath(path, buf))
 		return NULL;
@@ -388,6 +388,14 @@ static inline int tohex(int c)
 	return 0;
 }
 
+#define URIRESERVED ";/?:@&=+$,"
+#define URIALPHA "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+#define URIDIGIT "0123456789"
+#define URIMARK "-_.!~*'()"
+#define URIUNESCAPED URIALPHA URIDIGIT URIMARK
+#define HEX "0123456789ABCDEF"
+
+/* Same as fz_decode_uri_component but in-place */
 char *
 fz_urldecode(char *url)
 {
@@ -409,6 +417,100 @@ fz_urldecode(char *url)
 	}
 	*p = 0;
 	return url;
+}
+
+char *
+fz_decode_uri_component(fz_context *ctx, const char *s)
+{
+	char *uri = fz_malloc(ctx, strlen(s) + 1);
+	char *p = uri;
+	while (*s)
+	{
+		int c = (unsigned char) *s++;
+		if (c == '%' && ishex(s[0]) && ishex(s[1]))
+		{
+			int a = tohex(*s++);
+			int b = tohex(*s++);
+			*p++ = a << 4 | b;
+		}
+		else
+		{
+			*p++ = c;
+		}
+	}
+	*p = 0;
+	return uri;
+}
+
+char *
+fz_decode_uri(fz_context *ctx, const char *s)
+{
+	char *uri = fz_malloc(ctx, strlen(s) + 1);
+	char *p = uri;
+	while (*s)
+	{
+		int c = (unsigned char) *s++;
+		if (c == '%' && ishex(s[0]) && ishex(s[1]))
+		{
+			int a = tohex(*s++);
+			int b = tohex(*s++);
+			int c = a << 4 | b;
+			if (strchr(URIRESERVED "#", c)) {
+				*p++ = '%';
+				*p++ = HEX[a];
+				*p++ = HEX[b];
+			} else {
+				*p++ = c;
+			}
+		}
+		else
+		{
+			*p++ = c;
+		}
+	}
+	*p = 0;
+	return uri;
+}
+
+static char *
+fz_encode_uri_imp(fz_context *ctx, const char *s, const char *unescaped)
+{
+	char *uri = fz_malloc(ctx, strlen(s) * 3 + 1); /* allocate enough for worst case */
+	char *p = uri;
+	while (*s)
+	{
+		int c = (unsigned char) *s++;
+		if (strchr(unescaped, c))
+		{
+			*p++ = c;
+		}
+		else
+		{
+			*p++ = '%';
+			*p++ = HEX[(c >> 4) & 15];
+			*p++ = HEX[(c) & 15];
+		}
+	}
+	*p = 0;
+	return uri;
+}
+
+char *
+fz_encode_uri_component(fz_context *ctx, const char *s)
+{
+	return fz_encode_uri_imp(ctx, s, URIUNESCAPED);
+}
+
+char *
+fz_encode_uri_pathname(fz_context *ctx, const char *s)
+{
+	return fz_encode_uri_imp(ctx, s, URIUNESCAPED "/");
+}
+
+char *
+fz_encode_uri(fz_context *ctx, const char *s)
+{
+	return fz_encode_uri_imp(ctx, s, URIUNESCAPED URIRESERVED "#");
 }
 
 static const char *check_percent_d(const char* s)
@@ -556,7 +658,7 @@ fz_format_output_path_ex(fz_context* ctx, char* dstpath, size_t dstsize, const c
 
 		if (pos >= dstsize)
 		{
-			fz_throw(ctx, FZ_ERROR_GENERIC, "fz_format_output_path_ex: out of bounds; path too long");
+			fz_throw(ctx, FZ_ERROR_ARGUMENT, "fz_format_output_path_ex: out of bounds; path too long");
 		}
 		memcpy(dstpath, fmt, pos);
 		dstpath += pos;
@@ -583,14 +685,14 @@ fz_format_output_path_ex(fz_context* ctx, char* dstpath, size_t dstsize, const c
 					char fstr[20];
 					size_t l = p2 - fmt;
 					if (l >= sizeof(fmt))
-						fz_throw(ctx, FZ_ERROR_GENERIC, "illegal (too large) marker in path name template: %.*q in %q", (int)l, fmt, fmt);
+						fz_throw(ctx, FZ_ERROR_ARGUMENT, "illegal (too large) marker in path name template: %.*q in %q", (int)l, fmt, fmt);
 					memcpy(fstr, fmt, l);
 					fstr[l] = 0;
 
 					// bingo: workable/legal %d particle:
 					l = fz_snprintf(dstpath, dstsize, fstr, page);
 					if (l >= dstsize)
-						fz_throw(ctx, FZ_ERROR_GENERIC, "path name buffer overflow");
+						fz_throw(ctx, FZ_ERROR_ARGUMENT, "path name buffer overflow");
 					dstpath += l;
 					dstsize -= l;
 
@@ -609,7 +711,7 @@ fz_format_output_path_ex(fz_context* ctx, char* dstpath, size_t dstsize, const c
 
 				size_t l = fz_snprintf(dstpath, dstsize, "%0*d", (int)vl, page);
 				if (l >= dstsize)
-					fz_throw(ctx, FZ_ERROR_GENERIC, "path name buffer overflow");
+					fz_throw(ctx, FZ_ERROR_ARGUMENT, "path name buffer overflow");
 				dstpath += l;
 				dstsize -= l;
 
@@ -625,7 +727,7 @@ fz_format_output_path_ex(fz_context* ctx, char* dstpath, size_t dstsize, const c
 
 				size_t l = fz_snprintf(dstpath, dstsize, "%0*d", (int)vl, sequence_number);
 				if (l >= dstsize)
-					fz_throw(ctx, FZ_ERROR_GENERIC, "path name buffer overflow");
+					fz_throw(ctx, FZ_ERROR_ARGUMENT, "path name buffer overflow");
 				dstpath += l;
 				dstsize -= l;
 
@@ -642,7 +744,7 @@ fz_format_output_path_ex(fz_context* ctx, char* dstpath, size_t dstsize, const c
 
 				size_t l = fz_snprintf(dstpath, dstsize, "%s", label);
 				if (l >= dstsize)
-					fz_throw(ctx, FZ_ERROR_GENERIC, "path name buffer overflow");
+					fz_throw(ctx, FZ_ERROR_ARGUMENT, "path name buffer overflow");
 				dstpath += l;
 				dstsize -= l;
 
@@ -659,7 +761,7 @@ fz_format_output_path_ex(fz_context* ctx, char* dstpath, size_t dstsize, const c
 
 				size_t l = fz_snprintf(dstpath, dstsize, "%0*d", (int)vl, chapter);
 				if (l >= dstsize)
-					fz_throw(ctx, FZ_ERROR_GENERIC, "path name buffer overflow");
+					fz_throw(ctx, FZ_ERROR_ARGUMENT, "path name buffer overflow");
 				dstpath += l;
 				dstsize -= l;
 
@@ -686,14 +788,14 @@ fz_format_output_path_ex(fz_context* ctx, char* dstpath, size_t dstsize, const c
 	// edge case checks:
 	if (dstbase == dstpath)
 	{
-		fz_throw(ctx, FZ_ERROR_GENERIC, "fz_format_output_path_ex: invalid or empty path template specified; path name buffer underflow");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "fz_format_output_path_ex: invalid or empty path template specified; path name buffer underflow");
 	}
 	if (strchr("\\/:", dstpath[-1]))
 	{
 		static const char* fname = "NO-NAME";
 		size_t l = strlen(fname);
 		if (l + 1 >= dstsize)
-			fz_throw(ctx, FZ_ERROR_GENERIC, "path name buffer overflow");
+			fz_throw(ctx, FZ_ERROR_ARGUMENT, "path name buffer overflow");
 		memcpy(dstpath, fname, l);
 
 		dstpath += l;
@@ -702,7 +804,7 @@ fz_format_output_path_ex(fz_context* ctx, char* dstpath, size_t dstsize, const c
 
 	if (!dstsize)
 	{
-		fz_throw(ctx, FZ_ERROR_GENERIC, "fz_format_output_path_ex: out of bounds; path too long");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "fz_format_output_path_ex: out of bounds; path too long");
 	}
 
 #if 0
@@ -748,7 +850,7 @@ fz_format_output_path_ex(fz_context* ctx, char* dstpath, size_t dstsize, const c
 
 	if (!dstsize)
 	{
-		fz_throw(ctx, FZ_ERROR_GENERIC, "fz_format_output_path_ex: out of bounds; path too long");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "fz_format_output_path_ex: out of bounds; path too long");
 	}
 
 	*dstpath = 0;
@@ -808,6 +910,16 @@ fz_cleanname(char *name)
 		*q++ = '.';
 	*q = '\0';
 	return name;
+}
+
+char *
+fz_cleanname_strdup(fz_context *ctx, const char *name)
+{
+	size_t len = strlen(name);
+	char *newname = fz_malloc(ctx, fz_maxz(2, len + 1));
+	memcpy(newname, name, len + 1);
+	newname[len] = '\0';
+	return fz_cleanname(newname);
 }
 
 // NOTE: this next part is a near-duplicate of the code in thirdparty/mujs/utf.c
@@ -1270,4 +1382,51 @@ void *fz_memmem(const void *h0, size_t k, const void *n0, size_t l)
 	if (l==4) return fourbyte_memmem(h, k, n);
 
 	return twoway_memmem(h, h+k, n, l);
+}
+
+char *
+fz_utf8_from_wchar(fz_context *ctx, const wchar_t *s)
+{
+	const wchar_t *src = s;
+	char *d;
+	char *dst;
+	int len = 1;
+
+	while (*src)
+	{
+		len += fz_runelen(*src++);
+	}
+
+	d = Memento_label(fz_malloc(ctx, len), "utf8_from_wchar");
+	if (d != NULL)
+	{
+		dst = d;
+		src = s;
+		while (*src)
+		{
+			dst += fz_runetochar(dst, *src++);
+		}
+		*dst = 0;
+	}
+	return d;
+}
+
+wchar_t *
+fz_wchar_from_utf8(fz_context *ctx, const char *s)
+{
+	wchar_t *d, *r;
+	int c;
+	r = d = fz_malloc(ctx, (strlen(s) + 1) * sizeof(wchar_t));
+	if (!r)
+		return NULL;
+	while (*s) {
+		s += fz_chartorune_unsafe(&c, s);
+		/* Truncating c to a wchar_t can be problematic if c
+		 * is 0x10000. */
+		if (c >= 0x10000)
+			c = FZ_REPLACEMENT_CHARACTER;
+		*d++ = c;
+	}
+	*d = 0;
+	return r;
 }

@@ -84,7 +84,6 @@ boost_test(TYPE run SOURCES system_category_test2.cpp)
 boost_test(TYPE run SOURCES system_category_test3.cpp)
 
 boost_test(TYPE run SOURCES windows_error_test.cpp)
-boost_test(TYPE run SOURCES cygwin_error_test.cpp)
 boost_test(TYPE run SOURCES linux_error_test.cpp)
 
 boost_test(TYPE link SOURCES errc_test3.cpp)
@@ -132,9 +131,11 @@ boost_test(TYPE run SOURCES std_interop_test15.cpp)
 
 boost_test(TYPE run SOURCES win32_generic_test.cpp)
 
-# result
+boost_test(TYPE run SOURCES ec_hash_value_test.cpp)
 
-set(BOOST_TEST_COMPILE_FEATURES cxx_std_11)
+boost_test(TYPE run SOURCES std_interop_test16.cpp)
+
+# result
 
 boost_test(TYPE run SOURCES result_default_construct.cpp)
 boost_test(TYPE run SOURCES result_value_construct.cpp)
@@ -150,7 +151,26 @@ boost_test(TYPE run SOURCES result_eq.cpp)
 boost_test(TYPE run SOURCES result_range_for.cpp)
 boost_test(TYPE run SOURCES result_value_construct2.cpp)
 boost_test(TYPE run SOURCES result_error_construct2.cpp)
+boost_test(TYPE run SOURCES result_errc_construct.cpp)
 boost_test(TYPE run SOURCES result_convert_construct.cpp)
 boost_test(TYPE run SOURCES result_typedefs.cpp)
 boost_test(TYPE run SOURCES result_value_construct3.cpp)
 boost_test(TYPE run SOURCES result_error_construct3.cpp)
+boost_test(TYPE run SOURCES result_emplace.cpp)
+boost_test(TYPE run SOURCES result_error_construct4.cpp)
+boost_test(TYPE run SOURCES result_value_construct4.cpp)
+boost_test(TYPE run SOURCES result_value_construct5.cpp)
+boost_test(TYPE run SOURCES result_error_move.cpp)
+boost_test(TYPE run SOURCES result_value_construct6.cpp)
+boost_test(TYPE run SOURCES result_value_construct7.cpp)
+boost_test(TYPE run SOURCES result_error_construct5.cpp)
+boost_test(TYPE run SOURCES result_or_value.cpp)
+boost_test(TYPE compile-fail SOURCES result_or_value_fail.cpp)
+boost_test(TYPE compile-fail SOURCES result_or_value_fail2.cpp)
+boost_test(TYPE run SOURCES result_or_fn0v.cpp)
+boost_test(TYPE run SOURCES result_or_fn0r.cpp)
+boost_test(TYPE run SOURCES result_and_fn1v.cpp)
+boost_test(TYPE run SOURCES result_and_fn1r.cpp)
+boost_test(TYPE run SOURCES result_and_eq_fn1v.cpp)
+boost_test(TYPE run SOURCES result_and_eq_fn1r.cpp)
+boost_test(TYPE run SOURCES result_in_place_use.cpp)

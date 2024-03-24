@@ -72,335 +72,452 @@
     <Filter Include="Misc Files\docs">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0020}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\perf">
+    <Filter Include="Misc Files\m4">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\perf\texts">
+    <Filter Include="Misc Files\perf">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\src">
+    <Filter Include="Misc Files\perf\texts">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\src\ms-use">
+    <Filter Include="Misc Files\src">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test">
+    <Filter Include="Misc Files\src\ms-use">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\api">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0026}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\test\api\fonts">
+    <Filter Include="Misc Files\src\wasm">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\shape">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
+    <Filter Include="Misc Files\src\wasm\graphite">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0026}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\shape\data">
+    <Filter Include="Misc Files\src\wasm\rust">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0029}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\shape\data\aots">
+    <Filter Include="Misc Files\src\wasm\rust\harfbuzz-wasm">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\wasm\rust\harfbuzz-wasm\src">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0030}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\shape\data\in-house">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0031}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\test\shape\data\text-rendering-tests">
+    <Filter Include="Misc Files\src\wasm\sample">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0032}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\shape\data\text-rendering-tests\fonts">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0033}</UniqueIdentifier>
+    <Filter Include="Misc Files\src\wasm\sample\c">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0031}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\subset">
+    <Filter Include="Misc Files\src\wasm\sample\rust">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0034}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\subset\data">
+    <Filter Include="Misc Files\src\wasm\sample\rust\hello-wasm">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0033}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\wasm\sample\rust\hello-wasm\src">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0035}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\subset\data\profiles">
+    <Filter Include="Misc Files\test">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0036}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\subset\data\repack_tests">
+    <Filter Include="Misc Files\test\api">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0037}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\threads">
+    <Filter Include="Misc Files\test\api\fonts">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0038}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\util">
+    <Filter Include="Misc Files\test\api\results">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0039}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
+    <Filter Include="Misc Files\test\shape">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0040}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\docs">
+    <Filter Include="Misc Files\test\shape\data">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0041}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\perf">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0043}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\perf\fonts">
+    <Filter Include="Misc Files\test\shape\data\aots">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0042}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0046}</UniqueIdentifier>
+    <Filter Include="Misc Files\test\shape\data\aots\tests">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0043}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\api">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0045}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\test\api\fonts">
+    <Filter Include="Misc Files\test\shape\data\in-house">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0044}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\shape">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0050}</UniqueIdentifier>
+    <Filter Include="Misc Files\test\shape\data\in-house\tests">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0045}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\shape\data">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0049}</UniqueIdentifier>
+    <Filter Include="Misc Files\test\shape\data\text-rendering-tests">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0046}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\shape\data\aots">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0048}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\test\shape\data\aots\fonts">
+    <Filter Include="Misc Files\test\shape\data\text-rendering-tests\fonts">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0047}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\shape\data\in-house">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0052}</UniqueIdentifier>
+    <Filter Include="Misc Files\test\shape\data\text-rendering-tests\tests">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0048}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\shape\data\in-house\fonts">
+    <Filter Include="Misc Files\test\subset">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0049}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\subset\data">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0050}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\subset\data\expected">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0051}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\shape\data\text-rendering-tests">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0054}</UniqueIdentifier>
+    <Filter Include="Misc Files\test\subset\data\profiles">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0052}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\shape\data\text-rendering-tests\fonts">
+    <Filter Include="Misc Files\test\subset\data\repack_tests">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0053}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0058}</UniqueIdentifier>
+    <Filter Include="Misc Files\test\subset\data\tests">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0054}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0057}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0056}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\32bit_var_store">
+    <Filter Include="Misc Files\test\threads">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0055}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\apply_cvar_delta">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0059}</UniqueIdentifier>
+    <Filter Include="Misc Files\util">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0056}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\basics">
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0057}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\docs">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0058}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\perf">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0060}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\cbdt">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0061}</UniqueIdentifier>
+    <Filter Include="Resource Files\perf\fonts">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0059}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\cff-full-font">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0062}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\cff-japanese">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0063}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\cff.notoserifmyanmar">
+    <Filter Include="Resource Files\src">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0064}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\cmap">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0065}</UniqueIdentifier>
+    <Filter Include="Resource Files\src\wasm">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0063}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\cmap14">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0066}</UniqueIdentifier>
+    <Filter Include="Resource Files\src\wasm\sample">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0062}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\collect_name_ids">
+    <Filter Include="Resource Files\src\wasm\sample\c">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0061}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0067}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\colr">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0068}</UniqueIdentifier>
+    <Filter Include="Resource Files\test\api">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0066}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\colr_glyphs">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0069}</UniqueIdentifier>
+    <Filter Include="Resource Files\test\api\fonts">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0065}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\colr_with_components">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0070}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\colrv1">
+    <Filter Include="Resource Files\test\shape">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0071}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\colrv1_copy_varstore">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0072}</UniqueIdentifier>
+    <Filter Include="Resource Files\test\shape\data">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0070}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\full-font">
+    <Filter Include="Resource Files\test\shape\data\aots">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0069}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\shape\data\aots\fonts">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0068}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\shape\data\in-house">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0073}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\full_instance">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0074}</UniqueIdentifier>
+    <Filter Include="Resource Files\test\shape\data\in-house\fonts">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0072}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\glyf_bug_3131">
+    <Filter Include="Resource Files\test\shape\data\text-rendering-tests">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0075}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\glyph_names">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0076}</UniqueIdentifier>
+    <Filter Include="Resource Files\test\shape\data\text-rendering-tests\fonts">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0074}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\instance_comp_glyph_empty_child">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0077}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\instance_feature_variations">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0078}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\instance_no_double_free">
+    <Filter Include="Resource Files\test\subset">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0079}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\instantiate_cff2">
+    <Filter Include="Resource Files\test\subset\data">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0078}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0077}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\32bit_var_store">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0076}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\apply_cvar_delta">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0080}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\instantiate_colrv1">
+    <Filter Include="Resource Files\test\subset\data\expected\basics">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0081}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\instantiate_glyf">
+    <Filter Include="Resource Files\test\subset\data\expected\cbdt">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0082}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\japanese">
+    <Filter Include="Resource Files\test\subset\data\expected\cff-full-font">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0083}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\layout">
+    <Filter Include="Resource Files\test\subset\data\expected\cff-japanese">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0084}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\layout.context">
+    <Filter Include="Resource Files\test\subset\data\expected\cff.notoserifmyanmar">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0085}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\layout.context_format2">
+    <Filter Include="Resource Files\test\subset\data\expected\cmap">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0086}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\layout.drop_feature">
+    <Filter Include="Resource Files\test\subset\data\expected\cmap14">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0087}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\layout.duplicate_features">
+    <Filter Include="Resource Files\test\subset\data\expected\collect_name_ids">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0088}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\layout.gdef">
+    <Filter Include="Resource Files\test\subset\data\expected\colr">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0089}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\layout.gdef-attachlist">
+    <Filter Include="Resource Files\test\subset\data\expected\colr_glyphs">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0090}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\layout.gdef-varstore">
+    <Filter Include="Resource Files\test\subset\data\expected\colr_with_components">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0091}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\layout.gdef.glyphset">
+    <Filter Include="Resource Files\test\subset\data\expected\colrv1">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0092}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\layout.gpos">
+    <Filter Include="Resource Files\test\subset\data\expected\colrv1_copy_varstore">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0093}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\layout.gpos2">
+    <Filter Include="Resource Files\test\subset\data\expected\empty_region_vardata">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0094}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\layout.gpos3">
+    <Filter Include="Resource Files\test\subset\data\expected\feature_variation_instance_collect_lookups">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0095}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\layout.gpos4">
+    <Filter Include="Resource Files\test\subset\data\expected\feature_variations_partial_instance">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0096}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\layout.gpos5">
+    <Filter Include="Resource Files\test\subset\data\expected\full-font">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0097}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\layout.gpos6">
+    <Filter Include="Resource Files\test\subset\data\expected\full_instance">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0098}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\layout.gpos8">
+    <Filter Include="Resource Files\test\subset\data\expected\gdef_partial_instance">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0099}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\layout.gpos8.amiri">
+    <Filter Include="Resource Files\test\subset\data\expected\glyf_bug_3131">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0100}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\layout.gpos9">
+    <Filter Include="Resource Files\test\subset\data\expected\glyf_partial_instancing">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0101}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\layout.gsub3">
+    <Filter Include="Resource Files\test\subset\data\expected\glyph_map">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0102}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\layout.gsub5">
+    <Filter Include="Resource Files\test\subset\data\expected\glyph_names">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0103}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\layout.gsub5_format2">
+    <Filter Include="Resource Files\test\subset\data\expected\iftb_requirements">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0104}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\layout.gsub6">
+    <Filter Include="Resource Files\test\subset\data\expected\instance_comp_glyph_empty_child">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0105}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\layout.gsub8">
+    <Filter Include="Resource Files\test\subset\data\expected\instance_feature_variations">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0106}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\layout.khmer">
+    <Filter Include="Resource Files\test\subset\data\expected\instance_no_double_free">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0107}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\layout.notonastaliqurdu">
+    <Filter Include="Resource Files\test\subset\data\expected\instantiate_cff2">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0108}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\layout.tinos">
+    <Filter Include="Resource Files\test\subset\data\expected\instantiate_cff2_update_metrics">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0109}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\layout.unsorted_featurelist">
+    <Filter Include="Resource Files\test\subset\data\expected\instantiate_colrv1">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0110}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\math">
+    <Filter Include="Resource Files\test\subset\data\expected\instantiate_glyf">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0111}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\math_coverage_offset">
+    <Filter Include="Resource Files\test\subset\data\expected\japanese">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0112}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\mvar_full_instance">
+    <Filter Include="Resource Files\test\subset\data\expected\layout">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0113}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\pin_all_at_default">
+    <Filter Include="Resource Files\test\subset\data\expected\layout.context">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0114}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\post">
+    <Filter Include="Resource Files\test\subset\data\expected\layout.context_format2">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0115}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\post_apply_mvar_delta">
+    <Filter Include="Resource Files\test\subset\data\expected\layout.drop_feature">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0116}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\preprocess">
+    <Filter Include="Resource Files\test\subset\data\expected\layout.duplicate_features">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0117}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\sbix">
+    <Filter Include="Resource Files\test\subset\data\expected\layout.empty_ligature_offset">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0118}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\variable">
+    <Filter Include="Resource Files\test\subset\data\expected\layout.gdef">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0119}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\fonts">
+    <Filter Include="Resource Files\test\subset\data\expected\layout.gdef-attachlist">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0120}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\perf">
+    <Filter Include="Resource Files\test\subset\data\expected\layout.gdef-varstore">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0121}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\src">
+    <Filter Include="Resource Files\test\subset\data\expected\layout.gdef.glyphset">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0122}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\src\graph">
+    <Filter Include="Resource Files\test\subset\data\expected\layout.gpos">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0123}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0125}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\test\api">
+    <Filter Include="Resource Files\test\subset\data\expected\layout.gpos2">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0124}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\test\shape">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0128}</UniqueIdentifier>
+    <Filter Include="Resource Files\test\subset\data\expected\layout.gpos3">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0125}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\test\shape\data">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0127}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\test\shape\data\aots">
+    <Filter Include="Resource Files\test\subset\data\expected\layout.gpos4">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0126}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\test\threads">
+    <Filter Include="Resource Files\test\subset\data\expected\layout.gpos5">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0127}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\layout.gpos6">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0128}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\layout.gpos8">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0129}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\util">
+    <Filter Include="Resource Files\test\subset\data\expected\layout.gpos8.amiri">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0130}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\layout.gpos9">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0131}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\layout.gsub3">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0132}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\layout.gsub5">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0133}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\layout.gsub5_format2">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0134}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\layout.gsub6">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0135}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\layout.gsub8">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0136}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\layout.khmer">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0137}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\layout.notonastaliqurdu">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0138}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\layout.tinos">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0139}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\layout.unsorted_featurelist">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0140}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\math">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0141}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\math_coverage_offset">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0142}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\mvar_full_instance">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0143}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\mvar_partial_instance">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0144}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\no_layout_closure">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0145}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\pin_all_at_default">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0146}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\post">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0147}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\post_apply_mvar_delta">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0148}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\preprocess">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0149}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\sbix">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0150}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\sync_vmetrics">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0151}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\update_def_wght">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0152}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\value_format_partial_instance">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0153}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\variable">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0154}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\fonts">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0155}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\perf">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0156}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0157}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\graph">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0158}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\wasm">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0160}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\wasm\graphite">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0159}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\wasm\sample">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0162}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\wasm\sample\c">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0161}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0164}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test\api">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0163}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test\shape">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0167}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test\shape\data">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0166}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test\shape\data\aots">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0165}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test\threads">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0168}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\util">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0169}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -653,6 +770,12 @@
     <ClCompile Include="../../thirdparty/harfbuzz/src/hb-uniscribe.cc">
       <Filter>Source Files\src</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/harfbuzz/src/hb-wasm-api.cc">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/harfbuzz/src/hb-wasm-shape.cc">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/harfbuzz/src/main.cc">
       <Filter>Source Files\src</Filter>
     </ClCompile>
@@ -675,6 +798,9 @@
       <Filter>Source Files\src</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/harfbuzz/src/test-gsub-would-substitute.cc">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/harfbuzz/src/test-item-varstore.cc">
       <Filter>Source Files\src</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/harfbuzz/src/test-iter.cc">
@@ -713,6 +839,12 @@
     <ClCompile Include="../../thirdparty/harfbuzz/src/test-set.cc">
       <Filter>Source Files\src</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/harfbuzz/src/test-subset-instancer-solver.cc">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/harfbuzz/src/test-tuple-varstore.cc">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/harfbuzz/src/test-unicode-ranges.cc">
       <Filter>Source Files\src</Filter>
     </ClCompile>
@@ -725,7 +857,19 @@
     <ClCompile Include="../../thirdparty/harfbuzz/src/test.cc">
       <Filter>Source Files\src</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/harfbuzz/src/wasm/graphite/shape.cc">
+      <Filter>Source Files\src\wasm\graphite</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/harfbuzz/src/wasm/sample/c/shape-fallback.cc">
+      <Filter>Source Files\src\wasm\sample\c</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/harfbuzz/src/wasm/sample/c/shape-ot.cc">
+      <Filter>Source Files\src\wasm\sample\c</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/harfbuzz/test/api/test-aat-layout.c">
+      <Filter>Source Files\test\api</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/harfbuzz/test/api/test-base-minmax.c">
       <Filter>Source Files\test\api</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/harfbuzz/test/api/test-baseline.c">
@@ -939,6 +1083,9 @@
       <Filter>Source Files\util</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/harfbuzz/util/hb-view.cc">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/harfbuzz/util/test-hb-subset-parsing.c">
       <Filter>Source Files\util</Filter>
     </ClCompile>
     <ClInclude Include="../../thirdparty/harfbuzz/src/OT/Color/CBDT/CBDT.hh">
@@ -1715,13 +1862,13 @@
     <ClInclude Include="../../thirdparty/harfbuzz/src/hb-subset-cff-common.hh">
       <Filter>Header Files\src</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/harfbuzz/src/hb-subset-cff1.hh">
-      <Filter>Header Files\src</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/harfbuzz/src/hb-subset-cff2.hh">
-      <Filter>Header Files\src</Filter>
-    </ClInclude>
     <ClInclude Include="../../thirdparty/harfbuzz/src/hb-subset-input.hh">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/harfbuzz/src/hb-subset-instancer-solver.hh">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/harfbuzz/src/hb-subset-plan-member-list.hh">
       <Filter>Header Files\src</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/harfbuzz/src/hb-subset-plan.hh">
@@ -1760,6 +1907,33 @@
     <ClInclude Include="../../thirdparty/harfbuzz/src/hb-version.h">
       <Filter>Header Files\src</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/harfbuzz/src/hb-wasm-api-blob.hh">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/harfbuzz/src/hb-wasm-api-buffer.hh">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/harfbuzz/src/hb-wasm-api-common.hh">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/harfbuzz/src/hb-wasm-api-face.hh">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/harfbuzz/src/hb-wasm-api-font.hh">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/harfbuzz/src/hb-wasm-api-list.hh">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/harfbuzz/src/hb-wasm-api-shape.hh">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/harfbuzz/src/hb-wasm-api.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/harfbuzz/src/hb-wasm-api.hh">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/harfbuzz/src/hb.h">
       <Filter>Header Files\src</Filter>
     </ClInclude>
@@ -1794,6 +1968,9 @@
       <Filter>Header Files\util</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/harfbuzz/util/helper-cairo.hh">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/harfbuzz/util/helper-subset.hh">
       <Filter>Header Files\util</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/harfbuzz/util/main-font-text.hh">
@@ -1835,6 +2012,9 @@
     <Font Include="../../thirdparty/harfbuzz/perf/fonts/Roboto-Regular.ttf">
       <Filter>Resource Files\perf\fonts</Filter>
     </Font>
+    <Font Include="../../thirdparty/harfbuzz/src/wasm/sample/c/test.ttf">
+      <Filter>Resource Files\src\wasm\sample\c</Filter>
+    </Font>
     <Font Include="../../thirdparty/harfbuzz/test/api/fonts/AdobeVFPrototype-Subset.otf">
       <Filter>Resource Files\test\api\fonts</Filter>
     </Font>
@@ -1842,6 +2022,9 @@
       <Filter>Resource Files\test\api\fonts</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/api/fonts/AdobeVFPrototype.WAV.gpos.otf">
+      <Filter>Resource Files\test\api\fonts</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/api/fonts/AdobeVFPrototype.abc.long_off.otf">
       <Filter>Resource Files\test\api\fonts</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/api/fonts/AdobeVFPrototype.abc.otf">
@@ -2039,6 +2222,12 @@
     <Font Include="../../thirdparty/harfbuzz/test/api/fonts/Roboto-Regular.nogsub.fi.ttf">
       <Filter>Resource Files\test\api\fonts</Filter>
     </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/api/fonts/Roboto-Variable.abc.long_loca.ttf">
+      <Filter>Resource Files\test\api\fonts</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/api/fonts/Roboto-Variable.abc.ttf">
+      <Filter>Resource Files\test\api\fonts</Filter>
+    </Font>
     <Font Include="../../thirdparty/harfbuzz/test/api/fonts/RocherColorGX.abc.ttf">
       <Filter>Resource Files\test\api\fonts</Filter>
     </Font>
@@ -2058,6 +2247,9 @@
       <Filter>Resource Files\test\api\fonts</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/api/fonts/SourceHanSans-Regular.41,4C2E.retaingids.otf">
+      <Filter>Resource Files\test\api\fonts</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/api/fonts/SourceSansPro-Regular.abc.long_off.otf">
       <Filter>Resource Files\test\api\fonts</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/api/fonts/SourceSansPro-Regular.abc.otf">
@@ -2166,6 +2358,9 @@
       <Filter>Resource Files\test\api\fonts</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/api/fonts/bad_colrv1.ttf">
+      <Filter>Resource Files\test\api\fonts</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/api/fonts/base-minmax.ttf">
       <Filter>Resource Files\test\api\fonts</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/api/fonts/base.ttf">
@@ -3041,6 +3236,9 @@
     <Font Include="../../thirdparty/harfbuzz/test/shape/data/in-house/fonts/5028afb650b1bb718ed2131e872fbcce57828fff.ttf">
       <Filter>Resource Files\test\shape\data\in-house\fonts</Filter>
     </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/shape/data/in-house/fonts/507637795ce4f2975593da54d12b46f76c7cc4cc.ttf">
+      <Filter>Resource Files\test\shape\data\in-house\fonts</Filter>
+    </Font>
     <Font Include="../../thirdparty/harfbuzz/test/shape/data/in-house/fonts/53374c7ca3657be37efde7ed02ae34229a56ae1f.ttf">
       <Filter>Resource Files\test\shape\data\in-house\fonts</Filter>
     </Font>
@@ -3308,6 +3506,9 @@
     <Font Include="../../thirdparty/harfbuzz/test/shape/data/in-house/fonts/be10ea33f28a139f3305db2302af6220f2f9a583.ttf">
       <Filter>Resource Files\test\shape\data\in-house\fonts</Filter>
     </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/shape/data/in-house/fonts/bef923f4ccb474f961c43b63a9c74b7d9b7a023f.ttf">
+      <Filter>Resource Files\test\shape\data\in-house\fonts</Filter>
+    </Font>
     <Font Include="../../thirdparty/harfbuzz/test/shape/data/in-house/fonts/bf39b0e91ef9807f15a9e283a21a14a209fd2cfc.ttf">
       <Filter>Resource Files\test\shape\data\in-house\fonts</Filter>
     </Font>
@@ -3318,6 +3519,9 @@
       <Filter>Resource Files\test\shape\data\in-house\fonts</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/shape/data/in-house/fonts/cc5f3d2d717fb6bd4dfae1c16d48a2cb8e12233b.ttf">
+      <Filter>Resource Files\test\shape\data\in-house\fonts</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/shape/data/in-house/fonts/d0430ea499348c420946f6abc2efc84fdf8f00e3.ttf">
       <Filter>Resource Files\test\shape\data\in-house\fonts</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/shape/data/in-house/fonts/d23d76ea0909c14972796937ba072b5a40c1e257.ttf">
@@ -5675,6 +5879,21 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1_copy_varstore/Foldit.retain-gids.retain-all-codepoint.ttf">
       <Filter>Resource Files\test\subset\data\expected\colrv1_copy_varstore</Filter>
     </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/empty_region_vardata/RobotoFlex-Variable.ABC.default.retain-all-codepoint.wght=200-300,opsz=14.ttf">
+      <Filter>Resource Files\test\subset\data\expected\empty_region_vardata</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/empty_region_vardata/RobotoFlex-Variable.ABC.default.retain-all-codepoint.wght=400,wdth=100,opsz=14.ttf">
+      <Filter>Resource Files\test\subset\data\expected\empty_region_vardata</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/feature_variation_instance_collect_lookups/AnekBangla-question-subset.default.retain-all-codepoint.wdth=112.5.ttf">
+      <Filter>Resource Files\test\subset\data\expected\feature_variation_instance_collect_lookups</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/feature_variations_partial_instance/NotoSansOriya-subset.default.retain-all-codepoint.wdth=75.ttf">
+      <Filter>Resource Files\test\subset\data\expected\feature_variations_partial_instance</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/feature_variations_partial_instance/NotoSansOriya-subset.keep-all-layout-features.retain-all-codepoint.wdth=75.ttf">
+      <Filter>Resource Files\test\subset\data\expected\feature_variations_partial_instance</Filter>
+    </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/full-font/Roboto-Regular.default.1FC,21,41,20,62,63.ttf">
       <Filter>Resource Files\test\subset\data\expected\full-font</Filter>
     </Font>
@@ -5831,6 +6050,9 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/full_instance/Roboto-Variable.no-prune-unicode-ranges.retain-all-codepoint.wght=300,wdth=90.ttf">
       <Filter>Resource Files\test\subset\data\expected\full_instance</Filter>
     </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/gdef_partial_instance/AnekBangla-subset.default.retain-all-codepoint.wght=300.ttf">
+      <Filter>Resource Files\test\subset\data\expected\gdef_partial_instance</Filter>
+    </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyf_bug_3131/glyf_bug_3131.drop-hints-retain-gids.63,64,65,6F,70,71,72.ttf">
       <Filter>Resource Files\test\subset\data\expected\glyf_bug_3131</Filter>
     </Font>
@@ -5843,11 +6065,44 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyf_bug_3131/glyf_bug_3131.retain-gids.retain-all-codepoint.ttf">
       <Filter>Resource Files\test\subset\data\expected\glyf_bug_3131</Filter>
     </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyf_partial_instancing/Roboto-Variable.ABC.default.retain-all-codepoint.wght=200-300-500,wdth=80-90.ttf">
+      <Filter>Resource Files\test\subset\data\expected\glyf_partial_instancing</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyf_partial_instancing/Roboto-Variable.ABC.default.retain-all-codepoint.wght=300-600,wdth=85.ttf">
+      <Filter>Resource Files\test\subset\data\expected\glyf_partial_instancing</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyf_partial_instancing/Roboto-Variable.composite.default.retain-all-codepoint.wght=200-300-500,wdth=80-90.ttf">
+      <Filter>Resource Files\test\subset\data\expected\glyf_partial_instancing</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyf_partial_instancing/Roboto-Variable.composite.default.retain-all-codepoint.wght=300-600,wdth=85.ttf">
+      <Filter>Resource Files\test\subset\data\expected\glyf_partial_instancing</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyph_map/Roboto-Regular.glyph_map_roboto.41,43,61,66,69.ttf">
+      <Filter>Resource Files\test\subset\data\expected\glyph_map</Filter>
+    </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyph_names/Ubuntu-Regular.glyph-names.0x0,0x8,0x9,0x1d,0x20,0xb7.ttf">
       <Filter>Resource Files\test\subset\data\expected\glyph_names</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyph_names/Ubuntu-Regular.glyph-names.retain-all-codepoint.ttf">
       <Filter>Resource Files\test\subset\data\expected\glyph_names</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/iftb_requirements/AdobeVFPrototype.default.61,62,63.otf">
+      <Filter>Resource Files\test\subset\data\expected\iftb_requirements</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/iftb_requirements/AdobeVFPrototype.iftb_requirements.61,62,63.otf">
+      <Filter>Resource Files\test\subset\data\expected\iftb_requirements</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/iftb_requirements/Roboto-Variable.default.61,62,63.ttf">
+      <Filter>Resource Files\test\subset\data\expected\iftb_requirements</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/iftb_requirements/Roboto-Variable.iftb_requirements.61,62,63.ttf">
+      <Filter>Resource Files\test\subset\data\expected\iftb_requirements</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/iftb_requirements/SourceSansPro-Regular.default.61,62,63.otf">
+      <Filter>Resource Files\test\subset\data\expected\iftb_requirements</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/iftb_requirements/SourceSansPro-Regular.iftb_requirements.61,62,63.otf">
+      <Filter>Resource Files\test\subset\data\expected\iftb_requirements</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instance_comp_glyph_empty_child/RobotoMono.default.retain-all-codepoint.wght=700.ttf">
       <Filter>Resource Files\test\subset\data\expected\instance_comp_glyph_empty_child</Filter>
@@ -5866,6 +6121,12 @@
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_cff2/AdobeVFPrototype.default.retain-all-codepoint.wght=650,CNTR=50.otf">
       <Filter>Resource Files\test\subset\data\expected\instantiate_cff2</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_cff2_update_metrics/Cantarell-VF-ABC.default.retain-all-codepoint.wght=800.otf">
+      <Filter>Resource Files\test\subset\data\expected\instantiate_cff2_update_metrics</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_cff2_update_metrics/Cantarell-VF-ABC.retain-gids.retain-all-codepoint.wght=800.otf">
+      <Filter>Resource Files\test\subset\data\expected\instantiate_cff2_update_metrics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_colrv1/Foldit.default.retain-all-codepoint.wght=900.ttf">
       <Filter>Resource Files\test\subset\data\expected\instantiate_colrv1</Filter>
@@ -6067,6 +6328,9 @@
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.duplicate_features/AlegreyaSans-BlackItalic.notdef-outline.retain-all-codepoint.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.duplicate_features</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.empty_ligature_offset/AnekBangla-latin-subset.default.retain-all-codepoint.ttf">
+      <Filter>Resource Files\test\subset\data\expected\layout.empty_ligature_offset</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gdef-attachlist/IndicTestJalandhar-Regular.default.A01.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.gdef-attachlist</Filter>
@@ -7100,6 +7364,21 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/mvar_full_instance/NotoSans-VF.abc.no-layout.retain-all-codepoint.wght=300,wdth=90,CTGR=0.ttf">
       <Filter>Resource Files\test\subset\data\expected\mvar_full_instance</Filter>
     </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/mvar_partial_instance/NotoSans-VF.abc.default.retain-all-codepoint.wght=200-600,wdth=80-90,CTGR=20-60.ttf">
+      <Filter>Resource Files\test\subset\data\expected\mvar_partial_instance</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/mvar_partial_instance/NotoSans-VF.abc.default.retain-all-codepoint.wght=300-600.ttf">
+      <Filter>Resource Files\test\subset\data\expected\mvar_partial_instance</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/mvar_partial_instance/NotoSans-VF.abc.default.retain-all-codepoint.wght=500-800.ttf">
+      <Filter>Resource Files\test\subset\data\expected\mvar_partial_instance</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/no_layout_closure/Roboto-Regular.no-layout-closure-gids.no-unicodes.ttf">
+      <Filter>Resource Files\test\subset\data\expected\no_layout_closure</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/no_layout_closure/Roboto-Regular.no-layout-closure-gids2.no-unicodes.ttf">
+      <Filter>Resource Files\test\subset\data\expected\no_layout_closure</Filter>
+    </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/pin_all_at_default/Roboto-Variable.ABC.default.retain-all-codepoint.wght=400,wdth=100.0.ttf">
       <Filter>Resource Files\test\subset\data\expected\pin_all_at_default</Filter>
     </Font>
@@ -7172,10 +7451,31 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/sbix/sbix.retain-gids.59.ttf">
       <Filter>Resource Files\test\subset\data\expected\sbix</Filter>
     </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/sync_vmetrics/playwrite_mm.subset.default.retain-all-codepoint.SPED=25,YEXT=520,wght=100-400,slnt=18.ttf">
+      <Filter>Resource Files\test\subset\data\expected\sync_vmetrics</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/update_def_wght/SourceSerifVariable-Roman.default.retain-all-codepoint.wght=300-600.ttf">
+      <Filter>Resource Files\test\subset\data\expected\update_def_wght</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/update_def_wght/SourceSerifVariable-Roman.default.retain-all-codepoint.wght=500-800.ttf">
+      <Filter>Resource Files\test\subset\data\expected\update_def_wght</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/value_format_partial_instance/NotoSansOriya-valueformat-subset.default.retain-all-codepoint.wght=400.ttf">
+      <Filter>Resource Files\test\subset\data\expected\value_format_partial_instance</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/value_format_partial_instance/NotoSansOriya-valueformat-subset.drop-hints.retain-all-codepoint.wght=400.ttf">
+      <Filter>Resource Files\test\subset\data\expected\value_format_partial_instance</Filter>
+    </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/variable/Fraunces.default.26,66,69,124,125.ttf">
       <Filter>Resource Files\test\subset\data\expected\variable</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/variable/Fraunces.default.61.ttf">
+      <Filter>Resource Files\test\subset\data\expected\variable</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/variable/Fraunces.retain-gids.26,66,69,124,125.ttf">
+      <Filter>Resource Files\test\subset\data\expected\variable</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/variable/Fraunces.retain-gids.61.ttf">
       <Filter>Resource Files\test\subset\data\expected\variable</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/fonts/32bit_var_store.otf">
@@ -7193,10 +7493,22 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/fonts/Amiri-Regular.ttf">
       <Filter>Resource Files\test\subset\data\fonts</Filter>
     </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/fonts/AnekBangla-latin-subset.ttf">
+      <Filter>Resource Files\test\subset\data\fonts</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/fonts/AnekBangla-question-subset.ttf">
+      <Filter>Resource Files\test\subset\data\fonts</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/fonts/AnekBangla-subset.ttf">
+      <Filter>Resource Files\test\subset\data\fonts</Filter>
+    </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/fonts/BalooBhai2-Regular.ttf">
       <Filter>Resource Files\test\subset\data\fonts</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/fonts/BungeeColor-Regular.ttf">
+      <Filter>Resource Files\test\subset\data\fonts</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/fonts/Cantarell-VF-ABC.otf">
       <Filter>Resource Files\test\subset\data\fonts</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/fonts/Caudex-Regular.ttf">
@@ -7274,6 +7586,12 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/fonts/NotoSansNewa-Regular.ttf">
       <Filter>Resource Files\test\subset\data\fonts</Filter>
     </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/fonts/NotoSansOriya-subset.ttf">
+      <Filter>Resource Files\test\subset\data\fonts</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/fonts/NotoSansOriya-valueformat-subset.ttf">
+      <Filter>Resource Files\test\subset\data\fonts</Filter>
+    </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/fonts/NotoSerifMyanmar-Regular.otf">
       <Filter>Resource Files\test\subset\data\fonts</Filter>
     </Font>
@@ -7296,6 +7614,9 @@
       <Filter>Resource Files\test\subset\data\fonts</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/fonts/Roboto-Variable.ttf">
+      <Filter>Resource Files\test\subset\data\fonts</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/fonts/RobotoFlex-Variable.ABC.ttf">
       <Filter>Resource Files\test\subset\data\fonts</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/fonts/RobotoFlex-Variable.ttf">
@@ -7415,12 +7736,21 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/fonts/gsub_context3_successive_f1.otf">
       <Filter>Resource Files\test\subset\data\fonts</Filter>
     </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/fonts/playwrite_mm.subset.ttf">
+      <Filter>Resource Files\test\subset\data\fonts</Filter>
+    </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/fonts/sbix.ttf">
       <Filter>Resource Files\test\subset\data\fonts</Filter>
     </Font>
     <Image Include="../../thirdparty/harfbuzz/docs/HarfBuzz.png">
       <Filter>Resource Files\docs</Filter>
     </Image>
+    <Image Include="../../thirdparty/harfbuzz/xkcd.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Text Include="../../thirdparty/harfbuzz/AUTHORS">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/harfbuzz/BUILD.md">
       <Filter>Misc Files</Filter>
     </Text>
@@ -7448,6 +7778,9 @@
     <Text Include="../../thirdparty/harfbuzz/RELEASING.md">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/harfbuzz/SECURITY.md">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/harfbuzz/TESTING.md">
       <Filter>Misc Files</Filter>
     </Text>
@@ -7457,7 +7790,13 @@
     <Text Include="../../thirdparty/harfbuzz/configure.ac">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/harfbuzz/docs/HarfBuzz.svg">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
     <Text Include="../../thirdparty/harfbuzz/docs/Makefile.am">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/docs/features.dot">
       <Filter>Misc Files\docs</Filter>
     </Text>
     <Text Include="../../thirdparty/harfbuzz/docs/harfbuzz-overrides.txt">
@@ -7478,6 +7817,24 @@
     <Text Include="../../thirdparty/harfbuzz/docs/version.xml.in">
       <Filter>Misc Files\docs</Filter>
     </Text>
+    <Text Include="../../thirdparty/harfbuzz/docs/wasm-shaper.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/git.mk">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/m4/ax_check_link_flag.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/m4/ax_code_coverage.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/m4/ax_cxx_compile_stdcxx.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/m4/ax_pthread.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
     <Text Include="../../thirdparty/harfbuzz/meson_options.txt">
       <Filter>Misc Files</Filter>
     </Text>
@@ -7489,6 +7846,9 @@
     </Text>
     <Text Include="../../thirdparty/harfbuzz/perf/README.md">
       <Filter>Misc Files\perf</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/perf/texts/duployan.txt">
+      <Filter>Misc Files\perf\texts</Filter>
     </Text>
     <Text Include="../../thirdparty/harfbuzz/perf/texts/en-thelittleprince.txt">
       <Filter>Misc Files\perf\texts</Filter>
@@ -7515,6 +7875,12 @@
       <Filter>Misc Files\src</Filter>
     </Text>
     <Text Include="../../thirdparty/harfbuzz/src/Makefile.am">
+      <Filter>Misc Files\src</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/src/Makefile.sources">
+      <Filter>Misc Files\src</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/src/addTable.py">
       <Filter>Misc Files\src</Filter>
     </Text>
     <Text Include="../../thirdparty/harfbuzz/src/check-c-linkage-decls.py">
@@ -7601,7 +7967,37 @@
     <Text Include="../../thirdparty/harfbuzz/src/harfbuzz.pc.in">
       <Filter>Misc Files\src</Filter>
     </Text>
+    <Text Include="../../thirdparty/harfbuzz/src/hb-buffer-deserialize-json.rl">
+      <Filter>Misc Files\src</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/src/hb-buffer-deserialize-text-glyphs.rl">
+      <Filter>Misc Files\src</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/src/hb-buffer-deserialize-text-unicode.rl">
+      <Filter>Misc Files\src</Filter>
+    </Text>
     <Text Include="../../thirdparty/harfbuzz/src/hb-features.h.in">
+      <Filter>Misc Files\src</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/src/hb-gobject-enums.cc.tmpl">
+      <Filter>Misc Files\src</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/src/hb-gobject-enums.h.tmpl">
+      <Filter>Misc Files\src</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/src/hb-number-parser.rl">
+      <Filter>Misc Files\src</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/src/hb-ot-shaper-indic-machine.rl">
+      <Filter>Misc Files\src</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/src/hb-ot-shaper-khmer-machine.rl">
+      <Filter>Misc Files\src</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/src/hb-ot-shaper-myanmar-machine.rl">
+      <Filter>Misc Files\src</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/src/hb-ot-shaper-use-machine.rl">
       <Filter>Misc Files\src</Filter>
     </Text>
     <Text Include="../../thirdparty/harfbuzz/src/hb-version.h.in">
@@ -7619,8 +8015,29 @@
     <Text Include="../../thirdparty/harfbuzz/src/ms-use/IndicSyllabicCategory-Additional.txt">
       <Filter>Misc Files\src\ms-use</Filter>
     </Text>
+    <Text Include="../../thirdparty/harfbuzz/src/relative_to.py">
+      <Filter>Misc Files\src</Filter>
+    </Text>
     <Text Include="../../thirdparty/harfbuzz/src/sample.py">
       <Filter>Misc Files\src</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/src/wasm/graphite/Makefile">
+      <Filter>Misc Files\src\wasm\graphite</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/src/wasm/rust/harfbuzz-wasm/Cargo.toml">
+      <Filter>Misc Files\src\wasm\rust\harfbuzz-wasm</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/src/wasm/rust/harfbuzz-wasm/src/lib.rs">
+      <Filter>Misc Files\src\wasm\rust\harfbuzz-wasm\src</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/src/wasm/sample/c/Makefile">
+      <Filter>Misc Files\src\wasm\sample\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/src/wasm/sample/rust/hello-wasm/Cargo.toml">
+      <Filter>Misc Files\src\wasm\sample\rust\hello-wasm</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/src/wasm/sample/rust/hello-wasm/src/lib.rs">
+      <Filter>Misc Files\src\wasm\sample\rust\hello-wasm\src</Filter>
     </Text>
     <Text Include="../../thirdparty/harfbuzz/test/Makefile.am">
       <Filter>Misc Files\test</Filter>
@@ -7630,6 +8047,9 @@
     </Text>
     <Text Include="../../thirdparty/harfbuzz/test/api/fonts/README">
       <Filter>Misc Files\test\api\fonts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/api/results/hand-10.2">
+      <Filter>Misc Files\test\api\results</Filter>
     </Text>
     <Text Include="../../thirdparty/harfbuzz/test/shape/Makefile.am">
       <Filter>Misc Files\test\shape</Filter>
@@ -7643,13 +8063,640 @@
     <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/Makefile.am">
       <Filter>Misc Files\test\shape\data\aots</Filter>
     </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/Makefile.sources">
+      <Filter>Misc Files\test\shape\data\aots</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/classdef1.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/classdef1_empty.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/classdef1_multiple.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/classdef1_single.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/classdef2.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/classdef2_empty.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/classdef2_multiple.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/classdef2_single.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/cmap0.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/cmap10.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/cmap12.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/cmap2.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/cmap4.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/cmap6.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/cmap8.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos1_1_lookupflag.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos1_1_simple.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos1_2.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos1_2_lookupflag.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos2_1.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos2_1_lookupflag.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos2_1_next_glyph.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos2_1_simple.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos2_2.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos3.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos3_lookupflag.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos4_lookupflag.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos4_multiple_anchors.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos4_simple.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos5.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos6.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos7_1.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos9.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_chaining1_boundary.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_chaining1_lookupflag.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_chaining1_multiple_subrules.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_chaining1_next_glyph.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_chaining1_simple.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_chaining1_successive.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_chaining2_boundary.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_chaining2_lookupflag.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_chaining2_multiple_subrules.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_chaining2_next_glyph.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_chaining2_simple.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_chaining2_successive.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_chaining3_boundary.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_chaining3_lookupflag.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_chaining3_next_glyph.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_chaining3_simple.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_chaining3_successive.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_context1_boundary.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_context1_expansion.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_context1_lookupflag.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_context1_multiple_subrules.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_context1_next_glyph.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_context1_simple.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_context1_successive.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_context2_boundary.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_context2_classes.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_context2_expansion.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_context2_lookupflag.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_context2_multiple_subrules.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_context2_next_glyph.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_context2_simple.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_context2_successive.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_context3_boundary.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_context3_lookupflag.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_context3_next_glyph.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_context3_simple.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gpos_context3_successive.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub1_1_lookupflag.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub1_1_modulo.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub1_1_simple.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub1_2_lookupflag.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub1_2_simple.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub2_1_lookupflag.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub2_1_multiple_sequences.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub2_1_simple.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub3_1_lookupflag.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub3_1_multiple.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub3_1_simple.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub4_1_lookupflag.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub4_1_multiple_ligatures.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub4_1_multiple_ligsets.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub4_1_simple.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub7.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_chaining1_boundary.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_chaining1_lookupflag.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_chaining1_multiple_subrules.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_chaining1_next_glyph.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_chaining1_simple.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_chaining1_successive.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_chaining2_boundary.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_chaining2_lookupflag.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_chaining2_multiple_subrules.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_chaining2_next_glyph.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_chaining2_simple.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_chaining2_successive.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_chaining3_boundary.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_chaining3_lookupflag.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_chaining3_next_glyph.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_chaining3_simple.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_chaining3_successive.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_context1_boundary.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_context1_expansion.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_context1_lookupflag.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_context1_multiple_subrules.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_context1_next_glyph.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_context1_simple.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_context1_successive.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_context2_boundary.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_context2_classes.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_context2_expansion.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_context2_lookupflag.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_context2_multiple_subrules.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_context2_next_glyph.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_context2_simple.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_context2_successive.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_context3_boundary.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_context3_lookupflag.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_context3_next_glyph.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_context3_simple.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/gsub_context3_successive.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/lookupflag_ignore_attach.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/lookupflag_ignore_base.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/lookupflag_ignore_combination.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/lookupflag_ignore_ligatures.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/lookupflag_ignore_marks.tests">
+      <Filter>Misc Files\test\shape\data\aots\tests</Filter>
+    </Text>
     <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/update.py">
       <Filter>Misc Files\test\shape\data\aots</Filter>
     </Text>
     <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/Makefile.am">
       <Filter>Misc Files\test\shape\data\in-house</Filter>
     </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/Makefile.sources">
+      <Filter>Misc Files\test\shape\data\in-house</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/aat-morx.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/aat-trak.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/arabic-fallback-shaping.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/arabic-feature-order.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/arabic-like-joining.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/arabic-mark-order.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/arabic-normalization.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/arabic-phags-pa.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/arabic-stch.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/automatic-fractions.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/cluster.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/collections.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/color-fonts.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/context-matching.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/coretext.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/cursive-positioning.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/default-ignorables.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/digits.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/directwrite.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/emoji-clusters.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/emoji.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/fallback-positioning.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/glyph-props-no-gdef.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/hangul-jamo.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/hebrew-diacritics.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/hyphens.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/indic-consonant-with-stacker.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/indic-decompose.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/indic-feature-order.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/indic-init.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/indic-joiner-candrabindu.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/indic-joiners.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/indic-malayalam-dot-reph.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/indic-old-spec.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/indic-pref-blocking.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/indic-script-extensions.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/indic-special-cases.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/indic-syllable.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/indic-vowel-letter-spoofing.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/item-context.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/kern-format2.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/khmer-mark-order.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/khmer-misc.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/language-tags.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/ligature-id.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/macos.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/mark-attachment.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/mark-filtering-sets.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/mongolian-variation-selector.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/myanmar-misc.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/myanmar-syllable.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/myanmar-zawgyi.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/nested-mark-filtering-sets.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/none-directional.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/positioning-features.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/rand.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/reverse-sub.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/rotation.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/sara-am.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/simple.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/sinhala.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/spaces.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/tibetan-contractions-1.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/tibetan-contractions-2.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/tibetan-vowels.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/tt-kern-gpos.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/uniscribe.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/unsafe-to-concat.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/use-indic3.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/use-javanese.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/use-marchen.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/use-syllable.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/use-vowel-letter-spoofing.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/use.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/variations-rvrn.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/variations.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/vertical.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/zero-width-marks.tests">
+      <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
+    </Text>
     <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/Makefile.am">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/Makefile.sources">
       <Filter>Misc Files\test\shape\data\text-rendering-tests</Filter>
     </Text>
     <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/README">
@@ -7657,6 +8704,276 @@
     </Text>
     <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/fonts/Selawik-README.md">
       <Filter>Misc Files\test\shape\data\text-rendering-tests\fonts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/AVAR-1.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/CFF-1.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/CFF-2.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/CFF2-1.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/CMAP-1.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/CMAP-2.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/CMAP-3.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/CVAR-1.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/CVAR-2.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/GLYF-1.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/GPOS-1.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/GPOS-2.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/GPOS-3.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/GPOS-4.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/GPOS-5.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/GSUB-1.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/GSUB-2.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/GSUB-3.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/GVAR-1.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/GVAR-2.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/GVAR-3.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/GVAR-4.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/GVAR-5.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/GVAR-6.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/GVAR-7.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/GVAR-8.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/GVAR-9.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/HVAR-1.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/HVAR-2.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/KERN-1.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/KERN-2.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-1.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-10.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-11.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-12.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-13.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-14.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-16.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-17.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-18.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-19.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-2.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-20.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-21.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-22.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-23.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-24.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-25.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-26.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-27.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-28.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-29.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-3.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-30.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-31.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-32.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-33.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-34.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-35.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-36.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-37.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-38.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-39.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-4.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-40.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-41.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-5.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-6.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-7.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-8.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/MORX-9.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/SFNT-1.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/SFNT-2.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/SHARAN-1.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/SHBALI-1.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/SHBALI-2.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/SHBALI-3.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/SHKNDA-1.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/SHKNDA-2.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/SHKNDA-3.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/SHLANA-1.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/SHLANA-10.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/SHLANA-2.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/SHLANA-3.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/SHLANA-4.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/SHLANA-5.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/SHLANA-6.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/SHLANA-7.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/SHLANA-8.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/tests/SHLANA-9.tests">
+      <Filter>Misc Files\test\shape\data\text-rendering-tests\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/update.py">
       <Filter>Misc Files\test\shape\data\text-rendering-tests</Filter>
@@ -7675,6 +8992,69 @@
     </Text>
     <Text Include="../../thirdparty/harfbuzz/test/subset/data/Makefile.am">
       <Filter>Misc Files\test\subset\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/Makefile.sources">
+      <Filter>Misc Files\test\subset\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/expected/cff.notoserifmyanmar/">
+      <Filter>Misc Files\test\subset\data\expected</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context/">
+      <Filter>Misc Files\test\subset\data\expected</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context_format2/">
+      <Filter>Misc Files\test\subset\data\expected</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.duplicate_features/">
+      <Filter>Misc Files\test\subset\data\expected</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gdef/">
+      <Filter>Misc Files\test\subset\data\expected</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos/">
+      <Filter>Misc Files\test\subset\data\expected</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos2/">
+      <Filter>Misc Files\test\subset\data\expected</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos3/">
+      <Filter>Misc Files\test\subset\data\expected</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos4/">
+      <Filter>Misc Files\test\subset\data\expected</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos5/">
+      <Filter>Misc Files\test\subset\data\expected</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos6/">
+      <Filter>Misc Files\test\subset\data\expected</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos8/">
+      <Filter>Misc Files\test\subset\data\expected</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos9/">
+      <Filter>Misc Files\test\subset\data\expected</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub3/">
+      <Filter>Misc Files\test\subset\data\expected</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5/">
+      <Filter>Misc Files\test\subset\data\expected</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5_format2/">
+      <Filter>Misc Files\test\subset\data\expected</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub6/">
+      <Filter>Misc Files\test\subset\data\expected</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub8/">
+      <Filter>Misc Files\test\subset\data\expected</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.khmer/">
+      <Filter>Misc Files\test\subset\data\expected</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.tinos/">
+      <Filter>Misc Files\test\subset\data\expected</Filter>
     </Text>
     <Text Include="../../thirdparty/harfbuzz/test/subset/data/profiles/default.txt">
       <Filter>Misc Files\test\subset\data\profiles</Filter>
@@ -7712,6 +9092,12 @@
     <Text Include="../../thirdparty/harfbuzz/test/subset/data/profiles/glyph-names.txt">
       <Filter>Misc Files\test\subset\data\profiles</Filter>
     </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/profiles/glyph_map_roboto.txt">
+      <Filter>Misc Files\test\subset\data\profiles</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/profiles/iftb_requirements.txt">
+      <Filter>Misc Files\test\subset\data\profiles</Filter>
+    </Text>
     <Text Include="../../thirdparty/harfbuzz/test/subset/data/profiles/keep-all-layout-features.txt">
       <Filter>Misc Files\test\subset\data\profiles</Filter>
     </Text>
@@ -7737,6 +9123,12 @@
       <Filter>Misc Files\test\subset\data\profiles</Filter>
     </Text>
     <Text Include="../../thirdparty/harfbuzz/test/subset/data/profiles/name-legacy.txt">
+      <Filter>Misc Files\test\subset\data\profiles</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/profiles/no-layout-closure-gids.txt">
+      <Filter>Misc Files\test\subset\data\profiles</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/profiles/no-layout-closure-gids2.txt">
       <Filter>Misc Files\test\subset\data\profiles</Filter>
     </Text>
     <Text Include="../../thirdparty/harfbuzz/test/subset/data/profiles/no-layout.txt">
@@ -7784,6 +9176,258 @@
     <Text Include="../../thirdparty/harfbuzz/test/subset/data/repack_tests/Makefile.am">
       <Filter>Misc Files\test\subset\data\repack_tests</Filter>
     </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/repack_tests/Makefile.sources">
+      <Filter>Misc Files\test\subset\data\repack_tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/repack_tests/advanced_prioritization.tests">
+      <Filter>Misc Files\test\subset\data\repack_tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/repack_tests/basic.tests">
+      <Filter>Misc Files\test\subset\data\repack_tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/repack_tests/isolation.tests">
+      <Filter>Misc Files\test\subset\data\repack_tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/repack_tests/prioritization.tests">
+      <Filter>Misc Files\test\subset\data\repack_tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/repack_tests/space_splitting.tests">
+      <Filter>Misc Files\test\subset\data\repack_tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/repack_tests/table_duplication.tests">
+      <Filter>Misc Files\test\subset\data\repack_tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/32bit_var_store.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/apply_cvar_delta.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/basics.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/cbdt.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/cff-full-font.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/cff-japanese.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/cff.notoserifmyanmar.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/cmap.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/cmap14.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/collect_name_ids.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/colr.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/colr_glyphs.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/colr_with_components.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/colrv1.notoemoji.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/colrv1.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/colrv1_copy_varstore.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/empty_region_vardata.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/feature_variation_instance_collect_lookups.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/feature_variations_partial_instance.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/full-font.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/full_instance.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/gdef_partial_instance.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/glyf_bug_3131.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/glyf_partial_instancing.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/glyph_map.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/glyph_names.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/iftb_requirements.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/instance_comp_glyph_empty_child.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/instance_feature_variations.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/instance_no_double_free.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/instantiate_cff2.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/instantiate_cff2_update_metrics.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/instantiate_colrv1.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/instantiate_glyf.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/japanese.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/layout.context.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/layout.context_format2.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/layout.drop_feature.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/layout.duplicate_features.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/layout.empty_ligature_offset.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/layout.gdef-attachlist.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/layout.gdef-varstore.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/layout.gdef.glyphset.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/layout.gdef.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/layout.gpos.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/layout.gpos2.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/layout.gpos3.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/layout.gpos4.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/layout.gpos5.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/layout.gpos6.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/layout.gpos8.amiri.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/layout.gpos8.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/layout.gpos9.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/layout.gsub3.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/layout.gsub5.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/layout.gsub5_format2.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/layout.gsub6.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/layout.gsub8.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/layout.khmer.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/layout.notonastaliqurdu.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/layout.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/layout.tinos.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/layout.unsorted_featurelist.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/math.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/math_coverage_offset.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/mvar_full_instance.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/mvar_partial_instance.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/no_layout_closure.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/pin_all_at_default.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/post.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/post_apply_mvar_delta.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/preprocess.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/sbix.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/sync_vmetrics.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/update_def_wght.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/value_format_partial_instance.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/variable.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
     <Text Include="../../thirdparty/harfbuzz/test/subset/generate-expected-outputs.py">
       <Filter>Misc Files\test\subset</Filter>
     </Text>
@@ -7803,6 +9447,9 @@
       <Filter>Misc Files\test\threads</Filter>
     </Text>
     <Text Include="../../thirdparty/harfbuzz/util/Makefile.am">
+      <Filter>Misc Files\util</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/util/Makefile.sources">
       <Filter>Misc Files\util</Filter>
     </Text>
     <Xml Include="../../thirdparty/harfbuzz/docs/harfbuzz-docs.xml">

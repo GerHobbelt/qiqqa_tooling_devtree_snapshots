@@ -1,4 +1,4 @@
-# Copyright 2019, 2020, 2021 Peter Dimov
+# Copyright 2019-2023 Peter Dimov
 # Distributed under the Boost Software License, Version 1.0.
 # See accompanying file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt
 
@@ -182,7 +182,7 @@ function(__boost_install_update_include_directory lib incdir prop)
 
   get_target_property(value ${lib} ${prop})
 
-  if(value STREQUAL incdir)
+  if("${value}" STREQUAL "${incdir}" OR "${value}" STREQUAL "$<BUILD_INTERFACE:${incdir}>")
 
     set_target_properties(${lib} PROPERTIES ${prop} "$<BUILD_INTERFACE:${incdir}>;$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>")
 
@@ -311,7 +311,9 @@ function(boost_install_target)
 
       if(dep MATCHES "^Boost::(.*)$")
 
-        string(APPEND CONFIG_FILE_CONTENTS "find_dependency(boost_${CMAKE_MATCH_1} ${__VERSION} EXACT)\n")
+        string(APPEND CONFIG_FILE_CONTENTS "if(NOT boost_${CMAKE_MATCH_1}_FOUND)\n")
+        string(APPEND CONFIG_FILE_CONTENTS "  find_dependency(boost_${CMAKE_MATCH_1} ${__VERSION} EXACT)\n")
+        string(APPEND CONFIG_FILE_CONTENTS "endif()\n")
 
       elseif(dep STREQUAL "Threads::Threads")
 

@@ -57,6 +57,8 @@ to be modified. */
 #include <string.h>
 #include <pcre2.h>
 
+#include "monolithic_examples.h"
+
 
 /**************************************************************************
 * Here is the program. The API includes the concept of "contexts" for     *
@@ -69,7 +71,7 @@ to be modified. */
 
 
 #if defined(BUILD_MONOLITHIC)
-#define main(cnt, arr)      pcre2_demo_main(cnt, arr)
+#define main      pcre2_demo_main
 #endif
 
 int main(int argc, const char** argv)

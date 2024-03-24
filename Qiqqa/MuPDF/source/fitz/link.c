@@ -82,15 +82,24 @@ fz_drop_link(fz_context *ctx, fz_link *link)
 int
 fz_is_external_link(fz_context *ctx, const char *uri)
 {
+	const char *mark;
 	/* Basically, this function returns true, if the URI starts with
 	 * a valid 'scheme' followed by ':'. */
 	if (!uri)
 		return 0;
 
+	 if (!uri)
+		 return 0;
+
+	 if (!uri)
+		 return 0;
+
 	/* All schemes must start with a letter; exit if we don't. */
 	if ((*uri < 'a' || *uri > 'z') && (*uri < 'A' || *uri > 'Z'))
 		return 0;
 	uri++;
+
+	mark = uri;
 
 	/* Subsequent characters can be letters, digits, +, -, or . */
 	while ((*uri >= 'a' && *uri <= 'z') ||
@@ -101,7 +110,7 @@ fz_is_external_link(fz_context *ctx, const char *uri)
 		(*uri == '.'))
 		++uri;
 
-	return uri[0] == ':';
+	return uri[0] == ':' && (uri - mark) > 1;
 }
 
 fz_link_dest fz_make_link_dest_none(void)
@@ -114,4 +123,48 @@ fz_link_dest fz_make_link_dest_xyz(int chapter, int page, float x, float y, floa
 {
 	fz_link_dest dest = { { chapter, page }, FZ_LINK_DEST_XYZ, x, y, NAN, NAN, z };
 	return dest;
+}
+
+fz_navigation *
+fz_new_navigation_of_size(fz_context *ctx, int size, fz_link_dest dest, const char *uri)
+{
+	fz_navigation *navigation = Memento_label(fz_calloc(ctx, 1, size), "fz_navigation");
+	navigation->refs = 1;
+	navigation->dest = dest;
+
+	fz_try(ctx)
+		navigation->uri = fz_strdup(ctx, uri);
+	fz_catch(ctx)
+	{
+		fz_drop_navigation(ctx, navigation);
+		fz_rethrow(ctx);
+	}
+
+	return navigation;
+}
+
+fz_navigation *
+fz_keep_navigation(fz_context *ctx, fz_navigation *navigation)
+{
+	return fz_keep_imp(ctx, navigation, &navigation->refs);
+}
+
+void
+fz_drop_navigation(fz_context *ctx, fz_navigation *navigation)
+{
+	while (fz_drop_imp(ctx, navigation, &navigation->refs))
+	{
+		fz_navigation *next = navigation->next;
+		fz_free(ctx, navigation->uri);
+		fz_free(ctx, navigation);
+		navigation = next;
+	}
+}
+
+void
+fz_add_navigation(fz_context *ctx, fz_link_dest dest, char *uri, fz_navigation **head)
+{
+	fz_navigation *navigation = fz_new_derived_navigation(ctx, fz_navigation, dest, uri);
+	navigation->next = *head;
+	*head = navigation;
 }

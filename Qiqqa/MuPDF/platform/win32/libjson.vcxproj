@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSON;JSON_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSON;JSON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/json/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSON;JSON_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/json/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSON;JSON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSON;JSON_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSON;JSON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/json/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/json/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSON;JSON_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSON;JSON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/json/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSON;JSON_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/json/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSON;JSON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSON;JSON_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSON;JSON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/json/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/json/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSON;JSON_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSON;JSON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/json/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSON;JSON_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/json/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSON;JSON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSON;JSON_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSON;JSON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/json/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/json/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSON;JSON_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSON;JSON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/json/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSON;JSON_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/json/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSON;JSON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSON;JSON_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJSON;JSON_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/json/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/json/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -586,12 +586,14 @@
     <Image Include="../../thirdparty/owemdjee/json/tests/reports/2016-09-09-nativejson_benchmark/performance_Corei7-4980HQ@2.80GHz_mac64_clang7.0_3._Prettify_Time_(ms).png" />
     <Image Include="../../thirdparty/owemdjee/json/tests/reports/2016-09-09-nativejson_benchmark/performance_Corei7-4980HQ@2.80GHz_mac64_clang7.0_7._Code_size_FileSize_(byte).png" />
     <Image Include="../../thirdparty/owemdjee/json/tools/serve_header/demo.png" />
+    <Text Include="../../thirdparty/owemdjee/json/CITATION.cff" />
     <Text Include="../../thirdparty/owemdjee/json/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/json/ChangeLog.md" />
     <Text Include="../../thirdparty/owemdjee/json/LICENSES/Apache-2.0.txt" />
     <Text Include="../../thirdparty/owemdjee/json/LICENSES/BSD-3-Clause.txt" />
     <Text Include="../../thirdparty/owemdjee/json/LICENSES/GPL-3.0-only.txt" />
     <Text Include="../../thirdparty/owemdjee/json/LICENSES/MIT.txt" />
+    <Text Include="../../thirdparty/owemdjee/json/Makefile" />
     <Text Include="../../thirdparty/owemdjee/json/README.md" />
     <Text Include="../../thirdparty/owemdjee/json/cmake/ci.cmake" />
     <Text Include="../../thirdparty/owemdjee/json/cmake/config.cmake.in" />
@@ -599,10 +601,14 @@
     <Text Include="../../thirdparty/owemdjee/json/cmake/nlohmann_jsonConfigVersion.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/json/cmake/pkg-config.pc.in" />
     <Text Include="../../thirdparty/owemdjee/json/cmake/test.cmake" />
+    <Text Include="../../thirdparty/owemdjee/json/docs/Makefile" />
     <Text Include="../../thirdparty/owemdjee/json/docs/README.md" />
+    <Text Include="../../thirdparty/owemdjee/json/docs/docset/Makefile" />
     <Text Include="../../thirdparty/owemdjee/json/docs/docset/README.md" />
+    <Text Include="../../thirdparty/owemdjee/json/docs/docset/docSet.sql" />
     <Text Include="../../thirdparty/owemdjee/json/docs/docset/docset.json" />
     <Text Include="../../thirdparty/owemdjee/json/docs/examples/README.output" />
+    <Text Include="../../thirdparty/owemdjee/json/docs/mkdocs/Makefile" />
     <Text Include="../../thirdparty/owemdjee/json/docs/mkdocs/docs/api/adl_serializer/from_json.md" />
     <Text Include="../../thirdparty/owemdjee/json/docs/mkdocs/docs/api/adl_serializer/index.md" />
     <Text Include="../../thirdparty/owemdjee/json/docs/mkdocs/docs/api/adl_serializer/to_json.md" />
@@ -783,6 +789,7 @@
     <Text Include="../../thirdparty/owemdjee/json/docs/mkdocs/docs/api/operator_ltlt.md" />
     <Text Include="../../thirdparty/owemdjee/json/docs/mkdocs/docs/api/ordered_json.md" />
     <Text Include="../../thirdparty/owemdjee/json/docs/mkdocs/docs/api/ordered_map.md" />
+    <Text Include="../../thirdparty/owemdjee/json/docs/mkdocs/docs/css/custom.css" />
     <Text Include="../../thirdparty/owemdjee/json/docs/mkdocs/docs/features/arbitrary_types.md" />
     <Text Include="../../thirdparty/owemdjee/json/docs/mkdocs/docs/features/assertions.md" />
     <Text Include="../../thirdparty/owemdjee/json/docs/mkdocs/docs/features/binary_formats/bjdata.md" />
@@ -819,6 +826,8 @@
     <Text Include="../../thirdparty/owemdjee/json/docs/mkdocs/docs/home/license.md" />
     <Text Include="../../thirdparty/owemdjee/json/docs/mkdocs/docs/home/releases.md" />
     <Text Include="../../thirdparty/owemdjee/json/docs/mkdocs/docs/home/sponsors.md" />
+    <Text Include="../../thirdparty/owemdjee/json/docs/mkdocs/docs/images/range-begin-end.svg" />
+    <Text Include="../../thirdparty/owemdjee/json/docs/mkdocs/docs/images/range-rbegin-rend.svg" />
     <Text Include="../../thirdparty/owemdjee/json/docs/mkdocs/docs/index.md" />
     <Text Include="../../thirdparty/owemdjee/json/docs/mkdocs/docs/integration/cmake.md" />
     <Text Include="../../thirdparty/owemdjee/json/docs/mkdocs/docs/integration/conan/CMakeLists.txt" />
@@ -827,9 +836,12 @@
     <Text Include="../../thirdparty/owemdjee/json/docs/mkdocs/docs/integration/package_managers.md" />
     <Text Include="../../thirdparty/owemdjee/json/docs/mkdocs/docs/integration/pkg-config.md" />
     <Text Include="../../thirdparty/owemdjee/json/docs/mkdocs/docs/integration/vcpkg/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/json/docs/mkdocs/mkdocs.yml" />
     <Text Include="../../thirdparty/owemdjee/json/docs/mkdocs/requirements.txt" />
     <Text Include="../../thirdparty/owemdjee/json/docs/mkdocs/scripts/check_structure.py" />
+    <Text Include="../../thirdparty/owemdjee/json/nlohmann_json.natvis" />
     <Text Include="../../thirdparty/owemdjee/json/tests/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/json/tests/Makefile" />
     <Text Include="../../thirdparty/owemdjee/json/tests/abi/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/json/tests/abi/config/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/json/tests/abi/diag/CMakeLists.txt" />
@@ -862,9 +874,11 @@
     <Text Include="../../thirdparty/owemdjee/json/tools/gdb_pretty_printer/nlohmann-json.py" />
     <Text Include="../../thirdparty/owemdjee/json/tools/generate_natvis/README.md" />
     <Text Include="../../thirdparty/owemdjee/json/tools/generate_natvis/generate_natvis.py" />
+    <Text Include="../../thirdparty/owemdjee/json/tools/generate_natvis/nlohmann_json.natvis.j2" />
     <Text Include="../../thirdparty/owemdjee/json/tools/serve_header/README.md" />
     <Text Include="../../thirdparty/owemdjee/json/tools/serve_header/requirements.txt" />
     <Text Include="../../thirdparty/owemdjee/json/tools/serve_header/serve_header.py" />
+    <Text Include="../../thirdparty/owemdjee/json/wsjcpp.yml" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

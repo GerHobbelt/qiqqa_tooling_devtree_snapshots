@@ -66,9 +66,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/glog/src/demangle.cc">
       <Filter>Source Files\src</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/glog/src/glog_statics_single_instance.cpp">
-      <Filter>Source Files\src</Filter>
-    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/glog/src/logging.cc">
       <Filter>Source Files\src</Filter>
     </ClCompile>
@@ -150,6 +147,9 @@
     <ClInclude Include="../../thirdparty/owemdjee/glog/src/windows/port.h">
       <Filter>Header Files\src\windows</Filter>
     </ClInclude>
+    <Text Include="../../thirdparty/owemdjee/glog/AUTHORS">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/glog/BUILD.bazel">
       <Filter>Misc Files</Filter>
     </Text>
@@ -166,6 +166,12 @@
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/glog/build_win_cmake.bat">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/glog/codecov.yml">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/glog/gcovr.cfg">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/glog/glog-config.cmake.in">

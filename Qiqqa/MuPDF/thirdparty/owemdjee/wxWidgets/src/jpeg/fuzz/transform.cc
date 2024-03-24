@@ -32,16 +32,13 @@
 #include <string.h>
 
 
-#define NUMXFORMS  3
-
-
 extern "C" int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size)
 {
   tjhandle handle = NULL;
-  unsigned char *dstBufs[NUMXFORMS] = { NULL, NULL, NULL };
-  size_t dstSizes[NUMXFORMS] = { 0, 0, 0 }, maxBufSize;
-  int width = 0, height = 0, jpegSubsamp, i, t;
-  tjtransform transforms[NUMXFORMS];
+  unsigned char *dstBufs[1] = { NULL };
+  size_t dstSizes[1] = { 0 }, maxBufSize;
+  int width = 0, height = 0, jpegSubsamp, i;
+  tjtransform transforms[1];
 #if defined(__has_feature) && __has_feature(memory_sanitizer)
   char env[18] = "JSIMD_FORCENONE=1";
 
@@ -53,11 +50,17 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size)
   if ((handle = tj3Init(TJINIT_TRANSFORM)) == NULL)
     goto bailout;
 
-  if (tj3DecompressHeader(handle, data, size) < 0)
-    goto bailout;
+  /* We ignore the return value of tj3DecompressHeader(), because malformed
+     JPEG images that might expose issues in libjpeg-turbo might also have
+     header errors that cause tj3DecompressHeader() to fail. */
+  tj3DecompressHeader(handle, data, size);
   width = tj3Get(handle, TJPARAM_JPEGWIDTH);
   height = tj3Get(handle, TJPARAM_JPEGHEIGHT);
   jpegSubsamp = tj3Get(handle, TJPARAM_SUBSAMP);
+  /* Let the transform options dictate the entropy coding algorithm. */
+  tj3Set(handle, TJPARAM_ARITHMETIC, 0);
+  tj3Set(handle, TJPARAM_PROGRESSIVE, 0);
+  tj3Set(handle, TJPARAM_OPTIMIZE, 0);
 
   /* Ignore 0-pixel images and images larger than 1 Megapixel.  Casting width
      to (uint64_t) prevents integer overflow if width * height > INT_MAX. */
@@ -69,8 +72,7 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size)
   if (jpegSubsamp < 0 || jpegSubsamp >= TJ_NUMSAMP)
     jpegSubsamp = TJSAMP_444;
 
-  for (t = 0; t < NUMXFORMS; t++)
-    memset(&transforms[t], 0, sizeof(tjtransform));
+  memset(&transforms[0], 0, sizeof(tjtransform));
 
   transforms[0].op = TJXOP_NONE;
   transforms[0].options = TJXOPT_PROGRESSIVE | TJXOPT_COPYNONE;
@@ -79,47 +81,79 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size)
   if (!dstBufs[0])
     goto bailout;
 
-  transforms[1].r.w = (width + 1) / 2;
-  transforms[1].r.h = (height + 1) / 2;
-  transforms[1].op = TJXOP_TRANSPOSE;
-  transforms[1].options = TJXOPT_GRAY | TJXOPT_CROP | TJXOPT_COPYNONE;
-  dstBufs[1] =
-    (unsigned char *)malloc(tj3JPEGBufSize((width + 1) / 2, (height + 1) / 2,
-                                           TJSAMP_GRAY));
-  if (!dstBufs[1])
-    goto bailout;
-
-  transforms[2].op = TJXOP_ROT90;
-  transforms[2].options = TJXOPT_TRIM | TJXOPT_COPYNONE | TJXOPT_ARITHMETIC;
-  dstBufs[2] =
-    (unsigned char *)malloc(tj3JPEGBufSize(height, width, jpegSubsamp));
-  if (!dstBufs[2])
-    goto bailout;
-
   maxBufSize = tj3JPEGBufSize(width, height, jpegSubsamp);
 
   tj3Set(handle, TJPARAM_NOREALLOC, 1);
-  if (tj3Transform(handle, data, size, NUMXFORMS, dstBufs, dstSizes,
+  if (tj3Transform(handle, data, size, 1, dstBufs, dstSizes,
                    transforms) == 0) {
     /* Touch all of the output pixels in order to catch uninitialized reads
        when using MemorySanitizer. */
-    for (t = 0; t < NUMXFORMS; t++) {
-      int sum = 0;
+    int sum = 0;
 
-      for (i = 0; i < dstSizes[t]; i++)
-        sum += dstBufs[t][i];
+    for (i = 0; i < dstSizes[0]; i++)
+      sum += dstBufs[0][i];
 
-      /* Prevent the code above from being optimized out.  This test should
-         never be true, but the compiler doesn't know that. */
-      if (sum > 255 * maxBufSize)
-        goto bailout;
-    }
+    /* Prevent the code above from being optimized out.  This test should
+       never be true, but the compiler doesn't know that. */
+    if (sum > 255 * maxBufSize)
+      goto bailout;
   }
 
-  transforms[0].options &= ~TJXOPT_COPYNONE;
-  transforms[0].options |= TJXOPT_OPTIMIZE;
   free(dstBufs[0]);
   dstBufs[0] = NULL;
+
+  transforms[0].r.w = (height + 1) / 2;
+  transforms[0].r.h = (width + 1) / 2;
+  transforms[0].op = TJXOP_TRANSPOSE;
+  transforms[0].options = TJXOPT_GRAY | TJXOPT_CROP | TJXOPT_COPYNONE |
+                          TJXOPT_OPTIMIZE;
+  dstBufs[0] =
+    (unsigned char *)malloc(tj3JPEGBufSize((height + 1) / 2, (width + 1) / 2,
+                                           jpegSubsamp));
+  if (!dstBufs[0])
+    goto bailout;
+
+  maxBufSize = tj3JPEGBufSize((height + 1) / 2, (width + 1) / 2, jpegSubsamp);
+
+  if (tj3Transform(handle, data, size, 1, dstBufs, dstSizes,
+                   transforms) == 0) {
+    int sum = 0;
+
+    for (i = 0; i < dstSizes[0]; i++)
+      sum += dstBufs[0][i];
+
+    if (sum > 255 * maxBufSize)
+      goto bailout;
+  }
+
+  free(dstBufs[0]);
+  dstBufs[0] = NULL;
+
+  transforms[0].op = TJXOP_ROT90;
+  transforms[0].options = TJXOPT_TRIM | TJXOPT_ARITHMETIC;
+  dstBufs[0] =
+    (unsigned char *)malloc(tj3JPEGBufSize(height, width, jpegSubsamp));
+  if (!dstBufs[0])
+    goto bailout;
+
+  maxBufSize = tj3JPEGBufSize(height, width, jpegSubsamp);
+
+  if (tj3Transform(handle, data, size, 1, dstBufs, dstSizes,
+                   transforms) == 0) {
+    int sum = 0;
+
+    for (i = 0; i < dstSizes[0]; i++)
+      sum += dstBufs[0][i];
+
+    if (sum > 255 * maxBufSize)
+      goto bailout;
+  }
+
+  free(dstBufs[0]);
+  dstBufs[0] = NULL;
+
+  transforms[0].op = TJXOP_NONE;
+  transforms[0].options = TJXOPT_PROGRESSIVE;
   dstSizes[0] = 0;
 
   tj3Set(handle, TJPARAM_NOREALLOC, 0);
@@ -135,8 +169,7 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size)
   }
 
 bailout:
-  for (t = 0; t < NUMXFORMS; t++)
-    free(dstBufs[t]);
+  free(dstBufs[0]);
   tj3Destroy(handle);
   return 0;
 }

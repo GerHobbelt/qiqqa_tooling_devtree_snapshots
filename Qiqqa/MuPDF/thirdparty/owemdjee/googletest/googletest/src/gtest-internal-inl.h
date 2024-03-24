@@ -108,7 +108,8 @@ GTEST_API_ TimeInMillis GetTimeInMillis();
 // in the output.
 GTEST_API_ GTestColorMode ShouldUseColor(bool stdout_is_tty);
 
-// Formats the given time in milliseconds as seconds.
+// Formats the given time in milliseconds as seconds. If the input is an exact N
+// seconds, the output has a trailing decimal point (e.g., "N." instead of "N").
 GTEST_API_ std::string FormatTimeInMillisAsSeconds(TimeInMillis ms);
 
 // Converts the given time in milliseconds to a date string in the ISO 8601
@@ -327,7 +328,7 @@ void ShuffleRange(internal::Random* random, int begin, int end,
       << begin << ", " << size << "].";
 
   // Fisher-Yates shuffle, from
-  // http://en.wikipedia.org/wiki/Fisher-Yates_shuffle
+  // https://en.wikipedia.org/wiki/Fisher-Yates_shuffle
   for (int range_width = end - begin; range_width >= 2; range_width--) {
     const int last_in_range = begin + range_width - 1;
     const int selected =
@@ -402,10 +403,10 @@ class GTEST_API_ UnitTestOptions {
 #if GTEST_OS_WINDOWS
   // Function for supporting the gtest_catch_exception flag.
 
-  // Returns EXCEPTION_EXECUTE_HANDLER if Google Test should handle the
-  // given SEH exception, or EXCEPTION_CONTINUE_SEARCH otherwise.
+  // Returns EXCEPTION_EXECUTE_HANDLER if given SEH exception was handled, or
+  // EXCEPTION_CONTINUE_SEARCH otherwise.
   // This function is useful as an __except condition.
-  static int GTestShouldProcessSEH(DWORD exception_code);
+  static int GTestProcessSEH(DWORD seh_code, const char* location);
 #endif  // GTEST_OS_WINDOWS
 
   // Returns true if "name" matches the ':' separated list of glob-style
@@ -422,8 +423,8 @@ GTEST_API_ FilePath GetCurrentExecutableName();
 // The role interface for getting the OS stack trace as a string.
 class OsStackTraceGetterInterface {
  public:
-  OsStackTraceGetterInterface() {}
-  virtual ~OsStackTraceGetterInterface() {}
+  OsStackTraceGetterInterface() = default;
+  virtual ~OsStackTraceGetterInterface() = default;
 
   // Returns the current OS stack trace as an std::string.  Parameters:
   //
@@ -451,7 +452,7 @@ class OsStackTraceGetterInterface {
 // A working implementation of the OsStackTraceGetterInterface interface.
 class OsStackTraceGetter : public OsStackTraceGetterInterface {
  public:
-  OsStackTraceGetter() {}
+  OsStackTraceGetter() = default;
 
   std::string CurrentStackTrace(int max_depth, int skip_count) override;
   void UponLeavingGTest() override;
@@ -687,7 +688,7 @@ class GTEST_API_ UnitTestImpl {
   void AddTestInfo(internal::SetUpTestSuiteFunc set_up_tc,
                    internal::TearDownTestSuiteFunc tear_down_tc,
                    TestInfo* test_info) {
-#if GTEST_HAS_DEATH_TEST
+#if GTEST_HAS_FILE_SYSTEM
     // In order to support thread-safe death tests, we need to
     // remember the original working directory when the test program
     // was first invoked.  We cannot do this in RUN_ALL_TESTS(), as
@@ -700,7 +701,7 @@ class GTEST_API_ UnitTestImpl {
       GTEST_CHECK_(!original_working_dir_.IsEmpty())
           << "Failed to get the current working directory.";
     }
-#endif  // GTEST_HAS_DEATH_TEST
+#endif  // GTEST_HAS_FILE_SYSTEM
 
     GetTestSuite(test_info->test_suite_name(), test_info->type_param(),
                  set_up_tc, tear_down_tc)
@@ -1081,7 +1082,7 @@ class GTEST_API_ StreamingListener : public EmptyTestEventListener {
   // Abstract base class for writing strings to a socket.
   class AbstractSocketWriter {
    public:
-    virtual ~AbstractSocketWriter() {}
+    virtual ~AbstractSocketWriter() = default;
 
     // Sends a string to the socket.
     virtual void Send(const std::string& message) = 0;

@@ -19,7 +19,7 @@
 #include <assert.h>
 #include <stdlib.h>
 #include <string.h>
-#include <strings.h>
+#include "string_util.h"
 #include <stdarg.h>
 #include <stdio.h>
 
@@ -43,6 +43,31 @@ char* gumbo_copy_stringz(GumboParser* parser, const char* str) {
   char* buffer = gumbo_parser_allocate(parser, strlen(str) + 1);
   strcpy(buffer, str);
   return buffer;
+}
+
+// replace locale specific ctype functions to properly adhere
+// to spec
+
+bool gumbo_isspace(unsigned char ch) 
+{
+  switch(ch) {
+  case ' ':
+  case '\f':
+  case '\r':
+  case '\n':
+  case '\t':
+    return true;
+  default:
+    return false;
+  }
+}
+
+bool gumbo_isalnum(unsigned char ch) 
+{
+  if ('a' <= ch && ch <= 'z') return true;
+  if ('A' <= ch && ch <= 'Z') return true;
+  if ('0' <= ch && ch <= '9') return true;
+  return false;
 }
 
 // Debug function to trace operation of the parser.  Pass --copts=-DGUMBO_DEBUG

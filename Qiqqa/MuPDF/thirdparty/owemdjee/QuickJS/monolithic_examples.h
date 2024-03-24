@@ -10,9 +10,11 @@ extern "C" {
 int qjscompress_main(int argc, const char** argv);
 int qjs_main(int argc, const char** argv);
 int qjsc_main(int argc, const char** argv);
+int qjsd_main(int argc, const char** argv);
 int qjs_unicode_gen_main(int argc, const char** argv);
 int qjs_test262_main(int argc, const char** argv);
 int qjs_sample_app_main(int argc, const char** argv);
+int qjs_benchmark_main(int argc, const char** argv);
 
 #ifdef __cplusplus
 }

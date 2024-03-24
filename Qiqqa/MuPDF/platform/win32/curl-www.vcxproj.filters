@@ -27,50 +27,95 @@
     <Filter Include="Misc Files\docs">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\docs\videos">
+    <Filter Include="Misc Files\docs\audit">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\logo">
+    <Filter Include="Misc Files\docs\survey">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\rfc">
+    <Filter Include="Misc Files\docs\videos">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
+    <Filter Include="Misc Files\libcurl">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0009}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\docs">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0012}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\docs\survey">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0011}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\docs\survey\charts">
+    <Filter Include="Misc Files\libcurl\c">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0010}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\docs\videos">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0014}</UniqueIdentifier>
+    <Filter Include="Misc Files\libcurl\c\html">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0011}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\docs\videos\t">
+    <Filter Include="Misc Files\libcurl\using">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\logo">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0013}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\libcurl">
+    <Filter Include="Misc Files\mail">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0014}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\mirror">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0015}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\logo">
+    <Filter Include="Misc Files\pix">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0016}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\pix">
+    <Filter Include="Misc Files\pix\gold">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0017}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\pix\silver">
+    <Filter Include="Misc Files\pix\silver">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\libcurl">
+    <Filter Include="Misc Files\rfc">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0019}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\tiny">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0020}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Misc Files\trurl">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\windows">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\docs">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\docs\survey">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\docs\survey\charts">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\docs\videos">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\docs\videos\t">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\libcurl">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0029}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\logo">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0030}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\pix">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0031}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\pix\silver">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0032}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\trurl">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0033}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libcurl">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0035}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files\libcurl\c">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0019}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0034}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -150,6 +195,9 @@
       <Filter>Resource Files\docs\videos\t</Filter>
     </Image>
     <Image Include="../../thirdparty/owemdjee/curl-www/docs/videos/t/apache-http2-testing.jpg">
+      <Filter>Resource Files\docs\videos\t</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/curl-www/docs/videos/t/command-line-variables.jpg">
       <Filter>Resource Files\docs\videos\t</Filter>
     </Image>
     <Image Include="../../thirdparty/owemdjee/curl-www/docs/videos/t/common-libcurl-mistakes.jpg">
@@ -278,6 +326,9 @@
     <Image Include="../../thirdparty/owemdjee/curl-www/docs/videos/t/internet-all-the-things-2015.jpg">
       <Filter>Resource Files\docs\videos\t</Filter>
     </Image>
+    <Image Include="../../thirdparty/owemdjee/curl-www/docs/videos/t/just-curl-it.jpg">
+      <Filter>Resource Files\docs\videos\t</Filter>
+    </Image>
     <Image Include="../../thirdparty/owemdjee/curl-www/docs/videos/t/landing-code.jpg">
       <Filter>Resource Files\docs\videos\t</Filter>
     </Image>
@@ -293,7 +344,13 @@
     <Image Include="../../thirdparty/owemdjee/curl-www/docs/videos/t/life-of-a-distro-hacker-2017.jpg">
       <Filter>Resource Files\docs\videos\t</Filter>
     </Image>
+    <Image Include="../../thirdparty/owemdjee/curl-www/docs/videos/t/mastering-command-line.jpg">
+      <Filter>Resource Files\docs\videos\t</Filter>
+    </Image>
     <Image Include="../../thirdparty/owemdjee/curl-www/docs/videos/t/negotiate-support.jpg">
+      <Filter>Resource Files\docs\videos\t</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/curl-www/docs/videos/t/quic-and-wolfssl.jpg">
       <Filter>Resource Files\docs\videos\t</Filter>
     </Image>
     <Image Include="../../thirdparty/owemdjee/curl-www/docs/videos/t/quic-details-2019.jpg">
@@ -333,6 +390,9 @@
       <Filter>Resource Files\docs\videos\t</Filter>
     </Image>
     <Image Include="../../thirdparty/owemdjee/curl-www/docs/videos/t/websocket-support-2017.jpg">
+      <Filter>Resource Files\docs\videos\t</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/curl-www/docs/videos/t/websocket-with-libcurl.jpg">
       <Filter>Resource Files\docs\videos\t</Filter>
     </Image>
     <Image Include="../../thirdparty/owemdjee/curl-www/docs/videos/t/welcome-to-curlup-2018.jpg">
@@ -395,6 +455,9 @@
     <Image Include="../../thirdparty/owemdjee/curl-www/pix/linuxfromscratch.png">
       <Filter>Resource Files\pix</Filter>
     </Image>
+    <Image Include="../../thirdparty/owemdjee/curl-www/pix/mastering.jpg">
+      <Filter>Resource Files\pix</Filter>
+    </Image>
     <Image Include="../../thirdparty/owemdjee/curl-www/pix/minix.png">
       <Filter>Resource Files\pix</Filter>
     </Image>
@@ -428,10 +491,13 @@
     <Image Include="../../thirdparty/owemdjee/curl-www/pix/serenityos2.png">
       <Filter>Resource Files\pix</Filter>
     </Image>
-    <Image Include="../../thirdparty/owemdjee/curl-www/pix/silver/EyA.png">
+    <Image Include="../../thirdparty/owemdjee/curl-www/pix/silver/fineproxy.jpg">
       <Filter>Resource Files\pix\silver</Filter>
     </Image>
-    <Image Include="../../thirdparty/owemdjee/curl-www/pix/silver/monkeybreadsoftware.jpg">
+    <Image Include="../../thirdparty/owemdjee/curl-www/pix/silver/mobilen-2.png">
+      <Filter>Resource Files\pix\silver</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/curl-www/pix/silver/monkeybreadsoftware-2.jpg">
       <Filter>Resource Files\pix\silver</Filter>
     </Image>
     <Image Include="../../thirdparty/owemdjee/curl-www/pix/silver/surebet.png">
@@ -443,11 +509,122 @@
     <Image Include="../../thirdparty/owemdjee/curl-www/pix/unslung2.png">
       <Filter>Resource Files\pix</Filter>
     </Image>
+    <Image Include="../../thirdparty/owemdjee/curl-www/trurl/trurl-logo.jpg">
+      <Filter>Resource Files\trurl</Filter>
+    </Image>
+    <Text Include="../../thirdparty/owemdjee/curl-www/LICENSE">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/Makefile">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/curl-www/README.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_404.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_FAQ.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_about.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_book.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_changes.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_dashboard.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_dashboard1.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_dashboard5.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_dashboardd.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_doctype.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_donation.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_download.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_features.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_foot.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_footer.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_gethelp.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_head.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_index.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_install.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_latest.shtml">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_libs.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_manual.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_menu.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_mirrors.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_news2.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_newslog.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_oldnews.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_search.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_sponsors.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_support.html">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/_web-editing.html">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/curl-www/bootstrap.sh">
       <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/ca/Makefile">
+      <Filter>Misc Files\ca</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/ca/index.html">
+      <Filter>Misc Files\ca</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/ca/listpem.pl">
+      <Filter>Misc Files\ca</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/curl-www/ca/mozilla-ca.sh">
       <Filter>Misc Files\ca</Filter>
@@ -458,13 +635,142 @@
     <Text Include="../../thirdparty/owemdjee/curl-www/ca/update.sh">
       <Filter>Misc Files\ca</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/curl.css">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/Makefile">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_advisory.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_builds.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_code-review.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_code-style.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_contribute.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_deprecate.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_feature-window.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_foot.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_head.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_howto.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_index.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_internals.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_keywords.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_menu.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_missing.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_new-protocol.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_release-notes.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_release-procedure.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_roadmap.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_runtests.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_source.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_sourceactivity.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_summary.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_table0.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_table1.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_table2.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_table3.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_test-fileformat.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_testcurl.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_tests-overview.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_todo-release.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/_vuln-disclosure.html">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/curl-www/dev/autocurl.txt">
       <Filter>Misc Files\dev</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/curl-www/dev/dev.js">
       <Filter>Misc Files\dev</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/json-issues.pl">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/mk-release-notes.pl">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/summarize.pl">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/update.pl">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dev/warnit.pl">
+      <Filter>Misc Files\dev</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dl/Makefile">
+      <Filter>Misc Files\dl</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dl/dlfix.pl">
+      <Filter>Misc Files\dl</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dl/mktable.pl">
+      <Filter>Misc Files\dl</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/curl-www/dl/mod.js">
+      <Filter>Misc Files\dl</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/dl/remcheck.pl">
       <Filter>Misc Files\dl</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/curl-www/docs/CVE-2000-0973.md">
@@ -746,6 +1052,9 @@
     <Text Include="../../thirdparty/owemdjee/curl-www/docs/CVE-2019-5482.md">
       <Filter>Misc Files\docs</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/CVE-2020-19909.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/curl-www/docs/CVE-2020-8169.md">
       <Filter>Misc Files\docs</Filter>
     </Text>
@@ -866,6 +1175,165 @@
     <Text Include="../../thirdparty/owemdjee/curl-www/docs/CVE-2022-43552.md">
       <Filter>Misc Files\docs</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/CVE-2023-23914.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/CVE-2023-23915.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/CVE-2023-23916.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/CVE-2023-27533.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/CVE-2023-27534.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/CVE-2023-27535.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/CVE-2023-27536.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/CVE-2023-27537.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/CVE-2023-27538.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/CVE-2023-28319.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/CVE-2023-28320.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/CVE-2023-28321.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/CVE-2023-28322.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/CVE-2023-32001.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/CVE-2023-38039.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/CVE-2023-38545.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/CVE-2023-38546.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/Makefile">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_alt-svc.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_bugbounty.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_bugs.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_caextract.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_code-of-conduct.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_companies.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_comparison-table.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_contribute.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_copyright.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_faq.shtml">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_features.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_governance.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_help-us.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_history.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_hsts.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_http-cookies.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_http2.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_http3.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_httpscripting.shtml">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_index.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_install.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_internals.shtml">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_ipfs.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_irc.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_knownbugs.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_libs.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_manpage.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_menu.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_mk-ca-bundle.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_mqtt.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_option-menu.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_optionsall.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_optionswhen.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_projdocs.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_protdocs.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/curl-www/docs/_readme.curl.html">
       <Filter>Misc Files\docs</Filter>
     </Text>
@@ -875,14 +1343,902 @@
     <Text Include="../../thirdparty/owemdjee/curl-www/docs/_readme.libcurl.html">
       <Filter>Misc Files\docs</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/curl-www/docs/adv_20140422.txt">
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_reldocs.html">
       <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_releases.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_runtests.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_security.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_singlevuln.templ">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_ssl-ciphers.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_ssl-compared.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_sslcerts.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_testcurl.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_thanks.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_thename.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_todo.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_tooldocs.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_tutorial.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_url-syntax.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_versions.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_vulnall.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_vulnerabilities.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_websocket.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/_whodocs.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/alloptions.pl">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/allvulns.pl">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/audit/codereview-2022.pdf">
+      <Filter>Misc Files\docs\audit</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/audit/cure53-curl-report-2016.pdf">
+      <Filter>Misc Files\docs\audit</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/audit/threatmodel-2022.pdf">
+      <Filter>Misc Files\docs\audit</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/comparison.css">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/curlver-to-vulnlink.pl">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/cve-checker.pl">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/faqparse.pl">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/generatemanmenu.pl">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/listvulns.pl">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/mk-adv-template.pl">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/optionswhen.pl">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/relinfo.pl">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/survey/_survey2014.html">
+      <Filter>Misc Files\docs\survey</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/thanks.css">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/txt2plain.pl">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/videos/2015-curl-FOSDEM-internet-all-the-things.pdf">
+      <Filter>Misc Files\docs\videos</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/videos/2015-curl-hobby-billion-users-Google.pdf">
+      <Filter>Misc Files\docs\videos</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/videos/FOSDEM-2017-curl.pdf">
+      <Filter>Misc Files\docs\videos</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/videos/Makefile">
+      <Filter>Misc Files\docs\videos</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/videos/_index.html">
+      <Filter>Misc Files\docs\videos</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/videos/curl-driving-it-2019.pdf">
+      <Filter>Misc Files\docs\videos</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/videos/mkvideos.pl">
+      <Filter>Misc Files\docs\videos</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/videos/the-state-of-curl-2020.pdf">
+      <Filter>Misc Files\docs\videos</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/curl-www/docs/videos/videolist.txt">
       <Filter>Misc Files\docs\videos</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/vuln2csv.pl">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/vuln2json.pl">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/docs/vulntable.pl">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/filter.pl">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/last20threads.pl">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/Makefile">
+      <Filter>Misc Files\libcurl</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/_abi.html">
+      <Filter>Misc Files\libcurl</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/_bindings.html">
+      <Filter>Misc Files\libcurl</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/_comparison-table.html">
+      <Filter>Misc Files\libcurl</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/_competitors.html">
+      <Filter>Misc Files\libcurl</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/_features.html">
+      <Filter>Misc Files\libcurl</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/_index.html">
+      <Filter>Misc Files\libcurl</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/_libwww.html">
+      <Filter>Misc Files\libcurl</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/_mail.html">
+      <Filter>Misc Files\libcurl</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/_menu.html">
+      <Filter>Misc Files\libcurl</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/_neon.html">
+      <Filter>Misc Files\libcurl</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/_relatedlibs.html">
+      <Filter>Misc Files\libcurl</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/_security.html">
+      <Filter>Misc Files\libcurl</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/_theysay.html">
+      <Filter>Misc Files\libcurl</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/_wininet.html">
+      <Filter>Misc Files\libcurl</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/Makefile">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_CURLINFO_template.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_CURLMOPT_template.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_CURLOPT_template.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_CURLSHOPT_template.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_allfuncs.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_easy_cleanup.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_easy_duphandle.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_easy_escape.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_easy_getinfo.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_easy_header.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_easy_init.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_easy_nextheader.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_easy_option_by_id.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_easy_option_by_name.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_easy_option_next.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_easy_pause.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_easy_perform.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_easy_recv.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_easy_reset.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_easy_send.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_easy_setopt.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_easy_strerror.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_easy_unescape.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_easy_upkeep.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_escape.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_formadd.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_formfree.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_formget.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_free.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_getdate.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_getenv.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_global_cleanup.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_global_init.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_global_init_mem.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_global_sslset.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_global_trace.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_mime_addpart.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_mime_data.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_mime_data_cb.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_mime_encoder.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_mime_filedata.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_mime_filename.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_mime_free.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_mime_headers.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_mime_init.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_mime_name.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_mime_subparts.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_mime_type.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_mprintf.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_multi_add_handle.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_multi_assign.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_multi_cleanup.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_multi_fdset.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_multi_get_handles.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_multi_info_read.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_multi_init.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_multi_perform.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_multi_poll.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_multi_remove_handle.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_multi_setopt.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_multi_socket.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_multi_socket_action.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_multi_strerror.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_multi_timeout.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_multi_wait.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_multi_wakeup.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_pushheader_byname.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_pushheader_bynum.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_share_cleanup.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_share_init.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_share_setopt.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_share_strerror.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_slist_append.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_slist_free_all.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_strequal.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_unescape.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_url.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_url_cleanup.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_url_dup.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_url_get.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_url_set.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_url_strerror.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_version.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_version_info.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_ws_meta.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_ws_recv.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_curl_ws_send.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_easy_getinfo_options.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_easy_setopt_options.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_example-templ.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_example-warn.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_example.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_index.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_libcurl-easy.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_libcurl-env.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_libcurl-errors.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_libcurl-multi.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_libcurl-share.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_libcurl-tutorial.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_libcurl-url.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_libcurl-ws.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_libcurl.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_menu.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_multi_setopt_options.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_options-in-examples.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_symbols-in-versions.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/_threadsafe.html">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/curlopt2href.pl">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/html/Makefile">
+      <Filter>Misc Files\libcurl\c\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/html/build.pl">
+      <Filter>Misc Files\libcurl\c\html</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/mkexam.pl">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/mkopts.pl">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/c/options-used-in-examples.pl">
+      <Filter>Misc Files\libcurl\c</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/using/Makefile">
+      <Filter>Misc Files\libcurl\using</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/using/_apps.html">
+      <Filter>Misc Files\libcurl\using</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/using/_autoconf.html">
+      <Filter>Misc Files\libcurl\using</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/using/_curl-config.html">
+      <Filter>Misc Files\libcurl\using</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/using/_index.html">
+      <Filter>Misc Files\libcurl\using</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/libcurl/using/_menu.html">
+      <Filter>Misc Files\libcurl\using</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/logo/Makefile">
+      <Filter>Misc Files\logo</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/curl-www/logo/README.md">
       <Filter>Misc Files\logo</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/logo/curl-logo.svg">
+      <Filter>Misc Files\logo</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/logo/curl-logo.xcf">
+      <Filter>Misc Files\logo</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/logo/curl-symbol.svg">
+      <Filter>Misc Files\logo</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/logo/curl-symbol.xcf">
+      <Filter>Misc Files\logo</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/logo/curl-up.svg">
+      <Filter>Misc Files\logo</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/mail/Makefile">
+      <Filter>Misc Files\mail</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/mail/_etiquette.html">
+      <Filter>Misc Files\mail</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/mail/_index.html">
+      <Filter>Misc Files\mail</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/mail/_indexfooter.html">
+      <Filter>Misc Files\mail</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/mail/_indexheader.html">
+      <Filter>Misc Files\mail</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/mail/_lost.html">
+      <Filter>Misc Files\mail</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/mail/_mail.html">
+      <Filter>Misc Files\mail</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/mail/_mailfooter.html">
+      <Filter>Misc Files\mail</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/mail/_mailheader.html">
+      <Filter>Misc Files\mail</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/mail/_mailman.html">
+      <Filter>Misc Files\mail</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/mail/_subscribe.html">
+      <Filter>Misc Files\mail</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/mainparts.mk">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/manpage.css">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/mirror/Makefile">
+      <Filter>Misc Files\mirror</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/mirror/_index.html">
+      <Filter>Misc Files\mirror</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/mk-download.pl">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/mk-sponsors.pl">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/mkdash.pl">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/GS-Download-icon.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/aix.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/alpine.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/alt.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/amigaos.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/arch.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/archhurd.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/beos.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/buildroot.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/centos.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/chimera.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/chromenacl.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/clear.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/closed-sign.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/corellium.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/coreos.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/cygwin.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/debian.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/devuan.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/docker.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/dos.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/dragonfly.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/fastly.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/fedora.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/freebsd.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/frugalware.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/gentoo.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/gobolinux.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/gold/elastic-logo.svg">
+      <Filter>Misc Files\pix\gold</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/guix.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/haiku.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/haxx.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/hpenonstop.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/hpux.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/illumos.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/irix.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/kirei.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/linux.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/macosx.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/maemo.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/mageia.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/midnightbsd.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/mint.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/netbsd.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/nixos.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/open-sign.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/openbsd.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/openembedded.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/openindiana.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/openserver.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/openwrt.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/os2.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/pld.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/qnx.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/redhat.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/riscos.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/sailfishos.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/silver/CrosswordSolver.svg">
+      <Filter>Misc Files\pix\silver</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/silver/airbnb.svg">
+      <Filter>Misc Files\pix\silver</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/silver/airlock.svg">
+      <Filter>Misc Files\pix\silver</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/silver/babiel.svg">
+      <Filter>Misc Files\pix\silver</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/silver/crypto-tracker.svg">
+      <Filter>Misc Files\pix\silver</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/silver/iBoysoft.svg">
+      <Filter>Misc Files\pix\silver</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/silver/icons8.svg">
+      <Filter>Misc Files\pix\silver</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/silver/ipinfo.svg">
+      <Filter>Misc Files\pix\silver</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/silver/minitool-2.svg">
+      <Filter>Misc Files\pix\silver</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/silver/partitionwizard-2.svg">
+      <Filter>Misc Files\pix\silver</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/silver/premium-minds.svg">
+      <Filter>Misc Files\pix\silver</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/silver/proxyhub.svg">
+      <Filter>Misc Files\pix\silver</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/silver/serpapi.svg">
+      <Filter>Misc Files\pix\silver</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/silver/solcellsforetag.se.svg">
+      <Filter>Misc Files\pix\silver</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/slackware.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/slitaz.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/solaris.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/sourcemage.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/suse.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/t2.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/teamviewer.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/tizen.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/ubuntu.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/unixware.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/vms.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/wasix.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/win32-2.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/pix/wolfssl.svg">
+      <Filter>Misc Files\pix</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/rfc/Makefile">
+      <Filter>Misc Files\rfc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/rfc/_index.html">
+      <Filter>Misc Files\rfc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/rfc/cookie_spec.html">
+      <Filter>Misc Files\rfc</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/curl-www/rfc/draft-brezak-spnego-http-04.txt">
       <Filter>Misc Files\rfc</Filter>
@@ -900,6 +2256,12 @@
       <Filter>Misc Files\rfc</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/curl-www/rfc/draft-murray-auth-ftp-ssl-16.txt">
+      <Filter>Misc Files\rfc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/rfc/mkindex.pl">
+      <Filter>Misc Files\rfc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/rfc/ntlm.html">
       <Filter>Misc Files\rfc</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/curl-www/rfc/rfc0821.txt">
@@ -1355,8 +2717,44 @@
     <Text Include="../../thirdparty/owemdjee/curl-www/security.txt.in">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/setup.mk">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/tiny/Makefile">
+      <Filter>Misc Files\tiny</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/tiny/_index.html">
+      <Filter>Misc Files\tiny</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/trurl/Makefile">
+      <Filter>Misc Files\trurl</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/trurl/_index.html">
+      <Filter>Misc Files\trurl</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/trurl/_manual.html">
+      <Filter>Misc Files\trurl</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/trurl/_menu.html">
+      <Filter>Misc Files\trurl</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/curl-www/updatedash.sh">
       <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/windows/Makefile">
+      <Filter>Misc Files\windows</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/windows/_index.html">
+      <Filter>Misc Files\windows</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/windows/_microsoft.html">
+      <Filter>Misc Files\windows</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/windows/mkfiles.pl">
+      <Filter>Misc Files\windows</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/curl-www/windows/unpack.pl">
+      <Filter>Misc Files\windows</Filter>
     </Text>
   </ItemGroup>
 </Project>

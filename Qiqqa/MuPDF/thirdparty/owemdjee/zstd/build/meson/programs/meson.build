@@ -18,6 +18,7 @@ zstd_programs_sources = [join_paths(zstd_rootdir, 'programs/zstdcli.c'),
   join_paths(zstd_rootdir, 'programs/benchfn.c'),
   join_paths(zstd_rootdir, 'programs/benchzstd.c'),
   join_paths(zstd_rootdir, 'programs/datagen.c'),
+  join_paths(zstd_rootdir, 'programs/lorem.c'),
   join_paths(zstd_rootdir, 'programs/dibio.c'),
   join_paths(zstd_rootdir, 'programs/zstdcli_trace.c')]
 
@@ -51,7 +52,8 @@ endif
 
 export_dynamic_on_windows = false
 # explicit backtrace enable/disable for Linux & Darwin
-if not use_backtrace
+have_execinfo = cc.has_header('execinfo.h', required: use_backtrace)
+if not have_execinfo
   zstd_c_args += '-DBACKTRACE_ENABLE=0'
 elif use_debug and host_machine_os == os_windows  # MinGW target
   zstd_c_args += '-DBACKTRACE_ENABLE=1'
@@ -71,7 +73,14 @@ zstd = executable('zstd',
   c_args: zstd_c_args,
   dependencies: zstd_deps,
   export_dynamic: export_dynamic_on_windows, # Since Meson 0.45.0
-  install: true)
+  build_by_default: bin_programs,
+  install: bin_programs)
+
+if not bin_programs
+  # we generate rules to build the programs, but don't install anything
+  # so do not continue to installing scripts and manpages
+  subdir_done()
+endif
 
 zstd_frugal_sources = [join_paths(zstd_rootdir, 'programs/zstdcli.c'),
   join_paths(zstd_rootdir, 'programs/timefn.c'),

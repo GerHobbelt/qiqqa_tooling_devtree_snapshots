@@ -491,11 +491,12 @@ static void usage(void)
         "Syntax: bulktest [options] <scriptfile> [<datafile> ...]\n"
         "\n"
         "Options:\n"
-        "  -T      scriptfile is a script TEMPLATE file, which is filled with data from\n"
+		"  -V      display the version of this application and terminate\n"
+		"  -T      scriptfile is a script TEMPLATE file, which is filled with data from\n"
         "          the datafiles, one line at a time, and repeated until all datafile records\n"
         "          have been processed that way.\n"
-        "  -v      verbose (toggle)\n"
-        "  -q      be quiet (don't print progress messages)\n"
+        "  -v      verbose (repeat to dial up the verbosity level)\n"
+        "  -q      be quiet (don't print progress messages); the inverse of 'verbose'.\n"
         "  -s -    show extra information:\n"
         "     m    show memory use\n"
         "     t    show timings\n"
@@ -508,7 +509,9 @@ static void usage(void)
         "    NNN   set memory limit to NNN bytes (same as 'sNNN' above)\n"
         "  -L      low memory mode (avoid caching, clear objects after each page)\n"
         "\n"
-        "  -n LLL  restrict the test to only the specified tests at lines LLL, where\n"
+		"  The next few filter options apply to the DATAFILE content only:\n"
+		"\n"
+		"  -n LLL  restrict the test to only the specified tests at lines LLL, where\n"
         "          LLL is any set of comma-separated line specifications:\n"
         "            nnn     : the line number nnn\n"
         "            mmm-nnn : the lines numbers mmm up to and including nnn\n"
@@ -525,8 +528,7 @@ static void usage(void)
         "          any file path that includes 'dried-frog-pills', e.g.\n"
         "          'research/dried-frog-pills/effectiveness.pdf', and will skip\n"
         "          all non-matching lines, e.g. 'research/frog/disect1.pdf'\n"
-        "\n"
-        "  -V      display the version of this application and terminate\n"
+		"  -X RRR  the inverse of '-x RRR': ignore any RRR regex-matching tests.\n"
         "\n"
         "\nscriptfile contains a list of commands:\n"
         "  CD <path>            Change current directory to the indicated path\n"
@@ -2284,7 +2286,7 @@ bulktest_main(int argc, const char **argv)
 					//# nr.:      %datarow     -- index number of the test record
 					//# PDF:      % 1          -- full RELATIVE path to the PDF
 					//# dir :     % 2          -- basedir = path part of that
-					//# name :    % 3          -- filename = PDF filename part of that one(with.pdf extension)
+					//# name :    % 3          -- filename = PDF filename part of that one (with.pdf extension)
 					//# base :    % 4          -- basename = PDF filename "    "  "    "   (without the.pdf extension)
 					//# cd root : % 5          -- path to root of the repo
 					if (template_argc == 1)
@@ -2643,7 +2645,7 @@ bulktest_main(int argc, const char **argv)
 
                             if (rv != EXIT_SUCCESS)
                             {
-                                fz_error(ctx, "ERR: error executing MUTOOL command: %s", line);
+                                fz_error(ctx, "ERR: error (exit code: %d) executing MUTOOL command: %s\n", rv, line);
                                 errored++;
                             }
                             else if (verbosity >= 1)
@@ -2665,7 +2667,7 @@ bulktest_main(int argc, const char **argv)
                         rv = 1;
                         if (rv != EXIT_SUCCESS)
                         {
-                            fz_error(ctx, "ERR: error executing MUSERVE command: %s", line);
+                            fz_error(ctx, "ERR: error (exit code: %d) executing MUSERVE command: %s", rv, line);
                             errored++;
                         }
                         else if (verbosity >= 1)
@@ -2682,7 +2684,7 @@ bulktest_main(int argc, const char **argv)
                         rv = 1;
                         if (rv != EXIT_SUCCESS)
                         {
-                            fz_error(ctx, "ERR: error executing STOPSERVE command: %s", line);
+                            fz_error(ctx, "ERR: error (exit code: %d) executing STOPSERVE command: %s", rv, line);
                             errored++;
                         }
                         else if (verbosity >= 1)
@@ -2728,7 +2730,7 @@ bulktest_main(int argc, const char **argv)
 
                         if (rv != EXIT_SUCCESS)
                         {
-                            fz_error(ctx, "ERR: error executing BULKTEST command at script line %d.", linecounter);
+                            fz_error(ctx, "ERR: error (exit code: %d) executing BULKTEST command at script line %d.", rv, linecounter);
                             errored++;
                         }
                         else if (verbosity >= 1)

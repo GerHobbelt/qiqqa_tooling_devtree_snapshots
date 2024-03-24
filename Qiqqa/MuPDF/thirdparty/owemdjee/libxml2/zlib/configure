@@ -103,7 +103,6 @@ buildcrc32vx=1
 floatabi=
 native=0
 forcesse2=0
-forcetzcnt=0
 # For CPUs that can benefit from AVX512, it seems GCC generates suboptimal
 # instruction scheduling unless you specify a reasonable -mtune= target
 avx512flag="-mavx512f -mavx512dq -mavx512bw -mavx512vl -mtune=cascadelake"
@@ -115,6 +114,7 @@ sse41flag="-msse4.1"
 sse42flag="-msse4.2"
 pclmulflag="-mpclmul"
 vpclmulflag="-mvpclmulqdq -mavx512f"
+xsaveflag="-mxsave"
 acleflag=
 neonflag=
 noltoflag="-fno-lto"
@@ -127,6 +127,7 @@ reducedmem=0
 gcc=0
 warn=0
 debug=0
+visibility=1
 old_cc="$CC"
 old_cflags="$CFLAGS"
 OBJC='$(OBJZ)'
@@ -175,7 +176,6 @@ case "$1" in
       echo '    [--without-crc32-vx]        Build without vectorized CRC32 on IBM Z' | tee -a configure.log
       echo '    [--with-reduced-mem]        Reduced memory usage for special cases (reduces performance)' | tee -a configure.log
       echo '    [--force-sse2]              Assume SSE2 instructions are always available (disabled by default on x86, enabled on x86_64)' | tee -a configure.log
-      echo '    [--force-tzcnt]             Assume TZCNT instructions are always available (disabled by default)' | tee -a configure.log
       echo '    [--native]                  Compiles with full instruction set supported on this host' | tee -a configure.log
         exit 0 ;;
     -p*=* | --prefix=*) prefix=$(echo $1 | sed 's/.*=//'); shift ;;
@@ -209,7 +209,6 @@ case "$1" in
     --without-crc32-vx) buildcrc32vx=0; shift ;;
     --with-reduced-mem) reducedmem=1; shift ;;
     --force-sse2) forcesse2=1; shift ;;
-    --force-tzcnt) forcetzcnt=1; shift ;;
     -n | --native) native=1; shift ;;
     -a*=* | --archs=*) ARCHS=$(echo $1 | sed 's/.*=//'); shift ;;
     --sysconfdir=*) echo "ignored option: --sysconfdir" | tee -a configure.log; shift ;;
@@ -268,6 +267,7 @@ if test $native -eq 1; then
   sse42flag=""
   pclmulflag=""
   vpclmulflag=""
+  xsaveflag=""
   noltoflag=""
 fi
 
@@ -403,7 +403,7 @@ if test "$gcc" -eq 1 && ($cc $CFLAGS -c $test.c) >> configure.log 2>&1; then
     SFLAGS="${SFLAGS} ${NATIVE_FLAG}"
   fi
   if test "$warn" -eq 1; then
-    CFLAGS="${CFLAGS} -Wextra -Wpedantic"
+    CFLAGS="${CFLAGS} -Wextra"
   fi
   if test $debug -eq 1; then
     CFLAGS="${CFLAGS} -DZLIB_DEBUG"
@@ -424,6 +424,7 @@ if test "$gcc" -eq 1 && ($cc $CFLAGS -c $test.c) >> configure.log 2>&1; then
         LDSHAREDFLAGS="-shared -Wl,-soname,${LIBNAME}.so.${VER1},--version-script,${SRCDIR}/${MAPNAME}"
         LDCONFIG="ldconfig -m" ;;
   CYGWIN* | Cygwin* | cygwin*)
+        visibility=0
         ARFLAGS="rcs"
         SFLAGS="${CFLAGS}"
         shared_ext='.dll'
@@ -440,12 +441,16 @@ if test "$gcc" -eq 1 && ($cc $CFLAGS -c $test.c) >> configure.log 2>&1; then
         LDSHARED=${LDSHARED-"$cc"}
         LDSHAREDFLAGS="-shared -Wl,--out-implib,${IMPORTLIB},--version-script,${SRCDIR}/${MAPNAME}"
         LDSHAREDLIBC=""
-        DEFFILE='win32/${LIBNAME2}.def'
+        if test $gzfileops -eq 0; then
+          DEFFILE='win32/${LIBNAME2}.def'
+        fi
         RC="${CROSS_PREFIX}windres"
+        RCFLAGS="-I ${BUILDDIR}"
         RCOBJS='zlibrc.o'
         STRIP="${CROSS_PREFIX}strip"
         EXE='.exe' ;;
   MSYS* | msys*)
+        visibility=0
         ARFLAGS="rcs"
         SFLAGS="${CFLAGS}"
         shared_ext='.dll'
@@ -462,12 +467,16 @@ if test "$gcc" -eq 1 && ($cc $CFLAGS -c $test.c) >> configure.log 2>&1; then
         LDSHARED=${LDSHARED-"$cc"}
         LDSHAREDFLAGS="-shared -Wl,--out-implib,${IMPORTLIB}"
         LDSHAREDLIBC=""
-        DEFFILE='win32/${LIBNAME2}.def'
+        if test $gzfileops -eq 0; then
+          DEFFILE='win32/${LIBNAME2}.def'
+        fi
         RC="${CROSS_PREFIX}windres"
+        RCFLAGS="-I ${BUILDDIR}"
         RCOBJS='zlibrc.o'
         STRIP="${CROSS_PREFIX}strip"
         EXE='.exe' ;;
   MINGW* | mingw*)
+        visibility=0
         ARFLAGS="rcs"
         CFLAGS="${CFLAGS} -D_POSIX_C_SOURCE=200809L -D_GNU_SOURCE=1 -Wno-pedantic-ms-format"
         SFLAGS="${CFLAGS}"
@@ -481,8 +490,11 @@ if test "$gcc" -eq 1 && ($cc $CFLAGS -c $test.c) >> configure.log 2>&1; then
         LDSHARED=${LDSHARED-"$cc"}
         LDSHAREDFLAGS="-shared -Wl,--out-implib=${IMPORTLIB} -Wl,--version-script=${SRCDIR}/${MAPNAME}"
         LDSHAREDLIBC=""
-        DEFFILE='win32/${LIBNAME2}.def'
+        if test $gzfileops -eq 0; then
+          DEFFILE='win32/${LIBNAME2}.def'
+        fi
         RC="${CROSS_PREFIX}windres"
+        RCFLAGS="-I ${BUILDDIR}"
         if [ "$CC" == "mingw32-gcc" ]; then
           case $ARCH in
           i386 | i486 | i586 | i686) RCFLAGS="${RCFLAGS} -F pe-i386";;
@@ -749,13 +761,20 @@ else
   echo "Checking for strerror... No." | tee -a configure.log
 fi
 
-# check for getauxval() for architecture feature detection at run-time
+# check for getauxval() or elf_aux_info() for architecture feature detection at run-time
 cat > $test.c <<EOF
 #include <sys/auxv.h>
-int main() { return getauxval(0); }
+int main() {
+#ifdef __FreeBSD__
+  int test;
+  return elf_aux_info(AT_PAGESZ, &test, sizeof(test));
+#else
+  return getauxval(0);
+#endif
+}
 EOF
 if try $CC $CFLAGS -o $test $test.c $LDSHAREDLIBC; then
-  echo "Checking for getauxval() in sys/auxv.h... Yes." | tee -a configure.log
+  echo "Checking for getauxval() or elf_aux_info() in sys/auxv.h... Yes." | tee -a configure.log
   CFLAGS="${CFLAGS} -DHAVE_SYS_AUXV_H"
   SFLAGS="${SFLAGS} -DHAVE_SYS_AUXV_H"
 else
@@ -852,6 +871,11 @@ if test $compat -eq 1; then
   esac
 fi
 
+if [[ ! -z $DEFFILE ]]; then
+  mkdir -p win32
+  sed < $SRCDIR/$DEFFILE.in "s/@ZLIB_SYMBOL_PREFIX@/$symbol_prefix/g" > $DEFFILE
+fi
+
 # if --gzfileops was requested
 if test $gzfileops -eq 1; then
   CFLAGS="${CFLAGS} -DWITH_GZFILEOP"
@@ -859,6 +883,7 @@ if test $gzfileops -eq 1; then
   OBJC="${OBJC} \$(OBJG)"
   PIC_OBJC="${PIC_OBJC} \$(PIC_OBJG)"
 else
+  TESTOBJG="\$(OBJG)"
   PIC_TESTOBJG="\$(OBJG)"
 fi
 
@@ -934,7 +959,7 @@ EOF
 fi
 
 # see if we can hide zlib internal symbols that are linked between separate source files using hidden
-if test "$gcc" -eq 1; then
+if test "$gcc" -eq 1 && test "$visibility" -eq 1; then
   echo >> configure.log
   cat > $test.c <<EOF
 #define Z_INTERNAL __attribute__((visibility ("hidden")))
@@ -953,7 +978,7 @@ EOF
 fi
 
 # see if we can hide zlib internal symbols that are linked between separate source files using internal
-if test "$gcc" -eq 1; then
+if test "$gcc" -eq 1 && test "$visibility" -eq 1; then
   echo >> configure.log
   cat > $test.c <<EOF
 #define Z_INTERNAL __attribute__((visibility ("internal")))
@@ -1296,6 +1321,27 @@ EOF
     fi
 }
 
+check_xsave_intrinsics() {
+   # Check whether compiler supports XSAVE intrinsics
+   cat > $test.c << EOF
+#ifdef _WIN32
+#  include <intrin.h>
+#else
+#  include <x86gprintrin.h>
+#endif
+int main(void) {
+    return _xgetbv(0);
+}
+EOF
+    if try ${CC} ${CFLAGS} ${xsaveflag} $test.c; then
+        echo "Checking for XSAVE intrinsics ... Yes." | tee -a configure.log
+        HAVE_XSAVE_INTRIN=1
+    else
+        echo "Checking for XSAVE intrinsics ... No." | tee -a configure.log
+        HAVE_XSAVE_INTRIN=0
+    fi
+}
+
 check_ppc_intrinsics() {
         cat > $test.c << EOF
 #include <altivec.h>
@@ -1321,8 +1367,19 @@ EOF
             echo "Checking if -mno-vsx is supported ... No." | tee -a configure.log
         fi
         cat > $test.c << EOF
+#ifdef __FreeBSD__
+#include <machine/cpu.h>
+#endif
 #include <sys/auxv.h>
-int main() { return (getauxval(AT_HWCAP) & PPC_FEATURE_HAS_ALTIVEC); }
+int main() {
+#ifdef __FreeBSD__
+  unsigned long hwcap;
+  elf_aux_info(AT_HWCAP, &hwcap, sizeof(hwcap));
+  return (hwcap & PPC_FEATURE_HAS_ALTIVEC);
+#else
+  return (getauxval(AT_HWCAP) & PPC_FEATURE_HAS_ALTIVEC);
+#endif
+}
 EOF
         if try $CC -c $CFLAGS -maltivec $test.c; then
             HAVE_VMX=1
@@ -1336,8 +1393,19 @@ EOF
 check_power8_intrinsics() {
     # Check whether features needed by POWER8 optimisations are available
     cat > $test.c << EOF
+#ifdef __FreeBSD__
+#include <machine/cpu.h>
+#endif
 #include <sys/auxv.h>
-int main() { return (getauxval(AT_HWCAP2) & PPC_FEATURE2_ARCH_2_07); }
+int main() {
+#ifdef __FreeBSD__
+  unsigned long hwcap;
+  elf_aux_info(AT_HWCAP2, &hwcap, sizeof(hwcap));
+  return (hwcap & PPC_FEATURE2_ARCH_2_07);
+#else
+  return (getauxval(AT_HWCAP2) & PPC_FEATURE2_ARCH_2_07);
+#endif
+}
 EOF
     if test $buildpower8 -eq 1 && try $CC -c $CFLAGS -mcpu=power8 $test.c; then
         HAVE_POWER8_INTRIN=1
@@ -1655,9 +1723,10 @@ case "${ARCH}" in
                 fi
             fi
 
-            if test $forcetzcnt -eq 1; then
-                CFLAGS="${CFLAGS} -DX86_NOCHECK_TZCNT"
-                SFLAGS="${SFLAGS} -DX86_NOCHECK_TZCNT"
+            check_xsave_intrinsics
+
+            if test ${HAVE_XSAVE_INTRIN} -eq 0; then
+                xsaveflag=""
             fi
         fi
     ;;
@@ -2063,6 +2132,7 @@ echo RCFLAGS = $RCFLAGS >> configure.log
 echo RCOBJS = $RCOBJS >> configure.log
 echo STRIP = $STRIP >> configure.log
 echo OBJC = $OBJC >> configure.log
+echo TESTOBJG = $TESTOBJG >> configure.log
 echo PIC_TESTOBJG = $PIC_TESTOBJG >> configure.log
 echo PIC_OBJC = $PIC_OBJC >> configure.log
 echo RANLIB = $RANLIB >> configure.log
@@ -2094,6 +2164,7 @@ echo sse41flag = $sse41flag >> configure.log
 echo sse42flag = $sse42flag >> configure.log
 echo pclmulflag = $pclmulflag >> configure.log
 echo vpclmulflag = $vpclmulflag >> configure.log
+echo xsaveflag = $xsaveflag >> configure.log
 echo acleflag = $acleflag >> configure.log
 echo neonflag = $neonflag >> configure.log
 echo ARCHDIR = ${ARCHDIR} >> configure.log
@@ -2154,6 +2225,7 @@ sed < $SRCDIR/Makefile.in "
 /^SRCDIR *=/s#=.*#=$SRCDIR#
 /^INCLUDES *=/s#=.*#=$INCLUDES#
 /^OBJC *=/s#=.*#= $OBJC#
+/^TESTOBJG *=/s#=.*#= $TESTOBJG#
 /^PIC_TESTOBJG *=/s#=.*#= $PIC_TESTOBJG#
 /^PIC_OBJC *=/s#=.*#= $PIC_OBJC#
 /^all: */s#:.*#: $ALL#
@@ -2231,6 +2303,7 @@ sed < $SRCDIR/$ARCHDIR/Makefile.in "
 /^SSE42FLAG *=/s#=.*#=$sse42flag#
 /^PCLMULFLAG *=/s#=.*#=$pclmulflag#
 /^VPCLMULFLAG *=/s#=.*#=$vpclmulflag#
+/^XSAVEFLAG *=/s#=.*#=$xsaveflag#
 /^ACLEFLAG *=/s#=.*#=$acleflag#
 /^NEONFLAG *=/s#=.*#=$neonflag#
 /^NOLTOFLAG *=/s#=.*#=$noltoflag#

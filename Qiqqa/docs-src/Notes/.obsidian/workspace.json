@@ -8,85 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ac5cc1a7f1940827",
+            "id": "31677cb4444adc27",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Progress in Development/Considering the Way Forward/Database Design/Storing a wide range of date+time-stamps of arbitrary precision in a 64-bit number.md",
+                "file": "How to build Qiqqa from source.md",
                 "mode": "source",
                 "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e83d96325cd3d576",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Progress in Development/Considering the Way Forward/Full Text Search - Exit Lucene.NET, Enter SOLR/trigrams etc - considering the relevant atomic search unit.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5e768179084c84cb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technology/Odds 'n' Ends/PDFs in the Wild/Testing - Nasty URLs for PDFs.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b273b9a128e100a6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technology/Odds 'n' Ends/Filesystems - caveat emptor - and then I thought NTFS was a little nasty.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b9acb01c066f0974",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Progress in Development/Testing & Evaluating/Collected RAW logbook notes - PDF bulktest + mutool_ex PDF + URL tests/notes 016-of-N.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "88fad475b0ef9cb2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Progress in Development/Testing & Evaluating/Collected RAW logbook notes - PDF bulktest + mutool_ex PDF + URL tests/notes 017-of-N.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "source": true
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -115,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "LPT",
+                "query": "eternaltime",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -140,12 +74,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 559
+    "width": 678.4999961853027
   },
   "right": {
     "id": "0f91d8b06be635fe",
@@ -161,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technology/Odds 'n' Ends/Filesystems - caveat emptor - and then I thought NTFS was a little nasty.md",
+                "file": "How to build Qiqqa from source.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -178,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technology/Odds 'n' Ends/Filesystems - caveat emptor - and then I thought NTFS was a little nasty.md",
+                "file": "How to build Qiqqa from source.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -201,11 +134,24 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technology/Odds 'n' Ends/Filesystems - caveat emptor - and then I thought NTFS was a little nasty.md"
+                "file": "How to build Qiqqa from source.md"
+              }
+            }
+          },
+          {
+            "id": "7f82a790e564a24e",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -213,9 +159,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "ava:Ava": false,
-      "ava:Ava - Show Links": false,
-      "ava:Ava - Open Rewrite Playground": false,
       "omnisearch:Omnisearch": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "markdown-table-editor:Open Markdown Table Editor": false,
@@ -231,40 +174,53 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "b273b9a128e100a6",
+  "active": "31677cb4444adc27",
   "lastOpenFiles": [
-    "Progress in Development/Testing & Evaluating/Collected RAW logbook notes - PDF bulktest + mutool_ex PDF + URL tests/notes 017-of-N.md",
-    "Progress in Development/Testing & Evaluating/PDF `bulktest` test run notes at the bleeding edge.md",
-    "Progress in Development/Considering the Way Forward/vcopy - a dedicated tool for local and cloud synchronization of Qiqqa libraries.md",
-    "Progress in Development/Considering the Way Forward/Fingerprinting Documents/Fingerprinting - moving forward and away from b0rked SHA1.md",
-    "Technology/Odds 'n' Ends/PDFs in the Wild/Testing - Nasty URLs for PDFs.md",
-    "Progress in Development/Considering the Way Forward/Full Text Search - Exit Lucene.NET, Enter SOLR/trigrams etc - considering the relevant atomic search unit.md",
-    "Progress in Development/Considering the Way Forward/Full Text Search - Exit Lucene.NET, Enter SOLR/Detecting near-duplicate articles.md",
-    "Progress in Development/Considering the Way Forward/Database Design/Storing a wide range of date+time-stamps of arbitrary precision in a 64-bit number.md",
-    "Progress in Development/Testing & Evaluating/Collected RAW logbook notes - PDF bulktest + mutool_ex PDF + URL tests/notes 016-of-N.md",
-    "Technology/Odds 'n' Ends/Filesystems - caveat emptor - and then I thought NTFS was a little nasty.md",
+    "Technology/Odds 'n' Ends/libglob - does not fare well when traversing non-Unicode-legal filenames.md",
+    "Technology/Odds 'n' Ends/Unicode - useful arrows.md",
+    "Technology/Odds 'n' Ends/Linux - hitting Ctrl-C on a mv or cp command can leave a partial,b0rked destination file.md",
     "Technology/Odds 'n' Ends/File copy oddities observed elsewhere - stuff to be reckoned with.md",
-    "Progress in Development/Considering the Way Forward/IPC/Considering IPC methods - HTTP vs WebSocket, Pipe, etc.md",
-    "Progress in Development/Considering the Way Forward/assets/wavedrom11.png",
-    "Progress in Development/Considering the Way Forward/Document OCR & Text Extraction/Unexpected Hurdles Producing Decent Text And Images From PDF Documents.md",
-    "Progress in Development/Considering the Way Forward/Full Text Search - Exit Lucene.NET, Enter SOLR/Why it might be smart to treat 64-bit document id integer as a 63-bit one instead.md",
-    "Progress in Development/Considering the Way Forward/Full Text Search - Exit Lucene.NET, Enter SOLR/Can and should we use our BLAKE3+BASE58X based unique identifier as unique document id.md",
-    "Progress in Development/Testing & Evaluating/Collected RAW logbook notes - PDF bulktest + mutool_ex PDF + URL tests/notes 015-of-N.md",
+    "Technology/Odds 'n' Ends/How to check for bad sectors on an old drive.md",
+    "Technology/Odds 'n' Ends/Linux - mount all drives at once.md",
+    "Technology/Odds 'n' Ends/Filesystems - caveat emptor - and then I thought NTFS was a little nasty.md",
+    "Technology/Odds 'n' Ends/Writing documentation - which tools and pipeline to use.md",
+    "Progress in Development/Testing & Evaluating/Collected RAW logbook notes - PDF bulktest + mutool_ex PDF + URL tests/notes 019-of-N.md",
+    "Progress in Development/Testing & Evaluating/Collected RAW logbook notes - PDF bulktest + mutool_ex PDF + URL tests/notes 018-of-N.md",
+    "Progress in Development/Testing & Evaluating/Collected RAW logbook notes - PDF bulktest + mutool_ex PDF + URL tests/Pasted image 20240227174308.png",
+    "Progress in Development/Testing & Evaluating/Collected RAW logbook notes - PDF bulktest + mutool_ex PDF + URL tests/notes 017-of-N.md",
+    "Progress in Development/Testing & Evaluating/Collected RAW logbook notes - PDF bulktest + mutool_ex PDF + URL tests/notes 001-of-N.md",
+    "Progress in Development/Considering the Way Forward/Database Design/Database Normalization vs storing document trees and graphs.md",
+    "Progress in Development/Considering the Way Forward/Database Design/Old single-table NoSQL-like vs. new - what's speaking against going Boyce-Codd on this one.md",
     "Progress in Development/Considering the Way Forward/Database Design/Document metadata - flattened table or what.md",
-    "Progress in Development/Considering the Way Forward/Specific Tools and Tasks to Research and Produce for Cross-platform Qiqqa.md",
-    "Progress in Development/Considering the Way Forward/MiddleWare/MiddleWare - Exporting Metadata to XYZ.md",
-    "Metadata Extraction/Inferring Author, Title, DOI, etc from Content.md",
-    "Processing other document types/HTML.md",
-    "Metadata Extraction/Obtaining Author, Title, DOI, etc.md",
-    "FAQ/Where do my Qiqqa binaries look for the MuPDF+tesseract+misc tools.md",
-    "Aside/How to attach raw data to a PDF.md",
-    "Aside/The World of Data Extraction and Re-use/PDFs Considered Harmful.md",
-    "Aside/The World of Data Extraction and Re-use/PDF Reading, Annotating and Content Extraction.md",
-    "assets/kraus-cpu.webp",
-    "assets/kraus1.webp",
-    "Progress in Development/Considering the Way Forward/Synchronization & Updates",
-    "assets/enable_ntfs.png",
-    "assets/gpedit-path260.png",
-    "Technology/Developers - Known build issues"
+    "Progress in Development/Considering the Way Forward/Database Design/Storing a wide range of date+time-stamps of arbitrary precision in a 64-bit number.md",
+    "assets/tesseract-workflow-diagram.svg",
+    "assets/tesseract-workflow-diagram.pikchr",
+    "Progress in Development/Considering the Way Forward/assets/wavedrom16.png",
+    "Progress in Development/Considering the Way Forward/assets/wavedrom15.png",
+    "Progress in Development/Considering the Way Forward/Text Processing - Full Text Search, Categorization-Clustering, etc/Full Text Search - Enter SOLR/Using and Tuning SOLR as a better replacement for current (old) Lucene.NET.md",
+    "Progress in Development/Considering the Way Forward/Text Processing - Full Text Search, Categorization-Clustering, etc/Full Text Search - Enter SOLR/Why it might be smart to treat 64-bit document id integer as a 63-bit one instead.md",
+    "Progress in Development/Considering the Way Forward/Text Processing - Full Text Search, Categorization-Clustering, etc/Full Text Search - Enter SOLR/Using n-grams - folding N-grams and attributes into trigrams (for N ≧ 4).md",
+    "Progress in Development/Considering the Way Forward/Text Processing - Full Text Search, Categorization-Clustering, etc/Full Text Search - Enter SOLR/Number.MAX_SAFE_INTEGER.md",
+    "Progress in Development/Considering the Way Forward/Text Processing - Full Text Search, Categorization-Clustering, etc/Full Text Search - Enter SOLR/trigrams etc - considering the relevant atomic search unit.md",
+    "Progress in Development/Considering the Way Forward/Text Processing - Full Text Search, Categorization-Clustering, etc/Full Text Search - Enter SOLR/Making SOLR highlighting work for us.md",
+    "Progress in Development/Considering the Way Forward/Text Processing - Full Text Search, Categorization-Clustering, etc/Full Text Search - Enter SOLR/Initial Research Into SOLR - What To Do And Reckon With.md",
+    "Progress in Development/Considering the Way Forward/Text Processing - Full Text Search, Categorization-Clustering, etc/Full Text Search - Enter SOLR/Highlighting matches in SOLR.md",
+    "Progress in Development/Considering the Way Forward/Text Processing - Full Text Search, Categorization-Clustering, etc/Full Text Search - Enter SOLR/Full-Text Search Engines.md",
+    "Progress in Development/Considering the Way Forward/Text Processing - Full Text Search, Categorization-Clustering, etc/Full Text Search - Enter SOLR/Feeding data and metadata to SOLR.md",
+    "Progress in Development/Considering the Way Forward/Text Processing - Full Text Search, Categorization-Clustering, etc/Full Text Search - Enter SOLR",
+    "Progress in Development/Considering the Way Forward/Installing the software",
+    "assets/install-qiqqa-sequence-setup-v82.7.psd",
+    "assets/install-qiqqa-sequence-setup-v82.7.png",
+    "assets/install-qiqqa-sequence-setup-v82.27.png",
+    "assets/install-qiqqa-sequence-setup-v82.16.psd",
+    "assets/install-qiqqa-sequence-setup-v82.16.png",
+    "assets/install-qiqqa-sequence-setup-v82.14.psd",
+    "assets/install-qiqqa-sequence-setup-v82.14.png",
+    "assets/install-qiqqa-sequence-setup-v82.12.psd",
+    "assets/install-qiqqa-sequence-setup-v82.12.png",
+    "assets/install-qiqqa-sequence-setup-v82.10.psd",
+    "assets/install-qiqqa-sequence-setup-v82.10.png",
+    "assets/install-qiqqa-sequence-explorer_1.psd",
+    "assets/chrome_downloading_an_executable_installer.psd"
   ]
 }

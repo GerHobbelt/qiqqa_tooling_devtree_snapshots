@@ -69,41 +69,23 @@
     <Filter Include="Misc Files\source\liblocate">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0019}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\source\tests">
+    <Filter Include="Resource Files">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0020}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\source\tests\cpplocate-test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\source\tests\liblocate-test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files">
+    <Filter Include="Source Files\source">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\source">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0026}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\source\cpplocate">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\source\cpplocate\source">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\source\liblocate">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\source\liblocate\source">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\source\tests">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0030}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\source\tests\cpplocate-test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0029}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\source\tests\liblocate-test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0031}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -115,21 +97,6 @@
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/cpplocate/source/liblocate/source/utils.c">
       <Filter>Source Files\source\liblocate\source</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/cpplocate/source/tests/cpplocate-test/cpplocate_test.cpp">
-      <Filter>Source Files\source\tests\cpplocate-test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/cpplocate/source/tests/cpplocate-test/main.cpp">
-      <Filter>Source Files\source\tests\cpplocate-test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/cpplocate/source/tests/liblocate-test/liblocate_test.cpp">
-      <Filter>Source Files\source\tests\liblocate-test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/cpplocate/source/tests/liblocate-test/main.cpp">
-      <Filter>Source Files\source\tests\liblocate-test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/cpplocate/source/tests/liblocate-test/utils_test.cpp">
-      <Filter>Source Files\source\tests\liblocate-test</Filter>
     </ClCompile>
     <ClInclude Include="../../thirdparty/owemdjee/cpplocate/source/cpplocate/include/cpplocate/cpplocate.h">
       <Filter>Header Files\source\cpplocate\include\cpplocate</Filter>
@@ -143,7 +110,13 @@
     <Image Include="../../thirdparty/owemdjee/cpplocate/cpplocate-logo.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Text Include="../../thirdparty/owemdjee/cpplocate/AUTHORS">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/cpplocate/CMakeLists.txt">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/cpplocate/LICENSE">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/cpplocate/README.md">
@@ -203,6 +176,9 @@
     <Text Include="../../thirdparty/owemdjee/cpplocate/cpplocate-config.cmake">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/cpplocate/cpplocate-logo.svg">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/cpplocate/deploy/CMakeLists.txt">
       <Filter>Misc Files\deploy</Filter>
     </Text>
@@ -241,15 +217,6 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/cpplocate/source/liblocate/CMakeLists.txt">
       <Filter>Misc Files\source\liblocate</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/cpplocate/source/tests/CMakeLists.txt">
-      <Filter>Misc Files\source\tests</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/cpplocate/source/tests/cpplocate-test/CMakeLists.txt">
-      <Filter>Misc Files\source\tests\cpplocate-test</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/cpplocate/source/tests/liblocate-test/CMakeLists.txt">
-      <Filter>Misc Files\source\tests\liblocate-test</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/cpplocate/source/version.h.in">
       <Filter>Misc Files\source</Filter>

@@ -86,7 +86,13 @@
     <Text Include="../../thirdparty/owemdjee/argparse/CONTRIBUTING.md">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/argparse/LICENSE">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/argparse/README.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/argparse/clang_format.bash">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/argparse/conanfile.py">
@@ -103,6 +109,9 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/argparse/tools/build.sh">
       <Filter>Misc Files\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/argparse/xmake.lua">
+      <Filter>Misc Files</Filter>
     </Text>
   </ItemGroup>
 </Project>

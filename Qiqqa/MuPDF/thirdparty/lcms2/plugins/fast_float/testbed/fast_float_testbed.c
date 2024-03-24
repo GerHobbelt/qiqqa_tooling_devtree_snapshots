@@ -29,6 +29,9 @@
 #    include "crtdbg.h"
 #endif
 
+#include "monolithic_examples.h"
+
+
 #ifndef PROFILES_DIR
 #define PROFILES_DIR "../../test_profiles/"
 #endif
@@ -375,7 +378,7 @@ void Check15bitMacros(void)
        trace("ok\n");
 }
 
-// Do an in-depth test by checking all RGB cube of 8 bits, going from profilein to profileout.
+// Do an in-depth test by checking all RGB cube of 8 bits, going from profileIn to profileOut.
 // Results should be same except for 2 contone levels allowed for roundoff. Note 15 bits is more
 // precise than 8 bits and this is a source of discrepancies. Cache is disabled
 static
@@ -551,7 +554,7 @@ void CheckAccuracy16Bits(cmsContext Raw, cmsContext Plugin)
 
 // Try values that are denormalized, not-a-number and out of range
 static
-void CheckUncommonValues(cmsHPROFILE hlcmsProfileIn, cmsHPROFILE hlcmsProfileOut, cmsInt32Number Intent)
+void CheckUncommonValues(cmsContext ContextID, cmsHPROFILE hlcmsProfileIn, cmsHPROFILE hlcmsProfileOut, cmsInt32Number Intent)
 {
     union
     {
@@ -567,14 +570,14 @@ void CheckUncommonValues(cmsHPROFILE hlcmsProfileIn, cmsHPROFILE hlcmsProfileOut
 
     cmsContext Plugin = cmsCreateContext(cmsFastFloatExtensions(), NULL);
 
-    cmsHTRANSFORM xformPlugin = cmsCreateTransformTHR(Plugin, hlcmsProfileIn, TYPE_RGB_FLT, hlcmsProfileOut, TYPE_RGB_FLT, Intent, 0);
+    cmsHTRANSFORM xformPlugin = cmsCreateTransform(Plugin, hlcmsProfileIn, TYPE_RGB_FLT, hlcmsProfileOut, TYPE_RGB_FLT, Intent, 0);
 
 
     sub_pos.Int = 0x00000002;
     sub_neg.Int = 0x80000002;
 
-    cmsCloseProfile(hlcmsProfileIn);
-    cmsCloseProfile(hlcmsProfileOut);
+    cmsCloseProfile(ContextID, hlcmsProfileIn);
+    cmsCloseProfile(ContextID, hlcmsProfileOut);
 
     if (xformPlugin == NULL) {
 
@@ -592,7 +595,7 @@ void CheckUncommonValues(cmsHPROFILE hlcmsProfileIn, cmsHPROFILE hlcmsProfileOut
         bufferIn[i].b = i / 60.0f - 0.5f;
     }
 
-    cmsDoTransform(xformPlugin, bufferIn, bufferPluginOut, npixels);
+    cmsDoTransform(Plugin, xformPlugin, bufferIn, bufferPluginOut, npixels);
 
 
     bufferIn[0].r = NAN;
@@ -611,19 +614,19 @@ void CheckUncommonValues(cmsHPROFILE hlcmsProfileIn, cmsHPROFILE hlcmsProfileOut
     bufferIn[3].g = sub_neg.subnormal;
     bufferIn[3].b = sub_neg.subnormal;
 
-    cmsDoTransform(xformPlugin, bufferIn, bufferPluginOut, 4);
+    cmsDoTransform(Plugin, xformPlugin, bufferIn, bufferPluginOut, 4);
 
     free(bufferIn);
     free(bufferPluginOut);
 
-    cmsDeleteTransform(xformPlugin);
+    cmsDeleteTransform(Plugin, xformPlugin);
 
     cmsDeleteContext(Plugin);
 }
 
 
 static
-void lab8toLab(cmsUInt8Number lab8[3], cmsCIELab* Lab)
+void lab8toLab(cmsContext ContextID, cmsUInt8Number lab8[3], cmsCIELab* Lab)
 {
     cmsUInt16Number lab16[3];
 
@@ -631,7 +634,7 @@ void lab8toLab(cmsUInt8Number lab8[3], cmsCIELab* Lab)
     lab16[1] = FROM_8_TO_16(lab8[1]);
     lab16[2] = FROM_8_TO_16(lab8[2]);
 
-    cmsLabEncoded2Float(Lab, lab16);
+    cmsLabEncoded2Float(ContextID, Lab, lab16);
 }
 
 static
@@ -640,15 +643,15 @@ void CheckToEncodedLab(void)
     cmsContext Plugin = cmsCreateContext(cmsFastFloatExtensions(), NULL);
     cmsContext Raw = cmsCreateContext(NULL, NULL);
 
-    cmsHPROFILE hsRGB = cmsCreate_sRGBProfile();
-    cmsHPROFILE hLab = cmsCreateLab4Profile(NULL);
+    cmsHPROFILE hsRGB = cmsCreate_sRGBProfile(Raw);
+    cmsHPROFILE hLab = cmsCreateLab4Profile(Raw, NULL);
 
-    cmsHTRANSFORM xform_plugin = cmsCreateTransformTHR(Plugin, hsRGB, TYPE_RGB_8, hLab, TYPE_Lab_8, INTENT_PERCEPTUAL, 0);
-    cmsHTRANSFORM xform = cmsCreateTransformTHR(Raw, hsRGB, TYPE_RGB_8, hLab, TYPE_Lab_8, INTENT_PERCEPTUAL, 0);
+    cmsHTRANSFORM xform_plugin = cmsCreateTransform(Plugin, hsRGB, TYPE_RGB_8, hLab, TYPE_Lab_8, INTENT_PERCEPTUAL, 0);
+    cmsHTRANSFORM xform = cmsCreateTransform(Raw, hsRGB, TYPE_RGB_8, hLab, TYPE_Lab_8, INTENT_PERCEPTUAL, 0);
 
     int r, g, b;
     cmsCIELab Lab1, Lab2;
-    cmsUInt8Number rgb[3], lab1[3], lab2[3];    
+    cmsUInt8Number rgb[3], lab1[3], lab2[3];
     double err;
 
     for (r=0; r < 256; r += 5)
@@ -657,23 +660,23 @@ void CheckToEncodedLab(void)
             {
                 rgb[0] = (cmsUInt8Number) r; rgb[1] = (cmsUInt8Number) g; rgb[2] = (cmsUInt8Number) b;
 
-                cmsDoTransform(xform_plugin, rgb, lab1, 1);
-                cmsDoTransform(xform, rgb, lab2, 1);
-                
-                lab8toLab(lab1, &Lab1);
-                lab8toLab(lab2, &Lab2);
-                
-                err = cmsDeltaE(&Lab1, &Lab2);
+                cmsDoTransform(Plugin, xform_plugin, rgb, lab1, 1);
+                cmsDoTransform(Raw, xform, rgb, lab2, 1);
+
+                lab8toLab(Raw, lab1, &Lab1);
+                lab8toLab(Raw, lab2, &Lab2);
+
+                err = cmsDeltaE(Raw, &Lab1, &Lab2);
                 if (err > 0.1)
                 {
                     trace("Error on lab encoded (%f, %f, %f) <> (% f, % f, % f)\n",
-                        Lab1.L, Lab1.a, Lab1.b, Lab2.L, Lab2.a, Lab2.b);                   
+                        Lab1.L, Lab1.a, Lab1.b, Lab2.L, Lab2.a, Lab2.b);
                 }
             }
 
 
-    cmsDeleteTransform(xform); cmsDeleteTransform(xform_plugin);
-    cmsCloseProfile(hsRGB); cmsCloseProfile(hLab);
+    cmsDeleteTransform(Raw, xform); cmsDeleteTransform(Plugin, xform_plugin);
+    cmsCloseProfile(Raw, hsRGB); cmsCloseProfile(Raw, hLab);
     cmsDeleteContext(Raw);
     cmsDeleteContext(Plugin);
 
@@ -686,11 +689,11 @@ void CheckToFloatLab(void)
     cmsContext Plugin = cmsCreateContext(cmsFastFloatExtensions(), NULL);
     cmsContext Raw = cmsCreateContext(NULL, NULL);
 
-    cmsHPROFILE hsRGB = cmsCreate_sRGBProfile();
-    cmsHPROFILE hLab = cmsCreateLab4Profile(NULL);
+    cmsHPROFILE hsRGB = cmsCreate_sRGBProfile(Raw);
+    cmsHPROFILE hLab = cmsCreateLab4Profile(Raw, NULL);
 
-    cmsHTRANSFORM xform_plugin = cmsCreateTransformTHR(Plugin, hsRGB, TYPE_RGB_8, hLab, TYPE_Lab_DBL, INTENT_PERCEPTUAL, 0);
-    cmsHTRANSFORM xform = cmsCreateTransformTHR(Raw, hsRGB, TYPE_RGB_8, hLab, TYPE_Lab_DBL, INTENT_PERCEPTUAL, 0);
+    cmsHTRANSFORM xform_plugin = cmsCreateTransform(Plugin, hsRGB, TYPE_RGB_8, hLab, TYPE_Lab_DBL, INTENT_PERCEPTUAL, 0);
+    cmsHTRANSFORM xform = cmsCreateTransform(Raw, hsRGB, TYPE_RGB_8, hLab, TYPE_Lab_DBL, INTENT_PERCEPTUAL, 0);
 
     int r, g, b;
     cmsCIELab Lab1, Lab2;
@@ -703,10 +706,10 @@ void CheckToFloatLab(void)
             {
                 rgb[0] = (cmsUInt8Number)r; rgb[1] = (cmsUInt8Number)g; rgb[2] = (cmsUInt8Number)b;
 
-                cmsDoTransform(xform_plugin, rgb, &Lab1, 1);
-                cmsDoTransform(xform, rgb, &Lab2, 1);
-                
-                err = cmsDeltaE(&Lab1, &Lab2);
+                cmsDoTransform(Plugin, xform_plugin, rgb, &Lab1, 1);
+                cmsDoTransform(Raw, xform, rgb, &Lab2, 1);
+
+                err = cmsDeltaE(Raw, &Lab1, &Lab2);
                 if (err > 0.1)
                 {
                     trace("Error on lab encoded (%f, %f, %f) <> (% f, % f, % f)\n",
@@ -715,8 +718,8 @@ void CheckToFloatLab(void)
             }
 
 
-    cmsDeleteTransform(xform); cmsDeleteTransform(xform_plugin);
-    cmsCloseProfile(hsRGB); cmsCloseProfile(hLab);
+    cmsDeleteTransform(Raw, xform); cmsDeleteTransform(Plugin, xform_plugin);
+    cmsCloseProfile(Raw, hsRGB); cmsCloseProfile(Raw, hLab);
     cmsDeleteContext(Raw);
     cmsDeleteContext(Plugin);
 
@@ -730,11 +733,11 @@ void CheckFloatToFloatLab(void)
     cmsContext Plugin = cmsCreateContext(cmsFastFloatExtensions(), NULL);
     cmsContext Raw = cmsCreateContext(NULL, NULL);
 
-    cmsHPROFILE hsRGB = cmsCreate_sRGBProfile();
-    cmsHPROFILE hLab = cmsCreateLab4Profile(NULL);
+    cmsHPROFILE hsRGB = cmsCreate_sRGBProfile(Raw);
+    cmsHPROFILE hLab = cmsCreateLab4Profile(Raw, NULL);
 
-    cmsHTRANSFORM xform_plugin = cmsCreateTransformTHR(Plugin, hsRGB, TYPE_RGB_FLT, hLab, TYPE_Lab_FLT, INTENT_PERCEPTUAL, 0);
-    cmsHTRANSFORM xform = cmsCreateTransformTHR(Raw, hsRGB, TYPE_RGB_FLT, hLab, TYPE_Lab_FLT, INTENT_PERCEPTUAL, 0);
+    cmsHTRANSFORM xform_plugin = cmsCreateTransform(Plugin, hsRGB, TYPE_RGB_FLT, hLab, TYPE_Lab_FLT, INTENT_PERCEPTUAL, 0);
+    cmsHTRANSFORM xform = cmsCreateTransform(Raw, hsRGB, TYPE_RGB_FLT, hLab, TYPE_Lab_FLT, INTENT_PERCEPTUAL, 0);
 
     int r, g, b;
     cmsCIELab Lab1, Lab2;
@@ -751,12 +754,12 @@ void CheckFloatToFloatLab(void)
                 rgb[1] = (cmsFloat32Number)g / 255.0f;
                 rgb[2] = (cmsFloat32Number)b / 255.0f;
 
-                cmsDoTransform(xform_plugin, rgb, Lab, 1);
+                cmsDoTransform(Plugin, xform_plugin, rgb, Lab, 1);
                 Lab1.L = Lab[0]; Lab1.a = Lab[1]; Lab1.b = Lab[2];
-                cmsDoTransform(xform, rgb, Lab, 1);
+                cmsDoTransform(Raw, xform, rgb, Lab, 1);
                 Lab2.L = Lab[0]; Lab2.a = Lab[1]; Lab2.b = Lab[2];
 
-                err = cmsDeltaE(&Lab1, &Lab2);
+                err = cmsDeltaE(Raw, &Lab1, &Lab2);
                 if (err > 0.5)
                 {
                     trace("Error on lab encoded (%f, %f, %f) <> (% f, % f, % f)\n",
@@ -765,8 +768,8 @@ void CheckFloatToFloatLab(void)
             }
 
 
-    cmsDeleteTransform(xform); cmsDeleteTransform(xform_plugin);
-    cmsCloseProfile(hsRGB); cmsCloseProfile(hLab);
+    cmsDeleteTransform(Raw, xform); cmsDeleteTransform(Plugin, xform_plugin);
+    cmsCloseProfile(Raw, hsRGB); cmsCloseProfile(Raw, hLab);
     cmsDeleteContext(Raw);
     cmsDeleteContext(Plugin);
 
@@ -783,7 +786,7 @@ cmsBool ValidFloat(cmsFloat32Number a, cmsFloat32Number b)
        return fabsf(a-b) < EPSILON_FLOAT_TESTS;
 }
 
-// Do an in-depth test by checking all RGB cube of 8 bits, going from profilein to profileout.
+// Do an in-depth test by checking all RGB cube of 8 bits, going from profileIn to profileOut.
 // Values with and without optimization are checked (different contexts, one with the plugin and another without)
 // Results should be same except for EPSILON_FLOAT_TESTS allowed for accuracy/speed tradeoff. Cache is disabled
 static
@@ -1121,27 +1124,50 @@ void CheckLab2Roundtrip(cmsContext ContextID)
 
 }
 
+static
+void CheckAlphaDetect(cmsContext ContextID)
+{
+    cmsHPROFILE hsRGB;
+    cmsHTRANSFORM xform;
+
+    cmsSetLogErrorHandler(ContextID, NULL);
+
+    hsRGB = cmsCreate_sRGBProfile(ContextID);
+    
+    xform = cmsCreateTransform(ContextID, hsRGB, TYPE_RGB_FLT, hsRGB, TYPE_RGBA_FLT, INTENT_PERCEPTUAL, cmsFLAGS_COPY_ALPHA);
+    cmsCloseProfile(ContextID, hsRGB);
+
+    if (xform != NULL)
+        Fail("Copy alpha with mismatched channels should not succeed");
+
+    cmsSetLogErrorHandler(ContextID, FatalErrorQuit);
+}
+
 // Convert some known values
 static
-void CheckConversionFloat(void)
+void CheckConversionFloat(cmsContext Raw, cmsContext Plugin)
 {
+    trace("Check alpha detection.");
+    CheckAlphaDetect(Raw);
+    trace("Ok\n");
+
     trace("Crash test.");
-    TryAllValuesFloatAlpha(cmsOpenProfileFromFile(PROFILES_DIR "test5.icc", "r"), cmsOpenProfileFromFile(PROFILES_DIR "test0.icc", "r"), INTENT_PERCEPTUAL, FALSE);
+    TryAllValuesFloatAlpha(Raw, Plugin, cmsOpenProfileFromFile(Raw, PROFILES_DIR "test5.icc", "r"), cmsOpenProfileFromFile(Raw, PROFILES_DIR "test0.icc", "r"), INTENT_PERCEPTUAL, FALSE);
 
     trace("..");
-    TryAllValuesFloatAlpha(cmsOpenProfileFromFile(PROFILES_DIR "test5.icc", "r"), cmsOpenProfileFromFile(PROFILES_DIR "test0.icc", "r"), INTENT_PERCEPTUAL, TRUE);
+    TryAllValuesFloatAlpha(Raw, Plugin, cmsOpenProfileFromFile(Raw, PROFILES_DIR "test5.icc", "r"), cmsOpenProfileFromFile(Raw, PROFILES_DIR "test0.icc", "r"), INTENT_PERCEPTUAL, TRUE);
     trace("Ok\n");
 
     trace("Crash (II) test.");
-    TryAllValuesFloatAlpha(cmsOpenProfileFromFile(PROFILES_DIR "test0.icc", "r"), cmsOpenProfileFromFile(PROFILES_DIR "test0.icc", "r"), INTENT_PERCEPTUAL, FALSE);
+    TryAllValuesFloatAlpha(Raw, Plugin, cmsOpenProfileFromFile(Raw, PROFILES_DIR "test0.icc", "r"), cmsOpenProfileFromFile(Raw, PROFILES_DIR "test0.icc", "r"), INTENT_PERCEPTUAL, FALSE);
     trace("..");
-    TryAllValuesFloatAlpha(cmsOpenProfileFromFile(PROFILES_DIR "test0.icc", "r"), cmsOpenProfileFromFile(PROFILES_DIR "test0.icc", "r"), INTENT_PERCEPTUAL, TRUE);
+    TryAllValuesFloatAlpha(Raw, Plugin, cmsOpenProfileFromFile(Raw, PROFILES_DIR "test0.icc", "r"), cmsOpenProfileFromFile(Raw, PROFILES_DIR "test0.icc", "r"), INTENT_PERCEPTUAL, TRUE);
     trace("Ok\n");
 
     trace("Crash (III) test.");
-    CheckUncommonValues(cmsOpenProfileFromFile(PROFILES_DIR "test5.icc", "r"), cmsOpenProfileFromFile(PROFILES_DIR "test3.icc", "r"), INTENT_PERCEPTUAL);
+    CheckUncommonValues(Raw, cmsOpenProfileFromFile(Raw, PROFILES_DIR "test5.icc", "r"), cmsOpenProfileFromFile(Raw, PROFILES_DIR "test3.icc", "r"), INTENT_PERCEPTUAL);
     trace("..");
-    CheckUncommonValues(cmsOpenProfileFromFile(PROFILES_DIR "test5.icc", "r"), cmsOpenProfileFromFile(PROFILES_DIR "test0.icc", "r"), INTENT_PERCEPTUAL);
+    CheckUncommonValues(Raw, cmsOpenProfileFromFile(Raw, PROFILES_DIR "test5.icc", "r"), cmsOpenProfileFromFile(Raw, PROFILES_DIR "test0.icc", "r"), INTENT_PERCEPTUAL);
     trace("Ok\n");
 
     trace("Checking conversion to Lab...");
@@ -1152,19 +1178,21 @@ void CheckConversionFloat(void)
 
     // Matrix-shaper should be accurate 
     trace("Checking accuracy on Matrix-shaper...");
-    TryAllValuesFloat(cmsOpenProfileFromFile(PROFILES_DIR "test5.icc", "r"), cmsOpenProfileFromFile(PROFILES_DIR "test0.icc", "r"), INTENT_PERCEPTUAL);
+    TryAllValuesFloat(Raw, Plugin, cmsOpenProfileFromFile(Raw, PROFILES_DIR "test5.icc", "r"), cmsOpenProfileFromFile(Raw, PROFILES_DIR "test0.icc", "r"), INTENT_PERCEPTUAL);
     trace("Ok\n");
 
     // CLUT should be as 16 bits or better
     trace("Checking accuracy of CLUT...");
-    TryAllValuesFloatVs16(cmsOpenProfileFromFile(PROFILES_DIR "test5.icc", "r"), cmsOpenProfileFromFile(PROFILES_DIR "test3.icc", "r"), INTENT_PERCEPTUAL);
+    TryAllValuesFloatVs16(Raw, Plugin, cmsOpenProfileFromFile(Raw, PROFILES_DIR "test5.icc", "r"), cmsOpenProfileFromFile(Raw, PROFILES_DIR "test3.icc", "r"), INTENT_PERCEPTUAL);
     trace("Ok\n");
 
     // Same profile should give same values (we test both methods)
     trace("Checking accuracy on same profile ...");
-    TryAllValuesFloatVs16(cmsOpenProfileFromFile(PROFILES_DIR "test0.icc", "r"), cmsOpenProfileFromFile(PROFILES_DIR "test0.icc", "r"), INTENT_PERCEPTUAL);
-    TryAllValuesFloat(cmsOpenProfileFromFile(PROFILES_DIR "test0.icc", "r"), cmsOpenProfileFromFile(PROFILES_DIR "test0.icc", "r"), INTENT_PERCEPTUAL);
+    TryAllValuesFloatVs16(Raw, Plugin, cmsOpenProfileFromFile(Raw, PROFILES_DIR "test0.icc", "r"), cmsOpenProfileFromFile(Raw, PROFILES_DIR "test0.icc", "r"), INTENT_PERCEPTUAL);
+    TryAllValuesFloat(Raw, Plugin, cmsOpenProfileFromFile(Raw, PROFILES_DIR "test0.icc", "r"), cmsOpenProfileFromFile(Raw, PROFILES_DIR "test0.icc", "r"), INTENT_PERCEPTUAL);
     trace("Ok\n");
+
+
 }
 
 
@@ -1188,8 +1216,9 @@ cmsFloat32Number distance(cmsFloat32Number rgb1[], cmsFloat32Number rgb2[])
 static
 void CheckLab2RGB(cmsContext plugin)
 {
-    cmsHPROFILE hLab = cmsCreateLab4Profile(plugin);
+    cmsHPROFILE hLab = cmsCreateLab4Profile(plugin, NULL);
     cmsHPROFILE hRGB = cmsOpenProfileFromFile(plugin, PROFILES_DIR "test3.icc", "r");
+
     cmsContext noPlugin = cmsCreateContext(0, 0);
 
     cmsHTRANSFORM hXformNoPlugin = cmsCreateTransform(noPlugin, hLab, TYPE_Lab_FLT, hRGB, TYPE_RGB_FLT, INTENT_RELATIVE_COLORIMETRIC, cmsFLAGS_NOCACHE);
@@ -1200,8 +1229,8 @@ void CheckLab2RGB(cmsContext plugin)
     cmsFloat32Number maxInside = 0, maxOutside = 0, L, a, b;
 
     trace("Checking Lab -> RGB...");
-    cmsCloseProfile(hLab);
-    cmsCloseProfile(hRGB);
+    cmsCloseProfile(plugin, hLab);
+    cmsCloseProfile(plugin, hRGB);
 
     for (L = 4; L <= 100; L++)
     {
@@ -1211,8 +1240,8 @@ void CheckLab2RGB(cmsContext plugin)
                 cmsFloat32Number d;
 
                 Lab[0] = L; Lab[1] = a; Lab[2] = b;
-                cmsDoTransform(hXformNoPlugin, Lab, RGB, 1);
-                cmsDoTransform(hXformPlugin, Lab, RGB2, 1);
+                cmsDoTransform(noPlugin, hXformNoPlugin, Lab, RGB, 1);
+                cmsDoTransform(plugin, hXformPlugin, Lab, RGB2, 1);
 
                 d = distance(RGB, RGB2);
                 if (d > maxInside)
@@ -1229,8 +1258,8 @@ void CheckLab2RGB(cmsContext plugin)
                 cmsFloat32Number d;
 
                 Lab[0] = L; Lab[1] = a; Lab[2] = b;
-                cmsDoTransform(hXformNoPlugin, Lab, RGB, 1);
-                cmsDoTransform(hXformPlugin, Lab, RGB2, 1);
+                cmsDoTransform(noPlugin, hXformNoPlugin, Lab, RGB, 1);
+                cmsDoTransform(plugin, hXformPlugin, Lab, RGB2, 1);
 
                 d = distance(RGB, RGB2);
                 if (d > maxOutside)
@@ -1242,8 +1271,8 @@ void CheckLab2RGB(cmsContext plugin)
 
     trace("Max distance: Inside gamut %f, Outside gamut %f\n", sqrtf(maxInside), sqrtf(maxOutside));
 
-    cmsDeleteTransform(hXformNoPlugin);
-    cmsDeleteTransform(hXformPlugin);
+    cmsDeleteTransform(noPlugin, hXformNoPlugin);
+    cmsDeleteTransform(plugin, hXformPlugin);
 
     cmsDeleteContext(noPlugin);
 }
@@ -1251,14 +1280,14 @@ void CheckLab2RGB(cmsContext plugin)
 
 
 static
-void CheckSoftProofing(void)
+void CheckSoftProofing(cmsContext plugin)
 {
-    cmsHPROFILE hRGB1 = cmsOpenProfileFromFile(PROFILES_DIR "test5.icc", "r");
-    cmsHPROFILE hRGB2 = cmsOpenProfileFromFile(PROFILES_DIR "test3.icc", "r");
+    cmsHPROFILE hRGB1 = cmsOpenProfileFromFile(plugin, PROFILES_DIR "test5.icc", "r");
+    cmsHPROFILE hRGB2 = cmsOpenProfileFromFile(plugin, PROFILES_DIR "test3.icc", "r");
     cmsContext noPlugin = cmsCreateContext(0, 0);
 
-    cmsHTRANSFORM hXformNoPlugin = cmsCreateProofingTransformTHR(noPlugin, hRGB1, TYPE_RGB_FLT, hRGB1, TYPE_RGB_FLT, hRGB2, INTENT_RELATIVE_COLORIMETRIC, INTENT_RELATIVE_COLORIMETRIC, cmsFLAGS_GAMUTCHECK | cmsFLAGS_SOFTPROOFING);
-    cmsHTRANSFORM hXformPlugin = cmsCreateProofingTransformTHR(0,          hRGB1, TYPE_RGB_FLT, hRGB1, TYPE_RGB_FLT, hRGB2, INTENT_RELATIVE_COLORIMETRIC, INTENT_RELATIVE_COLORIMETRIC, cmsFLAGS_GAMUTCHECK | cmsFLAGS_SOFTPROOFING);
+    cmsHTRANSFORM hXformNoPlugin = cmsCreateProofingTransform(noPlugin, hRGB1, TYPE_RGB_FLT, hRGB1, TYPE_RGB_FLT, hRGB2, INTENT_RELATIVE_COLORIMETRIC, INTENT_RELATIVE_COLORIMETRIC, cmsFLAGS_GAMUTCHECK | cmsFLAGS_SOFTPROOFING);
+    cmsHTRANSFORM hXformPlugin =   cmsCreateProofingTransform(plugin,   hRGB1, TYPE_RGB_FLT, hRGB1, TYPE_RGB_FLT, hRGB2, INTENT_RELATIVE_COLORIMETRIC, INTENT_RELATIVE_COLORIMETRIC, cmsFLAGS_GAMUTCHECK | cmsFLAGS_SOFTPROOFING);
 
     cmsUInt32Number Mb, j, r, g, b;
 
@@ -1268,8 +1297,8 @@ void CheckSoftProofing(void)
 
     trace("Checking soft proofing and gamut check ...");
 
-    cmsCloseProfile(hRGB1);
-    cmsCloseProfile(hRGB2);
+    cmsCloseProfile(plugin, hRGB1);
+    cmsCloseProfile(plugin, hRGB2);
 
     Mb = 256 * 256 * 256 * sizeof(Scanline_rgbFloat);
     In = (Scanline_rgbFloat*)malloc(Mb);
@@ -1290,8 +1319,8 @@ void CheckSoftProofing(void)
             }
 
 
-    cmsDoTransform(hXformNoPlugin, In, Out1, 256 * 256 * 256);
-    cmsDoTransform(hXformPlugin,   In, Out2, 256 * 256 * 256);
+    cmsDoTransform(noPlugin, hXformNoPlugin, In, Out1, 256 * 256 * 256);
+    cmsDoTransform(plugin, hXformPlugin,   In, Out2, 256 * 256 * 256);
 
     j = 0;
     for (r = 0; r < 256; r++)
@@ -1309,8 +1338,8 @@ void CheckSoftProofing(void)
             }
 
     free(In); free(Out1); free(Out2);
-    cmsDeleteTransform(hXformNoPlugin);
-    cmsDeleteTransform(hXformPlugin);
+    cmsDeleteTransform(noPlugin, hXformNoPlugin);
+    cmsDeleteTransform(plugin, hXformPlugin);
 
     cmsDeleteContext(noPlugin);
 
@@ -1342,13 +1371,13 @@ void PerformanceHeader(void)
 
 
 static
-cmsHPROFILE loadProfile(const char* name)
+cmsHPROFILE loadProfile(cmsContext ct, const char* name)
 {
     if (*name == '*')
     {
         if (strcmp(name, "*lab") == 0)
         {
-            return cmsCreateLab4Profile(ct);
+            return cmsCreateLab4Profile(ct, NULL);
         }
         else
             if (strcmp(name, "*xyz") == 0)
@@ -1372,8 +1401,8 @@ cmsHPROFILE loadProfile(const char* name)
 static
 cmsFloat64Number Performance(const char* Title, perf_fn fn, cmsContext ct, const char* inICC, const char* outICC, size_t sz, cmsFloat64Number prev)
 {
-       cmsHPROFILE hlcmsProfileIn = loadProfile(inICC);
-       cmsHPROFILE hlcmsProfileOut = loadProfile(outICC);
+       cmsHPROFILE hlcmsProfileIn = loadProfile(ct, inICC);
+       cmsHPROFILE hlcmsProfileOut = loadProfile(ct, outICC);
 
        cmsFloat64Number n = fn(ct, hlcmsProfileIn, hlcmsProfileOut);
 
@@ -1753,7 +1782,7 @@ cmsFloat64Number SpeedTest16bitsCMYK(cmsContext ContextID, cmsHPROFILE hlcmsProf
 
 
 static
-void SpeedTest8(void)
+void SpeedTest8(cmsContext ct)
 {
     cmsContext noPlugin = cmsCreateContext(0, 0);
 
@@ -1778,10 +1807,10 @@ void SpeedTest8(void)
     fflush(stdout);
 
     PerformanceHeader();
-    Performance("8 bits on CLUT profiles  ", SpeedTest8bitsRGB, 0, PROFILES_DIR "test5.icc", PROFILES_DIR "test3.icc", sizeof(Scanline_rgb8bits), t[0]);
-    Performance("8 bits on Matrix-Shaper  ", SpeedTest8bitsRGB, 0, PROFILES_DIR "test5.icc", PROFILES_DIR "test0.icc", sizeof(Scanline_rgb8bits), t[1]);
-    Performance("8 bits on same MatrixSh  ", SpeedTest8bitsRGB, 0, PROFILES_DIR "test0.icc", PROFILES_DIR "test0.icc", sizeof(Scanline_rgb8bits), t[2]);
-    Performance("8 bits on curves         ", SpeedTest8bitsRGB, 0, "*curves",   "*curves",   sizeof(Scanline_rgb8bits), t[3]);
+    Performance("8 bits on CLUT profiles  ", SpeedTest8bitsRGB, ct, PROFILES_DIR "test5.icc", PROFILES_DIR "test3.icc", sizeof(Scanline_rgb8bits), t[0]);
+    Performance("8 bits on Matrix-Shaper  ", SpeedTest8bitsRGB, ct, PROFILES_DIR "test5.icc", PROFILES_DIR "test0.icc", sizeof(Scanline_rgb8bits), t[1]);
+    Performance("8 bits on same MatrixSh  ", SpeedTest8bitsRGB, ct, PROFILES_DIR "test0.icc", PROFILES_DIR "test0.icc", sizeof(Scanline_rgb8bits), t[2]);
+    Performance("8 bits on curves         ", SpeedTest8bitsRGB, ct, "*curves",   "*curves",   sizeof(Scanline_rgb8bits), t[3]);
 
     cmsDeleteContext(noPlugin);
 }
@@ -1848,7 +1877,7 @@ cmsFloat64Number SpeedTestFloatRGB(cmsContext ct, cmsHPROFILE hlcmsProfileIn, cm
            Fail("Unable to open profiles");
 
 
-       switch (cmsGetColorSpace(hlcmsProfileIn))
+       switch (cmsGetColorSpace(ct, hlcmsProfileIn))
        {
        case cmsSigRgbData: inFormatter = TYPE_RGB_FLT; break;
        case cmsSigLabData: inFormatter = TYPE_Lab_FLT; break;
@@ -1857,7 +1886,7 @@ cmsFloat64Number SpeedTestFloatRGB(cmsContext ct, cmsHPROFILE hlcmsProfileIn, cm
            Fail("Invalid colorspace");
        }
 
-       switch (cmsGetColorSpace(hlcmsProfileOut))
+       switch (cmsGetColorSpace(ct, hlcmsProfileOut))
        {
        case cmsSigRgbData:  outFormatter = TYPE_RGB_FLT; break;
        case cmsSigLabData:  outFormatter = TYPE_Lab_FLT; break;
@@ -1999,12 +2028,12 @@ cmsFloat64Number SpeedTestFloatLab(cmsContext ct, cmsHPROFILE hlcmsProfileIn, cm
         Fail("Unable to open profiles");
 
 
-    if (cmsGetColorSpace(hlcmsProfileIn) != cmsSigLabData)
+    if (cmsGetColorSpace(ct, hlcmsProfileIn) != cmsSigLabData)
     {
         Fail("Invalid colorspace");
     }
 
-    switch (cmsGetColorSpace(hlcmsProfileOut))
+    switch (cmsGetColorSpace(ct, hlcmsProfileOut))
     {
     case cmsSigRgbData:  outFormatter = TYPE_RGB_FLT; break;
     case cmsSigLabData:  outFormatter = TYPE_Lab_FLT; break;
@@ -2014,9 +2043,9 @@ cmsFloat64Number SpeedTestFloatLab(cmsContext ct, cmsHPROFILE hlcmsProfileIn, cm
         Fail("Invalid colorspace");
     }
 
-    hlcmsxform = cmsCreateTransformTHR(ct, hlcmsProfileIn, TYPE_Lab_FLT, hlcmsProfileOut, outFormatter, INTENT_PERCEPTUAL, cmsFLAGS_NOCACHE);
-    cmsCloseProfile(hlcmsProfileIn);
-    cmsCloseProfile(hlcmsProfileOut);
+    hlcmsxform = cmsCreateTransform(ct, hlcmsProfileIn, TYPE_Lab_FLT, hlcmsProfileOut, outFormatter, INTENT_PERCEPTUAL, cmsFLAGS_NOCACHE);
+    cmsCloseProfile(ct, hlcmsProfileIn);
+    cmsCloseProfile(ct, hlcmsProfileOut);
 
     j = 0;
 
@@ -2039,12 +2068,12 @@ cmsFloat64Number SpeedTestFloatLab(cmsContext ct, cmsHPROFILE hlcmsProfileIn, cm
 
     atime = clock();
 
-    cmsDoTransform(hlcmsxform, In, In, size);
+    cmsDoTransform(ct, hlcmsxform, In, In, size);
 
     diff = clock() - atime;
     free(In);
 
-    cmsDeleteTransform(hlcmsxform);
+    cmsDeleteTransform(ct, hlcmsxform);
 
     seconds = (cmsFloat64Number)diff / (cmsFloat64Number)CLOCKS_PER_SEC;
     return ((cmsFloat64Number)size) / (1024.0 * 1024.0 * seconds);
@@ -2055,8 +2084,6 @@ cmsFloat64Number SpeedTestFloatLab(cmsContext ct, cmsHPROFILE hlcmsProfileIn, cm
 static
 void SpeedTestFloat(cmsContext noPlugin, cmsContext plugin)
 {
-       cmsContext noPlugin = cmsCreateContext(0, 0);
-
        cmsFloat64Number t[10] = { 0 };
 
        trace("\n\n");
@@ -2091,8 +2118,6 @@ void SpeedTestFloat(cmsContext noPlugin, cmsContext plugin)
        Performance("Floating point on RGB->XYZ       ", SpeedTestFloatRGB,  plugin, PROFILES_DIR "test3.icc", "*xyz",      sizeof(Scanline_rgbFloat), t[5]);
        Performance("Floating point on CMYK->CMYK     ", SpeedTestFloatCMYK, plugin, PROFILES_DIR "test1.icc", PROFILES_DIR "test2.icc", sizeof(Scanline_cmykFloat), t[6]);
        Performance("Floating point on Lab->RGB       ", SpeedTestFloatLab,  plugin, "*lab",                   PROFILES_DIR "test3.icc", sizeof(Scanline_LabFloat), t[7]);
-
-       cmsDeleteContext(noPlugin);
 }
 
 
@@ -2427,7 +2452,7 @@ void TestGrayTransformPerformance1(cmsContext ct)
 #endif
 
 // The harness test
-int main()
+int main(void)
 {
 
 #ifdef _MSC_VER
@@ -2448,7 +2473,7 @@ int main()
        trace("Installing plug-in ... ");
        cmsPlugin(plugin, cmsFastFloatExtensions());
        trace("done.\n\n");
-
+                      
        CheckComputeIncrements();
 
        // 15 bit functionality
@@ -2465,7 +2490,7 @@ int main()
        CheckChangeFormat(plugin);
 
        // Soft proofing
-       CheckSoftProofing();
+       CheckSoftProofing(plugin);
 
        // Floating point functionality
        CheckConversionFloat(raw, plugin);
@@ -2478,7 +2503,6 @@ int main()
 
        ComparativeFloatVs16bits(raw, plugin);
        ComparativeLineStride8bits(raw, plugin);
-
        // Test gray performance
        trace("\n\n");
        trace("F L O A T   G R A Y   conversions performance.\n");

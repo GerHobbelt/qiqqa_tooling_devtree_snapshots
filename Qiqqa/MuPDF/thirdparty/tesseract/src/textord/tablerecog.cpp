@@ -316,8 +316,8 @@ double StructuredTable::CalculateCellFilledPercentage(unsigned row, unsigned col
 
 #if !GRAPHICS_DISABLED
 
-void StructuredTable::Display(ScrollView *window, ScrollView::Color color) {
-  window->Brush(ScrollView::NONE);
+void StructuredTable::Display(ScrollViewReference &window, Diagnostics::Color color) {
+  window->Brush(Diagnostics::NONE);
   window->Pen(color);
   window->Rectangle(bounding_box_.left(), bounding_box_.bottom(), bounding_box_.right(),
                     bounding_box_.top());
@@ -888,7 +888,6 @@ bool TableRecognizer::FindLinesBoundingBox(TBOX *bounding_box) {
   // The box can only get bigger, increasing area.
   bool changed = true;
   while (changed) {
-    changed = false;
     int old_area = bounding_box->area();
     bool check = FindLinesBoundingBoxIteration(bounding_box);
     // At this point, the function will return true.

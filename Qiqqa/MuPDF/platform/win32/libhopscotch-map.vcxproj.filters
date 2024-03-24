@@ -71,6 +71,9 @@
     <Text Include="../../thirdparty/owemdjee/hopscotch-map/CMakeLists.txt">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/hopscotch-map/LICENSE">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/hopscotch-map/README.md">
       <Filter>Misc Files</Filter>
     </Text>
@@ -82,6 +85,9 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/hopscotch-map/tests/CMakeLists.txt">
       <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/hopscotch-map/tsl-hopscotch-map.natvis">
+      <Filter>Misc Files</Filter>
     </Text>
   </ItemGroup>
 </Project>

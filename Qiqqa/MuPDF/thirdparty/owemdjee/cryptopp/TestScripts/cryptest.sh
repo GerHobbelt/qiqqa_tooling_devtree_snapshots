@@ -1260,6 +1260,7 @@ fi
 ############################################
 # C++ std::min and std::max
 # This is due to Windows.h and NOMINMAX. Linux test fine, while Windows breaks.
+# http://support.microsoft.com/en-us/kb/143208
 if true; then
 
     echo
@@ -1270,18 +1271,32 @@ if true; then
     TEST_LIST+=("C++ std::min and std::max")
     FAILED=0
 
-    # If this fires, then use the library's STDMIN(a,b) or (std::min)(a, b);
+    # If this fires, then use STDMIN(a,b) or (std::min)(a, b);
     COUNT=$(cat ./*.h ./*.cpp | "${GREP}" -v '//' | "${GREP}" -c -E 'std::min[[:space:]]*\(')
     if [[ "$COUNT" -ne 0 ]]; then
         FAILED=1
         echo "FAILED: found std::min" | tee -a "$TEST_RESULTS"
     fi
 
-    # If this fires, then use the library's STDMAX(a,b) or (std::max)(a, b);
+    # If this fires, then use STDMAX(a,b) or (std::max)(a, b);
     COUNT=$(cat ./*.h ./*.cpp | "${GREP}" -v '//' | "${GREP}" -c -E 'std::max[[:space:]]*\(')
     if [[ "$COUNT" -ne 0 ]]; then
         FAILED=1
         echo "FAILED: found std::max" | tee -a "$TEST_RESULTS"
+    fi
+
+    # If this fires, then use STDMIN(a,b) or (std::min)(a, b);
+    COUNT=$(cat ./*.h ./*.cpp | "${GREP}" -v '//' | "${GREP}" -c -E 'std::numeric_limits<.*>::min[[:space:]]*\(')
+    if [[ "$COUNT" -ne 0 ]]; then
+        FAILED=1
+        echo "FAILED: found std::numeric_limits<T>::min" | tee -a "$TEST_RESULTS"
+    fi
+
+    # If this fires, then use STDMAX(a,b) or (std::max)(a, b);
+    COUNT=$(cat ./*.h ./*.cpp | "${GREP}" -v '//' | "${GREP}" -c -E 'std::numeric_limits<.*>::max[[:space:]]*\(')
+    if [[ "$COUNT" -ne 0 ]]; then
+        FAILED=1
+        echo "FAILED: found std::numeric_limits<T>::max" | tee -a "$TEST_RESULTS"
     fi
 
     if [[ ("$FAILED" -eq 0) ]]; then
@@ -1630,7 +1645,7 @@ if [[ ("$HAVE_DISASS" -ne 0 && ("$IS_ARM32" -ne 0 || "$IS_ARM64" -ne 0)) ]]; the
 
         TEST_LIST+=("ARM NEON code generation")
 
-        OBJFILE=aria_simd.o; rm -f "$OBJFILE" 2>/dev/null
+        OBJFILE=chacha_simd.o; rm -f "$OBJFILE" 2>/dev/null
         CXX="${CXX}" CXXFLAGS="$RELEASE_CXXFLAGS" "$MAKE" "${MAKEARGS[@]}" $OBJFILE 2>&1 | tee -a "$TEST_RESULTS"
 
         COUNT=0
@@ -7929,7 +7944,7 @@ fi
 
 ############################################
 # Test latest zip with unzip -a
-if true; then
+if command -v zip &>/dev/null && command -v unzip &>/dev/null; then
 
     if command -v wget &>/dev/null; then
         FETCH_CMD="wget -q -O"
@@ -7939,7 +7954,7 @@ if true; then
         FETCH_CMD="wget-and-curl-not-found"
     fi
 
-    major=8; minor=6; rev=0
+    major=8; minor=9; rev=0
     filebase="cryptopp${major}${minor}${rev}"
     filename="${filebase}.zip"
     url="https://cryptopp.com/${filename}"

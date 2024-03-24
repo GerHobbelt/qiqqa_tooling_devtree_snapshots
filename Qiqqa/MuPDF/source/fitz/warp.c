@@ -317,7 +317,7 @@ fz_warp_pixmap(fz_context *ctx, fz_pixmap *src, const fz_point points[4], int wi
 		return NULL;
 
 	if (width >= (1<<24) || width < 0 || height >= (1<<24) || height < 0)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "Bad width/height");
+		fz_throw(ctx, FZ_ERROR_LIMIT, "Bad width/height");
 
 	dst = fz_new_pixmap(ctx, src->colorspace, width, height,
 			src->seps, src->alpha);
@@ -1190,7 +1190,7 @@ clean(fz_context *ctx, fz_pixmap *src)
 }
 
 #ifndef M_PI
-#    define  M_PI  3.14159265358979323846
+#define M_PI    3.14159265358979323846264338327950
 #endif
 static void
 mark_hough(uint32_t *d, int x, int y, int maxlen, int reduce, int ang)

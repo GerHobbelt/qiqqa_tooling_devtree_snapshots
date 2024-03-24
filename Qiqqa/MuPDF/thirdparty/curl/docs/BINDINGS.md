@@ -96,6 +96,8 @@ Bailiff and Bálint Szilakszi,
 
 [Python](http://pycurl.io/) PycURL by Kjetil Jacobsen
 
+[Python](https://pypi.org/project/pymcurl/) mcurl by Ganesh Viswanathan
+
 [Q](https://q-lang.sourceforge.net/) The libcurl module is part of the default install
 
 [R](https://cran.r-project.org/package=curl)
@@ -111,7 +113,7 @@ Ruby: [curb](https://github.com/taf2/curb) written by Ross Bamford,
 
 [Rust](https://github.com/alexcrichton/curl-rust) curl-rust - by Carl Lerche
 
-[Scheme](http://www.metapaper.net/lisovsky/web/curl/) Bigloo binding by Kirill Lisovsky
+[Scheme](https://www.metapaper.net/lisovsky/web/curl/) Bigloo binding by Kirill Lisovsky
 
 [Scilab](https://help.scilab.org/docs/current/fr_FR/getURL.html) binding by Sylvestre Ledru
 
@@ -124,6 +126,8 @@ Ruby: [curb](https://github.com/taf2/curb) written by Ross Bamford,
 [SPL](https://web.archive.org/web/20210203022158/www.clifford.at/spl/spldoc/curl.html) Written by Clifford Wolf
 
 [Tcl](https://web.archive.org/web/20160826011806/mirror.yellow5.com/tclcurl/) Tclcurl by Andrés García
+
+[Vibe](https://github.com/ttytm/vibe) HTTP requests through libcurl in V
 
 [Visual Basic](https://sourceforge.net/projects/libcurl-vb/) libcurl-vb by Jeffrey Phillips
 

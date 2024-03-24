@@ -48,17 +48,20 @@
     <Filter Include="Misc Files\lib\includes\nghttp3">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0012}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tests">
+    <Filter Include="Misc Files\m4">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0013}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\examples">
+    <Filter Include="Misc Files\tests">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0014}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\lib">
+    <Filter Include="Source Files\examples">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0015}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\tests">
+    <Filter Include="Source Files\lib">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0016}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tests">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0017}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -156,6 +159,9 @@
       <Filter>Source Files\lib</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/nghttp3/lib/nghttp3_version.c">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/nghttp3/lib/sfparse.c">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/nghttp3/tests/main.c">
@@ -278,6 +284,9 @@
     <ClInclude Include="../../thirdparty/owemdjee/nghttp3/lib/nghttp3_vec.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/nghttp3/lib/sfparse.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/nghttp3/tests/nghttp3_conn_test.h">
       <Filter>Header Files\tests</Filter>
     </ClInclude>
@@ -296,6 +305,9 @@
     <ClInclude Include="../../thirdparty/owemdjee/nghttp3/tests/nghttp3_tnode_test.h">
       <Filter>Header Files\tests</Filter>
     </ClInclude>
+    <Text Include="../../thirdparty/owemdjee/nghttp3/AUTHORS">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/nghttp3/CMakeLists.txt">
       <Filter>Misc Files</Filter>
     </Text>
@@ -317,10 +329,13 @@
     <Text Include="../../thirdparty/owemdjee/nghttp3/README.rst">
       <Filter>Misc Files</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/nghttp3/cmake/ExtractValidFlags.cmake">
+    <Text Include="../../thirdparty/owemdjee/nghttp3/cmake/FindCUnit.cmake">
       <Filter>Misc Files\cmake</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/nghttp3/cmake/FindCUnit.cmake">
+    <Text Include="../../thirdparty/owemdjee/nghttp3/cmake/PickyWarningsC.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/nghttp3/cmake/PickyWarningsCXX.cmake">
       <Filter>Misc Files\cmake</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/nghttp3/cmake/Version.cmake">
@@ -382,6 +397,15 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/nghttp3/lib/libnghttp3.pc.in">
       <Filter>Misc Files\lib</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/nghttp3/m4/ax_check_compile_flag.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/nghttp3/m4/ax_cxx_compile_stdcxx.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/nghttp3/makerelease.sh">
+      <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/nghttp3/mkhufftbl.py">
       <Filter>Misc Files</Filter>

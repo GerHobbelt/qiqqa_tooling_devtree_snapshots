@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CMPH_HASHER;CMPH_HASHER_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CMPH_HASHER;CMPH_HASHER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/cmph-hasher/src;../../thirdparty/owemdjee/cmph-hasher;..\..\thirdparty\owemdjee\plf_nanotimer;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/cxxtest_catch_2_gtest/3rd/check/win32/src;../../thirdparty/owemdjee/sparsehash/src;../../thirdparty/owemdjee/sparsehash/src/windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CMPH_HASHER_TESTS;CMPH_HASHER_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/cmph-hasher/src;../../thirdparty/owemdjee/cmph-hasher;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/cxxtest_catch_2_gtest/3rd/check/win32/src;../../thirdparty/owemdjee/sparsehash/src;../../thirdparty/owemdjee/sparsehash/src/windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CMPH_HASHER_TESTS;CMPH_HASHER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CMPH_HASHER;CMPH_HASHER_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CMPH_HASHER;CMPH_HASHER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/cmph-hasher/src;../../thirdparty/owemdjee/cmph-hasher;..\..\thirdparty\owemdjee\plf_nanotimer;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/cxxtest_catch_2_gtest/3rd/check/win32/src;../../thirdparty/owemdjee/sparsehash/src;../../thirdparty/owemdjee/sparsehash/src/windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/cmph-hasher/src;../../thirdparty/owemdjee/cmph-hasher;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/cxxtest_catch_2_gtest/3rd/check/win32/src;../../thirdparty/owemdjee/sparsehash/src;../../thirdparty/owemdjee/sparsehash/src/windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CMPH_HASHER;CMPH_HASHER_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CMPH_HASHER;CMPH_HASHER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/cmph-hasher/src;../../thirdparty/owemdjee/cmph-hasher;..\..\thirdparty\owemdjee\plf_nanotimer;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/cxxtest_catch_2_gtest/3rd/check/win32/src;../../thirdparty/owemdjee/sparsehash/src;../../thirdparty/owemdjee/sparsehash/src/windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CMPH_HASHER_TESTS;CMPH_HASHER_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/cmph-hasher/src;../../thirdparty/owemdjee/cmph-hasher;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/cxxtest_catch_2_gtest/3rd/check/win32/src;../../thirdparty/owemdjee/sparsehash/src;../../thirdparty/owemdjee/sparsehash/src/windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CMPH_HASHER_TESTS;CMPH_HASHER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CMPH_HASHER;CMPH_HASHER_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CMPH_HASHER;CMPH_HASHER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/cmph-hasher/src;../../thirdparty/owemdjee/cmph-hasher;..\..\thirdparty\owemdjee\plf_nanotimer;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/cxxtest_catch_2_gtest/3rd/check/win32/src;../../thirdparty/owemdjee/sparsehash/src;../../thirdparty/owemdjee/sparsehash/src/windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/cmph-hasher/src;../../thirdparty/owemdjee/cmph-hasher;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/cxxtest_catch_2_gtest/3rd/check/win32/src;../../thirdparty/owemdjee/sparsehash/src;../../thirdparty/owemdjee/sparsehash/src/windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CMPH_HASHER;CMPH_HASHER_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CMPH_HASHER;CMPH_HASHER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/cmph-hasher/src;../../thirdparty/owemdjee/cmph-hasher;..\..\thirdparty\owemdjee\plf_nanotimer;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/cxxtest_catch_2_gtest/3rd/check/win32/src;../../thirdparty/owemdjee/sparsehash/src;../../thirdparty/owemdjee/sparsehash/src/windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CMPH_HASHER_TESTS;CMPH_HASHER_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/cmph-hasher/src;../../thirdparty/owemdjee/cmph-hasher;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/cxxtest_catch_2_gtest/3rd/check/win32/src;../../thirdparty/owemdjee/sparsehash/src;../../thirdparty/owemdjee/sparsehash/src/windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CMPH_HASHER_TESTS;CMPH_HASHER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CMPH_HASHER;CMPH_HASHER_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CMPH_HASHER;CMPH_HASHER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/cmph-hasher/src;../../thirdparty/owemdjee/cmph-hasher;..\..\thirdparty\owemdjee\plf_nanotimer;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/cxxtest_catch_2_gtest/3rd/check/win32/src;../../thirdparty/owemdjee/sparsehash/src;../../thirdparty/owemdjee/sparsehash/src/windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/cmph-hasher/src;../../thirdparty/owemdjee/cmph-hasher;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/cxxtest_catch_2_gtest/3rd/check/win32/src;../../thirdparty/owemdjee/sparsehash/src;../../thirdparty/owemdjee/sparsehash/src/windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CMPH_HASHER;CMPH_HASHER_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CMPH_HASHER;CMPH_HASHER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/cmph-hasher/src;../../thirdparty/owemdjee/cmph-hasher;..\..\thirdparty\owemdjee\plf_nanotimer;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/cxxtest_catch_2_gtest/3rd/check/win32/src;../../thirdparty/owemdjee/sparsehash/src;../../thirdparty/owemdjee/sparsehash/src/windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CMPH_HASHER_TESTS;CMPH_HASHER_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/cmph-hasher/src;../../thirdparty/owemdjee/cmph-hasher;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/cxxtest_catch_2_gtest/3rd/check/win32/src;../../thirdparty/owemdjee/sparsehash/src;../../thirdparty/owemdjee/sparsehash/src/windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CMPH_HASHER_TESTS;CMPH_HASHER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CMPH_HASHER;CMPH_HASHER_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CMPH_HASHER;CMPH_HASHER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/cmph-hasher/src;../../thirdparty/owemdjee/cmph-hasher;..\..\thirdparty\owemdjee\plf_nanotimer;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/cxxtest_catch_2_gtest/3rd/check/win32/src;../../thirdparty/owemdjee/sparsehash/src;../../thirdparty/owemdjee/sparsehash/src/windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/cmph-hasher/src;../../thirdparty/owemdjee/cmph-hasher;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/cxxtest_catch_2_gtest/3rd/check/win32/src;../../thirdparty/owemdjee/sparsehash/src;../../thirdparty/owemdjee/sparsehash/src/windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -869,17 +869,52 @@
     <Image Include="../../thirdparty/owemdjee/cmph-hasher/figs/img97.png" />
     <Image Include="../../thirdparty/owemdjee/cmph-hasher/figs/img98.png" />
     <Image Include="../../thirdparty/owemdjee/cmph-hasher/figs/img99.png" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/AUTHORS" />
     <Text Include="../../thirdparty/owemdjee/cmph-hasher/ChangeLog" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/DOC.css" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/Doxyfile" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/MPL-1.1" />
     <Text Include="../../thirdparty/owemdjee/cmph-hasher/NEWS" />
     <Text Include="../../thirdparty/owemdjee/cmph-hasher/README.md" />
     <Text Include="../../thirdparty/owemdjee/cmph-hasher/README.t2t" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/cmph.spec" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/cmph.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/cmphapp.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/cmphapp.vcxproj.user" />
     <Text Include="../../thirdparty/owemdjee/cmph-hasher/configure.ac" />
     <Text Include="../../thirdparty/owemdjee/cmph-hasher/cxxmph/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/docs/bdz.html" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/docs/bmz.html" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/docs/brz.html" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/docs/chd.html" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/docs/chm.html" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/docs/comparison.html" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/docs/concepts.html" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/docs/examples.html" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/docs/faq.html" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/docs/fch.html" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/docs/gperf.html" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/docs/index.html" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/docs/newslog.html" />
     <Text Include="../../thirdparty/owemdjee/cmph-hasher/examples/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/cmph-hasher/examples/keys.txt" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/figs/brz/brz_temporegressao.eps" />
     <Text Include="../../thirdparty/owemdjee/cmph-hasher/man/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/man/cmph.1" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/papers/chm92.pdf" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/papers/esa09.pdf" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/papers/fch92.pdf" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/papers/thesis.pdf" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/papers/wads07.pdf" />
     <Text Include="../../thirdparty/owemdjee/cmph-hasher/src/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/cmph-hasher/tests/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/tex/bdz/bdz.tex" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/tex/bdz/figs/overviewinternal3g.eps" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/tex/bdz/introduction.tex" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/tex/bdz/makefile" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/tex/chd/chd.tex" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/tex/chd/introduction.tex" />
+    <Text Include="../../thirdparty/owemdjee/cmph-hasher/tex/chd/makefile" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

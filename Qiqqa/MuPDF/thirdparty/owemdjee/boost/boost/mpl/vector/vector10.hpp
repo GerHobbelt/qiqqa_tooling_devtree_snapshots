@@ -23,6 +23,8 @@
 #if !defined(BOOST_MPL_CFG_NO_PREPROCESSED_HEADERS) \
     && !defined(BOOST_MPL_PREPROCESSING_MODE)
 
+#   undef  BOOST_MPL_PREPROCESSED_HEADER
+
 #   define BOOST_MPL_PREPROCESSED_HEADER vector10.hpp
 #   include <boost/mpl/vector/aux_/include_preprocessed.hpp>
 

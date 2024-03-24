@@ -181,7 +181,8 @@ void fz_save_pixmap_as_pclm(fz_context *ctx, fz_pixmap *pixmap, char *filename, 
 */
 typedef struct
 {
-	int compress;
+	int compress;			/* mode: 0: none; 1 : deflate */
+	int compression_effort; /* percentage: 0 for default. 100 = max, 1 = min. */
 	int strip_height;
 	char language[256];
 	char datadir[PATH_MAX];
@@ -236,6 +237,11 @@ void fz_save_pixmap_as_pdfocr(fz_context *ctx, const fz_pixmap *pixmap, char *fi
 void fz_save_pixmap_as_png(fz_context *ctx, const fz_pixmap *pixmap, const char *filename);
 
 /**
+	Write a pixmap as a JPEG.
+*/
+void fz_write_pixmap_as_jpeg(fz_context *ctx, fz_output *out, const fz_pixmap *pix, int quality, int invert_cmyk);
+
+/**
 	Save a pixmap as a JPEG.
 */
 void fz_save_pixmap_as_jpeg(fz_context *ctx, const fz_pixmap *pixmap, const char *filename, int quality);
@@ -246,10 +252,26 @@ void fz_save_pixmap_as_jpeg(fz_context *ctx, const fz_pixmap *pixmap, const char
 void fz_write_pixmap_as_png(fz_context *ctx, fz_output *out, const fz_pixmap *pixmap);
 
 /**
+	Pixmap data as JP2K with no subsampling.
+
+	quality = 100 = lossless
+	otherwise for a factor of x compression use 100-x. (so 80 is 1:20 compression)
+*/
+void fz_write_pixmap_as_jpx(fz_context *ctx, fz_output *out, const fz_pixmap *pix, int quality);
+
+/**
+	Save pixmap data as JP2K with no subsampling.
+
+	quality = 100 = lossless
+	otherwise for a factor of x compression use 100-x. (so 80 is 1:20 compression)
+*/
+void fz_save_pixmap_as_jpx(fz_context *ctx, const fz_pixmap *pixmap, const char *filename, int quality);
+
+/**
 	Create a new png band writer (greyscale or RGB, with or without
 	alpha).
 */
-fz_band_writer *fz_new_png_band_writer(fz_context *ctx, fz_output *out);
+fz_band_writer *fz_new_png_band_writer(fz_context *ctx, fz_output *out, int compression_effort);
 
 /**
 	Re-encode a given image as a PNG into a buffer.
@@ -260,7 +282,8 @@ fz_buffer *fz_new_buffer_from_image_as_png(fz_context *ctx, const fz_image *imag
 fz_buffer *fz_new_buffer_from_image_as_pnm(fz_context *ctx, const fz_image *image, fz_color_params color_params);
 fz_buffer *fz_new_buffer_from_image_as_pam(fz_context *ctx, const fz_image *image, fz_color_params color_params);
 fz_buffer *fz_new_buffer_from_image_as_psd(fz_context *ctx, const fz_image *image, fz_color_params color_params);
-fz_buffer *fz_new_buffer_from_image_as_jpeg(fz_context *ctx, const fz_image *image, fz_color_params color_params, int quality);
+fz_buffer *fz_new_buffer_from_image_as_jpeg(fz_context *ctx, const fz_image *image, fz_color_params color_params, int quality, int invert_cmyk);
+fz_buffer *fz_new_buffer_from_image_as_jpx(fz_context *ctx, const fz_image *image, fz_color_params color_params, int quality);
 
 /**
 	Re-encode a given pixmap as a PNG into a buffer.
@@ -271,7 +294,8 @@ fz_buffer *fz_new_buffer_from_pixmap_as_png(fz_context *ctx, const fz_pixmap *pi
 fz_buffer *fz_new_buffer_from_pixmap_as_pnm(fz_context *ctx, const fz_pixmap *pixmap, fz_color_params color_params);
 fz_buffer *fz_new_buffer_from_pixmap_as_pam(fz_context *ctx, const fz_pixmap *pixmap, fz_color_params color_params);
 fz_buffer *fz_new_buffer_from_pixmap_as_psd(fz_context *ctx, const fz_pixmap *pix, fz_color_params color_params);
-fz_buffer *fz_new_buffer_from_pixmap_as_jpeg(fz_context *ctx, const fz_pixmap *pixmap, fz_color_params color_params, int quality);
+fz_buffer *fz_new_buffer_from_pixmap_as_jpeg(fz_context *ctx, const fz_pixmap *pixmap, fz_color_params color_params, int quality, int invert_cmyk);
+fz_buffer *fz_new_buffer_from_pixmap_as_jpx(fz_context *ctx, const fz_pixmap *pix, fz_color_params color_params, int quality);
 
 /**
 	Set default PNG output compression level: 0..9, Z_DEFAULT_COMPRESSION (-1) by default
@@ -294,7 +318,7 @@ void fz_write_pixmap_as_webp(fz_context *ctx, fz_output *out, const fz_pixmap *p
 	Create a new webp band writer (greyscale or RGB, with or without
 	alpha).
 */
-fz_band_writer *fz_new_webp_band_writer(fz_context *ctx, fz_output *out);
+fz_band_writer *fz_new_webp_band_writer(fz_context *ctx, fz_output *out, int compression_effort);
 
 /**
 	Re-encode a given image as a webp into a buffer.
@@ -336,7 +360,7 @@ void fz_write_pixmap_as_tiff(fz_context *ctx, fz_output *out, const fz_pixmap *p
 	Create a new tiff band writer (greyscale or RGB, with or without
 	alpha).
 */
-fz_band_writer *fz_new_tiff_band_writer(fz_context *ctx, fz_output *out);
+fz_band_writer *fz_new_tiff_band_writer(fz_context *ctx, fz_output *out, int compression_effort);
 
 /**
 	Re-encode a given image as a tiff into a buffer.
@@ -398,7 +422,7 @@ void fz_write_pixmap_as_webp(fz_context *ctx, fz_output *out, const fz_pixmap *p
 	Create a new webp band writer (greyscale or RGB, with or without
 	alpha).
 */
-fz_band_writer *fz_new_webp_band_writer(fz_context *ctx, fz_output *out);
+fz_band_writer *fz_new_webp_band_writer(fz_context *ctx, fz_output *out, int compression_effort);
 
 /**
 	Save a pixmap as a pnm (greyscale or rgb, no alpha).

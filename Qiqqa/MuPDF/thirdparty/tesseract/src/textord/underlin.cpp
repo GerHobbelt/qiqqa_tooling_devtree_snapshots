@@ -20,7 +20,7 @@
 
 namespace tesseract {
 
-double_VAR(textord_underline_offset, 0.1, "Fraction of x to ignore");
+DOUBLE_VAR(textord_underline_offset, 0.1, "Fraction of x to ignore");
 BOOL_VAR(textord_restore_underlines, true, "Chop underlines & put back");
 
 /**********************************************************************
@@ -195,7 +195,7 @@ void find_underlined_blobs(    // get chop points
 /**********************************************************************
  * vertical_cunderline_projection
  *
- * Compute the vertical projection of a outline from its outlines
+ * Compute the vertical projection of an outline from its outlines
  * and add to the given STATS.
  **********************************************************************/
 
@@ -208,19 +208,18 @@ void vertical_cunderline_projection( // project outlines
     STATS *middle_proj,              // centre region
     STATS *upper_proj                // top region
 ) {
-  ICOORD pos;               // current point
-  ICOORD step;              // edge step
-  int16_t lower_y, upper_y; // region limits
-  int32_t length;           // of outline
+  ICOORD pos;                   // current point
+  ICOORD step;                  // edge step
+  TDimension lower_y, upper_y;  // region limits
   C_OUTLINE_IT out_it = outline->child();
 
   pos = outline->start_pos();
-  length = outline->pathlength();
-  for (int32_t stepindex = 0; stepindex < length; stepindex++) {
+  TDimension length = outline->pathlength();
+  for (TDimension stepindex = 0; stepindex < length; stepindex++) {
     step = outline->step(stepindex);
     if (step.x() > 0) {
-      lower_y = static_cast<int16_t>(floor(baseline->y(pos.x()) + baseline_offset + 0.5));
-      upper_y = static_cast<int16_t>(floor(baseline->y(pos.x()) + baseline_offset + xheight + 0.5));
+      lower_y = static_cast<TDimension>(floor(baseline->y(pos.x()) + baseline_offset + 0.5));
+      upper_y = static_cast<TDimension>(floor(baseline->y(pos.x()) + baseline_offset + xheight + 0.5));
       if (pos.y() >= lower_y) {
         lower_proj->add(pos.x(), -lower_y);
         if (pos.y() >= upper_y) {
@@ -233,9 +232,8 @@ void vertical_cunderline_projection( // project outlines
         lower_proj->add(pos.x(), -pos.y());
       }
     } else if (step.x() < 0) {
-      lower_y = static_cast<int16_t>(floor(baseline->y(pos.x() - 1) + baseline_offset + 0.5));
-      upper_y =
-          static_cast<int16_t>(floor(baseline->y(pos.x() - 1) + baseline_offset + xheight + 0.5));
+      lower_y = static_cast<TDimension>(floor(baseline->y(pos.x() - 1) + baseline_offset + 0.5));
+      upper_y = static_cast<TDimension>(floor(baseline->y(pos.x() - 1) + baseline_offset + xheight + 0.5));
       if (pos.y() >= lower_y) {
         lower_proj->add(pos.x() - 1, lower_y);
         if (pos.y() >= upper_y) {
@@ -252,8 +250,7 @@ void vertical_cunderline_projection( // project outlines
   }
 
   for (out_it.mark_cycle_pt(); !out_it.cycled_list(); out_it.forward()) {
-    vertical_cunderline_projection(out_it.data(), baseline, xheight, baseline_offset, lower_proj,
-                                   middle_proj, upper_proj);
+    vertical_cunderline_projection(out_it.data(), baseline, xheight, baseline_offset, lower_proj, middle_proj, upper_proj);
   }
 }
 

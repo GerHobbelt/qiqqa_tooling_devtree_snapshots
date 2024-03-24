@@ -1,6 +1,8 @@
 .. Copyright (C) 2001-2023 Artifex Software, Inc.
 .. All Rights Reserved.
 
+----
+
 
 .. default-domain:: js
 
@@ -30,16 +32,16 @@
     :return: `Document`.
 
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
         var document = new mupdf.Document.openDocument("my_pdf.pdf", "application/pdf");
 
 
-----
 
-**Instance methods**
+
+|instance_methods|
 
 .. method:: needsPassword()
 
@@ -47,7 +49,7 @@
 
     :return: `Boolean`.
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
@@ -56,26 +58,72 @@
 
 .. method:: authenticatePassword(password)
 
-    Returns *true* if the password matches.
+    Returns a bitfield value against the password authentication result.
 
     :arg password: The password to attempt authentication with.
-    :return: `Boolean`.
+    :return: `Integer`.
 
-    **Example**
+
+
+    .. list-table::
+        :header-rows: 1
+
+        * - **Bitfield value**
+          - **Description**
+        * - `0`
+          - Failed
+        * - `1`
+          - No password needed
+        * - `2`
+          - Is User password and is okay
+        * - `4`
+          - Is Owner password and is okay
+        * - `6`
+          - Is both User & Owner password and is okay
+
+
+
+    |example_tag|
 
     .. code-block:: javascript
 
         var auth = document.authenticatePassword("abracadabra");
 
 
+
+
 .. method:: hasPermission(permission)
 
-    Returns *true* if the document has permission for "print", "annotate", "edit", "copy", "form", "accessbility", "assemble" or "print-hq".
+    Returns *true* if the document has permission for the supplied permission `String` parameter.
 
     :arg permission: `String` The permission to seek for, e.g. "edit".
     :return: `Boolean`.
 
-    **Example**
+
+    .. list-table::
+        :header-rows: 1
+
+        * - **String**
+          - **Description**
+        * - `print`
+          - Can print
+        * - `edit`
+          - Can edit
+        * - `copy`
+          - Can copy
+        * - `annotate`
+          - Can annotate
+        * - `form`
+          - Can fill out forms
+        * - `accessibility`
+          - Can copy for accessibility
+        * - `assemble`
+          - Can manage document pages
+        * - `print-hq`
+          - Can print high-quality
+
+
+    |example_tag|
 
     .. code-block:: javascript
 
@@ -84,16 +132,18 @@
 
 .. method:: getMetaData(key)
 
-    Return various meta data information. The common keys are: `format`, `encryption`, `info:Author`, and `info:Title`.
+    Return various meta data information. The common keys are: `format`, `encryption`, `info:ModDate`, and `info:Title`.
 
     :arg key: `String`.
     :return: `String`.
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
-        var metaData = document.getMetaData("format");
+        var format = document.getMetaData("format");
+        var modificationDate = doc.getMetaData("info:ModDate");
+        var author = doc.getMetaData("info:Author");
 
 
 .. method:: setMetaData(key, value)
@@ -103,7 +153,7 @@
     :arg key: `String`.
     :arg value: `String`.
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
@@ -116,7 +166,7 @@
 
     :return: `Boolean`.
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
@@ -135,7 +185,7 @@
     :arg pageHeight: `Int`.
     :arg fontSize: `Int`.
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
@@ -148,7 +198,7 @@
 
     :return: `Int`.
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
@@ -161,7 +211,7 @@
 
     :return: `Page` or `PDFPage`.
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
@@ -171,15 +221,17 @@
 
     Returns an array with the outline (also known as "table of contents" or "bookmarks"). In the array is an object for each heading with the property 'title', and a property 'page' containing the page number. If the object has a 'down' property, it contains an array with all the sub-headings for that entry.
 
-    :return: `[]`.
+    :return: `[...]`.
 
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
         var outline = document.loadOutline();
 
+
+.. _mutool_run_js_api_document_outlineIterator:
 
 .. method:: outlineIterator()
 
@@ -189,7 +241,7 @@
 
     :return: `OutlineIterator`.
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
@@ -206,7 +258,7 @@
     :arg uri: `String`.
     :return: :ref:`Link destination<mutool_run_js_api_link_dest>`.
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
@@ -220,7 +272,7 @@
 
     :return: `Boolean`.
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
@@ -229,18 +281,16 @@
 
 .. method:: formatLinkURI(linkDestination)
 
-    |mutool_tag|
-
     Format a document internal link destination object to a :title:`URI` string suitable for :ref:`createLink()<mutool_run_js_api_page_create_link>`.
 
     :arg linkDestination: :ref:`Link destination<mutool_run_js_api_link_dest>`.
     :return: `String`.
 
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
-        var str = document.formatLinkURI(linkDestination);
-
-
+        var uri = document.formatLinkURI({chapter:0, page:42,
+                type:"FitV", x:0, y:0, width:100, height:50, zoom:1});
+        document.createLink([0,0,100,100], uri);

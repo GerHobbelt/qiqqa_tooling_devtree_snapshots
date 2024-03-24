@@ -89,41 +89,47 @@
     <Filter Include="Misc Files\examples\tvhc">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\source">
+    <Filter Include="Misc Files\project">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\examples">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\examples\mmenu">
+    <Filter Include="Misc Files\source">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0026}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\examples\palette">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
+    <Filter Include="Misc Files\source\tvision">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\examples\tvdemo">
+    <Filter Include="Source Files\examples">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0029}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\examples\tvdir">
+    <Filter Include="Source Files\examples\mmenu">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\examples\palette">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0030}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\examples\tvedit">
+    <Filter Include="Source Files\examples\tvdemo">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0031}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\examples\tvforms">
+    <Filter Include="Source Files\examples\tvdir">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0032}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\examples\tvhc">
+    <Filter Include="Source Files\examples\tvedit">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0033}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\source">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0035}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\source\platform">
+    <Filter Include="Source Files\examples\tvforms">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0034}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\source\tvision">
+    <Filter Include="Source Files\examples\tvhc">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0035}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\source">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0037}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\source\platform">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0036}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\source\tvision">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0038}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -232,6 +238,9 @@
     <ClCompile Include="../../thirdparty/owemdjee/tvision/source/platform/dir.cpp">
       <Filter>Source Files\source\platform</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/tvision/source/platform/errredir.cpp">
+      <Filter>Source Files\source\platform</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/tvision/source/platform/events.cpp">
       <Filter>Source Files\source\platform</Filter>
     </ClCompile>
@@ -250,6 +259,9 @@
     <ClCompile Include="../../thirdparty/owemdjee/tvision/source/platform/linuxcon.cpp">
       <Filter>Source Files\source\platform</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/tvision/source/platform/mutex.cpp">
+      <Filter>Source Files\source\platform</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/tvision/source/platform/ncurdisp.cpp">
       <Filter>Source Files\source\platform</Filter>
     </ClCompile>
@@ -260,9 +272,6 @@
       <Filter>Source Files\source\platform</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/tvision/source/platform/platform.cpp">
-      <Filter>Source Files\source\platform</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/tvision/source/platform/scrlife.cpp">
       <Filter>Source Files\source\platform</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/tvision/source/platform/sighandl.cpp">
@@ -286,7 +295,13 @@
     <ClCompile Include="../../thirdparty/owemdjee/tvision/source/platform/ttext.cpp">
       <Filter>Source Files\source\platform</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/tvision/source/platform/unixclip.cpp">
+      <Filter>Source Files\source\platform</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/tvision/source/platform/unixcon.cpp">
+      <Filter>Source Files\source\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/tvision/source/platform/utf8.cpp">
       <Filter>Source Files\source\platform</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/tvision/source/platform/win32con.cpp">
@@ -311,6 +326,9 @@
       <Filter>Source Files\source\tvision</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/tvision/source/tvision/editstat.cpp">
+      <Filter>Source Files\source\tvision</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/tvision/source/tvision/fmtstr.cpp">
       <Filter>Source Files\source\tvision</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/tvision/source/tvision/framelin.cpp">
@@ -569,6 +587,9 @@
       <Filter>Source Files\source\tvision</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/tvision/source/tvision/smulchkb.cpp">
+      <Filter>Source Files\source\tvision</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/tvision/source/tvision/snprintf.cpp">
       <Filter>Source Files\source\tvision</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/tvision/source/tvision/soutline.cpp">
@@ -1003,6 +1024,9 @@
     <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/dispbuff.h">
       <Filter>Header Files\include\tvision\internal</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/errredir.h">
+      <Filter>Header Files\include\tvision\internal</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/events.h">
       <Filter>Header Files\include\tvision\internal</Filter>
     </ClInclude>
@@ -1021,6 +1045,9 @@
     <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/linuxcon.h">
       <Filter>Header Files\include\tvision\internal</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/mutex.h">
+      <Filter>Header Files\include\tvision\internal</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/ncurdisp.h">
       <Filter>Header Files\include\tvision\internal</Filter>
     </ClInclude>
@@ -1031,9 +1058,6 @@
       <Filter>Header Files\include\tvision\internal</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/platform.h">
-      <Filter>Header Files\include\tvision\internal</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/scrlife.h">
       <Filter>Header Files\include\tvision\internal</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/sighandl.h">
@@ -1052,6 +1076,9 @@
       <Filter>Header Files\include\tvision\internal</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/terminal.h">
+      <Filter>Header Files\include\tvision\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/unixclip.h">
       <Filter>Header Files\include\tvision\internal</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/unixcon.h">
@@ -1186,13 +1213,31 @@
     <Text Include="../../thirdparty/owemdjee/tvision/examples/tvdemo/CMakeLists.txt">
       <Filter>Misc Files\examples\tvdemo</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/tvision/examples/tvdemo/demohelp.h16">
+      <Filter>Misc Files\examples\tvdemo</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/tvision/examples/tvdemo/demohelp.h32">
+      <Filter>Misc Files\examples\tvdemo</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/tvision/examples/tvdemo/makefile">
+      <Filter>Misc Files\examples\tvdemo</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/tvision/examples/tvdir/CMakeLists.txt">
+      <Filter>Misc Files\examples\tvdir</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/tvision/examples/tvdir/makefile">
       <Filter>Misc Files\examples\tvdir</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/tvision/examples/tvedit/CMakeLists.txt">
       <Filter>Misc Files\examples\tvedit</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/tvision/examples/tvedit/makefile">
+      <Filter>Misc Files\examples\tvedit</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/tvision/examples/tvforms/CMakeLists.txt">
+      <Filter>Misc Files\examples\tvforms</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/tvision/examples/tvforms/makefile">
       <Filter>Misc Files\examples\tvforms</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/tvision/examples/tvhc/CMakeLists.txt">
@@ -1201,8 +1246,23 @@
     <Text Include="../../thirdparty/owemdjee/tvision/examples/tvhc/demohelp.txt">
       <Filter>Misc Files\examples\tvhc</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/tvision/examples/tvhc/makefile">
+      <Filter>Misc Files\examples\tvhc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/tvision/parts.f32">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/tvision/phonenum.f32">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/tvision/project/makefile">
+      <Filter>Misc Files\project</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/tvision/source/CMakeLists.txt">
       <Filter>Misc Files\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/tvision/source/tvision/makefile">
+      <Filter>Misc Files\source\tvision</Filter>
     </Text>
   </ItemGroup>
 </Project>

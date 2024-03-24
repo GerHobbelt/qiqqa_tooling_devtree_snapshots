@@ -1,6 +1,7 @@
 .. Copyright (C) 2001-2023 Artifex Software, Inc.
 .. All Rights Reserved.
 
+----
 
 .. default-domain:: js
 
@@ -13,8 +14,10 @@
 `Page`
 -------------
 
+The base class for a :ref:`PDF Page<mutool_run_js_api_pdf_page>`.
 
-**Instance methods**
+
+|instance_methods|
 
 .. method:: getBounds()
 
@@ -22,7 +25,7 @@
 
     :return: `[ulx,uly,lrx,lry]`.
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
@@ -41,13 +44,11 @@
     :arg device: The device object.
     :arg matrix: `[a,b,c,d,e,f]`. The transform :ref:`matrix<mutool_run_js_api_matrix>`.
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
         var rect = page.run(obj, mupdf.Matrix.identity);
-
-    |tor_todo| Make mutool run method match this.
 
 
 .. method:: runPageContents(device, matrix)
@@ -59,13 +60,11 @@
     :arg device: The device object.
     :arg matrix: `[a,b,c,d,e,f]`. The transform :ref:`matrix<mutool_run_js_api_matrix>`.
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
         var rect = page.runPageContents(obj, mupdf.Matrix.identity);
-
-    |tor_todo| Make mutool run method match this.
 
 
 .. method:: runPageAnnots(device, matrix)
@@ -77,13 +76,11 @@
     :arg device: The device object.
     :arg matrix: `[a,b,c,d,e,f]`. The transform :ref:`matrix<mutool_run_js_api_matrix>`.
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
         var rect = page.runPageAnnots(obj, mupdf.Matrix.identity);
-
-    |tor_todo| Make mutool run method match this.
 
 
 .. method:: runPageWidgets(device, matrix)
@@ -95,13 +92,12 @@
     :arg device: The device object.
     :arg matrix: `[a,b,c,d,e,f]`. The transform :ref:`matrix<mutool_run_js_api_matrix>`.
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
         var rect = page.runPageWidgets(obj, mupdf.Matrix.identity);
 
-    |tor_todo| Make mutool run method match this.
 
 .. method:: toPixmap(matrix, colorspace, alpha, showExtras)
 
@@ -117,16 +113,17 @@
     .. note::
 
         In :title:`MuPDF WASM` `alpha` & `showExtras` default to *true* unless otherwise specified.
+        In :title:`mutool run` `alpha` defaults to *false* and `showExtras` defaults to *true* unless otherwise specified.
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
-        var pixmap = page.toPixmap(mupdf.Martrix.identity, mupdf.ColorSpace.DeviceRGB, true, true);
+        var pixmap = page.toPixmap(mupdf.Matrix.identity, mupdf.ColorSpace.DeviceRGB, true, true);
 
 .. method:: toDisplayList(showExtras)
 
-    Record the contents on the page into a `DisplayList`_. If `showExtras` is *true* then the operation will include any page annotations and/or widgets.
+    Record the contents on the page into a :ref:`DisplayList<mutool_object_display_list>`. If `showExtras` is *true* then the operation will include any page annotations and/or widgets.
 
 
     :arg showExtras: `Boolean`.
@@ -135,13 +132,16 @@
 
     .. note::
 
-        In :title:`MuPDF WASM` `showExtras` defaults to *true* unless otherwise specified.
+        In both :title:`MuPDF WASM` and :title`mutool run` `showExtras` defaults to *true* unless otherwise specified.
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
         var displayList = page.toDisplayList(true);
+
+
+.. _mutool_page_toStructuredText:
 
 
 .. method:: toStructuredText(options)
@@ -151,7 +151,7 @@
     :arg options: `String`.
     :return: `StructuredText`.
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
@@ -160,20 +160,23 @@
 
 .. method:: search(needle, max_hits)
 
-    Search for `needle` text on the page, and return an array with :ref:`rectangles<mutool_run_js_api_rectangle>` of all matches found.
+
+    Search the page text for all instances of the `needle` value, and return an array of search hits. Each search hit is an array of :ref:`rectangles<mutool_run_js_api_quad>` corresponding to all characters in the search hit.
 
     :arg needle: `String`.
     :arg max_hits: `Integer` Defaults to 500 unless otherwise specified.
-    :return: `[]`.
+    :return: `[...]`.
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
-        var results = page.search("my phrase");
+        var results = page.search("my search phrase");
 
 
-    |tor_todo| TypeError: libmupdf._wasm_search_page is not a function.
+    .. note::
+
+        The numbers are `[ulx, uly, urx, ury, llx, lly, lrx, lry]` for each rectangle against each result. These type of rectangles are know as "Quads" or "QuadPoints" in the :title:`PDF` specification.
 
 
 
@@ -181,7 +184,7 @@
 
     Return an array of all the links on the page. Each link is an object with a 'bounds' property, and either a 'page' or 'uri' property, depending on whether it's an internal or external link. See: :ref:`Link<mutool_object_link>`.
 
-    :return: `[]`.
+    :return: `[...]`.
 
 
     .. code-block:: javascript
@@ -189,19 +192,6 @@
         var links = page.getLinks();
         var link = links[0];
         var linkDestination = doc.resolveLink(link)
-
-
-    |tor_todo| I tried this:
-
-    .. code-block:: javascript
-
-        var links = page.getLinks();
-        var link = links[0];
-        var linkDestination = doc.resolveLink(link)
-        console.log("linkDestination="+linkDestination);
-
-    |tor_todo| In **mutool** it returned `[object object]` which had all the :ref:`link dest<mutool_run_js_api_link_dest>` info in it, in **wasm** is returned `1`, I expected it to return a link dictionary ?
-
 
 
 .. _mutool_run_js_api_page_create_link:
@@ -212,16 +202,15 @@
     Create a new link within the rectangle on the page, linking to the destination URI string.
 
     :arg rect: :ref:`Rectangle<mutool_run_js_api_rectangle>` for the link.
-    :arg destinationUri: `String`.
+    :arg destinationUri: `String` containing URI.
     :return: :ref:`Link<mutool_object_link>`.
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
-        var link = page.createLink([0,0,100,100], "http://mupdf.com");
+        var link = page.createLink([0,0,100,100], "https://example.com");
 
-    |tor_todo| How to create links between pages ( i.e. with :ref:`link dest<mutool_run_js_api_link_dest>` info ) ?
 
 
 .. method:: deleteLink(link)
@@ -230,13 +219,11 @@
 
     :arg link: :ref:`Link<mutool_object_link>`.
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
         page.deleteLink(link_obj);
-
-    |tor_todo| Did not work in either mutool or wasm (function did not exist)
 
 
 .. method:: getLabel()
@@ -245,7 +232,7 @@
 
     :return: `String`.
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
@@ -259,7 +246,7 @@
 
     :return: `Boolean`.
 
-    **Example**
+    |example_tag|
 
     .. code-block:: javascript
 
@@ -268,6 +255,6 @@
 
     .. note::
 
-        As `PDFPage` extends `Page` this method will return **false**. It is only if we actually have an instance of a `PDFPage` when this method is overriden to return **true**.
+        As `PDFPage` extends `Page` this method will return **false**. It is only if we actually have an instance of a `PDFPage` when this method is overridden to return **true**.
 
 

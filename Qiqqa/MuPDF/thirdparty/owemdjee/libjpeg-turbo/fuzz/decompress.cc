@@ -55,8 +55,10 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size)
   if ((handle = tj3Init(TJINIT_DECOMPRESS)) == NULL)
     goto bailout;
 
-  if (tj3DecompressHeader(handle, data, size) < 0)
-    goto bailout;
+  /* We ignore the return value of tj3DecompressHeader(), because malformed
+     JPEG images that might expose issues in libjpeg-turbo might also have
+     header errors that cause tj3DecompressHeader() to fail. */
+  tj3DecompressHeader(handle, data, size);
   width = tj3Get(handle, TJPARAM_JPEGWIDTH);
   height = tj3Get(handle, TJPARAM_JPEGHEIGHT);
   precision = tj3Get(handle, TJPARAM_PRECISION);
@@ -76,9 +78,10 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size)
     int64_t sum = 0;
 
     /* Test non-default decompression options on the first iteration. */
+    tj3Set(handle, TJPARAM_BOTTOMUP, pfi == 0);
+    tj3Set(handle, TJPARAM_FASTUPSAMPLE, pfi == 0);
+
     if (!tj3Get(handle, TJPARAM_LOSSLESS)) {
-      tj3Set(handle, TJPARAM_BOTTOMUP, pfi == 0);
-      tj3Set(handle, TJPARAM_FASTUPSAMPLE, pfi == 0);
       tj3Set(handle, TJPARAM_FASTDCT, pfi == 0);
 
       /* Test IDCT scaling on the second iteration. */

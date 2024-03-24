@@ -33,71 +33,77 @@
     <Filter Include="Misc Files\docs">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\docs\advanced">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\docs\advanced\cast">
+    <Filter Include="Misc Files\docs\_static">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0009}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\docs\advanced\pycpp">
+    <Filter Include="Misc Files\docs\_static\css">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\docs\advanced">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0010}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\docs\cmake">
+    <Filter Include="Misc Files\docs\advanced\cast">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0011}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\pybind11">
+    <Filter Include="Misc Files\docs\advanced\pycpp">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0012}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tests">
+    <Filter Include="Misc Files\docs\cmake">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0013}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tests\extra_python_package">
+    <Filter Include="Misc Files\pybind11">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0014}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tests\extra_setuptools">
+    <Filter Include="Misc Files\tests">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0015}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tests\test_cmake_build">
+    <Filter Include="Misc Files\tests\extra_python_package">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0016}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tests\test_cmake_build\installed_embed">
+    <Filter Include="Misc Files\tests\extra_setuptools">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0017}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tests\test_cmake_build\installed_function">
+    <Filter Include="Misc Files\tests\test_cmake_build">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tests\test_cmake_build\installed_target">
+    <Filter Include="Misc Files\tests\test_cmake_build\installed_embed">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0019}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tests\test_cmake_build\subdirectory_embed">
+    <Filter Include="Misc Files\tests\test_cmake_build\installed_function">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0020}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tests\test_cmake_build\subdirectory_function">
+    <Filter Include="Misc Files\tests\test_cmake_build\installed_target">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tests\test_cmake_build\subdirectory_target">
+    <Filter Include="Misc Files\tests\test_cmake_build\subdirectory_embed">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tests\test_embed">
+    <Filter Include="Misc Files\tests\test_cmake_build\subdirectory_function">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tools">
+    <Filter Include="Misc Files\tests\test_cmake_build\subdirectory_target">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
+    <Filter Include="Misc Files\tests\test_embed">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\docs">
+    <Filter Include="Misc Files\tools">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0026}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\tests">
+    <Filter Include="Resource Files">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\tests\test_cmake_build">
+    <Filter Include="Resource Files\docs">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\tests\test_embed">
+    <Filter Include="Source Files\tests">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0029}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tests\test_cmake_build">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0030}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tests\test_embed">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0031}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -105,6 +111,9 @@
       <Filter>Source Files\tests</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/pybind11/tests/cross_module_interleaved_error_already_set.cpp">
+      <Filter>Source Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/pybind11/tests/eigen_tensor_avoid_stl_array.cpp">
       <Filter>Source Files\tests</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/pybind11/tests/pybind11_cross_module_tests.cpp">
@@ -162,9 +171,6 @@
       <Filter>Source Files\tests</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/pybind11/tests/test_eigen_tensor.cpp">
-      <Filter>Source Files\tests</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/pybind11/tests/test_eigen_tensor_avoid_stl_array.cpp">
       <Filter>Source Files\tests</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/pybind11/tests/test_embed/catch.cpp">
@@ -248,7 +254,19 @@
     <ClCompile Include="../../thirdparty/owemdjee/pybind11/tests/test_thread.cpp">
       <Filter>Source Files\tests</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/pybind11/tests/test_type_caster_pyobject_ptr.cpp">
+      <Filter>Source Files\tests</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/pybind11/tests/test_union.cpp">
+      <Filter>Source Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/pybind11/tests/test_unnamed_namespace_a.cpp">
+      <Filter>Source Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/pybind11/tests/test_unnamed_namespace_b.cpp">
+      <Filter>Source Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/pybind11/tests/test_vector_unique_ptr_member.cpp">
       <Filter>Source Files\tests</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/pybind11/tests/test_virtual_functions.cpp">
@@ -296,6 +314,9 @@
     <ClInclude Include="../../thirdparty/owemdjee/pybind11/include/pybind11/eigen.h">
       <Filter>Header Files\include\pybind11</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/pybind11/include/pybind11/eigen/common.h">
+      <Filter>Header Files\include\pybind11\eigen</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/pybind11/include/pybind11/eigen/matrix.h">
       <Filter>Header Files\include\pybind11\eigen</Filter>
     </ClInclude>
@@ -312,6 +333,9 @@
       <Filter>Header Files\include\pybind11</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/pybind11/include/pybind11/gil.h">
+      <Filter>Header Files\include\pybind11</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/pybind11/include/pybind11/gil_safe_call_once.h">
       <Filter>Header Files\include\pybind11</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/pybind11/include/pybind11/iostream.h">
@@ -341,6 +365,12 @@
     <ClInclude Include="../../thirdparty/owemdjee/pybind11/include/pybind11/stl_bind.h">
       <Filter>Header Files\include\pybind11</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/pybind11/include/pybind11/type_caster_pyobject_ptr.h">
+      <Filter>Header Files\include\pybind11</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/pybind11/include/pybind11/typing.h">
+      <Filter>Header Files\include\pybind11</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/pybind11/tests/constructor_stats.h">
       <Filter>Header Files\tests</Filter>
     </ClInclude>
@@ -368,11 +398,26 @@
     <Text Include="../../thirdparty/owemdjee/pybind11/CMakeLists.txt">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/pybind11/LICENSE">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/pybind11/MANIFEST.in">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/pybind11/README.rst">
       <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/pybind11/SECURITY.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/pybind11/docs/Doxyfile">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/pybind11/docs/Makefile">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/pybind11/docs/_static/css/custom.css">
+      <Filter>Misc Files\docs\_static\css</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/pybind11/docs/advanced/cast/chrono.rst">
       <Filter>Misc Files\docs\advanced\cast</Filter>
@@ -464,6 +509,12 @@
     <Text Include="../../thirdparty/owemdjee/pybind11/docs/limitations.rst">
       <Filter>Misc Files\docs</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/pybind11/docs/pybind11_vs_boost_python1.svg">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/pybind11/docs/pybind11_vs_boost_python2.svg">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/pybind11/docs/reference.rst">
       <Filter>Misc Files\docs</Filter>
     </Text>
@@ -494,6 +545,9 @@
     <Text Include="../../thirdparty/owemdjee/pybind11/pybind11/setup_helpers.py">
       <Filter>Misc Files\pybind11</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/pybind11/pyproject.toml">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/pybind11/setup.cfg">
       <Filter>Misc Files</Filter>
     </Text>
@@ -509,11 +563,20 @@
     <Text Include="../../thirdparty/owemdjee/pybind11/tests/env.py">
       <Filter>Misc Files\tests</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/pybind11/tests/extra_python_package/pytest.ini">
+      <Filter>Misc Files\tests\extra_python_package</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/pybind11/tests/extra_python_package/test_files.py">
       <Filter>Misc Files\tests\extra_python_package</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/pybind11/tests/extra_setuptools/pytest.ini">
+      <Filter>Misc Files\tests\extra_setuptools</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/pybind11/tests/extra_setuptools/test_setuphelper.py">
       <Filter>Misc Files\tests\extra_setuptools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/pybind11/tests/pytest.ini">
+      <Filter>Misc Files\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/pybind11/tests/requirements.txt">
       <Filter>Misc Files\tests</Filter>
@@ -582,6 +645,9 @@
       <Filter>Misc Files\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/pybind11/tests/test_eigen_matrix.py">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/pybind11/tests/test_eigen_tensor.inl">
       <Filter>Misc Files\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/pybind11/tests/test_eigen_tensor.py">
@@ -671,7 +737,19 @@
     <Text Include="../../thirdparty/owemdjee/pybind11/tests/test_thread.py">
       <Filter>Misc Files\tests</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/pybind11/tests/test_type_caster_pyobject_ptr.py">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/pybind11/tests/test_union.py">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/pybind11/tests/test_unnamed_namespace_a.py">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/pybind11/tests/test_unnamed_namespace_b.py">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/pybind11/tests/test_vector_unique_ptr_member.py">
       <Filter>Misc Files\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/pybind11/tests/test_virtual_functions.py">
@@ -717,6 +795,9 @@
       <Filter>Misc Files\tools</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/pybind11/tools/pybind11Tools.cmake">
+      <Filter>Misc Files\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/pybind11/tools/pyproject.toml">
       <Filter>Misc Files\tools</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/pybind11/tools/setup_global.py.in">

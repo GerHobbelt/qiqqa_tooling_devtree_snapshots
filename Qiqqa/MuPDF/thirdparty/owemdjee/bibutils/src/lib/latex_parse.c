@@ -316,6 +316,24 @@ write_latex_graph( latex_node *n )
 }
 #endif
 
+// Georgi: new functions - recursively free memory for nodes;
+static void latex_edge_delete_recursively( latex_edge *e ); // declaration
+
+static void
+latex_node_delete_recursively( latex_node *n )
+{
+  if( n->next_edge ) latex_edge_delete_recursively(n->next_edge);
+  if( n->down_node ) latex_node_delete_recursively( n->down_node );
+  free( n );
+}
+static void
+latex_edge_delete_recursively( latex_edge *e )
+{
+  if( e->next_node ) latex_node_delete_recursively( e->next_node );
+  latex_edge_delete(e);
+}
+
+
 int
 latex_parse( const str *in, str *out )
 {
@@ -326,6 +344,7 @@ latex_parse( const str *in, str *out )
 
 	if ( str_is_empty( in ) ) return BIBL_OK;
 
+	// Georgi: the code below was not clearing n, leading to memory leaks
 	status = build_latex_graph( in, &n );
 	if ( status!=BIBL_OK ) goto out;
 
@@ -335,7 +354,8 @@ latex_parse( const str *in, str *out )
 	str_trimendingws( out );
 
 out:
-	latex_node_delete( n );
+	// Georgi: TODO: this assumes that the strings have been copied to out
+	latex_node_delete_recursively( n );
 
 	return status;
 }

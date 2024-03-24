@@ -10,9 +10,10 @@
  * daniel@veillard.com
  */
 
-#include "libxml.h"
+#include "config.h"
 #include <stdio.h>
 
+#include <stdlib.h>
 #include <string.h>
 #include <sys/stat.h>
 
@@ -182,6 +183,7 @@ static const xmlHugeDocParts hugeDocTable[] = {
         "  <bar attr='&e; &f; &d;'>&a; &b; &c; &e; &f; &d;</bar>\n"
         "  <bar>_123456789_123456789_123456789_123456789</bar>\n"
         "  <bar>_123456789_123456789_123456789_123456789</bar>\n"
+        "  <bar>_123456789_123456789_123456789_123456789</bar>\n"
         "  <bar>_123456789_123456789_123456789_123456789</bar>\n",
 
         "</foo>"
@@ -280,7 +282,7 @@ hugeClose(void * context) {
     return(0);
 }
 
-#define MAX_NODES 10000
+#define MAX_NODES 1000
 
 /**
  * hugeRead:
@@ -359,282 +361,11 @@ testExternalEntityLoader(const char *URL, const char *ID,
     return(ret);
 }
 
-/*
- * Trapping the error messages at the generic level to grab the equivalent of
- * stderr messages on CLI tools.
- */
-static char testErrors[32769];
-static int testErrorsSize = 0;
-
-static void
-channel(void *ctx  ATTRIBUTE_UNUSED, const char *msg, ...) {
-    va_list args;
-    int res;
-
-    if (testErrorsSize >= 32768)
-        return;
-    va_start(args, msg);
-    res = vsnprintf(&testErrors[testErrorsSize],
-                    32768 - testErrorsSize,
-		    msg, args);
-    va_end(args);
-    if (testErrorsSize + res >= 32768) {
-        /* buffer is full */
-	testErrorsSize = 32768;
-	testErrors[testErrorsSize] = 0;
-    } else {
-        testErrorsSize += res;
-    }
-    testErrors[testErrorsSize] = 0;
-}
-
-/**
- * xmlParserPrintFileContext:
- * @input:  an xmlParserInputPtr input
- *
- * Displays current context within the input content for error tracking
- */
-
-static void
-xmlParserPrintFileContextInternal(xmlParserInputPtr input ,
-		xmlGenericErrorFunc chanl, void *data ) {
-    const xmlChar *cur, *base;
-    unsigned int n, col;	/* GCC warns if signed, because compared with sizeof() */
-    xmlChar  content[81]; /* space for 80 chars + line terminator */
-    xmlChar *ctnt;
-
-    if (input == NULL) return;
-    cur = input->cur;
-    base = input->base;
-    /* skip backwards over any end-of-lines */
-    while ((cur > base) && ((*(cur) == '\n') || (*(cur) == '\r'))) {
-	cur--;
-    }
-    n = 0;
-    /* search backwards for beginning-of-line (to max buff size) */
-    while ((n++ < (sizeof(content)-1)) && (cur > base) &&
-   (*(cur) != '\n') && (*(cur) != '\r'))
-        cur--;
-    if ((*(cur) == '\n') || (*(cur) == '\r')) cur++;
-    /* calculate the error position in terms of the current position */
-    col = input->cur - cur;
-    /* search forward for end-of-line (to max buff size) */
-    n = 0;
-    ctnt = content;
-    /* copy selected text to our buffer */
-    while ((*cur != 0) && (*(cur) != '\n') &&
-   (*(cur) != '\r') && (n < sizeof(content)-1)) {
-		*ctnt++ = *cur++;
-	n++;
-    }
-    *ctnt = 0;
-    /* print out the selected text */
-    chanl(data ,"%s\n", content);
-    /* create blank line with problem pointer */
-    n = 0;
-    ctnt = content;
-    /* (leave buffer space for pointer + line terminator) */
-    while ((n<col) && (n++ < sizeof(content)-2) && (*ctnt != 0)) {
-	if (*(ctnt) != '\t')
-	    *(ctnt) = ' ';
-	ctnt++;
-    }
-    *ctnt++ = '^';
-    *ctnt = 0;
-    chanl(data ,"%s\n", content);
-}
-
-static void
-testStructuredErrorHandler(void *ctx  ATTRIBUTE_UNUSED, xmlErrorPtr err) {
-    char *file = NULL;
-    int line = 0;
-    int code = -1;
-    int domain;
-    void *data = NULL;
-    const char *str;
-    const xmlChar *name = NULL;
-    xmlNodePtr node;
-    xmlErrorLevel level;
-    xmlParserInputPtr input = NULL;
-    xmlParserInputPtr cur = NULL;
-    xmlParserCtxtPtr ctxt = NULL;
-
-    if (err == NULL)
-        return;
-
-    file = err->file;
-    line = err->line;
-    code = err->code;
-    domain = err->domain;
-    level = err->level;
-    node = err->node;
-    if ((domain == XML_FROM_PARSER) || (domain == XML_FROM_HTML) ||
-        (domain == XML_FROM_DTD) || (domain == XML_FROM_NAMESPACE) ||
-	(domain == XML_FROM_IO) || (domain == XML_FROM_VALID)) {
-	ctxt = err->ctxt;
-    }
-    str = err->message;
-
-    if (code == XML_ERR_OK)
-        return;
-
-    if ((node != NULL) && (node->type == XML_ELEMENT_NODE))
-        name = node->name;
-
-    /*
-     * Maintain the compatibility with the legacy error handling
-     */
-    if (ctxt != NULL) {
-        input = ctxt->input;
-        if ((input != NULL) && (input->filename == NULL) &&
-            (ctxt->inputNr > 1)) {
-            cur = input;
-            input = ctxt->inputTab[ctxt->inputNr - 2];
-        }
-        if (input != NULL) {
-            if (input->filename)
-                channel(data, "%s:%d: ", input->filename, input->line);
-            else if ((line != 0) && (domain == XML_FROM_PARSER))
-                channel(data, "Entity: line %d: ", input->line);
-        }
-    } else {
-        if (file != NULL)
-            channel(data, "%s:%d: ", file, line);
-        else if ((line != 0) && (domain == XML_FROM_PARSER))
-            channel(data, "Entity: line %d: ", line);
-    }
-    if (name != NULL) {
-        channel(data, "element %s: ", name);
-    }
-    if (code == XML_ERR_OK)
-        return;
-    switch (domain) {
-        case XML_FROM_PARSER:
-            channel(data, "parser ");
-            break;
-        case XML_FROM_NAMESPACE:
-            channel(data, "namespace ");
-            break;
-        case XML_FROM_DTD:
-        case XML_FROM_VALID:
-            channel(data, "validity ");
-            break;
-        case XML_FROM_HTML:
-            channel(data, "HTML parser ");
-            break;
-        case XML_FROM_MEMORY:
-            channel(data, "memory ");
-            break;
-        case XML_FROM_OUTPUT:
-            channel(data, "output ");
-            break;
-        case XML_FROM_IO:
-            channel(data, "I/O ");
-            break;
-        case XML_FROM_XINCLUDE:
-            channel(data, "XInclude ");
-            break;
-        case XML_FROM_XPATH:
-            channel(data, "XPath ");
-            break;
-        case XML_FROM_XPOINTER:
-            channel(data, "parser ");
-            break;
-        case XML_FROM_REGEXP:
-            channel(data, "regexp ");
-            break;
-        case XML_FROM_MODULE:
-            channel(data, "module ");
-            break;
-        case XML_FROM_SCHEMASV:
-            channel(data, "Schemas validity ");
-            break;
-        case XML_FROM_SCHEMASP:
-            channel(data, "Schemas parser ");
-            break;
-        case XML_FROM_RELAXNGP:
-            channel(data, "Relax-NG parser ");
-            break;
-        case XML_FROM_RELAXNGV:
-            channel(data, "Relax-NG validity ");
-            break;
-        case XML_FROM_CATALOG:
-            channel(data, "Catalog ");
-            break;
-        case XML_FROM_C14N:
-            channel(data, "C14N ");
-            break;
-        case XML_FROM_XSLT:
-            channel(data, "XSLT ");
-            break;
-        default:
-            break;
-    }
-    if (code == XML_ERR_OK)
-        return;
-    switch (level) {
-        case XML_ERR_NONE:
-            channel(data, ": ");
-            break;
-        case XML_ERR_WARNING:
-            channel(data, "warning : ");
-            break;
-        case XML_ERR_ERROR:
-            channel(data, "error : ");
-            break;
-        case XML_ERR_FATAL:
-            channel(data, "error : ");
-            break;
-    }
-    if (code == XML_ERR_OK)
-        return;
-    if (str != NULL) {
-        int len;
-	len = xmlStrlen((const xmlChar *)str);
-	if ((len > 0) && (str[len - 1] != '\n'))
-	    channel(data, "%s\n", str);
-	else
-	    channel(data, "%s", str);
-    } else {
-        channel(data, "%s\n", "out of memory error");
-    }
-    if (code == XML_ERR_OK)
-        return;
-
-    if (ctxt != NULL) {
-        xmlParserPrintFileContextInternal(input, channel, data);
-        if (cur != NULL) {
-            if (cur->filename)
-                channel(data, "%s:%d: \n", cur->filename, cur->line);
-            else if ((line != 0) && (domain == XML_FROM_PARSER))
-                channel(data, "Entity: line %d: \n", cur->line);
-            xmlParserPrintFileContextInternal(cur, channel, data);
-        }
-    }
-    if ((domain == XML_FROM_XPATH) && (err->str1 != NULL) &&
-        (err->int1 < 100) &&
-	(err->int1 < xmlStrlen((const xmlChar *)err->str1))) {
-	xmlChar buf[150];
-	int i;
-
-	channel(data, "%s\n", err->str1);
-	for (i=0;i < err->int1;i++)
-	     buf[i] = ' ';
-	buf[i++] = '^';
-	buf[i] = 0;
-	channel(data, "%s\n", buf);
-    }
-}
-
 static void
 initializeLibxml2(void) {
-    xmlGetWarningsDefaultValue = 0;
-    xmlPedanticParserDefault(0);
-
     xmlMemSetup(xmlMemFree, xmlMemMalloc, xmlMemRealloc, xmlMemoryStrdup);
     xmlInitParser();
     xmlSetExternalEntityLoader(testExternalEntityLoader);
-    xmlSetStructuredErrorFunc(NULL, testStructuredErrorHandler);
     /*
      * register the new I/O handlers
      */
@@ -649,6 +380,8 @@ static void
 initSAX(xmlParserCtxtPtr ctxt) {
     ctxt->sax->startElementNs = NULL;
     ctxt->sax->endElementNs = NULL;
+    ctxt->sax->startElement = NULL;
+    ctxt->sax->endElement = NULL;
     ctxt->sax->characters = NULL;
     ctxt->sax->cdataBlock = NULL;
     ctxt->sax->ignorableWhitespace = NULL;
@@ -694,10 +427,6 @@ static char *resultFilename(const char *filename, const char *out,
         out = "";
 
     strncpy(suffixbuff,suffix,499);
-#ifdef VMS
-    if(strstr(base,".") && suffixbuff[0]=='.')
-      suffixbuff[0]='_';
-#endif
 
     if (snprintf(res, 499, "%s%s%s", out, base, suffixbuff) >= 499)
         res[499] = 0;
@@ -762,7 +491,7 @@ recursiveDetectTest(const char *filename,
      * without XML_PARSE_NOENT. The validation result doesn't matter
      * anyway.
      */
-    int parserOptions = XML_PARSE_DTDVALID;
+    int parserOptions = XML_PARSE_DTDVALID | XML_PARSE_NOERROR;
 
     nb_tests++;
 
@@ -775,7 +504,7 @@ recursiveDetectTest(const char *filename,
      * base of the test, parse with the old API
      */
     doc = xmlCtxtReadFile(ctxt, filename, NULL, parserOptions);
-    if ((doc != NULL) || (ctxt->lastError.code != XML_ERR_ENTITY_LOOP)) {
+    if ((doc != NULL) || (ctxt->lastError.code != XML_ERR_RESOURCE_LIMIT)) {
         fprintf(stderr, "Failed to detect recursion in %s\n", filename);
 	xmlFreeParserCtxt(ctxt);
 	xmlFreeDoc(doc);
@@ -863,7 +592,8 @@ notRecursiveHugeTest(const char *filename ATTRIBUTE_UNUSED,
 	res = 1;
     } else {
         xmlEntityPtr ent;
-        unsigned long fixed_cost = 50;
+        unsigned long fixed_cost = 20;
+        unsigned long allowed_expansion = 1000000;
         unsigned long f_size = xmlStrlen(BAD_CAST "some internal data");
         unsigned long e_size;
         unsigned long d_size;
@@ -903,7 +633,7 @@ notRecursiveHugeTest(const char *filename ATTRIBUTE_UNUSED,
             res = 1;
         }
 
-        if (ctxt->sizeentcopy < XML_MAX_TEXT_LENGTH) {
+        if (ctxt->sizeentcopy < allowed_expansion) {
             fprintf(stderr, "Total entity size too small: %lu\n",
                     ctxt->sizeentcopy);
             res = 1;
@@ -964,7 +694,8 @@ hugeDtdTest(const char *filename ATTRIBUTE_UNUSED,
         fprintf(stderr, "Failed to parse huge_dtd.xml\n");
 	res = 1;
     } else {
-        unsigned long fixed_cost = 50;
+        unsigned long fixed_cost = 20;
+        unsigned long allowed_expansion = 1000000;
         unsigned long a_size = xmlStrlen(BAD_CAST "<!-- comment -->");
         unsigned long b_size;
         unsigned long c_size;
@@ -972,7 +703,7 @@ hugeDtdTest(const char *filename ATTRIBUTE_UNUSED,
         unsigned long f_size;
         unsigned long total_size;
 
-        if (ctxt->sizeentcopy < XML_MAX_TEXT_LENGTH) {
+        if (ctxt->sizeentcopy < allowed_expansion) {
             fprintf(stderr, "Total entity size too small: %lu\n",
                     ctxt->sizeentcopy);
             res = 1;
@@ -1004,7 +735,12 @@ hugeDtdTest(const char *filename ATTRIBUTE_UNUSED,
         total_size = strlen(hugeDocParts->start) +
                      strlen(hugeDocParts->segment) * (MAX_NODES - 1) +
                      strlen(hugeDocParts->finish) +
-                     28;
+                     /*
+                      * Other external entities pa.ent, pb.ent, pc.ent.
+                      * These are currently counted twice because they're
+                      * used both in DTD and EntityValue.
+                      */
+                     (16 + 6 + 6) * 2;
         if (ctxt->sizeentities != total_size) {
             fprintf(stderr, "Wrong parsed entity size: %lu (expected %lu)\n",
                     ctxt->sizeentities, total_size);
@@ -1112,8 +848,6 @@ launchTests(testDescPtr tst) {
 	    } else {
 		mem = xmlMemUsed();
 		extraMemoryFromResolver = 0;
-		testErrorsSize = 0;
-		testErrors[0] = 0;
 		res = tst->func(globbuf.gl_pathv[i], result, error,
 		                tst->options | XML_PARSE_COMPACT);
 		xmlResetLastError();
@@ -1132,7 +866,6 @@ launchTests(testDescPtr tst) {
 			err++;
 		    }
 		}
-		testErrorsSize = 0;
 	    }
 	    if (result)
 		free(result);
@@ -1141,8 +874,6 @@ launchTests(testDescPtr tst) {
 	}
 	globfree(&globbuf);
     } else {
-        testErrorsSize = 0;
-	testErrors[0] = 0;
 	extraMemoryFromResolver = 0;
         res = tst->func(NULL, NULL, NULL, tst->options);
 	if (res != 0) {
@@ -1221,7 +952,6 @@ int main(int argc, const char** argv) {
 	       nb_tests, nb_errors, nb_leaks);
     }
     xmlCleanupParser();
-    xmlMemoryDump();
 
     return(ret);
 }

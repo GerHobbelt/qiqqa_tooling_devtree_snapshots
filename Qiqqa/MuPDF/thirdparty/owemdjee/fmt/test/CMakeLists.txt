@@ -1,4 +1,6 @@
-add_subdirectory(gtest)
+if (NOT FMT_GTEST_EXTERNAL)
+  add_subdirectory(gtest)
+endif ()
 
 include(CheckSymbolExists)
 
@@ -6,7 +8,11 @@ set(TEST_MAIN_SRC test-main.cc gtest-extra.cc gtest-extra.h util.cc)
 add_library(test-main STATIC ${TEST_MAIN_SRC})
 target_include_directories(test-main PUBLIC
   $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>)
-target_link_libraries(test-main gtest fmt)
+if (FMT_GTEST_EXTERNAL)
+  target_link_libraries(test-main gmock gtest fmt)
+else ()
+  target_link_libraries(test-main gtest fmt)
+endif ()
 
 function(add_fmt_executable name)
   add_executable(${name} ${ARGN})
@@ -32,12 +38,16 @@ function(add_fmt_test name)
   set(sources ${name}.cc ${ADD_FMT_TEST_UNPARSED_ARGUMENTS})
   if (ADD_FMT_TEST_HEADER_ONLY)
     set(sources ${sources} ${TEST_MAIN_SRC} ../src/os.cc)
-    set(libs gtest fmt-header-only)
+    if (FMT_GTEST_EXTERNAL)
+      set(libs gtest gmock fmt-header-only)
+    else ()
+      set(libs gtest fmt-header-only)
+    endif ()
     if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
       set(PEDANTIC_COMPILE_FLAGS ${PEDANTIC_COMPILE_FLAGS} -Wno-weak-vtables)
     endif ()
   elseif (ADD_FMT_TEST_MODULE)
-    set(libs gtest test-module)
+    set(libs test-main test-module)
     set_source_files_properties(${name}.cc PROPERTIES OBJECT_DEPENDS test-module)
   else ()
     set(libs test-main fmt)
@@ -55,11 +65,15 @@ function(add_fmt_test name)
   add_test(NAME ${name} COMMAND ${name})
 endfunction()
 
+if (FMT_MODULE)
+  return ()
+endif ()
+
 add_fmt_test(args-test)
+add_fmt_test(base-test)
 add_fmt_test(assert-test)
 add_fmt_test(chrono-test)
 add_fmt_test(color-test)
-add_fmt_test(core-test)
 add_fmt_test(gtest-extra-test)
 add_fmt_test(format-test mock-allocator.h)
 if (MSVC)
@@ -78,7 +92,7 @@ endif()
 add_fmt_test(printf-test)
 add_fmt_test(ranges-test ranges-odr-test.cc)
 
-add_fmt_test(scan-test)
+add_fmt_test(scan-test HEADER_ONLY)
 check_symbol_exists(strptime "time.h" HAVE_STRPTIME)
 if (HAVE_STRPTIME)
   target_compile_definitions(scan-test PRIVATE FMT_HAVE_STRPTIME)
@@ -138,7 +152,11 @@ if (NOT MSVC_STATIC_RUNTIME)
     posix-mock-test.cc ../src/format.cc ${TEST_MAIN_SRC})
   target_include_directories(
     posix-mock-test PRIVATE ${PROJECT_SOURCE_DIR}/include)
-  target_link_libraries(posix-mock-test gtest)
+  if (FMT_GTEST_EXTERNAL)
+    target_link_libraries(posix-mock-test gmock)
+  else ()
+    target_link_libraries(posix-mock-test gtest)
+  endif ()
   if (FMT_PEDANTIC)
     target_compile_options(posix-mock-test PRIVATE ${PEDANTIC_COMPILE_FLAGS})
   endif ()
@@ -171,7 +189,12 @@ if (FMT_PEDANTIC)
 endif ()
 
 # These tests are disabled on Windows because they take too long.
-if (FMT_PEDANTIC AND NOT WIN32)
+# They are disabled on GCC < 4.9 because it can not parse UDLs without
+# a space after `operator""` but that is an incorrect syntax for any more
+# modern compiler.
+if (FMT_PEDANTIC AND NOT WIN32 AND NOT (
+    CMAKE_CXX_COMPILER_ID MATCHES "GNU" AND
+    CMAKE_CXX_COMPILER_VERSION VERSION_LESS 4.9))
   # Test if incorrect API usages produce compilation error.
   add_test(compile-error-test ${CMAKE_CTEST_COMMAND}
     --build-and-test

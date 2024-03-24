@@ -27,11 +27,14 @@
     <Filter Include="Misc Files\docs\source">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test">
+    <Filter Include="Misc Files\docs\source\_static">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\test">
+    <Filter Include="Misc Files\test">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -45,6 +48,9 @@
       <Filter>Source Files\test</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/xtl/test/test_xclosure.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/xtl/test/test_xcompare.cpp">
       <Filter>Source Files\test</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/xtl/test/test_xcomplex.cpp">
@@ -114,6 +120,9 @@
       <Filter>Header Files\include\xtl</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/xtl/include/xtl/xclosure.hpp">
+      <Filter>Header Files\include\xtl</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/xtl/include/xtl/xcompare.hpp">
       <Filter>Header Files\include\xtl</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/xtl/include/xtl/xcomplex.hpp">
@@ -206,11 +215,26 @@
     <Text Include="../../thirdparty/owemdjee/xtl/CMakeLists.txt">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/xtl/LICENSE">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/xtl/README.md">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/xtl/docs/Doxyfile">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtl/docs/Makefile">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtl/docs/environment.yml">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/xtl/docs/make.bat">
       <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtl/docs/source/_static/main_stylesheet.css">
+      <Filter>Misc Files\docs\source\_static</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/xtl/docs/source/basic_types.rst">
       <Filter>Misc Files\docs\source</Filter>
@@ -221,10 +245,19 @@
     <Text Include="../../thirdparty/owemdjee/xtl/docs/source/changelog.rst">
       <Filter>Misc Files\docs\source</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/xtl/docs/source/cmake.svg">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtl/docs/source/conda.svg">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/xtl/docs/source/conf.py">
       <Filter>Misc Files\docs\source</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/xtl/docs/source/containers.rst">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtl/docs/source/debian.svg">
       <Filter>Misc Files\docs\source</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/xtl/docs/source/design_patterns.rst">
@@ -242,8 +275,23 @@
     <Text Include="../../thirdparty/owemdjee/xtl/docs/source/miscellaneous.rst">
       <Filter>Misc Files\docs\source</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/xtl/docs/source/quantstack-white.svg">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/xtl/docs/source/releasing.rst">
       <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtl/docs/source/spack.svg">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtl/docs/source/xtl.svg">
+      <Filter>Misc Files\docs\source</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtl/environment-dev.yml">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/xtl/readthedocs.yml">
+      <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/xtl/test/CMakeLists.txt">
       <Filter>Misc Files\test</Filter>

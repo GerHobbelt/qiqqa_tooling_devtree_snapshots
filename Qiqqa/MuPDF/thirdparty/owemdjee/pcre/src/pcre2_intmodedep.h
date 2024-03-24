@@ -7,7 +7,7 @@ and semantics are as close as possible to those of the Perl 5 language.
 
                        Written by Philip Hazel
      Original API code Copyright (c) 1997-2012 University of Cambridge
-          New API code Copyright (c) 2016-2022 University of Cambridge
+          New API code Copyright (c) 2016-2023 University of Cambridge
 
 -----------------------------------------------------------------------------
 Redistribution and use in source and binary forms, with or without
@@ -572,6 +572,7 @@ typedef struct pcre2_real_compile_context {
   uint16_t newline_convention;
   uint32_t parens_nest_limit;
   uint32_t extra_options;
+  uint32_t max_varlookbehind;
 } pcre2_real_compile_context;
 
 /* The real match context structure. */
@@ -605,9 +606,9 @@ defined specially because it is required in pcre2_serialize_decode() when
 copying the size from possibly unaligned memory into a variable of the same
 type. Use a macro rather than a typedef to avoid compiler warnings when this
 file is included multiple times by pcre2test. LOOKBEHIND_MAX specifies the
-largest lookbehind that is supported. (OP_REVERSE in a pattern has a 16-bit
-argument in 8-bit and 16-bit modes, so we need no more than a 16-bit field
-here.) */
+largest lookbehind that is supported. (OP_REVERSE and OP_VREVERSE in a pattern
+have 16-bit arguments in 8-bit and 16-bit modes, so we need no more than a
+16-bit field here.) */
 
 #undef  CODE_BLOCKSIZE_TYPE
 #define CODE_BLOCKSIZE_TYPE PCRE2_SIZE
@@ -658,6 +659,7 @@ typedef struct pcre2_real_match_data {
   PCRE2_SPTR       mark;             /* Pointer to last mark */
   struct heapframe *heapframes;      /* Backtracking frames heap memory */
   PCRE2_SIZE       heapframes_size;  /* Malloc-ed size */
+  PCRE2_SIZE       subject_length;   /* Subject length */
   PCRE2_SIZE       leftchar;         /* Offset to leftmost code unit */
   PCRE2_SIZE       rightchar;        /* Offset to rightmost code unit */
   PCRE2_SIZE       startchar;        /* Offset to starting code unit */
@@ -734,7 +736,6 @@ typedef struct compile_block {
   uint16_t name_entry_size;        /* Size of each entry */
   uint16_t parens_depth;           /* Depth of nested parentheses */
   uint16_t assert_depth;           /* Depth of nested assertions */
-  open_capitem *open_caps;         /* Chain of open capture items */
   named_group *named_groups;       /* Points to vector in pre-compile */
   uint32_t named_group_list_size;  /* Number of entries in the list */
   uint32_t external_options;       /* External (initial) options */
@@ -752,7 +753,8 @@ typedef struct compile_block {
   uint32_t class_range_end;        /* Overall class range end */
   PCRE2_UCHAR nl[4];               /* Newline string when fixed length */
   uint32_t req_varyopt;            /* "After variable item" flag for reqbyte */
-  int  max_lookbehind;             /* Maximum lookbehind (characters) */
+  uint32_t max_varlookbehind;      /* Limit for variable lookbehinds */
+  int  max_lookbehind;             /* Maximum lookbehind encountered (characters) */
   BOOL had_accept;                 /* (*ACCEPT) encountered */
   BOOL had_pruneorskip;            /* (*PRUNE) or (*SKIP) encountered */
   BOOL had_recurse;                /* Had a recursion or subroutine call */
@@ -878,7 +880,8 @@ typedef struct match_block {
   PCRE2_SPTR start_code;          /* For use when recursing */
   PCRE2_SPTR start_subject;       /* Start of the subject string */
   PCRE2_SPTR check_subject;       /* Where UTF-checked from */
-  PCRE2_SPTR end_subject;         /* End of the subject string */
+  PCRE2_SPTR end_subject;         /* Usable end of the subject string */
+  PCRE2_SPTR true_end_subject;    /* Actual end of the subject string */
   PCRE2_SPTR end_match_ptr;       /* Subject position at end match */
   PCRE2_SPTR start_used_ptr;      /* Earliest consulted character */
   PCRE2_SPTR last_used_ptr;       /* Latest consulted character */

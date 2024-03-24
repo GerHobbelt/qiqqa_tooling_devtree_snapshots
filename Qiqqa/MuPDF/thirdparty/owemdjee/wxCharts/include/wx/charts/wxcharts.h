@@ -56,9 +56,9 @@
 #ifdef _MSC_VER
 
 #ifdef _DEBUG
-#pragma comment(lib, "wxchartsd.lib")
+//#pragma comment(lib, "wxchartsd.lib")
 #else
-#pragma comment(lib, "wxcharts.lib")
+//#pragma comment(lib, "wxcharts.lib")
 #endif
 
 #endif

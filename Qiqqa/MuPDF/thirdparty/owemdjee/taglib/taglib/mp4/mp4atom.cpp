@@ -23,19 +23,22 @@
  *   http://www.mozilla.org/MPL/                                           *
  ***************************************************************************/
 
-#include <climits>
-
-#include <tdebug.h>
-#include <tstring.h>
 #include "mp4atom.h"
+
+#include <climits>
+#include <utility>
+
+#include "tdebug.h"
 
 using namespace TagLib;
 
-const char *const MP4::Atom::containers[11] = {
+namespace {
+  constexpr std::array containers {
     "moov", "udta", "mdia", "meta", "ilst",
     "stbl", "minf", "moof", "traf", "trak",
     "stsd"
-};
+  };
+} // namespace
 
 MP4::Atom::Atom(File *file)
   : offset(file->tell())
@@ -73,7 +76,7 @@ MP4::Atom::Atom(File *file)
     }
   }
 
-  if(length < 8) {
+  if(length < 8 || length > file->length() - offset) {
     debug("MP4: Invalid atom size");
     length = 0;
     file->seek(0, File::End);
@@ -81,26 +84,26 @@ MP4::Atom::Atom(File *file)
   }
 
   name = header.mid(4, 4);
+  for(int i = 0; i < 4; ++i) {
+    const char ch = name.at(i);
+    if((ch < ' ' || ch > '~') && ch != '\251') {
+      debug("MP4: Invalid atom type");
+      length = 0;
+      file->seek(0, File::End);
+    }
+  }
 
-  for(int i = 0; i < numContainers; i++) {
-    if(name == containers[i]) {
+  for(auto c : containers) {
+    if(name == c) {
       if(name == "meta") {
-        long posAfterMeta = file->tell();
-        ByteVector nextSize = file->readBlock(8).mid(4, 4);
-        static const char *const metaChildrenNames[] = {
-            "hdlr", "ilst", "mhdr", "ctry", "lang"
+        offset_t posAfterMeta = file->tell();
+        static constexpr std::array metaChildrenNames {
+          "hdlr", "ilst", "mhdr", "ctry", "lang"
         };
-        bool metaIsFullAtom = true;
-        for(size_t j = 0;
-            j < sizeof(metaChildrenNames) / sizeof(metaChildrenNames[0]);
-            ++j) {
-          if(nextSize == metaChildrenNames[j]) {
-            // meta is not a full atom (i.e. not followed by version, flags). It
-            // is followed by the size and type of the first child atom.
-            metaIsFullAtom = false;
-            break;
-          }
-        }
+        // meta is not a full atom (i.e. not followed by version, flags). It
+        // is followed by the size and type of the first child atom.
+        auto metaIsFullAtom = std::none_of(metaChildrenNames.begin(), metaChildrenNames.end(),
+          [nextSize = file->readBlock(8).mid(4, 4)](const auto &child) { return nextSize == child; });
         // Only skip next four bytes, which contain version and flags, if meta
         // is a full atom.
         file->seek(posAfterMeta + (metaIsFullAtom ? 4 : 0));
@@ -109,7 +112,7 @@ MP4::Atom::Atom(File *file)
         file->seek(8, File::Current);
       }
       while(file->tell() < offset + length) {
-        MP4::Atom *child = new MP4::Atom(file);
+        auto child = new MP4::Atom(file);
         children.append(child);
         if(child->length == 0)
           return;
@@ -121,34 +124,32 @@ MP4::Atom::Atom(File *file)
   file->seek(offset + length);
 }
 
-MP4::Atom::~Atom()
-{
-}
+MP4::Atom::~Atom() = default;
 
 MP4::Atom *
 MP4::Atom::find(const char *name1, const char *name2, const char *name3, const char *name4)
 {
-  if(name1 == 0) {
+  if(name1 == nullptr) {
     return this;
   }
-  for(AtomList::ConstIterator it = children.begin(); it != children.end(); ++it) {
-    if((*it)->name == name1) {
-      return (*it)->find(name2, name3, name4);
+  for(const auto &child : std::as_const(children)) {
+    if(child->name == name1) {
+      return child->find(name2, name3, name4);
     }
   }
-  return 0;
+  return nullptr;
 }
 
 MP4::AtomList
 MP4::Atom::findall(const char *name, bool recursive)
 {
   MP4::AtomList result;
-  for(AtomList::ConstIterator it = children.begin(); it != children.end(); ++it) {
-    if((*it)->name == name) {
-      result.append(*it);
+  for(const auto &child : std::as_const(children)) {
+    if(child->name == name) {
+      result.append(child);
     }
     if(recursive) {
-      result.append((*it)->findall(name, recursive));
+      result.append(child->findall(name, recursive));
     }
   }
   return result;
@@ -158,12 +159,12 @@ bool
 MP4::Atom::path(MP4::AtomList &path, const char *name1, const char *name2, const char *name3)
 {
   path.append(this);
-  if(name1 == 0) {
+  if(name1 == nullptr) {
     return true;
   }
-  for(AtomList::ConstIterator it = children.begin(); it != children.end(); ++it) {
-    if((*it)->name == name1) {
-      return (*it)->path(path, name2, name3);
+  for(const auto &child : std::as_const(children)) {
+    if(child->name == name1) {
+      return child->path(path, name2, name3);
     }
   }
   return false;
@@ -174,38 +175,36 @@ MP4::Atoms::Atoms(File *file)
   atoms.setAutoDelete(true);
 
   file->seek(0, File::End);
-  long end = file->tell();
+  offset_t end = file->tell();
   file->seek(0);
   while(file->tell() + 8 <= end) {
-    MP4::Atom *atom = new MP4::Atom(file);
+    auto atom = new MP4::Atom(file);
     atoms.append(atom);
     if (atom->length == 0)
       break;
   }
 }
 
-MP4::Atoms::~Atoms()
-{
-}
+MP4::Atoms::~Atoms() = default;
 
 MP4::Atom *
 MP4::Atoms::find(const char *name1, const char *name2, const char *name3, const char *name4)
 {
-  for(AtomList::ConstIterator it = atoms.begin(); it != atoms.end(); ++it) {
-    if((*it)->name == name1) {
-      return (*it)->find(name2, name3, name4);
+  for(const auto &atom : std::as_const(atoms)) {
+    if(atom->name == name1) {
+      return atom->find(name2, name3, name4);
     }
   }
-  return 0;
+  return nullptr;
 }
 
 MP4::AtomList
 MP4::Atoms::path(const char *name1, const char *name2, const char *name3, const char *name4)
 {
   MP4::AtomList path;
-  for(AtomList::ConstIterator it = atoms.begin(); it != atoms.end(); ++it) {
-    if((*it)->name == name1) {
-      if(!(*it)->path(path, name2, name3, name4)) {
+  for(const auto &atom : std::as_const(atoms)) {
+    if(atom->name == name1) {
+      if(!atom->path(path, name2, name3, name4)) {
         path.clear();
       }
       return path;

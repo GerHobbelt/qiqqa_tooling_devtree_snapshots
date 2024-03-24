@@ -3,7 +3,7 @@
 /// \file cryptlib.h
 /// \brief Abstract base classes that provide a uniform interface to this library.
 
-/*!	\mainpage Crypto++ Library 8.7 API Reference
+/*!	\mainpage Crypto++ Library 8.9 API Reference
 <dl>
 <dt>Abstract Base Classes<dd>
 	cryptlib.h
@@ -106,12 +106,12 @@ and getting us started on the manual.
 #include "stdcpp.h"
 #include "trap.h"
 
-// C5264 new for VS2022/v17.4, MSC v14.34
+// C5264 new for VS2022/v17.4, MSC v17.3.4
 // https://github.com/weidai11/cryptopp/issues/1185
 #if CRYPTOPP_MSC_VERSION
 # pragma warning(push)
 # pragma warning(disable: 4127 4189 4505 4702)
-# if (CRYPTOPP_MSC_VERSION >= 1434)
+# if (CRYPTOPP_MSC_VERSION >= 1933)
 #  pragma warning(disable: 5264)
 # endif
 #endif
@@ -1026,7 +1026,7 @@ public:
 	virtual unsigned int MinLastBlockSize() const {return 0;}
 
 	/// \brief Determines if the last block receives special processing
-	/// \return true if the last block reveives special processing, false otherwise.
+	/// \return true if the last block receives special processing, false otherwise.
 	/// \details Some authenticated encryption modes are not expressed well with
 	///  MandatoryBlockSize() and MinLastBlockSize(). For example, AES/OCB uses
 	///  16-byte blocks (MandatoryBlockSize = 16) and the last block requires special processing

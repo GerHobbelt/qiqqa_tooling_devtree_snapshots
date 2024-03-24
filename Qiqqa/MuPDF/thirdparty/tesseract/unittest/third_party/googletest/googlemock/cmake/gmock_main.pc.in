@@ -1,9 +1,0 @@
-prefix=@CMAKE_INSTALL_PREFIX@
-libdir=${prefix}/@CMAKE_INSTALL_LIBDIR@
-
-Name: gmock_main
-Description: GoogleMock (with main() function)
-Version: @PROJECT_VERSION@
-URL: https://github.com/google/googletest
-Requires: gmock = @PROJECT_VERSION@
-Libs: -L${libdir} -lgmock_main

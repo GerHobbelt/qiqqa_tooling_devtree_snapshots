@@ -12,11 +12,14 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Misc Files\TestVectors">
+    <Filter Include="Misc Files\TestData">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0001}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
+    <Filter Include="Misc Files\TestVectors">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0003}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -42,9 +45,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/cryptopp/aria.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/cryptopp/aria_simd.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/cryptopp/ariatab.cpp">
@@ -417,6 +417,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/cryptopp/ppc_simd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/cryptopp/primetab.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/cryptopp/pssr.cpp">
@@ -1286,7 +1289,13 @@
     <Text Include="../../thirdparty/owemdjee/cryptopp/CMakeLists.txt">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/cryptopp/Doxyfile">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/cryptopp/Filelist.txt">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/cryptopp/GNUmakefile">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/cryptopp/History.txt">
@@ -1303,6 +1312,12 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/cryptopp/Security.md">
       <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/cryptopp/TestData/defdmac1.bin">
+      <Filter>Misc Files\TestData</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/cryptopp/TestData/defdmac2.bin">
+      <Filter>Misc Files\TestData</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/cryptopp/TestVectors/Readme.txt">
       <Filter>Misc Files\TestVectors</Filter>
@@ -1550,7 +1565,28 @@
     <Text Include="../../thirdparty/owemdjee/cryptopp/aes_armv4.S">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/cryptopp/cryptdll.vcxproj.filters">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/cryptopp/cryptest.nmake">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/cryptopp/cryptest.vcxproj.filters">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/cryptopp/cryptest.vcxproj.user">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/cryptopp/cryptlib.vcxproj.filters">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/cryptopp/cryptlib.vcxproj.user">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/cryptopp/cryptopp-config.cmake">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/cryptopp/dlltest.vcxproj.filters">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/cryptopp/sha1_armv4.S">

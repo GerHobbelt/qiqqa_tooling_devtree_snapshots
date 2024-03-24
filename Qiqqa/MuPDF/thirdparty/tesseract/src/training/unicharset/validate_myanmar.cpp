@@ -1,3 +1,8 @@
+
+#ifdef HAVE_TESSERACT_CONFIG_H
+#  include "config_auto.h" // HAS_LIBICU
+#endif
+
 #include "validate_myanmar.h"
 #include "errcode.h"
 #include "icuerrorcode.h"
@@ -42,7 +47,7 @@ bool ValidateMyanmar::ConsumeGraphemeIfValid() {
     }
   } else {
     if (report_errors_) {
-      tprintf("ERROR: Invalid start of Myanmar syllable: {}\n", codes_[codes_used_].second);
+      tprintError("Invalid start of Myanmar syllable: {}\n", codes_[codes_used_].second);
     }
     return false; // One of these is required.
   }
@@ -152,7 +157,7 @@ bool ValidateMyanmar::ConsumeOptionalSignsIfPresent() {
   }
   // Sgaw tones 0x1062, 0x1063 must be followed by asat.
   // W Pwo tones 0x1069, 0x106a, and 0x106b may be followed by dot below or visarga (nasal).
-  ch = codes_[codes_used_].second; 
+  ch = codes_[codes_used_].second;
   if (ch == 0x103a || ch == 0x1037 || ch == 0x1038) {
     if (UseMultiCode(1)) {
       return true;

@@ -1,3 +1,5 @@
+Note: this is a patched version of HTML Tidy used for post-processing the markup on <https://seirdy.one/>. It adds support for the `referrerpolicy` attribute and switches boolean attribute values from the "attribute name" style to empty strings for XML output. [I submitted the former change as a PR](https://github.com/htacg/tidy-html5/pull/1095) but upstream development appears to have stagnated.
+
 # HTACG HTML Tidy
 
 All other READMEs and related materials can be found in [README/][100]. Although all of our materials should be linked in this README, be sure to check this directory for documents we’ve not yet added to this document.

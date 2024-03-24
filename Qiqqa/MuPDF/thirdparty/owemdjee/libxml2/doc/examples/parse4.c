@@ -112,7 +112,7 @@ int main(int argc, char **argv) {
      * between the version it was compiled for and the actual shared
      * library used.
      */
-    LIBXML_TEST_VERSION
+    LIBXML_TEST_VERSION();
 
     /*
      * simulate a progressive parsing using the input file.
@@ -125,14 +125,6 @@ int main(int argc, char **argv) {
         fprintf(stderr, "Failed to parse %s\n", argv[1]);
     }
 
-    /*
-     * Cleanup function for the XML library.
-     */
-    xmlCleanupParser();
-    /*
-     * this is to debug memory for regression tests
-     */
-    xmlMemoryDump();
     return(0);
 }
 #else /* ! LIBXML_PUSH_ENABLED */

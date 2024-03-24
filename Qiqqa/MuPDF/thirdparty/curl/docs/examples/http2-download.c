@@ -34,10 +34,10 @@
 #include <errno.h>
 
 /* somewhat unix-specific */
-#if !defined(CURL_WIN32) && !defined(CURL_AVOID_SYS_TIME_H)
+#if !defined(_WIN32) && !defined(CURL_AVOID_SYS_TIME_H)
 #  include <sys/time.h>
 #endif
-#if !defined(CURL_WIN32)
+#if !defined(_WIN32)
 #include <unistd.h>
 #endif
 
@@ -45,9 +45,9 @@
 #include <curl/mprintf.h>
 
 #ifndef CURLPIPE_MULTIPLEX
-/* This little trick will just make sure that we do not enable pipelining for
-   libcurls old enough to not have this symbol. It is _not_ defined to zero in
-   a recent libcurl header. */
+/* This little trick makes sure that we do not enable pipelining for libcurls
+   old enough to not have this symbol. It is _not_ defined to zero in a recent
+   libcurl header. */
 #define CURLPIPE_MULTIPLEX 0
 #endif
 
@@ -60,7 +60,7 @@ struct transfer {
 #define NUM_HANDLES 1000
 
 static
-void dump(const char *text, int num, unsigned char *ptr, size_t size,
+void dump(const char *text, unsigned int num, unsigned char *ptr, size_t size,
           char nohex)
 {
   size_t i;
@@ -72,7 +72,7 @@ void dump(const char *text, int num, unsigned char *ptr, size_t size,
     /* without the hex output, we can fit more on screen */
     width = 0x40;
 
-  fprintf(stderr, "%d %s, %lu bytes (0x%lx)\n",
+  fprintf(stderr, "%u %s, %lu bytes (0x%lx)\n",
           num, text, (unsigned long)size, (unsigned long)size);
 
   for(i = 0; i<size; i += width) {
@@ -121,10 +121,7 @@ int my_trace(CURL *handle, curl_infotype type,
   switch(type) {
   case CURLINFO_TEXT:
     fprintf(stderr, "== %u Info: %s", num, data);
-    /* FALLTHROUGH */
-  default: /* in case a new one is introduced to shock us */
     return 0;
-
   case CURLINFO_HEADER_OUT:
     text = "=> Send header";
     break;
@@ -143,6 +140,8 @@ int my_trace(CURL *handle, curl_infotype type,
   case CURLINFO_SSL_DATA_IN:
     text = "<= Recv SSL data";
     break;
+  default: /* in case a new one is introduced to shock us */
+    return 0;
   }
 
   dump(text, num, (unsigned char *)data, size, 1);
@@ -176,12 +175,11 @@ static void setup(struct transfer *t, int num)
   curl_easy_setopt(hnd, CURLOPT_DEBUGFUNCTION, my_trace);
   curl_easy_setopt(hnd, CURLOPT_DEBUGDATA, t);
 
+  /* enlarge the receive buffer for potentially higher transfer speeds */
+  curl_easy_setopt(hnd, CURLOPT_BUFFERSIZE, 100000L);
+
   /* HTTP/2 please */
   curl_easy_setopt(hnd, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_2_0);
-
-  /* we use a self-signed test server, skip verification during debugging */
-  curl_easy_setopt(hnd, CURLOPT_SSL_VERIFYPEER, 0L);
-  curl_easy_setopt(hnd, CURLOPT_SSL_VERIFYHOST, 0L);
 
 #if (CURLPIPE_MULTIPLEX > 0)
   /* wait for pipe connection to confirm */

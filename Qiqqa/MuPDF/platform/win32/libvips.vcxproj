@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVIPS;VIPS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVIPS;VIPS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libvips/cplusplus/include;../../thirdparty/owemdjee/libvips/libvips/include;../../thirdparty/owemdjee/libvips/libvips/include/vips;../../scripts/libvips;../../thirdparty/owemdjee/glib2/glib;../../thirdparty/owemdjee/glib2;../../scripts/libglib2;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/glib2/gmodule;../../thirdparty/owemdjee/libexpat/expat/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVIPS;VIPS_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libvips/cplusplus/include;../../thirdparty/owemdjee/libvips/libvips/include;../../thirdparty/owemdjee/libvips/libvips/include/vips;../../scripts/libvips;../../thirdparty/owemdjee/glib2/glib;../../thirdparty/owemdjee/glib2;../../scripts/libglib2;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/glib2/gmodule;../../thirdparty/owemdjee/libexpat/expat/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVIPS;VIPS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVIPS;VIPS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVIPS;VIPS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libvips/cplusplus/include;../../thirdparty/owemdjee/libvips/libvips/include;../../thirdparty/owemdjee/libvips/libvips/include/vips;../../scripts/libvips;../../thirdparty/owemdjee/glib2/glib;../../thirdparty/owemdjee/glib2;../../scripts/libglib2;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/glib2/gmodule;../../thirdparty/owemdjee/libexpat/expat/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libvips/cplusplus/include;../../thirdparty/owemdjee/libvips/libvips/include;../../thirdparty/owemdjee/libvips/libvips/include/vips;../../scripts/libvips;../../thirdparty/owemdjee/glib2/glib;../../thirdparty/owemdjee/glib2;../../scripts/libglib2;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/glib2/gmodule;../../thirdparty/owemdjee/libexpat/expat/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVIPS;VIPS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVIPS;VIPS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libvips/cplusplus/include;../../thirdparty/owemdjee/libvips/libvips/include;../../thirdparty/owemdjee/libvips/libvips/include/vips;../../scripts/libvips;../../thirdparty/owemdjee/glib2/glib;../../thirdparty/owemdjee/glib2;../../scripts/libglib2;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/glib2/gmodule;../../thirdparty/owemdjee/libexpat/expat/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVIPS;VIPS_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libvips/cplusplus/include;../../thirdparty/owemdjee/libvips/libvips/include;../../thirdparty/owemdjee/libvips/libvips/include/vips;../../scripts/libvips;../../thirdparty/owemdjee/glib2/glib;../../thirdparty/owemdjee/glib2;../../scripts/libglib2;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/glib2/gmodule;../../thirdparty/owemdjee/libexpat/expat/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVIPS;VIPS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVIPS;VIPS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVIPS;VIPS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libvips/cplusplus/include;../../thirdparty/owemdjee/libvips/libvips/include;../../thirdparty/owemdjee/libvips/libvips/include/vips;../../scripts/libvips;../../thirdparty/owemdjee/glib2/glib;../../thirdparty/owemdjee/glib2;../../scripts/libglib2;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/glib2/gmodule;../../thirdparty/owemdjee/libexpat/expat/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libvips/cplusplus/include;../../thirdparty/owemdjee/libvips/libvips/include;../../thirdparty/owemdjee/libvips/libvips/include/vips;../../scripts/libvips;../../thirdparty/owemdjee/glib2/glib;../../thirdparty/owemdjee/glib2;../../scripts/libglib2;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/glib2/gmodule;../../thirdparty/owemdjee/libexpat/expat/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVIPS;VIPS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVIPS;VIPS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libvips/cplusplus/include;../../thirdparty/owemdjee/libvips/libvips/include;../../thirdparty/owemdjee/libvips/libvips/include/vips;../../scripts/libvips;../../thirdparty/owemdjee/glib2/glib;../../thirdparty/owemdjee/glib2;../../scripts/libglib2;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/glib2/gmodule;../../thirdparty/owemdjee/libexpat/expat/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVIPS;VIPS_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libvips/cplusplus/include;../../thirdparty/owemdjee/libvips/libvips/include;../../thirdparty/owemdjee/libvips/libvips/include/vips;../../scripts/libvips;../../thirdparty/owemdjee/glib2/glib;../../thirdparty/owemdjee/glib2;../../scripts/libglib2;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/glib2/gmodule;../../thirdparty/owemdjee/libexpat/expat/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVIPS;VIPS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVIPS;VIPS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVIPS;VIPS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libvips/cplusplus/include;../../thirdparty/owemdjee/libvips/libvips/include;../../thirdparty/owemdjee/libvips/libvips/include/vips;../../scripts/libvips;../../thirdparty/owemdjee/glib2/glib;../../thirdparty/owemdjee/glib2;../../scripts/libglib2;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/glib2/gmodule;../../thirdparty/owemdjee/libexpat/expat/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libvips/cplusplus/include;../../thirdparty/owemdjee/libvips/libvips/include;../../thirdparty/owemdjee/libvips/libvips/include/vips;../../scripts/libvips;../../thirdparty/owemdjee/glib2/glib;../../thirdparty/owemdjee/glib2;../../scripts/libglib2;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/glib2/gmodule;../../thirdparty/owemdjee/libexpat/expat/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVIPS;VIPS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVIPS;VIPS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libvips/cplusplus/include;../../thirdparty/owemdjee/libvips/libvips/include;../../thirdparty/owemdjee/libvips/libvips/include/vips;../../scripts/libvips;../../thirdparty/owemdjee/glib2/glib;../../thirdparty/owemdjee/glib2;../../scripts/libglib2;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/glib2/gmodule;../../thirdparty/owemdjee/libexpat/expat/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVIPS;VIPS_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libvips/cplusplus/include;../../thirdparty/owemdjee/libvips/libvips/include;../../thirdparty/owemdjee/libvips/libvips/include/vips;../../scripts/libvips;../../thirdparty/owemdjee/glib2/glib;../../thirdparty/owemdjee/glib2;../../scripts/libglib2;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/glib2/gmodule;../../thirdparty/owemdjee/libexpat/expat/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVIPS;VIPS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVIPS;VIPS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVIPS;VIPS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libvips/cplusplus/include;../../thirdparty/owemdjee/libvips/libvips/include;../../thirdparty/owemdjee/libvips/libvips/include/vips;../../scripts/libvips;../../thirdparty/owemdjee/glib2/glib;../../thirdparty/owemdjee/glib2;../../scripts/libglib2;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/glib2/gmodule;../../thirdparty/owemdjee/libexpat/expat/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libvips/cplusplus/include;../../thirdparty/owemdjee/libvips/libvips/include;../../thirdparty/owemdjee/libvips/libvips/include/vips;../../scripts/libvips;../../thirdparty/owemdjee/glib2/glib;../../thirdparty/owemdjee/glib2;../../scripts/libglib2;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/glib2/gmodule;../../thirdparty/owemdjee/libexpat/expat/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -681,6 +681,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/libvips/libvips/resample/vsqbs.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libvips/test/test_connections.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libvips/test/test_descriptors.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libvips/test/test_timeout_webpsave.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libvips/tools/vips.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libvips/tools/vipsedit.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libvips/tools/vipsheader.c" />
@@ -825,8 +826,10 @@
     <Image Include="../../thirdparty/owemdjee/libvips/test/test-suite/images/truncated.jpg" />
     <Text Include="../../thirdparty/owemdjee/libvips/CODE_OF_CONDUCT.md" />
     <Text Include="../../thirdparty/owemdjee/libvips/ChangeLog" />
+    <Text Include="../../thirdparty/owemdjee/libvips/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/libvips/README.md" />
     <Text Include="../../thirdparty/owemdjee/libvips/completions/README.md" />
+    <Text Include="../../thirdparty/owemdjee/libvips/completions/vips-completion.bash" />
     <Text Include="../../thirdparty/owemdjee/libvips/cplusplus/Doxyfile.in" />
     <Text Include="../../thirdparty/owemdjee/libvips/cplusplus/README.md" />
     <Text Include="../../thirdparty/owemdjee/libvips/cplusplus/gen-operators.py" />
@@ -838,8 +841,10 @@
     <Text Include="../../thirdparty/owemdjee/libvips/doc/Using-vipsthumbnail.md" />
     <Text Include="../../thirdparty/owemdjee/libvips/doc/binding.md" />
     <Text Include="../../thirdparty/owemdjee/libvips/doc/gen-function-list.py" />
-    <Text Include="../../thirdparty/owemdjee/libvips/doc/libvips-docs.xml.in" />
+    <Text Include="../../thirdparty/owemdjee/libvips/doc/images/interconvert.svg" />
     <Text Include="../../thirdparty/owemdjee/libvips/doc/libvips-from-C++.md" />
+    <Text Include="../../thirdparty/owemdjee/libvips/doc/pandoc-docbook-template.docbook" />
+    <Text Include="../../thirdparty/owemdjee/libvips/doc/version.xml.in" />
     <Text Include="../../thirdparty/owemdjee/libvips/libvips/colour/wrap-profiles.sh" />
     <Text Include="../../thirdparty/owemdjee/libvips/libvips/foreign/libnsgif/README-ns.md" />
     <Text Include="../../thirdparty/owemdjee/libvips/libvips/foreign/libnsgif/README.md" />
@@ -847,14 +852,40 @@
     <Text Include="../../thirdparty/owemdjee/libvips/libvips/include/vips/enumtypes.c.in" />
     <Text Include="../../thirdparty/owemdjee/libvips/libvips/include/vips/enumtypes.h.in" />
     <Text Include="../../thirdparty/owemdjee/libvips/libvips/include/vips/version.h.in" />
+    <Text Include="../../thirdparty/owemdjee/libvips/man/vips.1" />
+    <Text Include="../../thirdparty/owemdjee/libvips/man/vipsedit.1" />
+    <Text Include="../../thirdparty/owemdjee/libvips/man/vipsheader.1" />
+    <Text Include="../../thirdparty/owemdjee/libvips/man/vipsprofile.1" />
+    <Text Include="../../thirdparty/owemdjee/libvips/man/vipsthumbnail.1" />
     <Text Include="../../thirdparty/owemdjee/libvips/meson_options.txt" />
     <Text Include="../../thirdparty/owemdjee/libvips/po/ChangeLog" />
     <Text Include="../../thirdparty/owemdjee/libvips/po/POTFILES.in" />
     <Text Include="../../thirdparty/owemdjee/libvips/po/README" />
+    <Text Include="../../thirdparty/owemdjee/libvips/po/de.po" />
+    <Text Include="../../thirdparty/owemdjee/libvips/po/en_GB.po" />
+    <Text Include="../../thirdparty/owemdjee/libvips/po/malkovich.po" />
     <Text Include="../../thirdparty/owemdjee/libvips/test/README.md" />
     <Text Include="../../thirdparty/owemdjee/libvips/test/test-suite/__init__.py" />
     <Text Include="../../thirdparty/owemdjee/libvips/test/test-suite/conftest.py" />
     <Text Include="../../thirdparty/owemdjee/libvips/test/test-suite/helpers/helpers.py" />
+    <Text Include="../../thirdparty/owemdjee/libvips/test/test-suite/images/16x17000.avif" />
+    <Text Include="../../thirdparty/owemdjee/libvips/test/test-suite/images/1bit.tif" />
+    <Text Include="../../thirdparty/owemdjee/libvips/test/test-suite/images/2bit.tif" />
+    <Text Include="../../thirdparty/owemdjee/libvips/test/test-suite/images/4bit.tif" />
+    <Text Include="../../thirdparty/owemdjee/libvips/test/test-suite/images/CMU-1-Small-Region.svs" />
+    <Text Include="../../thirdparty/owemdjee/libvips/test/test-suite/images/ISO_12233-reschart.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libvips/test/test-suite/images/WFPC2u5780205r_c0fx.fits" />
+    <Text Include="../../thirdparty/owemdjee/libvips/test/test-suite/images/avif-orientation-6.avif" />
+    <Text Include="../../thirdparty/owemdjee/libvips/test/test-suite/images/blankpage.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libvips/test/test-suite/images/blankpage.svg" />
+    <Text Include="../../thirdparty/owemdjee/libvips/test/test-suite/images/cmyktest.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libvips/test/test-suite/images/logo.svg" />
+    <Text Include="../../thirdparty/owemdjee/libvips/test/test-suite/images/multi-channel-z-series.ome.tif" />
+    <Text Include="../../thirdparty/owemdjee/libvips/test/test-suite/images/sample.exr" />
+    <Text Include="../../thirdparty/owemdjee/libvips/test/test-suite/images/sample.hdr" />
+    <Text Include="../../thirdparty/owemdjee/libvips/test/test-suite/images/sample.tif" />
+    <Text Include="../../thirdparty/owemdjee/libvips/test/test-suite/images/t00740_tr1_segm.hdr" />
+    <Text Include="../../thirdparty/owemdjee/libvips/test/test-suite/images/world.jp2" />
     <Text Include="../../thirdparty/owemdjee/libvips/test/test-suite/test_arithmetic.py" />
     <Text Include="../../thirdparty/owemdjee/libvips/test/test-suite/test_colour.py" />
     <Text Include="../../thirdparty/owemdjee/libvips/test/test-suite/test_connection.py" />
@@ -887,6 +918,7 @@
     <Xml Include="../../thirdparty/owemdjee/libvips/doc/extending.xml" />
     <Xml Include="../../thirdparty/owemdjee/libvips/doc/file-format.xml" />
     <Xml Include="../../thirdparty/owemdjee/libvips/doc/function-list.xml" />
+    <Xml Include="../../thirdparty/owemdjee/libvips/doc/libvips-docs.xml" />
     <Xml Include="../../thirdparty/owemdjee/libvips/doc/libvips-from-C++.xml" />
     <Xml Include="../../thirdparty/owemdjee/libvips/doc/using-C.xml" />
     <Xml Include="../../thirdparty/owemdjee/libvips/doc/using-command-line.xml" />

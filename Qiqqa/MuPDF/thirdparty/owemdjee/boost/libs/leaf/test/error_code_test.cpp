@@ -1,4 +1,4 @@
-// Copyright 2018-2022 Emil Dotchevski and Reverge Studios, Inc.
+// Copyright 2018-2023 Emil Dotchevski and Reverge Studios, Inc.
 
 // Distributed under the Boost Software License, Version 1.0. (See accompanying
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
@@ -214,7 +214,7 @@ void test()
         int r = leaf::try_handle_all(
             []() -> R
             {
-                return leaf::new_error( e_wrapped_error_code { make_error_code(errc_a::a0) } ).to_error_code();
+                return R(leaf::new_error( e_wrapped_error_code { make_error_code(errc_a::a0) } ));
             },
             []( e_wrapped_error_code const & wec )
             {
@@ -232,7 +232,7 @@ void test()
         int r = leaf::try_handle_all(
             []() -> R
             {
-                return leaf::new_error( e_wrapped_error_code { make_error_code(errc_a::a0) } ).to_error_code();
+                return R(leaf::new_error( e_wrapped_error_code { make_error_code(errc_a::a0) } ));
             },
             []( leaf::match_value<leaf::condition<e_wrapped_error_code, errc_a>, errc_a::a0> code )
             {
@@ -252,7 +252,7 @@ void test()
         int r = leaf::try_handle_all(
             []() -> R
             {
-                return leaf::new_error( e_wrapped_error_code { make_error_code(errc_a::a0) } ).to_error_code();
+                return R(leaf::new_error( e_wrapped_error_code { make_error_code(errc_a::a0) } ));
             },
             []( leaf::match_value<e_wrapped_error_code, errc_a::a0> code )
             {
@@ -272,7 +272,7 @@ void test()
         int r = leaf::try_handle_all(
             []() -> R
             {
-                return leaf::new_error( e_wrapped_error_code { make_error_code(errc_a::a0) } ).to_error_code();
+                return R(leaf::new_error( e_wrapped_error_code { make_error_code(errc_a::a0) } ));
             },
             []( leaf::match_value<leaf::condition<e_wrapped_error_code, cond_x>, cond_x::x00> cond )
             {
@@ -293,7 +293,7 @@ void test()
         int r = leaf::try_handle_all(
             []() -> R
             {
-                return leaf::new_error( e_wrapped_error_code { make_error_code(errc_a::a0) } ).to_error_code();
+                return R(leaf::new_error( e_wrapped_error_code { make_error_code(errc_a::a0) } ));
             },
             []( leaf::match_value<e_wrapped_error_code, cond_x::x00> cond )
             {
@@ -504,7 +504,7 @@ void test_void()
         leaf::try_handle_all(
             []() -> R
             {
-                return leaf::new_error( e_wrapped_error_code { make_error_code(errc_a::a0) } ).to_error_code();
+                return R(leaf::new_error( e_wrapped_error_code { make_error_code(errc_a::a0) } ));
             },
             [&]( e_wrapped_error_code const & wec )
             {
@@ -523,7 +523,7 @@ void test_void()
         leaf::try_handle_all(
             []() -> R
             {
-                return leaf::new_error( e_wrapped_error_code { make_error_code(errc_a::a0) } ).to_error_code();
+                return R(leaf::new_error( e_wrapped_error_code { make_error_code(errc_a::a0) } ));
             },
             [&]( leaf::match_value<leaf::condition<e_wrapped_error_code, errc_a>, errc_a::a0> code )
             {
@@ -544,7 +544,7 @@ void test_void()
         leaf::try_handle_all(
             []() -> R
             {
-                return leaf::new_error( e_wrapped_error_code { make_error_code(errc_a::a0) } ).to_error_code();
+                return R(leaf::new_error( e_wrapped_error_code { make_error_code(errc_a::a0) } ));
             },
             [&]( leaf::match_value<e_wrapped_error_code, errc_a::a0> code )
             {
@@ -565,7 +565,7 @@ void test_void()
         leaf::try_handle_all(
             []() -> R
             {
-                return leaf::new_error( e_wrapped_error_code { make_error_code(errc_a::a0) } ).to_error_code();
+                return R(leaf::new_error( e_wrapped_error_code { make_error_code(errc_a::a0) } ));
             },
             [&]( leaf::match_value<leaf::condition<e_wrapped_error_code, cond_x>, cond_x::x00> cond )
             {
@@ -587,7 +587,7 @@ void test_void()
         leaf::try_handle_all(
             []() -> R
             {
-                return leaf::new_error( e_wrapped_error_code { make_error_code(errc_a::a0) } ).to_error_code();
+                return R(leaf::new_error( e_wrapped_error_code { make_error_code(errc_a::a0) } ));
             },
             [&]( leaf::match_value<e_wrapped_error_code, cond_x::x00> cond )
             {

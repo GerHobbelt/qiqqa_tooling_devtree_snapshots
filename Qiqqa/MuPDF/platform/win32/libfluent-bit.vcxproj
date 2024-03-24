@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFLUENT_BIT;FLUENT_BIT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFLUENT_BIT;FLUENT_BIT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFLUENT_BIT;FLUENT_BIT_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFLUENT_BIT;FLUENT_BIT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFLUENT_BIT;FLUENT_BIT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFLUENT_BIT;FLUENT_BIT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFLUENT_BIT;FLUENT_BIT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFLUENT_BIT;FLUENT_BIT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFLUENT_BIT;FLUENT_BIT_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFLUENT_BIT;FLUENT_BIT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFLUENT_BIT;FLUENT_BIT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFLUENT_BIT;FLUENT_BIT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFLUENT_BIT;FLUENT_BIT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFLUENT_BIT;FLUENT_BIT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFLUENT_BIT;FLUENT_BIT_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFLUENT_BIT;FLUENT_BIT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFLUENT_BIT;FLUENT_BIT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFLUENT_BIT;FLUENT_BIT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFLUENT_BIT;FLUENT_BIT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFLUENT_BIT;FLUENT_BIT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFLUENT_BIT;FLUENT_BIT_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFLUENT_BIT;FLUENT_BIT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFLUENT_BIT;FLUENT_BIT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFLUENT_BIT;FLUENT_BIT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -250,6 +250,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_kubernetes/kube_property.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_kubernetes/kube_regex.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_kubernetes/kubernetes.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_log_to_metrics/log_to_metrics.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_lua/lua.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_lua/lua_config.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_modify/modify.c" />
@@ -269,16 +270,22 @@
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_throttle_size/throttle_size.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_type_converter/type_converter.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_wasm/filter_wasm.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_calyptia_fleet/in_calyptia_fleet.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_collectd/in_collectd.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_collectd/netprot.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_collectd/typesdb.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_collectd/typesdb_parser.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_cpu/cpu.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_disk/in_disk.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_docker/cgroup_v1.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_docker/docker.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_docker_events/docker_events.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_docker_events/docker_events_config.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_dummy/in_dummy.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_elasticsearch/in_elasticsearch.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_elasticsearch/in_elasticsearch_bulk_conn.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_elasticsearch/in_elasticsearch_bulk_prot.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_elasticsearch/in_elasticsearch_config.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_emitter/emitter.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_event_test/event_test.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_event_type/event_type.c" />
@@ -297,6 +304,8 @@
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_http/http_prot.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_kafka/in_kafka.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_kmsg/in_kmsg.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_kubernetes_events/kubernetes_events.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_kubernetes_events/kubernetes_events_conf.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_lib/in_lib.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_mem/mem.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_mem/proc.c" />
@@ -309,20 +318,33 @@
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_config.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_cpu.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_cpu_darwin.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_cpu_linux.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_cpufreq_linux.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_diskstats.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_diskstats_darwin.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_diskstats_linux.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_filefd_linux.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_filesystem.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_filesystem_linux.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_loadavg.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_loadavg_darwin.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_loadavg_linux.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_meminfo.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_meminfo_darwin.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_meminfo_linux.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_netdev.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_netdev_darwin.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_netdev_linux.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_processes.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_processes_linux.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_stat_linux.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_systemd.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_textfile.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_textfile_linux.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_time.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_uname.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_uname_darwin.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_uname_linux.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_utils.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_vmstat_linux.c" />
@@ -330,11 +352,17 @@
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_opentelemetry/opentelemetry.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_opentelemetry/opentelemetry_config.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_opentelemetry/opentelemetry_prot.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_podman_metrics/podman_metrics.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_podman_metrics/podman_metrics_data.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_proc/in_proc.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_prometheus_scrape/prom_scrape.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_random/random.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_serial/in_serial.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_serial/in_serial_config.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_splunk/splunk.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_splunk/splunk_config.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_splunk/splunk_conn.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_splunk/splunk_prot.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_statsd/statsd.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_stdin/in_stdin.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_storage_backlog/sb.c" />
@@ -383,6 +411,10 @@
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_windows_exporter_metrics/we_wmi.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_windows_exporter_metrics/we_wmi_cpu_info.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_windows_exporter_metrics/we_wmi_logon.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_windows_exporter_metrics/we_wmi_memory.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_windows_exporter_metrics/we_wmi_paging_file.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_windows_exporter_metrics/we_wmi_process.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_windows_exporter_metrics/we_wmi_service.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_windows_exporter_metrics/we_wmi_system.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_windows_exporter_metrics/we_wmi_thermalzone.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_winevtlog/in_winevtlog.c" />
@@ -403,9 +435,13 @@
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_azure_kusto/azure_kusto.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_azure_kusto/azure_kusto_conf.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_azure_kusto/azure_kusto_ingest.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_azure_logs_ingestion/azure_logs_ingestion.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_azure_logs_ingestion/azure_logs_ingestion_conf.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_bigquery/bigquery.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_bigquery/bigquery_conf.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_calyptia/calyptia.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_chronicle/chronicle.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_chronicle/chronicle_conf.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_cloudwatch_logs/cloudwatch_api.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_cloudwatch_logs/cloudwatch_logs.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_counter/counter.c" />
@@ -445,6 +481,8 @@
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_opensearch/os_conf.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_opentelemetry/opentelemetry.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_opentelemetry/opentelemetry_conf.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_oracle_log_analytics/oci_logan.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_oracle_log_analytics/oci_logan_conf.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_pgsql/pgsql.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_pgsql/pgsql_connections.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_plot/plot.c" />
@@ -479,8 +517,13 @@
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_td/td_http.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_udp/udp.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_udp/udp_conf.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_vivo_exporter/vivo.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_vivo_exporter/vivo_http.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_vivo_exporter/vivo_stream.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_websocket/websocket.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_websocket/websocket_conf.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/processor_attributes/attributes.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/plugins/processor_labels/labels.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/aws/compression/arrow/compress.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/aws/flb_aws_compress.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/aws/flb_aws_credentials.c" />
@@ -500,6 +543,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_base64.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_callback.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_chunk_trace.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_compression.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_config.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_config_map.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_config_static.c" />
@@ -537,6 +581,10 @@
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_kv.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_lib.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_log.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_log_event_decoder.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_log_event_encoder.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_log_event_encoder_dynamic_field.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_log_event_encoder_primitives.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_lua.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_luajit.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_meta.c" />
@@ -558,10 +606,12 @@
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_pipe.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_plugin.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_plugin_proxy.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_processor.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_ra_key.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_random.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_record_accessor.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_regex.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_reload.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_ring_buffer.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_router.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/flb_routes_mask.c" />
@@ -595,13 +645,15 @@
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/http_server/api/v1/storage.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/http_server/api/v1/trace.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/http_server/api/v1/uptime.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/http_server/api/v2/metrics.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/http_server/api/v2/register.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/http_server/api/v2/reload.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/http_server/flb_hs.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/http_server/flb_hs_endpoints.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/http_server/flb_hs_utils.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/multiline/flb_ml.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/multiline/flb_ml_group.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/multiline/flb_ml_mode.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/multiline/flb_ml_mode_java.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/multiline/flb_ml_parser.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/multiline/flb_ml_parser_cri.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/multiline/flb_ml_parser_docker.c" />
@@ -627,9 +679,9 @@
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/tls/openssl.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/wasm/flb_wasm.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/src/win32/winsvc.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/include/aws_client_mock.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/avro.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/aws/placeholder.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/aws_client_mock.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/aws_compress.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/aws_credentials.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/aws_credentials_ec2.c" />
@@ -660,6 +712,8 @@
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/http_client.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/input_chunk.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/log.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/log_event_decoder.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/log_event_encoder.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/lua.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/metrics.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/mp.c" />
@@ -672,9 +726,11 @@
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/parser_ltsv.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/parser_regex.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/pipe.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/processor.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/random.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/record_accessor.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/regex.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/reload.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/ring_buffer.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/router.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/sds.c" />
@@ -684,6 +740,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/stream_processor.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/typecast.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/unit_sizes.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/uri.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/utils.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/config_map_opts.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/core-timeout.c" />
@@ -691,11 +748,13 @@
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/core_engine.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/core_log.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/custom_calyptia_test.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/filter_aws.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/filter_checklist.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/filter_ecs.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/filter_expect.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/filter_grep.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/filter_kubernetes.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/filter_log_to_metrics.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/filter_lua.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/filter_modify.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/filter_multiline.c" />
@@ -709,16 +768,22 @@
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/filter_type_converter.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/filter_wasm.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/http_callbacks.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/in_elasticsearch.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/in_event_test.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/in_fluentbit_metrics.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/in_forward.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/in_http.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/in_mqtt.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/in_netif.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/in_opentelemetry.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/in_podman_metrics.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/in_simple_systems.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/in_splunk.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/in_statsd.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/in_syslog.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/in_tail.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/in_tcp.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/in_udp.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/out_cloudwatch.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/out_counter.c" />
     <ClCompile Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/out_datadog.c" />
@@ -759,9 +824,11 @@
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_base64.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_bits.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_bucket_queue.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_byteswap.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_callback.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_chunk_trace.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_compat.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_compression.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_config.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_config_format.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_config_map.h" />
@@ -812,6 +879,14 @@
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_langinfo.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_lib.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_log.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_log_event.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_log_event_decoder.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_log_event_encoder.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_log_event_encoder_body_macros.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_log_event_encoder_dynamic_field.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_log_event_encoder_metadata_macros.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_log_event_encoder_primitives.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_log_event_encoder_root_macros.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_lua.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_luajit.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_macros.h" />
@@ -832,11 +907,14 @@
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_pipe.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_plugin.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_plugin_proxy.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_processor.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_processor_plugin.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_pthread.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_ra_key.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_random.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_record_accessor.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_regex.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_reload.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_ring_buffer.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_router.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/flb_routes_mask.h" />
@@ -909,6 +987,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_kubernetes/kube_property.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_kubernetes/kube_props.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_kubernetes/kube_regex.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_log_to_metrics/log_to_metrics.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_lua/lua_config.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_modify/modify.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_multiline/ml.h" />
@@ -936,7 +1015,12 @@
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_docker_events/docker_events.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_docker_events/docker_events_config.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_dummy/in_dummy.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_elasticsearch/in_elasticsearch.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_elasticsearch/in_elasticsearch_bulk_conn.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_elasticsearch/in_elasticsearch_bulk_prot.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_elasticsearch/in_elasticsearch_config.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_exec/in_exec.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_exec/in_exec_win32_compat.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_exec_wasi/in_exec_wasi.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_forward/fw.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_forward/fw_config.h" />
@@ -949,6 +1033,9 @@
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_http/http_prot.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_kafka/in_kafka.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_kmsg/in_kmsg.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_kubernetes_events/kubernetes_events.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_kubernetes_events/kubernetes_events_conf.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_kubernetes_events/kubernetes_events_sql.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_lib/in_lib.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_mem/mem.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_mem/proc.h" />
@@ -964,10 +1051,14 @@
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_cpufreq.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_diskstats.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_filefd_linux.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_filesystem.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_loadavg.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_meminfo.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_netdev.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_processes.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_stat_linux.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_systemd.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_textfile.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_time.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_uname.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/ne_utils.h" />
@@ -976,10 +1067,17 @@
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_opentelemetry/opentelemetry.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_opentelemetry/opentelemetry_config.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_opentelemetry/opentelemetry_prot.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_podman_metrics/podman_metrics.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_podman_metrics/podman_metrics_config.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_podman_metrics/podman_metrics_data.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_proc/in_proc.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_prometheus_scrape/prom_scrape.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_serial/in_serial.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_serial/in_serial_config.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_splunk/splunk.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_splunk/splunk_config.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_splunk/splunk_conn.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_splunk/splunk_prot.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_stdin/in_stdin.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_syslog/syslog.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_syslog/syslog_conf.h" />
@@ -1026,6 +1124,10 @@
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_windows_exporter_metrics/we_wmi.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_windows_exporter_metrics/we_wmi_cpu_info.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_windows_exporter_metrics/we_wmi_logon.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_windows_exporter_metrics/we_wmi_memory.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_windows_exporter_metrics/we_wmi_paging_file.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_windows_exporter_metrics/we_wmi_process.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_windows_exporter_metrics/we_wmi_service.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_windows_exporter_metrics/we_wmi_system.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_windows_exporter_metrics/we_wmi_thermalzone.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_winevtlog/winevtlog.h" />
@@ -1041,9 +1143,13 @@
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_azure_kusto/azure_kusto.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_azure_kusto/azure_kusto_conf.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_azure_kusto/azure_kusto_ingest.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_azure_logs_ingestion/azure_logs_ingestion.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_azure_logs_ingestion/azure_logs_ingestion_conf.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_bigquery/bigquery.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_bigquery/bigquery_conf.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_calyptia/calyptia.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_chronicle/chronicle.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_chronicle/chronicle_conf.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_cloudwatch_logs/cloudwatch_api.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_cloudwatch_logs/cloudwatch_logs.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_datadog/datadog.h" />
@@ -1080,6 +1186,8 @@
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_opensearch/os_conf.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_opentelemetry/opentelemetry.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_opentelemetry/opentelemetry_conf.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_oracle_log_analytics/oci_logan.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_oracle_log_analytics/oci_logan_conf.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_pgsql/pgsql.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_pgsql/pgsql_connections.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_prometheus_exporter/prom.h" />
@@ -1110,8 +1218,12 @@
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_td/td_http.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_udp/udp.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_udp/udp_conf.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_vivo_exporter/vivo.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_vivo_exporter/vivo_http.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_vivo_exporter/vivo_stream.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_websocket/websocket.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_websocket/websocket_conf.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/plugins/processor_attributes/variant_utils.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/src/aws/compression/arrow/compress.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/src/aws/flb_aws_credentials_log.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/src/http_server/api/v1/health.h" />
@@ -1121,9 +1233,12 @@
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/src/http_server/api/v1/storage.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/src/http_server/api/v1/trace.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/src/http_server/api/v1/uptime.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/src/http_server/api/v2/metrics.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/src/http_server/api/v2/register.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/src/http_server/api/v2/reload.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/src/proxy/go/go.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/tests/include/aws_client_mock.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/tests/include/flb_tests_initialize_tls.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/aws_client_mock.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/aws_credentials_test_internal.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/input_chunk/log/test_buffer_drop_chunks.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/include/sp_cb_functions.h" />
@@ -1140,6 +1255,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/common/json_small.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/datadog/json.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/es/json_es.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/in_elasticsearch/json_bulk.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/stackdriver/json.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/stackdriver/stackdriver_test_http_request.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/stackdriver/stackdriver_test_insert_id.h" />
@@ -1150,8 +1266,10 @@
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/stackdriver/stackdriver_test_operation.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/stackdriver/stackdriver_test_resource_labels.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/stackdriver/stackdriver_test_source_location.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/stackdriver/stackdriver_test_span_id.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/stackdriver/stackdriver_test_timestamp.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/stackdriver/stackdriver_test_trace.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/stackdriver/stackdriver_test_trace_sampled.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/td/json_td.h" />
     <Image Include="../../thirdparty/owemdjee/fluent-bit/documentation/fluentbit_ecosystem.png" />
     <Image Include="../../thirdparty/owemdjee/fluent-bit/documentation/fluentbit_users.png" />
@@ -1164,9 +1282,11 @@
     <Text Include="../../thirdparty/owemdjee/fluent-bit/DEVELOPER_GUIDE.md" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/GOLANG_OUTPUT_PLUGIN.md" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/GOVERNANCE.md" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/MAINTAINERS.md" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/README.md" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/SECURITY.md" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/appveyor.yml" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/cmake/FindJournald.cmake" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/cmake/FindLibEdit.cmake" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/cmake/FindMonkey.cmake" />
@@ -1177,7 +1297,9 @@
     <Text Include="../../thirdparty/owemdjee/fluent-bit/cmake/luajit.cmake" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/cmake/macos-setup.cmake" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/cmake/macros.cmake" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/cmake/platform_feature_checks.cmake" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/cmake/sanitizers-cmake/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/cmake/sanitizers-cmake/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/cmake/sanitizers-cmake/README.md" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/cmake/sanitizers-cmake/cmake/FindASan.cmake" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/cmake/sanitizers-cmake/cmake/FindMSan.cmake" />
@@ -1217,9 +1339,19 @@
     <Text Include="../../thirdparty/owemdjee/fluent-bit/conf/parsers_multiline.conf" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/conf/parsers_openstack.conf" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/conf/plugins.conf" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/conf/rate_limit.conf" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/cpack/macos/fluent-bit.plist.cmakein" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/cpack/macos/welcome.txt.cmakein" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/cpack/wix/WIX.template.in.cmakein" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/debian.sh" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/docker_compose/node-exporter-dashboard/README.md" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/docker_compose/node-exporter-dashboard/config/grafana/provisioning/dashboards/dashboard.json" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/docker_compose/node-exporter-dashboard/config/grafana/provisioning/dashboards/dashboard.yml" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/docker_compose/node-exporter-dashboard/config/grafana/provisioning/datasources/datasource.yml" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/docker_compose/node-exporter-dashboard/config/prometheus.yml" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/docker_compose/node-exporter-dashboard/docker-compose.yml" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/dockerfiles/Dockerfile.centos7" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/dockerfiles/Dockerfile.windows" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/dockerfiles/README.md" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/dockerfiles/dockerhub-description.md" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/documentation/README.md" />
@@ -1228,12 +1360,21 @@
     <Text Include="../../thirdparty/owemdjee/fluent-bit/documentation/examples/multiline/regex-001/fluent-bit.conf" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/documentation/examples/multiline/regex-001/parsers_multiline.conf" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/filter_rust/Cargo.toml" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/filter_rust/README.md" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/filter_rust/src/lib.rs" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/filter_rust_clib/Cargo.toml" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/filter_rust_clib/Makefile" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/filter_rust_clib/README.md" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/filter_rust_clib/src/lib.rs" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/filter_wasm_c/Makefile" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/filter_wasm_c/README.md" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/filter_wasm_go/README.md" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/filter_wasm_go/go.sum" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/hello_world/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/hello_world/README.md" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/kafka_filter/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/kafka_filter/docker-compose.yml" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/kafka_filter/kafka.conf" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/kafka_filter/kafka.lua" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/kafka_filter/scripts/common.sh" />
@@ -1243,15 +1384,21 @@
     <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/kafka_filter/scripts/kafka-produce.sh" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/out_lib/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/out_lib/README.md" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/perf_test/docker-compose.yml" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/perf_test/fluent-bit.conf" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/perf_test/scripts/entrypoint.sh" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/perf_test/scripts/multi-line-log-generator.sh" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/tracing/docker-compose.yml" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/tracing/enable-tracing.sh" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/tracing/fluent-bit.conf" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/wasi_serde_json/Cargo.toml" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/wasi_serde_json/README.md" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/wasi_serde_json/src/main.rs" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/windows/docker/README.md" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/windows/docker/conf/fluent-bit.conf" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/windows/kubernetes/README.md" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/windows/kubernetes/configmap.yaml" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/examples/windows/kubernetes/deployment.yaml" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/gen_static_conf/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/include/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/include/fluent-bit/conf/flb_static_conf.h.in" />
@@ -1267,23 +1414,31 @@
     <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/build-config.json" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/build.sh" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/local-build-all.sh" />
-    <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/remove-version.sh" />
-    <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/server/README.md" />
-    <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/server/aptly.conf" />
-    <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/server/create-aptly-repo.sh" />
-    <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/server/publish-all.sh" />
-    <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/server/publish-manual.sh" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/skopeo-sync.sh" />
-    <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/sync-releases-to-bucket.sh" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/test-release-packages.sh" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/testing/README.md" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/testing/smoke/container/container-smoke-test.sh" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/testing/smoke/container/fluent-bit.conf" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/testing/smoke/container/fluent-bit.yaml" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/testing/smoke/k8s/k8s-smoke-test.sh" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/testing/smoke/packages/Dockerfile.amazonlinux2" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/testing/smoke/packages/Dockerfile.amazonlinux2022" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/testing/smoke/packages/Dockerfile.centos7" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/testing/smoke/packages/Dockerfile.centos8" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/testing/smoke/packages/Dockerfile.centos9" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/testing/smoke/packages/Dockerfile.debian10" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/testing/smoke/packages/Dockerfile.debian11" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/testing/smoke/packages/Dockerfile.debian12" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/testing/smoke/packages/Dockerfile.ubuntu1804" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/testing/smoke/packages/Dockerfile.ubuntu2004" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/testing/smoke/packages/Dockerfile.ubuntu2204" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/testing/smoke/packages/local-test-all.sh" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/testing/smoke/packages/run-package-tests.sh" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/testing/smoke/packages/test.sh" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/update-apt-repo.sh" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/update-repos.sh" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/update-source-packages.sh" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/update-yum-repo.sh" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/packaging/windows-checksums.sh" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/custom_calyptia/CMakeLists.txt" />
@@ -1294,6 +1449,7 @@
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_expect/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_geoip2/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_geoip2/libmaxminddb/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_geoip2/libmaxminddb/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_geoip2/libmaxminddb/bin/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_geoip2/libmaxminddb/bin/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_geoip2/libmaxminddb/include/maxminddb_config.h.cmake.in" />
@@ -1302,6 +1458,7 @@
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_geoip2/libmaxminddb/src/libmaxminddb.pc.in" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_grep/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_kubernetes/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_log_to_metrics/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_lua/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_modify/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_multiline/CMakeLists.txt" />
@@ -1316,12 +1473,14 @@
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_throttle_size/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_type_converter/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/filter_wasm/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_calyptia_fleet/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_collectd/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_cpu/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_disk/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_docker/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_docker_events/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_dummy/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_elasticsearch/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_emitter/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_event_test/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_event_type/CMakeLists.txt" />
@@ -1334,6 +1493,7 @@
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_http/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_kafka/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_kmsg/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_kubernetes_events/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_lib/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_mem/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_mqtt/CMakeLists.txt" />
@@ -1341,10 +1501,12 @@
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_nginx_exporter_metrics/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_node_exporter_metrics/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_opentelemetry/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_podman_metrics/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_proc/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_prometheus_scrape/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_random/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_serial/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_splunk/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_statsd/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_stdin/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/in_storage_backlog/CMakeLists.txt" />
@@ -1363,8 +1525,10 @@
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_azure/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_azure_blob/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_azure_kusto/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_azure_logs_ingestion/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_bigquery/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_calyptia/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_chronicle/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_cloudwatch_logs/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_counter/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_datadog/CMakeLists.txt" />
@@ -1389,6 +1553,7 @@
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_null/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_opensearch/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_opentelemetry/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_oracle_log_analytics/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_pgsql/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_plot/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_prometheus_exporter/CMakeLists.txt" />
@@ -1404,17 +1569,24 @@
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_tcp/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_td/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_udp/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_vivo_exporter/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/out_websocket/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/processor_attributes/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/plugins/processor_labels/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/run_code_analysis.sh" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/scripts/append_tag.lua" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/scripts/override_time.lua" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/scripts/rate_limit.lua" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/scripts/test.lua" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/snap/fluent-bit.svg" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/snap/snapcraft.yaml" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/src/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/src/aws/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/src/aws/compression/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/src/aws/compression/arrow/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/src/http_server/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/src/http_server/api/v1/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/src/http_server/api/v2/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/src/multiline/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/src/proxy/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/src/proxy/go/CMakeLists.txt" />
@@ -1428,12 +1600,16 @@
     <Text Include="../../thirdparty/owemdjee/fluent-bit/src/stream_processor/parser/sql.y" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/src/wamrc/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/src/wasm/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/include/aws_client_mock_client_resp.def" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/README.md" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/aws/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/avro/json_single_map_001.json" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/avro/live-sample.json" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/avro/multiline.json" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/aws_credentials/shared_config.ini" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/aws_credentials/shared_credentials_file.ini" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/aws_credentials/shared_credentials_file_nodefault.ini" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/aws_credentials/web_identity_token_file.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/config_format/classic/fluent-bit.conf" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/config_format/classic/indent_level_error.conf" />
@@ -1441,8 +1617,20 @@
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/config_format/classic/issue6281_input.conf" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/config_format/classic/issue6281_output.conf" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/config_format/classic/issue_5880.conf" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/config_format/classic/nolimitline.conf" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/config_format/classic/recursion.conf" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/config_format/classic/service.conf" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/config_format/yaml/fluent-bit.yaml" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/config_format/yaml/issue_7559.yaml" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/config_format/yaml/parsers/parsers-conf.yaml" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/config_format/yaml/parsers/parsers.conf" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/config_format/yaml/pipelines/slist/even.yaml" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/config_format/yaml/pipelines/slist/odd.yaml" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/config_format/yaml/processors.yaml" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/config_format/yaml/service.yaml" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/config_format/yaml/test.yaml" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/config_format/yaml/test/dummy_pipeline.yaml" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/config_format/yaml/test/nested.yaml" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/file/empty_file.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/file/text_file.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/input_chunk/parser.conf" />
@@ -1470,8 +1658,42 @@
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/pack/utf8_relaxed.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/parser/json.conf" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/parser/regex.conf" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/reload/fluent-bit.conf" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/reload/yaml/processor.yaml" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/LICENSE" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/get-header-key-duplicate/get-header-key-duplicate.sts" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/get-header-value-multiline/get-header-value-multiline.sts" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/get-header-value-order/get-header-value-order.sts" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/get-header-value-trim/get-header-value-trim.sts" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/get-unreserved/get-unreserved.sts" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/get-utf8/get-utf8.sts" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/get-vanilla-empty-query-key/get-vanilla-empty-query-key.sts" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/get-vanilla-query-order-key-case/get-vanilla-query-order-key-case.sts" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/get-vanilla-query-order-key/get-vanilla-query-order-key.sts" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/get-vanilla-query-order-value/get-vanilla-query-order-value.sts" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/get-vanilla-query-unreserved/get-vanilla-query-unreserved.sts" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/get-vanilla-query/get-vanilla-query.sts" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/get-vanilla-utf8-query/get-vanilla-utf8-query.sts" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/get-vanilla/get-vanilla.sts" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/normalize-path/get-relative-relative/get-relative-relative.sts" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/normalize-path/get-relative/get-relative.sts" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/normalize-path/get-slash-dot-slash/get-slash-dot-slash.sts" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/normalize-path/get-slash-pointless-dot/get-slash-pointless-dot.sts" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/normalize-path/get-slash/get-slash.sts" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/normalize-path/get-slashes/get-slashes.sts" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/normalize-path/get-space/get-space.sts" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/normalize-path/normalize-path.txt" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/post-header-key-case/post-header-key-case.sts" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/post-header-key-sort/post-header-key-sort.sts" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/post-header-value-case/post-header-value-case.sts" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/post-sts-token/post-sts-header-after/post-sts-header-after.sts" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/post-sts-token/post-sts-header-before/post-sts-header-before.sts" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/post-sts-token/readme.txt" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/post-vanilla-empty-query-value/post-vanilla-empty-query-value.sts" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/post-vanilla-query/post-vanilla-query.sts" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/post-vanilla/post-vanilla.sts" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/post-x-www-form-urlencoded-parameters/post-x-www-form-urlencoded-parameters.sts" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/signv4/aws-sig-v4-test-suite/post-x-www-form-urlencoded/post-x-www-form-urlencoded.sts" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/stream_processor/gen_msgpack.sh" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/stream_processor/samples-hw/1.json" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/data/stream_processor/samples-hw/2.json" />
@@ -1485,6 +1707,7 @@
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/internal/flb_tests_internal.h.in" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/lib/acutest/README.md" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/lib/shunit2/CODE_OF_CONDUCT.md" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/lib/shunit2/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/lib/shunit2/README.md" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/lib/shunit2/doc/CHANGES-2.1.md" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/lib/shunit2/doc/RELEASE_NOTES-2.1.0.txt" />
@@ -1516,12 +1739,36 @@
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/kubernetes/parsers.conf" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/loki/labelmap.json" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/podman/cgroupv2/cgroup.controllers" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/podman/cgroupv2/config.json" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/podman/cgroupv2/libpod-8a19d6058bfbe88cd0548eba9047d94c70161f5d74b545c7504b2f27491686d9/containers/cgroup.procs" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/podman/garbage/config.json" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/podman/garbage/memory/libpod-8a19d6058bfbe88cd0548eba9047d94c70161f5d74b545c7504b2f27491686d9/memory.usage_in_bytes" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/podman/garbage_config/config.json" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/podman/no_config/libpod-8a19d6058bfbe88cd0548eba9047d94c70161f5d74b545c7504b2f27491686d9/memory.usage_in_bytes" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/podman/no_config/memory/libpod-8a19d6058bfbe88cd0548eba9047d94c70161f5d74b545c7504b2f27491686d9/memory.usage_in_bytes" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/podman/no_proc/config.json" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/podman/no_proc/memory/libpod-8a19d6058bfbe88cd0548eba9047d94c70161f5d74b545c7504b2f27491686d9/memory.usage_in_bytes" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/podman/no_sysfs/config.json" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/podman/regular/config.json" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/podman/regular/memory/libpod-8a19d6058bfbe88cd0548eba9047d94c70161f5d74b545c7504b2f27491686d9/memory.usage_in_bytes" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/podman/regular/systemd/libpod-8a19d6058bfbe88cd0548eba9047d94c70161f5d74b545c7504b2f27491686d9/cgroup.procs" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/podman/reversed/config.json" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/podman/reversed/memory/libpod-8a19d6058bfbe88cd0548eba9047d94c70161f5d74b545c7504b2f27491686d9/memory.usage_in_bytes" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/podman/reversed/systemd/libpod-8a19d6058bfbe88cd0548eba9047d94c70161f5d74b545c7504b2f27491686d9/cgroup.procs" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/stackdriver/stackdriver-credentials.json" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/tail/parsers.conf" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/tail/parsers_multiline_json.conf" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/wasm/append_tag.wasm" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/wasm/drop_record.wasm" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/wasm/modify_record.wasm" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/wasm/numeric_records.wasm" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/data/wasm/say_hello.wasm" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/filter_kubernetes.md" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/flb_tests_runtime.h.in" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/gen_data.py" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/wasm/go/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime/wasm/go/go.sum" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime_shell/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime_shell/common.sh" />
     <Text Include="../../thirdparty/owemdjee/fluent-bit/tests/runtime_shell/conf/in_dummy_expect.conf" />

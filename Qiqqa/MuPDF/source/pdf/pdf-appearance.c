@@ -150,7 +150,7 @@ pdf_write_opacity_blend_mode(fz_context *ctx, pdf_annot *annot, fz_buffer *buf, 
 
 	/* /Resources << /ExtGState << /H << /Type/ExtGState /BM/Multiply /CA %g /ca %g >> >> >> */
 
-	if (!*res)
+	if (!pdf_is_dict(ctx, *res))
 		*res = pdf_new_dict(ctx, annot->page->doc, 1);
 
 	res_egs = pdf_dict_put_dict(ctx, *res, PDF_NAME(ExtGState), 1);
@@ -940,7 +940,7 @@ pdf_write_ink_appearance(fz_context *ctx, pdf_annot *annot, fz_buffer *buf, fz_r
 
 	*rect = fz_empty_rect;
 
-	fz_append_printf(ctx, buf, "1 j\n");
+	fz_append_printf(ctx, buf, "1 J\n1 j\n");
 
 	ink_list = pdf_dict_get(ctx, annot->obj, PDF_NAME(InkList));
 	n = pdf_array_len(ctx, ink_list);
@@ -966,7 +966,12 @@ pdf_write_ink_appearance(fz_context *ctx, pdf_annot *annot, fz_buffer *buf, fz_r
 			fz_append_printf(ctx, buf, "%g %g %c\n", p.x, p.y, 'l');
 	}
 	maybe_stroke(ctx, buf, sc);
-	*rect = fz_expand_rect(*rect, lw);
+
+	/* Account for line width and add an extra 6 points of whitespace padding.
+	 * In case the annotation is a dot or a perfectly horizontal/vertical line,
+	 * we need some extra size to allow selecting it easily.
+	 */
+	*rect = fz_expand_rect(*rect, lw + 6);
 }
 
 /* Contrary to the specification, the points within a QuadPoint are NOT
@@ -1374,7 +1379,7 @@ pdf_write_stamp_appearance(fz_context *ctx, pdf_annot *annot, fz_buffer *buf, fz
 	fz_try(ctx)
 	{
 		/* /Resources << /Font << /Times %d 0 R >> >> */
-		if (!*res)
+		if (!pdf_is_dict(ctx, *res))
 			*res = pdf_new_dict(ctx, annot->page->doc, 1);
 		res_font = pdf_dict_put_dict(ctx, *res, PDF_NAME(Font), 1);
 		pdf_dict_put_drop(ctx, res_font, PDF_NAME(Times), pdf_add_simple_font(ctx, annot->page->doc, font, PDF_SIMPLE_ENCODING_NONE));
@@ -2205,7 +2210,7 @@ pdf_write_tx_widget_appearance(fz_context *ctx, pdf_annot *annot, fz_buffer *buf
 	}
 	else if (ff & PDF_TX_FIELD_IS_COMB)
 	{
-		int maxlen = pdf_to_int(ctx, pdf_dict_get_inheritable(ctx, annot->obj, PDF_NAME(MaxLen)));
+		int maxlen = pdf_dict_get_inheritable_int(ctx, annot->obj, PDF_NAME(MaxLen));
 		if (has_bc && maxlen > 1)
 		{
 			float cell_w = (w - 2 * b) / maxlen;
@@ -2273,7 +2278,7 @@ pdf_layout_text_widget(fz_context *ctx, pdf_annot *annot)
 		}
 		else if (ff & PDF_TX_FIELD_IS_COMB)
 		{
-			int maxlen = pdf_to_int(ctx, pdf_dict_get_inheritable(ctx, annot->obj, PDF_NAME(MaxLen)));
+			int maxlen = pdf_dict_get_inheritable_int(ctx, annot->obj, PDF_NAME(MaxLen));
 			layout_variable_text(ctx, out, text, lang, font, size, q, x, y, w, h, 0, 0.8f, 1.2f, 0, maxlen, 0);
 		}
 		else
@@ -2389,7 +2394,7 @@ pdf_write_widget_appearance(fz_context *ctx, pdf_annot *annot, fz_buffer *buf,
 	}
 	else
 	{
-		fz_throw(ctx, FZ_ERROR_GENERIC, "cannot create appearance stream for %q widgets", pdf_to_name_not_null(ctx, ft));
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "cannot create appearance stream for %q widgets", pdf_to_name_not_null(ctx, ft));
 	}
 }
 
@@ -2400,7 +2405,7 @@ pdf_write_appearance(fz_context *ctx, pdf_annot *annot, fz_buffer *buf,
 	switch (pdf_annot_type(ctx, annot))
 	{
 	default:
-		fz_throw(ctx, FZ_ERROR_GENERIC, "cannot create appearance stream for %q annotations",
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "cannot create appearance stream for %q annotations",
 			pdf_dict_get_name(ctx, annot->obj, PDF_NAME(Subtype)));
 	case PDF_ANNOT_WIDGET:
 		pdf_write_widget_appearance(ctx, annot, buf, rect, bbox, matrix, res);
@@ -3124,7 +3129,10 @@ retry_after_repair:
 		/* Never update Popup and Link annotations */
 		subtype = pdf_dict_get(ctx, annot->obj, PDF_NAME(Subtype));
 		if (subtype == PDF_NAME(Popup) || subtype == PDF_NAME(Link))
+		{
+			pdf_end_operation(ctx, annot->page->doc);
 			break;
+		}
 
 		/* Never update signed Signature widgets */
 		if (subtype == PDF_NAME(Widget))
@@ -3134,7 +3142,10 @@ retry_after_repair:
 			{
 				/* We cannot synthesise an appearance for a signed Sig, so don't even try. */
 				if (pdf_signature_is_signed(ctx, annot->page->doc, annot->obj))
+				{
+					pdf_end_operation(ctx, annot->page->doc);
 					break;
+				}
 			}
 		}
 
@@ -3259,6 +3270,8 @@ retry_after_repair:
 				fz_catch(ctx)
 				{
 					fz_rethrow_if(ctx, FZ_ERROR_REPAIRED);
+					fz_rethrow_if(ctx, FZ_ERROR_SYSTEM);
+					fz_report_error(ctx);
 					fz_warn(ctx, "cannot create appearance stream");
 				}
 			}
@@ -3291,7 +3304,10 @@ retry_after_repair:
 		 * Repairs only ever happen once for a document, so no infinite
 		 * loop potential here. */
 		if (fz_caught(ctx) == FZ_ERROR_REPAIRED)
+		{
+			fz_report_error(ctx);
 			goto retry_after_repair;
+		}
 		fz_rethrow(ctx);
 	}
 }

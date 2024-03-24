@@ -67,7 +67,7 @@ struct GXKeyList gxKeyList;
 #endif /* _WIN32_WCE */
 
 #ifdef _DEBUG
-/* 
+/*
  * WM_ message to string, for debugging
  * This is taken from the 8.0 SDK, so Windows 8 API and everything earlier is included
  */
@@ -478,7 +478,7 @@ fg_time_t fgPlatformSystemTime ( void )
     /* Check if we just wrapped */
     if (currTime32 < lastTime32)
         timeEpoch++;
-    
+
     lastTime32 = currTime32;
 
     return currTime32 | timeEpoch << 32;
@@ -608,10 +608,10 @@ static void fghPlatformOnWindowStatusNotify(SFG_Window *window, GLboolean visSta
         {
             if (visState)
                 /* visible, set window title */
-                SetWindowTextA( window->Window.Handle, window->State.pWState.WindowTitle );
+                SetWindowText( window->Window.Handle, window->State.pWState.WindowTitle );
             else
                 /* not visible, set icon title */
-                SetWindowTextA( window->Window.Handle, window->State.pWState.IconTitle );
+                SetWindowText( window->Window.Handle, window->State.pWState.IconTitle );
         }
 
         notify = GL_TRUE;
@@ -621,7 +621,7 @@ static void fghPlatformOnWindowStatusNotify(SFG_Window *window, GLboolean visSta
     {
         SFG_Window *saved_window = fgStructure.CurrentWindow;
 
-        /* On win32 we only have two states, window displayed and window not displayed (iconified) 
+        /* On win32 we only have two states, window displayed and window not displayed (iconified)
          * We map these to GLUT_FULLY_RETAINED and GLUT_HIDDEN respectively.
          */
         INVOKE_WCB( *window, WindowStatus, ( visState ? GLUT_FULLY_RETAINED:GLUT_HIDDEN ) );
@@ -673,7 +673,7 @@ static LRESULT fghWindowProcKeyPress(SFG_Window *window, UINT uMsg, GLboolean ke
                          rControl = 0, rShift = 0, rAlt = 0;
 
     int keypress = -1;
-    
+
     /* if keydown, check for repeat */
     /* If repeat is globally switched off, it cannot be switched back on per window.
      * But if it is globally switched on, it can be switched off per window. This matches
@@ -682,7 +682,7 @@ static LRESULT fghWindowProcKeyPress(SFG_Window *window, UINT uMsg, GLboolean ke
      */
     if( keydown && ( fgState.KeyRepeat==GLUT_KEY_REPEAT_OFF || window->State.IgnoreKeyRepeat==GL_TRUE ) && (HIWORD(lParam) & KF_REPEAT) )
         return 1;
-    
+
     /* Remember the current modifiers state so user can query it from their callback */
     fgState.Modifiers = fgPlatformGetModifiers( );
 
@@ -806,7 +806,7 @@ static LRESULT fghWindowProcKeyPress(SFG_Window *window, UINT uMsg, GLboolean ke
             keypress = GLUT_KEY_F4;
     }
 #endif
-    
+
     if(keypress != -1) {
         if(keydown) {
             INVOKE_WCB(*window, Special,
@@ -845,7 +845,7 @@ SFG_Window* fghWindowUnderCursor(SFG_Window *window)
         mouse_pos.x = GET_X_LPARAM(mouse_pos_dw);
         mouse_pos.y = GET_Y_LPARAM(mouse_pos_dw);
         ScreenToClient( window->Window.Handle, &mouse_pos );
-        
+
         hwnd = ChildWindowFromPoint(window->Window.Handle, mouse_pos);
         if (hwnd && hwnd!=window->Window.Handle)   /* can be NULL if mouse outside parent by the time we get here, or can be same as parent if we didn't find a child */
         {
@@ -963,7 +963,7 @@ LRESULT CALLBACK fgPlatformWindowProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPAR
         /* Update visibility state of the window */
         if (wParam==SIZE_MINIMIZED)
             fghPlatformOnWindowStatusNotify(window,GL_FALSE,GL_FALSE);
-        else if (wParam==SIZE_RESTORED && !window->State.Visible)
+        else if ((wParam==SIZE_RESTORED || wParam == SIZE_MAXIMIZED) && !window->State.Visible)
             fghPlatformOnWindowStatusNotify(window,GL_TRUE,GL_FALSE);
 
         /* Check window visible, we don't want do anything when we get a WM_SIZE because the user or glutIconifyWindow minimized the window */
@@ -977,7 +977,7 @@ LRESULT CALLBACK fgPlatformWindowProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPAR
             width  = LOWORD(lParam);
             height = HIWORD(lParam);
 #endif /* defined(_WIN32_WCE) */
-            
+
             /* Update state and call callback, if there was a change */
             fghOnReshapeNotify(window, width, height, GL_FALSE);
         }
@@ -1024,15 +1024,15 @@ LRESULT CALLBACK fgPlatformWindowProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPAR
             if (!IsIconic(window->Window.Handle))
             {
                 RECT windowRect;
-                
+
                 /* lParam contains coordinates of top-left of client area.
                  * Get top-left of non-client area of window, matching coordinates of
-                 * glutInitPosition and glutPositionWindow, but not those of 
+                 * glutInitPosition and glutPositionWindow, but not those of
                  * glutGet(GLUT_WINDOW_X) and glutGet(GLUT_WINDOW_Y), which return
                  * top-left of client area.
                  */
                 GetWindowRect( window->Window.Handle, &windowRect );
-            
+
                 if (window->Parent)
                 {
                     /* For child window, we should return relative to upper-left
@@ -1121,7 +1121,7 @@ LRESULT CALLBACK fgPlatformWindowProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPAR
             {
                 TRACKMOUSEEVENT tme;
 
-                /* Cursor just entered window, set cursor look */ 
+                /* Cursor just entered window, set cursor look */
                 fgSetCursor ( window, window->State.Cursor ) ;
 
                 /* If an EntryFunc callback is specified by the user, also
@@ -1181,7 +1181,7 @@ LRESULT CALLBACK fgPlatformWindowProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPAR
     case WM_PAINT:
     {
         RECT rect;
-        
+
         /* As per docs, upon receiving WM_PAINT, first check if the update region is not empty before you call BeginPaint */
         if (GetUpdateRect(hWnd,&rect,FALSE))
         {
@@ -1370,7 +1370,7 @@ LRESULT CALLBACK fgPlatformWindowProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPAR
     {
         int wheel_number = 0;   /* Only one scroll wheel on windows */
 #if defined(_WIN32_WCE)
-        int modkeys = LOWORD(wParam); 
+        int modkeys = LOWORD(wParam);
         short ticks = (short)HIWORD(wParam);
         /* commented out as should not be needed here, mouse motion is processed in WM_MOUSEMOVE first:
         xPos = LOWORD(lParam);  -- straight from docs, not consistent with mouse nutton and mouse motion above (which i think is wrong)

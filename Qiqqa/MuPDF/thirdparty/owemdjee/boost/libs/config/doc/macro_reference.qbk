@@ -630,22 +630,6 @@ standard).
 
 [endsect]
 
-[section Macros that describe possible C++ future features]
-
-The following macros describe features that may be included in some future
-ISO C++ standard, but have not yet been approved for inclusion in the language.
-
-
-[table
-[[Macro     ][Description     ]]
-
-[[`BOOST_HAS_CONCEPTS`][
-The compiler supports  concepts.
-]]
-]
-
-[endsect]
-
 [section Macros that describe C++11 features not supported]
 
 The following macros describe features in the 2011 ISO C++ standard, formerly known as C++0x,
@@ -1085,6 +1069,26 @@ that are not yet supported by a particular compiler or library.
 [[`BOOST_NO_CXX20_HDR_COROUTINE`][The compiler does not support the header `<coroutine>`.]]
 [[`BOOST_NO_CXX20_HDR_SEMAPHORE`][The compiler does not support the header `<semaphore>`.]]
 [[`BOOST_NO_CXX20_HDR_VERSION`][The compiler does not support the header `<version>`.]]
+]
+
+[endsect]
+
+[section Macros that describe C++23 features not supported]
+
+The following macros describe features in the 2023 ISO C++ standard, formerly known as C++2b,
+that are not yet supported by a particular compiler or library.
+
+[table
+[[Macro ][Description ]]
+[[`BOOST_NO_CXX23_HDR_EXPECTED`][The compiler does not support the header `<expected>`.]]
+[[`BOOST_NO_CXX23_HDR_FLAT_MAP`][The compiler does not support the header `<flat_map>`.]]
+[[`BOOST_NO_CXX23_HDR_FLAT_SET`][The compiler does not support the header `<flat_set>`.]]
+[[`BOOST_NO_CXX23_HDR_GENERATOR`][The compiler does not support the header `<generator>`.]]
+[[`BOOST_NO_CXX23_HDR_MDSPAN`][The compiler does not support the header `<mdspan>`.]]
+[[`BOOST_NO_CXX23_HDR_PRINT`][The compiler does not support the header `<print>`.]]
+[[`BOOST_NO_CXX23_HDR_SPANSTREAM`][The compiler does not support the header `<spanstream>`.]]
+[[`BOOST_NO_CXX23_HDR_STACKTRACE`][The compiler does not support the header `<stacktrace>`.]]
+[[`BOOST_NO_CXX23_HDR_STDFLOAT`][The compiler does not support the header `<stdfloat>`.]]
 ]
 
 [endsect]

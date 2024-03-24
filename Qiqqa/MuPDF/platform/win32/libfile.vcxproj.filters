@@ -24,29 +24,32 @@
     <Filter Include="Misc Files\doc">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\magic">
+    <Filter Include="Misc Files\m4">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\magic\Magdir">
+    <Filter Include="Misc Files\magic">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\python">
+    <Filter Include="Misc Files\magic\Magdir">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\python\file_magic">
+    <Filter Include="Misc Files\python">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\src">
+    <Filter Include="Misc Files\python\file_magic">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0009}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tests">
+    <Filter Include="Misc Files\src">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0010}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\src">
+    <Filter Include="Misc Files\tests">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0011}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\tests">
+    <Filter Include="Source Files\src">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tests">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0013}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -114,6 +117,9 @@
       <Filter>Source Files\src</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/file/src/is_json.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/file/src/is_simh.c">
       <Filter>Source Files\src</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/file/src/is_tar.c">
@@ -191,10 +197,16 @@
     <ClInclude Include="../../thirdparty/owemdjee/file/src/tar.h">
       <Filter>Header Files\src</Filter>
     </ClInclude>
+    <Text Include="../../thirdparty/owemdjee/file/AUTHORS">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/file/CMakeLists.txt">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/file/ChangeLog">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/file/INSTALL">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/file/Makefile.am">
@@ -212,6 +224,9 @@
     <Text Include="../../thirdparty/owemdjee/file/TODO">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/file/acinclude.m4">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/file/cmake/ConfigureChecks.cmake">
       <Filter>Misc Files\cmake</Filter>
     </Text>
@@ -224,8 +239,20 @@
     <Text Include="../../thirdparty/owemdjee/file/doc/Makefile.am">
       <Filter>Misc Files\doc</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/file/doc/file.man">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/file/doc/libmagic.man">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/file/doc/magic.man">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/file/libmagic.pc.in">
       <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/file/m4/visibility.m4">
+      <Filter>Misc Files\m4</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/file/magic/Magdir/mail.news">
       <Filter>Misc Files\magic\Magdir</Filter>
@@ -237,6 +264,12 @@
       <Filter>Misc Files\magic</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/file/python/CHANGELOG.md">
+      <Filter>Misc Files\python</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/file/python/HOWTO">
+      <Filter>Misc Files\python</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/file/python/LICENSE">
       <Filter>Misc Files\python</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/file/python/Makefile.am">
@@ -254,6 +287,9 @@
     <Text Include="../../thirdparty/owemdjee/file/python/magic.py">
       <Filter>Misc Files\python</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/file/python/pyproject.toml">
+      <Filter>Misc Files\python</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/file/python/setup.py">
       <Filter>Misc Files\python</Filter>
     </Text>
@@ -266,6 +302,9 @@
     <Text Include="../../thirdparty/owemdjee/file/src/Makefile.am">
       <Filter>Misc Files\src</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/file/src/cdf.mk">
+      <Filter>Misc Files\src</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/file/src/magic.h.in">
       <Filter>Misc Files\src</Filter>
     </Text>
@@ -273,6 +312,9 @@
       <Filter>Misc Files\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/file/tests/README">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/file/tests/multiple.flags">
       <Filter>Misc Files\tests</Filter>
     </Text>
   </ItemGroup>

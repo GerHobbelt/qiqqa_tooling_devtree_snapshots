@@ -157,7 +157,7 @@ template<class R = /*unspecified*/, class F, class... V>
 // visit_by_index (extension)
 
 template<class R = /*unspecified*/, class V, class... F>
-  constexpr /*see below*/ visit_by_index(V&& v, F&&.. f);
+  constexpr /*see below*/ visit_by_index(V&& v, F&&... f);
 
 // monostate
 
@@ -249,6 +249,8 @@ public:
 
   constexpr bool valueless_by_exception() const noexcept;
   constexpr size_t index() const noexcept;
+
+  static constexpr bool uses_double_storage() noexcept;
 
   // swap
 
@@ -569,6 +571,18 @@ constexpr size_t index() const noexcept;
 +
 Returns:  ::
   The zero-based index of the active alternative.
+
+```
+static constexpr bool uses_double_storage() noexcept;
+```
+[none]
+* {blank}
++
+Returns:  ::
+  `true` if the variant uses double storage to meet the never valueless
+  guarantee because one of the alternatives is not nothrow move constructible,
+  and `false` otherwise.
+
 
 #### Swap
 
@@ -922,7 +936,7 @@ Remarks: :: If `R` is given explicitly, as in `visit<int>`, the return
 
 ```
 template<class R = /*unspecified*/, class V, class... F>
-  constexpr /*see below*/ visit_by_index(V&& v, F&&.. f);
+  constexpr /*see below*/ visit_by_index(V&& v, F&&... f);
 ```
 [none]
 * {blank}

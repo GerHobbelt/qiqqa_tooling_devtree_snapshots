@@ -60,15 +60,33 @@ TEST(CommandLineFlagsTest, CanBeAccessedInCodeOnceGTestHIsIncluded) {
 
 #include <cstdint>
 #include <map>
+#include <memory>
 #include <ostream>
 #include <set>
+#include <stdexcept>
 #include <string>
 #include <type_traits>
 #include <unordered_set>
+#include <utility>
 #include <vector>
 
 #include "gtest/gtest-spi.h"
 #include "src/gtest-internal-inl.h"
+
+struct ConvertibleGlobalType {
+  // The inner enable_if is to ensure invoking is_constructible doesn't fail.
+  // The outer enable_if is to ensure the overload resolution doesn't encounter
+  // an ambiguity.
+  template <
+      class T,
+      std::enable_if_t<
+          false, std::enable_if_t<std::is_constructible<T>::value, int>> = 0>
+  operator T() const;  // NOLINT(google-explicit-constructor)
+};
+void operator<<(ConvertibleGlobalType&, int);
+static_assert(sizeof(decltype(std::declval<ConvertibleGlobalType&>()
+                              << 1)(*)()) > 0,
+              "error in operator<< overload resolution");
 
 namespace testing {
 namespace internal {
@@ -171,7 +189,7 @@ class TestEventListenersAccessor {
   }
 
   static void SuppressEventForwarding(TestEventListeners* listeners) {
-    listeners->SuppressEventForwarding();
+    listeners->SuppressEventForwarding(true);
   }
 };
 
@@ -210,7 +228,6 @@ using testing::TestPartResult;
 using testing::TestPartResultArray;
 using testing::TestProperty;
 using testing::TestResult;
-using testing::TestSuite;
 using testing::TimeInMillis;
 using testing::UnitTest;
 using testing::internal::AlwaysFalse;
@@ -226,7 +243,6 @@ using testing::internal::FloatingPoint;
 using testing::internal::ForEach;
 using testing::internal::FormatEpochTimeInMillisAsIso8601;
 using testing::internal::FormatTimeInMillisAsSeconds;
-using testing::internal::GetCurrentOsStackTraceExceptTop;
 using testing::internal::GetElementOr;
 using testing::internal::GetNextRandomSeed;
 using testing::internal::GetRandomSeedFromFlag;
@@ -234,6 +250,7 @@ using testing::internal::GetTestTypeId;
 using testing::internal::GetTimeInMillis;
 using testing::internal::GetTypeId;
 using testing::internal::GetUnitTestImpl;
+using testing::internal::GTestColorMode;
 using testing::internal::GTestFlagSaver;
 using testing::internal::HasDebugStringAndShortDebugString;
 using testing::internal::Int32FromEnvOrDie;
@@ -243,8 +260,6 @@ using testing::internal::IsNotContainer;
 using testing::internal::kMaxRandomSeed;
 using testing::internal::kTestTypeIdInGoogleTest;
 using testing::internal::NativeArray;
-using testing::internal::OsStackTraceGetter;
-using testing::internal::OsStackTraceGetterInterface;
 using testing::internal::ParseFlag;
 using testing::internal::RelationToSourceCopy;
 using testing::internal::RelationToSourceReference;
@@ -258,11 +273,11 @@ using testing::internal::StreamableToString;
 using testing::internal::String;
 using testing::internal::TestEventListenersAccessor;
 using testing::internal::TestResultAccessor;
-using testing::internal::UnitTestImpl;
 using testing::internal::WideStringToUtf8;
 using testing::internal::edit_distance::CalculateOptimalEdits;
 using testing::internal::edit_distance::CreateUnifiedDiff;
 using testing::internal::edit_distance::EditType;
+using testing::internal::GTestColorMode;
 
 #if GTEST_HAS_STREAM_REDIRECTION
 using testing::internal::CaptureStdout;
@@ -382,7 +397,7 @@ TEST(CanonicalizeForStdLibVersioning, ElidesDoubleUnderNames) {
 // Tests FormatTimeInMillisAsSeconds().
 
 TEST(FormatTimeInMillisAsSecondsTest, FormatsZero) {
-  EXPECT_EQ("0", FormatTimeInMillisAsSeconds(0));
+  EXPECT_EQ("0.", FormatTimeInMillisAsSeconds(0));
 }
 
 TEST(FormatTimeInMillisAsSecondsTest, FormatsPositiveNumber) {
@@ -390,7 +405,11 @@ TEST(FormatTimeInMillisAsSecondsTest, FormatsPositiveNumber) {
   EXPECT_EQ("0.01", FormatTimeInMillisAsSeconds(10));
   EXPECT_EQ("0.2", FormatTimeInMillisAsSeconds(200));
   EXPECT_EQ("1.2", FormatTimeInMillisAsSeconds(1200));
-  EXPECT_EQ("3", FormatTimeInMillisAsSeconds(3000));
+  EXPECT_EQ("3.", FormatTimeInMillisAsSeconds(3000));
+  EXPECT_EQ("10.", FormatTimeInMillisAsSeconds(10000));
+  EXPECT_EQ("100.", FormatTimeInMillisAsSeconds(100000));
+  EXPECT_EQ("123.456", FormatTimeInMillisAsSeconds(123456));
+  EXPECT_EQ("1234567.89", FormatTimeInMillisAsSeconds(1234567890));
 }
 
 TEST(FormatTimeInMillisAsSecondsTest, FormatsNegativeNumber) {
@@ -398,7 +417,11 @@ TEST(FormatTimeInMillisAsSecondsTest, FormatsNegativeNumber) {
   EXPECT_EQ("-0.01", FormatTimeInMillisAsSeconds(-10));
   EXPECT_EQ("-0.2", FormatTimeInMillisAsSeconds(-200));
   EXPECT_EQ("-1.2", FormatTimeInMillisAsSeconds(-1200));
-  EXPECT_EQ("-3", FormatTimeInMillisAsSeconds(-3000));
+  EXPECT_EQ("-3.", FormatTimeInMillisAsSeconds(-3000));
+  EXPECT_EQ("-10.", FormatTimeInMillisAsSeconds(-10000));
+  EXPECT_EQ("-100.", FormatTimeInMillisAsSeconds(-100000));
+  EXPECT_EQ("-123.456", FormatTimeInMillisAsSeconds(-123456));
+  EXPECT_EQ("-1234567.89", FormatTimeInMillisAsSeconds(-1234567890));
 }
 
 // Tests FormatEpochTimeInMillisAsIso8601().  The correctness of conversion
@@ -416,10 +439,12 @@ class FormatEpochTimeInMillisAsIso8601Test : public Test {
 
  private:
   void SetUp() override {
-    saved_tz_ = nullptr;
+    saved_tz_.reset();
 
-    GTEST_DISABLE_MSC_DEPRECATED_PUSH_(/* getenv, strdup: deprecated */)
-    if (getenv("TZ")) saved_tz_ = strdup(getenv("TZ"));
+    GTEST_DISABLE_MSC_DEPRECATED_PUSH_(/* getenv: deprecated */)
+    if (const char* tz = getenv("TZ")) {
+      saved_tz_ = std::make_unique<std::string>(tz);
+    }
     GTEST_DISABLE_MSC_DEPRECATED_POP_()
 
     // Set up the time zone for FormatEpochTimeInMillisAsIso8601 to use.  We
@@ -429,9 +454,8 @@ class FormatEpochTimeInMillisAsIso8601Test : public Test {
   }
 
   void TearDown() override {
-    SetTimeZone(saved_tz_);
-    free(const_cast<char*>(saved_tz_));
-    saved_tz_ = nullptr;
+    SetTimeZone(saved_tz_ != nullptr ? saved_tz_->c_str() : nullptr);
+    saved_tz_.reset();
   }
 
   static void SetTimeZone(const char* time_zone) {
@@ -463,7 +487,7 @@ class FormatEpochTimeInMillisAsIso8601Test : public Test {
 #endif
   }
 
-  const char* saved_tz_;
+  std::unique_ptr<std::string> saved_tz_;  // Empty and null are different here
 };
 
 const TimeInMillis FormatEpochTimeInMillisAsIso8601Test::kMillisPerSec;
@@ -3306,11 +3330,7 @@ TEST_F(SingleEvaluationTest, OtherCases) {
 
 #if GTEST_HAS_RTTI
 
-#ifdef _MSC_VER
-#define ERROR_DESC "class std::runtime_error"
-#else
 #define ERROR_DESC "std::runtime_error"
-#endif
 
 #else  // GTEST_HAS_RTTI
 
@@ -4095,7 +4115,7 @@ TEST(ExpectThrowTest, DoesNotGenerateUnreachableCodeWarning) {
 
   EXPECT_THROW(throw 1, int);
   EXPECT_NONFATAL_FAILURE(EXPECT_THROW(n++, int), "");
-  EXPECT_NONFATAL_FAILURE(EXPECT_THROW(throw 1, const char*), "");
+  EXPECT_NONFATAL_FAILURE(EXPECT_THROW(throw n, const char*), "");
   EXPECT_NO_THROW(n++);
   EXPECT_NONFATAL_FAILURE(EXPECT_NO_THROW(throw 1), "");
   EXPECT_ANY_THROW(throw 1);
@@ -4945,7 +4965,7 @@ TEST(ComparisonAssertionTest, AcceptsUnprintableArgs) {
 // both in a TEST and in a TEST_F.
 class Foo {
  public:
-  Foo() {}
+  Foo() = default;
 
  private:
   int Bar() const { return 1; }
@@ -6214,6 +6234,15 @@ TEST_F(ParseFlagsTest, AbseilPositionalFlags) {
 }
 #endif
 
+TEST_F(ParseFlagsTest, UnrecognizedFlags) {
+  const char* argv[] = {"foo.exe", "--gtest_filter=abcd", "--other_flag",
+                        nullptr};
+
+  const char* argv2[] = {"foo.exe", "--other_flag", nullptr};
+
+  GTEST_TEST_PARSING_FLAGS_(argv, argv2, Flags::Filter("abcd"), false);
+}
+
 #if GTEST_OS_WINDOWS
 // Tests parsing wide strings.
 TEST_F(ParseFlagsTest, WideStrings) {
@@ -6546,59 +6575,67 @@ TEST(StreamingAssertionsTest, AnyThrow) {
 TEST(ColoredOutputTest, UsesColorsWhenGTestColorFlagIsYes) {
   GTEST_FLAG_SET(color, "yes");
 
-  SetEnv("TERM", "xterm");             // TERM supports colors.
-  EXPECT_TRUE(ShouldUseColor(true));   // Stdout is a TTY.
-  EXPECT_TRUE(ShouldUseColor(false));  // Stdout is not a TTY.
+  SetEnv("TERM", "xterm");  // TERM supports colors.
+  EXPECT_EQ(ShouldUseColor(true), GTestColorMode::kYes);  // Stdout is a TTY.
+  EXPECT_EQ(ShouldUseColor(false),
+            GTestColorMode::kYes);  // Stdout is not a TTY.
 
-  SetEnv("TERM", "dumb");              // TERM doesn't support colors.
-  EXPECT_TRUE(ShouldUseColor(true));   // Stdout is a TTY.
-  EXPECT_TRUE(ShouldUseColor(false));  // Stdout is not a TTY.
+  SetEnv("TERM", "dumb");  // TERM doesn't support colors.
+  EXPECT_EQ(ShouldUseColor(true), GTestColorMode::kYes);  // Stdout is a TTY.
+  EXPECT_EQ(ShouldUseColor(false),
+            GTestColorMode::kYes);  // Stdout is not a TTY.
 }
 
 TEST(ColoredOutputTest, UsesColorsWhenGTestColorFlagIsAliasOfYes) {
   SetEnv("TERM", "dumb");  // TERM doesn't support colors.
 
   GTEST_FLAG_SET(color, "True");
-  EXPECT_TRUE(ShouldUseColor(false));  // Stdout is not a TTY.
+  EXPECT_EQ(ShouldUseColor(false),
+            GTestColorMode::kYes);  // Stdout is not a TTY.
 
   GTEST_FLAG_SET(color, "t");
-  EXPECT_TRUE(ShouldUseColor(false));  // Stdout is not a TTY.
+  EXPECT_EQ(ShouldUseColor(false),
+            GTestColorMode::kYes);  // Stdout is not a TTY.
 
   GTEST_FLAG_SET(color, "1");
-  EXPECT_TRUE(ShouldUseColor(false));  // Stdout is not a TTY.
+  EXPECT_EQ(ShouldUseColor(false),
+            GTestColorMode::kYes);  // Stdout is not a TTY.
 }
 
 TEST(ColoredOutputTest, UsesNoColorWhenGTestColorFlagIsNo) {
   GTEST_FLAG_SET(color, "no");
 
-  SetEnv("TERM", "xterm");              // TERM supports colors.
-  EXPECT_FALSE(ShouldUseColor(true));   // Stdout is a TTY.
-  EXPECT_FALSE(ShouldUseColor(false));  // Stdout is not a TTY.
+  SetEnv("TERM", "xterm");  // TERM supports colors.
+  EXPECT_EQ(ShouldUseColor(true), GTestColorMode::kNo);  // Stdout is a TTY.
+  EXPECT_EQ(ShouldUseColor(false),
+            GTestColorMode::kNo);  // Stdout is not a TTY.
 
-  SetEnv("TERM", "dumb");               // TERM doesn't support colors.
-  EXPECT_FALSE(ShouldUseColor(true));   // Stdout is a TTY.
-  EXPECT_FALSE(ShouldUseColor(false));  // Stdout is not a TTY.
+  SetEnv("TERM", "dumb");  // TERM doesn't support colors.
+  EXPECT_EQ(ShouldUseColor(true), GTestColorMode::kNo);  // Stdout is a TTY.
+  EXPECT_EQ(ShouldUseColor(false),
+            GTestColorMode::kNo);  // Stdout is not a TTY.
 }
 
 TEST(ColoredOutputTest, UsesNoColorWhenGTestColorFlagIsInvalid) {
   SetEnv("TERM", "xterm");  // TERM supports colors.
 
   GTEST_FLAG_SET(color, "F");
-  EXPECT_FALSE(ShouldUseColor(true));  // Stdout is a TTY.
+  EXPECT_EQ(ShouldUseColor(true), GTestColorMode::kNo);  // Stdout is a TTY.
 
   GTEST_FLAG_SET(color, "0");
-  EXPECT_FALSE(ShouldUseColor(true));  // Stdout is a TTY.
+  EXPECT_EQ(ShouldUseColor(true), GTestColorMode::kNo);  // Stdout is a TTY.
 
   GTEST_FLAG_SET(color, "unknown");
-  EXPECT_FALSE(ShouldUseColor(true));  // Stdout is a TTY.
+  EXPECT_EQ(ShouldUseColor(true), GTestColorMode::kNo);  // Stdout is a TTY.
 }
 
 TEST(ColoredOutputTest, UsesColorsWhenStdoutIsTty) {
   GTEST_FLAG_SET(color, "auto");
 
-  SetEnv("TERM", "xterm");              // TERM supports colors.
-  EXPECT_FALSE(ShouldUseColor(false));  // Stdout is not a TTY.
-  EXPECT_TRUE(ShouldUseColor(true));    // Stdout is a TTY.
+  SetEnv("TERM", "xterm");  // TERM supports colors.
+  EXPECT_EQ(ShouldUseColor(false),
+            GTestColorMode::kNo);  // Stdout is not a TTY.
+  EXPECT_EQ(ShouldUseColor(true), GTestColorMode::kYes);  // Stdout is a TTY.
 }
 
 TEST(ColoredOutputTest, UsesColorsWhenTermSupportsColors) {
@@ -6608,64 +6645,68 @@ TEST(ColoredOutputTest, UsesColorsWhenTermSupportsColors) {
   // On Windows, we ignore the TERM variable as it's usually not set.
 
   SetEnv("TERM", "dumb");
-  EXPECT_TRUE(ShouldUseColor(true));  // Stdout is a TTY.
+  EXPECT_EQ(ShouldUseColor(true), GTestColorMode::kYes);  // Stdout is a TTY.
 
   SetEnv("TERM", "");
-  EXPECT_TRUE(ShouldUseColor(true));  // Stdout is a TTY.
+  EXPECT_EQ(ShouldUseColor(true), GTestColorMode::kYes);  // Stdout is a TTY.
 
   SetEnv("TERM", "xterm");
-  EXPECT_TRUE(ShouldUseColor(true));  // Stdout is a TTY.
+  EXPECT_EQ(ShouldUseColor(true), GTestColorMode::kYes);  // Stdout is a TTY.
 #else
   // On non-Windows platforms, we rely on TERM to determine if the
   // terminal supports colors.
 
-  SetEnv("TERM", "dumb");              // TERM doesn't support colors.
-  EXPECT_FALSE(ShouldUseColor(true));  // Stdout is a TTY.
+  SetEnv("TERM", "dumb");  // TERM doesn't support colors.
+  EXPECT_EQ(ShouldUseColor(true),
+            GTestColorMode::kNo);  // Stdout is a TTY.
 
-  SetEnv("TERM", "emacs");             // TERM doesn't support colors.
-  EXPECT_FALSE(ShouldUseColor(true));  // Stdout is a TTY.
+  SetEnv("TERM", "emacs");  // TERM doesn't support colors.
+  EXPECT_EQ(ShouldUseColor(true),
+            GTestColorMode::kNo);  // Stdout is a TTY.
 
-  SetEnv("TERM", "vt100");             // TERM doesn't support colors.
-  EXPECT_FALSE(ShouldUseColor(true));  // Stdout is a TTY.
+  SetEnv("TERM", "vt100");  // TERM doesn't support colors.
+  EXPECT_EQ(ShouldUseColor(true),
+            GTestColorMode::kNo);  // Stdout is a TTY.
 
-  SetEnv("TERM", "xterm-mono");        // TERM doesn't support colors.
-  EXPECT_FALSE(ShouldUseColor(true));  // Stdout is a TTY.
+  SetEnv("TERM", "xterm-mono");  // TERM doesn't support colors.
+  EXPECT_EQ(ShouldUseColor(true),
+            GTestColorMode::kNo);  // Stdout is a TTY.
 
-  SetEnv("TERM", "xterm");            // TERM supports colors.
-  EXPECT_TRUE(ShouldUseColor(true));  // Stdout is a TTY.
+  SetEnv("TERM", "xterm");  // TERM supports colors.
+  EXPECT_EQ(ShouldUseColor(true), GTestColorMode::kYes);  // Stdout is a TTY.
 
-  SetEnv("TERM", "xterm-color");      // TERM supports colors.
-  EXPECT_TRUE(ShouldUseColor(true));  // Stdout is a TTY.
+  SetEnv("TERM", "xterm-color");  // TERM supports colors.
+  EXPECT_EQ(ShouldUseColor(true), GTestColorMode::kYes);  // Stdout is a TTY.
 
-  SetEnv("TERM", "xterm-kitty");      // TERM supports colors.
-  EXPECT_TRUE(ShouldUseColor(true));  // Stdout is a TTY.
+  SetEnv("TERM", "xterm-kitty");  // TERM supports colors.
+  EXPECT_EQ(ShouldUseColor(true), GTestColorMode::kYes);  // Stdout is a TTY.
 
-  SetEnv("TERM", "xterm-256color");   // TERM supports colors.
-  EXPECT_TRUE(ShouldUseColor(true));  // Stdout is a TTY.
+  SetEnv("TERM", "xterm-256color");  // TERM supports colors.
+  EXPECT_EQ(ShouldUseColor(true), GTestColorMode::kYes);  // Stdout is a TTY.
 
-  SetEnv("TERM", "screen");           // TERM supports colors.
-  EXPECT_TRUE(ShouldUseColor(true));  // Stdout is a TTY.
+  SetEnv("TERM", "screen");  // TERM supports colors.
+  EXPECT_EQ(ShouldUseColor(true), GTestColorMode::kYes);  // Stdout is a TTY.
 
   SetEnv("TERM", "screen-256color");  // TERM supports colors.
-  EXPECT_TRUE(ShouldUseColor(true));  // Stdout is a TTY.
+  EXPECT_EQ(ShouldUseColor(true), GTestColorMode::kYes);  // Stdout is a TTY.
 
-  SetEnv("TERM", "tmux");             // TERM supports colors.
-  EXPECT_TRUE(ShouldUseColor(true));  // Stdout is a TTY.
+  SetEnv("TERM", "tmux");  // TERM supports colors.
+  EXPECT_EQ(ShouldUseColor(true), GTestColorMode::kYes);  // Stdout is a TTY.
 
-  SetEnv("TERM", "tmux-256color");    // TERM supports colors.
-  EXPECT_TRUE(ShouldUseColor(true));  // Stdout is a TTY.
+  SetEnv("TERM", "tmux-256color");  // TERM supports colors.
+  EXPECT_EQ(ShouldUseColor(true), GTestColorMode::kYes);  // Stdout is a TTY.
 
-  SetEnv("TERM", "rxvt-unicode");     // TERM supports colors.
-  EXPECT_TRUE(ShouldUseColor(true));  // Stdout is a TTY.
+  SetEnv("TERM", "rxvt-unicode");  // TERM supports colors.
+  EXPECT_EQ(ShouldUseColor(true), GTestColorMode::kYes);  // Stdout is a TTY.
 
   SetEnv("TERM", "rxvt-unicode-256color");  // TERM supports colors.
-  EXPECT_TRUE(ShouldUseColor(true));        // Stdout is a TTY.
+  EXPECT_EQ(ShouldUseColor(true), GTestColorMode::kYes);  // Stdout is a TTY.
 
-  SetEnv("TERM", "linux");            // TERM supports colors.
-  EXPECT_TRUE(ShouldUseColor(true));  // Stdout is a TTY.
+  SetEnv("TERM", "linux");  // TERM supports colors.
+  EXPECT_EQ(ShouldUseColor(true), GTestColorMode::kYes);  // Stdout is a TTY.
 
-  SetEnv("TERM", "cygwin");           // TERM supports colors.
-  EXPECT_TRUE(ShouldUseColor(true));  // Stdout is a TTY.
+  SetEnv("TERM", "cygwin");  // TERM supports colors.
+  EXPECT_EQ(ShouldUseColor(true), GTestColorMode::kYes);  // Stdout is a TTY.
 #endif  // GTEST_OS_WINDOWS
 }
 
@@ -6970,7 +7011,7 @@ TEST(EventListenerTest, SuppressEventForwarding) {
 
 // Tests that events generated by Google Test are not forwarded in
 // death test subprocesses.
-TEST(EventListenerDeathTest, EventsNotForwardedInDeathTestSubprecesses) {
+TEST(EventListenerDeathTest, EventsNotForwardedInDeathTestSubprocesses) {
   EXPECT_DEATH_IF_SUPPORTED(
       {
         GTEST_CHECK_(TestEventListenersAccessor::EventForwardingEnabled(

@@ -104,6 +104,8 @@ static void AddBoxTohOCR(const ResultIterator *it, PageIteratorLevel level,
     hocr_str << "; x_size " << row_height << "; x_descenders " << -descenders
              << "; x_ascenders " << ascenders;
   }
+  float conf = it->Confidence(level);
+  hocr_str << "; x_conf " << conf;
   hocr_str << "\">";
 }
 
@@ -190,7 +192,7 @@ char *TessBaseAPI::GetHOCRText(ETEXT_DESC *monitor, int page_number) {
         res_it->Next(RIL_BLOCK);
         continue;
       case PT_NOISE:
-        tprintf("TODO: Please report image which triggers the noise case.\n");
+        tprintError("TODO: Please report image which triggers the noise case.\n");
         ASSERT_HOST(false);
       default:
         break;
@@ -238,10 +240,14 @@ char *TessBaseAPI::GetHOCRText(ETEXT_DESC *monitor, int page_number) {
         case PT_FLOWING_IMAGE:
         case PT_HEADING_IMAGE:
         case PT_PULLOUT_IMAGE:
+          if (tesseract_->hocr_images) {
+            hocr_str << "ocr_photo";
+          }
           ASSERT_HOST(false);
           break;
         default:
           hocr_str << "ocr_line";
+      break;
       }
       hocr_str << "' id='"
                << "line_" << page_id << "_" << lcnt << "'";
@@ -263,12 +269,12 @@ char *TessBaseAPI::GetHOCRText(ETEXT_DESC *monitor, int page_number) {
     bool bold, italic, underlined, monospace, serif, smallcaps;
     int pointsize, font_id;
     res_it->BoundingBox(RIL_WORD, &left, &top, &right, &bottom);
+    float w_conf = res_it->Confidence(RIL_WORD);
     const char *font_name =
         res_it->WordFontAttributes(&bold, &italic, &underlined, &monospace,
                                    &serif, &smallcaps, &pointsize, &font_id);
     hocr_str << " title='bbox " << left << " " << top << " " << right << " "
-             << bottom << "; x_wconf "
-             << static_cast<int>(res_it->Confidence(RIL_WORD));
+             << bottom << "; x_wconf " << w_conf;
     if (tesseract_->hocr_font_info) {
       if (font_name) {
         hocr_str << "; x_font " << HOcrEscape(font_name).c_str();
@@ -321,7 +327,7 @@ char *TessBaseAPI::GetHOCRText(ETEXT_DESC *monitor, int page_number) {
         if (tesseract_->hocr_char_boxes) {
           hocr_str << "</span>";
           tesseract::ChoiceIterator ci(*res_it);
-          if (lstm_choice_mode == 1 && ci.Timesteps() != nullptr) {
+          if ((lstm_choice_mode & 1) && ci.Timesteps() != nullptr) {
             std::vector<std::vector<std::pair<const char *, float>>> *symbol =
                 ci.Timesteps();
             hocr_str << "\n        <span class='ocr_symbol'"
@@ -347,7 +353,8 @@ char *TessBaseAPI::GetHOCRText(ETEXT_DESC *monitor, int page_number) {
             }
             hocr_str << "\n        </span>";
             ++scnt;
-          } else if (lstm_choice_mode == 2) {
+          } 
+      if (lstm_choice_mode & 2) {
             hocr_str << "\n        <span class='ocrx_cinfo'"
                      << " id='"
                      << "lstm_choices_" << page_id << "_" << wcnt << "_" << tcnt
@@ -379,7 +386,7 @@ char *TessBaseAPI::GetHOCRText(ETEXT_DESC *monitor, int page_number) {
       hocr_str << "</strong>";
     }
     // If the lstm choice mode is required it is added here
-    if (lstm_choice_mode == 1 && !tesseract_->hocr_char_boxes && rawTimestepMap != nullptr) {
+    if ((lstm_choice_mode & 1) && (!tesseract_->hocr_char_boxes || (lstm_choice_mode & 2)) && rawTimestepMap != nullptr) {
       for (const auto &symbol : *rawTimestepMap) {
         hocr_str << "\n       <span class='ocr_symbol'"
                  << " id='"
@@ -404,7 +411,8 @@ char *TessBaseAPI::GetHOCRText(ETEXT_DESC *monitor, int page_number) {
         hocr_str << "</span>";
         ++scnt;
       }
-    } else if (lstm_choice_mode == 2 && !tesseract_->hocr_char_boxes && CTCMap != nullptr) {
+    } 
+  if ((lstm_choice_mode & 2) && (!tesseract_->hocr_char_boxes || (lstm_choice_mode & 1)) && CTCMap != nullptr) {
       for (const auto &timestep : *CTCMap) {
         if (timestep.size() > 0) {
           hocr_str << "\n       <span class='ocrx_cinfo'"
@@ -478,12 +486,16 @@ TessHOcrRenderer::TessHOcrRenderer(const char *outputbase, bool font_info)
 }
 
 bool TessHOcrRenderer::BeginDocumentHandler() {
+  // This code ensures that Tesseract's hOCR output conforms to XHTML standards.
+  // It includes text direction and baseline information to facilitate correct rendering in Chrome.
+  //SetContentType("application/xhtml+xml");
+
   AppendString(
       "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
       "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n"
       "    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n"
       "<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" "
-      "lang=\"en\">\n <head>\n  <title>");
+      "lang=\"en\">\n <head>\n	<meta charset =\"UTF-8\">\n  <title> ");
   AppendString(title());
   AppendString(
       "</title>\n"

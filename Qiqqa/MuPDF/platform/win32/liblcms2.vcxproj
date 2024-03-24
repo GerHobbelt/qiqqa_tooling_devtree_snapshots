@@ -112,8 +112,8 @@
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>..\..\thirdparty\lcms2\include;..\..\scripts\freetype;..\..\scripts\libpng;..\..\scripts\libtiff;..\..\scripts\libjpeg-turbo;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\freetype\include;..\..\thirdparty\freetype\include\freetype;../../thirdparty/harfbuzz/src;..\..\thirdparty\gumbo-parser\src;..\..\thirdparty\gumbo-parser\visualc\include;..\..\thirdparty\libpng;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\zlib;..\..\include\;..\..\include\mupdf;..\..\scripts\zlib;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/lcms2/plugins/fast_float/include;..\..\thirdparty\lcms2\plugins\threaded\include;..\..\thirdparty\owemdjee\pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>HAVE_MUPDF;MUJS_ALL_FILES;WITH_GZFILEOP;BUILD_MONOLITHIC;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_CRT_SECURE_NO_WARNINGS;FT2_BUILD_LIBRARY;OPJ_STATIC;USE_JPIP=1;FT_CONFIG_MODULES_H="slimftmodules.h";FT_CONFIG_OPTIONS_H="slimftoptions.h";verbose=-1;JBIG_EXTERNAL_MEMENTO_H="memento.h";HAVE_FALLBACK=1;HAVE_OT;HAVE_UCDN;HB_NO_MT;hb_malloc_impl=fz_hb_malloc;hb_calloc_impl=fz_hb_calloc;hb_realloc_impl=fz_hb_realloc;hb_free_impl=fz_hb_free;HAVE_FREETYPE;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/lcms2/include;../../scripts/freetype;../../scripts/libpng;../../scripts/libtiff;../../scripts/libjpeg-turbo;../../thirdparty/jbig2dec;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/openjpeg/src/lib/openjp2;../../thirdparty/freetype/include;../../thirdparty/freetype/include/freetype;../../thirdparty/harfbuzz/src;../../thirdparty/gumbo-parser/src;../../thirdparty/gumbo-parser/visualc/include;../../thirdparty/libpng;../../thirdparty/libtiff/libtiff;../../thirdparty/zlib;../../include/;../../include/mupdf;../../scripts/zlib;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/lcms2/plugins/fast_float/include;../../thirdparty/lcms2/plugins/threaded/include;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>HAVE_MUPDF;MUJS_ALL_FILES;WITH_GZFILEOP;BUILD_MONOLITHIC;FT2_BUILD_LIBRARY;OPJ_STATIC;USE_JPIP=1;FT_CONFIG_MODULES_H="slimftmodules.h";FT_CONFIG_OPTIONS_H="slimftoptions.h";verbose=-1;JBIG_EXTERNAL_MEMENTO_H="memento.h";HAVE_FALLBACK=1;HAVE_OT;HAVE_UCDN;HB_NO_MT;hb_malloc_impl=fz_hb_malloc;hb_calloc_impl=fz_hb_calloc;hb_realloc_impl=fz_hb_realloc;hb_free_impl=fz_hb_free;HAVE_FREETYPE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
@@ -124,8 +124,8 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>..\..\thirdparty\lcms2\include;..\..\scripts\freetype;..\..\scripts\libpng;..\..\scripts\libtiff;..\..\scripts\libjpeg-turbo;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\freetype\include;..\..\thirdparty\freetype\include\freetype;../../thirdparty/harfbuzz/src;..\..\thirdparty\gumbo-parser\src;..\..\thirdparty\gumbo-parser\visualc\include;..\..\thirdparty\libpng;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\zlib;..\..\include\;..\..\include\mupdf;..\..\scripts\zlib;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/lcms2/plugins/fast_float/include;..\..\thirdparty\lcms2\plugins\threaded\include;..\..\thirdparty\owemdjee\pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>HAVE_MUPDF;MUJS_ALL_FILES;WITH_GZFILEOP;BUILD_MONOLITHIC;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_CRT_SECURE_NO_WARNINGS;FT2_BUILD_LIBRARY;OPJ_STATIC;USE_JPIP=1;FT_CONFIG_MODULES_H="slimftmodules.h";FT_CONFIG_OPTIONS_H="slimftoptions.h";verbose=-1;HAVE_FALLBACK=1;HAVE_OT;HAVE_UCDN;HB_NO_MT;hb_malloc_impl=fz_hb_malloc;hb_calloc_impl=fz_hb_calloc;hb_realloc_impl=fz_hb_realloc;hb_free_impl=fz_hb_free;HAVE_FREETYPE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/lcms2/include;../../scripts/freetype;../../scripts/libpng;../../scripts/libtiff;../../scripts/libjpeg-turbo;../../thirdparty/jbig2dec;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/openjpeg/src/lib/openjp2;../../thirdparty/freetype/include;../../thirdparty/freetype/include/freetype;../../thirdparty/harfbuzz/src;../../thirdparty/gumbo-parser/src;../../thirdparty/gumbo-parser/visualc/include;../../thirdparty/libpng;../../thirdparty/libtiff/libtiff;../../thirdparty/zlib;../../include/;../../include/mupdf;../../scripts/zlib;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/lcms2/plugins/fast_float/include;../../thirdparty/lcms2/plugins/threaded/include;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>HAVE_MUPDF;MUJS_ALL_FILES;WITH_GZFILEOP;BUILD_MONOLITHIC;FT2_BUILD_LIBRARY;OPJ_STATIC;USE_JPIP=1;FT_CONFIG_MODULES_H="slimftmodules.h";FT_CONFIG_OPTIONS_H="slimftoptions.h";verbose=-1;HAVE_FALLBACK=1;HAVE_OT;HAVE_UCDN;HB_NO_MT;hb_malloc_impl=fz_hb_malloc;hb_calloc_impl=fz_hb_calloc;hb_realloc_impl=fz_hb_realloc;hb_free_impl=fz_hb_free;HAVE_FREETYPE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
@@ -134,8 +134,8 @@
     <ClCompile>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories>..\..\thirdparty\lcms2\include;..\..\scripts\freetype;..\..\scripts\libpng;..\..\scripts\libtiff;..\..\scripts\libjpeg-turbo;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\freetype\include;..\..\thirdparty\freetype\include\freetype;../../thirdparty/harfbuzz/src;..\..\thirdparty\gumbo-parser\src;..\..\thirdparty\gumbo-parser\visualc\include;..\..\thirdparty\libpng;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\zlib;..\..\include\;..\..\include\mupdf;..\..\scripts\zlib;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/lcms2/plugins/fast_float/include;..\..\thirdparty\lcms2\plugins\threaded\include;..\..\thirdparty\owemdjee\pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>HAVE_MUPDF;MUJS_ALL_FILES;WITH_GZFILEOP;BUILD_MONOLITHIC;_CRT_NONSTDC_NO_WARNINGS;WIN32;_CRT_SECURE_NO_WARNINGS;FT2_BUILD_LIBRARY;OPJ_STATIC;USE_JPIP=1;FT_CONFIG_MODULES_H="slimftmodules.h";FT_CONFIG_OPTIONS_H="slimftoptions.h";verbose=-1;JBIG_EXTERNAL_MEMENTO_H="memento.h";HAVE_FALLBACK=1;HAVE_OT;HAVE_UCDN;HB_NO_MT;hb_malloc_impl=fz_hb_malloc;hb_calloc_impl=fz_hb_calloc;hb_realloc_impl=fz_hb_realloc;hb_free_impl=fz_hb_free;HAVE_FREETYPE;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/lcms2/include;../../scripts/freetype;../../scripts/libpng;../../scripts/libtiff;../../scripts/libjpeg-turbo;../../thirdparty/jbig2dec;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/openjpeg/src/lib/openjp2;../../thirdparty/freetype/include;../../thirdparty/freetype/include/freetype;../../thirdparty/harfbuzz/src;../../thirdparty/gumbo-parser/src;../../thirdparty/gumbo-parser/visualc/include;../../thirdparty/libpng;../../thirdparty/libtiff/libtiff;../../thirdparty/zlib;../../include/;../../include/mupdf;../../scripts/zlib;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/lcms2/plugins/fast_float/include;../../thirdparty/lcms2/plugins/threaded/include;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>HAVE_MUPDF;MUJS_ALL_FILES;WITH_GZFILEOP;BUILD_MONOLITHIC;FT2_BUILD_LIBRARY;OPJ_STATIC;USE_JPIP=1;FT_CONFIG_MODULES_H="slimftmodules.h";FT_CONFIG_OPTIONS_H="slimftoptions.h";verbose=-1;JBIG_EXTERNAL_MEMENTO_H="memento.h";HAVE_FALLBACK=1;HAVE_OT;HAVE_UCDN;HB_NO_MT;hb_malloc_impl=fz_hb_malloc;hb_calloc_impl=fz_hb_calloc;hb_realloc_impl=fz_hb_realloc;hb_free_impl=fz_hb_free;HAVE_FREETYPE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
   </ItemDefinitionGroup>
@@ -146,8 +146,8 @@
     <ClCompile>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories>..\..\thirdparty\lcms2\include;..\..\scripts\freetype;..\..\scripts\libpng;..\..\scripts\libtiff;..\..\scripts\libjpeg-turbo;..\..\thirdparty\jbig2dec;..\..\thirdparty\owemdjee\libjpeg-turbo;..\..\thirdparty\openjpeg\src\lib\openjp2;..\..\thirdparty\freetype\include;..\..\thirdparty\freetype\include\freetype;../../thirdparty/harfbuzz/src;..\..\thirdparty\gumbo-parser\src;..\..\thirdparty\gumbo-parser\visualc\include;..\..\thirdparty\libpng;..\..\thirdparty\libtiff\libtiff;..\..\thirdparty\zlib;..\..\include\;..\..\include\mupdf;..\..\scripts\zlib;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/lcms2/plugins/fast_float/include;..\..\thirdparty\lcms2\plugins\threaded\include;..\..\thirdparty\owemdjee\pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>HAVE_MUPDF;MUJS_ALL_FILES;WITH_GZFILEOP;BUILD_MONOLITHIC;_CRT_NONSTDC_NO_WARNINGS;WIN64;NDEBUG;_CRT_SECURE_NO_WARNINGS;FT2_BUILD_LIBRARY;OPJ_STATIC;USE_JPIP=1;FT_CONFIG_MODULES_H="slimftmodules.h";FT_CONFIG_OPTIONS_H="slimftoptions.h";verbose=-1;HAVE_FALLBACK=1;HAVE_OT;HAVE_UCDN;HB_NO_MT;hb_malloc_impl=fz_hb_malloc;hb_calloc_impl=fz_hb_calloc;hb_realloc_impl=fz_hb_realloc;hb_free_impl=fz_hb_free;HAVE_FREETYPE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/lcms2/include;../../scripts/freetype;../../scripts/libpng;../../scripts/libtiff;../../scripts/libjpeg-turbo;../../thirdparty/jbig2dec;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/openjpeg/src/lib/openjp2;../../thirdparty/freetype/include;../../thirdparty/freetype/include/freetype;../../thirdparty/harfbuzz/src;../../thirdparty/gumbo-parser/src;../../thirdparty/gumbo-parser/visualc/include;../../thirdparty/libpng;../../thirdparty/libtiff/libtiff;../../thirdparty/zlib;../../include/;../../include/mupdf;../../scripts/zlib;../../thirdparty/owemdjee/zstd/lib;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/lcms2/plugins/fast_float/include;../../thirdparty/lcms2/plugins/threaded/include;../../thirdparty/owemdjee/pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>HAVE_MUPDF;MUJS_ALL_FILES;WITH_GZFILEOP;BUILD_MONOLITHIC;FT2_BUILD_LIBRARY;OPJ_STATIC;USE_JPIP=1;FT_CONFIG_MODULES_H="slimftmodules.h";FT_CONFIG_OPTIONS_H="slimftoptions.h";verbose=-1;HAVE_FALLBACK=1;HAVE_OT;HAVE_UCDN;HB_NO_MT;hb_malloc_impl=fz_hb_malloc;hb_calloc_impl=fz_hb_calloc;hb_realloc_impl=fz_hb_realloc;hb_free_impl=fz_hb_free;HAVE_FREETYPE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
   </ItemDefinitionGroup>
@@ -202,6 +202,7 @@
     <ClInclude Include="../../thirdparty/lcms2/Projects/VC2022/resource.h" />
     <ClInclude Include="../../thirdparty/lcms2/include/lcms2mt.h" />
     <ClInclude Include="../../thirdparty/lcms2/include/lcms2mt_plugin.h" />
+    <ClInclude Include="../../thirdparty/lcms2/include/monolithic_examples.h" />
     <ClInclude Include="../../thirdparty/lcms2/plugins/fast_float/include/lcms2mt_fast_float.h" />
     <ClInclude Include="../../thirdparty/lcms2/plugins/fast_float/src/fast_float_internal.h" />
     <ClInclude Include="../../thirdparty/lcms2/plugins/test_profiles/test0.icc" />
@@ -214,32 +215,72 @@
     <ClInclude Include="../../thirdparty/lcms2/src/extra_xform.h" />
     <ClInclude Include="../../thirdparty/lcms2/src/lcms2_internal.h" />
     <ResourceCompile Include="../../thirdparty/lcms2/Projects/VC2022/lcms2.rc" />
+    <Text Include="../../thirdparty/lcms2/AUTHORS" />
     <Text Include="../../thirdparty/lcms2/ChangeLog" />
+    <Text Include="../../thirdparty/lcms2/INSTALL" />
     <Text Include="../../thirdparty/lcms2/Lib/BC/BC.txt" />
     <Text Include="../../thirdparty/lcms2/Lib/MS/MS.TXT" />
     <Text Include="../../thirdparty/lcms2/Makefile.am" />
     <Text Include="../../thirdparty/lcms2/Makefile.in" />
+    <Text Include="../../thirdparty/lcms2/Projects/VC2022/jpegicc/jpegicc.vcxproj.filters" />
+    <Text Include="../../thirdparty/lcms2/Projects/VC2022/lcms2_DLL/lcms2_DLL.vcxproj.filters" />
+    <Text Include="../../thirdparty/lcms2/Projects/VC2022/lcms2_static/lcms2_static.vcxproj.filters" />
+    <Text Include="../../thirdparty/lcms2/Projects/VC2022/linkicc/linkicc.vcxproj.filters" />
+    <Text Include="../../thirdparty/lcms2/Projects/VC2022/psicc/psicc.vcxproj.filters" />
+    <Text Include="../../thirdparty/lcms2/Projects/VC2022/tiffdiff/tiffdiff.vcxproj.filters" />
+    <Text Include="../../thirdparty/lcms2/Projects/VC2022/tifficc/tifficc.vcxproj.filters" />
+    <Text Include="../../thirdparty/lcms2/Projects/VC2022/transicc/transicc.vcxproj.filters" />
+    <Text Include="../../thirdparty/lcms2/Projects/Xcode_11.5/" />
+    <Text Include="../../thirdparty/lcms2/Projects/Xcode_12/lcms2/lcms2.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" />
+    <Text Include="../../thirdparty/lcms2/Projects/Xcode_14/lcms2/lcms2.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" />
     <Text Include="../../thirdparty/lcms2/README.1ST" />
+    <Text Include="../../thirdparty/lcms2/SECURITY.md" />
+    <Text Include="../../thirdparty/lcms2/aclocal.m4" />
     <Text Include="../../thirdparty/lcms2/autogen.sh" />
+    <Text Include="../../thirdparty/lcms2/config.guess" />
     <Text Include="../../thirdparty/lcms2/configure.ac" />
+    <Text Include="../../thirdparty/lcms2/doc/LittleCMS2.15 API.pdf" />
+    <Text Include="../../thirdparty/lcms2/doc/LittleCMS2.15 Plugin API.pdf" />
+    <Text Include="../../thirdparty/lcms2/doc/LittleCMS2.15 tutorial.pdf" />
     <Text Include="../../thirdparty/lcms2/doc/WhyThisFork.txt" />
     <Text Include="../../thirdparty/lcms2/include/Makefile.am" />
     <Text Include="../../thirdparty/lcms2/include/Makefile.in" />
     <Text Include="../../thirdparty/lcms2/lcms2mt.pc.in" />
     <Text Include="../../thirdparty/lcms2/ltmain.sh" />
+    <Text Include="../../thirdparty/lcms2/m4/ax_append_compile_flags.m4" />
+    <Text Include="../../thirdparty/lcms2/m4/ax_append_flag.m4" />
+    <Text Include="../../thirdparty/lcms2/m4/ax_check_compile_flag.m4" />
+    <Text Include="../../thirdparty/lcms2/m4/ax_gcc_func_attribute.m4" />
+    <Text Include="../../thirdparty/lcms2/m4/ax_pthread.m4" />
+    <Text Include="../../thirdparty/lcms2/m4/ax_require_defined.m4" />
+    <Text Include="../../thirdparty/lcms2/m4/libtool.m4" />
+    <Text Include="../../thirdparty/lcms2/m4/ltoptions.m4" />
+    <Text Include="../../thirdparty/lcms2/m4/ltsugar.m4" />
+    <Text Include="../../thirdparty/lcms2/m4/ltversion.m4" />
+    <Text Include="../../thirdparty/lcms2/m4/lt~obsolete.m4" />
     <Text Include="../../thirdparty/lcms2/meson_options.txt" />
+    <Text Include="../../thirdparty/lcms2/plugins/Makefile" />
     <Text Include="../../thirdparty/lcms2/plugins/Makefile.am" />
     <Text Include="../../thirdparty/lcms2/plugins/Makefile.in" />
     <Text Include="../../thirdparty/lcms2/plugins/README.1ST" />
+    <Text Include="../../thirdparty/lcms2/plugins/fast_float/COPYING.GPL3" />
     <Text Include="../../thirdparty/lcms2/plugins/fast_float/Makefile.am" />
     <Text Include="../../thirdparty/lcms2/plugins/fast_float/Makefile.in" />
+    <Text Include="../../thirdparty/lcms2/plugins/fast_float/Projects/VC2022/lcms2_fast_float_plugin.vcxproj.filters" />
+    <Text Include="../../thirdparty/lcms2/plugins/fast_float/Projects/VC2022/lcms2_fast_float_plugin_testbed.vcxproj.filters" />
+    <Text Include="../../thirdparty/lcms2/plugins/fast_float/doc/LittleCMS fast float extensions 1.0.pdf" />
+    <Text Include="../../thirdparty/lcms2/plugins/fast_float/doc/LittleCMS floating point extensions 1.5.pdf" />
     <Text Include="../../thirdparty/lcms2/plugins/fast_float/include/Makefile.am" />
     <Text Include="../../thirdparty/lcms2/plugins/fast_float/include/Makefile.in" />
     <Text Include="../../thirdparty/lcms2/plugins/fast_float/src/Makefile.am" />
     <Text Include="../../thirdparty/lcms2/plugins/fast_float/src/Makefile.in" />
     <Text Include="../../thirdparty/lcms2/plugins/fast_float/src/lcms2_fast_float.rc.in" />
+    <Text Include="../../thirdparty/lcms2/plugins/threaded/COPYING.GPL3" />
     <Text Include="../../thirdparty/lcms2/plugins/threaded/Makefile.am" />
     <Text Include="../../thirdparty/lcms2/plugins/threaded/Makefile.in" />
+    <Text Include="../../thirdparty/lcms2/plugins/threaded/Projects/VC2022/lcms2_threaded_plugin.vcxproj.filters" />
+    <Text Include="../../thirdparty/lcms2/plugins/threaded/Projects/VC2022/lcms2_threaded_plugin_testbed.vcxproj.filters" />
+    <Text Include="../../thirdparty/lcms2/plugins/threaded/doc/LittleCMS threaded extensions 1.0.pdf" />
     <Text Include="../../thirdparty/lcms2/plugins/threaded/include/Makefile.am" />
     <Text Include="../../thirdparty/lcms2/plugins/threaded/include/Makefile.in" />
     <Text Include="../../thirdparty/lcms2/plugins/threaded/src/Makefile.am" />
@@ -248,6 +289,7 @@
     <Text Include="../../thirdparty/lcms2/src/Makefile.am" />
     <Text Include="../../thirdparty/lcms2/src/Makefile.in" />
     <Text Include="../../thirdparty/lcms2/src/lcms2.rc.in" />
+    <Text Include="../../thirdparty/lcms2/src/lcms2mt.def" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

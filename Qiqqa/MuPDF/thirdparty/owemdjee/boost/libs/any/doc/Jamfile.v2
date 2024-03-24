@@ -1,4 +1,4 @@
-# Copyright Antony Polukhin, 2013-2023.
+# Copyright Antony Polukhin, 2013-2024.
 #
 # Use, modification, and distribution are
 # subject to the Boost Software License, Version 1.0. (See accompanying
@@ -39,7 +39,7 @@ doxygen autodoc_any
         [ glob ../../../boost/any/*.hpp ]
     :
         $(doxygen_params)
-        <xsl:param>"boost.doxygen.reftitle=Reference Section"
+        <xsl:param>"boost.doxygen.reftitle=Reference Section of Boost.Any"
     ;
 
 boostbook any-doc

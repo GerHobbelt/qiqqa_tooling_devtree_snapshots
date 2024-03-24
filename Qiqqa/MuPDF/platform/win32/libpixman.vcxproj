@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPIXMAN;PIXMAN_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPIXMAN;PIXMAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPIXMAN;PIXMAN_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/pixman/pixman;../../thirdparty/owemdjee/pixman/test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPIXMAN;PIXMAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPIXMAN;PIXMAN_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPIXMAN;PIXMAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/pixman/pixman;../../thirdparty/owemdjee/pixman/test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPIXMAN;PIXMAN_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPIXMAN;PIXMAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPIXMAN;PIXMAN_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/pixman/pixman;../../thirdparty/owemdjee/pixman/test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPIXMAN;PIXMAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPIXMAN;PIXMAN_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPIXMAN;PIXMAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/pixman/pixman;../../thirdparty/owemdjee/pixman/test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPIXMAN;PIXMAN_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPIXMAN;PIXMAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPIXMAN;PIXMAN_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/pixman/pixman;../../thirdparty/owemdjee/pixman/test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPIXMAN;PIXMAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPIXMAN;PIXMAN_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPIXMAN;PIXMAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/pixman/pixman;../../thirdparty/owemdjee/pixman/test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPIXMAN;PIXMAN_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPIXMAN;PIXMAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPIXMAN;PIXMAN_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/pixman/pixman;../../thirdparty/owemdjee/pixman/test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPIXMAN;PIXMAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPIXMAN;PIXMAN_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPIXMAN;PIXMAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/pixman/pixman;../../thirdparty/owemdjee/pixman/test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -325,8 +325,8 @@
     <ClCompile Include="../../thirdparty/owemdjee/pixman/test/thread-test.c" />
     <ClCompile Include="../../thirdparty/owemdjee/pixman/test/tolerance-test.c" />
     <ClCompile Include="../../thirdparty/owemdjee/pixman/test/trap-crasher.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/pixman/test/utils-prng.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/pixman/test/utils.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/pixman/test/utils/utils-prng.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/pixman/test/utils/utils.c" />
     <ClInclude Include="../../thirdparty/owemdjee/pixman/demos/gtk-utils.h" />
     <ClInclude Include="../../thirdparty/owemdjee/pixman/pixman/dither/blue-noise-64x64.h" />
     <ClInclude Include="../../thirdparty/owemdjee/pixman/pixman/loongson-mmintrin.h" />
@@ -344,26 +344,22 @@
     <ClInclude Include="../../thirdparty/owemdjee/pixman/pixman/pixman-mips-dspr2.h" />
     <ClInclude Include="../../thirdparty/owemdjee/pixman/pixman/pixman-private.h" />
     <ClInclude Include="../../thirdparty/owemdjee/pixman/pixman/pixman.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/pixman/test/utils-prng.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/pixman/test/utils.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/pixman/test/utils/utils-prng.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/pixman/test/utils/utils.h" />
     <Image Include="../../thirdparty/owemdjee/pixman/demos/parrot.jpg" />
     <Image Include="../../thirdparty/owemdjee/pixman/demos/zone_plate.png" />
     <NASM Include="../../thirdparty/owemdjee/pixman/pixman/pixman-arm-detect-win32.asm" />
+    <Text Include="../../thirdparty/owemdjee/pixman/AUTHORS" />
     <Text Include="../../thirdparty/owemdjee/pixman/ChangeLog" />
-    <Text Include="../../thirdparty/owemdjee/pixman/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/pixman/INSTALL" />
     <Text Include="../../thirdparty/owemdjee/pixman/NEWS" />
     <Text Include="../../thirdparty/owemdjee/pixman/README" />
     <Text Include="../../thirdparty/owemdjee/pixman/a64-neon-test.S" />
     <Text Include="../../thirdparty/owemdjee/pixman/arm-simd-test.S" />
-    <Text Include="../../thirdparty/owemdjee/pixman/autogen.sh" />
-    <Text Include="../../thirdparty/owemdjee/pixman/configure.ac" />
     <Text Include="../../thirdparty/owemdjee/pixman/contrib/ci.sh" />
-    <Text Include="../../thirdparty/owemdjee/pixman/demos/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/pixman/meson_options.txt" />
     <Text Include="../../thirdparty/owemdjee/pixman/neon-test.S" />
-    <Text Include="../../thirdparty/owemdjee/pixman/pixman-1-uninstalled.pc.in" />
-    <Text Include="../../thirdparty/owemdjee/pixman/pixman-1.pc.in" />
-    <Text Include="../../thirdparty/owemdjee/pixman/pixman/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/pixman/pixman/make-srgb.pl" />
     <Text Include="../../thirdparty/owemdjee/pixman/pixman/pixman-arm-neon-asm-bilinear.S" />
     <Text Include="../../thirdparty/owemdjee/pixman/pixman/pixman-arm-neon-asm.S" />
     <Text Include="../../thirdparty/owemdjee/pixman/pixman/pixman-arm-simd-asm-scaled.S" />
@@ -374,7 +370,6 @@
     <Text Include="../../thirdparty/owemdjee/pixman/pixman/pixman-mips-memcpy-asm.S" />
     <Text Include="../../thirdparty/owemdjee/pixman/pixman/pixman-version.h.in" />
     <Text Include="../../thirdparty/owemdjee/pixman/pixman/rounding.txt" />
-    <Text Include="../../thirdparty/owemdjee/pixman/test/Makefile.am" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMIPP;MIPP_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMIPP;MIPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/mipp/src;../../thirdparty/owemdjee/tomlpp/external/Catch2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMIPP;MIPP_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/mipp/src;../../thirdparty/owemdjee/tomlpp/external/Catch2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMIPP;MIPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMIPP;MIPP_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMIPP;MIPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/mipp/src;../../thirdparty/owemdjee/tomlpp/external/Catch2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/mipp/src;../../thirdparty/owemdjee/tomlpp/external/Catch2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMIPP;MIPP_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMIPP;MIPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/mipp/src;../../thirdparty/owemdjee/tomlpp/external/Catch2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMIPP;MIPP_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/mipp/src;../../thirdparty/owemdjee/tomlpp/external/Catch2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMIPP;MIPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMIPP;MIPP_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMIPP;MIPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/mipp/src;../../thirdparty/owemdjee/tomlpp/external/Catch2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/mipp/src;../../thirdparty/owemdjee/tomlpp/external/Catch2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMIPP;MIPP_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMIPP;MIPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/mipp/src;../../thirdparty/owemdjee/tomlpp/external/Catch2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMIPP;MIPP_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/mipp/src;../../thirdparty/owemdjee/tomlpp/external/Catch2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMIPP;MIPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMIPP;MIPP_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMIPP;MIPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/mipp/src;../../thirdparty/owemdjee/tomlpp/external/Catch2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/mipp/src;../../thirdparty/owemdjee/tomlpp/external/Catch2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMIPP;MIPP_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMIPP;MIPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/mipp/src;../../thirdparty/owemdjee/tomlpp/external/Catch2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMIPP;MIPP_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/mipp/src;../../thirdparty/owemdjee/tomlpp/external/Catch2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMIPP;MIPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMIPP;MIPP_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMIPP;MIPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/mipp/src;../../thirdparty/owemdjee/tomlpp/external/Catch2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/mipp/src;../../thirdparty/owemdjee/tomlpp/external/Catch2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -323,11 +323,15 @@
     <ClInclude Include="../../thirdparty/owemdjee/mipp/src/mipp_impl_AVX512.hxx" />
     <ClInclude Include="../../thirdparty/owemdjee/mipp/src/mipp_impl_NEON.hxx" />
     <ClInclude Include="../../thirdparty/owemdjee/mipp/src/mipp_impl_SSE.hxx" />
+    <ClInclude Include="../../thirdparty/owemdjee/mipp/src/mipp_impl_SVE.hxx" />
     <ClInclude Include="../../thirdparty/owemdjee/mipp/src/mipp_object.hxx" />
     <ClInclude Include="../../thirdparty/owemdjee/mipp/src/mipp_scalar_op.h" />
     <ClInclude Include="../../thirdparty/owemdjee/mipp/src/mipp_scalar_op.hxx" />
     <ClInclude Include="../../thirdparty/owemdjee/mipp/tests/lib/Catch2/include/catch.hpp" />
     <Image Include="../../thirdparty/owemdjee/mipp/mipp.jpg" />
+    <Text Include="../../thirdparty/owemdjee/mipp/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/mipp/FindMIPP.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mipp/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/mipp/README.md" />
     <Text Include="../../thirdparty/owemdjee/mipp/ci/analysis-cppcheck.sh" />
     <Text Include="../../thirdparty/owemdjee/mipp/ci/build-coverage-linux-armv7-gcc.sh" />
@@ -336,6 +340,7 @@
     <Text Include="../../thirdparty/owemdjee/mipp/ci/build-linux-armv7-clang.sh" />
     <Text Include="../../thirdparty/owemdjee/mipp/ci/build-linux-armv7-gcc.sh" />
     <Text Include="../../thirdparty/owemdjee/mipp/ci/build-linux-armv8-clang.sh" />
+    <Text Include="../../thirdparty/owemdjee/mipp/ci/build-linux-armv8-gcc-11.sh" />
     <Text Include="../../thirdparty/owemdjee/mipp/ci/build-linux-armv8-gcc.sh" />
     <Text Include="../../thirdparty/owemdjee/mipp/ci/build-linux-x86-clang.sh" />
     <Text Include="../../thirdparty/owemdjee/mipp/ci/build-linux-x86-gcc.sh" />
@@ -349,7 +354,12 @@
     <Text Include="../../thirdparty/owemdjee/mipp/ci/tools/build-linux-x86-gcc-generic.sh" />
     <Text Include="../../thirdparty/owemdjee/mipp/ci/tools/threads.bat" />
     <Text Include="../../thirdparty/owemdjee/mipp/ci/tools/threads.sh" />
+    <Text Include="../../thirdparty/owemdjee/mipp/cmake/MIPPConfig.cmake.in" />
+    <Text Include="../../thirdparty/owemdjee/mipp/cmake/cmake_uninstall.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/mipp/tests/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/mipp/tests/cmake/compiler_warnings.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mipp/tests/cmake/target_fast_math.cmake" />
+    <Text Include="../../thirdparty/owemdjee/mipp/tests/cmake/target_optimizations.cmake" />
     <Text Include="../../thirdparty/owemdjee/mipp/tests/lib/Catch2/README.md" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >

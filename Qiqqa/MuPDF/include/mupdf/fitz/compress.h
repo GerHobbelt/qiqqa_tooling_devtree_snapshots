@@ -25,6 +25,7 @@
 
 #include "mupdf/fitz/system.h"
 #include "mupdf/fitz/buffer.h"
+#include "mupdf/fitz/pixmap.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -40,23 +41,26 @@ typedef enum
 
 /**
 	Compress input data using the Deflate/Zip algorithm.
+
+	The effort is a percentage number: 0..100
+
 	Returns a new buffer containing the compressed data.
  */
-fz_buffer *fz_deflate(fz_context *ctx, fz_buffer *input);
+fz_buffer *fz_deflate(fz_context *ctx, fz_buffer *input, int effort);
 
 /**
 	Compress bitmap data as CCITT Group 3 1D fax image.
 	Creates a stream assuming the default PDF parameters,
 	except the number of columns.
 */
-fz_buffer *fz_compress_ccitt_fax_g3(fz_context *ctx, const unsigned char *data, int columns, int rows);
+fz_buffer *fz_compress_ccitt_fax_g3(fz_context *ctx, const unsigned char *data, int columns, int rows, ptrdiff_t stride);
 
 /**
 	Compress bitmap data as CCITT Group 4 2D fax image.
 	Creates a stream assuming the default PDF parameters, except
 	K=-1 and the number of columns.
 */
-fz_buffer *fz_compress_ccitt_fax_g4(fz_context *ctx, const unsigned char *data, int columns, int rows);
+fz_buffer *fz_compress_ccitt_fax_g4(fz_context *ctx, const unsigned char *data, int columns, int rows, ptrdiff_t stride);
 
 #ifdef __cplusplus
 }

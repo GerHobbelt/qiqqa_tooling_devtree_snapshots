@@ -27,7 +27,7 @@
 #include <stddef.h>
 #include <stdint.h>
 
-#if (INTPTR_MAX >= INT64_MAX) && !defined(_MSC_VER) /* MSVC has no __int128 in stdC mode */
+#if defined(__SIZEOF_INT128__) && (INTPTR_MAX >= INT64_MAX) && !defined(_MSC_VER) /* MSVC has no __int128 in stdC mode */
 #define LIMB_LOG2_BITS 6
 #else
 #define LIMB_LOG2_BITS 5
@@ -314,7 +314,7 @@ int bf_logic_and(bf_t *r, const bf_t *a, const bf_t *b);
 /* Do not parse NaN or Inf */
 #define BF_ATOF_NO_NAN_INF   (1 << 18)
 /* return the exponent separately */
-#define BF_ATOF_EXPONENT       (1 << 19)
+#define BF_ATOF_EXPONENT     (1 << 19)
 
 int bf_atof(bf_t *a, const char *str, const char **pnext, int radix,
             limb_t prec, bf_flags_t flags);

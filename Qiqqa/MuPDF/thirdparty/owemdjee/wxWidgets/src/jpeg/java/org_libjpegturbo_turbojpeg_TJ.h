@@ -8,7 +8,7 @@
 extern "C" {
 #endif
 #undef org_libjpegturbo_turbojpeg_TJ_NUMSAMP
-#define org_libjpegturbo_turbojpeg_TJ_NUMSAMP 6L
+#define org_libjpegturbo_turbojpeg_TJ_NUMSAMP 7L
 #undef org_libjpegturbo_turbojpeg_TJ_SAMP_444
 #define org_libjpegturbo_turbojpeg_TJ_SAMP_444 0L
 #undef org_libjpegturbo_turbojpeg_TJ_SAMP_422
@@ -21,6 +21,8 @@ extern "C" {
 #define org_libjpegturbo_turbojpeg_TJ_SAMP_440 4L
 #undef org_libjpegturbo_turbojpeg_TJ_SAMP_411
 #define org_libjpegturbo_turbojpeg_TJ_SAMP_411 5L
+#undef org_libjpegturbo_turbojpeg_TJ_SAMP_441
+#define org_libjpegturbo_turbojpeg_TJ_SAMP_441 6L
 #undef org_libjpegturbo_turbojpeg_TJ_SAMP_UNKNOWN
 #define org_libjpegturbo_turbojpeg_TJ_SAMP_UNKNOWN -1L
 #undef org_libjpegturbo_turbojpeg_TJ_NUMPF
@@ -105,6 +107,10 @@ extern "C" {
 #define org_libjpegturbo_turbojpeg_TJ_PARAM_YDENSITY 21L
 #undef org_libjpegturbo_turbojpeg_TJ_PARAM_DENSITYUNITS
 #define org_libjpegturbo_turbojpeg_TJ_PARAM_DENSITYUNITS 22L
+#undef org_libjpegturbo_turbojpeg_TJ_PARAM_MAXMEMORY
+#define org_libjpegturbo_turbojpeg_TJ_PARAM_MAXMEMORY 23L
+#undef org_libjpegturbo_turbojpeg_TJ_PARAM_MAXPIXELS
+#define org_libjpegturbo_turbojpeg_TJ_PARAM_MAXPIXELS 24L
 #undef org_libjpegturbo_turbojpeg_TJ_FLAG_BOTTOMUP
 #define org_libjpegturbo_turbojpeg_TJ_FLAG_BOTTOMUP 2L
 #undef org_libjpegturbo_turbojpeg_TJ_FLAG_FASTUPSAMPLE

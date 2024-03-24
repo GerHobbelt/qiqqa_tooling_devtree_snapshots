@@ -60,7 +60,7 @@ adsout_initparams( param *pm, const char *progname )
 	if ( !pm->progname ) {
 		if ( !progname ) pm->progname=NULL;
 		else {
-			pm->progname = _strdup( progname );
+			pm->progname = strdup( progname );
 			if ( !pm->progname ) return BIBL_ERR_MEMERR;
 		}
 	}
@@ -337,9 +337,11 @@ initial_ascii( const char *name )
 
 	if ( isascii( name[0] )  )
 		return name[0];
-
-        b1 = name[0]+256;
-        b2 = name[1]+256;
+	
+	// (Georgi) fixes github issue #8: name[0]+256; doesn't give the expected
+	// result on platforms where char is unsigned char
+	b1 = (unsigned char)(name[0]); // name[0]+256;
+	b2 = (unsigned char)(name[1]); // name[1]+256;
 
 	switch( b1 ) {
 
@@ -369,9 +371,10 @@ initial_ascii( const char *name )
 		     if ( b2 >= 0x80 && b2 <= 0x85 ) return 'A';
 		else if ( b2 >= 0x86 && b2 <= 0x8d ) return 'C';
 
-		     // (Georgi) was: 
-		     //   else if ( b2 >= 0x8e || b2 <= 0x91 ) return 'D';
-		     // but that always evaluates to true! Looks like '||' should be '&&'
+		// (Georgi) was: 
+		//   else if ( b2 >= 0x8e || b2 <= 0x91 ) return 'D';
+		// but that always evaluates to true! 
+		// Looks like '||' should be '&&'
 		else if ( b2 >= 0x8e && b2 <= 0x91 ) return 'D';
 
 		else if ( b2 >= 0x92 && b2 <= 0x9b ) return 'E';
@@ -387,9 +390,10 @@ initial_ascii( const char *name )
 		     if ( b2 >= 0x80 && b2 <= 0x82 ) return 'L';
 		else if ( b2 >= 0x83 && b2 <= 0x8b ) return 'N';
 
-		     // (Georgi) was: 
-		     //    else if ( b2 >= 0x8c || b2 <= 0x93 ) return 'O';
-		     // but that always evaluate to true! Looks like '||' should be '&&'
+		// (Georgi) was: 
+		//    else if ( b2 >= 0x8c || b2 <= 0x93 ) return 'O';
+		// but that always evaluate to true!
+		// Looks like '||' should be '&&'
 		else if ( b2 >= 0x8c && b2 <= 0x93 ) return 'O';
 
 		else if ( b2 >= 0x94 && b2 <= 0x99 ) return 'R';
@@ -404,9 +408,10 @@ initial_ascii( const char *name )
 	case 0xc6:
 		     if ( b2 >= 0x80 && b2 <= 0x85 ) return 'B';
 		else if ( b2 >= 0x86 && b2 <= 0x88 ) return 'C';
-		     // (Georgi) was: 
-		     //   else if ( b2 >= 0x89 || b2 <= 0x8d ) return 'D';
-		     // but that always evaluate to true! Looks like '||' should be '&&'
+		// (Georgi) was: 
+		//   else if ( b2 >= 0x89 || b2 <= 0x8d ) return 'D';
+		// but that always evaluate to true! 
+		// Looks like '||' should be '&&'
 		else if ( b2 >= 0x89 && b2 <= 0x8d ) return 'D';
 		     
 		else if ( b2 >= 0x8e && b2 <= 0x90 ) return 'E';
@@ -415,10 +420,10 @@ initial_ascii( const char *name )
 		else if ( b2 == 0x95 )               return 'H';
 		else if ( b2 >= 0x96 && b2 <= 0x97 ) return 'I';
 		else if ( b2 >= 0x98 && b2 <= 0x99 ) return 'K';
-		     // (Georgi) was: 
-		     //   else if ( b2 >= 0xba && b2 <= 0x9b ) return 'L';
-		     // but that always evaluate to false!
-		     // Looking at the surrounding code, seems like '0xba' should be '0x9a'
+		// (Georgi) was: 
+		//   else if ( b2 >= 0xba && b2 <= 0x9b ) return 'L';
+		// but that always evaluate to false!
+		// Looking at the surrounding code, seems like '0xba' should be '0x9a'
 		else if ( b2 >= 0x9a && b2 <= 0x9b ) return 'L';
 
 		else if ( b2 == 0xbc )               return 'M';

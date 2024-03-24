@@ -31,6 +31,10 @@
 //
 // This file tests some commonly used argument matchers.
 
+#include <functional>
+#include <memory>
+#include <string>
+#include <tuple>
 #include <vector>
 
 #include "test/gmock-matchers_test.h"
@@ -585,8 +589,8 @@ TEST(MatcherCastTest, ValueIsNotCopied) {
 
 class Base {
  public:
-  virtual ~Base() {}
-  Base() {}
+  virtual ~Base() = default;
+  Base() = default;
 
  private:
   Base(const Base&) = delete;
@@ -1542,7 +1546,7 @@ TEST(PairTest, MatchesCorrectly) {
 
 TEST(PairTest, WorksWithMoveOnly) {
   pair<std::unique_ptr<int>, std::unique_ptr<int>> p;
-  p.second.reset(new int(7));
+  p.second = std::make_unique<int>(7);
   EXPECT_THAT(p, Pair(Eq(nullptr), Ne(nullptr)));
 }
 
@@ -1765,6 +1769,15 @@ TEST(StartsWithTest, CanDescribeSelf) {
   EXPECT_EQ("starts with \"Hi\"", Describe(m));
 }
 
+TEST(StartsWithTest, WorksWithStringMatcherOnStringViewMatchee) {
+#if GTEST_INTERNAL_HAS_STRING_VIEW
+  EXPECT_THAT(internal::StringView("talk to me goose"),
+              StartsWith(std::string("talk")));
+#else
+  GTEST_SKIP() << "Not applicable without internal::StringView.";
+#endif  // GTEST_INTERNAL_HAS_STRING_VIEW
+}
+
 // Tests EndsWith(s).
 
 TEST(EndsWithTest, MatchesStringWithGivenSuffix) {
@@ -1802,11 +1815,13 @@ TEST(WhenBase64UnescapedTest, MatchesUnescapedBase64Strings) {
   EXPECT_FALSE(m1.Matches("invalid base64"));
   EXPECT_FALSE(m1.Matches("aGVsbG8gd29ybGQ="));  // hello world
   EXPECT_TRUE(m1.Matches("aGVsbG8gd29ybGQh"));   // hello world!
+  EXPECT_TRUE(m1.Matches("+/-_IQ"));             // \xfb\xff\xbf!
 
   const Matcher<const std::string&> m2 = WhenBase64Unescaped(EndsWith("!"));
   EXPECT_FALSE(m2.Matches("invalid base64"));
   EXPECT_FALSE(m2.Matches("aGVsbG8gd29ybGQ="));  // hello world
   EXPECT_TRUE(m2.Matches("aGVsbG8gd29ybGQh"));   // hello world!
+  EXPECT_TRUE(m2.Matches("+/-_IQ"));             // \xfb\xff\xbf!
 
 #if GTEST_INTERNAL_HAS_STRING_VIEW
   const Matcher<const internal::StringView&> m3 =
@@ -1814,6 +1829,7 @@ TEST(WhenBase64UnescapedTest, MatchesUnescapedBase64Strings) {
   EXPECT_FALSE(m3.Matches("invalid base64"));
   EXPECT_FALSE(m3.Matches("aGVsbG8gd29ybGQ="));  // hello world
   EXPECT_TRUE(m3.Matches("aGVsbG8gd29ybGQh"));   // hello world!
+  EXPECT_TRUE(m3.Matches("+/-_IQ"));             // \xfb\xff\xbf!
 #endif  // GTEST_INTERNAL_HAS_STRING_VIEW
 }
 

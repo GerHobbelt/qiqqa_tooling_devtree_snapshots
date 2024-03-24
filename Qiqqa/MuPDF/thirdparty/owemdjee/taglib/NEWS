@@ -1,3 +1,21 @@
+TagLib 2.0 (Jan 24, 2024)
+=========================
+
+ * New major version, binary incompatible, but source-compatible with the
+   latest 1.x release if no deprecated features are used.
+
+TagLib 1.13.1 (Jul 1, 2023)
+===========================
+
+ * Fixed parsing of TXXX frames without description.
+ * Detect MP4 atoms with invalid length or type.
+ * Do not miss ID3v2 frames when an extended header is present.
+ * Use property "DISCSUBTITLE" for ID3v2 "TSST" frame.
+ * Build system improvements: Use absolute path for macOS dylib install name,
+   support --define-prefix when using pkg-config, fixed minimum required
+   CppUnit version.
+ * Code clean up using clang-tidy.
+
 TagLib 1.13 (Oct 27, 2022)
 ==========================
 
@@ -208,7 +226,7 @@ TagLib 1.8 (Sep 6, 2012)
 
  * Added support for OWNE ID3 frames.
  * Changed key validation in the new PropertyMap API.
- * ID3v1::Tag::setStringHandler will no londer delete the previous handler,
+ * ID3v1::Tag::setStringHandler will no longer delete the previous handler,
    the caller is responsible for this.
  * File objects will also no longer delete the passed IOStream objects. It
    should be done in the caller code after the File object is no longer
@@ -351,7 +369,7 @@ TagLib 1.6 (Sep 13, 2009)
    and in String::operator+=. (BUG:169389)
  * Added support for PRIV ID3v2 frames.
  * Empty ID3v2 genres are no longer treated as numeric ID3v1 genres.
- * Added support for the POPM (rating/playcount) ID3v2 frame.
+ * Added support for the POPM (rating/play count) ID3v2 frame.
  * Generic RIFF file format support:
    * Support for AIFF files with ID3v2 tags.
    * Support for WAV files with ID3v2 tags.

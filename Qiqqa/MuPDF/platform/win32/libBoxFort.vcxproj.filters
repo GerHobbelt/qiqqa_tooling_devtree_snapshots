@@ -164,6 +164,9 @@
     <NASM Include="../../thirdparty/owemdjee/BoxFort/src/asm/trampoline-x86_64.asm">
       <Filter>Source Files\src\asm</Filter>
     </NASM>
+    <Text Include="../../thirdparty/owemdjee/BoxFort/LICENSE">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/BoxFort/README.md">
       <Filter>Misc Files</Filter>
     </Text>
@@ -177,6 +180,9 @@
       <Filter>Misc Files\src\asm</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/BoxFort/src/asm/trampoline-arm.S">
+      <Filter>Misc Files\src\asm</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/BoxFort/src/asm/trampoline-riscv64.S">
       <Filter>Misc Files\src\asm</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/BoxFort/src/asm/trampoline-x86.S">

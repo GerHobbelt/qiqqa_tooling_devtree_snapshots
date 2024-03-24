@@ -7,6 +7,44 @@
 #include "gtest/gtest.h"
 #include "gtest/internal/gtest-port.h"
 
+#if GTEST_HAS_FILE_SYSTEM
+
+#if defined(_MSC_VER)
+
+static int setenv(const char *name, const char *value, int overwrite)
+{
+	int errcode = 0;
+	if (!overwrite) {
+		size_t envsize = 0;
+		errcode = getenv_s(&envsize, NULL, 0, name);
+		if(errcode || envsize) return errcode;
+	}
+	return _putenv_s(name, value);
+}
+
+static int unsetenv(const char *name)
+{
+	int errcode = 0;
+	size_t envsize = 0;
+	errcode = getenv_s(&envsize, NULL, 0, name);
+	if(errcode) return errcode;
+	if(envsize == 0) return 0;
+	return _putenv_s(name, "");
+}
+
+// minimal port as required for this test file; has only partial functionality!
+static char *mkdtemp(char *path)
+{
+	size_t len = strlen(path) + 1;
+	int errcode = _mktemp_s(path, len);
+	if (errcode) return NULL;
+	errcode = mkdir(path);
+	if (errcode) return NULL;
+	return path;
+}
+
+#endif // _MSC_VER
+
 namespace {
 
 class SetEnv {
@@ -93,5 +131,7 @@ TEST(SrcDirTest, NotInEnvironment) {
   SetEnv set_env("TEST_SRCDIR", nullptr);
   EXPECT_NE(testing::SrcDir(), "");
 }
+
+#endif  // GTEST_HAS_FILE_SYSTEM
 
 }  // namespace

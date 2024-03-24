@@ -73,16 +73,16 @@
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\dependencies\lz4">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\dependencies\lz4\lib">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Misc Files\dependencies\lz4\lib">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Misc Files\dependencies\lz4\lib\dll">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\dependencies\lz4\lib\dll\example">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\dict">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
@@ -194,6 +194,9 @@
     <ClCompile Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/mdb_stat.c">
       <Filter>Source Files\dependencies\lmdb\libraries\liblmdb</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/midl-sparse.c">
+      <Filter>Source Files\dependencies\lmdb\libraries\liblmdb</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/midl.c">
       <Filter>Source Files\dependencies\lmdb\libraries\liblmdb</Filter>
     </ClCompile>
@@ -228,6 +231,9 @@
       <Filter>Source Files\dependencies\lmdb\libraries\liblmdb</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/lib/lz4.c">
+      <Filter>Source Files\dependencies\lz4\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/lib/lz4file.c">
       <Filter>Source Files\dependencies\lz4\lib</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/lib/lz4frame.c">
@@ -293,6 +299,9 @@
     <ClInclude Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/lib/lz4.h">
       <Filter>Header Files\dependencies\lz4\lib</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/lib/lz4file.h">
+      <Filter>Header Files\dependencies\lz4\lib</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/lib/lz4frame.h">
       <Filter>Header Files\dependencies\lz4\lib</Filter>
     </ClInclude>
@@ -326,6 +335,9 @@
     <Image Include="../../thirdparty/owemdjee/lmdb-store/assets/powers-dre.png">
       <Filter>Resource Files\assets</Filter>
     </Image>
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/LICENSE">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/lmdb-store/README.md">
       <Filter>Misc Files</Filter>
     </Text>
@@ -350,11 +362,59 @@
     <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb-data-v1/libraries/liblmdb/CHANGES">
       <Filter>Misc Files\dependencies\lmdb-data-v1\libraries\liblmdb</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb-data-v1/libraries/liblmdb/Doxyfile">
+      <Filter>Misc Files\dependencies\lmdb-data-v1\libraries\liblmdb</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb-data-v1/libraries/liblmdb/LICENSE">
+      <Filter>Misc Files\dependencies\lmdb-data-v1\libraries\liblmdb</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb-data-v1/libraries/liblmdb/intro.doc">
+      <Filter>Misc Files\dependencies\lmdb-data-v1\libraries\liblmdb</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb-data-v1/libraries/liblmdb/mdb_copy.1">
+      <Filter>Misc Files\dependencies\lmdb-data-v1\libraries\liblmdb</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb-data-v1/libraries/liblmdb/mdb_dump.1">
+      <Filter>Misc Files\dependencies\lmdb-data-v1\libraries\liblmdb</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb-data-v1/libraries/liblmdb/mdb_load.1">
+      <Filter>Misc Files\dependencies\lmdb-data-v1\libraries\liblmdb</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb-data-v1/libraries/liblmdb/mdb_stat.1">
+      <Filter>Misc Files\dependencies\lmdb-data-v1\libraries\liblmdb</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb-data-v1/libraries/liblmdb/sample-bdb.txt">
       <Filter>Misc Files\dependencies\lmdb-data-v1\libraries\liblmdb</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb-data-v1/libraries/liblmdb/sample-mdb.txt">
       <Filter>Misc Files\dependencies\lmdb-data-v1\libraries\liblmdb</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/Doxyfile">
+      <Filter>Misc Files\dependencies\lmdb\libraries\liblmdb</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/LICENSE">
+      <Filter>Misc Files\dependencies\lmdb\libraries\liblmdb</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/Makefile">
+      <Filter>Misc Files\dependencies\lmdb\libraries\liblmdb</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/intro.doc">
+      <Filter>Misc Files\dependencies\lmdb\libraries\liblmdb</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/mdb_copy.1">
+      <Filter>Misc Files\dependencies\lmdb\libraries\liblmdb</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/mdb_drop.1">
+      <Filter>Misc Files\dependencies\lmdb\libraries\liblmdb</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/mdb_dump.1">
+      <Filter>Misc Files\dependencies\lmdb\libraries\liblmdb</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/mdb_load.1">
+      <Filter>Misc Files\dependencies\lmdb\libraries\liblmdb</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/mdb_stat.1">
+      <Filter>Misc Files\dependencies\lmdb\libraries\liblmdb</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/sample-bdb.txt">
       <Filter>Misc Files\dependencies\lmdb\libraries\liblmdb</Filter>
@@ -362,11 +422,20 @@
     <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/sample-mdb.txt">
       <Filter>Misc Files\dependencies\lmdb\libraries\liblmdb</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/LICENSE">
+      <Filter>Misc Files\dependencies\lz4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/lib/LICENSE">
+      <Filter>Misc Files\dependencies\lz4\lib</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/lib/README.md">
       <Filter>Misc Files\dependencies\lz4\lib</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/lib/dll/example/README.md">
       <Filter>Misc Files\dependencies\lz4\lib\dll\example</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/lib/dll/liblz4.def">
+      <Filter>Misc Files\dependencies\lz4\lib\dll</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/lib/liblz4-dll.rc.in">
       <Filter>Misc Files\dependencies\lz4\lib</Filter>
@@ -419,6 +488,9 @@
     <Text Include="../../thirdparty/owemdjee/lmdb-store/test/cluster.js">
       <Filter>Misc Files\test</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/test/deno.js">
+      <Filter>Misc Files\test</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/lmdb-store/test/deno.sh">
       <Filter>Misc Files\test</Filter>
     </Text>
@@ -431,10 +503,19 @@
     <Text Include="../../thirdparty/owemdjee/lmdb-store/test/performance.js">
       <Filter>Misc Files\test</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/test/readonly-threads.cjs">
+      <Filter>Misc Files\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/test/threads.cjs">
+      <Filter>Misc Files\test</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/lmdb-store/test/types/index.test-d.ts">
       <Filter>Misc Files\test\types</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/lmdb-store/util/RangeIterable.js">
+      <Filter>Misc Files\util</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/util/set-optional-deps.cjs">
       <Filter>Misc Files\util</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/lmdb-store/util/when.js">

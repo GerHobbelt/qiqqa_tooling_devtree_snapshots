@@ -4,6 +4,8 @@
 
 .. default-domain:: js
 
+.. include:: html_tags.rst
+
 
 .. title:: MuPDF & JavaScript
 
@@ -30,14 +32,50 @@
 
 Both usages are, in fact, very similar and here we show code samples and the API for both.
 
-API's generally work for both environments, however if an API is specific to only one usage then the |mutool_tag| or |wasm_tag| tag will be shown.
-
+APIs generally work for both environments, however if an API is specific to only one usage, then it is marked with the |mutool_tag| or |wasm_tag|.
 
 
 
 .. note::
 
-   In the code examples, if you are developing for `mutool run` then the `mupdf` prefix is optional.
+   - In the code examples, if you are developing for `mutool run` then the `mupdf` prefix is optional.
+
+   - `mutool run` supports :title:`ECMAScript 5` syntax in strict mode, but not :title:`ECMAScript 6` and above.
+
+
+
+Class A-Z Index
+------------------
+
+- :ref:`Archive<mutool_run_js_api_object_archive>`
+- :ref:`Buffer<mutool_run_js_api_buffer>`
+- :ref:`ColorSpace<mutool_run_js_api_colorspace>`
+- :ref:`Device<mutool_run_js_api_device>`
+- :ref:`Document<mutool_run_js_api_document>`
+- :ref:`DocumentWriter<mutool_run_js_api_document_writer>`
+- :ref:`DisplayList<mutool_run_js_api_display_list>`
+- :ref:`DisplayListDevice<mutool_run_js_api_display_list_device>`
+- :ref:`DrawDevice<mutool_run_js_api_draw_device>`
+- :ref:`Image<mutool_run_js_api_image>`
+- :ref:`Font<mutool_run_js_api_font>`
+- :ref:`Link<mutool_run_js_api_link>`
+- :ref:`OutlineIterator<mutool_run_js_api_object_outline_iterator>`
+- :ref:`Page<mutool_run_js_api_page>`
+- :ref:`Path<mutool_run_js_api_path>`
+- :ref:`PDFAnnotation<mutool_run_js_api_pdf_annotation>`
+- :ref:`PDFDocument<mutool_run_js_api_pdf_document>`
+- :ref:`PDFGraftMap<mutool_run_js_api_pdf_graft_map>`
+- :ref:`PDFObject<mutool_run_js_api_pdf_object>`
+- :ref:`PDFPage<mutool_run_js_api_pdf_page>`
+- :ref:`PDFWidget<mutool_run_js_api_object_pdf_widget>`
+- :ref:`Pixmap<mutool_run_js_api_pixmap>`
+- :ref:`Story<mutool_run_js_api_object_story>`
+- :ref:`StrokeState<mutool_run_js_api_stroke_state>`
+- :ref:`StructuredText<mutool_run_js_api_structured_text>`
+- :ref:`Text<mutool_run_js_api_text>`
+- :ref:`XML<mutool_run_js_api_object_xml>`
+
+
 
 
 
@@ -77,7 +115,7 @@ This matrix is represented in :title:`JavaScript` as `[a,b,c,d,e,f]`.
 
    The identity matrix, short hand for `[1,0,0,1,0,0]`.
 
-   **Example**
+   |example_tag|
 
    .. code-block:: javascript
 
@@ -94,7 +132,7 @@ This matrix is represented in :title:`JavaScript` as `[a,b,c,d,e,f]`.
 
    :return: `[a,b,c,d,e,f]`.
 
-   **Example**
+   |example_tag|
 
    .. code-block:: javascript
 
@@ -110,7 +148,7 @@ This matrix is represented in :title:`JavaScript` as `[a,b,c,d,e,f]`.
 
    :return: `[a,b,c,d,e,f]`.
 
-   **Example**
+   |example_tag|
 
    .. code-block:: javascript
 
@@ -124,7 +162,7 @@ This matrix is represented in :title:`JavaScript` as `[a,b,c,d,e,f]`.
 
    :return: `[a,b,c,d,e,f]`.
 
-   **Example**
+   |example_tag|
 
    .. code-block:: javascript
 
@@ -139,7 +177,7 @@ This matrix is represented in :title:`JavaScript` as `[a,b,c,d,e,f]`.
 
    :return: `[a,b,c,d,e,f]`.
 
-   **Example**
+   |example_tag|
 
    .. code-block:: javascript
 
@@ -154,7 +192,7 @@ This matrix is represented in :title:`JavaScript` as `[a,b,c,d,e,f]`.
 
    :return: `[a,b,c,d,e,f]`.
 
-   **Example**
+   |example_tag|
 
    .. code-block:: javascript
 
@@ -166,7 +204,7 @@ This matrix is represented in :title:`JavaScript` as `[a,b,c,d,e,f]`.
 Rectangles
 ~~~~~~~~~~~~
 
-Rectangles are 4-element arrays, specifying the minimum and maximum corners (typically upper left and lower right, in a coordinate space with the origin at the top left with descending y): `[ulx,uly,lrx,lry]`.
+Rectangles are 4-element arrays, specifying the minimum and maximum corners (typically upper left and lower right, in a coordinate space with the origin at the top left with descending y): `[ulx,uly,lrx,lry]`. Rectangles are always X- and Y-axis aligned.
 
 If the minimum x coordinate is bigger than the maximum x coordinate, :title:`MuPDF` treats the rectangle as infinite in size.
 
@@ -184,7 +222,7 @@ If the minimum x coordinate is bigger than the maximum x coordinate, :title:`MuP
 
    :return: `Boolean`.
 
-   **Example**
+   |example_tag|
 
    .. code-block:: javascript
 
@@ -195,13 +233,13 @@ If the minimum x coordinate is bigger than the maximum x coordinate, :title:`MuP
 
 .. method:: isValid(rect)
 
-   Returns a boolean indicating if the rectangle is valid or not. Rectangles are considered "invalid" if `x2` < `x1` and/or if `y2` < `y1`.
+   Returns a boolean indicating if the rectangle is valid or not. Rectangles are considered "invalid" if `lrx` < `ulx` and/or if `lry` < `uly`.
 
    :arg rect: Rectangle array.
 
    :return: `Boolean`.
 
-   **Example**
+   |example_tag|
 
    .. code-block:: javascript
 
@@ -217,7 +255,7 @@ If the minimum x coordinate is bigger than the maximum x coordinate, :title:`MuP
 
    :return: `Boolean`.
 
-   **Example**
+   |example_tag|
 
    .. code-block:: javascript
 
@@ -228,14 +266,14 @@ If the minimum x coordinate is bigger than the maximum x coordinate, :title:`MuP
 
 .. method:: transform(rect, matrix)
 
-   Returns a matrix generated by transforming the supplied `rect` by the `matrix`.
+   Returns a rectangle generated by transforming the supplied `rect` by the `matrix`.
 
    :arg rect: Rectangle array.
    :arg matrix: Matrix array.
 
-   :return: `[a,b,c,d,e,f]`.
+   :return: `[ulx,uly,lrx,lry]`.
 
-   **Example**
+   |example_tag|
 
    .. code-block:: javascript
 
@@ -247,7 +285,7 @@ If the minimum x coordinate is bigger than the maximum x coordinate, :title:`MuP
 Colors
 ----------
 
-Colors are specified as arrays with the appropriate number of components for the :ref:`color space<mutool_run_javascript_api_colorspace>`. Each number is a floating point between `0` and `1` for the color value.
+Colors are specified as arrays with the appropriate number of components for the :ref:`color space<mutool_run_javascript_api_colorspace>`. Each number is a floating point between `0` and `1` for the component value.
 
 Therefore colors are represented as an array of up to 4 component values.
 
@@ -255,7 +293,7 @@ For example:
 
 - In the `DeviceCMYK` color space a color would be `[Cyan,Magenta,Yellow,Black]`. A full magenta color would therefore be `[0,1,0,0]`.
 - In the `DeviceRGB` color space a color would be `[Red,Green,Blue]`. A full green color would therefore be `[0,1,0]`.
-- In the `DeviceGray` color space a color would be `[Black]`. A full black color would therefore be `[1]`.
+- In the `DeviceGray` color space a color would be `[Black]`. A full black color would therefore be `[0]`.
 
 
 .. _mutool_run_js_api_color_params:
@@ -362,7 +400,7 @@ Global :title:`MuPDF` methods
 
    :arg ...: Arguments to print.
 
-   **Example**
+   |example_tag|
 
    .. code-block:: javascript
 
@@ -392,12 +430,13 @@ Global :title:`MuPDF` methods
    :arg object: Object to format.
 
 
-   **Example**
+   |example_tag|
 
    .. code-block:: javascript
 
       var document = new Document.openDocument("my_pdf.pdf");
-      repr(document); // "[userdata pdf_document]"
+      print(document.getJournal()); // "[object Object]"
+      print(repr(document.getJournal())); // "{position: 0, steps: []}"
 
 
 
@@ -427,7 +466,7 @@ Global :title:`MuPDF` methods
 
    |mutool_tag|
 
-   Read the contents of a file and return them as a :title:`UTF-8` decoded string.
+   Read the contents of a file and return them as a :title:`UTF-8` encoded string.
 
    :arg fileName: `String`.
 
@@ -454,6 +493,8 @@ Global :title:`MuPDF` methods
 
 .. method:: setUserCSS(userStyleSheet, usePublisherStyles)
 
+   |mutool_tag|
+
    Set user styles and whether to use publisher styles when laying out reflowable documents.
 
    :arg userStyleSheet: Link to :title:`CSS` stylesheet file.
@@ -461,12 +502,13 @@ Global :title:`MuPDF` methods
 
 
 
-.. method:: quit()
+.. method:: quit(exitStatus)
 
    |mutool_tag|
 
-   Exit the shell.
+   Terminate script execution and exit with the provided exit status.
 
+   :arg exitStatus: `Integer` exit status to return.
 
 
 .. _mutool_run_js_api_pdf_processor:
@@ -568,7 +610,7 @@ Text positioning
 Text showing
 """""""""""""""""""""""""""""""""""""""""""
 
-- `op_TJ(textArray)` number/string
+- `op_TJ(textArray)`
 
 - `op_Tj(stringOrByteArray)`
 

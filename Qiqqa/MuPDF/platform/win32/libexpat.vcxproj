@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEXPAT;EXPAT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEXPAT;EXPAT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libexpat/expat/lib;../../scripts/libexpat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>XML_UNICODE;XML_UNICODE_WCHAR_T;XML_STATIC;BUILD_MONOLITHIC;BUILDING_LIBEXPAT;EXPAT_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libexpat/expat/lib;../../scripts/libexpat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>XML_UNICODE;XML_UNICODE_WCHAR_T;XML_STATIC;BUILD_MONOLITHIC;BUILDING_LIBEXPAT;EXPAT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEXPAT;EXPAT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEXPAT;EXPAT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libexpat/expat/lib;../../scripts/libexpat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libexpat/expat/lib;../../scripts/libexpat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEXPAT;EXPAT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEXPAT;EXPAT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libexpat/expat/lib;../../scripts/libexpat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>XML_UNICODE;XML_UNICODE_WCHAR_T;XML_STATIC;BUILD_MONOLITHIC;BUILDING_LIBEXPAT;EXPAT_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libexpat/expat/lib;../../scripts/libexpat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>XML_UNICODE;XML_UNICODE_WCHAR_T;XML_STATIC;BUILD_MONOLITHIC;BUILDING_LIBEXPAT;EXPAT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEXPAT;EXPAT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEXPAT;EXPAT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libexpat/expat/lib;../../scripts/libexpat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libexpat/expat/lib;../../scripts/libexpat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEXPAT;EXPAT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEXPAT;EXPAT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libexpat/expat/lib;../../scripts/libexpat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>XML_UNICODE;XML_UNICODE_WCHAR_T;XML_STATIC;BUILD_MONOLITHIC;BUILDING_LIBEXPAT;EXPAT_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libexpat/expat/lib;../../scripts/libexpat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>XML_UNICODE;XML_UNICODE_WCHAR_T;XML_STATIC;BUILD_MONOLITHIC;BUILDING_LIBEXPAT;EXPAT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEXPAT;EXPAT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEXPAT;EXPAT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libexpat/expat/lib;../../scripts/libexpat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libexpat/expat/lib;../../scripts/libexpat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEXPAT;EXPAT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEXPAT;EXPAT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libexpat/expat/lib;../../scripts/libexpat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>XML_UNICODE;XML_UNICODE_WCHAR_T;XML_STATIC;BUILD_MONOLITHIC;BUILDING_LIBEXPAT;EXPAT_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libexpat/expat/lib;../../scripts/libexpat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>XML_UNICODE;XML_UNICODE_WCHAR_T;XML_STATIC;BUILD_MONOLITHIC;BUILDING_LIBEXPAT;EXPAT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEXPAT;EXPAT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEXPAT;EXPAT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libexpat/expat/lib;../../scripts/libexpat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libexpat/expat/lib;../../scripts/libexpat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -276,13 +276,16 @@
     <ClInclude Include="../../thirdparty/owemdjee/libexpat/expat/xmlwf/xmlfile.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libexpat/expat/xmlwf/xmlmime.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libexpat/expat/xmlwf/xmltchar.h" />
-    <ResourceCompile Include="../../thirdparty/owemdjee/libexpat/expat/win32/version.rc" />
+    <Text Include="../../thirdparty/owemdjee/libexpat/SECURITY.md" />
+    <Text Include="../../thirdparty/owemdjee/libexpat/appveyor.yml" />
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/AUTHORS" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/CMake.README" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/Changes" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/ConfigureChecks.cmake" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/README.md" />
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/acinclude.m4" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/apply-clang-format.sh" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/buildconf.sh" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/clean_coverage.sh" />
@@ -296,10 +299,21 @@
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/cmake/mingw-toolchain.cmake" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/configure-ac-style.md" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/configure.ac" />
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/conftools/ax-append-compile-flags.m4" />
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/conftools/ax-append-flag.m4" />
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/conftools/ax-append-link-flags.m4" />
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/conftools/ax-check-compile-flag.m4" />
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/conftools/ax-check-link-flag.m4" />
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/conftools/ax-require-defined.m4" />
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/conftools/expat.m4" />
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/conftools/expatcfg-compiler-supports-visibility.m4" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/conftools/get-version.sh" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/coverage.sh" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/distribute.sh" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/doc/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/doc/ok.min.css" />
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/doc/reference.html" />
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/doc/style.css" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/examples/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/expat.pc.cmake" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/expat.pc.in" />
@@ -321,12 +335,14 @@
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/win32/MANIFEST.txt" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/win32/README.txt" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/win32/build_expat_iss.bat" />
+    <Text Include="../../thirdparty/owemdjee/libexpat/expat/win32/expat.iss" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/xmlwf/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/xmlwf/xmlwf_helpgen.py" />
     <Text Include="../../thirdparty/owemdjee/libexpat/expat/xmlwf/xmlwf_helpgen.sh" />
     <Text Include="../../thirdparty/owemdjee/libexpat/run_cmake.sh" />
     <Text Include="../../thirdparty/owemdjee/libexpat/testdata/README.txt" />
     <Text Include="../../thirdparty/owemdjee/libexpat/testdata/largefiles/README.txt" />
+    <Text Include="../../thirdparty/owemdjee/libexpat/testdata/largefiles/wordnet_glossary-20010201.rdf" />
     <Xml Include="../../thirdparty/owemdjee/libexpat/expat/doc/xmlwf.xml" />
     <Xml Include="../../thirdparty/owemdjee/libexpat/testdata/largefiles/nes96.xml" />
     <Xml Include="../../thirdparty/owemdjee/libexpat/testdata/largefiles/ns_att_test.xml" />

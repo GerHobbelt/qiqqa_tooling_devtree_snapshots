@@ -601,8 +601,10 @@ static void ResetLineAfterWrap( TidyPrintImpl* pprint )
 
         if ( ! IsWrapInAttrVal(pprint) )
         {
-            while ( q < end && *q == ' ' )
-                ++q, ++pprint->wraphere;
+            while ( q < end && *q == ' ' ) {
+                ++q;
+                ++pprint->wraphere;
+            }
         }
 
         while ( q < end )
@@ -1141,6 +1143,7 @@ static void PPrintChar( TidyDocImpl* doc, uint c, uint mode )
     TidyPrintImpl* pprint  = &doc->pprint;
     uint outenc = cfg( doc, TidyOutCharEncoding );
     Bool qmark = cfgBool( doc, TidyQuoteMarks );
+    Bool writeEntities = cfgBool( doc, TidyWriteEntities );
 
     if ( c == ' ' && !(mode & (PREFORMATTED | COMMENT | ATTRIBVALUE | CDATA)))
     {
@@ -1159,7 +1162,7 @@ static void PPrintChar( TidyDocImpl* doc, uint c, uint mode )
     }
 
     /* comment characters are passed raw */
-    if ( mode & (COMMENT | CDATA) )
+    if ( ! writeEntities || mode & (COMMENT | CDATA) )
     {
         AddChar( pprint, c );
         return;
@@ -1610,8 +1613,7 @@ static void PPrintAttribute( TidyDocImpl* doc, uint indent,
         Bool scriptAttr = TY_(attrIsEvent)(attr);
 
         if ( xmlOut )
-            PPrintAttrValue( doc, indent, isB ? attr->attribute : NULLSTR,
-                             attr->delim, no, scriptAttr );
+            PPrintAttrValue( doc, indent, "", attr->delim, yes, scriptAttr );
 
         else if ( !isB && !TY_(IsNewNode)(node) )
             PPrintAttrValue( doc, indent, "", attr->delim, yes, scriptAttr );

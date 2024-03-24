@@ -34,7 +34,7 @@
 // This file contains code for handling the 'reporting' flags.  These
 // are flags that, when present, cause the program to report some
 // information and then exit.  --help and --version are the canonical
-// reporting flags, but we also have flags like --helpxml, etc.
+// reporting flags, but we also have flags like --help-xml, etc.
 //
 // There's only one function that's meant to be called externally:
 // HandleCommandLineHelpFlags().  (Well, actually, ShowUsageWithFlags(),
@@ -68,12 +68,12 @@
 
 // The 'reporting' flags.  They all call gflags_exitfunc().
 DEFINE_bool  (help,        false, "show help on all flags [tip: all flags can have two dashes]");
-DEFINE_bool  (helpfull,    false, "show help on all flags -- same as -help");
+DEFINE_bool  (helpful,     false, "show help on all flags -- same as -help");
 DEFINE_bool  (helpshort,   false, "show help on only the main module for this program");
 DEFINE_string(helpon,      "",    "show help on the modules named by this flag value");
 DEFINE_string(helpmatch,   "",    "show help on modules whose name contains the specified substr");
 DEFINE_bool  (helppackage, false, "show help on all modules in the main package");
-DEFINE_bool  (helpxml,     false, "produce an xml version of help");
+DEFINE_bool  (help_xml,    false, "produce an xml version of help");
 DEFINE_bool  (version,     false, "show version and build info and exit");
 
 
@@ -207,7 +207,9 @@ static string DescribeOneFlagInXML(const CommandLineFlagInfo& flag) {
   // and meaning need to avoid attribute normalization.  This way it
   // can be parsed by simple programs, in addition to xml parsers.
   string r("<flag>");
+#ifndef STRIP_INTERNAL_FLAG_HELP
   AddXMLTag(&r, "file", flag.filename);
+#endif
   AddXMLTag(&r, "name", flag.name);
   AddXMLTag(&r, "meaning", flag.description);
   AddXMLTag(&r, "default", flag.default_value);
@@ -232,11 +234,21 @@ static string DescribeOneFlagInXML(const CommandLineFlagInfo& flag) {
 
 static const char* Basename(const char* filename) {
   const char* sep = strrchr(filename, PATH_SEPARATOR);
+#ifdef OS_WINDOWS
+  const char* sep2 = strrchr(filename, '/');
+  if (sep2 > sep)    // BTW: this compare also works when either pointer is NULL
+	  sep = sep2;
+#endif
   return sep ? sep + 1 : filename;
 }
 
 static string Dirname(const string& filename) {
   string::size_type sep = filename.rfind(PATH_SEPARATOR);
+#ifdef OS_WINDOWS
+  string::size_type sep2 = filename.rfind('/');
+  if (sep2 != string::npos && (sep == string::npos || sep2 > sep))
+	  sep = sep2;
+#endif
   return filename.substr(0, (sep == string::npos) ? 0 : sep);
 }
 
@@ -252,7 +264,7 @@ static bool FileMatchesSubstring(const string& filename,
     // the string to be at the beginning of a directory component.
     // That should match the first directory component as well, so
     // we allow '/foo' to match a filename of 'foo'.
-    if (!target->empty() && (*target)[0] == PATH_SEPARATOR &&
+    if (!target->empty() && ((*target)[0] == PATH_SEPARATOR || (*target)[0] == '/') &&
         strncmp(filename.c_str(), target->c_str() + 1,
                 strlen(target->c_str() + 1)) == 0)
       return true;
@@ -267,7 +279,7 @@ static bool FileMatchesSubstring(const string& filename,
 // by '--help' and its variants.
 static void ShowUsageWithFlagsMatching(const char *argv0,
                                        const vector<string> &substrings) {
-  fprintf(stdout, "%s: %s\n", Basename(argv0), ProgramUsage());
+  gflags_stderr_printf("%s: %s\n", Basename(argv0), ProgramUsage());
 
   vector<CommandLineFlagInfo> flags;
   GetAllFlags(&flags);           // flags are sorted by filename, then flagname
@@ -286,20 +298,20 @@ static void ShowUsageWithFlagsMatching(const char *argv0,
       if (flag->filename != last_filename) {                      // new file
         if (Dirname(flag->filename) != Dirname(last_filename)) {  // new dir!
           if (!first_directory)
-            fprintf(stdout, "\n\n");   // put blank lines between directories
+            gflags_stderr_printf("\n\n");   // put blank lines between directories
           first_directory = false;
         }
 #ifndef STRIP_INTERNAL_FLAG_HELP
-        fprintf(stdout, "\n  Flags from %s:\n", flag->filename.c_str());
+        gflags_stderr_printf("\n  Flags from %s:\n", flag->filename.c_str());
 #endif  // STRIP_INTERNAL_FLAG_HELP
         last_filename = flag->filename;
       }
       // Now print this flag
-      fprintf(stdout, "%s", DescribeOneFlag(*flag).c_str());
+      gflags_stderr_printf("%s", DescribeOneFlag(*flag).c_str());
     }
   }
   if (!found_match && !substrings.empty()) {
-    fprintf(stdout, "\n  No modules matched: use -help\n");
+    gflags_stderr_printf("\n  No modules matched: use -help\n");
   }
 }
 
@@ -338,6 +350,7 @@ static void ShowXMLOfFlags(const char *prog_name) {
   }
   // The end of the document
   fprintf(stdout, "</AllFlags>\n");
+  fflush(stdout);
 }
 
 // --------------------------------------------------------------------
@@ -353,9 +366,10 @@ static void ShowVersion() {
   } else {
     fprintf(stdout, "%s\n", ProgramInvocationShortName());
   }
-# if !defined(NDEBUG)
-  fprintf(stdout, "Debug build (NDEBUG not #defined)\n");
+# ifdef GFLAGS_DEBUG_BUILD
+  fprintf(stdout, "Debug build\n");
 # endif
+  fflush(stdout);
 }
 
 static void AppendPrognameStrings(vector<string>* substrings,
@@ -390,7 +404,7 @@ void HandleCommandLineHelpFlags() {
     ShowUsageWithFlagsMatching(progname, substrings);
     gflags_exitfunc(1);
 
-  } else if (FLAGS_help || FLAGS_helpfull) {
+  } else if (FLAGS_help || FLAGS_helpful) {
     // show all options
     ShowUsageWithFlagsRestrict(progname, "");   // empty restrict
     gflags_exitfunc(1);
@@ -433,7 +447,7 @@ void HandleCommandLineHelpFlags() {
     }
     gflags_exitfunc(1);
 
-  } else if (FLAGS_helpxml) {
+  } else if (FLAGS_help_xml) {
     ShowXMLOfFlags(progname);
     gflags_exitfunc(1);
 

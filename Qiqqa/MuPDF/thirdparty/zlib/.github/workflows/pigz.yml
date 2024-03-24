@@ -22,14 +22,14 @@ jobs:
           - name: Ubuntu Clang
             os: ubuntu-latest
             compiler: clang
-            packages: llvm-11-tools
+            packages: llvm-11 llvm-11-tools
             gcov-exec: llvm-cov-11 gcov
             codecov: ubuntu_clang_pigz
 
           - name: Ubuntu Clang No Optim
             os: ubuntu-latest
             compiler: clang
-            packages: llvm-11-tools
+            packages: llvm-11 llvm-11-tools
             gcov-exec: llvm-cov-11 gcov
             codecov: ubuntu_clang_pigz_no_optim
             cmake-args: -DWITH_OPTIM=OFF
@@ -38,7 +38,7 @@ jobs:
           - name: Ubuntu Clang No Threads
             os: ubuntu-latest
             compiler: clang
-            packages: llvm-11-tools
+            packages: llvm-11 llvm-11-tools
             gcov-exec: llvm-cov-11 gcov
             codecov: ubuntu_clang_pigz_no_threads
             cmake-args: -DWITH_THREADS=OFF -DPIGZ_VERSION=v2.6
@@ -51,13 +51,24 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
+      with:
+        show-progress: 'false'
 
     - name: Checkout test corpora
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         repository: zlib-ng/corpora
         path: test/data/corpora
+        show-progress: 'false'
+
+    - name: Add ubuntu mirrors
+      if: runner.os == 'Linux' && matrix.packages
+      run: |
+        # Github Actions caching proxy is at times unreliable
+        echo -e 'http://azure.archive.ubuntu.com/ubuntu\tpriority:1\n' | sudo tee /etc/apt/mirrors.txt
+        curl http://mirrors.ubuntu.com/mirrors.txt | sudo tee --append /etc/apt/mirrors.txt
+        sudo sed -i 's#http://azure.archive.ubuntu.com/ubuntu/#mirror+file:/etc/apt/mirrors.txt#' /etc/apt/sources.list
 
     - name: Install packages (Ubuntu)
       if: runner.os == 'Linux' && matrix.packages
@@ -81,11 +92,11 @@ jobs:
         CI: true
 
     - name: Compile source code
-      run: cmake --build . --config ${{ matrix.build-config || 'Release' }}
+      run: cmake --build . -j2 --config ${{ matrix.build-config || 'Release' }}
       working-directory: test/pigz
 
     - name: Run test cases
-      run: ctest --verbose -C Release --output-on-failure --max-width 120 -j ${{ matrix.parallels-jobs || '2' }}
+      run: ctest --verbose -C Release --output-on-failure --max-width 120 -j ${{ matrix.parallels-jobs || '3' }}
       working-directory: test/pigz
 
     - name: Generate coverage report
@@ -99,7 +110,7 @@ jobs:
           --xml --output coverage.xml
 
     - name: Upload coverage report
-      uses: codecov/codecov-action@v2
+      uses: codecov/codecov-action@v3
       if: matrix.codecov && (env.CODECOV_TOKEN != '' || github.repository == 'zlib-ng/zlib-ng')
       with:
         token: ${{ secrets.CODECOV_TOKEN || 'e4fdf847-f541-4ab1-9d50-3d27e5913906' }}
@@ -111,7 +122,7 @@ jobs:
         CODECOV_TOKEN: ${{secrets.CODECOV_TOKEN}}
 
     - name: Upload build errors
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       if: failure()
       with:
         name: ${{ matrix.name }} (cmake)

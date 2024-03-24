@@ -39,7 +39,7 @@ POSSIBILITY OF SUCH DAMAGE.
 */
 
 
-#ifdef HAVE_CONFIG_H
+#if defined(HAVE_CONFIG_H) && !defined(PCRE2_AMALGAMETE)
 #include "config.h"
 #endif
 
@@ -125,10 +125,10 @@ static unsigned int
 static int
   compile_regex(uint32_t, uint32_t, PCRE2_UCHAR **, uint32_t **, int *,
     uint32_t, uint32_t *, uint32_t *, uint32_t *, uint32_t *, branch_chain *,
-    compile_block *, PCRE2_SIZE *);
+    open_capitem *, compile_block *, PCRE2_SIZE *);
 
 static int
-  get_branchlength(uint32_t **, int *, int *, parsed_recurse_check *,
+  get_branchlength(uint32_t **, int *, int *, int *, parsed_recurse_check *,
     compile_block *);
 
 static BOOL
@@ -706,9 +706,11 @@ static const char posix_names[] =
 static const uint8_t posix_name_lengths[] = {
   5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 6, 0 };
 
-#define PC_GRAPH  8
-#define PC_PRINT  9
-#define PC_PUNCT 10
+#define PC_DIGIT   7
+#define PC_GRAPH   8
+#define PC_PRINT   9
+#define PC_PUNCT  10
+#define PC_XDIGIT 13
 
 /* Table of class bit maps for each POSIX class. Each class is formed from a
 base map, with an optional addition or removal of another map. Then, for some
@@ -721,20 +723,20 @@ absolute value of the third field has these meanings: 0 => no tweaking, 1 =>
 remove vertical space characters, 2 => remove underscore. */
 
 static const int posix_class_maps[] = {
-  cbit_word,  cbit_digit, -2,             /* alpha */
-  cbit_lower, -1,          0,             /* lower */
-  cbit_upper, -1,          0,             /* upper */
-  cbit_word,  -1,          2,             /* alnum - word without underscore */
-  cbit_print, cbit_cntrl,  0,             /* ascii */
-  cbit_space, -1,          1,             /* blank - a GNU extension */
-  cbit_cntrl, -1,          0,             /* cntrl */
-  cbit_digit, -1,          0,             /* digit */
-  cbit_graph, -1,          0,             /* graph */
-  cbit_print, -1,          0,             /* print */
-  cbit_punct, -1,          0,             /* punct */
-  cbit_space, -1,          0,             /* space */
-  cbit_word,  -1,          0,             /* word - a Perl extension */
-  cbit_xdigit,-1,          0              /* xdigit */
+  cbit_word,   cbit_digit, -2,            /* alpha */
+  cbit_lower,  -1,          0,            /* lower */
+  cbit_upper,  -1,          0,            /* upper */
+  cbit_word,   -1,          2,            /* alnum - word without underscore */
+  cbit_print,  cbit_cntrl,  0,            /* ascii */
+  cbit_space,  -1,          1,            /* blank - a GNU extension */
+  cbit_cntrl,  -1,          0,            /* cntrl */
+  cbit_digit,  -1,          0,            /* digit */
+  cbit_graph,  -1,          0,            /* graph */
+  cbit_print,  -1,          0,            /* print */
+  cbit_punct,  -1,          0,            /* punct */
+  cbit_space,  -1,          0,            /* space */
+  cbit_word,   -1,          0,            /* word - a Perl extension */
+  cbit_xdigit, -1,          0             /* xdigit */
 };
 
 #ifdef SUPPORT_UNICODE
@@ -756,7 +758,7 @@ static int posix_substitutes[] = {
   PT_PXPUNCT, 0,    /* punct */
   PT_PXSPACE, 0,    /* space */   /* Xps is POSIX space, but from 8.34 */
   PT_WORD, 0,       /* word  */   /* Perl and POSIX space are the same */
-  -1, 0             /* xdigit, treat as non-UCP */
+  PT_PXXDIGIT, 0    /* xdigit */  /* Perl has additional hex digits */
 };
 #define POSIX_SUBSIZE (sizeof(posix_substitutes) / (2*sizeof(uint32_t)))
 #endif  /* SUPPORT_UNICODE */
@@ -786,7 +788,8 @@ are allowed. */
     PCRE2_EXTRA_ALLOW_SURROGATE_ESCAPES|PCRE2_EXTRA_BAD_ESCAPE_IS_LITERAL| \
     PCRE2_EXTRA_ESCAPED_CR_IS_LF|PCRE2_EXTRA_ALT_BSUX| \
     PCRE2_EXTRA_ALLOW_LOOKAROUND_BSK|PCRE2_EXTRA_ASCII_BSD| \
-    PCRE2_EXTRA_ASCII_BSS|PCRE2_EXTRA_ASCII_BSW|PCRE2_EXTRA_ASCII_POSIX)
+    PCRE2_EXTRA_ASCII_BSS|PCRE2_EXTRA_ASCII_BSW|PCRE2_EXTRA_ASCII_POSIX| \
+    PCRE2_EXTRA_ASCII_DIGIT)
 
 /* Compile time error code numbers. They are given names so that they can more
 easily be tracked. When a new number is added, the tables called eint1 and
@@ -805,7 +808,7 @@ enum { ERR0 = COMPILE_ERROR_BASE,
        ERR61, ERR62, ERR63, ERR64, ERR65, ERR66, ERR67, ERR68, ERR69, ERR70,
        ERR71, ERR72, ERR73, ERR74, ERR75, ERR76, ERR77, ERR78, ERR79, ERR80,
        ERR81, ERR82, ERR83, ERR84, ERR85, ERR86, ERR87, ERR88, ERR89, ERR90,
-       ERR91, ERR92, ERR93, ERR94, ERR95, ERR96, ERR97, ERR98, ERR99 };
+       ERR91, ERR92, ERR93, ERR94, ERR95, ERR96, ERR97, ERR98, ERR99, ERR100 };
 
 /* This is a table of start-of-pattern options such as (*UTF) and settings such
 as (*LIMIT_MATCH=nnnn) and (*CRLF). For completeness and backward
@@ -818,7 +821,8 @@ enum { PSO_OPT,     /* Value is an option bit */
        PSO_BSR,     /* Value is a \R type */
        PSO_LIMH,    /* Read integer value for heap limit */
        PSO_LIMM,    /* Read integer value for match limit */
-       PSO_LIMD };  /* Read integer value for depth limit */
+       PSO_LIMD     /* Read integer value for depth limit */
+     };
 
 typedef struct pso {
   const uint8_t *name;
@@ -1066,21 +1070,18 @@ for (;;)
     break;
 
     case META_LOOKBEHIND:
-    fprintf(stderr, "META (?<= %d offset=", meta_arg);
-    GETOFFSET(offset, pptr);
-    fprintf(stderr, "%zd", offset);
+    fprintf(stderr, "META (?<= %d %d", meta_arg, *pptr);
+    pptr += 2;
     break;
 
     case META_LOOKBEHIND_NA:
-    fprintf(stderr, "META (*naplb: %d offset=", meta_arg);
-    GETOFFSET(offset, pptr);
-    fprintf(stderr, "%zd", offset);
+    fprintf(stderr, "META (*naplb: %d %d", meta_arg, *pptr);
+    pptr += 2;
     break;
 
     case META_LOOKBEHINDNOT:
-    fprintf(stderr, "META (?<! %d offset=", meta_arg);
-    GETOFFSET(offset, pptr);
-    fprintf(stderr, "%zd", offset);
+    fprintf(stderr, "META (?<! %d %d", meta_arg, *pptr);
+    pptr += 2;
     break;
 
     case META_CALLOUT_NUMBER:
@@ -1301,9 +1302,9 @@ if (code != NULL)
 *************************************************/
 
 /* This function is used to read numbers in the pattern. The initial pointer
-must be the sign or first digit of the number. When relative values (introduced
-by + or -) are allowed, they are relative group numbers, and the result must be
-greater than zero.
+must be at the sign or first digit of the number. When relative values
+(introduced by + or -) are allowed, they are relative group numbers, and the
+result must be greater than zero.
 
 Arguments:
   ptrptr      points to the character pointer variable
@@ -1387,17 +1388,18 @@ return yield;
 *         Read repeat counts                     *
 *************************************************/
 
-/* Read an item of the form {n,m} and return the values if non-NULL pointers
+/* Read an item of the form {n,m} and return the values when non-NULL pointers
 are supplied. Repeat counts must be less than 65536 (MAX_REPEAT_COUNT); a
 larger value is used for "unlimited". We have to use signed arguments for
-read_number() because it is capable of returning a signed value.
+read_number() because it is capable of returning a signed value. As of Perl
+5.34.0 either n or m may be absent, but not both. Perl also allows spaces and
+tabs after { and before } and between the numbers and the comma, so we do too.
 
 Arguments:
-  ptrptr         points to pointer to character after'{'
+  ptrptr         points to pointer to character after '{'
   ptrend         pointer to end of input
   minp           if not NULL, pointer to int for min
-  maxp           if not NULL, pointer to int for max (-1 if no max)
-                 returned as -1 if no max
+  maxp           if not NULL, pointer to int for max
   errorcodeptr   points to error code variable
 
 Returns:         FALSE if not a repeat quantifier, errorcode set zero
@@ -1409,57 +1411,96 @@ static BOOL
 read_repeat_counts(PCRE2_SPTR *ptrptr, PCRE2_SPTR ptrend, uint32_t *minp,
   uint32_t *maxp, int *errorcodeptr)
 {
-PCRE2_SPTR p;
+PCRE2_SPTR p = *ptrptr;
+PCRE2_SPTR pp;
 BOOL yield = FALSE;
-BOOL had_comma = FALSE;
+BOOL had_minimum = FALSE;
 int32_t min = 0;
 int32_t max = REPEAT_UNLIMITED; /* This value is larger than MAX_REPEAT_COUNT */
 
-/* Check the syntax */
-
 *errorcodeptr = 0;
-for (p = *ptrptr;; p++)
+while (p < ptrend && (*p == CHAR_SPACE || *p == CHAR_HT)) p++;
+
+/* Check the syntax before interpreting. Otherwise, a non-quantifier sequence
+such as "X{123456ABC" would incorrectly give a "number too big in quantifier"
+error. */
+
+pp = p;
+if (pp < ptrend && IS_DIGIT(*pp))
   {
-  uint32_t c;
-  if (p >= ptrend) return FALSE;
-  c = *p;
-  if (IS_DIGIT(c)) continue;
-  if (c == CHAR_RIGHT_CURLY_BRACKET) break;
-  if (c == CHAR_COMMA)
-    {
-    if (had_comma) return FALSE;
-    had_comma = TRUE;
-    }
-  else return FALSE;
+  had_minimum = TRUE;
+  while (++pp < ptrend && IS_DIGIT(*pp)) {}
   }
 
-/* The only error from read_number() is for a number that is too big. */
+while (pp < ptrend && (*pp == CHAR_SPACE || *pp == CHAR_HT)) pp++;
+if (pp >= ptrend) return FALSE;
 
-p = *ptrptr;
-if (!read_number(&p, ptrend, -1, MAX_REPEAT_COUNT, ERR5, &min, errorcodeptr))
-  goto EXIT;
-
-if (*p == CHAR_RIGHT_CURLY_BRACKET)
+if (*pp == CHAR_RIGHT_CURLY_BRACKET)
   {
-  p++;
-  max = min;
+  if (!had_minimum) return FALSE;
   }
 else
   {
-  if (*(++p) != CHAR_RIGHT_CURLY_BRACKET)
+  if (*pp++ != CHAR_COMMA) return FALSE;
+  while (pp < ptrend && (*pp == CHAR_SPACE || *pp == CHAR_HT)) pp++;
+  if (pp >= ptrend) return FALSE;
+  if (IS_DIGIT(*pp))
     {
-    if (!read_number(&p, ptrend, -1, MAX_REPEAT_COUNT, ERR5, &max,
-        errorcodeptr))
-      goto EXIT;
+    while (++pp < ptrend && IS_DIGIT(*pp)) {}
+    }
+  else if (!had_minimum) return FALSE;
+  while (pp < ptrend && (*pp == CHAR_SPACE || *pp == CHAR_HT)) pp++;
+  if (pp >= ptrend || *pp != CHAR_RIGHT_CURLY_BRACKET) return FALSE;
+  }
+
+/* Now process the quantifier for real. We know it must be {n} or (n,} or {,m}
+or {n,m}. The only error that read_number() can return is for a number that is
+too big. If *errorcodeptr is returned as zero it means no number was found. */
+
+/* Deal with {,m} or n too big. If we successfully read m there is no need to
+check m >= n because n defaults to zero. */
+
+if (!read_number(&p, ptrend, -1, MAX_REPEAT_COUNT, ERR5, &min, errorcodeptr))
+  {
+  if (*errorcodeptr != 0) goto EXIT;    /* n too big */
+  p++;  /* Skip comma and subsequent spaces */
+  while (p < ptrend && (*p == CHAR_SPACE || *p == CHAR_HT)) p++;
+  if (!read_number(&p, ptrend, -1, MAX_REPEAT_COUNT, ERR5, &max, errorcodeptr))
+    {
+    if (*errorcodeptr != 0) goto EXIT;  /* m too big */
+    }
+  }
+
+/* Have read one number. Deal with {n} or {n,} or {n,m} */
+
+else
+  {
+  while (p < ptrend && (*p == CHAR_SPACE || *p == CHAR_HT)) p++;
+  if (*p == CHAR_RIGHT_CURLY_BRACKET)
+    {
+    max = min;
+    }
+  else   /* Handle {n,} or {n,m} */
+    {
+    p++;    /* Skip comma and subsequent spaces */
+    while (p < ptrend && (*p == CHAR_SPACE || *p == CHAR_HT)) p++;
+    if (!read_number(&p, ptrend, -1, MAX_REPEAT_COUNT, ERR5, &max, errorcodeptr))
+      {
+      if (*errorcodeptr != 0) goto EXIT;   /* m too big */
+      }
+
     if (max < min)
       {
       *errorcodeptr = ERR4;
       goto EXIT;
       }
     }
-  p++;
   }
 
+/* Valid quantifier exists */
+
+while (p < ptrend && (*p == CHAR_SPACE || *p == CHAR_HT)) p++;
+p++;
 yield = TRUE;
 if (minp != NULL) *minp = (uint32_t)min;
 if (maxp != NULL) *maxp = (uint32_t)max;
@@ -1511,7 +1552,7 @@ PRIV(check_escape)(PCRE2_SPTR *ptrptr, PCRE2_SPTR ptrend, uint32_t *chptr,
   compile_block *cb)
 {
 BOOL utf = (options & PCRE2_UTF) != 0;
-BOOL alt_bsux = 
+BOOL alt_bsux =
   ((options & PCRE2_ALT_BSUX) | (xoptions & PCRE2_EXTRA_ALT_BSUX)) != 0;
 PCRE2_SPTR ptr = *ptrptr;
 uint32_t c, cc;
@@ -1564,6 +1605,10 @@ else if ((i = escapes[c - ESCAPES_FIRST]) != 0)
       {
       PCRE2_SPTR p = ptr + 1;
 
+      /* Perl ignores spaces and tabs after { */
+
+      while (p < ptrend && (*p == CHAR_SPACE || *p == CHAR_HT)) p++;
+
       /* \N{U+ can be handled by the \x{ code. However, this construction is
       not valid in EBCDIC environments because it specifies a Unicode
       character, not a codepoint in the local code. For example \N{U+0041}
@@ -1578,7 +1623,7 @@ else if ((i = escapes[c - ESCAPES_FIRST]) != 0)
 #else
         if (utf)
           {
-          ptr = p + 1;
+          ptr = p + 2;
           escape = 0;   /* Not a fancy escape after all */
           goto COME_FROM_NU;
           }
@@ -1637,7 +1682,9 @@ else
     is set. Otherwise, \u must be followed by exactly four hex digits or, if
     PCRE2_EXTRA_ALT_BSUX is set, by any number of hex digits in braces.
     Otherwise it is a lowercase u letter. This gives some compatibility with
-    ECMAScript (aka JavaScript). */
+    ECMAScript (aka JavaScript). Unlike other braced items, white space is NOT
+    allowed. When \u{ is not followed by hex digits, a special return is given
+    because otherwise \u{ 12} (for example) would be treated as u{12}. */
 
     case CHAR_u:
     if (!alt_bsux) *errorcodeptr = ERR37; else
@@ -1649,8 +1696,8 @@ else
           (xoptions & PCRE2_EXTRA_ALT_BSUX) != 0)
         {
         PCRE2_SPTR hptr = ptr + 1;
-        cc = 0;
 
+        cc = 0;
         while (hptr < ptrend && (xc = XDIGIT(*hptr)) != 0xff)
           {
           if ((cc & 0xf0000000) != 0)  /* Test for 32-bit overflow */
@@ -1666,7 +1713,11 @@ else
         if (hptr == ptr + 1 ||   /* No hex digits */
             hptr >= ptrend ||    /* Hit end of input */
             *hptr != CHAR_RIGHT_CURLY_BRACKET)  /* No } terminator */
-          break;         /* Hex escape not recognized */
+          {
+          escape = ESC_ub;    /* Special return */
+          ptr++;              /* Skip { */
+          break;              /* Hex escape not recognized */
+          }
 
         c = cc;          /* Accept the code point */
         ptr = hptr + 1;
@@ -1746,12 +1797,16 @@ else
     if (*ptr == CHAR_LEFT_CURLY_BRACKET)
       {
       PCRE2_SPTR p = ptr + 1;
+
+      while (p < ptrend && (*p == CHAR_SPACE || *p == CHAR_HT)) p++;
       if (!read_number(&p, ptrend, cb->bracount, MAX_GROUP_NUMBER, ERR61, &s,
           errorcodeptr))
         {
         if (*errorcodeptr == 0) escape = ESC_k;  /* No number found */
         break;
         }
+      while (p < ptrend && (*p == CHAR_SPACE || *p == CHAR_HT)) p++;
+
       if (p >= ptrend || *p != CHAR_RIGHT_CURLY_BRACKET)
         {
         *errorcodeptr = ERR57;
@@ -1847,55 +1902,63 @@ else
     break;
 
     /* \o is a relatively new Perl feature, supporting a more general way of
-    specifying character codes in octal. The only supported form is \o{ddd}. */
+    specifying character codes in octal. The only supported form is \o{ddd},
+    with optional spaces or tabs after { and before }. */
 
     case CHAR_o:
     if (ptr >= ptrend || *ptr++ != CHAR_LEFT_CURLY_BRACKET)
       {
       ptr--;
       *errorcodeptr = ERR55;
+      break;
       }
-    else if (ptr >= ptrend || *ptr == CHAR_RIGHT_CURLY_BRACKET)
-      *errorcodeptr = ERR78;
-    else
+
+    while (ptr < ptrend && (*ptr == CHAR_SPACE || *ptr == CHAR_HT)) ptr++;
+    if (ptr >= ptrend || *ptr == CHAR_RIGHT_CURLY_BRACKET)
       {
-      c = 0;
-      overflow = FALSE;
-      while (ptr < ptrend && *ptr >= CHAR_0 && *ptr <= CHAR_7)
-        {
-        cc = *ptr++;
-        if (c == 0 && cc == CHAR_0) continue;     /* Leading zeroes */
+      *errorcodeptr = ERR78;
+      break;
+      }
+
+    c = 0;
+    overflow = FALSE;
+    while (ptr < ptrend && *ptr >= CHAR_0 && *ptr <= CHAR_7)
+      {
+      cc = *ptr++;
+      if (c == 0 && cc == CHAR_0) continue;     /* Leading zeroes */
 #if PCRE2_CODE_UNIT_WIDTH == 32
-        if (c >= 0x20000000l) { overflow = TRUE; break; }
+      if (c >= 0x20000000l) { overflow = TRUE; break; }
 #endif
-        c = (c << 3) + (cc - CHAR_0);
+      c = (c << 3) + (cc - CHAR_0);
 #if PCRE2_CODE_UNIT_WIDTH == 8
-        if (c > (utf ? 0x10ffffU : 0xffU)) { overflow = TRUE; break; }
+      if (c > (utf ? 0x10ffffU : 0xffU)) { overflow = TRUE; break; }
 #elif PCRE2_CODE_UNIT_WIDTH == 16
-        if (c > (utf ? 0x10ffffU : 0xffffU)) { overflow = TRUE; break; }
+      if (c > (utf ? 0x10ffffU : 0xffffU)) { overflow = TRUE; break; }
 #elif PCRE2_CODE_UNIT_WIDTH == 32
-        if (utf && c > 0x10ffffU) { overflow = TRUE; break; }
+      if (utf && c > 0x10ffffU) { overflow = TRUE; break; }
 #endif
-        }
-      if (overflow)
-        {
-        while (ptr < ptrend && *ptr >= CHAR_0 && *ptr <= CHAR_7) ptr++;
-        *errorcodeptr = ERR34;
-        }
-      else if (ptr < ptrend && *ptr++ == CHAR_RIGHT_CURLY_BRACKET)
-        {
-        if (utf && c >= 0xd800 && c <= 0xdfff &&
-            (xoptions & PCRE2_EXTRA_ALLOW_SURROGATE_ESCAPES) == 0)
-          {
-          ptr--;
-          *errorcodeptr = ERR73;
-          }
-        }
-      else
+      }
+
+    while (ptr < ptrend && (*ptr == CHAR_SPACE || *ptr == CHAR_HT)) ptr++;
+
+    if (overflow)
+      {
+      while (ptr < ptrend && *ptr >= CHAR_0 && *ptr <= CHAR_7) ptr++;
+      *errorcodeptr = ERR34;
+      }
+    else if (ptr < ptrend && *ptr++ == CHAR_RIGHT_CURLY_BRACKET)
+      {
+      if (utf && c >= 0xd800 && c <= 0xdfff &&
+          (xoptions & PCRE2_EXTRA_ALLOW_SURROGATE_ESCAPES) == 0)
         {
         ptr--;
-        *errorcodeptr = ERR64;
+        *errorcodeptr = ERR73;
         }
+      }
+    else
+      {
+      ptr--;
+      *errorcodeptr = ERR64;
       }
     break;
 
@@ -1924,10 +1987,13 @@ else
       {
       if (ptr < ptrend && *ptr == CHAR_LEFT_CURLY_BRACKET)
         {
+        ptr++;
+        while (ptr < ptrend && (*ptr == CHAR_SPACE || *ptr == CHAR_HT)) ptr++;
+
 #ifndef EBCDIC
         COME_FROM_NU:
 #endif
-        if (++ptr >= ptrend || *ptr == CHAR_RIGHT_CURLY_BRACKET)
+        if (ptr >= ptrend || *ptr == CHAR_RIGHT_CURLY_BRACKET)
           {
           *errorcodeptr = ERR78;
           break;
@@ -1950,6 +2016,12 @@ else
             }
           }
 
+        /* Perl ignores spaces and tabs before } */
+
+        while (ptr < ptrend && (*ptr == CHAR_SPACE || *ptr == CHAR_HT)) ptr++;
+
+        /* On overflow, skip remaining hex digits */
+
         if (overflow)
           {
           while (ptr < ptrend && XDIGIT(*ptr) != 0xff) ptr++;
@@ -1965,10 +2037,10 @@ else
             }
           }
 
-        /* If the sequence of hex digits does not end with '}', give an error.
-        We used just to recognize this construct and fall through to the normal
-        \x handling, but nowadays Perl gives an error, which seems much more
-        sensible, so we do too. */
+        /* If the sequence of hex digits (followed by optional space) does not
+        end with '}', give an error. We used just to recognize this construct
+        and fall through to the normal \x handling, but nowadays Perl gives an
+        error, which seems much more sensible, so we do too. */
 
         else
           {
@@ -2122,7 +2194,11 @@ if (c == CHAR_LEFT_CURLY_BRACKET)
     {
     if (ptr >= cb->end_pattern) goto ERROR_RETURN;
     c = *ptr++;
+#if PCRE2_CODE_UNIT_WIDTH != 8
+    while (c == '_' || c == '-' || (c <= 0xff && isspace(c)))
+#else
     while (c == '_' || c == '-' || isspace(c))
+#endif
       {
       if (ptr >= cb->end_pattern) goto ERROR_RETURN;
       c = *ptr++;
@@ -2360,12 +2436,13 @@ return -1;
 
 /* This function is called from parse_regex() below whenever it needs to read
 the name of a subpattern or a (*VERB) or an (*alpha_assertion). The initial
-pointer must be to the character before the name. If that character is '*' we
-are reading a verb or alpha assertion name. The pointer is updated to point
-after the name, for a VERB or alpha assertion name, or after tha name's
-terminator for a subpattern name. Returning both the offset and the name
-pointer is redundant information, but some callers use one and some the other,
-so it is simplest just to return both.
+pointer must be to the preceding character. If that character is '*' we are
+reading a verb or alpha assertion name. The pointer is updated to point after
+the name, for a VERB or alpha assertion name, or after tha name's terminator
+for a subpattern name. Returning both the offset and the name pointer is
+redundant information, but some callers use one and some the other, so it is
+simplest just to return both. When the name is in braces, spaces and tabs are
+allowed (and ignored) at either end.
 
 Arguments:
   ptrptr      points to the character pointer variable
@@ -2388,9 +2465,13 @@ read_name(PCRE2_SPTR *ptrptr, PCRE2_SPTR ptrend, BOOL utf, uint32_t terminator,
   int *errorcodeptr, compile_block *cb)
 {
 PCRE2_SPTR ptr = *ptrptr;
-BOOL is_group = (*ptr != CHAR_ASTERISK);
+BOOL is_group = (*ptr++ != CHAR_ASTERISK);
+BOOL is_braced = terminator == CHAR_RIGHT_CURLY_BRACKET;
 
-if (++ptr >= ptrend)               /* No characters in name */
+if (is_braced)
+  while (ptr < ptrend && (*ptr == CHAR_SPACE || *ptr == CHAR_HT)) ptr++;
+
+if (ptr >= ptrend)                 /* No characters in name */
   {
   *errorcodeptr = is_group? ERR62: /* Subpattern name expected */
                             ERR60; /* Verb not recognized or malformed */
@@ -2469,6 +2550,8 @@ if (is_group)
     *errorcodeptr = ERR62;   /* Subpattern name expected */
     goto FAILED;
     }
+  if (is_braced)
+    while (ptr < ptrend && (*ptr == CHAR_SPACE || *ptr == CHAR_HT)) ptr++;
   if (ptr >= ptrend || *ptr != (PCRE2_UCHAR)terminator)
     {
     *errorcodeptr = ERR42;
@@ -2662,7 +2745,7 @@ the main compiling phase. */
 
 #define PARSE_TRACKED_EXTRA_OPTIONS (PCRE2_EXTRA_CASELESS_RESTRICT| \
   PCRE2_EXTRA_ASCII_BSD|PCRE2_EXTRA_ASCII_BSS|PCRE2_EXTRA_ASCII_BSW| \
-  PCRE2_EXTRA_ASCII_POSIX)
+  PCRE2_EXTRA_ASCII_DIGIT|PCRE2_EXTRA_ASCII_POSIX)
 
 /* States used for analyzing ranges in character classes. The two OK values
 must be last. */
@@ -2698,6 +2781,8 @@ uint32_t *verbstartptr = NULL;
 uint32_t *previous_callout = NULL;
 uint32_t *parsed_pattern = cb->parsed_pattern;
 uint32_t *parsed_pattern_end = cb->parsed_pattern_end;
+uint32_t *this_parsed_item = NULL;
+uint32_t *prev_parsed_item = NULL;
 uint32_t meta_quantifier = 0;
 uint32_t add_after_mark = 0;
 uint32_t xoptions = cb->cx->extra_options;
@@ -2797,6 +2882,17 @@ while (ptr < ptrend)
     {
     errorcode = ERR19;
     goto FAILED;        /* Parentheses too deeply nested */
+    }
+
+  /* If the last time round this loop something was added, parsed_pattern will
+  no longer be equal to this_parsed_item. Remember where the previous item
+  started and reset for the next item. Note that sometimes round the loop,
+  nothing gets added (e.g. for ignored white space). */
+
+  if (this_parsed_item != parsed_pattern)
+    {
+    prev_parsed_item = this_parsed_item;
+    this_parsed_item = parsed_pattern;
     }
 
   /* Get next input character, save its position for callout handling. */
@@ -2921,6 +3017,11 @@ while (ptr < ptrend)
         *parsed_pattern++ = c;
         break;
 
+        case ESC_ub:
+        *parsed_pattern++ = CHAR_u;
+        PARSED_LITERAL(CHAR_LEFT_CURLY_BRACKET, parsed_pattern);
+        break;
+
         case ESC_Q:
         inescq = TRUE;
         break;
@@ -3007,8 +3108,11 @@ while (ptr < ptrend)
          !read_repeat_counts(&tempptr, ptrend, NULL, NULL, &errorcode))))
     {
     if (after_manual_callout-- <= 0)
+      {
       parsed_pattern = manage_callouts(thisptr, &previous_callout, auto_callout,
         parsed_pattern, cb);
+      this_parsed_item = parsed_pattern;  /* New start for current item */
+      }
     }
 
   /* If expect_cond_assert is 2, we have just passed (?( and are expecting an
@@ -3084,7 +3188,6 @@ while (ptr < ptrend)
         0x00020000u : 0x00010000u);
     continue;  /* Next character in pattern */
     }
-
 
   /* Process the next item in the main part of a pattern. */
 
@@ -3178,6 +3281,16 @@ while (ptr < ptrend)
       *parsed_pattern++ = META_ESCAPE + escape;
       break;
 
+      /* This is a special return that happens only in EXTRA_ALT_BSUX mode,
+      when \u{ is not followed by hex digits and }. It requests two literal
+      characters, u and { and we need this, as otherwise \u{ 12} (for example)
+      would be treated as u{12} now that spaces are allowed in quantifiers. */
+
+      case ESC_ub:
+      *parsed_pattern++ = CHAR_u;
+      PARSED_LITERAL(CHAR_LEFT_CURLY_BRACKET, parsed_pattern);
+      break;
+
       case ESC_X:
 #ifndef SUPPORT_UNICODE
       errorcode = ERR45;   /* Supported only with Unicode support */
@@ -3269,7 +3382,8 @@ while (ptr < ptrend)
         if (errorcode != 0) goto ESCAPE_FAILED;
         }
 
-      /* Not a numerical recursion */
+      /* Not a numerical recursion. Perl allows spaces and tabs after { and
+      before } but not for other delimiters. */
 
       if (!read_name(&ptr, ptrend, utf, terminator, &offset, &name, &namelen,
           &errorcode, cb)) goto ESCAPE_FAILED;
@@ -3336,7 +3450,8 @@ while (ptr < ptrend)
 
     /* ---- Quantifier post-processing ---- */
 
-    /* Check that a quantifier is allowed after the previous item. */
+    /* Check that a quantifier is allowed after the previous item. This
+    guarantees that there is a previous item. */
 
     CHECK_QUANTIFIER:
     if (!prev_okquantifier)
@@ -3351,7 +3466,7 @@ while (ptr < ptrend)
     wrapping it in non-capturing brackets, but we have to allow for a preceding
     (*MARK) for when (*ACCEPT) has an argument. */
 
-    if (parsed_pattern[-1] == META_ACCEPT)
+    if (*prev_parsed_item == META_ACCEPT)
       {
       uint32_t *p;
       for (p = parsed_pattern - 1; p >= verbstartptr; p--) p[1] = p[0];
@@ -3581,7 +3696,9 @@ while (ptr < ptrend)
 
 #ifdef SUPPORT_UNICODE
         if ((options & PCRE2_UCP) != 0 &&
-            (xoptions & PCRE2_EXTRA_ASCII_POSIX) == 0)
+            (xoptions & PCRE2_EXTRA_ASCII_POSIX) == 0 &&
+            !((xoptions & PCRE2_EXTRA_ASCII_DIGIT) != 0 &&
+              (posix_class == PC_DIGIT || posix_class == PC_XDIGIT)))
           {
           int ptype = posix_substitutes[2*posix_class];
           int pvalue = posix_substitutes[2*posix_class + 1];
@@ -3672,7 +3789,7 @@ while (ptr < ptrend)
           {
           case 0:  /* Escaped character code point is in c */
           char_is_literal = FALSE;
-          goto CLASS_LITERAL;
+          goto CLASS_LITERAL;      /* (a few lines above) */
 
           case ESC_b:
           c = CHAR_BS;    /* \b is backspace in a class */
@@ -4136,13 +4253,19 @@ while (ptr < ptrend)
                 }
               if (*ptr == CHAR_P)
                 {
-                *xoptset |= PCRE2_EXTRA_ASCII_POSIX;
+                *xoptset |= (PCRE2_EXTRA_ASCII_POSIX|PCRE2_EXTRA_ASCII_DIGIT);
                 ptr++;
                 break;
                 }
               if (*ptr == CHAR_S)
                 {
                 *xoptset |= PCRE2_EXTRA_ASCII_BSS;
+                ptr++;
+                break;
+                }
+              if (*ptr == CHAR_T)
+                {
+                *xoptset |= PCRE2_EXTRA_ASCII_DIGIT;
                 ptr++;
                 break;
                 }
@@ -4154,7 +4277,8 @@ while (ptr < ptrend)
                 }
               }
             *xoptset |= PCRE2_EXTRA_ASCII_BSD|PCRE2_EXTRA_ASCII_BSS|
-                        PCRE2_EXTRA_ASCII_BSW|PCRE2_EXTRA_ASCII_POSIX;
+                        PCRE2_EXTRA_ASCII_BSW|
+                        PCRE2_EXTRA_ASCII_DIGIT|PCRE2_EXTRA_ASCII_POSIX;
             break;
 
             case CHAR_J:  /* Record that it changed in the external options */
@@ -5491,6 +5615,7 @@ Arguments:
   reqcuptr          place to put the last required code unit
   reqcuflagsptr     place to put the last required code unit flags
   bcptr             points to current branch chain
+  open_caps         points to current capitem
   cb                contains pointers to tables etc.
   lengthptr         NULL during the real compile phase
                     points to length accumulator during pre-compile phase
@@ -5504,8 +5629,8 @@ static int
 compile_branch(uint32_t *optionsptr, uint32_t *xoptionsptr,
   PCRE2_UCHAR **codeptr, uint32_t **pptrptr, int *errorcodeptr,
   uint32_t *firstcuptr, uint32_t *firstcuflagsptr, uint32_t *reqcuptr,
-  uint32_t *reqcuflagsptr, branch_chain *bcptr, compile_block *cb,
-  PCRE2_SIZE *lengthptr)
+  uint32_t *reqcuflagsptr, branch_chain *bcptr, open_capitem *open_caps,
+  compile_block *cb, PCRE2_SIZE *lengthptr)
 {
 int bravalue = 0;
 int okreturn = -1;
@@ -5750,8 +5875,8 @@ for (;; pptr++)
 
     If the class contains characters outside the 0-255 range, a different
     opcode is compiled. It may optionally have a bit map for characters < 256,
-    but those above are are explicitly listed afterwards. A flag code unit
-    tells whether the bitmap is present, and whether this is a negated class or
+    but those above are explicitly listed afterwards. A flag code unit tells
+    whether the bitmap is present, and whether this is a negated class or
     not. */
 
     case META_CLASS_NOT:
@@ -5937,13 +6062,13 @@ for (;; pptr++)
             xclass_has_prop = TRUE;
             goto CONTINUE_CLASS;
 
-            /* For the other POSIX classes (ascii, xdigit) we are going to
+            /* For the other POSIX classes (ex: ascii) we are going to
             fall through to the non-UCP case and build a bit map for
             characters with code points less than 256. However, if we are in
             a negated POSIX class, characters with code points greater than
             255 must either all match or all not match, depending on whether
             the whole class is not or is negated. For example, for
-            [[:^ascii:]... they must all match, whereas for [^[:^xdigit:]...
+            [[:^ascii:]... they must all match, whereas for [^[:^ascii:]...
             they must not.
 
             In the special case where there are no xclass items, this is
@@ -6255,11 +6380,11 @@ for (;; pptr++)
     characters > 255 are in or not in the class, so any that were explicitly
     given as well can be ignored.
 
-    In the UCP case, if certain negated POSIX classes ([:^ascii:] or
-    [^:xdigit:]) were present in a class, we either have to match or not match
-    all wide characters (depending on whether the whole class is or is not
-    negated). This requirement is indicated by match_all_or_no_wide_chars being
-    true. We do this by including an explicit range, which works in both cases.
+    In the UCP case, if certain negated POSIX classes (ex: [:^ascii:]) were
+    were present in a class, we either have to match or not match all wide
+    characters (depending on whether the whole class is or is not negated).
+    This requirement is indicated by match_all_or_no_wide_chars being true.
+    We do this by including an explicit range, which works in both cases.
     This applies only in UTF and 16-bit and 32-bit non-UTF modes, since there
     cannot be any wide characters in 8-bit non-UTF mode.
 
@@ -6363,7 +6488,7 @@ for (;; pptr++)
 
     case META_ACCEPT:
     cb->had_accept = had_accept = TRUE;
-    for (oc = cb->open_caps;
+    for (oc = open_caps;
          oc != NULL && oc->assert_depth >= cb->assert_depth;
          oc = oc->next)
       {
@@ -6705,6 +6830,7 @@ for (;; pptr++)
          &subreqcu,                       /* For possible last char */
          &subreqcuflags,
          bcptr,                           /* Current branch chain */
+         open_caps,                       /* Pointer to capture stack */
          cb,                              /* Compile data block */
          (lengthptr == NULL)? NULL :      /* Actual compile phase */
            &length_prevgroup              /* Pre-compile phase */
@@ -8244,8 +8370,8 @@ static int
 compile_regex(uint32_t options, uint32_t xoptions, PCRE2_UCHAR **codeptr,
   uint32_t **pptrptr, int *errorcodeptr, uint32_t skipunits,
   uint32_t *firstcuptr, uint32_t *firstcuflagsptr, uint32_t *reqcuptr,
-  uint32_t *reqcuflagsptr, branch_chain *bcptr, compile_block *cb,
-  PCRE2_SIZE *lengthptr)
+  uint32_t *reqcuflagsptr, branch_chain *bcptr, open_capitem *open_caps,
+  compile_block *cb, PCRE2_SIZE *lengthptr)
 {
 PCRE2_UCHAR *code = *codeptr;
 PCRE2_UCHAR *last_branch = code;
@@ -8257,6 +8383,7 @@ int okreturn = 1;
 uint32_t *pptr = *pptrptr;
 uint32_t firstcu, reqcu;
 uint32_t lookbehindlength;
+uint32_t lookbehindminlength;
 uint32_t firstcuflags, reqcuflags;
 uint32_t branchfirstcu, branchreqcu;
 uint32_t branchfirstcuflags, branchreqcuflags;
@@ -8299,9 +8426,10 @@ lookbehind = *code == OP_ASSERTBACK ||
 if (lookbehind)
   {
   lookbehindlength = META_DATA(pptr[-1]);
+  lookbehindminlength = *pptr;
   pptr += SIZEOFFSET;
   }
-else lookbehindlength = 0;
+else lookbehindlength = lookbehindminlength = 0;
 
 /* If this is a capturing subpattern, add to the chain of open capturing items
 so that we can detect them if (*ACCEPT) is encountered. Note that only OP_CBRA
@@ -8312,9 +8440,9 @@ if (*code == OP_CBRA)
   {
   capnumber = GET2(code, 1 + LINK_SIZE);
   capitem.number = capnumber;
-  capitem.next = cb->open_caps;
+  capitem.next = open_caps;
   capitem.assert_depth = cb->assert_depth;
-  cb->open_caps = &capitem;
+  open_caps = &capitem;
   }
 
 /* Offset is set zero to mark that this bracket is still open */
@@ -8328,13 +8456,30 @@ for (;;)
   {
   int branch_return;
 
-  /* Insert OP_REVERSE if this is as lookbehind assertion. */
+  /* Insert OP_REVERSE or OP_VREVERSE if this is a lookbehind assertion. There
+  is only a single mimimum length for the whole assertion. When the mimimum
+  length is LOOKBEHIND_MAX it means that all branches are of fixed length,
+  though not necessarily the same length. In this case, the original OP_REVERSE
+  can be used. It can also be used if a branch in a variable length lookbehind
+  has the same maximum and minimum. Otherwise, use OP_VREVERSE, which has both
+  maximum and minimum values. */
 
   if (lookbehind && lookbehindlength > 0)
     {
-    *code++ = OP_REVERSE;
-    PUTINC(code, 0, lookbehindlength);
-    length += 1 + LINK_SIZE;
+    if (lookbehindminlength == LOOKBEHIND_MAX ||
+        lookbehindminlength == lookbehindlength)
+      {
+      *code++ = OP_REVERSE;
+      PUT2INC(code, 0, lookbehindlength);
+      length += 1 + IMM2_SIZE;
+      }
+    else
+      {
+      *code++ = OP_VREVERSE;
+      PUT2INC(code, 0, lookbehindminlength);
+      PUT2INC(code, 0, lookbehindlength);
+      length += 1 + 2*IMM2_SIZE;
+      }
     }
 
   /* Now compile the branch; in the pre-compile phase its length gets added
@@ -8343,7 +8488,7 @@ for (;;)
   if ((branch_return =
         compile_branch(&options, &xoptions, &code, &pptr, errorcodeptr,
           &branchfirstcu, &branchfirstcuflags, &branchreqcu, &branchreqcuflags,
-          &bc, cb, (lengthptr == NULL)? NULL : &length)) == 0)
+          &bc, open_caps, cb, (lengthptr == NULL)? NULL : &length)) == 0)
     return 0;
 
   /* If a branch can match an empty string, so can the whole group. */
@@ -8441,10 +8586,6 @@ for (;;)
     PUT(code, 1, (int)(code - start_bracket));
     code += 1 + LINK_SIZE;
 
-    /* If it was a capturing subpattern, remove the block from the chain. */
-
-    if (capnumber > 0) cb->open_caps = cb->open_caps->next;
-
     /* Set values to pass back */
 
     *codeptr = code;
@@ -8487,8 +8628,8 @@ for (;;)
     code += 1 + LINK_SIZE;
     }
 
-  /* Set the lookbehind length (if not in a lookbehind the value will be zero)
-  and then advance past the vertical bar. */
+  /* Set the maximum lookbehind length for the next branch (if not in a
+  lookbehind the value will be zero) and then advance past the vertical bar. */
 
   lookbehindlength = META_DATA(*pptr);
   pptr++;
@@ -9199,13 +9340,13 @@ return pptr;
 *************************************************/
 
 /* This is called for nested groups within a branch of a lookbehind whose
-length is being computed. If all the branches in the nested group have the same
-length, that is OK. On entry, the pointer must be at the first element after
-the group initializing code. On exit it points to OP_KET. Caching is used to
-improve processing speed when the same capturing group occurs many times.
+length is being computed. On entry, the pointer must be at the first element
+after the group initializing code. On exit it points to OP_KET. Caching is used
+to improve processing speed when the same capturing group occurs many times.
 
 Arguments:
   pptrptr     pointer to pointer in the parsed pattern
+  minptr      where to return the minimum length
   isinline    FALSE if a reference or recursion; TRUE for inline group
   errcodeptr  pointer to the errorcode
   lcptr       pointer to the loop counter
@@ -9213,15 +9354,17 @@ Arguments:
   recurses    chain of recurse_check to catch mutual recursion
   cb          pointer to the compile data
 
-Returns:      the group length or a negative number
+Returns:      the maximum group length or a negative number
 */
 
 static int
-get_grouplength(uint32_t **pptrptr, BOOL isinline, int *errcodeptr, int *lcptr,
-   int group, parsed_recurse_check *recurses, compile_block *cb)
+get_grouplength(uint32_t **pptrptr, int *minptr, BOOL isinline, int *errcodeptr,
+  int *lcptr, int group, parsed_recurse_check *recurses, compile_block *cb)
 {
-int branchlength;
+uint32_t *gi = cb->groupinfo + 2 * group;
+int branchlength, branchminlength;
 int grouplength = -1;
+int groupminlength = INT_MAX;
 
 /* The cache can be used only if there is no possibility of there being two
 groups with the same number. We do not need to set the end pointer for a group
@@ -9230,11 +9373,12 @@ an inline group. */
 
 if (group > 0 && (cb->external_flags & PCRE2_DUPCAPUSED) == 0)
   {
-  uint32_t groupinfo = cb->groupinfo[group];
+  uint32_t groupinfo = gi[0];
   if ((groupinfo & GI_NOT_FIXED_LENGTH) != 0) return -1;
   if ((groupinfo & GI_SET_FIXED_LENGTH) != 0)
     {
     if (isinline) *pptrptr = parsed_skip(*pptrptr, PSKIP_KET);
+    *minptr = gi[1];
     return groupinfo & GI_FIXED_LENGTH_MASK;
     }
   }
@@ -9243,20 +9387,26 @@ if (group > 0 && (cb->external_flags & PCRE2_DUPCAPUSED) == 0)
 
 for(;;)
   {
-  branchlength = get_branchlength(pptrptr, errcodeptr, lcptr, recurses, cb);
+  branchlength = get_branchlength(pptrptr, &branchminlength, errcodeptr, lcptr,
+    recurses, cb);
   if (branchlength < 0) goto ISNOTFIXED;
-  if (grouplength == -1) grouplength = branchlength;
-    else if (grouplength != branchlength) goto ISNOTFIXED;
+  if (branchlength > grouplength) grouplength = branchlength;
+  if (branchminlength < groupminlength) groupminlength = branchminlength;
   if (**pptrptr == META_KET) break;
   *pptrptr += 1;   /* Skip META_ALT */
   }
 
 if (group > 0)
-  cb->groupinfo[group] |= (uint32_t)(GI_SET_FIXED_LENGTH | grouplength);
+  {
+  gi[0] |= (uint32_t)(GI_SET_FIXED_LENGTH | grouplength);
+  gi[1] = groupminlength;
+  }
+
+*minptr = groupminlength;
 return grouplength;
 
 ISNOTFIXED:
-if (group > 0) cb->groupinfo[group] |= GI_NOT_FIXED_LENGTH;
+if (group > 0) gi[0] |= GI_NOT_FIXED_LENGTH;
 return -1;
 }
 
@@ -9266,27 +9416,30 @@ return -1;
 *        Find length of a parsed branch          *
 *************************************************/
 
-/* Return a fixed length for a branch in a lookbehind, giving an error if the
-length is not fixed. On entry, *pptrptr points to the first element inside the
-branch. On exit it is set to point to the ALT or KET.
+/* Return fixed maximum and minimum lengths for a branch in a lookbehind,
+giving an error if the length is not limited. On entry, *pptrptr points to the
+first element inside the branch. On exit it is set to point to the ALT or KET.
 
 Arguments:
   pptrptr     pointer to pointer in the parsed pattern
+  minptr      where to return the minimum length
   errcodeptr  pointer to error code
   lcptr       pointer to loop counter
   recurses    chain of recurse_check to catch mutual recursion
   cb          pointer to compile block
 
-Returns:      the length, or a negative value on error
+Returns:      the maximum length, or a negative value on error
 */
 
 static int
-get_branchlength(uint32_t **pptrptr, int *errcodeptr, int *lcptr,
+get_branchlength(uint32_t **pptrptr, int *minptr, int *errcodeptr, int *lcptr,
   parsed_recurse_check *recurses, compile_block *cb)
 {
 int branchlength = 0;
-int grouplength;
+int branchminlength = 0;
+int grouplength, groupminlength;
 uint32_t lastitemlength = 0;
+uint32_t lastitemminlength = 0;
 uint32_t *pptr = *pptrptr;
 PCRE2_SIZE offset;
 parsed_recurse_check this_recurse;
@@ -9310,10 +9463,12 @@ for (;; pptr++)
   uint32_t escape;
   uint32_t group = 0;
   uint32_t itemlength = 0;
+  uint32_t itemminlength = 0;
+  uint32_t min, max;
 
   if (*pptr < META_END)
     {
-    itemlength = 1;
+    itemlength = itemminlength = 1;
     }
 
   else switch (META_CODE(*pptr))
@@ -9352,20 +9507,20 @@ for (;; pptr++)
     break;
 
     case META_BIGVALUE:
-    itemlength = 1;
+    itemlength = itemminlength = 1;
     pptr += 1;
     break;
 
     case META_CLASS:
     case META_CLASS_NOT:
-    itemlength = 1;
+    itemlength = itemminlength = 1;
     pptr = parsed_skip(pptr, PSKIP_CLASS);
     if (pptr == NULL) goto PARSED_SKIP_FAILED;
     break;
 
     case META_CLASS_EMPTY_NOT:
     case META_DOT:
-    itemlength = 1;
+    itemlength = itemminlength = 1;
     break;
 
     case META_CALLOUT_NUMBER:
@@ -9376,14 +9531,19 @@ for (;; pptr++)
     pptr += 3 + SIZEOFFSET;
     break;
 
-    /* Only some escapes consume a character. Of those, \R and \X are never
-    allowed because they might match more than character. \C is allowed only in
-    32-bit and non-UTF 8/16-bit modes. */
+    /* Only some escapes consume a character. Of those, \R can match one or two
+    characters, but \X is never allowed because it matches an unknown number of
+    characters. \C is allowed only in 32-bit and non-UTF 8/16-bit modes. */
 
     case META_ESCAPE:
     escape = META_DATA(*pptr);
-    if (escape == ESC_R || escape == ESC_X) return -1;
-    if (escape > ESC_b && escape < ESC_Z)
+    if (escape == ESC_X) return -1;
+    if (escape == ESC_R)
+      {
+      itemminlength = 1;
+      itemlength = 2;
+      }
+    else if (escape > ESC_b && escape < ESC_Z)
       {
 #if PCRE2_CODE_UNIT_WIDTH != 32
       if ((cb->external_options & PCRE2_UTF) != 0 && escape == ESC_C)
@@ -9392,7 +9552,7 @@ for (;; pptr++)
         return -1;
         }
 #endif
-      itemlength = 1;
+      itemlength = itemminlength = 1;
       if (escape == ESC_p || escape == ESC_P) pptr++;  /* Skip prop data */
       }
     break;
@@ -9548,14 +9708,15 @@ for (;; pptr++)
     in the cache. */
 
     gptr++;
-    grouplength = get_grouplength(&gptr, FALSE, errcodeptr, lcptr, group,
-      &this_recurse, cb);
+    grouplength = get_grouplength(&gptr, &groupminlength, FALSE, errcodeptr,
+      lcptr, group, &this_recurse, cb);
     if (grouplength < 0)
       {
       if (*errcodeptr == 0) goto ISNOTFIXED;
       return -1;  /* Error already set */
       }
     itemlength = grouplength;
+    itemminlength = groupminlength;
     break;
 
     /* A (DEFINE) group is never obeyed inline and so it does not contribute to
@@ -9593,11 +9754,19 @@ for (;; pptr++)
     case META_SCRIPT_RUN:
     pptr++;
     CHECK_GROUP:
-    grouplength = get_grouplength(&pptr, TRUE, errcodeptr, lcptr, group,
-      recurses, cb);
+    grouplength = get_grouplength(&pptr, &groupminlength, TRUE, errcodeptr,
+      lcptr, group, recurses, cb);
     if (grouplength < 0) return -1;
     itemlength = grouplength;
+    itemminlength = groupminlength;
     break;
+
+    case META_QUERY:
+    case META_QUERY_PLUS:
+    case META_QUERY_QUERY:
+    min = 0;
+    max = 1;
+    goto REPETITION;
 
     /* Exact repetition is OK; variable repetition is not. A repetition of zero
     must subtract the length that has already been added. */
@@ -9605,29 +9774,24 @@ for (;; pptr++)
     case META_MINMAX:
     case META_MINMAX_PLUS:
     case META_MINMAX_QUERY:
-    if (pptr[1] == pptr[2])
+    min = pptr[1];
+    max = pptr[2];
+    pptr += 2;
+
+    REPETITION:
+    if (max != REPEAT_UNLIMITED)
       {
-      switch(pptr[1])
+      if (lastitemlength != 0 &&  /* Should not occur, but just in case */
+          max != 0 &&
+          (INT_MAX - branchlength)/lastitemlength < max - 1)
         {
-        case 0:
-        branchlength -= lastitemlength;
-        break;
-
-        case 1:
-        itemlength = 0;
-        break;
-
-        default:  /* Check for integer overflow */
-        if (lastitemlength != 0 &&  /* Should not occur, but just in case */
-            INT_MAX/lastitemlength < pptr[1] - 1)
-          {
-          *errcodeptr = ERR87;  /* Integer overflow; lookbehind too big */
-          return -1;
-          }
-        itemlength = (pptr[1] - 1) * lastitemlength;
-        break;
+        *errcodeptr = ERR87;  /* Integer overflow; lookbehind too big */
+        return -1;
         }
-      pptr += 2;
+      if (min == 0) branchminlength -= lastitemminlength;
+        else itemminlength = (min - 1) * lastitemminlength;
+      if (max == 0) branchlength -= lastitemlength;
+        else itemlength = (max - 1) * lastitemlength;
       break;
       }
     /* Fall through */
@@ -9641,7 +9805,9 @@ for (;; pptr++)
     }
 
   /* Add the item length to the branchlength, checking for integer overflow and
-  for the branch length exceeding the limit. */
+  for the branch length exceeding the overall limit. Later, if there is at
+  least one variable-length branch in the group, there is a test for the
+  (smaller) variable-length branch length limit. */
 
   if (INT_MAX - branchlength < (int)itemlength ||
       (branchlength += itemlength) > LOOKBEHIND_MAX)
@@ -9650,13 +9816,17 @@ for (;; pptr++)
     return -1;
     }
 
+  branchminlength += itemminlength;
+
   /* Save this item length for use if the next item is a quantifier. */
 
   lastitemlength = itemlength;
+  lastitemminlength = itemminlength;
   }
 
 EXIT:
 *pptrptr = pptr;
+*minptr = branchminlength;
 return branchlength;
 
 PARSED_SKIP_FAILED:
@@ -9671,9 +9841,9 @@ return -1;
 *************************************************/
 
 /* This function is called for each lookbehind, to set the lengths in its
-branches. An error occurs if any branch does not have a fixed length that is
-less than the maximum (65535). On exit, the pointer must be left on the final
-ket.
+branches. An error occurs if any branch does not have a limited maximum length
+that is less than the limit (65535). On exit, the pointer must be left on the
+final ket.
 
 The function also maintains the max_lookbehind value. Any lookbehind branch
 that contains a nested lookbehind may actually look further back than the
@@ -9696,16 +9866,27 @@ set_lookbehind_lengths(uint32_t **pptrptr, int *errcodeptr, int *lcptr,
   parsed_recurse_check *recurses, compile_block *cb)
 {
 PCRE2_SIZE offset;
-int branchlength;
 uint32_t *bptr = *pptrptr;
+uint32_t *gbptr = bptr;
+int maxlength = 0;
+int minlength = INT_MAX;
+BOOL variable = FALSE;
 
 READPLUSOFFSET(offset, bptr);  /* Offset for error messages */
 *pptrptr += SIZEOFFSET;
 
+/* Each branch can have a different maximum length, but we can keep only a
+single minimum for the whole group, because there's nowhere to save individual
+values in the META_ALT item. */
+
 do
   {
+  int branchlength, branchminlength;
+
   *pptrptr += 1;
-  branchlength = get_branchlength(pptrptr, errcodeptr, lcptr, recurses, cb);
+  branchlength = get_branchlength(pptrptr, &branchminlength, errcodeptr, lcptr,
+    recurses, cb);
+
   if (branchlength < 0)
     {
     /* The errorcode and offset may already be set from a nested lookbehind. */
@@ -9713,12 +9894,37 @@ do
     if (cb->erroroffset == PCRE2_UNSET) cb->erroroffset = offset;
     return FALSE;
     }
+
+  if (branchlength != branchminlength) variable = TRUE;
+  if (branchminlength < minlength) minlength = branchminlength;
+  if (branchlength > maxlength) maxlength = branchlength;
   if (branchlength > cb->max_lookbehind) cb->max_lookbehind = branchlength;
   *bptr |= branchlength;  /* branchlength never more than 65535 */
   bptr = *pptrptr;
   }
 while (*bptr == META_ALT);
 
+/* If any branch is of variable length, the whole lookbehind is of variable
+length. If the maximum length of any branch exceeds the maximum for variable
+lookbehinds, give an error. Otherwise, the minimum length is set in the word
+that follows the original group META value. For a fixed-length lookbehind, this
+is set to LOOKBEHIND_MAX, to indicate that each branch is of a fixed (but
+possibly different) length. */
+
+if (variable)
+  {
+  gbptr[1] = minlength;
+  if ((uint32_t)maxlength > cb->max_varlookbehind)
+    {
+    *errcodeptr = ERR100;
+    cb->erroroffset = offset;
+    return FALSE;
+    }
+  }
+else gbptr[1] = LOOKBEHIND_MAX;
+
+
+gbptr[1] = variable? minlength : LOOKBEHIND_MAX;
 return TRUE;
 }
 
@@ -9968,12 +10174,15 @@ if (errorptr == NULL || erroroffset == NULL) return NULL;
 *errorptr = ERR0;
 *erroroffset = 0;
 
-/* There must be a pattern! */
+/* There must be a pattern, but NULL is allowed with zero length. */
 
 if (pattern == NULL)
   {
-  *errorptr = ERR16;
-  return NULL;
+  if (patlen == 0) pattern = (PCRE2_SPTR)""; else
+    {
+    *errorptr = ERR16;
+    return NULL;
+    }
   }
 
 /* A NULL compile context means "use a default context" */
@@ -10038,13 +10247,13 @@ cb.external_options = options;
 cb.groupinfo = stack_groupinfo;
 cb.had_recurse = FALSE;
 cb.lastcapture = 0;
-cb.max_lookbehind = 0;
+cb.max_lookbehind = 0;                               /* Max encountered */
+cb.max_varlookbehind = ccontext->max_varlookbehind;  /* Limit */
 cb.name_entry_size = 0;
 cb.name_table = NULL;
 cb.named_groups = named_groups;
 cb.named_group_list_size = NAMED_GROUP_LIST_SIZE;
 cb.names_found = 0;
-cb.open_caps = NULL;
 cb.parens_depth = 0;
 cb.parsed_pattern = stack_parsed_pattern;
 cb.req_varyopt = 0;
@@ -10306,39 +10515,36 @@ cb.parsed_pattern_end = cb.parsed_pattern + parsed_size_needed + 1;
 errorcode = parse_regex(ptr, cb.external_options, &has_lookbehind, &cb);
 if (errorcode != 0) goto HAD_CB_ERROR;
 
-/* Workspace is needed to remember information about numbered groups: whether a
-group can match an empty string and what its fixed length is. This is done to
-avoid the possibility of recursive references causing very long compile times
-when checking these features. Unnumbered groups do not have this exposure since
-they cannot be referenced. We use an indexed vector for this purpose. If there
-are sufficiently few groups, the default vector on the stack, as set up above,
-can be used. Otherwise we have to get/free a special vector. The vector must be
-initialized to zero. */
-
-if (cb.bracount >= GROUPINFO_DEFAULT_SIZE)
-  {
-  cb.groupinfo = ccontext->memctl.malloc(
-    (cb.bracount + 1)*sizeof(uint32_t), ccontext->memctl.memory_data);
-  if (cb.groupinfo == NULL)
-    {
-    errorcode = ERR21;
-    cb.erroroffset = 0;
-    goto HAD_CB_ERROR;
-    }
-  }
-memset(cb.groupinfo, 0, (cb.bracount + 1) * sizeof(uint32_t));
-
-/* If there were any lookbehinds, scan the parsed pattern to figure out their
-lengths. */
+/* If there are any lookbehinds, scan the parsed pattern to figure out their
+lengths. Workspace is needed to remember whether numbered groups are or are not
+of limited length, and if limited, what the minimum and maximum lengths are.
+This caching saves re-computing the length of any group that is referenced more
+than once, which is particularly relevant when recursion is involved.
+Unnumbered groups do not have this exposure because they cannot be referenced.
+If there are sufficiently few groups, the default index vector on the stack, as
+set up above, can be used. Otherwise we have to get/free some heap memory. The
+vector must be initialized to zero. */
 
 if (has_lookbehind)
   {
   int loopcount = 0;
+  if (cb.bracount >= GROUPINFO_DEFAULT_SIZE/2)
+    {
+    cb.groupinfo = ccontext->memctl.malloc(
+      (2 * (cb.bracount + 1))*sizeof(uint32_t), ccontext->memctl.memory_data);
+    if (cb.groupinfo == NULL)
+      {
+      errorcode = ERR21;
+      cb.erroroffset = 0;
+      goto HAD_CB_ERROR;
+      }
+    }
+  memset(cb.groupinfo, 0, (2 * cb.bracount + 1) * sizeof(uint32_t));
   errorcode = check_lookbehinds(cb.parsed_pattern, NULL, NULL, &cb, &loopcount);
   if (errorcode != 0) goto HAD_CB_ERROR;
   }
 
-/* For debugging, there is a function that shows the parsed data vector. */
+/* For debugging, there is a function that shows the parsed pattern vector. */
 
 #ifdef DEBUG_SHOW_PARSED
 fprintf(stderr, "+++ Pre-scan complete:\n");
@@ -10376,8 +10582,8 @@ code = cworkspace;
 *code = OP_BRA;
 
 (void)compile_regex(cb.external_options, ccontext->extra_options, &code, &pptr,
-   &errorcode, 0, &firstcu, &firstcuflags, &reqcu, &reqcuflags, NULL, &cb,
-   &length);
+   &errorcode, 0, &firstcu, &firstcuflags, &reqcu, &reqcuflags, NULL, NULL,
+   &cb, &length);
 
 if (errorcode != 0) goto HAD_CB_ERROR;  /* Offset is in cb.erroroffset */
 
@@ -10455,7 +10661,6 @@ cb.start_code = codestart;
 cb.req_varyopt = 0;
 cb.had_accept = FALSE;
 cb.had_pruneorskip = FALSE;
-cb.open_caps = NULL;
 
 /* If any named groups were found, create the name/number table from the list
 created in the pre-pass. */
@@ -10476,7 +10681,7 @@ code = (PCRE2_UCHAR *)codestart;
 *code = OP_BRA;
 regexrc = compile_regex(re->overall_options, ccontext->extra_options, &code,
   &pptr, &errorcode, 0, &firstcu, &firstcuflags, &reqcu, &reqcuflags, NULL,
-  &cb, NULL);
+  NULL, &cb, NULL);
 if (regexrc < 0) re->flags |= PCRE2_MATCH_EMPTY;
 re->top_bracket = cb.bracount;
 re->top_backref = cb.top_backref;

@@ -82,9 +82,9 @@ OTHER_PROGS = adaptmap_dark \
 	blendcmaptest buffertest \
 	ccbordtest cctest1 cleanpdf \
 	colorsegtest comparepages comparepixa \
-	comparetest concatpdf \
+	comparetest compresspdf \
 	contrasttest converttogray \
-	cornertest corrupttest croptext deskew_it \
+	cornertest corrupttest croppdf croptext deskew_it \
 	dewarprules dewarptest1 dewarptest2 \
 	dewarptest3 dewarptest4 dewarptest5 \
 	digitprep1 displayboxa displayboxes_on_pixa \
@@ -129,7 +129,7 @@ endif
 
 check_PROGRAMS = $(AUTO_REG_PROGS)
 TESTS = $(AUTO_REG_PROGS)
-TESTS_ENVIRONMENT = $(srcdir)/reg_wrapper.sh
+AM_TESTS_ENVIRONMENT = $(srcdir)/reg_wrapper.sh
 EXTRA_DIST = reg_wrapper.sh
 
 dwamorph1_reg_SOURCES = dwamorph1_reg.c dwalinear.3.c dwalinearlow.3.c

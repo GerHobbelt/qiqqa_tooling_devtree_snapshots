@@ -121,7 +121,7 @@ protected:
                      Dict *dict, PointerVector<WERD_RES> *words) {
     RecodeBeamSearch beam_search(recoder_, encoded_null_char_, false, dict);
 #ifndef NDEBUG
-	beam_search.SetDebug(true);
+	beam_search.SetDebug(1);
 #endif
 	beam_search.Decode(output, 3.5, -0.125, -25.0, &ccutil_.unicharset);
     // Uncomment and/or change nullptr above to &ccutil_.unicharset to debug:
@@ -180,7 +180,7 @@ protected:
     // Check that ExtractBestPathAsWords does the same thing.
     TBOX line_box(0, 0, 100, 10);
     for (int i = 0; i < 2; ++i) {
-      beam_search.ExtractBestPathAsWords(line_box, 1.0f, false, &ccutil_.unicharset, words);
+      beam_search.ExtractBestPathAsWords(line_box, 1.0f, &ccutil_.unicharset, words);
       std::string w_decoded;
       for (int w = 0; w < words->size(); ++w) {
         const WERD_RES *word = (*words)[w];

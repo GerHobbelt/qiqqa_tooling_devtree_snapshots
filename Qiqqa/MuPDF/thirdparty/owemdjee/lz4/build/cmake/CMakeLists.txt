@@ -10,28 +10,21 @@
 # LZ4's CMake support is maintained by Evan Nemerson; when filing
 # bugs please mention @nemequ to make sure I see it.
 
-cmake_minimum_required(VERSION 2.8.12)
+cmake_minimum_required(VERSION 3.5)
 
 set(LZ4_TOP_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../..")
 
 # Parse version information
-file(STRINGS "${LZ4_TOP_SOURCE_DIR}/lib/lz4.h" LZ4_VERSION_MAJOR REGEX "^#define LZ4_VERSION_MAJOR +([0-9]+) +.*$")
-string(REGEX REPLACE "^#define LZ4_VERSION_MAJOR +([0-9]+) +.*$" "\\1" LZ4_VERSION_MAJOR "${LZ4_VERSION_MAJOR}")
-file(STRINGS "${LZ4_TOP_SOURCE_DIR}/lib/lz4.h" LZ4_VERSION_MINOR REGEX "^#define LZ4_VERSION_MINOR +([0-9]+) +.*$")
-string(REGEX REPLACE "^#define LZ4_VERSION_MINOR +([0-9]+) +.*$" "\\1" LZ4_VERSION_MINOR "${LZ4_VERSION_MINOR}")
-file(STRINGS "${LZ4_TOP_SOURCE_DIR}/lib/lz4.h" LZ4_VERSION_RELEASE REGEX "^#define LZ4_VERSION_RELEASE +([0-9]+) +.*$")
-string(REGEX REPLACE "^#define LZ4_VERSION_RELEASE +([0-9]+) +.*$" "\\1" LZ4_VERSION_RELEASE "${LZ4_VERSION_RELEASE}")
+file(STRINGS "${LZ4_TOP_SOURCE_DIR}/lib/lz4.h" LZ4_VERSION_MAJOR REGEX "^ *# *define +LZ4_VERSION_MAJOR +([0-9]+).*$")
+string(REGEX REPLACE "^ *# *define +LZ4_VERSION_MAJOR +([0-9]+).*$" "\\1" LZ4_VERSION_MAJOR "${LZ4_VERSION_MAJOR}")
+file(STRINGS "${LZ4_TOP_SOURCE_DIR}/lib/lz4.h" LZ4_VERSION_MINOR REGEX "^ *# *define +LZ4_VERSION_MINOR +([0-9]+).*$")
+string(REGEX REPLACE "^ *# *define +LZ4_VERSION_MINOR +([0-9]+).*$" "\\1" LZ4_VERSION_MINOR "${LZ4_VERSION_MINOR}")
+file(STRINGS "${LZ4_TOP_SOURCE_DIR}/lib/lz4.h" LZ4_VERSION_RELEASE REGEX "^ *# *define +LZ4_VERSION_RELEASE +([0-9]+).*$")
+string(REGEX REPLACE "^ *# *define +LZ4_VERSION_RELEASE +([0-9]+).*$" "\\1" LZ4_VERSION_RELEASE "${LZ4_VERSION_RELEASE}")
 set(LZ4_VERSION_STRING "${LZ4_VERSION_MAJOR}.${LZ4_VERSION_MINOR}.${LZ4_VERSION_RELEASE}")
 mark_as_advanced(LZ4_VERSION_STRING LZ4_VERSION_MAJOR LZ4_VERSION_MINOR LZ4_VERSION_RELEASE)
 
-if("${CMAKE_VERSION}" VERSION_LESS "3.0")
-  project(LZ4 C)
-else()
-  cmake_policy (SET CMP0048 NEW)
-  project(LZ4
-    VERSION ${LZ4_VERSION_STRING}
-    LANGUAGES C)
-endif()
+project(LZ4 VERSION ${LZ4_VERSION_STRING} LANGUAGES C)
 
 option(LZ4_BUILD_CLI "Build lz4 program" ON)
 option(LZ4_BUILD_LEGACY_LZ4C "Build lz4c program with legacy argument support" ON)
@@ -93,6 +86,7 @@ set(LZ4_CLI_SOURCES
   "${LZ4_PROG_SOURCE_DIR}/lz4cli.c"
   "${LZ4_PROG_SOURCE_DIR}/lz4io.c"
   "${LZ4_PROG_SOURCE_DIR}/datagen.c")
+list(APPEND LZ4_CLI_SOURCES ${LZ4_SOURCES}) # LZ4_CLI always use liblz4 sources directly.
 
 # Whether to use position independent code for the static library.  If
 # we're building a shared library this is ignored and PIC is always
@@ -100,6 +94,7 @@ set(LZ4_CLI_SOURCES
 option(LZ4_POSITION_INDEPENDENT_LIB "Use position independent code for static library (if applicable)" ON)
 
 # liblz4
+include(GNUInstallDirs)
 set(LZ4_LIBRARIES_BUILT)
 if(BUILD_SHARED_LIBS)
   add_library(lz4_shared SHARED ${LZ4_SOURCES})
@@ -131,10 +126,14 @@ if(BUILD_STATIC_LIBS)
   list(APPEND LZ4_LIBRARIES_BUILT lz4_static)
 endif()
 
+# xxhash namesapce
+if(BUILD_SHARED_LIBS)
+  target_compile_definitions(lz4_shared PRIVATE 
+    XXH_NAMESPACE=LZ4_)
+endif()
 if(BUILD_STATIC_LIBS)
-  set(LZ4_LINK_LIBRARY lz4_static)
-else()
-  list(APPEND LZ4_CLI_SOURCES ${LZ4_SOURCES})
+  target_compile_definitions(lz4_static PRIVATE 
+    XXH_NAMESPACE=LZ4_)
 endif()
 
 # lz4
@@ -142,9 +141,6 @@ if (LZ4_BUILD_CLI)
   set(LZ4_PROGRAMS_BUILT lz4cli)
   add_executable(lz4cli ${LZ4_CLI_SOURCES})
   set_target_properties(lz4cli PROPERTIES OUTPUT_NAME lz4)
-  if (BUILD_STATIC_LIBS)
-    target_link_libraries(lz4cli ${LZ4_LINK_LIBRARY})
-  endif()
 endif()
 
 # lz4c
@@ -152,9 +148,6 @@ if (LZ4_BUILD_LEGACY_LZ4C)
   list(APPEND LZ4_PROGRAMS_BUILT lz4c)
   add_executable(lz4c ${LZ4_CLI_SOURCES})
   set_target_properties(lz4c PROPERTIES COMPILE_DEFINITIONS "ENABLE_LZ4C_LEGACY_OPTIONS")
-  if (BUILD_STATIC_LIBS)
-    target_link_libraries(lz4c ${LZ4_LINK_LIBRARY})
-  endif()
 endif()
 
 # Extra warning flags
@@ -189,8 +182,6 @@ foreach (flag
 endforeach (flag)
 
 if(NOT LZ4_BUNDLED_MODE)
-  include(GNUInstallDirs)
-
   install(TARGETS ${LZ4_PROGRAMS_BUILT}
     BUNDLE	DESTINATION "${CMAKE_INSTALL_BINDIR}"
     RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}")

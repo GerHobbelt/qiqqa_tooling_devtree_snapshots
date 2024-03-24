@@ -29,6 +29,7 @@
 #include <plf_nanotimer_c_api.h>
 
 #include "libbf.h"
+#include "monolithic_examples.h"
 
 #define CHUD_A 13591409
 #define CHUD_B 545140134
@@ -111,31 +112,25 @@ static void chud_bs(bf_t *P, bf_t *Q, bf_t *G, int64_t a, int64_t b, int need_g,
     }
 }
 
-static int64_t time_start;
+static struct plf_nanotimer_data timer = {0};
 int verbose;
-
-static int64_t get_clock_msec(void)
-{
-    struct timeval tv;
-    gettimeofday(&tv, NULL);
-    return tv.tv_sec * 1000LL + (tv.tv_usec / 1000);
-}
 
 static void step_start(const char *str)
 {
     if (verbose) {
         printf("%-20s", str);
         fflush(stdout);
-        time_start = get_clock_msec();
+
+		nanotimer(&timer);
+		nanotimer_start(&timer);
     }
 }
 
 static void step_end(void)
 {
-    int64_t ti;
     if (verbose) {
-        ti = get_clock_msec() - time_start;
-        printf("(%0.3f s)\n", ti / 1000.0);
+		double ti = nanotimer_get_elapsed_sec(&timer);
+        printf("(%0.3f s)\n", ti);
     }
 }
 
@@ -176,9 +171,15 @@ static void pi_chud(bf_t *Q, int64_t prec)
     bf_delete(&G);
 }
 
-int main(int argc, char **argv)
+
+#if defined (BUILD_MONOLITHIC)
+#define main			libbf_tinypi_main
+#endif
+
+int main(int argc, const char **argv)
 {
-    int64_t n_digits, prec, n_bits, ti_tot;
+    int64_t n_digits, prec, n_bits;
+	struct plf_nanotimer_data ti_tot = {0};
     bf_t PI;
     const char *output_filename;
     FILE *f;
@@ -207,7 +208,7 @@ int main(int argc, char **argv)
                "Options:\n"
                "-b : output in binary (hexa) instead of base 10\n"
                "-v : dump computation steps\n");
-        exit(1);
+        return 1;
     }
     
     n_digits = (int64_t)strtod(argv[arg_idx++], NULL);
@@ -215,7 +216,8 @@ int main(int argc, char **argv)
     if (arg_idx < argc)
         output_filename = argv[arg_idx++];
     
-    ti_tot = get_clock_msec();
+	nanotimer(&ti_tot);
+	nanotimer_start(&ti_tot);
     n_digits = bf_max(n_digits, 50);
     n_bits = (limb_t)ceil(n_digits * BITS_PER_DIGIT);
     /* we add more bits to reduce the probability of bad rounding for
@@ -235,16 +237,16 @@ int main(int argc, char **argv)
         digits = bf_ftoa(&digits_len, &PI, 16, n_bits / 4,
                          BF_FTOA_FORMAT_FIXED | BF_RNDZ);
     }
-    ti_tot = get_clock_msec() - ti_tot;
     if (verbose) {
-        printf("%-20s(%0.3f s)\n", "total", ti_tot / 1000.0);
+		double td = nanotimer_get_elapsed_sec(&ti_tot);
+		printf("%-20s(%0.3f s)\n", "total", td);
     }
     
     if (output_filename) {
         f = fopen(output_filename, "wb");
         if (!f) {
             perror(output_filename);
-            exit(1);
+            return 1;
         }
         fwrite(digits, 1, digits_len, f);
         fclose(f);
@@ -252,5 +254,7 @@ int main(int argc, char **argv)
     free(digits);
     bf_delete(&PI);
     bf_context_end(&bf_ctx);
-    return 0;
+	nanotimer_destroy(&ti_tot);
+	nanotimer_destroy(&timer);
+	return 0;
 }

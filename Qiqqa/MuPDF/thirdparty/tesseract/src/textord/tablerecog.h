@@ -133,7 +133,7 @@ public:
 
   // Debug display, draws the table in the given color. If the table is not
   // valid, the table and "best" grid lines are still drawn in the given color.
-  void Display(ScrollView *window, ScrollView::Color color);
+  void Display(ScrollViewReference &window, Diagnostics::Color color);
 
   /// Calculate bounding boxes of the rows and return them.
   std::vector<TBOX> getRows();
@@ -285,7 +285,7 @@ public:
   // nullptr is returned.
   //
   // Keep in mind, this may "overgrow" or "undergrow" the size of guess.
-  // Ideally, there is a either a one-to-one correspondence between
+  // Ideally, there is either a one-to-one correspondence between
   // the guess and table or no table at all. This is not the best of
   // assumptions right now, but was made to try to keep things simple in
   // the first pass.

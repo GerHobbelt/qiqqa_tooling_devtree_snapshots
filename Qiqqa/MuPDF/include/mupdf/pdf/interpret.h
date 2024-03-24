@@ -75,7 +75,7 @@ struct pdf_processor
 	void (*op_gs_ca)(fz_context *ctx, pdf_processor *proc, float alpha);
 	void (*op_gs_CA)(fz_context *ctx, pdf_processor *proc, float alpha);
 	void (*op_gs_TK)(fz_context *ctx, pdf_processor *proc, int tk);
-	void (*op_gs_SMask)(fz_context *ctx, pdf_processor *proc, pdf_obj *smask, float *bc, int luminosity);
+	void (*op_gs_SMask)(fz_context *ctx, pdf_processor *proc, pdf_obj *smask, float *bc, int luminosity, pdf_obj *tr);
 	void (*op_gs_end)(fz_context *ctx, pdf_processor *proc);
 
 	/* special graphics state */
@@ -129,9 +129,9 @@ struct pdf_processor
 
 	/* text showing */
 	void (*op_TJ)(fz_context *ctx, pdf_processor *proc, pdf_obj *array);
-	void (*op_Tj)(fz_context *ctx, pdf_processor *proc, char *str, size_t len);
-	void (*op_squote)(fz_context *ctx, pdf_processor *proc, char *str, size_t len);
-	void (*op_dquote)(fz_context *ctx, pdf_processor *proc, float aw, float ac, char *str, size_t len);
+	void (*op_Tj)(fz_context *ctx, pdf_processor *proc, const char *str, size_t len);
+	void (*op_squote)(fz_context *ctx, pdf_processor *proc, const char *str, size_t len);
+	void (*op_dquote)(fz_context *ctx, pdf_processor *proc, float aw, float ac, const char *str, size_t len);
 
 	/* type 3 fonts */
 	void (*op_d0)(fz_context *ctx, pdf_processor *proc, float wx, float wy);
@@ -312,7 +312,7 @@ struct pdf_filter_options
 	int no_update;
 
 	void *opaque;
-	void (*complete)(fz_context *ctx, fz_buffer *buffer, void *arg);
+	void (*complete)(fz_context *ctx, fz_buffer *buffer, void *opaque);
 
 	pdf_filter_factory *filters;
 };
@@ -345,7 +345,7 @@ typedef enum
 typedef struct
 {
 	void *opaque;
-	fz_image *(*image_filter)(fz_context *ctx, void *opaque, fz_matrix ctm, const char *name, fz_image *image);
+	fz_image *(*image_filter)(fz_context *ctx, void *opaque, fz_matrix ctm, const char *name, fz_image *image, fz_rect scissor);
 	int (*text_filter)(fz_context *ctx, void *opaque, int *ucsbuf, int ucslen, fz_matrix trm, fz_matrix ctm, fz_rect bbox);
 	void (*after_text_object)(fz_context *ctx, void *opaque, pdf_document *doc, pdf_processor *chain, fz_matrix ctm);
 	int (*culler)(fz_context *ctx, void *opaque, fz_rect bbox, fz_cull_type type);
@@ -412,13 +412,20 @@ pdf_obj *pdf_processor_pop_resources(fz_context *ctx, pdf_processor *proc);
 			*image either the same (for no change) or updated
 			to be a new one. Reference must be dropped, and a
 			new kept reference returned.
+
+	share_rewrite: function pointer called to rewrite a shade
+
+	repeated_image_rewrite: If 0, then each image is rewritten only once.
+		Otherwise, it is called for every instance (useful if gathering
+		information about the ctm).
 */
 typedef struct
 {
 	void *opaque;
 	void (*color_rewrite)(fz_context *ctx, void *opaque, pdf_obj **cs, int *n, float color[FZ_MAX_COLORS]);
-	void (*image_rewrite)(fz_context *ctx, void *opaque, fz_image **image);
+	void (*image_rewrite)(fz_context *ctx, void *opaque, fz_image **image, fz_matrix ctm, pdf_obj *obj);
 	pdf_shade_recolorer *shade_rewrite;
+	int repeated_image_rewrite;
 } pdf_color_filter_options;
 
 pdf_processor *
@@ -427,7 +434,7 @@ pdf_new_color_filter(fz_context *ctx, pdf_document *doc, pdf_processor *chain, i
 /*
 	Functions to actually process annotations, glyphs and general stream objects.
 */
-void pdf_process_contents(fz_context *ctx, pdf_processor *proc, pdf_document *doc, pdf_obj *obj, pdf_obj *res, pdf_obj **out_res);
+void pdf_process_contents(fz_context *ctx, pdf_processor *proc, pdf_document *doc, pdf_obj *res, pdf_obj *stm, pdf_obj **out_res);
 void pdf_process_annot(fz_context *ctx, pdf_processor *proc, pdf_annot *annot);
 void pdf_process_glyph(fz_context *ctx, pdf_processor *proc, pdf_document *doc, pdf_obj *resources, fz_buffer *contents);
 

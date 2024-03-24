@@ -636,13 +636,24 @@ struct has_exit_pseudo_states
 };
 
 // builds flags (add internal_flag_list and flag_list). internal_flag_list is used for terminate/interrupt states
+//template <class StateType>
+//struct get_flag_list
+//{
+//    typedef typename ::boost::mpl::insert_range<
+//        typename StateType::flag_list,
+//        typename ::boost::mpl::end< typename StateType::flag_list >::type,
+//        typename StateType::internal_flag_list
+//    >::type type;
+//};
 template <class StateType>
-struct get_flag_list 
+struct get_flag_list
 {
-    typedef typename ::boost::mpl::insert_range< 
-        typename StateType::flag_list, 
-        typename ::boost::mpl::end< typename StateType::flag_list >::type,
-        typename StateType::internal_flag_list
+    typedef typename ::boost::fusion::result_of::as_vector<
+        typename ::boost::fusion::result_of::insert_range<
+            typename StateType::flag_list,
+            typename ::boost::fusion::result_of::end< typename StateType::flag_list >::type,
+            typename StateType::internal_flag_list
+        >::type
     >::type type;
 };
 

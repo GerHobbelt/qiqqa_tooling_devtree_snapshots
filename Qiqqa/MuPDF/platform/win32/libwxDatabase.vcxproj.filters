@@ -410,7 +410,22 @@
     <Text Include="../../thirdparty/owemdjee/wxDatabase/cmake/Modules/FindSQLite3.cmake">
       <Filter>Misc Files\cmake\Modules</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/wxDatabase/docs/Doxyfile">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/wxDatabase/docs/docs.txt">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxDatabase/docs/extra_stylesheet.css">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxDatabase/docs/footer.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxDatabase/docs/header.html">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxDatabase/docs/logo.xcf">
       <Filter>Misc Files\docs</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/wxDatabase/docs/wxwidgets.js">

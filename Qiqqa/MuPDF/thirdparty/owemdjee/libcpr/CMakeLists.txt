@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
-project(cpr VERSION 1.9.0 LANGUAGES CXX)
+project(cpr VERSION 1.11.0 LANGUAGES CXX)
 
 math(EXPR cpr_VERSION_NUM "${cpr_VERSION_MAJOR} * 0x10000 + ${cpr_VERSION_MINOR} * 0x100 + ${cpr_VERSION_PATCH}" OUTPUT_FORMAT HEXADECIMAL)
 configure_file("${cpr_SOURCE_DIR}/cmake/cprver.h.in" "${cpr_BINARY_DIR}/cpr_generated_includes/cpr/cprver.h")
@@ -67,8 +67,8 @@ cpr_option(CPR_ENABLE_CPPCHECK "Set to ON to enable Cppcheck static analysis. Re
 cpr_option(CPR_BUILD_TESTS "Set to ON to build cpr tests." OFF)
 cpr_option(CPR_BUILD_TESTS_SSL "Set to ON to build cpr ssl tests" ${CPR_BUILD_TESTS})
 cpr_option(CPR_BUILD_TESTS_PROXY "Set to ON to build proxy tests. They fail in case there is no valid proxy server available in proxy_tests.cpp" OFF)
-cpr_option(CPR_SKIP_CA_BUNDLE_SEARCH "Skip searching for Certificate Authority certs. Turn ON systems like iOS where file access is restricted and prevents https from working." OFF)
-cpr_option(CPR_USE_BOOST_FILESYSTEM "Set to ON to use the Boost.Filesystem library on OSX." OFF)
+cpr_option(CPR_SKIP_CA_BUNDLE_SEARCH "Skip searching for Certificate Authority certs. Turn ON for systems like iOS where file access is restricted and prevents https from working." OFF)
+cpr_option(CPR_USE_BOOST_FILESYSTEM "Set to ON to use the Boost.Filesystem library. This is useful, on, e.g., Apple platforms, where std::filesystem may not always be available when targeting older OS versions." OFF)
 cpr_option(CPR_DEBUG_SANITIZER_FLAG_THREAD "Enables the ThreadSanitizer for debug builds." OFF)
 cpr_option(CPR_DEBUG_SANITIZER_FLAG_ADDR "Enables the AddressSanitizer for debug builds." OFF)
 cpr_option(CPR_DEBUG_SANITIZER_FLAG_LEAK "Enables the LeakSanitizer for debug builds." OFF)
@@ -101,11 +101,6 @@ if(CPR_ENABLE_CPPCHECK)
         message(FATAL_ERROR "Cppcheck is incompatible with building tests. Make sure to disable CPR_ENABLE_CPPCHECK or disable tests by setting CPR_BUILD_TESTS and CPR_BUILD_TESTS_SSL to OFF. This is because Cppcheck would try to check the google tests source code and then fail. ")
     endif()
     include(cmake/cppcheck.cmake)
-endif()
-
-if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
-else()
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wpedantic -Werror")
 endif()
 
 # SSL
@@ -209,7 +204,6 @@ else()
     # * from command line:
     #     -DCURL_ZLIB=OFF
     # * from CMake script:
-    #     SET(CURL_ZLIB OFF CACHE STRING "" FORCE)
     if (CURL_ZLIB OR CURL_ZLIB STREQUAL AUTO OR NOT DEFINED CACHE{CURL_ZLIB})
         include(cmake/zlib_external.cmake)
     endif()
@@ -227,7 +221,7 @@ else()
     endif()
 
     if (CPR_ENABLE_SSL)
-        set(SSL_ENABLED ON CACHE INTERNAL "" FORCE)
+        set(CURL_ENABLE_SSL ON CACHE INTERNAL "" FORCE)
         if(ANDROID)
             set(CURL_CA_PATH "/system/etc/security/cacerts" CACHE INTERNAL "")
         elseif(CPR_SKIP_CA_BUNDLE_SEARCH)
@@ -243,29 +237,32 @@ else()
         endif()
 
         if(SSL_BACKEND_USED STREQUAL "WinSSL")
-            set(CMAKE_USE_SCHANNEL ON CACHE INTERNAL "" FORCE)
+            set(CURL_USE_SCHANNEL ON CACHE INTERNAL "" FORCE)
+            set(CURL_WINDOWS_SSPI ON CACHE INTERNAL "" FORCE)
         endif()
 
         if(SSL_BACKEND_USED STREQUAL "OpenSSL")
-            set(CMAKE_USE_OPENSSL ON CACHE INTERNAL "" FORCE)
+            set(CURL_USE_OPENSSL ON CACHE INTERNAL "" FORCE)
         endif()
 
         if(SSL_BACKEND_USED STREQUAL "DarwinSSL")
-            set(CMAKE_USE_SECTRANSP ON CACHE INTERNAL "" FORCE)
+            set(CURL_USE_SECTRANSP ON CACHE INTERNAL "" FORCE)
         endif()
 
         if(SSL_BACKEND_USED STREQUAL "MbedTLS")
-            set(CMAKE_USE_MBEDTLS ON CACHE INTERNAL "" FORCE)
+            set(CURL_USE_MBEDTLS ON CACHE INTERNAL "" FORCE)
         endif()
 
         message(STATUS "Enabled curl SSL")
     else()
-        set(SSL_ENABLED OFF CACHE INTERNAL "" FORCE)
+        set(CURL_ENABLE_SSL OFF CACHE INTERNAL "" FORCE)
+
         set(CURL_CA_PATH "none" CACHE INTERNAL "" FORCE)
-        set(CMAKE_USE_SCHANNEL OFF CACHE INTERNAL "" FORCE)
-        set(CMAKE_USE_OPENSSL OFF CACHE INTERNAL "" FORCE)
-        set(CMAKE_USE_SECTRANSP OFF CACHE INTERNAL "" FORCE)
-        set(CMAKE_USE_MBEDTLS OFF CACHE INTERNAL "" FORCE)
+        set(CURL_USE_SCHANNEL OFF CACHE INTERNAL "" FORCE)
+        set(CURL_WINDOWS_SSPI OFF CACHE INTERNAL "" FORCE)
+        set(CURL_USE_OPENSSL OFF CACHE INTERNAL "" FORCE)
+        set(CURL_USE_SECTRANSP OFF CACHE INTERNAL "" FORCE)
+        set(CURL_USE_MBEDTLS OFF CACHE INTERNAL "" FORCE)
         message(STATUS "Disabled curl SSL")
     endif()
     # Disable linting for curl
@@ -275,19 +272,12 @@ else()
         cmake_policy(SET CMP0135 NEW)
     endif()
     FetchContent_Declare(curl
-                         URL                    https://github.com/curl/curl/releases/download/curl-7_80_0/curl-7.80.0.tar.xz
-                         URL_HASH               SHA256=a132bd93188b938771135ac7c1f3ac1d3ce507c1fcbef8c471397639214ae2ab # the file hash for curl-7.80.0.tar.xz
+                         URL                    https://github.com/curl/curl/releases/download/curl-8_4_0/curl-8.4.0.tar.xz
+                         URL_HASH               SHA256=16c62a9c4af0f703d28bda6d7bbf37ba47055ad3414d70dec63e2e6336f2a82d # the file hash for curl-8.4.0.tar.xz
                          USES_TERMINAL_DOWNLOAD TRUE)   # <---- This is needed only for Ninja to show download progress
     FetchContent_MakeAvailable(curl)
 
     restore_variable(DESTINATION CMAKE_CXX_CLANG_TIDY BACKUP CMAKE_CXX_CLANG_TIDY_BKP)
-
-    # Group under the "external" project folder in IDEs such as Visual Studio.
-    if(BUILD_CURL_EXE)
-        set_property(TARGET curl PROPERTY FOLDER "external")
-    endif()
-        
-    set_property(TARGET libcurl PROPERTY FOLDER "external")
 endif()
 
 # GTest configuration
@@ -308,8 +298,8 @@ if(CPR_BUILD_TESTS)
         clear_variable(DESTINATION CMAKE_CXX_CLANG_TIDY BACKUP CMAKE_CXX_CLANG_TIDY_BKP)
 
         FetchContent_Declare(googletest
-                             URL                    https://github.com/google/googletest/archive/release-1.11.0.tar.gz
-                             URL_HASH               SHA256=b4870bf121ff7795ba20d20bcdd8627b8e088f2d1dab299a031c1034eddc93d5 # the file hash for release-1.11.0.tar.gz
+                             URL                    https://github.com/google/googletest/archive/refs/tags/v1.14.0.tar.gz
+                             URL_HASH               SHA256=8ad598c73ad796e0d8280b082cebd82a630d73e73cd3c70057938a6501bba5d7 # the file hash for release-1.14.0.tar.gz
                              USES_TERMINAL_DOWNLOAD TRUE)   # <---- This is needed only for Ninja to show download progress
         FetchContent_MakeAvailable(googletest)
 
@@ -367,6 +357,14 @@ if(CPR_BUILD_TESTS)
     restore_variable(DESTINATION CMAKE_CXX_CLANG_TIDY BACKUP CMAKE_CXX_CLANG_TIDY_BKP)
 endif()
 
+if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
+else()
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wpedantic -Werror")
+    if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+        # Disable C++98 compatibility support in clang: https://github.com/libcpr/cpr/issues/927
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-nonportable-system-include-path -Wno-exit-time-destructors -Wno-undef -Wno-global-constructors -Wno-switch-enum -Wno-old-style-cast -Wno-covered-switch-default -Wno-undefined-func-template")
+    endif()
+endif()
 
 add_subdirectory(cpr)
 add_subdirectory(include)

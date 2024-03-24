@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/nanoflann/include;../../thirdparty/owemdjee/opencv/modules/flann/include/opencv2;../../thirdparty/owemdjee/opencv/modules/flann/include;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/nanoflann/include;../../thirdparty/owemdjee/opencv/modules/flann/include/opencv2;../../thirdparty/owemdjee/opencv/modules/flann/include;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/nanoflann/include;../../thirdparty/owemdjee/opencv/modules/flann/include/opencv2;../../thirdparty/owemdjee/opencv/modules/flann/include;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/nanoflann/include;../../thirdparty/owemdjee/opencv/modules/flann/include/opencv2;../../thirdparty/owemdjee/opencv/modules/flann/include;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/nanoflann/include;../../thirdparty/owemdjee/opencv/modules/flann/include/opencv2;../../thirdparty/owemdjee/opencv/modules/flann/include;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/nanoflann/include;../../thirdparty/owemdjee/opencv/modules/flann/include/opencv2;../../thirdparty/owemdjee/opencv/modules/flann/include;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/nanoflann/include;../../thirdparty/owemdjee/opencv/modules/flann/include/opencv2;../../thirdparty/owemdjee/opencv/modules/flann/include;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/nanoflann/include;../../thirdparty/owemdjee/opencv/modules/flann/include/opencv2;../../thirdparty/owemdjee/opencv/modules/flann/include;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/nanoflann/include;../../thirdparty/owemdjee/opencv/modules/flann/include/opencv2;../../thirdparty/owemdjee/opencv/modules/flann/include;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/nanoflann/include;../../thirdparty/owemdjee/opencv/modules/flann/include/opencv2;../../thirdparty/owemdjee/opencv/modules/flann/include;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/nanoflann/include;../../thirdparty/owemdjee/opencv/modules/flann/include/opencv2;../../thirdparty/owemdjee/opencv/modules/flann/include;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/nanoflann/include;../../thirdparty/owemdjee/opencv/modules/flann/include/opencv2;../../thirdparty/owemdjee/opencv/modules/flann/include;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/nanoflann/include;../../thirdparty/owemdjee/opencv/modules/flann/include/opencv2;../../thirdparty/owemdjee/opencv/modules/flann/include;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/nanoflann/include;../../thirdparty/owemdjee/opencv/modules/flann/include/opencv2;../../thirdparty/owemdjee/opencv/modules/flann/include;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBNANOFLANN;NANOFLANN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/nanoflann/include;../../thirdparty/owemdjee/opencv/modules/flann/include/opencv2;../../thirdparty/owemdjee/opencv/modules/flann/include;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/nanoflann/include;../../thirdparty/owemdjee/opencv/modules/flann/include/opencv2;../../thirdparty/owemdjee/opencv/modules/flann/include;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -234,9 +234,11 @@
     <ClCompile Include="../../thirdparty/owemdjee/nanoflann/examples/example_with_cmake/pointcloud_example.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/nanoflann/examples/example_with_pkgconfig/pointcloud_example.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/nanoflann/examples/examples_gui/nanoflann_gui_example_R3/nanoflann_gui_example_R3.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/nanoflann/examples/examples_gui/nanoflann_gui_example_bearings/nanoflann_gui_example_bearings.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/nanoflann/examples/matrix_example.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/nanoflann/examples/pointcloud_adaptor_example.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/nanoflann/examples/pointcloud_custom_metric.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/nanoflann/examples/pointcloud_custom_resultset.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/nanoflann/examples/pointcloud_example.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/nanoflann/examples/pointcloud_kdd_radius.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/nanoflann/examples/saveload_example.cpp" />
@@ -293,11 +295,15 @@
     <Image Include="../../thirdparty/owemdjee/nanoflann/doc/perf5_1e5pts_time_vs_maxleaf_real_dataset.png" />
     <Text Include="../../thirdparty/owemdjee/nanoflann/CHANGELOG.md" />
     <Text Include="../../thirdparty/owemdjee/nanoflann/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/nanoflann/Doxyfile" />
     <Text Include="../../thirdparty/owemdjee/nanoflann/README.md" />
+    <Text Include="../../thirdparty/owemdjee/nanoflann/appveyor.yml" />
     <Text Include="../../thirdparty/owemdjee/nanoflann/examples/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/nanoflann/examples/example_with_cmake/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/nanoflann/examples/example_with_pkgconfig/Makefile" />
     <Text Include="../../thirdparty/owemdjee/nanoflann/examples/examples_gui/README.md" />
     <Text Include="../../thirdparty/owemdjee/nanoflann/examples/examples_gui/nanoflann_gui_example_R3/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/nanoflann/examples/examples_gui/nanoflann_gui_example_bearings/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/nanoflann/scripts/cmake_uninstall.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/nanoflann/scripts/nanoflann.pc.in" />
     <Text Include="../../thirdparty/owemdjee/nanoflann/scripts/nanoflannConfig.cmake.in" />
@@ -305,6 +311,7 @@
     <Text Include="../../thirdparty/owemdjee/nanoflann/scripts/prepare_release.sh" />
     <Text Include="../../thirdparty/owemdjee/nanoflann/scripts/prepare_ubuntu_pkgs_for_ppa.sh" />
     <Text Include="../../thirdparty/owemdjee/nanoflann/tests/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/" />
     <Text Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/CONTRIBUTORS" />
     <Text Include="../../thirdparty/owemdjee/nanoflann/tests/gtest-1.8.0/README.md" />

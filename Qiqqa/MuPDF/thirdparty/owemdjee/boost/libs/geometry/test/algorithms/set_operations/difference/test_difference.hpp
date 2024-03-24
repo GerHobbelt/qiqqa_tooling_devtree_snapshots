@@ -2,7 +2,7 @@
 // Unit Test
 
 // Copyright (c) 2007-2015 Barend Gehrels, Amsterdam, the Netherlands.
-// Copyright (c) 2017 Adam Wulkiewicz, Lodz, Poland.
+// Copyright (c) 2017-2023 Adam Wulkiewicz, Lodz, Poland.
 
 // This file was modified by Oracle on 2016-2020.
 // Modifications copyright (c) 2016-2020, Oracle and/or its affiliates.
@@ -147,9 +147,9 @@ void difference_output(std::string const& caseid, G1 const& g1, G2 const& g2, Ou
         mapper.map(g2, "fill-opacity:0.5;fill:rgb(153,204,0);stroke:rgb(153,204,0);stroke-width:3");
 
 
-        for (typename Output::const_iterator it = output.begin(); it != output.end(); ++it)
+        for (auto const& item : output)
         {
-            mapper.map(*it,
+            mapper.map(item,
                 //sym ? "fill-opacity:0.2;stroke-opacity:0.4;fill:rgb(255,255,0);stroke:rgb(255,0,255);stroke-width:8" :
                 "fill-opacity:0.2;stroke-opacity:0.4;fill:rgb(255,0,0);stroke:rgb(255,0,255);stroke-width:8");
         }
@@ -159,7 +159,7 @@ void difference_output(std::string const& caseid, G1 const& g1, G2 const& g2, Ou
 
 template <typename OutputType, typename G1, typename G2>
 std::string test_difference(std::string const& caseid, G1 const& g1, G2 const& g2,
-        const count_set& expected_count,
+        count_set const& expected_count,
         int expected_rings_count, int expected_point_count,
         expectation_limits const& expected_area,
         difference_type dtype,
@@ -167,6 +167,7 @@ std::string test_difference(std::string const& caseid, G1 const& g1, G2 const& g
 {
     typedef typename bg::coordinate_type<G1>::type coordinate_type;
     boost::ignore_unused<coordinate_type>();
+    boost::ignore_unused(expected_point_count);
 
     bg::model::multi_polygon<OutputType> result;
 
@@ -304,7 +305,7 @@ std::string test_difference(std::string const& caseid, G1 const& g1, G2 const& g
 
 template <typename OutputType, typename G1, typename G2>
 std::string test_difference(std::string const& caseid, G1 const& g1, G2 const& g2,
-        const count_set&  expected_count, int expected_point_count,
+        count_set const&  expected_count, int expected_point_count,
         expectation_limits const& expected_area,
         difference_type dtype,
         ut_settings const& settings)
@@ -322,15 +323,15 @@ static int counter = 0;
 template <typename OutputType, typename G1, typename G2>
 std::string test_one(std::string const& caseid,
         std::string const& wkt1, std::string const& wkt2,
-        const count_set& expected_count1,
+        count_set const& expected_count1,
         int expected_rings_count1,
         int expected_point_count1,
         expectation_limits const& expected_area1,
-        const count_set& expected_count2,
+        count_set const& expected_count2,
         int expected_rings_count2,
         int expected_point_count2,
         expectation_limits const& expected_area2,
-        const count_set&  expected_count_s,
+        count_set const&  expected_count_s,
         int expected_rings_count_s,
         int expected_point_count_s,
         expectation_limits const& expected_area_s,
@@ -381,11 +382,11 @@ std::string test_one(std::string const& caseid,
 template <typename OutputType, typename G1, typename G2>
 std::string test_one(std::string const& caseid,
         std::string const& wkt1, std::string const& wkt2,
-        const count_set&  expected_count1,
+        count_set const&  expected_count1,
         int expected_rings_count1,
         int expected_point_count1,
         expectation_limits const& expected_area1,
-        const count_set&  expected_count2,
+        count_set const&  expected_count2,
         int expected_rings_count2,
         int expected_point_count2,
         expectation_limits const& expected_area2,
@@ -406,13 +407,13 @@ std::string test_one(std::string const& caseid,
 template <typename OutputType, typename G1, typename G2>
 std::string test_one(std::string const& caseid,
         std::string const& wkt1, std::string const& wkt2,
-        const count_set&  expected_count1,
+        count_set const&  expected_count1,
         int expected_point_count1,
         expectation_limits const& expected_area1,
-        const count_set&  expected_count2,
+        count_set const&  expected_count2,
         int expected_point_count2,
         expectation_limits const& expected_area2,
-        const count_set&  expected_count_s,
+        count_set const&  expected_count_s,
         int expected_point_count_s,
         expectation_limits const& expected_area_s,
         ut_settings const& settings = ut_settings())
@@ -428,13 +429,13 @@ std::string test_one(std::string const& caseid,
 template <typename OutputType, typename G1, typename G2>
 std::string test_one(std::string const& caseid,
         std::string const& wkt1, std::string const& wkt2,
-        const count_set&  expected_count1,
+        count_set const&  expected_count1,
         int expected_point_count1,
         expectation_limits const& expected_area1,
-        const count_set&  expected_count2,
+        count_set const&  expected_count2,
         int expected_point_count2,
         expectation_limits const& expected_area2,
-        const count_set&  expected_count_s,
+        count_set const&  expected_count_s,
         ut_settings const& settings = ut_settings())
 {
     return test_one<OutputType, G1, G2>(caseid, wkt1, wkt2,
@@ -451,10 +452,10 @@ std::string test_one(std::string const& caseid,
 template <typename OutputType, typename G1, typename G2>
 std::string test_one(std::string const& caseid,
         std::string const& wkt1, std::string const& wkt2,
-        const count_set&  expected_count1,
+        count_set const&  expected_count1,
         int expected_point_count1,
         expectation_limits const& expected_area1,
-        const count_set&  expected_count2,
+        count_set const&  expected_count2,
         int expected_point_count2,
         expectation_limits const& expected_area2,
         ut_settings const& settings = ut_settings())

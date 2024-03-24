@@ -1,10 +1,13 @@
 
-Jpeginfo v1.7.0beta  Copyright (c) 1995-2023, Timo Kokkonen.
+Jpeginfo v1.7.1beta  Copyright (c) 1995-2023, Timo Kokkonen.
+
+SYNOPSIS
+    Prints information and tests integrity of JPEG/JFIF files.
 
 
 REQUIREMENTS
-	jpeglib, Independent JPEG Group's jpeg library version 6a or
-        version 7 (or later version)
+	Independent JPEG Group's jpeg library (libjpeg) version 6b or later.
+	(Alternatively should also work with libjpeg-turbo or mozjpeg)
 
 TESTED PLATFORMS
 	Linux
@@ -15,8 +18,8 @@ TESTED PLATFORMS
 
 INSTALLATION
 	Installation should be very straightforward, just unpack the
-	tar file, run configure script, and then compile the program. 
-	You may wanna do something like this:
+	tar file, run configure script, and then compile the program.
+	You may want to do something like this:
 
 		gunzip -c jpeginfo-1.7.0.tar.gz | tar xf -
 		cd jpeginfo-1.7.0
@@ -31,9 +34,15 @@ INSTALLATION
 
 
 HISTORY
-        v1.7.0 - add support for reading input file stdin,
+	v1.7.1 - add --files-from and --files-stdin,
+	         minor fixed.
+        v1.7.0 - support for CSV output (--csv),
+	         support for JSON output (--json),
+	         add support for reading input file from stdin (--stdin),
+		 add support for displaying column names (--header),
+		 add SHA-512 sigest support (--sha512),
 	         other minor fixes.
-	v1.6.2 - add SHA256 digest support (--sha256 or -2),
+	v1.6.2 - add SHA-256 digest support (--sha256 or -2),
 	         improved Win32 support thanks to tumagonx,
 		 other minor fixes.
 	v1.6.1 - support for new libjpeg v7 thanks to Guido Vollbeding,
@@ -41,17 +50,17 @@ HISTORY
 	v1.6.0 - added support for printing out Comments (from COM
 	         markers), Exif format images are now also recognized
 	         (no Exif marker decoding functionality, though).
-	v1.5   - configuration is now done with GNU autoconf, 
+	v1.5   - configuration is now done with GNU autoconf,
 		 program now uses free MD5 algorithm,
 		 added file size as new field on reports,
 		 program now returns exit code 1 if one or more of the jpegs
 		 had any errors, useful for testing if particular jpeg is
-	         ok from shell scripts, 
+	         ok from shell scripts,
 	         also if you specify -q (--quiet) option twice on
 		 command line, then program won't produce any output.
 	v1.4   - added support for calculating MD5 checksums.
 	v1.3   - alternative listing format (-l switch) added.
-	         new column on reports displaying whether jpeg is 
+	         new column on reports displaying whether jpeg is
 		 progressive or normal (P/N).
 		 new switch -i for printing out even more information
 	         about pictures: coding, density, CCIR601 sampling.
@@ -74,10 +83,10 @@ ACKNOWLEDGEMENT
 
 	- MD5 message-digest allgorithm used is public domain implementation
 	  written by Colin Plumb.
-	- SHA-256 message-digest algorithm used is public domain implementation
+	- SHA-2 message-digest algorithm used is public domain implementation
 	  by D. J. Bernstein (from NaCl library).
 
 
 
 Timo <tjko@iki.fi>
-07-Jan-2023
+15-Jan-2023

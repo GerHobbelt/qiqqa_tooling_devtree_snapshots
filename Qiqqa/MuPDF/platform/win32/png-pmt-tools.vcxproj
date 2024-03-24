@@ -25,6 +25,9 @@
     <ProjectReference Include="libpng.vcxproj">
       <Project>{5edcf4fd-0291-4fb9-8d96-658957ca5e3c}</Project>
     </ProjectReference>
+    <ProjectReference Include="libsystem_override.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8318-7518ff7ef82f}</Project>
+    </ProjectReference>
     <ProjectReference Include="libzlib.vcxproj">
       <Project>{5edcf4fd-0291-4fb9-8d96-458957ca5e3c}</Project>
     </ProjectReference>
@@ -140,14 +143,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/pmt-png-tools;../../thirdparty/libpng;../../scripts/zlib;../../thirdparty/monolithic_tmplt;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_PNG_PMT_TOOLS;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/pmt-png-tools;../../thirdparty/libpng;../../scripts/zlib;../../thirdparty/monolithic_tmplt;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_PNG_PMT_TOOLS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_PNG-PMT-TOOLS;PNG-PMT-TOOLS_STATICLIB;CHM_NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/pmt-png-tools;../../thirdparty/libpng;../../scripts/zlib;../../thirdparty/monolithic_tmplt;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/pmt-png-tools;../../thirdparty/libpng;../../scripts/zlib;../../thirdparty/monolithic_tmplt;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -159,7 +162,7 @@
       <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
       <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <TargetMachine>MachineX86</TargetMachine>
       <GenerateMapFile>true</GenerateMapFile>
       <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
@@ -176,15 +179,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/pmt-png-tools;../../thirdparty/libpng;../../scripts/zlib;../../thirdparty/monolithic_tmplt;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_PNG_PMT_TOOLS;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/pmt-png-tools;../../thirdparty/libpng;../../scripts/zlib;../../thirdparty/monolithic_tmplt;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_PNG_PMT_TOOLS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_PNG-PMT-TOOLS;PNG-PMT-TOOLS_STATICLIB;CHM__DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/pmt-png-tools;../../thirdparty/libpng;../../scripts/zlib;../../thirdparty/monolithic_tmplt;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/pmt-png-tools;../../thirdparty/libpng;../../scripts/zlib;../../thirdparty/monolithic_tmplt;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -197,7 +200,7 @@
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
       <TargetMachine>MachineX86</TargetMachine>
       <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <GenerateMapFile>true</GenerateMapFile>
       <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
       <MapExports>true</MapExports>
@@ -215,14 +218,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/pmt-png-tools;../../thirdparty/libpng;../../scripts/zlib;../../thirdparty/monolithic_tmplt;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_PNG_PMT_TOOLS;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/pmt-png-tools;../../thirdparty/libpng;../../scripts/zlib;../../thirdparty/monolithic_tmplt;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_PNG_PMT_TOOLS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_PNG-PMT-TOOLS;PNG-PMT-TOOLS_STATICLIB;CHM_NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/pmt-png-tools;../../thirdparty/libpng;../../scripts/zlib;../../thirdparty/monolithic_tmplt;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/pmt-png-tools;../../thirdparty/libpng;../../scripts/zlib;../../thirdparty/monolithic_tmplt;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -234,7 +237,7 @@
       <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
       <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <TargetMachine>MachineX64</TargetMachine>
       <GenerateMapFile>true</GenerateMapFile>
       <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
@@ -251,15 +254,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/pmt-png-tools;../../thirdparty/libpng;../../scripts/zlib;../../thirdparty/monolithic_tmplt;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_PNG_PMT_TOOLS;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/pmt-png-tools;../../thirdparty/libpng;../../scripts/zlib;../../thirdparty/monolithic_tmplt;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_PNG_PMT_TOOLS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_PNG-PMT-TOOLS;PNG-PMT-TOOLS_STATICLIB;CHM__DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/pmt-png-tools;../../thirdparty/libpng;../../scripts/zlib;../../thirdparty/monolithic_tmplt;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/pmt-png-tools;../../thirdparty/libpng;../../scripts/zlib;../../thirdparty/monolithic_tmplt;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -272,7 +275,7 @@
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
       <TargetMachine>MachineX64</TargetMachine>
       <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <GenerateMapFile>true</GenerateMapFile>
       <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
       <MapExports>true</MapExports>
@@ -300,17 +303,23 @@
     <Text Include="../../thirdparty/owemdjee/pmt-png-tools/png2uri/png2uri-README.txt" />
     <Text Include="../../thirdparty/owemdjee/pmt-png-tools/png2uri/png2uri.sh" />
     <Text Include="../../thirdparty/owemdjee/pmt-png-tools/pngcrush/ChangeLog.html" />
+    <Text Include="../../thirdparty/owemdjee/pmt-png-tools/pngcrush/LICENSE" />
+    <Text Include="../../thirdparty/owemdjee/pmt-png-tools/pngcrush/Makefile" />
     <Text Include="../../thirdparty/owemdjee/pmt-png-tools/pngmeta/ChangeLog" />
     <Text Include="../../thirdparty/owemdjee/pmt-png-tools/pngmeta/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/pmt-png-tools/pngmeta/Makefile.in" />
     <Text Include="../../thirdparty/owemdjee/pmt-png-tools/pngmeta/NEWS" />
     <Text Include="../../thirdparty/owemdjee/pmt-png-tools/pngmeta/README" />
+    <Text Include="../../thirdparty/owemdjee/pmt-png-tools/pngmeta/aclocal.m4" />
     <Text Include="../../thirdparty/owemdjee/pmt-png-tools/pngmeta/autogen.sh" />
     <Text Include="../../thirdparty/owemdjee/pmt-png-tools/pngmeta/config.h.in" />
     <Text Include="../../thirdparty/owemdjee/pmt-png-tools/pngmeta/configure.in" />
+    <Text Include="../../thirdparty/owemdjee/pmt-png-tools/pngmeta/pngmeta.1" />
+    <Text Include="../../thirdparty/owemdjee/pmt-png-tools/pngmeta/pngmeta.spec" />
     <Text Include="../../thirdparty/owemdjee/pmt-png-tools/pngmeta/pngmeta.spec.in" />
     <Text Include="../../thirdparty/owemdjee/pmt-png-tools/pngzop/pngzop-1.0.2-README.txt" />
     <Text Include="../../thirdparty/owemdjee/pmt-png-tools/pngzop/pngzop.sh" />
+    <Text Include="../../thirdparty/owemdjee/pmt-png-tools/pngzop/pngzop_references.html" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

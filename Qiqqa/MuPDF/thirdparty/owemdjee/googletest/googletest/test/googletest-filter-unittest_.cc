@@ -38,6 +38,8 @@
 
 #include "gtest/gtest.h"
 
+#include "googletest/include/monolithic_examples.h"
+
 namespace {
 
 // Test case FooTest.
@@ -88,16 +90,17 @@ TEST(DISABLED_FoobarTest, DISABLED_Test2) { FAIL() << "Expected failure."; }
 
 TEST(DISABLED_FoobarbazTest, TestA) { FAIL() << "Expected failure."; }
 
-class ParamTest : public testing::TestWithParam<int> {};
+class ParamFilterTest : public testing::TestWithParam<int> {};
 
-TEST_P(ParamTest, TestX) {}
+TEST_P(ParamFilterTest, TestX) {}
 
-TEST_P(ParamTest, TestY) {}
+TEST_P(ParamFilterTest, TestY) {}
 
 INSTANTIATE_TEST_SUITE_P(SeqP, ParamFilterTest, testing::Values(1, 2));
 INSTANTIATE_TEST_SUITE_P(SeqQ, ParamFilterTest, testing::Values(5, 6));
 
 }  // namespace
+
 
 #if defined(BUILD_MONOLITHIC)
 #define main(cnt, arr)	gtest_filter_test_main(cnt, arr)

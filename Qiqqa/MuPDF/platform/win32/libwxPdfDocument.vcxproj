@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWXPDFDOCUMENT;WXPDFDOCUMENT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWXPDFDOCUMENT;WXPDFDOCUMENT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWXPDFDOCUMENT;WXPDFDOCUMENT_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/wxWidgets/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWXPDFDOCUMENT;WXPDFDOCUMENT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWXPDFDOCUMENT;WXPDFDOCUMENT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWXPDFDOCUMENT;WXPDFDOCUMENT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/wxWidgets/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWXPDFDOCUMENT;WXPDFDOCUMENT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWXPDFDOCUMENT;WXPDFDOCUMENT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWXPDFDOCUMENT;WXPDFDOCUMENT_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/wxWidgets/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWXPDFDOCUMENT;WXPDFDOCUMENT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWXPDFDOCUMENT;WXPDFDOCUMENT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWXPDFDOCUMENT;WXPDFDOCUMENT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/wxWidgets/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWXPDFDOCUMENT;WXPDFDOCUMENT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWXPDFDOCUMENT;WXPDFDOCUMENT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWXPDFDOCUMENT;WXPDFDOCUMENT_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/wxWidgets/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWXPDFDOCUMENT;WXPDFDOCUMENT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWXPDFDOCUMENT;WXPDFDOCUMENT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWXPDFDOCUMENT;WXPDFDOCUMENT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/wxWidgets/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWXPDFDOCUMENT;WXPDFDOCUMENT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWXPDFDOCUMENT;WXPDFDOCUMENT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWXPDFDOCUMENT;WXPDFDOCUMENT_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/wxWidgets/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWXPDFDOCUMENT;WXPDFDOCUMENT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWXPDFDOCUMENT;WXPDFDOCUMENT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBWXPDFDOCUMENT;WXPDFDOCUMENT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/wxWidgets/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -402,16 +402,98 @@
     <Text Include="../../thirdparty/owemdjee/wxPdfDocument/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/wxPdfDocument/admin/appveyor/appveyor-test.bat" />
     <Text Include="../../thirdparty/owemdjee/wxPdfDocument/admin/appveyor/appveyor.bat" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/admin/build-aux/config.guess" />
     <Text Include="../../thirdparty/owemdjee/wxPdfDocument/admin/build-aux/ltmain.sh" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/admin/m4/libtool.m4" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/admin/m4/ltoptions.m4" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/admin/m4/ltsugar.m4" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/admin/m4/ltversion.m4" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/admin/m4/lt~obsolete.m4" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/admin/m4/pkg.m4" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/admin/m4/wxwin.m4" />
     <Text Include="../../thirdparty/owemdjee/wxPdfDocument/admin/travis/before_install.sh" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/Makefile" />
     <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/config.gcc" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wx_setup.props" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc10_dcsample.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc10_dcsample.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc10_makefont.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc10_makefont.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc10_minimal.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc10_minimal.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc10_pdfdoc.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc10_pdfdoc.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc10_showfont.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc10_showfont.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc11_dcsample.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc11_dcsample.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc11_makefont.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc11_makefont.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc11_minimal.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc11_minimal.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc11_pdfdoc.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc11_pdfdoc.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc11_showfont.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc11_showfont.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc12_dcsample.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc12_dcsample.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc12_makefont.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc12_makefont.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc12_minimal.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc12_minimal.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc12_pdfdoc.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc12_pdfdoc.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc12_showfont.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc12_showfont.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc14_dcsample.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc14_dcsample.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc14_makefont.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc14_makefont.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc14_minimal.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc14_minimal.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc14_pdfdoc.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc14_pdfdoc.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc14_showfont.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc14_showfont.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc15_dcsample.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc15_dcsample.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc15_makefont.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc15_makefont.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc15_minimal.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc15_minimal.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc15_pdfdoc.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc15_pdfdoc.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc15_showfont.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc15_showfont.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc16_dcsample.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc16_dcsample.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc16_makefont.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc16_makefont.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc16_minimal.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc16_minimal.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc16_pdfdoc.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc16_pdfdoc.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc16_showfont.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc16_showfont.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc17_dcsample.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc17_dcsample.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc17_makefont.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc17_makefont.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc17_minimal.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc17_minimal.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc17_pdfdoc.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc17_pdfdoc.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc17_showfont.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/build/wxpdfdoc_vc17_showfont.vcxproj.user" />
     <Text Include="../../thirdparty/owemdjee/wxPdfDocument/configure.ac" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/docs/Doxyfile" />
     <Text Include="../../thirdparty/owemdjee/wxPdfDocument/premake/wxwidgets.lua" />
     <Text Include="../../thirdparty/owemdjee/wxPdfDocument/premake5.lua" />
     <Text Include="../../thirdparty/owemdjee/wxPdfDocument/readme.md" />
     <Text Include="../../thirdparty/owemdjee/wxPdfDocument/samples/minimal/20k_c1.txt" />
     <Text Include="../../thirdparty/owemdjee/wxPdfDocument/samples/minimal/20k_c2.txt" />
     <Text Include="../../thirdparty/owemdjee/wxPdfDocument/samples/minimal/attached.txt" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/samples/minimal/chart2d.pdf" />
     <Text Include="../../thirdparty/owemdjee/wxPdfDocument/samples/minimal/countries.txt" />
     <Text Include="../../thirdparty/owemdjee/wxPdfDocument/samples/minimal/glyphsample.txt" />
     <Text Include="../../thirdparty/owemdjee/wxPdfDocument/samples/minimal/icu-sample.txt" />
@@ -426,8 +508,10 @@
     <Text Include="../../thirdparty/owemdjee/wxPdfDocument/samples/minimal/indic-punjabi.txt" />
     <Text Include="../../thirdparty/owemdjee/wxPdfDocument/samples/minimal/indic-tamil.txt" />
     <Text Include="../../thirdparty/owemdjee/wxPdfDocument/samples/minimal/indic-telugu.txt" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/samples/minimal/ringmaster.wmf" />
     <Text Include="../../thirdparty/owemdjee/wxPdfDocument/samples/pdfdc/mondrian.xpm" />
     <Text Include="../../thirdparty/owemdjee/wxPdfDocument/samples/pdfdc/smiley.xpm" />
+    <Text Include="../../thirdparty/owemdjee/wxPdfDocument/samples/pdfdc/test.html" />
     <Text Include="../../thirdparty/owemdjee/wxPdfDocument/samples/pdfdc/zebra.xpm" />
     <Text Include="../../thirdparty/owemdjee/wxPdfDocument/wxpdfdoc.pc.in" />
     <Xml Include="../../thirdparty/owemdjee/wxPdfDocument/lib/fonts/GFSDidot.xml" />

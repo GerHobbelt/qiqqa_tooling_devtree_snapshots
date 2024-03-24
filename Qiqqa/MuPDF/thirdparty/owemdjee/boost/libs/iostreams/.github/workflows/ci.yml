@@ -18,51 +18,103 @@ jobs:
       matrix:
         include:
           - toolset: gcc-4.8
-            cxxstd: "03,11"
-            os: ubuntu-18.04
+            cxxstd: "11"
+            os: ubuntu-latest
+            container: ubuntu:18.04
             install: g++-4.8
           - toolset: gcc-5
-            cxxstd: "03,11,14,1z"
-            os: ubuntu-18.04
+            cxxstd: "11,14,1z"
+            os: ubuntu-latest
+            container: ubuntu:18.04
             install: g++-5
           - toolset: gcc-6
-            cxxstd: "03,11,14,1z"
-            os: ubuntu-18.04
+            cxxstd: "11,14,1z"
+            os: ubuntu-latest
+            container: ubuntu:18.04
             install: g++-6
           - toolset: gcc-7
-            cxxstd: "03,11,14,17"
-            os: ubuntu-18.04
+            cxxstd: "11,14,17"
+            os: ubuntu-20.04
+            install: g++-7
           - toolset: gcc-8
-            cxxstd: "03,11,14,17,2a"
-            os: ubuntu-18.04
+            cxxstd: "11,14,17,2a"
+            os: ubuntu-20.04
             install: g++-8
           - toolset: gcc-9
-            cxxstd: "03,11,14,17,2a"
+            cxxstd: "11,14,17,2a"
             os: ubuntu-20.04
           - toolset: gcc-10
-            cxxstd: "03,11,14,17,2a"
+            cxxstd: "11,14,17,2a"
             os: ubuntu-20.04
             install: g++-10
           - toolset: gcc-11
-            cxxstd: "03,11,14,17,2a"
-            os: ubuntu-20.04
-            install: g++-11
+            cxxstd: "11,14,17,2a"
+            os: ubuntu-22.04
+          - toolset: gcc-12
+            cxxstd: "11,14,17,20,2b"
+            os: ubuntu-22.04
+            install: g++-12
+          - toolset: gcc-13
+            cxxstd: "11,14,17,20,2b"
+            os: ubuntu-latest
+            container: ubuntu:23.04
+            install: g++-13
           - toolset: clang
             compiler: clang++-12
-            cxxstd: "03,11,14,17,2a"
+            cxxstd: "11,14,17,2a"
             os: ubuntu-20.04
           - toolset: clang
-            cxxstd: "03,11,14,17,2a"
+            compiler: clang++-13
+            cxxstd: "11,14,17,20,2b"
+            os: ubuntu-22.04
+            install: clang-13
+          - toolset: clang
+            compiler: clang++-14
+            cxxstd: "11,14,17,20,2b"
+            os: ubuntu-22.04
+            install: clang-14
+          - toolset: clang
+            compiler: clang++-15
+            cxxstd: "11,14,17,20,2b"
+            os: ubuntu-22.04
+            install: clang-15
+          - toolset: clang
+            compiler: clang++-16
+            cxxstd: "11,14,17,20,2b"
+            os: ubuntu-latest
+            container: ubuntu:23.04
+            install: clang-16
+          - toolset: clang
+            cxxstd: "11,14,17,20,2b"
             os: macos-11
+          - toolset: clang
+            cxxstd: "11,14,17,20,2b"
+            os: macos-12
+          - toolset: clang
+            cxxstd: "11,14,17,20,2b"
+            os: macos-13
 
     runs-on: ${{matrix.os}}
+    container: ${{matrix.container}}
+
+    defaults:
+      run:
+        shell: bash
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+
+      - name: Setup container environment
+        if: matrix.container
+        run: |
+          apt-get update
+          apt-get -y install sudo python3 git g++
 
       - name: Install packages
         if: matrix.install
-        run: sudo apt install ${{matrix.install}}
+        run: |
+          sudo apt-get update
+          sudo apt-get -y install ${{matrix.install}}
 
       - name: Setup Boost
         run: |
@@ -82,7 +134,7 @@ jobs:
           cd boost-root
           cp -r $GITHUB_WORKSPACE/* libs/$LIBRARY
           git submodule update --init tools/boostdep
-          python tools/boostdep/depinst/depinst.py --git_args "--jobs 3" $LIBRARY
+          python3 tools/boostdep/depinst/depinst.py --git_args "--jobs 3" $LIBRARY
           ./bootstrap.sh
           ./b2 -d0 headers
 
@@ -101,19 +153,31 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - toolset: msvc-14.1
-            cxxstd: "14,17,latest"
+          - toolset: msvc-14.0
+            cxxstd: 14,latest
             addrmd: 32,64
-            os: windows-2016
+            os: windows-2019
           - toolset: msvc-14.2
+            cxxstd: "14,17,20,latest"
+            addrmd: 32,64
+            os: windows-2019
+          - toolset: msvc-14.3
+            cxxstd: "14,17,20,latest"
+            addrmd: 32,64
+            os: windows-2022
+          - toolset: clang-win
             cxxstd: "14,17,latest"
             addrmd: 32,64
+            os: windows-2022
+          - toolset: gcc
+            cxxstd: "11,14,17,2a"
+            addrmd: 64
             os: windows-2019
 
     runs-on: ${{matrix.os}}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Setup Boost
         shell: cmd
@@ -141,30 +205,38 @@ jobs:
         shell: cmd
         run: |
           cd ../boost-root
-          b2 -j3 libs/%LIBRARY%/test toolset=${{matrix.toolset}} cxxstd=${{matrix.cxxstd}} address-model=${{matrix.addrmd}} variant=debug,release
+          b2 -j3 libs/%LIBRARY%/test toolset=${{matrix.toolset}} cxxstd=${{matrix.cxxstd}} address-model=${{matrix.addrmd}} variant=debug,release embed-manifest-via=linker
 
   posix-cmake-subdir:
     strategy:
       fail-fast: false
       matrix:
         include:
-          - os: ubuntu-18.04
-            shared: OFF
-          - os: ubuntu-18.04
-            shared: ON
           - os: ubuntu-20.04
             shared: OFF
           - os: ubuntu-20.04
             shared: ON
+          - os: ubuntu-22.04
+            shared: OFF
+          - os: ubuntu-22.04
+            shared: ON
           - os: macos-11
             shared: OFF
           - os: macos-11
+            shared: ON
+          - os: macos-12
+            shared: OFF
+          - os: macos-12
+            shared: ON
+          - os: macos-13
+            shared: OFF
+          - os: macos-13
             shared: ON
 
     runs-on: ${{matrix.os}}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Install packages
         if: matrix.install
@@ -203,23 +275,31 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os: ubuntu-18.04
-            shared: OFF
-          - os: ubuntu-18.04
-            shared: ON
           - os: ubuntu-20.04
             shared: OFF
           - os: ubuntu-20.04
             shared: ON
+          - os: ubuntu-22.04
+            shared: OFF
+          - os: ubuntu-22.04
+            shared: ON
           - os: macos-11
             shared: OFF
           - os: macos-11
+            shared: ON
+          - os: macos-12
+            shared: OFF
+          - os: macos-12
+            shared: ON
+          - os: macos-13
+            shared: OFF
+          - os: macos-13
             shared: ON
 
     runs-on: ${{matrix.os}}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Install packages
         if: matrix.install

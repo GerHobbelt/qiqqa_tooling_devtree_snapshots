@@ -44,13 +44,11 @@ LIB_VAUTH_HFILES =      \
 
 LIB_VTLS_CFILES =           \
   vtls/bearssl.c            \
-  vtls/gskit.c              \
   vtls/gtls.c               \
   vtls/hostcheck.c          \
   vtls/keylog.c             \
   vtls/mbedtls.c            \
   vtls/mbedtls_threadlock.c \
-  vtls/nss.c                \
   vtls/openssl.c            \
   vtls/rustls.c             \
   vtls/schannel.c           \
@@ -62,16 +60,15 @@ LIB_VTLS_CFILES =           \
 
 LIB_VTLS_HFILES =           \
   vtls/bearssl.h            \
-  vtls/gskit.h              \
   vtls/gtls.h               \
   vtls/hostcheck.h          \
   vtls/keylog.h             \
   vtls/mbedtls.h            \
   vtls/mbedtls_threadlock.h \
-  vtls/nssg.h               \
   vtls/openssl.h            \
   vtls/rustls.h             \
   vtls/schannel.h           \
+  vtls/schannel_int.h       \
   vtls/sectransp.h          \
   vtls/vtls.h               \
   vtls/vtls_int.h           \
@@ -81,15 +78,19 @@ LIB_VTLS_HFILES =           \
 LIB_VQUIC_CFILES = \
   vquic/curl_msh3.c   \
   vquic/curl_ngtcp2.c   \
+  vquic/curl_osslq.c   \
   vquic/curl_quiche.c   \
-  vquic/vquic.c
+  vquic/vquic.c \
+  vquic/vquic-tls.c
 
 LIB_VQUIC_HFILES = \
   vquic/curl_msh3.h   \
   vquic/curl_ngtcp2.h   \
+  vquic/curl_osslq.h   \
   vquic/curl_quiche.h   \
   vquic/vquic.h    \
-  vquic/vquic_int.h
+  vquic/vquic_int.h \
+  vquic/vquic-tls.h
 
 LIB_VSSH_CFILES =  \
   vssh/libssh.c    \
@@ -125,7 +126,6 @@ LIB_CFILES =         \
   curl_get_line.c    \
   curl_gethostname.c \
   curl_gssapi.c      \
-  curl_log.c         \
   curl_memrchr.c     \
   curl_multibyte.c   \
   curl_ntlm_core.c   \
@@ -134,8 +134,11 @@ LIB_CFILES =         \
   curl_range.c       \
   curl_rtmp.c        \
   curl_sasl.c        \
+  curl_sha512_256.c  \
   curl_sspi.c        \
   curl_threads.c     \
+  curl_trc.c         \
+  cw-out.c           \
   dict.c             \
   doh.c              \
   dynbuf.c           \
@@ -165,12 +168,12 @@ LIB_CFILES =         \
   http.c             \
   http1.c            \
   http2.c            \
+  http_aws_sigv4.c   \
   http_chunks.c      \
   http_digest.c      \
   http_negotiate.c   \
   http_ntlm.c        \
   http_proxy.c       \
-  http_aws_sigv4.c   \
   idn.c              \
   if2ip.c            \
   imap.c             \
@@ -179,6 +182,7 @@ LIB_CFILES =         \
   krb5.c             \
   ldap.c             \
   llist.c            \
+  macos.c            \
   md4.c              \
   md5.c              \
   memdebug.c         \
@@ -198,6 +202,7 @@ LIB_CFILES =         \
   psl.c              \
   rand.c             \
   rename.c           \
+  request.c          \
   rtsp.c             \
   select.c           \
   sendf.c            \
@@ -261,7 +266,6 @@ LIB_HFILES =         \
   curl_hmac.h        \
   curl_krb5.h        \
   curl_ldap.h        \
-  curl_log.h         \
   curl_md4.h         \
   curl_md5.h         \
   curl_memory.h      \
@@ -277,9 +281,12 @@ LIB_HFILES =         \
   curl_setup.h       \
   curl_setup_once.h  \
   curl_sha256.h      \
+  curl_sha512_256.h  \
   curl_sspi.h        \
   curl_threads.h     \
+  curl_trc.h         \
   curlx.h            \
+  cw-out.h           \
   dict.h             \
   doh.h              \
   dynbuf.h           \
@@ -292,9 +299,9 @@ LIB_HFILES =         \
   fileinfo.h         \
   fopen.h            \
   formdata.h         \
-  functypes.h        \
   ftp.h              \
   ftplistparser.h    \
+  functypes.h        \
   getinfo.h          \
   gopher.h           \
   hash.h             \
@@ -304,18 +311,19 @@ LIB_HFILES =         \
   http.h             \
   http1.h            \
   http2.h            \
+  http_aws_sigv4.h   \
   http_chunks.h      \
   http_digest.h      \
   http_negotiate.h   \
   http_ntlm.h        \
   http_proxy.h       \
-  http_aws_sigv4.h   \
   idn.h              \
   if2ip.h            \
   imap.h             \
   inet_ntop.h        \
   inet_pton.h        \
   llist.h            \
+  macos.h            \
   memdebug.h         \
   mime.h             \
   mqtt.h             \
@@ -332,6 +340,7 @@ LIB_HFILES =         \
   psl.h              \
   rand.h             \
   rename.h           \
+  request.h          \
   rtsp.h             \
   select.h           \
   sendf.h            \

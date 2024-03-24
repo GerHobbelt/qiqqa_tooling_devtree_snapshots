@@ -36,7 +36,14 @@
 // This program will be invoked from a Python unit test.
 // Don't run it directly.
 
+#include <ostream>
+#include <string>
+
 #include "gtest/gtest.h"
+
+#include "googletest/include/monolithic_examples.h"
+
+namespace {
 
 // Several different test cases and tests that will be listed.
 TEST(Foo, Bar1) {}
@@ -76,14 +83,14 @@ class MyType {
 // Teaches Google Test how to print a MyType.
 void PrintTo(const MyType& x, std::ostream* os) { *os << x.value(); }
 
-class ValueParamTest : public testing::TestWithParam<MyType> {};
+class ValueParamFilterTest : public testing::TestWithParam<MyType> {};
 
-TEST_P(ValueParamTest, TestA) {}
+TEST_P(ValueParamFilterTest, TestA) {}
 
-TEST_P(ValueParamTest, TestB) {}
+TEST_P(ValueParamFilterTest, TestB) {}
 
 INSTANTIATE_TEST_SUITE_P(
-    MyInstantiation, ValueParamTest,
+    MyInstantiation, ValueParamFilterTest,
     testing::Values(
         MyType("one line"), MyType("two\nlines"),
         MyType("a "
@@ -132,6 +139,9 @@ TYPED_TEST_P(TypeParamTest, TestB) {}
 REGISTER_TYPED_TEST_SUITE_P(TypeParamTest, TestA, TestB);
 
 INSTANTIATE_TYPED_TEST_SUITE_P(My, TypeParamTest, MyTypes);
+
+}	// anonymous namespace
+
 
 #if defined(BUILD_MONOLITHIC)
 #define main(cnt, arr)	gtest_list_test_main(cnt, arr)

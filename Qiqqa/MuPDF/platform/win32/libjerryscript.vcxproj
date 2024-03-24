@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJERRYSCRIPT;JERRYSCRIPT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJERRYSCRIPT;JERRYSCRIPT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJERRYSCRIPT;JERRYSCRIPT_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/jerryscript/jerry-core/include;../../thirdparty/owemdjee/jerryscript/jerry-core/debugger;../../thirdparty/owemdjee/jerryscript/jerry-core/ecma/operations;../../thirdparty/owemdjee/jerryscript/jerry-core/ecma/base;../../thirdparty/owemdjee/jerryscript/jerry-port/default/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJERRYSCRIPT;JERRYSCRIPT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJERRYSCRIPT;JERRYSCRIPT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJERRYSCRIPT;JERRYSCRIPT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/jerryscript/jerry-core/include;../../thirdparty/owemdjee/jerryscript/jerry-core/debugger;../../thirdparty/owemdjee/jerryscript/jerry-core/ecma/operations;../../thirdparty/owemdjee/jerryscript/jerry-core/ecma/base;../../thirdparty/owemdjee/jerryscript/jerry-port/default/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJERRYSCRIPT;JERRYSCRIPT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJERRYSCRIPT;JERRYSCRIPT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJERRYSCRIPT;JERRYSCRIPT_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/jerryscript/jerry-core/include;../../thirdparty/owemdjee/jerryscript/jerry-core/debugger;../../thirdparty/owemdjee/jerryscript/jerry-core/ecma/operations;../../thirdparty/owemdjee/jerryscript/jerry-core/ecma/base;../../thirdparty/owemdjee/jerryscript/jerry-port/default/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJERRYSCRIPT;JERRYSCRIPT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJERRYSCRIPT;JERRYSCRIPT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJERRYSCRIPT;JERRYSCRIPT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/jerryscript/jerry-core/include;../../thirdparty/owemdjee/jerryscript/jerry-core/debugger;../../thirdparty/owemdjee/jerryscript/jerry-core/ecma/operations;../../thirdparty/owemdjee/jerryscript/jerry-core/ecma/base;../../thirdparty/owemdjee/jerryscript/jerry-port/default/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJERRYSCRIPT;JERRYSCRIPT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJERRYSCRIPT;JERRYSCRIPT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJERRYSCRIPT;JERRYSCRIPT_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/jerryscript/jerry-core/include;../../thirdparty/owemdjee/jerryscript/jerry-core/debugger;../../thirdparty/owemdjee/jerryscript/jerry-core/ecma/operations;../../thirdparty/owemdjee/jerryscript/jerry-core/ecma/base;../../thirdparty/owemdjee/jerryscript/jerry-port/default/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJERRYSCRIPT;JERRYSCRIPT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJERRYSCRIPT;JERRYSCRIPT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJERRYSCRIPT;JERRYSCRIPT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/jerryscript/jerry-core/include;../../thirdparty/owemdjee/jerryscript/jerry-core/debugger;../../thirdparty/owemdjee/jerryscript/jerry-core/ecma/operations;../../thirdparty/owemdjee/jerryscript/jerry-core/ecma/base;../../thirdparty/owemdjee/jerryscript/jerry-port/default/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJERRYSCRIPT;JERRYSCRIPT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJERRYSCRIPT;JERRYSCRIPT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJERRYSCRIPT;JERRYSCRIPT_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/jerryscript/jerry-core/include;../../thirdparty/owemdjee/jerryscript/jerry-core/debugger;../../thirdparty/owemdjee/jerryscript/jerry-core/ecma/operations;../../thirdparty/owemdjee/jerryscript/jerry-core/ecma/base;../../thirdparty/owemdjee/jerryscript/jerry-port/default/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJERRYSCRIPT;JERRYSCRIPT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJERRYSCRIPT;JERRYSCRIPT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJERRYSCRIPT;JERRYSCRIPT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/jerryscript/jerry-core/include;../../thirdparty/owemdjee/jerryscript/jerry-core/debugger;../../thirdparty/owemdjee/jerryscript/jerry-core/ecma/operations;../../thirdparty/owemdjee/jerryscript/jerry-core/ecma/base;../../thirdparty/owemdjee/jerryscript/jerry-port/default/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -854,6 +854,9 @@
     <Text Include="../../thirdparty/owemdjee/jerryscript/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/CONTRIBUTING.md" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/DCO.md" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/Doxyfile" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/LICENSE" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/LOGO.svg" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/README.md" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/cmake/toolchain-esp32.cmake" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/cmake/toolchain_linux_aarch64.cmake" />
@@ -885,6 +888,7 @@
     <Text Include="../../thirdparty/owemdjee/jerryscript/docs/16.MIGRATION-GUIDE.md" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/jerry-core/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/jerry-core/libjerry-core.pc.in" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/jerry-core/lit/lit-magic-strings.ini" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/jerry-core/profiles/README.md" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/jerry-debugger/README.md" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/jerry-debugger/jerry_client.py" />
@@ -901,14 +905,24 @@
     <Text Include="../../thirdparty/owemdjee/jerryscript/jerry-math/libjerry-math.pc.in" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/jerry-port/default/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/jerry-port/default/libjerry-port-default.pc.in" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/sonar-project.properties" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/targets/curie_bsp/README.md" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/targets/curie_bsp/jerry_app/arc/memory_pool_list.def" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/targets/curie_bsp/jerry_app/quark/memory_pool_list.def" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/targets/curie_bsp/setup.py" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/targets/curie_bsp/source/setjmp.S" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/targets/esp-idf/README.md" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/targets/esp8266/LICENSE" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/targets/esp8266/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/targets/esp8266/Makefile.esp8266" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/targets/esp8266/Makefile.travis" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/targets/esp8266/docs/ESP-PREREQUISITES.md" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/targets/esp8266/js/blink.js" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/targets/esp8266/js/main.js" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/targets/esp8266/readme.md" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/targets/esp8266/user/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/targets/mbedos5/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/targets/mbedos5/Makefile.travis" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/targets/mbedos5/README.md" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/targets/mbedos5/js/flash_leds.js" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/targets/mbedos5/js/main.js" />
@@ -918,19 +932,29 @@
     <Text Include="../../thirdparty/owemdjee/jerryscript/targets/mbedos5/tools/generate_pins.py" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/targets/mbedos5/tools/jshint.conf" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/targets/mbedos5/tools/requirements.txt" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/targets/nuttx-stm32f4/Make.defs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/targets/nuttx-stm32f4/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/targets/nuttx-stm32f4/Makefile.travis" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/targets/nuttx-stm32f4/README.md" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/targets/nuttx-stm32f4/setjmp.S" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/targets/openwrt/readme.md" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/targets/particle/README.md" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/targets/riot-stm32f4/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/targets/riot-stm32f4/Makefile.riot" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/targets/riot-stm32f4/Makefile.travis" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/targets/riot-stm32f4/README.md" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/targets/zephyr/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/targets/zephyr/Makefile.travis" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/targets/zephyr/Makefile.zephyr" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/targets/zephyr/README.md" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/targets/zephyr/prj.conf" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/targets/zephyr/src/Makefile" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/benchmarks/jerry/fill-array-with-numbers-3-times-5000-elements.js" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/benchmarks/jerry/function_loop.js" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/benchmarks/jerry/gc.js" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/benchmarks/jerry/loop_arithmetics_10kk.js" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/benchmarks/jerry/loop_arithmetics_1kk.js" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/benchmarks/v8/Makefile" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/benchmarks/v8/README.txt" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/benchmarks/v8/base.js" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/benchmarks/v8/combined.js" />
@@ -940,6 +964,7 @@
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/benchmarks/v8/navier-stokes.js" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/benchmarks/v8/raytrace.js" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/benchmarks/v8/regexp.js" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/benchmarks/v8/revisions.html" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/benchmarks/v8/richards.js" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/benchmarks/v8/run_harness.js" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/benchmarks/v8/splay.js" />
@@ -1221,6 +1246,42 @@
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/math-sinh.js" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/math-tanh.js" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/math-trunc.js" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-circular-01.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-circular-02.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-circular-03.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-circular-04.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-dynamic-import.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-export-01.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-export-02.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-export-03.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-export-04.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-export-05.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-export-06.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-export-07.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-export-08.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-export-default-1.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-export-default-10.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-export-default-2.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-export-default-3.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-export-default-4.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-export-default-5.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-export-default-6.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-export-default-7.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-export-default-8.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-export-default-9.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-export-default-main.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-export-fail-test.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-import-01.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-import-02.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-import-03.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-import-04.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-import-05.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-namespace-01.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-namespace-02.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-namespace-03.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-namespace-04.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-resource-name-export.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/module-resource-name.mjs" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/new-target-async.js" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/new-target-class.js" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/new-target-error.js" />
@@ -1401,6 +1462,7 @@
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/regression-test-issue-2822.js" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/regression-test-issue-2823.js" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/regression-test-issue-2825.js" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/regression-test-issue-2842.mjs" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/regression-test-issue-2848.js" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/regression-test-issue-2850.js" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/regression-test-issue-2851.js" />
@@ -1673,6 +1735,7 @@
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/weakmap.js" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/weakref.js" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es.next/weakset.js" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es5.1/" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es5.1/arguments.js" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es5.1/arithmetic-parse.js" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/es5.1/arithmetics.js" />
@@ -1731,6 +1794,47 @@
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/labelled-statements-duplicate-label.js" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/labelled-statements-no-label.js" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/let-strict.js" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-001.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-002.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-003.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-004.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-005.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-006.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-007.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-008.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-009.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-010.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-011.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-012.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-013.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-014.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-015.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-016.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-017.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-018.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-019.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-020.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-021.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-022.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-023.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-024.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-025.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-026.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-027.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-028.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-029.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-030.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-031.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-032.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-033.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-034.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-035.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-036.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-037.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-await-001.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-export-001.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-export-default-arrow.mjs" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/module-sideeffect.mjs" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/octal-strict.js" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/param-duplication-strict.js" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tests/jerry/fail/regression-test-issue-1387.js" />
@@ -2173,6 +2277,7 @@
     <Text Include="../../thirdparty/owemdjee/jerryscript/tools/runners/test262-harness.py" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tools/runners/util.py" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tools/settings.py" />
+    <Text Include="../../thirdparty/owemdjee/jerryscript/tools/unit-tests/Makefile" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tools/update-webpage.sh" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tools/vera++/scripts/rules/jerry_always_curly.tcl" />
     <Text Include="../../thirdparty/owemdjee/jerryscript/tools/vera++/scripts/rules/jerry_braces_on_separate_line.tcl" />

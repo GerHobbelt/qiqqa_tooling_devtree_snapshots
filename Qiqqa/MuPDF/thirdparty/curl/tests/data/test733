@@ -1,78 +1,49 @@
 <testcase>
 <info>
 <keywords>
-HTTP
-HTTP GET
-HTTP Digest auth
-SAFEAUTH
+IPFS
 </keywords>
 </info>
+
+#
 # Server-side
 <reply>
-<data>
-HTTP/1.1 401 Authorization Required swsclose
-Server: Apache/1.3.27 (Darwin) PHP/4.1.2
-WWW-Authenticate: Digest realm="testrealm", nonce="1053604145"
-Content-Type: text/html; charset=iso-8859-1
+<data nocheck="yes">
+HTTP/1.1 200 OK
+Date: Tue, 09 Nov 2010 14:49:00 GMT
+Server: test-server/fake
+Last-Modified: Tue, 13 Jun 2000 12:10:00 GMT
+ETag: "21025-dc7-39462498"
+Accept-Ranges: bytes
+Content-Length: 21
+Connection: close
+Content-Type: text/plain
+Funny-head: yesyes
 
-This is not the real page
+Hello curl from IPFS
 </data>
-
-# This is supposed to be returned when the server gets a
-# Authorization: Digest line passed-in from the client
-<data1000>
-HTTP/1.1 200 OK swsclose
-Server: Apache/1.3.27 (Darwin) PHP/4.1.2
-Content-Type: text/html; charset=iso-8859-1
-Content-Length: 23
-
-This IS the real page!
-</data1000>
-
-<datacheck>
-HTTP/1.1 401 Authorization Required swsclose
-Server: Apache/1.3.27 (Darwin) PHP/4.1.2
-WWW-Authenticate: Digest realm="testrealm", nonce="1053604145"
-Content-Type: text/html; charset=iso-8859-1
-
-HTTP/1.1 200 OK swsclose
-Server: Apache/1.3.27 (Darwin) PHP/4.1.2
-Content-Type: text/html; charset=iso-8859-1
-Content-Length: 23
-
-This IS the real page!
-</datacheck>
-
 </reply>
 
+#
 # Client-side
 <client>
 <server>
 http
 </server>
-<features>
-!SSPI
-crypto
-</features>
- <name>
-HTTP with password protected Digest authentication
- </name>
- <command>
-http://%HOSTIP:%HTTPPORT/%TESTNUMBER -u testuser:testpass --safe-auth --digest
+<name>
+IPFS with path and query args
+</name>
+<command>
+--ipfs-gateway http://%HOSTIP:%HTTPPORT "ipfs://bafybeidecnvkrygux6uoukouzps5ofkeevoqland7kopseiod6pzqvjg7u/a/b?foo=bar&aaa=bbb"
 </command>
 </client>
 
+#
 # Verify data after the test has been "shot"
 <verify>
-<protocol>
-GET /%TESTNUMBER HTTP/1.1
+<protocol crlf="yes">
+GET /ipfs/bafybeidecnvkrygux6uoukouzps5ofkeevoqland7kopseiod6pzqvjg7u/a/b?foo=bar&aaa=bbb HTTP/1.1
 Host: %HOSTIP:%HTTPPORT
-User-Agent: curl/%VERSION
-Accept: */*
-
-GET /%TESTNUMBER HTTP/1.1
-Host: %HOSTIP:%HTTPPORT
-Authorization: Digest username="testuser", realm="testrealm", nonce="1053604145", uri="/%TESTNUMBER", response="9cfc1037f9c2a04b2595de4015736439"
 User-Agent: curl/%VERSION
 Accept: */*
 

@@ -206,6 +206,7 @@ static int console_h = 14; /* to be scaled by lineheight */
 static int outline_start_x = 0;
 static int console_start_y = 0;
 
+static int oldbox = FZ_CROP_BOX, currentbox = FZ_CROP_BOX;
 static int oldtint = 0, currenttint = 0;
 static int oldinvert = 0, currentinvert = 0;
 static int oldicc = 1, currenticc = 1;
@@ -495,25 +496,6 @@ static void save_history(void)
 	js_freestate(J);
 }
 
-static int
-fz_mkdir(char *path)
-{
-#ifdef _WIN32
-	int ret;
-	wchar_t *wpath = fz_wchar_from_utf8(path);
-
-	if (wpath == NULL)
-		return -1;
-
-	ret = _wmkdir(wpath);
-
-	free(wpath);
-
-	return ret;
-#else
-	return mkdir(path, S_IRWXU | S_IRWXG | S_IRWXO);
-#endif
-}
 
 static int create_accel_path(char outname[], size_t len, int create, const char *absname, ...)
 {
@@ -531,7 +513,7 @@ static int create_accel_path(char outname[], size_t len, int create, const char 
 			goto fail; /* won't fit */
 
 		if (create)
-			fz_mkdir(outname);
+			(void) fz_mkdir(ctx, outname);
 		if (!fz_is_directory(ctx, outname))
 			goto fail; /* directory creation failed, or that dir doesn't exist! */
 #ifdef _WIN32
@@ -648,11 +630,13 @@ static char *help_dialog_text =
 	"\n"
 	"< - decrease E-book font size\n"
 	"> - increase E-book font size\n"
+	"B - cycle between MediaBox, CropBox, ArtBox, etc.\n"
 	"A - toggle anti-aliasing\n"
 	"I - toggle inverted color mode\n"
 	"C - toggle tinted color mode\n"
 	"E - toggle ICC color management\n"
 	"e - toggle spot color emulation\n"
+	"! - toggle gamma blending mode\n"
 	"\n"
 	"f - fullscreen window\n"
 	"w - shrink wrap window\n"
@@ -725,6 +709,8 @@ static void info_dialog(void)
 	ui_dialog_end();
 }
 
+static void cleanup_destruction(void);
+
 static char error_message[256];
 static void error_dialog(void)
 {
@@ -733,7 +719,10 @@ static void error_dialog(void)
 	ui_label("%C %s", 0x1f4a3, error_message); /* BOMB */
 	ui_layout(B, NONE, S, ui.padsize, ui.padsize);
 	if (ui_button("Quit") || ui.key == KEY_ENTER || ui.key == KEY_ESCAPE || ui.key == 'q')
+	{
+		cleanup_destruction();
 		glutLeaveMainLoop();
+	}
 	ui_dialog_end();
 }
 void ui_show_error_dialog(const char *fmt, ...)
@@ -797,7 +786,10 @@ static void quit_dialog(void)
 			do_save_pdf_file();
 		ui_spacer();
 		if (ui_button("Discard") || ui.key == 'q')
+		{
+			cleanup_destruction();
 			glutLeaveMainLoop();
+		}
 		ui_layout(L, NONE, S, 0, 0);
 		if (ui_button("Cancel") || ui.key == KEY_ESCAPE)
 			ui.dialog = NULL;
@@ -871,7 +863,7 @@ void trace_page_update(void)
 void trace_save_snapshot(void)
 {
 	static int trace_idx = 1;
-	trace_action("page.toPixmap(Identity, DeviceRGB).saveAsPNG(\"trace-%03d.png\");\n", trace_idx++);
+	trace_action("page.toPixmap(Matrix.identity, ColorSpace.DeviceRGB).saveAsPNG(\"trace-%03d.png\");\n", trace_idx++);
 }
 
 static int document_shown_as_dirty = 0;
@@ -1045,7 +1037,7 @@ void load_page(void)
 	}
 
 	/* compute bounds here for initial window size */
-	page_bounds = fz_bound_page(ctx, fzpage);
+	page_bounds = fz_bound_page_box(ctx, fzpage, currentbox);
 	transform_page();
 
 	area = fz_irect_from_rect(draw_page_bounds);
@@ -1061,6 +1053,7 @@ void render_page(void)
 	fz_pixmap *pix;
 	fz_device *dev;
 
+	page_bounds = fz_bound_page_box(ctx, fzpage, currentbox);
 	transform_page();
 
 	fz_set_aa_level(ctx, currentaa);
@@ -1071,7 +1064,7 @@ void render_page(void)
 		fz_drop_pixmap(ctx, page_contents);
 		page_contents = NULL;
 
-		bbox = fz_round_rect(fz_transform_rect(fz_bound_page(ctx, fzpage), draw_page_ctm));
+		bbox = fz_round_rect(fz_transform_rect(fz_bound_page_box(ctx, fzpage, currentbox), draw_page_ctm));
 		page_contents = fz_new_pixmap_with_bbox(ctx, profile, bbox, seps, 0);
 		fz_clear_pixmap(ctx, page_contents);
 
@@ -1138,7 +1131,8 @@ void render_page_if_changed(void)
 		oldicc != currenticc ||
 		oldseparations != currentseparations ||
 		oldaa != currentaa ||
-		oldgamma != currentgamma)
+		oldgamma != currentgamma ||
+		oldbox != currentbox)
 	{
 		page_contents_changed = 1;
 	}
@@ -1155,6 +1149,7 @@ void render_page_if_changed(void)
 		oldseparations = currentseparations;
 		oldaa = currentaa;
 		oldgamma = currentgamma;
+		oldbox = currentbox;
 		page_contents_changed = 0;
 		page_annots_changed = 0;
 	}
@@ -1593,10 +1588,10 @@ static void do_page_selection(void)
 			n = fz_highlight_selection(ctx, page_text, page_a, page_b, hits, nelem(hits));
 		}
 
-		glBlendFunc(GL_ONE_MINUS_DST_COLOR, GL_ZERO); /* invert destination color */
+		glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
 		glEnable(GL_BLEND);
+		glColor4f(0.0, 0.1, 0.4, 0.3f);
 
-		glColor4f(1, 1, 1, 1);
 		glBegin(GL_QUADS);
 		for (i = 0; i < n; ++i)
 		{
@@ -1799,7 +1794,7 @@ static void event_cb(fz_context *callback_ctx, pdf_document *callback_doc, pdf_d
 		break;
 
 	default:
-		fz_throw(callback_ctx, FZ_ERROR_GENERIC, "event not yet implemented");
+		fz_throw(callback_ctx, FZ_ERROR_UNSUPPORTED, "event not yet implemented");
 		break;
 	}
 }
@@ -1813,7 +1808,9 @@ static void load_document(void)
 	fz_location location;
 
 	fz_drop_outline(ctx, outline);
+	outline = NULL;
 	fz_drop_document(ctx, doc);
+	doc = NULL;
 
 	if (!strncmp(filename, "file://", 7))
 	{
@@ -1846,12 +1843,12 @@ static void load_document(void)
 		else
 		{
 			/* Accelerator data is out of date */
-			fz_remove_utf8(ctx, accelpath);
+			(void)fz_remove_utf8(ctx, accelpath);
 			accel = NULL; /* In case we have jumped up from below */
 		}
 	}
 
-	trace_action("doc = new Document(%q);\n", filename);
+	trace_action("doc = Document.openDocument(%q);\n", filename);
 
 	doc = fz_open_accelerated_document(ctx, filename, accel);
 	pdf = pdf_specifics(ctx, doc);
@@ -1900,7 +1897,10 @@ static void load_document(void)
 	fz_try(ctx)
 		outline = fz_load_outline(ctx, doc);
 	fz_catch(ctx)
+	{
+		fz_report_error(ctx);
 		outline = NULL;
+	}
 
 	load_history();
 
@@ -1939,13 +1939,7 @@ static void load_document(void)
 			jump_to_location(location);
 		else
 		{
-			location.chapter = 0;
-			if (pdf)
-				location.page = pdf_lookup_anchor(ctx, pdf, anchor, NULL, NULL);
-			else
-				location.page = -1;
-			if (location.page < 0)
-				location = fz_resolve_link(ctx, doc, anchor, NULL, NULL);
+			location = fz_resolve_link(ctx, doc, anchor, NULL, NULL);
 			if (location.page < 0)
 				fz_warn(ctx, "cannot find location: %s", anchor);
 			else
@@ -1970,6 +1964,7 @@ static void reflow_document(void)
 		return;
 
 	fz_drop_outline(ctx, outline);
+	outline = NULL;
 
 	fz_parse_stext_options(ctx, &opts, reflow_options);
 
@@ -2328,6 +2323,7 @@ void do_console(void)
 				{
 					console->write(ctx, "\nError: ");
 					console->write(ctx, fz_caught_message(ctx));
+					fz_report_error(ctx);
 				}
 			}
 			fz_flush_warnings(ctx);
@@ -2420,7 +2416,7 @@ static void do_app(void)
 				currentpage = fz_next_page(ctx, doc, currentpage);
 			break;
 
-		case 'B':
+		case '!':
 			currentgamma = !currentgamma;
 			break;
 
@@ -2429,6 +2425,12 @@ static void do_app(void)
 				currentaa = (currentaa == 8 ? 0 : 8);
 			else
 				currentaa = number;
+			break;
+
+		case 'B':
+			currentbox += 1;
+			if (currentbox >= FZ_UNKNOWN_BOX)
+				currentbox = FZ_MEDIA_BOX;
 			break;
 
 		case 'm':
@@ -2585,7 +2587,7 @@ static char *short_signature_error_desc(pdf_signature_error err)
 	}
 }
 
-const char *format_date(int64_t secs)
+const char *format_date(int64_t secs64)
 {
 	static char buf[100];
 #ifdef _POSIX_SOURCE
@@ -2593,6 +2595,7 @@ const char *format_date(int64_t secs)
 #else
 	struct tm *tm;
 #endif
+	time_t secs = (time_t)secs64;
 
 	if (secs <= 0)
 		return NULL;
@@ -2752,9 +2755,9 @@ static fz_buffer *format_info_text()
 		if (!size)
 			size = paper_size_name(h, w);
 		if (size)
-			fz_append_printf(ctx, out, "Size: %d x %d (%s)\n", w, h, size);
+			fz_append_printf(ctx, out, "Size: %d x %d (%s - %s)\n", w, h, fz_string_from_box_type(currentbox), size);
 		else
-			fz_append_printf(ctx, out, "Size: %d x %d\n", w, h);
+			fz_append_printf(ctx, out, "Size: %d x %d (%s)\n", w, h, fz_string_from_box_type(currentbox));
 	}
 	fz_append_printf(ctx, out, "ICC rendering: %s.\n", currenticc ? "on" : "off");
 	fz_append_printf(ctx, out, "Spot rendering: %s.\n", currentseparations ? "on" : "off");
@@ -2851,10 +2854,14 @@ static void do_canvas(void)
 
 	if (search_active)
 	{
+		int chapters = fz_count_chapters(ctx, doc);
 		ui_layout(T, X, NW, 0, 0);
 		ui_panel_begin(0, ui.gridsize + ui.padsize*4, ui.padsize*2, ui.padsize*2, 1);
 		ui_layout(L, NONE, W, ui.padsize, 0);
-		ui_label("Searching chapter %d page %d...", search_page.chapter, search_page.page);
+		if (chapters == 1 && search_page.chapter == 0)
+			ui_label("Searching page %d...", search_page.page);
+		else
+			ui_label("Searching chapter %d page %d...", search_page.chapter, search_page.page);
 		ui_panel_end();
 	}
 	else
@@ -3037,7 +3044,10 @@ void run_main_loop(void)
 			do_main();
 	}
 	fz_catch(ctx)
+	{
 		ui_show_error_dialog("%s", fz_caught_message(ctx));
+		fz_report_error(ctx);
+	}
 	ui_end();
 }
 
@@ -3049,6 +3059,7 @@ static void usage(const char *argv0)
 		"\t-p -\tpassword\n"
 		"\t-r -\tresolution\n"
 	    "\t-c -\tdisplay ICC profile\n"
+	    "\t-b -\tuse named page box (MediaBox, CropBox, BleedBox, TrimBox, or ArtBox)\n"
 		"\t-I\tinvert colors\n"
 		"\t-W -\tpage width for EPUB layout\n"
 		"\t-H -\tpage height for EPUB layout\n"
@@ -3102,6 +3113,12 @@ static void cleanup(void)
 
 	ui_finish();
 
+	cleanup_destruction();
+}
+
+static void
+cleanup_destruction(void)
+{
 	fz_drop_pixmap(ctx, page_contents);
 	page_contents = NULL;
 #ifndef NDEBUG
@@ -3113,14 +3130,30 @@ static void cleanup(void)
 
 	fz_flush_warnings(ctx);
 
-	fz_drop_output(ctx, trace_file);
+	console_fin();
+
 	fz_drop_stext_page(ctx, page_text);
+	page_text = NULL;
+	if (search_needle)
+	{
+		fz_free(ctx, search_needle);
+		search_needle = NULL;
+	}
+	fz_drop_output(ctx, trace_file);
 	fz_drop_separations(ctx, seps);
 	fz_drop_link(ctx, links);
 	fz_drop_page(ctx, fzpage);
 	fz_drop_outline(ctx, outline);
 	fz_drop_document(ctx, doc);
+
+	// WARNING: do NOT drop the context yet as the GUI loop is still probably running and
+	// the code there needs a valid ctx to handle any lingering faults / exceptions.
+	//
+	// Hence we defer dropping the context ctx till the very end of the application run.
+#if 0	
 	fz_drop_context(ctx);
+	ctx = NULL;
+#endif
 
 	console_fin();
 }
@@ -3161,7 +3194,7 @@ int main(int argc, const char** argv)
 	glutInit(&argc, argv);
 
 	fz_getopt_reset();
-	while ((c = fz_getopt(argc, argv, "gp:r:IW:H:S:U:XJA:B:C:T:Y:R:c:")) != -1)
+	while ((c = fz_getopt(argc, argv, "gp:r:IW:H:S:U:XJbA:B:C:T:Y:R:c:")) != -1)
 	{
 		switch (c)
 		{
@@ -3170,6 +3203,7 @@ int main(int argc, const char** argv)
 		case 'r': currentzoom = fz_atof(fz_optarg); break;
 		case 'c': profile_name = fz_optarg; break;
 		case 'I': currentinvert = !currentinvert; break;
+		case 'b': currentbox = fz_box_type_from_string(fz_optarg); break;
 		case 'W': layout_w = fz_atof(fz_optarg); break;
 		case 'H': layout_h = fz_atof(fz_optarg); break;
 		case 'S': layout_em = fz_atof(fz_optarg); break;
@@ -3191,9 +3225,14 @@ int main(int argc, const char** argv)
 
 	ui_init_dpi(scale);
 
-	oldzoom = currentzoom = DEFRES * ui.scale;
+	oldzoom = currentzoom = currentzoom * ui.scale;
 
-	ctx = fz_new_context(NULL, NULL, FZ_STORE_DEFAULT);
+	ctx = fz_new_context(NULL, NULL, FZ_STORE_UNLIMITED);
+	if (!ctx)
+	{
+		fz_error(ctx, "cannot initialise MuPDF context");
+		return EXIT_FAILURE;
+	}
 
 	console_init();
 
@@ -3269,7 +3308,7 @@ int main(int argc, const char** argv)
 				oldzoom = currentzoom;
 
 				/* compute bounds here for initial window size */
-				page_bounds = fz_bound_page(ctx, fzpage);
+				page_bounds = fz_bound_page_box(ctx, fzpage, currentbox);
 				transform_page();
 
 				area = fz_irect_from_rect(draw_page_bounds);
@@ -3283,6 +3322,7 @@ int main(int argc, const char** argv)
 		fz_catch(ctx)
 		{
 			ui_show_error_dialog("%s", fz_caught_message(ctx));
+			fz_report_error(ctx);
 		}
 
 		fz_try(ctx)
@@ -3293,6 +3333,7 @@ int main(int argc, const char** argv)
 		fz_catch(ctx)
 		{
 			ui_show_error_dialog("%s", fz_caught_message(ctx));
+			fz_report_error(ctx);
 		}
 	}
 	else
@@ -3314,6 +3355,11 @@ int main(int argc, const char** argv)
 
 	cleanup();
 
+	// WARNING: we defered dropping rothe context ctx till the very end of the application run here.
+	// See also the comment in the cleanup code section.
+	fz_drop_context(ctx);
+	ctx = NULL;
+
 	return 0;
 }
 
@@ -3322,11 +3368,12 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 {
 	int argc;
 	LPWSTR *wargv = CommandLineToArgvW(GetCommandLineW(), &argc);
-	const char **argv = fz_argv_from_wargv(argc, wargv);
+	fz_context *ctx = fz_get_global_context();
+	const char **argv = fz_argv_from_wargv(ctx, argc, wargv);
 	if (!argv)
 		return EXIT_FAILURE;
 	int ret = main_utf8(argc, argv);
-	fz_free_argv(argc, argv);
+	fz_free_argv(ctx, argc, argv);
 	LocalFree(wargv);
 	return ret;
 }

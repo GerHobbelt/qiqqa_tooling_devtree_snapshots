@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLEAN;SQLEAN_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLEAN;SQLEAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/sqlite-amalgamation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLEAN;SQLEAN_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/sqlite-amalgamation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLEAN;SQLEAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLEAN;SQLEAN_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLEAN;SQLEAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/sqlite-amalgamation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/sqlite-amalgamation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLEAN;SQLEAN_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLEAN;SQLEAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/sqlite-amalgamation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLEAN;SQLEAN_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/sqlite-amalgamation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLEAN;SQLEAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLEAN;SQLEAN_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLEAN;SQLEAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/sqlite-amalgamation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/sqlite-amalgamation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLEAN;SQLEAN_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLEAN;SQLEAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/sqlite-amalgamation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLEAN;SQLEAN_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/sqlite-amalgamation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLEAN;SQLEAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLEAN;SQLEAN_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLEAN;SQLEAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/sqlite-amalgamation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/sqlite-amalgamation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLEAN;SQLEAN_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLEAN;SQLEAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/sqlite-amalgamation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLEAN;SQLEAN_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/sqlite-amalgamation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLEAN;SQLEAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLEAN;SQLEAN_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLEAN;SQLEAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/sqlite-amalgamation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/sqlite-amalgamation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -273,6 +273,8 @@
     <ClInclude Include="../../thirdparty/owemdjee/sqlean/src/crypto/sha1.h" />
     <ClInclude Include="../../thirdparty/owemdjee/sqlean/src/crypto/sha2.h" />
     <ClInclude Include="../../thirdparty/owemdjee/sqlean/src/re.h" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/LICENSE" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/Makefile" />
     <Text Include="../../thirdparty/owemdjee/sqlean/README.md" />
     <Text Include="../../thirdparty/owemdjee/sqlean/docs/crypto.md" />
     <Text Include="../../thirdparty/owemdjee/sqlean/docs/define.md" />
@@ -290,6 +292,55 @@
     <Text Include="../../thirdparty/owemdjee/sqlean/docs/unicode.md" />
     <Text Include="../../thirdparty/owemdjee/sqlean/docs/uuid.md" />
     <Text Include="../../thirdparty/owemdjee/sqlean/docs/vsv.md" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/array.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/besttype.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/bloom.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/btreeinfo.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/cbrt.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/classifier.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/closure.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/compress.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/cron.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/crypto.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/dbdump.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/decimal.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/define.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/envfuncs.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/eval.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/fcmp.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/fileio.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/ieee754.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/interpolate.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/ipaddr.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/isodate.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/json1.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/json2.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/math.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/math2.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/memstat.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/pearson.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/pivotvtab.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/prefixes.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/re.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/recsize.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/rotate.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/spellfix.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/sqlar.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/stats.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/stats2.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/stats3.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/stmt.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/text.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/text2.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/uint.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/unhex.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/unicode.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/unionvtab.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/uuid.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/vsv.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/xmltojson.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/zipfile.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlean/test/zorder.sql" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

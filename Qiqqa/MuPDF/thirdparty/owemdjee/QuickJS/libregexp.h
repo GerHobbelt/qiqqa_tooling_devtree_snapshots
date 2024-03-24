@@ -34,9 +34,9 @@
 #define LRE_FLAG_IGNORECASE (1 << 1)
 #define LRE_FLAG_MULTILINE  (1 << 2)
 #define LRE_FLAG_DOTALL     (1 << 3)
-#define LRE_FLAG_UTF16      (1 << 4)
+#define LRE_FLAG_UNICODE    (1 << 4)
 #define LRE_FLAG_STICKY     (1 << 5)
-
+#define LRE_FLAG_INDICES    (1 << 6) /* Unused by libregexp, just recorded. */
 #define LRE_FLAG_NAMED_GROUPS (1 << 7) /* named groups are present in the regexp */
 
 uint8_t *lre_compile(int *plen, char *error_msg, int error_msg_size,
@@ -48,6 +48,7 @@ const char *lre_get_groupnames(const uint8_t *bc_buf);
 int lre_exec(uint8_t **capture,
              const uint8_t *bc_buf, const uint8_t *cbuf, int cindex, int clen,
              int cbuf_type, void *opaque);
+void lre_byte_swap(uint8_t *bc_buf, int bc_buf_len);
 
 int lre_parse_escape(const uint8_t **pp, int allow_utf16);
 LRE_BOOL lre_is_space(int c);

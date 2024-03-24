@@ -51,6 +51,7 @@ while (<STDIN>) {
     # remove trailing CR from line. msysgit checks out files as line+CRLF
     $line =~ s/\r$//;
 
+    $line =~ s/\x1b\x5b[0-9]+m//g; # escape sequence
     if($line =~ /^([ \t]*\n|curl)/i) {
         # cut off headers and empty lines
         $wline++; # count number of cut off lines
@@ -87,8 +88,11 @@ print <<HEAD
 /*
  * NEVER EVER edit this manually, fix the mkhelp.pl script instead!
  */
-#ifdef USE_MANUAL
+
 #include "tool_hugehelp.h"
+
+#ifdef USE_MANUAL
+
 HEAD
     ;
 if($c) {
@@ -150,12 +154,12 @@ static void zfree_func(voidpf opaque, voidpf ptr)
 /* Decompress and send to stdout a gzip-compressed buffer */
 void hugehelp(void)
 {
-  unsigned char* buf;
-  int status,headerlen;
+  unsigned char *buf;
+  int status, headerlen;
   zng_stream z;
 
   /* Make sure no gzip options are set */
-  if (hugehelpgz[3] & 0xfe)
+  if(hugehelpgz[3] & 0xfe)
     return;
 
   headerlen = 10;
@@ -169,14 +173,14 @@ void hugehelp(void)
     return;
 
   buf = malloc(BUF_SIZE);
-  if (buf) {
+  if(buf) {
     while(1) {
       z.avail_out = BUF_SIZE;
       z.next_out = buf;
       status = zng_inflate(&z, Z_SYNC_FLUSH);
-      if (status == Z_OK || status == Z_STREAM_END) {
+      if(status == Z_OK || status == Z_STREAM_END) {
         fwrite(buf, BUF_SIZE - z.avail_out, 1, stdout);
-        if (status == Z_STREAM_END)
+        if(status == Z_STREAM_END)
           break;
       }
       else

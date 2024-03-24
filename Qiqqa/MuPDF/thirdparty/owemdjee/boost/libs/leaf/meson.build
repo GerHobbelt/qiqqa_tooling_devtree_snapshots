@@ -1,4 +1,4 @@
-# Copyright 2018-2022 Emil Dotchevski and Reverge Studios, Inc.
+# Copyright 2018-2023 Emil Dotchevski and Reverge Studios, Inc.
 
 # Distributed under the Boost Software License, Version 1.0. (See accompanying
 # file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
@@ -104,20 +104,15 @@ leaf = declare_dependency( include_directories: 'include', compile_args: defines
 if option_enable_unit_tests
 
     tests = [
-        'accumulate_basic_test',
-        'accumulate_nested_error_exception_test',
-        'accumulate_nested_error_result_test',
-        'accumulate_nested_new_error_exception_test',
-        'accumulate_nested_new_error_result_test',
-        'accumulate_nested_success_exception_test',
-        'accumulate_nested_success_result_test',
         'BOOST_LEAF_AUTO_test',
         'BOOST_LEAF_ASSIGN_test',
         'BOOST_LEAF_CHECK_test',
         'capture_exception_async_test',
         'capture_exception_result_async_test',
+        'capture_exception_result_unload_test',
         'capture_exception_state_test',
         'capture_exception_unload_test',
+        'capture_result_async_test_',
         'capture_result_async_test',
         'capture_result_state_test',
         'context_activator_test',
@@ -127,15 +122,11 @@ if option_enable_unit_tests
         'ctx_handle_some_test',
         'ctx_remote_handle_all_test',
         'ctx_remote_handle_some_test',
-        'defer_basic_test',
-        'defer_nested_error_exception_test',
-        'defer_nested_error_result_test',
-        'defer_nested_new_error_exception_test',
-        'defer_nested_new_error_result_test',
-        'defer_nested_success_exception_test',
-        'defer_nested_success_result_test',
-        'diagnostic_info_test',
+        'diagnostic_info_test1',
         'diagnostic_info_test2',
+        'diagnostic_info_test3',
+        'diagnostic_info_test4',
+        'diagnostic_info_test5',
         'e_errno_test',
         'e_LastError_test',
         'error_code_test',
@@ -154,19 +145,34 @@ if option_enable_unit_tests
         'match_member_test',
         'match_value_test',
         'multiple_errors_test',
+        'on_error_accumulate_basic_test',
+        'on_error_accumulate_nested_error_exception_test',
+        'on_error_accumulate_nested_error_result_test',
+        'on_error_accumulate_nested_new_error_exception_test',
+        'on_error_accumulate_nested_new_error_result_test',
+        'on_error_accumulate_nested_success_exception_test',
+        'on_error_accumulate_nested_success_result_test',
+        'on_error_defer_basic_test',
+        'on_error_defer_nested_error_exception_test',
+        'on_error_defer_nested_error_result_test',
+        'on_error_defer_nested_new_error_exception_test',
+        'on_error_defer_nested_new_error_result_test',
+        'on_error_defer_nested_success_exception_test',
+        'on_error_defer_nested_success_result_test',
+        'on_error_preload_basic_test',
+        'on_error_preload_exception_test',
+        'on_error_preload_nested_error_exception_test',
+        'on_error_preload_nested_error_result_test',
+        'on_error_preload_nested_new_error_exception_test',
+        'on_error_preload_nested_new_error_result_test',
+        'on_error_preload_nested_success_exception_test',
+        'on_error_preload_nested_success_result_test',
         'optional_test',
-        'preload_basic_test',
-        'preload_exception_test',
-        'preload_nested_error_exception_test',
-        'preload_nested_error_result_test',
-        'preload_nested_new_error_exception_test',
-        'preload_nested_new_error_result_test',
-        'preload_nested_success_exception_test',
-        'preload_nested_success_result_test',
         'print_test',
         'result_bad_result_test',
         'result_implicit_conversion_test',
         'result_load_test',
+        'result_print_test',
         'result_ref_test',
         'result_state_test',
         'tls_array_alloc_test1',
@@ -174,6 +180,7 @@ if option_enable_unit_tests
         'tls_array_alloc_test3',
         'tls_array_test',
         'to_variant_test',
+        'try_capture_all_test',
         'try_catch_error_id_test',
         'try_catch_system_error_test',
         'try_catch_test',
@@ -195,7 +202,6 @@ if option_enable_unit_tests
     endforeach
 
     header_tests = [
-        '_hpp_capture_test',
         '_hpp_common_test',
         '_hpp_config_test',
         '_hpp_context_test',
@@ -243,15 +249,15 @@ endif
 if option_enable_examples
 
     examples = [
-        'capture_in_result',
         'error_log',
         'error_trace',
-        'print_half'
+        'print_half',
+        'try_capture_all_result'
     ]
     if option_exceptions
         examples += [
-            'capture_in_exception',
-            'exception_to_result'
+            'exception_to_result',
+            'try_capture_all_eh'
         ]
         if option_lua
             examples += [
@@ -260,7 +266,7 @@ if option_enable_examples
         endif
         if option_boost
             examples += [
-    #           'asio_beast_leaf_rpc' #FIXME
+               'asio_beast_leaf_rpc'
             ]
         endif
     endif

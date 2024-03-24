@@ -18,139 +18,88 @@
     <Filter Include="Header Files\cocoa\ScintillaTest">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0002}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gtk">
+    <Filter Include="Header Files\include">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0003}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\include">
+    <Filter Include="Header Files\src">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\qt">
+    <Filter Include="Header Files\test">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\qt\ScintillaEdit">
+    <Filter Include="Header Files\test\unit">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\qt\ScintillaEditBase">
+    <Filter Include="Header Files\win32">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\src">
+    <Filter Include="Misc Files\bin">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0010}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\test\unit">
+    <Filter Include="Misc Files\cocoa">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0009}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\win32">
+    <Filter Include="Misc Files\cocoa\ScintillaTest">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0010}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\cocoa\ScintillaTest\en.lproj">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0011}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\bin">
+    <Filter Include="Misc Files\doc">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0012}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\cocoa">
+    <Filter Include="Misc Files\scripts">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0013}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\doc">
+    <Filter Include="Misc Files\src">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0014}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\gtk">
+    <Filter Include="Misc Files\test">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0015}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\qt">
+    <Filter Include="Misc Files\test\gi">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0016}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\qt\ScintillaEdit">
+    <Filter Include="Misc Files\test\unit">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0017}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\qt\ScintillaEditBase">
+    <Filter Include="Misc Files\win32">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\scripts">
+    <Filter Include="Resource Files">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0019}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0020}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\test\gi">
+    <Filter Include="Resource Files\cocoa">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\unit">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\win32">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\cocoa">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0026}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Resource Files\cocoa\res">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0020}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\doc">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\win32">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\call">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0029}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\gtk">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0030}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\qt">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0032}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\qt\ScintillaEdit">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0031}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\qt\ScintillaEditBase">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0033}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\src">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0034}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0036}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\test\unit">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0035}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0026}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\win32">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0037}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="../../thirdparty/owemdjee/scintilla/call/ScintillaCall.cxx">
       <Filter>Source Files\call</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/scintilla/gtk/PlatGTK.cxx">
-      <Filter>Source Files\gtk</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/scintilla/gtk/ScintillaGTK.cxx">
-      <Filter>Source Files\gtk</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/scintilla/gtk/ScintillaGTKAccessible.cxx">
-      <Filter>Source Files\gtk</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/scintilla/gtk/scintilla-marshal.c">
-      <Filter>Source Files\gtk</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/scintilla/qt/ScintillaEdit/ScintillaDocument.cpp">
-      <Filter>Source Files\qt\ScintillaEdit</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/scintilla/qt/ScintillaEditBase/PlatQt.cpp">
-      <Filter>Source Files\qt\ScintillaEditBase</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/scintilla/qt/ScintillaEditBase/ScintillaEditBase.cpp">
-      <Filter>Source Files\qt\ScintillaEditBase</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/scintilla/qt/ScintillaEditBase/ScintillaQt.cpp">
-      <Filter>Source Files\qt\ScintillaEditBase</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/scintilla/src/AutoComplete.cxx">
       <Filter>Source Files\src</Filter>
@@ -335,21 +284,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/scintilla/cocoa/ScintillaView.h">
       <Filter>Header Files\cocoa</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/scintilla/gtk/Converter.h">
-      <Filter>Header Files\gtk</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/scintilla/gtk/ScintillaGTK.h">
-      <Filter>Header Files\gtk</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/scintilla/gtk/ScintillaGTKAccessible.h">
-      <Filter>Header Files\gtk</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/scintilla/gtk/Wrappers.h">
-      <Filter>Header Files\gtk</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/scintilla/gtk/scintilla-marshal.h">
-      <Filter>Header Files\gtk</Filter>
-    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/scintilla/include/ILexer.h">
       <Filter>Header Files\include</Filter>
     </ClInclude>
@@ -376,18 +310,6 @@
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/scintilla/include/ScintillaWidget.h">
       <Filter>Header Files\include</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/scintilla/qt/ScintillaEdit/ScintillaDocument.h">
-      <Filter>Header Files\qt\ScintillaEdit</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/scintilla/qt/ScintillaEditBase/PlatQt.h">
-      <Filter>Header Files\qt\ScintillaEditBase</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/scintilla/qt/ScintillaEditBase/ScintillaEditBase.h">
-      <Filter>Header Files\qt\ScintillaEditBase</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/scintilla/qt/ScintillaEditBase/ScintillaQt.h">
-      <Filter>Header Files\qt\ScintillaEditBase</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/scintilla/src/AutoComplete.h">
       <Filter>Header Files\src</Filter>
@@ -587,8 +509,17 @@
     <Text Include="../../thirdparty/owemdjee/scintilla/bin/empty.txt">
       <Filter>Misc Files\bin</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/scintilla/cocoa/ScintillaTest/TestData.sql">
+      <Filter>Misc Files\cocoa\ScintillaTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/scintilla/cocoa/ScintillaTest/en.lproj/InfoPlist.strings">
+      <Filter>Misc Files\cocoa\ScintillaTest\en.lproj</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/scintilla/cocoa/checkbuildosx.sh">
       <Filter>Misc Files\cocoa</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/scintilla/cppcheck.suppress">
+      <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/scintilla/delbin.bat">
       <Filter>Misc Files</Filter>
@@ -596,20 +527,50 @@
     <Text Include="../../thirdparty/owemdjee/scintilla/doc/AddSource.txt">
       <Filter>Misc Files\doc</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/scintilla/doc/Design.html">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/scintilla/doc/Icons.html">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/scintilla/doc/Lexer.txt">
       <Filter>Misc Files\doc</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/scintilla/gtk/DepGen.py">
-      <Filter>Misc Files\gtk</Filter>
+    <Text Include="../../thirdparty/owemdjee/scintilla/doc/Privacy.html">
+      <Filter>Misc Files\doc</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/scintilla/qt/README">
-      <Filter>Misc Files\qt</Filter>
+    <Text Include="../../thirdparty/owemdjee/scintilla/doc/SciCoding.html">
+      <Filter>Misc Files\doc</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/scintilla/qt/ScintillaEdit/WidgetGen.py">
-      <Filter>Misc Files\qt\ScintillaEdit</Filter>
+    <Text Include="../../thirdparty/owemdjee/scintilla/doc/Scintilla5Migration.html">
+      <Filter>Misc Files\doc</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/scintilla/qt/ScintillaEditBase/Notes.txt">
-      <Filter>Misc Files\qt\ScintillaEditBase</Filter>
+    <Text Include="../../thirdparty/owemdjee/scintilla/doc/ScintillaDoc.html">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/scintilla/doc/ScintillaDownload.html">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/scintilla/doc/ScintillaHistory.html">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/scintilla/doc/ScintillaRelated.html">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/scintilla/doc/ScintillaToDo.html">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/scintilla/doc/ScintillaUsage.html">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/scintilla/doc/Steps.html">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/scintilla/doc/StyleMetadata.html">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/scintilla/doc/index.html">
+      <Filter>Misc Files\doc</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/scintilla/scripts/CheckMentioned.py">
       <Filter>Misc Files\scripts</Filter>
@@ -653,6 +614,9 @@
     <Text Include="../../thirdparty/owemdjee/scintilla/scripts/archive.sh">
       <Filter>Misc Files\scripts</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/scintilla/src/SciTE.properties">
+      <Filter>Misc Files\src</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/scintilla/test/MessageNumbers.py">
       <Filter>Misc Files\test</Filter>
     </Text>
@@ -674,6 +638,9 @@
     <Text Include="../../thirdparty/owemdjee/scintilla/test/gi/gi-test.py">
       <Filter>Misc Files\test\gi</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/scintilla/test/gi/makefile">
+      <Filter>Misc Files\test\gi</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/scintilla/test/performanceTests.py">
       <Filter>Misc Files\test</Filter>
     </Text>
@@ -686,6 +653,15 @@
     <Text Include="../../thirdparty/owemdjee/scintilla/test/unit/README">
       <Filter>Misc Files\test\unit</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/scintilla/test/unit/Sci.natvis">
+      <Filter>Misc Files\test\unit</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/scintilla/test/unit/SciTE.properties">
+      <Filter>Misc Files\test\unit</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/scintilla/test/unit/makefile">
+      <Filter>Misc Files\test\unit</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/scintilla/test/win32Tests.py">
       <Filter>Misc Files\test</Filter>
     </Text>
@@ -696,6 +672,15 @@
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/scintilla/win32/DepGen.py">
+      <Filter>Misc Files\win32</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/scintilla/win32/SciTE.properties">
+      <Filter>Misc Files\win32</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/scintilla/win32/Scintilla.def">
+      <Filter>Misc Files\win32</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/scintilla/win32/makefile">
       <Filter>Misc Files\win32</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/scintilla/zipsrc.bat">

@@ -84,6 +84,7 @@ TIDY_EXPORT char *get_time_stg(void);
 TIDY_EXPORT char *get_date_time_stg(void);
 
 #ifdef _MSC_VER
+struct timeval;
 TIDY_EXPORT int gettimeofday(struct timeval *tp, void *tzp);
 #endif
 

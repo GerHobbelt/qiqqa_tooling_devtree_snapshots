@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSCINTILLA;SCINTILLA_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSCINTILLA;SCINTILLA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSCINTILLA;SCINTILLA_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/scintilla/include;../../thirdparty/owemdjee/scintilla/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSCINTILLA;SCINTILLA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSCINTILLA;SCINTILLA_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSCINTILLA;SCINTILLA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/scintilla/include;../../thirdparty/owemdjee/scintilla/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSCINTILLA;SCINTILLA_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSCINTILLA;SCINTILLA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSCINTILLA;SCINTILLA_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/scintilla/include;../../thirdparty/owemdjee/scintilla/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSCINTILLA;SCINTILLA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSCINTILLA;SCINTILLA_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSCINTILLA;SCINTILLA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/scintilla/include;../../thirdparty/owemdjee/scintilla/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSCINTILLA;SCINTILLA_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSCINTILLA;SCINTILLA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSCINTILLA;SCINTILLA_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/scintilla/include;../../thirdparty/owemdjee/scintilla/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSCINTILLA;SCINTILLA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSCINTILLA;SCINTILLA_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSCINTILLA;SCINTILLA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/scintilla/include;../../thirdparty/owemdjee/scintilla/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSCINTILLA;SCINTILLA_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSCINTILLA;SCINTILLA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSCINTILLA;SCINTILLA_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/scintilla/include;../../thirdparty/owemdjee/scintilla/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSCINTILLA;SCINTILLA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSCINTILLA;SCINTILLA_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSCINTILLA;SCINTILLA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/scintilla/include;../../thirdparty/owemdjee/scintilla/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -229,14 +229,6 @@
   </ImportGroup>
   <ItemGroup>
     <ClCompile Include="../../thirdparty/owemdjee/scintilla/call/ScintillaCall.cxx" />
-    <ClCompile Include="../../thirdparty/owemdjee/scintilla/gtk/PlatGTK.cxx" />
-    <ClCompile Include="../../thirdparty/owemdjee/scintilla/gtk/ScintillaGTK.cxx" />
-    <ClCompile Include="../../thirdparty/owemdjee/scintilla/gtk/ScintillaGTKAccessible.cxx" />
-    <ClCompile Include="../../thirdparty/owemdjee/scintilla/gtk/scintilla-marshal.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/scintilla/qt/ScintillaEdit/ScintillaDocument.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/scintilla/qt/ScintillaEditBase/PlatQt.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/scintilla/qt/ScintillaEditBase/ScintillaEditBase.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/scintilla/qt/ScintillaEditBase/ScintillaQt.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/scintilla/src/AutoComplete.cxx" />
     <ClCompile Include="../../thirdparty/owemdjee/scintilla/src/CallTip.cxx" />
     <ClCompile Include="../../thirdparty/owemdjee/scintilla/src/CaseConvert.cxx" />
@@ -298,11 +290,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/scintilla/cocoa/ScintillaCocoa.h" />
     <ClInclude Include="../../thirdparty/owemdjee/scintilla/cocoa/ScintillaTest/AppController.h" />
     <ClInclude Include="../../thirdparty/owemdjee/scintilla/cocoa/ScintillaView.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/scintilla/gtk/Converter.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/scintilla/gtk/ScintillaGTK.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/scintilla/gtk/ScintillaGTKAccessible.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/scintilla/gtk/Wrappers.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/scintilla/gtk/scintilla-marshal.h" />
     <ClInclude Include="../../thirdparty/owemdjee/scintilla/include/ILexer.h" />
     <ClInclude Include="../../thirdparty/owemdjee/scintilla/include/ILoader.h" />
     <ClInclude Include="../../thirdparty/owemdjee/scintilla/include/Sci_Position.h" />
@@ -312,10 +299,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/scintilla/include/ScintillaStructures.h" />
     <ClInclude Include="../../thirdparty/owemdjee/scintilla/include/ScintillaTypes.h" />
     <ClInclude Include="../../thirdparty/owemdjee/scintilla/include/ScintillaWidget.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/scintilla/qt/ScintillaEdit/ScintillaDocument.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/scintilla/qt/ScintillaEditBase/PlatQt.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/scintilla/qt/ScintillaEditBase/ScintillaEditBase.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/scintilla/qt/ScintillaEditBase/ScintillaQt.h" />
     <ClInclude Include="../../thirdparty/owemdjee/scintilla/src/AutoComplete.h" />
     <ClInclude Include="../../thirdparty/owemdjee/scintilla/src/CallTip.h" />
     <ClInclude Include="../../thirdparty/owemdjee/scintilla/src/CaseConvert.h" />
@@ -382,14 +365,27 @@
     <Text Include="../../thirdparty/owemdjee/scintilla/README" />
     <Text Include="../../thirdparty/owemdjee/scintilla/bin/__init__.py" />
     <Text Include="../../thirdparty/owemdjee/scintilla/bin/empty.txt" />
+    <Text Include="../../thirdparty/owemdjee/scintilla/cocoa/ScintillaTest/TestData.sql" />
+    <Text Include="../../thirdparty/owemdjee/scintilla/cocoa/ScintillaTest/en.lproj/InfoPlist.strings" />
     <Text Include="../../thirdparty/owemdjee/scintilla/cocoa/checkbuildosx.sh" />
+    <Text Include="../../thirdparty/owemdjee/scintilla/cppcheck.suppress" />
     <Text Include="../../thirdparty/owemdjee/scintilla/delbin.bat" />
     <Text Include="../../thirdparty/owemdjee/scintilla/doc/AddSource.txt" />
+    <Text Include="../../thirdparty/owemdjee/scintilla/doc/Design.html" />
+    <Text Include="../../thirdparty/owemdjee/scintilla/doc/Icons.html" />
     <Text Include="../../thirdparty/owemdjee/scintilla/doc/Lexer.txt" />
-    <Text Include="../../thirdparty/owemdjee/scintilla/gtk/DepGen.py" />
-    <Text Include="../../thirdparty/owemdjee/scintilla/qt/README" />
-    <Text Include="../../thirdparty/owemdjee/scintilla/qt/ScintillaEdit/WidgetGen.py" />
-    <Text Include="../../thirdparty/owemdjee/scintilla/qt/ScintillaEditBase/Notes.txt" />
+    <Text Include="../../thirdparty/owemdjee/scintilla/doc/Privacy.html" />
+    <Text Include="../../thirdparty/owemdjee/scintilla/doc/SciCoding.html" />
+    <Text Include="../../thirdparty/owemdjee/scintilla/doc/Scintilla5Migration.html" />
+    <Text Include="../../thirdparty/owemdjee/scintilla/doc/ScintillaDoc.html" />
+    <Text Include="../../thirdparty/owemdjee/scintilla/doc/ScintillaDownload.html" />
+    <Text Include="../../thirdparty/owemdjee/scintilla/doc/ScintillaHistory.html" />
+    <Text Include="../../thirdparty/owemdjee/scintilla/doc/ScintillaRelated.html" />
+    <Text Include="../../thirdparty/owemdjee/scintilla/doc/ScintillaToDo.html" />
+    <Text Include="../../thirdparty/owemdjee/scintilla/doc/ScintillaUsage.html" />
+    <Text Include="../../thirdparty/owemdjee/scintilla/doc/Steps.html" />
+    <Text Include="../../thirdparty/owemdjee/scintilla/doc/StyleMetadata.html" />
+    <Text Include="../../thirdparty/owemdjee/scintilla/doc/index.html" />
     <Text Include="../../thirdparty/owemdjee/scintilla/scripts/CheckMentioned.py" />
     <Text Include="../../thirdparty/owemdjee/scintilla/scripts/Dependencies.py" />
     <Text Include="../../thirdparty/owemdjee/scintilla/scripts/Face.py" />
@@ -404,6 +400,7 @@
     <Text Include="../../thirdparty/owemdjee/scintilla/scripts/ScintillaData.py" />
     <Text Include="../../thirdparty/owemdjee/scintilla/scripts/__init__.py" />
     <Text Include="../../thirdparty/owemdjee/scintilla/scripts/archive.sh" />
+    <Text Include="../../thirdparty/owemdjee/scintilla/src/SciTE.properties" />
     <Text Include="../../thirdparty/owemdjee/scintilla/test/MessageNumbers.py" />
     <Text Include="../../thirdparty/owemdjee/scintilla/test/README" />
     <Text Include="../../thirdparty/owemdjee/scintilla/test/ScintillaCallable.py" />
@@ -411,14 +408,21 @@
     <Text Include="../../thirdparty/owemdjee/scintilla/test/XiteWin.py" />
     <Text Include="../../thirdparty/owemdjee/scintilla/test/gi/filter-scintilla-h.py" />
     <Text Include="../../thirdparty/owemdjee/scintilla/test/gi/gi-test.py" />
+    <Text Include="../../thirdparty/owemdjee/scintilla/test/gi/makefile" />
     <Text Include="../../thirdparty/owemdjee/scintilla/test/performanceTests.py" />
     <Text Include="../../thirdparty/owemdjee/scintilla/test/simpleTests.py" />
     <Text Include="../../thirdparty/owemdjee/scintilla/test/unit/LICENSE_1_0.txt" />
     <Text Include="../../thirdparty/owemdjee/scintilla/test/unit/README" />
+    <Text Include="../../thirdparty/owemdjee/scintilla/test/unit/Sci.natvis" />
+    <Text Include="../../thirdparty/owemdjee/scintilla/test/unit/SciTE.properties" />
+    <Text Include="../../thirdparty/owemdjee/scintilla/test/unit/makefile" />
     <Text Include="../../thirdparty/owemdjee/scintilla/test/win32Tests.py" />
     <Text Include="../../thirdparty/owemdjee/scintilla/test/xite.py" />
     <Text Include="../../thirdparty/owemdjee/scintilla/version.txt" />
     <Text Include="../../thirdparty/owemdjee/scintilla/win32/DepGen.py" />
+    <Text Include="../../thirdparty/owemdjee/scintilla/win32/SciTE.properties" />
+    <Text Include="../../thirdparty/owemdjee/scintilla/win32/Scintilla.def" />
+    <Text Include="../../thirdparty/owemdjee/scintilla/win32/makefile" />
     <Text Include="../../thirdparty/owemdjee/scintilla/zipsrc.bat" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >

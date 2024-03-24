@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLMDB_STORE;LMDB_STORE_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLMDB_STORE;LMDB_STORE_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLMDB_STORE;LMDB_STORE_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLMDB_STORE;LMDB_STORE_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLMDB_STORE;LMDB_STORE_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLMDB_STORE;LMDB_STORE_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLMDB_STORE;LMDB_STORE_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLMDB_STORE;LMDB_STORE_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLMDB_STORE;LMDB_STORE_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLMDB_STORE;LMDB_STORE_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLMDB_STORE;LMDB_STORE_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLMDB_STORE;LMDB_STORE_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLMDB_STORE;LMDB_STORE_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLMDB_STORE;LMDB_STORE_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLMDB_STORE;LMDB_STORE_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLMDB_STORE;LMDB_STORE_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLMDB_STORE;LMDB_STORE_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLMDB_STORE;LMDB_STORE_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLMDB_STORE;LMDB_STORE_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLMDB_STORE;LMDB_STORE_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLMDB_STORE;LMDB_STORE_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLMDB_STORE;LMDB_STORE_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLMDB_STORE;LMDB_STORE_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLMDB_STORE;LMDB_STORE_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -248,6 +248,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/mdb_dump.c" />
     <ClCompile Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/mdb_load.c" />
     <ClCompile Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/mdb_stat.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/midl-sparse.c" />
     <ClCompile Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/midl.c" />
     <ClCompile Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/module.c" />
     <ClCompile Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/mtest.c" />
@@ -260,6 +261,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/mtest_enc2.c" />
     <ClCompile Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/mtest_remap.c" />
     <ClCompile Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/lib/lz4.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/lib/lz4file.c" />
     <ClCompile Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/lib/lz4frame.c" />
     <ClCompile Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/lib/lz4hc.c" />
     <ClCompile Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/lib/xxhash.c" />
@@ -281,6 +283,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/midl.h" />
     <ClInclude Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/module.h" />
     <ClInclude Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/lib/lz4.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/lib/lz4file.h" />
     <ClInclude Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/lib/lz4frame.h" />
     <ClInclude Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/lib/lz4frame_static.h" />
     <ClInclude Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/lib/lz4hc.h" />
@@ -292,6 +295,7 @@
     <Image Include="../../thirdparty/owemdjee/lmdb-store/assets/harperdb.png" />
     <Image Include="../../thirdparty/owemdjee/lmdb-store/assets/performance.png" />
     <Image Include="../../thirdparty/owemdjee/lmdb-store/assets/powers-dre.png" />
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/lmdb-store/README.md" />
     <Text Include="../../thirdparty/owemdjee/lmdb-store/SECURITY.md" />
     <Text Include="../../thirdparty/owemdjee/lmdb-store/benchmark/index.js" />
@@ -300,12 +304,31 @@
     <Text Include="../../thirdparty/owemdjee/lmdb-store/bin/download-prebuilds.js" />
     <Text Include="../../thirdparty/owemdjee/lmdb-store/caching.js" />
     <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb-data-v1/libraries/liblmdb/CHANGES" />
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb-data-v1/libraries/liblmdb/Doxyfile" />
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb-data-v1/libraries/liblmdb/LICENSE" />
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb-data-v1/libraries/liblmdb/intro.doc" />
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb-data-v1/libraries/liblmdb/mdb_copy.1" />
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb-data-v1/libraries/liblmdb/mdb_dump.1" />
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb-data-v1/libraries/liblmdb/mdb_load.1" />
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb-data-v1/libraries/liblmdb/mdb_stat.1" />
     <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb-data-v1/libraries/liblmdb/sample-bdb.txt" />
     <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb-data-v1/libraries/liblmdb/sample-mdb.txt" />
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/Doxyfile" />
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/LICENSE" />
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/intro.doc" />
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/mdb_copy.1" />
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/mdb_drop.1" />
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/mdb_dump.1" />
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/mdb_load.1" />
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/mdb_stat.1" />
     <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/sample-bdb.txt" />
     <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lmdb/libraries/liblmdb/sample-mdb.txt" />
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/LICENSE" />
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/lib/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/lib/README.md" />
     <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/lib/dll/example/README.md" />
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/lib/dll/liblz4.def" />
     <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/lib/liblz4-dll.rc.in" />
     <Text Include="../../thirdparty/owemdjee/lmdb-store/dependencies/lz4/lib/liblz4.pc.in" />
     <Text Include="../../thirdparty/owemdjee/lmdb-store/dict/dict.txt" />
@@ -323,12 +346,16 @@
     <Text Include="../../thirdparty/owemdjee/lmdb-store/test/bun.js" />
     <Text Include="../../thirdparty/owemdjee/lmdb-store/test/check-commit.js" />
     <Text Include="../../thirdparty/owemdjee/lmdb-store/test/cluster.js" />
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/test/deno.js" />
     <Text Include="../../thirdparty/owemdjee/lmdb-store/test/deno.sh" />
     <Text Include="../../thirdparty/owemdjee/lmdb-store/test/deno.ts" />
     <Text Include="../../thirdparty/owemdjee/lmdb-store/test/index.test.js" />
     <Text Include="../../thirdparty/owemdjee/lmdb-store/test/performance.js" />
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/test/readonly-threads.cjs" />
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/test/threads.cjs" />
     <Text Include="../../thirdparty/owemdjee/lmdb-store/test/types/index.test-d.ts" />
     <Text Include="../../thirdparty/owemdjee/lmdb-store/util/RangeIterable.js" />
+    <Text Include="../../thirdparty/owemdjee/lmdb-store/util/set-optional-deps.cjs" />
     <Text Include="../../thirdparty/owemdjee/lmdb-store/util/when.js" />
     <Text Include="../../thirdparty/owemdjee/lmdb-store/write.js" />
   </ItemGroup>

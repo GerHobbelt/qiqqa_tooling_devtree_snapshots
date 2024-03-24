@@ -92,11 +92,12 @@ Example code is still a mess, as all things that were looked at, include Countin
   Consequently, the only viable way to make sure you can count the children alive at point of decision to kick one more alive or not is to use a system which **completes entirely** at start of child app: the way this is done here is to use a Named Mutex (all we need is a critical section, no counting done at this level, so not a semaphore but a mutex instead), which protects a critical section in all parties involved, where the OS is queried for a processes snapshot (a la `ps -ax` if you're into UNIX) and then scan the executable names for a match. Once that scan is done, the critical section ends and the Mutex is released, so we CAN guarantee proper global mutex handling now (as long as our OS process scan code doesn't *crash* ;-) )
 
   Then, when the count of 'live children' is high enough, the creation of yet anotheer one is skipped.
+
 - extra lesson: Named Mutexes and Named Semaphores on Win32/64 can have a 'Global\' prefix, if you read their API docs. DO NOT DO THAT. Turns out that the verbiage at the Microsoft site is not clear enough for *me*, at least, to grok that this prefix is ONLY legal when running Terminal Services, which is Windows Server stuff and I bet you're not running research UI applications on a Windows Server license, surely!  ;-P
 
   That bit took another couple of hours off my life. !@#$%^
 
-- extra lesson: DO read ('empty') your child's STDOUT pipe CONTINUOUSLY and RIGOROUSLY, when you've redirected its stdio to you, the parent/monitor. If you don't (and the original Microsoft sample code didn't because it didn't have to, as it didn't have any "debugging printf statements" in there! !@#$%^) to child process will BLOCK, waiting indefinitely for the parent to finally do some ReadFile(handle) work and empty the buffer.
+- extra lesson: DO read ('empty') your child's STDOUT pipe CONTINUOUSLY and RIGOROUSLY, when you've redirected its stdio to you, the parent/monitor. If you don't (and the original Microsoft sample code didn't because it didn't have to, as it didn't have any "debugging printf statements" in there! !@#$%^) the child process will BLOCK, waiting indefinitely for the parent to finally do some ReadFile(handle) work and empty the buffer.
 
   In the current example code, this has been resolved by kicking an extra *thread* alive in the *monitor* (`ThreadProc`) which' sole purpose is continuously waiting for stdout data from the child. 
 

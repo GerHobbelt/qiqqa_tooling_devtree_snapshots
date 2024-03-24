@@ -51,10 +51,11 @@
 #include <tesseract/unichar.h>     // for UNICHAR_ID
 #include <tesseract/memcost_estimate.h>  // for ImageCostEstimate
 
-#include <allheaders.h> // for pixDestroy, pixGetWidth, pixGetHe...
+#include <leptonica/allheaders.h> // for pixDestroy, pixGetWidth, pixGetHe...
 
 #include <cstdint> // for int16_t, int32_t, uint16_t
 #include <cstdio>  // for FILE
+#include <map> 
 
 namespace tesseract {
 
@@ -194,19 +195,29 @@ using WordRecognizer = void (Tesseract::*)(const WordData &, WERD_RES **,
 
 class TESS_API Tesseract: public Wordrec {
 public:
-  Tesseract(Tesseract *parent = nullptr);
-  ~Tesseract() override;
+  Tesseract(Tesseract *parent = nullptr, AutoSupressDatum *LogReportingHoldoffMarkerRef = nullptr);
+  virtual ~Tesseract() override;
+
+protected:
+  AutoSupressDatum &reporting_holdoff_;
+
+public:
+  AutoSupressDatum &GetLogReportingHoldoffMarkerRef() {
+    return reporting_holdoff_;
+  };
 
   // Return appropriate dictionary
   Dict &getDict() override;
 
   // Clear as much used memory as possible without resetting the adaptive
   // classifier or losing any other classifier data.
-  void Clear();
+  void Clear(bool invoked_by_destructor = false);
   // Clear all memory of adaption for this and all subclassifiers.
   void ResetAdaptiveClassifier();
   // Clear the document dictionary for this and all subclassifiers.
   void ResetDocumentDictionary();
+
+  void ResyncVariablesInternally();
 
 #if !DISABLED_LEGACY_ENGINE
   // Set the equation detector.
@@ -217,10 +228,19 @@ public:
   const FCOORD &reskew() const {
     return reskew_;
   }
+
+  float gradient() const {
+    return gradient_;
+  }
+
   // Destroy any existing pix and return a pointer to the pointer.
   void set_pix_binary(Image pix) {
     pix_binary_.destroy();
     pix_binary_ = pix;
+    // Clone to sublangs as well.
+    for (auto &lang_ref : sub_langs_) {
+      lang_ref->set_pix_binary(pix ? pix.clone() : nullptr);
+    }
   }
   Image pix_binary() const {
     return pix_binary_;
@@ -231,12 +251,11 @@ public:
   void set_pix_grey(Image grey_pix) {
     pix_grey_.destroy();
     pix_grey_ = grey_pix;
+    // Clone to sublangs as well.
+    for (auto &lang_ref : sub_langs_) {
+      lang_ref->set_pix_grey(grey_pix ? grey_pix.clone() : nullptr);
+    }
   }
-#if 0
-  DebugPixa &pix_debug() {
-	  return pixa_debug_;
-  }
-#endif
   Image pix_original() const {
     return pix_original_;
   }
@@ -249,6 +268,33 @@ public:
       lang_ref->set_pix_original(original_pix ? original_pix.clone() : nullptr);
     }
   }
+
+  Image GetPixForDebugView() {
+    if (pix_for_debug_view_ != nullptr)
+      return pix_for_debug_view_;
+
+    pix_for_debug_view_ = pixConvertTo32(pix_binary_);
+    return pix_for_debug_view_;
+  }
+
+  void ClearPixForDebugView() {
+    if (pix_for_debug_view_ != nullptr) {
+      pix_for_debug_view_.destroy();
+      pix_for_debug_view_ = nullptr;
+    }
+  }
+
+  void ReportDebugInfo();
+
+#if !GRAPHICS_DISABLED
+  bool SupportsInteractiveScrollView() const {
+    return (interactive_display_mode && !debug_do_not_use_scrollview_app);
+  }
+#else
+  constexpr bool SupportsInteractiveScrollView() const {
+    return false;
+  }
+#endif
 
   // Return a memory capacity cost estimate for the given image / current original image.
   //
@@ -271,7 +317,7 @@ public:
   // In any case, the return value is a borrowed Pix, and should not be
   // deleted or pixDestroyed.
   Image BestPix() const {
-    if (pixGetWidth(pix_original_) == ImageWidth()) {
+    if (pix_original_ != nullptr && pixGetWidth(pix_original_) == ImageWidth()) {
       return pix_original_;
     } else if (pix_grey_ != nullptr) {
       return pix_grey_;
@@ -279,6 +325,7 @@ public:
       return pix_binary_;
     }
   }
+
   void set_pix_thresholds(Image thresholds) {
     pix_thresholds_.destroy();
     pix_thresholds_ = thresholds;
@@ -433,8 +480,28 @@ public:
   // Helper to recognize the word using the given (language-specific) tesseract.
   // Returns positive if this recognizer found more new best words than the
   // number kept from best_words.
-  int RetryWithLanguage(const WordData &word_data, WordRecognizer recognizer, bool debug,
+  int RetryWithLanguage(const WordData &word_data, WordRecognizer recognizer,
                         WERD_RES **in_word, PointerVector<WERD_RES> *best_words);
+
+protected:
+  // Helper chooses the best combination of words, transferring good ones from
+  // new_words to best_words. To win, a new word must have (better rating and
+  // certainty) or (better permuter status and rating within rating ratio and
+  // certainty within certainty margin) than current best.
+  // All the new_words are consumed (moved to best_words or deleted.)
+  // The return value is the number of new_words used minus the number of
+  // best_words that remain in the output.
+  int SelectBestWords(double rating_ratio, double certainty_margin,
+                             PointerVector<WERD_RES>* new_words,
+                             PointerVector<WERD_RES>* best_words);
+  // Factored helper computes the rating, certainty, badness and validity of
+  // the permuter of the words in [first_index, end_index).
+  void EvaluateWordSpan(const PointerVector<WERD_RES>& words, unsigned int first_index, unsigned int end_index,
+                               float* rating, float* certainty, bool* bad, bool* valid_permuter);
+  // Helper finds the gap between the index word and the next.
+  void WordGap(const PointerVector<WERD_RES>& words, unsigned int index, TDimension* right, TDimension* next_left);
+
+public:
   // Moves good-looking "noise"/diacritics from the reject list to the main
   // blob list on the current word. Returns true if anything was done, and
   // sets make_next_word_fuzzy if blob(s) were added to the end of the word.
@@ -470,6 +537,16 @@ public:
   // best raw choice, and undoing all the work done to fake out the word.
   float ClassifyBlobAsWord(int pass_n, PAGE_RES_IT *pr_it, C_BLOB *blob, std::string &best_str,
                            float *c2);
+  // Generic function for classifying a word. Can be used either for pass1 or
+  // pass2 according to the function passed to recognizer.
+  // word_data holds the word to be recognized, and its block and row, and
+  // pr_it points to the word as well, in case we are running LSTM and it wants
+  // to output multiple words.
+  // Recognizes in the current language, and if successful (a.k.a. accepted) that is all.
+  // If recognition was not successful, tries all available languages until
+  // it gets a successful result or runs out of languages. Keeps the best result,
+  // where "best" is defined as: the first language that producs an *acceptable* result
+  // (as determined by Dict::AcceptableResult() et al).
   void classify_word_and_language(int pass_n, PAGE_RES_IT *pr_it, WordData *word_data);
   void classify_word_pass1(const WordData &word_data, WERD_RES **in_word,
                            PointerVector<WERD_RES> *out_words);
@@ -493,7 +570,9 @@ public:
   bool recog_interactive(PAGE_RES_IT *pr_it);
 
   // Set fonts of this word.
-  void set_word_fonts(WERD_RES *word);
+  void set_word_fonts(WERD_RES *word, std::vector<int> font_choices = std::vector<int>());
+  std::vector<int> score_word_fonts(WERD_RES *word);
+  void score_word_fonts_by_letter(WERD_RES *word, std::map<int, std::map<int, std::map<int, int>>> & page_fonts_letter, int font_id);
   void font_recognition_pass(PAGE_RES *page_res);
   void italic_recognition_pass(PAGE_RES *page_res);
   void dictionary_correction_pass(PAGE_RES *page_res);
@@ -526,19 +605,25 @@ public:
   int16_t count_alphanums(const WERD_CHOICE &word);
   int16_t count_alphas(const WERD_CHOICE &word);
 
-  void read_config_file(const char *filename, SetParamConstraint constraint);
+  void read_config_file(const char *filename);
+
   // Initialize for potentially a set of languages defined by the language
   // string and recursively any additional languages required by any language
   // traineddata file (via tessedit_load_sublangs in its config) that is loaded.
+  // 
   // See init_tesseract_internal for args.
   int init_tesseract(const std::string &arg0, const std::string &textbase,
-                     const std::string &language, OcrEngineMode oem, const char **configs,
-                     int configs_size, const std::vector<std::string> *vars_vec,
-                     const std::vector<std::string> *vars_values, bool set_only_non_debug_params,
+                     const std::string &language, OcrEngineMode oem, 
+				     const std::vector<std::string> &configs,
+				     const std::vector<std::string> &vars_vec,
+				     const std::vector<std::string> &vars_values,
+                     bool set_only_non_debug_params,
                      TessdataManager *mgr);
   int init_tesseract(const std::string &datapath, const std::string &language, OcrEngineMode oem) {
     TessdataManager mgr;
-    return init_tesseract(datapath, {}, language, oem, nullptr, 0, nullptr, nullptr, false, &mgr);
+	std::vector<std::string> nil;
+
+    return init_tesseract(datapath, {}, language, oem, nil, nil, nil, false, &mgr);
   }
   // Common initialization for a single language.
   // arg0 is the datapath for the tessdata directory, which could be the
@@ -548,31 +633,34 @@ public:
   // textbase is an optional output file basename (used only for training)
   // language is the language code to load.
   // oem controls which engine(s) will operate on the image
-  // configs (argv) is an array of config filenames to load variables from.
-  // May be nullptr.
-  // configs_size (argc) is the number of elements in configs.
-  // vars_vec is an optional vector of variables to set.
+  // configs is an optional vector of config filenames to load variables from.
+  // May be empty.
+  // vars_vec is an optional vector of variables to set. May be empty.
   // vars_values is an optional corresponding vector of values for the variables
   // in vars_vec.
   // If set_only_non_debug_params is true, only params that do not contain
   // "debug" in the name will be set.
   int init_tesseract_internal(const std::string &arg0, const std::string &textbase,
-                              const std::string &language, OcrEngineMode oem, const char **configs,
-                              int configs_size, const std::vector<std::string> *vars_vec,
-                              const std::vector<std::string> *vars_values,
+                              const std::string &language, OcrEngineMode oem, 
+						      const std::vector<std::string> &configs,
+						      const std::vector<std::string> &vars_vec,
+						      const std::vector<std::string> &vars_values,
                               bool set_only_non_debug_params, TessdataManager *mgr);
 
+#if !DISABLED_LEGACY_ENGINE
   // Set the universal_id member of each font to be unique among all
   // instances of the same font loaded.
   void SetupUniversalFontIds();
+#endif
 
   void recognize_page(std::string &image_name);
   void end_tesseract();
 
   bool init_tesseract_lang_data(const std::string &arg0,
-                                const std::string &language, OcrEngineMode oem, const char **configs,
-                                int configs_size, const std::vector<std::string> *vars_vec,
-                                const std::vector<std::string> *vars_values,
+                                const std::string &language, OcrEngineMode oem, 
+							    const std::vector<std::string> &configs,
+							    const std::vector<std::string> &vars_vec,
+							    const std::vector<std::string> &vars_values,
                                 bool set_only_non_debug_params, TessdataManager *mgr);
 
   void ParseLanguageString(const std::string &lang_str, std::vector<std::string> *to_load,
@@ -587,17 +675,15 @@ public:
       const SVEvent &event);
   bool process_cmd_win_event( // UI command semantics
       int32_t cmd_event,      // which menu item?
-      char *new_value         // any prompt data
+      const char *new_value   // any prompt data
   );
 #endif // !GRAPHICS_DISABLED
   void debug_word(PAGE_RES *page_res, const TBOX &selection_box);
-  void do_re_display(bool (tesseract::Tesseract::*word_painter)(PAGE_RES_IT *pr_it));
+  void do_re_display(PAGE_RES *page_res, bool (tesseract::Tesseract::*word_painter)(PAGE_RES_IT *pr_it));
   bool word_display(PAGE_RES_IT *pr_it);
   bool word_bln_display(PAGE_RES_IT *pr_it);
   bool word_blank_and_set_display(PAGE_RES_IT *pr_its);
   bool word_set_display(PAGE_RES_IT *pr_it);
-
-  void display_current_page_result(PAGE_RES* page_res);
 
   // #if !GRAPHICS_DISABLED
   bool word_dumper(PAGE_RES_IT *pr_it);
@@ -693,7 +779,7 @@ public:
       WERD_CHOICE *word_choice // after context
   );
   void tess_segment_pass_n(int pass_n, WERD_RES *word);
-  bool tess_acceptable_word(WERD_RES *word);
+  bool tess_acceptable_word(const WERD_RES &word);
 #endif
 
   //// applybox.cpp //////////////////////////////////////////////////////
@@ -801,19 +887,17 @@ public:
   BOOL_VAR_H(tessedit_make_boxes_from_boxes);
   BOOL_VAR_H(tessedit_train_line_recognizer);
   BOOL_VAR_H(tessedit_dump_pageseg_images);
-  // TODO: remove deprecated tessedit_do_invert in release 6.
-  BOOL_VAR_H(tessedit_do_invert);
-  double_VAR_H(invert_threshold);
+  DOUBLE_VAR_H(invert_threshold);
   INT_VAR_H(tessedit_pageseg_mode);
   INT_VAR_H(preprocess_graynorm_mode);
   INT_VAR_H(thresholding_method);
   BOOL_VAR_H(showcase_threshold_methods);
   BOOL_VAR_H(thresholding_debug);
-  double_VAR_H(thresholding_window_size);
-  double_VAR_H(thresholding_kfactor);
-  double_VAR_H(thresholding_tile_size);
-  double_VAR_H(thresholding_smooth_kernel_size);
-  double_VAR_H(thresholding_score_fraction);
+  DOUBLE_VAR_H(thresholding_window_size);
+  DOUBLE_VAR_H(thresholding_kfactor);
+  DOUBLE_VAR_H(thresholding_tile_size);
+  DOUBLE_VAR_H(thresholding_smooth_kernel_size);
+  DOUBLE_VAR_H(thresholding_score_fraction);
   INT_VAR_H(tessedit_ocr_engine_mode);
   STRING_VAR_H(tessedit_char_blacklist);
   STRING_VAR_H(tessedit_char_whitelist);
@@ -846,32 +930,32 @@ public:
   INT_VAR_H(debug_noise_removal);
   // Worst (min) certainty, for which a diacritic is allowed to make the base
   // character worse and still be included.
-  double_VAR_H(noise_cert_basechar);
+  DOUBLE_VAR_H(noise_cert_basechar);
   // Worst (min) certainty, for which a non-overlapping diacritic is allowed to
   // make the base character worse and still be included.
-  double_VAR_H(noise_cert_disjoint);
+  DOUBLE_VAR_H(noise_cert_disjoint);
   // Worst (min) certainty, for which a diacritic is allowed to make a new
   // stand-alone blob.
-  double_VAR_H(noise_cert_punc);
+  DOUBLE_VAR_H(noise_cert_punc);
   // Factor of certainty margin for adding diacritics to not count as worse.
-  double_VAR_H(noise_cert_factor);
+  DOUBLE_VAR_H(noise_cert_factor);
   INT_VAR_H(noise_maxperblob);
   INT_VAR_H(noise_maxperword);
   INT_VAR_H(debug_x_ht_level);
   STRING_VAR_H(chs_leading_punct);
   STRING_VAR_H(chs_trailing_punct1);
   STRING_VAR_H(chs_trailing_punct2);
-  double_VAR_H(quality_rej_pc);
-  double_VAR_H(quality_blob_pc);
-  double_VAR_H(quality_outline_pc);
-  double_VAR_H(quality_char_pc);
+  DOUBLE_VAR_H(quality_rej_pc);
+  DOUBLE_VAR_H(quality_blob_pc);
+  DOUBLE_VAR_H(quality_outline_pc);
+  DOUBLE_VAR_H(quality_char_pc);
   INT_VAR_H(quality_min_initial_alphas_reqd);
   INT_VAR_H(tessedit_tess_adaption_mode);
   BOOL_VAR_H(tessedit_minimal_rej_pass1);
   BOOL_VAR_H(tessedit_test_adaption);
   BOOL_VAR_H(test_pt);
-  double_VAR_H(test_pt_x);
-  double_VAR_H(test_pt_y);
+  DOUBLE_VAR_H(test_pt_x);
+  DOUBLE_VAR_H(test_pt_y);
   INT_VAR_H(multilang_debug_level);
   INT_VAR_H(paragraph_debug_level);
   BOOL_VAR_H(paragraph_text_based);
@@ -880,42 +964,42 @@ public:
   STRING_VAR_H(outlines_2);
   BOOL_VAR_H(tessedit_good_quality_unrej);
   BOOL_VAR_H(tessedit_use_reject_spaces);
-  double_VAR_H(tessedit_reject_doc_percent);
-  double_VAR_H(tessedit_reject_block_percent);
-  double_VAR_H(tessedit_reject_row_percent);
-  double_VAR_H(tessedit_whole_wd_rej_row_percent);
+  DOUBLE_VAR_H(tessedit_reject_doc_percent);
+  DOUBLE_VAR_H(tessedit_reject_block_percent);
+  DOUBLE_VAR_H(tessedit_reject_row_percent);
+  DOUBLE_VAR_H(tessedit_whole_wd_rej_row_percent);
   BOOL_VAR_H(tessedit_preserve_blk_rej_perfect_wds);
   BOOL_VAR_H(tessedit_preserve_row_rej_perfect_wds);
   BOOL_VAR_H(tessedit_dont_blkrej_good_wds);
   BOOL_VAR_H(tessedit_dont_rowrej_good_wds);
   INT_VAR_H(tessedit_preserve_min_wd_len);
   BOOL_VAR_H(tessedit_row_rej_good_docs);
-  double_VAR_H(tessedit_good_doc_still_rowrej_wd);
+  DOUBLE_VAR_H(tessedit_good_doc_still_rowrej_wd);
   BOOL_VAR_H(tessedit_reject_bad_qual_wds);
   BOOL_VAR_H(tessedit_debug_doc_rejection);
   BOOL_VAR_H(tessedit_debug_quality_metrics);
   BOOL_VAR_H(bland_unrej);
-  double_VAR_H(quality_rowrej_pc);
+  DOUBLE_VAR_H(quality_rowrej_pc);
   BOOL_VAR_H(unlv_tilde_crunching);
   BOOL_VAR_H(hocr_font_info);
   BOOL_VAR_H(hocr_char_boxes);
   BOOL_VAR_H(hocr_images);
   BOOL_VAR_H(crunch_early_merge_tess_fails);
   BOOL_VAR_H(crunch_early_convert_bad_unlv_chs);
-  double_VAR_H(crunch_terrible_rating);
+  DOUBLE_VAR_H(crunch_terrible_rating);
   BOOL_VAR_H(crunch_terrible_garbage);
-  double_VAR_H(crunch_poor_garbage_cert);
-  double_VAR_H(crunch_poor_garbage_rate);
-  double_VAR_H(crunch_pot_poor_rate);
-  double_VAR_H(crunch_pot_poor_cert);
-  double_VAR_H(crunch_del_rating);
-  double_VAR_H(crunch_del_cert);
-  double_VAR_H(crunch_del_min_ht);
-  double_VAR_H(crunch_del_max_ht);
-  double_VAR_H(crunch_del_min_width);
-  double_VAR_H(crunch_del_high_word);
-  double_VAR_H(crunch_del_low_word);
-  double_VAR_H(crunch_small_outlines_size);
+  DOUBLE_VAR_H(crunch_poor_garbage_cert);
+  DOUBLE_VAR_H(crunch_poor_garbage_rate);
+  DOUBLE_VAR_H(crunch_pot_poor_rate);
+  DOUBLE_VAR_H(crunch_pot_poor_cert);
+  DOUBLE_VAR_H(crunch_del_rating);
+  DOUBLE_VAR_H(crunch_del_cert);
+  DOUBLE_VAR_H(crunch_del_min_ht);
+  DOUBLE_VAR_H(crunch_del_max_ht);
+  DOUBLE_VAR_H(crunch_del_min_width);
+  DOUBLE_VAR_H(crunch_del_high_word);
+  DOUBLE_VAR_H(crunch_del_low_word);
+  DOUBLE_VAR_H(crunch_small_outlines_size);
   INT_VAR_H(crunch_rating_max);
   INT_VAR_H(crunch_pot_indicators);
   BOOL_VAR_H(crunch_leave_ok_strings);
@@ -927,7 +1011,7 @@ public:
   INT_VAR_H(crunch_long_repetitions);
   INT_VAR_H(crunch_debug);
   INT_VAR_H(fixsp_non_noise_limit);
-  double_VAR_H(fixsp_small_outlines_size);
+  DOUBLE_VAR_H(fixsp_small_outlines_size);
   BOOL_VAR_H(tessedit_prefer_joined_punct);
   INT_VAR_H(fixsp_done_mode);
   INT_VAR_H(debug_fix_space_level);
@@ -935,11 +1019,11 @@ public:
   INT_VAR_H(x_ht_acceptance_tolerance);
   INT_VAR_H(x_ht_min_change);
   INT_VAR_H(superscript_debug);
-  double_VAR_H(superscript_worse_certainty);
-  double_VAR_H(superscript_bettered_certainty);
-  double_VAR_H(superscript_scaledown_ratio);
-  double_VAR_H(subscript_max_y_top);
-  double_VAR_H(superscript_min_y_bottom);
+  DOUBLE_VAR_H(superscript_worse_certainty);
+  DOUBLE_VAR_H(superscript_bettered_certainty);
+  DOUBLE_VAR_H(superscript_scaledown_ratio);
+  DOUBLE_VAR_H(subscript_max_y_top);
+  DOUBLE_VAR_H(superscript_min_y_bottom);
   BOOL_VAR_H(tessedit_write_block_separators);
   BOOL_VAR_H(tessedit_write_rep_codes);
   BOOL_VAR_H(tessedit_write_unlv);
@@ -961,8 +1045,8 @@ public:
   INT_VAR_H(suspect_level);
   INT_VAR_H(suspect_short_words);
   BOOL_VAR_H(suspect_constrain_1Il);
-  double_VAR_H(suspect_rating_per_ch);
-  double_VAR_H(suspect_accept_rating);
+  DOUBLE_VAR_H(suspect_rating_per_ch);
+  DOUBLE_VAR_H(suspect_accept_rating);
   BOOL_VAR_H(tessedit_minimal_rejection);
   BOOL_VAR_H(tessedit_zero_rejection);
   BOOL_VAR_H(tessedit_word_for_word);
@@ -970,8 +1054,9 @@ public:
   INT_VAR_H(tessedit_reject_mode);
   BOOL_VAR_H(tessedit_rejection_debug);
   BOOL_VAR_H(tessedit_flip_0O);
-  double_VAR_H(tessedit_lower_flip_hyphen);
-  double_VAR_H(tessedit_upper_flip_hyphen);
+  DOUBLE_VAR_H(tessedit_lower_flip_hyphen);
+  DOUBLE_VAR_H(tessedit_upper_flip_hyphen);
+  BOOL_VAR_H(tsv_lang_info);
   BOOL_VAR_H(rej_trust_doc_dawg);
   BOOL_VAR_H(rej_1Il_use_dict_word);
   BOOL_VAR_H(rej_1Il_trust_permuter_type);
@@ -980,7 +1065,7 @@ public:
   BOOL_VAR_H(rej_use_good_perm);
   BOOL_VAR_H(rej_use_sensible_wd);
   BOOL_VAR_H(rej_alphas_in_number_perm);
-  double_VAR_H(rej_whole_of_mostly_reject_word_fract);
+  DOUBLE_VAR_H(rej_whole_of_mostly_reject_word_fract);
   INT_VAR_H(tessedit_image_border);
   STRING_VAR_H(ok_repeated_ch_non_alphanum_wds);
   STRING_VAR_H(conflict_set_I_l_1);
@@ -992,11 +1077,13 @@ public:
   STRING_VAR_H(file_type);
   BOOL_VAR_H(tessedit_override_permuter);
   STRING_VAR_H(tessedit_load_sublangs);
+#if DISABLED_LEGACY_ENGINE
   BOOL_VAR_H(tessedit_use_primary_params_model);
+#endif
   // Min acceptable orientation margin (difference in scores between top and 2nd
   // choice in OSResults::orientations) to believe the page orientation.
-  double_VAR_H(min_orientation_margin);
-  BOOL_VAR_H(textord_tabfind_show_vlines);
+  DOUBLE_VAR_H(min_orientation_margin);
+  //BOOL_VAR_H(textord_tabfind_show_vlines);
   BOOL_VAR_H(textord_use_cjk_fp_model);
   BOOL_VAR_H(poly_allow_detailed_fx);
   BOOL_VAR_H(tessedit_init_config_only);
@@ -1005,16 +1092,16 @@ public:
 #endif // !DISABLED_LEGACY_ENGINE
   BOOL_VAR_H(textord_tabfind_vertical_text);
   BOOL_VAR_H(textord_tabfind_force_vertical_text);
-  double_VAR_H(textord_tabfind_vertical_text_ratio);
-  double_VAR_H(textord_tabfind_aligned_gap_fraction);
+  DOUBLE_VAR_H(textord_tabfind_vertical_text_ratio);
+  DOUBLE_VAR_H(textord_tabfind_aligned_gap_fraction);
   INT_VAR_H(tessedit_parallelize);
   BOOL_VAR_H(preserve_interword_spaces);
   STRING_VAR_H(page_separator);
   INT_VAR_H(lstm_choice_mode);
   INT_VAR_H(lstm_choice_iterations);
-  double_VAR_H(lstm_rating_coefficient);
+  DOUBLE_VAR_H(lstm_rating_coefficient);
   BOOL_VAR_H(pageseg_apply_music_mask);
-  double_VAR_H(max_page_gradient_recognize);
+  DOUBLE_VAR_H(max_page_gradient_recognize);
   BOOL_VAR_H(scribe_save_binary_rotated_image);
   BOOL_VAR_H(scribe_save_grey_rotated_image);
   BOOL_VAR_H(scribe_save_original_rotated_image);
@@ -1045,14 +1132,26 @@ public:
   void AddPixDebugPage(const Image &pix, const std::string& title) {
     AddPixDebugPage(pix, title.c_str());
   }
-  void AddPixDebugPage(Image& pix, const char* title, bool keep_a_copy) {
-    if (pix == nullptr)
-      return;
 
-    pixa_debug_.AddPix(pix, title, keep_a_copy);
+  void AddClippedPixDebugPage(const Image &pix, const TBOX& bbox, const char *title);
+  void AddClippedPixDebugPage(const Image& pix, const TBOX& bbox, const std::string& title) {
+    AddClippedPixDebugPage(pix, bbox, title.c_str());
   }
-  void AddPixDebugPage(Image& pix, const std::string& title, bool keep_a_copy) {
-    AddPixDebugPage(pix, title.c_str(), keep_a_copy);
+  void AddClippedPixDebugPage(const Image &pix, const char *title);
+  void AddClippedPixDebugPage(const Image &pix, const std::string &title) {
+    AddClippedPixDebugPage(pix, title.c_str());
+  }
+
+  int PushNextPixDebugSection(const std::string &title) { // sibling
+    return pixa_debug_.PushNextSection(title);
+  }
+  int PushSubordinatePixDebugSection(const std::string &title) { // child
+    return pixa_debug_.PushSubordinateSection(title);
+  }
+  void PopPixDebugSection(int handle = -1) { // pop active; return focus to parent
+    pixa_debug_.WriteSectionParamsUsageReport();
+
+    pixa_debug_.PopSection(handle);
   }
 
 public:
@@ -1120,7 +1219,7 @@ private:
   // have a temporary debug config file loaded, and backup_config_file_
   // will be loaded, and set to null when debug is complete.
   const char *backup_config_file_;
-  // The filename of a config file to read when processing a debug word.
+  // The filename of a config file to read when processing a debug word via Tesseract::debug_word().
   std::string word_config_;
   // Image used for input to layout analysis and tesseract recognition.
   // May be modified by the ShiroRekhaSplitter to eliminate the top-line.
@@ -1131,6 +1230,8 @@ private:
   Image pix_original_;
   // Thresholds that were used to generate the thresholded image from grey.
   Image pix_thresholds_;
+  // canvas copy of pix_binary for debug view painting; this image is always 32-bit depth RGBA.
+  Image pix_for_debug_view_;
   // Debug images. If non-empty, will be written on destruction.
   DebugPixa pixa_debug_;
   // Input image resolution after any scaling. The resolution is not well
@@ -1157,6 +1258,7 @@ private:
   int scaled_factor_;
   FCOORD deskew_;
   FCOORD reskew_;
+  float gradient_;
   TesseractStats stats_;
   // Sub-languages to be tried in addition to this.
   std::vector<Tesseract *> sub_langs_;

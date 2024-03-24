@@ -257,6 +257,8 @@
 
 #include <algorithm>
 #include <cmath>
+#include <exception>
+#include <functional>
 #include <initializer_list>
 #include <ios>
 #include <iterator>
@@ -562,7 +564,7 @@ namespace internal {
 // If the explanation is not empty, prints it to the ostream.
 inline void PrintIfNotEmpty(const std::string& explanation,
                             ::std::ostream* os) {
-  if (explanation != "" && os != nullptr) {
+  if (!explanation.empty() && os != nullptr) {
     *os << ", " << explanation;
   }
 }
@@ -1046,7 +1048,7 @@ class StartsWithMatcher {
   template <typename MatcheeStringType>
   bool MatchAndExplain(const MatcheeStringType& s,
                        MatchResultListener* /* listener */) const {
-    const StringType& s2(s);
+    const StringType s2(s);
     return s2.length() >= prefix_.length() &&
            s2.substr(0, prefix_.length()) == prefix_;
   }
@@ -1100,7 +1102,7 @@ class EndsWithMatcher {
   template <typename MatcheeStringType>
   bool MatchAndExplain(const MatcheeStringType& s,
                        MatchResultListener* /* listener */) const {
-    const StringType& s2(s);
+    const StringType s2(s);
     return s2.length() >= suffix_.length() &&
            s2.substr(s2.length() - suffix_.length()) == suffix_;
   }
@@ -1199,27 +1201,27 @@ class PairMatchBase {
   };
 };
 
-class Eq2Matcher : public PairMatchBase<Eq2Matcher, AnyEq> {
+class Eq2Matcher : public PairMatchBase<Eq2Matcher, std::equal_to<>> {
  public:
   static const char* Desc() { return "an equal pair"; }
 };
-class Ne2Matcher : public PairMatchBase<Ne2Matcher, AnyNe> {
+class Ne2Matcher : public PairMatchBase<Ne2Matcher, std::not_equal_to<>> {
  public:
   static const char* Desc() { return "an unequal pair"; }
 };
-class Lt2Matcher : public PairMatchBase<Lt2Matcher, AnyLt> {
+class Lt2Matcher : public PairMatchBase<Lt2Matcher, std::less<>> {
  public:
   static const char* Desc() { return "a pair where the first < the second"; }
 };
-class Gt2Matcher : public PairMatchBase<Gt2Matcher, AnyGt> {
+class Gt2Matcher : public PairMatchBase<Gt2Matcher, std::greater<>> {
  public:
   static const char* Desc() { return "a pair where the first > the second"; }
 };
-class Le2Matcher : public PairMatchBase<Le2Matcher, AnyLe> {
+class Le2Matcher : public PairMatchBase<Le2Matcher, std::less_equal<>> {
  public:
   static const char* Desc() { return "a pair where the first <= the second"; }
 };
-class Ge2Matcher : public PairMatchBase<Ge2Matcher, AnyGe> {
+class Ge2Matcher : public PairMatchBase<Ge2Matcher, std::greater_equal<>> {
  public:
   static const char* Desc() { return "a pair where the first >= the second"; }
 };
@@ -1473,6 +1475,7 @@ class SomeOfArrayMatcher {
   operator Matcher<U>() const {  // NOLINT
     using RawU = typename std::decay<U>::type;
     std::vector<Matcher<RawU>> matchers;
+    matchers.reserve(matchers_.size());
     for (const auto& matcher : matchers_) {
       matchers.push_back(MatcherCast<RawU>(matcher));
     }
@@ -2401,8 +2404,7 @@ class BeginEndDistanceIsMatcher {
 // elements in the containers (which don't properly matter to sets, but can
 // occur if the containers are vectors or lists, for example).
 //
-// Uses the container's const_iterator, value_type, operator ==,
-// begin(), and end().
+// Uses the container's const_iterator, operator ==, begin(), and end().
 template <typename Container>
 class ContainerEqMatcher {
  public:
@@ -2489,6 +2491,11 @@ struct LessComparator {
   }
 };
 
+// Trait to deduce the value type of a container
+template <typename Container>
+using ValueType = typename std::iterator_traits<
+    decltype(std::declval<Container>().begin())>::value_type;
+
 // Implements WhenSortedBy(comparator, container_matcher).
 template <typename Comparator, typename ContainerMatcher>
 class WhenSortedByMatcher {
@@ -2513,8 +2520,7 @@ class WhenSortedByMatcher {
     // Transforms std::pair<const Key, Value> into std::pair<Key, Value>
     // so that we can match associative containers.
     typedef
-        typename RemoveConstFromKey<typename LhsStlContainer::value_type>::type
-            LhsValue;
+        typename RemoveConstFromKey<ValueType<LhsStlContainer>>::type LhsValue;
 
     Impl(const Comparator& comparator, const ContainerMatcher& matcher)
         : comparator_(comparator), matcher_(matcher) {}
@@ -2580,7 +2586,7 @@ class PointwiseMatcher {
  public:
   typedef internal::StlContainerView<RhsContainer> RhsView;
   typedef typename RhsView::type RhsStlContainer;
-  typedef typename RhsStlContainer::value_type RhsValue;
+  typedef ValueType<RhsStlContainer> RhsValue;
 
   static_assert(!std::is_const<RhsContainer>::value,
                 "RhsContainer type must not be const");
@@ -2610,7 +2616,7 @@ class PointwiseMatcher {
         LhsView;
     typedef typename LhsView::type LhsStlContainer;
     typedef typename LhsView::const_reference LhsStlContainerReference;
-    typedef typename LhsStlContainer::value_type LhsValue;
+    typedef ValueType<LhsStlContainer> LhsValue;
     // We pass the LHS value and the RHS value to the inner matcher by
     // reference, as they may be expensive to copy.  We must use tuple
     // instead of pair here, as a pair cannot hold references (C++ 98,
@@ -2696,7 +2702,7 @@ class QuantifierMatcherImpl : public MatcherInterface<Container> {
   typedef StlContainerView<RawContainer> View;
   typedef typename View::type StlContainer;
   typedef typename View::const_reference StlContainerReference;
-  typedef typename StlContainer::value_type Element;
+  typedef ValueType<StlContainer> Element;
 
   template <typename InnerMatcher>
   explicit QuantifierMatcherImpl(InnerMatcher inner_matcher)
@@ -2964,7 +2970,7 @@ class KeyMatcherImpl : public MatcherInterface<PairType> {
     const bool match = inner_matcher_.MatchAndExplain(
         pair_getters::First(key_value, Rank0()), &inner_listener);
     const std::string explanation = inner_listener.str();
-    if (explanation != "") {
+    if (!explanation.empty()) {
       *listener << "whose first field is a value " << explanation;
     }
     return match;
@@ -3111,12 +3117,12 @@ class PairMatcherImpl : public MatcherInterface<PairType> {
                       const std::string& second_explanation,
                       MatchResultListener* listener) const {
     *listener << "whose both fields match";
-    if (first_explanation != "") {
+    if (!first_explanation.empty()) {
       *listener << ", where the first field is a value " << first_explanation;
     }
-    if (second_explanation != "") {
+    if (!second_explanation.empty()) {
       *listener << ", ";
-      if (first_explanation != "") {
+      if (!first_explanation.empty()) {
         *listener << "and ";
       } else {
         *listener << "where ";
@@ -3367,7 +3373,7 @@ class ElementsAreMatcherImpl : public MatcherInterface<Container> {
   typedef internal::StlContainerView<RawContainer> View;
   typedef typename View::type StlContainer;
   typedef typename View::const_reference StlContainerReference;
-  typedef typename StlContainer::value_type Element;
+  typedef ValueType<StlContainer> Element;
 
   // Constructs the matcher from a sequence of element values or
   // element matchers.
@@ -3613,7 +3619,7 @@ class UnorderedElementsAreMatcherImpl
   typedef internal::StlContainerView<RawContainer> View;
   typedef typename View::type StlContainer;
   typedef typename View::const_reference StlContainerReference;
-  typedef typename StlContainer::value_type Element;
+  typedef ValueType<StlContainer> Element;
 
   template <typename InputIter>
   UnorderedElementsAreMatcherImpl(UnorderedMatcherRequire::Flags matcher_flags,
@@ -3702,7 +3708,7 @@ class UnorderedElementsAreMatcher {
   operator Matcher<Container>() const {
     typedef GTEST_REMOVE_REFERENCE_AND_CONST_(Container) RawContainer;
     typedef typename internal::StlContainerView<RawContainer>::type View;
-    typedef typename View::value_type Element;
+    typedef ValueType<View> Element;
     typedef ::std::vector<Matcher<const Element&>> MatcherVec;
     MatcherVec matchers;
     matchers.reserve(::std::tuple_size<MatcherTuple>::value);
@@ -3733,7 +3739,7 @@ class ElementsAreMatcher {
 
     typedef GTEST_REMOVE_REFERENCE_AND_CONST_(Container) RawContainer;
     typedef typename internal::StlContainerView<RawContainer>::type View;
-    typedef typename View::value_type Element;
+    typedef ValueType<View> Element;
     typedef ::std::vector<Matcher<const Element&>> MatcherVec;
     MatcherVec matchers;
     matchers.reserve(::std::tuple_size<MatcherTuple>::value);
@@ -4212,7 +4218,7 @@ inline internal::UnorderedElementsAreArrayMatcher<T> UnorderedElementsAreArray(
 
 template <typename Container>
 inline internal::UnorderedElementsAreArrayMatcher<
-    typename Container::value_type>
+    internal::ValueType<Container>>
 UnorderedElementsAreArray(const Container& container) {
   return UnorderedElementsAreArray(container.begin(), container.end());
 }
@@ -4758,15 +4764,15 @@ template <typename Tuple2Matcher, typename RhsContainer>
 inline internal::UnorderedElementsAreArrayMatcher<
     typename internal::BoundSecondMatcher<
         Tuple2Matcher,
-        typename internal::StlContainerView<
-            typename std::remove_const<RhsContainer>::type>::type::value_type>>
+        internal::ValueType<typename internal::StlContainerView<
+            typename std::remove_const<RhsContainer>::type>::type>>>
 UnorderedPointwise(const Tuple2Matcher& tuple2_matcher,
                    const RhsContainer& rhs_container) {
   // RhsView allows the same code to handle RhsContainer being a
   // STL-style container and it being a native C-style array.
   typedef typename internal::StlContainerView<RhsContainer> RhsView;
   typedef typename RhsView::type RhsStlContainer;
-  typedef typename RhsStlContainer::value_type Second;
+  typedef internal::ValueType<RhsStlContainer> Second;
   const RhsStlContainer& rhs_stl_container =
       RhsView::ConstReference(rhs_container);
 
@@ -4876,7 +4882,7 @@ inline internal::UnorderedElementsAreArrayMatcher<T> IsSupersetOf(
 
 template <typename Container>
 inline internal::UnorderedElementsAreArrayMatcher<
-    typename Container::value_type>
+    internal::ValueType<Container>>
 IsSupersetOf(const Container& container) {
   return IsSupersetOf(container.begin(), container.end());
 }
@@ -4933,7 +4939,7 @@ inline internal::UnorderedElementsAreArrayMatcher<T> IsSubsetOf(
 
 template <typename Container>
 inline internal::UnorderedElementsAreArrayMatcher<
-    typename Container::value_type>
+    internal::ValueType<Container>>
 IsSubsetOf(const Container& container) {
   return IsSubsetOf(container.begin(), container.end());
 }
@@ -5181,13 +5187,13 @@ inline internal::AllOfArrayMatcher<T> AllOfArray(const T (&array)[N]) {
 }
 
 template <typename Container>
-inline internal::AnyOfArrayMatcher<typename Container::value_type> AnyOfArray(
+inline internal::AnyOfArrayMatcher<internal::ValueType<Container>> AnyOfArray(
     const Container& container) {
   return AnyOfArray(container.begin(), container.end());
 }
 
 template <typename Container>
-inline internal::AllOfArrayMatcher<typename Container::value_type> AllOfArray(
+inline internal::AllOfArrayMatcher<internal::ValueType<Container>> AllOfArray(
     const Container& container) {
   return AllOfArray(container.begin(), container.end());
 }
@@ -5542,7 +5548,8 @@ PolymorphicMatcher<internal::ExceptionMatcherImpl<Err>> ThrowsMessage(
                                                                                \
      private:                                                                  \
       ::std::string FormatDescription(bool negation) const {                   \
-        ::std::string gmock_description = (description);                       \
+        ::std::string gmock_description;                                       \
+        gmock_description = (description);                                     \
         if (!gmock_description.empty()) {                                      \
           return gmock_description;                                            \
         }                                                                      \

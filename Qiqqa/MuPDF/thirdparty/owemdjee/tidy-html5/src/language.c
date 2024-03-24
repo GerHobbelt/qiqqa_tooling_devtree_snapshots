@@ -448,7 +448,7 @@ TY_PRIVATE Bool TY_(tidySetLanguage)( ctmbstr languageCode )
 /**
  *  Gets the current language used by Tidy.
  */
-TY_PRIVATE ctmbstr TY_(tidyGetLanguage)()
+TY_PRIVATE ctmbstr TY_(tidyGetLanguage)( void )
 {
     languageDefinition *langDef = tidyLanguages.currentLanguage;
     languageDictionary *langDict = &langDef->messages;
@@ -460,7 +460,7 @@ TY_PRIVATE ctmbstr TY_(tidyGetLanguage)()
  *  Indicates whether or not the current language was set by a
  *  LibTidy user (yes) or internally by the library (no).
  */
-TY_PRIVATE Bool TY_(tidyGetLanguageSetByUser)()
+TY_PRIVATE Bool TY_(tidyGetLanguageSetByUser)( void )
 {
     return tidyLanguages.manually_set;
 }
@@ -500,7 +500,7 @@ TY_PRIVATE ctmbstr TY_(tidyDefaultString)( uint messageType )
  *  Determines the true size of the `language_en` array indicating the
  *  number of items in the array, _not_ the highest index.
  */
-static const uint tidyStringKeyListSize()
+static const uint tidyStringKeyListSize( void )
 {
     static uint array_size = 0;
     
@@ -521,7 +521,7 @@ static const uint tidyStringKeyListSize()
  *  these are provided for documentation generation purposes
  *  and probably aren't useful for LibTidy implementors.
  */
-TY_PRIVATE TidyIterator TY_(getStringKeyList)()
+TY_PRIVATE TidyIterator TY_(getStringKeyList)( void )
 {
     return (TidyIterator)(size_t)1;
 }
@@ -555,7 +555,7 @@ TY_PRIVATE uint TY_(getNextStringKey)( TidyIterator* iter )
  *  Determines the true size of the `localeMappings` array indicating the
  *  number of items in the array, _not_ the highest index.
  */
-static const uint tidyLanguageListSize()
+static const uint tidyLanguageListSize( void )
 {
     static uint array_size = 0;
     
@@ -574,7 +574,7 @@ static const uint tidyLanguageListSize()
  *  in Tidy's structure of Windows<->POSIX local mapping.
  *  Items can be retrieved with getNextWindowsLanguage();
  */
-TY_PRIVATE TidyIterator TY_(getWindowsLanguageList)()
+TY_PRIVATE TidyIterator TY_(getWindowsLanguageList)( void )
 {
     return (TidyIterator)(size_t)1;
 }
@@ -623,7 +623,7 @@ TY_PRIVATE ctmbstr TY_(TidyLangPosixName)( const tidyLocaleMapItemImpl *item )
 /**
  *  Determines the number of languages installed in Tidy.
  */
-static const uint tidyInstalledLanguageListSize()
+static const uint tidyInstalledLanguageListSize( void )
 {
     static uint array_size = 0;
     
@@ -642,7 +642,7 @@ static const uint tidyInstalledLanguageListSize()
  *  in Tidy's list of installed language codes.
  *  Items can be retrieved with getNextInstalledLanguage();
  */
-TY_PRIVATE TidyIterator TY_(getInstalledLanguageList)()
+TY_PRIVATE TidyIterator TY_(getInstalledLanguageList)( void )
 {
     return (TidyIterator)(size_t)1;
 }

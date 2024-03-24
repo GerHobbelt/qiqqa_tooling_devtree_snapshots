@@ -24,8 +24,9 @@
 
 #include "pdf_ttf.h"
 #include "tprintf.h"
+#include "helpers.h" // for Swap
 
-#include <allheaders.h>
+#include <leptonica/allheaders.h>
 #include <tesseract/baseapi.h>
 #include <tesseract/publictypes.h> // for PTIsTextType()
 #include <tesseract/renderer.h>
@@ -36,10 +37,18 @@
 #include <locale>    // for std::locale::classic
 #include <memory>    // std::unique_ptr
 #include <sstream>   // for std::stringstream
+#include <string_view>
 
 #include "tesseractclass.h"
 
-#include "helpers.h" // for Swap
+using namespace std::literals;
+
+#ifndef NDEBUG
+#define DEBUG_PDF
+#endif
+#ifdef DEBUG_PDF
+#define NO_PDF_COMPRESSION
+#endif
 
 /*
 
@@ -77,7 +86,7 @@ codes into Unicode values. If its not present then the reader will
 fall back through a series of heuristics to try and guess the
 result. This is, as you would expect, prone to failure.
 
-This doesn't concern you of course, since you always writing a ToUnicode
+This doesn't concern you of course, since you always write a ToUnicode
 CMap, so because you are writing the text in text rendering mode 3 it
 would seem that you don't really need to worry about this, but in the
 PDF spec you cannot have an isolated ToUnicode CMap, it has to be
@@ -310,7 +319,7 @@ static void ClipBaseline(int ppi, int x1, int y1, int x2, int y2, int *line_x1, 
 
 static bool CodepointToUtf16be(int code, char utf16[kMaxBytesPerCodepoint]) {
   if ((code > 0xD7FF && code < 0xE000) || code > 0x10FFFF) {
-    tprintf("ERROR: Dropping invalid codepoint {}\n", code);
+    tprintError("Dropping invalid codepoint {}\n", code);
     return false;
   }
   if (code < 0x10000) {
@@ -449,6 +458,9 @@ char *TessPDFRenderer::GetPDFTextObjects(TessBaseAPI *api, double width, double 
       if (fontsize != old_fontsize) {
         pdf_str << "/f-0-0 " << fontsize << " Tf ";
         old_fontsize = fontsize;
+#ifdef DEBUG_PDF
+        pdf_str << "\n";
+#endif
       }
     }
 
@@ -472,13 +484,19 @@ char *TessPDFRenderer::GetPDFTextObjects(TessBaseAPI *api, double width, double 
     } while (!res_it->Empty(RIL_BLOCK) && !res_it->IsAtBeginningOf(RIL_WORD));
     if (res_it->IsAtBeginningOf(RIL_WORD)) {
       pdf_word += "0020";
-      pdf_word_len++;
+      // We don't increment `pdf_word_len` here because it repesents the number
+      // of characters of the word itself - the added space is not part of the
+      // word!
     }
     if (word_length > 0 && pdf_word_len > 0) {
       double h_stretch = kCharWidth * prec(100.0 * word_length / (fontsize * pdf_word_len));
-      pdf_str << h_stretch << " Tz" // horizontal stretch
-              << " [ <" << pdf_word // UTF-16BE representation
-              << "> ] TJ";          // show the text
+      pdf_str << h_stretch << " Tz"; // horizontal stretch
+      pdf_str
+          << " [ <" << pdf_word // UTF-16BE representation
+          << "> ] TJ";          // show the text
+#ifdef DEBUG_PDF
+      pdf_str << "\n";
+#endif
     }
     if (last_word_in_line) {
       pdf_str << " \n";
@@ -488,7 +506,7 @@ char *TessPDFRenderer::GetPDFTextObjects(TessBaseAPI *api, double width, double 
     }
   }
   const std::string &text = pdf_str.str();
-  char* result = new char[text.length() + 1];
+  char *result = new char[text.length() + 1];
   strcpy(result, text.c_str());
   return result;
 }
@@ -552,26 +570,36 @@ bool TessPDFRenderer::BeginDocumentHandler() {
   for (int i = 0; i < kCIDToGIDMapSize; i++) {
     cidtogidmap[i] = (i % 2) ? 1 : 0;
   }
-  size_t len;
-  unsigned char *comp = zlibCompress(cidtogidmap.get(), kCIDToGIDMapSize, &len);
+  size_t len = kCIDToGIDMapSize;
+#ifndef NO_PDF_COMPRESSION
+  auto comp = zlibCompress(cidtogidmap.get(), kCIDToGIDMapSize, &len);
+#endif
   stream.str("");
   stream << "5 0 obj\n"
             "<<\n"
             "  /Length "
          << len
-         << " /Filter /FlateDecode\n"
+         << ""
+#ifndef NO_PDF_COMPRESSION
+            " /Filter /FlateDecode"
+#endif
+            "\n"
             ">>\n"
-            "stream\n";
+            "stream\n"
+            ;
   AppendString(stream.str().c_str());
   long objsize = stream.str().size();
+#ifndef NO_PDF_COMPRESSION
   AppendData(reinterpret_cast<char *>(comp), len);
+#else
+  AppendData(reinterpret_cast<char *>(cidtogidmap.get()), len);
+#endif
   objsize += len;
+#ifndef NO_PDF_COMPRESSION
   lept_free(comp);
-  const char *endstream_endobj =
-      "endstream\n"
-      "endobj\n";
-  AppendString(endstream_endobj);
-  objsize += strlen(endstream_endobj);
+#endif
+  objsize += AppendData("endstream\n"sv);
+  objsize += AppendData("endobj\n"sv);
   AppendPDFObjectDIY(objsize);
 
   const char stream2[] =
@@ -639,7 +667,7 @@ bool TessPDFRenderer::BeginDocumentHandler() {
     font = buffer.data();
   } else {
 #if !defined(NDEBUG)
-    tprintf("ERROR: Cannot open file \"{}\"!\nUsing internal glyphless font.\n", stream.str());
+    tprintError("Cannot open file \"{}\"!\nUsing internal glyphless font.\n", stream.str());
 #endif
     font = pdf_ttf;
     size = sizeof(pdf_ttf);
@@ -661,8 +689,8 @@ bool TessPDFRenderer::BeginDocumentHandler() {
   objsize = stream.str().size();
   AppendData(reinterpret_cast<const char *>(font), size);
   objsize += size;
-  AppendString(endstream_endobj);
-  objsize += strlen(endstream_endobj);
+  objsize += AppendData("endstream\n"sv);
+  objsize += AppendData("endobj\n"sv);
   AppendPDFObjectDIY(objsize);
   return true;
 }
@@ -680,17 +708,7 @@ bool TessPDFRenderer::imageToPDFObj(Pix *pix, const char *filename, long int obj
   }
 
   L_Compressed_Data *cid = nullptr;
-
-  int sad = 0;
-  if (pixGetInputFormat(pix) == IFF_PNG) {
-    sad = pixGenerateCIData(pix, L_FLATE_ENCODE, 0, 0, &cid);
-  }
-  else if (pixGetInputFormat(pix) == IFF_UNKNOWN) {
-    sad = pixGenerateCIData(pix, L_FLATE_ENCODE, 0, 0, &cid);
-  }
-  if (!cid) {
-    sad = l_generateCIDataForPdf(filename, pix, jpg_quality, &cid);
-  }
+  auto sad = l_generateCIDataForPdf(filename, pix, jpg_quality, &cid);
 
   if (sad || !cid) {
     l_CIDataDestroy(&cid);
@@ -801,7 +819,7 @@ bool TessPDFRenderer::imageToPDFObj(Pix *pix, const char *filename, long int obj
   size_t colorspace_len = colorspace.str().size();
 
   *pdf_object_size = b1_len + colorspace_len + b2_len + cid->nbytescomp + b3_len;
-  * pdf_object = new char[*pdf_object_size];
+  *pdf_object = new char[*pdf_object_size];
 
   char *p = *pdf_object;
   memcpy(p, b1.str().c_str(), b1_len);
@@ -877,39 +895,47 @@ bool TessPDFRenderer::AddImageHandler(TessBaseAPI *api) {
   // CONTENTS
   const std::unique_ptr<char[]> pdftext(GetPDFTextObjects(api, width, height));
   const size_t pdftext_len = strlen(pdftext.get());
-  size_t len;
-  unsigned char *comp_pdftext =
-      zlibCompress(reinterpret_cast<unsigned char *>(pdftext.get()), pdftext_len, &len);
-  long comp_pdftext_len = len;
+  size_t len = pdftext_len;
+#ifndef NO_PDF_COMPRESSION
+  auto comp_pdftext = zlibCompress(reinterpret_cast<unsigned char *>(pdftext.get()), pdftext_len, &len);
+#endif
   stream.str("");
   stream << obj_
          << " 0 obj\n"
             "<<\n"
             "  /Length "
-         << comp_pdftext_len
-         << " /Filter /FlateDecode\n"
+         << len
+         << ""
+#ifndef NO_PDF_COMPRESSION
+            " /Filter /FlateDecode"
+#endif
+            "\n"
             ">>\n"
-            "stream\n";
+            "stream\n"
+            ;
   AppendString(stream.str().c_str());
   long objsize = stream.str().size();
-  AppendData(reinterpret_cast<char *>(comp_pdftext), comp_pdftext_len);
-  objsize += comp_pdftext_len;
+#ifndef NO_PDF_COMPRESSION
+  AppendData(reinterpret_cast<char *>(comp_pdftext), len);
+#else
+  AppendData(reinterpret_cast<char *>(pdftext.get()), len);
+#endif
+  objsize += len;
+#ifndef NO_PDF_COMPRESSION
   lept_free(comp_pdftext);
-  const char *b2 =
-      "endstream\n"
-      "endobj\n";
-  AppendString(b2);
-  objsize += strlen(b2);
+#endif
+  objsize += AppendData("endstream\n"sv);
+  objsize += AppendData("endobj\n"sv);
   AppendPDFObjectDIY(objsize);
 
   if (!textonly_) {
     char *pdf_object = nullptr;
     int jpg_quality = api->tesseract()->jpg_quality;
     if (!imageToPDFObj(pix, filename, obj_, &pdf_object, &objsize, jpg_quality)) {
-	  if (destroy_pix)
-	  {
-	    pixDestroy(&pix);
-	  }
+    if (destroy_pix)
+    {
+      pixDestroy(&pix);
+    }
       return false;
     }
     AppendData(pdf_object, objsize);
@@ -961,7 +987,7 @@ bool TessPDFRenderer::EndDocumentHandler() {
     }
   }
 
-  char *datestr = l_getFormattedDate();
+  const char *datestr = l_getFormattedDate();
   stream.str("");
   stream << obj_
          << " 0 obj\n"

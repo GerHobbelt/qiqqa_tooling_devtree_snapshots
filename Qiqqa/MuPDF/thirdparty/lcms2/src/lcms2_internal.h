@@ -39,7 +39,7 @@
 
 // Some needed constants
 #ifndef M_PI
-#       define M_PI        3.14159265358979323846
+#		define M_PI    3.14159265358979323846264338327950
 #endif
 
 #ifndef M_LOG10E
@@ -534,7 +534,7 @@ struct _cmsContext_struct {
     struct _cmsContext_struct* Next;  // Points to next context in the new style
     _cmsSubAllocator* MemPool;        // The memory pool that stores context data
 
-    void* chunks[MemoryClientMax];    // array of pointers to client chunks. Memory itself is hold in the suballocator.
+    void* chunks[MemoryClientMax];    // array of pointers to client chunks. Memory itself is held in the suballocator.
                                       // If NULL, then it reverts to global Context0
 
     _cmsMemPluginChunkType DefaultMemoryManager;  // The allocators used for creating the context itself. Cannot be overridden
@@ -746,8 +746,8 @@ typedef struct {
 
     cmsInt32Number      MaxWorkers;       // Number of workers to do as maximum
     cmsInt32Number      WorkerFlags;      // reserved
-    _cmsTransform2Fn    SchedulerFn;      // callback to setup functions 
-    
+    _cmsTransform2Fn    SchedulerFn;      // callback to setup functions
+
 } _cmsParallelizationPluginChunkType;
 
 // The global Context0 storage for parallelization plug-in
@@ -821,6 +821,9 @@ typedef struct _cms_iccprofile_struct {
     // Creation time
     struct tm                Created;
 
+    // Color management module identification
+    cmsUInt32Number          CMM;
+
     // Only most important items found in ICC profiles
     cmsUInt32Number          Version;
     cmsProfileClassSignature DeviceClass;
@@ -828,6 +831,7 @@ typedef struct _cms_iccprofile_struct {
     cmsColorSpaceSignature   PCS;
     cmsUInt32Number          RenderingIntent;
 
+    cmsPlatformSignature     platform;
     cmsUInt32Number          flags;
     cmsUInt32Number          manufacturer, model;
     cmsUInt64Number          attributes;
@@ -1122,7 +1126,7 @@ typedef struct _cmstransform_struct {
 
     _cmsTRANSFORMCORE *core;
 	
-    // A one-worker transform entry for parallelization 
+    // A one-worker transform entry for parallelization
     _cmsTransform2Fn Worker;
     cmsInt32Number   MaxWorkers;
     cmsUInt32Number  WorkerFlags;

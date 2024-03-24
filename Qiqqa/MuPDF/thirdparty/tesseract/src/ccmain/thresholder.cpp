@@ -30,7 +30,7 @@
 #  include "openclwrapper.h" // for OpenclDevice
 #endif
 
-#include <allheaders.h>
+#include <leptonica/allheaders.h>
 #include <tesseract/baseapi.h> // for api->GetIntVariable()
 
 #include <algorithm> // for std::max, std::min
@@ -82,7 +82,7 @@ bool ImageThresholder::IsEmpty() const {
 // byte packed with the MSB of the first byte being the first pixel, and a
 // one pixel is WHITE. For binary images set bytes_per_pixel=0.
 void ImageThresholder::SetImage(const unsigned char *imagedata, int width, int height,
-                                int bytes_per_pixel, int bytes_per_line, const float angle) {
+                                int bytes_per_pixel, int bytes_per_line, int exif, const float angle) {
   int bpp = bytes_per_pixel * 8;
   if (bpp == 0) {
     bpp = 1;
@@ -135,10 +135,10 @@ void ImageThresholder::SetImage(const unsigned char *imagedata, int width, int h
       break;
 
     default:
-      tprintf("ERROR: Cannot convert RAW image to Pix with bpp = {}\n", bpp);
+      tprintError("Cannot convert RAW image to Pix with bpp = {}\n", bpp);
   }
 
-  SetImage(pix, angle);
+  SetImage(pix, exif, angle);
   pix.destroy();
 }
 
@@ -170,12 +170,36 @@ void ImageThresholder::GetImageSizes(int *left, int *top, int *width, int *heigh
 // SetImage for Pix clones its input, so the source pix may be pixDestroyed
 // immediately after, but may not go away until after the Thresholder has
 // finished with it.
-void ImageThresholder::SetImage(const Image pix, const float angle) {
+void ImageThresholder::SetImage(const Image pix, int exif, const float angle) {
   if (pix_ != nullptr) {
     pix_.destroy();
   }
-  Image src = pixRotate(pix, angle, L_ROTATE_AREA_MAP, L_BRING_IN_WHITE, 0, 0);
-  //Image src = pix;
+
+  // Rotate if specified by exif orientation value
+  Image src, temp1, temp2;
+  if (exif == 3 || exif == 4) {
+    temp1 = pixRotateOrth(pix, 2);
+  } else if (exif == 5 || exif == 6) {
+    temp1 = pixRotateOrth(pix, 1);
+  } else if (exif == 7 || exif == 8) {
+    temp1 = pixRotateOrth(pix, 3);
+  } else {
+    temp1 = pix.clone();
+  }
+
+  // Mirror if specified by exif orientation value
+  if (exif == 2 || exif == 4 || exif == 5 || exif == 7) {
+    temp2 = pixFlipLR(NULL, temp1);
+  } else {
+    temp2 = temp1.clone();
+  }
+
+  // Rotate if additional rotation angle is specified
+  src = pixRotate(temp2, angle, L_ROTATE_AREA_MAP, L_BRING_IN_WHITE, 0, 0);
+
+  temp1.destroy();
+  temp2.destroy();
+
   int depth;
   pixGetDimensions(src, &image_width_, &image_height_, &depth);
   // Convert the image as necessary so it is one of binary, plain RGB, or
@@ -186,6 +210,7 @@ void ImageThresholder::SetImage(const Image pix, const float angle) {
   } else {
     pix_ = src.copy();
   }
+  src.destroy();
   depth = pixGetDepth(pix_);
   pix_channels_ = depth / 8;
   pix_wpl_ = pixGetWpl(pix_);
@@ -209,7 +234,7 @@ void ImageThresholder::SetImage(const Image pix, const float angle) {
  *      (1) This composite operation is good for adaptively removing
  *          dark background. Adaption of Thomas Breuel's nlbin version
  *          from ocropus.
- *      (2) A good thresholder together NLNorm is WAN
+ *      (2) A good thresholder together with NLNorm is WAN
  * </pre>
  */
 Pix *ImageThresholder::pixNLNorm2(Pix *pixs, int *pthresh) {
@@ -260,7 +285,7 @@ Pix *ImageThresholder::pixNLNorm2(Pix *pixs, int *pthresh) {
   pixDestroy(&pixd2);
 
   /// Local contrast enhancement
-  //  Ignore a border of 10 % and get a mean threshold,
+  //  Ignore a border of 10% and get a mean threshold,
   //  background and foreground value
   pixbox = boxCreate(w1 * 0.1, h1 * 0.1, w1 * 0.9, h1 * 0.9);
   na = pixGetGrayHistogramInRect(pixg, pixbox, 1);
@@ -412,7 +437,7 @@ ImageThresholder::pixNLBin(PIX *pixs, bool adaptive)
     /* whsize needs to be this small to use it also for lineimages for tesseract */
     pixSauvolaBinarizeTiled(pixb, 16, 0.5, nx, ny, NULL, &pixb);
   } else {
-    pixb =pixDitherToBinarySpec(pixb, bgval-((bgval-thresh)*0.75), fgval+((thresh-fgval)*0.25));
+    pixb = pixDitherToBinarySpec(pixb, bgval-((bgval-thresh)*0.75), fgval+((thresh-fgval)*0.25));
     //pixb = pixThresholdToBinary(pixb, fgval+((thresh-fgval)*.1));  /* for bg and light fg */
   }
 
@@ -442,10 +467,11 @@ std::tuple<bool, Image, Image, Image> ImageThresholder::Threshold(
   pixGetDimensions(pix_ /* pix_grey */, &pix_w, &pix_h, nullptr);
 
   if (tesseract_->thresholding_debug) {
-    tprintf("\nimage width: {}  height: {}  ppi: {}\n", pix_w, pix_h, yres_);
+    tprintDebug("\nimage width: {}  height: {}  ppi: {}\n", pix_w, pix_h, yres_);
   }
 
-  if (method == ThresholdMethod::Sauvola) {
+  switch (method) {
+  case ThresholdMethod::Sauvola: {
     int window_size;
     window_size = tesseract_->thresholding_window_size * yres_;
     window_size = std::max(7, window_size);
@@ -470,21 +496,27 @@ std::tuple<bool, Image, Image, Image> ImageThresholder::Threshold(
     kfactor = std::max(0.0, kfactor);
 
     if (tesseract_->thresholding_debug) {
-      tprintf("window size: {}  kfactor: {}  nx: {}  ny: {}\n", window_size, kfactor, nx, ny);
+      tprintDebug("window size: {}  kfactor: {}  nx: {}  ny: {}\n", window_size, kfactor, nx, ny);
     }
 
     r = pixSauvolaBinarizeTiled(pix_grey, half_window_size, kfactor, nx, ny,
                                (PIX**)pix_thresholds,
                                 (PIX**)pix_binary);
-  } else if (method == ThresholdMethod::OtsuOnNormalizedBackground) {
+  } break;
+
+  case ThresholdMethod::OtsuOnNormalizedBackground: {
     pix_binary = pixOtsuThreshOnBackgroundNorm(pix_grey, nullptr, 10, 15, 100,
                                                50, 255, 2, 2, 0.1f,
                                                &threshold_val);
-  } else if (method == ThresholdMethod::MaskingAndOtsuOnNormalizedBackground) {
+  } break;
+
+  case ThresholdMethod::MaskingAndOtsuOnNormalizedBackground: {
     pix_binary = pixMaskedThreshOnBackgroundNorm(pix_grey, nullptr, 10, 15,
                                                  100, 50, 2, 2, 0.1f,
                                                  &threshold_val);
-  } else if (method == ThresholdMethod::LeptonicaOtsu) {
+  } break;
+
+  case ThresholdMethod::LeptonicaOtsu: {
     int tile_size;
     double tile_size_factor = tesseract_->thresholding_tile_size;
     tile_size = tile_size_factor * yres_;
@@ -499,7 +531,7 @@ std::tuple<bool, Image, Image, Image> ImageThresholder::Threshold(
     double score_fraction = tesseract_->thresholding_score_fraction;
 
     if (tesseract_->thresholding_debug) {
-      tprintf("LeptonicaOtsu thresholding: tile size: {}, smooth_size: {}, score_fraction: {}\n", tile_size, smooth_size, score_fraction);
+      tprintDebug("LeptonicaOtsu thresholding: tile size: {}, smooth_size: {}, score_fraction: {}\n", tile_size, smooth_size, score_fraction);
     }
 
     r = pixOtsuAdaptiveThreshold(pix_grey, tile_size, tile_size,
@@ -507,13 +539,29 @@ std::tuple<bool, Image, Image, Image> ImageThresholder::Threshold(
                                  score_fraction,
                                  (PIX **)pix_thresholds,
                                  (PIX **)pix_binary);
-  } else if (method == ThresholdMethod::Nlbin) {
+  } break;
+
+  case ThresholdMethod::Nlbin: {
     auto pix = GetPixRect();
     pix_binary = pixNLBin(pix, false);
-    r = 0;
-  } else {
+  } break;
+
+  case ThresholdMethod::Otsu: {
+    if (!ThresholdToPix(&pix_binary)) {
+      r = 1;
+    }
+    else {
+      if (!IsBinary()) {
+        pix_thresholds = GetPixRectThresholds();
+        //pix_grey = GetPixRectGrey();
+      }
+    }
+  } break;
+
+  default:
     // Unsupported threshold method.
     r = 1;
+    break;
   }
 
   bool ok = (r == 0) && pix_binary;

@@ -512,6 +512,9 @@
     <ClInclude Include="../../thirdparty/owemdjee/YACLib/include/yaclib/coro/detail/await_awaiter.hpp">
       <Filter>Header Files\include\yaclib\coro\detail</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/YACLib/include/yaclib/coro/detail/await_on_awaiter.hpp">
+      <Filter>Header Files\include\yaclib\coro\detail</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/YACLib/include/yaclib/coro/detail/on_awaiter.hpp">
       <Filter>Header Files\include\yaclib\coro\detail</Filter>
     </ClInclude>
@@ -863,6 +866,9 @@
     <Text Include="../../thirdparty/owemdjee/YACLib/CMakeLists.txt">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/YACLib/LICENSE">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/YACLib/README.md">
       <Filter>Misc Files</Filter>
     </Text>
@@ -899,6 +905,12 @@
     <Text Include="../../thirdparty/owemdjee/YACLib/doc/design.md">
       <Filter>Misc Files\doc</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/YACLib/doc/doxygen/Doxyfile">
+      <Filter>Misc Files\doc\doxygen</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/YACLib/doc/doxygen/LICENSE">
+      <Filter>Misc Files\doc\doxygen</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/YACLib/doc/doxygen/doxygen-awesome-darkmode-toggle.js">
       <Filter>Misc Files\doc\doxygen</Filter>
     </Text>
@@ -907,6 +919,24 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/YACLib/doc/doxygen/doxygen-awesome-paragraph-link.js">
       <Filter>Misc Files\doc\doxygen</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/YACLib/doc/doxygen/doxygen-awesome-sidebar-only-darkmode-toggle.css">
+      <Filter>Misc Files\doc\doxygen</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/YACLib/doc/doxygen/doxygen-awesome-sidebar-only.css">
+      <Filter>Misc Files\doc\doxygen</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/YACLib/doc/doxygen/doxygen-awesome.css">
+      <Filter>Misc Files\doc\doxygen</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/YACLib/doc/doxygen/doxygen-custom/custom-alternative.css">
+      <Filter>Misc Files\doc\doxygen\doxygen-custom</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/YACLib/doc/doxygen/doxygen-custom/custom.css">
+      <Filter>Misc Files\doc\doxygen\doxygen-custom</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/YACLib/doc/doxygen/doxygen-custom/header.html">
+      <Filter>Misc Files\doc\doxygen\doxygen-custom</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/YACLib/doc/doxygen/doxygen-custom/toggle-alternative-theme.js">
       <Filter>Misc Files\doc\doxygen\doxygen-custom</Filter>

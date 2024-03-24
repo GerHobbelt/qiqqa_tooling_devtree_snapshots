@@ -20,6 +20,7 @@
 #include <ios>
 #include <sstream>
 #include <filesystem>
+#include <iostream>
 
 
 #if defined(__cpp_rtti)
@@ -139,7 +140,7 @@ struct js_traits<bool>
 
     static JSValue wrap(JSContext * ctx, bool i) noexcept
     {
-        return JS_NewBool(ctx, i);
+        return JS_NewBool(ctx, static_cast<JS_BOOL>(i));
     }
 };
 
@@ -177,7 +178,9 @@ struct js_traits<double>
 };
 
 namespace detail {
-/** Fake std::string_view which frees the string on destruction.
+
+/** 
+* Fake std::string_view which frees the string on destruction.
 */
 class js_string : public std::string_view
 {
@@ -206,6 +209,7 @@ public:
             JS_FreeCString(ctx, this->data());
     }
 };
+
 } // namespace detail
 
 /** Conversion traits from std::string_view and to detail::js_string. */
@@ -442,7 +446,7 @@ struct js_traits<std::variant<Ts...>>
 
             case JS_TAG_FUNCTION_BYTECODE:
                 return unwrapPriority<std::is_function>(ctx, v);
-            case JS_TAG_OBJECT:
+            case JS_TAG_OBJECT: // TODO: FIX: this does not account for inheritance!
                 if(auto result = unwrapObj<Ts...>(ctx, v, JS_GetClassID(v)))
                 {
                     return *result;
@@ -771,6 +775,7 @@ struct js_traits<ctor_wrapper<T, Args...>>
             if(JS_IsException(proto))
                 return proto;
             auto jsobj = JS_NewObjectProtoClass(ctx, proto, js_traits<std::shared_ptr<T>>::QJSClassId);
+
             JS_FreeValue(ctx, proto);
             if(JS_IsException(jsobj))
                 return jsobj;
@@ -779,6 +784,17 @@ struct js_traits<ctor_wrapper<T, Args...>>
             {
                 std::shared_ptr<T> ptr = std::apply(std::make_shared<T, Args...>, detail::unwrap_args<Args...>(ctx, argc, argv));
                 JS_SetOpaque(jsobj, new std::shared_ptr<T>(std::move(ptr)));
+
+                #ifdef DEUS_DEBUG
+                std::cout << "CONSTRUCT JS_NewObjectProtoClass\n";
+                #endif
+
+                // If memory is managed by external source
+                const bool isMemoryManaged = true; // TODO: define in class
+                if (isMemoryManaged) {
+                  JS_DupValue(ctx, jsobj);
+                }
+
                 return jsobj;
             }
             catch (exception)
@@ -908,7 +924,7 @@ struct js_traits<std::shared_ptr<T>>
                     assert(pptr);
                     const T * ptr = pptr->get();
                     assert(ptr);
-                    for(auto member : markOffsets)
+                    for(auto&& member : markOffsets)
                     {
                         JS_MarkValue(rt, (*ptr.*member).v, mark_func);
                     }
@@ -931,6 +947,7 @@ struct js_traits<std::shared_ptr<T>>
             int e = JS_NewClass(rt, QJSClassId, &def);
             if(e < 0)
             {
+                JS_FreeValue(ctx, proto);
                 JS_ThrowInternalError(ctx, "Can't register class %s", name);
                 throw exception{ctx};
             }
@@ -1312,7 +1329,12 @@ public:
 
     bool operator ==(JSValueConst other) const
     {
-        return JS_VALUE_GET_TAG(v) == JS_VALUE_GET_TAG(other) && JS_VALUE_GET_PTR(v) == JS_VALUE_GET_PTR(other);
+        auto tag = JS_VALUE_GET_TAG(v);
+        if(tag != JS_VALUE_GET_TAG(other))
+            return false;
+        if(tag >= JS_TAG_INT && tag < JS_TAG_FLOAT64)
+            return JS_VALUE_GET_INT(v) == JS_VALUE_GET_INT(other);
+        return JS_VALUE_GET_PTR(v) == JS_VALUE_GET_PTR(other);
     }
 
     bool operator !=(JSValueConst other) const { return !((*this) == other); }
@@ -1574,7 +1596,6 @@ public:
             return *this;
         }
 
-
         template <typename T>
         Module& add(const char * name, T&& value)
         {
@@ -1713,7 +1734,7 @@ public:
                 assert(js_traits<std::shared_ptr<B>>::QJSClassId && "base class is not registered");
                 js_traits<std::shared_ptr<T>>::template ensureCanCastToBase<B>();
                 auto base_proto = JS_GetClassProto(context.ctx, js_traits<std::shared_ptr<B>>::QJSClassId);
-                int err = JS_SetPrototype(context.ctx, prototype.v, base_proto);
+                JS_BOOL err = JS_SetPrototype(context.ctx, prototype.v, base_proto);
                 JS_FreeValue(context.ctx, base_proto);
                 if(err < 0)
                     throw exception{context.ctx};
@@ -1730,10 +1751,14 @@ public:
                 return *this;
             }
 
-
-            ~class_registrar()
+            ~class_registrar() noexcept(false)
             {
-                context.registerClass<T>(name, std::move(prototype));
+                // register_class can throw, so check if an exception has already occurred
+                JSValue v = JS_GetException(context.ctx);
+                if(JS_IsNull(v))
+                    context.registerClass<T>(name, std::move(prototype));
+                else
+                    JS_Throw(context.ctx, v);
             }
         };
 
@@ -1893,7 +1918,7 @@ struct js_traits<std::function<R(Args...)>, int>
 {
     static auto unwrap(JSContext * ctx, JSValueConst fun_obj)
     {
-        const int argc = sizeof...(Args);
+        constexpr int argc = sizeof...(Args);
         if constexpr(argc == 0)
         {
             return [jsfun_obj = Value{ctx, JS_DupValue(ctx, fun_obj)}]() -> R {
@@ -1926,7 +1951,7 @@ struct js_traits<std::function<R(Args...)>, int>
     static JSValue wrap(JSContext * ctx, Functor&& functor) noexcept
     {
         using detail::function;
-        assert(js_traits<function>::QJSClassId);
+        assert(js_traits<function>::QJSClassId != 0);
         auto obj = JS_NewObjectClass(ctx, js_traits<function>::QJSClassId);
         if(JS_IsException(obj))
             return obj;

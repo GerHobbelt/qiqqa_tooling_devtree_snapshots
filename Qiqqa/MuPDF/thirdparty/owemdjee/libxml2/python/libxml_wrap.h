@@ -18,6 +18,8 @@
 #include <libxml/xmlregexp.h>
 #include <libxml/xmlautomata.h>
 #include <libxml/xmlreader.h>
+#include <libxml/globals.h>
+#include <libxml/xmlsave.h>
 #ifdef LIBXML_SCHEMAS_ENABLED
 #include <libxml/relaxng.h>
 #include <libxml/xmlschemas.h>
@@ -63,7 +65,10 @@
 /*
  * Macros to ignore deprecation warnings
  */
-#if defined(__clang__) || \
+#if defined(__LCC__)
+#define XML_IGNORE_DEPRECATION_WARNINGS \
+    _Pragma("diag_suppress 1215")
+#elif defined(__clang__) || \
     (defined(__GNUC__) && (__GNUC__ * 100 + __GNUC_MINOR__ >= 406))
 #define XML_IGNORE_DEPRECATION_WARNINGS \
     _Pragma("GCC diagnostic push") \
@@ -288,7 +293,7 @@ PyObject * libxml_xmlSchemaPtrWrap(xmlSchemaPtr ctxt);
 PyObject * libxml_xmlSchemaParserCtxtPtrWrap(xmlSchemaParserCtxtPtr ctxt);
 PyObject * libxml_xmlSchemaValidCtxtPtrWrap(xmlSchemaValidCtxtPtr valid);
 #endif /* LIBXML_SCHEMAS_ENABLED */
-PyObject * libxml_xmlErrorPtrWrap(xmlErrorPtr error);
+PyObject * libxml_xmlErrorPtrWrap(const xmlError *error);
 PyObject * libxml_xmlSchemaSetValidErrors(PyObject * self, PyObject * args);
 PyObject * libxml_xmlRegisterInputCallback(PyObject *self, PyObject *args);
 PyObject * libxml_xmlUnregisterInputCallback(PyObject *self, PyObject *args);

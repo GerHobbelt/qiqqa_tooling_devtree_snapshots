@@ -70,8 +70,6 @@
 
 /* RFC2348 allows the block size to be negotiated */
 #define TFTP_BLKSIZE_DEFAULT 512
-#define TFTP_BLKSIZE_MIN 8
-#define TFTP_BLKSIZE_MAX 65464
 #define TFTP_OPTION_BLKSIZE "blksize"
 
 /* from RFC2349: */
@@ -183,7 +181,7 @@ const struct Curl_handler Curl_handler_tftp = {
   ZERO_NULL,                            /* domore_getsock */
   ZERO_NULL,                            /* perform_getsock */
   tftp_disconnect,                      /* disconnect */
-  ZERO_NULL,                            /* readwrite */
+  ZERO_NULL,                            /* write_resp */
   ZERO_NULL,                            /* connection_check */
   ZERO_NULL,                            /* attach connection */
   PORT_TFTP,                            /* defport */
@@ -454,8 +452,6 @@ static CURLcode tftp_send_first(struct tftp_state_data *state,
     if(data->set.upload) {
       /* If we are uploading, send an WRQ */
       setpacketevent(&state->spacket, TFTP_EVENT_WRQ);
-      state->data->req.upload_fromhere =
-        (char *)state->spacket.data + 4;
       if(data->state.infilesize != -1)
         Curl_pgrsSetUploadSize(data, data->state.infilesize);
     }
@@ -710,6 +706,8 @@ static CURLcode tftp_tx(struct tftp_state_data *state, tftp_event_t event)
   struct SingleRequest *k = &data->req;
   size_t cb; /* Bytes currently read */
   char buffer[STRERROR_LEN];
+  char *bufptr;
+  bool eos;
 
   switch(event) {
 
@@ -773,13 +771,14 @@ static CURLcode tftp_tx(struct tftp_state_data *state, tftp_event_t event)
      * data block.
      * */
     state->sbytes = 0;
-    state->data->req.upload_fromhere = (char *)state->spacket.data + 4;
+    bufptr = (char *)state->spacket.data + 4;
     do {
-      result = Curl_fillreadbuffer(data, state->blksize - state->sbytes, &cb);
+      result = Curl_client_read(data, bufptr, state->blksize - state->sbytes,
+                                &cb, &eos);
       if(result)
         return result;
       state->sbytes += (int)cb;
-      state->data->req.upload_fromhere += cb;
+      bufptr += cb;
     } while(state->sbytes < state->blksize && cb);
 
     sbytes = sendto(state->sockfd, (void *) state->spacket.data,
@@ -978,11 +977,9 @@ static CURLcode tftp_connect(struct Curl_easy *data, bool *done)
     return CURLE_OUT_OF_MEMORY;
 
   /* alloc pkt buffers based on specified blksize */
-  if(data->set.tftp_blksize) {
+  if(data->set.tftp_blksize)
+    /* range checked when set */
     blksize = (int)data->set.tftp_blksize;
-    if(blksize > TFTP_BLKSIZE_MAX || blksize < TFTP_BLKSIZE_MIN)
-      return CURLE_TFTP_ILLEGAL;
-  }
 
   need_blksize = blksize;
   /* default size is the fallback when no OACK is received */
@@ -1107,7 +1104,6 @@ static CURLcode tftp_receive_packet(struct Curl_easy *data)
   CURLcode              result = CURLE_OK;
   struct connectdata *conn = data->conn;
   struct tftp_state_data *state = conn->proto.tftpc;
-  struct SingleRequest  *k = &data->req;
 
   /* Receive the packet */
   fromlen = sizeof(fromaddr);
@@ -1145,8 +1141,6 @@ static CURLcode tftp_receive_packet(struct Curl_easy *data)
           tftp_state_machine(state, TFTP_EVENT_ERROR);
           return result;
         }
-        k->bytecount += state->rbytes-4;
-        Curl_pgrsSetDownloadCounter(data, (curl_off_t) k->bytecount);
       }
       break;
     case TFTP_EVENT_ERROR:
@@ -1247,7 +1241,7 @@ static CURLcode tftp_multi_statemach(struct Curl_easy *data, bool *done)
     *done = (state->state == TFTP_STATE_FIN) ? TRUE : FALSE;
     if(*done)
       /* Tell curl we're done */
-      Curl_setup_transfer(data, -1, -1, FALSE, -1);
+      Curl_xfer_setup(data, -1, -1, FALSE, -1);
   }
   else {
     /* no timeouts to handle, check our socket */
@@ -1270,7 +1264,7 @@ static CURLcode tftp_multi_statemach(struct Curl_easy *data, bool *done)
       *done = (state->state == TFTP_STATE_FIN) ? TRUE : FALSE;
       if(*done)
         /* Tell curl we're done */
-        Curl_setup_transfer(data, -1, -1, FALSE, -1);
+        Curl_xfer_setup(data, -1, -1, FALSE, -1);
     }
     /* if rc == 0, then select() timed out */
   }

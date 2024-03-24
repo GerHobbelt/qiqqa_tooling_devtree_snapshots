@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIODBC;IODBC_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIODBC;IODBC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIODBC;IODBC_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIODBC;IODBC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIODBC;IODBC_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIODBC;IODBC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIODBC;IODBC_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIODBC;IODBC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIODBC;IODBC_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIODBC;IODBC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIODBC;IODBC_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIODBC;IODBC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIODBC;IODBC_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIODBC;IODBC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIODBC;IODBC_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIODBC;IODBC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIODBC;IODBC_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIODBC;IODBC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIODBC;IODBC_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIODBC;IODBC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIODBC;IODBC_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIODBC;IODBC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIODBC;IODBC_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIODBC;IODBC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -441,7 +441,11 @@
     <Image Include="../../thirdparty/owemdjee/iODBC/iodbcadm/mac/confirm.png" />
     <Image Include="../../thirdparty/owemdjee/iODBC/iodbcadm/mac/drvchoose.png" />
     <Image Include="../../thirdparty/owemdjee/iODBC/iodbcadm/mac/odbc.png" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/AUTHORS" />
     <Text Include="../../thirdparty/owemdjee/iODBC/ChangeLog" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/INSTALL" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/LICENSE" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/LICENSE.LGPL" />
     <Text Include="../../thirdparty/owemdjee/iODBC/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/iODBC/NEWS" />
     <Text Include="../../thirdparty/owemdjee/iODBC/README" />
@@ -450,21 +454,37 @@
     <Text Include="../../thirdparty/owemdjee/iODBC/README_GIT.md" />
     <Text Include="../../thirdparty/owemdjee/iODBC/README_MACOSX" />
     <Text Include="../../thirdparty/owemdjee/iODBC/README_MACOSX.md" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/acinclude.m4" />
     <Text Include="../../thirdparty/owemdjee/iODBC/admin/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/admin/gtk-2.0.m4" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/admin/gtk.m4" />
     <Text Include="../../thirdparty/owemdjee/iODBC/admin/libiodbc.pc.in" />
     <Text Include="../../thirdparty/owemdjee/iODBC/admin/libiodbc.spec.in" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/admin/openlink.m4" />
     <Text Include="../../thirdparty/owemdjee/iODBC/autogen.sh" />
     <Text Include="../../thirdparty/owemdjee/iODBC/bin/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/iODBC/bin/iodbc-config.in" />
     <Text Include="../../thirdparty/owemdjee/iODBC/configure.ac" />
     <Text Include="../../thirdparty/owemdjee/iODBC/debian/README.Debian" />
     <Text Include="../../thirdparty/owemdjee/iODBC/debian/changelog" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/debian/iodbc.files" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/debian/iodbc.install" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/debian/iodbc.lintian-overrides" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/debian/libiodbc2-dev.examples" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/debian/libiodbc2-dev.files" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/debian/libiodbc2-dev.install" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/debian/libiodbc2.docs" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/debian/libiodbc2.examples" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/debian/libiodbc2.files" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/debian/libiodbc2.install" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/debian/libiodbc2.lintian-overrides" />
     <Text Include="../../thirdparty/owemdjee/iODBC/drvproxy/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/iODBC/drvproxy/gtk/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/iODBC/etc/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/iODBC/include/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/iODBC/iodbc/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/iODBC/iodbc/install_libodbc.sh" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/iodbc/iodbc.def" />
     <Text Include="../../thirdparty/owemdjee/iODBC/iodbc/trace/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/iODBC/iodbcadm/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/iODBC/iodbcadm/gtk/Makefile.am" />
@@ -473,8 +493,33 @@
     <Text Include="../../thirdparty/owemdjee/iODBC/iodbcadm/gtk/odbc4.xpm" />
     <Text Include="../../thirdparty/owemdjee/iODBC/iodbcadm/gtk/question.xpm" />
     <Text Include="../../thirdparty/owemdjee/iODBC/iodbcinst/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/mac/GNUmakefile" />
     <Text Include="../../thirdparty/owemdjee/iODBC/mac/framework-include.sh" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/mac/iODBC/en.lproj/InfoPlist.strings" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/mac/iODBC/iODBC.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/mac/iODBCadm/en.lproj/InfoPlist.strings" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/mac/iODBCadm/iODBCadm.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/mac/iODBCadministrator/en.lproj/InfoPlist.strings" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/mac/iODBCadministrator/en.lproj/iODBCAdministrator.icns" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/mac/iODBCadministrator/en.lproj/odbcman.tiff" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/mac/iODBCadministrator/iODBCadministrator.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/mac/iODBCadministrator64/en.lproj/InfoPlist.strings" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/mac/iODBCadministrator64/en.lproj/iODBCAdministrator.icns" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/mac/iODBCadministrator64/en.lproj/odbcman.tiff" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/mac/iODBCadministrator64/iODBCadministrator64.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/mac/iODBCdemo/DemoAnsi/DemoAnsi.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/mac/iODBCdemo/DemoAnsi/en.lproj/InfoPlist.strings" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/mac/iODBCdemo/DemoUnicode/DemoUnicode.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/mac/iODBCdemo/DemoUnicode/en.lproj/InfoPlist.strings" />
     <Text Include="../../thirdparty/owemdjee/iODBC/mac/iODBCdemo/en.lproj/Credits.rtf" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/mac/iODBCdemo/en.lproj/iODBCdemo.icns" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/mac/iODBCdrvproxy/en.lproj/InfoPlist.strings" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/mac/iODBCdrvproxy/iODBCdrvproxy.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/mac/iODBCinst/en.lproj/InfoPlist.strings" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/mac/iODBCinst/iODBCinst.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/mac/iODBCtest/iODBCtest.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/mac/iODBCtestw/iODBCtestw.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" />
+    <Text Include="../../thirdparty/owemdjee/iODBC/mac/iodbc-config.macos" />
     <Text Include="../../thirdparty/owemdjee/iODBC/mac/link-inclibs.sh" />
     <Text Include="../../thirdparty/owemdjee/iODBC/man/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/iODBC/man/iodbc-config.1.in" />

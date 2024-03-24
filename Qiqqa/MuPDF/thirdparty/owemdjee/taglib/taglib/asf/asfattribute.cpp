@@ -23,31 +23,29 @@
  *   http://www.mozilla.org/MPL/                                           *
  ***************************************************************************/
 
-#include <taglib.h>
-#include <tdebug.h>
-#include <trefcounter.h>
-
 #include "asfattribute.h"
+
+#include "tdebug.h"
+
 #include "asffile.h"
 #include "asfutils.h"
 
 using namespace TagLib;
 
-class ASF::Attribute::AttributePrivate : public RefCounter
+class ASF::Attribute::AttributePrivate
 {
 public:
   AttributePrivate() :
-    pictureValue(ASF::Picture::fromInvalid()),
-    numericValue(0),
-    stream(0),
-    language(0) {}
+    pictureValue(ASF::Picture::fromInvalid())
+  {
+  }
   AttributeTypes type;
   String stringValue;
   ByteVector byteVectorValue;
   ASF::Picture pictureValue;
-  unsigned long long numericValue;
-  int stream;
-  int language;
+  unsigned long long numericValue { 0 };
+  int stream { 0 };
+  int language { 0 };
 };
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -55,71 +53,63 @@ public:
 ////////////////////////////////////////////////////////////////////////////////
 
 ASF::Attribute::Attribute() :
-  d(new AttributePrivate())
+  d(std::make_shared<AttributePrivate>())
 {
   d->type = UnicodeType;
 }
 
-ASF::Attribute::Attribute(const ASF::Attribute &other) :
-  d(other.d)
-{
-  d->ref();
-}
+ASF::Attribute::Attribute(const ASF::Attribute &) = default;
 
 ASF::Attribute::Attribute(const String &value) :
-  d(new AttributePrivate())
+  d(std::make_shared<AttributePrivate>())
 {
   d->type = UnicodeType;
   d->stringValue = value;
 }
 
 ASF::Attribute::Attribute(const ByteVector &value) :
-  d(new AttributePrivate())
+  d(std::make_shared<AttributePrivate>())
 {
   d->type = BytesType;
   d->byteVectorValue = value;
 }
 
 ASF::Attribute::Attribute(const ASF::Picture &value) :
-  d(new AttributePrivate())
+  d(std::make_shared<AttributePrivate>())
 {
   d->type = BytesType;
   d->pictureValue = value;
 }
 
 ASF::Attribute::Attribute(unsigned int value) :
-  d(new AttributePrivate())
+  d(std::make_shared<AttributePrivate>())
 {
   d->type = DWordType;
   d->numericValue = value;
 }
 
 ASF::Attribute::Attribute(unsigned long long value) :
-  d(new AttributePrivate())
+  d(std::make_shared<AttributePrivate>())
 {
   d->type = QWordType;
   d->numericValue = value;
 }
 
 ASF::Attribute::Attribute(unsigned short value) :
-  d(new AttributePrivate())
+  d(std::make_shared<AttributePrivate>())
 {
   d->type = WordType;
   d->numericValue = value;
 }
 
 ASF::Attribute::Attribute(bool value) :
-  d(new AttributePrivate())
+  d(std::make_shared<AttributePrivate>())
 {
   d->type = BoolType;
   d->numericValue = value;
 }
 
-ASF::Attribute &ASF::Attribute::operator=(const ASF::Attribute &other)
-{
-  Attribute(other).swap(*this);
-  return *this;
-}
+ASF::Attribute &ASF::Attribute::operator=(const ASF::Attribute &) = default;
 
 void ASF::Attribute::swap(Attribute &other)
 {
@@ -128,11 +118,7 @@ void ASF::Attribute::swap(Attribute &other)
   swap(d, other.d);
 }
 
-ASF::Attribute::~Attribute()
-{
-  if(d->deref())
-    delete d;
-}
+ASF::Attribute::~Attribute() = default;
 
 ASF::Attribute::AttributeTypes ASF::Attribute::type() const
 {

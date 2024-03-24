@@ -10,12 +10,17 @@
 #include <string.h>
 #include <dirent.h>
 #include <assert.h>
+
+#include "../examples/monolithic_examples.h"
+
 using namespace std;
 
 /* Filter and sort functions */
 static int only_readme(const struct dirent *entry);
 static void test_retrieval(void);
 static void test_scan(void);
+static void initialize(void);
+static void cleanup(void);
 
 
 #if defined(BUILD_MONOLITHIC)
@@ -23,15 +28,14 @@ static void test_scan(void);
 #endif
 
 int
-main(int argc, const char **argv)
+main(void)
 {
-	(void) argc;
-	(void) argv;
+	initialize();
 
 	test_retrieval();
 	test_scan();
 
-	cout << "OK" << endl;
+	cleanup();
 	return EXIT_SUCCESS;
 }
 
@@ -157,4 +161,16 @@ only_readme(const struct dirent *entry)
 	}
 
 	return pass;
+}
+
+static void
+initialize(void)
+{
+	/*NOP*/;
+}
+
+static void
+cleanup(void)
+{
+	cout << "OK" << endl;
 }

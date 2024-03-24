@@ -27,6 +27,9 @@
 #define TAGLIB_MAP_H
 
 #include <map>
+#include <memory>
+#include <initializer_list>
+#include <utility>
 
 #include "taglib.h"
 
@@ -53,11 +56,11 @@ namespace TagLib {
     // Not all the specializations of Map can use the class keyword
     // (when T is not actually a class type), so don't apply this
     // generally.
-    typedef typename std::map<class Key, class T>::iterator Iterator;
-    typedef typename std::map<class Key, class T>::const_iterator ConstIterator;
+    using Iterator = typename std::map<class Key, class T>::iterator;
+    using ConstIterator = typename std::map<class Key, class T>::const_iterator;
 #else
-    typedef typename std::map<Key, T>::iterator Iterator;
-    typedef typename std::map<Key, T>::const_iterator ConstIterator;
+    using Iterator = typename std::map<Key, T>::iterator;
+    using ConstIterator = typename std::map<Key, T>::const_iterator;
 #endif
 #endif
 
@@ -74,9 +77,14 @@ namespace TagLib {
     Map(const Map<Key, T> &m);
 
     /*!
+     * Constructs a Map with the contents of the braced initializer list.
+     */
+    Map(std::initializer_list<std::pair<const Key, T>> init);
+
+    /*!
      * Destroys this instance of the Map.
      */
-    virtual ~Map();
+    ~Map();
 
     /*!
      * Returns an STL style iterator to the beginning of the map.  See
@@ -91,6 +99,12 @@ namespace TagLib {
     ConstIterator begin() const;
 
     /*!
+     * Returns an STL style iterator to the beginning of the map.  See
+     * std::map::const_iterator for the semantics.
+     */
+    ConstIterator cbegin() const;
+
+    /*!
      * Returns an STL style iterator to the end of the map.  See
      * std::map::iterator for the semantics.
      */
@@ -101,6 +115,12 @@ namespace TagLib {
      * std::map::const_iterator for the semantics.
      */
     ConstIterator end() const;
+
+    /*!
+     * Returns an STL style iterator to the end of the map.  See
+     * std::map::const_iterator for the semantics.
+     */
+    ConstIterator cend() const;
 
     /*!
      * Inserts \a value under \a key in the map.  If a value for \a key already
@@ -183,9 +203,25 @@ namespace TagLib {
     Map<Key, T> &operator=(const Map<Key, T> &m);
 
     /*!
+     * Replace the contents of the map with those of the braced initializer list
+     */
+    Map<Key, T> &operator=(std::initializer_list<std::pair<const Key, T>> init);
+
+    /*!
      * Exchanges the content of this map by the content of \a m.
      */
     void swap(Map<Key, T> &m);
+
+    /*!
+     * Compares this map with \a m and returns true if all of the elements are
+     * the same.
+     */
+    bool operator==(const Map<Key, T> &m) const;
+
+    /*!
+     * Compares this map with \a m and returns true if the maps differ.
+     */
+    bool operator!=(const Map<Key, T> &m) const;
 
   protected:
     /*
@@ -198,7 +234,7 @@ namespace TagLib {
   private:
 #ifndef DO_NOT_DOCUMENT
     template <class KeyP, class TP> class MapPrivate;
-    MapPrivate<Key, T> *d;
+    std::shared_ptr<MapPrivate<Key, T>> d;
 #endif
   };
 

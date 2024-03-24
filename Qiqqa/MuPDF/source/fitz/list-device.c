@@ -72,8 +72,14 @@ typedef enum
  *	cmd:	What type of node this is.
  *
  *	size:	The number of sizeof(fz_display_node) bytes that this node's
- *		data occupies. (i.e. &node[node->size] = the next node in the
+ *		data occupies. (i.e. &node[size] = the next node in the
  *		chain; 0 for end of list).
+ *
+ *		At 9 bits for this field, and 4 bytes for a node, this means
+ *		the largest node can span 511*4 bytes. We therefore reserve
+ *		511 as a special value to mean that the actual size for the
+ *		node is given in an (unaligned!) size_t following the node
+ *		before the rest of the data.
  *
  *	rect:	0 for unchanged, 1 for present.
  *
@@ -139,7 +145,7 @@ enum {
 	CTM_CHANGE_BC = 2,
 	CTM_CHANGE_EF = 4,
 
-	MAX_NODE_SIZE = (1<<9)-sizeof(fz_display_node)
+	INDIRECT_NODE_THRESHOLD = (1<<9)-1
 };
 
 struct fz_display_list
@@ -213,6 +219,22 @@ static void align_node_for_pointer(fz_display_node **node)
 	}
 	else
 		(*node) = (fz_display_node *)((ptr + FZ_POINTER_ALIGN_MOD - 1) & ~(FZ_POINTER_ALIGN_MOD-1));
+}
+
+static int
+cmd_needs_alignment(fz_display_command cmd)
+{
+	return (cmd == FZ_CMD_FILL_TEXT ||
+		cmd == FZ_CMD_STROKE_TEXT ||
+		cmd == FZ_CMD_CLIP_TEXT ||
+		cmd == FZ_CMD_CLIP_STROKE_TEXT ||
+		cmd == FZ_CMD_IGNORE_TEXT ||
+		cmd == FZ_CMD_FILL_SHADE ||
+		cmd == FZ_CMD_FILL_IMAGE ||
+		cmd == FZ_CMD_FILL_IMAGE_MASK ||
+		cmd == FZ_CMD_CLIP_IMAGE_MASK ||
+		cmd == FZ_CMD_END_MASK ||
+		cmd == FZ_CMD_DEFAULT_COLORSPACES);
 }
 
 static unsigned char *
@@ -331,7 +353,7 @@ fz_append_display_node(
 	if (color == NULL)
 	{
 		if (colorspace)
-			fz_throw(ctx, FZ_ERROR_GENERIC, "Colorspace cannot be specified without color.");
+			fz_throw(ctx, FZ_ERROR_ARGUMENT, "Colorspace cannot be specified without color.");
 	}
 	else
 	{
@@ -523,11 +545,8 @@ fz_append_display_node(
 	}
 	if (path && (writer->path == NULL || path != writer->path))
 	{
-		size_t max;
-
 		pad_size_for_pointer(list, &size);
-		max = SIZE_IN_NODES(MAX_NODE_SIZE) - size - SIZE_IN_NODES(private_data_len);
-		path_size = SIZE_IN_NODES(fz_pack_path(ctx, NULL, max, path));
+		path_size = SIZE_IN_NODES(fz_pack_path(ctx, NULL, path));
 		node.path = 1;
 		path_off = size;
 
@@ -535,15 +554,17 @@ fz_append_display_node(
 	}
 	if (private_data_len)
 	{
-		size_t max;
-
-		pad_size_for_pointer(list, &size);
-		max = SIZE_IN_NODES(MAX_NODE_SIZE) - size;
-		if (SIZE_IN_NODES(private_data_len) > max)
-			fz_throw(ctx, FZ_ERROR_GENERIC, "Private data too large to pack into display list node");
+		if (cmd_needs_alignment(cmd))
+			pad_size_for_pointer(list, &size);
 		private_off = size;
 		size += SIZE_IN_NODES(private_data_len);
 	}
+
+	/* If the size is more than 511, then we can't signal that in 9 bits,
+	 * so we'll send it as 511, and then put an extra size_t with the
+	 * size in. */
+	if (size >= INDIRECT_NODE_THRESHOLD)
+		size += SIZE_IN_NODES(sizeof(size_t));
 
 	while (list->len + size > list->max)
 	{
@@ -567,22 +588,28 @@ fz_append_display_node(
 			writer->path = (fz_path *)(((char *)writer->path) + diff);
 	}
 
-	if ((unsigned int)size != size)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "Display list node too large");
-
 	/* Write the node to the list */
-	node.size = (unsigned int)size;
+	if (size >= INDIRECT_NODE_THRESHOLD)
+		node.size = INDIRECT_NODE_THRESHOLD;
+	else
+		node.size = (unsigned int)size;
 	node.flags = flags;
-	assert(size < (1<<9));
 	node_ptr = &list->list[list->len];
 	*node_ptr = node;
+
+	/* Insert the explicit size (unaligned) if required. */
+	if (size >= INDIRECT_NODE_THRESHOLD)
+	{
+		memcpy(&node_ptr[1], &size, sizeof(size));
+		node_ptr += SIZE_IN_NODES(sizeof(size_t));
+	}
 
 	/* Path is the most frequent one, so try to avoid the try/catch in
 	 * this case */
 	if (path_off)
 	{
 		my_path = (void *)(&node_ptr[path_off]);
-		(void)fz_pack_path(ctx, (uint8_t *)my_path, path_size * sizeof(fz_display_node), path);
+		(void)fz_pack_path(ctx, (uint8_t *)my_path, path);
 	}
 
 	if (stroke_off)
@@ -1131,30 +1158,37 @@ fz_list_begin_mask(fz_context *ctx, fz_device *dev, fz_rect rect, int luminosity
 }
 
 static void
-fz_list_end_mask(fz_context *ctx, fz_device *dev)
+fz_list_end_mask(fz_context *ctx, fz_device *dev, fz_function *tr)
 {
-	fz_append_display_node(
-		ctx,
-		dev,
-		FZ_CMD_END_MASK,
-		0, /* flags */
-		NULL, /* rect */
-		NULL, /* path */
-		NULL, /* color */
-		NULL, /* colorspace */
-		NULL, /* alpha */
-		NULL, /* ctm */
-		NULL, /* stroke */
-		NULL, /* private_data */
-		0); /* private_data_len */
+	fz_function *tr2 = fz_keep_function(ctx, tr);
+
+	fz_try(ctx)
+		fz_append_display_node(
+			ctx,
+			dev,
+			FZ_CMD_END_MASK,
+			0, /* flags */
+			NULL, /* rect */
+			NULL, /* path */
+			NULL, /* color */
+			NULL, /* colorspace */
+			NULL, /* alpha */
+			NULL, /* ctm */
+			NULL, /* stroke */
+			&tr2, /* private_data */
+			sizeof(tr2)); /* private_data_len */
+	fz_catch(ctx)
+	{
+		fz_drop_function(ctx, tr);
+		fz_rethrow(ctx);
+	}
 }
 
 static void
 fz_list_begin_group(fz_context *ctx, fz_device *dev, fz_rect rect, fz_colorspace *colorspace, int isolated, int knockout, int blendmode, float alpha)
 {
 	int flags;
-
-	colorspace = fz_keep_colorspace(ctx, colorspace);
+	static const float color[FZ_MAX_COLORS] = { 0 };
 
 	flags = (blendmode<<2);
 	if (isolated)
@@ -1162,30 +1196,20 @@ fz_list_begin_group(fz_context *ctx, fz_device *dev, fz_rect rect, fz_colorspace
 	if (knockout)
 		flags |= KNOCKOUT;
 
-	fz_try(ctx)
-	{
-#if 01
-		fz_append_display_node(
-			ctx,
-			dev,
-			FZ_CMD_BEGIN_GROUP,
-			flags,
-			&rect,
-			NULL, /* path */
-			NULL, /* color */
-			NULL, /* colorspace */
-			&alpha, /* alpha */
-			NULL, /* ctm */
-			NULL, /* stroke */
-			&colorspace, /* private_data */
-			sizeof(colorspace)); /* private_data_len */
-#endif
-	}
-	fz_catch(ctx)
-	{
-		fz_drop_colorspace(ctx, colorspace);
-		fz_rethrow(ctx);
-	}
+	fz_append_display_node(
+		ctx,
+		dev,
+		FZ_CMD_BEGIN_GROUP,
+		flags,
+		&rect,
+		NULL, /* path */
+		color, /* color */
+		colorspace, /* colorspace */
+		&alpha, /* alpha */
+		NULL, /* ctm */
+		NULL, /* stroke */
+		NULL, /* private_data */
+		0); /* private_data_len */
 }
 
 static void
@@ -1362,7 +1386,7 @@ fz_list_end_layer(fz_context *ctx, fz_device *dev)
 }
 
 static void
-fz_list_begin_structure(fz_context *ctx, fz_device *dev, fz_structure standard, const char *raw, int uid)
+fz_list_begin_structure(fz_context *ctx, fz_device *dev, fz_structure standard, const char *raw, int idx)
 {
 	unsigned char *data;
 	size_t len = (raw ? strlen(raw) : 0);
@@ -1380,13 +1404,13 @@ fz_list_begin_structure(fz_context *ctx, fz_device *dev, fz_structure standard, 
 		NULL,
 		NULL, /* stroke */
 		NULL, /* private_data */
-		len+2+sizeof(uid)); /* private_data_len */
+		len+2+sizeof(idx)); /* private_data_len */
 	data[0] = (char)standard;
-	memcpy(data+1, &uid, sizeof(uid));
+	memcpy(data+1, &idx, sizeof(idx));
 	if (len)
-		memcpy(data+1+sizeof(uid), raw, len+1);
+		memcpy(data+1+sizeof(idx), raw, len+1);
 	else
-		data[1+sizeof(uid)] = 0;
+		data[1+sizeof(idx)] = 0;
 }
 
 static void
@@ -1537,7 +1561,17 @@ fz_drop_display_list_imp(fz_context *ctx, fz_storable *list_)
 	while (node != node_end)
 	{
 		fz_display_node n = *node;
-		fz_display_node *next = node + n.size;
+		size_t size = n.size;
+		fz_display_node *next;
+
+		if (size == INDIRECT_NODE_THRESHOLD)
+		{
+			memcpy(&size, &node[1], sizeof(size));
+			node += SIZE_IN_NODES(sizeof(size_t));
+			size -= SIZE_IN_NODES(sizeof(size_t));
+		}
+
+		next = node + size;
 
 		node++;
 		if (n.rect)
@@ -1617,9 +1651,9 @@ fz_drop_display_list_imp(fz_context *ctx, fz_storable *list_)
 			align_node_for_pointer(&node);
 			fz_drop_image(ctx, *(fz_image **)node);
 			break;
-		case FZ_CMD_BEGIN_GROUP:
+		case FZ_CMD_END_MASK:
 			align_node_for_pointer(&node);
-			fz_drop_colorspace(ctx, *(fz_colorspace **)node);
+			fz_drop_function(ctx, *(fz_function **)node);
 			break;
 		case FZ_CMD_DEFAULT_COLORSPACES:
 			align_node_for_pointer(&node);
@@ -1715,8 +1749,16 @@ fz_run_display_list(fz_context *ctx, fz_display_list *list, fz_device *dev, fz_m
 	{
 		int empty;
 		fz_display_node n = *node;
+		size_t size = n.size;
 
-		next_node = node + n.size;
+		if (size == INDIRECT_NODE_THRESHOLD)
+		{
+			memcpy(&size, &node[1], sizeof(size_t));
+			node += SIZE_IN_NODES(sizeof(size_t));
+			size -= SIZE_IN_NODES(sizeof(size_t));
+		}
+
+		next_node = node + size;
 
 		/* Check the cookie for aborting */
 		if (cookie)
@@ -1724,9 +1766,9 @@ fz_run_display_list(fz_context *ctx, fz_display_list *list, fz_device *dev, fz_m
 			if (cookie->d.abort)
 				break;
 
-			do_not_draw = cookie->check_back(ctx, FZ_PROGRESS_RUN_PROCEEDING, n.size);
+			do_not_draw = cookie->check_back(ctx, FZ_PROGRESS_RUN_PROCEEDING, size);
 
-			cookie->d.progress += n.size;
+			cookie->d.progress += size;
 		}
 
 		node++;
@@ -1989,11 +2031,11 @@ visible:
 				fz_begin_mask(ctx, dev, trans_rect, n.flags & 1, colorspace, color, color_params);
 				break;
 			case FZ_CMD_END_MASK:
-				fz_end_mask(ctx, dev);
+				align_node_for_pointer(&node);
+				fz_end_mask_tr(ctx, dev, *(fz_function **)node);
 				break;
 			case FZ_CMD_BEGIN_GROUP:
-				align_node_for_pointer(&node);
-				fz_begin_group(ctx, dev, trans_rect, *(fz_colorspace **)node, (n.flags & ISOLATED) != 0, (n.flags & KNOCKOUT) != 0, (n.flags>>2), alpha);
+				fz_begin_group(ctx, dev, trans_rect, colorspace, (n.flags & ISOLATED) != 0, (n.flags & KNOCKOUT) != 0, (n.flags>>2), alpha);
 				break;
 			case FZ_CMD_END_GROUP:
 				fz_end_group(ctx, dev);
@@ -2036,11 +2078,10 @@ visible:
 			case FZ_CMD_BEGIN_STRUCTURE:
 			{
 				const unsigned char *data;
-				int uid;
-				align_node_for_pointer(&node);
+				int idx;
 				data = (const unsigned char *)node;
-				memcpy(&uid, data+1, sizeof(uid));
-				fz_begin_structure(ctx, dev, (fz_structure)data[0], (const char *)(data[1+sizeof(uid)] == 0 ? NULL : &data[1+sizeof(uid)]), uid);
+				memcpy(&idx, data+1, sizeof(idx));
+				fz_begin_structure(ctx, dev, (fz_structure)data[0], (const char *)(data[1+sizeof(idx)] == 0 ? NULL : &data[1+sizeof(idx)]), idx);
 				break;
 			}
 			case FZ_CMD_END_STRUCTURE:
@@ -2049,9 +2090,10 @@ visible:
 			case FZ_CMD_BEGIN_METATEXT:
 			{
 				const unsigned char *data;
-				align_node_for_pointer(&node);
+				const char *text;
 				data = (const unsigned char *)node;
-				fz_begin_metatext(ctx, dev, (fz_metatext)data[0], (const char *)(data[1] == 0 ? NULL : &data[1]));
+				text = (const char *)&data[1];
+				fz_begin_metatext(ctx, dev, (fz_metatext)data[0], (text[0] == 0 ? NULL : text));
 				break;
 			}
 			case FZ_CMD_END_METATEXT:
@@ -2061,11 +2103,22 @@ visible:
 		}
 		fz_catch(ctx)
 		{
+			if (fz_caught(ctx) == FZ_ERROR_SYSTEM)
+			{
+				fz_drop_colorspace(ctx, colorspace);
+				fz_drop_stroke_state(ctx, stroke);
+				fz_drop_path(ctx, path);
+				fz_rethrow(ctx);
+			}
 			/* Swallow the error */
 			/* Do NOT count ignored 'errors': "Page found as color; stopping interpolation" is
 			   the FZ_ERROR_ABORT message here (no other exception anywhere is of type FZ_ERROR_ABORT) */
 			if (fz_caught(ctx) == FZ_ERROR_ABORT)
+			{
+				fz_ignore_error(ctx);
 				break;
+			}
+			fz_report_error(ctx);
 			fz_warn(ctx, "Ignoring error during interpretation: %s", fz_caught_message(ctx));
 			if (cookie)
 				cookie->d.errors++;

@@ -31,7 +31,10 @@
 
 #include "gtest/gtest.h"
 
-#if GTEST_OS_ESP8266 || GTEST_OS_ESP32
+#include "googletest/include/monolithic_examples.h"
+
+#if GTEST_OS_ESP8266 || GTEST_OS_ESP32 || \
+    (GTEST_OS_NRF52 && defined(ARDUINO))
 // Arduino-like platforms: program entry points are setup/loop instead of main.
 
 #if GTEST_OS_ESP8266

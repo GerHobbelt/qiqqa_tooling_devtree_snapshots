@@ -23,9 +23,9 @@
  *   http://www.mozilla.org/MPL/                                           *
  ***************************************************************************/
 
-#include "taglib_export.h"
 #include "tfile.h"
 #include "tbytevectorlist.h"
+#include "taglib_export.h"
 
 #ifndef TAGLIB_OGGFILE_H
 #define TAGLIB_OGGFILE_H
@@ -50,7 +50,10 @@ namespace TagLib {
     class TAGLIB_EXPORT File : public TagLib::File
     {
     public:
-      virtual ~File();
+      ~File() override;
+
+      File(const File &) = delete;
+      File &operator=(const File &) = delete;
 
       /*!
        * Returns the packet contents for the i-th packet (starting from zero)
@@ -78,7 +81,7 @@ namespace TagLib {
        */
       const PageHeader *lastPageHeader();
 
-      virtual bool save();
+      bool save() override;
 
     protected:
       /*!
@@ -103,9 +106,6 @@ namespace TagLib {
       File(IOStream *stream);
 
     private:
-      File(const File &);
-      File &operator=(const File &);
-
       /*!
        * Reads the pages from the beginning of the file until enough to compose
        * the requested packet.
@@ -118,7 +118,7 @@ namespace TagLib {
       void writePacket(unsigned int i, const ByteVector &packet);
 
       class FilePrivate;
-      FilePrivate *d;
+      std::unique_ptr<FilePrivate> d;
     };
 
   }  // namespace Ogg

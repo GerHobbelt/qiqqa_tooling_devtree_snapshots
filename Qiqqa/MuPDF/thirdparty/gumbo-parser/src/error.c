@@ -136,6 +136,9 @@ static const char* find_last_newline(
     const char* original_text, const char* error_location) {
   assert(error_location >= original_text);
   const char* c = error_location;
+  // if the error location itself is a newline then start searching for 
+  // the preceding newline one character earlier see original PR #371
+  if (*error_location == '\n' && c != original_text) --c;
   for (; c != original_text && *c != '\n'; --c) {
     // There may be an error at EOF, which would be a nul byte.
     assert(*c || c == error_location);
@@ -178,6 +181,11 @@ void gumbo_error_to_string(
           "Input stream ends with a truncated UTF8 character 0x%x",
           error->v.codepoint);
       break;
+    case GUMBO_ERR_UTF8_NULL:
+      print_message (parser, output, 
+        "Unexpected NULL character in the input stream"
+      );
+      break;
     case GUMBO_ERR_NUMERIC_CHAR_REF_NO_DIGITS:
       print_message(
           parser, output, "No digits after &# in numeric character reference");
@@ -213,6 +221,11 @@ void gumbo_error_to_string(
           error->v.duplicate_attr.name, error->v.duplicate_attr.original_index,
           error->v.duplicate_attr.new_index);
       break;
+    case GUMBO_ERR_DASHES_OR_DOCTYPE:
+      print_message(parser, output, 
+        "Incorrectly opened comment; expected '--', 'DOCTYPE', or '[CDATA['"
+      );
+      break;
     case GUMBO_ERR_PARSER:
     case GUMBO_ERR_UNACKNOWLEDGED_SELF_CLOSING_TAG:
       handle_parser_error(parser, &error->v.parser, output);
@@ -245,9 +258,11 @@ void gumbo_caret_diagnostic_to_string(GumboParser* parser,
   gumbo_string_buffer_append_codepoint(parser, '\n', output);
   gumbo_string_buffer_reserve(
       parser, output->length + error->position.column, output);
-  int num_spaces = error->position.column - 1;
-  memset(output->data + output->length, ' ', num_spaces);
-  output->length += num_spaces;
+  if (error->position.column >= 2) {
+    int num_spaces = error->position.column - 1;
+    memset(output->data + output->length, ' ', num_spaces);
+    output->length += num_spaces;
+  }
   gumbo_string_buffer_append_codepoint(parser, '^', output);
   gumbo_string_buffer_append_codepoint(parser, '\n', output);
 }

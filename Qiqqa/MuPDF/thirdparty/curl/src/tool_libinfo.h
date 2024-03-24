@@ -45,12 +45,15 @@ extern const char *proto_scp;
 extern const char *proto_sftp;
 extern const char *proto_tftp;
 extern const char *proto_ssh;
+extern const char *proto_ipfs;
+extern const char *proto_ipns;
 
 extern bool feature_altsvc;
 extern bool feature_brotli;
 extern bool feature_hsts;
 extern bool feature_http2;
 extern bool feature_http3;
+extern bool feature_httpsproxy;
 extern bool feature_libz;
 extern bool feature_ntlm;
 extern bool feature_ntlm_wb;

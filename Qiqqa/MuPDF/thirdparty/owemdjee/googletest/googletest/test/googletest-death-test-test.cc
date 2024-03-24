@@ -52,12 +52,18 @@ using testing::internal::AlwaysTrue;
 #include <signal.h>
 #include <stdio.h>
 
+#include <string>
+#include <vector>
+
 #if GTEST_OS_LINUX
 #include <sys/time.h>
 #endif  // GTEST_OS_LINUX
 
 #include "gtest/gtest-spi.h"
 #include "src/gtest-internal-inl.h"
+
+#undef min
+#undef max
 
 namespace posix = ::testing::internal::posix;
 
@@ -330,23 +336,6 @@ TEST_F(TestForDeathTest, SingleStatement) {
 #pragma GCC diagnostic pop
 #endif
 
-#if GTEST_USES_PCRE
-
-void DieWithEmbeddedNul() {
-  fprintf(stderr, "Hello%cmy null world.\n", '\0');
-  fflush(stderr);
-  _exit(1);
-}
-
-// Tests that EXPECT_DEATH and ASSERT_DEATH work when the error
-// message has a NUL character in it.
-TEST_F(TestForDeathTest, EmbeddedNulInMessage) {
-  EXPECT_DEATH(DieWithEmbeddedNul(), "my null world");
-  ASSERT_DEATH(DieWithEmbeddedNul(), "my null world");
-}
-
-#endif  // GTEST_USES_PCRE
-
 // Tests that death test macros expand to code which interacts well with switch
 // statements.
 TEST_F(TestForDeathTest, SwitchStatement) {
@@ -524,16 +513,12 @@ TEST_F(TestForDeathTest, AcceptsAnythingConvertibleToRE) {
   const testing::internal::RE regex(regex_c_str);
   EXPECT_DEATH(GlobalFunction(), regex);
 
-#if !GTEST_USES_PCRE
-
   const ::std::string regex_std_str(regex_c_str);
   EXPECT_DEATH(GlobalFunction(), regex_std_str);
 
   // This one is tricky; a temporary pointer into another temporary.  Reference
   // lifetime extension of the pointer is not sufficient.
   EXPECT_DEATH(GlobalFunction(), ::std::string(regex_c_str).c_str());
-
-#endif  // !GTEST_USES_PCRE
 }
 
 // Tests that a non-void function can be used in a death test.

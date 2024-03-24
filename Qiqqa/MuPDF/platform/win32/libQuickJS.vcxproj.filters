@@ -35,9 +35,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/QuickJS/bjson.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/QuickJS/getopt.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/QuickJS/gettimeofday.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -50,10 +47,16 @@
     <ClCompile Include="../../thirdparty/owemdjee/QuickJS/libunicode.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/QuickJS/qbench.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/QuickJS/qjs.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/QuickJS/qjsc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/QuickJS/qjsd.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/QuickJS/quickjs-debugger-transport-unix.c">
@@ -167,6 +170,9 @@
     <Text Include="../../thirdparty/owemdjee/QuickJS/LICENSE.txt">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/QuickJS/Makefile">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/QuickJS/TODO.md">
       <Filter>Misc Files</Filter>
     </Text>
@@ -233,10 +239,28 @@
     <Text Include="../../thirdparty/owemdjee/QuickJS/defs.cmake">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/QuickJS/doc/jsbignum.html">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/QuickJS/doc/jsbignum.md">
       <Filter>Misc Files\doc</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/QuickJS/doc/jsbignum.pdf">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/QuickJS/doc/jsbignum.texi">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/QuickJS/doc/quickjs.html">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/QuickJS/doc/quickjs.md">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/QuickJS/doc/quickjs.pdf">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/QuickJS/doc/quickjs.texi">
       <Filter>Misc Files\doc</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/QuickJS/get_quickjs.cmake.in">

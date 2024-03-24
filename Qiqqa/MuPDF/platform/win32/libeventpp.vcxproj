@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVENTPP;EVENTPP_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVENTPP;EVENTPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/eventpp/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVENTPP;EVENTPP_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/eventpp/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVENTPP;EVENTPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVENTPP;EVENTPP_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVENTPP;EVENTPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/eventpp/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/eventpp/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVENTPP;EVENTPP_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVENTPP;EVENTPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/eventpp/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVENTPP;EVENTPP_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/eventpp/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVENTPP;EVENTPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVENTPP;EVENTPP_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVENTPP;EVENTPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/eventpp/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/eventpp/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVENTPP;EVENTPP_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVENTPP;EVENTPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/eventpp/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVENTPP;EVENTPP_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/eventpp/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVENTPP;EVENTPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVENTPP;EVENTPP_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVENTPP;EVENTPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/eventpp/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/eventpp/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVENTPP;EVENTPP_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVENTPP;EVENTPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/eventpp/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVENTPP;EVENTPP_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/eventpp/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVENTPP;EVENTPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVENTPP;EVENTPP_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBEVENTPP;EVENTPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/eventpp/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/eventpp/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -233,9 +233,11 @@
     <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/benchmark/b3_b5_eventqueue.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/benchmark/b6_callbacklist_add_remove_callbacks.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/benchmark/b7_callbacklist_vs_function_list.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/benchmark/b8_eventqueue_anydata.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/benchmark/benchmark_testmain.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/benchmark/testmain.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/cmake-pkg-demo/main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/tutorial/tutorial_anydata.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/tutorial/tutorial_argumentadapter.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/tutorial/tutorial_callbacklist.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/tutorial/tutorial_eventdispatcher.cpp" />
@@ -243,6 +245,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/tutorial/tutorial_hetercallbacklist.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/tutorial/tutorial_hetereventdispatcher.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/tutorial/tutorialmain.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_anydata.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_anyid.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_argumentadapter.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_callbacklist_basic.cpp" />
@@ -282,6 +285,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/eventpp/include/eventpp/internal/typeutil_i.h" />
     <ClInclude Include="../../thirdparty/owemdjee/eventpp/include/eventpp/mixins/mixinfilter.h" />
     <ClInclude Include="../../thirdparty/owemdjee/eventpp/include/eventpp/mixins/mixinheterfilter.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/eventpp/include/eventpp/utilities/anydata.h" />
     <ClInclude Include="../../thirdparty/owemdjee/eventpp/include/eventpp/utilities/anyid.h" />
     <ClInclude Include="../../thirdparty/owemdjee/eventpp/include/eventpp/utilities/argumentadapter.h" />
     <ClInclude Include="../../thirdparty/owemdjee/eventpp/include/eventpp/utilities/conditionalfunctor.h" />
@@ -298,6 +302,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_callbacklist_util.h" />
     <Text Include="../../thirdparty/owemdjee/eventpp/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/eventpp/cmake/eventppConfig.cmake.in" />
+    <Text Include="../../thirdparty/owemdjee/eventpp/doc/anydata.md" />
     <Text Include="../../thirdparty/owemdjee/eventpp/doc/anyid.md" />
     <Text Include="../../thirdparty/owemdjee/eventpp/doc/argumentadapter.md" />
     <Text Include="../../thirdparty/owemdjee/eventpp/doc/benchmark.md" />
@@ -332,9 +337,11 @@
     <Text Include="../../thirdparty/owemdjee/eventpp/doc/tutorial_callbacklist.md" />
     <Text Include="../../thirdparty/owemdjee/eventpp/doc/tutorial_eventdispatcher.md" />
     <Text Include="../../thirdparty/owemdjee/eventpp/doc/tutorial_eventqueue.md" />
+    <Text Include="../../thirdparty/owemdjee/eventpp/license" />
     <Text Include="../../thirdparty/owemdjee/eventpp/readme.md" />
     <Text Include="../../thirdparty/owemdjee/eventpp/tests/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/eventpp/tests/benchmark/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/eventpp/tests/build/makefile" />
     <Text Include="../../thirdparty/owemdjee/eventpp/tests/cmake-pkg-demo/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/eventpp/tests/cmake-pkg-demo/readme.md" />
     <Text Include="../../thirdparty/owemdjee/eventpp/tests/tutorial/CMakeLists.txt" />

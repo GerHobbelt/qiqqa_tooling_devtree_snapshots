@@ -6,9 +6,9 @@
 TidyNodeIter *newTidyNodeIter( Node *pStart )
 {
     TidyNodeIter *pThis = NULL;
-    if (NULL != (pThis = MemAlloc( sizeof( TidyNodeIter ))))
+    if (NULL != (pThis = TidyAlloc( sizeof( TidyNodeIter ))))
     {
-        ClearMemory( pThis, sizeof( TidyNodeIter ));
+		TidyClearMemory( pThis, sizeof( TidyNodeIter ));
         pThis->pTop = pStart;
     }
     return pThis;

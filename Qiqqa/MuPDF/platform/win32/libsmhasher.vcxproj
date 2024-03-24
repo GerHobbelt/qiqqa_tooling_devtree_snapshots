@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSMHASHER;SMHASHER_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSMHASHER;SMHASHER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSMHASHER;SMHASHER_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSMHASHER;SMHASHER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSMHASHER;SMHASHER_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSMHASHER;SMHASHER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSMHASHER;SMHASHER_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSMHASHER;SMHASHER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSMHASHER;SMHASHER_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSMHASHER;SMHASHER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSMHASHER;SMHASHER_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSMHASHER;SMHASHER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSMHASHER;SMHASHER_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSMHASHER;SMHASHER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSMHASHER;SMHASHER_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSMHASHER;SMHASHER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSMHASHER;SMHASHER_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSMHASHER;SMHASHER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSMHASHER;SMHASHER_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSMHASHER;SMHASHER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSMHASHER;SMHASHER_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSMHASHER;SMHASHER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSMHASHER;SMHASHER_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSMHASHER;SMHASHER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -359,6 +359,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/smhasher/SpookyV2.h" />
     <ClInclude Include="../../thirdparty/owemdjee/smhasher/Stats.h" />
     <ClInclude Include="../../thirdparty/owemdjee/smhasher/Types.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/smhasher/aesni-hash.h" />
     <ClInclude Include="../../thirdparty/owemdjee/smhasher/ahash.h" />
     <ClInclude Include="../../thirdparty/owemdjee/smhasher/asconhashv12/api.h" />
     <ClInclude Include="../../thirdparty/owemdjee/smhasher/asconhashv12/ascon.h" />
@@ -454,12 +455,16 @@
     <Text Include="../../thirdparty/owemdjee/smhasher/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/CMakeMINGW64Cross.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/CONTRIBUTING.md" />
+    <Text Include="../../thirdparty/owemdjee/smhasher/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/smhasher/README.md" />
+    <Text Include="../../thirdparty/owemdjee/smhasher/asconhashv12/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/smhasher/asconhashv12/README.md" />
+    <Text Include="../../thirdparty/owemdjee/smhasher/blake3/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/smhasher/blake3/README.md" />
     <Text Include="../../thirdparty/owemdjee/smhasher/build-msys2.bat" />
     <Text Include="../../thirdparty/owemdjee/smhasher/build.sh" />
     <Text Include="../../thirdparty/owemdjee/smhasher/build32.sh" />
+    <Text Include="../../thirdparty/owemdjee/smhasher/checkdoctests.pl" />
     <Text Include="../../thirdparty/owemdjee/smhasher/crc32-pclmul_asm.S" />
     <Text Include="../../thirdparty/owemdjee/smhasher/debug.sh" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/BEBB4185.txt" />
@@ -471,6 +476,7 @@
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/City64noSeed.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/CityCrc128.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/Crap8.txt" />
+    <Text Include="../../thirdparty/owemdjee/smhasher/doc/FNV128.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/FNV1A_Pippip_Yurii.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/FNV1A_Totenschiff.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/FNV1a.txt" />
@@ -516,8 +522,11 @@
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/TSip.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/VHASH_32.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/VHASH_64.txt" />
+    <Text Include="../../thirdparty/owemdjee/smhasher/doc/aesni-low.txt" />
+    <Text Include="../../thirdparty/owemdjee/smhasher/doc/aesni.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/aesnihash.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/ahash64.txt" />
+    <Text Include="../../thirdparty/owemdjee/smhasher/doc/air.html" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/asconhashv12.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/asconhashv12_64.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/badseeds.log.txt" />
@@ -567,6 +576,8 @@
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/halftime_hash512.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/halftime_hash64.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/hasshe2.txt" />
+    <Text Include="../../thirdparty/owemdjee/smhasher/doc/i686.html" />
+    <Text Include="../../thirdparty/owemdjee/smhasher/doc/intel.html" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/jodyhash32.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/jodyhash64.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/k-hash32.txt" />
@@ -578,6 +589,7 @@
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/lookup3.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/md5-128.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/md5_32.txt" />
+    <Text Include="../../thirdparty/owemdjee/smhasher/doc/md5_64.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/metrohash128.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/metrohash128_1.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/metrohash128_2.txt" />
@@ -605,6 +617,7 @@
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/pearsonhash256.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/pearsonhash64.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/pengyhash.txt" />
+    <Text Include="../../thirdparty/owemdjee/smhasher/doc/phone.html" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/poly_1_mersenne.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/poly_2_mersenne.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/poly_3_mersenne.txt" />
@@ -617,11 +630,14 @@
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/rmd128.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/rmd160.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/rmd256.txt" />
+    <Text Include="../../thirdparty/owemdjee/smhasher/doc/ryzen3.html" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/sdbm.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/seahash.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/seahash32low.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/sha1-160.txt" />
+    <Text Include="../../thirdparty/owemdjee/smhasher/doc/sha1_32.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/sha1_32a.txt" />
+    <Text Include="../../thirdparty/owemdjee/smhasher/doc/sha1_64.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/sha1ni.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/sha1ni_32.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/sha2-224.txt" />
@@ -646,6 +662,7 @@
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/t1ha2_atonce128.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/t1ha2_stream.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/t1ha2_stream128.txt" />
+    <Text Include="../../thirdparty/owemdjee/smhasher/doc/table.html" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/tabulation.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/tabulation32.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/tifuhash_64.txt" />
@@ -663,11 +680,21 @@
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/xxh128low.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/xxh3.txt" />
     <Text Include="../../thirdparty/owemdjee/smhasher/doc/xxh3low.txt" />
+    <Text Include="../../thirdparty/owemdjee/smhasher/fixupdocspeeds.pl" />
+    <Text Include="../../thirdparty/owemdjee/smhasher/fixupdoctests.pl" />
+    <Text Include="../../thirdparty/owemdjee/smhasher/log.hashes" />
+    <Text Include="../../thirdparty/owemdjee/smhasher/log.sanity" />
+    <Text Include="../../thirdparty/owemdjee/smhasher/log.speed32" />
+    <Text Include="../../thirdparty/owemdjee/smhasher/parallel_hashmap/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/smhasher/parallel_hashmap/README.md" />
+    <Text Include="../../thirdparty/owemdjee/smhasher/parallel_hashmap/phmap.natvis" />
+    <Text Include="../../thirdparty/owemdjee/smhasher/pearson_hash/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/smhasher/pearson_hash/README.md" />
     <Text Include="../../thirdparty/owemdjee/smhasher/sanity.sh" />
+    <Text Include="../../thirdparty/owemdjee/smhasher/speed.pl" />
     <Text Include="../../thirdparty/owemdjee/smhasher/speed.sh" />
     <Text Include="../../thirdparty/owemdjee/smhasher/speedall.sh" />
+    <Text Include="../../thirdparty/owemdjee/smhasher/split.pl" />
     <Text Include="../../thirdparty/owemdjee/smhasher/testall.sh" />
     <Text Include="../../thirdparty/owemdjee/smhasher/testextra.sh" />
     <Text Include="../../thirdparty/owemdjee/smhasher/testgood-but-poor.sh" />
@@ -679,8 +706,10 @@
     <Text Include="../../thirdparty/owemdjee/smhasher/testpoor-but-good.sh" />
     <Text Include="../../thirdparty/owemdjee/smhasher/testseeds.sh" />
     <Text Include="../../thirdparty/owemdjee/smhasher/testspeed-air.sh" />
+    <Text Include="../../thirdparty/owemdjee/smhasher/testspeed-intel.sh" />
     <Text Include="../../thirdparty/owemdjee/smhasher/testspeed-phone.sh" />
     <Text Include="../../thirdparty/owemdjee/smhasher/testspeed-ryzen3.sh" />
+    <Text Include="../../thirdparty/owemdjee/smhasher/testspeed-ryzen5.sh" />
     <Text Include="../../thirdparty/owemdjee/smhasher/testspeed.sh" />
     <Text Include="../../thirdparty/owemdjee/smhasher/testspeed32.sh" />
     <Text Include="../../thirdparty/owemdjee/smhasher/verifyall.sh" />

@@ -73,11 +73,8 @@ static void add_font_res(pdf_obj *resources, char *name, char *path, char *encna
 		font = fz_new_font_from_file(ctx, NULL, path, 0, 0);
 
 	subres = pdf_dict_get(ctx, resources, PDF_NAME(Font));
-	if (!subres)
-	{
-		subres = pdf_new_dict(ctx, doc, 10);
-		pdf_dict_put_drop(ctx, resources, PDF_NAME(Font), subres);
-	}
+	if (!pdf_is_dict(ctx, subres))
+		subres = pdf_dict_put_dict(ctx, resources, PDF_NAME(Font), 10);
 
 	enc = PDF_SIMPLE_ENCODING_LATIN;
 	if (encname)
@@ -120,11 +117,8 @@ static void add_cjkfont_res(pdf_obj *resources, char *name, char *lang, char *wm
 	font = fz_new_font_from_memory(ctx, NULL, data, size, index, 0);
 
 	subres = pdf_dict_get(ctx, resources, PDF_NAME(Font));
-	if (!subres)
-	{
-		subres = pdf_new_dict(ctx, doc, 10);
-		pdf_dict_put_drop(ctx, resources, PDF_NAME(Font), subres);
-	}
+	if (!pdf_is_dict(ctx, subres))
+		subres = pdf_dict_put_dict(ctx, resources, PDF_NAME(Font), 10);
 
 	ref = pdf_add_cjk_font(ctx, doc, font, ordering, wmode, serif);
 	pdf_dict_puts(ctx, subres, name, ref);
@@ -141,11 +135,8 @@ static void add_image_res(pdf_obj *resources, char *name, char *path)
 	image = fz_new_image_from_file(ctx, path);
 
 	subres = pdf_dict_get(ctx, resources, PDF_NAME(XObject));
-	if (!subres)
-	{
-		subres = pdf_new_dict(ctx, doc, 10);
-		pdf_dict_put_drop(ctx, resources, PDF_NAME(XObject), subres);
-	}
+	if (!pdf_is_dict(ctx, subres))
+		subres = pdf_dict_put_dict(ctx, resources, PDF_NAME(XObject), 10);
 
 	ref = pdf_add_image(ctx, doc, image);
 	pdf_dict_puts(ctx, subres, name, ref);
@@ -210,7 +201,7 @@ static void create_page(const char *input)
 					char *path = fz_strsep(&p, " ");
 					char *enc = fz_strsep(&p, " ");
 					if (!name || !path)
-						fz_throw(ctx, FZ_ERROR_GENERIC, "Font directive missing arguments");
+						fz_throw(ctx, FZ_ERROR_ARGUMENT, "Font directive missing arguments");
 					add_font_res(resources, name, path, enc);
 				}
 				else if (!strcmp(s, "%%CJKFont"))
@@ -220,7 +211,7 @@ static void create_page(const char *input)
 					char *wmode = fz_strsep(&p, " ");
 					char *style = fz_strsep(&p, " ");
 					if (!name || !lang)
-						fz_throw(ctx, FZ_ERROR_GENERIC, "CJKFont directive missing arguments");
+						fz_throw(ctx, FZ_ERROR_ARGUMENT, "CJKFont directive missing arguments");
 					add_cjkfont_res(resources, name, lang, wmode, style);
 				}
 				else if (!strcmp(s, "%%Image"))
@@ -228,7 +219,7 @@ static void create_page(const char *input)
 					char *name = fz_strsep(&p, " ");
 					char *path = fz_strsep(&p, " ");
 					if (!name || !path)
-						fz_throw(ctx, FZ_ERROR_GENERIC, "Image directive missing arguments");
+						fz_throw(ctx, FZ_ERROR_ARGUMENT, "Image directive missing arguments");
 					add_image_res(resources, name, path);
 				}
 			}
@@ -321,7 +312,7 @@ int pdfcreate_main(int argc, const char** argv)
 	}
 	fz_catch(ctx)
 	{
-		fz_log_error(ctx, fz_caught_message(ctx));
+		fz_report_error(ctx);
 		error = EXIT_FAILURE;
 	}
 

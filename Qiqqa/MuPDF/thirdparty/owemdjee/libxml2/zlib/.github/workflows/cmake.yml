@@ -12,8 +12,8 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - name: Ubuntu 18.04 GCC
-            os: ubuntu-18.04
+          - name: Ubuntu 20.04 GCC
+            os: ubuntu-20.04
             compiler: gcc
             cxx-compiler: g++
 
@@ -212,13 +212,13 @@ jobs:
             codecov: ubuntu_gcc_ppc64
 
           - name: Ubuntu GCC PPC64LE
-            os: ubuntu-latest
+            os: ubuntu-20.04
             cmake-args: -DCMAKE_TOOLCHAIN_FILE=cmake/toolchain-powerpc64le.cmake
             packages: qemu qemu-user gcc-powerpc64le-linux-gnu g++-powerpc64le-linux-gnu libc-dev-ppc64el-cross
             codecov: ubuntu_gcc_ppc64le
 
           - name: Ubuntu GCC SPARC64
-            os: ubuntu-latest
+            os: ubuntu-20.04
             cmake-args: -DCMAKE_TOOLCHAIN_FILE=cmake/toolchain-sparc64.cmake
             packages: qemu qemu-user gcc-sparc64-linux-gnu g++-sparc64-linux-gnu libc-dev-sparc64-cross
             ldflags: -static
@@ -264,9 +264,9 @@ jobs:
             cmake-args: -GNinja -DWITH_DFLTCC_DEFLATE=ON -DWITH_DFLTCC_INFLATE=ON -DWITH_SANITIZER=Memory
 
           - name: Ubuntu MinGW i686
-            os: ubuntu-latest
+            os: ubuntu-22.04
             cmake-args: -DCMAKE_TOOLCHAIN_FILE=cmake/toolchain-mingw-i686.cmake
-            packages: wine32 gcc-mingw-w64-i686 g++-mingw-w64-i686 libpcre2-8-0=10.34-7 libpcre2-8-0:i386=10.34-7 libodbc1=2.3.6-0.1build1 libodbc1:i386=2.3.6-0.1build1 libwine:i386=5.0-3ubuntu1 libgphoto2-6:i386=2.5.25-0ubuntu0.1 libsane:i386=1.0.29-0ubuntu5.2 libgd3=2.2.5-5.2ubuntu2.1 libgd3:i386=2.2.5-5.2ubuntu2.1
+            packages: wine32 gcc-mingw-w64-i686 g++-mingw-w64-i686 libpcre2-8-0=10.39-3ubuntu0.1 libpcre2-8-0:i386=10.39-3ubuntu0.1 libodbc1=2.3.9-5 libodbc1:i386=2.3.9-5 libwine:i386=6.0.3~repack-1 libgphoto2-6:i386=2.5.27-1build2 libsane:i386=1.1.1-5 libgd3=2.3.0-2ubuntu2 libgd3:i386=2.3.0-2ubuntu2
             ldflags: -static
             codecov: ubuntu_gcc_mingw_i686
             # Limit parallel test jobs to prevent wine errors
@@ -281,8 +281,8 @@ jobs:
              # Limit parallel test jobs to prevent wine errors
             parallels-jobs: 1
 
-          - name: Ubuntu 18.04 Clang
-            os: ubuntu-18.04
+          - name: Ubuntu 20.04 Clang
+            os: ubuntu-20.04
             compiler: clang-6.0
             cxx-compiler: clang++-6.0
             packages: clang-6.0
@@ -291,16 +291,34 @@ jobs:
             os: ubuntu-latest
             compiler: clang-11
             cxx-compiler: clang++-11
-            packages: llvm-11-tools
+            packages: clang-11 llvm-11 llvm-11-tools
             gcov-exec: llvm-cov-11 gcov
             codecov: ubuntu_clang
+
+          # Check for undefined symbols in the version script for the modern api
+          - name: Ubuntu Clang Undefined Symbols
+            os: ubuntu-latest
+            compiler: clang-11
+            cxx-compiler: clang++-11
+            cmake-args: -DCMAKE_SHARED_LINKER_FLAGS="-fuse-ld=lld -Wl,--no-undefined-version" -DZLIBNG_ENABLE_TESTS=OFF
+            build-shared: ON
+            packages: clang-11 llvm-11 lld
+
+          # Check for undefined symbols in the version script for the compat api
+          - name: Ubuntu Clang Undefined Symbols Compat
+            os: ubuntu-latest
+            compiler: clang-11
+            cxx-compiler: clang++-11
+            cmake-args: -DCMAKE_SHARED_LINKER_FLAGS="-fuse-ld=lld -Wl,--no-undefined-version" -DZLIBNG_ENABLE_TESTS=OFF -DZLIB_COMPAT=ON
+            build-shared: ON
+            packages: clang-11 llvm-11 lld
 
           - name: Ubuntu Clang Inflate Strict
             os: ubuntu-latest
             compiler: clang-11
             cxx-compiler: clang++-11
             cmake-args: -DWITH_INFLATE_STRICT=ON
-            packages: llvm-11-tools
+            packages: clang-11 llvm-11 llvm-11-tools
             gcov-exec: llvm-cov-11 gcov
             codecov: ubuntu_clang_inflate_strict
 
@@ -309,7 +327,7 @@ jobs:
             compiler: clang-11
             cxx-compiler: clang++-11
             cmake-args: -DWITH_INFLATE_ALLOW_INVALID_DIST=ON
-            packages: llvm-11-tools
+            packages: clang-11 llvm-11 llvm-11-tools
             gcov-exec: llvm-cov-11 gcov
             codecov: ubuntu_clang_inflate_allow_invalid_dist
 
@@ -318,7 +336,7 @@ jobs:
             compiler: clang-11
             cxx-compiler: clang++-11
             cmake-args: -DWITH_REDUCED_MEM=ON
-            packages: llvm-11-tools
+            packages: clang-11 llvm-11 llvm-11-tools
             gcov-exec: llvm-cov-11 gcov
             codecov: ubuntu_clang_reduced_mem
 
@@ -327,7 +345,7 @@ jobs:
             compiler: clang-11
             cxx-compiler: clang++-11
             cflags: -DUSE_MMAP
-            packages: llvm-11-tools
+            packages: clang-11 llvm-11 llvm-11-tools
             gcov-exec: llvm-cov-11 gcov
             codecov: ubuntu_clang_mmap
 
@@ -335,7 +353,7 @@ jobs:
             os: ubuntu-latest
             compiler: clang-11
             cxx-compiler: clang++-11
-            packages: llvm-11-tools
+            packages: clang-11 llvm-11 llvm-11-tools
             gcov-exec: llvm-cov-11 gcov
             codecov: ubuntu_clang_debug
             build-config: Debug
@@ -345,8 +363,10 @@ jobs:
             compiler: clang-11
             cxx-compiler: clang++-11
             cmake-args: -GNinja -DWITH_SANITIZER=Memory
-            packages:  ninja-build llvm-11-tools
+            packages:  ninja-build clang-11 llvm-11-tools
             gcov-exec: llvm-cov-11 gcov
+            # https://github.com/llvm/llvm-project/issues/55785
+            msan-options: use_sigaltstack=0
 
           - name: Ubuntu Emscripten WASM32
             os: ubuntu-latest
@@ -458,6 +478,14 @@ jobs:
       if: contains(matrix.packages, 'wine')
       run: sudo dpkg --add-architecture i386
 
+    - name: Add ubuntu mirrors
+      if: runner.os == 'Linux' && matrix.packages
+      run: |
+        # Github Actions caching proxy is at times unreliable
+        echo -e 'http://azure.archive.ubuntu.com/ubuntu\tpriority:1\n' | sudo tee /etc/apt/mirrors.txt
+        curl http://mirrors.ubuntu.com/mirrors.txt | sudo tee --append /etc/apt/mirrors.txt
+        sudo sed -i 's#http://azure.archive.ubuntu.com/ubuntu/#mirror+file:/etc/apt/mirrors.txt#' /etc/apt/sources.list
+
     - name: Install packages (Ubuntu)
       if: runner.os == 'Linux' && matrix.packages
       run: |
@@ -480,7 +508,7 @@ jobs:
 
     - name: Install Emscripten
       if: contains(matrix.name, 'WASM32')
-      uses: mymindstorm/setup-emsdk@v11
+      uses: mymindstorm/setup-emsdk@v12
 
     - name: Initialize Wine
       # Prevent parallel test jobs from initializing Wine at the same time
@@ -490,7 +518,7 @@ jobs:
     - name: Compile LLVM C++ libraries (MSAN)
       if: contains(matrix.name, 'MSAN')
       run: |
-        git clone --depth=1 https://github.com/llvm/llvm-project --single-branch --branch llvmorg-11.0.0
+        git clone --depth=1 https://github.com/llvm/llvm-project --single-branch --branch llvmorg-11.1.0
         cmake -S llvm-project/llvm -B llvm-project/build -G Ninja \
           -DCMAKE_BUILD_TYPE=Release \
           -DLLVM_ENABLE_PROJECTS="libcxx;libcxxabi" \
@@ -508,7 +536,7 @@ jobs:
       run: |
         cmake -S ${{ matrix.build-src-dir || '.' }} -B ${{ matrix.build-dir || '.' }} ${{ matrix.cmake-args }} \
           -DCMAKE_BUILD_TYPE=${{ matrix.build-config || 'Release' }} \
-          -DBUILD_SHARED_LIBS=OFF \
+          -DBUILD_SHARED_LIBS=${{ matrix.build-shared || 'OFF' }} \
           -DWITH_FUZZERS=ON \
           -DWITH_MAINTAINER_WARNINGS=ON \
           ${{ matrix.codecov && '-DWITH_CODE_COVERAGE=ON' }}
@@ -546,7 +574,7 @@ jobs:
           --xml --output coverage.xml
 
     - name: Upload coverage report
-      uses: codecov/codecov-action@v2
+      uses: codecov/codecov-action@v3
       if: matrix.codecov && (env.CODECOV_TOKEN != '' || github.repository == 'zlib-ng/zlib-ng')
       with:
         token: ${{ secrets.CODECOV_TOKEN || 'e4fdf847-f541-4ab1-9d50-3d27e5913906' }}
@@ -559,7 +587,7 @@ jobs:
         CODECOV_TOKEN: "${{secrets.CODECOV_TOKEN}}"
 
     - name: Upload build errors
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       if: failure()
       with:
         name: ${{ matrix.name }} (cmake)

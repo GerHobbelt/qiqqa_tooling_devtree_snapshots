@@ -48,6 +48,8 @@
 
 #else
 
+#include <crtdbg.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -105,6 +107,10 @@ typedef int l_atomic;
 #ifdef __APPLE__
   #include <Availability.h>
 #endif /* __APPLE__ */
+
+#if defined(HAVE_MUPDF)
+#include "mupdf/fitz/context.h"
+#endif
 
 #ifdef __cplusplus
 extern "C" {
@@ -236,7 +242,7 @@ typedef uintptr_t l_uintptr_t;
 /*--------------------------------------------------------------------*
  *                          Built-in types                            *
  *--------------------------------------------------------------------*/
-typedef int                     l_ok;       /*!< return type 0 if OK, 1 on error */
+typedef int                     l_ok;       /*!< return 0 if OK, 1 on error */
 typedef signed char             l_int8;     /*!< signed 8-bit value */
 typedef unsigned char           l_uint8;    /*!< unsigned 8-bit value */
 typedef short                   l_int16;    /*!< signed 16-bit value */
@@ -379,6 +385,11 @@ typedef struct L_WallTimer  L_WALLTIMER;
  *      For such builds, define LEPTONICA_INTERCEPT_ALLOC, and provide    *
  *      custom leptonica_{malloc, calloc, realloc, free} functions.       *
  *------------------------------------------------------------------------*/
+#if defined(LEPTONICA_INTERCEPT_ALLOC) && defined(_MSC_VER) && defined(FZDBG_HAS_TRACING) && defined(_DEBUG)
+#undef LEPTONICA_INTERCEPT_ALLOC    // rely on MSVC's crtdbg.h instead!
+#define LEPTONICA_NO_CUSTOM_MEM_MANAGER   1
+#endif
+
 #ifdef LEPTONICA_INTERCEPT_ALLOC
   #define LEPT_MALLOC(blocksize)           leptonica_malloc(blocksize)
   #define LEPT_CALLOC(numelem, elemsize)   leptonica_calloc(numelem, elemsize)
@@ -518,16 +529,18 @@ LEPT_DLL extern l_int32  LeptMsgSeverity;
  *      a : <message string>
  *      b : __func__   (the procedure name)
  *      c : <return value from function>
+ *  A newline is added by the function after the message.
  *
  *  (2) The messages
  *      ERROR_INT_1(a,f,b,c)     : returns l_int32
- *      ERROR_FLOAT_2(a,f,b,c)   : returns l_float32
- *      ERROR_PTR_2(a,f,b,c)     : returns void*
+ *      ERROR_FLOAT_1(a,f,b,c)   : returns l_float32
+ *      ERROR_PTR_1(a,f,b,c)     : returns void*
  *  are used to return from functions and take four parameters:
  *      a : <message string>
  *      f : <second message string> (typically, a filename for an fopen()))
  *      b : __func__   (the procedure name)
  *      c : <return value from function>
+ *  A newline is added by the function after the message.
  *
  *  (3) The purely informational L_* messages
  *      L_ERROR(a,...)
@@ -537,6 +550,8 @@ LEPT_DLL extern l_int32  LeptMsgSeverity;
  *      a  :  <message string> with optional format conversions
  *      v1 : procName    (this must be included as the first vararg)
  *      v2, ... :  optional varargs to match format converters in the message
+ *  Unlike the messages that return a value in (2) and (3) above,
+ *  here a newline needs to be included at the end of the message string.
  *
  *  To return an error from a function that returns void, use:
  *      L_ERROR(<message string>, procName, [...])

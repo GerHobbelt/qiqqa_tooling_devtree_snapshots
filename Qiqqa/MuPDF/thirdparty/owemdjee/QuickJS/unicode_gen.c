@@ -43,6 +43,7 @@
 //#define DUMP_TABLE_SIZE
 //#define DUMP_CC_TABLE
 //#define DUMP_DECOMP_TABLE
+//#define DUMP_CASE_FOLDING_SPECIAL_CASES
 
 /* Ideas:
    - Generalize run length encoding + index for all tables
@@ -65,7 +66,7 @@
 #define CHARCODE_MAX 0x10ffff
 #define CC_LEN_MAX 3
 
-static void *mallocz(size_t size)
+void *mallocz(size_t size)
 {
     void *ptr;
     ptr = malloc(size);
@@ -73,7 +74,7 @@ static void *mallocz(size_t size)
     return ptr;
 }
 
-static const char *get_field(const char *p, int n)
+const char *get_field(const char *p, int n)
 {
     int i;
     for(i = 0; i < n; i++) {
@@ -86,7 +87,7 @@ static const char *get_field(const char *p, int n)
     return p;
 }
 
-static const char *get_field_buf(char *buf, size_t buf_size, const char *p, int n)
+const char *get_field_buf(char *buf, size_t buf_size, const char *p, int n)
 {
     char *q;
     p = get_field(p, n);
@@ -100,7 +101,7 @@ static const char *get_field_buf(char *buf, size_t buf_size, const char *p, int 
     return buf;
 }
 
-static void add_char(int **pbuf, int *psize, int *plen, int c)
+void add_char(int **pbuf, int *psize, int *plen, int c)
 {
     int len, size, *buf;
     buf = *pbuf;
@@ -117,7 +118,7 @@ static void add_char(int **pbuf, int *psize, int *plen, int c)
     *plen = len;
 }
 
-static int *get_field_str(int *plen, const char *str, int n)
+int *get_field_str(int *plen, const char *str, int n)
 {
     const char *p;
     int *buf, len, size;
@@ -140,7 +141,7 @@ static int *get_field_str(int *plen, const char *str, int n)
     return buf;
 }
 
-static char *get_line(char *buf, int buf_size, FILE *f)
+char *get_line(char *buf, int buf_size, FILE *f)
 {
     int len;
     if (!fgets(buf, buf_size, f))
@@ -218,15 +219,16 @@ static const char *unicode_prop_short_name[] = {
 #undef DEF
 };
 
-#undef UNICODE_SPROP_LIST
+#undef UNICODE_PROP_LIST
 
 typedef struct {
     /* case conv */
     uint8_t u_len;
     uint8_t l_len;
-    int u_data[CC_LEN_MAX];
-    int l_data[CC_LEN_MAX];
-    int f_code;
+    uint8_t f_len;
+    int u_data[CC_LEN_MAX]; /* to upper case */
+    int l_data[CC_LEN_MAX]; /* to lower case */
+    int f_data[CC_LEN_MAX]; /* to case folding */
 
     uint8_t combining_class;
     uint8_t is_compat:1;
@@ -241,9 +243,9 @@ typedef struct {
     int *decomp_data;
 } CCInfo;
 
-static CCInfo *unicode_db = NULL;
+CCInfo *unicode_db;
 
-static int find_name(const char **tab, int tab_len, const char *name)
+int find_name(const char **tab, int tab_len, const char *name)
 {
     int i, len, name_len;
     const char *p, *r;
@@ -282,7 +284,7 @@ static void set_prop(uint32_t c, int prop_idx, int val)
         unicode_db[c].prop_bitmap_tab[prop_idx >> 5]  &= ~mask;
 }
 
-static void parse_unicode_data(const char *filename)
+void parse_unicode_data(const char *filename)
 {
     FILE *f;
     char line[1024];
@@ -419,7 +421,7 @@ static void parse_unicode_data(const char *filename)
     fclose(f);
 }
 
-static void parse_special_casing(CCInfo *tab, const char *filename)
+void parse_special_casing(CCInfo *tab, const char *filename)
 {
     FILE *f;
     char line[1024];
@@ -495,12 +497,12 @@ static void parse_special_casing(CCInfo *tab, const char *filename)
     fclose(f);
 }
 
-static void parse_case_folding(CCInfo *tab, const char *filename)
+void parse_case_folding(CCInfo *tab, const char *filename)
 {
     FILE *f;
     char line[1024];
     const char *p;
-    int code;
+    int code, status;
     CCInfo *ci;
 
     f = fopen(filename, "rb");
@@ -531,20 +533,34 @@ static void parse_case_folding(CCInfo *tab, const char *filename)
         /* locale dependent casing */
         while (isspace(*p))
             p++;
-        if (*p != 'C' && *p != 'S')
+        status = *p;
+        if (status != 'C' && status != 'S' && status != 'F')
             continue;
 
         p = get_field(line, 2);
-        QJS_ASSERT(p != 0);
-        QJS_ASSERT(ci->f_code == 0);
-        ci->f_code = strtoul(p, NULL, 16);
-        QJS_ASSERT(ci->f_code != 0 && ci->f_code != code);
+        QJS_ASSERT(p != NULL);
+        if (status == 'S') {
+            /* we always select the simple case folding and assume it
+             * comes after the full case folding case */
+            QJS_ASSERT(ci->f_len >= 2);
+            ci->f_len = 0;
+        } else {
+            QJS_ASSERT(ci->f_len == 0);
+        }
+        for(;;) {
+            while (isspace(*p))
+                p++;
+            if (*p == ';')
+                break;
+            QJS_ASSERT(ci->l_len < CC_LEN_MAX);
+            ci->f_data[ci->f_len++] = strtoul(p, (char **)&p, 16);
+        }
     }
 
     fclose(f);
 }
 
-static void parse_composition_exclusions(const char *filename)
+void parse_composition_exclusions(const char *filename)
 {
     FILE *f;
     char line[4096], *p;
@@ -571,7 +587,7 @@ static void parse_composition_exclusions(const char *filename)
     fclose(f);
 }
 
-static void parse_derived_core_properties(const char *filename)
+void parse_derived_core_properties(const char *filename)
 {
     FILE *f;
     char line[4096], *p, buf[256], *q;
@@ -628,7 +644,7 @@ next: ;
     fclose(f);
 }
 
-static void parse_derived_norm_properties(const char *filename)
+void parse_derived_norm_properties(const char *filename)
 {
     FILE *f;
     char line[4096], *p, buf[256], *q;
@@ -677,7 +693,7 @@ static void parse_derived_norm_properties(const char *filename)
     fclose(f);
 }
 
-static void parse_prop_list(const char *filename)
+void parse_prop_list(const char *filename)
 {
     FILE *f;
     char line[4096], *p, buf[256], *q;
@@ -731,7 +747,7 @@ static void parse_prop_list(const char *filename)
     fclose(f);
 }
 
-static void parse_scripts(const char *filename)
+void parse_scripts(const char *filename)
 {
     FILE *f;
     char line[4096], *p, buf[256], *q;
@@ -784,7 +800,7 @@ static void parse_scripts(const char *filename)
     fclose(f);
 }
 
-static void parse_script_extensions(const char *filename)
+void parse_script_extensions(const char *filename)
 {
     FILE *f;
     char line[4096], *p, buf[256], *q;
@@ -851,7 +867,7 @@ static void parse_script_extensions(const char *filename)
     fclose(f);
 }
 
-static void dump_cc_info(CCInfo *ci, int i)
+void dump_cc_info(CCInfo *ci, int i)
 {
     int j;
     printf("%05x:", i);
@@ -865,30 +881,32 @@ static void dump_cc_info(CCInfo *ci, int i)
         for(j = 0; j < ci->l_len; j++)
             printf(" %05x", ci->l_data[j]);
     }
-    if (ci->f_code != 0) {
-        printf(" F: %05x", ci->f_code);
+    if (ci->f_len != 0) {
+        printf(" F:");
+        for(j = 0; j < ci->f_len; j++)
+            printf(" %05x", ci->f_data[j]);
     }
     printf("\n");
 }
 
-static void dump_data(CCInfo *tab)
+void dump_unicode_data(CCInfo *tab)
 {
     int i;
     CCInfo *ci;
     for(i = 0; i <= CHARCODE_MAX; i++) {
         ci = &tab[i];
-        if (ci->u_len != 0 || ci->l_len != 0 || ci->f_code != 0) {
+        if (ci->u_len != 0 || ci->l_len != 0 || ci->f_len != 0) {
             dump_cc_info(ci, i);
         }
     }
 }
 
-static BOOL is_complicated_case(const CCInfo *ci)
+BOOL is_complicated_case(const CCInfo *ci)
 {
     return (ci->u_len > 1 || ci->l_len > 1 ||
             (ci->u_len > 0 && ci->l_len > 0) ||
-            (ci->f_code != 0) != ci->l_len ||
-            (ci->f_code != 0 && ci->l_data[0] != ci->f_code));
+            (ci->f_len != ci->l_len) ||
+            (memcmp(ci->f_data, ci->l_data, ci->f_len * sizeof(ci->f_data[0])) != 0));
 }
 
 #ifndef USE_TEST
@@ -904,13 +922,13 @@ enum {
     RUN_TYPE_UF_D1_EXT,
     RUN_TYPE_U_EXT,
     RUN_TYPE_LF_EXT,
-    RUN_TYPE_U_EXT2,
-    RUN_TYPE_L_EXT2,
-    RUN_TYPE_U_EXT3,
+    RUN_TYPE_UF_EXT2,
+    RUN_TYPE_LF_EXT2,
+    RUN_TYPE_UF_EXT3,
 };
 #endif
 
-static const char *run_type_str[] = {
+const char *run_type_str[] = {
     "U",
     "L",
     "UF",
@@ -922,9 +940,9 @@ static const char *run_type_str[] = {
     "UF_D1_EXT",
     "U_EXT",
     "LF_EXT",
-    "U_EXT2",
-    "L_EXT2",
-    "U_EXT3",
+    "UF_EXT2",
+    "LF_EXT2",
+    "UF_EXT3",
 };
 
 typedef struct {
@@ -937,9 +955,16 @@ typedef struct {
     int data_index; /* 'data' coming from the table */
 } TableEntry;
 
+static int simple_to_lower(CCInfo *tab, int c)
+{
+    if (tab[c].l_len != 1)
+        return c;
+    return tab[c].l_data[0];
+}
+
 /* code (17), len (7), type (4) */
 
-static void find_run_type(TableEntry *te, CCInfo *tab, int code)
+void find_run_type(TableEntry *te, CCInfo *tab, int code)
 {
     int is_lower, len;
     CCInfo *ci, *ci1, *ci2;
@@ -950,15 +975,15 @@ static void find_run_type(TableEntry *te, CCInfo *tab, int code)
     te->code = code;
 
     if (ci->l_len == 1 && ci->l_data[0] == code + 2 &&
-        ci->f_code == ci->l_data[0] &&
+        ci->f_len == 1 && ci->f_data[0] == ci->l_data[0] &&
         ci->u_len == 0 &&
 
         ci1->l_len == 1 && ci1->l_data[0] == code + 2 &&
-        ci1->f_code == ci1->l_data[0] &&
+        ci1->f_len == 1 && ci1->f_data[0] == ci1->l_data[0] &&
         ci1->u_len == 1 && ci1->u_data[0] == code &&
 
         ci2->l_len == 0 &&
-        ci2->f_code == 0 &&
+        ci2->f_len == 0 &&
         ci2->u_len == 1 && ci2->u_data[0] == code) {
         te->len = 3;
         te->data = 0;
@@ -973,7 +998,7 @@ static void find_run_type(TableEntry *te, CCInfo *tab, int code)
             if (ci1->u_len != 1 ||
                 ci1->u_data[0] != ci->u_data[0] + len ||
                 ci1->l_len != 0 ||
-                ci1->f_code != ci1->u_data[0])
+                ci1->f_len != 1 || ci1->f_data[0] != ci1->u_data[0])
                 break;
             len++;
         }
@@ -984,21 +1009,25 @@ static void find_run_type(TableEntry *te, CCInfo *tab, int code)
             return;
         }
 
-        if (ci->u_len == 2 && ci->u_data[1] == 0x399 &&
-            ci->f_code == 0 && ci->l_len == 0) {
+        if (ci->l_len == 0 &&
+            ci->u_len == 2 && ci->u_data[1] == 0x399 &&
+            ci->f_len == 2 && ci->f_data[1] == 0x3B9 &&
+            ci->f_data[0] == simple_to_lower(tab, ci->u_data[0])) {
             len = 1;
             while (code + len <= CHARCODE_MAX) {
                 ci1 = &tab[code + len];
                 if (!(ci1->u_len == 2 &&
-                    ci1->u_data[1] == 0x399 &&
+                      ci1->u_data[1] == ci->u_data[1] &&
                       ci1->u_data[0] == ci->u_data[0] + len &&
-                      ci1->f_code == 0 &&
+                      ci1->f_len == 2 &&
+                      ci1->f_data[1] == ci->f_data[1] &&
+                      ci1->f_data[0] == ci->f_data[0] + len &&
                       ci1->l_len == 0))
                     break;
                 len++;
             }
             te->len = len;
-            te->type = RUN_TYPE_U_EXT2;
+            te->type = RUN_TYPE_UF_EXT2;
             te->ext_data[0] = ci->u_data[0];
             te->ext_data[1] = ci->u_data[1];
             te->ext_len = 2;
@@ -1006,7 +1035,8 @@ static void find_run_type(TableEntry *te, CCInfo *tab, int code)
         }
 
         if (ci->u_len == 2 && ci->u_data[1] == 0x399 &&
-            ci->l_len == 1 && ci->f_code == ci->l_data[0]) {
+            ci->l_len == 1 &&
+            ci->f_len == 1 && ci->f_data[0] == ci->l_data[0]) {
             len = 1;
             while (code + len <= CHARCODE_MAX) {
                 ci1 = &tab[code + len];
@@ -1015,7 +1045,7 @@ static void find_run_type(TableEntry *te, CCInfo *tab, int code)
                       ci1->u_data[0] == ci->u_data[0] + len &&
                       ci1->l_len == 1 &&
                       ci1->l_data[0] == ci->l_data[0] + len &&
-                      ci1->f_code == ci1->l_data[0]))
+                      ci1->f_len == 1 && ci1->f_data[0] == ci1->l_data[0]))
                     break;
                 len++;
             }
@@ -1027,13 +1057,13 @@ static void find_run_type(TableEntry *te, CCInfo *tab, int code)
             return;
         }
 
-        if (ci->l_len == 1 && ci->u_len == 0 && ci->f_code == 0) {
+        if (ci->l_len == 1 && ci->u_len == 0 && ci->f_len == 0) {
             len = 1;
             while (code + len <= CHARCODE_MAX) {
                 ci1 = &tab[code + len];
                 if (!(ci1->l_len == 1 &&
                       ci1->l_data[0] == ci->l_data[0] + len &&
-                      ci1->u_len == 0 && ci1->f_code == 0))
+                      ci1->u_len == 0 && ci1->f_len == 0))
                     break;
                 len++;
             }
@@ -1046,32 +1076,39 @@ static void find_run_type(TableEntry *te, CCInfo *tab, int code)
         if (ci->l_len == 0 &&
             ci->u_len == 1 &&
             ci->u_data[0] < 0x1000 &&
-            ci->f_code == ci->u_data[0] + 0x20) {
+            ci->f_len == 1 && ci->f_data[0] == ci->u_data[0] + 0x20) {
             te->len = 1;
             te->type = RUN_TYPE_UF_D20;
             te->data = ci->u_data[0];
         } else if (ci->l_len == 0 &&
-            ci->u_len == 1 &&
-            ci->f_code == ci->u_data[0] + 1) {
+                   ci->u_len == 1 &&
+                   ci->f_len == 1 && ci->f_data[0] == ci->u_data[0] + 1) {
             te->len = 1;
             te->type = RUN_TYPE_UF_D1_EXT;
             te->ext_data[0] = ci->u_data[0];
             te->ext_len = 1;
-        } else if (ci->l_len == 2 && ci->u_len == 0 && ci->f_code == 0) {
+        } else if (ci->l_len == 2 && ci->u_len == 0 && ci->f_len == 2 &&
+                   ci->l_data[0] == ci->f_data[0] &&
+                   ci->l_data[1] == ci->f_data[1]) {
             te->len = 1;
-            te->type = RUN_TYPE_L_EXT2;
+            te->type = RUN_TYPE_LF_EXT2;
             te->ext_data[0] = ci->l_data[0];
             te->ext_data[1] = ci->l_data[1];
             te->ext_len = 2;
-        } else if (ci->u_len == 2 && ci->l_len == 0 && ci->f_code == 0) {
+        } else if (ci->u_len == 2 && ci->l_len == 0 && ci->f_len == 2 &&
+                   ci->f_data[0] == simple_to_lower(tab, ci->u_data[0]) &&
+                   ci->f_data[1] == simple_to_lower(tab, ci->u_data[1])) {
             te->len = 1;
-            te->type = RUN_TYPE_U_EXT2;
+            te->type = RUN_TYPE_UF_EXT2;
             te->ext_data[0] = ci->u_data[0];
             te->ext_data[1] = ci->u_data[1];
             te->ext_len = 2;
-        } else if (ci->u_len == 3 && ci->l_len == 0 && ci->f_code == 0) {
+        } else if (ci->u_len == 3 && ci->l_len == 0 && ci->f_len == 3 &&
+                   ci->f_data[0] == simple_to_lower(tab, ci->u_data[0]) &&
+                   ci->f_data[1] == simple_to_lower(tab, ci->u_data[1]) &&
+                   ci->f_data[2] == simple_to_lower(tab, ci->u_data[2])) {
             te->len = 1;
-            te->type = RUN_TYPE_U_EXT3;
+            te->type = RUN_TYPE_UF_EXT3;
             te->ext_data[0] = ci->u_data[0];
             te->ext_data[1] = ci->u_data[1];
             te->ext_data[2] = ci->u_data[2];
@@ -1139,7 +1176,7 @@ static int conv_table_len;
 static int ext_data[1000];
 static int ext_data_len;
 
-static void dump_case_conv_table1(void)
+void dump_case_conv_table1(void)
 {
     int i, j;
     const TableEntry *te;
@@ -1156,7 +1193,7 @@ static void dump_case_conv_table1(void)
     printf("table_len=%d ext_len=%d\n", conv_table_len, ext_data_len);
 }
 
-static int find_data_index(const TableEntry *conv_table, int len, int data)
+int find_data_index(const TableEntry *conv_table, int len, int data)
 {
     int i;
     const TableEntry *te;
@@ -1168,7 +1205,7 @@ static int find_data_index(const TableEntry *conv_table, int len, int data)
     return -1;
 }
 
-static int find_ext_data_index(int data)
+int find_ext_data_index(int data)
 {
     int i;
     for(i = 0; i < ext_data_len; i++) {
@@ -1180,7 +1217,7 @@ static int find_ext_data_index(int data)
     return ext_data_len - 1;
 }
 
-static void build_conv_table(CCInfo *tab)
+void build_conv_table(CCInfo *tab)
 {
     int code, i, j;
     CCInfo *ci;
@@ -1189,7 +1226,7 @@ static void build_conv_table(CCInfo *tab)
     te = conv_table;
     for(code = 0; code <= CHARCODE_MAX; code++) {
         ci = &tab[code];
-        if (ci->u_len == 0 && ci->l_len == 0 && ci->f_code == 0)
+        if (ci->u_len == 0 && ci->l_len == 0 && ci->f_len == 0)
             continue;
         QJS_ASSERT(te - conv_table < countof(conv_table));
         find_run_type(te, tab, code);
@@ -1245,7 +1282,7 @@ static void build_conv_table(CCInfo *tab)
     /* find the data index for ext_data */
     for(i = 0; i < conv_table_len; i++) {
         te = &conv_table[i];
-        if (te->type == RUN_TYPE_U_EXT3) {
+        if (te->type == RUN_TYPE_UF_EXT3) {
             int p, v;
             v = 0;
             for(j = 0; j < 3; j++) {
@@ -1259,8 +1296,8 @@ static void build_conv_table(CCInfo *tab)
 
     for(i = 0; i < conv_table_len; i++) {
         te = &conv_table[i];
-        if (te->type == RUN_TYPE_L_EXT2 ||
-            te->type == RUN_TYPE_U_EXT2 ||
+        if (te->type == RUN_TYPE_LF_EXT2 ||
+            te->type == RUN_TYPE_UF_EXT2 ||
             te->type == RUN_TYPE_U2L_399_EXT2) {
             int p, v;
             v = 0;
@@ -1286,7 +1323,7 @@ static void build_conv_table(CCInfo *tab)
 #endif
 }
 
-static void dump_case_conv_table(FILE *f)
+void dump_case_conv_table(FILE *f)
 {
     int i;
     uint32_t v;
@@ -1323,7 +1360,55 @@ static void dump_case_conv_table(FILE *f)
     fprintf(f, "\n};\n\n");
 }
 
-static int tabcmp(const int *tab1, const int *tab2, int n)
+
+static CCInfo *global_tab;
+
+static int sp_cc_cmp(const void *p1, const void *p2)
+{
+    CCInfo *c1 = &global_tab[*(const int *)p1];
+    CCInfo *c2 = &global_tab[*(const int *)p2];
+    if (c1->f_len < c2->f_len) {
+        return -1;
+    } else if (c2->f_len < c1->f_len) {
+        return 1;
+    } else {
+        return memcmp(c1->f_data, c2->f_data, sizeof(c1->f_data[0]) * c1->f_len);
+    }
+}
+
+/* dump the case special cases (multi character results which are
+   identical and need specific handling in lre_canonicalize() */
+void dump_case_folding_special_cases(CCInfo *tab)
+{
+    int i, len, j;
+    int *perm;
+
+    perm = malloc(sizeof(perm[0]) * (CHARCODE_MAX + 1));
+    for(i = 0; i <= CHARCODE_MAX; i++)
+        perm[i] = i;
+    global_tab = tab;
+    qsort(perm, CHARCODE_MAX + 1, sizeof(perm[0]), sp_cc_cmp);
+    for(i = 0; i <= CHARCODE_MAX;) {
+        if (tab[perm[i]].f_len <= 1) {
+            i++;
+        } else {
+            len = 1;
+            while ((i + len) <= CHARCODE_MAX && !sp_cc_cmp(&perm[i], &perm[i + len]))
+                len++;
+
+            if (len > 1) {
+                for(j = i; j < i + len; j++)
+                    dump_cc_info(&tab[perm[j]], perm[j]);
+            }
+            i += len;
+        }
+    }
+    free(perm);
+    global_tab = NULL;
+}
+
+
+int tabcmp(const int *tab1, const int *tab2, int n)
 {
     int i;
     for(i = 0; i < n; i++) {
@@ -1333,7 +1418,7 @@ static int tabcmp(const int *tab1, const int *tab2, int n)
     return 0;
 }
 
-static void dump_str(const char *str, const int *buf, int len)
+void dump_str(const char *str, const int *buf, int len)
 {
     int i;
     printf("%s=", str);
@@ -1342,14 +1427,14 @@ static void dump_str(const char *str, const int *buf, int len)
     printf("\n");
 }
 
-static void compute_internal_props(void)
+void compute_internal_props(void)
 {
     int i;
     BOOL has_ul;
 
     for(i = 0; i <= CHARCODE_MAX; i++) {
         CCInfo *ci = &unicode_db[i];
-        has_ul = (ci->u_len != 0 || ci->l_len != 0 || ci->f_code != 0);
+        has_ul = (ci->u_len != 0 || ci->l_len != 0 || ci->f_len != 0);
         if (has_ul) {
             QJS_ASSERT(get_prop(i, PROP_Cased));
         } else {
@@ -1364,10 +1449,10 @@ static void compute_internal_props(void)
         set_prop(i, PROP_Changes_When_Titlecased1,
                  get_prop(i, PROP_Changes_When_Titlecased) ^ (ci->u_len != 0));
         set_prop(i, PROP_Changes_When_Casefolded1,
-                 get_prop(i, PROP_Changes_When_Casefolded) ^ (ci->f_code != 0));
+                 get_prop(i, PROP_Changes_When_Casefolded) ^ (ci->f_len != 0));
         /* XXX: reduce table size (438 bytes) */
         set_prop(i, PROP_Changes_When_NFKC_Casefolded1,
-                 get_prop(i, PROP_Changes_When_NFKC_Casefolded) ^ (ci->f_code != 0));
+                 get_prop(i, PROP_Changes_When_NFKC_Casefolded) ^ (ci->f_len != 0));
 #if 0
         /* TEST */
 #define M(x) (1U << GCAT_ ## x)
@@ -1383,7 +1468,7 @@ static void compute_internal_props(void)
     }
 }
 
-static void dump_byte_table(FILE *f, const char *cname, const uint8_t *tab, int len)
+void dump_byte_table(FILE *f, const char *cname, const uint8_t *tab, int len)
 {
     int i;
     fprintf(f, "static const uint8_t %s[%d] = {", cname, len);
@@ -1397,7 +1482,7 @@ static void dump_byte_table(FILE *f, const char *cname, const uint8_t *tab, int 
 
 #define PROP_BLOCK_LEN 32
 
-static void build_prop_table(FILE *f, int prop_index, BOOL add_index)
+void build_prop_table(FILE *f, int prop_index, BOOL add_index)
 {
     int i, j, n, v, offset, code;
     DynBuf dbuf_s, *dbuf = &dbuf_s;
@@ -1497,7 +1582,7 @@ static void build_prop_table(FILE *f, int prop_index, BOOL add_index)
     dbuf_free(dbuf2);
 }
 
-static void build_flags_tables(FILE *f)
+void build_flags_tables(FILE *f)
 {
     build_prop_table(f, PROP_Cased1, TRUE);
     build_prop_table(f, PROP_Case_Ignorable, TRUE);
@@ -1505,7 +1590,7 @@ static void build_flags_tables(FILE *f)
     build_prop_table(f, PROP_ID_Continue1, TRUE);
 }
 
-static void dump_name_table(FILE *f, const char *cname, const char **tab_name, int len,
+void dump_name_table(FILE *f, const char *cname, const char **tab_name, int len,
                      const char **tab_short_name)
 {
     int i, w, maxw;
@@ -1533,11 +1618,13 @@ static void dump_name_table(FILE *f, const char *cname, const char **tab_name, i
     fprintf(f, ";\n\n");
 }
 
-static void build_general_category_table(FILE *f)
+void build_general_category_table(FILE *f)
 {
     int i, v, j, n, n1;
     DynBuf dbuf_s, *dbuf = &dbuf_s;
+#ifdef DUMP_TABLE_SIZE
     int cw_count, cw_len_count[4], cw_start;
+#endif
 
     fprintf(f, "typedef enum {\n");
     for(i = 0; i < GCAT_COUNT; i++)
@@ -1551,9 +1638,11 @@ static void build_general_category_table(FILE *f)
 
 
     dbuf_init(dbuf);
+#ifdef DUMP_TABLE_SIZE
     cw_count = 0;
     for(i = 0; i < 4; i++)
         cw_len_count[i] = 0;
+#endif
     for(i = 0; i <= CHARCODE_MAX;) {
         v = unicode_db[i].general_category;
         j = i + 1;
@@ -1572,9 +1661,11 @@ static void build_general_category_table(FILE *f)
             }
         }
         //        printf("%05x %05x %d\n", i, n, v);
-        cw_count++;
         n--;
+#ifdef DUMP_TABLE_SIZE
+        cw_count++;
         cw_start = dbuf->size;
+#endif
         if (n < 7) {
             dbuf_putc(dbuf, (n << 5) | v);
         } else if (n < 7 + 128) {
@@ -1596,12 +1687,13 @@ static void build_general_category_table(FILE *f)
             dbuf_putc(dbuf, n1 >> 8);
             dbuf_putc(dbuf, n1);
         }
+#ifdef DUMP_TABLE_SIZE
         cw_len_count[dbuf->size - cw_start - 1]++;
+#endif
         i += n + 1;
     }
 #ifdef DUMP_TABLE_SIZE
-    printf("general category: %d entries [",
-           cw_count);
+    printf("general category: %d entries [", cw_count);
     for(i = 0; i < 4; i++)
         printf(" %d", cw_len_count[i]);
     printf(" ], length=%d bytes\n", (int)dbuf->size);
@@ -1612,11 +1704,13 @@ static void build_general_category_table(FILE *f)
     dbuf_free(dbuf);
 }
 
-static void build_script_table(FILE *f)
+void build_script_table(FILE *f)
 {
     int i, v, j, n, n1, type;
     DynBuf dbuf_s, *dbuf = &dbuf_s;
+#ifdef DUMP_TABLE_SIZE
     int cw_count, cw_len_count[4], cw_start;
+#endif
 
     fprintf(f, "typedef enum {\n");
     for(i = 0; i < SCRIPT_COUNT; i++)
@@ -1630,9 +1724,11 @@ static void build_script_table(FILE *f)
                     unicode_script_short_name + i);
 
     dbuf_init(dbuf);
+#ifdef DUMP_TABLE_SIZE
     cw_count = 0;
     for(i = 0; i < 4; i++)
         cw_len_count[i] = 0;
+#endif
     for(i = 0; i <= CHARCODE_MAX;) {
         v = unicode_db[i].script;
         j = i + 1;
@@ -1642,9 +1738,11 @@ static void build_script_table(FILE *f)
         if (v == 0 && j == (CHARCODE_MAX + 1))
             break;
         //        printf("%05x %05x %d\n", i, n, v);
-        cw_count++;
         n--;
+#ifdef DUMP_TABLE_SIZE
+        cw_count++;
         cw_start = dbuf->size;
+#endif
         if (v == 0)
             type = 0;
         else
@@ -1666,12 +1764,13 @@ static void build_script_table(FILE *f)
         if (type != 0)
             dbuf_putc(dbuf, v);
 
+#ifdef DUMP_TABLE_SIZE
         cw_len_count[dbuf->size - cw_start - 1]++;
+#endif
         i += n + 1;
     }
-#if defined(DUMP_TABLE_SIZE)
-    printf("script: %d entries [",
-           cw_count);
+#ifdef DUMP_TABLE_SIZE
+    printf("script: %d entries [", cw_count);
     for(i = 0; i < 4; i++)
         printf(" %d", cw_len_count[i]);
     printf(" ], length=%d bytes\n", (int)dbuf->size);
@@ -1682,14 +1781,15 @@ static void build_script_table(FILE *f)
     dbuf_free(dbuf);
 }
 
-static void build_script_ext_table(FILE *f)
+void build_script_ext_table(FILE *f)
 {
     int i, j, n, n1, script_ext_len;
     DynBuf dbuf_s, *dbuf = &dbuf_s;
-    int cw_count;
+#if defined(DUMP_TABLE_SIZE)
+    int cw_count = 0;
+#endif
 
     dbuf_init(dbuf);
-    cw_count = 0;
     for(i = 0; i <= CHARCODE_MAX;) {
         script_ext_len = unicode_db[i].script_ext_len;
         j = i + 1;
@@ -1700,7 +1800,9 @@ static void build_script_ext_table(FILE *f)
             j++;
         }
         n = j - i;
+#if defined(DUMP_TABLE_SIZE)
         cw_count++;
+#endif
         n--;
         if (n < 128) {
             dbuf_putc(dbuf, n);
@@ -1722,8 +1824,7 @@ static void build_script_ext_table(FILE *f)
         i += n + 1;
     }
 #ifdef DUMP_TABLE_SIZE
-    printf("script_ext: %d entries",
-           cw_count);
+    printf("script_ext: %d entries", cw_count);
     printf(", length=%d bytes\n", (int)dbuf->size);
 #endif
 
@@ -1735,7 +1836,7 @@ static void build_script_ext_table(FILE *f)
 /* the following properties are synthetized so no table is necessary */
 #define PROP_TABLE_COUNT PROP_ASCII
 
-static void build_prop_list_table(FILE *f)
+void build_prop_list_table(FILE *f)
 {
     int i;
 
@@ -1774,12 +1875,12 @@ static void build_prop_list_table(FILE *f)
 }
 
 #ifdef USE_TEST
-static int check_conv(uint32_t *res, uint32_t c, int conv_type)
+int check_conv(uint32_t *res, uint32_t c, int conv_type)
 {
     return lre_case_conv(res, c, conv_type);
 }
 
-static void check_case_conv(void)
+void check_case_conv(void)
 {
     CCInfo *tab = unicode_db;
     uint32_t res[3];
@@ -1798,8 +1899,10 @@ static void check_case_conv(void)
             ci->u_len = 1;
             ci->u_data[0] = code;
         }
-        if (ci->f_code == 0)
-            ci->f_code = code;
+        if (ci->f_len == 0) {
+            ci->f_len = 1;
+            ci->f_data[0] = code;
+        }
 
         error = 0;
         l = check_conv(res, code, 0);
@@ -1813,7 +1916,7 @@ static void check_case_conv(void)
             error++;
         }
         l = check_conv(res, code, 2);
-        if (l != 1 || res[0] != ci->f_code) {
+        if (l != ci->f_len || tabcmp((int *)res, ci->f_data, l)) {
             printf("ERROR: F\n");
             error++;
         }
@@ -1834,7 +1937,7 @@ static int64_t get_time_ns(void)
 #endif
 
 
-static void check_flags(void)
+void check_flags(void)
 {
     int c;
     BOOL flag_ref, flag;
@@ -1893,19 +1996,23 @@ static void check_flags(void)
 
 #define CC_BLOCK_LEN 32
 
-static void build_cc_table(FILE *f)
+void build_cc_table(FILE *f)
 {
-    int i, cc, n, cc_table_len, type, n1;
+    int i, cc, n, type, n1, block_end_pos;
     DynBuf dbuf_s, *dbuf = &dbuf_s;
     DynBuf dbuf1_s, *dbuf1 = &dbuf1_s;
-    int cw_len_tab[3], cw_start, block_end_pos;
+#if defined(DUMP_CC_TABLE) || defined(DUMP_TABLE_SIZE)
+    int cw_len_tab[3], cw_start, cc_table_len;
+#endif
     uint32_t v;
 
     dbuf_init(dbuf);
     dbuf_init(dbuf1);
+#if defined(DUMP_CC_TABLE) || defined(DUMP_TABLE_SIZE)
     cc_table_len = 0;
     for(i = 0; i < countof(cw_len_tab); i++)
         cw_len_tab[i] = 0;
+#endif
     block_end_pos = CC_BLOCK_LEN;
     for(i = 0; i <= CHARCODE_MAX;) {
         cc = unicode_db[i].combining_class;
@@ -1946,7 +2053,9 @@ static void build_cc_table(FILE *f)
             dbuf_putc(dbuf1, v >> 16);
             block_end_pos += CC_BLOCK_LEN;
         }
+#if defined(DUMP_CC_TABLE) || defined(DUMP_TABLE_SIZE)
         cw_start = dbuf->size;
+#endif
         if (n1 < 48) {
             dbuf_putc(dbuf, n1 | (type << 6));
         } else if (n1 < 48 + (1 << 11)) {
@@ -1960,10 +2069,12 @@ static void build_cc_table(FILE *f)
             dbuf_putc(dbuf, n1 >> 8);
             dbuf_putc(dbuf, n1);
         }
+#if defined(DUMP_CC_TABLE) || defined(DUMP_TABLE_SIZE)
         cw_len_tab[dbuf->size - cw_start - 1]++;
+        cc_table_len++;
+#endif
         if (type == 0 || type == 1)
             dbuf_putc(dbuf, cc);
-        cc_table_len++;
         i += n;
     }
 
@@ -2029,7 +2140,7 @@ typedef enum {
 } DecompTypeEnum;
 #endif
 
-static const char *decomp_type_str[] = {
+const char *decomp_type_str[] = {
     "C1",
     "L1",
     "L2",
@@ -2067,7 +2178,7 @@ static const char *decomp_type_str[] = {
     "LS2_UL",
 };
 
-static const int decomp_incr_tab[4][4] = {
+const int decomp_incr_tab[4][4] = {
     { DECOMP_TYPE_I1, 0, -1 },
     { DECOMP_TYPE_I2_0, 0, 1, -1 },
     { DECOMP_TYPE_I3_1, 1, 2, -1 },
@@ -2095,7 +2206,7 @@ typedef struct {
     int cost; /* size in bytes from this entry to the end */
 } DecompEntry;
 
-static int get_decomp_run_size(const DecompEntry *de)
+int get_decomp_run_size(const DecompEntry *de)
 {
     int s;
     s = 6;
@@ -2129,7 +2240,7 @@ static int get_decomp_run_size(const DecompEntry *de)
 static const uint16_t unicode_short_table[2] = { 0x2044, 0x2215 };
 
 /* return -1 if not found */
-static int get_short_code(int c)
+int get_short_code(int c)
 {
     int i;
     if (c < 0x80) {
@@ -2445,7 +2556,7 @@ void find_decomp_run(DecompEntry *tab_de, int i)
     }
 }
 
-static void put16(uint8_t *data_buf, int *pidx, uint16_t c)
+void put16(uint8_t *data_buf, int *pidx, uint16_t c)
 {
     int idx;
     idx = *pidx;
@@ -2454,7 +2565,7 @@ static void put16(uint8_t *data_buf, int *pidx, uint16_t c)
     *pidx = idx;
 }
 
-static void add_decomp_data(uint8_t *data_buf, int *pidx, DecompEntry *de)
+void add_decomp_data(uint8_t *data_buf, int *pidx, DecompEntry *de)
 {
     int i, j, idx, c;
     CCInfo *ci;
@@ -2589,7 +2700,7 @@ static void add_decomp_data(uint8_t *data_buf, int *pidx, DecompEntry *de)
 }
 
 #if 0
-static void dump_large_char(void)
+void dump_large_char(void)
 {
     int i, j;
     for(i = 0; i <= CHARCODE_MAX; i++) {
@@ -2602,9 +2713,9 @@ static void dump_large_char(void)
 }
 #endif
 
-static void build_compose_table(FILE *f, const DecompEntry *tab_de);
+void build_compose_table(FILE *f, const DecompEntry *tab_de);
 
-static void build_decompose_table(FILE *f)
+void build_decompose_table(FILE *f)
 {
     int i, array_len, code_max, data_len, count;
     DecompEntry *tab_de, de_s, *de = &de_s;
@@ -2750,7 +2861,7 @@ static int get_decomp_pos(const DecompEntry *tab_de, int c)
     return -1;
 }
 
-static void build_compose_table(FILE *f, const DecompEntry *tab_de)
+void build_compose_table(FILE *f, const DecompEntry *tab_de)
 {
     int i, v, tab_ce_len;
     ComposeEntry *ce, *tab_ce;
@@ -2799,7 +2910,7 @@ static void build_compose_table(FILE *f, const DecompEntry *tab_de)
 }
 
 #ifdef USE_TEST
-static void check_decompose_table(void)
+void check_decompose_table(void)
 {
     int c;
     CCInfo *ci;
@@ -2826,7 +2937,7 @@ static void check_decompose_table(void)
     }
 }
 
-static void check_compose_table(void)
+void check_compose_table(void)
 {
     int i, p;
     /* XXX: we don't test all the cases */
@@ -2854,7 +2965,7 @@ static void check_compose_table(void)
 
 #ifdef USE_TEST
 
-static void check_str(const char *msg, int num, const int *in_buf, int in_len,
+void check_str(const char *msg, int num, const int *in_buf, int in_len,
                const int *buf1, int len1,
                const int *buf2, int len2)
 {
@@ -2867,7 +2978,7 @@ static void check_str(const char *msg, int num, const int *in_buf, int in_len,
     }
 }
 
-static void check_cc_table(void)
+void check_cc_table(void)
 {
     int cc, cc_ref, c;
 
@@ -2899,7 +3010,7 @@ static void check_cc_table(void)
 #endif
 }
 
-static void normalization_test(const char *filename)
+void normalization_test(const char *filename)
 {
     FILE *f;
     char line[4096], *p;
@@ -3013,11 +3124,12 @@ int main(int argc, const char** argv)
              unicode_db_path);
     parse_prop_list(filename);
 
-    //    dump_data(unicode_db);
-
+    //    dump_unicode_data(unicode_db);
     build_conv_table(unicode_db);
 
-    //    dump_table();
+#ifdef DUMP_CASE_FOLDING_SPECIAL_CASES
+    dump_case_folding_special_cases(unicode_db);
+#endif
 
     if (!outfilename) {
 #ifdef USE_TEST

@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGD;GD_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGD;GD_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libgd/src;../../thirdparty/owemdjee/libgd/tests/gdtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BGDWIN32;NODLL;BUILD_MONOLITHIC;BUILDING_LIBGD;GD_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libgd/src;../../thirdparty/owemdjee/libgd/tests/gdtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BGDWIN32;NODLL;BUILD_MONOLITHIC;BUILDING_LIBGD;GD_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGD;GD_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGD;GD_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libgd/src;../../thirdparty/owemdjee/libgd/tests/gdtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libgd/src;../../thirdparty/owemdjee/libgd/tests/gdtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGD;GD_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGD;GD_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libgd/src;../../thirdparty/owemdjee/libgd/tests/gdtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BGDWIN32;NODLL;BUILD_MONOLITHIC;BUILDING_LIBGD;GD_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libgd/src;../../thirdparty/owemdjee/libgd/tests/gdtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BGDWIN32;NODLL;BUILD_MONOLITHIC;BUILDING_LIBGD;GD_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGD;GD_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGD;GD_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libgd/src;../../thirdparty/owemdjee/libgd/tests/gdtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libgd/src;../../thirdparty/owemdjee/libgd/tests/gdtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGD;GD_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGD;GD_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libgd/src;../../thirdparty/owemdjee/libgd/tests/gdtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BGDWIN32;NODLL;BUILD_MONOLITHIC;BUILDING_LIBGD;GD_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libgd/src;../../thirdparty/owemdjee/libgd/tests/gdtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BGDWIN32;NODLL;BUILD_MONOLITHIC;BUILDING_LIBGD;GD_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGD;GD_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGD;GD_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libgd/src;../../thirdparty/owemdjee/libgd/tests/gdtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libgd/src;../../thirdparty/owemdjee/libgd/tests/gdtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGD;GD_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGD;GD_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libgd/src;../../thirdparty/owemdjee/libgd/tests/gdtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BGDWIN32;NODLL;BUILD_MONOLITHIC;BUILDING_LIBGD;GD_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libgd/src;../../thirdparty/owemdjee/libgd/tests/gdtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BGDWIN32;NODLL;BUILD_MONOLITHIC;BUILDING_LIBGD;GD_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGD;GD_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGD;GD_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libgd/src;../../thirdparty/owemdjee/libgd/tests/gdtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libgd/src;../../thirdparty/owemdjee/libgd/tests/gdtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -281,6 +281,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/libgd/tests/gdimagearc/bug00079.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libgd/tests/gdimagebrightness/basic.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libgd/tests/gdimageclone/bug00300.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libgd/tests/gdimageclone/polyInts.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libgd/tests/gdimageclone/style.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libgd/tests/gdimagecolor/basic.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libgd/tests/gdimagecolorclosest/gdimagecolorclosest.c" />
@@ -370,6 +371,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/libgd/tests/gdimagerotate/bug00067.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libgd/tests/gdimagerotate/php_bug_64898.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libgd/tests/gdimagerotate/php_bug_65070.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libgd/tests/gdimagerotate/php_gh10614.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libgd/tests/gdimagescale/bug00329.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libgd/tests/gdimagescale/bug00330.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libgd/tests/gdimagescale/bug_overflow_large_new_size.c" />
@@ -580,6 +582,11 @@
     <Image Include="../../thirdparty/owemdjee/libgd/tests/gdimagerotate/php_bug_64898_exp.png" />
     <Image Include="../../thirdparty/owemdjee/libgd/tests/gdimagerotate/php_bug_65070.gif" />
     <Image Include="../../thirdparty/owemdjee/libgd/tests/gdimagerotate/php_bug_65070_exp.png" />
+    <Image Include="../../thirdparty/owemdjee/libgd/tests/gdimagerotate/php_gh10614.png" />
+    <Image Include="../../thirdparty/owemdjee/libgd/tests/gdimagerotate/php_gh10614_000_exp.png" />
+    <Image Include="../../thirdparty/owemdjee/libgd/tests/gdimagerotate/php_gh10614_090_exp.png" />
+    <Image Include="../../thirdparty/owemdjee/libgd/tests/gdimagerotate/php_gh10614_180_exp.png" />
+    <Image Include="../../thirdparty/owemdjee/libgd/tests/gdimagerotate/php_gh10614_270_exp.png" />
     <Image Include="../../thirdparty/owemdjee/libgd/tests/gdimagerotate/remirh128.png" />
     <Image Include="../../thirdparty/owemdjee/libgd/tests/gdimagescatterex/bug00208.png" />
     <Image Include="../../thirdparty/owemdjee/libgd/tests/gdimagescatterex/bug00208_1.png" />
@@ -634,19 +641,35 @@
     <Text Include="../../thirdparty/owemdjee/libgd/configure.ac" />
     <Text Include="../../thirdparty/owemdjee/libgd/docs/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libgd/docs/ChangeLog.historic" />
+    <Text Include="../../thirdparty/owemdjee/libgd/docs/INSTALL" />
+    <Text Include="../../thirdparty/owemdjee/libgd/docs/INSTALL.Solaris" />
     <Text Include="../../thirdparty/owemdjee/libgd/docs/README.CMAKE" />
     <Text Include="../../thirdparty/owemdjee/libgd/docs/README.JPN" />
     <Text Include="../../thirdparty/owemdjee/libgd/docs/README.TESTING" />
     <Text Include="../../thirdparty/owemdjee/libgd/docs/README.TXT" />
     <Text Include="../../thirdparty/owemdjee/libgd/docs/README_CI.md" />
+    <Text Include="../../thirdparty/owemdjee/libgd/docs/naturaldocs/nobgd.pl" />
     <Text Include="../../thirdparty/owemdjee/libgd/docs/naturaldocs/preamble.txt" />
     <Text Include="../../thirdparty/owemdjee/libgd/docs/naturaldocs/project/Menu.txt" />
+    <Text Include="../../thirdparty/owemdjee/libgd/docs/naturaldocs/project/libgd.css" />
     <Text Include="../../thirdparty/owemdjee/libgd/docs/naturaldocs/run_docs.sh" />
     <Text Include="../../thirdparty/owemdjee/libgd/examples/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libgd/m4/ax_append_flag.m4" />
+    <Text Include="../../thirdparty/owemdjee/libgd/m4/ax_cflags_warn_all.m4" />
+    <Text Include="../../thirdparty/owemdjee/libgd/m4/ax_openmp.m4" />
+    <Text Include="../../thirdparty/owemdjee/libgd/m4/ax_pthread.m4" />
+    <Text Include="../../thirdparty/owemdjee/libgd/m4/ax_require_defined.m4" />
+    <Text Include="../../thirdparty/owemdjee/libgd/m4/visibility.m4" />
+    <Text Include="../../thirdparty/owemdjee/libgd/m4/w32.m4" />
+    <Text Include="../../thirdparty/owemdjee/libgd/test/gdtest.gd2" />
     <Text Include="../../thirdparty/owemdjee/libgd/tests/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libgd/tests/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libgd/tests/avif/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libgd/tests/avif/Makemodule.am" />
+    <Text Include="../../thirdparty/owemdjee/libgd/tests/avif/baboon.avif" />
+    <Text Include="../../thirdparty/owemdjee/libgd/tests/avif/dice_with_alpha.avif" />
+    <Text Include="../../thirdparty/owemdjee/libgd/tests/avif/plum_blossom_12bit.avif" />
+    <Text Include="../../thirdparty/owemdjee/libgd/tests/avif/sunset.avif" />
     <Text Include="../../thirdparty/owemdjee/libgd/tests/bmp/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libgd/tests/bmp/Makemodule.am" />
     <Text Include="../../thirdparty/owemdjee/libgd/tests/fontconfig/CMakeLists.txt" />
@@ -657,6 +680,17 @@
     <Text Include="../../thirdparty/owemdjee/libgd/tests/gd/Makemodule.am" />
     <Text Include="../../thirdparty/owemdjee/libgd/tests/gd2/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libgd/tests/gd2/Makemodule.am" />
+    <Text Include="../../thirdparty/owemdjee/libgd/tests/gd2/bug00209.gd2" />
+    <Text Include="../../thirdparty/owemdjee/libgd/tests/gd2/bug00354a.gd2" />
+    <Text Include="../../thirdparty/owemdjee/libgd/tests/gd2/bug00354b.gd2" />
+    <Text Include="../../thirdparty/owemdjee/libgd/tests/gd2/bug00383.gd2" />
+    <Text Include="../../thirdparty/owemdjee/libgd/tests/gd2/bug797.gd2" />
+    <Text Include="../../thirdparty/owemdjee/libgd/tests/gd2/conv_gd2_exp.gd2" />
+    <Text Include="../../thirdparty/owemdjee/libgd/tests/gd2/conv_test.gd2" />
+    <Text Include="../../thirdparty/owemdjee/libgd/tests/gd2/empty.gd2" />
+    <Text Include="../../thirdparty/owemdjee/libgd/tests/gd2/invalid_header.gd2" />
+    <Text Include="../../thirdparty/owemdjee/libgd/tests/gd2/invalid_neg_size.gd2" />
+    <Text Include="../../thirdparty/owemdjee/libgd/tests/gd2/too_few_image_data.gd2" />
     <Text Include="../../thirdparty/owemdjee/libgd/tests/gdcolormaplookup/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libgd/tests/gdcolormaplookup/Makemodule.am" />
     <Text Include="../../thirdparty/owemdjee/libgd/tests/gdimagearc/CMakeLists.txt" />
@@ -783,6 +817,7 @@
     <Text Include="../../thirdparty/owemdjee/libgd/tests/gif/Makemodule.am" />
     <Text Include="../../thirdparty/owemdjee/libgd/tests/heif/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libgd/tests/heif/Makemodule.am" />
+    <Text Include="../../thirdparty/owemdjee/libgd/tests/heif/label.avif" />
     <Text Include="../../thirdparty/owemdjee/libgd/tests/jpeg/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libgd/tests/jpeg/Makemodule.am" />
     <Text Include="../../thirdparty/owemdjee/libgd/tests/png/CMakeLists.txt" />
@@ -794,6 +829,10 @@
     <Text Include="../../thirdparty/owemdjee/libgd/tests/tga/Makemodule.am" />
     <Text Include="../../thirdparty/owemdjee/libgd/tests/tiff/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libgd/tests/tiff/Makemodule.am" />
+    <Text Include="../../thirdparty/owemdjee/libgd/tests/tiff/tiff_invalid_read_1.tiff" />
+    <Text Include="../../thirdparty/owemdjee/libgd/tests/tiff/tiff_invalid_read_2.tiff" />
+    <Text Include="../../thirdparty/owemdjee/libgd/tests/tiff/tiff_invalid_read_3.tiff" />
+    <Text Include="../../thirdparty/owemdjee/libgd/tests/tiff/tiff_read_bw.tiff" />
     <Text Include="../../thirdparty/owemdjee/libgd/tests/wbmp/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libgd/tests/wbmp/Makemodule.am" />
     <Text Include="../../thirdparty/owemdjee/libgd/tests/webp/CMakeLists.txt" />
@@ -809,7 +848,9 @@
     <Text Include="../../thirdparty/owemdjee/libgd/windows/Makefile.vc" />
     <Text Include="../../thirdparty/owemdjee/libgd/windows/Makefiletest.vc" />
     <Text Include="../../thirdparty/owemdjee/libgd/windows/gentest.bat" />
+    <Text Include="../../thirdparty/owemdjee/libgd/windows/msys/Makefile" />
     <Text Include="../../thirdparty/owemdjee/libgd/windows/msys/README.MSYS.md" />
+    <Text Include="../../thirdparty/owemdjee/libgd/windows/msys/deps.mk" />
     <Text Include="../../thirdparty/owemdjee/libgd/windows/msys/run_tests.sh" />
     <Text Include="../../thirdparty/owemdjee/libgd/windows/readme.md" />
     <Text Include="../../thirdparty/owemdjee/libgd/windows/run_tests.bat" />

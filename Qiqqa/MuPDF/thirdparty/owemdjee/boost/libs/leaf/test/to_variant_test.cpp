@@ -1,4 +1,4 @@
-// Copyright 2018-2022 Emil Dotchevski and Reverge Studios, Inc.
+// Copyright 2018-2023 Emil Dotchevski and Reverge Studios, Inc.
 
 // Distributed under the Boost Software License, Version 1.0. (See accompanying
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
@@ -35,7 +35,7 @@ int main()
 #if !defined(__clang__) || __clang_major__ < 5 || __clang_major__ > 7 // See https://github.com/llvm/llvm-project/issues/32569
     {
         auto v = leaf::to_variant<E1, E2, E3>(
-            [ ]() -> leaf::result<int>
+            []() -> leaf::result<int>
             {
                 return 42;
             } );
@@ -45,7 +45,7 @@ int main()
 
     {
         auto v = leaf::to_variant<E1, E2, E3>(
-            [ ]() -> leaf::result<int>
+            []() -> leaf::result<int>
             {
                 return leaf::new_error(E1::e12, E3::e31);
             } );

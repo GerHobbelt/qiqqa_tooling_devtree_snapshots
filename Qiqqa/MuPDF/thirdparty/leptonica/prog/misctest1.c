@@ -39,6 +39,9 @@
  *        * Test zlib compression in png
  *        * Show sampled scaling with and without source indexing shift
  *        * Display differences in images with pixDisplayDiff()
+ *        * Demonstrate read of cmap+alpha png, and I/O of rgba pnm, bmp, webp
+ *        * Demonstrate image cropping function
+ *        * Demonstrate image cleaning function
  */
 
 #ifdef HAVE_CONFIG_H
@@ -63,7 +66,7 @@ static const size_t  zlibsize[5] = {1047868, 215039, 195778, 189709, 180987};
 int main(int    argc,
          const char **argv)
 {
-l_int32   w, h, bx, by, bw, bh, i, j;
+l_int32   w, h, bx, by, bw, bh, i, j, same;
 size_t    size;
 BOX      *box1, *box2;
 BOXA     *boxa1, *boxa2, *boxae, *boxao;
@@ -395,5 +398,60 @@ PIXCMAP  *cmap, *cmapg;
     pixDestroy(&pix3);
     pixDestroy(&pix4);
 
+        /* Demonstrate read of cmap+alpha png; I/O of rgba pnm, bmp, webp */
+    pix1 = pixRead("elephant-cmap-alpha.png");  /* has colormap */
+    pixDisplay(pix1, 1300, 800);
+    pixWrite("/tmp/lept/misc/e.pnm", pix1, IFF_PNM);
+    pixWrite("/tmp/lept/misc/e.bmp", pix1, IFF_BMP);
+  #if HAVE_LIBWEBP
+    pixWrite("/tmp/lept/misc/e.webp", pix1, IFF_WEBP);
+  #endif  /* HAVE_LIBWEBP */
+    pix2 = pixRead("/tmp/lept/misc/e.pnm");
+    pixEqual(pix1, pix2, &same);
+    lept_stderr("png vs pnm same? (yes): %d\n", same);
+    pixDestroy(&pix2);
+    pix2 = pixRead("/tmp/lept/misc/e.bmp");
+    pixEqual(pix1, pix2, &same);
+    lept_stderr("png vs bmp same? (yes): %d\n", same);
+    pixDestroy(&pix2);
+  #if HAVE_LIBWEBP
+    pix2 = pixRead("/tmp/lept/misc/e.webp");
+    pixDisplay(pix2, 1440, 800);  /* interesting change in rgb layer */
+    pixEqual(pix1, pix2, &same);
+    lept_stderr("png vs webp same? (no): %d\n", same);
+    pixDestroy(&pix2);
+  #endif  /* HAVE_LIBWEBP */
+    pixDestroy(&pix1);
+
+        /* Page cropping */
+    pix1 = pixRead("tel_3.tif");
+    pix2 = pixCropImage(pix1, 30, 30, 4, 25, 25, 1.15,
+                        "/tmp/lept/misc/cropdebug.pdf", NULL);
+    pixDestroy(&pix1);
+    pixDestroy(&pix2);
+
+        /* Page cleaning */
+    pixa1 = pixaCreate(3);
+    pix1 = pixRead("tel_3.tif");
+    pix2 = pixRotate(pix1, 0.02, L_ROTATE_SAMPLING, L_BRING_IN_WHITE, 0, 0);
+    pix3 = pixCleanImage(pix2, 1, 0, 1, 0);
+    pixaAddPix(pixa1, pix3, L_INSERT);
+    pixDisplay(pix3, 800, 800);
+    pixDestroy(&pix1);
+    pixDestroy(&pix2);
+    pix1 = pixRead("w91frag.jpg");
+    pixaAddPix(pixa1, pixScale(pix1, 2.5, 2.5), L_INSERT);
+    pix2 = pixRotate(pix1, 0.02, L_ROTATE_AREA_MAP, L_BRING_IN_WHITE, 0, 0);
+    pix3 = pixCleanImage(pix2, 1, 0, 1, 0);
+    pixaAddPix(pixa1, pixScale(pix3, 2.5, 2.5), L_INSERT);
+    pixDisplay(pix3, 1200, 800);
+    pixDestroy(&pix1);
+    pixDestroy(&pix2);
+    pixDestroy(&pix3);
+    lept_stderr("Writing /tmp/lept/misc/pageclean.pdf\n");
+    pixaConvertToPdf(pixa1, 0, 1.0, L_DEFAULT_ENCODE, 50, NULL,
+                     "/tmp/lept/misc/pageclean.pdf");
+    pixaDestroy(&pixa1);
+    
     return 0;
 }

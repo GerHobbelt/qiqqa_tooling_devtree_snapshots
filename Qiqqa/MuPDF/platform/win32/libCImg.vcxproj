@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCIMG;CIMG_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCIMG;CIMG_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/CImg;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/libjpeg-turbo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCIMG;CIMG_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/CImg;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/libjpeg-turbo/src;../../scripts/libtiff;../../scripts/libjpeg-turbo;../../thirdparty/owemdjee/CImg/plugins;../../thirdparty/libpng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>cimg_use_ffmpeg;cimg_use_heic;cimg_use_fftw3;cimg_use_magick;cimg_use_openexr;img_use_opencv;cimg_use_png;cimg_use_jpeg;cimg_use_tiff;BUILD_MONOLITHIC;BUILDING_LIBCIMG;CIMG_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCIMG;CIMG_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCIMG;CIMG_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/CImg;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/libjpeg-turbo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/CImg;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/libjpeg-turbo/src;../../scripts/libtiff;../../scripts/libjpeg-turbo;../../thirdparty/owemdjee/CImg/plugins;../../thirdparty/libpng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCIMG;CIMG_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCIMG;CIMG_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/CImg;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/libjpeg-turbo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCIMG;CIMG_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/CImg;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/libjpeg-turbo/src;../../scripts/libtiff;../../scripts/libjpeg-turbo;../../thirdparty/owemdjee/CImg/plugins;../../thirdparty/libpng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>cimg_use_ffmpeg;cimg_use_heic;cimg_use_fftw3;cimg_use_magick;cimg_use_openexr;img_use_opencv;cimg_use_png;cimg_use_jpeg;cimg_use_tiff;BUILD_MONOLITHIC;BUILDING_LIBCIMG;CIMG_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCIMG;CIMG_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCIMG;CIMG_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/CImg;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/libjpeg-turbo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/CImg;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/libjpeg-turbo/src;../../scripts/libtiff;../../scripts/libjpeg-turbo;../../thirdparty/owemdjee/CImg/plugins;../../thirdparty/libpng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCIMG;CIMG_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCIMG;CIMG_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/CImg;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/libjpeg-turbo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCIMG;CIMG_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/CImg;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/libjpeg-turbo/src;../../scripts/libtiff;../../scripts/libjpeg-turbo;../../thirdparty/owemdjee/CImg/plugins;../../thirdparty/libpng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>cimg_use_ffmpeg;cimg_use_heic;cimg_use_fftw3;cimg_use_magick;cimg_use_openexr;img_use_opencv;cimg_use_png;cimg_use_jpeg;cimg_use_tiff;BUILD_MONOLITHIC;BUILDING_LIBCIMG;CIMG_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCIMG;CIMG_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCIMG;CIMG_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/CImg;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/libjpeg-turbo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/CImg;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/libjpeg-turbo/src;../../scripts/libtiff;../../scripts/libjpeg-turbo;../../thirdparty/owemdjee/CImg/plugins;../../thirdparty/libpng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCIMG;CIMG_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCIMG;CIMG_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/CImg;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/libjpeg-turbo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCIMG;CIMG_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/CImg;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/libjpeg-turbo/src;../../scripts/libtiff;../../scripts/libjpeg-turbo;../../thirdparty/owemdjee/CImg/plugins;../../thirdparty/libpng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>cimg_use_ffmpeg;cimg_use_heic;cimg_use_fftw3;cimg_use_magick;cimg_use_openexr;img_use_opencv;cimg_use_png;cimg_use_jpeg;cimg_use_tiff;BUILD_MONOLITHIC;BUILDING_LIBCIMG;CIMG_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCIMG;CIMG_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCIMG;CIMG_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/CImg;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/libjpeg-turbo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/CImg;../../thirdparty/libtiff/libtiff;../../thirdparty/owemdjee/libjpeg-turbo/src;../../scripts/libtiff;../../scripts/libjpeg-turbo;../../thirdparty/owemdjee/CImg/plugins;../../thirdparty/libpng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -228,46 +228,7 @@
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ItemGroup>
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/CImg_demo.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/captcha.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/curve_editor2d.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/dtmri_view3d.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/edge_explorer2d.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/fade_images.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/gaussian_fit1d.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/generate_loop_macros.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/hough_transform2d.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/image2ascii.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/image_registration2d.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/image_surface3d.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/jawbreaker.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/mcf_levelsets2d.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/mcf_levelsets3d.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/odykill.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/pde_TschumperleDeriche2d.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/pde_heatflow2d.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/plotter1d.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/radon_transform2d.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/scene3d.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/spherical_function3d.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/tetris.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/tron.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/tutorial.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/use_RGBclass.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/use_chlpca.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/use_cimgIPL.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/use_cimgmatlab.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/use_draw_gradient.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/use_jpeg_buffer.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/use_nlmeans.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/use_skeleton.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/use_tiff_stream.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/use_tinymatwriter.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/CImg/examples/wavelet_atrous.cpp" />
     <ClInclude Include="../../thirdparty/owemdjee/CImg/CImg.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/CImg/examples/img/CImg_demo.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/CImg/examples/img/odykill.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/CImg/examples/img/tetris.h" />
     <ClInclude Include="../../thirdparty/owemdjee/CImg/html/CImg_documentation.h" />
     <ClInclude Include="../../thirdparty/owemdjee/CImg/plugins/add_fileformat.h" />
     <ClInclude Include="../../thirdparty/owemdjee/CImg/plugins/bayer.h" />
@@ -286,8 +247,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/CImg/plugins/tinymatwriter.h" />
     <ClInclude Include="../../thirdparty/owemdjee/CImg/plugins/vrml.h" />
     <ClInclude Include="../../thirdparty/owemdjee/CImg/plugins/vtk.h" />
-    <Image Include="../../thirdparty/owemdjee/CImg/examples/img/logo.bmp" />
-    <Image Include="../../thirdparty/owemdjee/CImg/examples/img/milla.bmp" />
     <Image Include="../../thirdparty/owemdjee/CImg/html/favicon.ico" />
     <Image Include="../../thirdparty/owemdjee/CImg/html/favicon.png" />
     <Image Include="../../thirdparty/owemdjee/CImg/html/highslide/graphics/close.png" />
@@ -314,6 +273,7 @@
     <Image Include="../../thirdparty/owemdjee/CImg/html/highslide/graphics/resize.gif" />
     <Image Include="../../thirdparty/owemdjee/CImg/html/highslide/graphics/scrollarrows.png" />
     <Image Include="../../thirdparty/owemdjee/CImg/html/img/book_cimg.jpg" />
+    <Image Include="../../thirdparty/owemdjee/CImg/html/img/book_cimg_en.jpg" />
     <Image Include="../../thirdparty/owemdjee/CImg/html/img/item_clickvideo.jpg" />
     <Image Include="../../thirdparty/owemdjee/CImg/html/img/item_clickvideo2.jpg" />
     <Image Include="../../thirdparty/owemdjee/CImg/html/img/item_description.jpg" />
@@ -532,24 +492,43 @@
     <Text Include="../../thirdparty/owemdjee/CImg/Licence_CeCILL_V2-en.txt" />
     <Text Include="../../thirdparty/owemdjee/CImg/README.md" />
     <Text Include="../../thirdparty/owemdjee/CImg/README.txt" />
-    <Text Include="../../thirdparty/owemdjee/CImg/examples/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/CImg/html/CImg.doxygen" />
+    <Text Include="../../thirdparty/owemdjee/CImg/html/CImg_flyer.svg" />
+    <Text Include="../../thirdparty/owemdjee/CImg/html/CImg_reference_chinese.pdf" />
+    <Text Include="../../thirdparty/owemdjee/CImg/html/download.html" />
+    <Text Include="../../thirdparty/owemdjee/CImg/html/footer.html" />
+    <Text Include="../../thirdparty/owemdjee/CImg/html/footer_doxygen.html" />
+    <Text Include="../../thirdparty/owemdjee/CImg/html/header.html" />
+    <Text Include="../../thirdparty/owemdjee/CImg/html/header_doxygen.html" />
     <Text Include="../../thirdparty/owemdjee/CImg/html/highslide.js" />
+    <Text Include="../../thirdparty/owemdjee/CImg/html/highslide/graphics/zoomin.cur" />
+    <Text Include="../../thirdparty/owemdjee/CImg/html/highslide/graphics/zoomout.cur" />
     <Text Include="../../thirdparty/owemdjee/CImg/html/highslide/highslide-full.js" />
     <Text Include="../../thirdparty/owemdjee/CImg/html/highslide/highslide-full.min.js" />
     <Text Include="../../thirdparty/owemdjee/CImg/html/highslide/highslide-full.packed.js" />
+    <Text Include="../../thirdparty/owemdjee/CImg/html/highslide/highslide-ie6.css" />
     <Text Include="../../thirdparty/owemdjee/CImg/html/highslide/highslide-with-gallery.js" />
     <Text Include="../../thirdparty/owemdjee/CImg/html/highslide/highslide-with-gallery.min.js" />
     <Text Include="../../thirdparty/owemdjee/CImg/html/highslide/highslide-with-gallery.packed.js" />
     <Text Include="../../thirdparty/owemdjee/CImg/html/highslide/highslide-with-html.js" />
     <Text Include="../../thirdparty/owemdjee/CImg/html/highslide/highslide-with-html.min.js" />
     <Text Include="../../thirdparty/owemdjee/CImg/html/highslide/highslide-with-html.packed.js" />
+    <Text Include="../../thirdparty/owemdjee/CImg/html/highslide/highslide.css" />
     <Text Include="../../thirdparty/owemdjee/CImg/html/highslide/highslide.js" />
     <Text Include="../../thirdparty/owemdjee/CImg/html/highslide/highslide.min.js" />
     <Text Include="../../thirdparty/owemdjee/CImg/html/highslide/highslide.packed.js" />
+    <Text Include="../../thirdparty/owemdjee/CImg/html/img/logo_header.xcf" />
+    <Text Include="../../thirdparty/owemdjee/CImg/html/index.html" />
     <Text Include="../../thirdparty/owemdjee/CImg/html/jquery-3.5.1.min.js" />
+    <Text Include="../../thirdparty/owemdjee/CImg/html/links.html" />
+    <Text Include="../../thirdparty/owemdjee/CImg/html/screenshots.html" />
+    <Text Include="../../thirdparty/owemdjee/CImg/html/style.css" />
     <Text Include="../../thirdparty/owemdjee/CImg/resources/compile_win_icl.bat" />
     <Text Include="../../thirdparty/owemdjee/CImg/resources/compile_win_visualcpp.bat" />
     <Text Include="../../thirdparty/owemdjee/CImg/resources/debian/changelog" />
+    <Text Include="../../thirdparty/owemdjee/CImg/resources/debian/cimg-dev.dirs" />
+    <Text Include="../../thirdparty/owemdjee/CImg/resources/debian/cimg-dev.install" />
+    <Text Include="../../thirdparty/owemdjee/CImg/resources/debian/cimg-dev.links" />
     <Text Include="../../thirdparty/owemdjee/CImg/resources/pycimg.py" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >

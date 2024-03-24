@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTL;XTL_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTL;XTL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/xtl/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTL;XTL_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/xtl/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTL;XTL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTL;XTL_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTL;XTL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/xtl/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/xtl/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTL;XTL_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTL;XTL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/xtl/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTL;XTL_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/xtl/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTL;XTL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTL;XTL_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTL;XTL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/xtl/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/xtl/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTL;XTL_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTL;XTL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/xtl/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTL;XTL_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/xtl/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTL;XTL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTL;XTL_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTL;XTL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/xtl/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/xtl/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTL;XTL_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTL;XTL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/xtl/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTL;XTL_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/xtl/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTL;XTL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTL;XTL_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXTL;XTL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/xtl/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/xtl/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -232,6 +232,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/xtl/test/test_xbase64.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/xtl/test/test_xbasic_fixed_string.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/xtl/test/test_xclosure.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/xtl/test/test_xcompare.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/xtl/test/test_xcomplex.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/xtl/test/test_xcomplex_sequence.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/xtl/test/test_xdynamic_bitset.cpp" />
@@ -255,6 +256,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/xtl/include/xtl/xbase64.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/xtl/include/xtl/xbasic_fixed_string.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/xtl/include/xtl/xclosure.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/xtl/include/xtl/xcompare.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/xtl/include/xtl/xcomplex.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/xtl/include/xtl/xcomplex_sequence.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/xtl/include/xtl/xdynamic_bitset.hpp" />
@@ -285,19 +287,32 @@
     <ClInclude Include="../../thirdparty/owemdjee/xtl/include/xtl/xvisitor.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/xtl/test/test_common_macros.hpp" />
     <Text Include="../../thirdparty/owemdjee/xtl/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/xtl/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/xtl/README.md" />
+    <Text Include="../../thirdparty/owemdjee/xtl/docs/Doxyfile" />
+    <Text Include="../../thirdparty/owemdjee/xtl/docs/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/xtl/docs/environment.yml" />
     <Text Include="../../thirdparty/owemdjee/xtl/docs/make.bat" />
+    <Text Include="../../thirdparty/owemdjee/xtl/docs/source/_static/main_stylesheet.css" />
     <Text Include="../../thirdparty/owemdjee/xtl/docs/source/basic_types.rst" />
     <Text Include="../../thirdparty/owemdjee/xtl/docs/source/build-options.rst" />
     <Text Include="../../thirdparty/owemdjee/xtl/docs/source/changelog.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtl/docs/source/cmake.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtl/docs/source/conda.svg" />
     <Text Include="../../thirdparty/owemdjee/xtl/docs/source/conf.py" />
     <Text Include="../../thirdparty/owemdjee/xtl/docs/source/containers.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtl/docs/source/debian.svg" />
     <Text Include="../../thirdparty/owemdjee/xtl/docs/source/design_patterns.rst" />
     <Text Include="../../thirdparty/owemdjee/xtl/docs/source/index.rst" />
     <Text Include="../../thirdparty/owemdjee/xtl/docs/source/installation.rst" />
     <Text Include="../../thirdparty/owemdjee/xtl/docs/source/meta_programming.rst" />
     <Text Include="../../thirdparty/owemdjee/xtl/docs/source/miscellaneous.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtl/docs/source/quantstack-white.svg" />
     <Text Include="../../thirdparty/owemdjee/xtl/docs/source/releasing.rst" />
+    <Text Include="../../thirdparty/owemdjee/xtl/docs/source/spack.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtl/docs/source/xtl.svg" />
+    <Text Include="../../thirdparty/owemdjee/xtl/environment-dev.yml" />
+    <Text Include="../../thirdparty/owemdjee/xtl/readthedocs.yml" />
     <Text Include="../../thirdparty/owemdjee/xtl/test/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/xtl/xtl.pc.in" />
     <Text Include="../../thirdparty/owemdjee/xtl/xtlConfig.cmake.in" />

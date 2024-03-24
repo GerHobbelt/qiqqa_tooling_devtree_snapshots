@@ -124,7 +124,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUPSKIRT;UPSKIRT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUPSKIRT;UPSKIRT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -134,14 +134,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/upskirt-markdown/src;../../thirdparty/owemdjee/upskirt-markdown/bin;../../thirdparty/owemdjee/tinyexpr;../../thirdparty/owemdjee/svg-charter/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUPSKIRT;UPSKIRT_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/upskirt-markdown/src;../../thirdparty/owemdjee/upskirt-markdown/bin;../../thirdparty/owemdjee/tinyexpr;../../thirdparty/owemdjee/svg-charter/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUPSKIRT;UPSKIRT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUPSKIRT;UPSKIRT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUPSKIRT;UPSKIRT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/upskirt-markdown/src;../../thirdparty/owemdjee/upskirt-markdown/bin;../../thirdparty/owemdjee/tinyexpr;../../thirdparty/owemdjee/svg-charter/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/upskirt-markdown/src;../../thirdparty/owemdjee/upskirt-markdown/bin;../../thirdparty/owemdjee/tinyexpr;../../thirdparty/owemdjee/svg-charter/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -152,7 +152,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUPSKIRT;UPSKIRT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUPSKIRT;UPSKIRT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -160,15 +160,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/upskirt-markdown/src;../../thirdparty/owemdjee/upskirt-markdown/bin;../../thirdparty/owemdjee/tinyexpr;../../thirdparty/owemdjee/svg-charter/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUPSKIRT;UPSKIRT_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/upskirt-markdown/src;../../thirdparty/owemdjee/upskirt-markdown/bin;../../thirdparty/owemdjee/tinyexpr;../../thirdparty/owemdjee/svg-charter/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUPSKIRT;UPSKIRT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUPSKIRT;UPSKIRT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUPSKIRT;UPSKIRT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/upskirt-markdown/src;../../thirdparty/owemdjee/upskirt-markdown/bin;../../thirdparty/owemdjee/tinyexpr;../../thirdparty/owemdjee/svg-charter/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/upskirt-markdown/src;../../thirdparty/owemdjee/upskirt-markdown/bin;../../thirdparty/owemdjee/tinyexpr;../../thirdparty/owemdjee/svg-charter/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -179,7 +179,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUPSKIRT;UPSKIRT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUPSKIRT;UPSKIRT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -189,14 +189,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/upskirt-markdown/src;../../thirdparty/owemdjee/upskirt-markdown/bin;../../thirdparty/owemdjee/tinyexpr;../../thirdparty/owemdjee/svg-charter/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUPSKIRT;UPSKIRT_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/upskirt-markdown/src;../../thirdparty/owemdjee/upskirt-markdown/bin;../../thirdparty/owemdjee/tinyexpr;../../thirdparty/owemdjee/svg-charter/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUPSKIRT;UPSKIRT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUPSKIRT;UPSKIRT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUPSKIRT;UPSKIRT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/upskirt-markdown/src;../../thirdparty/owemdjee/upskirt-markdown/bin;../../thirdparty/owemdjee/tinyexpr;../../thirdparty/owemdjee/svg-charter/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/upskirt-markdown/src;../../thirdparty/owemdjee/upskirt-markdown/bin;../../thirdparty/owemdjee/tinyexpr;../../thirdparty/owemdjee/svg-charter/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -207,7 +207,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUPSKIRT;UPSKIRT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUPSKIRT;UPSKIRT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -215,15 +215,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/upskirt-markdown/src;../../thirdparty/owemdjee/upskirt-markdown/bin;../../thirdparty/owemdjee/tinyexpr;../../thirdparty/owemdjee/svg-charter/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUPSKIRT;UPSKIRT_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/upskirt-markdown/src;../../thirdparty/owemdjee/upskirt-markdown/bin;../../thirdparty/owemdjee/tinyexpr;../../thirdparty/owemdjee/svg-charter/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUPSKIRT;UPSKIRT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUPSKIRT;UPSKIRT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUPSKIRT;UPSKIRT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/upskirt-markdown/src;../../thirdparty/owemdjee/upskirt-markdown/bin;../../thirdparty/owemdjee/tinyexpr;../../thirdparty/owemdjee/svg-charter/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/upskirt-markdown/src;../../thirdparty/owemdjee/upskirt-markdown/bin;../../thirdparty/owemdjee/tinyexpr;../../thirdparty/owemdjee/svg-charter/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -278,16 +278,108 @@
     <Image Include="../../thirdparty/owemdjee/upskirt-markdown/html_article.png" />
     <Image Include="../../thirdparty/owemdjee/upskirt-markdown/html_report.png" />
     <Text Include="../../thirdparty/owemdjee/upskirt-markdown/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/upskirt-markdown/MANIFESTO.md" />
     <Text Include="../../thirdparty/owemdjee/upskirt-markdown/README.md" />
     <Text Include="../../thirdparty/owemdjee/upskirt-markdown/examples/abstract.md" />
     <Text Include="../../thirdparty/owemdjee/upskirt-markdown/examples/example.md" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/examples/example_article.html" />
     <Text Include="../../thirdparty/owemdjee/upskirt-markdown/examples/example_article.md" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/examples/example_article.pdf" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/examples/example_article.tex" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/examples/example_report.html" />
     <Text Include="../../thirdparty/owemdjee/upskirt-markdown/examples/example_report.md" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/examples/example_report.pdf" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/examples/example_report.tex" />
     <Text Include="../../thirdparty/owemdjee/upskirt-markdown/examples/references.md" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/examples/scidown_article.css" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/examples/scidown_report.css" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/examples/test.pdf" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/examples/test.tex" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/examples/test2.pdf" />
     <Text Include="../../thirdparty/owemdjee/upskirt-markdown/html_block_names.gperf" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/mvc/2010/libupskirt.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/mvc/2010/smartypants.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/mvc/2010/upskirt.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/mvc/2012/libupskirt.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/mvc/2012/smartypants.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/mvc/2012/upskirt.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/mvc/2013/libupskirt.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/mvc/2013/smartypants.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/mvc/2013/upskirt.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/mvc/2019/libupskirt.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/mvc/2019/libupskirt.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/mvc/2019/libupskirtDLL.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/mvc/2019/libupskirtDLL.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/mvc/2019/upskirt.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/mvc/2019/upskirt.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/resources/css/scidown_article.css" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/resources/css/scidown_report.css" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/MarkdownTest.pl" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Amps and angle encoding.html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Amps and angle encoding.text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Auto links.html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Auto links.text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Backslash escapes.html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Backslash escapes.text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Blockquotes with code blocks.html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Blockquotes with code blocks.text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Code Blocks.html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Code Blocks.text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Code Spans.html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Code Spans.text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Hard-wrapped paragraphs with list-like lines.html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Hard-wrapped paragraphs with list-like lines.text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Horizontal rules.html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Horizontal rules.text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Inline HTML (Advanced).html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Inline HTML (Advanced).text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Inline HTML (Simple).html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Inline HTML (Simple).text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Inline HTML comments.html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Inline HTML comments.text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Links, inline style.html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Links, inline style.text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Links, reference style.html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Links, reference style.text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Links, shortcut references.html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Links, shortcut references.text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Literal quotes in titles.html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Literal quotes in titles.text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Markdown Documentation - Basics.html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Markdown Documentation - Basics.text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Markdown Documentation - Syntax.html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Markdown Documentation - Syntax.text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Nested blockquotes.html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Nested blockquotes.text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Ordered and unordered lists.html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Ordered and unordered lists.text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Strong and em together.html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Strong and em together.text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Tabs.html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Tabs.text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Tidyness.html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/MarkdownTest_1.0.3/Tests/Tidyness.text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/Tests/CommentsInMiddleOfLine.html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/Tests/CommentsInMiddleOfLine.text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/Tests/Escape character.html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/Tests/Escape character.text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/Tests/Formatting in Table of Contents.html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/Tests/Formatting in Table of Contents.text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/Tests/Images.html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/Tests/Images.text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/Tests/Math.html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/Tests/Math.text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/Tests/Table.html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/Tests/Table.text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/Tests/Underline.html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/Tests/Underline.text" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/Tests/extras/List_Item_Fenced_Code_First_Line.html" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/Tests/extras/List_Item_Fenced_Code_First_Line.text" />
     <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/config.json" />
     <Text Include="../../thirdparty/owemdjee/upskirt-markdown/test/runner.py" />
+    <Text Include="../../thirdparty/owemdjee/upskirt-markdown/upskirt.def" />
     <Text Include="../../thirdparty/owemdjee/upskirt-markdown/upskirt.podspec.json" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >

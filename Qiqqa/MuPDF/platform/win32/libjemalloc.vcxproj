@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJEMALLOC;JEMALLOC_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJEMALLOC;JEMALLOC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/jemalloc/include;../../thirdparty/owemdjee/jemalloc/include/jemalloc/internal;../../thirdparty/owemdjee/jemalloc/include;../../scripts/jemalloc/include;../../scripts/jemalloc/include/jemalloc/internal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJEMALLOC;JEMALLOC_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/jemalloc/include;../../thirdparty/owemdjee/jemalloc/include/jemalloc/internal;../../scripts/jemalloc/include;../../scripts/jemalloc/include/jemalloc/internal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJEMALLOC;JEMALLOC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJEMALLOC;JEMALLOC_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJEMALLOC;JEMALLOC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/jemalloc/include;../../thirdparty/owemdjee/jemalloc/include/jemalloc/internal;../../thirdparty/owemdjee/jemalloc/include;../../scripts/jemalloc/include;../../scripts/jemalloc/include/jemalloc/internal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/jemalloc/include;../../thirdparty/owemdjee/jemalloc/include/jemalloc/internal;../../scripts/jemalloc/include;../../scripts/jemalloc/include/jemalloc/internal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJEMALLOC;JEMALLOC_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJEMALLOC;JEMALLOC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/jemalloc/include;../../thirdparty/owemdjee/jemalloc/include/jemalloc/internal;../../thirdparty/owemdjee/jemalloc/include;../../scripts/jemalloc/include;../../scripts/jemalloc/include/jemalloc/internal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJEMALLOC;JEMALLOC_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/jemalloc/include;../../thirdparty/owemdjee/jemalloc/include/jemalloc/internal;../../scripts/jemalloc/include;../../scripts/jemalloc/include/jemalloc/internal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJEMALLOC;JEMALLOC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJEMALLOC;JEMALLOC_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJEMALLOC;JEMALLOC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/jemalloc/include;../../thirdparty/owemdjee/jemalloc/include/jemalloc/internal;../../thirdparty/owemdjee/jemalloc/include;../../scripts/jemalloc/include;../../scripts/jemalloc/include/jemalloc/internal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/jemalloc/include;../../thirdparty/owemdjee/jemalloc/include/jemalloc/internal;../../scripts/jemalloc/include;../../scripts/jemalloc/include/jemalloc/internal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJEMALLOC;JEMALLOC_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJEMALLOC;JEMALLOC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/jemalloc/include;../../thirdparty/owemdjee/jemalloc/include/jemalloc/internal;../../thirdparty/owemdjee/jemalloc/include;../../scripts/jemalloc/include;../../scripts/jemalloc/include/jemalloc/internal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJEMALLOC;JEMALLOC_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/jemalloc/include;../../thirdparty/owemdjee/jemalloc/include/jemalloc/internal;../../scripts/jemalloc/include;../../scripts/jemalloc/include/jemalloc/internal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJEMALLOC;JEMALLOC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJEMALLOC;JEMALLOC_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJEMALLOC;JEMALLOC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/jemalloc/include;../../thirdparty/owemdjee/jemalloc/include/jemalloc/internal;../../thirdparty/owemdjee/jemalloc/include;../../scripts/jemalloc/include;../../scripts/jemalloc/include/jemalloc/internal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/jemalloc/include;../../thirdparty/owemdjee/jemalloc/include/jemalloc/internal;../../scripts/jemalloc/include;../../scripts/jemalloc/include/jemalloc/internal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJEMALLOC;JEMALLOC_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJEMALLOC;JEMALLOC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/jemalloc/include;../../thirdparty/owemdjee/jemalloc/include/jemalloc/internal;../../thirdparty/owemdjee/jemalloc/include;../../scripts/jemalloc/include;../../scripts/jemalloc/include/jemalloc/internal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJEMALLOC;JEMALLOC_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/jemalloc/include;../../thirdparty/owemdjee/jemalloc/include/jemalloc/internal;../../scripts/jemalloc/include;../../scripts/jemalloc/include/jemalloc/internal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJEMALLOC;JEMALLOC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJEMALLOC;JEMALLOC_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJEMALLOC;JEMALLOC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/jemalloc/include;../../thirdparty/owemdjee/jemalloc/include/jemalloc/internal;../../thirdparty/owemdjee/jemalloc/include;../../scripts/jemalloc/include;../../scripts/jemalloc/include/jemalloc/internal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/jemalloc/include;../../thirdparty/owemdjee/jemalloc/include/jemalloc/internal;../../scripts/jemalloc/include;../../scripts/jemalloc/include/jemalloc/internal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -424,12 +424,15 @@
     <Text Include="../../thirdparty/owemdjee/jemalloc/bin/jemalloc-config.in" />
     <Text Include="../../thirdparty/owemdjee/jemalloc/bin/jemalloc.sh.in" />
     <Text Include="../../thirdparty/owemdjee/jemalloc/bin/jeprof.in" />
+    <Text Include="../../thirdparty/owemdjee/jemalloc/build-aux/config.guess" />
     <Text Include="../../thirdparty/owemdjee/jemalloc/config.stamp.in" />
     <Text Include="../../thirdparty/owemdjee/jemalloc/configure.ac" />
     <Text Include="../../thirdparty/owemdjee/jemalloc/doc/html.xsl.in" />
     <Text Include="../../thirdparty/owemdjee/jemalloc/doc/jemalloc.xml.in" />
     <Text Include="../../thirdparty/owemdjee/jemalloc/doc/manpages.xsl.in" />
+    <Text Include="../../thirdparty/owemdjee/jemalloc/doc/stylesheet.xsl" />
     <Text Include="../../thirdparty/owemdjee/jemalloc/doc_internal/PROFILING_INTERNALS.md" />
+    <Text Include="../../thirdparty/owemdjee/jemalloc/doc_internal/jemalloc.svg" />
     <Text Include="../../thirdparty/owemdjee/jemalloc/include/jemalloc/internal/jemalloc_internal_defs.h.in" />
     <Text Include="../../thirdparty/owemdjee/jemalloc/include/jemalloc/internal/jemalloc_preamble.h.in" />
     <Text Include="../../thirdparty/owemdjee/jemalloc/include/jemalloc/internal/private_namespace.sh" />
@@ -445,6 +448,11 @@
     <Text Include="../../thirdparty/owemdjee/jemalloc/include/jemalloc/jemalloc_rename.sh" />
     <Text Include="../../thirdparty/owemdjee/jemalloc/include/jemalloc/jemalloc_typedefs.h.in" />
     <Text Include="../../thirdparty/owemdjee/jemalloc/jemalloc.pc.in" />
+    <Text Include="../../thirdparty/owemdjee/jemalloc/m4/ax_cxx_compile_stdcxx.m4" />
+    <Text Include="../../thirdparty/owemdjee/jemalloc/msvc/projects/vc2015/jemalloc/jemalloc.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/jemalloc/msvc/projects/vc2017/jemalloc/jemalloc.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/jemalloc/msvc/projects/vc2019/jemalloc/jemalloc.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/jemalloc/msvc/projects/vc2019/jemalloc/jemalloc.vcxproj.user" />
     <Text Include="../../thirdparty/owemdjee/jemalloc/run_tests.sh" />
     <Text Include="../../thirdparty/owemdjee/jemalloc/scripts/check-formatting.sh" />
     <Text Include="../../thirdparty/owemdjee/jemalloc/scripts/freebsd/before_install.sh" />

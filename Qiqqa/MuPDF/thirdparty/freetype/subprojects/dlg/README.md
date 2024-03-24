@@ -1,6 +1,3 @@
-[![Appveyor status](https://ci.appveyor.com/api/projects/status/an3isk91jx8vmwh6/branch/master?svg=true)](https://ci.appveyor.com/project/nyorain/dlg/branch/master)
-[![Travis Status](https://travis-ci.org/nyorain/dlg.svg?branch=master)](https://travis-ci.org/nyorain/dlg)
-
 dlg
 ===
 
@@ -16,7 +13,7 @@ well-documented logging interface in a few hundred lines*):
 
 There are 3 headers:
 
-- [<dlg/dlg.h>](include/dlg/dlg.h) (around 230 loc): Everything you need, no dependencies
+- [<dlg/dlg.h>](include/dlg/dlg.h) (around 280 loc): Everything you need, no dependencies
 - [<dlg/output.h>](include/dlg/output.h) (around 150 loc): Utilities for implementing custom output handlers
 - [<dlg/dlg.hpp>](include/dlg/dlg.hpp) (around 330 loc): Modern C++11 utilities, typesafe formatter
 

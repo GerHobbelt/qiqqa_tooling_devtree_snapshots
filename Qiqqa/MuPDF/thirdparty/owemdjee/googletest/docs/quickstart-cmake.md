@@ -54,6 +54,7 @@ project(my_project)
 
 # GoogleTest requires at least C++14
 set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include(FetchContent)
 FetchContent_Declare(
@@ -116,8 +117,9 @@ gtest_discover_tests(hello_test)
 ```
 
 The above configuration enables testing in CMake, declares the C++ test binary
-you want to build (`hello_test`), and links it to GoogleTest (`gtest_main`). The
-last two lines enable CMake's test runner to discover the tests included in the
+you want to build (`hello_test`), and links it against GoogleTest (`GTest::gtest_main`). 
+To be able to use GoogleMock, you also need to link against gmock (`GTest::gmock`).
+The last two lines enable CMake's test runner to discover the tests included in the
 binary, using the
 [`GoogleTest` CMake module](https://cmake.org/cmake/help/git-stage/module/GoogleTest.html).
 

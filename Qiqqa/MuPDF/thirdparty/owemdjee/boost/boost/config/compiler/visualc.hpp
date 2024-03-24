@@ -271,7 +271,7 @@
 #ifndef BOOST_NO_CXX11_THREAD_LOCAL
 #  define BOOST_NO_CXX11_THREAD_LOCAL
 #endif
-#ifndef BOOST_NO_SFINAE_EXPR
+#if !defined(BOOST_NO_SFINAE_EXPR) && !defined(_MSVC_LANG)
 #  define BOOST_NO_SFINAE_EXPR
 #endif
 #ifndef BOOST_NO_CXX11_REF_QUALIFIERS
@@ -303,6 +303,10 @@
 #  define BOOST_CXX_VERSION 201703L
 #elif BOOST_MSVC >= 1916
 #  define BOOST_CXX_VERSION 201402L
+#endif
+
+#if BOOST_CXX_VERSION >= 201703L
+#  define BOOST_ATTRIBUTE_UNUSED [[maybe_unused]]
 #endif
 
 #ifndef BOOST_COMPILER

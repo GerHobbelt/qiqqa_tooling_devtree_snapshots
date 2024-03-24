@@ -9,11 +9,11 @@ There are a variety of reasons you might not get good quality output from Tesser
   * [Noise Removal](#noise-removal)
   * [Dilation / Erosion](#dilation-and-erosion)
   * [Rotation / Deskewing](#rotation--deskewing)
-  * [Borders](#Borders)
+  * [Borders](#borders)
   * [Transparency / Alpha channel](#transparency--alpha-channel)
   * [Tools / Libraries](#tools--libraries)
   * [Examples](#examples)
-  * [Tables recognitions](#tables-recognitions)
+  * [Tables recognition](#tables-recognition)
 * [Page segmentation method](#page-segmentation-method)
 * [Dictionaries, word lists, and patterns](#dictionaries-word-lists-and-patterns)
 * [Still having problems?](#still-having-problems)
@@ -23,7 +23,7 @@ There are a variety of reasons you might not get good quality output from Tesser
 
 Tesseract does various image processing operations internally (using the Leptonica library) before doing the actual OCR. It generally does a very good job of this, but there will inevitably be cases where it isn't good enough, which can result in a significant reduction in accuracy.
 
-You can see how Tesseract has processed the image by using the [configuration variable](ControlParams) `tessedit_write_images` to `true` (or using configfile `get.images`) when running Tesseract. If the resulting `tessinput.tif` file looks problematic, try some of these image processing operations before passing the image to Tesseract. 
+You can see how Tesseract has processed the image by using the [configuration variable](https://github.com/tesseract-ocr/tessdoc/blob/main/tess3/ControlParams.md) `tessedit_write_images` to `true` (or using configfile `get.images`) when running Tesseract. If the resulting `tessinput.tif` file looks problematic, try some of these image processing operations before passing the image to Tesseract. 
 
 ### Inverting images
 
@@ -31,7 +31,7 @@ While tesseract version 3.05 (and older) handle inverted image (dark background 
 
 ### Rescaling
 
-Tesseract works best on images which have a DPI of at least 300 dpi, so it may be beneficial to resize images. For more information see [the FAQ](FAQ-Old#is-there-a-minimum-text-size-it-wont-read-screen-text).
+Tesseract works best on images which have a DPI of at least 300 dpi, so it may be beneficial to resize images. For more information see [the FAQ](https://github.com/tesseract-ocr/tessdoc/blob/main/tess3/FAQ-Old.md#is-there-a-minimum--maximum-text-size-it-wont-read-screen-text).
 
 "Willus Dotkom" made interesting test for [Optimal image resolution](https://groups.google.com/d/msg/tesseract-ocr/Wdh_JJwnw94/24JHDYQbBQAJ) with suggestion for optimal Height of capital letter in pixels.
 
@@ -78,17 +78,26 @@ A skewed image is when a page has been scanned when not straight. The quality of
 
 ### Borders
 
+#### Missing borders
+
+If you OCR just text area without any border, tesseract could have problems with it. See for some details in [tesseract user forum](https://groups.google.com/forum/?utm_medium=email&utm_source=footer#!msg/tesseract-ocr/v26a-RYPSOE/2Sppq61GBwAJ)[#427](https://github.com/tesseract-ocr/tesseract/issues/427) . You can easy add small border (e.g. 10 px) with [ImageMagick®](http://imagemagick.org/script/index.php):
+```
+convert  427-1.jpg  -bordercolor White -border 10x10 427-1b.jpg
+```
+
+#### Too big borders
+
+Big borders (especially when processing a single letter/digit or one word on a large background) can cause problems ("empty page").
+Please try to crop you input image to a text area with reasonable border (e.g. 10 px).
+
+
 #### Scanning border Removal
+
 ![borders.png](images/borders.png)
 
 Scanned pages often have dark borders around them. These can be erroneously picked up as extra characters, especially if they vary in shape and gradation.
 
-#### Missing borders
 
-If you OCR just text area without any border, tesseract could have problems with it. See for some details in [tesseract user forum](https://groups.google.com/forum/?utm_medium=email&utm_source=footer#!msg/tesseract-ocr/v26a-RYPSOE/2Sppq61GBwAJ)[#427](https://github.com/tesseract-ocr/tesseract/issues/427) . You can easy add small border (e.g. 10 pt) with [ImageMagick®](http://imagemagick.org/script/index.php):
-```
-convert  427-1.jpg  -bordercolor White -border 10x10 427-1b.jpg
-```
 
 ### Transparency / Alpha channel
 
@@ -99,7 +108,7 @@ Tesseract 3.0x expects that users remove the alpha channel from the image before
 convert input.png -alpha off output.png
 ```
 
-Tesseract 4.00 removes the alpha channel with leptonica function [pixRemoveAlpha()](https://github.com/DanBloomberg/leptonica/blob/648a3be52b6a004df14671de7004416f9a3ce489/src/pixconv.c#L133): it removes the alpha component by blending it with a white background. In some case (e.g. OCR of [movie subtitles](https://github.com/tesseract-ocr/tesseract/issues/2048#issuecomment-438015376)) this can lead to problems, so users would need to remove the alpha channel (or pre-process the image by inverting image colors) by themself.
+Tesseract 4.00 removes the alpha channel with leptonica function [pixRemoveAlpha()](https://github.com/DanBloomberg/leptonica/blob/648a3be52b6a004df14671de7004416f9a3ce489/src/pixconv.c#L133): it removes the alpha component by blending it with a white background. In some cases (e.g. OCR of [movie subtitles](https://github.com/tesseract-ocr/tesseract/issues/2048#issuecomment-438015376)) this can lead to problems, so users would need to remove the alpha channel (or pre-process the image by inverting image colors) by themselves.
 
 ### Tools / Libraries
 
@@ -116,14 +125,14 @@ Tesseract 4.00 removes the alpha channel with leptonica function [pixRemoveAlpha
 
 If you need an example how to improve image quality programmatically, have a look at this examples:
 
-  * [OpenCV - Rotation (Deskewing)](http://felix.abecassis.me/2011/10/opencv-rotation-deskewing/) - c++ example
-  * [Fred's ImageMagick TEXTCLEANER](http://www.fmwconcepts.com/imagemagick/textcleaner/index.php) - bash script for processing a scanned document of text to clean the text background.
-  * [rotation\_spacing.py](https://gist.github.com/endolith/334196bac1cac45a4893#) - python script for automatic detection of rotation and line spacing of an image of text
-  * [crop\_morphology.py](https://github.com/danvk/oldnyc/blob/master/ocr/tess/crop_morphology.py) - [Finding blocks of text in an image using Python, OpenCV and numpy](http://www.danvk.org/2015/01/07/finding-blocks-of-text-in-an-image-using-python-opencv-and-numpy.html)
-  * [Credit card OCR with OpenCV and Python](https://www.pyimagesearch.com/2017/07/17/credit-card-ocr-with-opencv-and-python)
-  * [noteshrink](https://github.com/mzucker/noteshrink) - python example how to clean up scans. Details in blog [Compressing and enhancing hand-written notes](https://mzucker.github.io/2016/09/20/noteshrink.html).
-  * [uproject text](https://github.com/mzucker/unproject_text) - python example how to recover perspective of image. Details in blog [Unprojecting text with ellipses](https://mzucker.github.io/2016/10/11/unprojecting-text-with-ellipses.html).
-  * [page_dewarp](https://github.com/mzucker/page_dewarp) - python example for Text page dewarping using a "cubic sheet" model. Details in blog [Page dewarping](https://mzucker.github.io/2016/08/15/page-dewarping.html).
+* [OpenCV - Rotation (Deskewing)](http://felix.abecassis.me/2011/10/opencv-rotation-deskewing/) - c++ example
+* [Fred's ImageMagick TEXTCLEANER](http://www.fmwconcepts.com/imagemagick/textcleaner/index.php) - bash script for processing a scanned document of text to clean the text background.
+* [rotation\_spacing.py](https://gist.github.com/endolith/334196bac1cac45a4893#) - python script for automatic detection of rotation and line spacing of an image of text
+* [crop\_morphology.py](https://github.com/danvk/oldnyc/blob/master/ocr/tess/crop_morphology.py) - [Finding blocks of text in an image using Python, OpenCV and numpy](http://www.danvk.org/2015/01/07/finding-blocks-of-text-in-an-image-using-python-opencv-and-numpy.html)
+* [Credit card OCR with OpenCV and Python](https://www.pyimagesearch.com/2017/07/17/credit-card-ocr-with-opencv-and-python)
+* [noteshrink](https://github.com/mzucker/noteshrink) - python example how to clean up scans. Details in blog [Compressing and enhancing hand-written notes](https://mzucker.github.io/2016/09/20/noteshrink.html).
+* [uproject text](https://github.com/mzucker/unproject_text) - python example how to recover perspective of image. Details in blog [Unprojecting text with ellipses](https://mzucker.github.io/2016/10/11/unprojecting-text-with-ellipses.html).
+* [page_dewarp](https://github.com/mzucker/page_dewarp) - python example for Text page dewarping using a "cubic sheet" model. Details in blog [Page dewarping](https://mzucker.github.io/2016/08/15/page-dewarping.html).
 * [How to remove shadow from scanned images using OpenCV](https://stackoverflow.com/questions/44752240/how-to-remove-shadow-from-scanned-images-using-opencv)
 
 

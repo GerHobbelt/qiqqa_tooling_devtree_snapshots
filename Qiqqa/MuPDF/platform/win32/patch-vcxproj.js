@@ -3,7 +3,7 @@
 // 
 // usage: run as
 //
-//     node ./patch-vcxproj.js your_project.vcxproj
+//     node ./patch-vcxproj.js your_project.vcxproj [create|tweak]
 //
 // WARNING: this script REMOVES all source files listed in the project, 
 // giving you a clean, EMPTY project to start with.
@@ -36,10 +36,10 @@ let projectName = path.basename(filepath, '.vcxproj');
 
 console.error({projectName, mode});
 
-//     <ClCompile Include="..\..\thirdparty\curl\src\tool_operhlp.c" />
-//     <ClInclude Include="..\..\thirdparty\curl\include\curl\easy.h" />
-//     <None Include="..\..\thirdparty\curl\src\Makefile.am" />
-//     <ResourceCompile Include="..\..\thirdparty\curl\lib\libcurl.rc" />
+//     <ClCompile Include="../../thirdparty/curl/src/tool_operhlp.c" />
+//     <ClInclude Include="../../thirdparty/curl/include/curl/easy.h" />
+//     <None Include="../../thirdparty/curl/src/Makefile.am" />
+//     <ResourceCompile Include="../../thirdparty/curl/lib/libcurl.rc" />
 src = src
 .replace(/<[A-Za-z]+ Include="[^"]*" \/>/g, '')
 
@@ -51,10 +51,10 @@ if (mode === "create") {
 	.replace(/<RootNamespace>[^<]+<\/RootNamespace>/g, (m) => `<RootNamespace>${projectName}</RootNamespace>`)
 	//      <AdditionalDependencies>crypt32.lib;%(AdditionalDependencies)</AdditionalDependencies>
 	.replace(/<AdditionalDependencies>[^<]+<\/AdditionalDependencies>/g, "<AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>")
-	//      <TypeLibraryName>.\Release/libcurl.tlb</TypeLibraryName>
+	//      <TypeLibraryName>./Release/libcurl.tlb</TypeLibraryName>
 	.replace(/<TypeLibraryName>[^<]+<\/TypeLibraryName>/g, "<TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>")
-	//      <AdditionalIncludeDirectories>.;..\..\thirdparty\curl\include;..\..\thirdparty\curl\lib;..\..\thirdparty\curl\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-	.replace(/<AdditionalIncludeDirectories>[^<]+<\/AdditionalIncludeDirectories>/g, "<AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>")
+	//      <AdditionalIncludeDirectories>../../include/system-override;;.;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../thirdparty/curl/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+	.replace(/<AdditionalIncludeDirectories>[^<]+<\/AdditionalIncludeDirectories>/g, "<AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>")
 	//       <PreprocessorDefinitions>BUILDING_LIBCURL;CURL_STATICLIB;CURL_DISABLE_LDAP;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;_USRDLL;BUILDING_LIBCURL;CURL_STATICLIB;CURL_DISABLE_LDAP;USE_SCHANNEL;USE_WINDOWS_SSPI;USE_SCHANNEL;USE_WINDOWS_SSPI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
 	.replace(/<PreprocessorDefinitions>([^<]+)<\/PreprocessorDefinitions>/g, (m, p1) => {
 		p1 = p1
@@ -68,6 +68,8 @@ if (mode === "create") {
 		.replace(/[A-Z_-]+-_CRT_/g, '_CRT_')	
 		.replace(/USE_SCHANNEL;/g, '')	
 		.replace(/USE_WINDOWS_SSPI;/g, '')	
+		.replace(/\bNDEBUG;/g, '')	
+		.replace(/\b_DEBUG;/g, '')	
 
 		let pnu = projectName.toUpperCase().replace(/-/g, '_');
 		p1 = `BUILD_MONOLITHIC;BUILDING_${pnu};${ pnu.replace(/LIB/, '')}_STATICLIB;${p1}`;
@@ -85,6 +87,20 @@ if (mode === "create") {
 		return `<ProjectGuid>${p1}</ProjectGuid>`;
 	})
 }
+
+src = src
+.replace(/<AdditionalIncludeDirectories>([^<]+)<\/AdditionalIncludeDirectories>/g, (m, p1) => {
+	p1 = p1
+	.trim()
+	.replace(/\\/g, '/')
+	.replace(/..\/..\/include\/system-override;/g, '')
+	.replace(/;%\(AdditionalIncludeDirectories\)/g, '')
+	
+	if (p1.length == 0)
+		p1 = ".";
+
+	return `<AdditionalIncludeDirectories>../../include/system-override;${p1};%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>`;
+})
 
 const sections_to_remove = [
 	"ClCompile", "Resourcecompile", "ClInclude", "MASM", "Text", "Image", "Font", "None"

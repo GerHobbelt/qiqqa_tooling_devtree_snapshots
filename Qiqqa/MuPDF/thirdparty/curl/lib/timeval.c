@@ -24,7 +24,7 @@
 
 #include "timeval.h"
 
-#if (defined(WIN32) || defined(WIN64)) && !defined(MSDOS)
+#if defined(_WIN32)
 
 #include "curl_setup.h"
 #include <curl/curl.h>
@@ -35,8 +35,8 @@
 #include <sysinfoapi.h>
 
 /* set in win32_init() */
-static LARGE_INTEGER Curl_freq;
-static bool Curl_isVistaOrGreater;
+static LARGE_INTEGER Curl_freq = { 0 };
+static bool Curl_isVistaOrGreater = FALSE;
 static bool timer_initialized = FALSE;
 
 /* In case of bug fix this function has a counterpart in tool_util.c */
@@ -114,7 +114,8 @@ struct curltime Curl_now(void)
   return now;
 }
 
-#elif defined(HAVE_CLOCK_GETTIME_MONOTONIC)
+#elif defined(HAVE_CLOCK_GETTIME_MONOTONIC) ||  \
+  defined(HAVE_CLOCK_GETTIME_MONOTONIC_RAW)
 
 #include <sys/time.h>
 #include <time.h>
@@ -144,6 +145,19 @@ struct curltime Curl_now(void)
   bool have_clock_gettime = FALSE;
   if(__builtin_available(macOS 10.12, iOS 10, tvOS 10, watchOS 3, *))
     have_clock_gettime = TRUE;
+#endif
+
+#ifdef HAVE_CLOCK_GETTIME_MONOTONIC_RAW
+  if(
+#if defined(__APPLE__) && defined(HAVE_BUILTIN_AVAILABLE) &&    \
+        (HAVE_BUILTIN_AVAILABLE == 1)
+    have_clock_gettime &&
+#endif
+    (0 == clock_gettime(CLOCK_MONOTONIC_RAW, &tsnow))) {
+    cnow.tv_sec = tsnow.tv_sec;
+    cnow.tv_usec = (unsigned int)(tsnow.tv_nsec / 1000);
+  }
+  else
 #endif
 
   if(
@@ -257,6 +271,20 @@ timediff_t Curl_timediff(struct curltime newer, struct curltime older)
   else if(diff <= (TIMEDIFF_T_MIN/1000))
     return TIMEDIFF_T_MIN;
   return diff * 1000 + (newer.tv_usec-older.tv_usec)/1000;
+}
+
+/*
+ * Returns: time difference in number of milliseconds, rounded up.
+ * For too large diffs it returns max value.
+ */
+timediff_t Curl_timediff_ceil(struct curltime newer, struct curltime older)
+{
+  timediff_t diff = (timediff_t)newer.tv_sec-older.tv_sec;
+  if(diff >= (TIMEDIFF_T_MAX/1000))
+    return TIMEDIFF_T_MAX;
+  else if(diff <= (TIMEDIFF_T_MIN/1000))
+    return TIMEDIFF_T_MIN;
+  return diff * 1000 + (newer.tv_usec - older.tv_usec + 999)/1000;
 }
 
 /*

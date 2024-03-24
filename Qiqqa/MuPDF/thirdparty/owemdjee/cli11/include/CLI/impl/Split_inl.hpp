@@ -1,4 +1,4 @@
-// Copyright (c) 2017-2022, University of Cincinnati, developed by Henry Schreiner
+// Copyright (c) 2017-2023, University of Cincinnati, developed by Henry Schreiner
 // under NSF AWARD 1414736 and by the respective contributors.
 // All rights reserved.
 //
@@ -34,7 +34,7 @@ CLI11_INLINE bool split_short(const std::string &current, std::string &name, std
 }
 
 CLI11_INLINE bool split_long(const std::string &current, std::string &name, std::string &value) {
-    if(current.size() > 2 && current.substr(0, 2) == "--" && valid_first_char(current[2])) {
+    if(current.size() > 2 && current.compare(0, 2, "--") == 0 && valid_first_char(current[2])) {
         auto loc = current.find_first_of('=');
         if(loc != std::string::npos) {
             name = current.substr(2, loc - 2);

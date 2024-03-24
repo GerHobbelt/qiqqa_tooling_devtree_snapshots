@@ -824,7 +824,6 @@ static float nsvg__convertToPixels(NSVGparser* p, NSVGcoordinate c, float orig, 
 		case NSVG_UNITS_PERCENT:	return orig + c.value / 100.0f * length;
 		default:					return c.value;
 	}
-	return c.value;
 }
 
 static NSVGgradientData* nsvg__findGradientData(NSVGparser* p, const char* id)
@@ -1129,11 +1128,7 @@ static double nsvg__atof(const char* s)
 	// Parse integer part
 	if (nsvg__isdigit(*cur)) {
 		// Parse digit sequence
-#ifdef _MSC_VER
-		intPart = (double)_strtoi64(cur, &end, 10);
-#else
 		intPart = (double)strtoll(cur, &end, 10);
-#endif
 		if (cur != end) {
 			res = intPart;
 			hasIntPart = 1;
@@ -1146,11 +1141,7 @@ static double nsvg__atof(const char* s)
 		cur++; // Skip '.'
 		if (nsvg__isdigit(*cur)) {
 			// Parse digit sequence
-#ifdef _MSC_VER
-			fracPart = (double)_strtoi64(cur, &end, 10);
-#else
 			fracPart = (double)strtoll(cur, &end, 10);
-#endif
 			if (cur != end) {
 				res += fracPart / pow(10.0, (double)(end - cur));
 				hasFracPart = 1;

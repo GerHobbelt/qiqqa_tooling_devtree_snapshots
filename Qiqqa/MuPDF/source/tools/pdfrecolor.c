@@ -24,6 +24,7 @@
 
 #include "mupdf/fitz.h"
 #include "mupdf/pdf.h"
+#include "mupdf/mutool.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -64,7 +65,7 @@ color_rewrite(fz_context *ctx, void *opaque, pdf_obj **cs_obj, int *n, float col
 }
 
 static void
-image_rewrite(fz_context *ctx, void *opaque, fz_image **image)
+image_rewrite(fz_context *ctx, void *opaque, fz_image **image, fz_matrix ctm, pdf_obj *im_obj)
 {
 	fz_image *orig = *image;
 	fz_pixmap *pix;
@@ -192,6 +193,7 @@ int pdfrecolor_main(int argc, const char** argv)
 	opts.do_compress_images = 1;
 	opts.do_compress_fonts = 1;
 	opts.do_garbage = 3;
+	opts.do_use_objstms = 1;
 #else
 	opts.do_compress = 0;
 	opts.do_pretty = 1;
@@ -253,7 +255,7 @@ int pdfrecolor_main(int argc, const char** argv)
 	}
 	fz_catch(ctx)
 	{
-		fz_log_error(ctx, fz_caught_message(ctx));
+		fz_report_error(ctx);
 		code = EXIT_FAILURE;
 	}
 	fz_drop_context(ctx);

@@ -1400,6 +1400,9 @@
     <Image Include="../../thirdparty/owemdjee/fftw3/doc/equation-rodft11.png">
       <Filter>Resource Files\doc</Filter>
     </Image>
+    <Text Include="../../thirdparty/owemdjee/fftw3/AUTHORS">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/fftw3/CMakeLists.txt">
       <Filter>Misc Files</Filter>
     </Text>
@@ -1431,6 +1434,9 @@
       <Filter>Misc Files\api</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/fftw3/api/f03api.sh">
+      <Filter>Misc Files\api</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/api/genf03.pl">
       <Filter>Misc Files\api</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/fftw3/bootstrap.sh">
@@ -1478,6 +1484,9 @@
     <Text Include="../../thirdparty/owemdjee/fftw3/dft/simd/avx512/Makefile.am">
       <Filter>Misc Files\dft\simd\avx512</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/dft/simd/codlist.mk">
+      <Filter>Misc Files\dft\simd</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/fftw3/dft/simd/common/Makefile.am">
       <Filter>Misc Files\dft\simd\common</Filter>
     </Text>
@@ -1493,6 +1502,9 @@
     <Text Include="../../thirdparty/owemdjee/fftw3/dft/simd/neon/Makefile.am">
       <Filter>Misc Files\dft\simd\neon</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/dft/simd/simd.mk">
+      <Filter>Misc Files\dft\simd</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/fftw3/dft/simd/sse2/Makefile.am">
       <Filter>Misc Files\dft\simd\sse2</Filter>
     </Text>
@@ -1502,13 +1514,196 @@
     <Text Include="../../thirdparty/owemdjee/fftw3/doc/FAQ/Makefile.am">
       <Filter>Misc Files\doc\FAQ</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/doc/FAQ/bfnnconv.pl">
+      <Filter>Misc Files\doc\FAQ</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/doc/FAQ/html.refs">
+      <Filter>Misc Files\doc\FAQ</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/doc/FAQ/m-ascii.pl">
+      <Filter>Misc Files\doc\FAQ</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/doc/FAQ/m-html.pl">
+      <Filter>Misc Files\doc\FAQ</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/doc/FAQ/m-info.pl">
+      <Filter>Misc Files\doc\FAQ</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/doc/FAQ/m-lout.pl">
+      <Filter>Misc Files\doc\FAQ</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/doc/FAQ/m-post.pl">
+      <Filter>Misc Files\doc\FAQ</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/fftw3/doc/Makefile.am">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/doc/acknowledgements.texi">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/doc/cindex.texi">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/doc/f77_wisdom.f">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/doc/fftw3.texi">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/doc/findex.texi">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/doc/install.texi">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/doc/intro.texi">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/doc/legacy-fortran.texi">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/doc/license.texi">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/doc/modern-fortran.texi">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/doc/mpi.texi">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/doc/other.texi">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/doc/reference.texi">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/doc/threads.texi">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/doc/tutorial.texi">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/doc/upgrading.texi">
       <Filter>Misc Files\doc</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/fftw3/fftw.pc.in">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/fftw3/genfft/Makefile.am">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/algsimp.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/annotate.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/assoctable.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/c.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/complex.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/conv.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/dag.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/expr.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/fft.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/gen_hc2c.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/gen_hc2cdft.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/gen_hc2cdft_c.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/gen_hc2hc.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/gen_mdct.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/gen_notw.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/gen_notw_c.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/gen_r2cb.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/gen_r2cf.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/gen_r2r.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/gen_twiddle.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/gen_twiddle_c.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/gen_twidsq.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/gen_twidsq_c.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/genutil.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/littlesimp.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/magic.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/monads.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/number.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/oracle.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/schedule.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/simd.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/simdmagic.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/to_alist.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/trig.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/twiddle.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/unique.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/util.ml">
+      <Filter>Misc Files\genfft</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/genfft/variable.ml">
       <Filter>Misc Files\genfft</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/fftw3/kernel/Makefile.am">
@@ -1518,6 +1713,30 @@
       <Filter>Misc Files\libbench2</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/fftw3/m4/Makefile.am">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/m4/acx_mpi.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/m4/acx_pthread.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/m4/ax_cc_maxopt.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/m4/ax_check_compiler_flags.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/m4/ax_compiler_vendor.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/m4/ax_gcc_aligns_stack.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/m4/ax_gcc_version.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/m4/ax_openmp.m4">
       <Filter>Misc Files\m4</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/fftw3/mkdist.sh">
@@ -1530,6 +1749,9 @@
       <Filter>Misc Files\mpi</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/fftw3/mpi/f03api.sh">
+      <Filter>Misc Files\mpi</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/mpi/genf03-wrap.pl">
       <Filter>Misc Files\mpi</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/fftw3/rdft/Makefile.am">
@@ -1568,6 +1790,9 @@
     <Text Include="../../thirdparty/owemdjee/fftw3/rdft/simd/avx512/Makefile.am">
       <Filter>Misc Files\rdft\simd\avx512</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/rdft/simd/codlist.mk">
+      <Filter>Misc Files\rdft\simd</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/fftw3/rdft/simd/common/Makefile.am">
       <Filter>Misc Files\rdft\simd\common</Filter>
     </Text>
@@ -1582,6 +1807,9 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/fftw3/rdft/simd/neon/Makefile.am">
       <Filter>Misc Files\rdft\simd\neon</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/rdft/simd/simd.mk">
+      <Filter>Misc Files\rdft\simd</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/fftw3/rdft/simd/sse2/Makefile.am">
       <Filter>Misc Files\rdft\simd\sse2</Filter>
@@ -1604,6 +1832,9 @@
     <Text Include="../../thirdparty/owemdjee/fftw3/support/Makefile.am">
       <Filter>Misc Files\support</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/support/Makefile.codelets">
+      <Filter>Misc Files\support</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/fftw3/support/twovers.sh">
       <Filter>Misc Files\support</Filter>
     </Text>
@@ -1613,10 +1844,16 @@
     <Text Include="../../thirdparty/owemdjee/fftw3/tests/README">
       <Filter>Misc Files\tests</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/tests/check.pl">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/fftw3/threads/Makefile.am">
       <Filter>Misc Files\threads</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/fftw3/tools/Makefile.am">
+      <Filter>Misc Files\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fftw3/tools/fftw-wisdom-to-conf.1">
       <Filter>Misc Files\tools</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/fftw3/tools/fftw-wisdom-to-conf.in">

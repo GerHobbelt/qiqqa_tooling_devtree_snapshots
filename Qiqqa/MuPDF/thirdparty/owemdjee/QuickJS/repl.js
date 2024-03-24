@@ -67,38 +67,20 @@ import * as os from "os";
         bright_white:   "\x1b[37;1m",
     };
 
-    var styles;
-    if (config_numcalc) {
-        styles = {
-            'default':    'black',
-            'comment':    'white',
-            'string':     'green',
-            'regex':      'cyan',
-            'number':     'green',
-            'keyword':    'blue',
-            'function':   'gray',
-            'type':       'bright_magenta',
-            'identifier': 'yellow',
-            'error':      'bright_red',
-            'result':     'black',
-            'error_msg':  'bright_red',
-        };
-    } else {
-        styles = {
-            'default':    'bright_green',
-            'comment':    'white',
-            'string':     'bright_cyan',
-            'regex':      'cyan',
-            'number':     'green',
-            'keyword':    'bright_white',
-            'function':   'bright_yellow',
-            'type':       'bright_magenta',
-            'identifier': 'bright_green',
-            'error':      'red',
-            'result':     'bright_blue',
-            'error_msg':  'bright_red',
-        };
-    }
+    var styles = {
+        'default':    'bright_green',
+        'comment':    'white',
+        'string':     'bright_cyan',
+        'regex':      'cyan',
+        'number':     'green',
+        'keyword':    'bright_white',
+        'function':   'bright_yellow',
+        'type':       'bright_magenta',
+        'identifier': 'bright_green',
+        'error':      'red',
+        'result':     'bright_blue',
+        'error_msg':  'bright_red',
+    };
 
     var history = [];
     var clip_board = "";
@@ -109,15 +91,12 @@ import * as os from "os";
     var pstate = "";
     var prompt = "";
     var plen = 0;
-    var ps1;
-    if (config_numcalc)
-        ps1 = "> ";
-    else
-        ps1 = "qjs > ";
+    var ps1 = "qjs > ";
     var ps2 = "  ... ";
     var utf8 = true;
     var show_time = false;
     var show_colors = true;
+    var eval_start_time;
     var eval_time = 0;
 
     var mexpr = "";
@@ -613,6 +592,9 @@ import * as os from "os";
                     base = get_context_word(line, pos);
                     if (["true", "false", "null", "this"].includes(base) || !isNaN(+base))
                         return eval(base);
+                    // Check if `base` is a set of regexp flags
+                    if (pos - base.length >= 3 && line[pos - base.length - 1] === '/')
+                        return new RegExp('', base);
                     obj = get_context_object(line, pos - base.length);
                     if (obj === null || obj === void 0)
                         return obj;
@@ -817,10 +799,8 @@ import * as os from "os";
             prompt += ps2;
         } else {
             if (show_time) {
-                var t = Math.round(eval_time) + " ";
-                eval_time = 0;
-                t = dupstr("0", 5 - t.length) + t;
-                prompt += t.substring(0, t.length - 4) + "." + t.substring(t.length - 4);
+                var t = eval_time / 1000;
+                prompt += t.toFixed(6) + " ";
             }
             plen = prompt.length;
             prompt += ps1;
@@ -1009,6 +989,8 @@ import * as os from "os";
                     std.puts(a);
                 } else if (stack.indexOf(a) >= 0) {
                     std.puts("[circular]");
+                } else if (a instanceof Date) {
+                    std.puts("Date " + a.toGMTString().__quote());
                 } else if (has_jscalc && (a instanceof Fraction ||
                                         a instanceof Complex ||
                                         a instanceof Mod ||
@@ -1183,6 +1165,23 @@ import * as os from "os";
     }
 
     if (config_numcalc) {
+        styles = {
+            'default':    'black',
+            'comment':    'white',
+            'string':     'green',
+            'regex':      'cyan',
+            'number':     'green',
+            'keyword':    'blue',
+            'function':   'gray',
+            'type':       'bright_magenta',
+            'identifier': 'yellow',
+            'error':      'bright_red',
+            'result':     'black',
+            'error_msg':  'bright_red',
+        };
+
+        ps1 = "> ";
+
         /* called by the GUI */
         g.execCmd = function (cmd) {
             switch(cmd) {
@@ -1225,38 +1224,7 @@ import * as os from "os";
         if (!config_numcalc) {
             std.puts("\\q          exit\n");
         }
-		std.puts("\nHit TAB twice to get a list of available identifiers while writing\nyour code in this REPL.\n");
-    }
-
-    function eval_and_print(expr) {
-        var result;
-
-        try {
-            if (eval_mode === "math")
-                expr = '"use math"; void 0;' + expr;
-            var now = (new Date).getTime();
-            /* eval as a script */
-            result = std.evalScript(expr, { backtrace_barrier: true });
-            eval_time = (new Date).getTime() - now;
-            std.puts(colors[styles.result]);
-            print(result);
-            std.puts("\n");
-            std.puts(colors.none);
-            /* set the last result */
-            g._ = result;
-        } catch (error) {
-            std.puts(colors[styles.error_msg]);
-            if (error instanceof Error) {
-                console.log(error);
-                if (error.stack) {
-                    std.puts(error.stack);
-                }
-            } else {
-                std.puts("Throw: ");
-                console.log(error);
-            }
-            std.puts(colors.none);
-        }
+        std.puts("\nHit TAB twice to get a list of available identifiers while writing\nyour code in this REPL.\n");
     }
 
     function cmd_start() {
@@ -1285,29 +1253,32 @@ import * as os from "os";
     }
 
     function readline_handle_cmd(expr) {
-        handle_cmd(expr);
-        cmd_readline_start();
+        if (!handle_cmd(expr)) {
+            cmd_readline_start();
+        }
     }
 
+    /* return true if async termination */
     function handle_cmd(expr) {
         var colorstate, cmd;
 
         if (expr === null) {
             expr = "";
-            return;
+            return false;
         }
         if (expr === "?") {
             help();
-            return;
+            return false;
         }
         cmd = extract_directive(expr);
         if (cmd.length > 0) {
-            if (!handle_directive(cmd, expr))
-                return;
+            if (!handle_directive(cmd, expr)) {
+                return false;
+            }
             expr = expr.substring(cmd.length + 1);
         }
         if (expr === "")
-            return;
+            return false;
 
         if (mexpr)
             expr = mexpr + '\n' + expr;
@@ -1316,20 +1287,74 @@ import * as os from "os";
         level = colorstate[1];
         if (pstate) {
             mexpr = expr;
-            return;
+            return false;
         }
         mexpr = "";
 
         if (has_bignum) {
-            BigFloatEnv.setPrec(eval_and_print.bind(null, expr),
+            /* XXX: async is not supported in this case */
+            BigFloatEnv.setPrec(eval_and_print_start.bind(null, expr, false),
                                 prec, expBits);
         } else {
-            eval_and_print(expr);
+            eval_and_print_start(expr, true);
         }
-        level = 0;
+        return true;
+    }
 
+    function eval_and_print_start(expr, is_async) {
+        var result;
+
+        try {
+            if (eval_mode === "math")
+                expr = '"use math"; void 0;' + expr;
+            eval_start_time = os.now();
+            /* eval as a script */
+            result = std.evalScript(expr, { backtrace_barrier: true, async: is_async });
+            if (is_async) {
+                /* result is a promise */
+                result.then(print_eval_result, print_eval_error);
+            } else {
+                print_eval_result({ value: result });
+            }
+        } catch (error) {
+            print_eval_error(error);
+        }
+    }
+
+    function print_eval_result(result) {
+        result = result.value;
+        eval_time = os.now() - eval_start_time;
+        std.puts(colors[styles.result]);
+        print(result);
+        std.puts("\n");
+        std.puts(colors.none);
+        /* set the last result */
+        g._ = result;
+
+        handle_cmd_end();
+    }
+
+    function print_eval_error(error) {
+        std.puts(colors[styles.error_msg]);
+        if (error instanceof Error) {
+            console.log(error);
+            if (error.stack) {
+                std.puts(error.stack);
+            }
+        } else {
+            std.puts("Throw: ");
+            console.log(error);
+        }
+        std.puts(colors.none);
+
+        handle_cmd_end();
+    }
+
+    function handle_cmd_end() {
+        level = 0;
         /* run the garbage collector after each command */
         std.gc();
+        cmd_readline_start();
     }
 
     function colorize_js(str) {

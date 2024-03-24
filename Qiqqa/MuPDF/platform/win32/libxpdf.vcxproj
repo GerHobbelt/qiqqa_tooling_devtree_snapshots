@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXPDF;XPDF_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXPDF;XPDF_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXPDF;XPDF_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXPDF;XPDF_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXPDF;XPDF_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXPDF;XPDF_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXPDF;XPDF_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXPDF;XPDF_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXPDF;XPDF_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXPDF;XPDF_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXPDF;XPDF_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXPDF;XPDF_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXPDF;XPDF_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXPDF;XPDF_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXPDF;XPDF_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXPDF;XPDF_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXPDF;XPDF_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXPDF;XPDF_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXPDF;XPDF_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXPDF;XPDF_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXPDF;XPDF_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXPDF;XPDF_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXPDF;XPDF_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBXPDF;XPDF_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -440,14 +440,58 @@
     <ResourceCompile Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/xpdf.rc" />
     <Text Include="../../thirdparty/owemdjee/xpdf/CHANGES" />
     <Text Include="../../thirdparty/owemdjee/xpdf/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/INSTALL" />
     <Text Include="../../thirdparty/owemdjee/xpdf/README" />
     <Text Include="../../thirdparty/owemdjee/xpdf/aconf.h.in" />
     <Text Include="../../thirdparty/owemdjee/xpdf/cmake-config.txt" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/doc/pdfdetach.1" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/doc/pdffonts.1" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/doc/pdfimages.1" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/doc/pdfinfo.1" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/doc/pdftohtml.1" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/doc/pdftopng.1" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/doc/pdftoppm.1" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/doc/pdftops.1" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/doc/pdftotext.1" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/doc/xpdf.1" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/doc/xpdfrc.5" />
     <Text Include="../../thirdparty/owemdjee/xpdf/fofi/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/xpdf/goo/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/xpdf/splash/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/back.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/findNext.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/findPrevious.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/findSettings.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/fitPage.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/fitPageOn.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/fitWidth.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/fitWidthOn.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/forward.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/indicator-icon-err0.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/indicator-icon-err1.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/indicator-icon-err2.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/indicator-icon-err3.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/indicator-icon-err4.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/indicator-icon-err5.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/indicator-icon-err6.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/indicator-icon-err7.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/indicator-icon0.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/indicator-icon1.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/indicator-icon2.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/indicator-icon3.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/indicator-icon4.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/indicator-icon5.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/indicator-icon6.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/indicator-icon7.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/selectModeBlock.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/selectModeLinear.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/toggleSidebar.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/xpdf-icon.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/zoomIn.svg" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf-qt/zoomOut.svg" />
     <Text Include="../../thirdparty/owemdjee/xpdf/xpdf/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/xpdf/xpdf/winLongPath.exe.manifest" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

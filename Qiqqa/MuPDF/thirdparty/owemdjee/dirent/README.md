@@ -89,7 +89,7 @@ below.
 ```
 /* This is your true main function */
 static int
-_main(int argc, wchar_t *argv[])
+_main(int argc, char *argv[])
 {
 	/* ... */
 }
@@ -173,4 +173,3 @@ both [Cygwin](http://www.cygwin.com) and [MingW](http://www.mingw.org)
 allow you to compile a great number of UNIX programs in Microsoft Windows.
 They both provide a full Dirent API as well as many other UNIX APIs.  MingW
 can even be used for commercial applications!
-

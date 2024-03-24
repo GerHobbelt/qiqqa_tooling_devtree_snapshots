@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTWAIN_LIBRARY;TWAIN_LIBRARY_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTWAIN_LIBRARY;TWAIN_LIBRARY_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTWAIN_LIBRARY;TWAIN_LIBRARY_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/twain_library/c_cpp_includes;../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib;../../thirdparty/owemdjee/twain_library/demos/NoImportLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTWAIN_LIBRARY;TWAIN_LIBRARY_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTWAIN_LIBRARY;TWAIN_LIBRARY_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTWAIN_LIBRARY;TWAIN_LIBRARY_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/twain_library/c_cpp_includes;../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib;../../thirdparty/owemdjee/twain_library/demos/NoImportLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTWAIN_LIBRARY;TWAIN_LIBRARY_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTWAIN_LIBRARY;TWAIN_LIBRARY_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTWAIN_LIBRARY;TWAIN_LIBRARY_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/twain_library/c_cpp_includes;../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib;../../thirdparty/owemdjee/twain_library/demos/NoImportLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTWAIN_LIBRARY;TWAIN_LIBRARY_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTWAIN_LIBRARY;TWAIN_LIBRARY_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTWAIN_LIBRARY;TWAIN_LIBRARY_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/twain_library/c_cpp_includes;../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib;../../thirdparty/owemdjee/twain_library/demos/NoImportLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTWAIN_LIBRARY;TWAIN_LIBRARY_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTWAIN_LIBRARY;TWAIN_LIBRARY_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTWAIN_LIBRARY;TWAIN_LIBRARY_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/twain_library/c_cpp_includes;../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib;../../thirdparty/owemdjee/twain_library/demos/NoImportLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTWAIN_LIBRARY;TWAIN_LIBRARY_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTWAIN_LIBRARY;TWAIN_LIBRARY_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTWAIN_LIBRARY;TWAIN_LIBRARY_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/twain_library/c_cpp_includes;../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib;../../thirdparty/owemdjee/twain_library/demos/NoImportLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTWAIN_LIBRARY;TWAIN_LIBRARY_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTWAIN_LIBRARY;TWAIN_LIBRARY_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTWAIN_LIBRARY;TWAIN_LIBRARY_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/twain_library/c_cpp_includes;../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib;../../thirdparty/owemdjee/twain_library/demos/NoImportLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTWAIN_LIBRARY;TWAIN_LIBRARY_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTWAIN_LIBRARY;TWAIN_LIBRARY_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTWAIN_LIBRARY;TWAIN_LIBRARY_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/twain_library/c_cpp_includes;../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib;../../thirdparty/owemdjee/twain_library/demos/NoImportLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -281,10 +281,12 @@
     <ClCompile Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/GetXYResolutionValues/GetSetXYResolutionValues.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/GetXYResolutionValues/stdafx.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/ManualDuplexScanningDemo/ManualDuplexScanningDemo.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/MultiPageTiffCompressionDemo/MultiPageTiffCompressionDemo.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/PDFAddTextDemo/PDFAddTextDemo.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/PDFAddTextDemo/stdafx.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/PDFDemo/PDFDemo.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/PDFDemo/stdafx.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/ShowCustomDSData/ShowCustomDSData.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/SimpleFileAcquireMultiPage/SimpleFileAcquireMultiPage.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/SimpleFileAcquireMultiPage/stdafx.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/SimpleFileAcquireToBMP/SimpleFileAcquireToBMP.cpp" />
@@ -304,20 +306,22 @@
     <ClCompile Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/TwainLoggingDemo/TwainLoggingDemo.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/WaitForFeederLoaded/WaitForFeederLoaded.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/buffered_transfer_info.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/acquire_characteristics/acquire_characteristics.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/logging/logger_callback.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/session/twain_characteristics.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/options_base.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/paperhandling_info.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/pdf_text_element.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/tojson.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/twain_callback.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/twain_session.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/twain_source.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/C_CPP_DynamicLoad/CPPExample.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/C_CPP_DynamicLoad/dtwimpl.c" />
     <ClCompile Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/C_CPP_DynamicLoad/dtwimpl.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java/JNI_Source/classes/com/dynarithmic/jnicode/DTWAINJNIGlobals.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java/JNI_Source/classes/com/dynarithmic/jnicode/DTWAINJavaAPI.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java/JNI_Source/classes/com/dynarithmic/jnicode/JavaAdapter.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java/JNI_Source/classes/com/dynarithmic/jnicode/JavaArrayTraits.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JNI_Source/classes/com/dynarithmic/jnicode/DTWAINJNIGlobals.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JNI_Source/classes/com/dynarithmic/jnicode/DTWAINJavaAPI.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JNI_Source/classes/com/dynarithmic/jnicode/JavaAdapter.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JNI_Source/classes/com/dynarithmic/jnicode/JavaArrayTraits.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/c_cpp/DibView/DIB.c" />
     <ClCompile Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/c_cpp/DibView/ERRORS.c" />
     <ClCompile Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/c_cpp/DibView/PAINT.c" />
@@ -451,6 +455,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/capability_interface/capability_interface.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/capability_interface/generated_capfuncs.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/characteristics/twain_select_dialog.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/compiler_details.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/dtwain_twain.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/identity/twain_identity.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/imagehandler/image_handler.hpp" />
@@ -467,7 +472,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/logging/logger_callback.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/logging/twain_logger.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/messaging/twain_loop.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/nlohmann/json.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/options/audiblealarms_options.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/options/autoadjust_options.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/options/autocapture_options.hpp" />
@@ -504,9 +508,9 @@
     <ClInclude Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/session/twain_session_base.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/source/twain_source.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/source/twain_source_pimpl.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/tostring/tojson.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/tostring/tostring.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/twain_callback.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/twain_details.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/twain_session.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/twain_source.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/twain_values.hpp" />
@@ -520,17 +524,17 @@
     <ClInclude Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/types/underlying_type.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/dynarithmic/twain/utilities/string_utilities.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/C_CPP_DynamicLoad/dtwainx2.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java/JNI_Source/classes/com/dynarithmic/jnicode/DTWAINFunctionCaller.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java/JNI_Source/classes/com/dynarithmic/jnicode/DTWAINGlobalFn.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java/JNI_Source/classes/com/dynarithmic/jnicode/DTWAINJNIGlobals.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java/JNI_Source/classes/com/dynarithmic/jnicode/DTWAINRAII.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java/JNI_Source/classes/com/dynarithmic/jnicode/DTwainJava.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java/JNI_Source/classes/com/dynarithmic/jnicode/DTwainJavaAPI.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java/JNI_Source/classes/com/dynarithmic/jnicode/JavaAdapter.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java/JNI_Source/classes/com/dynarithmic/jnicode/JavaArrayTraits.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java/JNI_Source/classes/com/dynarithmic/jnicode/StringDefs.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java/JNI_Source/classes/com/dynarithmic/jnicode/UTFCharsHandler.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java/JNI_Source/classes/com/dynarithmic/jnicode/javaobjectcaller.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JNI_Source/classes/com/dynarithmic/jnicode/DTWAINFunctionCaller.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JNI_Source/classes/com/dynarithmic/jnicode/DTWAINGlobalFn.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JNI_Source/classes/com/dynarithmic/jnicode/DTWAINJNIGlobals.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JNI_Source/classes/com/dynarithmic/jnicode/DTWAINRAII.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JNI_Source/classes/com/dynarithmic/jnicode/DTwainJava.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JNI_Source/classes/com/dynarithmic/jnicode/DTwainJavaAPI.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JNI_Source/classes/com/dynarithmic/jnicode/JavaAdapter.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JNI_Source/classes/com/dynarithmic/jnicode/JavaArrayTraits.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JNI_Source/classes/com/dynarithmic/jnicode/StringDefs.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JNI_Source/classes/com/dynarithmic/jnicode/UTFCharsHandler.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JNI_Source/classes/com/dynarithmic/jnicode/javaobjectcaller.h" />
     <ClInclude Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/c_cpp/DibView/DIB.h" />
     <ClInclude Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/c_cpp/DibView/DIBFUNC.h" />
     <ClInclude Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/c_cpp/DibView/ERRORS.h" />
@@ -557,14 +561,40 @@
     <ResourceCompile Include="../../thirdparty/owemdjee/twain_library/demos/c/SimpleAcquire/SimpleAcquire.rc" />
     <ResourceCompile Include="../../thirdparty/owemdjee/twain_library/demos/c/dtwdemo/dibdisplay.rc" />
     <ResourceCompile Include="../../thirdparty/owemdjee/twain_library/demos/c/dtwdemo/dtwdemo.rc" />
-    <ResourceCompile Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java/JNI_Source/classes/com/dynarithmic/jnicode/dtwainjni.rc" />
+    <ResourceCompile Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JNI_Source/classes/com/dynarithmic/jnicode/dtwainjni.rc" />
     <ResourceCompile Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/c_cpp/SimpleAcquire/SimpleAcquire.rc" />
     <ResourceCompile Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/c_cpp/dtwdemo/dibdisplay.rc" />
     <ResourceCompile Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/c_cpp/dtwdemo/dtwdemo.rc" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/twain_library/README.md" />
     <Text Include="../../thirdparty/owemdjee/twain_library/SampleTWAINDevices/README.md" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/SampleTWAINDevices/twain_32/TWAINDSM.dll" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/SampleTWAINDevices/twain_32/sample2/FreeImage.dll" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/SampleTWAINDevices/twain_32/sample2/Qt5Core.dll" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/SampleTWAINDevices/twain_32/sample2/Qt5Gui.dll" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/SampleTWAINDevices/twain_32/sample2/Qt5Widgets.dll" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/SampleTWAINDevices/twain_32/sample2/QtCore4.dll" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/SampleTWAINDevices/twain_32/sample2/QtGui4.dll" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/SampleTWAINDevices/twain_32/sample2/TWAINDS_Sample32.ds" />
     <Text Include="../../thirdparty/owemdjee/twain_library/SampleTWAINDevices/twain_32/sample2/license.txt" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/SampleTWAINDevices/twain_32/sample2/msvcp140.dll" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/SampleTWAINDevices/twain_32/sample2/platforms/qwindows.dll" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/SampleTWAINDevices/twain_32/sample2/vcruntime140.dll" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/SampleTWAINDevices/twain_32/wiatwain.ds" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/SampleTWAINDevices/twain_64/TWAINDSM.dll" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/SampleTWAINDevices/twain_64/sample2/FreeImage.dll" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/SampleTWAINDevices/twain_64/sample2/Qt5Core.dll" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/SampleTWAINDevices/twain_64/sample2/Qt5Gui.dll" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/SampleTWAINDevices/twain_64/sample2/Qt5Widgets.dll" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/SampleTWAINDevices/twain_64/sample2/TWAINDS_Sample64.ds" />
     <Text Include="../../thirdparty/owemdjee/twain_library/SampleTWAINDevices/twain_64/sample2/license.txt" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/SampleTWAINDevices/twain_64/sample2/msvcp140.dll" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/SampleTWAINDevices/twain_64/sample2/platforms/qwindows.dll" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/SampleTWAINDevices/twain_64/sample2/vcruntime140.dll" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/TwainSpecification/TWAIN 2.3 Features.pdf" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/TwainSpecification/TWAIN 2.3 Spec.pdf" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/TwainSpecification/TWAIN-2.4-Features.pdf" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/TwainSpecification/TWAIN-2.4-Specification.pdf" />
     <Text Include="../../thirdparty/owemdjee/twain_library/additional_language_resources/README.md" />
     <Text Include="../../thirdparty/owemdjee/twain_library/additional_language_resources/twainresourcestrings_portuguese_br.txt" />
     <Text Include="../../thirdparty/owemdjee/twain_library/additional_language_resources/usage.txt" />
@@ -572,12 +602,283 @@
     <Text Include="../../thirdparty/owemdjee/twain_library/binaries/32bit/release_ziphashes32.txt" />
     <Text Include="../../thirdparty/owemdjee/twain_library/binaries/64bit/64bit_FullDemo_hash.txt" />
     <Text Include="../../thirdparty/owemdjee/twain_library/binaries/64bit/release_ziphashes64.txt" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/AllDemos.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/AllDemos.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/Delphi/SimpleAcquire/SimpleAcquire.dpr" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/Delphi/SimpleAcquire/SimpleAcquire.res" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/Delphi/SimpleAcquire/dtwain32u.pas" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/Delphi/SimpleAcquire/dtwexam1.pas" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/Delphi/dtwain32.pas" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/Delphi/dtwain32d.pas" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/Delphi/dtwain32u.pas" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/Delphi/dtwain32ud.pas" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/Delphi/dtwain64.pas" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/Delphi/dtwain64d.pas" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/Delphi/dtwain64u.pas" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/Delphi/dtwain64ud.pas" />
     <Text Include="../../thirdparty/owemdjee/twain_library/demos/Delphi/readme.txt" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/NoImportLib/SimpleFileAcquireToBMP/SimpleFileAcquireToBMP.vcxproj.user" />
     <Text Include="../../thirdparty/owemdjee/twain_library/demos/README.md" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/VisualBasic/Examples/FullDemo/AboutDlg.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/VisualBasic/Examples/FullDemo/CustomSelectSource.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/VisualBasic/Examples/FullDemo/DibDisplayerDlg.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/VisualBasic/Examples/FullDemo/DibDisplayerDlg2.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/VisualBasic/Examples/FullDemo/FileTypeDlg.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/VisualBasic/Examples/FullDemo/LogFileSelectionDlg.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/VisualBasic/Examples/FullDemo/My Project/Settings.settings" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/VisualBasic/Examples/FullDemo/SelectSourceByName.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/VisualBasic/Examples/FullDemo/SourcePropertiesDlg.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/VisualBasic/Examples/FullDemo/UpgradeLog.htm" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/VisualBasic/Examples/FullDemo/VB_FullDemo.resx" />
     <Text Include="../../thirdparty/owemdjee/twain_library/demos/VisualBasic/Examples/FullDemo/app.config" />
-    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java/JNI_Source/classes/com/dynarithmic/jnicode/readme_first.txt" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/c/AdvancedBufferedAcquire/AdvancedBufferedAcquire.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/c/AutomaticFileNaming/AutomaticFileNaming.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/c/BasicTwainInfo/BasicTwainInfo.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/c/CustomizeSelectSourceDialog/CustomizeSelectSourceDialog.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/c/DuplexScanningDemo/DuplexScanningDemo.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/c/GetSetCapabilities/GetSetCapabilities.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/c/GetSetSupportedColorTypes/GetSetSupportedColorTypes.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/c/GetXYResolutionValues/GetXYResolutionValues.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/c/ManualDuplexScanningDemo/ManualDuplexScanningDemo.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/c/MultipageFileFromSinglePageDevice/MultipageFileFromSinglePageDevice.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/c/RemoveBlankPages/RemoveBlankPages.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/c/ShowCustomDataSourceData/ShowCustomDataSourceData.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/c/SimpleConsole/SimpleConsole.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/c/SimpleFileAcquireMultiPage/SimpleFileAcquireMultiPage.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/c/SimpleFileAcquireToBMP/SimpleFileAcquireToBMP.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/c/SimpleFileAcquireToBMPErrorHandling/SimpleFileAcquireToBMPErrorHandling.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/c/SimpleFileAcquireToBMPNoUserInterface/SimpleFileAcquireToBMPNoUserInterface.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/c/SimpleFileAcquireToTIFFLZW/SimpleFileAcquireToTIFFLZW.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/c/SimpleNativeAcquire/SimpleNativeAcquire.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/c/SimpleSavePDF/SimpleSavePDF.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/c/TwainCallbackDemo/TwainCallbackDemo.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/c/TwainCapListing/TwainCapListing.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/c/TwainLoggingDemo/TwainLoggingDemo.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/c/dtwdemo/DTWDEMO.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/cpp/TestImageFileCreation/TestImageFileCreation.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/AdvancedBufferedAcquire/AdvancedBufferedAcquire.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/AdvancedBufferedAcquire/test.bin" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/AutoFileNamingDemo/AutoFileNamingDemo.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/BasicTwainInfo/BasicTwainInfo.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/ChooseTWAINVersion2DSM/ChooseTWAINVersion2DSM.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/CustomizeSelectSourceDialog/CustomizeSelectSourceDialog.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/DiscardBlankPagesDemo/DiscardBlankPagesDemo.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/DuplexScanningDemo/DuplexScanningDemo.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/GetAllColorTypesAndBitDepths/GetAllColorTypesAndBitDepths.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/GetSetCapabilities/GetSetCapabilities.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/GetXYResolutionValues/GetXYResolutionValues.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/ManualDuplexScanningDemo/ManualDuplexScanningDemo.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/PDFAddTextDemo/PDFAddTextDemo.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/PDFDemo/PDFDemo.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/SimpleFileAcquireMultiPage/SimpleFileAcquireMultiPage.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/SimpleFileAcquireToBMP/SimpleFileAcquireToBMP.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/SimpleFileAcquireToBMPErrorHandling/SimpleFileAcquireToBMPErrorHandling.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/SimpleFileAcquireToBMPNoUserInterface/SimpleFileAcquireToBMPNoUserInterface.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/SimpleFileAcquireToTIFFLZW/SimpleFileAcquireToTIFFLZW.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/SimpleNativeAcquire/SimpleNativeAcquire.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/SinglePageDeviceToMultiPageDemo/SinglePageDeviceToMultiPageDemo.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/TwainCallbackDemo/TwainCallbackDemo.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/TwainCapListing/TwainCapListing.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/TwainLoggingDemo/TwainLoggingDemo.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper/WaitForFeederLoaded/WaitForFeederLoaded.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/cpp_wrapper_lib/cpp_wrapper_lib.vcxproj.user" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/AboutDlg.Designer.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/AboutDlg.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/AboutDlg.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/CustomSelectSource.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/CustomSelectSource.designer.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/CustomSelectSource.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/DIBDisplayerDlg.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/DIBDisplayerDlg.designer.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/DIBDisplayerDlg.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/DTWAIN32U.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/DTwainDemo.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/DTwainDemo.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/FileTypeDlg.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/FileTypeDlg.designer.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/FileTypeDlg.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/LogFileSelectionDlg.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/LogFileSelectionDlg.designer.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/LogFileSelectionDlg.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/Properties/AssemblyInfo.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/Properties/Resources.Designer.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/Properties/Resources.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/Properties/Settings.Designer.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/Properties/Settings.settings" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/SelectSourceByName.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/SelectSourceByName.designer.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/SelectSourceByName.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/SourcePropertiesDlg.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/SourcePropertiesDlg.designer.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/Examples/FullDemo/SourcePropertiesDlg.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/dtwain32.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/dtwain32d.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/dtwain32u.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/dtwain32ud.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/dtwain64.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/dtwain64d.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/dtwain64u.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/demos/csharp/dtwain64ud.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Delphi/Examples/SimpleAcquire/SimpleAcquire.dpr" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Delphi/Examples/SimpleAcquire/SimpleAcquire.res" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Delphi/Examples/SimpleAcquire/dtwain32u.pas" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Delphi/Examples/SimpleAcquire/dtwexam1.pas" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Delphi/dtwain32.pas" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Delphi/dtwain32d.pas" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Delphi/dtwain32u.pas" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Delphi/dtwain32ud.pas" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Delphi/dtwain64.pas" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Delphi/dtwain64d.pas" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Delphi/dtwain64u.pas" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Delphi/dtwain64ud.pas" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/dtwainapi.jar" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dtwain/test/DTwainJavaCapDemo.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dtwain/test/DTwainJavaCapListing.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dtwain/test/SimpleAcquire.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dtwain/test/displaydialogs/GetSourceNameDialog.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dtwain/test/displaydialogs/ImageDisplayDialog.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dtwain/test/displaydialogs/SourcePropertiesDialog.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dtwain/test/fulldemo/DTwainDemoImageListener.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dtwain/test/fulldemo/DTwainFullDemo.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dtwain/test/fulldemo/DTwainImageDisplayDialog.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dtwain/test/fulldemo/DTwainSelectSourceByNameDialog.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dtwain/test/fulldemo/DTwainSelectSourceCustomDialog.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dtwain/test/fulldemo/DTwainSourcePropertiesDialog.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainAcquireArea.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainAcquireParams.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainAcquireType.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainAcquirer.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainAcquisitionArray.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainAcquisitionData.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainAppInfo.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainBufferedStripInfo.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainBufferedTransferData.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainCapabilityHandler.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainCompressedTransfer.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainCompressionType.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainException.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainFileType.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainFrame.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainImageData.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainImageDataLengthException.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainImageInfo.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainInitException.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainInvalidImageDataException.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainJavaAPI.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainJavaAPIConstants.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainJavaAPIException.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainLogger.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainMessageListener.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainOCRInfo.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainPDFOptions.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainPaperSize.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainPixelType.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainRangeDouble.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainRangeInt.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainResourceContainer.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainResources_de.properties" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainResources_en.properties" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainResources_en_US.properties" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainResources_es.properties" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainResources_fr.properties" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainResources_it.properties" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainResources_nl.properties" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainRuntimeException.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainSelectSourceComponent.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainSessionInitException.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainShowUIType.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainSource.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainSourceInfo.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainSourceSelector.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainVersionInfo.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/DTwainWrongThreadException.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/DTwainJava/src/com/dynarithmic/twain/dynarithmic_twain.ucls" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JNI/x32/dtwainjni32.dll" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JNI/x32/dtwainjni32u.dll" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JNI/x64/dtwainjni64.dll" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JNI/x64/dtwainjni64u.dll" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JNI_Source/classes/com/dynarithmic/jnicode/PropertySheet.props" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JNI_Source/classes/com/dynarithmic/jnicode/readme_first.txt" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JavaDemo/TestDTWAIN/src/com/dtwain/test/DTwainJavaCapDemo.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JavaDemo/TestDTWAIN/src/com/dtwain/test/DTwainJavaCapListing.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JavaDemo/TestDTWAIN/src/com/dtwain/test/SimpleAcquire.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JavaDemo/TestDTWAIN/src/com/dtwain/test/displaydialogs/GetSourceNameDialog.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JavaDemo/TestDTWAIN/src/com/dtwain/test/displaydialogs/ImageDisplayDialog.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JavaDemo/TestDTWAIN/src/com/dtwain/test/displaydialogs/SourcePropertiesDialog.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JavaDemo/TestDTWAIN/src/com/dtwain/test/fulldemo/DTwainDemoFrame.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JavaDemo/TestDTWAIN/src/com/dtwain/test/fulldemo/DTwainDemoImageListener.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JavaDemo/TestDTWAIN/src/com/dtwain/test/fulldemo/DTwainImageDisplayDialog.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JavaDemo/TestDTWAIN/src/com/dtwain/test/fulldemo/DTwainSelectSourceByNameDialog.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JavaDemo/TestDTWAIN/src/com/dtwain/test/fulldemo/DTwainSelectSourceCustomDialog.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/JavaDemo/TestDTWAIN/src/com/dtwain/test/fulldemo/DTwainSourcePropertiesDialog.java" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/image_3rdparty_jars/clibwrapper_jiio.jar" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/image_3rdparty_jars/jai_codec.jar" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/image_3rdparty_jars/jai_core.jar" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/image_3rdparty_jars/jai_imageio.jar" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/image_3rdparty_jars/jai_windows-i586.jar" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/image_3rdparty_jars/mlibwrapper_jai.jar" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Java legacy only/readme.txt" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Perl/dtwain32.pl" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Perl/dtwain32d.pl" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Perl/dtwain32u.pl" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Perl/dtwain32ud.pl" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Perl/dtwain64.pl" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Perl/dtwain64d.pl" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Perl/dtwain64u.pl" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Perl/dtwain64ud.pl" />
     <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/Python/dtwain.py" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/VisualBasic/Examples/FullDemo/AboutDlg.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/VisualBasic/Examples/FullDemo/CustomSelectSource.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/VisualBasic/Examples/FullDemo/DibDisplayerDlg.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/VisualBasic/Examples/FullDemo/DibDisplayerDlg2.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/VisualBasic/Examples/FullDemo/FileTypeDlg.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/VisualBasic/Examples/FullDemo/LogFileSelectionDlg.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/VisualBasic/Examples/FullDemo/My Project/Settings.settings" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/VisualBasic/Examples/FullDemo/SelectSourceByName.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/VisualBasic/Examples/FullDemo/SourcePropertiesDlg.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/VisualBasic/Examples/FullDemo/UpgradeLog.htm" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/VisualBasic/Examples/FullDemo/VB_FullDemo.resx" />
     <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/VisualBasic/Examples/FullDemo/app.config" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/AboutDlg.Designer.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/AboutDlg.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/AboutDlg.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/CustomSelectSource.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/CustomSelectSource.designer.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/CustomSelectSource.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/DIBDisplayerDlg.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/DIBDisplayerDlg.designer.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/DIBDisplayerDlg.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/DTWAIN32U.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/DTwainDemo.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/DTwainDemo.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/FileTypeDlg.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/FileTypeDlg.designer.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/FileTypeDlg.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/LogFileSelectionDlg.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/LogFileSelectionDlg.designer.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/LogFileSelectionDlg.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/Properties/AssemblyInfo.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/Properties/Resources.Designer.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/Properties/Resources.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/Properties/Settings.Designer.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/Properties/Settings.settings" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/SelectSourceByName.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/SelectSourceByName.designer.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/SelectSourceByName.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/SourcePropertiesDlg.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/SourcePropertiesDlg.designer.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/SourcePropertiesDlg.resx" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/Examples/FullDemo/app.config" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/dtwain32.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/dtwain32d.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/dtwain32u.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/dtwain32ud.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/dtwain64.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/dtwain64d.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/dtwain64u.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/language_bindings_and_examples/csharp/dtwain64ud.cs" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/text_resources/dtwain32.ini" />
+    <Text Include="../../thirdparty/owemdjee/twain_library/text_resources/dtwain64.ini" />
     <Text Include="../../thirdparty/owemdjee/twain_library/text_resources/twaininfo.txt" />
     <Text Include="../../thirdparty/owemdjee/twain_library/text_resources/twainlanguage.txt" />
     <Text Include="../../thirdparty/owemdjee/twain_library/text_resources/twainresourcestrings_dutch.txt" />

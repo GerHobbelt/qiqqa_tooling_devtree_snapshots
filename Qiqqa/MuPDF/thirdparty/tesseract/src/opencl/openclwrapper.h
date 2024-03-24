@@ -11,9 +11,9 @@
 #ifndef TESSERACT_OPENCL_OPENCLWRAPPER_H_
 #define TESSERACT_OPENCL_OPENCLWRAPPER_H_
 
-#include <allheaders.h>
+#include <leptonica/allheaders.h>
 #include <cstdio>
-#include "pix.h"
+#include <leptonica/pix.h>
 #include "tprintf.h"
 
 // including CL/cl.h doesn't occur until USE_OPENCL defined below
@@ -79,7 +79,7 @@ typedef int (*cl_kernel_function)(void **userdata, KernelEnv *kenv);
 
 #  define CHECK_OPENCL(status, name)                                     \
     if (status != CL_SUCCESS) {                                          \
-      tprintf("ERROR: OpenCL error code is {} at   when {} .\n", status, name); \
+      tprintError("OpenCL error code is {} at   when {} .\n", status, name); \
     }
 
 struct GPUEnv {

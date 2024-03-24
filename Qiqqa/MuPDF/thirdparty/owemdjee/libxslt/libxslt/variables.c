@@ -757,26 +757,18 @@ xsltAddStackElem(xsltTransformContextPtr ctxt, xsltStackElemPtr elem)
 	return(-1);
 
     do {
-	if (ctxt->varsMax == 0) {
-	    ctxt->varsMax = 10;
-	    ctxt->varsTab =
-		(xsltStackElemPtr *) xmlMalloc(ctxt->varsMax *
-		sizeof(ctxt->varsTab[0]));
-	    if (ctxt->varsTab == NULL) {
-		xmlGenericError(xmlGenericErrorContext, "malloc failed !\n");
-		return (-1);
-	    }
-	}
 	if (ctxt->varsNr >= ctxt->varsMax) {
-	    ctxt->varsMax *= 2;
-	    ctxt->varsTab =
-		(xsltStackElemPtr *) xmlRealloc(ctxt->varsTab,
-		ctxt->varsMax *
-		sizeof(ctxt->varsTab[0]));
-	    if (ctxt->varsTab == NULL) {
-		xmlGenericError(xmlGenericErrorContext, "realloc failed !\n");
-		return (-1);
-	    }
+            xsltStackElemPtr *tmp;
+            int newMax = ctxt->varsMax == 0 ? 10 : 2 * ctxt->varsMax;
+
+            tmp = (xsltStackElemPtr *) xmlRealloc(ctxt->varsTab,
+                    newMax * sizeof(*tmp));
+            if (tmp == NULL) {
+                xmlGenericError(xmlGenericErrorContext, "realloc failed !\n");
+                return (-1);
+            }
+            ctxt->varsTab = tmp;
+            ctxt->varsMax = newMax;
 	}
 	ctxt->varsTab[ctxt->varsNr++] = elem;
 	ctxt->vars = elem;
@@ -1018,10 +1010,10 @@ xsltEvalVariable(xsltTransformContextPtr ctxt, xsltStackElemPtr variable,
 	    if (result == NULL) {
 		result = xmlXPathNewCString("");
 	    } else {
-		/*
-		* Freeing is not handled there anymore.
-		* QUESTION TODO: What does the above comment mean?
-		*/
+                /*
+                 * This stops older libxml2 versions from freeing the nodes
+                 * in the tree.
+                 */
 	        result->boolval = 0;
 	    }
 #ifdef WITH_XSLT_DEBUG_VARIABLE
@@ -1240,7 +1232,11 @@ xsltEvalGlobalVariable(xsltStackElemPtr elem, xsltTransformContextPtr ctxt)
 	    if (result == NULL) {
 		result = xmlXPathNewCString("");
 	    } else {
-	        result->boolval = 0; /* Freeing is not handled there anymore */
+                /*
+                 * This stops older libxml2 versions from freeing the nodes
+                 * in the tree.
+                 */
+	        result->boolval = 0;
 	    }
 #ifdef WITH_XSLT_DEBUG_VARIABLE
 #ifdef LIBXML_DEBUG_ENABLED
@@ -1318,8 +1314,13 @@ xsltEvalGlobalVariables(xsltTransformContextPtr ctxt) {
 	    if (def == NULL) {
 
 		def = xsltCopyStackElem(elem);
-		xmlHashAddEntry2(ctxt->globalVars,
-				 elem->name, elem->nameURI, def);
+		if (xmlHashAddEntry2(ctxt->globalVars,
+				     elem->name, elem->nameURI, def) < 0) {
+                    xmlGenericError(xmlGenericErrorContext,
+                                    "hash update failed\n");
+                    xsltFreeStackElem(def);
+                    return(-1);
+                }
 	    } else if ((elem->comp != NULL) &&
 		       (elem->comp->type == XSLT_FUNC_VARIABLE)) {
 		/*
@@ -1877,7 +1878,10 @@ xsltRegisterVariable(xsltTransformContextPtr ctxt,
 #endif /* else of XSLT_REFACTORED */
 
     variable = xsltBuildVariable(ctxt, (xsltStylePreCompPtr) comp, tree);
-    xsltAddStackElem(ctxt, variable);
+    if (xsltAddStackElem(ctxt, variable) < 0) {
+        xsltFreeStackElem(variable);
+        return(-1);
+    }
     return(0);
 }
 

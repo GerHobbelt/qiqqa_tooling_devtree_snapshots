@@ -141,7 +141,11 @@ def mupdf_version():
     #
     # This also allows us to easily experiment on test.pypi.org.
     #
-    ret = base_version + time.strftime(".%Y%m%d.%H%M")
+    # We have to protect against the time component containing `.0` as this is
+    # prohibited by PEP-440.
+    #
+    tail = time.strftime(".%Y%m%d.%H%M").replace('.0', '.')
+    ret = base_version + tail
     #log(f'Have created version number: {ret}')
     return ret
 
@@ -239,9 +243,8 @@ def sdist():
         b += '0'
     if use_swig:
         b += '2'
-    extra = ' --swig-windows-auto' if windows() else ''
     command = '' if os.getcwd() == root_dir() else f'cd {os.path.relpath(root_dir())} && '
-    command += f'{sys.executable} ./scripts/mupdfwrap.py{extra} -d {build_dir()} -b "{b}"'
+    command += f'{sys.executable} ./scripts/mupdfwrap.py -d {build_dir()} -b "{b}"'
     log(f'Running: {command}')
     subprocess.check_call(command, shell=True)
     paths += [
@@ -289,7 +292,6 @@ def build():
     command = '' if root_dir() == os.getcwd() else f'cd {os.path.relpath(root_dir())} && '
     command += (
             f'"{sys.executable}" ./scripts/mupdfwrap.py'
-            f'{" --swig-windows-auto" if windows() else ""}'
             f' -d {build_dir()}'
             f' -b {b}'
             )
@@ -307,30 +309,30 @@ def build():
     if windows():
         infix = '' if sys.maxsize == 2**31 - 1 else '64'
         names = [
-                f'mupdfcpp{infix}.dll', # C and C++.
-                '_mupdf.pyd',           # Python internals.
-                'mupdf.py',             # Python.
+                f'{build_dir()}/mupdfcpp{infix}.dll',   # C and C++.
+                f'{build_dir()}/_mupdf.pyd',            # Python internals.
+                f'{build_dir()}/mupdf.py',              # Python.
                 ]
     elif macos():
         log( f'Contents of {build_dir()} are:')
         for leaf in os.listdir(build_dir()):
             log( f'    {leaf}')
         names = [
-                'libmupdf.dylib',   # C.
-                'libmupdfcpp.so',   # C++.
-                '_mupdf.so',        # Python internals.
-                'mupdf.py',         # Python.
+                f'{build_dir()}/libmupdf.dylib',    # C.
+                f'{build_dir()}/libmupdfcpp.so',    # C++.
+                f'{build_dir()}/_mupdf.so',         # Python internals.
+                f'{build_dir()}/mupdf.py',          # Python.
                 ]
     else:
         names = [
-                'libmupdf.so',      # C.
-                'libmupdfcpp.so',   # C++.
-                '_mupdf.so',        # Python internals.
-                'mupdf.py',         # Python.
+                pipcl.get_soname(f'{build_dir()}/libmupdf.so'),     # C.
+                pipcl.get_soname(f'{build_dir()}/libmupdfcpp.so'),  # C++.
+                f'{build_dir()}/_mupdf.so',                         # Python internals.
+                f'{build_dir()}/mupdf.py',                          # Python.
                 ]
     paths = []
     for name in names:
-        paths.append((f'{build_dir()}/{name}', name))
+        paths.append((name, ''))
 
     log(f'build(): returning: {paths}')
     return paths
@@ -449,13 +451,16 @@ https://mupdf.com/r/C-and-Python-APIs
 
 """
 
+with open(f'{root_dir()}/COPYING') as f:
+    license = f.read()
+
 mupdf_package = pipcl.Package(
         name = 'mupdf',
         version = mupdf_version(),
         root = root_dir(),
         summary = 'Python bindings for MuPDF library.',
         description = description,
-        classifiers = [
+        classifier = [
                 'Development Status :: 4 - Beta',
                 'Intended Audience :: Developers',
                 'License :: OSI Approved :: GNU Affero General Public License v3',
@@ -463,13 +468,15 @@ mupdf_package = pipcl.Package(
                 ],
         author = 'Artifex Software, Inc.',
         author_email = 'support@artifex.com',
-        url_docs = 'https://mupdf.com/r/C-and-Python-APIs',
-        url_home = 'https://mupdf.com/',
-        url_source = 'https://git.ghostscript.com/?p=mupdf.git',
-        url_tracker = 'https://bugs.ghostscript.com/',
+        home_page = 'https://mupdf.com/',
+        project_url = [
+            ('Documentation, https://mupdf.com/r/C-and-Python-APIs/'),
+            ('Source, https://git.ghostscript.com/?p=mupdf.git'),
+            ('Tracker, https://bugs.ghostscript.com/'),
+            ],
         keywords = 'PDF',
         platform = None,
-        license_files = ['COPYING'],
+        license = license,
         fn_build = build,
         fn_clean = clean,
         fn_sdist = sdist,

@@ -17,6 +17,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <Text Include="../../thirdparty/owemdjee/ipa-dict/LICENSE">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/ipa-dict/README.md">
       <Filter>Misc Files</Filter>
     </Text>
@@ -72,6 +75,9 @@
       <Filter>Misc Files\data</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/ipa-dict/data/nb.txt">
+      <Filter>Misc Files\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/ipa-dict/data/nl.txt">
       <Filter>Misc Files\data</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/ipa-dict/data/or.txt">

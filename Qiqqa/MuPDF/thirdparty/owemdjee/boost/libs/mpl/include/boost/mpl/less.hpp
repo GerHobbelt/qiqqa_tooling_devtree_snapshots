@@ -14,6 +14,9 @@
 // $Date$
 // $Revision$
 
+#undef  AUX778076_OP_NAME 
+#undef  AUX778076_OP_TOKEN 
+
 #define AUX778076_OP_NAME less
 #define AUX778076_OP_TOKEN <
 #include <boost/mpl/aux_/comparison_op.hpp>

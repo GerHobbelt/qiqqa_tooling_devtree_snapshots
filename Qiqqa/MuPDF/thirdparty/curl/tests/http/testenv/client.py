@@ -45,10 +45,12 @@ log = logging.getLogger(__name__)
 class LocalClient:
 
     def __init__(self, name: str, env: Env, run_dir: Optional[str] = None,
-                 timeout: Optional[float] = None):
+                 timeout: Optional[float] = None,
+                 run_env: Optional[Dict[str,str]] = None):
         self.name = name
         self.path = os.path.join(env.project_dir, f'tests/http/clients/{name}')
         self.env = env
+        self._run_env= run_env
         self._timeout = timeout if timeout else env.test_timeout
         self._curl = os.environ['CURL'] if 'CURL' in os.environ else env.curl
         self._run_dir = run_dir if run_dir else os.path.join(env.gen_dir, name)
@@ -60,6 +62,10 @@ class LocalClient:
     @property
     def run_dir(self) -> str:
         return self._run_dir
+
+    @property
+    def stderr_file(self) -> str:
+        return self._stderrfile
 
     def exists(self) -> bool:
         return os.path.exists(self.path)
@@ -91,7 +97,7 @@ class LocalClient:
                 with open(self._stderrfile, 'w') as cerr:
                     p = subprocess.run(myargs, stderr=cerr, stdout=cout,
                                        cwd=self._run_dir, shell=False,
-                                       input=None,
+                                       input=None, env=self._run_env,
                                        timeout=self._timeout)
                     exitcode = p.returncode
         except subprocess.TimeoutExpired:
@@ -103,3 +109,12 @@ class LocalClient:
         return ExecResult(args=myargs, exit_code=exitcode, exception=exception,
                           stdout=coutput, stderr=cerrput,
                           duration=datetime.now() - start)
+
+    def dump_logs(self):
+        lines = []
+        lines.append('>>--stdout ----------------------------------------------\n')
+        lines.extend(open(self._stdoutfile).readlines())
+        lines.append('>>--stderr ----------------------------------------------\n')
+        lines.extend(open(self._stderrfile).readlines())
+        lines.append('<<-------------------------------------------------------\n')
+        return ''.join(lines)

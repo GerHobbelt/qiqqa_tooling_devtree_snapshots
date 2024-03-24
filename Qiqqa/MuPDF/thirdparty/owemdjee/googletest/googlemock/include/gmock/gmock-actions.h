@@ -135,6 +135,7 @@
 #endif
 
 #include <algorithm>
+#include <exception>
 #include <functional>
 #include <memory>
 #include <string>
@@ -175,9 +176,15 @@ struct BuiltInDefaultValueGetter<T, false> {
   static T Get() {
     Assert(false, __FILE__, __LINE__,
            "Default action undefined for the function return type.");
-    return internal::Invalid<T>();
+#if defined(__GNUC__) || defined(__clang__)
+    __builtin_unreachable();
+#elif defined(_MSC_VER)
+    __assume(0);
+#else
+    return Invalid<T>();
     // The above statement will never be reached, but is required in
     // order for this function to compile.
+#endif
   }
 };
 
@@ -611,7 +618,7 @@ class DefaultValue {
  private:
   class ValueProducer {
    public:
-    virtual ~ValueProducer() {}
+    virtual ~ValueProducer() = default;
     virtual T Produce() = 0;
   };
 
@@ -699,8 +706,8 @@ class ActionInterface {
   typedef typename internal::Function<F>::Result Result;
   typedef typename internal::Function<F>::ArgumentTuple ArgumentTuple;
 
-  ActionInterface() {}
-  virtual ~ActionInterface() {}
+  ActionInterface() = default;
+  virtual ~ActionInterface() = default;
 
   // Performs the action.  This method is not const, as in general an
   // action can have side effects and be stateful.  For example, a
@@ -749,7 +756,7 @@ class Action<R(Args...)> {
 
   // Constructs a null Action.  Needed for storing Action objects in
   // STL containers.
-  Action() {}
+  Action() = default;
 
   // Construct an Action from a specified callable.
   // This cannot take std::function directly, because then Action would not be
@@ -1740,6 +1747,13 @@ struct ThrowAction {
     return [copy](Args...) -> R { throw copy; };
   }
 };
+struct RethrowAction {
+  std::exception_ptr exception;
+  template <typename R, typename... Args>
+  operator Action<R(Args...)>() const {  // NOLINT
+    return [ex = exception](Args...) -> R { std::rethrow_exception(ex); };
+  }
+};
 #endif  // GTEST_HAS_EXCEPTIONS
 
 }  // namespace internal
@@ -2056,12 +2070,22 @@ internal::ReturnPointeeAction<Ptr> ReturnPointee(Ptr pointer) {
   return {pointer};
 }
 
-// Action Throw(exception) can be used in a mock function of any type
-// to throw the given exception.  Any copyable value can be thrown.
 #if GTEST_HAS_EXCEPTIONS
+// Action Throw(exception) can be used in a mock function of any type
+// to throw the given exception.  Any copyable value can be thrown,
+// except for std::exception_ptr, which is likely a mistake if
+// thrown directly.
 template <typename T>
-internal::ThrowAction<typename std::decay<T>::type> Throw(T&& exception) {
+typename std::enable_if<
+    !std::is_base_of<std::exception_ptr, typename std::decay<T>::type>::value,
+    internal::ThrowAction<typename std::decay<T>::type>>::type
+Throw(T&& exception) {
   return {std::forward<T>(exception)};
+}
+// Action Rethrow(exception_ptr) can be used in a mock function of any type
+// to rethrow any exception_ptr. Note that the same object is thrown each time.
+inline internal::RethrowAction Rethrow(std::exception_ptr exception) {
+  return {std::move(exception)};
 }
 #endif  // GTEST_HAS_EXCEPTIONS
 

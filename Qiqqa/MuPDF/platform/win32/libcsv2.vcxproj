@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCSV2;CSV2_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCSV2;CSV2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libcsv2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCSV2;CSV2_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libcsv2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCSV2;CSV2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCSV2;CSV2_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCSV2;CSV2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libcsv2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libcsv2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCSV2;CSV2_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCSV2;CSV2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libcsv2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCSV2;CSV2_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libcsv2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCSV2;CSV2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCSV2;CSV2_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCSV2;CSV2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libcsv2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libcsv2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCSV2;CSV2_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCSV2;CSV2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libcsv2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCSV2;CSV2_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libcsv2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCSV2;CSV2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCSV2;CSV2_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCSV2;CSV2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libcsv2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libcsv2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCSV2;CSV2_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCSV2;CSV2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libcsv2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCSV2;CSV2_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libcsv2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCSV2;CSV2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCSV2;CSV2_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCSV2;CSV2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libcsv2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libcsv2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -231,41 +231,22 @@
     <ClCompile Include="../../thirdparty/owemdjee/libcsv2/benchmark/benchmain.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libcsv2/benchmark/csv-game/csv_count.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libcsv2/benchmark/csv-game/fieldcount.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/libcsv2/test/main.cpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libcsv2/include/csv2/mio.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libcsv2/include/csv2/parameters.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libcsv2/include/csv2/reader.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libcsv2/include/csv2/writer.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/libcsv2/include/monolithic_examples.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libcsv2/single_include/csv2/csv2.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/libcsv2/test/doctest.hpp" />
     <Image Include="../../thirdparty/owemdjee/libcsv2/img/logo.png" />
     <Text Include="../../thirdparty/owemdjee/libcsv2/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libcsv2/CONTRIBUTING.md" />
+    <Text Include="../../thirdparty/owemdjee/libcsv2/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/libcsv2/README.md" />
     <Text Include="../../thirdparty/owemdjee/libcsv2/benchmark/csv-game/README.md" />
+    <Text Include="../../thirdparty/owemdjee/libcsv2/clang-format.bash" />
     <Text Include="../../thirdparty/owemdjee/libcsv2/csv2.pc.in" />
     <Text Include="../../thirdparty/owemdjee/libcsv2/csv2Config.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/libcsv2/single_include.json" />
-    <Text Include="../../thirdparty/owemdjee/libcsv2/test/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/libcsv2/test/inputs/empty.csv" />
-    <Text Include="../../thirdparty/owemdjee/libcsv2/test/inputs/empty_lines.csv" />
-    <Text Include="../../thirdparty/owemdjee/libcsv2/test/inputs/missing_columns.csv" />
-    <Text Include="../../thirdparty/owemdjee/libcsv2/test/inputs/test_01.csv" />
-    <Text Include="../../thirdparty/owemdjee/libcsv2/test/inputs/test_02.csv" />
-    <Text Include="../../thirdparty/owemdjee/libcsv2/test/inputs/test_03.csv" />
-    <Text Include="../../thirdparty/owemdjee/libcsv2/test/inputs/test_04.csv" />
-    <Text Include="../../thirdparty/owemdjee/libcsv2/test/inputs/test_05.csv" />
-    <Text Include="../../thirdparty/owemdjee/libcsv2/test/inputs/test_06.csv" />
-    <Text Include="../../thirdparty/owemdjee/libcsv2/test/inputs/test_07.csv" />
-    <Text Include="../../thirdparty/owemdjee/libcsv2/test/inputs/test_08.csv" />
-    <Text Include="../../thirdparty/owemdjee/libcsv2/test/inputs/test_09.csv" />
-    <Text Include="../../thirdparty/owemdjee/libcsv2/test/inputs/test_10.csv" />
-    <Text Include="../../thirdparty/owemdjee/libcsv2/test/inputs/test_11_excel.csv" />
-    <Text Include="../../thirdparty/owemdjee/libcsv2/test/inputs/test_12_unix.csv" />
-    <Text Include="../../thirdparty/owemdjee/libcsv2/test/inputs/test_13.csv" />
-    <Text Include="../../thirdparty/owemdjee/libcsv2/test/inputs/test_14.csv" />
-    <Text Include="../../thirdparty/owemdjee/libcsv2/test/inputs/test_15.csv" />
-    <Text Include="../../thirdparty/owemdjee/libcsv2/test/inputs/too_many_columns.csv" />
     <Text Include="../../thirdparty/owemdjee/libcsv2/utils/amalgamate/CHANGES.md" />
     <Text Include="../../thirdparty/owemdjee/libcsv2/utils/amalgamate/LICENSE.md" />
     <Text Include="../../thirdparty/owemdjee/libcsv2/utils/amalgamate/README.md" />

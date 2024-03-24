@@ -139,6 +139,12 @@
     <ProjectReference Include="..\..\..\thirdparty\DirScanner\NTFS Find hardlinks or regular files\NTFS Find hardlinks or regular files.vcxproj">
       <Project>{ec989955-8ccb-49b4-891f-8761cf6e2560}</Project>
     </ProjectReference>
+    <ProjectReference Include="base58x_test.vcxproj">
+      <Project>{ace48c47-b9f9-460f-8535-08c8d37d78c5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="bbe.vcxproj">
+      <Project>{00811970-815b-4f64-bc9d-21907833ac56}</Project>
+    </ProjectReference>
     <ProjectReference Include="bibutils.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff55313e}</Project>
     </ProjectReference>
@@ -151,8 +157,17 @@
     <ProjectReference Include="bulktest.vcxproj">
       <Project>{8156c20c-dd56-4200-b4a6-40c056eb0a45}</Project>
     </ProjectReference>
+    <ProjectReference Include="clipp_demos.vcxproj">
+      <Project>{00112979-815b-4f64-bc9d-219078aad35a}</Project>
+    </ProjectReference>
     <ProjectReference Include="curl.vcxproj">
       <Project>{00111979-815b-4f64-bc9d-219078b1f3aa}</Project>
+    </ProjectReference>
+    <ProjectReference Include="gflags.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff634baa}</Project>
+    </ProjectReference>
+    <ProjectReference Include="glfw_tests.vcxproj">
+      <Project>{a8fee663-05f1-4f2c-a80a-38a0a2e75e94}</Project>
     </ProjectReference>
     <ProjectReference Include="glob.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff17062e}</Project>
@@ -163,14 +178,56 @@
     <ProjectReference Include="jpeginfo.vcxproj">
       <Project>{e74f29fa-f143-4adc-b92c-6af1a8e4a417}</Project>
     </ProjectReference>
+    <ProjectReference Include="leptonica_tools.vcxproj">
+      <Project>{ca0bda38-89b9-4703-a77d-8049acf23056}</Project>
+    </ProjectReference>
     <ProjectReference Include="libarchive.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff18377f}</Project>
     </ProjectReference>
     <ProjectReference Include="libarchive_tools.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ffd03c63}</Project>
     </ProjectReference>
+    <ProjectReference Include="libargparse.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffaece6d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libassert.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518fffea6c7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libassert_tests.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffab2cb1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libbase58x.vcxproj">
+      <Project>{0501bedf-3191-46a9-9997-288466675b82}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libbf.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff45d7d4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libbf_tests.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffd7494b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libbhtsne--Barnes-Hut-t-SNE.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff622d18}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libbitsery.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff0cc246}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libcpp-terminal.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff2367fa}</Project>
+    </ProjectReference>
     <ProjectReference Include="libcpr.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff55f506}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libcpuinfo.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff24f32d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libdebugbreak.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff0f0f12}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libdelegate.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff239b91}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libdiagnostics.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffa3e936}</Project>
     </ProjectReference>
     <ProjectReference Include="libdlfcn-win32-test-dladdr.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff2ce62c}</Project>
@@ -180,6 +237,84 @@
     </ProjectReference>
     <ProjectReference Include="libdlfcn-win32.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ffcfa3c0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libeternaltimestamp.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-751811b1257e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libexpat.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff83ffca}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libexprtk.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff276c46}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libfile.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff7340da}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libfilesystem.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff38a587}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libfmt.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffaf3a53}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libgcem.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffa791d0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libgetopt.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518110e57b1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libgetopt_tests.vcxproj">
+      <Project>{d2000b45-3ffc-43ed-a536-4d32ca239e6c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libgflags.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffc19ff8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libgibbs-lda.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff43a863}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libglfw.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff878bbf}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libgumbo-parser.vcxproj">
+      <Project>{5edcf4fd-0291-4fb9-8d96-358957ca5e3c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libgumbo-parser_examples.vcxproj">
+      <Project>{f69bff26-21a8-4a22-bc20-888f1e3a1979}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libgumbo-parser_tests.vcxproj">
+      <Project>{2874baac-7e03-4db4-b541-39ffec4a609d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libgumbo-query.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff51b60c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libhog.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff129e7a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libimagedistance.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff992f89}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libjpeg_default_handlers.vcxproj">
+      <Project>{5f615f91-dff8-4f05-bf48-1222b72071a8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libmuhelpers.vcxproj">
+      <Project>{fa8ade21-fc8a-47e0-87e4-dce88099485a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libmujs.vcxproj">
+      <Project>{5edcf4fd-0291-4fb9-8d96-858957ca5e3c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libmupdf.vcxproj">
+      <Project>{5f615f91-dff8-4f05-bf48-6222b7d86519}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libmupdf_default_handlers.vcxproj">
+      <Project>{5f615f91-dff8-4f05-bf48-1222b7d86519}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libnanosvg.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-751bff971987}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libparameters.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffba076f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libplf_nanotimer.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffe7ea82}</Project>
     </ProjectReference>
     <ProjectReference Include="libpthread-win32-EH.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff8df242}</Project>
@@ -193,14 +328,80 @@
     <ProjectReference Include="libpthread-win32.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff8df2c2}</Project>
     </ProjectReference>
+    <ProjectReference Include="libQuickJS-C++-Wrapper.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff361594}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libQuickJS-C++-Wrapper2.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff9f13e5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libQuickJS.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff0e57ba}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libQuickJS_examples.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff0e57b3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libre2.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff49f979}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libspdlog.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff35655c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libspdlog_tests.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8979-7518ff356959}</Project>
+    </ProjectReference>
     <ProjectReference Include="libtag.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff2daf08}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libtinyexpr.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff33b1b5}</Project>
     </ProjectReference>
     <ProjectReference Include="libtvision.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff5340c1}</Project>
     </ProjectReference>
     <ProjectReference Include="libtvision_tests.vcxproj">
       <Project>{a60d8644-5a16-4d29-8970-7518ff5340c1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libu8_to_std_string.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff2c2ae5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libuint128.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffb1257e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libuint128_tests.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff209ad8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libutfcpp.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff0eba51}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libwarc_tests.vcxproj">
+      <Project>{aec2eb6b-714c-4646-978a-4c14866b11b2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libwcwidth9.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff781edb}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libxml-pugixml.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffa5edbe}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libxml2.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffa57a44}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libxsimd.vcxproj">
+      <Project>{45d2c855-d670-463c-bab2-1c9d012e3f7b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libxslt.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffce99e8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libyaml-examples.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff4a52ca}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libyaml-tests.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffcfd499}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libyaml.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffcfd7a9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="lib_nas_lockfile.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff0a15c6}</Project>
     </ProjectReference>
     <ProjectReference Include="linenoise.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ffac1208}</Project>
@@ -226,11 +427,23 @@
     <ProjectReference Include="muraster.vcxproj">
       <Project>{0fdc74d7-d18c-45ce-94d6-edfcc5a0cdf2}</Project>
     </ProjectReference>
+    <ProjectReference Include="mutest_tess_threadpool_cleanup_at_exit.vcxproj">
+      <Project>{8156c20c-dd56-4200-b4a6-40c056e66d69}</Project>
+    </ProjectReference>
+    <ProjectReference Include="mutest_throw_without_context.vcxproj">
+      <Project>{8156c20c-dd56-4200-b4a6-40c056fa7a8e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="mutest_throw_without_try_catch.vcxproj">
+      <Project>{8156c20c-dd56-4200-b4a6-40c0560223be}</Project>
+    </ProjectReference>
     <ProjectReference Include="mutool.vcxproj">
       <Project>{00811970-815b-4f64-bc9d-219078b1f3aa}</Project>
     </ProjectReference>
     <ProjectReference Include="mutool_ex.vcxproj">
       <Project>{00811970-1151-4f64-bc9d-219078b1f3aa}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nanosvg.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff9719b7}</Project>
     </ProjectReference>
     <ProjectReference Include="png-pmt-tools.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff035e08}</Project>
@@ -241,8 +454,14 @@
     <ProjectReference Include="qjsrepl.vcxproj">
       <Project>{8156c20c-dd56-4200-b4a6-4010561a118e}</Project>
     </ProjectReference>
+    <ProjectReference Include="re2.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff1d72b9}</Project>
+    </ProjectReference>
     <ProjectReference Include="replxx.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518fffe817a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="spdlog_example.vcxproj">
+      <Project>{641bc0f8-5302-4520-9293-21522802dd37}</Project>
     </ProjectReference>
     <ProjectReference Include="splitmerge.vcxproj">
       <Project>{edc7613a-2ce0-428a-a2d8-c98897b693be}</Project>
@@ -253,8 +472,59 @@
     <ProjectReference Include="sync_nas_filelock.vcxproj">
       <Project>{87ee9da4-de1e-4448-8324-183c98f87eaa}</Project>
     </ProjectReference>
+    <ProjectReference Include="tesseract-ambiguous_words.vcxproj">
+      <Project>{56109a0d-2cd3-4ac7-b344-5db0295bc7c9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="tesseract-classifier_tester.vcxproj">
+      <Project>{a303a365-dc1c-4072-92e7-5852cd63d0c0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="tesseract-cn_training.vcxproj">
+      <Project>{02975355-f70e-415b-aef9-acb556c571a4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="tesseract-combine_lang_model.vcxproj">
+      <Project>{b06213ed-7406-4462-9958-e167e418b79f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="tesseract-combine_tessdata.vcxproj">
+      <Project>{429d7e9a-ab02-4d41-84c2-e4feaac14d8f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="tesseract-dawg2wordlist.vcxproj">
+      <Project>{7458ce24-b282-4446-9dc9-a87cdc02fb4e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="tesseract-lstm_eval.vcxproj">
+      <Project>{9bd1770c-a856-4fef-a093-a0d318af6279}</Project>
+    </ProjectReference>
+    <ProjectReference Include="tesseract-lstm_training.vcxproj">
+      <Project>{c3e6b70f-a036-432d-a411-54bbe55f06fb}</Project>
+    </ProjectReference>
+    <ProjectReference Include="tesseract-merge_unicharsets.vcxproj">
+      <Project>{cca9e0a1-7177-4854-9813-78df883ddaa2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="tesseract-mf_training.vcxproj">
+      <Project>{abb45633-d66d-45eb-9e24-e8db6562c621}</Project>
+    </ProjectReference>
+    <ProjectReference Include="tesseract-set_unicharset_properties.vcxproj">
+      <Project>{b9ec2f6e-311b-4995-99d9-942cd43e3c08}</Project>
+    </ProjectReference>
+    <ProjectReference Include="tesseract-shape_clustering.vcxproj">
+      <Project>{03525cc3-c92c-493c-baf0-c60833a1bf7e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="tesseract-text2image.vcxproj">
+      <Project>{cc99dac8-15df-464d-adc9-d5a81a84c21c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="tesseract-unicharset_extractor.vcxproj">
+      <Project>{899deaaa-4bfc-4b85-8a1c-3b3e7e7c8b6e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="tesseract-wordlist2dawg.vcxproj">
+      <Project>{d05636ba-a83a-44ed-9e12-f98f5efb8efa}</Project>
+    </ProjectReference>
     <ProjectReference Include="tesseract.vcxproj">
       <Project>{00115919-815b-4f64-bc9d-219078b1f3aa}</Project>
+    </ProjectReference>
+    <ProjectReference Include="tidyhtml.vcxproj">
+      <Project>{e07c9d34-f333-4547-a16d-28e5fb9c3871}</Project>
+    </ProjectReference>
+    <ProjectReference Include="tre.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffce40d4}</Project>
     </ProjectReference>
     <ProjectReference Include="tvision.vcxproj">
       <Project>{a10d8644-5a1c-4d29-8970-7518ff5340c1}</Project>

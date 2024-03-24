@@ -39,6 +39,9 @@
 #elif defined(__linux__)
 #include <malloc.h>
 #include <unistd.h>
+#elif defined(__FreeBSD__)
+#include <malloc_np.h>
+#include <unistd.h>
 #endif
 
 #include "cutils.h"
@@ -76,6 +79,7 @@ static int eval_buf(JSContext *ctx, const void *buf, int buf_len,
             js_module_set_import_meta(ctx, val, TRUE, TRUE);
             val = JS_EvalFunction(ctx, val);
         }
+        val = js_std_await(ctx, val);
     } else {
         val = JS_Eval(ctx, buf, buf_len, filename, eval_flags);
     }
@@ -89,6 +93,22 @@ static int eval_buf(JSContext *ctx, const void *buf, int buf_len,
     return ret;
 }
 
+static JS_BOOL eval_bytecode_file(JSContext *ctx, const char *filename)
+{
+    uint8_t *buf;
+    size_t buf_len;
+
+    buf = js_load_file(ctx, &buf_len, filename);
+    if (!buf) {
+        perror(filename);
+        return -1;
+    }
+
+    JS_BOOL ret = js_std_dump_binary(ctx, buf, buf_len, filename);
+    qjs_free(ctx, buf);
+	return ret;
+}
+
 static int eval_file(JSContext *ctx, const char *filename, int module)
 {
     uint8_t *buf;
@@ -98,7 +118,7 @@ static int eval_file(JSContext *ctx, const char *filename, int module)
     buf = js_load_file(ctx, &buf_len, filename);
     if (!buf) {
         perror(filename);
-        exit(1);
+        return -1;
     }
 
     if (module < 0) {
@@ -275,6 +295,7 @@ static int help(void)
 #endif
            "-T  --trace        trace memory allocation\n"
            "-d  --dump         dump the memory usage stats\n"
+           "-b  --bytecode     load bytecode from file\n"
            "    --memory-limit n       limit the memory usage to 'n' bytes\n"
            "    --stack-size n         limit the stack size to 'n' bytes\n"
            "    --unhandled-rejection  dump unhandled promise rejections\n"
@@ -315,6 +336,7 @@ int main(int argc, const char** argv)
     int interactive = 0;
     int dump_memory = 0;
     int trace_memory = 0;
+    int load_bytecode = 0;
     int empty_run = 0;
     int module = -1;
     int load_std = 0;
@@ -440,6 +462,11 @@ int main(int argc, const char** argv)
                 empty_run++;
                 continue;
             }
+            if (opt == 'b' || !strcmp(longopt, "bytecode"))
+            {
+                load_bytecode++;
+                continue;
+            }
 			if (opt == 'y') {
 				const char* optarg = "";
 				if (*arg) {
@@ -531,12 +558,12 @@ int main(int argc, const char** argv)
                 "import * as os from 'os';\n"
                 "globalThis.std = std;\n"
                 "globalThis.os = os;\n";
-			if (eval_buf(ctx, str, strlen(str), "<input>", JS_EVAL_TYPE_MODULE))
+			if (eval_buf(ctx, str, strlen(str), "<input>", JS_EVAL_TYPE_MODULE) < 0)
 				goto fail;
 		}
 
         for(i = 0; i < include_count; i++) {
-            if (eval_file(ctx, include_list[i], module))
+            if (eval_file(ctx, include_list[i], module) < 0)
                 goto fail;
         }
 
@@ -547,7 +574,7 @@ int main(int argc, const char** argv)
                 eval_flags = JS_EVAL_TYPE_GLOBAL;
             else
                 eval_flags = JS_EVAL_TYPE_MODULE;
-            if (eval_buf(ctx, expr, buf_len, "<cmdline>", eval_flags))
+            if (eval_buf(ctx, expr, buf_len, "<cmdline>", eval_flags) < 0)
                 goto fail;
         } else
         if (optind >= argc) {
@@ -556,8 +583,13 @@ int main(int argc, const char** argv)
         } else {
             const char *filename;
             filename = argv[optind];
-            if (eval_file(ctx, filename, module))
-                goto fail;
+            if (load_bytecode) {
+                if (eval_bytecode_file(ctx, filename) < 0)
+					goto fail;
+            } else {
+                if (eval_file(ctx, filename, module) < 0)
+                    goto fail;
+            }
         }
         if (interactive) {
             if (js_std_eval_binary(ctx, qjsc_repl, qjsc_repl_size, 0))
@@ -571,6 +603,7 @@ int main(int argc, const char** argv)
         JS_ComputeMemoryUsage(rt, &stats);
         JS_DumpMemoryUsage(&stats, rt);
     }
+	int exit_status = qjs_GetExitStatus(ctx);
     js_std_free_handlers(rt);
     JS_FreeContext(ctx);
     JS_FreeRuntime(rt);
@@ -601,7 +634,7 @@ int main(int argc, const char** argv)
     }
 
 	JS_Finalize();
-	return EXIT_SUCCESS;
+	return exit_status;
 
  fail:
     js_std_free_handlers(rt);

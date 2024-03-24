@@ -173,6 +173,10 @@ private:
   // Displays the column edges at each grid y coordinate defined by
   // best_columns_.
   void DisplayColumnBounds(PartSetVector *sets);
+  
+  void DisplayColumnBounds2(PartSetVector *sets);
+
+  void DisplayColumnBounds3(PartSetVector *sets);
 
   ////// Functions involved in determining the columns used on the page. /////
 
@@ -346,11 +350,8 @@ private:
 
 #if !GRAPHICS_DISABLED
   // Various debug windows that automatically go away on completion.
-  ScrollView *input_blobs_win_ = nullptr;
-
-  // Allow a subsequent instance to reuse the blocks window.
-  // Not thread-safe, but multiple threads shouldn't be using windows anyway.
-  static ScrollView *blocks_win_;
+  ScrollViewReference input_blobs_win_;
+  ScrollViewReference blocks_win_;
 #endif
 };
 

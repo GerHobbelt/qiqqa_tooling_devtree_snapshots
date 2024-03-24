@@ -17,7 +17,7 @@ Steps:
   
 - go to `Qiqqa/MuPDF\platform\win32\` and open the `mupdf.sln` MSVC solution.
 
-- **verify** the solution's `__build_target_mupdf` does build without errors. (this step may be skipped; second **verify action** beelow may not!)
+- **verify** the solution's `__build_target_mupdf` & `__build_target_tesseract` do build without errors. (this step may be skipped; second **verify action** beelow may not!)
 
 - commit the sourcetree snapshot to git repo.
 
@@ -28,7 +28,7 @@ Steps:
   git reset --hard
   ```
   
-- **verify** the solution's `__build_target_mupdf` does build without errors. (this step may be skipped; second **verify action** below may not!)
+- **AGAIN** **verify** the solution's `__build_target_mupdf` & `__build_target_tesseract` do build without errors. (this step MUST NOT be skipped!)
 
   > When the verification fails, fix it, append/overwrite the last git commit and re-run the nuke dirtree + verification cycle until all is well.
   

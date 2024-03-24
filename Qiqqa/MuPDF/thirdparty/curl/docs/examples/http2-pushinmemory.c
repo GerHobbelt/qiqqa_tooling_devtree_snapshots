@@ -33,10 +33,10 @@
 #include <string.h>
 
 /* somewhat unix-specific */
-#if !defined(CURL_WIN32) && !defined(CURL_AVOID_SYS_TIME_H)
+#if !defined(_WIN32) && !defined(CURL_AVOID_SYS_TIME_H)
 #include <sys/time.h>
 #endif
-#if !defined(CURL_WIN32)
+#if !defined(_WIN32)
 #include <unistd.h>
 #endif
 
@@ -98,7 +98,7 @@ static void setup(CURL *hnd)
   curl_easy_setopt(hnd, CURLOPT_PIPEWAIT, 1L);
 }
 
-/* called when there's an incoming push */
+/* called when there is an incoming push */
 static int server_push_callback(CURL *parent,
                                 CURL *easy,
                                 size_t num_headers,

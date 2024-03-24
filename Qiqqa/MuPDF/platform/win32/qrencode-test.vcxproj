@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_QRENCODE_TEST;QRENCODE_TEST_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_QRENCODE_TEST;QRENCODE_TEST_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../scripts/libqrencode;../../scripts/libqrencode/fake-for-dotdot-prefix-in-testdir;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/libpng;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WITH_TESTS;HAVE_CONFIG_H;BUILD_MONOLITHIC;BUILDING_QRENCODE_TEST;QRENCODE_TEST_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libqrencode;../../scripts/libqrencode/fake-for-dotdot-prefix-in-testdir;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/libpng;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WITH_TESTS;HAVE_CONFIG_H;BUILD_MONOLITHIC;BUILDING_QRENCODE_TEST;QRENCODE_TEST_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_QRENCODE_TEST;QRENCODE_TEST_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_QRENCODE_TEST;QRENCODE_TEST_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../scripts/libqrencode;../../scripts/libqrencode/fake-for-dotdot-prefix-in-testdir;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/libpng;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libqrencode;../../scripts/libqrencode/fake-for-dotdot-prefix-in-testdir;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/libpng;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_QRENCODE_TEST;QRENCODE_TEST_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_QRENCODE_TEST;QRENCODE_TEST_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../scripts/libqrencode;../../scripts/libqrencode/fake-for-dotdot-prefix-in-testdir;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/libpng;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WITH_TESTS;HAVE_CONFIG_H;BUILD_MONOLITHIC;BUILDING_QRENCODE_TEST;QRENCODE_TEST_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libqrencode;../../scripts/libqrencode/fake-for-dotdot-prefix-in-testdir;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/libpng;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WITH_TESTS;HAVE_CONFIG_H;BUILD_MONOLITHIC;BUILDING_QRENCODE_TEST;QRENCODE_TEST_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_QRENCODE_TEST;QRENCODE_TEST_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_QRENCODE_TEST;QRENCODE_TEST_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../scripts/libqrencode;../../scripts/libqrencode/fake-for-dotdot-prefix-in-testdir;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/libpng;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libqrencode;../../scripts/libqrencode/fake-for-dotdot-prefix-in-testdir;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/libpng;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_QRENCODE_TEST;QRENCODE_TEST_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_QRENCODE_TEST;QRENCODE_TEST_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../scripts/libqrencode;../../scripts/libqrencode/fake-for-dotdot-prefix-in-testdir;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/libpng;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WITH_TESTS;HAVE_CONFIG_H;BUILD_MONOLITHIC;BUILDING_QRENCODE_TEST;QRENCODE_TEST_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libqrencode;../../scripts/libqrencode/fake-for-dotdot-prefix-in-testdir;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/libpng;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WITH_TESTS;HAVE_CONFIG_H;BUILD_MONOLITHIC;BUILDING_QRENCODE_TEST;QRENCODE_TEST_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_QRENCODE_TEST;QRENCODE_TEST_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_QRENCODE_TEST;QRENCODE_TEST_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../scripts/libqrencode;../../scripts/libqrencode/fake-for-dotdot-prefix-in-testdir;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/libpng;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libqrencode;../../scripts/libqrencode/fake-for-dotdot-prefix-in-testdir;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/libpng;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_QRENCODE_TEST;QRENCODE_TEST_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_QRENCODE_TEST;QRENCODE_TEST_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../scripts/libqrencode;../../scripts/libqrencode/fake-for-dotdot-prefix-in-testdir;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/libpng;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WITH_TESTS;HAVE_CONFIG_H;BUILD_MONOLITHIC;BUILDING_QRENCODE_TEST;QRENCODE_TEST_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libqrencode;../../scripts/libqrencode/fake-for-dotdot-prefix-in-testdir;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/libpng;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WITH_TESTS;HAVE_CONFIG_H;BUILD_MONOLITHIC;BUILDING_QRENCODE_TEST;QRENCODE_TEST_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_QRENCODE_TEST;QRENCODE_TEST_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_QRENCODE_TEST;QRENCODE_TEST_STATICLIB;BUILDING_LIBBZIP2;BZIP2_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../scripts/libqrencode;../../scripts/libqrencode/fake-for-dotdot-prefix-in-testdir;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/libpng;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libqrencode;../../scripts/libqrencode/fake-for-dotdot-prefix-in-testdir;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/libpng;../../thirdparty/jpeginfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -278,10 +278,12 @@
     <ClInclude Include="../../thirdparty/owemdjee/libqrencode/tests/rsecc_decoder.h" />
     <Text Include="../../thirdparty/owemdjee/libqrencode/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libqrencode/ChangeLog" />
+    <Text Include="../../thirdparty/owemdjee/libqrencode/Doxyfile" />
     <Text Include="../../thirdparty/owemdjee/libqrencode/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libqrencode/NEWS" />
     <Text Include="../../thirdparty/owemdjee/libqrencode/README.md" />
     <Text Include="../../thirdparty/owemdjee/libqrencode/TODO" />
+    <Text Include="../../thirdparty/owemdjee/libqrencode/acinclude.m4" />
     <Text Include="../../thirdparty/owemdjee/libqrencode/autogen.sh" />
     <Text Include="../../thirdparty/owemdjee/libqrencode/cmake/FindIconv.cmake" />
     <Text Include="../../thirdparty/owemdjee/libqrencode/configure.ac" />
@@ -295,6 +297,8 @@
     <Text Include="../../thirdparty/owemdjee/libqrencode/tests/test_basic.sh" />
     <Text Include="../../thirdparty/owemdjee/libqrencode/tests/test_configure.sh" />
     <Text Include="../../thirdparty/owemdjee/libqrencode/tests/test_qrenc.sh" />
+    <Text Include="../../thirdparty/owemdjee/libqrencode/win32/qrencode.def" />
+    <Text Include="../../thirdparty/owemdjee/libqrencode/win32/qrencode.vcxproj.filters" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

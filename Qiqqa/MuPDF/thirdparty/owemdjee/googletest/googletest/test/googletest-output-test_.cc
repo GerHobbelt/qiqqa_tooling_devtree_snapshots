@@ -35,13 +35,16 @@
 
 #include <stdlib.h>
 
+#include <algorithm>
+#include <string>
+
 #include "gtest/gtest-spi.h"
 #include "gtest/gtest.h"
 #include "src/gtest-internal-inl.h"
 
-#ifdef _MSC_VER
+#include "googletest/include/monolithic_examples.h"
+
 GTEST_DISABLE_MSC_WARNINGS_PUSH_(4127 /* conditional expression is constant */)
-#endif  //  _MSC_VER
 
 #if GTEST_IS_THREADSAFE
 using testing::ScopedFakeTestPartResultReporter;
@@ -52,6 +55,8 @@ using testing::internal::ThreadWithParam;
 #endif
 
 namespace posix = ::testing::internal::posix;
+
+namespace {
 
 // Tests catching fatal failures.
 
@@ -677,17 +682,17 @@ std::string ParamNameFunc(const testing::TestParamInfo<std::string>& info) {
   return info.param;
 }
 
-class ParamTest : public testing::TestWithParam<std::string> {};
+class ParamOutputTest : public testing::TestWithParam<std::string> {};
 
-TEST_P(ParamTest, Success) { EXPECT_EQ("a", GetParam()); }
+TEST_P(ParamOutputTest, Success) { EXPECT_EQ("a", GetParam()); }
 
-TEST_P(ParamTest, Failure) { EXPECT_EQ("b", GetParam()) << "Expected failure"; }
+TEST_P(ParamOutputTest, Failure) { EXPECT_EQ("b", GetParam()) << "Expected failure"; }
 
-INSTANTIATE_TEST_SUITE_P(PrintingStrings, ParamTest,
+INSTANTIATE_TEST_SUITE_P(PrintingStrings, ParamOutputTest,
                          testing::Values(std::string("a")), ParamNameFunc);
 
 // The case where a suite has INSTANTIATE_TEST_SUITE_P but not TEST_P.
-using NoTests = ParamTest;
+using NoTests = ParamOutputTest;
 INSTANTIATE_TEST_SUITE_P(ThisIsOdd, NoTests, ::testing::Values("Hello"));
 
 // fails under kErrorOnUninstantiatedParameterizedTest=true
@@ -1008,6 +1013,13 @@ class TestSuiteThatFailsToSetUp : public testing::Test {
 };
 TEST_F(TestSuiteThatFailsToSetUp, ShouldNotRun) { std::abort(); }
 
+class TestSuiteThatSkipsInSetUp : public testing::Test {
+ public:
+  static void SetUpTestSuite() { GTEST_SKIP() << "Skip entire test suite"; }
+};
+TEST_F(TestSuiteThatSkipsInSetUp, ShouldNotRun) { std::abort(); }
+
+}	// anonymous namespace
 
 
 #if defined(BUILD_MONOLITHIC)
@@ -1035,7 +1047,7 @@ int main(int argc, const char** argv) {
                  std::string("internal_skip_environment_and_ad_hoc_tests")) > 0;
 
 #if GTEST_HAS_DEATH_TEST
-  if (GTEST_FLAG_GET(internal_run_death_test) != "") {
+  if (!GTEST_FLAG_GET(internal_run_death_test).empty()) {
     // Skip the usual output capturing if we're running as the child
     // process of an threadsafe-style death test.
 #if GTEST_OS_WINDOWS
@@ -1054,8 +1066,6 @@ int main(int argc, const char** argv) {
   // are registered, and torn down in the reverse order.
   testing::AddGlobalTestEnvironment(new FooEnvironment);
   testing::AddGlobalTestEnvironment(new BarEnvironment);
-#ifdef _MSC_VER
   GTEST_DISABLE_MSC_WARNINGS_POP_()  //  4127
-#endif                               //  _MSC_VER
   return RunAllTests();
 }

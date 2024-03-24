@@ -1,4 +1,4 @@
-// Copyright (c) 2017-2022, University of Cincinnati, developed by Henry Schreiner
+// Copyright (c) 2017-2023, University of Cincinnati, developed by Henry Schreiner
 // under NSF AWARD 1414736 and by the respective contributors.
 // All rights reserved.
 //
@@ -8,6 +8,7 @@
 
 #include <CLI/Validators.hpp>
 
+#include <CLI/Encoding.hpp>
 #include <CLI/Macros.hpp>
 #include <CLI/StringTools.hpp>
 #include <CLI/TypeTools.hpp>
@@ -127,7 +128,7 @@ namespace detail {
 #if defined CLI11_HAS_FILESYSTEM && CLI11_HAS_FILESYSTEM > 0
 CLI11_INLINE path_type check_path(const char *file) noexcept {
     std::error_code ec;
-    auto stat = std::filesystem::status(file, ec);
+    auto stat = std::filesystem::status(to_path(file), ec);
     if(ec) {
         return path_type::nonexistent;
     }
@@ -219,7 +220,8 @@ CLI11_INLINE IPV4Validator::IPV4Validator() : Validator("IPV4") {
         }
         int num = 0;
         for(const auto &var : result) {
-            bool retval = detail::lexical_cast(var, num);
+            using CLI::detail::lexical_cast;
+            bool retval = lexical_cast(var, num);
             if(!retval) {
                 return std::string("Failed parsing number (") + var + ')';
             }

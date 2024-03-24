@@ -96,32 +96,32 @@ namespace crow
         }
 
         /// Create a dynamic route using a rule (**Use CROW_ROUTE instead**)
-        DynamicRule& route_dynamic(std::string&& rule)
+        DynamicRule& route_dynamic(const std::string& rule)
         {
-            return router_.new_rule_dynamic(std::move(rule));
+            return router_.new_rule_dynamic(rule);
         }
 
 #if (__cplusplus < 201703L)
         /// Create a route using a rule (**Use CROW_ROUTE instead**)
         template<uint64_t Tag>
 #ifdef CROW_GCC83_WORKAROUND
-        auto& route(std::string&& rule)
+        auto& route(const std::string& rule)
 #else
-        auto route(std::string&& rule)
+        auto route(const std::string& rule)
 #endif
 #if defined CROW_CAN_USE_CPP17 && !defined CROW_GCC83_WORKAROUND
-          -> typename std::invoke_result<decltype(&Router::new_rule_tagged<Tag>), Router, std::string&&>::type
+          -> typename std::invoke_result<decltype(&Router::new_rule_tagged<Tag>), Router, const std::string&>::type
 #elif !defined CROW_GCC83_WORKAROUND
-          -> typename std::result_of<decltype (&Router::new_rule_tagged<Tag>)(Router, std::string&&)>::type
+          -> typename std::result_of<decltype (&Router::new_rule_tagged<Tag>)(Router, const std::string&)>::type
 #endif
         {
-            return router_.new_rule_tagged<Tag>(std::move(rule));
+            return router_.new_rule_tagged<Tag>(rule);
         }
 #else
         template <uint64_t Tag>
-        auto& route(std::string&& rule)
+        auto& route(const std::string&& rule)
         {
-            return router_.new_rule_tagged<Tag>(std::move(rule));
+            return router_.new_rule_tagged<Tag>(rule);
         }
 #endif
 
@@ -194,7 +194,7 @@ namespace crow
             bindaddr_ = bindaddr;
             return *this;
         }
-        
+
         /// Get the address that Crow will handle requests on
         std::string bindaddr()
         {
@@ -215,7 +215,7 @@ namespace crow
             concurrency_ = concurrency;
             return *this;
         }
-        
+
         /// Get the number of threads that server is using
         std::uint16_t concurrency()
         {
@@ -258,6 +258,24 @@ namespace crow
             return *this;
         }
 
+        /// Set the function to call to handle uncaught exceptions generated in routes (Default generates error 500).
+
+        ///
+        /// The function must have the following signature: void(crow::response&).
+        /// It must set the response passed in argument to the function, which will be sent back to the client.
+        /// See Router::default_exception_handler() for the default implementation.
+        template<typename Func>
+        self_t& exception_handler(Func&& f)
+        {
+            router_.exception_handler() = std::forward<Func>(f);
+            return *this;
+        }
+
+        std::function<void(crow::response&)>& exception_handler()
+        {
+            return router_.exception_handler();
+        }
+
         /// Set a custom duration and function to run on every tick
         template<typename Duration, typename Func>
         self_t& tick(Duration d, Func f)
@@ -285,60 +303,57 @@ namespace crow
             return compression_used_;
         }
 #endif
-        /// A wrapper for `validate()` in the router
-        ///
-        /// Go through the rules, upgrade them if possible, and add them to the list of rules
-        void validate()
+
+        /// Apply blueprints
+        void add_blueprint()
         {
-            if (!validated_)
+#if defined(__APPLE__) || defined(__MACH__)
+            if (router_.blueprints().empty()) return;
+#endif
+
+            for (Blueprint* bp : router_.blueprints())
             {
+                if (bp->static_dir().empty()) continue;
 
-#ifndef CROW_DISABLE_STATIC_DIR
+                auto static_dir_ = crow::utility::normalize_path(bp->static_dir());
 
-                // stat on windows doesn't care whether '/' or '\' is being used. on Linux however, using '\' doesn't work. therefore every instance of '\' gets replaced with '/' then a check is done to make sure the directory ends with '/'.
-                std::string static_dir_(CROW_STATIC_DIRECTORY);
-                std::replace(static_dir_.begin(), static_dir_.end(), '\\', '/');
-                if (static_dir_[static_dir_.length() - 1] != '/')
-                    static_dir_ += '/';
-
-                route<crow::black_magic::get_parameter_tag(CROW_STATIC_ENDPOINT)>(CROW_STATIC_ENDPOINT)([static_dir_](crow::response& res, std::string file_path_partial) {
+                bp->new_rule_tagged<crow::black_magic::get_parameter_tag(CROW_STATIC_ENDPOINT)>(CROW_STATIC_ENDPOINT)([static_dir_](crow::response& res, std::string file_path_partial) {
                     utility::sanitize_filename(file_path_partial);
                     res.set_static_file_info_unsafe(static_dir_ + file_path_partial);
                     res.end();
                 });
-
-#if defined(__APPLE__) || defined(__MACH__)
-                if (!router_.blueprints().empty())
-#endif
-                {
-                    for (Blueprint* bp : router_.blueprints())
-                    {
-                        if (!bp->static_dir().empty())
-                        {
-                            // stat on windows doesn't care whether '/' or '\' is being used. on Linux however, using '\' doesn't work. therefore every instance of '\' gets replaced with '/' then a check is done to make sure the directory ends with '/'.
-                            std::string static_dir_(bp->static_dir());
-                            std::replace(static_dir_.begin(), static_dir_.end(), '\\', '/');
-                            if (static_dir_[static_dir_.length() - 1] != '/')
-                                static_dir_ += '/';
-
-                            bp->new_rule_tagged<crow::black_magic::get_parameter_tag(CROW_STATIC_ENDPOINT)>(CROW_STATIC_ENDPOINT)([static_dir_](crow::response& res, std::string file_path_partial) {
-                                utility::sanitize_filename(file_path_partial);
-                                res.set_static_file_info_unsafe(static_dir_ + file_path_partial);
-                                res.end();
-                            });
-                        }
-                    }
-                }
-#endif
-
-                router_.validate();
-                validated_ = true;
             }
+
+            router_.validate_bp();
+        }
+
+        /// Go through the rules, upgrade them if possible, and add them to the list of rules
+        void add_static_dir()
+        {
+            if (are_static_routes_added()) return;
+            auto static_dir_ = crow::utility::normalize_path(CROW_STATIC_DIRECTORY);
+
+            route<crow::black_magic::get_parameter_tag(CROW_STATIC_ENDPOINT)>(CROW_STATIC_ENDPOINT)([static_dir_](crow::response& res, std::string file_path_partial) {
+                utility::sanitize_filename(file_path_partial);
+                res.set_static_file_info_unsafe(static_dir_ + file_path_partial);
+                res.end();
+            });
+            set_static_routes_added();
+        }
+
+        /// A wrapper for `validate()` in the router
+        void validate()
+        {
+            router_.validate();
         }
 
         /// Run the server
         void run()
         {
+#ifndef CROW_DISABLE_STATIC_DIR
+            add_blueprint();
+            add_static_dir();
+#endif
             validate();
 
 #ifdef CROW_ENABLE_SSL
@@ -562,17 +577,24 @@ namespace crow
             cv_started_.notify_all();
         }
 
+        void set_static_routes_added() {
+            static_routes_added_ = true;
+        }
+
+        bool are_static_routes_added() {
+            return static_routes_added_;
+        }
 
     private:
         std::uint8_t timeout_{5};
         uint16_t port_ = 80;
         uint16_t concurrency_ = 2;
         uint64_t max_payload_{UINT64_MAX};
-        bool validated_ = false;
         std::string server_name_ = std::string("Crow/") + VERSION;
         std::string bindaddr_ = "0.0.0.0";
         size_t res_stream_threshold_ = 1048576;
         Router router_;
+        bool static_routes_added_{false};
 
 #ifdef CROW_ENABLE_COMPRESSION
         compression::algorithm comp_algorithm_;

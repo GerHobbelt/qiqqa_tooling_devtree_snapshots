@@ -37,6 +37,10 @@
 #include <cstdint>
 #include <fstream>
 #include <memory>
+#include <ostream>
+#include <string>
+#include <utility>
+#include <vector>
 
 #if GTEST_OS_WINDOWS
 #include <io.h>
@@ -63,10 +67,12 @@
 #include <mach/vm_map.h>
 #endif  // GTEST_OS_MAC
 
-#if GTEST_OS_DRAGONFLY || GTEST_OS_FREEBSD || GTEST_OS_GNU_KFREEBSD || \
-    GTEST_OS_NETBSD || GTEST_OS_OPENBSD
+#if GTEST_OS_DRAGONFLY || GTEST_OS_FREEBSD ||   \
+    GTEST_OS_GNU_KFREEBSD || GTEST_OS_NETBSD || \
+    GTEST_OS_OPENBSD
 #include <sys/sysctl.h>
-#if GTEST_OS_DRAGONFLY || GTEST_OS_FREEBSD || GTEST_OS_GNU_KFREEBSD
+#if GTEST_OS_DRAGONFLY || GTEST_OS_FREEBSD || \
+    GTEST_OS_GNU_KFREEBSD
 #include <sys/user.h>
 #endif
 #endif
@@ -137,8 +143,8 @@ size_t GetThreadCount() {
   }
 }
 
-#elif GTEST_OS_DRAGONFLY || GTEST_OS_FREEBSD || GTEST_OS_GNU_KFREEBSD || \
-    GTEST_OS_NETBSD
+#elif GTEST_OS_DRAGONFLY || GTEST_OS_FREEBSD || \
+    GTEST_OS_GNU_KFREEBSD || GTEST_OS_NETBSD
 
 #if GTEST_OS_NETBSD
 #undef KERN_PROC
@@ -158,13 +164,13 @@ size_t GetThreadCount() {
 // we cannot detect it.
 size_t GetThreadCount() {
   int mib[] = {
-    CTL_KERN,
-    KERN_PROC,
-    KERN_PROC_PID,
-    getpid(),
+      CTL_KERN,
+      KERN_PROC,
+      KERN_PROC_PID,
+      getpid(),
 #if GTEST_OS_NETBSD
-    sizeof(struct kinfo_proc),
-    1,
+      sizeof(struct kinfo_proc),
+      1,
 #endif
   };
   u_int miblen = sizeof(mib) / sizeof(mib[0]);
@@ -199,8 +205,8 @@ size_t GetThreadCount() {
   mib[5] = static_cast<int>(size / static_cast<size_t>(mib[4]));
 
   // populate array of structs
-  struct kinfo_proc info[mib[5]];
-  if (sysctl(mib, miblen, &info, &size, NULL, 0)) {
+  std::vector<struct kinfo_proc> info(mib[5]);
+  if (sysctl(mib, miblen, info.data(), &size, NULL, 0)) {
     return 0;
   }
 
@@ -674,7 +680,6 @@ RE::~RE() {
     regfree(&partial_regex_);
     regfree(&full_regex_);
   }
-  free(const_cast<char*>(pattern_));
 }
 
 // Returns true if and only if regular expression re matches the entire str.
@@ -696,7 +701,18 @@ bool RE::PartialMatch(const char* str, const RE& re) {
 
 // Initializes an RE from its string representation.
 void RE::Init(const char* regex) {
-  pattern_ = posix::StrDup(regex);
+  pattern_ = regex;
+
+  // NetBSD (and Android, which takes its regex implemntation from NetBSD) does
+  // not include the GNU regex extensions (such as Perl style character classes
+  // like \w) in REG_EXTENDED. REG_EXTENDED is only specified to include the
+  // [[:alpha:]] style character classes. Enable REG_GNU wherever it is defined
+  // so users can use those extensions.
+#if defined(REG_GNU)
+  constexpr int reg_flags = REG_EXTENDED | REG_GNU;
+#else
+  constexpr int reg_flags = REG_EXTENDED;
+#endif
 
   // Reserves enough bytes to hold the regular expression used for a
   // full match.
@@ -704,7 +720,7 @@ void RE::Init(const char* regex) {
   char* const full_pattern = new char[full_regex_len];
 
   snprintf(full_pattern, full_regex_len, "^(%s)$", regex);
-  is_valid_ = regcomp(&full_regex_, full_pattern, REG_EXTENDED) == 0;
+  is_valid_ = regcomp(&full_regex_, full_pattern, reg_flags) == 0;
   // We want to call regcomp(&partial_regex_, ...) even if the
   // previous expression returns false.  Otherwise partial_regex_ may
   // not be properly initialized can may cause trouble when it's
@@ -715,7 +731,7 @@ void RE::Init(const char* regex) {
   // regex.  We change it to an equivalent form "()" to be safe.
   if (is_valid_) {
     const char* const partial_regex = (*regex == '\0') ? "()" : regex;
-    is_valid_ = regcomp(&partial_regex_, partial_regex, REG_EXTENDED) == 0;
+    is_valid_ = regcomp(&partial_regex_, partial_regex, reg_flags) == 0;
   }
   EXPECT_TRUE(is_valid_)
       << "Regular expression \"" << regex
@@ -926,27 +942,26 @@ bool MatchRegexAnywhere(const char* regex, const char* str) {
 
 // Implements the RE class.
 
-RE::~RE() {
-  free(const_cast<char*>(pattern_));
-  free(const_cast<char*>(full_pattern_));
-}
+RE::~RE() = default;
 
 // Returns true if and only if regular expression re matches the entire str.
 bool RE::FullMatch(const char* str, const RE& re) {
-  return re.is_valid_ && MatchRegexAnywhere(re.full_pattern_, str);
+  return re.is_valid_ && MatchRegexAnywhere(re.full_pattern_.c_str(), str);
 }
 
 // Returns true if and only if regular expression re matches a substring of
 // str (including str itself).
 bool RE::PartialMatch(const char* str, const RE& re) {
-  return re.is_valid_ && MatchRegexAnywhere(re.pattern_, str);
+  return re.is_valid_ && MatchRegexAnywhere(re.pattern_.c_str(), str);
 }
 
 // Initializes an RE from its string representation.
 void RE::Init(const char* regex) {
-  pattern_ = full_pattern_ = nullptr;
+  full_pattern_.clear();
+  pattern_.clear();
+
   if (regex != nullptr) {
-    pattern_ = posix::StrDup(regex);
+    pattern_ = regex;
   }
 
   is_valid_ = ValidateRegex(regex);
@@ -955,25 +970,19 @@ void RE::Init(const char* regex) {
     return;
   }
 
-  const size_t len = strlen(regex);
   // Reserves enough bytes to hold the regular expression used for a
-  // full match: we need space to prepend a '^', append a '$', and
-  // terminate the string with '\0'.
-  char* buffer = static_cast<char*>(malloc(len + 3));
-  full_pattern_ = buffer;
+  // full match: we need space to prepend a '^' and append a '$'.
+  full_pattern_.reserve(pattern_.size() + 2);
 
-  if (*regex != '^')
-    *buffer++ = '^';  // Makes sure full_pattern_ starts with '^'.
+  if (pattern_.empty() || pattern_.front() != '^') {
+    full_pattern_.push_back('^');  // Makes sure full_pattern_ starts with '^'.
+  }
 
-  // We don't use snprintf or strncpy, as they trigger a warning when
-  // compiled with VC++ 8.0.
-  memcpy(buffer, regex, len);
-  buffer += len;
+  full_pattern_.append(pattern_);
 
-  if (len == 0 || regex[len - 1] != '$')
-    *buffer++ = '$';  // Makes sure full_pattern_ ends with '$'.
-
-  *buffer = '\0';
+  if (pattern_.empty() || pattern_.back() != '$') {
+    full_pattern_.push_back('$');  // Makes sure full_pattern_ ends with '$'.
+  }
 }
 
 #endif  // GTEST_USES_POSIX_RE
@@ -1036,6 +1045,24 @@ GTEST_DISABLE_MSC_DEPRECATED_PUSH_()
 
 #if GTEST_HAS_STREAM_REDIRECTION
 
+namespace {
+
+#if defined(GTEST_OS_LINUX_ANDROID) || defined(GTEST_OS_IOS)
+bool EndsWithPathSeparator(const std::string& path) {
+  return !path.empty() && path.back() == GTEST_PATH_SEP_[0];
+}
+#elif defined(_WIN32) || defined(WIN32) || defined(WIN64)
+bool EndsWithPathSeparator(const std::string& path) {
+  return !path.empty() && (path.back() == '\\' || path.back() == '/');
+}
+#else
+bool EndsWithPathSeparator(const std::string& path) {
+  return !path.empty() && path.back() == GTEST_PATH_SEP_[0];
+}
+#endif
+
+}  // namespace
+
 // Object that captures an output stream (stdout/stderr).
 class CapturedStream {
  public:
@@ -1046,7 +1073,7 @@ class CapturedStream {
   // testing::TempDir() should return a directory without a path separator.
   // However, this rule was documented fairly recently, so we normalize across
   // implementations with and without a trailing path separator.
-  if (temp_dir.back() != GTEST_PATH_SEP_[0])
+  if (!EndsWithPathSeparator(temp_dir))
     temp_dir.push_back(GTEST_PATH_SEP_[0]);
 
 #if GTEST_OS_WINDOWS

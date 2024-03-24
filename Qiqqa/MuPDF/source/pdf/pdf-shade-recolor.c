@@ -75,7 +75,7 @@ fz_recolor_shade_type1(fz_context *ctx, pdf_obj *shade, pdf_function **func, rec
 
 	if (rd->funcs != 1 && rd->funcs != n_in)
 	{
-		fz_throw(ctx, FZ_ERROR_GENERIC, "Unexpected function-arity.");
+		fz_throw(ctx, FZ_ERROR_SYNTAX, "Unexpected function-arity.");
 	}
 
 	/* Sample the function, rewriting it. */
@@ -406,6 +406,7 @@ fz_recolor_shade_type4(fz_context *ctx, pdf_obj *shade, recolor_details *rd)
 
 	fz_var(outbuf);
 	fz_var(out);
+	fz_var(stream);
 
 	read_decode(ctx, shade, n_in, c_min, c_max, n_out, d_min, d_max);
 
@@ -499,6 +500,7 @@ fz_recolor_shade_type5(fz_context *ctx, pdf_obj *shade, recolor_details *rd)
 
 	fz_var(outbuf);
 	fz_var(out);
+	fz_var(stream);
 
 	read_decode(ctx, shade, n_in, c_min, c_max, n_out, d_min, d_max);
 
@@ -594,6 +596,7 @@ fz_recolor_shade_type6(fz_context *ctx, pdf_obj *shade, recolor_details *rd)
 
 	fz_var(outbuf);
 	fz_var(out);
+	fz_var(stream);
 
 	read_decode(ctx, shade, n_in, c_min, c_max, n_out, d_min, d_max);
 
@@ -733,6 +736,7 @@ fz_recolor_shade_type7(fz_context *ctx, pdf_obj *shade, recolor_details *rd)
 
 	fz_var(outbuf);
 	fz_var(out);
+	fz_var(stream);
 
 	read_decode(ctx, shade, n_in, c_min, c_max, n_out, d_min, d_max);
 
@@ -861,7 +865,7 @@ pdf_new_colorspace(fz_context *ctx, fz_colorspace *cs)
 	case FZ_COLORSPACE_CMYK:
 		return PDF_NAME(DeviceCMYK);
 	default:
-		fz_throw(ctx, FZ_ERROR_GENERIC, "Unimplemented colorspace");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "Unimplemented colorspace");
 	}
 
 	return NULL;
@@ -911,9 +915,9 @@ pdf_recolor_shade(fz_context *ctx, pdf_obj *shade, pdf_shade_recolorer *reshade,
 			float nbg[FZ_MAX_COLORS];
 
 			if (n > FZ_MAX_COLORS)
-				fz_throw(ctx, FZ_ERROR_GENERIC, "Too many background components");
+				fz_throw(ctx, FZ_ERROR_SYNTAX, "Too many background components");
 			if (n != src_cs->n)
-				fz_throw(ctx, FZ_ERROR_GENERIC, "Wrong background dimension");
+				fz_throw(ctx, FZ_ERROR_SYNTAX, "Wrong background dimension");
 
 			for (i = 0; i < n; i++)
 				bg[i] = pdf_array_get_real(ctx, background, i);
@@ -922,7 +926,7 @@ pdf_recolor_shade(fz_context *ctx, pdf_obj *shade, pdf_shade_recolorer *reshade,
 
 			new_bg = pdf_dict_put_array(ctx, rewritten, PDF_NAME(Background), rd.dst_cs->n);
 			for (i = 0; i < n; i++)
-				pdf_array_put(ctx, new_bg, i, pdf_new_real(ctx, bg[i]));
+				pdf_array_put_real(ctx, new_bg, i, bg[i]);
 			pdf_dict_put(ctx, rewritten, PDF_NAME(Background), new_bg);
 		}
 
@@ -1004,7 +1008,7 @@ pdf_recolor_shade(fz_context *ctx, pdf_obj *shade, pdf_shade_recolorer *reshade,
 			break;
 		case FZ_LINEAR:
 		case FZ_RADIAL:
-			fz_throw(ctx, FZ_ERROR_GENERIC, "Linear/Radial shadings must use functions");
+			fz_throw(ctx, FZ_ERROR_SYNTAX, "Linear/Radial shadings must use functions");
 			break;
 		case FZ_MESH_TYPE4:
 			fz_recolor_shade_type4(ctx, rewritten, &rd);
@@ -1019,7 +1023,7 @@ pdf_recolor_shade(fz_context *ctx, pdf_obj *shade, pdf_shade_recolorer *reshade,
 			fz_recolor_shade_type7(ctx, rewritten, &rd);
 			break;
 		default:
-			fz_throw(ctx, FZ_ERROR_GENERIC, "Unexpected mesh type %d\n", type);
+			fz_throw(ctx, FZ_ERROR_SYNTAX, "Unexpected mesh type %d\n", type);
 		}
 	}
 	fz_always(ctx)

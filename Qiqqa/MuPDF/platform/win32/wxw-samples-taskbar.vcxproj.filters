@@ -26,6 +26,9 @@
     <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/taskbar/Makefile.in">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/taskbar/info.svg">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/taskbar/makefile.gcc">
       <Filter>Misc Files</Filter>
     </Text>
@@ -42,6 +45,12 @@
       <Filter>Resource Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/taskbar/taskbar.bkl">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/taskbar/taskbar_vc9.vcxproj.filters">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wxWidgets/samples/taskbar/taskbar_vc9.vcxproj.user">
       <Filter>Misc Files</Filter>
     </Text>
   </ItemGroup>

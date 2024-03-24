@@ -563,10 +563,16 @@
     <Text Include="../../thirdparty/owemdjee/libzip/API-CHANGES.md">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/AUTHORS">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libzip/CMakeLists.txt">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libzip/INSTALL.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/LICENSE">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libzip/NEWS.md">
@@ -586,6 +592,9 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/libzip/android/readme.txt">
       <Filter>Misc Files\android</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/appveyor.yml">
+      <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libzip/cmake-compat/CMakePushCheckState.cmake">
       <Filter>Misc Files\cmake-compat</Filter>
@@ -629,7 +638,10 @@
     <Text Include="../../thirdparty/owemdjee/libzip/cmake/FindNettle.cmake">
       <Filter>Misc Files\cmake</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/libzip/cmake/FindZstd.cmake">
+    <Text Include="../../thirdparty/owemdjee/libzip/cmake/Findzstd.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/cmake/GenerateZipErrorStrings.cmake">
       <Filter>Misc Files\cmake</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libzip/examples/CMakeLists.txt">
@@ -647,16 +659,964 @@
     <Text Include="../../thirdparty/owemdjee/libzip/man/CMakeLists.txt">
       <Filter>Misc Files\man</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/ZIP_SOURCE_GET_ARGS.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/ZIP_SOURCE_GET_ARGS.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/ZIP_SOURCE_GET_ARGS.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libzip/man/fix-man-links.sh">
       <Filter>Misc Files\man</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/libzip.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/libzip.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/libzip.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libzip/man/make_zip_errors.sh">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/mkdocset.pl">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/nih-man.css">
       <Filter>Misc Files\man</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libzip/man/update-html.cmake">
       <Filter>Misc Files\man</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libzip/man/update-man.cmake">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_add.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_add.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_add.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_add_dir.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_add_dir.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_add_dir.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_close.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_close.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_close.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_compression_method_supported.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_compression_method_supported.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_compression_method_supported.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_delete.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_delete.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_delete.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_dir_add.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_dir_add.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_dir_add.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_discard.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_discard.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_discard.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_encryption_method_supported.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_encryption_method_supported.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_encryption_method_supported.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_clear.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_clear.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_clear.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_code_system.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_code_system.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_code_system.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_code_zip.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_code_zip.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_code_zip.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_fini.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_fini.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_fini.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_get.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_get.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_get.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_get_sys_type.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_get_sys_type.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_get_sys_type.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_init.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_init.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_init.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_set.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_set.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_set.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_set_from_source.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_strerror.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_strerror.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_strerror.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_system_type.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_system_type.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_system_type.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_to_data.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_to_data.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_to_data.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_to_str.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_to_str.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_error_to_str.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_errors.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_errors.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_errors.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fclose.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fclose.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fclose.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fdopen.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fdopen.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fdopen.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_add.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_add.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_add.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_attributes_init.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_attributes_init.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_attributes_init.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_extra_field_delete.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_extra_field_delete.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_extra_field_delete.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_extra_field_get.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_extra_field_get.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_extra_field_get.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_extra_field_set.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_extra_field_set.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_extra_field_set.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_extra_fields_count.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_extra_fields_count.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_extra_fields_count.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_get_comment.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_get_comment.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_get_comment.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_get_error.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_get_error.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_get_error.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_get_external_attributes.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_get_external_attributes.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_get_external_attributes.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_rename.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_rename.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_rename.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_set_comment.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_set_comment.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_set_comment.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_set_encryption.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_set_encryption.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_set_encryption.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_set_external_attributes.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_set_external_attributes.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_set_external_attributes.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_set_mtime.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_set_mtime.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_set_mtime.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_strerror.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_strerror.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_file_strerror.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fopen.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fopen.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fopen.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fopen_encrypted.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fopen_encrypted.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fopen_encrypted.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fread.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fread.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fread.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fseek.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fseek.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_fseek.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_ftell.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_ftell.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_ftell.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_archive_comment.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_archive_comment.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_archive_comment.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_archive_flag.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_archive_flag.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_archive_flag.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_error.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_error.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_error.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_file_comment.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_file_comment.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_file_comment.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_name.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_name.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_name.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_num_entries.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_num_entries.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_num_entries.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_num_files.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_num_files.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_get_num_files.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_libzip_version.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_libzip_version.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_libzip_version.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_name_locate.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_name_locate.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_name_locate.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_open.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_open.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_open.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_register_cancel_callback_with_state.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_register_cancel_callback_with_state.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_register_cancel_callback_with_state.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_register_progress_callback.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_register_progress_callback.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_register_progress_callback.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_register_progress_callback_with_state.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_register_progress_callback_with_state.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_register_progress_callback_with_state.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_rename.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_rename.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_rename.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_archive_comment.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_archive_comment.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_archive_comment.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_archive_flag.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_archive_flag.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_archive_flag.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_default_password.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_default_password.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_default_password.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_file_comment.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_file_comment.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_file_comment.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_file_compression.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_file_compression.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_set_file_compression.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_begin_write.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_begin_write.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_begin_write.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_buffer.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_buffer.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_buffer.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_buffer_fragment.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_buffer_fragment.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_buffer_fragment.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_close.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_close.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_close.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_commit_write.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_commit_write.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_commit_write.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_error.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_error.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_error.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_file.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_file.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_file.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_filep.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_filep.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_filep.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_free.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_free.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_free.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_function.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_function.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_function.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_is_deleted.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_is_deleted.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_is_deleted.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_is_seekable.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_is_seekable.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_is_seekable.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_keep.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_keep.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_keep.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_layered.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_layered.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_layered.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_make_command_bitmap.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_make_command_bitmap.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_make_command_bitmap.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_open.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_open.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_open.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_pass_to_lower_layer.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_read.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_read.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_read.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_rollback_write.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_rollback_write.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_rollback_write.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_seek.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_seek.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_seek.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_seek_compute_offset.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_seek_compute_offset.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_seek_compute_offset.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_seek_write.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_seek_write.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_seek_write.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_stat.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_stat.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_stat.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_tell.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_tell.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_tell.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_tell_write.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_tell_write.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_tell_write.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_win32a.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_win32a.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_win32a.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_win32handle.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_win32handle.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_win32handle.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_win32w.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_win32w.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_win32w.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_window_create.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_window_create.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_window_create.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_write.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_write.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_write.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_zip.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_zip.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_zip.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_zip_file.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_zip_file.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_source_zip_file.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_stat.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_stat.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_stat.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_stat_init.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_stat_init.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_stat_init.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_unchange.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_unchange.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_unchange.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_unchange_all.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_unchange_all.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_unchange_all.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_unchange_archive.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_unchange_archive.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zip_unchange_archive.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zipcmp.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zipcmp.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zipcmp.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zipmerge.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zipmerge.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/zipmerge.mdoc">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/ziptool.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/ziptool.man">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libzip/man/ziptool.mdoc">
       <Filter>Misc Files\man</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libzip/regress/CMakeLists.txt">

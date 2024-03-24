@@ -23,7 +23,7 @@
 
 #include "pdblock.h"
 
-#include <allheaders.h>
+#include <leptonica/allheaders.h>
 
 #include <cinttypes> // for PRId32
 #include <cstdlib>
@@ -183,9 +183,9 @@ Image PDBLK::render_mask(const FCOORD &rerotation, TBOX *mask_box) {
 
 #if !GRAPHICS_DISABLED
 void PDBLK::plot(            // draw outline
-    ScrollView *window,      // window to draw in
+    ScrollViewReference &window,      // window to draw in
     int32_t serial,          // serial number
-    ScrollView::Color colour // colour to draw in
+    Diagnostics::Color colour // colour to draw in
 ) {
   ICOORD startpt;              // start of outline
   ICOORD endpt;                // end of outline
@@ -235,72 +235,6 @@ void PDBLK::plot(            // draw outline
   }
 }
 #endif
-
-void PDBLK::plot(            // draw outline
-    Image &pix,              // image to draw in
-    int32_t serial,          // serial number
-    uint32_t* data, int wpl, int w, int h
-) {
-  ICOORD startpt;              // start of outline
-  ICOORD endpt;                // end of outline
-  ICOORD prevpt;               // previous point
-  ICOORDELT_IT it = &leftside; // iterator
-
-  // set the colour
-  //window->Pen(colour);
-  //window->TextAttributes("Times", BLOCK_LABEL_HEIGHT, false, false, false);
-
-  if (hand_poly != nullptr) {
-    hand_poly->plot(pix, serial);
-  }
-  else if (!leftside.empty()) {
-    startpt = *(it.data()); // bottom left corner
-    //              tprintf("Block {} bottom left is ({},{})\n",
-    //                      serial,startpt.x(),startpt.y());
-    char temp_buff[34];
-#  if defined(PRId32)
-    snprintf(temp_buff, sizeof(temp_buff), "%" PRId32, serial);
-#  else
-    _ultoa(serial, temp_buff, 10);
-#  endif
-    auto tx = startpt.x();
-    auto ty = startpt.y();
-    //window->Text(startpt.x(), startpt.y(), temp_buff);
-
-    //window->SetCursor(startpt.x(), startpt.y());
-    do {
-      prevpt = *(it.data()); // previous point
-      it.forward();          // move to next point
-      // draw round corner
-      auto x1 = prevpt.x();
-      auto y1 = it.data()->y();
-      auto x2 = it.data()->x();
-      auto y2 = it.data()->y();
-      //window->DrawTo(prevpt.x(), it.data()->y());
-      //window->DrawTo(it.data()->x(), it.data()->y());
-    } while (!it.at_last()); // until end of list
-    endpt = *(it.data());    // end point
-
-    // other side of boundary
-    //window->SetCursor(startpt.x(), startpt.y());
-    it.set_to_list(&rightside);
-    prevpt = startpt;
-    for (it.mark_cycle_pt(); !it.cycled_list(); it.forward()) {
-      // draw round corner
-      auto x1 = prevpt.x();
-      auto y1 = it.data()->y();
-      auto x2 = it.data()->x();
-      auto y2 = it.data()->y();
-      //window->DrawTo(prevpt.x(), it.data()->y());
-      //window->DrawTo(it.data()->x(), it.data()->y());
-      prevpt = *(it.data()); // previous point
-    }
-    // close boundary
-    auto ex = endpt.x();
-    auto ey = endpt.y();
-    //window->DrawTo(endpt.x(), endpt.y());
-  }
-}
 
 /**********************************************************************
  * PDBLK::operator=
@@ -427,7 +361,7 @@ TDimension BLOCK_LINE_IT::get_line( // get a line
   block->bounding_box(bleft, tright);
   if (y < bleft.y() || y >= tright.y()) {
     //              block->print(stderr,false);
-    BADBLOCKLINE.error("BLOCK_LINE_IT::get_line", ABORT, "Y=%d", y);
+    BADBLOCKLINE.abort("BLOCK_LINE_IT::get_line", "Y=%d", y);
   }
 
   // get rectangle box
@@ -448,7 +382,7 @@ TDimension BLOCK_LINE_IT::get_line( // get a line
       return bleft.x(); // start of line
     }
   }
-  LOSTBLOCKLINE.error("BLOCK_LINE_IT::get_line", ABORT, "Y=%d", y);
+  LOSTBLOCKLINE.abort("BLOCK_LINE_IT::get_line", "Y=%d", y);
   return 0; // dummy to stop warning
 }
 

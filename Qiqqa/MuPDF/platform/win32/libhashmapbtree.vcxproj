@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/parallel-hashmap;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHASHMAPBTREE;HASHMAPBTREE_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/parallel-hashmap;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHASHMAPBTREE;HASHMAPBTREE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHASHMAPBTREE;HASHMAPBTREE_STATICLIB;CHM_NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/parallel-hashmap;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/parallel-hashmap;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/parallel-hashmap;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHASHMAPBTREE;HASHMAPBTREE_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/parallel-hashmap;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHASHMAPBTREE;HASHMAPBTREE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHASHMAPBTREE;HASHMAPBTREE_STATICLIB;CHM__DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/parallel-hashmap;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/parallel-hashmap;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/parallel-hashmap;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHASHMAPBTREE;HASHMAPBTREE_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/parallel-hashmap;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHASHMAPBTREE;HASHMAPBTREE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHASHMAPBTREE;HASHMAPBTREE_STATICLIB;CHM_NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/parallel-hashmap;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/parallel-hashmap;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/parallel-hashmap;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHASHMAPBTREE;HASHMAPBTREE_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/parallel-hashmap;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHASHMAPBTREE;HASHMAPBTREE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBHASHMAPBTREE;HASHMAPBTREE_STATICLIB;CHM__DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/parallel-hashmap;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/parallel-hashmap;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -239,16 +239,18 @@
     <ClCompile Include="../../thirdparty/owemdjee/parallel-hashmap/examples/f1.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/parallel-hashmap/examples/f2.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/parallel-hashmap/examples/hash.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/parallel-hashmap/examples/hash_bench.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/parallel-hashmap/examples/hash_std.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/parallel-hashmap/examples/hash_value.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/parallel-hashmap/examples/insert_bench.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/parallel-hashmap/examples/knucleotide.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/parallel-hashmap/examples/lazy_emplace_l.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/parallel-hashmap/examples/matt.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/parallel-hashmap/examples/mt_word_counter.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/parallel-hashmap/examples/p_bench.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/parallel-hashmap/examples/pmr.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/parallel-hashmap/examples/serialize.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/parallel-hashmap/tests/btree_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/parallel-hashmap/tests/compressed_tuple_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/parallel-hashmap/tests/container_memory_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/parallel-hashmap/tests/dump_load_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/parallel-hashmap/tests/erase_if_test.cc" />
@@ -338,9 +340,13 @@
     <Image Include="../../thirdparty/owemdjee/parallel-hashmap/html/img/stl_flat_par_speed.PNG" />
     <Image Include="../../thirdparty/owemdjee/parallel-hashmap/html/img/stl_flat_speed.PNG" />
     <Text Include="../../thirdparty/owemdjee/parallel-hashmap/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/parallel-hashmap/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/parallel-hashmap/README.md" />
     <Text Include="../../thirdparty/owemdjee/parallel-hashmap/benchmark/BENCHMARK.md" />
+    <Text Include="../../thirdparty/owemdjee/parallel-hashmap/benchmark/Makefile" />
     <Text Include="../../thirdparty/owemdjee/parallel-hashmap/benchmark/bench.py" />
+    <Text Include="../../thirdparty/owemdjee/parallel-hashmap/benchmark/charts-template.html" />
+    <Text Include="../../thirdparty/owemdjee/parallel-hashmap/benchmark/js/examples.css" />
     <Text Include="../../thirdparty/owemdjee/parallel-hashmap/benchmark/js/jquery.canvaswrapper.js" />
     <Text Include="../../thirdparty/owemdjee/parallel-hashmap/benchmark/js/jquery.colorhelpers.js" />
     <Text Include="../../thirdparty/owemdjee/parallel-hashmap/benchmark/js/jquery.flot.axislabels.js" />
@@ -377,11 +383,31 @@
     <Text Include="../../thirdparty/owemdjee/parallel-hashmap/cmake/DownloadGTest.cmake" />
     <Text Include="../../thirdparty/owemdjee/parallel-hashmap/cmake/helpers.cmake" />
     <Text Include="../../thirdparty/owemdjee/parallel-hashmap/cmake/phmap.cmake" />
+    <Text Include="../../thirdparty/owemdjee/parallel-hashmap/css/bootstrap-responsive.min.css" />
+    <Text Include="../../thirdparty/owemdjee/parallel-hashmap/css/bootstrap.min.css" />
+    <Text Include="../../thirdparty/owemdjee/parallel-hashmap/css/colors.css" />
+    <Text Include="../../thirdparty/owemdjee/parallel-hashmap/css/style.css" />
     <Text Include="../../thirdparty/owemdjee/parallel-hashmap/doc/new_release.md" />
     <Text Include="../../thirdparty/owemdjee/parallel-hashmap/examples/knucleotide-input.txt" />
     <Text Include="../../thirdparty/owemdjee/parallel-hashmap/examples/knucleotide-input0.txt" />
+    <Text Include="../../thirdparty/owemdjee/parallel-hashmap/html/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/parallel-hashmap/html/bench_results/martinus_mod/InsertManyInt.html" />
+    <Text Include="../../thirdparty/owemdjee/parallel-hashmap/html/bench_results/martinus_mod/Lookup.html" />
+    <Text Include="../../thirdparty/owemdjee/parallel-hashmap/html/bench_results/martinus_mod/index2.html" />
+    <Text Include="../../thirdparty/owemdjee/parallel-hashmap/html/css/bootstrap-responsive.min.css" />
+    <Text Include="../../thirdparty/owemdjee/parallel-hashmap/html/css/bootstrap.min.css" />
+    <Text Include="../../thirdparty/owemdjee/parallel-hashmap/html/css/colors.css" />
+    <Text Include="../../thirdparty/owemdjee/parallel-hashmap/html/css/style.css" />
+    <Text Include="../../thirdparty/owemdjee/parallel-hashmap/html/diagrams/closed_hashing.svg" />
+    <Text Include="../../thirdparty/owemdjee/parallel-hashmap/html/diagrams/index_computation.svg" />
+    <Text Include="../../thirdparty/owemdjee/parallel-hashmap/html/includes.hs" />
+    <Text Include="../../thirdparty/owemdjee/parallel-hashmap/html/parallel_hashmap.html" />
     <Text Include="../../thirdparty/owemdjee/parallel-hashmap/html/parallel_hashmap.md" />
-    <Text Include="../../thirdparty/owemdjee/parallel-hashmap/parallel_hashmap/conanfile.py" />
+    <Text Include="../../thirdparty/owemdjee/parallel-hashmap/html/parallel_hashmap.pdf" />
+    <Text Include="../../thirdparty/owemdjee/parallel-hashmap/html/template.html" />
+    <Text Include="../../thirdparty/owemdjee/parallel-hashmap/html/template.latex" />
+    <Text Include="../../thirdparty/owemdjee/parallel-hashmap/index.html" />
+    <Text Include="../../thirdparty/owemdjee/parallel-hashmap/phmap.natvis" />
     <Text Include="../../thirdparty/owemdjee/parallel-hashmap/phmap_gdb.py" />
     <Text Include="../../thirdparty/owemdjee/parallel-hashmap/phmap_lldb.py" />
   </ItemGroup>

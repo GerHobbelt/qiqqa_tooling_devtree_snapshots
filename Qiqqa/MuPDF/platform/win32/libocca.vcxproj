@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOCCA;OCCA_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOCCA;OCCA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOCCA;OCCA_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libocca/include;../../thirdparty/owemdjee/libocca/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOCCA;OCCA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOCCA;OCCA_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOCCA;OCCA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libocca/include;../../thirdparty/owemdjee/libocca/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOCCA;OCCA_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOCCA;OCCA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOCCA;OCCA_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libocca/include;../../thirdparty/owemdjee/libocca/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOCCA;OCCA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOCCA;OCCA_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOCCA;OCCA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libocca/include;../../thirdparty/owemdjee/libocca/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOCCA;OCCA_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOCCA;OCCA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOCCA;OCCA_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libocca/include;../../thirdparty/owemdjee/libocca/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOCCA;OCCA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOCCA;OCCA_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOCCA;OCCA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libocca/include;../../thirdparty/owemdjee/libocca/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOCCA;OCCA_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOCCA;OCCA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOCCA;OCCA_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libocca/include;../../thirdparty/owemdjee/libocca/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOCCA;OCCA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOCCA;OCCA_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOCCA;OCCA_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libocca/include;../../thirdparty/owemdjee/libocca/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -252,6 +252,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/libocca/examples/cpp/15_finite_difference/src/visualizer.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/examples/cpp/16_mandelbulb/main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/examples/cpp/16_mandelbulb/src/visualizer.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libocca/examples/cpp/17_memory_pool/main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/examples/cpp/18_nonblocking_streams/main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/examples/cpp/20_native_dpcpp_kernel/addVectors.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/examples/cpp/20_native_dpcpp_kernel/main.cpp" />
@@ -262,6 +263,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/c/device.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/c/dtype.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/c/experimental/kernelBuilder.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libocca/src/c/experimental/memoryPool.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/c/io.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/c/json.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/c/kernel.cpp" />
@@ -274,6 +276,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/core/kernel.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/core/kernelArg.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/core/memory.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libocca/src/core/memoryPool.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/core/stream.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/core/streamTag.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/dtype/builtins.cpp" />
@@ -297,6 +300,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/core/launchedDevice.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/core/launchedKernel.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/core/memory.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/core/memoryPool.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/core/stream.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/core/streamTag.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/functional/functionStore.cpp" />
@@ -319,6 +323,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/builtins/attributes/shared.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/builtins/attributes/tile.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/builtins/types.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/enumerator.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/expr/binaryOpNode.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/expr/callNode.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/expr/charNode.cpp" />
@@ -360,8 +365,10 @@
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/kernelMetadata.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/keyword.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/loaders/attributeLoader.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/loaders/enumLoader.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/loaders/structLoader.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/loaders/typeLoader.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/loaders/unionLoader.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/loaders/variableLoader.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/macro.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/modes/cuda.cpp" />
@@ -449,6 +456,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/cuda/device.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/cuda/kernel.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/cuda/memory.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/cuda/memoryPool.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/cuda/registration.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/cuda/stream.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/cuda/streamTag.cpp" />
@@ -457,6 +465,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/dpcpp/device.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/dpcpp/kernel.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/dpcpp/memory.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/dpcpp/memoryPool.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/dpcpp/registration.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/dpcpp/stream.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/dpcpp/streamTag.cpp" />
@@ -465,6 +474,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/hip/device.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/hip/kernel.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/hip/memory.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/hip/memoryPool.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/hip/registration.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/hip/stream.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/hip/streamTag.cpp" />
@@ -473,6 +483,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/metal/device.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/metal/kernel.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/metal/memory.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/metal/memoryPool.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/metal/registration.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/metal/stream.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/metal/streamTag.cpp" />
@@ -480,6 +491,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/opencl/device.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/opencl/kernel.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/opencl/memory.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/opencl/memoryPool.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/opencl/registration.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/opencl/stream.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/opencl/streamTag.cpp" />
@@ -491,9 +503,10 @@
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/serial/device.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/serial/kernel.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/serial/memory.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/serial/memoryPool.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/serial/registration.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/serial/serialTag.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/serial/stream.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/serial/streamTag.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/utils/cli.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/utils/env.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/src/occa/internal/utils/gc.cpp" />
@@ -521,10 +534,14 @@
     <ClCompile Include="../../thirdparty/owemdjee/libocca/tests/src/c/json.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/tests/src/c/kernel.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/tests/src/c/memory.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libocca/tests/src/c/memoryPool.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/tests/src/c/types.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/tests/src/core/device.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/tests/src/core/kernel.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/tests/src/core/memory.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libocca/tests/src/core/memoryPool.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libocca/tests/src/core/stream.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libocca/tests/src/core/streamTag.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/tests/src/dtype.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/tests/src/fortran/typedefs_helper.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libocca/tests/src/functional/array.cpp" />
@@ -583,6 +600,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/libocca/include/occa/c/dtype.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/include/occa/c/experimental.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/include/occa/c/experimental/kernelBuilder.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libocca/include/occa/c/experimental/memoryPool.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/include/occa/c/io.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/include/occa/c/json.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/include/occa/c/kernel.h" />
@@ -597,6 +615,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/libocca/include/occa/core/kernel.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/include/occa/core/kernelArg.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/include/occa/core/memory.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/libocca/include/occa/core/memoryPool.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/include/occa/core/stream.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/include/occa/core/streamTag.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/include/occa/defines.hpp" />
@@ -663,6 +682,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/core/launchedDevice.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/core/launchedKernel.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/core/memory.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/core/memoryPool.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/core/stream.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/core/streamTag.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/functional/functionStore.hpp" />
@@ -688,6 +708,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/builtins/attributes/shared.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/builtins/attributes/tile.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/builtins/types.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/enumerator.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/expr.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/expr/binaryOpNode.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/expr/callNode.hpp" />
@@ -732,8 +753,10 @@
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/keyword.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/loaders.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/loaders/attributeLoader.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/loaders/enumLoader.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/loaders/structLoader.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/loaders/typeLoader.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/loaders/unionLoader.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/loaders/variableLoader.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/macro.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/modes/cuda.hpp" />
@@ -827,6 +850,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/cuda/device.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/cuda/kernel.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/cuda/memory.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/cuda/memoryPool.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/cuda/polyfill.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/cuda/registration.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/cuda/stream.hpp" />
@@ -837,6 +861,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/dpcpp/device.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/dpcpp/kernel.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/dpcpp/memory.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/dpcpp/memoryPool.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/dpcpp/polyfill.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/dpcpp/registration.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/dpcpp/stream.hpp" />
@@ -847,6 +872,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/hip/device.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/hip/kernel.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/hip/memory.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/hip/memoryPool.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/hip/polyfill.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/hip/registration.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/hip/stream.hpp" />
@@ -857,6 +883,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/metal/device.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/metal/kernel.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/metal/memory.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/metal/memoryPool.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/metal/registration.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/metal/stream.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/metal/streamTag.hpp" />
@@ -865,6 +892,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/opencl/device.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/opencl/kernel.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/opencl/memory.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/opencl/memoryPool.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/opencl/polyfill.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/opencl/registration.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/opencl/stream.hpp" />
@@ -877,6 +905,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/serial/device.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/serial/kernel.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/serial/memory.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/serial/memoryPool.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/serial/registration.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/serial/stream.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/libocca/src/occa/internal/modes/serial/streamTag.hpp" />
@@ -911,6 +940,8 @@
     <Image Include="../../thirdparty/owemdjee/libocca/docs/favicon.ico" />
     <Text Include="../../thirdparty/owemdjee/libocca/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libocca/INSTALL.md" />
+    <Text Include="../../thirdparty/owemdjee/libocca/LICENSE" />
+    <Text Include="../../thirdparty/owemdjee/libocca/Makefile" />
     <Text Include="../../thirdparty/owemdjee/libocca/README.md" />
     <Text Include="../../thirdparty/owemdjee/libocca/bin/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libocca/cmake/ExportAndPackageConfig.cmake" />
@@ -922,6 +953,8 @@
     <Text Include="../../thirdparty/owemdjee/libocca/cmake/SetCompilerFlags.cmake" />
     <Text Include="../../thirdparty/owemdjee/libocca/config.default.json" />
     <Text Include="../../thirdparty/owemdjee/libocca/configure-cmake.sh" />
+    <Text Include="../../thirdparty/owemdjee/libocca/configure-sycl-nv-cmake.sh" />
+    <Text Include="../../thirdparty/owemdjee/libocca/docs/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/libocca/docs/README.md" />
     <Text Include="../../thirdparty/owemdjee/libocca/docs/_navbar.md" />
     <Text Include="../../thirdparty/owemdjee/libocca/docs/_sidebar.md" />
@@ -1181,6 +1214,8 @@
     <Text Include="../../thirdparty/owemdjee/libocca/docs/api/streamTag/operator_equals/_sidebar.md" />
     <Text Include="../../thirdparty/owemdjee/libocca/docs/api/streamTag/wait.md" />
     <Text Include="../../thirdparty/owemdjee/libocca/docs/api/streamTag/wait/_sidebar.md" />
+    <Text Include="../../thirdparty/owemdjee/libocca/docs/assets/images/logo/blue.svg" />
+    <Text Include="../../thirdparty/owemdjee/libocca/docs/assets/occa.css" />
     <Text Include="../../thirdparty/owemdjee/libocca/docs/assets/occa.js" />
     <Text Include="../../thirdparty/owemdjee/libocca/docs/examples/README.md" />
     <Text Include="../../thirdparty/owemdjee/libocca/docs/examples/_sidebar.md" />
@@ -1209,58 +1244,120 @@
     <Text Include="../../thirdparty/owemdjee/libocca/docs/guide/user-guide/introduction.md" />
     <Text Include="../../thirdparty/owemdjee/libocca/docs/guide/user-guide/python-setup.md" />
     <Text Include="../../thirdparty/owemdjee/libocca/docs/history.md" />
+    <Text Include="../../thirdparty/owemdjee/libocca/docs/index.html" />
     <Text Include="../../thirdparty/owemdjee/libocca/docs/publications.md" />
     <Text Include="../../thirdparty/owemdjee/libocca/docs/team.md" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/c/01_add_vectors/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/c/01_add_vectors/Makefile" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/c/01_add_vectors/README.md" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/c/01_add_vectors/addVectors.okl" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/c/02_background_device/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/c/02_background_device/Makefile" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/c/02_background_device/README.md" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/c/02_background_device/addVectors.okl" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/c/03_generic_inline_kernel/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/c/03_generic_inline_kernel/Makefile" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/c/03_generic_inline_kernel/README.md" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/c/04_reduction/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/c/04_reduction/Makefile" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/c/04_reduction/README.md" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/c/04_reduction/reduction.okl" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/c/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/01_add_vectors/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/01_add_vectors/Makefile" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/01_add_vectors/README.md" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/01_add_vectors/addVectors.okl" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/02_for_loops/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/02_for_loops/Makefile" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/02_for_loops/README.md" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/03_arrays/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/03_arrays/Makefile" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/03_arrays/README.md" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/04_generic_inline_kernel/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/04_generic_inline_kernel/Makefile" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/04_generic_inline_kernel/README.md" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/05_custom_types/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/05_custom_types/Makefile" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/05_custom_types/README.md" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/05_custom_types/addVectors.okl" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/06_shared_memory/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/06_shared_memory/Makefile" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/06_shared_memory/README.md" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/06_shared_memory/reduction.okl" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/07_streams/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/07_streams/Makefile" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/07_streams/README.md" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/07_streams/addVectors.okl" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/09_native_cpp_kernels/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/09_native_cpp_kernels/Makefile" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/10_native_c_kernels/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/10_native_c_kernels/Makefile" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/11_native_cuda_kernels/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/11_native_cuda_kernels/Makefile" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/12_native_opencl_kernels/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/12_native_opencl_kernels/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/12_native_opencl_kernels/addVectors.cl" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/13_openmp_interop/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/13_openmp_interop/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/13_openmp_interop/addVectors.okl" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/14_cuda_interop/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/14_cuda_interop/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/14_cuda_interop/addVectors.okl" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/15_finite_difference/Makefile" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/15_finite_difference/README.md" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/15_finite_difference/fd2d.okl" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/15_finite_difference/settings.json" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/16_mandelbulb/Makefile" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/16_mandelbulb/README.md" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/16_mandelbulb/rayMarcher.okl" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/16_mandelbulb/settings.json" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/17_memory_pool/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/17_memory_pool/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/17_memory_pool/README.md" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/17_memory_pool/addVectors.okl" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/18_nonblocking_streams/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/18_nonblocking_streams/Makefile" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/18_nonblocking_streams/README.md" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/18_nonblocking_streams/powerOfPi.okl" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/20_native_dpcpp_kernel/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/20_native_dpcpp_kernel/Makefile" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/30_device_function/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/30_device_function/Makefile" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/30_device_function/README.md" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/30_device_function/addVectors.okl" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/cpp/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/fortran/01_add_vectors/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/fortran/01_add_vectors/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/fortran/01_add_vectors/addVectors.okl" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/fortran/01_add_vectors/main.f90" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/fortran/03_static_compilation/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/fortran/03_static_compilation/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/fortran/03_static_compilation/addVectors.okl" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/fortran/03_static_compilation/main.f90" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/fortran/04_reduction/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/fortran/04_reduction/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/fortran/04_reduction/main.f90" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/fortran/04_reduction/reduction.okl" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/fortran/09_streams/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/fortran/09_streams/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/fortran/09_streams/addVectors.okl" />
+    <Text Include="../../thirdparty/owemdjee/libocca/examples/fortran/09_streams/main.f90" />
     <Text Include="../../thirdparty/owemdjee/libocca/examples/fortran/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libocca/include/occa/core/base.tpp" />
+    <Text Include="../../thirdparty/owemdjee/libocca/include/occa/core/device.tpp" />
+    <Text Include="../../thirdparty/owemdjee/libocca/include/occa/core/memory.tpp" />
+    <Text Include="../../thirdparty/owemdjee/libocca/include/occa/core/memoryPool.tpp" />
+    <Text Include="../../thirdparty/owemdjee/libocca/include/occa/types/json.tpp" />
+    <Text Include="../../thirdparty/owemdjee/libocca/scripts/build/Make.fortran_rules" />
+    <Text Include="../../thirdparty/owemdjee/libocca/scripts/build/Makefile" />
     <Text Include="../../thirdparty/owemdjee/libocca/scripts/build/compiledDefinesTemplate.hpp.in" />
     <Text Include="../../thirdparty/owemdjee/libocca/scripts/build/shellTools.sh" />
     <Text Include="../../thirdparty/owemdjee/libocca/scripts/codegen/create_fortran_kernel_interface.py" />
     <Text Include="../../thirdparty/owemdjee/libocca/scripts/codegen/occa_kernel_m.f90.in" />
     <Text Include="../../thirdparty/owemdjee/libocca/scripts/codegen/setup_kernel_operators.py" />
+    <Text Include="../../thirdparty/owemdjee/libocca/scripts/compiler/findFortranCompilerVendor.F90" />
+    <Text Include="../../thirdparty/owemdjee/libocca/scripts/compiler/fortranCompilerSupportsOpenMP.f90" />
     <Text Include="../../thirdparty/owemdjee/libocca/scripts/docs/api_docgen/__init__.py" />
     <Text Include="../../thirdparty/owemdjee/libocca/scripts/docs/api_docgen/api_docgen.py" />
     <Text Include="../../thirdparty/owemdjee/libocca/scripts/docs/api_docgen/cli.py" />
@@ -1272,7 +1369,33 @@
     <Text Include="../../thirdparty/owemdjee/libocca/scripts/docs/api_docgen/types.py" />
     <Text Include="../../thirdparty/owemdjee/libocca/scripts/docs/api_docgen/utils.py" />
     <Text Include="../../thirdparty/owemdjee/libocca/scripts/docs/api_docgen/xml_utils.py" />
+    <Text Include="../../thirdparty/owemdjee/libocca/scripts/editor/okl-mode.el" />
+    <Text Include="../../thirdparty/owemdjee/libocca/src/fortran/fc_string_m.f90" />
+    <Text Include="../../thirdparty/owemdjee/libocca/src/fortran/occa_base_m.f90" />
+    <Text Include="../../thirdparty/owemdjee/libocca/src/fortran/occa_device_m.f90" />
+    <Text Include="../../thirdparty/owemdjee/libocca/src/fortran/occa_dtype_m.f90" />
+    <Text Include="../../thirdparty/owemdjee/libocca/src/fortran/occa_json_m.f90" />
+    <Text Include="../../thirdparty/owemdjee/libocca/src/fortran/occa_kernelBuilder_m.f90" />
+    <Text Include="../../thirdparty/owemdjee/libocca/src/fortran/occa_kernel_m.f90" />
+    <Text Include="../../thirdparty/owemdjee/libocca/src/fortran/occa_m.f90" />
+    <Text Include="../../thirdparty/owemdjee/libocca/src/fortran/occa_memory_m.f90" />
+    <Text Include="../../thirdparty/owemdjee/libocca/src/fortran/occa_scope_m.f90" />
+    <Text Include="../../thirdparty/owemdjee/libocca/src/fortran/occa_stream_m.f90" />
+    <Text Include="../../thirdparty/owemdjee/libocca/src/fortran/occa_typedefs_m.f90" />
+    <Text Include="../../thirdparty/owemdjee/libocca/src/fortran/occa_types_m.f90" />
+    <Text Include="../../thirdparty/owemdjee/libocca/src/occa/internal/io/output.tpp" />
+    <Text Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/loaders/variableLoader.tpp" />
+    <Text Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/parser.tpp" />
+    <Text Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/stream.tpp" />
+    <Text Include="../../thirdparty/owemdjee/libocca/src/occa/internal/lang/utils/array.tpp" />
+    <Text Include="../../thirdparty/owemdjee/libocca/src/occa/internal/utils/cli.tpp" />
+    <Text Include="../../thirdparty/owemdjee/libocca/src/occa/internal/utils/gc.tpp" />
+    <Text Include="../../thirdparty/owemdjee/libocca/src/occa/internal/utils/trie.tpp" />
     <Text Include="../../thirdparty/owemdjee/libocca/tests/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libocca/tests/files/addVectors.okl" />
+    <Text Include="../../thirdparty/owemdjee/libocca/tests/files/argKernel.okl" />
+    <Text Include="../../thirdparty/owemdjee/libocca/tests/src/fortran/typedefs.f90" />
+    <Text Include="../../thirdparty/owemdjee/libocca/tests/src/fortran/types.f90" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

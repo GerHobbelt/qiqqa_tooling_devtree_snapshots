@@ -1423,7 +1423,7 @@ test_find( void )
 static int
 test_findv_chrp_use( void )
 {
-	int n, status;
+	int status;
 	fields f;
 	const char *p;
 
@@ -1454,7 +1454,7 @@ test_findv_chrp_use( void )
 static int
 test_findv_chrp_nouse( void )
 {
-	int n, status;
+	int status;
 	fields f;
 	const char *p;
 
@@ -1483,7 +1483,7 @@ test_findv_chrp_nouse( void )
 static int
 test_findv_chrp_nolen( void )
 {
-	int n, status;
+	int status;
 	fields f;
 	char *p;
 
@@ -1520,7 +1520,7 @@ test_findv_chrp( void )
 static int
 test_findv_strp_use( void )
 {
-	int n, status;
+	int status;
 	fields f;
 	const str *p;
 
@@ -1551,7 +1551,7 @@ test_findv_strp_use( void )
 static int
 test_findv_strp_nouse( void )
 {
-	int n, status;
+	int status;
 	fields f;
 	const str *p;
 
@@ -1580,7 +1580,7 @@ test_findv_strp_nouse( void )
 static int
 test_findv_strp_nolen( void )
 {
-	int n, status;
+	int status;
 	fields f;
 	const str *p;
 

@@ -56,13 +56,13 @@
  */
 #if ! defined __MINGW32__ || ! defined __have_typedef_pid_t
 
-# if defined __MINGW64__
+# if defined __MINGW64__ || defined WIN64 || defined _WIN64
     typedef __int64 pid_t;
 # else
     typedef int pid_t;
 #endif
 
-#if __GNUC__ < 4
+#if ! defined __GNUC__ || __GNUC__ < 4
 /* GCC v4.0 and later, (as used by MinGW), allows us to repeat a
  * typedef, provided every duplicate is consistent; only set this
  * multiple definition guard when we cannot be certain that it is

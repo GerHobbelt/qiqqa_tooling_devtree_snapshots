@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUV;UV_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUV;UV_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUV;UV_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUV;UV_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUV;UV_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUV;UV_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUV;UV_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUV;UV_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUV;UV_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUV;UV_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUV;UV_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUV;UV_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUV;UV_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUV;UV_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUV;UV_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUV;UV_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUV;UV_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUV;UV_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUV;UV_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUV;UV_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUV;UV_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUV;UV_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUV;UV_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUV;UV_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -267,6 +267,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/libuv/src/random.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libuv/src/strscpy.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libuv/src/strtok.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libuv/src/thread-common.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libuv/src/threadpool.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libuv/src/timer.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libuv/src/unix/aix-common.c" />
@@ -446,7 +447,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/libuv/test/test-pipe-server-close.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libuv/test/test-pipe-set-fchmod.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libuv/test/test-pipe-set-non-blocking.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libuv/test/test-pipe-try-write.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libuv/test/test-platform-output.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libuv/test/test-poll-close-doesnt-corrupt-stack.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libuv/test/test-poll-close.c" />
@@ -591,16 +591,20 @@
     <Image Include="../../thirdparty/owemdjee/libuv/docs/src/static/logo.png" />
     <Image Include="../../thirdparty/owemdjee/libuv/docs/src/static/loop_iteration.png" />
     <Image Include="../../thirdparty/owemdjee/libuv/img/banner.png" />
+    <Text Include="../../thirdparty/owemdjee/libuv/AUTHORS" />
     <Text Include="../../thirdparty/owemdjee/libuv/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libuv/CONTRIBUTING.md" />
     <Text Include="../../thirdparty/owemdjee/libuv/ChangeLog" />
+    <Text Include="../../thirdparty/owemdjee/libuv/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/libuv/LINKS.md" />
     <Text Include="../../thirdparty/owemdjee/libuv/MAINTAINERS.md" />
     <Text Include="../../thirdparty/owemdjee/libuv/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libuv/README.md" />
     <Text Include="../../thirdparty/owemdjee/libuv/SUPPORTED_PLATFORMS.md" />
     <Text Include="../../thirdparty/owemdjee/libuv/autogen.sh" />
+    <Text Include="../../thirdparty/owemdjee/libuv/cmake-toolchains/cross-mingw32.cmake" />
     <Text Include="../../thirdparty/owemdjee/libuv/configure.ac" />
+    <Text Include="../../thirdparty/owemdjee/libuv/docs/Makefile" />
     <Text Include="../../thirdparty/owemdjee/libuv/docs/code/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libuv/docs/code/multi-echo-server/hammer.js" />
     <Text Include="../../thirdparty/owemdjee/libuv/docs/make.bat" />
@@ -640,6 +644,7 @@
     <Text Include="../../thirdparty/owemdjee/libuv/docs/src/request.rst" />
     <Text Include="../../thirdparty/owemdjee/libuv/docs/src/signal.rst" />
     <Text Include="../../thirdparty/owemdjee/libuv/docs/src/sphinx-plugins/manpage.py" />
+    <Text Include="../../thirdparty/owemdjee/libuv/docs/src/static/diagrams.key/" />
     <Text Include="../../thirdparty/owemdjee/libuv/docs/src/stream.rst" />
     <Text Include="../../thirdparty/owemdjee/libuv/docs/src/tcp.rst" />
     <Text Include="../../thirdparty/owemdjee/libuv/docs/src/threading.rst" />
@@ -649,11 +654,18 @@
     <Text Include="../../thirdparty/owemdjee/libuv/docs/src/udp.rst" />
     <Text Include="../../thirdparty/owemdjee/libuv/docs/src/upgrading.rst" />
     <Text Include="../../thirdparty/owemdjee/libuv/docs/src/version.rst" />
+    <Text Include="../../thirdparty/owemdjee/libuv/img/logos.svg" />
     <Text Include="../../thirdparty/owemdjee/libuv/libuv-static.pc.in" />
     <Text Include="../../thirdparty/owemdjee/libuv/libuv.pc.in" />
+    <Text Include="../../thirdparty/owemdjee/libuv/m4/as_case.m4" />
+    <Text Include="../../thirdparty/owemdjee/libuv/m4/ax_pthread.m4" />
+    <Text Include="../../thirdparty/owemdjee/libuv/m4/libuv-check-flags.m4" />
+    <Text Include="../../thirdparty/owemdjee/libuv/m4/libuv-check-versions.m4" />
     <Text Include="../../thirdparty/owemdjee/libuv/test/fixtures/lorem_ipsum.txt" />
     <Text Include="../../thirdparty/owemdjee/libuv/tools/make_dist_html.py" />
     <Text Include="../../thirdparty/owemdjee/libuv/tools/vswhere_usability_wrapper.cmd" />
+    <Text Include="../../thirdparty/owemdjee/libuv/tsansupp.txt" />
+    <Text Include="../../thirdparty/owemdjee/libuv/uv_win_longpath.manifest" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

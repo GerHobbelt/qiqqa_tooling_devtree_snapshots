@@ -28,6 +28,7 @@
 #include <boost/range/begin.hpp>
 #include <boost/range/end.hpp>
 #include <boost/range/iterator.hpp>
+#include <boost/range/size.hpp>
 
 #include <boost/geometry/algorithms/union.hpp>
 
@@ -68,7 +69,7 @@ inline std::size_t num_points(Range const& rng, bool add_for_open = false)
 
 template <typename OutputType, typename G1, typename G2>
 void test_union(std::string const& caseid, G1 const& g1, G2 const& g2,
-        const count_set& expected_count, const count_set& expected_hole_count,
+        count_set const& expected_count, count_set const& expected_hole_count,
         int expected_point_count, expectation_limits const& expected_area,
         ut_settings const& settings)
 {
@@ -227,10 +228,9 @@ void test_union(std::string const& caseid, G1 const& g1, G2 const& g2,
         //mapper.map(g1, "opacity:0.6;fill:rgb(0,0,255);stroke:rgb(0,0,0);stroke-width:1");
         //mapper.map(g2, "opacity:0.6;fill:rgb(0,255,0);stroke:rgb(0,0,0);stroke-width:1");
 
-        for (typename result_type::const_iterator it = clip.begin();
-                it != clip.end(); ++it)
+        for (auto const& item : clip)
         {
-            mapper.map(*it, "fill-opacity:0.2;stroke-opacity:0.4;fill:rgb(255,0,0);"
+            mapper.map(item, "fill-opacity:0.2;stroke-opacity:0.4;fill:rgb(255,0,0);"
                     "stroke:rgb(255,0,255);stroke-width:8");
             //mapper.map(*it, "opacity:0.6;fill:none;stroke:rgb(255,0,0);stroke-width:5");
         }
@@ -241,7 +241,7 @@ void test_union(std::string const& caseid, G1 const& g1, G2 const& g2,
 template <typename OutputType, typename G1, typename G2>
 void test_one(std::string const& caseid,
         std::string const& wkt1, std::string const& wkt2,
-        const count_set& expected_count, const count_set& expected_hole_count,
+        count_set const& expected_count, count_set const& expected_hole_count,
         int expected_point_count, expectation_limits const& expected_area,
         ut_settings const& settings = ut_settings())
 {

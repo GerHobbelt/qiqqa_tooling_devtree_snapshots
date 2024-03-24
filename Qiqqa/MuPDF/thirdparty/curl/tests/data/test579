@@ -64,10 +64,10 @@ crypto
 lib%TESTNUMBER
 </tool>
 
- <name>
+<name>
 small chunked HTTP POSTs with digest auth. and progress callback
- </name>
- <command>
+</name>
+<command>
 http://%HOSTIP:%HTTPPORT/%TESTNUMBER %LOGDIR/ip%TESTNUMBER
 </command>
 </client>
@@ -76,6 +76,8 @@ http://%HOSTIP:%HTTPPORT/%TESTNUMBER %LOGDIR/ip%TESTNUMBER
 # Verify data after the test has been "shot"
 <verify>
 <file name="%LOGDIR/ip%TESTNUMBER">
+Progress callback called with UL 0 out of 0
+Progress callback called with UL 5 out of 0
 Progress callback called with UL 0 out of 0
 Progress callback called with UL 8 out of 0
 Progress callback called with UL 16 out of 0

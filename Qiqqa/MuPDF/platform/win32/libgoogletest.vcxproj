@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGOOGLETEST;GOOGLETEST_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGOOGLETEST;GOOGLETEST_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGOOGLETEST;GOOGLETEST_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;../../thirdparty/owemdjee/abseil-cpp;../../thirdparty/owemdjee/re2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGOOGLETEST;GOOGLETEST_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGOOGLETEST;GOOGLETEST_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGOOGLETEST;GOOGLETEST_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;../../thirdparty/owemdjee/abseil-cpp;../../thirdparty/owemdjee/re2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGOOGLETEST;GOOGLETEST_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGOOGLETEST;GOOGLETEST_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGOOGLETEST;GOOGLETEST_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;../../thirdparty/owemdjee/abseil-cpp;../../thirdparty/owemdjee/re2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGOOGLETEST;GOOGLETEST_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGOOGLETEST;GOOGLETEST_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGOOGLETEST;GOOGLETEST_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;../../thirdparty/owemdjee/abseil-cpp;../../thirdparty/owemdjee/re2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGOOGLETEST;GOOGLETEST_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGOOGLETEST;GOOGLETEST_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGOOGLETEST;GOOGLETEST_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;../../thirdparty/owemdjee/abseil-cpp;../../thirdparty/owemdjee/re2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGOOGLETEST;GOOGLETEST_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGOOGLETEST;GOOGLETEST_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGOOGLETEST;GOOGLETEST_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;../../thirdparty/owemdjee/abseil-cpp;../../thirdparty/owemdjee/re2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGOOGLETEST;GOOGLETEST_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGOOGLETEST;GOOGLETEST_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGOOGLETEST;GOOGLETEST_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;../../thirdparty/owemdjee/abseil-cpp;../../thirdparty/owemdjee/re2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGOOGLETEST;GOOGLETEST_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGOOGLETEST;GOOGLETEST_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGOOGLETEST;GOOGLETEST_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;../../thirdparty/owemdjee/googletest/googletest;../../thirdparty/owemdjee/googletest/googlemock;../../thirdparty/owemdjee/abseil-cpp;../../thirdparty/owemdjee/re2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -235,7 +235,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/googletest/googlemock/src/gmock-spec-builders.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/googletest/googlemock/src/gmock.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/googletest/googlemock/src/gmock_main.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/googletest/googletest/src/gtest-all.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/googletest/googletest/src/gtest-assertion-result.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/googletest/googletest/src/gtest-death-test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/googletest/googletest/src/gtest-filepath.cc" />
@@ -245,7 +244,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/googletest/googletest/src/gtest-test-part.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/googletest/googletest/src/gtest-typed-test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/googletest/googletest/src/gtest.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/googletest/googletest/src/gtest_main.cc" />
     <ClInclude Include="../../thirdparty/owemdjee/googletest/googlemock/include/gmock/gmock-actions.h" />
     <ClInclude Include="../../thirdparty/owemdjee/googletest/googlemock/include/gmock/gmock-cardinalities.h" />
     <ClInclude Include="../../thirdparty/owemdjee/googletest/googlemock/include/gmock/gmock-function-mocker.h" />
@@ -261,8 +259,10 @@
     <ClInclude Include="../../thirdparty/owemdjee/googletest/googlemock/include/gmock/internal/gmock-internal-utils.h" />
     <ClInclude Include="../../thirdparty/owemdjee/googletest/googlemock/include/gmock/internal/gmock-port.h" />
     <ClInclude Include="../../thirdparty/owemdjee/googletest/googlemock/include/gmock/internal/gmock-pp.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/googletest/googlemock/include/monolithic_examples.h" />
     <ClInclude Include="../../thirdparty/owemdjee/googletest/googletest/include/gtest/gtest-assertion-result.h" />
     <ClInclude Include="../../thirdparty/owemdjee/googletest/googletest/include/gtest/gtest-death-test.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/googletest/googletest/include/gtest/gtest-exit-handlers.h" />
     <ClInclude Include="../../thirdparty/owemdjee/googletest/googletest/include/gtest/gtest-matchers.h" />
     <ClInclude Include="../../thirdparty/owemdjee/googletest/googletest/include/gtest/gtest-message.h" />
     <ClInclude Include="../../thirdparty/owemdjee/googletest/googletest/include/gtest/gtest-param-test.h" />
@@ -284,12 +284,14 @@
     <ClInclude Include="../../thirdparty/owemdjee/googletest/googletest/include/gtest/internal/gtest-port.h" />
     <ClInclude Include="../../thirdparty/owemdjee/googletest/googletest/include/gtest/internal/gtest-string.h" />
     <ClInclude Include="../../thirdparty/owemdjee/googletest/googletest/include/gtest/internal/gtest-type-util.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/googletest/googletest/include/monolithic_examples.h" />
     <ClInclude Include="../../thirdparty/owemdjee/googletest/googletest/src/gtest-internal-inl.h" />
     <Image Include="../../thirdparty/owemdjee/googletest/Google_Cloud_Developer_PosterDark_2021-3-1.max-2200x2200.jpg" />
     <Text Include="../../thirdparty/owemdjee/googletest/BUILD.bazel" />
     <Text Include="../../thirdparty/owemdjee/googletest/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/googletest/CONTRIBUTING.md" />
     <Text Include="../../thirdparty/owemdjee/googletest/CONTRIBUTORS" />
+    <Text Include="../../thirdparty/owemdjee/googletest/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/googletest/README.md" />
     <Text Include="../../thirdparty/owemdjee/googletest/build_linux_arm.sh" />
     <Text Include="../../thirdparty/owemdjee/googletest/build_linux_x86.sh" />
@@ -300,7 +302,12 @@
     <Text Include="../../thirdparty/owemdjee/googletest/ci/macos-presubmit.sh" />
     <Text Include="../../thirdparty/owemdjee/googletest/ci/windows-presubmit.bat" />
     <Text Include="../../thirdparty/owemdjee/googletest/cmake/Config.cmake.in" />
+    <Text Include="../../thirdparty/owemdjee/googletest/docs/_config.yml" />
+    <Text Include="../../thirdparty/owemdjee/googletest/docs/_data/navigation.yml" />
+    <Text Include="../../thirdparty/owemdjee/googletest/docs/_layouts/default.html" />
+    <Text Include="../../thirdparty/owemdjee/googletest/docs/_sass/main.scss" />
     <Text Include="../../thirdparty/owemdjee/googletest/docs/advanced.md" />
+    <Text Include="../../thirdparty/owemdjee/googletest/docs/assets/css/style.scss" />
     <Text Include="../../thirdparty/owemdjee/googletest/docs/community_created_documentation.md" />
     <Text Include="../../thirdparty/owemdjee/googletest/docs/faq.md" />
     <Text Include="../../thirdparty/owemdjee/googletest/docs/gmock_cheat_sheet.md" />
@@ -333,6 +340,7 @@
     <Text Include="../../thirdparty/owemdjee/googletest/googletest/cmake/libgtest.la.in" />
     <Text Include="../../thirdparty/owemdjee/googletest/googletest/docs/README.md" />
     <Text Include="../../thirdparty/owemdjee/googletest/googletest/include/gtest/internal/custom/README.md" />
+    <Text Include="../../thirdparty/owemdjee/googletest/googletest_deps.bzl" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

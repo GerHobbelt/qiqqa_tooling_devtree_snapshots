@@ -265,7 +265,7 @@ TBOX TESSLINE::bounding_box() const {
 }
 
 #if !GRAPHICS_DISABLED
-void TESSLINE::plot(ScrollView *window, ScrollView::Color color, ScrollView::Color child_color) {
+void TESSLINE::plot(ScrollViewReference &window, Diagnostics::Color color, Diagnostics::Color child_color) {
   if (is_hole) {
     window->Pen(child_color);
   } else {
@@ -361,11 +361,11 @@ TBLOB *TBLOB::ClassifyNormalizeIfNeeded() const {
     rotated_blob = new TBLOB(*this);
     const FCOORD &rotation = denorm_.block()->classify_rotation();
     // Move the rotated blob back to the same y-position so that we
-    // can still distinguish similar glyphs with differeny y-position.
+    // can still distinguish similar glyphs with different y-position.
     float target_y =
         kBlnBaselineOffset + (rotation.y() > 0 ? x_middle - box.left() : box.right() - x_middle);
     rotated_blob->Normalize(nullptr, &rotation, &denorm_, x_middle, y_middle, 1.0f, 1.0f, 0.0f,
-                            target_y, denorm_.inverse(), denorm_.pix());
+                            target_y, denorm_.inverse());
   }
   return rotated_blob;
 }
@@ -399,11 +399,10 @@ void TBLOB::Clear() {
 // this blob and the Pix for the full image.
 void TBLOB::Normalize(const BLOCK *block, const FCOORD *rotation, const DENORM *predecessor,
                       float x_origin, float y_origin, float x_scale, float y_scale,
-                      float final_xshift, float final_yshift, bool inverse, Image pix) {
+                      float final_xshift, float final_yshift, bool inverse) {
   denorm_.SetupNormalization(block, rotation, predecessor, x_origin, y_origin, x_scale, y_scale,
                              final_xshift, final_yshift);
   denorm_.set_inverse(inverse);
-  denorm_.set_pix(pix);
   // TODO(rays) outline->Normalize is more accurate, but breaks tests due
   // the changes it makes. Reinstate this code with a retraining.
   // The reason this change is troublesome is that it normalizes for the
@@ -506,7 +505,7 @@ void TBLOB::CorrectBlobOrder(TBLOB *next) {
 }
 
 #if !GRAPHICS_DISABLED
-void TBLOB::plot(ScrollView *window, ScrollView::Color color, ScrollView::Color child_color) {
+void TBLOB::plot(ScrollViewReference &window, Diagnostics::Color color, Diagnostics::Color child_color) {
   for (TESSLINE *outline = outlines; outline != nullptr; outline = outline->next) {
     outline->plot(window, color, child_color);
   }
@@ -793,7 +792,7 @@ TWERD *TWERD::PolygonalCopy(bool allow_detailed_fx, WERD *src) {
 
 // Baseline normalizes the blobs in-place, recording the normalization in the
 // DENORMs in the blobs.
-void TWERD::BLNormalize(const BLOCK *block, const ROW *row, Image pix, bool inverse, float x_height,
+void TWERD::BLNormalize(const BLOCK *block, const ROW *row, bool inverse, float x_height,
                         float baseline_shift, bool numeric_mode, tesseract::OcrEngineMode hint,
                         const TBOX *norm_box, DENORM *word_denorm) {
   TBOX word_box = bounding_box();
@@ -829,13 +828,12 @@ void TWERD::BLNormalize(const BLOCK *block, const ROW *row, Image pix, bool inve
     // The inverse flag will be true iff the word has been determined to be
     // white on black, and is independent of whether the pix is 8 bit or 1 bit.
     blob->Normalize(block, nullptr, nullptr, word_middle, baseline, blob_scale, blob_scale, 0.0f,
-                    final_y_offset, inverse, pix);
+                    final_y_offset, inverse);
   }
   if (word_denorm != nullptr) {
     word_denorm->SetupNormalization(block, nullptr, nullptr, word_middle, input_y_offset, scale,
                                     scale, 0.0f, final_y_offset);
     word_denorm->set_inverse(inverse);
-    word_denorm->set_pix(pix);
   }
 }
 
@@ -908,10 +906,10 @@ void TWERD::MergeBlobs(unsigned start, unsigned end) {
 }
 
 #if !GRAPHICS_DISABLED
-void TWERD::plot(ScrollView *window) {
-  ScrollView::Color color = WERD::NextColor(ScrollView::BLACK);
+void TWERD::plot(ScrollViewReference &window) {
+  Diagnostics::Color color = WERD::NextColor(Diagnostics::BLACK);
   for (auto &blob : blobs) {
-    blob->plot(window, color, ScrollView::BROWN);
+    blob->plot(window, color, Diagnostics::BROWN);
     color = WERD::NextColor(color);
   }
 }

@@ -25,29 +25,31 @@
 # Revised by Martin Storsjo, 2022
 # Revised by Jon Creighton, 2023
 # Revised by Gunther Nikl, 2023
+# Revised by Tyler Kropp, 2023
+# Revised by Timothy Lyanguzov, 2023
 
 # This code is released under the libpng license.
 # For conditions of distribution and use, see the disclaimer
 # and license in png.h
 
-cmake_minimum_required(VERSION 3.1)
-cmake_policy(VERSION 3.1)
-
-project(libpng C ASM)
-enable_testing()
-
-include(CMakeParseArguments)
-include(CheckCSourceCompiles)
-include(GNUInstallDirs)
+cmake_minimum_required(VERSION 3.5)
 
 set(PNGLIB_MAJOR 1)
 set(PNGLIB_MINOR 6)
-set(PNGLIB_REVISION 40)
+set(PNGLIB_REVISION 41)
 #set(PNGLIB_SUBREVISION 0)
 set(PNGLIB_SUBREVISION "git")
 set(PNGLIB_VERSION ${PNGLIB_MAJOR}.${PNGLIB_MINOR}.${PNGLIB_REVISION})
 set(PNGLIB_ABI_VERSION ${PNGLIB_MAJOR}${PNGLIB_MINOR})
 set(PNGLIB_SHARED_VERSION ${PNGLIB_ABI_VERSION}.${PNGLIB_REVISION}.${PNGLIB_SUBREVISION})
+
+project(libpng
+        VERSION ${PNGLIB_VERSION}
+        LANGUAGES C ASM)
+
+include(CMakeParseArguments)
+include(CheckCSourceCompiles)
+include(GNUInstallDirs)
 
 # Allow the users to specify an application-specific API prefix for libpng
 # vendoring purposes. A standard libpng build should have no such prefix.
@@ -69,10 +71,21 @@ set(DFA_XTRA ""
 option(PNG_SHARED "Build libpng as a shared lib" ON)
 option(PNG_STATIC "Build libpng as a static lib" ON)
 option(PNG_FRAMEWORK "Build libpng as a Mac OS X framework" OFF)
-option(PNG_EXECUTABLES "Build libpng executables" ON)
-option(PNG_TESTS "Build libpng tests" ON)
+option(PNG_TESTS "Build the libpng tests" ON)
+option(PNG_TOOLS "Build the libpng tools" ON)
 option(PNG_DEBUG "Enable debug output" OFF)
 option(PNG_HARDWARE_OPTIMIZATIONS "Enable hardware optimizations" ON)
+
+# Maintain backwards compatibility with the deprecated option PNG_EXECUTABLES.
+option(PNG_EXECUTABLES "[Deprecated; please use PNG_TOOLS]" ON)
+if(NOT PNG_EXECUTABLES)
+  message(DEPRECATION "The option PNG_EXECUTABLES has been deprecated in favour of PNG_TOOLS")
+  if(PNG_TOOLS)
+    message(AUTHOR_WARNING
+            "Setting PNG_TOOLS to ${PNG_EXECUTABLES}, to stay compatible with PNG_EXECUTABLES")
+    set(PNG_TOOLS "${PNG_EXECUTABLES}")
+  endif()
+endif()
 
 # Allow the users to specify a location of zlib.
 # Useful if zlib is being built alongside this as a sub-project.
@@ -240,38 +253,36 @@ option(ld-version-script "Enable linker version script" ON)
 if(ld-version-script AND NOT ANDROID AND NOT APPLE)
   # Check if LD supports linker scripts.
   file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/conftest.map" "
-VERS_1 {
-        global: sym1;
-        local: *;
-};
-
-VERS_2 {
-        global: sym2;
-                main;
-} VERS_1;
+VERS_1 { global: sym1; local: *; };
+VERS_2 { global: sym2; main; } VERS_1;
 ")
-  set(CMAKE_REQUIRED_FLAGS_SAVE ${CMAKE_REQUIRED_FLAGS})
-  set(CMAKE_REQUIRED_FLAGS
-      ${CMAKE_REQUIRED_FLAGS}
-      ${CMAKE_SHARED_LIBRARY_C_FLAGS}
-      "-Wl,--version-script='${CMAKE_CURRENT_BINARY_DIR}/conftest.map'")
+  set(_SAVED_CMAKE_REQUIRED_FLAGS ${CMAKE_REQUIRED_FLAGS})
+  if(NOT CMAKE_HOST_SYSTEM_NAME MATCHES "^SunOS")
+    # Avoid using CMAKE_SHARED_LIBRARY_C_FLAGS in version script checks on
+    # Solaris, because of an incompatibility with the Solaris link editor.
+    list(APPEND CMAKE_REQUIRED_FLAGS ${CMAKE_SHARED_LIBRARY_C_FLAGS})
+  endif()
+  list(APPEND CMAKE_REQUIRED_FLAGS "-Wl,--version-script='${CMAKE_CURRENT_BINARY_DIR}/conftest.map'")
   check_c_source_compiles("
 void sym1(void) {}
 void sym2(void) {}
-int main(void) {return 0;}
+int main(void) { return 0; }
 " HAVE_LD_VERSION_SCRIPT)
   if(NOT HAVE_LD_VERSION_SCRIPT)
-    set(CMAKE_REQUIRED_FLAGS
-        ${CMAKE_REQUIRED_FLAGS_SAVE}
-        ${CMAKE_SHARED_LIBRARY_C_FLAGS}
-        "-Wl,-M -Wl,${CMAKE_CURRENT_BINARY_DIR}/conftest.map")
-  check_c_source_compiles("
+    set(CMAKE_REQUIRED_FLAGS ${_SAVED_CMAKE_REQUIRED_FLAGS})
+    if(NOT CMAKE_HOST_SYSTEM_NAME MATCHES "^SunOS")
+      # Again, avoid using CMAKE_SHARED_LIBRARY_C_FLAGS in version script
+      # checks on Solaris.
+      list(APPEND CMAKE_REQUIRED_FLAGS ${CMAKE_SHARED_LIBRARY_C_FLAGS})
+    endif()
+    list(APPEND CMAKE_REQUIRED_FLAGS "-Wl,-M -Wl,${CMAKE_CURRENT_BINARY_DIR}/conftest.map")
+    check_c_source_compiles("
 void sym1(void) {}
 void sym2(void) {}
-int main(void) {return 0;}
+int main(void) { return 0; }
 " HAVE_SOLARIS_LD_VERSION_SCRIPT)
   endif()
-  set(CMAKE_REQUIRED_FLAGS ${CMAKE_REQUIRED_FLAGS_SAVE})
+  set(CMAKE_REQUIRED_FLAGS ${_SAVED_CMAKE_REQUIRED_FLAGS})
   file(REMOVE "${CMAKE_CURRENT_BINARY_DIR}/conftest.map")
 endif()
 
@@ -701,32 +712,34 @@ if(NOT PNG_LIBRARY_TARGETS)
                      "PNG_SHARED, PNG_STATIC, PNG_FRAMEWORK")
 endif()
 
-function(png_add_test)
-  set(options)
-  set(oneValueArgs NAME COMMAND)
-  set(multiValueArgs OPTIONS FILES)
-  cmake_parse_arguments(_PAT "${options}" "${oneValueArgs}" "${multiValueArgs}" ${ARGN})
-  if(NOT _PAT_NAME)
-    message(FATAL_ERROR "png_add_test: Missing NAME argument")
-  endif()
-  if(NOT _PAT_COMMAND)
-    message(FATAL_ERROR "png_add_test: Missing COMMAND argument")
-  endif()
-
-  set(TEST_OPTIONS "${_PAT_OPTIONS}")
-  set(TEST_FILES "${_PAT_FILES}")
-
-  configure_file("${CMAKE_CURRENT_SOURCE_DIR}/scripts/test.cmake.in"
-                 "${CMAKE_CURRENT_BINARY_DIR}/tests/${_PAT_NAME}.cmake"
-                 @ONLY)
-  add_test(NAME "${_PAT_NAME}"
-           COMMAND "${CMAKE_COMMAND}"
-                   "-DLIBPNG=$<TARGET_FILE:png_shared>"
-                   "-DTEST_COMMAND=$<TARGET_FILE:${_PAT_COMMAND}>"
-                   -P "${CMAKE_CURRENT_BINARY_DIR}/tests/${_PAT_NAME}.cmake")
-endfunction()
-
 if(PNG_TESTS AND PNG_SHARED)
+  enable_testing()
+
+  function(png_add_test)
+    set(options)
+    set(oneValueArgs NAME COMMAND)
+    set(multiValueArgs OPTIONS FILES)
+    cmake_parse_arguments(_PAT "${options}" "${oneValueArgs}" "${multiValueArgs}" ${ARGN})
+    if(NOT _PAT_NAME)
+      message(FATAL_ERROR "png_add_test: Missing NAME argument")
+    endif()
+    if(NOT _PAT_COMMAND)
+      message(FATAL_ERROR "png_add_test: Missing COMMAND argument")
+    endif()
+
+    set(TEST_OPTIONS "${_PAT_OPTIONS}")
+    set(TEST_FILES "${_PAT_FILES}")
+
+    configure_file("${CMAKE_CURRENT_SOURCE_DIR}/scripts/test.cmake.in"
+                   "${CMAKE_CURRENT_BINARY_DIR}/tests/${_PAT_NAME}.cmake"
+                   @ONLY)
+    add_test(NAME "${_PAT_NAME}"
+             COMMAND "${CMAKE_COMMAND}"
+                     "-DLIBPNG=$<TARGET_FILE:png_shared>"
+                     "-DTEST_COMMAND=$<TARGET_FILE:${_PAT_COMMAND}>"
+                     -P "${CMAKE_CURRENT_BINARY_DIR}/tests/${_PAT_NAME}.cmake")
+  endfunction()
+
   # Find test PNG files by globbing, but sort lists to ensure
   # consistency between different filesystems.
   file(GLOB PNGSUITE_PNGS "${CMAKE_CURRENT_SOURCE_DIR}/contrib/pngsuite/*.png")
@@ -737,14 +750,14 @@ if(PNG_TESTS AND PNG_SHARED)
   set(PNGTEST_PNG "${CMAKE_CURRENT_SOURCE_DIR}/pngtest.png")
 
   add_executable(pngtest ${pngtest_sources})
-  target_link_libraries(pngtest png_shared)
+  target_link_libraries(pngtest PRIVATE png_shared)
 
   png_add_test(NAME pngtest
                COMMAND pngtest
                FILES "${PNGTEST_PNG}")
 
   add_executable(pngvalid ${pngvalid_sources})
-  target_link_libraries(pngvalid png_shared)
+  target_link_libraries(pngvalid PRIVATE png_shared)
 
   png_add_test(NAME pngvalid-gamma-16-to-8
                COMMAND pngvalid
@@ -790,7 +803,7 @@ if(PNG_TESTS AND PNG_SHARED)
                OPTIONS --transform)
 
   add_executable(pngstest ${pngstest_sources})
-  target_link_libraries(pngstest png_shared)
+  target_link_libraries(pngstest PRIVATE png_shared)
 
   foreach(gamma_type 1.8 linear none sRGB)
     foreach(alpha_type none alpha)
@@ -845,7 +858,7 @@ if(PNG_TESTS AND PNG_SHARED)
   endforeach()
 
   add_executable(pngunknown ${pngunknown_sources})
-  target_link_libraries(pngunknown png_shared)
+  target_link_libraries(pngunknown PRIVATE png_shared)
 
   png_add_test(NAME pngunknown-discard
                COMMAND pngunknown
@@ -877,7 +890,7 @@ if(PNG_TESTS AND PNG_SHARED)
                FILES "${PNGTEST_PNG}")
 
   add_executable(pngimage ${pngimage_sources})
-  target_link_libraries(pngimage png_shared)
+  target_link_libraries(pngimage PRIVATE png_shared)
 
   png_add_test(NAME pngimage-quick
                COMMAND pngimage
@@ -893,13 +906,13 @@ if(PNG_TESTS AND PNG_SHARED)
   png_add_test(NAME pngadhoc COMMAND pngadhoc)
 endif()
 
-if(PNG_SHARED AND PNG_EXECUTABLES)
+if(PNG_SHARED AND PNG_TOOLS)
   add_executable(pngfix ${pngfix_sources})
-  target_link_libraries(pngfix png_shared)
+  target_link_libraries(pngfix PRIVATE png_shared)
   set(PNG_BIN_TARGETS pngfix)
 
   add_executable(png-fix-itxt ${png_fix_itxt_sources})
-  target_link_libraries(png-fix-itxt ${ZLIB_LIBRARIES} ${M_LIBRARY})
+  target_link_libraries(png-fix-itxt PRIVATE ${ZLIB_LIBRARIES} ${M_LIBRARY})
   list(APPEND PNG_BIN_TARGETS png-fix-itxt)
 endif()
 
@@ -941,7 +954,7 @@ function(create_symlink DEST_FILE)
                          POST_BUILD
                          COMMAND "${CMAKE_COMMAND}"
                                  -E copy_if_different
-                                 $<TARGET_LINKER_FILE_NAME:${_SYM_TARGET}>
+                                 $<TARGET_LINKER_FILE_DIR:${_SYM_TARGET}>/$<TARGET_LINKER_FILE_NAME:${_SYM_TARGET}>
                                  $<TARGET_LINKER_FILE_DIR:${_SYM_TARGET}>/${DEST_FILE})
     else()
       add_custom_command(TARGET ${_SYM_TARGET}
@@ -1009,20 +1022,14 @@ endif()
 if(NOT SKIP_INSTALL_LIBRARIES AND NOT SKIP_INSTALL_ALL)
   install(TARGETS ${PNG_LIBRARY_TARGETS}
           EXPORT libpng
-          RUNTIME DESTINATION bin
+          RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
           LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
           ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
           FRAMEWORK DESTINATION ${CMAKE_INSTALL_LIBDIR})
 
   if(PNG_SHARED)
     # Create a symlink for libpng.dll.a => libpng16.dll.a on Cygwin
-    if(CYGWIN OR MINGW)
-      create_symlink(libpng${CMAKE_IMPORT_LIBRARY_SUFFIX} TARGET png_shared)
-      install(FILES $<TARGET_LINKER_FILE_DIR:png_shared>/libpng${CMAKE_IMPORT_LIBRARY_SUFFIX}
-              DESTINATION ${CMAKE_INSTALL_LIBDIR})
-    endif()
-
-    if(NOT WIN32)
+    if(NOT WIN32 OR CYGWIN OR MINGW)
       create_symlink(libpng${CMAKE_SHARED_LIBRARY_SUFFIX} TARGET png_shared)
       install(FILES $<TARGET_LINKER_FILE_DIR:png_shared>/libpng${CMAKE_SHARED_LIBRARY_SUFFIX}
               DESTINATION ${CMAKE_INSTALL_LIBDIR})
@@ -1040,22 +1047,22 @@ endif()
 
 if(NOT SKIP_INSTALL_HEADERS AND NOT SKIP_INSTALL_ALL)
   install(FILES ${libpng_public_hdrs}
-          DESTINATION include)
+          DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
   install(FILES ${libpng_public_hdrs}
-          DESTINATION include/libpng${PNGLIB_ABI_VERSION})
+          DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/libpng${PNGLIB_ABI_VERSION})
 endif()
 if(NOT SKIP_INSTALL_EXECUTABLES AND NOT SKIP_INSTALL_ALL)
   if(NOT WIN32 OR CYGWIN OR MINGW)
     install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/libpng-config
-            DESTINATION bin)
+            DESTINATION ${CMAKE_INSTALL_BINDIR})
     install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/libpng${PNGLIB_ABI_VERSION}-config
-            DESTINATION bin)
+            DESTINATION ${CMAKE_INSTALL_BINDIR})
   endif()
 endif()
 
 if(NOT SKIP_INSTALL_PROGRAMS AND NOT SKIP_INSTALL_ALL)
   install(TARGETS ${PNG_BIN_TARGETS}
-          RUNTIME DESTINATION bin)
+          RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 endif()
 
 if(NOT SKIP_INSTALL_FILES AND NOT SKIP_INSTALL_ALL)
@@ -1084,7 +1091,7 @@ endif()
 # Create an export file that CMake users can include() to import our targets.
 if(NOT SKIP_INSTALL_EXPORT AND NOT SKIP_INSTALL_ALL)
   install(EXPORT libpng
-          DESTINATION lib/libpng
+          DESTINATION ${CMAKE_INSTALL_LIBDIR}/libpng
           FILE libpng${PNGLIB_ABI_VERSION}.cmake)
 endif()
 

@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMXNET;MXNET_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMXNET;MXNET_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMXNET;MXNET_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMXNET;MXNET_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMXNET;MXNET_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMXNET;MXNET_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMXNET;MXNET_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMXNET;MXNET_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMXNET;MXNET_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMXNET;MXNET_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMXNET;MXNET_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMXNET;MXNET_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMXNET;MXNET_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMXNET;MXNET_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMXNET;MXNET_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMXNET;MXNET_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMXNET;MXNET_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMXNET;MXNET_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMXNET;MXNET_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMXNET;MXNET_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMXNET;MXNET_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMXNET;MXNET_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMXNET;MXNET_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBMXNET;MXNET_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -1367,6 +1367,7 @@
     <Text Include="../../thirdparty/owemdjee/mxnet/CODE_OF_CONDUCT.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/CONTRIBUTORS.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/DNNL_README.md" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/mxnet/NEWS.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/README.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/SECURITY.md" />
@@ -1420,9 +1421,14 @@
     <Text Include="../../thirdparty/owemdjee/mxnet/benchmark/python/sparse/updater.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/benchmark/python/sparse/util.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/benchmark/python/tvmop/benchmark_tvmop.py" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/cd/Jenkinsfile_utils.groovy" />
     <Text Include="../../thirdparty/owemdjee/mxnet/cd/README.md" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/cd/mxnet_lib/Jenkins_pipeline.groovy" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/cd/mxnet_lib/mxnet_lib_pipeline.groovy" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/cd/python/docker/Jenkins_pipeline.groovy" />
     <Text Include="../../thirdparty/owemdjee/mxnet/cd/python/docker/python_images.sh" />
     <Text Include="../../thirdparty/owemdjee/mxnet/cd/python/docker/test_python_image.sh" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/cd/python/pypi/Jenkins_pipeline.groovy" />
     <Text Include="../../thirdparty/owemdjee/mxnet/cd/python/pypi/README.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/cd/python/pypi/pypi_package.sh" />
     <Text Include="../../thirdparty/owemdjee/mxnet/cd/python/pypi/pypi_publish.py" />
@@ -1432,11 +1438,17 @@
     <Text Include="../../thirdparty/owemdjee/mxnet/cd/utils/mxnet_base_image.sh" />
     <Text Include="../../thirdparty/owemdjee/mxnet/cd/utils/requirements.txt" />
     <Text Include="../../thirdparty/owemdjee/mxnet/cd/utils/test_artifact_repository.py" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/ci/Jenkinsfile_utils.groovy" />
     <Text Include="../../thirdparty/owemdjee/mxnet/ci/README.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/ci/__init__.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/ci/build.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/ci/build_windows.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/ci/dev_menu.py" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/ci/docker/Dockerfile.build.centos7" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/ci/docker/Dockerfile.build.ubuntu_cpu_jekyll" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/ci/docker/Dockerfile.publish.test.centos7" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/ci/docker/docker-compose.yml" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/ci/docker/install/" />
     <Text Include="../../thirdparty/owemdjee/mxnet/ci/docker/install/deb_ubuntu_ccache.sh" />
     <Text Include="../../thirdparty/owemdjee/mxnet/ci/docker/install/docker_filepermissions.sh" />
     <Text Include="../../thirdparty/owemdjee/mxnet/ci/docker/install/ubuntu_adduser.sh" />
@@ -1444,6 +1456,7 @@
     <Text Include="../../thirdparty/owemdjee/mxnet/ci/docker/toolchains/aarch64-linux-gnu-toolchain.cmake" />
     <Text Include="../../thirdparty/owemdjee/mxnet/ci/docker/toolchains/arm-linux-gnueabihf-toolchain.cmake" />
     <Text Include="../../thirdparty/owemdjee/mxnet/ci/docker_login.py" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/ci/jenkins/Jenkins_steps.groovy" />
     <Text Include="../../thirdparty/owemdjee/mxnet/ci/logging.conf" />
     <Text Include="../../thirdparty/owemdjee/mxnet/ci/other/ci_deploy_doc.sh" />
     <Text Include="../../thirdparty/owemdjee/mxnet/ci/publish/README.md" />
@@ -1526,10 +1539,24 @@
     <Text Include="../../thirdparty/owemdjee/mxnet/cpp-package/scripts/OpWrapperGenerator.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/cpp-package/scripts/lint.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/cpp-package/tests/ci_test.sh" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/doap.rdf" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docker/Dockerfiles/Dockerfile.in.julia" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docker/Dockerfiles/Dockerfile.in.perl" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docker/README.md" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docker/docker-python/Dockerfile.mxnet.python.cpu.mkl" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docker/docker-python/Dockerfile.mxnet.python.gpu.cu80" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docker/docker-python/Dockerfile.mxnet.python.gpu.cu80.mkl" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docker/docker-python/Dockerfile.mxnet.python.gpu.cu92" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docker/docker-python/Dockerfile.mxnet.python.gpu.cu92.mkl" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docker/docker-python/Dockerfile.mxnet.python3.cpu.mkl" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docker/docker-python/Dockerfile.mxnet.python3.gpu.cu80" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docker/docker-python/Dockerfile.mxnet.python3.gpu.cu80.mkl" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docker/docker-python/Dockerfile.mxnet.python3.gpu.cu92" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docker/docker-python/Dockerfile.mxnet.python3.gpu.cu92.mkl" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docker/docker-python/README.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docker/docker-python/build_python_dockerfile.sh" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docker/docker-python/test_mxnet.py" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docker/install/" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docker/install/cpp.sh" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docker/install/julia.sh" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docker/install/perl.sh" />
@@ -1539,9 +1566,19 @@
     <Text Include="../../thirdparty/owemdjee/mxnet/docker/run.sh" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docker/tool.sh" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/README.md" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/cpp_docs/Doxyfile" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/cpp_docs/Makefile" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/README.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/_static/autodoc.js" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/_static/autograd_images/autograd_grad_req.mp4" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/_static/autograd_images/autograd_graph.mp4" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/_static/autograd_images/autograd_head_grad.mp4" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/_static/blocks.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/_static/feedback.css" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/_static/matomo_analytics.js" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/_static/minima-social-icons.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/_static/mxnet.css" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/python/Makefile" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/python/api/autograd/index.rst" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/python/api/contrib/index.rst" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/python/api/contrib/io/index.rst" />
@@ -1719,22 +1756,79 @@
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/python/tutorials/performance/compression/index.rst" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/python/tutorials/performance/compression/int8.rst" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/python/tutorials/performance/index.rst" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/MANIFEST.in" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/README.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/__init__.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/card.py" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/drawer.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/feedback.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/footer.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/header.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/header_search.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/header_sourcelink.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/header_top.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/layout.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/localtoc.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/relations.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/search.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/static/font/Roboto/Roboto-Regular.woff" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/static/font/Roboto/Roboto-Regular.woff2" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/static/fontawesome/all.css" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/static/fonts.css" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/static/material-design-icons-3.0.1/" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/static/material-design-icons-3.0.1/iconfont/MaterialIcons-Regular.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/static/material-design-icons-3.0.1/iconfont/MaterialIcons-Regular.woff" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/static/material-design-icons-3.0.1/iconfont/MaterialIcons-Regular.woff2" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/static/material-design-lite-1.3.0/" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/static/material-design-lite-1.3.0/material.blue-deep_orange.min.css" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/static/sphinx_materialdesign_theme.css" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/static/sphinx_materialdesign_theme.js" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/static/webfonts/fa-solid-900.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/static/webfonts/fa-solid-900.woff" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/static/webfonts/fa-solid-900.woff2" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/mxtheme/theme.conf" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/setup.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/src/js/adjust-height.js" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/src/js/feedback.js" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/src/js/scrollspy.js" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/src/js/sphinx_materialdesign_theme.js" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/src/scss/_root.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/src/scss/_variables.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/src/scss/admonitions/_admonitions.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/src/scss/blockquote/_blockquote.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/src/scss/card/_card.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/src/scss/code/_code.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/src/scss/downloadlink/_downloadlink.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/src/scss/drawer/_drawer.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/src/scss/fonts/_material-icons.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/src/scss/footer/_footer.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/src/scss/grid/_simplegrid.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/src/scss/header/_header.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/src/scss/headerings/_headerings.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/src/scss/layout/_layout.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/src/scss/lists/_lists.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/src/scss/search/_search.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/src/scss/sphinx_materialdesign_theme.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/src/scss/tables/_tables.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/src/scss/toc/_globaltoc.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/src/scss/toc/_localtoc.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/python_docs/themes/mx-theme/src/scss/toc/_toctree.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/Makefile" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/README.md" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/404.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_config.yml" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_config_beta.yml" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_config_prod.yml" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_includes/callout.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_includes/disqus_comments.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_includes/feedback.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_includes/footer.html" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_includes/get_started/cloud/cpu.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_includes/get_started/cloud/gpu.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_includes/get_started/devices/nvidia-jetson.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_includes/get_started/devices/raspberry_pi.md" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_includes/get_started/get_started.html" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_includes/get_started/gpu_snippet.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_includes/get_started/linux/clojure/build-from-source.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_includes/get_started/linux/cpp/build-from-source.md" />
@@ -1750,11 +1844,81 @@
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_includes/get_started/linux/r/build-from-source.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_includes/get_started/linux/scala/build-from-source.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_includes/get_started/pip_snippet.md" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_includes/head.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_includes/header.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_includes/icon-github.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_includes/icon-github.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_includes/icon-twitter.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_includes/icon-twitter.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_includes/important.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_includes/matomo-analytics.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_includes/note.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_includes/social.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_includes/tip.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_includes/warning.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_layouts/default.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_layouts/home.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_layouts/page.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_layouts/page_api.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_layouts/page_category.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_layouts/page_landing_tutorials.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_layouts/post.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_sass/feedback.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_sass/generalVersionDropdown.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_sass/globalSearch.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_sass/minima.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_sass/minima/_base.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_sass/minima/_blog.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_sass/minima/_docs.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_sass/minima/_ecosystem.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_sass/minima/_features.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_sass/minima/_getting_started.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_sass/minima/_home.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_sass/minima/_layout.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_sass/minima/_syntax-highlighting.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_sass/minima/colorful.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/_sass/minima/simple-grid.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/Github.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/R_logo.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/algorithm.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/algorithmv1.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/api.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/artificial-intelligence.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/asf_logo.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/book.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/chip.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/circuit.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/clipboard.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/clojure_logo.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/compass.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/cpp_logo.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/java_logo.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/julia_logo.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/line-graph.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/medium_black.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/perl_logo.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/programming.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/programmingv1.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/python_logo.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/reddit_blue.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/scala_logo.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/search-icon.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/search.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/slack-logo-icon.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/textbook.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/twitter.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/video-tutorial.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/visual.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/img/youtube_red.svg" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/js/clipboard.js" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/js/copycode.js" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/js/feedback.js" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/js/globalSearch.js" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/js/options.js" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/main.scss" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/assets/minima-social-icons.svg" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/index.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/pages/api/api.html" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/pages/api/architecture/exception_handling.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/pages/api/architecture/note_data_loading.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/pages/api/architecture/note_engine.md" />
@@ -1832,10 +1996,14 @@
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/pages/community/git_howto.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/pages/community/index.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/pages/community/pull_request.md" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/pages/ecosystem.html" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/pages/features.html" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/pages/get_started/build_from_source.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/pages/get_started/download.md" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/pages/get_started/index.html" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/pages/get_started/jetson_setup.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/pages/get_started/validate_mxnet.md" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/docs/static_site/src/pages/trusted_by.html" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/tutorial_utils/data/oxford_102_flower_dataset.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/docs/tutorial_utils/vision/cnn_visualization/gradcam.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/example/README.md" />
@@ -1847,7 +2015,9 @@
     <Text Include="../../thirdparty/owemdjee/mxnet/example/distributed_training/README.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/example/distributed_training/cifar10_dist.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/example/distributed_training/cifar10_kvstore_hvd.py" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/example/extensions/lib_api/Makefile" />
     <Text Include="../../thirdparty/owemdjee/mxnet/example/extensions/lib_api/test_loading.py" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/example/extensions/lib_custom_op/Makefile" />
     <Text Include="../../thirdparty/owemdjee/mxnet/example/extensions/lib_custom_op/README.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/example/extensions/lib_custom_op/test_gemm.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/example/extensions/lib_custom_op/test_relu.py" />
@@ -1856,8 +2026,10 @@
     <Text Include="../../thirdparty/owemdjee/mxnet/example/extensions/lib_external_ops/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/mxnet/example/extensions/lib_external_ops/README.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/example/extensions/lib_external_ops/test_loading.py" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/example/extensions/lib_pass/Makefile" />
     <Text Include="../../thirdparty/owemdjee/mxnet/example/extensions/lib_pass/README.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/example/extensions/lib_pass/test_pass.py" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/example/extensions/lib_subgraph/Makefile" />
     <Text Include="../../thirdparty/owemdjee/mxnet/example/extensions/lib_subgraph/README.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/example/extensions/lib_subgraph/test_subgraph.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/example/gluon/actor_critic/README.md" />
@@ -1881,6 +2053,7 @@
     <Text Include="../../thirdparty/owemdjee/mxnet/example/quantization/imagenet_inference.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/example/quantization/launch_inference_onednn.sh" />
     <Text Include="../../thirdparty/owemdjee/mxnet/example/quantization_inc/custom_strategy.py" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/example/quantization_inc/resnet50v2_mse.yaml" />
     <Text Include="../../thirdparty/owemdjee/mxnet/example/quantization_inc/resnet_measurement.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/example/quantization_inc/resnet_mse.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/example/quantization_inc/resnet_tuning.py" />
@@ -1925,7 +2098,13 @@
     <Text Include="../../thirdparty/owemdjee/mxnet/licenses/LICENSE.rang.txt" />
     <Text Include="../../thirdparty/owemdjee/mxnet/licenses/LICENSE.tvm.txt" />
     <Text Include="../../thirdparty/owemdjee/mxnet/plugin/opencv/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/plugin/opencv/opencv.mk" />
     <Text Include="../../thirdparty/owemdjee/mxnet/plugin/opencv/opencv.py" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/plugin/sframe/plugin.mk" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/plugin/torch/torch.mk" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/plugin/warpctc/warpctc.mk" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/prospector.yaml" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/pytest.ini" />
     <Text Include="../../thirdparty/owemdjee/mxnet/python/README.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/python/mxnet/__init__.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/python/mxnet/_api_internal.py" />
@@ -1944,6 +2123,7 @@
     <Text Include="../../thirdparty/owemdjee/mxnet/python/mxnet/_ffi/_ctypes/object.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/python/mxnet/_ffi/_ctypes/types.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/python/mxnet/_ffi/_cy3/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/python/mxnet/_ffi/_cython/core.pyx" />
     <Text Include="../../thirdparty/owemdjee/mxnet/python/mxnet/_ffi/base.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/python/mxnet/_ffi/function.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/python/mxnet/_ffi/node_generic.py" />
@@ -1980,6 +2160,8 @@
     <Text Include="../../thirdparty/owemdjee/mxnet/python/mxnet/cuda/__init__.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/python/mxnet/cuda/nvtx.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/python/mxnet/cython/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/python/mxnet/cython/ndarray.pyx" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/python/mxnet/cython/symbol.pyx" />
     <Text Include="../../thirdparty/owemdjee/mxnet/python/mxnet/device.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/python/mxnet/dlpack.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/python/mxnet/engine.py" />
@@ -2216,6 +2398,7 @@
     <Text Include="../../thirdparty/owemdjee/mxnet/python/mxnet/util.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/python/mxnet/visualization.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/python/setup.py" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/readthedocs.yml" />
     <Text Include="../../thirdparty/owemdjee/mxnet/tests/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/mxnet/tests/README.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/tests/nightly/README.md" />
@@ -2290,6 +2473,7 @@
     <Text Include="../../thirdparty/owemdjee/mxnet/tests/python/train/common.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/tests/python/train/test_autograd.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/tests/python/unittest/common.py" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/tests/python/unittest/legacy_ndarray.v0" />
     <Text Include="../../thirdparty/owemdjee/mxnet/tests/python/unittest/test_attr.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/tests/python/unittest/test_autograd.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/tests/python/unittest/test_base.py" />
@@ -2367,6 +2551,7 @@
     <Text Include="../../thirdparty/owemdjee/mxnet/tools/bandwidth/test_measure.py" />
     <Text Include="../../thirdparty/owemdjee/mxnet/tools/cfn/Readme.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/tools/create_source_archive.sh" />
+    <Text Include="../../thirdparty/owemdjee/mxnet/tools/dependencies/LICENSE.binary.dependencies" />
     <Text Include="../../thirdparty/owemdjee/mxnet/tools/dependencies/README.md" />
     <Text Include="../../thirdparty/owemdjee/mxnet/tools/dependencies/cityhash.sh" />
     <Text Include="../../thirdparty/owemdjee/mxnet/tools/dependencies/curl.sh" />

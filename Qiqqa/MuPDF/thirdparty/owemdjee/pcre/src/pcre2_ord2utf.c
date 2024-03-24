@@ -43,7 +43,7 @@ POSSIBILITY OF SUCH DAMAGE.
 into a UTF string. The behaviour is different for each code unit width. */
 
 
-#ifdef HAVE_CONFIG_H
+#if defined(HAVE_CONFIG_H) && !defined(PCRE2_AMALGAMETE)
 #include "config.h"
 #endif
 

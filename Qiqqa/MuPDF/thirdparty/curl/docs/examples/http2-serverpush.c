@@ -33,10 +33,10 @@
 #include <string.h>
 
 /* somewhat unix-specific */
-#if !defined(CURL_WIN32) && !defined(CURL_AVOID_SYS_TIME_H)
+#if !defined(_WIN32) && !defined(CURL_AVOID_SYS_TIME_H)
 #include <sys/time.h>
 #endif
-#if !defined(CURL_WIN32)
+#if !defined(_WIN32)
 #include <unistd.h>
 #endif
 
@@ -106,10 +106,7 @@ int my_trace(CURL *handle, curl_infotype type,
   switch(type) {
   case CURLINFO_TEXT:
     fprintf(stderr, "== Info: %s", data);
-    /* FALLTHROUGH */
-  default: /* in case a new one is introduced to shock us */
     return 0;
-
   case CURLINFO_HEADER_OUT:
     text = "=> Send header";
     break;
@@ -128,6 +125,8 @@ int my_trace(CURL *handle, curl_infotype type,
   case CURLINFO_SSL_DATA_IN:
     text = "<= Recv SSL data";
     break;
+  default: /* in case a new one is introduced to shock us */
+    return 0;
   }
 
   dump(text, (unsigned char *)data, size, 1);
@@ -167,7 +166,7 @@ static int setup(CURL *hnd, const char *url)
   return 0; /* all is good */
 }
 
-/* called when there's an incoming push */
+/* called when there is an incoming push */
 static int server_push_callback(CURL *parent,
                                 CURL *easy,
                                 size_t num_headers,

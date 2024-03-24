@@ -8,21 +8,30 @@ jobs:
       run:
         shell: bash
     name: Emscripten-C++${{matrix.std}}-${{matrix.build_type}}-${{matrix.lib}}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
     container: emscripten/emsdk
     strategy:
       fail-fast: true
       matrix:
         build_type: [Release, Debug]
         lib: [static]
-        std: [14, 17, 20]
+        std: [14, 17, 20, 23]
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: cpp
 
       - name: Setup Dependencies
         run: |
-          apt-get update
+          sudo apt-get update
           DEBIAN_FRONTEND=noninteractive sudo apt-get install -y \
             cmake \
             ninja-build
@@ -50,3 +59,6 @@ jobs:
         run: |
           cmake --build build_${{matrix.build_type}} \
                 --config ${{matrix.build_type}}
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2

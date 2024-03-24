@@ -59,6 +59,9 @@
     <ClCompile Include="../../thirdparty/owemdjee/uint128_t/tests/testcases/gte.cpp">
       <Filter>Source Files\tests\testcases</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/uint128_t/tests/testcases/hash.cpp">
+      <Filter>Source Files\tests\testcases</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/uint128_t/tests/testcases/invert.cpp">
       <Filter>Source Files\tests\testcases</Filter>
     </ClCompile>
@@ -104,20 +107,29 @@
     <ClCompile Include="../../thirdparty/owemdjee/uint128_t/tests/testcases/xor.cpp">
       <Filter>Source Files\tests\testcases</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/uint128_t/uint128_t.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClInclude Include="../../thirdparty/owemdjee/uint128_t/endianness.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/uint128_t/uint128_t.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <Text Include="../../thirdparty/owemdjee/uint128_t/LICENSE">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/uint128_t/README.md">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/uint128_t/tests/Makefile">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/uint128_t/tests/install_gtest.sh">
       <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/uint128_t/uint128_t.include">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/uint128_t/uint128_t_config.include">
+      <Filter>Misc Files</Filter>
     </Text>
   </ItemGroup>
 </Project>

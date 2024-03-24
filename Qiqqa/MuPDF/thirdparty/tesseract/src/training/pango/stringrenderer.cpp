@@ -17,9 +17,14 @@
  *
  **********************************************************************/
 
+#ifdef HAVE_TESSERACT_CONFIG_H
+#  include "config_auto.h"
+#endif
+
 #include "stringrenderer.h"
 
-#include <allheaders.h> // from leptonica
+#include <leptonica/allheaders.h> // from leptonica
+#include <leptonica/pix_internal.h> 
 #include <tesseract/baseapi.h> // for TessBaseAPI
 #include "boxchar.h"
 #include "fileio.h"
@@ -32,8 +37,8 @@
 
 #if defined(PANGO_ENABLE_ENGINE) && defined(HAS_LIBICU)
 
-#include "pango/pango-font.h"
-#include "pango/pango-glyph-item.h"
+//#include "pango/pango-font.h"
+//#include "pango/pango-glyph-item.h"
 #include "unicode/uchar.h" // from libicu
 
 #include <algorithm>
@@ -83,7 +88,7 @@ static bool RandBool(const double prob, TRand *rand) {
 /* static */
 static Image CairoARGB32ToPixFormat(cairo_surface_t *surface) {
   if (cairo_image_surface_get_format(surface) != CAIRO_FORMAT_ARGB32) {
-    tprintf("ERROR: Unexpected surface format {}\n", cairo_image_surface_get_format(surface));
+    tprintError("Unexpected surface format {}\n", (int)cairo_image_surface_get_format(surface));
     return nullptr;
   }
   const int width = cairo_image_surface_get_width(surface);
@@ -297,7 +302,7 @@ int StringRenderer::FindFirstPageBreakOffset(const char *text, int text_length) 
   UNICHAR::const_iterator it = UNICHAR::begin(text, text_length);
   const UNICHAR::const_iterator it_end = UNICHAR::end(text, text_length);
   const int kMaxUnicodeBufLength = 15000;
-  for (int i = 0; i < kMaxUnicodeBufLength && it != it_end; ++it, ++i) {
+  for (int i = 0; i < kMaxUnicodeBufLength && it < it_end; ++it, ++i) {
     ;
   }
   int buf_length = it.utf8_data() - text;
@@ -406,7 +411,7 @@ bool StringRenderer::GetClusterStrings(std::vector<std::string> *cluster_text) {
         // decided to use an unmapped glyph.
         text = LigatureTable::Get()->AddLigatures(text, nullptr);
       }
-      start_byte_to_text[start_byte_index] = text;
+      start_byte_to_text[start_byte_index] = std::move(text);
     }
   } while (pango_layout_iter_next_run(run_iter));
   pango_layout_iter_free(run_iter);
@@ -502,7 +507,7 @@ AddBaselinePtsToPAGE(Pta *baseline_pts, std::stringstream &str) {
 }
 
 void StringRenderer::WriteTesseractBoxAsPAGEFile(const std::string &filename, const std::vector<BoxChar *> &boxes){
-  float x_min, y_min, x_max, y_max, a, b;
+  float x_min, y_min, x_max, y_max;
   std::stringstream page_str;
   std::stringstream line_str;
 
@@ -514,7 +519,7 @@ void StringRenderer::WriteTesseractBoxAsPAGEFile(const std::string &filename, co
     "\t\t<Creator>Tesseract - " << TESSERACT_VERSION_STR << " (Text2Image)</Creator>\n";
   
   // If gmtime conversion is problematic maybe l_getFormattedDate can be used here
-  //char *datestr = l_getFormattedDate();
+  //const char *datestr = l_getFormattedDate();
   std::time_t now= std::time(nullptr);
   std::tm* now_tm= std::gmtime(&now);
   char mbstr[100];
@@ -541,7 +546,7 @@ void StringRenderer::WriteTesseractBoxAsPAGEFile(const std::string &filename, co
     if (boxe->rtl_index()) line_str << "\"right-to-left\" ";
     else line_str << "\"left-to-right\" ";
     line_str << "custom=\""<< "readingOrder {index:0;}\">\n";
-    auto bbox = boxe->box();
+    const Box *bbox = boxe->box();
     line_str << "\t\t\t\t";
     AddBaselinePtsToPAGE(boxe->baseline(), line_str);
     ptaAddPt(line_polygon_pts, bbox->x, bbox->y);
@@ -607,16 +612,26 @@ static void MergeBoxCharsToWords(std::vector<BoxChar *> *boxchars) {
       BoxChar *last_boxchar = result.back();
       // Compute bounding box union
       const Box *box = boxchar->box();
+      int32_t box_x;
+      int32_t box_y;
+      int32_t box_w;
+      int32_t box_h;
+      boxGetGeometry(const_cast<Box *>(box), &box_x, &box_y, &box_w, &box_h);
       Box *last_box = last_boxchar->mutable_box();
-      int left = std::min(last_box->x, box->x);
-      int right = std::max(last_box->x + last_box->w, box->x + box->w);
-      int top = std::min(last_box->y, box->y);
-      int bottom = std::max(last_box->y + last_box->h, box->y + box->h);
+      int32_t last_box_x;
+      int32_t last_box_y;
+      int32_t last_box_w;
+      int32_t last_box_h;
+      boxGetGeometry(last_box, &last_box_x, &last_box_y, &last_box_w, &last_box_h);
+      int left = std::min(last_box_x, box_x);
+      int right = std::max(last_box_x + last_box_w, box_x + box_w);
+      int top = std::min(last_box_y, box_y);
+      int bottom = std::max(last_box_y + last_box_h, box_y + box_h);
       // Conclude that the word was broken to span multiple lines based on the
       // size of the merged bounding box in relation to those of the individual
       // characters seen so far.
-      if (right - left > last_box->w + 5 * box->w) {
-        tlog(1, "Found line break after '{}'", last_boxchar->ch().c_str());
+      if (right - left > last_box_w + 5 * box_w) {
+        tlog(1, "Found line break after '{}'", last_boxchar->ch());
         // Insert a fake interword space and start a new word with the current
         // boxchar.
         result.push_back(new BoxChar(" ", 1));
@@ -626,10 +641,7 @@ static void MergeBoxCharsToWords(std::vector<BoxChar *> *boxchars) {
       }
       // Append to last word
       last_boxchar->mutable_ch()->append(boxchar->ch());
-      last_box->x = left;
-      last_box->w = right - left;
-      last_box->y = top;
-      last_box->h = bottom - top;
+      boxSetGeometry(last_box, left, top, right - left, bottom - top);
       delete boxchar;
       boxchar = nullptr;
     }
@@ -711,7 +723,7 @@ void StringRenderer::ComputeClusterBoxes() {
     line_boxchar->set_page(page_);
     line_boxchar->AddBox(ink_rect.x, logical_rect.y, ink_rect.width, logical_rect.height);
     line_boxchar->AddBaselinePt(ink_rect.x, baseline);
-    line_boxchar->AddBaselinePt(ink_rect.x+ink_rect.width, baseline);
+    line_boxchar->AddBaselinePt(ink_rect.x + ink_rect.width, baseline);
     line_boxchar->set_rtl_index(rtl);
     line_boxchars_.push_back(line_boxchar);
   } while (pango_layout_iter_next_line(line_iter));
@@ -746,7 +758,7 @@ void StringRenderer::ComputeClusterBoxes() {
     }
     if (!cluster_rect.width || !cluster_rect.height || IsUTF8Whitespace(cluster_text.c_str())) {
       tlog(2, "Skipping whitespace with boxdim ({},{}) '{}'\n", cluster_rect.width,
-           cluster_rect.height, cluster_text.c_str());
+           cluster_rect.height, cluster_text);
       auto *boxchar = new BoxChar(" ", 1);
       boxchar->set_page(page_);
       start_byte_to_box[start_byte_index] = boxchar;
@@ -755,7 +767,7 @@ void StringRenderer::ComputeClusterBoxes() {
     // Prepare a boxchar for addition at this byte position.
     tlog(2, "[{} {}], {}, {} : start_byte={} end_byte={} : '{}'\n", cluster_rect.x, cluster_rect.y,
          cluster_rect.width, cluster_rect.height, start_byte_index, end_byte_index,
-         cluster_text.c_str());
+         cluster_text);
     ASSERT_HOST_MSG(cluster_rect.width, "cluster_text:{}  start_byte_index:{}\n",
                     cluster_text, start_byte_index);
     ASSERT_HOST_MSG(cluster_rect.height, "cluster_text:{}  start_byte_index:{}\n",
@@ -883,7 +895,7 @@ int StringRenderer::StripUnrenderableWords(std::string *utf8_text) const {
   utf8_text->swap(output_text);
 
   if (num_dropped > 0) {
-    tprintf("Stripped {} unrenderable word(s): '{}'\n", num_dropped, unrenderable_words.c_str());
+    tprintInfo("Stripped {} unrenderable word(s): '{}'\n", num_dropped, unrenderable_words.c_str());
   }
   return num_dropped;
 }
@@ -919,7 +931,7 @@ int StringRenderer::RenderToBinaryImage(const char *text, int text_length, int t
 std::string StringRenderer::InsertWordJoiners(const std::string &text) {
   std::string out_str;
   const UNICHAR::const_iterator it_end = UNICHAR::end(text.c_str(), text.length());
-  for (UNICHAR::const_iterator it = UNICHAR::begin(text.c_str(), text.length()); it != it_end;
+  for (UNICHAR::const_iterator it = UNICHAR::begin(text.c_str(), text.length()); it < it_end;
        ++it) {
     // Add the symbol to the output string.
     out_str.append(it.utf8_data(), it.utf8_len());
@@ -939,7 +951,7 @@ std::string StringRenderer::InsertWordJoiners(const std::string &text) {
 std::string StringRenderer::ConvertBasicLatinToFullwidthLatin(const std::string &str) {
   std::string full_str;
   const UNICHAR::const_iterator it_end = UNICHAR::end(str.c_str(), str.length());
-  for (UNICHAR::const_iterator it = UNICHAR::begin(str.c_str(), str.length()); it != it_end; ++it) {
+  for (UNICHAR::const_iterator it = UNICHAR::begin(str.c_str(), str.length()); it < it_end; ++it) {
     // Convert printable and non-space 7-bit ASCII characters to
     // their fullwidth forms.
     if (IsInterchangeValid7BitAscii(*it) && isprint(*it) && !isspace(*it)) {
@@ -957,7 +969,7 @@ std::string StringRenderer::ConvertBasicLatinToFullwidthLatin(const std::string 
 std::string StringRenderer::ConvertFullwidthLatinToBasicLatin(const std::string &str) {
   std::string half_str;
   UNICHAR::const_iterator it_end = UNICHAR::end(str.c_str(), str.length());
-  for (UNICHAR::const_iterator it = UNICHAR::begin(str.c_str(), str.length()); it != it_end; ++it) {
+  for (UNICHAR::const_iterator it = UNICHAR::begin(str.c_str(), str.length()); it < it_end; ++it) {
     char32 half_char = FullwidthToHalfwidth(*it);
     // Convert fullwidth Latin characters to their halfwidth forms
     // only if halfwidth forms are printable and non-space 7-bit ASCII.
@@ -1014,7 +1026,7 @@ int StringRenderer::RenderToImage(const char *text, int text_length, Image *pix)
   if (drop_uncovered_chars_ && !font_.CoversUTF8Text(page_text.c_str(), page_text.length())) {
     int num_dropped = font_.DropUncoveredChars(&page_text);
     if (num_dropped) {
-      tprintf("WARNING: Dropped {} uncovered characters\n", num_dropped);
+      tprintWarn("Dropped {} uncovered characters\n", num_dropped);
     }
   }
   if (add_ligatures_) {
@@ -1080,11 +1092,11 @@ int StringRenderer::RenderAllFontsToImage(double min_coverage, const char *text,
   const char kTitleTemplate[] = "%s : %d hits = %.2f%%, raw = %d = %.2f%%";
   std::string title_font;
   if (!FontUtils::SelectFont(kTitleTemplate, strlen(kTitleTemplate), &title_font, nullptr)) {
-    tprintf("WARNING: Could not find a font to render image title with!\n");
+    tprintWarn("Could not find a font to render image title with!\n");
     title_font = "Arial";
   }
   title_font += " 8";
-  tlog(1, "Selected title font: {}\n", title_font.c_str());
+  tlog(1, "Selected title font: {}\n", title_font);
   if (font_used) {
     font_used->clear();
   }
@@ -1094,11 +1106,11 @@ int StringRenderer::RenderAllFontsToImage(double min_coverage, const char *text,
     total_chars_ = 0;
     // Fill the hash table and use that for computing which fonts to use.
     for (UNICHAR::const_iterator it = UNICHAR::begin(text, text_length);
-         it != UNICHAR::end(text, text_length); ++it) {
+         it < UNICHAR::end(text, text_length); ++it) {
       ++total_chars_;
       ++char_map_[*it];
     }
-    tprintf("Total chars = {}\n", total_chars_);
+    tprintDebug("Total chars = {}\n", total_chars_);
   }
   const std::vector<std::string> &all_fonts = FontUtils::ListAvailableFonts();
 
@@ -1114,7 +1126,7 @@ int StringRenderer::RenderAllFontsToImage(double min_coverage, const char *text,
       char title[kMaxTitleLength];
       snprintf(title, kMaxTitleLength, kTitleTemplate, all_fonts[i].c_str(), ok_chars,
                100.0 * ok_chars / total_chars_, raw_score, 100.0 * raw_score / char_map_.size());
-      tprintf("{}\n", title);
+      tprintDebug("{}\n", title);
       // This is a good font! Store the offset to return once we've tried all
       // the fonts.
       if (offset) {
@@ -1136,7 +1148,7 @@ int StringRenderer::RenderAllFontsToImage(double min_coverage, const char *text,
       // We return the real offset only after cycling through the list of fonts.
       return 0;
     } else {
-      tprintf("Font {} failed with {} hits = {}%%\n", all_fonts[i].c_str(), ok_chars,
+      tprintDebug("Font {} failed with {} hits = {}%%\n", all_fonts[i].c_str(), ok_chars,
               100.0 * ok_chars / total_chars_);
     }
   }

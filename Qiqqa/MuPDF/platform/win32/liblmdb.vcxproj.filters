@@ -512,28 +512,109 @@
     <ResourceCompile Include="../../thirdparty/owemdjee/lmdb/libraries/liblutil/slapdmsg.rc">
       <Filter>Resource Files\libraries\liblutil</Filter>
     </ResourceCompile>
+    <Text Include="../../thirdparty/owemdjee/lmdb/INSTALL">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/LICENSE">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/lmdb/Makefile.in">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/lmdb/README">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/aclocal.m4">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/build/LICENSE-2.0.1">
+      <Filter>Misc Files\build</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/lmdb/build/README">
+      <Filter>Misc Files\build</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/build/config.guess">
+      <Filter>Misc Files\build</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/build/dir.mk">
+      <Filter>Misc Files\build</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/build/info.mk">
+      <Filter>Misc Files\build</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/build/lib-shared.mk">
+      <Filter>Misc Files\build</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/build/lib-static.mk">
+      <Filter>Misc Files\build</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/build/lib.mk">
+      <Filter>Misc Files\build</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/build/libtool.m4">
       <Filter>Misc Files\build</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/lmdb/build/ltmain.sh">
       <Filter>Misc Files\build</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/build/ltoptions.m4">
+      <Filter>Misc Files\build</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/build/ltsugar.m4">
+      <Filter>Misc Files\build</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/build/ltversion.m4">
+      <Filter>Misc Files\build</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/build/lt~obsolete.m4">
+      <Filter>Misc Files\build</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/build/man.mk">
+      <Filter>Misc Files\build</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/build/mkdep.aix">
+      <Filter>Misc Files\build</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/lmdb/build/mkvers.bat">
       <Filter>Misc Files\build</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/build/mod.mk">
+      <Filter>Misc Files\build</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/build/openldap.m4">
+      <Filter>Misc Files\build</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/build/rules.mk">
+      <Filter>Misc Files\build</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/build/srv.mk">
+      <Filter>Misc Files\build</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/build/top.mk">
+      <Filter>Misc Files\build</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/lmdb/build/version.sh">
+      <Filter>Misc Files\build</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/build/version.var">
       <Filter>Misc Files\build</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/lmdb/configure.ac">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/lmdb/include/Makefile.in">
+      <Filter>Misc Files\include</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/include/lber_types.hin">
+      <Filter>Misc Files\include</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/include/ldap_config.hin">
+      <Filter>Misc Files\include</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/include/ldap_features.hin">
+      <Filter>Misc Files\include</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/include/portable.hin">
       <Filter>Misc Files\include</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/lmdb/libraries/Makefile.in">
@@ -546,6 +627,30 @@
       <Filter>Misc Files\libraries\liblber</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/lmdb/libraries/liblmdb/CHANGES">
+      <Filter>Misc Files\libraries\liblmdb</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/libraries/liblmdb/Doxyfile">
+      <Filter>Misc Files\libraries\liblmdb</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/libraries/liblmdb/LICENSE">
+      <Filter>Misc Files\libraries\liblmdb</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/libraries/liblmdb/Makefile">
+      <Filter>Misc Files\libraries\liblmdb</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/libraries/liblmdb/intro.doc">
+      <Filter>Misc Files\libraries\liblmdb</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/libraries/liblmdb/mdb_copy.1">
+      <Filter>Misc Files\libraries\liblmdb</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/libraries/liblmdb/mdb_dump.1">
+      <Filter>Misc Files\libraries\liblmdb</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/libraries/liblmdb/mdb_load.1">
+      <Filter>Misc Files\libraries\liblmdb</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/libraries/liblmdb/mdb_stat.1">
       <Filter>Misc Files\libraries\liblmdb</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/lmdb/libraries/liblmdb/sample-bdb.txt">
@@ -578,6 +683,12 @@
     <Text Include="../../thirdparty/owemdjee/lmdb/libraries/liblunicode/ucdata/format.txt">
       <Filter>Misc Files\libraries\liblunicode\ucdata</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/libraries/liblunicode/ucdata/ucdata.man">
+      <Filter>Misc Files\libraries\liblunicode\ucdata</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/libraries/liblunicode/ucdata/ucpgba.man">
+      <Filter>Misc Files\libraries\liblunicode\ucdata</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/lmdb/libraries/liblunicode/ure/README">
       <Filter>Misc Files\libraries\liblunicode\ure</Filter>
     </Text>
@@ -585,6 +696,9 @@
       <Filter>Misc Files\libraries\liblunicode\utbm</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/lmdb/libraries/liblutil/Makefile.in">
+      <Filter>Misc Files\libraries\liblutil</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/lmdb/libraries/liblutil/slapdmsg.bin">
       <Filter>Misc Files\libraries\liblutil</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/lmdb/libraries/librewrite/Makefile.in">

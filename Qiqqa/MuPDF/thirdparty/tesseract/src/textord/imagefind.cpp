@@ -29,7 +29,7 @@
 #include "statistc.h"
 #include "tesseractclass.h"
 
-#include <allheaders.h>
+#include <leptonica/allheaders.h>
 
 #include <algorithm>
 
@@ -260,9 +260,14 @@ void ImageFind::ConnCompAndRectangularize(Image pix, Boxa **boxa,
 // If not nullptr, it must be PixDestroyed by the caller.
 // If textord_tabfind_show_images, debug images are appended to pixa_debug.
 Image ImageFind::FindImages(Image pix) {
+  auto width = pixGetWidth(pix);
+  auto height = pixGetHeight(pix);
   // Not worth looking at small images.
-  if (pixGetWidth(pix) < kMinImageFindSize || pixGetHeight(pix) < kMinImageFindSize) {
-    return pixCreate(pixGetWidth(pix), pixGetHeight(pix), 1);
+  // Leptonica will print an error message and return nullptr if we call
+  // pixGenHalftoneMask(pixr, nullptr, ...) with width or height < 100
+  // for the reduced image, so we want to bypass that, too.
+  if (width / 2 < kMinImageFindSize || height / 2 < kMinImageFindSize) {
+    return pixCreate(width, height, 1);
   }
 
   // Reduce by factor 2.
@@ -272,15 +277,6 @@ Image ImageFind::FindImages(Image pix) {
   }
 
   // Get the halftone mask directly from Leptonica.
-  //
-  // Leptonica will print an error message and return nullptr if we call
-  // pixGenHalftoneMask(pixr, nullptr, ...) with too small image, so we
-  // want to bypass that.
-  if (pixGetWidth(pixr) < kMinImageFindSize || pixGetHeight(pixr) < kMinImageFindSize) {
-    pixr.destroy();
-    return pixCreate(pixGetWidth(pix), pixGetHeight(pix), 1);
-  }
-  // Get the halftone mask.
   l_int32 ht_found = 0;
   Pixa *pixadb = textord_tabfind_show_images ? pixaCreate(0) : nullptr;
   Image pixht2 = pixGenerateHalftoneMask(pixr, nullptr, &ht_found, pixadb);
@@ -297,7 +293,7 @@ Image ImageFind::FindImages(Image pix) {
     pixht2.destroy();
   }
   if (pixht2 == nullptr) {
-    return pixCreate(pixGetWidth(pix), pixGetHeight(pix), 1);
+    return pixCreate(width, height, 1);
   }
 
   // Expand back up again.
@@ -344,7 +340,7 @@ Image ImageFind::FindImages(Image pix) {
     tesseract_->AddPixDebugPage(pixht, "FinalMask");
   }
   // Make the result image the same size as the input.
-  Image result = pixCreate(pixGetWidth(pix), pixGetHeight(pix), 1);
+  Image result = pixCreate(width, height, 1);
   result |= pixht;
   pixht.destroy();
   return result;
@@ -619,6 +615,24 @@ void ImageFind::CutChunkFromParts(const TBOX &box, const TBOX &im_box, const FCO
 void ImageFind::DivideImageIntoParts(const TBOX &im_box, const FCOORD &rotation,
                                  const FCOORD &rerotation, Image pix,
                                  ColPartitionGridSearch *rectsearch, ColPartition_LIST *part_list) {
+
+  int textParts = 0;
+  int totalParts = 0;
+
+  rectsearch->StartRectSearch(im_box);
+  ColPartition *part;
+  while ((part = rectsearch->NextRectSearch()) != nullptr) {
+
+    totalParts++;
+    if (part->flow() >= BTFT_CHAIN) {
+      textParts++;
+    }
+  }
+
+  if (textParts * 2 > totalParts) {
+    return;
+  } 
+
   // Add the full im_box partition to the list to begin with.
   ColPartition *pix_part =
       ColPartition::FakePartition(tesseract_, im_box, PT_UNKNOWN, BRT_RECTIMAGE, BTFT_NONTEXT);
@@ -626,7 +640,7 @@ void ImageFind::DivideImageIntoParts(const TBOX &im_box, const FCOORD &rotation,
   part_it.add_after_then_move(pix_part);
 
   rectsearch->StartRectSearch(im_box);
-  ColPartition *part;
+  
   while ((part = rectsearch->NextRectSearch()) != nullptr) {
     TBOX part_box = part->bounding_box();
     if (part_box.contains(im_box) && part->flow() >= BTFT_CHAIN) {
@@ -898,9 +912,9 @@ bool ImageFind::ExpandImageIntoParts(const TBOX &max_image_box, ColPartitionGrid
   ColPartition *image_part = *part_ptr;
   TBOX im_part_box = image_part->bounding_box();
   if (textord_tabfind_show_images > 1) {
-    tprintf("Searching for merge with image part:");
+    tprintDebug("Searching for merge with image part:");
     im_part_box.print();
-    tprintf("Text box=");
+    tprintDebug("Text box=");
     max_image_box.print();
   }
   rectsearch->StartRectSearch(max_image_box);
@@ -909,16 +923,16 @@ bool ImageFind::ExpandImageIntoParts(const TBOX &max_image_box, ColPartitionGrid
   int best_dist = 0;
   while ((part = rectsearch->NextRectSearch()) != nullptr) {
     if (textord_tabfind_show_images > 1) {
-      tprintf("Considering merge with part:");
+      tprintDebug("Considering merge with part:");
       part->Print();
       if (im_part_box.contains(part->bounding_box())) {
-        tprintf("Fully contained\n");
+        tprintDebug("Fully contained\n");
       } else if (!max_image_box.contains(part->bounding_box())) {
-        tprintf("Not within text box\n");
+        tprintDebug("Not within text box\n");
       } else if (part->flow() == BTFT_STRONG_CHAIN) {
-        tprintf("Too strong text\n");
+        tprintDebug("Too strong text\n");
       } else {
-        tprintf("Real candidate\n");
+        tprintDebug("Real candidate\n");
       }
     }
     if (part->flow() == BTFT_STRONG_CHAIN || part->flow() == BTFT_TEXT_ON_IMAGE ||
@@ -950,9 +964,9 @@ bool ImageFind::ExpandImageIntoParts(const TBOX &max_image_box, ColPartitionGrid
     // It needs expanding. We can do it without touching text.
     TBOX box = best_part->bounding_box();
     if (textord_tabfind_show_images > 1) {
-      tprintf("Merging image part:");
+      tprintDebug("Merging image part:");
       im_part_box.print();
-      tprintf("with part:");
+      tprintDebug("with part:");
       box.print();
     }
     im_part_box += box;
@@ -1177,7 +1191,7 @@ void ImageFind::FindImagePartitions(Image image_pix, const FCOORD &rotation,
     DivideImageIntoParts(im_box, rotation, rerotation, pix, &rectsearch, &part_list);
     if (textord_tabfind_show_images) {
       tesseract_->AddPixDebugPage(pix, "ImageComponent");
-      tprintf("Component has {} parts\n", part_list.length());
+      tprintDebug("Component has {} parts\n", part_list.length());
     }
     pix.destroy();
     if (!part_list.empty()) {
@@ -1215,7 +1229,7 @@ void ImageFind::FindImagePartitions(Image image_pix, const FCOORD &rotation,
   DeleteSmallImages(part_grid);
 #if !GRAPHICS_DISABLED
   if (textord_tabfind_show_images) {
-    ScrollView *images_win_ = part_grid->MakeWindow(1000, 400, "With Images");
+    ScrollViewReference images_win_(part_grid->MakeWindow(tesseract_, 1000, 400, "With Images"));
     part_grid->DisplayBoxes(images_win_);
   }
 #endif

@@ -105,19 +105,39 @@ public class PDFObject implements Iterable<PDFObject>
 	}
 
 	private native PDFObject getArray(int index);
-	private native PDFObject getDictionary(String name);
+	private native PDFObject getDictionary(String name, boolean inheritable);
 	private native PDFObject getDictionaryKey(int index);
 
 	public PDFObject get(int index) {
 		return getArray(index);
 	}
 
+	public PDFObject get(String name, boolean inheritable) {
+		return getDictionary(name, inheritable);
+	}
+
 	public PDFObject get(String name) {
-		return getDictionary(name);
+		return getDictionary(name, false);
+	}
+
+	public PDFObject get(PDFObject name, boolean inheritable) {
+		return getDictionary(name != null ? name.asName() : null, inheritable);
 	}
 
 	public PDFObject get(PDFObject name) {
-		return getDictionary(name != null ? name.asName() : null);
+		return get(name, false);
+	}
+
+	public PDFObject getInheritable(PDFObject name) {
+		return getDictionary(name != null ? name.asName() : null, false);
+	}
+
+	public PDFObject getInheritable(String name) {
+		return getDictionary(name, true);
+	}
+
+	public PDFObject getInheritable(PDFObject name) {
+		return getDictionary(name != null ? name.asName() : null, true);
 	}
 
 	private native void putArrayBoolean(int index, boolean b);
@@ -131,6 +151,9 @@ public class PDFObject implements Iterable<PDFObject>
 	private native void putDictionaryStringFloat(String name, float f);
 	private native void putDictionaryStringString(String name, String str);
 	private native void putDictionaryStringPDFObject(String name, PDFObject obj);
+	private native void putDictionaryStringRect(String name, Rect r);
+	private native void putDictionaryStringMatrix(String name, Matrix m);
+	private native void putDictionaryStringDate(String name, long secs);
 
 	private native void putDictionaryPDFObjectBoolean(PDFObject name, boolean b);
 	private native void putDictionaryPDFObjectInteger(PDFObject name, int i);
@@ -179,6 +202,18 @@ public class PDFObject implements Iterable<PDFObject>
 
 	public void put(String name, PDFObject obj) {
 		putDictionaryStringPDFObject(name, obj);
+	}
+
+	public void put(String name, Rect r) {
+		putDictionaryStringRect(name, r);
+	}
+
+	public void put(String name, Matrix m) {
+		putDictionaryStringMatrix(name, m);
+	}
+
+	public void put(String name, Date time) {
+		putDictionaryStringDate(name, time.getTime());
 	}
 
 	public void put(PDFObject name, boolean b) {

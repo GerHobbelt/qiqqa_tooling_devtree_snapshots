@@ -1629,7 +1629,7 @@ void TY_(BQ2Div)( TidyDocImpl* doc, Node *node )
 
         node = next ? next : TY_(pop)(stack);
     }
-    TY_(freeStack)(stack);
+    TY_(freeStack)(stack, doc);
 }
 
 
@@ -1824,13 +1824,23 @@ void TY_(NormalizeSpaces)(Lexer *lexer, Node *node)
                 c = (byte) lexer->lexbuf[i];
 
                 /* look for UTF-8 multibyte character */
+                int bytes = 0;
                 if ( c > 0x7F )
-                    i += TY_(GetUTF8)( lexer->lexbuf + i, &c );
+                    bytes = TY_(GetUTF8)( lexer->lexbuf + i, &c );
 
                 if ( c == 160 )
                     c = ' ';
 
-                p = TY_(PutUTF8)(p, c);
+                /* don't copy replacement char on invalid UTF-8, as it might */
+                /* be larger than original char and overflow the buffer */
+                if(bytes > 0) {
+                    p = TY_(PutUTF8)(p, c);
+                } else {
+                    *p = lexer->lexbuf[i];
+                    p++;
+                }
+
+                i += bytes;
             }
             node->end = p - lexer->lexbuf;
         }
@@ -2644,7 +2654,7 @@ void TY_(FixLanguageInformation)(TidyDocImpl* doc, Node* node, Bool wantXmlLang,
 
         node = next ? next : TY_(pop)(stack);
     }
-    TY_(freeStack)(stack);
+    TY_(freeStack)(stack, doc);
 }
 
 /*
@@ -2754,7 +2764,7 @@ void TY_(FixAnchors)(TidyDocImpl* doc, Node *node, Bool wantName, Bool wantId)
 
         node = next ? next : TY_(pop)(stack);
     }
-    TY_(freeStack)(stack);
+    TY_(freeStack)(stack, doc);
 }
 
 /* Issue #567 - move style elements from body to head 
@@ -2798,7 +2808,7 @@ static void StyleToHead(TidyDocImpl* doc, Node *head, Node *node, Bool fix, int 
             indent--;
         }
     }
-    TY_(freeStack)(stack);
+    TY_(freeStack)(stack, doc);
 }
 
 

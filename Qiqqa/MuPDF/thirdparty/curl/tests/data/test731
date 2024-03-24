@@ -1,22 +1,26 @@
 <testcase>
 <info>
 <keywords>
-HTTP
-HTTP GET
-HTTP Basic auth
-SAFEAUTH
+IPFS
 </keywords>
 </info>
+
 #
 # Server-side
 <reply>
-<data>
-HTTP/1.1 401 Authorization Required
-Server: testcurl
-WWW-Authenticate: Basic realm="gimme all yer s3cr3ts"
+<data nocheck="yes">
+HTTP/1.1 200 OK
+Date: Tue, 09 Nov 2010 14:49:00 GMT
+Server: test-server/fake
+Last-Modified: Tue, 13 Jun 2000 12:10:00 GMT
+ETag: "21025-dc7-39462498"
+Accept-Ranges: bytes
+Content-Length: 21
+Connection: close
 Content-Type: text/plain
-Content-Length: 0
+Funny-head: yesyes
 
+Hello curl from IPFS
 </data>
 </reply>
 
@@ -26,19 +30,25 @@ Content-Length: 0
 <server>
 http
 </server>
- <name>
-HTTP GET with user and clear password protection upon server request
- </name>
- <command>
- -u fake:user --safe-auth http://%HOSTIP:%HTTPPORT/%TESTNUMBER
+<setenv>
+HOME=%PWD/%LOGDIR
+</setenv>
+<name>
+IPFS with gateway URL and path from gateway file
+</name>
+<command>
+ipfs://bafybeidecnvkrygux6uoukouzps5ofkeevoqland7kopseiod6pzqvjg7u
 </command>
+<file name="%LOGDIR/.ipfs/gateway" >
+http://%HOSTIP:%HTTPPORT/%TESTNUMBER
+</file>
 </client>
 
 #
 # Verify data after the test has been "shot"
 <verify>
-<protocol>
-GET /%TESTNUMBER HTTP/1.1
+<protocol crlf="yes">
+GET /%TESTNUMBER/ipfs/bafybeidecnvkrygux6uoukouzps5ofkeevoqland7kopseiod6pzqvjg7u HTTP/1.1
 Host: %HOSTIP:%HTTPPORT
 User-Agent: curl/%VERSION
 Accept: */*

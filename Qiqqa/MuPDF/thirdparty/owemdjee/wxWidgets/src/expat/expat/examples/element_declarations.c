@@ -180,6 +180,11 @@ handleElementDeclaration(void *userData, const XML_Char *name,
   }
 }
 
+
+#if defined(BUILD_MONOLITHIC)
+#define main    expat_element_declarations_example_main
+#endif
+
 int
 main(void) {
   XML_Parser parser = XML_ParserCreate(NULL);

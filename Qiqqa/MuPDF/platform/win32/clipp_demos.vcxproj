@@ -88,7 +88,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <DisableSpecificWarnings>4018;4100;4127;4180;4206;4244;4267;5105;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4018;4100;4127;4180;4206;4244;4267;4913;5105;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <SupportJustMyCode>false</SupportJustMyCode>
@@ -112,8 +112,8 @@
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/clipp/include;../../thirdparty/owemdjee/clipp;../../thirdparty/monolithic_tmplt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CLIPP_DEMOS;CLIPP_DEMOS_STATICLIB;_CRT_SECURE_NO_WARNINGS;CLIPP_CLIPP_WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/clipp/include;../../thirdparty/owemdjee/clipp;../../thirdparty/monolithic_tmplt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CLIPP_DEMOS;CLIPP_DEMOS_STATICLIB;CLIPP_CLIPP_WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
@@ -122,7 +122,7 @@
       <TargetMachine>MachineX86</TargetMachine>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <ForceFileOutput>
       </ForceFileOutput>
       <GenerateMapFile>true</GenerateMapFile>
@@ -130,7 +130,7 @@
       <MapExports>true</MapExports>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/clipp/include;../../thirdparty/owemdjee/clipp;../../thirdparty/monolithic_tmplt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/clipp/include;../../thirdparty/owemdjee/clipp;../../thirdparty/monolithic_tmplt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -139,8 +139,8 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/clipp/include;../../thirdparty/owemdjee/clipp;../../thirdparty/monolithic_tmplt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CLIPP_DEMOS;CLIPP_DEMOS_STATICLIB;_CRT_SECURE_NO_WARNINGS;CLIPP_CLIPP_WIN64;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/clipp/include;../../thirdparty/owemdjee/clipp;../../thirdparty/monolithic_tmplt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CLIPP_DEMOS;CLIPP_DEMOS_STATICLIB;CLIPP_CLIPP_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
@@ -149,7 +149,7 @@
       <TargetMachine>MachineX64</TargetMachine>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <ForceFileOutput>
       </ForceFileOutput>
       <GenerateMapFile>true</GenerateMapFile>
@@ -157,21 +157,21 @@
       <MapExports>true</MapExports>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/clipp/include;../../thirdparty/owemdjee/clipp;../../thirdparty/monolithic_tmplt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/clipp/include;../../thirdparty/owemdjee/clipp;../../thirdparty/monolithic_tmplt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/clipp/include;../../thirdparty/owemdjee/clipp;../../thirdparty/monolithic_tmplt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CLIPP_DEMOS;CLIPP_DEMOS_STATICLIB;_CRT_SECURE_NO_WARNINGS;CLIPP_CLIPP_WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/clipp/include;../../thirdparty/owemdjee/clipp;../../thirdparty/monolithic_tmplt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CLIPP_DEMOS;CLIPP_DEMOS_STATICLIB;CLIPP_CLIPP_WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
       <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <TargetMachine>MachineX86</TargetMachine>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <ForceFileOutput>
@@ -181,7 +181,7 @@
       <MapExports>true</MapExports>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/clipp/include;../../thirdparty/owemdjee/clipp;../../thirdparty/monolithic_tmplt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/clipp/include;../../thirdparty/owemdjee/clipp;../../thirdparty/monolithic_tmplt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -191,14 +191,14 @@
     <ClCompile>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/clipp/include;../../thirdparty/owemdjee/clipp;../../thirdparty/monolithic_tmplt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CLIPP_DEMOS;CLIPP_DEMOS_STATICLIB;_CRT_SECURE_NO_WARNINGS;CLIPP_CLIPP_WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/clipp/include;../../thirdparty/owemdjee/clipp;../../thirdparty/monolithic_tmplt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_CLIPP_DEMOS;CLIPP_DEMOS_STATICLIB;CLIPP_CLIPP_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
       <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <TargetMachine>MachineX64</TargetMachine>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <ForceFileOutput>
@@ -208,46 +208,27 @@
       <MapExports>true</MapExports>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/clipp/include;../../thirdparty/owemdjee/clipp;../../thirdparty/monolithic_tmplt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/clipp/include;../../thirdparty/owemdjee/clipp;../../thirdparty/monolithic_tmplt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ItemGroup>
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/actions.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/align.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/alternatives.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/annotate.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/argv0.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/commands.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/complex_nesting.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/convert.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/counter.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/doc_filter.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/documentation.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/finder.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/float_vector.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/groups.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/joinable_flags.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/model.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/naval_fate.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/nested_alternatives.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/numbers.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/options.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/options_values.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/parsing.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/positional_values.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/repeatable.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/required_flags.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/sanity.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/send.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/simplify.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/switches.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/tagnames.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/text_formatting.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/timing.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/clipp/examples/transform.cpp" />
+    <ProjectReference Include="libclipp.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff9e7b3a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libclipp_examples.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff983822}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../scripts/libclipp/monolithic_main.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../scripts/libclipp/run_all_clipp_tests.c" />
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="../../thirdparty/owemdjee/clipp/test/actions_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/clipp/test/alternative_groups_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/clipp/test/alternative_options_test.cpp" />
@@ -287,13 +268,15 @@
     <ClCompile Include="../../thirdparty/owemdjee/clipp/test/values_conversion_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/clipp/test/values_filter_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/clipp/test/values_sequencing_test.cpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/clipp/examples/monolithic_examples.h" />
     <ClInclude Include="../../thirdparty/owemdjee/clipp/include/clipp.h" />
     <ClInclude Include="../../thirdparty/owemdjee/clipp/test/monolithic_tests.h" />
     <ClInclude Include="../../thirdparty/owemdjee/clipp/test/testing.h" />
     <Text Include="../../thirdparty/owemdjee/clipp/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/clipp/CMakePresets.json" />
+    <Text Include="../../thirdparty/owemdjee/clipp/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/clipp/README.md" />
-    <Text Include="../../thirdparty/owemdjee/clipp/examples/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/clipp/appveyor.yml" />
+    <Text Include="../../thirdparty/owemdjee/clipp/docs/doxyfile" />
     <Text Include="../../thirdparty/owemdjee/clipp/test/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/clipp/test/run_tests.py" />
   </ItemGroup>

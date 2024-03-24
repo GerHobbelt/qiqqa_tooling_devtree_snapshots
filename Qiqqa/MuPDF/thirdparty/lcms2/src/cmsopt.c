@@ -177,6 +177,7 @@ cmsBool  isFloatMatrixIdentity(cmsContext ContextID, const cmsMAT3* a)
 
        return TRUE;
 }
+
 // if two adjacent matrices are found, multiply them.
 static
 cmsBool _MultiplyMatrix(cmsContext ContextID, cmsPipeline* Lut)
@@ -1109,14 +1110,17 @@ cmsBool OptimizeByComputingLinearization(cmsContext ContextID, cmsPipeline** Lut
 
         // Store result in curve
         for (t=0; t < OriginalLut ->InputChannels; t++)
-            Trans[t] ->Table16[i] = _cmsQuickSaturateWord(Out[t] * 65535.0);
+        {
+            if (Trans[t]->Table16 != NULL)
+                Trans[t] ->Table16[i] = _cmsQuickSaturateWord(Out[t] * 65535.0);
+        }
     }
 
     // Slope-limit the obtained curves
     for (t = 0; t < OriginalLut ->InputChannels; t++)
         SlopeLimiting(ContextID, Trans[t]);
 
-    // Check for validity
+    // Check for validity. lIsLinear is here for debug purposes
     lIsSuitable = TRUE;
     lIsLinear   = TRUE;
     for (t=0; (lIsSuitable && (t < OriginalLut ->InputChannels)); t++) {
@@ -1521,7 +1525,8 @@ void* DupMatShaper(cmsContext ContextID, const void* Data)
 // to accomplish some performance. Actually it takes 256x3 16 bits tables and 16385 x 3 tables of 8 bits,
 // in total about 50K, and the performance boost is huge!
 static CMS_NO_SANITIZE
-void MatShaperEval16(cmsContext ContextID, CMSREGISTER const cmsUInt16Number In[],
+void MatShaperEval16(cmsContext ContextID,
+                     CMSREGISTER const cmsUInt16Number In[],
                      CMSREGISTER cmsUInt16Number Out[],
                      CMSREGISTER const void* D)
 {
@@ -1771,7 +1776,7 @@ cmsBool OptimizeMatrixShaper(cmsContext ContextID, cmsPipeline** Lut, cmsUInt32N
         _cmsStageToneCurvesData* mpeC2 = (_cmsStageToneCurvesData*) cmsStageData(ContextID, Curve2);
 
         // In this particular optimization, cache does not help as it takes more time to deal with
-        // the cache that with the pixel handling
+        // the cache than with the pixel handling
         *dwFlags |= cmsFLAGS_NOCACHE;
 
         // Setup the optimizarion routines
@@ -1928,7 +1933,7 @@ cmsBool CMSEXPORT _cmsOptimizePipeline(cmsContext ContextID,
     for (mpe = cmsPipelineGetPtrToFirstStage(ContextID, *PtrLut);
         mpe != NULL;
         mpe = cmsStageNext(ContextID, mpe)) {
-	        if (cmsStageType(ContextID, mpe) == cmsSigNamedColorElemType) return FALSE;
+            if (cmsStageType(ContextID, mpe) == cmsSigNamedColorElemType) return FALSE;
     }
 
     // Try to get rid of identities and trivial conversions.

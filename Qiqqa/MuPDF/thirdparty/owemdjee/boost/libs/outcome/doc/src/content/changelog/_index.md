@@ -4,13 +4,66 @@ weight = 80
 +++
 
 ---
-## v2.2.7 ??? 2023 (Boost 1.83) [[release]](https://github.com/ned14/outcome/releases/tag/v2.2.7)
+## v2.2.9 ? (Boost 1.85) [[release]](https://github.com/ned14/outcome/releases/tag/v2.2.9)
+
+### Enhancements:
+
+[#293](https://github.com/ned14/outcome/issues/293)
+- Some users wished that Outcome would be clean with `-Wpedantic`, this is now turned on for
+the test suite.
+
+[#294](https://github.com/ned14/outcome/issues/294)
+- All use of `assert()` has been replaced with `BOOST_OUTCOME_ASSERT`, which can be user overridden
+at compile time.
+
+[#295](https://github.com/ned14/outcome/issues/295)
+- In git commit 12b14e1533848e9a0f7f3c38e41da0ee4e819770 (Aug 11 2022) status code had its
+paths changed due to its headers not previously having the right path convention. It was not
+realised at the time that in Boost.Outcome this resulted in
+`<boost/outcome/experimental/status-code/status-code/headers.hpp>` which is not desirable.
+This has now been remedied to remove the double `status-code`, which will obviously break
+any Boost.Outcome code which relies on the double `status-code`. Standalone Outcome is unaffected.
+
+### Bug fixes:
+
+---
+## v2.2.8 13th December 2023 (Boost 1.84) [[release]](https://github.com/ned14/outcome/releases/tag/v2.2.8)
+
+### Enhancements:
+
+- cmake 3.9 is now the minimum required for standalone Outcome. This fixes a long standing
+cmake issue with probing for standard library facilities. cmake 3.9 is what RHEL7 ships with,
+when RHEL7 EOLs we may raise the minimum cmake version at that point.
+
+### Bug fixes:
+
+- There was a bug in the Outcome C++ coroutine awaitables whereby we were over eagerly resuming
+execution of coroutines which return one of our awaitables. It is surprising how many years have
+passed before this was noticed, but it is now fixed. It is believed that this has been fixed
+without affecting ABI stability, however mixing old Outcome and new Outcome in the same binary
+without recompiling all the C++ coroutine code to use new Outcome will not fix the bug.
+
+[#291](https://github.com/ned14/outcome/issues/291)
+- A Result or Outcome with `void` value type and move-only non-value type was only usable in
+const use cases, due to the lack of provision of non-const member functions in relevant observers
+injection layers for the `void` specialisation. The missing non-const member functions have now
+been added.
+
+---
+## v2.2.7 13th August 2023 (Boost 1.83) [[release]](https://github.com/ned14/outcome/releases/tag/v2.2.7)
 
 ### Enhancements:
 
 - Update the list of known compiler issues in the docs.
 
 - Update Outcome.Experimental to match latest changes requested of `status_code` by WG21.
+This as usual will cause minor breakage due to LEWG renaming of things.
+
+- Outcome previously took addresses of things not using `std::addressof()`, and until now
+nobody complained because custom `operator&` which doesn't return an address is an
+abomination not used in much modern C++. But finally someone did complain, so
+for both normal Outcome and Experimental.Outcome, if you set `BOOST_OUTCOME_USE_STD_ADDRESSOF = 1`,
+Outcome will use `std::addressof()`
 
 ### Bug fixes:
 
@@ -24,6 +77,10 @@ and configurations within that CI matrix.
  Standalone Outcome's test suite was never affected, as it did not have Boost changing underneath it.
 Nevertheless, a few of the compiler parse bug workarounds will have improved compatibility there
 too for atyical toolchain choices.
+
+- Experimental.Outcome now supports big endian architectures. Implementation for them simply wasn't done
+before under the assumption that nobody would be using Experimental.Outcome on big endian architectures.
+Turns out that was a wrong assumption!
 
 ---
 ## v2.2.6 24th March 2023 (Boost 1.82) [[release]](https://github.com/ned14/outcome/releases/tag/v2.2.6)
@@ -321,7 +378,7 @@ use cases.
 Precompiled headers are automatically enabled on new enough cmake's for standalone Outcome
 : If on cmake 3.16 or later, its new precompiled headers build support is used
 to tell consumers of the `outcome::hl` cmake target to precompile Outcome, **if
-and only if** `PROJECT_IS_DEPENDENCY` is false. `PROJECT_IS_DEPENDENCY` is set
+and only if** `outcome_IS_DEPENDENCY` is false. `outcome_IS_DEPENDENCY` is set
 by Outcome's CMakeLists.txt if it detects that it was included using
 `add_subdirectory()`, so for the vast majority of Outcome end users, the use
 of precompiled headers will NOT be enabled.

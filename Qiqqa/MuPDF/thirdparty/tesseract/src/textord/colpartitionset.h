@@ -97,10 +97,7 @@ public:
   ColPartitionSet *Copy(bool good_only);
 
   // Display the edges of the columns at the given y coords.
-  void DisplayColumnEdges(int y_bottom, int y_top, ScrollView *win);
-
-  // Display the edges of the columns at the given y coords.
-  void DisplayColumnEdges(int y_bottom, int y_top, Image &pix, uint32_t* data, int wpl, int w, int h);
+  void DisplayColumnEdges(int y_bottom, int y_top, ScrollViewReference &win);
 
   // Return the ColumnSpanningType that best explains the columns overlapped
   // by the given coords(left,right,y), with the given margins.
@@ -146,7 +143,7 @@ private:
   // |        Double     width    heading                              |
   // |-----------------------------------------------------------------|
   // |-------------------------------| |-------------------------------|
-  // |   Common width ColParition    | |  Common width ColPartition    |
+  // |   Common width ColPartition   | |  Common width ColPartition    |
   // |-------------------------------| |-------------------------------|
   // the layout with two common-width columns has better coverage than the
   // double width heading, because the coverage is "good," even though less in

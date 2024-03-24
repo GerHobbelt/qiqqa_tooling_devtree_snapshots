@@ -1341,6 +1341,7 @@ PIX     *pixd;
  *      (2) Note that %rankorder is an integer.  Use %rankorder = 0 for
  *          the largest component and %rankorder = -1 for the smallest.
  *          If %rankorder >= number of components, select the smallest.
+ * </pre>
  */
 PIX *
 pixSelectComponentBySize(PIX     *pixs,
@@ -1412,6 +1413,7 @@ PIXA    *pixa1, *pixa2;
  *      (1) See notes in pixSelectComponentBySize().
  *      (2) This returns a copy of %pixs, with all components removed
  *          except for the selected one.
+ * </pre>
  */
 PIX *
 pixFilterComponentBySize(PIX     *pixs,
@@ -1837,6 +1839,10 @@ l_uint32  *data, *line;
 
         /* Check top and bottom raster lines */
     pixGetDimensions(pixs, &w, &h, NULL);
+    if (w == 0)
+        return ERROR_INT("zero-width pix", __func__, 1);
+    if (h == 0)
+        return ERROR_INT("zero-height pix", __func__, 1);
     data = pixGetData(pixs);
     wpl = pixGetWpl(pixs);
     found = FALSE;
@@ -1912,11 +1918,19 @@ BOX     *boxt, *boxd;
         return pixClipToForeground(pixs, ppixd, pboxd);
 
     pixGetDimensions(pixs, &w, &h, NULL);
+    if (w == 0)
+        return ERROR_INT("zero-width pix", __func__, 1);
+    if (h == 0)
+        return ERROR_INT("zero-height pix", __func__, 1);
     boxGetGeometry(boxs, &bx, &by, &bw, &bh);
     cbw = L_MIN(bw, w - bx);
     cbh = L_MIN(bh, h - by);
     if (cbw < 0 || cbh < 0)
         return ERROR_INT("box not within image", __func__, 1);
+    if (cbw == 0)
+        return ERROR_INT("zero-width box", __func__, 1);
+    if (cbh == 0)
+        return ERROR_INT("zero-height box", __func__, 1);
     boxt = boxCreate(bx, by, cbw, cbh);
 
     if (pixScanForForeground(pixs, boxt, L_FROM_LEFT, &left)) {
@@ -1974,10 +1988,18 @@ BOX       *boxt;
 
         /* Clip box to pixs if it exists */
     pixGetDimensions(pixs, &bw, &bh, NULL);
+    if (bw == 0)
+        return ERROR_INT("zero-width pix", __func__, 1);
+    if (bh == 0)
+        return ERROR_INT("zero-height pix", __func__, 1);
     if (box) {
         if ((boxt = boxClipToRectangle(box, bw, bh)) == NULL)
             return ERROR_INT("invalid box", __func__, 1);
         boxGetGeometry(boxt, &bx, &by, &bw, &bh);
+        if (bw == 0)
+            return ERROR_INT("zero-width clipped box", __func__, 1);
+        if (bh == 0)
+            return ERROR_INT("zero-height clipped box", __func__, 1);
         boxDestroy(&boxt);
     } else {
         bx = by = 0;

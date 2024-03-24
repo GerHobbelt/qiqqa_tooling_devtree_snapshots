@@ -31,6 +31,8 @@
 #endif
 #include <dirent.h>
 
+#include "monolithic_examples.h"
+
 /* File name and location of database file */
 #define DB_LOCATION L"locate.db"
 

@@ -46,7 +46,9 @@ if(NOT BOOST_FILESYSTEM_DISABLE_STATX)
     endif()
 endif()
 check_cxx_source_compiles("#include <${CMAKE_CURRENT_SOURCE_DIR}/config/has_fdopendir_nofollow.cpp>" BOOST_FILESYSTEM_HAS_FDOPENDIR_NOFOLLOW)
+check_cxx_source_compiles("#include <${CMAKE_CURRENT_SOURCE_DIR}/config/has_dirent_d_type.cpp>" BOOST_FILESYSTEM_HAS_DIRENT_D_TYPE)
 check_cxx_source_compiles("#include <${CMAKE_CURRENT_SOURCE_DIR}/config/has_posix_at_apis.cpp>" BOOST_FILESYSTEM_HAS_POSIX_AT_APIS)
+check_cxx_source_compiles("#include <${CMAKE_CURRENT_SOURCE_DIR}/config/has_fallocate.cpp>" BOOST_FILESYSTEM_HAS_FALLOCATE)
 if(WIN32 AND NOT BOOST_FILESYSTEM_DISABLE_BCRYPT)
     set(CMAKE_REQUIRED_LIBRARIES bcrypt)
     check_cxx_source_compiles("#include <${CMAKE_CURRENT_SOURCE_DIR}/config/has_bcrypt.cpp>" BOOST_FILESYSTEM_HAS_BCRYPT)
@@ -72,6 +74,44 @@ endif()
 
 add_library(boost_filesystem ${BOOST_FILESYSTEM_SOURCES})
 add_library(Boost::filesystem ALIAS boost_filesystem)
+
+target_compile_features(boost_filesystem PUBLIC
+    cxx_rvalue_references
+    cxx_strong_enums
+    cxx_noexcept
+    cxx_nullptr
+    cxx_defaulted_functions
+    cxx_defaulted_move_initializers
+    cxx_deleted_functions
+    cxx_default_function_template_args
+    cxx_final
+    cxx_override
+)
+
+get_target_property(BOOST_FILESYSTEM_TARGET_TYPE boost_filesystem TYPE)
+if(BOOST_FILESYSTEM_TARGET_TYPE STREQUAL "SHARED_LIBRARY")
+    set(CMAKE_REQUIRED_LIBRARIES "-Wl,--no-undefined")
+    check_cxx_source_compiles("#include <${CMAKE_CURRENT_SOURCE_DIR}/config/has_linkflag_no_undefined.cpp>" BOOST_FILESYSTEM_HAS_LINKFLAG_NO_UNDEFINED)
+    unset(CMAKE_REQUIRED_LIBRARIES)
+    if(NOT BOOST_FILESYSTEM_HAS_LINKFLAG_NO_UNDEFINED)
+        set(CMAKE_REQUIRED_LIBRARIES "-Wl,-undefined,error")
+        check_cxx_source_compiles("#include <${CMAKE_CURRENT_SOURCE_DIR}/config/has_linkflag_no_undefined.cpp>" BOOST_FILESYSTEM_HAS_LINKFLAG_UNDEFINED_ERROR)
+        unset(CMAKE_REQUIRED_LIBRARIES)
+    endif()
+    if(BOOST_FILESYSTEM_HAS_LINKFLAG_NO_UNDEFINED)
+        if(NOT CMAKE_VERSION VERSION_LESS 3.13)
+            target_link_options(boost_filesystem PRIVATE "-Wl,--no-undefined")
+        else()
+            target_link_libraries(boost_filesystem PRIVATE "-Wl,--no-undefined")
+        endif()
+    elseif(BOOST_FILESYSTEM_HAS_LINKFLAG_UNDEFINED_ERROR)
+        if(NOT CMAKE_VERSION VERSION_LESS 3.13)
+            target_link_options(boost_filesystem PRIVATE "-Wl,-undefined,error")
+        else()
+            target_link_libraries(boost_filesystem PRIVATE "-Wl,-undefined,error")
+        endif()
+    endif()
+endif()
 
 target_include_directories(boost_filesystem PUBLIC include)
 target_include_directories(boost_filesystem PRIVATE src)
@@ -174,8 +214,14 @@ endif()
 if(BOOST_FILESYSTEM_HAS_FDOPENDIR_NOFOLLOW)
     target_compile_definitions(boost_filesystem PRIVATE BOOST_FILESYSTEM_HAS_FDOPENDIR_NOFOLLOW)
 endif()
+if(BOOST_FILESYSTEM_HAS_DIRENT_D_TYPE)
+    target_compile_definitions(boost_filesystem PRIVATE BOOST_FILESYSTEM_HAS_DIRENT_D_TYPE)
+endif()
 if(BOOST_FILESYSTEM_HAS_POSIX_AT_APIS)
     target_compile_definitions(boost_filesystem PRIVATE BOOST_FILESYSTEM_HAS_POSIX_AT_APIS)
+endif()
+if(BOOST_FILESYSTEM_HAS_FALLOCATE)
+    target_compile_definitions(boost_filesystem PRIVATE BOOST_FILESYSTEM_HAS_FALLOCATE)
 endif()
 
 target_link_libraries(boost_filesystem

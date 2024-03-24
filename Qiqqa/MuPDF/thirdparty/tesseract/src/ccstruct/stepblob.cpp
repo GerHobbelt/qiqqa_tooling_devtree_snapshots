@@ -25,7 +25,7 @@
 
 #include "points.h" // for operator+=, FCOORD, ICOORD
 
-#include <allheaders.h> // for pixCreate, pixGetDepth
+#include <leptonica/allheaders.h> // for pixCreate, pixGetDepth
 #include <vector>       // for std::vector
 
 namespace tesseract {
@@ -99,9 +99,9 @@ static void position_outline( // put in place
 #if !GRAPHICS_DISABLED
 static void plot_outline_list(     // draw outlines
     C_OUTLINE_LIST *list,          // outline to draw
-    ScrollView *window,            // window to draw in
-    ScrollView::Color colour,      // colour to use
-    ScrollView::Color child_colour // colour of children
+    ScrollViewReference &window,   // window to draw in
+    Diagnostics::Color colour,      // colour to use for the oulines (contours)
+    Diagnostics::Color child_colour // colour of children (holes)
 ) {
   C_OUTLINE *outline;     // current outline
   C_OUTLINE_IT it = list; // iterator
@@ -144,8 +144,8 @@ static void plot_outline_list(     // draw outlines
 // using the given denorm, making use of sub-pixel accurate information
 // if available.
 static void plot_normed_outline_list(const DENORM &denorm, C_OUTLINE_LIST *list,
-                                     ScrollView::Color colour, ScrollView::Color child_colour,
-                                     ScrollView *window) {
+                                     Diagnostics::Color colour, Diagnostics::Color child_colour,
+                                     ScrollViewReference &window) {
   C_OUTLINE_IT it(list);
   for (it.mark_cycle_pt(); !it.cycled_list(); it.forward()) {
     C_OUTLINE *outline = it.data();
@@ -233,9 +233,7 @@ void C_BLOB::ConstructBlobsFromOutlines(bool good_blob, C_OUTLINE_LIST *outline_
     // Set inverse flag and reverse if needed.
     blob->CheckInverseFlagAndDirection();
     // Put on appropriate list.
-    if (!blob_is_good && bad_blobs_it != nullptr) {
-      bad_blobs_it->add_after_then_move(blob);
-    } else {
+    if (!(!blob_is_good && bad_blobs_it != nullptr)) {
       good_blobs_it->add_after_then_move(blob);
     }
   }
@@ -548,9 +546,9 @@ Image C_BLOB::render_outline() {
  **********************************************************************/
 
 #if !GRAPHICS_DISABLED
-void C_BLOB::plot(ScrollView *window,               // window to draw in
-                  ScrollView::Color blob_colour,    // main colour
-                  ScrollView::Color child_colour) { // for holes
+void C_BLOB::plot(ScrollViewReference &window,               // window to draw in
+                  Diagnostics::Color blob_colour,             // main colour
+                  Diagnostics::Color child_colour) {          // for holes
   plot_outline_list(&outlines, window, blob_colour, child_colour);
 }
 #endif
@@ -563,8 +561,8 @@ void C_BLOB::plot(Image& pix, std::vector<uint32_t>& cmap, int& cmap_offset, boo
 // Draws the blob in the given colour, and child_colour, normalized
 // using the given denorm, making use of sub-pixel accurate information
 // if available.
-void C_BLOB::plot_normed(const DENORM &denorm, ScrollView::Color blob_colour,
-                         ScrollView::Color child_colour, ScrollView *window) {
+void C_BLOB::plot_normed(const DENORM &denorm, Diagnostics::Color blob_colour,
+                         Diagnostics::Color child_colour, ScrollViewReference &window) {
   plot_normed_outline_list(denorm, &outlines, blob_colour, child_colour, window);
 }
 #endif

@@ -98,7 +98,13 @@
     <Text Include="../../thirdparty/owemdjee/PlatformFolders/CMakeLists.txt">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/PlatformFolders/LICENSE">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/PlatformFolders/README.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/PlatformFolders/appveyor.yml">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/PlatformFolders/doxygen.conf">

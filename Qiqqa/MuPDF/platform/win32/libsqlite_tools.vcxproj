@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_SQLITE_TOOLS;SQLITE_TOOLS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_SQLITE_TOOLS;SQLITE_TOOLS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/sqlite-amalgamation;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/sqlite/tsrc;../../thirdparty/owemdjee/sqlite/src;../../thirdparty/owemdjee/sqlite/sqlite/ext/recover;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pthread-win32;../../scripts/zlib;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_SQLITE_TOOLS;SQLITE_TOOLS_STATICLIB;_HAVE_SQLITE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/sqlite-amalgamation;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/sqlite/tsrc;../../thirdparty/owemdjee/sqlite/src;../../thirdparty/owemdjee/sqlite/sqlite/ext/recover;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pthread-win32;../../scripts/zlib;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_SQLITE_TOOLS;SQLITE_TOOLS_STATICLIB;_HAVE_SQLITE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_SQLITE_TOOLS;SQLITE_TOOLS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_SQLITE_TOOLS;SQLITE_TOOLS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/sqlite-amalgamation;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/sqlite/tsrc;../../thirdparty/owemdjee/sqlite/src;../../thirdparty/owemdjee/sqlite/sqlite/ext/recover;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pthread-win32;../../scripts/zlib;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/sqlite-amalgamation;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/sqlite/tsrc;../../thirdparty/owemdjee/sqlite/src;../../thirdparty/owemdjee/sqlite/sqlite/ext/recover;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pthread-win32;../../scripts/zlib;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_SQLITE_TOOLS;SQLITE_TOOLS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_SQLITE_TOOLS;SQLITE_TOOLS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/sqlite-amalgamation;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/sqlite/tsrc;../../thirdparty/owemdjee/sqlite/src;../../thirdparty/owemdjee/sqlite/sqlite/ext/recover;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pthread-win32;../../scripts/zlib;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_SQLITE_TOOLS;SQLITE_TOOLS_STATICLIB;_HAVE_SQLITE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;SQLITE_DEBUG;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/sqlite-amalgamation;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/sqlite/tsrc;../../thirdparty/owemdjee/sqlite/src;../../thirdparty/owemdjee/sqlite/sqlite/ext/recover;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pthread-win32;../../scripts/zlib;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_SQLITE_TOOLS;SQLITE_TOOLS_STATICLIB;_HAVE_SQLITE_CONFIG_H;SQLITE_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_SQLITE_TOOLS;SQLITE_TOOLS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_SQLITE_TOOLS;SQLITE_TOOLS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/sqlite-amalgamation;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/sqlite/tsrc;../../thirdparty/owemdjee/sqlite/src;../../thirdparty/owemdjee/sqlite/sqlite/ext/recover;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pthread-win32;../../scripts/zlib;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/sqlite-amalgamation;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/sqlite/tsrc;../../thirdparty/owemdjee/sqlite/src;../../thirdparty/owemdjee/sqlite/sqlite/ext/recover;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pthread-win32;../../scripts/zlib;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_SQLITE_TOOLS;SQLITE_TOOLS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_SQLITE_TOOLS;SQLITE_TOOLS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/sqlite-amalgamation;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/sqlite/tsrc;../../thirdparty/owemdjee/sqlite/src;../../thirdparty/owemdjee/sqlite/sqlite/ext/recover;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pthread-win32;../../scripts/zlib;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_SQLITE_TOOLS;SQLITE_TOOLS_STATICLIB;_HAVE_SQLITE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WIN64;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/sqlite-amalgamation;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/sqlite/tsrc;../../thirdparty/owemdjee/sqlite/src;../../thirdparty/owemdjee/sqlite/sqlite/ext/recover;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pthread-win32;../../scripts/zlib;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_SQLITE_TOOLS;SQLITE_TOOLS_STATICLIB;_HAVE_SQLITE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_SQLITE_TOOLS;SQLITE_TOOLS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_SQLITE_TOOLS;SQLITE_TOOLS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/sqlite-amalgamation;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/sqlite/tsrc;../../thirdparty/owemdjee/sqlite/src;../../thirdparty/owemdjee/sqlite/sqlite/ext/recover;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pthread-win32;../../scripts/zlib;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/sqlite-amalgamation;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/sqlite/tsrc;../../thirdparty/owemdjee/sqlite/src;../../thirdparty/owemdjee/sqlite/sqlite/ext/recover;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pthread-win32;../../scripts/zlib;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_SQLITE_TOOLS;SQLITE_TOOLS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_SQLITE_TOOLS;SQLITE_TOOLS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/sqlite-amalgamation;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/sqlite/tsrc;../../thirdparty/owemdjee/sqlite/src;../../thirdparty/owemdjee/sqlite/sqlite/ext/recover;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pthread-win32;../../scripts/zlib;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_SQLITE_TOOLS;SQLITE_TOOLS_STATICLIB;_HAVE_SQLITE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_CRTDBG_MAP_ALLOC;SQLITE_DEBUG;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/sqlite-amalgamation;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/sqlite/tsrc;../../thirdparty/owemdjee/sqlite/src;../../thirdparty/owemdjee/sqlite/sqlite/ext/recover;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pthread-win32;../../scripts/zlib;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_SQLITE_TOOLS;SQLITE_TOOLS_STATICLIB;_HAVE_SQLITE_CONFIG_H;SQLITE_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_SQLITE_TOOLS;SQLITE_TOOLS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_SQLITE_TOOLS;SQLITE_TOOLS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/sqlite-amalgamation;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/sqlite/tsrc;../../thirdparty/owemdjee/sqlite/src;../../thirdparty/owemdjee/sqlite/sqlite/ext/recover;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pthread-win32;../../scripts/zlib;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/sqlite-amalgamation;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/sqlite/tsrc;../../thirdparty/owemdjee/sqlite/src;../../thirdparty/owemdjee/sqlite/sqlite/ext/recover;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pthread-win32;../../scripts/zlib;../../thirdparty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -341,28 +341,42 @@
     <ClInclude Include="../../thirdparty/owemdjee/sqlite/src/test_windirent.h" />
     <Image Include="../../thirdparty/owemdjee/sqlite/art/sqlite370.ico" />
     <Image Include="../../thirdparty/owemdjee/sqlite/art/sqlite370.jpg" />
+    <Text Include="../../thirdparty/owemdjee/sqlite/2kinit.sql" />
     <Text Include="../../thirdparty/owemdjee/sqlite/LICENSE.md" />
+    <Text Include="../../thirdparty/owemdjee/sqlite/Makefile" />
     <Text Include="../../thirdparty/owemdjee/sqlite/Makefile.in" />
+    <Text Include="../../thirdparty/owemdjee/sqlite/Makefile.linux-gcc" />
     <Text Include="../../thirdparty/owemdjee/sqlite/Makefile.msc" />
     <Text Include="../../thirdparty/owemdjee/sqlite/README.md" />
+    <Text Include="../../thirdparty/owemdjee/sqlite/aclocal.m4" />
+    <Text Include="../../thirdparty/owemdjee/sqlite/art/sqlite370.eps" />
+    <Text Include="../../thirdparty/owemdjee/sqlite/clear.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlite/config.guess" />
+    <Text Include="../../thirdparty/owemdjee/sqlite/config.status" />
     <Text Include="../../thirdparty/owemdjee/sqlite/configure.ac" />
     <Text Include="../../thirdparty/owemdjee/sqlite/contrib/sqlitecon.tcl" />
     <Text Include="../../thirdparty/owemdjee/sqlite/doc/F2FS.txt" />
     <Text Include="../../thirdparty/owemdjee/sqlite/doc/begin_concurrent.md" />
     <Text Include="../../thirdparty/owemdjee/sqlite/doc/begin_concurrent_report.md" />
     <Text Include="../../thirdparty/owemdjee/sqlite/doc/json-enhancements.md" />
+    <Text Include="../../thirdparty/owemdjee/sqlite/doc/lemon.html" />
     <Text Include="../../thirdparty/owemdjee/sqlite/doc/pager-invariants.txt" />
+    <Text Include="../../thirdparty/owemdjee/sqlite/doc/shell_extend.html" />
     <Text Include="../../thirdparty/owemdjee/sqlite/doc/trusted-schema.md" />
     <Text Include="../../thirdparty/owemdjee/sqlite/doc/vdbesort-memory.md" />
     <Text Include="../../thirdparty/owemdjee/sqlite/doc/vfs-shm.txt" />
     <Text Include="../../thirdparty/owemdjee/sqlite/doc/wal-lock.md" />
     <Text Include="../../thirdparty/owemdjee/sqlite/doc/wal2.md" />
+    <Text Include="../../thirdparty/owemdjee/sqlite/fts5parse.sql" />
     <Text Include="../../thirdparty/owemdjee/sqlite/fts5parse.y" />
     <Text Include="../../thirdparty/owemdjee/sqlite/ltmain.sh" />
     <Text Include="../../thirdparty/owemdjee/sqlite/magic.txt" />
+    <Text Include="../../thirdparty/owemdjee/sqlite/main.mk" />
     <Text Include="../../thirdparty/owemdjee/sqlite/mkso.sh" />
+    <Text Include="../../thirdparty/owemdjee/sqlite/parse.sql" />
     <Text Include="../../thirdparty/owemdjee/sqlite/parse.y" />
     <Text Include="../../thirdparty/owemdjee/sqlite/sqlite.pc.in" />
+    <Text Include="../../thirdparty/owemdjee/sqlite/sqlite3.1" />
     <Text Include="../../thirdparty/owemdjee/sqlite/sqlite3.pc.in" />
     <Text Include="../../thirdparty/owemdjee/sqlite/sqlite_cfg.h.in" />
     <Text Include="../../thirdparty/owemdjee/sqlite/test/bc_common.tcl" />
@@ -383,6 +397,8 @@
     <Text Include="../../thirdparty/owemdjee/sqlite/test/releasetest_data.tcl" />
     <Text Include="../../thirdparty/owemdjee/sqlite/test/run-wordcount.sh" />
     <Text Include="../../thirdparty/owemdjee/sqlite/test/show_speedtest1_rtree.tcl" />
+    <Text Include="../../thirdparty/owemdjee/sqlite/test/speed1p.explain" />
+    <Text Include="../../thirdparty/owemdjee/sqlite/test/speed4p.explain" />
     <Text Include="../../thirdparty/owemdjee/sqlite/test/tester.tcl" />
     <Text Include="../../thirdparty/owemdjee/sqlite/test/testrunner.tcl" />
     <Text Include="../../thirdparty/owemdjee/sqlite/test/testrunner_data.tcl" />
@@ -398,7 +414,9 @@
     <Text Include="../../thirdparty/owemdjee/sqlite/test/window7.tcl" />
     <Text Include="../../thirdparty/owemdjee/sqlite/test/window8.tcl" />
     <Text Include="../../thirdparty/owemdjee/sqlite/test/windowerr.tcl" />
+    <Text Include="../../thirdparty/owemdjee/sqlite/tool/GetFile.cs" />
     <Text Include="../../thirdparty/owemdjee/sqlite/tool/GetTclKit.bat" />
+    <Text Include="../../thirdparty/owemdjee/sqlite/tool/Replace.cs" />
     <Text Include="../../thirdparty/owemdjee/sqlite/tool/build-all-msvc.bat" />
     <Text Include="../../thirdparty/owemdjee/sqlite/tool/build-shell.sh" />
     <Text Include="../../thirdparty/owemdjee/sqlite/tool/cg_anno.tcl" />
@@ -447,6 +465,7 @@
     <Text Include="../../thirdparty/owemdjee/sqlite/tool/vdbe_profile.tcl" />
     <Text Include="../../thirdparty/owemdjee/sqlite/tool/warnings-clang.sh" />
     <Text Include="../../thirdparty/owemdjee/sqlite/tool/warnings.sh" />
+    <Text Include="../../thirdparty/owemdjee/sqlite/tool/win/sqlite.vsix" />
     <Text Include="../../thirdparty/owemdjee/sqlite/util/register_git_remotes_recursive.sh" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >

@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIMAGEQUANT;IMAGEQUANT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIMAGEQUANT;IMAGEQUANT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libimagequant/imagequant-sys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIMAGEQUANT;IMAGEQUANT_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libimagequant/imagequant-sys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIMAGEQUANT;IMAGEQUANT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIMAGEQUANT;IMAGEQUANT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIMAGEQUANT;IMAGEQUANT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libimagequant/imagequant-sys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libimagequant/imagequant-sys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIMAGEQUANT;IMAGEQUANT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIMAGEQUANT;IMAGEQUANT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libimagequant/imagequant-sys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIMAGEQUANT;IMAGEQUANT_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libimagequant/imagequant-sys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIMAGEQUANT;IMAGEQUANT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIMAGEQUANT;IMAGEQUANT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIMAGEQUANT;IMAGEQUANT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libimagequant/imagequant-sys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libimagequant/imagequant-sys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIMAGEQUANT;IMAGEQUANT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIMAGEQUANT;IMAGEQUANT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libimagequant/imagequant-sys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIMAGEQUANT;IMAGEQUANT_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libimagequant/imagequant-sys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIMAGEQUANT;IMAGEQUANT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIMAGEQUANT;IMAGEQUANT_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIMAGEQUANT;IMAGEQUANT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libimagequant/imagequant-sys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libimagequant/imagequant-sys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIMAGEQUANT;IMAGEQUANT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIMAGEQUANT;IMAGEQUANT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libimagequant/imagequant-sys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIMAGEQUANT;IMAGEQUANT_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libimagequant/imagequant-sys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIMAGEQUANT;IMAGEQUANT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIMAGEQUANT;IMAGEQUANT_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBIMAGEQUANT;IMAGEQUANT_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libimagequant/imagequant-sys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libimagequant/imagequant-sys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -235,9 +235,41 @@
     <Text Include="../../thirdparty/owemdjee/libimagequant/CHANGELOG" />
     <Text Include="../../thirdparty/owemdjee/libimagequant/CODE_OF_CONDUCT.md" />
     <Text Include="../../thirdparty/owemdjee/libimagequant/CONTRIBUTING.md" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/Cargo.toml" />
     <Text Include="../../thirdparty/owemdjee/libimagequant/README.md" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/benches/bench.rs" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/examples/basic.rs" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/imagequant-sys/Cargo.toml" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/imagequant-sys/Makefile" />
     <Text Include="../../thirdparty/owemdjee/libimagequant/imagequant-sys/README.md" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/imagequant-sys/build.rs" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/imagequant-sys/c_test/Cargo.toml" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/imagequant-sys/c_test/build.rs" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/imagequant-sys/c_test/src/lib.rs" />
     <Text Include="../../thirdparty/owemdjee/libimagequant/imagequant-sys/imagequant.pc.in" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/imagequant-sys/libimagequant.cs" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/imagequant-sys/org/pngquant/Image.java" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/imagequant-sys/org/pngquant/LiqObject.java" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/imagequant-sys/org/pngquant/PngQuant.java" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/imagequant-sys/org/pngquant/PngQuantException.java" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/imagequant-sys/org/pngquant/Result.java" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/imagequant-sys/src/ffi.rs" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/src/attr.rs" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/src/blur.rs" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/src/capi.rs" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/src/error.rs" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/src/hist.rs" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/src/image.rs" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/src/kmeans.rs" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/src/lib.rs" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/src/mediancut.rs" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/src/nearest.rs" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/src/pal.rs" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/src/quant.rs" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/src/rayoff.rs" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/src/remap.rs" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/src/rows.rs" />
+    <Text Include="../../thirdparty/owemdjee/libimagequant/src/seacow.rs" />
     <Xml Include="../../thirdparty/owemdjee/libimagequant/imagequant-sys/pom.xml" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >

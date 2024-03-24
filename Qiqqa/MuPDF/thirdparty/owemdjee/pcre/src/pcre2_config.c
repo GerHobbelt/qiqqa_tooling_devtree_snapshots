@@ -38,7 +38,7 @@ POSSIBILITY OF SUCH DAMAGE.
 -----------------------------------------------------------------------------
 */
 
-#ifdef HAVE_CONFIG_H
+#if defined(HAVE_CONFIG_H) && !defined(PCRE2_AMALGAMETE)
 #include "config.h"
 #endif
 
@@ -71,7 +71,7 @@ Arguments:
 Returns:           0 if a numerical value is returned
                    >= 0 if a string value
                    PCRE2_ERROR_BADOPTION if "where" not recognized
-                     or JIT target requested when JIT not enabled
+                   or JIT target requested when JIT not enabled
 */
 
 PCRE2_EXP_DEFN int PCRE2_CALL_CONVENTION

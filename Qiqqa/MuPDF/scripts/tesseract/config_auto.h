@@ -3,10 +3,10 @@
 
 // undef: use double (64bit),
 // defined: use float (32bit) for matrix and dot product calculations
-#define FAST_FLOAT   1
+#define FAST_FLOAT                      1
 
 // defined: support image sizes > 32K*32K pixels.
-#undef LARGE_IMAGES 
+#undef LARGE_IMAGES                    
 
 
 // https://docs.microsoft.com/en-us/cpp/preprocessor/predefined-macros?redirectedfrom=MSDN&view=msvc-160
@@ -47,11 +47,16 @@
 #define TESSERACT_IMAGEDATA_AS_PIX       1
 
 #define GRAPHICS_DISABLED                0
-#define DISABLED_LEGACY_ENGINE           0
+#define DISABLED_LEGACY_ENGINE           1
 
-#undef PANGO_ENABLE_ENGINE
+#define PANGO_ENABLE_ENGINE              1
 
-#undef HAS_LIBICU
+#define HAS_LIBICU                       1
+
+// icu defines required to produce a matching compile/build:
+#define U_CHARSET_IS_UTF8                1
+#define U_STATIC_IMPLEMENTATION
+#define U_IMPORT /**/
 
 #if !defined(DISABLED_LEGACY_ENGINE)
 #define DISABLED_LEGACY_ENGINE           0

@@ -68,6 +68,9 @@
     <ClInclude Include="../../thirdparty/owemdjee/ucto/include/ucto/tokenize.h">
       <Filter>Header Files\include\ucto</Filter>
     </ClInclude>
+    <Text Include="../../thirdparty/owemdjee/ucto/AUTHORS">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/ucto/Makefile.am">
       <Filter>Misc Files</Filter>
     </Text>
@@ -110,6 +113,9 @@
     <Text Include="../../thirdparty/owemdjee/ucto/docs/Makefile.am">
       <Filter>Misc Files\docs</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/ucto/docs/Makefile.sphinx">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/ucto/docs/source/conf.py">
       <Filter>Misc Files\docs\source</Filter>
     </Text>
@@ -119,7 +125,16 @@
     <Text Include="../../thirdparty/owemdjee/ucto/docs/todo">
       <Filter>Misc Files\docs</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/ucto/docs/ucto.1">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/ucto/docs/ucto_manual.pdf">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/ucto/docs/ucto_manual.rst">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/ucto/docs/ucto_manual.tex">
       <Filter>Misc Files\docs</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/ucto/dox.cfg">
@@ -131,7 +146,22 @@
     <Text Include="../../thirdparty/owemdjee/ucto/include/ucto/Makefile.am">
       <Filter>Misc Files\include\ucto</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/ucto/logo.svg">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/ucto/m4/Makefile.am">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/ucto/m4/ac_check_old_textcat.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/ucto/m4/ac_osx_pkg.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/ucto/m4/ac_search_lm.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/ucto/m4/ax_icu_check.m4">
       <Filter>Misc Files\m4</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/ucto/src/Makefile.am">
@@ -141,6 +171,12 @@
       <Filter>Misc Files\src</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/ucto/tests/Makefile.am">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/ucto/tests/UTF16BE.nl">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/ucto/tests/W1258.nl">
       <Filter>Misc Files\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/ucto/tests/abbreviations.nl.txt">
@@ -197,6 +233,9 @@
     <Text Include="../../thirdparty/owemdjee/ucto/tests/encoding.nl.txt">
       <Filter>Misc Files\tests</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/ucto/tests/encoding2.nl">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/ucto/tests/eos.txt">
       <Filter>Misc Files\tests</Filter>
     </Text>
@@ -213,6 +252,9 @@
       <Filter>Misc Files\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/ucto/tests/issue03.nl.txt">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/ucto/tests/issue04.nl.txt.FAILS">
       <Filter>Misc Files\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/ucto/tests/issue046.nl.txt">
@@ -260,7 +302,13 @@
     <Text Include="../../thirdparty/owemdjee/ucto/tests/parentheses.nl.txt">
       <Filter>Misc Files\tests</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/ucto/tests/partest.nl.tok">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/ucto/tests/partest.nl.txt">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/ucto/tests/partest2.nl.tok">
       <Filter>Misc Files\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/ucto/tests/partest2.nl.txt">
@@ -279,6 +327,18 @@
       <Filter>Misc Files\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/ucto/tests/passthru2.txt">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/ucto/tests/qtest.nl">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/ucto/tests/qtest.nl.tok">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/ucto/tests/qtest.spec">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/ucto/tests/qtest.spec.tok">
       <Filter>Misc Files\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/ucto/tests/quoteproblem.txt">
@@ -356,6 +416,9 @@
     <Text Include="../../thirdparty/owemdjee/ucto/tests/test.fr.txt">
       <Filter>Misc Files\tests</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/ucto/tests/test.nl.tok">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/ucto/tests/test.nl.txt">
       <Filter>Misc Files\tests</Filter>
     </Text>
@@ -378,6 +441,12 @@
       <Filter>Misc Files\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/ucto/tests/urls.nl.txt">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/ucto/tests/utf16bom.nl">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/ucto/tests/utf8bom.nl">
       <Filter>Misc Files\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/ucto/tests/utt.txt">
@@ -453,6 +522,9 @@
       <Filter>Misc Files\tests</Filter>
     </Xml>
     <Xml Include="../../thirdparty/owemdjee/ucto/tests/issue066.xml">
+      <Filter>Misc Files\tests</Filter>
+    </Xml>
+    <Xml Include="../../thirdparty/owemdjee/ucto/tests/issue068.xml">
       <Filter>Misc Files\tests</Filter>
     </Xml>
     <Xml Include="../../thirdparty/owemdjee/ucto/tests/issue70.xml">

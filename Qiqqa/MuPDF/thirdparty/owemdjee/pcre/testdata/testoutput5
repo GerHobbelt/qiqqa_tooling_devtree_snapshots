@@ -1737,6 +1737,13 @@ Failed: error 173 at offset 6: disallowed Unicode code point (>= 0xd800 && <= 0x
     \x{10ffff}
  0: \x{10ffff}
 
+/\u{ 1bb1}/utf,extra_alt_bsux
+    u{ 1bb1}
+ 0: u{ 1bb1}
+\= Expect no match
+    \x{1bb1}
+No match
+
 /\u/utf,alt_bsux
     \\u
  0: u
@@ -2337,12 +2344,12 @@ No match
 # Some negative checks
 
 /^[\P{Xwd}]+/utf
-    !.+\x{019}\x{35a}AB
- 0: !.+\x{19}\x{35a}
+    !.+\x{019}\x{482}AB
+ 0: !.+\x{19}\x{482}
 
 /^[\p{^Xwd}]+/utf
-    !.+\x{019}\x{35a}AB
- 0: !.+\x{19}\x{35a}
+    !.+\x{019}\x{589}AB
+ 0: !.+\x{19}\x{589}
 
 /[\D]/B,utf,ucp
 ------------------------------------------------------------------
@@ -2391,8 +2398,8 @@ No match
         Ket
         End
 ------------------------------------------------------------------
-    A\x{1712}B
- 0: \x{1712}
+    A\x{1735}B
+ 0: \x{1735}
 
 /[\w]/B,utf,ucp
 ------------------------------------------------------------------
@@ -2451,8 +2458,8 @@ No match
         Ket
         End
 ------------------------------------------------------------------
-    A\x{1712}B
- 0: \x{1712}
+    A\x{1735}B
+ 0: \x{1735}
 
 /\w/B,utf,ucp
 ------------------------------------------------------------------
@@ -2520,6 +2527,14 @@ No match
         End
 ------------------------------------------------------------------
 
+/[[:digit:]]/B,ucp,ascii_digit
+------------------------------------------------------------------
+        Bra
+        [0-9]
+        Ket
+        End
+------------------------------------------------------------------
+
 /[[:graph:]]/B,ucp
 ------------------------------------------------------------------
         Bra
@@ -2563,12 +2578,20 @@ No match
 /[[:xdigit:]]/B,ucp
 ------------------------------------------------------------------
         Bra
+        [[:xdigit:]]
+        Ket
+        End
+------------------------------------------------------------------
+
+/[[:xdigit:]]/B,ucp,ascii_digit
+------------------------------------------------------------------
+        Bra
         [0-9A-Fa-f]
         Ket
         End
 ------------------------------------------------------------------
 
-# Unicode properties for \b abd \B
+# Unicode properties for \b and \B
 
 /\b...\B/utf,ucp
     abc_
@@ -4093,7 +4116,7 @@ MK: a\x{12345}b\x{09}(d)c
     \x{200}
  0: \x{200}
 \= Expect no match
-    \x{300}
+    \x{589}
 No match
     \x{37e}
 No match
@@ -4161,10 +4184,7 @@ No match
 /'#('/hex,extended,utf
 
 /a(?<=A\XB)/utf
-Failed: error 125 at offset 1: lookbehind assertion is not fixed length
-
-/ab(?<=A\RB)/utf
-Failed: error 125 at offset 2: lookbehind assertion is not fixed length
+Failed: error 125 at offset 1: length of lookbehind assertion is not limited
 
 /../utf,auto_callout
     \n\x{123}\x{123}\x{123}\x{123}
@@ -5231,12 +5251,24 @@ No match
     \x{660}\x{660}\x{660}
 No match
 
+/\d(?-aD)\d(?aD)\d/utf,ucp,ascii_bsd
+    999
+ 0: 999
+    9\x{660}9
+ 0: 9\x{660}9
+
 /\d(?a)\d(?-a)\d/utf,ucp
     \x{660}9\x{660}
  0: \x{660}9\x{660}
 \= Expect no match     
     \x{660}\x{660}\x{660}
 No match
+
+/\d(?-aD)\d(?aD)\d/utf,ucp,ascii_bsd
+    999
+ 0: 999
+    9\x{660}9
+ 0: 9\x{660}9
 
 # SPACES
 
@@ -5355,13 +5387,107 @@ No match
     
 # POSIX 
 
-/[[:digit:]]+/utf,ucp
+/^[[:digit:]]+$/utf,ucp
+    123456
+ 0: 123456
     123\x{660}456
  0: 123\x{660}456
+
+/^[[:digit:]]+$/utf,ucp,ascii_digit
+    123456
+ 0: 123456
+\= Expect no match
+    123\x{660}456
+No match
+
+/[[:digit:]]+/g,utf,ucp,ascii_digit
+    123\x{660}456
+ 0: 123
+ 0: 456
+
+/(?-aT)[[:digit:]](?aT)[[:digit:]]/utf,ucp,ascii_digit
+    11
+ 0: 11
+    \x{ff11}1
+ 0: \x{ff11}1
+\= Expect no match
+    1\x{ff11}
+No match
+
+/(?-aT:[[:digit:]])[[:digit:]]/utf,ucp,ascii_digit
+    11
+ 0: 11
+    \x{ff11}1
+ 0: \x{ff11}1
+\= Expect no match
+    1\x{ff11}
+No match
+
+/(?-aT:[[:digit:]])[[:digit:]]/utf,never_ucp,ascii_digit
+    11
+ 0: 11
+\= Expect no match
+    \x{ff11}1
+No match
+    1\x{ff11}
+No match
 
 /[[:digit:]]+/utf,ucp,ascii_posix
     123\x{660}456
  0: 123
+
+/(?-aP)[[:digit:]](?aP)[[:digit:]]/utf,ucp,ascii_posix
+    11
+ 0: 11
+    \x{ff11}1
+ 0: \x{ff11}1
+\= Expect no match
+    1\x{ff11}
+No match
+
+/(?-aP:[[:digit:]])[[:digit:]]/utf,ucp,ascii_posix
+    11
+ 0: 11
+    \x{ff11}1
+ 0: \x{ff11}1
+\= Expect no match
+    1\x{ff11}
+No match
+
+/(?-a:[[:digit:]])[[:digit:]]/a,utf,ucp
+    11
+ 0: 11
+    \x{ff11}1
+ 0: \x{ff11}1
+\= Expect no match
+    1\x{ff11}
+No match
+
+/^[[:xdigit:]]+$/utf,ucp
+    f0
+ 0: f0
+    1A
+ 0: 1A
+    d\x{ff10}
+ 0: d\x{ff10}
+    \x{ff26}8
+ 0: \x{ff26}8
+\= Expect no match
+    8g\=no_jit
+No match
+
+/^[[:xdigit:]]+$/utf,ucp,ascii_digit
+    f0
+ 0: f0
+    1A
+ 0: 1A
+\= Expect no match
+    d\x{ff10}
+No match
+    \x{ff26}8
+No match
+    8g
+No match
 
 />[[:space:]]+</utf,ucp
     >\x{a0} \x{a0}<
@@ -5400,5 +5526,9 @@ No match
  0: 9 A
 
 # End PCRE2_EXTRA_ASCII_xxx tests
+
+/(?<!(|l ))/utf
+    (?<!(|l ))
+No match
 
 # End of testinput5

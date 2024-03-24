@@ -2,14 +2,14 @@
 
 ## Supported input formats
 
-Tesseract uses the [Leptonica](https://github.com/DanBloomberg/leptonica) library to read images with one of these formats:
+Tesseract uses the [Leptonica](https://github.com/DanBloomberg/leptonica) library to read images in one of these formats:
 
 * PNG - requires libpng, libz
 * JPEG - requires libjpeg / libjpeg-turbo
 * TIFF - requires libtiff, libz
 * JPEG 2000 - requires libopenjp2
 * GIF - requires libgif (giflib)
-* WebP (including animated WebP) - requires libwebp
+* WebP requires libwebp
 * BMP - no library required\*
 * PNM - no library required\*
 
@@ -27,10 +27,19 @@ If you need to OCR PDF files, you should either convert them to another format o
 
 Note: Tesseract does support PDF as an **output** format.
 
+### Animated WebP
+
+Tesseract does not support reading animated WebP files.
+
 ### Animated GIF
 
-Tesseract does not support reading animated GIFs files. When given such a file, Tesseract will read only the first image in the sequence of images contained inside the file.
+Tesseract does not support reading animated GIF files.\
+If given such a file, Tesseract will only read the first image in the sequence of images contained in the file.
 
 ### Other formats
 
-Tesseract does not support the HEIC and the AVIF formats.
+Tesseract does not support these image formats:
+
+* HEIC
+* AVIF
+* JPEG-XL

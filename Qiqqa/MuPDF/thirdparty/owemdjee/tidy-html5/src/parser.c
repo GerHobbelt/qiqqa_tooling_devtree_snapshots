@@ -584,7 +584,7 @@ static void CleanSpaces(TidyDocImpl* doc, Node* node)
 
         node = next ? next : TY_(pop)(stack);
     }
-    TY_(freeStack)(stack);
+    TY_(freeStack)(stack, doc);
 }
 
 
@@ -4458,9 +4458,10 @@ Node* TY_(ParsePre)( TidyDocImpl* doc, Node *pre, GetTokenMode ARG_UNUSED(mode) 
             DEBUG_LOG_EXIT;
             return NULL;
         }
+
+        TY_(InlineDup)( doc, NULL ); /* tell lexer to insert inlines if needed */
     }
 
-    TY_(InlineDup)( doc, NULL ); /* tell lexer to insert inlines if needed */
 
     while ( state != STATE_COMPLETE )
     {

@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TXIKI.JS;TXIKI.JS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TXIKI.JS;TXIKI.JS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TXIKI.JS;TXIKI.JS_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TXIKI.JS;TXIKI.JS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TXIKI.JS;TXIKI.JS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TXIKI.JS;TXIKI.JS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TXIKI.JS;TXIKI.JS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TXIKI.JS;TXIKI.JS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TXIKI.JS;TXIKI.JS_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TXIKI.JS;TXIKI.JS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TXIKI.JS;TXIKI.JS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TXIKI.JS;TXIKI.JS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TXIKI.JS;TXIKI.JS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TXIKI.JS;TXIKI.JS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TXIKI.JS;TXIKI.JS_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TXIKI.JS;TXIKI.JS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TXIKI.JS;TXIKI.JS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TXIKI.JS;TXIKI.JS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TXIKI.JS;TXIKI.JS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TXIKI.JS;TXIKI.JS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TXIKI.JS;TXIKI.JS_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TXIKI.JS;TXIKI.JS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TXIKI.JS;TXIKI.JS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TXIKI.JS;TXIKI.JS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -268,6 +268,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/random.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/strscpy.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/strtok.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/thread-common.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/threadpool.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/timer.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/aix-common.c" />
@@ -280,7 +281,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/darwin-proctitle.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/darwin.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/dl.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/epoll.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/freebsd.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/fs.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/fsevents.c" />
@@ -290,9 +290,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/hurd.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/ibmi.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/kqueue.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/linux-core.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/linux-inotify.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/linux-syscalls.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/linux.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/loop.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/netbsd.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/no-fsevents.c" />
@@ -308,7 +306,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/process.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/procfs-exepath.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/proctitle.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/pthread-fixes.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/qnx.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/random-devurandom.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/random-getentropy.c" />
@@ -504,6 +501,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/test/test-tcp-unexpected-read.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/test/test-tcp-write-after-connect.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/test/test-tcp-write-fail.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/test/test-tcp-write-in-a-row.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/test/test-tcp-write-queue-order.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/test/test-tcp-write-to-half-open-connection.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/test/test-tcp-writealot.c" />
@@ -535,6 +533,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/test/test-udp-multicast-ttl.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/test/test-udp-open.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/test/test-udp-options.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/test/test-udp-recv-in-a-row.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/test/test-udp-send-and-recv.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/test/test-udp-send-hang-loop.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/test/test-udp-send-immediate.c" />
@@ -549,6 +548,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/quickjs/src/libregexp.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/quickjs/src/libunicode.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/quickjs/src/quickjs.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/sqlite3/sqlite3.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/android/app/src/main/cpp/jni.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/android/app/src/main/cpp/main.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/app/main.c" />
@@ -601,13 +601,26 @@
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/smallpt/smallpt-ex.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/smallpt/smallpt.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/stream/stream.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/bootstrap.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/_sqlite3.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/builtins.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/bundles/c/core/core.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/bundles/c/core/polyfills.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/bundles/c/core/run-main.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/bundles/c/stdlib/assert.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/bundles/c/stdlib/ffi.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/bundles/c/stdlib/getopts.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/bundles/c/stdlib/hashing.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/bundles/c/stdlib/ipaddr.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/bundles/c/stdlib/path.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/bundles/c/stdlib/sqlite.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/bundles/c/stdlib/uuid.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/cli.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/curl-utils.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/curl-websocket-utils.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/curl-websocket.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/dns.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/error.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/eval.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/ffi.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/fs.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/fswatch.c" />
@@ -615,6 +628,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/os.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/posix-socket.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/process.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/qjsc.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/sha1.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/signals.c" />
     <ClCompile Include="../../thirdparty/owemdjee/txiki.js/src/streams.c" />
@@ -650,12 +664,9 @@
     <ClInclude Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/queue.h" />
     <ClInclude Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/strscpy.h" />
     <ClInclude Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/strtok.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/atomic-ops.h" />
     <ClInclude Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/darwin-stub.h" />
     <ClInclude Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/internal.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/linux-syscalls.h" />
     <ClInclude Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/os390-syscalls.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/unix/spinlock.h" />
     <ClInclude Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/uv-common.h" />
     <ClInclude Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/win/atomicops-inl.h" />
     <ClInclude Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/src/win/fs-fd-hash-inl.h" />
@@ -681,6 +692,8 @@
     <ClInclude Include="../../thirdparty/owemdjee/txiki.js/deps/quickjs/src/list.h" />
     <ClInclude Include="../../thirdparty/owemdjee/txiki.js/deps/quickjs/src/quickjs-atom.h" />
     <ClInclude Include="../../thirdparty/owemdjee/txiki.js/deps/quickjs/src/quickjs-opcode.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/txiki.js/deps/sqlite3/sqlite3.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/txiki.js/deps/sqlite3/sqlite3ext.h" />
     <ClInclude Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/cpp/wasm/test_prog.wasm.h" />
     <ClInclude Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/cpp/wasm3_cpp/include/wasm3_cpp.h" />
     <ClInclude Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/embedded/esp32-idf-wasi/main/m3_api_esp_wasi.h" />
@@ -738,8 +751,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/simple/wasm_api.h" />
     <ClInclude Include="../../thirdparty/owemdjee/txiki.js/src/curl-utils.h" />
     <ClInclude Include="../../thirdparty/owemdjee/txiki.js/src/curl-websocket.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/txiki.js/src/embedjs.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/txiki.js/src/incbin.h" />
     <ClInclude Include="../../thirdparty/owemdjee/txiki.js/src/private.h" />
     <ClInclude Include="../../thirdparty/owemdjee/txiki.js/src/sha1.h" />
     <ClInclude Include="../../thirdparty/owemdjee/txiki.js/src/tjs.h" />
@@ -777,18 +788,25 @@
     <Image Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/smallpt/image.jpg" />
     <Image Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/wasmboy/image.png" />
     <Image Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/wasmsynth/image.png" />
+    <Image Include="../../thirdparty/owemdjee/txiki.js/video.png" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/LICENSE" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/Makefile" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/README.md" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/AUTHORS" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/CONTRIBUTING.md" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/ChangeLog" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/LINKS.md" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/MAINTAINERS.md" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/README.md" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/SUPPORTED_PLATFORMS.md" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/autogen.sh" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/cmake-toolchains/cross-mingw32.cmake" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/configure.ac" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/docs/Makefile" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/docs/code/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/docs/code/multi-echo-server/hammer.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/docs/make.bat" />
@@ -829,6 +847,7 @@
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/docs/src/request.rst" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/docs/src/signal.rst" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/docs/src/sphinx-plugins/manpage.py" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/docs/src/static/diagrams.key/" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/docs/src/stream.rst" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/docs/src/tcp.rst" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/docs/src/threading.rst" />
@@ -838,15 +857,25 @@
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/docs/src/udp.rst" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/docs/src/upgrading.rst" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/docs/src/version.rst" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/img/logos.svg" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/libuv-static.pc.in" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/libuv.pc.in" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/m4/as_case.m4" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/m4/ax_pthread.m4" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/m4/libuv-check-flags.m4" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/m4/libuv-check-versions.m4" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/test/fixtures/lorem_ipsum.txt" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/tools/make_dist_html.py" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/tools/vswhere_usability_wrapper.cmd" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/tsansupp.txt" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/libuv/uv_win_longpath.manifest" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/quickjs/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/sqlite3/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/README.md" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/build-cross.py" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/build.zig" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/docs/Cookbook.md" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/docs/Demos.md" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/docs/Development.md" />
@@ -858,64 +887,130 @@
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/docs/Testing.md" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/docs/Troubleshooting.md" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/extra/disasm-func.sh" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/extra/logos/iden3.svg" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/extra/logos/shareup_app.svg" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/extra/testutils.py" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/extra/utils.mk" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/extra/wapm-package/README.md" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/extra/wapm-package/wapm.toml" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/extra/wasm-symbol.svg" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/android/README.md" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/android/app/src/main/cpp/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/android/app/src/main/java/com/example/wasm3/MainActivity.java" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/android/gradle.properties" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/android/gradle/wrapper/gradle-wrapper.jar" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/android/gradle/wrapper/gradle-wrapper.properties" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/android/gradlew.bat" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/android/override.txt" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/app/README.md" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/cosmopolitan/build.sh" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/cpp/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/cpp/README.md" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/cpp/wasm/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/cpp/wasm/test_prog.wasm" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/cpp/wasm3_cpp/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/embedded/arduino/platformio.ini" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/embedded/bluepill/lib/wasm3/library.json" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/embedded/bluepill/platformio.ini" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/embedded/esp32-idf-wasi/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/embedded/esp32-idf-wasi/README.md" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/embedded/esp32-idf-wasi/main/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/embedded/esp32-idf-wasi/sdkconfig.defaults" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/embedded/esp32-idf/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/embedded/esp32-idf/README.md" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/embedded/esp32-idf/main/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/embedded/esp32-idf/main/linker.lf" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/embedded/esp32-idf/sdkconfig.defaults" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/embedded/esp32-pio/lib/wasm3/README.md" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/embedded/esp32-pio/lib/wasm3/library.json" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/embedded/esp32-pio/platformio.ini" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/embedded/esp8266/platformio.ini" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/embedded/fomu/Makefile" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/embedded/fomu/README.md" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/embedded/fomu/src/crt0-vexriscv.S" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/embedded/hifive1/README.md" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/embedded/hifive1/platformio.ini" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/embedded/particle/README.md" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/embedded/particle/lib/wasm3/library.properties" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/embedded/particle/project.properties" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/embedded/wm_w600/Makefile" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/embedded/wm_w600/README.md" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/embedded/wm_w600/build.sh" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/emscripten/README.md" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/emscripten_lib/run_native.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/emscripten_lib/run_wasm3.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/ios/README.md" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/ios/wasm3.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/ios/wasm3/Assets.xcassets/" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/ios/wasm3/Assets.xcassets/AppIcon.appiconset/Contents.json" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/openwrt/README.md" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/openwrt/build/Makefile" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/python/README.md" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/source/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/internal/tailcall/build.sh" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/lang/README.md" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/lang/fib.c.wasm" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/lang/fib.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/lang/fib.lua" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/lang/fib.min.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/lang/fib.py" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/lang/fib32.wasm" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/lang/fib32_tail.wasm" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/lang/fib64.wasm" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/run-spec-test.py" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/run-wasi-test.py" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/self-hosting/wasm3-fib.wasm" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/brotli/README.md" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/brotli/alice29.txt" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/brotli/alice29_small.txt" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/brotli/brotli.wasm" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/c-ray/README.md" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/c-ray/c-ray.wasm" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/coremark/README.md" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/coremark/coremark-minimal.wasm" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/coremark/coremark.wasm" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/mal/README.md" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/mal/core.mal" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/mal/env.mal" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/mal/mal.mal" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/mal/mal.wasm" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/mal/test-fib.mal" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/mandelbrot/README.md" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/mandelbrot/mandel.wasm" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/mandelbrot/mandel_dd.wasm" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/raymarcher/raymarcher.wasm" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/simple/0.txt" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/simple/README.md" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/simple/test-opt.wasm" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/simple/test.wasm" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/simple/wasm_api.syms" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/smallpt/README.md" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/smallpt/smallpt-ex-mv.wasm" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/smallpt/smallpt-ex.wasm" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/smallpt/smallpt.wasm" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/stream/stream.wasm" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/wasmboy/README.md" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/wasmboy/wasmerboy.wasm" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/wasmsynth/README.md" />
-    <Text Include="../../thirdparty/owemdjee/txiki.js/docs/ffi.d.ts" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/wasmsynth/hondarribia.wasm" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/wasmsynth/shuffle-chill.wasm" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/wasmsynth/wasm-song.wasm" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/test/wasi/wasmsynth/webchip-music.wasm" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/docker/entry.sh" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/docs/README.md" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/docs/intro.md" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/docs/package.json" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/docs/tsconfig.doc.json" />
-    <Text Include="../../thirdparty/owemdjee/txiki.js/docs/txikijs.d.ts" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/docs/types/assert.d.ts" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/docs/types/ffi.d.ts" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/docs/types/getopts.d.ts" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/docs/types/hashing.d.ts" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/docs/types/index.d.ts" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/docs/types/ipaddr.d.ts" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/docs/types/path.d.ts" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/docs/types/sqlite.d.ts" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/docs/types/txikijs.d.ts" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/docs/types/uuid.d.ts" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/examples/echo-client-pipe.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/examples/echo-client.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/examples/echo-server-pipe.js" />
@@ -923,6 +1018,7 @@
     <Text Include="../../thirdparty/owemdjee/txiki.js/examples/echo-server.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/examples/gundb.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/examples/hello_workers.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/examples/hello_world.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/examples/import_http.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/examples/listdir.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/examples/lodash.js" />
@@ -933,9 +1029,16 @@
     <Text Include="../../thirdparty/owemdjee/txiki.js/examples/worker.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/package-lock.json" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/package.json" />
-    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/bundle.js" />
-    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/eval-stdin.js" />
-    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/index.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/core/alert-confirm-prompt.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/core/fs.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/core/index.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/core/path.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/core/posix-socket.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/core/signal.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/core/sockets.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/core/stdio.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/core/stream-utils.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/core/worker-bootstrap.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/polyfills/base.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/polyfills/blob.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/polyfills/console.js" />
@@ -944,28 +1047,27 @@
     <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/polyfills/event-target.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/polyfills/index.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/polyfills/performance.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/polyfills/storage.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/polyfills/text-encoding.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/polyfills/url-polyfill.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/polyfills/wasm.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/polyfills/worker.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/polyfills/ws.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/polyfills/xhr.js" />
-    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/repl.js" />
-    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/std.js" />
-    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/stdlib/hashlib.js" />
-    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/stdlib/index.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/run-main/eval-stdin.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/run-main/index.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/run-main/repl.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/run-main/run-tests.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/stdlib/assert.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/stdlib/ffi.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/stdlib/ffi/ffi.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/stdlib/ffi/ffiutils.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/stdlib/getopts.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/stdlib/hashing.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/stdlib/ipaddr.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/stdlib/path.js" />
-    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/tjs/alert-confirm-prompt.js" />
-    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/tjs/ffi.js" />
-    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/tjs/ffiutils.js" />
-    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/tjs/fs.js" />
-    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/tjs/index.js" />
-    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/tjs/posix-socket.js" />
-    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/tjs/signal.js" />
-    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/tjs/sockets.js" />
-    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/tjs/stdio.js" />
-    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/tjs/stream-utils.js" />
-    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/worker-bootstrap.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/stdlib/sqlite.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/src/js/stdlib/uuid.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/src/version.h.in" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/advanced/browserify.config.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/advanced/generator/cheerio.js" />
@@ -974,18 +1076,22 @@
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/advanced/package.json" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/advanced/test-cheerio.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/advanced/test-jsdom.js" />
-    <Text Include="../../thirdparty/owemdjee/txiki.js/tests/assert.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/fixtures/data.json" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/floatops.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/helpers/a/b/c/d/e/foo.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/tests/helpers/bad.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/tests/helpers/import-http-delay.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/helpers/log-import-meta.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/helpers/sleep.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/tests/helpers/syntax-error.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/helpers/unhandled-rejection.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/helpers/worker.js" />
-    <Text Include="../../thirdparty/owemdjee/txiki.js/tests/run.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-abort-on-unhandled-rejection.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-args.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-async-task-sequence.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-badjs.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-builtin.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-cli.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-env.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-errno-codes.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-eval-as-module.js" />
@@ -993,6 +1099,7 @@
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-fetch.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-ffi.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-fs-readdir.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-fs-rm.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-fs-stat.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-fs-streams.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-fs-sync.js" />
@@ -1002,7 +1109,8 @@
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-getaddrinfo.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-gethostname.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-global-window.js" />
-    <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-hashlib.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-hashing.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-import-http-timeout.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-import-http.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-import-json.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-import.js" />
@@ -1017,6 +1125,9 @@
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-random.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-readfile.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-signal.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-sqlite.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-storage.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-syntax-error.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-tcp-bindflags.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-tcp.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-timer.js" />
@@ -1045,7 +1156,14 @@
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-xhr-persistent.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-xhr-progress.js" />
     <Text Include="../../thirdparty/owemdjee/txiki.js/tests/test-xhr-timeout.js" />
-    <Text Include="../../thirdparty/owemdjee/txiki.js/tests/wasi/launcher.js" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/tests/wasi/bad.wasm" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/tests/wasi/empty.wasm" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/tests/wasi/test.wasm" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/tests/wasm/f32.wasm" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/tests/wasm/f64.wasm" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/tests/wasm/i32.wasm" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/tests/wasm/i64.wasm" />
+    <Text Include="../../thirdparty/owemdjee/txiki.js/tests/wasm/multi.wasm" />
     <Xml Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/android/app/src/main/AndroidManifest.xml" />
     <Xml Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/android/app/src/main/res/layout/activity_main.xml" />
     <Xml Include="../../thirdparty/owemdjee/txiki.js/deps/wasm3/platforms/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" />

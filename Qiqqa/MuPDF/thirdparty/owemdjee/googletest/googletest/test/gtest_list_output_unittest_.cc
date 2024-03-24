@@ -40,18 +40,22 @@
 
 #include "gtest/gtest.h"
 
-TEST(FooTest, Test1) {}
+#include "googletest/include/monolithic_examples.h"
 
-TEST(FooTest, Test2) {}
+namespace {
 
-class FooTestFixture : public ::testing::Test {};
-TEST_F(FooTestFixture, Test3) {}
-TEST_F(FooTestFixture, Test4) {}
+TEST(FoooTest, Test1) {}
 
-class ValueParamTest : public ::testing::TestWithParam<int> {};
-TEST_P(ValueParamTest, Test5) {}
-TEST_P(ValueParamTest, Test6) {}
-INSTANTIATE_TEST_SUITE_P(ValueParam, ValueParamTest, ::testing::Values(33, 42));
+TEST(FoooTest, Test2) {}
+
+class FoooTestFixture : public ::testing::Test {};
+TEST_F(FoooTestFixture, Test3) {}
+TEST_F(FoooTestFixture, Test4) {}
+
+class ValueParamOutputTest : public ::testing::TestWithParam<int> {};
+TEST_P(ValueParamOutputTest, Test5) {}
+TEST_P(ValueParamOutputTest, Test6) {}
+INSTANTIATE_TEST_SUITE_P(ValueParam, ValueParamOutputTest, ::testing::Values(33, 42));
 
 template <typename T>
 class TypedTest : public ::testing::Test {};
@@ -69,6 +73,9 @@ REGISTER_TYPED_TEST_SUITE_P(TypeParameterizedTestSuite, Test9, Test10);
 typedef testing::Types<int, bool> TypeParameterizedTestSuiteTypes;  // NOLINT
 INSTANTIATE_TYPED_TEST_SUITE_P(Single, TypeParameterizedTestSuite,
                                TypeParameterizedTestSuiteTypes);
+
+}	// anonymous namespace
+
 
 #if defined(BUILD_MONOLITHIC)
 #define main(cnt, arr)	gtest_list_output_test_main(cnt, arr)

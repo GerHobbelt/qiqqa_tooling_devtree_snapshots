@@ -61,5 +61,7 @@
 #include "hb-ucd.cc"
 #include "hb-unicode.cc"
 #include "hb-uniscribe.cc"
+#include "hb-wasm-api.cc"
+#include "hb-wasm-shape.cc"
 
 #endif

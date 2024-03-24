@@ -41,7 +41,7 @@ static void putchunk(fz_context *ctx, fz_output *out, const char *tag, unsigned 
 	unsigned int sum;
 
 	if ((uint32_t)size != size)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "PNG chunk too large");
+		fz_throw(ctx, FZ_ERROR_LIMIT, "PNG chunk too large");
 
 	fz_write_int32_be(ctx, out, (int)size);
 	fz_write_data(ctx, out, tag, 4);
@@ -57,12 +57,13 @@ fz_save_pixmap_as_png(fz_context *ctx, const fz_pixmap *pixmap, const char *file
 {
 	fz_output *out = fz_new_output_with_path(ctx, filename, 0);
 	fz_band_writer *writer = NULL;
+	const int compression_effort = 0;
 
 	fz_var(writer);
 
 	fz_try(ctx)
 	{
-		writer = fz_new_png_band_writer(ctx, out);
+		writer = fz_new_png_band_writer(ctx, out, compression_effort);
 		fz_write_header(ctx, writer, pixmap->w, pixmap->h, pixmap->n, pixmap->alpha, pixmap->xres, pixmap->yres, 0, pixmap->colorspace, pixmap->seps);
 		fz_write_band(ctx, writer, pixmap->stride, pixmap->h, pixmap->samples);
 		fz_close_band_writer(ctx, writer);
@@ -83,11 +84,12 @@ void
 fz_write_pixmap_as_png(fz_context *ctx, fz_output *out, const fz_pixmap *pixmap)
 {
 	fz_band_writer *writer;
+	const int compression_effort = 0;
 
 	if (!out)
 		return;
 
-	writer = fz_new_png_band_writer(ctx, out);
+	writer = fz_new_png_band_writer(ctx, out, compression_effort);
 
 	fz_try(ctx)
 	{
@@ -112,6 +114,7 @@ typedef struct png_band_writer_s
 	unsigned char *cdata;
 	size_t usize, csize;
 	zng_stream stream;
+	int stream_started;
 	int stream_ended;
 } png_band_writer;
 
@@ -132,7 +135,7 @@ png_write_icc(fz_context *ctx, png_band_writer *writer, fz_colorspace *cs)
 			return;
 
 		/* Deflate the profile */
-		cbuffer = fz_deflate(ctx, buffer);
+		cbuffer = fz_deflate(ctx, buffer, writer->super.compression_effort);
 
 		name = cs->name;
 		size = cbuffer->len + strlen(name) + 2;
@@ -173,11 +176,11 @@ png_write_header(fz_context *ctx, fz_band_writer *writer_, fz_colorspace *cs)
 	int color;
 
 	if (writer->super.s != 0)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "PNGs cannot contain spot colors");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "PNGs cannot contain spot colors");
 	if (fz_colorspace_type(ctx, cs) == FZ_COLORSPACE_BGR)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "pixmap can not be bgr");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "pixmap can not be bgr");
 	if (cs && !fz_colorspace_is_gray(ctx, cs) && !fz_colorspace_is_rgb(ctx, cs))
-		fz_throw(ctx, FZ_ERROR_GENERIC, "pixmap must be grayscale or rgb to write as png");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "pixmap must be grayscale or rgb to write as png");
 
 	/* Treat alpha only as greyscale */
 	if (n == 1 && alpha)
@@ -189,7 +192,7 @@ png_write_header(fz_context *ctx, fz_band_writer *writer_, fz_colorspace *cs)
 	case 1: color = (alpha ? 4 : 0); break; /* 0 = Greyscale, 4 = Greyscale + Alpha */
 	case 3: color = (alpha ? 6 : 2); break; /* 2 = RGB, 6 = RGBA */
 	default:
-		fz_throw(ctx, FZ_ERROR_GENERIC, "pixmap must be grayscale or rgb to write as png");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "pixmap must be grayscale or rgb to write as png");
 	}
 
 	big32(head+0, w);
@@ -246,17 +249,18 @@ png_write_band(fz_context *ctx, fz_band_writer *writer_, int stride, int band_st
 		size_t usize = w;
 
 		if (usize > SIZE_MAX / n - 1)
-			fz_throw(ctx, FZ_ERROR_GENERIC, "png data too large.");
+			fz_throw(ctx, FZ_ERROR_LIMIT, "png data too large.");
 		usize = usize * n + 1;
 		if (usize > SIZE_MAX / band_height)
-			fz_throw(ctx, FZ_ERROR_GENERIC, "png data too large.");
+			fz_throw(ctx, FZ_ERROR_LIMIT, "png data too large.");
 		usize *= band_height;
 		writer->stream.opaque = ctx;
 		writer->stream.zalloc = fz_zlib_alloc;
 		writer->stream.zfree = fz_zlib_free;
+		writer->stream_started = 1;
 		err = zng_deflateInit(&writer->stream, png_compresion_level);
 		if (err != Z_OK)
-			fz_throw(ctx, FZ_ERROR_GENERIC, "compression error %d", err);
+			fz_throw(ctx, FZ_ERROR_LIBRARY, "compression error %d", err);
 		writer->usize = usize;
 		/* Now figure out how large a buffer we need to compress into.
 		 * deflateBound always expands a bit, and it's limited by being
@@ -320,7 +324,7 @@ png_write_band(fz_context *ctx, fz_band_writer *writer_, int stride, int band_st
 
 		err = zng_deflate(&writer->stream, (finalband && remain == writer->stream.avail_in) ? Z_FINISH : Z_NO_FLUSH);
 		if (err != Z_OK && err != Z_STREAM_END)
-			fz_throw(ctx, FZ_ERROR_GENERIC, "compression error %d", err);
+			fz_throw(ctx, FZ_ERROR_LIBRARY, "compression error %d", err);
 
 		/* We are guaranteed that writer->stream.next_in will have been updated for the
 		 * data that has been eaten. */
@@ -351,7 +355,7 @@ png_write_trailer(fz_context *ctx, fz_band_writer *writer_)
 	writer->stream_ended = 1;
 	err = zng_deflateEnd(&writer->stream);
 	if (err != Z_OK)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "compression error %d", err);
+		fz_throw(ctx, FZ_ERROR_LIBRARY, "compression error %d", err);
 
 	putchunk(ctx, out, "IEND", block, 0);
 }
@@ -361,7 +365,7 @@ png_drop_band_writer(fz_context *ctx, fz_band_writer *writer_)
 {
 	png_band_writer *writer = (png_band_writer *)(void *)writer_;
 
-	if (!writer->stream_ended)
+	if (writer->stream_started && !writer->stream_ended)
 	{
 		int err = zng_deflateEnd(&writer->stream);
 		if (err != Z_OK)
@@ -372,7 +376,7 @@ png_drop_band_writer(fz_context *ctx, fz_band_writer *writer_)
 	fz_free(ctx, writer->udata);
 }
 
-fz_band_writer *fz_new_png_band_writer(fz_context *ctx, fz_output *out)
+fz_band_writer *fz_new_png_band_writer(fz_context *ctx, fz_output *out, int compression_effort)
 {
 	png_band_writer *writer = fz_new_band_writer(ctx, png_band_writer, out);
 
@@ -380,6 +384,8 @@ fz_band_writer *fz_new_png_band_writer(fz_context *ctx, fz_output *out)
 	writer->super.band = png_write_band;
 	writer->super.trailer = png_write_trailer;
 	writer->super.drop = png_drop_band_writer;
+
+	writer->super.compression_effort = compression_effort;
 
 	return &writer->super;
 }
@@ -407,7 +413,7 @@ png_from_pixmap(fz_context *ctx, fz_pixmap *pix, fz_color_params color_params, i
 		{
 			cookie->d.errors++;
 			fz_throw(ctx, FZ_ERROR_GENERIC, "content error: image dimensions are specified as (0 x 0)");
-#pragma message("TODO: throw exception in strict mode. Also check out 'ignore_errors' in mudraw tool and link this to that setting.")
+#pragma message(FZPM_TODO "throw exception in strict mode. Also check out 'ignore_errors' in mudraw tool and link this to that setting.")
 		}
 		return NULL;
 	}

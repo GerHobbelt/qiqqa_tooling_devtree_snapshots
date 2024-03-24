@@ -66,305 +66,221 @@
     <Filter Include="Misc Files\SMP">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\build-VS2022">
+    <Filter Include="Misc Files\build-VS2010">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\build-VS2022\iconv">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\iconv-static">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\iconv-static\x64">
+    <Filter Include="Misc Files\build-VS2010-MT">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0020}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\build-VS2022\iconv-static\x64\Debug">
+    <Filter Include="Misc Files\build-VS2010-MT\_props">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0019}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\build-VS2022\iconv\x64">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
+    <Filter Include="Misc Files\build-VS2010\_props">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\build-VS2022\iconv\x64\Debug">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\libiconv">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0031}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\libiconv-static">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\libiconv-static\x64">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\libiconv-static\x64\Debug">
+    <Filter Include="Misc Files\build-VS2013">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0026}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\build-VS2022\libiconv\x64">
+    <Filter Include="Misc Files\build-VS2013-MT">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\build-VS2013-MT\_props">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\build-VS2013\_props">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\build-VS2015">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0030}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\build-VS2022\libiconv\x64\Debug">
+    <Filter Include="Misc Files\build-VS2015-MT">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\build-VS2015-MT\_props">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\build-VS2015\_props">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0029}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0035}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\gengb18030z">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0038}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\gengb18030z-static">
+    <Filter Include="Misc Files\build-VS2017">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0034}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\gengb18030z-static\x64">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0033}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\gengb18030z-static\x64\Debug">
+    <Filter Include="Misc Files\build-VS2017-MT">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0032}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\gengb18030z\x64">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0037}</UniqueIdentifier>
+    <Filter Include="Misc Files\build-VS2017-MT\_props">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0031}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\gengb18030z\x64\Debug">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0036}</UniqueIdentifier>
+    <Filter Include="Misc Files\build-VS2017\_props">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0033}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\gentranslit">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0041}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\gentranslit\x64">
+    <Filter Include="Misc Files\build-VS2019">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0040}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\gentranslit\x64\Debug">
+    <Filter Include="Misc Files\build-VS2019-MT">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0036}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\build-VS2019-MT\_props">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0035}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\build-VS2019-arm">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0038}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\build-VS2019-arm\_props">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0037}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\build-VS2019\_props">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0039}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\genutf8">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0047}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\genutf8-static">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0044}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\genutf8-static\x64">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0043}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\genutf8-static\x64\Debug">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0042}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\genutf8\x64">
+    <Filter Include="Misc Files\build-VS2022">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0046}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\genutf8\x64\Debug">
+    <Filter Include="Misc Files\build-VS2022-MT">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0042}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\build-VS2022-MT\_props">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0041}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\build-VS2022-arm">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0044}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\build-VS2022-arm\_props">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0043}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\build-VS2022\_props">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0045}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\is-native">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0053}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\is-native-static">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0050}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\is-native-static\x64">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0049}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\is-native-static\x64\Debug">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0048}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\is-native\x64">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0052}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\is-native\x64\Debug">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0051}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\table-from">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0059}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\table-from-static">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0056}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\table-from-static\x64">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0055}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\table-from-static\x64\Debug">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0054}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\table-from\x64">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0058}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\table-from\x64\Debug">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0057}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\table-to">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0065}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\table-to-static">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0062}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\table-to-static\x64">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0061}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\table-to-static\x64\Debug">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0060}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\table-to\x64">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0064}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\table-to\x64\Debug">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0063}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\test-shiftseq">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0071}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\test-shiftseq-static">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0068}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\test-shiftseq-static\x64">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0067}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\test-shiftseq-static\x64\Debug">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0066}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\test-shiftseq\x64">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0070}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\test-shiftseq\x64\Debug">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0069}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\test-to-wchar">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0077}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\test-to-wchar-static">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0074}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\test-to-wchar-static\x64">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0073}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\test-to-wchar-static\x64\Debug">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0072}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\test-to-wchar\x64">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0076}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\test-to-wchar\x64\Debug">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0075}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\uniq-u">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0083}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\uniq-u-static">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0080}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\uniq-u-static\x64">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0079}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\uniq-u-static\x64\Debug">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0078}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\uniq-u\x64">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0082}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\build-VS2022\tests\uniq-u\x64\Debug">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0081}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Misc Files\build-aux">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0084}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0047}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\cmake">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0085}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0048}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\distfiles">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0086}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0049}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\doc">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0050}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\extras">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0087}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0051}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\gnulib-local">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0053}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\gnulib-local\lib">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0052}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\gnulib-local\m4">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0054}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\include">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0088}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0055}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\lib">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0089}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0056}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\libcharset">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0090}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0057}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\libcharset\autoconf">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0058}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\libcharset\build-aux">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0091}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0059}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\libcharset\include">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0092}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0060}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\libcharset\lib">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0093}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0061}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\libcharset\m4">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0062}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\libcharset\tools">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0094}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0063}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\m4">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0064}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\man">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0095}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0065}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\os2">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0066}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\po">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0096}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0067}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\src">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0097}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0068}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\srclib">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0098}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0069}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\srcm4">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0070}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\tests">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0099}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0071}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\tools">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0100}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0072}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0101}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0073}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\res">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0102}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0074}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\win32">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0103}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0075}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\windows">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0104}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0076}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\extras">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0105}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0077}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\gnulib-local">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0107}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0079}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\gnulib-local\lib">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0106}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0078}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\lib">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0108}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0080}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\libcharset">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0110}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0082}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\libcharset\lib">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0109}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0081}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\libcharset\tools">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0111}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0083}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\src">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0112}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0084}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\srclib">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0113}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0085}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\srclib\malloc">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0114}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0086}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\srclib\uniwidth">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0115}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0087}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\tests">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0116}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0088}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\tools">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0117}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0089}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\woe32dll">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0118}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0090}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -376,6 +292,9 @@
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/libiconv/gnulib-local/lib/xstrdup.c">
       <Filter>Source Files\gnulib-local\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libiconv/lib/compat.c">
+      <Filter>Source Files\lib</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/libiconv/lib/genaliases.c">
       <Filter>Source Files\lib</Filter>
@@ -390,9 +309,6 @@
       <Filter>Source Files\lib</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/libiconv/lib/iconv.c">
-      <Filter>Source Files\lib</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/libiconv/lib/relocatable.c">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/libiconv/libcharset/lib/localcharset.c">
@@ -1163,7 +1079,10 @@
     <ClInclude Include="../../thirdparty/owemdjee/libiconv/lib/gb12345ext.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/libiconv/lib/gb18030.h">
+    <ClInclude Include="../../thirdparty/owemdjee/libiconv/lib/gb18030_2005.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libiconv/lib/gb18030_2022.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/libiconv/lib/gb18030ext.h">
@@ -1394,9 +1313,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/libiconv/lib/pt154.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/libiconv/lib/relocatable.h">
-      <Filter>Header Files\lib</Filter>
-    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/libiconv/lib/riscos1.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
@@ -1500,6 +1416,9 @@
       <Filter>Header Files\libcharset\include</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/libiconv/src/config.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libiconv/src/zos-tag.h">
       <Filter>Header Files\src</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/libiconv/srclib/_Noreturn.h">
@@ -1730,13 +1649,25 @@
     <ResourceCompile Include="../../thirdparty/owemdjee/libiconv/windows/libiconv.rc">
       <Filter>Resource Files\windows</Filter>
     </ResourceCompile>
+    <Text Include="../../thirdparty/owemdjee/libiconv/AUTHORS">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/CMakeLists.txt">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/ChangeLog">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/INSTALL.windows">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/LICENSE">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/LICENSE.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/Makefile.devel">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/Makefile.in">
@@ -1757,11 +1688,29 @@
     <Text Include="../../thirdparty/owemdjee/libiconv/README.md">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/SMP/appveyor.yml">
+      <Filter>Misc Files\SMP</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/SMP/libiconv_files.props">
+      <Filter>Misc Files\SMP</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/SMP/libiconv_with_latest_sdk.bat">
       <Filter>Misc Files\SMP</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/SMP/readme.txt">
       <Filter>Misc Files\SMP</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/SMP/smp.props">
+      <Filter>Misc Files\SMP</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/SMP/smp_winrt.props">
+      <Filter>Misc Files\SMP</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/THIS_VERSION_IS_1.17">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/aclocal.m4">
+      <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/autogen.sh">
       <Filter>Misc Files</Filter>
@@ -1769,68 +1718,302 @@
     <Text Include="../../thirdparty/owemdjee/libiconv/autopull.sh">
       <Filter>Misc Files</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022/iconv-static/x64/Debug/iconv-static.vcxproj.FileListAbsolute.txt">
-      <Filter>Misc Files\build-VS2022\iconv-static\x64\Debug</Filter>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2010-MT/_props/iconv-static.props">
+      <Filter>Misc Files\build-VS2010-MT\_props</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022/iconv/x64/Debug/iconv.vcxproj.FileListAbsolute.txt">
-      <Filter>Misc Files\build-VS2022\iconv\x64\Debug</Filter>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2010-MT/_props/iconv.props">
+      <Filter>Misc Files\build-VS2010-MT\_props</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022/libiconv-static/x64/Debug/libiconv-static.vcxproj.FileListAbsolute.txt">
-      <Filter>Misc Files\build-VS2022\libiconv-static\x64\Debug</Filter>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2010-MT/_props/libiconv-static.props">
+      <Filter>Misc Files\build-VS2010-MT\_props</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022/libiconv/x64/Debug/libiconv.vcxproj.FileListAbsolute.txt">
-      <Filter>Misc Files\build-VS2022\libiconv\x64\Debug</Filter>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2010-MT/_props/libiconv.props">
+      <Filter>Misc Files\build-VS2010-MT\_props</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022/tests/gengb18030z-static/x64/Debug/gengb18030z-static.vcxproj.FileListAbsolute.txt">
-      <Filter>Misc Files\build-VS2022\tests\gengb18030z-static\x64\Debug</Filter>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2010-MT/_props/testapp-static.props">
+      <Filter>Misc Files\build-VS2010-MT\_props</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022/tests/gengb18030z/x64/Debug/gengb18030z.vcxproj.FileListAbsolute.txt">
-      <Filter>Misc Files\build-VS2022\tests\gengb18030z\x64\Debug</Filter>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2010-MT/_props/testapp.props">
+      <Filter>Misc Files\build-VS2010-MT\_props</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022/tests/gentranslit/x64/Debug/gentranslit.vcxproj.FileListAbsolute.txt">
-      <Filter>Misc Files\build-VS2022\tests\gentranslit\x64\Debug</Filter>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2010-MT/_props/vs_common.props">
+      <Filter>Misc Files\build-VS2010-MT\_props</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022/tests/genutf8-static/x64/Debug/genutf8-static.vcxproj.FileListAbsolute.txt">
-      <Filter>Misc Files\build-VS2022\tests\genutf8-static\x64\Debug</Filter>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2010/_props/iconv-static.props">
+      <Filter>Misc Files\build-VS2010\_props</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022/tests/genutf8/x64/Debug/genutf8.vcxproj.FileListAbsolute.txt">
-      <Filter>Misc Files\build-VS2022\tests\genutf8\x64\Debug</Filter>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2010/_props/iconv.props">
+      <Filter>Misc Files\build-VS2010\_props</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022/tests/is-native-static/x64/Debug/is-native-static.vcxproj.FileListAbsolute.txt">
-      <Filter>Misc Files\build-VS2022\tests\is-native-static\x64\Debug</Filter>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2010/_props/libiconv-static.props">
+      <Filter>Misc Files\build-VS2010\_props</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022/tests/is-native/x64/Debug/is-native.vcxproj.FileListAbsolute.txt">
-      <Filter>Misc Files\build-VS2022\tests\is-native\x64\Debug</Filter>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2010/_props/libiconv.props">
+      <Filter>Misc Files\build-VS2010\_props</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022/tests/table-from-static/x64/Debug/table-from-static.vcxproj.FileListAbsolute.txt">
-      <Filter>Misc Files\build-VS2022\tests\table-from-static\x64\Debug</Filter>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2010/_props/testapp-static.props">
+      <Filter>Misc Files\build-VS2010\_props</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022/tests/table-from/x64/Debug/table-from.vcxproj.FileListAbsolute.txt">
-      <Filter>Misc Files\build-VS2022\tests\table-from\x64\Debug</Filter>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2010/_props/testapp.props">
+      <Filter>Misc Files\build-VS2010\_props</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022/tests/table-to-static/x64/Debug/table-to-static.vcxproj.FileListAbsolute.txt">
-      <Filter>Misc Files\build-VS2022\tests\table-to-static\x64\Debug</Filter>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2010/_props/vs_common.props">
+      <Filter>Misc Files\build-VS2010\_props</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022/tests/table-to/x64/Debug/table-to.vcxproj.FileListAbsolute.txt">
-      <Filter>Misc Files\build-VS2022\tests\table-to\x64\Debug</Filter>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2013-MT/_props/iconv-static.props">
+      <Filter>Misc Files\build-VS2013-MT\_props</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022/tests/test-shiftseq-static/x64/Debug/test-shiftseq-static.vcxproj.FileListAbsolute.txt">
-      <Filter>Misc Files\build-VS2022\tests\test-shiftseq-static\x64\Debug</Filter>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2013-MT/_props/iconv.props">
+      <Filter>Misc Files\build-VS2013-MT\_props</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022/tests/test-shiftseq/x64/Debug/test-shiftseq.vcxproj.FileListAbsolute.txt">
-      <Filter>Misc Files\build-VS2022\tests\test-shiftseq\x64\Debug</Filter>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2013-MT/_props/libiconv-static.props">
+      <Filter>Misc Files\build-VS2013-MT\_props</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022/tests/test-to-wchar-static/x64/Debug/test-to-wchar-static.vcxproj.FileListAbsolute.txt">
-      <Filter>Misc Files\build-VS2022\tests\test-to-wchar-static\x64\Debug</Filter>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2013-MT/_props/libiconv.props">
+      <Filter>Misc Files\build-VS2013-MT\_props</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022/tests/test-to-wchar/x64/Debug/test-to-wchar.vcxproj.FileListAbsolute.txt">
-      <Filter>Misc Files\build-VS2022\tests\test-to-wchar\x64\Debug</Filter>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2013-MT/_props/testapp-static.props">
+      <Filter>Misc Files\build-VS2013-MT\_props</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022/tests/uniq-u-static/x64/Debug/uniq-u-static.vcxproj.FileListAbsolute.txt">
-      <Filter>Misc Files\build-VS2022\tests\uniq-u-static\x64\Debug</Filter>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2013-MT/_props/testapp.props">
+      <Filter>Misc Files\build-VS2013-MT\_props</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022/tests/uniq-u/x64/Debug/uniq-u.vcxproj.FileListAbsolute.txt">
-      <Filter>Misc Files\build-VS2022\tests\uniq-u\x64\Debug</Filter>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2013-MT/_props/vs_common.props">
+      <Filter>Misc Files\build-VS2013-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2013/_props/iconv-static.props">
+      <Filter>Misc Files\build-VS2013\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2013/_props/iconv.props">
+      <Filter>Misc Files\build-VS2013\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2013/_props/libiconv-static.props">
+      <Filter>Misc Files\build-VS2013\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2013/_props/libiconv.props">
+      <Filter>Misc Files\build-VS2013\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2013/_props/testapp-static.props">
+      <Filter>Misc Files\build-VS2013\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2013/_props/testapp.props">
+      <Filter>Misc Files\build-VS2013\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2013/_props/vs_common.props">
+      <Filter>Misc Files\build-VS2013\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2015-MT/_props/iconv-static.props">
+      <Filter>Misc Files\build-VS2015-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2015-MT/_props/iconv.props">
+      <Filter>Misc Files\build-VS2015-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2015-MT/_props/libiconv-static.props">
+      <Filter>Misc Files\build-VS2015-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2015-MT/_props/libiconv.props">
+      <Filter>Misc Files\build-VS2015-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2015-MT/_props/testapp-static.props">
+      <Filter>Misc Files\build-VS2015-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2015-MT/_props/testapp.props">
+      <Filter>Misc Files\build-VS2015-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2015-MT/_props/vs_common.props">
+      <Filter>Misc Files\build-VS2015-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2015/_props/iconv-static.props">
+      <Filter>Misc Files\build-VS2015\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2015/_props/iconv.props">
+      <Filter>Misc Files\build-VS2015\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2015/_props/libiconv-static.props">
+      <Filter>Misc Files\build-VS2015\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2015/_props/libiconv.props">
+      <Filter>Misc Files\build-VS2015\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2015/_props/testapp-static.props">
+      <Filter>Misc Files\build-VS2015\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2015/_props/testapp.props">
+      <Filter>Misc Files\build-VS2015\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2015/_props/vs_common.props">
+      <Filter>Misc Files\build-VS2015\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2017-MT/_props/iconv-static.props">
+      <Filter>Misc Files\build-VS2017-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2017-MT/_props/iconv.props">
+      <Filter>Misc Files\build-VS2017-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2017-MT/_props/libiconv-static.props">
+      <Filter>Misc Files\build-VS2017-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2017-MT/_props/libiconv.props">
+      <Filter>Misc Files\build-VS2017-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2017-MT/_props/testapp-static.props">
+      <Filter>Misc Files\build-VS2017-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2017-MT/_props/testapp.props">
+      <Filter>Misc Files\build-VS2017-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2017-MT/_props/vs_common.props">
+      <Filter>Misc Files\build-VS2017-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2017/_props/iconv-static.props">
+      <Filter>Misc Files\build-VS2017\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2017/_props/iconv.props">
+      <Filter>Misc Files\build-VS2017\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2017/_props/libiconv-static.props">
+      <Filter>Misc Files\build-VS2017\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2017/_props/libiconv.props">
+      <Filter>Misc Files\build-VS2017\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2017/_props/testapp-static.props">
+      <Filter>Misc Files\build-VS2017\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2017/_props/testapp.props">
+      <Filter>Misc Files\build-VS2017\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2017/_props/vs_common.props">
+      <Filter>Misc Files\build-VS2017\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2019-MT/_props/iconv-static.props">
+      <Filter>Misc Files\build-VS2019-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2019-MT/_props/iconv.props">
+      <Filter>Misc Files\build-VS2019-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2019-MT/_props/libiconv-static.props">
+      <Filter>Misc Files\build-VS2019-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2019-MT/_props/libiconv.props">
+      <Filter>Misc Files\build-VS2019-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2019-MT/_props/testapp-static.props">
+      <Filter>Misc Files\build-VS2019-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2019-MT/_props/testapp.props">
+      <Filter>Misc Files\build-VS2019-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2019-MT/_props/vs_common.props">
+      <Filter>Misc Files\build-VS2019-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2019-arm/_props/iconv-static.props">
+      <Filter>Misc Files\build-VS2019-arm\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2019-arm/_props/iconv.props">
+      <Filter>Misc Files\build-VS2019-arm\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2019-arm/_props/libiconv-static.props">
+      <Filter>Misc Files\build-VS2019-arm\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2019-arm/_props/libiconv.props">
+      <Filter>Misc Files\build-VS2019-arm\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2019-arm/_props/testapp-static.props">
+      <Filter>Misc Files\build-VS2019-arm\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2019-arm/_props/testapp.props">
+      <Filter>Misc Files\build-VS2019-arm\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2019-arm/_props/vs_common.props">
+      <Filter>Misc Files\build-VS2019-arm\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2019/_props/iconv-static.props">
+      <Filter>Misc Files\build-VS2019\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2019/_props/iconv.props">
+      <Filter>Misc Files\build-VS2019\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2019/_props/libiconv-static.props">
+      <Filter>Misc Files\build-VS2019\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2019/_props/libiconv.props">
+      <Filter>Misc Files\build-VS2019\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2019/_props/testapp-static.props">
+      <Filter>Misc Files\build-VS2019\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2019/_props/testapp.props">
+      <Filter>Misc Files\build-VS2019\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2019/_props/vs_common.props">
+      <Filter>Misc Files\build-VS2019\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022-MT/_props/iconv-static.props">
+      <Filter>Misc Files\build-VS2022-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022-MT/_props/iconv.props">
+      <Filter>Misc Files\build-VS2022-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022-MT/_props/libiconv-static.props">
+      <Filter>Misc Files\build-VS2022-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022-MT/_props/libiconv.props">
+      <Filter>Misc Files\build-VS2022-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022-MT/_props/testapp-static.props">
+      <Filter>Misc Files\build-VS2022-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022-MT/_props/testapp.props">
+      <Filter>Misc Files\build-VS2022-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022-MT/_props/vs_common.props">
+      <Filter>Misc Files\build-VS2022-MT\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022-arm/_props/iconv-static.props">
+      <Filter>Misc Files\build-VS2022-arm\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022-arm/_props/iconv.props">
+      <Filter>Misc Files\build-VS2022-arm\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022-arm/_props/libiconv-static.props">
+      <Filter>Misc Files\build-VS2022-arm\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022-arm/_props/libiconv.props">
+      <Filter>Misc Files\build-VS2022-arm\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022-arm/_props/testapp-static.props">
+      <Filter>Misc Files\build-VS2022-arm\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022-arm/_props/testapp.props">
+      <Filter>Misc Files\build-VS2022-arm\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022-arm/_props/vs_common.props">
+      <Filter>Misc Files\build-VS2022-arm\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022/_props/iconv-static.props">
+      <Filter>Misc Files\build-VS2022\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022/_props/iconv.props">
+      <Filter>Misc Files\build-VS2022\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022/_props/libiconv-static.props">
+      <Filter>Misc Files\build-VS2022\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022/_props/libiconv.props">
+      <Filter>Misc Files\build-VS2022\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022/_props/testapp-static.props">
+      <Filter>Misc Files\build-VS2022\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022/_props/testapp.props">
+      <Filter>Misc Files\build-VS2022\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-VS2022/_props/vs_common.props">
+      <Filter>Misc Files\build-VS2022\_props</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/build-aux/config.guess">
+      <Filter>Misc Files\build-aux</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/build-aux/ltmain.sh">
       <Filter>Misc Files\build-aux</Filter>
@@ -1859,11 +2042,26 @@
     <Text Include="../../thirdparty/owemdjee/libiconv/distfiles/config_for_vs.sh">
       <Filter>Misc Files\distfiles</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/distfiles/download.url">
+      <Filter>Misc Files\distfiles</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/doc/relocatable.texi">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/extras/ChangeLog">
       <Filter>Misc Files\extras</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/gitsub.sh">
       <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/gnulib-local/lib/error.h.diff">
+      <Filter>Misc Files\gnulib-local\lib</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/gnulib-local/lib/progname.h.diff">
+      <Filter>Misc Files\gnulib-local\lib</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/gnulib-local/m4/alloca.m4">
+      <Filter>Misc Files\gnulib-local\m4</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/iconv-config.cmake.in">
       <Filter>Misc Files</Filter>
@@ -1895,7 +2093,40 @@
     <Text Include="../../thirdparty/owemdjee/libiconv/lib/config.h.in">
       <Filter>Misc Files\lib</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/lib/encodings.def">
+      <Filter>Misc Files\lib</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/lib/encodings_aix.def">
+      <Filter>Misc Files\lib</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/lib/encodings_dos.def">
+      <Filter>Misc Files\lib</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/lib/encodings_extra.def">
+      <Filter>Misc Files\lib</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/lib/encodings_local.def">
+      <Filter>Misc Files\lib</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/lib/encodings_osf1.def">
+      <Filter>Misc Files\lib</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/lib/encodings_zos.def">
+      <Filter>Misc Files\lib</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/lib/translit.def">
+      <Filter>Misc Files\lib</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/AUTHORS">
+      <Filter>Misc Files\libcharset</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/ChangeLog">
+      <Filter>Misc Files\libcharset</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/INSTALL.windows">
+      <Filter>Misc Files\libcharset</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/Makefile.devel">
       <Filter>Misc Files\libcharset</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/Makefile.in">
@@ -1907,11 +2138,17 @@
     <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/README">
       <Filter>Misc Files\libcharset</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/autoconf/aclocal.m4">
+      <Filter>Misc Files\libcharset\autoconf</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/autogen.sh">
       <Filter>Misc Files\libcharset</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/autopull.sh">
       <Filter>Misc Files\libcharset</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/build-aux/config.guess">
+      <Filter>Misc Files\libcharset\build-aux</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/build-aux/ltmain.sh">
       <Filter>Misc Files\libcharset\build-aux</Filter>
@@ -1940,11 +2177,182 @@
     <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/lib/Makefile.in">
       <Filter>Misc Files\libcharset\lib</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/m4/codeset.m4">
+      <Filter>Misc Files\libcharset\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/m4/fcntl-o.m4">
+      <Filter>Misc Files\libcharset\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/m4/libtool.m4">
+      <Filter>Misc Files\libcharset\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/m4/ltoptions.m4">
+      <Filter>Misc Files\libcharset\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/m4/ltsugar.m4">
+      <Filter>Misc Files\libcharset\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/m4/ltversion.m4">
+      <Filter>Misc Files\libcharset\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/m4/lt~obsolete.m4">
+      <Filter>Misc Files\libcharset\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/m4/visibility.m4">
+      <Filter>Misc Files\libcharset\m4</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/tools/README">
       <Filter>Misc Files\libcharset\tools</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/tools/aix-3.2.5">
+      <Filter>Misc Files\libcharset\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/tools/aix-4.1.5">
+      <Filter>Misc Files\libcharset\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/tools/aix-4.2.0">
+      <Filter>Misc Files\libcharset\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/tools/aix-4.3.2">
+      <Filter>Misc Files\libcharset\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/tools/cygwin-1.7.2">
+      <Filter>Misc Files\libcharset\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/tools/darwin-6.8">
+      <Filter>Misc Files\libcharset\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/tools/darwin-7.5">
+      <Filter>Misc Files\libcharset\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/tools/darwin-9.5">
+      <Filter>Misc Files\libcharset\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/tools/freebsd-3.3">
+      <Filter>Misc Files\libcharset\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/tools/glibc-2.1.3">
+      <Filter>Misc Files\libcharset\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/tools/glibc-2.1.90">
+      <Filter>Misc Files\libcharset\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/tools/glibc-2.2">
+      <Filter>Misc Files\libcharset\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/tools/glibc-2.2-XF86-3.3.6">
+      <Filter>Misc Files\libcharset\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/tools/glibc-2.2-XF86-4.0.1f">
+      <Filter>Misc Files\libcharset\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/tools/hpux-10.01">
+      <Filter>Misc Files\libcharset\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/tools/hpux-10.20">
+      <Filter>Misc Files\libcharset\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/tools/hpux-11.00">
+      <Filter>Misc Files\libcharset\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/tools/irix-6.5">
+      <Filter>Misc Files\libcharset\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/tools/netbsd-3.0">
+      <Filter>Misc Files\libcharset\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/tools/openbsd-4.1">
+      <Filter>Misc Files\libcharset\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/tools/osf1-5.1">
+      <Filter>Misc Files\libcharset\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/tools/solaris-2.4">
+      <Filter>Misc Files\libcharset\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/tools/solaris-2.5.1">
+      <Filter>Misc Files\libcharset\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/tools/solaris-2.6">
+      <Filter>Misc Files\libcharset\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/tools/solaris-2.7">
+      <Filter>Misc Files\libcharset\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/libcharset/tools/sunos-4.1.4">
+      <Filter>Misc Files\libcharset\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/m4/cp.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/m4/eilseq.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/m4/general.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/m4/libtool.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/m4/ln.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/m4/ltoptions.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/m4/ltsugar.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/m4/ltversion.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/m4/lt~obsolete.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/m4/proto.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/man/Makefile.in">
       <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/man/iconv.1">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/man/iconv.1.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/man/iconv.3">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/man/iconv.3.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/man/iconv_close.3">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/man/iconv_close.3.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/man/iconv_open.3">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/man/iconv_open.3.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/man/iconv_open_into.3">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/man/iconv_open_into.3.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/man/iconvctl.3">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/man/iconvctl.3.html">
+      <Filter>Misc Files\man</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/os2/iconv.def">
+      <Filter>Misc Files\os2</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/po/ChangeLog">
       <Filter>Misc Files\po</Filter>
@@ -1955,6 +2363,132 @@
     <Text Include="../../thirdparty/owemdjee/libiconv/po/POTFILES.in">
       <Filter>Misc Files\po</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/af.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/bg.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/ca.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/cs.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/da.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/de.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/el.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/en@boldquot.header">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/en@quot.header">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/eo.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/es.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/et.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/fi.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/fr.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/ga.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/gl.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/hr.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/hu.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/id.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/insert-header.sin">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/it.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/ja.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/ko.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/lt.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/nl.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/pl.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/pt_BR.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/remove-potcdate.sin">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/rm.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/ro.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/ru.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/sk.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/sl.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/sq.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/sr.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/sv.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/tr.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/uk.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/vi.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/wa.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/zh_CN.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/po/zh_TW.po">
+      <Filter>Misc Files\po</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/src/Makefile.in">
       <Filter>Misc Files\src</Filter>
     </Text>
@@ -1963,6 +2497,303 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/srclib/Makefile.in">
       <Filter>Misc Files\srclib</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/00gnulib.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/__inline.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/absolute-header.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/alloca.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/asm-underscore.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/builtin-expect.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/canonicalize.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/close.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/codeset.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/double-slash-root.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/dup2.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/eealloc.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/environ.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/errno_h.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/error.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/extensions.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/extern-inline.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/fcntl-o.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/fcntl.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/fcntl_h.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/free.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/fstat.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/getdtablesize.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/getprogname.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/gettext.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/gnulib-cache.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/gnulib-common.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/gnulib-comp.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/gnulib-tool.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/host-cpu-c-abi.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/iconv.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/include_next.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/intl-thread-locale.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/intlmacosx.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/inttypes.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/largefile.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/lib-ld.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/lib-link.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/lib-prefix.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/libunistring-base.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/limits-h.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/lstat.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/malloc.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/malloca.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/mbstate_t.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/mempcpy.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/minmax.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/mode_t.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/msvc-inval.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/msvc-nothrow.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/multiarch.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/nls.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/nocrash.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/off_t.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/open-cloexec.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/open-slash.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/open.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/pathmax.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/pid_t.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/po.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/progtest.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/raise.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/rawmemchr.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/read.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/readlink.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/realloc.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/relocatable-lib.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/relocatable.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/safe-read.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/setenv.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/signal_h.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/signalblocking.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/sigpipe.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/ssize_t.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/stat-time.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/stat.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/std-gnu11.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/stdalign.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/stdbool.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/stddef_h.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/stdint.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/stdio_h.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/stdlib_h.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/strerror.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/string_h.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/sys_socket_h.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/sys_stat_h.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/sys_types_h.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/time_h.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/unistd_h.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/unlocked-io.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/vararrays.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/visibility.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/warn-on-use.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/wchar_h.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/wchar_t.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/wint_t.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/year2038.m4">
+      <Filter>Misc Files\srcm4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/srcm4/zzgnulib.m4">
+      <Filter>Misc Files\srcm4</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/tests/ARMSCII-8.IRREVERSIBLE.TXT">
       <Filter>Misc Files\tests</Filter>
@@ -1982,10 +2813,16 @@
     <Text Include="../../thirdparty/owemdjee/libiconv/tests/BIG5-2003.TXT">
       <Filter>Misc Files\tests</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/BIG5-HKSCS-1999-snippet.UTF-8">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/tests/BIG5-HKSCS-1999.IRREVERSIBLE.TXT">
       <Filter>Misc Files\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/tests/BIG5-HKSCS-1999.TXT">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/BIG5-HKSCS-2001-snippet.UTF-8">
       <Filter>Misc Files\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/tests/BIG5-HKSCS-2001.IRREVERSIBLE.TXT">
@@ -1994,10 +2831,16 @@
     <Text Include="../../thirdparty/owemdjee/libiconv/tests/BIG5-HKSCS-2001.TXT">
       <Filter>Misc Files\tests</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/BIG5-HKSCS-2004-snippet.UTF-8">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/tests/BIG5-HKSCS-2004.IRREVERSIBLE.TXT">
       <Filter>Misc Files\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/tests/BIG5-HKSCS-2004.TXT">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/BIG5-HKSCS-2008-snippet.UTF-8">
       <Filter>Misc Files\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/tests/BIG5-HKSCS-2008.IRREVERSIBLE.TXT">
@@ -2057,6 +2900,9 @@
     <Text Include="../../thirdparty/owemdjee/libiconv/tests/CP1254.TXT">
       <Filter>Misc Files\tests</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/CP1255-snippet.UTF-8">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/tests/CP1255.IRREVERSIBLE.TXT">
       <Filter>Misc Files\tests</Filter>
     </Text>
@@ -2067,6 +2913,9 @@
       <Filter>Misc Files\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/tests/CP1257.TXT">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/CP1258-snippet.UTF-8">
       <Filter>Misc Files\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/tests/CP1258.IRREVERSIBLE.TXT">
@@ -2183,10 +3032,13 @@
     <Text Include="../../thirdparty/owemdjee/libiconv/tests/EUC-TW.TXT">
       <Filter>Misc Files\tests</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/libiconv/tests/GB18030-BMP.TXT">
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/GB18030-2005-BMP.TXT">
       <Filter>Misc Files\tests</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/libiconv/tests/GB18030.IRREVERSIBLE.TXT">
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/GB18030-2005.IRREVERSIBLE.TXT">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/GB18030-2022-BMP.TXT">
       <Filter>Misc Files\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/tests/GBK.TXT">
@@ -2199,6 +3051,9 @@
       <Filter>Misc Files\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/tests/HP-ROMAN8.TXT">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/HZ-snippet.UTF-8">
       <Filter>Misc Files\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/tests/IBM-037.TXT">
@@ -2366,6 +3221,30 @@
     <Text Include="../../thirdparty/owemdjee/libiconv/tests/IBM-924.TXT">
       <Filter>Misc Files\tests</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/ISO-2022-CN-EXT-snippet.UTF-8">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/ISO-2022-CN-snippet.UTF-8">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/ISO-2022-JP-1-snippet.UTF-8">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/ISO-2022-JP-2-snippet.UTF-8">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/ISO-2022-JP-3-snippet.UTF-8">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/ISO-2022-JP-MS-snippet.UTF-8">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/ISO-2022-JP-snippet.UTF-8">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/ISO-2022-KR-snippet.UTF-8">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/tests/ISO-8859-1.TXT">
       <Filter>Misc Files\tests</Filter>
     </Text>
@@ -2489,6 +3368,15 @@
     <Text Include="../../thirdparty/owemdjee/libiconv/tests/PT154.TXT">
       <Filter>Misc Files\tests</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/Quotes.ASCII">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/Quotes.ISO-8859-1">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/Quotes.UTF-8">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/tests/RISCOS-LATIN1.TXT">
       <Filter>Misc Files\tests</Filter>
     </Text>
@@ -2501,6 +3389,9 @@
     <Text Include="../../thirdparty/owemdjee/libiconv/tests/SHIFT_JISX0213.TXT">
       <Filter>Misc Files\tests</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/TCVN-snippet.UTF-8">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/tests/TCVN.IRREVERSIBLE.TXT">
       <Filter>Misc Files\tests</Filter>
     </Text>
@@ -2511,6 +3402,48 @@
       <Filter>Misc Files\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/tests/TIS-620.TXT">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/Translit1.ASCII">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/Translit1.ISO-8859-1">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/TranslitFail1.ISO-8859-1">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/UCS-2BE-snippet.UTF-8">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/UCS-2LE-snippet.UTF-8">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/UCS-4BE-snippet.UTF-8">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/UCS-4LE-snippet.UTF-8">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/UTF-16-snippet.UTF-8">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/UTF-16BE-snippet.UTF-8">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/UTF-16LE-snippet.UTF-8">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/UTF-32-snippet.UTF-8">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/UTF-32BE-snippet.UTF-8">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/UTF-32LE-snippet.UTF-8">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tests/UTF-7-snippet.UTF-8">
       <Filter>Misc Files\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/tests/VISCII.TXT">
@@ -2547,6 +3480,12 @@
       <Filter>Misc Files\tools</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libiconv/tools/JISX0213.TXT">
+      <Filter>Misc Files\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tools/Makefile">
+      <Filter>Misc Files\tools</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libiconv/tools/gen-translit-def-part.lisp">
       <Filter>Misc Files\tools</Filter>
     </Text>
   </ItemGroup>

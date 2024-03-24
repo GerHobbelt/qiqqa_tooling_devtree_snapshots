@@ -28,6 +28,9 @@
 #include <string.h>
 #include <math.h>
 
+#include "monolithic_examples.h"
+
+
 static
 int PrintUsage(void)
 {
@@ -35,10 +38,15 @@ int PrintUsage(void)
 	return 0; 
 }
 
-int main(int argc, char *argv[])
+
+#if defined(BUILD_MONOLITHIC)
+#define main(cnt, arr)      lcms2_vericc_example_main(cnt, arr)
+#endif
+
+int main(int argc, const char *argv[])
 {
        cmsHPROFILE hProfile;
-	   char* ptr;
+	   const char* ptr;
 	   cmsFloat64Number Version;
 
 	   if (argc != 3)  return PrintUsage();
@@ -50,16 +58,19 @@ int main(int argc, char *argv[])
 
 	   Version = atof(ptr); 
 
-	   hProfile = cmsOpenProfileFromFile(argv[2], "r");
+	   cmsContext ContextID = cmsCreateContext(NULL, NULL);
+
+	   hProfile = cmsOpenProfileFromFile(ContextID, argv[2], "r");
 	   if (hProfile == NULL) { fprintf(stderr, "'%s': cannot open\n", argv[2]); return 1; }
 
-	   cmsSetProfileVersion(hProfile, Version);
-	   cmsSaveProfileToFile(hProfile, "$$tmp.icc");
-	   cmsCloseProfile(hProfile);
+	   cmsSetProfileVersion(ContextID, hProfile, Version);
+	   cmsSaveProfileToFile(ContextID, hProfile, "$$tmp.icc");
+	   cmsCloseProfile(ContextID, hProfile);
 
 	   remove(argv[2]);
 	   rename("$$tmp.icc", argv[2]);
+
+	   cmsDeleteContext(ContextID);
+
 	   return 0;
-
-
 }

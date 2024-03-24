@@ -41,8 +41,9 @@ final class TJBench {
 
   private static boolean stopOnWarning, bottomUp, fastUpsample, fastDCT,
     optimize, progressive, limitScans, arithmetic, lossless;
-  private static int precision = 8, quiet = 0, pf = TJ.PF_BGR, yuvAlign = 1,
-    restartIntervalBlocks, restartIntervalRows = 0;
+  private static int maxMemory = 0, maxPixels = 0, precision = 8, quiet = 0,
+    pf = TJ.PF_BGR, yuvAlign = 1, restartIntervalBlocks,
+    restartIntervalRows = 0;
   private static boolean compOnly, decompOnly, doTile, doYUV, write = true,
     bmp = false;
 
@@ -52,11 +53,11 @@ final class TJBench {
   };
 
   static final String[] SUBNAME_LONG = {
-    "4:4:4", "4:2:2", "4:2:0", "GRAY", "4:4:0", "4:1:1"
+    "4:4:4", "4:2:2", "4:2:0", "GRAY", "4:4:0", "4:1:1", "4:4:1"
   };
 
   static final String[] SUBNAME = {
-    "444", "422", "420", "GRAY", "440", "411"
+    "444", "422", "420", "GRAY", "440", "411", "441"
   };
 
   static final String[] CSNAME = {
@@ -183,6 +184,8 @@ final class TJBench {
     tjd.set(TJ.PARAM_FASTUPSAMPLE, fastUpsample ? 1 : 0);
     tjd.set(TJ.PARAM_FASTDCT, fastDCT ? 1 : 0);
     tjd.set(TJ.PARAM_SCANLIMIT, limitScans ? 500 : 0);
+    tjd.set(TJ.PARAM_MAXMEMORY, maxMemory);
+    tjd.set(TJ.PARAM_MAXPIXELS, maxPixels);
 
     if (isCropped(cr)) {
       try {
@@ -364,6 +367,7 @@ final class TJBench {
       tjc.set(TJ.PARAM_QUALITY, jpegQual);
     tjc.set(TJ.PARAM_RESTARTBLOCKS, restartIntervalBlocks);
     tjc.set(TJ.PARAM_RESTARTROWS, restartIntervalRows);
+    tjc.set(TJ.PARAM_MAXMEMORY, maxMemory);
 
     for (tilew = doTile ? 8 : w, tileh = doTile ? 8 : h; ;
          tilew *= 2, tileh *= 2) {
@@ -530,7 +534,7 @@ final class TJBench {
     // Original image
     int w = 0, h = 0, ntilesw = 1, ntilesh = 1, subsamp = -1, cs = -1;
     // Transformed image
-    int tw, th, ttilew, ttileh, tntilesw, tntilesh, tsubsamp;
+    int minTile = 16, tw, th, ttilew, ttileh, tntilesw, tntilesh, tsubsamp;
 
     FileInputStream fis = new FileInputStream(fileName);
     if (fis.getChannel().size() > (long)Integer.MAX_VALUE)
@@ -550,6 +554,8 @@ final class TJBench {
     tjt.set(TJ.PARAM_FASTUPSAMPLE, fastUpsample ? 1 : 0);
     tjt.set(TJ.PARAM_FASTDCT, fastDCT ? 1 : 0);
     tjt.set(TJ.PARAM_SCANLIMIT, limitScans ? 500 : 0);
+    tjt.set(TJ.PARAM_MAXMEMORY, maxMemory);
+    tjt.set(TJ.PARAM_MAXPIXELS, maxPixels);
 
     try {
       tjt.setSourceImage(srcBuf, srcSize);
@@ -593,7 +599,12 @@ final class TJBench {
                         precision, formatName(subsamp, cs), PIXFORMATSTR[pf],
                         bottomUp ? "Bottom-up" : "Top-down");
 
-    for (int tilew = doTile ? 16 : w, tileh = doTile ? 16 : h; ;
+    if (doTile) {
+      if (subsamp == TJ.SAMP_UNKNOWN)
+        throw new Exception("Could not determine subsampling level of JPEG image");
+      minTile = Math.max(TJ.getMCUWidth(subsamp), TJ.getMCUHeight(subsamp));
+    }
+    for (int tilew = doTile ? minTile : w, tileh = doTile ? minTile : h; ;
          tilew *= 2, tileh *= 2) {
       if (tilew > w)
         tilew = w;
@@ -655,6 +666,10 @@ final class TJBench {
             tsubsamp = TJ.SAMP_440;
           else if (tsubsamp == TJ.SAMP_440)
             tsubsamp = TJ.SAMP_422;
+          else if (tsubsamp == TJ.SAMP_411)
+            tsubsamp = TJ.SAMP_441;
+          else if (tsubsamp == TJ.SAMP_441)
+            tsubsamp = TJ.SAMP_411;
         }
 
         TJTransform[] t = new TJTransform[tntilesw * tntilesh];
@@ -766,6 +781,11 @@ final class TJBench {
     System.out.println("-componly = Stop after running compression tests.  Do not test decompression.");
     System.out.println("-lossless = Generate lossless JPEG images when compressing (implies");
     System.out.println("     -subsamp 444).  PSV is the predictor selection value (1-7).");
+    System.out.println("-maxmemory = Memory limit (in megabytes) for intermediate buffers used with");
+    System.out.println("     progressive JPEG compression and decompression, optimized baseline entropy");
+    System.out.println("     coding, lossless JPEG compression, and lossless transformation");
+    System.out.println("     [default = no limit]");
+    System.out.println("-maxpixels = Input image size limit (in pixels) [default = no limit]");
     System.out.println("-nowrite = Do not write reference or output images (improves consistency of");
     System.out.println("     benchmark results)");
     System.out.println("-rgb, -bgr, -rgbx, -bgrx, -xbgr, -xrgb =");
@@ -826,7 +846,7 @@ final class TJBench {
     }
     System.out.println(")");
     System.out.println("-subsamp S = When compressing, use the specified level of chrominance");
-    System.out.println("     subsampling (S = 444, 422, 440, 420, 411, or GRAY) [default = test");
+    System.out.println("     subsampling (S = 444, 422, 440, 420, 411, 441, or GRAY) [default = test");
     System.out.println("     Grayscale, 4:2:0, 4:2:2, and 4:4:4 in sequence]");
     System.out.println("-hflip, -vflip, -transpose, -transverse, -rot90, -rot180, -rot270 =");
     System.out.println("     Perform the specified lossless transform operation on the input image");
@@ -1055,6 +1075,8 @@ final class TJBench {
               subsamp = TJ.SAMP_420;
             else if (argv[i].equals("411"))
               subsamp = TJ.SAMP_411;
+            else if (argv[i].equals("441"))
+              subsamp = TJ.SAMP_441;
             else
               usage();
           } else if (argv[i].equalsIgnoreCase("-componly"))
@@ -1063,7 +1085,27 @@ final class TJBench {
             write = false;
           else if (argv[i].equalsIgnoreCase("-limitscans"))
             limitScans = true;
-          else if (argv[i].equalsIgnoreCase("-restart") &&
+          else if (argv[i].equalsIgnoreCase("-maxmemory") &&
+                   i < argv.length - 1) {
+            int temp = -1;
+
+            try {
+              temp = Integer.parseInt(argv[++i]);
+            } catch (NumberFormatException e) {}
+            if (temp < 0)
+              usage();
+            maxMemory = temp;
+          } else if (argv[i].equalsIgnoreCase("-maxpixels") &&
+                     i < argv.length - 1) {
+            int temp = -1;
+
+            try {
+              temp = Integer.parseInt(argv[++i]);
+            } catch (NumberFormatException e) {}
+            if (temp < 0)
+              usage();
+            maxPixels = temp;
+          } else if (argv[i].equalsIgnoreCase("-restart") &&
                    i < argv.length - 1) {
             int temp = -1;
             String arg = argv[++i];
@@ -1119,6 +1161,7 @@ final class TJBench {
         tjc = new TJCompressor();
         tjc.set(TJ.PARAM_STOPONWARNING, stopOnWarning ? 1 : 0);
         tjc.set(TJ.PARAM_BOTTOMUP, bottomUp ? 1 : 0);
+        tjc.set(TJ.PARAM_MAXPIXELS, maxPixels);
 
         pixelFormat[0] = pf;
         srcBuf = tjc.loadImage(precision, argv[0], width, 1, height,

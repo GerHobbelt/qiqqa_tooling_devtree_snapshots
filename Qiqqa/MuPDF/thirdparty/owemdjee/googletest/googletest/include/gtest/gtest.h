@@ -60,7 +60,7 @@
 #include <string>
 #include <type_traits>
 #include <vector>
-
+#include <type_traits>
 #include "gtest/gtest-assertion-result.h"
 #include "gtest/gtest-death-test.h"
 #include "gtest/gtest-matchers.h"
@@ -71,6 +71,7 @@
 #include "gtest/gtest-typed-test.h"
 #include "gtest/gtest_pred_impl.h"
 #include "gtest/gtest_prod.h"
+#include "gtest/gtest-exit-handlers.h"
 #include "gtest/internal/gtest-internal.h"
 #include "gtest/internal/gtest-string.h"
 
@@ -297,7 +298,13 @@ class GTEST_API_ Test {
   // SetUp/TearDown method of Environment objects registered with Google
   // Test) will be output as attributes of the <testsuites> element.
   static void RecordProperty(const std::string& key, const std::string& value);
-  static void RecordProperty(const std::string& key, int64_t value);
+  // We do not define a custom serialization except for values that can be
+  // converted to int64_t, but other values could be logged in this way.
+  template <typename T, std::enable_if_t<std::is_convertible<T, int64_t>::value,
+                                         bool> = true>
+  static void RecordProperty(const std::string& key, const T& value) {
+    RecordProperty(key, (Message() << value).GetString());
+  }
 
  protected:
   // Creates a Test object.
@@ -545,14 +552,14 @@ class GTEST_API_ TestInfo {
   // Returns the name of the parameter type, or NULL if this is not a typed
   // or a type-parameterized test.
   const char* type_param() const {
-    if (type_param_.get() != nullptr) return type_param_->c_str();
+    if (type_param_ != nullptr) return type_param_->c_str();
     return nullptr;
   }
 
   // Returns the text representation of the value parameter, or NULL if this
   // is not a value-parameterized test.
   const char* value_param() const {
-    if (value_param_.get() != nullptr) return value_param_->c_str();
+    if (value_param_ != nullptr) return value_param_->c_str();
     return nullptr;
   }
 
@@ -691,7 +698,7 @@ class GTEST_API_ TestSuite {
   // Returns the name of the parameter type, or NULL if this is not a
   // type-parameterized test suite.
   const char* type_param() const {
-    if (type_param_.get() != nullptr) return type_param_->c_str();
+    if (type_param_ != nullptr) return type_param_->c_str();
     return nullptr;
   }
 
@@ -888,7 +895,7 @@ class GTEST_API_ TestSuite {
 class Environment {
  public:
   // The d'tor is virtual as we need to subclass Environment.
-  virtual ~Environment() {}
+  virtual ~Environment() = default;
 
   // Override this to define how to set up the environment.
   virtual void SetUp() {}
@@ -919,7 +926,7 @@ class GTEST_API_ AssertionException
 // the order the corresponding events are fired.
 class TestEventListener {
  public:
-  virtual ~TestEventListener() {}
+  virtual ~TestEventListener() = default;
 
   // Fired before any test activity starts.
   virtual void OnTestProgramStart(const UnitTest& unit_test) = 0;
@@ -1077,10 +1084,12 @@ class GTEST_API_ TestEventListeners {
   // nothing if the previous and the current listener objects are the same.
   void SetDefaultXmlGenerator(TestEventListener* listener);
 
-  // Controls whether events will be forwarded by the repeater to the
+  // Checks whether events will be forwarded by the repeater to the
   // listeners in the list.
   bool EventForwardingEnabled() const;
-  void SuppressEventForwarding();
+  // Controls whether events will be forwarded by the repeater to the
+  // listeners in the list.
+  void SuppressEventForwarding(bool);
 
   // The actual list of listeners.
   internal::TestEventRepeater* repeater_;
@@ -1345,6 +1354,17 @@ GTEST_API_ void InitGoogleTest(int* argc, const wchar_t** argv);
 // there is no argc/argv.
 GTEST_API_ void InitGoogleTest();
 
+// Prints a string containing code-encoded text.  The following escape
+// sequences can be used in the string to control the text color:
+//
+//   @@    prints a single '@' character.
+//   @R    changes the color to red.
+//   @G    changes the color to green.
+//   @Y    changes the color to yellow.
+//   @D    changes to the default terminal text color.
+//
+GTEST_API_ void PrintColorEncoded(const char* str);
+
 namespace internal {
 
 // g_help_flag is true if and only if the --help flag or an equivalent form
@@ -1370,12 +1390,36 @@ struct faketype {};
 inline bool operator==(faketype, faketype) { return true; }
 inline bool operator!=(faketype, faketype) { return false; }
 
+// Check for == operator
+  template<typename Tf, typename Uf, typename = void>
+  struct has_equality_operator : std::false_type {};
+
+  template<typename Tf, typename Uf>
+  struct has_equality_operator<Tf, Uf, std::void_t<decltype(std::declval<Tf>() == std::declval<Uf>())>> : std::true_type {};
+
+  template <typename Tf, typename Uf>
+  bool safe_equals(const Tf& a, const Uf& b) {
+      if constexpr (has_equality_operator<Tf, Uf>::value) {
+#if defined(_MSC_VER)
+#pragma warning(push)
+#pragma warning(disable: 5056) // warning C5056: operator '==': deprecated for array types
+#endif
+          return a == b;
+#if defined(_MSC_VER)
+#pragma warning(pop)
+#endif
+      } else {
+          std::cout << "Equality comparison not valid between types." << std::endl;
+          return false;
+      }
+  }
+
 // The helper function for {ASSERT|EXPECT}_EQ.
 template <typename T1, typename T2>
 AssertionResult CmpHelperEQ(const char* lhs_expression,
                             const char* rhs_expression, const T1& lhs,
                             const T2& rhs) {
-  if (lhs == rhs) {
+  if (safe_equals(lhs, rhs)) {
     return AssertionSuccess();
   }
 
@@ -1677,7 +1721,7 @@ template <typename T>
 class WithParamInterface {
  public:
   typedef T ParamType;
-  virtual ~WithParamInterface() {}
+  virtual ~WithParamInterface() = default;
 
   // The current parameter value. Is also available in the test fixture's
   // constructor.
@@ -1753,9 +1797,6 @@ class TestWithParam : public Test, public WithParamInterface<T> {};
 
 // Define this macro to 1 to omit the definition of FAIL(), which is a
 // generic name and clashes with some other libraries.
-#ifndef GTEST_DONT_DEFINE_FAIL
-# define GTEST_DONT_DEFINE_FAIL 0
-#endif
 #if !GTEST_DONT_DEFINE_FAIL
 #define FAIL() GTEST_FAIL()
 #endif
@@ -1765,9 +1806,6 @@ class TestWithParam : public Test, public WithParamInterface<T> {};
 
 // Define this macro to 1 to omit the definition of SUCCEED(), which
 // is a generic name and clashes with some other libraries.
-#ifndef GTEST_DONT_DEFINE_SUCCEED
-# define GTEST_DONT_DEFINE_SUCCEED 0
-#endif
 #if !GTEST_DONT_DEFINE_SUCCEED
 #define SUCCEED() GTEST_SUCCEED()
 #endif
@@ -1916,45 +1954,27 @@ class TestWithParam : public Test, public WithParamInterface<T> {};
 // Define macro GTEST_DONT_DEFINE_ASSERT_XY to 1 to omit the definition of
 // ASSERT_XY(), which clashes with some users' own code.
 
-#ifndef GTEST_DONT_DEFINE_ASSERT_EQ
-# define GTEST_DONT_DEFINE_ASSERT_EQ 0
-#endif
-#if !GTEST_DONT_DEFINE_ASSERT_EQ
+#if !GTEST_DONT_DEFINE_ASSERT_EQ && !defined(ASSERT_EQ)
 #define ASSERT_EQ(val1, val2) GTEST_ASSERT_EQ(val1, val2)
 #endif
 
-#ifndef GTEST_DONT_DEFINE_ASSERT_NE
-# define GTEST_DONT_DEFINE_ASSERT_NE 0
-#endif
-#if !GTEST_DONT_DEFINE_ASSERT_NE
+#if !GTEST_DONT_DEFINE_ASSERT_NE && !defined(ASSERT_NE)
 #define ASSERT_NE(val1, val2) GTEST_ASSERT_NE(val1, val2)
 #endif
 
-#ifndef GTEST_DONT_DEFINE_ASSERT_LE
-# define GTEST_DONT_DEFINE_ASSERT_LE 0
-#endif
-#if !GTEST_DONT_DEFINE_ASSERT_LE
+#if !GTEST_DONT_DEFINE_ASSERT_LE && !defined(ASSERT_LE)
 #define ASSERT_LE(val1, val2) GTEST_ASSERT_LE(val1, val2)
 #endif
 
-#ifndef GTEST_DONT_DEFINE_ASSERT_LT
-# define GTEST_DONT_DEFINE_ASSERT_LT 0
-#endif
-#if !GTEST_DONT_DEFINE_ASSERT_LT
+#if !GTEST_DONT_DEFINE_ASSERT_LT && !defined(ASSERT_LT)
 #define ASSERT_LT(val1, val2) GTEST_ASSERT_LT(val1, val2)
 #endif
 
-#ifndef GTEST_DONT_DEFINE_ASSERT_GE
-# define GTEST_DONT_DEFINE_ASSERT_GE 0
-#endif
-#if !GTEST_DONT_DEFINE_ASSERT_GE
+#if !GTEST_DONT_DEFINE_ASSERT_GE && !defined(ASSERT_GE)
 #define ASSERT_GE(val1, val2) GTEST_ASSERT_GE(val1, val2)
 #endif
 
-#ifndef GTEST_DONT_DEFINE_ASSERT_GT
-# define GTEST_DONT_DEFINE_ASSERT_GT 0
-#endif
-#if !GTEST_DONT_DEFINE_ASSERT_GT
+#if !GTEST_DONT_DEFINE_ASSERT_GT && !defined(ASSERT_GT)
 #define ASSERT_GT(val1, val2) GTEST_ASSERT_GT(val1, val2)
 #endif
 
@@ -2212,9 +2232,6 @@ constexpr bool StaticAssertTypeEq() noexcept {
 
 // Define this macro to 1 to omit the definition of TEST(), which
 // is a generic name and clashes with some other libraries.
-#ifndef GTEST_DONT_DEFINE_TEST
-# define GTEST_DONT_DEFINE_TEST 0
-#endif
 #if !GTEST_DONT_DEFINE_TEST
 #define TEST(test_suite_name, test_name) GTEST_TEST(test_suite_name, test_name)
 #endif

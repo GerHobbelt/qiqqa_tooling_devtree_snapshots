@@ -126,7 +126,7 @@ L_REGPARAMS  *rp;
     lept_stderr("Omitting libtiff tests in ioformats_reg\n");
 #endif  /* !HAVE_LIBTIFF */
 
-#if  !HAVE_LIBPNG || !HAVE_LIBZ
+#if  !HAVE_LIBPNG
     lept_stderr("Omitting libpng tests in ioformats_reg\n");
 #endif  /* !HAVE_LIBPNG || !HAVE_LIBZ */
 
@@ -225,7 +225,7 @@ L_REGPARAMS  *rp;
     pix4 = pixConvert1To4(NULL, pix1, 15, 0);
     pix16 = pixRead(FILE_16BPP);
     lept_stderr("Input format: %d\n", pixGetInputFormat(pix16));
-    pix8 = pixConvert16To8(pix16, 1);
+    pix8 = pixConvert16To8(pix16, L_LS_BYTE);
     pix32 = pixRead(FILE_32BPP);
     pixaAddPix(pixa, pix1, L_INSERT);
     pixaAddPix(pixa, pix2, L_INSERT);

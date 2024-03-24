@@ -50,6 +50,14 @@
 #endif
 
 #ifdef USE_WIN32_LDAP           /* Use Windows LDAP implementation. */
+# ifdef _MSC_VER
+#  pragma warning(push)
+#  pragma warning(disable: 4201)
+# endif
+# include <subauth.h>  /* for [P]UNICODE_STRING */
+# ifdef _MSC_VER
+#  pragma warning(pop)
+# endif
 # include <winldap.h>
 # ifndef LDAP_VENDOR_NAME
 #  error Your Platform SDK is NOT sufficient for LDAP support! \
@@ -130,7 +138,7 @@ static void _ldap_free_urldesc(LDAPURLDesc *ludp);
                             _ldap_trace x; \
                           } while(0)
 
-  static void _ldap_trace(const char *fmt, ...);
+  static void _ldap_trace(const char *fmt, ...) CURL_PRINTF(1, 2);
 #else
   #define LDAP_TRACE(x)   Curl_nop_stmt
 #endif
@@ -170,7 +178,7 @@ const struct Curl_handler Curl_handler_ldap = {
   ZERO_NULL,                            /* domore_getsock */
   ZERO_NULL,                            /* perform_getsock */
   ZERO_NULL,                            /* disconnect */
-  ZERO_NULL,                            /* readwrite */
+  ZERO_NULL,                            /* write_resp */
   ZERO_NULL,                            /* connection_check */
   ZERO_NULL,                            /* attach connection */
   PORT_LDAP,                            /* defport */
@@ -198,7 +206,7 @@ const struct Curl_handler Curl_handler_ldaps = {
   ZERO_NULL,                            /* domore_getsock */
   ZERO_NULL,                            /* perform_getsock */
   ZERO_NULL,                            /* disconnect */
-  ZERO_NULL,                            /* readwrite */
+  ZERO_NULL,                            /* write_resp */
   ZERO_NULL,                            /* connection_check */
   ZERO_NULL,                            /* attach connection */
   PORT_LDAPS,                           /* defport */
@@ -232,7 +240,7 @@ static int ldap_win_bind_auth(LDAP *server, const char *user,
   }
   else
 #endif
-#if !defined(CURL_DISABLE_CRYPTO_AUTH)
+#if !defined(CURL_DISABLE_DIGEST_AUTH)
   if(authflags & CURLAUTH_DIGEST) {
     method = LDAP_AUTH_DIGEST;
   }
@@ -306,7 +314,6 @@ static CURLcode ldap_do(struct Curl_easy *data, bool *done)
   int ldap_ssl = 0;
   char *val_b64 = NULL;
   size_t val_b64_sz = 0;
-  curl_off_t dlsize = 0;
 #ifdef LDAP_OPT_NETWORK_TIMEOUT
   struct timeval ldap_timeout = {10, 0}; /* 10 sec connection/search timeout */
 #endif
@@ -320,7 +327,7 @@ static CURLcode ldap_do(struct Curl_easy *data, bool *done)
 
   *done = TRUE; /* unconditionally */
   infof(data, "LDAP local: LDAP Vendor = %s ; LDAP Version = %d",
-          LDAP_VENDOR_NAME, LDAP_VENDOR_VERSION);
+        LDAP_VENDOR_NAME, LDAP_VENDOR_VERSION);
   infof(data, "LDAP local: %s", data->state.url);
 
 #ifdef HAVE_LDAP_URL_PARSE
@@ -338,7 +345,7 @@ static CURLcode ldap_do(struct Curl_easy *data, bool *done)
   if(conn->given->flags & PROTOPT_SSL)
     ldap_ssl = 1;
   infof(data, "LDAP local: trying to establish %s connection",
-          ldap_ssl ? "encrypted" : "cleartext");
+        ldap_ssl ? "encrypted" : "cleartext");
 
 #if defined(USE_WIN32_LDAP)
   host = curlx_convert_UTF8_to_tchar(conn->host.name);
@@ -532,6 +539,7 @@ static CURLcode ldap_do(struct Curl_easy *data, bool *done)
     goto quit;
   }
 
+  Curl_pgrsSetDownloadCounter(data, 0);
   rc = ldap_search_s(server, ludp->lud_dn, ludp->lud_scope,
                      ludp->lud_filter, ludp->lud_attrs, 0, &ldapmsg);
 
@@ -592,8 +600,6 @@ static CURLcode ldap_do(struct Curl_easy *data, bool *done)
 
         goto quit;
       }
-
-      dlsize += name_len + 5;
 
       FREE_ON_WINLDAP(name);
       ldap_memfree(dn);
@@ -656,8 +662,6 @@ static CURLcode ldap_do(struct Curl_easy *data, bool *done)
             goto quit;
           }
 
-          dlsize += attr_len + 3;
-
           if((attr_len > 7) &&
              (strcmp(";binary", attr + (attr_len - 7)) == 0)) {
             /* Binary attribute, encode to base64. */
@@ -686,8 +690,6 @@ static CURLcode ldap_do(struct Curl_easy *data, bool *done)
 
                 goto quit;
               }
-
-              dlsize += val_b64_sz;
             }
           }
           else {
@@ -702,8 +704,6 @@ static CURLcode ldap_do(struct Curl_easy *data, bool *done)
 
               goto quit;
             }
-
-            dlsize += vals[i]->bv_len;
           }
 
           result = Curl_client_write(data, CLIENTWRITE_BODY, (char *)"\n", 1);
@@ -716,8 +716,6 @@ static CURLcode ldap_do(struct Curl_easy *data, bool *done)
 
             goto quit;
           }
-
-          dlsize++;
         }
 
         /* Free memory used to store values */
@@ -731,8 +729,6 @@ static CURLcode ldap_do(struct Curl_easy *data, bool *done)
       result = Curl_client_write(data, CLIENTWRITE_BODY, (char *)"\n", 1);
       if(result)
         goto quit;
-      dlsize++;
-      Curl_pgrsSetDownloadCounter(data, dlsize);
     }
 
     if(ber)
@@ -758,8 +754,8 @@ quit:
   FREE_ON_WINLDAP(host);
 
   /* no data to transfer */
-  Curl_setup_transfer(data, -1, -1, FALSE, -1);
-  connclose(conn, "LDAP connection always disable re-use");
+  Curl_xfer_setup(data, -1, -1, FALSE, -1);
+  connclose(conn, "LDAP connection always disable reuse");
 
   return result;
 }

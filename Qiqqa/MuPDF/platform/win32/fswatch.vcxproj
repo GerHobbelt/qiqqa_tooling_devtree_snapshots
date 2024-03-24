@@ -47,20 +47,20 @@
     <UseDebugLibraries>true</UseDebugLibraries>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <ImportGroup Label="PropertySheets">
+  <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project.props" Label="SolutionWideSettings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props" Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
+    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Import Project="$(SolutionDir)\common-project-Release-Win32.props" Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
+    <Import Project="$(SolutionDir)\common-project-Release-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props" Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
+    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <Import Project="$(SolutionDir)\common-project-Release-Win64.props" Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
+    <Import Project="$(SolutionDir)\common-project-Release-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
   </ImportGroup>
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
@@ -74,7 +74,7 @@
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
-  <ItemDefinitionGroup>
+<ItemDefinitionGroup>
     <ClCompile>
       <Optimization>Custom</Optimization>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -108,12 +108,12 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+</ItemDefinitionGroup>
+<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_FSWATCH;FSWATCH_STATICLIB;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_FSWATCH;FSWATCH_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
@@ -122,14 +122,14 @@
       <TargetMachine>MachineX86</TargetMachine>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <Profile>true</Profile>
       <GenerateMapFile>true</GenerateMapFile>
       <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
       <MapExports>true</MapExports>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -138,8 +138,8 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_FSWATCH;FSWATCH_STATICLIB;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_FSWATCH;FSWATCH_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
@@ -148,28 +148,28 @@
       <TargetMachine>MachineX64</TargetMachine>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <Profile>true</Profile>
       <GenerateMapFile>true</GenerateMapFile>
       <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
       <MapExports>true</MapExports>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_FSWATCH;FSWATCH_STATICLIB;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_FSWATCH;FSWATCH_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
       <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <TargetMachine>MachineX86</TargetMachine>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <Profile>true</Profile>
@@ -178,7 +178,7 @@
       <MapExports>true</MapExports>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -188,14 +188,14 @@
     <ClCompile>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_FSWATCH;FSWATCH_STATICLIB;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_FSWATCH;FSWATCH_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
       <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
       <TargetMachine>MachineX64</TargetMachine>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <Profile>true</Profile>
@@ -204,7 +204,7 @@
       <MapExports>true</MapExports>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
@@ -266,9 +266,11 @@
     <ClInclude Include="../../thirdparty/owemdjee/fswatch/libfswatch/src/libfswatch/c/libfswatch_types.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fswatch/libfswatch/src/libfswatch/gettext.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fswatch/libfswatch/src/libfswatch/gettext_defs.h" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/AUTHORS" />
     <Text Include="../../thirdparty/owemdjee/fswatch/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fswatch/CONTRIBUTING.md" />
     <Text Include="../../thirdparty/owemdjee/fswatch/ChangeLog" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/INSTALL" />
     <Text Include="../../thirdparty/owemdjee/fswatch/LICENSE-2.0.txt" />
     <Text Include="../../thirdparty/owemdjee/fswatch/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/fswatch/NEWS" />
@@ -300,6 +302,9 @@
     <Text Include="../../thirdparty/owemdjee/fswatch/docker/debian9/Dockerfile.in" />
     <Text Include="../../thirdparty/owemdjee/fswatch/fswatch/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/fswatch/fswatch/doc/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/fswatch/doc/fdl.texi" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/fswatch/doc/fswatch.texi" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/fswatch/doc/value.texi" />
     <Text Include="../../thirdparty/owemdjee/fswatch/fswatch/src/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/fswatch/fswatch/src/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/fswatch/libfswatch/CMakeLists.txt" />
@@ -309,11 +314,36 @@
     <Text Include="../../thirdparty/owemdjee/fswatch/libfswatch/libfswatch_config.in" />
     <Text Include="../../thirdparty/owemdjee/fswatch/libfswatch/src/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/fswatch/libfswatch/src/libfswatch.pc.in" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/m4/ax_append_flag.m4" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/m4/ax_cflags_warn_all.m4" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/m4/ax_compare_version.m4" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/m4/ax_compiler_vendor.m4" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/m4/ax_compiler_version.m4" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/m4/ax_cxx_compile_stdcxx.m4" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/m4/ax_cxx_compile_stdcxx_0x.m4" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/m4/ax_cxx_compile_stdcxx_11.m4" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/m4/ax_cxx_compile_stdcxx_14.m4" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/m4/ax_cxx_have_thread.m4" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/m4/ax_cxx_namespaces.m4" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/m4/ax_fsevents_have_file_events.m4" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/m4/ax_git_current_branch.m4" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/m4/ax_prepend_flag.m4" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/m4/ax_prog_date.m4" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/m4/ax_require_defined.m4" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/m4/emc_path_prog.m4" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/m4/fswatch_version.m4" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/m4/libfswatch_version.m4" />
     <Text Include="../../thirdparty/owemdjee/fswatch/man/fswatch.7.in" />
     <Text Include="../../thirdparty/owemdjee/fswatch/po/POTFILES.in" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/po/en.po" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/po/en@boldquot.po" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/po/en@quot.po" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/po/es.po" />
+    <Text Include="../../thirdparty/owemdjee/fswatch/po/it.po" />
     <Text Include="../../thirdparty/owemdjee/fswatch/test/src/CMakeLists.txt" />
   </ItemGroup>
-  <ImportGroup Label="PropertySheets">
+  <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />
   </ImportGroup>
 </Project>
+  

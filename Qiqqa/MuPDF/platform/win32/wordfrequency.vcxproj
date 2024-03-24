@@ -125,6 +125,7 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
   <ItemGroup>
+    <Text Include="../../thirdparty/owemdjee/wordfrequency/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/wordfrequency/README.md" />
     <Text Include="../../thirdparty/owemdjee/wordfrequency/content/2016/af/af_50k.txt" />
     <Text Include="../../thirdparty/owemdjee/wordfrequency/content/2016/af/af_full.txt" />
@@ -418,6 +419,9 @@
     <Text Include="../../thirdparty/owemdjee/wordfrequency/content/2018/zh_tw/zh_tw_full.txt" />
     <Text Include="../../thirdparty/owemdjee/wordfrequency/content/2018/zh_tw/zh_tw_ignored.txt" />
     <Text Include="../../thirdparty/owemdjee/wordfrequency/src/FrequencyListBuilder/App.config" />
+    <Text Include="../../thirdparty/owemdjee/wordfrequency/src/FrequencyListBuilder/InputType.cs" />
+    <Text Include="../../thirdparty/owemdjee/wordfrequency/src/FrequencyListBuilder/Program.cs" />
+    <Text Include="../../thirdparty/owemdjee/wordfrequency/src/FrequencyListBuilder/Properties/AssemblyInfo.cs" />
     <Text Include="../../thirdparty/owemdjee/wordfrequency/src/FrequencyListBuilder/packages.config" />
     <Text Include="../../thirdparty/owemdjee/wordfrequency/src/to-csv-convertor/index.js" />
     <Text Include="../../thirdparty/owemdjee/wordfrequency/src/to-csv-convertor/package.json" />

@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
 collecting data (e.g. minimum matching length). */
 
 
-#ifdef HAVE_CONFIG_H
+#if defined(HAVE_CONFIG_H) && !defined(PCRE2_AMALGAMETE)
 #include "config.h"
 #endif
 
@@ -256,6 +256,7 @@ for (;;)
     /* Skip over things that don't match chars */
 
     case OP_REVERSE:
+    case OP_VREVERSE:
     case OP_CREF:
     case OP_DNCREF:
     case OP_RREF:
@@ -1056,6 +1057,7 @@ do
       case OP_REF:
       case OP_REFI:
       case OP_REVERSE:
+      case OP_VREVERSE:
       case OP_RREF:
       case OP_SCOND:
       case OP_SET_SOM:

@@ -134,3 +134,11 @@ main(void)
 		return EXIT_FAILURE;
 	}
 }
+
+#if defined(BUNDLE_BIBUTILS_TESTS) && defined(BUILD_MONOLITHIC)
+int
+main(void)
+{
+	return doi_test();
+}
+#endif

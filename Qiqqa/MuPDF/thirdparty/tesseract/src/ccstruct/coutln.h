@@ -23,7 +23,7 @@
 #include "mod128.h"     // for DIR128, DIRBITS
 #include "points.h"     // for ICOORD, FCOORD
 #include "rect.h"       // for TBOX
-#include "scrollview.h" // for ScrollView, ScrollView::Color
+#include "scrollview.h" // for ScrollView, Diagnostics::Color
 
 #include <tesseract/export.h> // for TESS_API, DLLSYM
 
@@ -43,7 +43,9 @@ class DENORM;
 #define STEP_MASK 3
 
 enum C_OUTLINE_FLAGS {
-  COUT_INVERSE // White on black blob
+  COUT_INVERSE, // White on black blob
+
+  COUT_COUNT
 };
 
 // Simple struct to hold the 3 values needed to compute a more precise edge
@@ -138,8 +140,7 @@ public:
   // Return step at a given index as a DIR128.
   DIR128 step_dir(int index) const {
     ASSERT_HOST(index >= 0);
-    return DIR128(
-        static_cast<int16_t>(((steps[index / 4] >> (index % 4 * 2)) & STEP_MASK) << (DIRBITS - 2)));
+    return DIR128(static_cast<int16_t>(((steps[index / 4] >> (index % 4 * 2)) & STEP_MASK) << (DIRBITS - 2)));
   }
   // Return the step vector for the given outline position.
   ICOORD step(int index) const { // index of step
@@ -251,8 +252,8 @@ public:
 
 #if !GRAPHICS_DISABLED
   void plot(                           // draw one
-      ScrollView *window,              // window to draw in
-      ScrollView::Color colour) const; // colour to draw it
+      ScrollViewReference &window,              // window to draw in
+      Diagnostics::Color colour) const; // colour to draw it
 #endif
 
   void plot(Image& pix, std::vector<uint32_t>& cmap, int& cmap_offset, bool noise) const; // colour to draw it
@@ -260,7 +261,7 @@ public:
 #if !GRAPHICS_DISABLED
   // Draws the outline in the given colour, normalized using the given denorm,
   // making use of sub-pixel accurate information if available.
-  void plot_normed(const DENORM &denorm, ScrollView::Color colour, ScrollView *window) const;
+  void plot_normed(const DENORM &denorm, Diagnostics::Color colour, ScrollViewReference &window) const;
 #endif // !GRAPHICS_DISABLED
 
   C_OUTLINE &operator=(const C_OUTLINE &source);
@@ -292,7 +293,7 @@ private:
   TBOX box;                // bounding box
   ICOORD start;            // start coord
   int16_t stepcount;       // no of steps
-  std::bitset<16> flags;   // flags about outline
+  std::bitset<COUT_COUNT> flags;   // flags about outline
   std::vector<uint8_t> steps; // step array
   EdgeOffset *offsets;     // Higher precision edge.
   C_OUTLINE_LIST children; // child elements

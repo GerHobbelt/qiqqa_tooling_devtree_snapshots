@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 /* This module contains the function for checking a script run. */
 
-#ifdef HAVE_CONFIG_H
+#if defined(HAVE_CONFIG_H) && !defined(PCRE2_AMALGAMETE)
 #include "config.h"
 #endif
 

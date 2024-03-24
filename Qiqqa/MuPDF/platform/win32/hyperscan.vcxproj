@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_HYPERSCAN;HYPERSCAN_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_HYPERSCAN;HYPERSCAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_HYPERSCAN;HYPERSCAN_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_HYPERSCAN;HYPERSCAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_HYPERSCAN;HYPERSCAN_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_HYPERSCAN;HYPERSCAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_HYPERSCAN;HYPERSCAN_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_HYPERSCAN;HYPERSCAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_HYPERSCAN;HYPERSCAN_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_HYPERSCAN;HYPERSCAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_HYPERSCAN;HYPERSCAN_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_HYPERSCAN;HYPERSCAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_HYPERSCAN;HYPERSCAN_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_HYPERSCAN;HYPERSCAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_HYPERSCAN;HYPERSCAN_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_HYPERSCAN;HYPERSCAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_HYPERSCAN;HYPERSCAN_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_HYPERSCAN;HYPERSCAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_HYPERSCAN;HYPERSCAN_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_HYPERSCAN;HYPERSCAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_HYPERSCAN;HYPERSCAN_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_HYPERSCAN;HYPERSCAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_HYPERSCAN;HYPERSCAN_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_HYPERSCAN;HYPERSCAN_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -720,9 +720,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/hyperscan/src/nfa/vermicelli_sve.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hyperscan/src/nfa/vermicellicompile.h" />
     <ClInclude Include="../../thirdparty/owemdjee/hyperscan/src/nfa/x86/shufti.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/hyperscan/src/nfa/x86/shufti.hpp.BASE.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/hyperscan/src/nfa/x86/shufti.hpp.LOCAL.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/hyperscan/src/nfa/x86/shufti.hpp.REMOTE.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/hyperscan/src/nfa/x86/truffle.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/hyperscan/src/nfa/x86/vermicelli.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/hyperscan/src/nfagraph/ng.h" />
@@ -1015,6 +1012,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/hyperscan/util/string_util.h" />
     <Text Include="../../thirdparty/owemdjee/hyperscan/CHANGELOG.md" />
     <Text Include="../../thirdparty/owemdjee/hyperscan/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/hyperscan/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/hyperscan/README.md" />
     <Text Include="../../thirdparty/owemdjee/hyperscan/benchmarks/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/hyperscan/chimera/CMakeLists.txt" />
@@ -1035,6 +1033,7 @@
     <Text Include="../../thirdparty/owemdjee/hyperscan/cmake/setenv-arm64-cross.sh" />
     <Text Include="../../thirdparty/owemdjee/hyperscan/cmake/sqlite3.cmake" />
     <Text Include="../../thirdparty/owemdjee/hyperscan/doc/dev-reference/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/hyperscan/doc/dev-reference/_static/hyperscan.css" />
     <Text Include="../../thirdparty/owemdjee/hyperscan/doc/dev-reference/api_constants.rst" />
     <Text Include="../../thirdparty/owemdjee/hyperscan/doc/dev-reference/api_files.rst" />
     <Text Include="../../thirdparty/owemdjee/hyperscan/doc/dev-reference/chimera.rst" />
@@ -1052,8 +1051,12 @@
     <Text Include="../../thirdparty/owemdjee/hyperscan/doc/dev-reference/tools.rst" />
     <Text Include="../../thirdparty/owemdjee/hyperscan/examples/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/hyperscan/examples/README.md" />
+    <Text Include="../../thirdparty/owemdjee/hyperscan/hs.def" />
+    <Text Include="../../thirdparty/owemdjee/hyperscan/hs_runtime.def" />
     <Text Include="../../thirdparty/owemdjee/hyperscan/libhs.pc.in" />
     <Text Include="../../thirdparty/owemdjee/hyperscan/src/hs_version.h.in" />
+    <Text Include="../../thirdparty/owemdjee/hyperscan/src/parser/Parser.rl" />
+    <Text Include="../../thirdparty/owemdjee/hyperscan/src/parser/control_verbs.rl" />
     <Text Include="../../thirdparty/owemdjee/hyperscan/tools/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/hyperscan/tools/hsbench/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/hyperscan/tools/hsbench/README.md" />
@@ -1063,6 +1066,7 @@
     <Text Include="../../thirdparty/owemdjee/hyperscan/tools/hsbench/scripts/pcapCorpus.py" />
     <Text Include="../../thirdparty/owemdjee/hyperscan/tools/hscheck/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/hyperscan/tools/hscollider/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/hyperscan/tools/hscollider/ColliderCorporaParser.rl" />
     <Text Include="../../thirdparty/owemdjee/hyperscan/tools/hscollider/test_cases/corpora/accel.txt" />
     <Text Include="../../thirdparty/owemdjee/hyperscan/tools/hscollider/test_cases/corpora/anchors.txt" />
     <Text Include="../../thirdparty/owemdjee/hyperscan/tools/hscollider/test_cases/corpora/approximate_matching.txt" />
@@ -1122,6 +1126,7 @@
     <Text Include="../../thirdparty/owemdjee/hyperscan/unit/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/hyperscan/unit/hyperscan/bad_patterns.txt" />
     <Text Include="../../thirdparty/owemdjee/hyperscan/util/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/hyperscan/util/ExpressionParser.rl" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

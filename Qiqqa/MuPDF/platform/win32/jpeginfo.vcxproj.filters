@@ -12,43 +12,73 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Header Files\sha256">
+    <Filter Include="Header Files\md5">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0001}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\sha256">
+    <Filter Include="Header Files\sha256">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\sha512">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\redhat">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\tools">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\md5">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0009}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\sha256">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0010}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\sha512">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0011}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="../../thirdparty/jpeginfo/getopt.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/jpeginfo/getopt1.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="../../thirdparty/jpeginfo/jpeginfo.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/jpeginfo/md5.c">
+    <ClCompile Include="../../thirdparty/jpeginfo/jpegmarker.c">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/jpeginfo/md5/md5.c">
+      <Filter>Source Files\md5</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/jpeginfo/misc.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/jpeginfo/sha256/blocks.c">
+    <ClCompile Include="../../thirdparty/jpeginfo/sha256/sha256_blocks.c">
       <Filter>Source Files\sha256</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/jpeginfo/sha256/hash.c">
+    <ClCompile Include="../../thirdparty/jpeginfo/sha256/sha256_hash.c">
       <Filter>Source Files\sha256</Filter>
     </ClCompile>
-    <ClInclude Include="../../thirdparty/jpeginfo/getopt.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClCompile Include="../../thirdparty/jpeginfo/sha512/sha512_blocks.c">
+      <Filter>Source Files\sha512</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/jpeginfo/sha512/sha512_hash.c">
+      <Filter>Source Files\sha512</Filter>
+    </ClCompile>
     <ClInclude Include="../../thirdparty/jpeginfo/jpeginfo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/jpeginfo/md5.h">
+    <ClInclude Include="../../thirdparty/jpeginfo/jpegmarker.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/jpeginfo/md5/md5.h">
+      <Filter>Header Files\md5</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/jpeginfo/sha256/crypto_hash_sha256.h">
       <Filter>Header Files\sha256</Filter>
@@ -56,6 +86,30 @@
     <ClInclude Include="../../thirdparty/jpeginfo/sha256/crypto_hashblocks_sha256.h">
       <Filter>Header Files\sha256</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/jpeginfo/sha512/crypto_hash_sha512.h">
+      <Filter>Header Files\sha512</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/jpeginfo/sha512/crypto_hashblocks_sha512.h">
+      <Filter>Header Files\sha512</Filter>
+    </ClInclude>
+    <Image Include="../../thirdparty/jpeginfo/test/jpeginfo_test1.jpg">
+      <Filter>Resource Files\test</Filter>
+    </Image>
+    <Image Include="../../thirdparty/jpeginfo/test/jpeginfo_test2.jpg">
+      <Filter>Resource Files\test</Filter>
+    </Image>
+    <Image Include="../../thirdparty/jpeginfo/test/jpeginfo_test2_broken.jpg">
+      <Filter>Resource Files\test</Filter>
+    </Image>
+    <Image Include="../../thirdparty/jpeginfo/test/jpeginfo_test3.jpg">
+      <Filter>Resource Files\test</Filter>
+    </Image>
+    <Text Include="../../thirdparty/jpeginfo/INSTALL">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/jpeginfo/LICENSE">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/jpeginfo/Makefile.in">
       <Filter>Misc Files</Filter>
     </Text>
@@ -67,6 +121,21 @@
     </Text>
     <Text Include="../../thirdparty/jpeginfo/configure.in">
       <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/jpeginfo/jpeginfo.1">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/jpeginfo/redhat/jpeginfo.spec">
+      <Filter>Misc Files\redhat</Filter>
+    </Text>
+    <Text Include="../../thirdparty/jpeginfo/test/README">
+      <Filter>Misc Files\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/jpeginfo/test/test.py">
+      <Filter>Misc Files\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/jpeginfo/tools/config.guess">
+      <Filter>Misc Files\tools</Filter>
     </Text>
   </ItemGroup>
 </Project>

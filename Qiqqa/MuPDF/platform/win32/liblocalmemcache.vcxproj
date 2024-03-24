@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLOCALMEMCACHE;LOCALMEMCACHE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLOCALMEMCACHE;LOCALMEMCACHE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLOCALMEMCACHE;LOCALMEMCACHE_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLOCALMEMCACHE;LOCALMEMCACHE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLOCALMEMCACHE;LOCALMEMCACHE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLOCALMEMCACHE;LOCALMEMCACHE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLOCALMEMCACHE;LOCALMEMCACHE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLOCALMEMCACHE;LOCALMEMCACHE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLOCALMEMCACHE;LOCALMEMCACHE_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLOCALMEMCACHE;LOCALMEMCACHE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLOCALMEMCACHE;LOCALMEMCACHE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLOCALMEMCACHE;LOCALMEMCACHE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLOCALMEMCACHE;LOCALMEMCACHE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLOCALMEMCACHE;LOCALMEMCACHE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLOCALMEMCACHE;LOCALMEMCACHE_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLOCALMEMCACHE;LOCALMEMCACHE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLOCALMEMCACHE;LOCALMEMCACHE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLOCALMEMCACHE;LOCALMEMCACHE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLOCALMEMCACHE;LOCALMEMCACHE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLOCALMEMCACHE;LOCALMEMCACHE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLOCALMEMCACHE;LOCALMEMCACHE_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLOCALMEMCACHE;LOCALMEMCACHE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLOCALMEMCACHE;LOCALMEMCACHE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBLOCALMEMCACHE;LOCALMEMCACHE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -246,10 +246,56 @@
     <ClInclude Include="../../thirdparty/owemdjee/localmemcache/src/lmc_shm.h" />
     <ClInclude Include="../../thirdparty/owemdjee/localmemcache/src/lmc_valloc.h" />
     <ClInclude Include="../../thirdparty/owemdjee/localmemcache/src/localmemcache.h" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/AUTHORS" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/localmemcache/Makefile.in" />
     <Text Include="../../thirdparty/owemdjee/localmemcache/README" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/aclocal.m4" />
     <Text Include="../../thirdparty/owemdjee/localmemcache/configure.in" />
     <Text Include="../../thirdparty/owemdjee/localmemcache/example/compile.sh" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/localmemcache.gemspec" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache.src/M000001.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache.src/M000002.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache.src/M000003.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache.src/M000004.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache.src/M000005.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache.src/M000006.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache.src/M000007.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache.src/M000008.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache.src/M000009.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache.src/M000010.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache.src/M000011.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache.src/M000012.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache.src/M000013.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache.src/M000014.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache/ArgError.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache/DBVersionNotSupported.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache/InitError.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache/LocalMemCacheError.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache/LockError.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache/LockTimedOut.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache/MemoryPoolClosed.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache/MemoryPoolFull.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache/OutOfMemoryError.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache/RecoveryFailed.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache/SharedObjectStorage.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache/SharedObjectStorage.src/M000015.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache/SharedObjectStorage.src/M000016.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache/SharedObjectStorage.src/M000017.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache/SharedObjectStorage.src/M000018.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache/ShmError.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache/ShmLockFailed.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/classes/LocalMemCache/ShmUnlockFailed.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/files/extconf_rb.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/files/localmemcache_rb.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/files/rblocalmemcache_c.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/fr_class_index.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/fr_file_index.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/fr_method_index.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/index.html" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/doc/rdoc-style.css" />
+    <Text Include="../../thirdparty/owemdjee/localmemcache/site/index.html" />
     <Text Include="../../thirdparty/owemdjee/localmemcache/src/Makefile.in" />
     <Text Include="../../thirdparty/owemdjee/localmemcache/src/lmc_config.h.in" />
     <Text Include="../../thirdparty/owemdjee/localmemcache/src/tests/capi.sh" />

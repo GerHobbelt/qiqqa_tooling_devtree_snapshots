@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCCV_NNC;CCV_NNC_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCCV_NNC;CCV_NNC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCCV_NNC;CCV_NNC_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/ccv-nnc/lib;../../thirdparty/owemdjee/ccv-nnc/test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCCV_NNC;CCV_NNC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCCV_NNC;CCV_NNC_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCCV_NNC;CCV_NNC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/ccv-nnc/lib;../../thirdparty/owemdjee/ccv-nnc/test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCCV_NNC;CCV_NNC_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCCV_NNC;CCV_NNC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCCV_NNC;CCV_NNC_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/ccv-nnc/lib;../../thirdparty/owemdjee/ccv-nnc/test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCCV_NNC;CCV_NNC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCCV_NNC;CCV_NNC_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCCV_NNC;CCV_NNC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/ccv-nnc/lib;../../thirdparty/owemdjee/ccv-nnc/test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCCV_NNC;CCV_NNC_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCCV_NNC;CCV_NNC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCCV_NNC;CCV_NNC_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/ccv-nnc/lib;../../thirdparty/owemdjee/ccv-nnc/test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCCV_NNC;CCV_NNC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCCV_NNC;CCV_NNC_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCCV_NNC;CCV_NNC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/ccv-nnc/lib;../../thirdparty/owemdjee/ccv-nnc/test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCCV_NNC;CCV_NNC_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCCV_NNC;CCV_NNC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCCV_NNC;CCV_NNC_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/ccv-nnc/lib;../../thirdparty/owemdjee/ccv-nnc/test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCCV_NNC;CCV_NNC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCCV_NNC;CCV_NNC_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCCV_NNC;CCV_NNC_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/ccv-nnc/lib;../../thirdparty/owemdjee/ccv-nnc/test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -245,6 +245,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/bin/icfdetect.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/bin/icfoptimize.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/bin/image-net.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/bin/kmeans1d.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/bin/msermatch.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/bin/nnc/cifar-10.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/bin/nnc/coco.c" />
@@ -320,6 +321,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/ccv_nnc_micro_core.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/ccv_nnc_micro_interpret.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/ccv_nnc_micro_simplify.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/ccv_nnc_palettize.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/ccv_nnc_stream.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/ccv_nnc_symbolic_graph.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/ccv_nnc_symbolic_graph_backward.c" />
@@ -327,6 +329,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/ccv_nnc_symbolic_graph_compile.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/ccv_nnc_symbolic_graph_io.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/ccv_nnc_symbolic_graph_memory_compression.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/ccv_nnc_symbolic_graph_memory_reduction.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/ccv_nnc_symbolic_graph_minimize.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/ccv_nnc_symbolic_graph_parallel.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/ccv_nnc_symbolic_graph_simplify.c" />
@@ -337,6 +340,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/ccv_nnc_xpu_alloc.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/adam/ccv_nnc_adam.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/adam/ccv_nnc_adam_cpu_ref.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/adam/ccv_nnc_adamw_cpu_ref.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/blas/ccv_nnc_add_cpu_ref.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/blas/ccv_nnc_blas.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/blas/ccv_nnc_gemm_cpu_opt.c" />
@@ -367,6 +371,8 @@
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/histogram/ccv_nnc_histogram_cpu_ref.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/index/ccv_nnc_index_select.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/index/ccv_nnc_index_select_cpu_ref.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/isnan/ccv_nnc_reduce_isnan.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/isnan/ccv_nnc_reduce_isnan_cpu_ref.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/lamb/ccv_nnc_lamb.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/lamb/ccv_nnc_lamb_cpu_ref.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/leaky_relu/ccv_nnc_leaky_relu.c" />
@@ -392,9 +398,11 @@
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/rand/ccv_nnc_rand_normal_cpu_ref.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/rand/ccv_nnc_rand_uniform_cpu_ref.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/reduce/ccv_nnc_argmax_cpu_ref.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/reduce/ccv_nnc_argmin_cpu_ref.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/reduce/ccv_nnc_reduce.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/reduce/ccv_nnc_reduce_max_cpu_ref.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/reduce/ccv_nnc_reduce_mean_cpu_ref.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/reduce/ccv_nnc_reduce_min_cpu_ref.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/reduce/ccv_nnc_reduce_norm2_cpu_ref.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/reduce/ccv_nnc_reduce_sum_cpu_ref.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/relu/ccv_nnc_relu.c" />
@@ -405,6 +413,8 @@
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/rnn/ccv_nnc_lstm_cpu_ref.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/roi/ccv_nnc_roi_align.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/roi/ccv_nnc_roi_align_cpu_ref.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/scaled_dot_product_attention/ccv_nnc_scaled_dot_product_attention.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/scaled_dot_product_attention/ccv_nnc_scaled_dot_product_attention_cpu_ref.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/sgd/ccv_nnc_sgd.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/sgd/ccv_nnc_sgd_cpu_ref.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/sigmoid/ccv_nnc_sigmoid.c" />
@@ -424,6 +434,14 @@
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/util/ccv_nnc_util.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/util/ccv_nnc_util_cpu_ref.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/co.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/mfa/Metal.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/mfa/ccv_nnc_mfa.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/mfa/ccv_nnc_mfa_adam.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/mfa/ccv_nnc_mfa_attention.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/mfa/ccv_nnc_mfa_depalettize.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/mfa/ccv_nnc_mfa_error.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/mfa/ccv_nnc_mfa_gemm.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/mfa/ccv_nnc_mfa_normalization.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/serve/async.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/serve/bbf.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/serve/convnet.c" />
@@ -464,6 +482,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/test/int/nnc/mpsdnn.tests.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/test/int/nnc/nccl.tests.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/test/int/nnc/nms.tests.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/test/int/nnc/palettize.tests.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/test/int/nnc/parallel.tests.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/test/int/nnc/random.tests.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/test/int/nnc/reduce.tests.c" />
@@ -474,6 +493,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/test/int/nnc/smooth_l1.tests.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/test/int/nnc/swish.tests.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/test/int/nnc/symbolic.graph.vgg.d.tests.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/test/int/nnc/tensor.tests.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/test/int/nnc/transform.tests.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/test/int/nnc/upsample.tests.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/test/regression/defects.l0.1.tests.c" />
@@ -484,6 +504,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/image_processing.tests.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/io.tests.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/memory.tests.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/nnc/attention.tests.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/nnc/autograd.tests.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/nnc/autograd.vector.tests.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/nnc/backward.tests.c" />
@@ -517,6 +538,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/nnc/minimize.tests.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/nnc/nms.tests.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/nnc/numa.tests.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/nnc/palettize.tests.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/nnc/parallel.tests.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/nnc/rand.tests.c" />
     <ClCompile Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/nnc/reduce.tests.c" />
@@ -577,6 +599,16 @@
     <ClInclude Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/convolution/_ccv_nnc_conv_cpu_opt.h" />
     <ClInclude Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/co.h" />
     <ClInclude Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/gpu/ccv_nnc_compat.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/mfa/ccv_nnc_mfa.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/mfa/ccv_nnc_mfa_adam.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/mfa/ccv_nnc_mfa_attention.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/mfa/ccv_nnc_mfa_defines.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/mfa/ccv_nnc_mfa_depalettize.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/mfa/ccv_nnc_mfa_error.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/mfa/ccv_nnc_mfa_gemm.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/mfa/ccv_nnc_mfa_hash.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/mfa/ccv_nnc_mfa_normalization.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/mfa/libmfa.inc" />
     <ClInclude Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/mps/ccv_nnc_mps.h" />
     <ClInclude Include="../../thirdparty/owemdjee/ccv-nnc/serve/async.h" />
     <ClInclude Include="../../thirdparty/owemdjee/ccv-nnc/serve/ebb.h" />
@@ -624,7 +656,15 @@
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/README.rst" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/WORKLOG.rst" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/bazel/setup_clang.sh" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/bin/cuda/makefile" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/bin/makefile" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/bin/nnc/cudnn/makefile" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/bin/nnc/makefile" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/bin/nnc/opt/makefile" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/config/BUILD.bazel" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/config/build_defs.bzl.tpl" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/config/ccv.bzl" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/config/ccv_setting.BUILD.tpl" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/doc/bbf.rst" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/doc/cache.rst" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/doc/convnet.rst" />
@@ -642,13 +682,25 @@
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/doc/sift.rst" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/doc/swt.rst" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/doc/tld.rst" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/js/a.css" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/js/ccv.js" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/js/face.js" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/js/index.html" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/lib/BUILD.bazel" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/lib/config.mk.in" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/lib/configure.ac" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/lib/makefile" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/config.mk" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/cmd/makefile" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/gpu/makefile" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/makefile" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/mfa/makefile" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/mfa/packager.py" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/lib/nnc/mps/makefile" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/lib/scheme.mk" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/samples/download-vgg-d-32bit.sh" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/samples/download-vgg-d-model.sh" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/samples/face.sqlite3" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/samples/face/cascade.txt" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/samples/face/stage-0.txt" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/samples/face/stage-1.txt" />
@@ -666,23 +718,149 @@
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/samples/face/stage-7.txt" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/samples/face/stage-8.txt" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/samples/face/stage-9.txt" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/samples/image-net-2012.words" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/samples/pedestrian.icf" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/serve/ebb_request_parser.rl" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/serve/makefile" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/doc/doc-bbf/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/doc/doc-cache/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/doc/doc-convnet/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/doc/doc-dpm/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/doc/doc-http/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/doc/doc-icf/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/doc/doc-sift/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/doc/doc-swt/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/doc/doc-tld/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/doc/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/lib/ccv-algebra/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/lib/ccv-basic/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/lib/ccv-bbf/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/lib/ccv-cache/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/lib/ccv-classic/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/lib/ccv-convnet/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/lib/ccv-daisy/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/lib/ccv-dpm/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/lib/ccv-icf/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/lib/ccv-io/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/lib/ccv-memory/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/lib/ccv-numeric/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/lib/ccv-resample/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/lib/ccv-serve/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/lib/ccv-sift/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/lib/ccv-swt/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/lib/ccv-tld/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/lib/ccv-transform/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/lib/ccv-util/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/0.6/lib/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_config.yml" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_doxygen.sh" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_layouts/default.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_layouts/page.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_layouts/post.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-ccv-algebra.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-ccv-basic.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-ccv-bbf.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-ccv-cache.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-ccv-classic.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-ccv-convnet.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-ccv-daisy.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-ccv-dpm.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-ccv-icf.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-ccv-image-processing.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-ccv-io.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-ccv-memory.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-ccv-numeric.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-ccv-resample.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-ccv-scd.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-ccv-serve.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-ccv-sift.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-ccv-swt.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-ccv-tld.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-ccv-transform.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-ccv-util.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-doc-bbf.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-doc-cache.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-doc-convnet.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-doc-dpm.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-doc-http.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-doc-icf.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-doc-scd.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-doc-sift.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-doc-swt.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/0000-01-01-doc-tld.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/2010-02-06-call-for-a-new-lightweight-c-based-computer-vision-library.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/2011-05-03-application-driven-philosophy.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/2012-06-18-an-elephant-in-the-room.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/2012-06-29-introducing-ccv-milestone.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/2012-10-02-ccv-0.2-is-almost-there.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/2012-10-04-ccv-cut-the-0.2-stable-and-whats-new.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/2012-11-10-ccv-now-has-a-state-of-art-tracking-algorithm.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/2012-11-30-ccv-talks-http.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/2013-09-02-ccv-0.5-with-a-new-pedestrian-detector.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/2014-03-27-ccv-0.6-open-sources-near-state-of-the-art-image-classifier-under-creative-commons.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/2014-04-25-closing-the-gap-between-open-source-and-proprietary.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/2014-08-07-how-to-run-a-state-of-the-art-image-classifier-on-a-iphone.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_posts/2014-12-23-with-a-sub-10-image-classifier-a-decent-face-detector-here-comes-ccv-0.7.markdown" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/_source/makefile" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/doc/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/index.html" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/javascripts/scale.fix.js" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/lib/index.html" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/makefile" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/stylesheets/coderay.css" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/stylesheets/styles.css" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/site/tutorial/index.markdown" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/BUILD.bazel" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/all.mk" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/int/nnc/BUILD.bazel" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/int/nnc/graph-gen.sh" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/int/nnc/known-leaks.txt" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/int/nnc/makefile" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/known-leaks.txt" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/makefile" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/regression/known-leaks.txt" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/regression/makefile" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/BUILD.bazel" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/data/blackbox.canny.bin" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/data/chessbox.decimal.slice.bin" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/data/chessbox.flip_x.bin" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/data/chessbox.flip_xy.bin" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/data/chessbox.flip_y.bin" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/data/chessbox.perspective.transform.bin" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/data/chessbox.resample.bin" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/data/chessbox.sample_down.bin" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/data/chessbox.sample_up.bin" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/data/chessbox.slice.bin" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/data/chessbox.sobel.u.bin" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/data/chessbox.sobel.v.bin" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/data/chessbox.sobel.x.3.bin" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/data/chessbox.sobel.x.5.bin" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/data/chessbox.sobel.x.bin" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/data/chessbox.sobel.y.3.bin" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/data/chessbox.sobel.y.5.bin" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/data/chessbox.sobel.y.bin" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/data/nature.blur.bin" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/data/nature.contrast.0.5.bin" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/data/nature.contrast.1.5.bin" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/data/nature.saturation.0.5.bin" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/data/nature.saturation.1.5.bin" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/data/street.g100.bin" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/data/street.g101.bin" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/known-leaks.txt" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/makefile" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/nnc/BUILD.bazel" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/nnc/data/long_text.csv" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/nnc/data/nature.lssc.bin" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/nnc/data/nature.random-jitter.bin" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/nnc/data/quote.csv" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/nnc/data/scaled_data.csv" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/nnc/data/upsample.backward.bin" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/nnc/data/upsample.forward.bin" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/nnc/data/win.csv" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/nnc/graph-gen.sh" />
     <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/nnc/known-leaks.txt" />
+    <Text Include="../../thirdparty/owemdjee/ccv-nnc/test/unit/nnc/makefile" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

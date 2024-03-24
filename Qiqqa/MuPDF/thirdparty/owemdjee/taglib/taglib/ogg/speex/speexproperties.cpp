@@ -27,12 +27,11 @@
  *   http://www.mozilla.org/MPL/                                           *
  ***************************************************************************/
 
-#include <tstring.h>
-#include <tdebug.h>
-
-#include <oggpageheader.h>
-
 #include "speexproperties.h"
+
+#include "tstring.h"
+#include "tdebug.h"
+#include "oggpageheader.h"
 #include "speexfile.h"
 
 using namespace TagLib;
@@ -41,24 +40,14 @@ using namespace TagLib::Ogg;
 class Speex::Properties::PropertiesPrivate
 {
 public:
-  PropertiesPrivate() :
-    length(0),
-    bitrate(0),
-    bitrateNominal(0),
-    sampleRate(0),
-    channels(0),
-    speexVersion(0),
-    vbr(false),
-    mode(0) {}
-
-  int length;
-  int bitrate;
-  int bitrateNominal;
-  int sampleRate;
-  int channels;
-  int speexVersion;
-  bool vbr;
-  int mode;
+  int length { 0 };
+  int bitrate { 0 };
+  int bitrateNominal { 0 };
+  int sampleRate { 0 };
+  int channels { 0 };
+  int speexVersion { 0 };
+  bool vbr { false };
+  int mode { 0 };
 };
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -67,25 +56,12 @@ public:
 
 Speex::Properties::Properties(File *file, ReadStyle style) :
   AudioProperties(style),
-  d(new PropertiesPrivate())
+  d(std::make_unique<PropertiesPrivate>())
 {
   read(file);
 }
 
-Speex::Properties::~Properties()
-{
-  delete d;
-}
-
-int Speex::Properties::length() const
-{
-  return lengthInSeconds();
-}
-
-int Speex::Properties::lengthInSeconds() const
-{
-  return d->length / 1000;
-}
+Speex::Properties::~Properties() = default;
 
 int Speex::Properties::lengthInMilliseconds() const
 {
@@ -182,7 +158,7 @@ void Speex::Properties::read(File *file)
 
       if(frameCount > 0) {
         const double length = frameCount * 1000.0 / d->sampleRate;
-        long fileLengthWithoutOverhead = file->length();
+        offset_t fileLengthWithoutOverhead = file->length();
         // Ignore the two header packets, see "Ogg file format" in
         // https://www.speex.org/docs/manual/speex-manual/node8.html
         for (unsigned int i = 0; i < 2; ++i) {

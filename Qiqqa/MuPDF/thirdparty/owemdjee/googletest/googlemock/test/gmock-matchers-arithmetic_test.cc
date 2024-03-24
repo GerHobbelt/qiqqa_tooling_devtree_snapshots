@@ -31,9 +31,12 @@
 //
 // This file tests some commonly used argument matchers.
 
-#include "test/gmock-matchers_test.h"
-
+#include <cmath>
 #include <limits>
+#include <memory>
+#include <string>
+
+#include "test/gmock-matchers_test.h"
 
 // Silence warning C4244: 'initializing': conversion from 'int' to 'short',
 // possible loss of data and C4100, unreferenced local parameter
@@ -952,7 +955,7 @@ TEST(AllArgsTest, WorksForNonTuple) {
 
 class AllArgsHelper {
  public:
-  AllArgsHelper() {}
+  AllArgsHelper() = default;
 
   MOCK_METHOD2(Helper, int(char x, int y));
 
@@ -973,7 +976,7 @@ TEST(AllArgsTest, WorksInWithClause) {
 
 class OptionalMatchersHelper {
  public:
-  OptionalMatchersHelper() {}
+  OptionalMatchersHelper() = default;
 
   MOCK_METHOD0(NoArgs, int());
 

@@ -26,6 +26,13 @@
 #endif
 #include <libxml/xmlversion.h>
 
+#include "../examples/monolithic_examples.h"
+
+
+#if defined(BUILD_MONOLITHIC)
+#define main      xslt_test_threads_main
+#endif
+
 #if defined(LIBXML_THREAD_ENABLED) && defined(HAVE_PTHREAD_H)
 
 #include <libxml/globals.h>

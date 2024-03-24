@@ -219,7 +219,7 @@ int GamutSampler(cmsContext ContextID, CMSREGISTER const cmsUInt16Number In[], C
     cmsUInt16Number Proof[cmsMAXCHANNELS], Proof2[cmsMAXCHANNELS];
     cmsFloat64Number dE1, dE2, ErrorRatio;
 
-    // Assume in-gamut by default.
+    // Assume in-gamut by default. NEVER READ, USED FOR DEBUG PURPOSES.
     ErrorRatio = 1.0;
 
     // Convert input to Lab
@@ -591,11 +591,11 @@ cmsBool CMSEXPORT cmsDesaturateLab(cmsContext ContextID, cmsCIELab* Lab,
     return TRUE;
 }
 
-// Detect whatever a given ICC profile works in linear (gamma 1.0) space
+// Detect whatever gamma a given ICC profile works with in linear (gamma 1.0) space
 // Actually, doing that "well" is quite hard, since every component may behave completely different.
 // Since the true point of this function is to detect suitable optimizations, I am imposing some requirements
-// that simplifies things: only RGB, and only profiles that can got in both directions.
-// The algorithm obtains Y from a syntetical gray R=G=B. Then least squares fitting is used to estimate gamma.
+// that simplify things: only RGB, and only profiles that can got in both directions.
+// The algorithm obtains Y from a synthetical gray R=G=B. Then least squares fitting is used to estimate gamma.
 // For gamma close to 1.0, RGB is linear. On profiles not supported, -1 is returned.
 
 cmsFloat64Number CMSEXPORT cmsDetectRGBProfileGamma(cmsContext ContextID, cmsHPROFILE hProfile, cmsFloat64Number threshold)

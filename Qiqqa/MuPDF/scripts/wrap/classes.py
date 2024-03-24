@@ -153,7 +153,10 @@ class ClassExtra:
 
             Otherwise if true, generated wrapper class must be copyable. If
             pod is false, we generate a copy constructor by looking for a
-            fz_keep_*() function; it's an error if we can't find this function.
+            fz_keep_*() function; it's an error if we can't find this function
+            [2024-01-24 fixme: actually we don't apear to raise an
+            error in this case, instead we make class non-copyable.
+            e.g. FzCompressedBuffer.].
 
             Otherwise if false we create a private copy constructor.
 
@@ -222,27 +225,42 @@ class ClassExtra:
         virtual_fnptrs:
             If true, should be a dict with these keys:
 
-                self_:
-                    A callable taking single arg that is the name of a pointer
-                    to an instance of the MuPDF struct; should return C++ code
-                    that converts the specified name into a pointer to the
-                    corresponding virtual_fnptrs wrapper class.
-                self_n:
-                    Index of arg that is the void* that should be passed to
-                    `virtual_fnptrs['self_']` to recover the virtual_fnptrs
-                    wrapper class.  Note that we assume/require that all
-                    virtual fns have the same `self_n`. If not specified,
-                    default is 1 (we generally expect args to be (fz_context*
-                    ctx, void*, ...).
                 alloc:
-                    Code for embedding in the virtual_fnptrs wrapper class's
-                    constructor that creates a new instances of the MuPDF
-                    struct and virtual_fnptrs wrapper class, and sets
-                    m_internal to point to the MuPDF struct. It should also
-                    ensure that <self> can convert m_internal to the instance
-                    of the virtual_fnptrs wrapper class.
+                    A string containing C++ code to be embedded in the
+                    virtual_fnptrs wrapper class's constructor.
+
+                    If the wrapper class is a POD, the MuPDF struct is already
+                    available as part of the wrapper class instance (as
+                    m_internal, or `internal()` if inline). Otherwise this
+                    code should set `m_internal` to point to a newly allocated
+                    instance of the MuPDF struct.
+
+                    Should typically set up the MuPDF struct so that `self_()`
+                    can return the original C++ wrapper class instance.
                 free:
-                    Optional code for freeing the virtual_fnptrs wrapper class.
+                    Optional code for freeing the virtual_fnptrs wrapper
+                    class. If specified this causes creation of a destructor
+                    function.
+
+                    This is only needed for non-ref-counted classes that are
+                    not marked as POD. In this case the wrapper class has a
+                    pointer `m_internal` member that will not be automatically
+                    freed by the destructor, and `alloc` will usually have set
+                    it to a newly allocated struct.
+                self_:
+                    A callable that returns a string containing C++ code for
+                    embedding in each low-level callback. It should returns a
+                    pointer to the original C++ virtual_fnptrs wrapper class.
+
+                    If `self_n` is None, this callable takes no args. Otherwise
+                    it takes the name of the `self_n`'th arg.
+                self_n:
+                    Index of arg in each low-level callback, for the arg that
+                    should be passed to `self_`. We use the same index for all
+                    low-level callbacks.  If not specified, default is 1 (we
+                    generally expect args to be (fz_context* ctx, void*, ...).
+                    If None, `self_` is called with no arg; this is for if we
+                    use a different mechanism such as a global variable.
 
             We generate a virtual_fnptrs wrapper class, derived from the main
             wrapper class, where the main wrapper class's function pointers end
@@ -612,29 +630,6 @@ classextras = ClassExtras(
                 method_wrappers_static = [
                     'fz_new_xhtml_document_from_document',
                     ],
-                methods_extra = [
-                    # This duplicates our creation of extra fz_lookup_metadata()
-                    # function in make_function_wrappers(). Maybe we could
-                    # parse the generated functions.h instead of fitz.h so that
-                    # we pick up extra C++ wrappers automatically, but this
-                    # would be a fairly major change.
-                    #
-                    ExtraMethod(
-                            'std::string',
-                            f'{rename.method( "fz_document", "fz_lookup_metadata")}(const char* key, int* o_out=NULL)',
-                            f'''
-                            {{
-                                return {rename.ll_fn("fz_lookup_metadata")}(m_internal, key, o_out);
-                            }}
-                            ''',
-                           textwrap.dedent('''
-                            /* Wrapper for fz_lookup_metadata() that returns a std::string and sets
-                            *o_out to length of string plus one. If <key> is not found, returns empty
-                            string with *o_out=-1. <o_out> can be NULL if caller is not interested in
-                            error information. */
-                            ''')
-                            ),
-                    ],
                 ),
 
         # This is a little complicated. Many of the functions that we would
@@ -912,6 +907,22 @@ classextras = ClassExtras(
                 accessors=True,
                 ),
 
+        fz_install_load_system_font_funcs_args = ClassExtra(
+                pod = True,
+                virtual_fnptrs = dict(
+                    alloc = textwrap.dedent( f'''
+                        /*
+                        There can only be one active instance of the wrapper
+                        class so we simply keep a pointer to it in a global
+                        variable.
+                        */
+                        fz_install_load_system_font_funcs2_state = this;
+                        '''),
+                    self_ = lambda: f'({rename.class_("fz_install_load_system_font_funcs_args")}2*) fz_install_load_system_font_funcs2_state',
+                    self_n = None,
+                    ),
+                ),
+
         fz_irect = ClassExtra(
                 constructor_prefixes = [
                     'fz_irect_from_rect',
@@ -983,19 +994,6 @@ classextras = ClassExtras(
                         ''',
                         '/* Default constructor calls md5_init(). */',
                         )
-                    ],
-                methods_extra = [
-                    ExtraMethod( 'std::vector<unsigned char>',
-                        f'{rename.method("fz_md5", "fz_md5_final2")}()',
-                        f'''
-                        {{
-                            std::vector<unsigned char>  ret(16);
-                            {rename.ll_fn( 'fz_md5_final')}( &m_internal, &ret[0]);
-                            return ret;
-                        }}
-                        ''',
-                        f'/* Wrapper for fz_md5_final() that returns the digest by value. */',
-                        ),
                     ],
                 ),
 
@@ -1188,20 +1186,6 @@ classextras = ClassExtras(
                     ],
                 methods_extra = [
                     ExtraMethod(
-                        f'std::vector<{rename.class_("fz_quad")}>',
-                        f'{rename.method("fz_page", "fz_search_page")}(const char* needle, int *hit_mark, int max)',
-                        f'''
-                        {{
-                            std::vector<{rename.class_("fz_quad")}> ret(max);
-                            ::fz_quad* hit_bbox = ret[0].internal();
-                            int n = {rename.ll_fn('fz_search_page')}(m_internal, needle, hit_mark, hit_bbox, (int) ret.size());
-                            ret.resize(n);
-                            return ret;
-                        }}
-                        ''',
-                        comment=f'/* Wrapper for fz_search_page(). */',
-                        ),
-                    ExtraMethod(
                         f'{rename.class_("fz_document")}',
                         'doc()',
                         f'''
@@ -1221,8 +1205,8 @@ classextras = ClassExtras(
                     self_ = lambda name: f'*({rename.class_("fz_path_walker")}2**) ((fz_path_walker*) {name} + 1)',
                     alloc = textwrap.dedent( f'''
                         m_internal = (::fz_path_walker*) {rename.ll_fn("fz_calloc")}(
-                                1, sizeof(*m_internal)
-                                + sizeof({rename.class_("fz_path_walker")}2*)
+                                1,
+                                sizeof(*m_internal) + sizeof({rename.class_("fz_path_walker")}2*)
                                 );
                         *({rename.class_("fz_path_walker")}2**) (m_internal + 1) = this;
                         '''),
@@ -1281,47 +1265,6 @@ classextras = ClassExtras(
                 ),
 
         fz_pixmap = ClassExtra(
-                methods_extra = [
-                    ExtraMethod( 'std::vector<unsigned char>',
-                        f'{rename.method( "fz_pixmap", "fz_md5_pixmap")}()',
-                        f'''
-                        {{
-                            std::vector<unsigned char>  ret(16);
-                            {rename.ll_fn( 'fz_md5_pixmap')}( m_internal, &ret[0]);
-                            return ret;
-                        }}
-                        ''',
-                        f'/* Wrapper for fz_md5_pixmap(). */',
-                        ),
-                    ExtraMethod( 'long long',
-                        f'{rename.method( "fz_pixmap", "fz_pixmap_samples_int")}()',
-                        f'''
-                        {{
-                            long long ret = (intptr_t) samples();
-                            return ret;
-                        }}
-                        ''',
-                        f'/* Alternative to pixmap_samples() that returns pointer as integer. */',
-                        ),
-                    ExtraMethod( 'int',
-                        f'{rename.method( "fz_pixmap", "fz_samples_get")}(int offset)',
-                        f'''
-                        {{
-                            return m_internal->samples[offset];
-                        }}
-                        ''',
-                        f'/* Returns m_internal->samples[offset]. */',
-                        ),
-                    ExtraMethod( 'void',
-                        f'{rename.method( "fz_pixmap", "fz_samples_set")}(int offset, int value)',
-                        f'''
-                        {{
-                            m_internal->samples[offset] = value;
-                        }}
-                        ''',
-                        f'/* Sets m_internal->samples[offset] to value. */',
-                        ),
-                    ],
                 constructor_raw = True,
                 accessors = True,
                 ),
@@ -1405,8 +1348,8 @@ classextras = ClassExtras(
                         '''
                         :
                         x0(rhs.x0),
-                        x1(rhs.x1),
                         y0(rhs.y0),
+                        x1(rhs.x1),
                         y1(rhs.y1)
                         {
                         }
@@ -1700,7 +1643,27 @@ classextras = ClassExtras(
                     comment = '/* Construct using fz_open_file(). */',
                     )
                     ],
+                virtual_fnptrs = dict(
+                    # We need to cast `name` to `fz_stream` because it is
+                    # passed as a `void*` to `drop()`.
+                    self_ = lambda name: f'({rename.class_("fz_stream")}2*) ((fz_stream*) {name})->state',
+                    self_n = 1,
+                    alloc = textwrap.dedent( f'''
+                        m_internal = {rename.ll_fn("fz_new_stream")}(this, nullptr, nullptr);
+                        '''),
+                    ),
                 ),
+
+        #fz_stream_with_buffer = ClassExtra(
+        #        virtual_fnptrs = dict(
+        #            self_ = lambda name: f'({rename.class_("fz_stream_with_buffer")}2*) {name}->state',
+        #            self_n = 1,
+        #            alloc = textwrap.dedent( f'''
+        #                m_internal = {rename.ll_fn("fz_new_stream_with_buffer")}(4096);
+        #                m_internal->state = this;
+        #                '''),
+        #            ),
+        #        ),
 
         fz_story_element_position = ClassExtra(
                 pod='inline',
@@ -1715,6 +1678,69 @@ classextras = ClassExtras(
                 constructor_raw = 'default',
                 ),
 
+        pdf_clean_options = ClassExtra(
+                constructors_extra = [
+                    ExtraConstructor( '()',
+                        f'''
+                        {{
+                            /* Use memcpy() otherwise we get 'invalid array assignment' errors. */
+                            memcpy(&this->internal()->write, &pdf_default_write_options, sizeof(this->internal()->write));
+                            memset(&this->internal()->image, 0, sizeof(this->internal()->image));
+                        }}
+                        ''',
+                        comment = '/* Default constructor, makes copy of pdf_default_write_options. */'
+                        ),
+                    ExtraConstructor(
+                        f'(const {rename.class_("pdf_clean_options")}& rhs)',
+                        f'''
+                        {{
+                            *this = rhs;
+                        }}
+                        ''',
+                        comment = '/* Copy constructor using raw memcopy(). */'
+                        ),
+                ],
+                methods_extra = [
+                    ExtraMethod(
+                        f'{rename.class_("pdf_clean_options")}&',
+                        f'operator=(const {rename.class_("pdf_clean_options")}& rhs)',
+                        f'''
+                        {{
+                            memcpy(this->internal(), rhs.internal(), sizeof(*this->internal()));
+                            return *this;
+                        }}
+                        ''',
+                        comment = '/* Assignment using plain memcpy(). */',
+                        ),
+                    ExtraMethod(
+                        f'void',
+                        f'write_opwd_utf8_set(const std::string& text)',
+                        f'''
+                        {{
+                            size_t len = std::min(text.size(), sizeof(write.opwd_utf8) - 1);
+                            memcpy(write.opwd_utf8, text.c_str(), len);
+                            write.opwd_utf8[len] = 0;
+                        }}
+                        ''',
+                        '/* Copies <text> into write.opwd_utf8[]. */',
+                        ),
+                    ExtraMethod(
+                        f'void',
+                        f'write_upwd_utf8_set(const std::string& text)',
+                        f'''
+                        {{
+                            size_t len = std::min(text.size(), sizeof(write.upwd_utf8) - 1);
+                            memcpy(write.upwd_utf8, text.c_str(), len);
+                            write.upwd_utf8[len] = 0;
+                        }}
+                        ''',
+                        '/* Copies <text> into upwd_utf8[]. */',
+                        ),
+                ],
+                pod = 'inline',
+                copyable = 'default',
+                ),
+
         pdf_document = ClassExtra(
                 constructor_prefixes = [
                     'pdf_open_document',
@@ -1722,27 +1748,6 @@ classextras = ClassExtras(
                     'pdf_document_from_fz_document',
                     ],
                 methods_extra = [
-                    # This duplicates our creation of extra lookup_metadata()
-                    # function in make_function_wrappers(). Maybe we could
-                    # parse the generated functions.h instead of fitz.h so that
-                    # we pick up extra C++ wrappers automatically, but this
-                    # would be a fairly major change.
-                    #
-                    ExtraMethod(
-                            'std::string',
-                            f'{rename.method("pdf_document", "pdf_lookup_metadata")}(const char* key, int* o_out=NULL)',
-                            f'''
-                            {{
-                                return {rename.ll_fn("pdf_lookup_metadata")}(m_internal, key, o_out);
-                            }}
-                            ''',
-                           textwrap.dedent('''
-                            /* Wrapper for pdf_lookup_metadata() that returns a std::string and sets
-                            *o_out to length of string plus one. If <key> is not found, returns empty
-                            string with *o_out=-1. <o_out> can be NULL if caller is not interested in
-                            error information. */
-                            ''')
-                            ),
                     ExtraMethod(
                         f'{rename.class_("fz_document")}',
                         'super()',
@@ -1769,6 +1774,8 @@ classextras = ClassExtras(
                 pod = 'inline',
                 # We don't need to allocate extra space, and because we are a
                 # POD class, we can simply let our default constructor run.
+                #
+                # this->opaque is passsed as arg[2].
                 #
                 virtual_fnptrs = dict(
                         self_ = lambda name: f'({rename.class_("pdf_filter_options")}2*) {name}',
@@ -1927,6 +1934,11 @@ classextras = ClassExtras(
                 copyable = 'default',
                 ),
 
+        pdf_image_rewriter_options = ClassExtra(
+                pod = 'inline',
+                copyable = 'default',
+                ),
+
         pdf_processor = ClassExtra(
                 virtual_fnptrs = dict(
                     self_ = lambda name: f'(*({rename.class_("pdf_processor")}2**) ({name} + 1))',
@@ -1946,9 +1958,7 @@ classextras = ClassExtras(
 
         pdf_sanitize_filter_options = ClassExtra(
                 pod = 'inline',
-                # We don't need to allocate extra space, and because we are a
-                # POD class, we can simply let our default constructor run.
-                #
+                # this->opaque is passed as arg[1].
                 virtual_fnptrs = dict(
                         self_ = lambda name: f'({rename.class_("pdf_sanitize_filter_options")}2*) {name}',
                         alloc = f'this->opaque = this;\n',
@@ -1975,47 +1985,47 @@ classextras = ClassExtras(
                         ''',
                         comment = '/* Copy constructor using raw memcopy(). */'
                         ),
+                ],
+                methods_extra = [
+                    ExtraMethod(
+                        f'{rename.class_("pdf_write_options")}&',
+                        f'operator=(const {rename.class_("pdf_write_options")}& rhs)',
+                        f'''
+                        {{
+                            memcpy(this->internal(), rhs.internal(), sizeof(*this->internal()));
+                            return *this;
+                        }}
+                        ''',
+                        comment = '/* Assignment using plain memcpy(). */',
+                        ),
+                    ExtraMethod(
+                        # Would prefer to call this opwd_utf8_set() but
+                        # this conflicts with SWIG-generated accessor for
+                        # opwd_utf8.
+                        f'void',
+                        f'opwd_utf8_set_value(const std::string& text)',
+                        f'''
+                        {{
+                            size_t len = std::min(text.size(), sizeof(opwd_utf8) - 1);
+                            memcpy(opwd_utf8, text.c_str(), len);
+                            opwd_utf8[len] = 0;
+                        }}
+                        ''',
+                        '/* Copies <text> into opwd_utf8[]. */',
+                        ),
+                    ExtraMethod(
+                        f'void',
+                        f'upwd_utf8_set_value(const std::string& text)',
+                        f'''
+                        {{
+                            size_t len = std::min(text.size(), sizeof(upwd_utf8) - 1);
+                            memcpy(upwd_utf8, text.c_str(), len);
+                            upwd_utf8[len] = 0;
+                        }}
+                        ''',
+                        '/* Copies <text> into upwd_utf8[]. */',
+                        ),
                     ],
-                    methods_extra = [
-                        ExtraMethod(
-                            f'{rename.class_("pdf_write_options")}&',
-                            f'operator=(const {rename.class_("pdf_write_options")}& rhs)',
-                            f'''
-                            {{
-                                memcpy(this->internal(), rhs.internal(), sizeof(*this->internal()));
-                                return *this;
-                            }}
-                            ''',
-                            comment = '/* Assignment using plain memcpy(). */',
-                            ),
-                        ExtraMethod(
-                            # Would prefer to call this opwd_utf8_set() but
-                            # this conflicts with SWIG-generated accessor for
-                            # opwd_utf8.
-                            f'void',
-                            f'opwd_utf8_set_value(const std::string& text)',
-                            f'''
-                            {{
-                                size_t len = std::min(text.size(), sizeof(opwd_utf8) - 1);
-                                memcpy(opwd_utf8, text.c_str(), len);
-                                opwd_utf8[len] = 0;
-                            }}
-                            ''',
-                            '/* Copies <text> into opwd_utf8[]. */',
-                            ),
-                        ExtraMethod(
-                            f'void',
-                            f'upwd_utf8_set_value(const std::string& text)',
-                            f'''
-                            {{
-                                size_t len = std::min(text.size(), sizeof(upwd_utf8) - 1);
-                                memcpy(upwd_utf8, text.c_str(), len);
-                                upwd_utf8[len] = 0;
-                            }}
-                            ''',
-                            '/* Copies <text> into upwd_utf8[]. */',
-                            ),
-                        ],
                 pod = 'inline',
                 copyable = 'default',
                 )

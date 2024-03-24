@@ -30,6 +30,7 @@ namespace tesseract {
 enum ColSegType { COL_UNKNOWN, COL_TEXT, COL_TABLE, COL_MIXED, COL_COUNT };
 
 class ColPartitionSet;
+class TESS_API Tesseract;
 
 // ColSegment holds rectangular blocks that represent segmentation of a page
 // into regions containing single column text/table.
@@ -95,7 +96,7 @@ public:
   void set_type();
 
   // Provides a color for BBGrid to draw the rectangle.
-  ScrollView::Color BoxColor() const;
+  Diagnostics::Color BoxColor() const;
 
   // Insert a rectangle into bounding_box_
   void InsertBox(const TBOX &other);
@@ -123,7 +124,7 @@ using ColSegmentGridSearch =
 class TESS_API TableFinder {
 public:
   // Constructor is simple initializations
-  TableFinder();
+  TableFinder(Tesseract *tess);
   ~TableFinder();
 
   // Set the resolution of the connected components in ppi.
@@ -161,7 +162,7 @@ protected:
   const ICOORD &tright() const;
 
   // Makes a window for debugging, see BBGrid
-  ScrollView *MakeWindow(int x, int y, const char *window_name);
+  ScrollViewReference MakeWindow(Tesseract *tess, int x, int y, const char *window_name);
 
   //////// Functions to insert objects from the grid into the table finder.
   //////// In all cases, ownership is transferred to the table finder.
@@ -331,7 +332,7 @@ protected:
   void GrowTableToIncludeLines(const TBOX &table_box, const TBOX &search_range,
                                TBOX *result_box);
   // Checks whether the horizontal line belong to the table by looking at the
-  // side spacing of extra ColParitions that will be included in the table
+  // side spacing of extra ColPartitions that will be included in the table
   // due to expansion
   bool HLineBelongsToTable(const ColPartition &part, const TBOX &table_box);
 
@@ -360,19 +361,19 @@ protected:
 
   // Displays Colpartitions marked as table row. Overlays them on top of
   // part_grid_.
-  void DisplayColSegments(ScrollView *win, ColSegment_LIST *cols,
-                          ScrollView::Color color);
+  void DisplayColSegments(ScrollViewReference &win, ColSegment_LIST *cols,
+                          Diagnostics::Color color);
 
   // Displays the colpartitions using a new coloring on an existing window.
   // Note: This method is only for debug purpose during development and
   // would not be part of checked in code
-  void DisplayColPartitions(ScrollView *win, ColPartitionGrid *grid,
-                            ScrollView::Color text_color,
-                            ScrollView::Color table_color);
-  void DisplayColPartitions(ScrollView *win, ColPartitionGrid *grid,
-                            ScrollView::Color default_color);
-  void DisplayColPartitionConnections(ScrollView *win, ColPartitionGrid *grid,
-                                      ScrollView::Color default_color);
+  void DisplayColPartitions(ScrollViewReference &win, ColPartitionGrid *grid,
+                            Diagnostics::Color text_color,
+                            Diagnostics::Color table_color);
+  void DisplayColPartitions(ScrollViewReference &win, ColPartitionGrid *grid,
+                            Diagnostics::Color default_color);
+  void DisplayColPartitionConnections(ScrollViewReference &win, ColPartitionGrid *grid,
+                                      Diagnostics::Color default_color);
 
   // Merge all colpartitions in table regions to make them a single
   // colpartition and revert types of isolated table cells not
@@ -407,6 +408,9 @@ protected:
   ColSegmentGrid table_grid_;
   // The reading order of text. Defaults to true, for languages such as English.
   bool left_to_right_language_;
+
+protected:
+  Tesseract *tesseract_; // reference to the active instance
 };
 
 } // namespace tesseract.

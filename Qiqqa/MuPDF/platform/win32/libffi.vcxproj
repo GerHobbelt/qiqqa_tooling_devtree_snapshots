@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFFI;FFI_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFFI;FFI_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libffi/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFFI;FFI_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libffi/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFFI;FFI_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFFI;FFI_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFFI;FFI_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libffi/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libffi/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFFI;FFI_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFFI;FFI_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libffi/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFFI;FFI_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libffi/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFFI;FFI_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFFI;FFI_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFFI;FFI_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libffi/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libffi/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFFI;FFI_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFFI;FFI_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libffi/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFFI;FFI_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libffi/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFFI;FFI_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFFI;FFI_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFFI;FFI_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libffi/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libffi/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFFI;FFI_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFFI;FFI_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libffi/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFFI;FFI_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libffi/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFFI;FFI_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFFI;FFI_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBFFI;FFI_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libffi/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libffi/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -329,7 +329,9 @@
     <ClCompile Include="../../thirdparty/owemdjee/libffi/testsuite/libffi.call/struct9.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libffi/testsuite/libffi.call/struct_by_value_2.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libffi/testsuite/libffi.call/struct_by_value_3.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libffi/testsuite/libffi.call/struct_by_value_3f.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libffi/testsuite/libffi.call/struct_by_value_4.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libffi/testsuite/libffi.call/struct_by_value_4f.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libffi/testsuite/libffi.call/struct_by_value_big.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libffi/testsuite/libffi.call/struct_by_value_small.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libffi/testsuite/libffi.call/struct_return_2H.c" />
@@ -539,17 +541,41 @@
     <ClInclude Include="../../thirdparty/owemdjee/libffi/testsuite/libffi.go/ffitest.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libffi/testsuite/libffi.go/static-chain.h" />
     <Text Include="../../thirdparty/owemdjee/libffi/ChangeLog.old" />
+    <Text Include="../../thirdparty/owemdjee/libffi/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/libffi/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libffi/README.md" />
+    <Text Include="../../thirdparty/owemdjee/libffi/acinclude.m4" />
     <Text Include="../../thirdparty/owemdjee/libffi/autogen.sh" />
+    <Text Include="../../thirdparty/owemdjee/libffi/config.guess" />
     <Text Include="../../thirdparty/owemdjee/libffi/configure.ac" />
     <Text Include="../../thirdparty/owemdjee/libffi/doc/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/libffi/doc/libffi.texi" />
+    <Text Include="../../thirdparty/owemdjee/libffi/doc/version.texi" />
     <Text Include="../../thirdparty/owemdjee/libffi/generate-darwin-source-and-headers.py" />
     <Text Include="../../thirdparty/owemdjee/libffi/include/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libffi/include/ffi.h.in" />
     <Text Include="../../thirdparty/owemdjee/libffi/libffi.map.in" />
     <Text Include="../../thirdparty/owemdjee/libffi/libffi.pc.in" />
+    <Text Include="../../thirdparty/owemdjee/libffi/m4/asmcfi.m4" />
+    <Text Include="../../thirdparty/owemdjee/libffi/m4/ax_append_flag.m4" />
+    <Text Include="../../thirdparty/owemdjee/libffi/m4/ax_cc_maxopt.m4" />
+    <Text Include="../../thirdparty/owemdjee/libffi/m4/ax_cflags_warn_all.m4" />
+    <Text Include="../../thirdparty/owemdjee/libffi/m4/ax_check_compile_flag.m4" />
+    <Text Include="../../thirdparty/owemdjee/libffi/m4/ax_compiler_vendor.m4" />
+    <Text Include="../../thirdparty/owemdjee/libffi/m4/ax_configure_args.m4" />
+    <Text Include="../../thirdparty/owemdjee/libffi/m4/ax_enable_builddir.m4" />
+    <Text Include="../../thirdparty/owemdjee/libffi/m4/ax_gcc_archflag.m4" />
+    <Text Include="../../thirdparty/owemdjee/libffi/m4/ax_gcc_x86_cpuid.m4" />
+    <Text Include="../../thirdparty/owemdjee/libffi/m4/ax_prepend_flag.m4" />
+    <Text Include="../../thirdparty/owemdjee/libffi/m4/ax_require_defined.m4" />
+    <Text Include="../../thirdparty/owemdjee/libffi/make_sunver.pl" />
     <Text Include="../../thirdparty/owemdjee/libffi/man/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/libffi/man/ffi.3" />
+    <Text Include="../../thirdparty/owemdjee/libffi/man/ffi_call.3" />
+    <Text Include="../../thirdparty/owemdjee/libffi/man/ffi_prep_cif.3" />
+    <Text Include="../../thirdparty/owemdjee/libffi/man/ffi_prep_cif_var.3" />
+    <Text Include="../../thirdparty/owemdjee/libffi/msvc_build/aarch64/Ffi_staticLib.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/libffi/msvc_build/aarch64/Ffi_staticLib.vcxproj.user" />
     <Text Include="../../thirdparty/owemdjee/libffi/msvcc.sh" />
     <Text Include="../../thirdparty/owemdjee/libffi/src/aarch64/sysv.S" />
     <Text Include="../../thirdparty/owemdjee/libffi/src/aarch64/win64_armasm.S" />
@@ -606,8 +632,13 @@
     <Text Include="../../thirdparty/owemdjee/libffi/testsuite/emscripten/build.sh" />
     <Text Include="../../thirdparty/owemdjee/libffi/testsuite/emscripten/conftest.py" />
     <Text Include="../../thirdparty/owemdjee/libffi/testsuite/emscripten/node-tests.sh" />
+    <Text Include="../../thirdparty/owemdjee/libffi/testsuite/emscripten/test.html" />
     <Text Include="../../thirdparty/owemdjee/libffi/testsuite/emscripten/test_libffi.py" />
+    <Text Include="../../thirdparty/owemdjee/libffi/testsuite/libffi.bhaible/Makefile" />
     <Text Include="../../thirdparty/owemdjee/libffi/testsuite/libffi.bhaible/README" />
+    <Text Include="../../thirdparty/owemdjee/libffi/testsuite/libffi.call/" />
+    <Text Include="../../thirdparty/owemdjee/libffi/testsuite/libffi.closures/" />
+    <Text Include="../../thirdparty/owemdjee/libffi/testsuite/libffi.complex/" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

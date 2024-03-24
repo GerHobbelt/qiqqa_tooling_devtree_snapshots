@@ -4,8 +4,6 @@
 ![CI](https://github.com/libcpr/cpr/workflows/CI/badge.svg)
 [![Gitter](https://badges.gitter.im/libcpr/community.svg)](https://gitter.im/libcpr/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-### Expect slower response times as all maintainers are currently on vacation ✈️🏝️ until March 01, 2023.
-
 ## Announcements
 
 * This project is being maintained by [Fabian Sauter](https://github.com/com8) and [Kilian Traub](https://github.com/KingKili).
@@ -114,17 +112,27 @@ If you prefer not to use `fetch_content`, you can download, build, and install t
 
 **Note:** this feature is feasible only if CPR_USE_SYSTEM_CURL is set. (see [#645](https://github.com/libcpr/cpr/pull/645))
 ```Bash
-$ git clone https://github.com/libcpr/cpr.git
-$ cd cpr && mkdir build && cd build
-$ cmake .. -DCPR_USE_SYSTEM_CURL=ON
-$ cmake --build .
-$ sudo cmake --install .
+git clone https://github.com/libcpr/cpr.git
+cd cpr && mkdir build && cd build
+cmake .. -DCPR_USE_SYSTEM_CURL=ON
+cmake --build . --parallel
+sudo cmake --install .
 ```
 In your `CMakeLists.txt`:
 ```cmake
 find_package(cpr REQUIRED)
 add_executable(your_target_name your_target_name.cpp)
 target_link_libraries(your_target_name PRIVATE cpr::cpr)
+```
+
+#### Tests
+`cpr` provides a bunch of tests that can be executed via the following commands.
+```Bash
+git clone https://github.com/libcpr/cpr.git
+cd cpr && mkdir build && cd build
+cmake .. -DCPR_BUILD_TESTS=ON # There are other test related options like 'CPR_BUILD_TESTS_SSL' and 'CPR_BUILD_TESTS_PROXY'
+cmake --build . --parallel
+ctest -VV # -VV is optional since it enables verbose output
 ```
 
 ### Bazel
@@ -138,6 +146,7 @@ Alternatively, you may install a package specific to your Linux distribution. Si
 Currently, we are aware of packages for the following distributions:
 
 * [Arch Linux (AUR)](https://aur.archlinux.org/packages/cpr)
+* [Fedora Linux](https://src.fedoraproject.org/rpms/cpr)
 
 If there's no package for your distribution, try making one! If you do, and it is added to your distribution's repositories, please submit a pull request to add it to the list above. However, please only do this if you plan to actively maintain the package.
 

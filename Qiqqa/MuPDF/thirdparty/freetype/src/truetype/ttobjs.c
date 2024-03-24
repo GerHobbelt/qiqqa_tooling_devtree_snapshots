@@ -153,18 +153,20 @@
   static const FT_String*
   tt_skip_pdffont_random_tag( const FT_String*  name )
   {
-    unsigned int  i;
+    if ( ft_isupper( name[0] ) &&
+         ft_isupper( name[1] ) &&
+         ft_isupper( name[2] ) &&
+         ft_isupper( name[3] ) &&
+         ft_isupper( name[4] ) &&
+         ft_isupper( name[5] ) &&
+              '+' == name[6]   &&
+                     name[7]   )
+    {
+      FT_TRACE7(( "name without randomization tag: %s\n", name + 7 ));
+      return name + 7;
+    }
 
-
-    if ( ft_strlen( name ) < 8 || name[6] != '+' )
-      return name;
-
-    for ( i = 0; i < 6; i++ )
-      if ( !ft_isupper( name[i] ) )
-        return name;
-
-    FT_TRACE7(( "name without randomization tag: %s\n", name + 7 ));
-    return name + 7;
+    return name;
   }
 
 
@@ -313,7 +315,8 @@
 #define TRICK_SFNT_IDS_NUM_FACES  31
 
     static const tt_sfnt_id_rec sfnt_id[TRICK_SFNT_IDS_NUM_FACES]
-                                       [TRICK_SFNT_IDS_PER_FACE] = {
+                                       [TRICK_SFNT_IDS_PER_FACE] =
+    {
 
 #define TRICK_SFNT_ID_cvt   0
 #define TRICK_SFNT_ID_fpgm  1
@@ -1481,9 +1484,6 @@
     TT_Driver  driver = (TT_Driver)ttdriver;
 
     driver->interpreter_version = TT_INTERPRETER_VERSION_35;
-#ifdef TT_SUPPORT_SUBPIXEL_HINTING_INFINALITY
-    driver->interpreter_version = TT_INTERPRETER_VERSION_38;
-#endif
 #ifdef TT_SUPPORT_SUBPIXEL_HINTING_MINIMAL
     driver->interpreter_version = TT_INTERPRETER_VERSION_40;
 #endif

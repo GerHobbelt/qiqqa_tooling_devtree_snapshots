@@ -42,8 +42,10 @@
  *      Textblock extraction
  *          PIX      *pixGenTextblockMask()
  *
- *      Location of page foreground
- *          PIX      *pixFindPageForeground()
+ *      Location and extraction of page foreground; cleaning pages
+ *          PIX      *pixCropImage()
+ *          PIX      *pixCleanImage()
+ *          BOX      *pixFindPageForeground()
  *
  *      Extraction of characters from image with only text
  *          l_int32   pixSplitIntoCharacters()
@@ -540,12 +542,287 @@ PIX     *pix1, *pix2, *pix3, *pixd;
 
 
 /*------------------------------------------------------------------*
- *                    Location of page foreground                   *
+ *    Location and extraction of page foreground; cleaning pages    *
  *------------------------------------------------------------------*/
+/*!
+ * \brief   pixCropImage()
+ *
+ * \param[in]    pixs        full resolution (any type or depth)
+ * \param[in]    lr_clear    full res pixels cleared at left and right sides
+ * \param[in]    tb_clear    full res pixels cleared at top and bottom sides
+ * \param[in]    edgeclean   parameter for removing edge noise (0-15)
+ *                           default = 0 (no removal);
+ *                           15 is maximally aggressive
+ * \param[in]    lr_add      full res expansion of crop box on left and right
+ * \param[in]    tb_add      full res expansion of crop box on top and bottom
+ * \param[in]    maxwiden    max fractional horizontal stretch allowed
+ * \param[in]   *debugfile   [optional] usually is NULL
+ * \param[out]  *pcropbox    [optional] crop box at full resolution
+ * \return  cropped pix, or NULL on error
+ *
+ * <pre>
+ * Notes:
+ *      (1) This binarizes and crops a page image.  After binarization
+ *          and 2x reduction, it does the following:
+ *          (a) Clears near the border by %lr_clear/2 and %tb_clear/ pixels
+ *          (b) If %edgeclean > 0, it removes isolated sets of pixels,
+ *              using a close/open operation of size %edgeclean + 1.
+ *          (c) Find the bounding box of remaining fg pixels
+ *          (d) Expands the box by %lr_add and and %tb_add pixels,
+ *              but respecting the cleared regions.
+ *          (e) 2x expansion of the bounding box to full resolution. 
+ *          (f) Crops the binarized image to the bounding box.
+ *          (g) Slightly thickens long horizontal lines.
+ *          (h) Does anamorphic horizontal upscaling by %maxwiden
+ *              to better fill an 8.5 x 11 inch printed page.
+ *              Suggest not to exceed 1.15.
+ *          Note that input parameters are given at full resolution and
+ *          (a) - (c) are done at 2x reduction for efficiency.
+ *      (2) The side clearing must not exceed 1/6 of the dimension on that side.
+ *      (3) The clear and add pixel parameters must be >= 0.
+ *      (4) This is not intended to work on small thumbnails.  The
+ *          dimensions of pixs must be at least MinWidth x MinHeight.
+ *      (5) Step (g) above helps with orthographically-produced music notation,
+ *          where the staff lines can be very thin and subject to printer alias.
+ * </pre>
+ */
+PIX *
+pixCropImage(PIX         *pixs,
+             l_int32      lr_clear,
+             l_int32      tb_clear,
+             l_int32      edgeclean,
+             l_int32      lr_add,
+             l_int32      tb_add,
+             l_float32    maxwiden,
+             const char  *debugfile,
+             BOX        **pcropbox)
+{
+char       cmd[64];
+l_int32    w, h, d, lrc, tbc, val;
+l_int32    left, right, top, bot, leftfinal, rightfinal, topfinal, botfinal;
+static l_int32    first_time = TRUE;
+l_float32  hscale;
+PIX       *pix1, *pix2, *pix3;
+PIXA      *pixa1;
+BOX       *box1, *box2;
+
+    if (pcropbox) *pcropbox = NULL;
+    if (!pixs)
+        return (PIX *)ERROR_PTR("pixs not defined", __func__, NULL);
+    if (edgeclean < 0) edgeclean = 0;
+    if (edgeclean > 15) {
+        L_WARNING("edgeclean > 15; setting to 15\n", __func__);
+        edgeclean = 15;
+    }
+    pixGetDimensions(pixs, &w, &h, &d);
+    if (w < MinWidth || h < MinHeight) {
+        L_ERROR("pix too small: w = %d, h = %d\n", __func__, w, h);
+        return NULL;
+    }
+    if (lr_clear < 0) lr_clear = 0;
+    if (tb_clear < 0) tb_clear = 0;
+    if (lr_add < 0) lr_add = 0;
+    if (tb_add < 0) tb_add = 0;
+    if (lr_clear > w / 6 || tb_clear > h / 6) {
+        L_ERROR("lr_clear or tb_clear too large; must be <= %d and %d\n",
+                __func__, w / 6, h / 6);
+        return NULL;
+    }
+    if (maxwiden > 1.2)
+        L_WARNING("maxwiden = %f > 1.2; suggest between 1.0 and 1.15\n",
+                  __func__, maxwiden);
+    pixa1 = (debugfile) ? pixaCreate(5) : NULL;
+    if (pixa1) pixaAddPix(pixa1, pixs, L_COPY);
+
+        /* Binarize if necessary and 2x reduction */
+    pix1 = pixBackgroundNormTo1MinMax(pixs, 1, 1);
+    pix2 = pixReduceRankBinary2(pix1, 2, NULL);
+
+        /* Clear out border pixels */
+    pixSetOrClearBorder(pix2, lr_clear / 2, lr_clear / 2, tb_clear / 2,
+                        tb_clear / 2, PIX_CLR);
+    if (pixa1) pixaAddPix(pixa1, pixScale(pix2, 2.0, 2.0), L_INSERT);
+
+        /* Optional morphological close/open and find the bounding box
+         * of the foreground pixels. */
+    if (edgeclean == 0) {
+        pixClipToForeground(pix2, NULL, &box1);
+    } else {
+        val = edgeclean + 1;
+        snprintf(cmd, 32, "c%d.%d + o%d.%d", val, val, val, val);
+        pix3 = pixMorphSequence(pix2, cmd, 0);
+        pixClipToForeground(pix3, NULL, &box1);
+        pixDestroy(&pix3);
+    }
+    pixDestroy(&pix2);
+
+        /* Transform to full resolution */
+    box2 = boxTransform(box1, 0, 0, 2.0, 2.0);  /* full res */
+    if (pixa1) {
+        pix2 = pixCopy(NULL, pix1);
+        pixRenderBoxArb(pix2, box2, 5, 255, 0, 0);
+        pixaAddPix(pixa1, pix2, L_INSERT);
+    }
+
+        /* Adjust sides outward, respecting %lr_clear and %tb_clear */
+    boxGetSideLocations(box2, &left, &right, &top, &bot);
+    leftfinal = L_MAX(left - lr_add, lr_clear);
+    rightfinal = L_MIN(right + lr_add, w - lr_clear);
+    topfinal = L_MAX(top - tb_add, tb_clear);
+    botfinal = L_MIN(bot + tb_add, h - tb_clear);
+    boxSetSideLocations(box2, leftfinal, rightfinal, topfinal, botfinal);
+    boxDestroy(&box1);
+    if (pixa1) {
+        pix2 = pixCopy(NULL, pix1);
+        pixRenderBoxArb(pix2, box2, 5, 255, 0, 0);
+        pixaAddPix(pixa1, pix2, L_INSERT);
+    }
+
+        /* Crop the input image */
+    pix2 = pixClipRectangle(pix1, box2, NULL);
+
+        /* Slightly thicken long horizontal lines.  This prevents loss of
+         * printed thin music staff lines due to aliasing. */
+    pix3 = pixMorphSequence(pix2, "o80.1 + d1.2", 0);
+    pixOr(pix2, pix2, pix3);
+    pixDestroy(&pix3);
+
+        /* Widen the result to fit the standard page shape (8.5 x 11 inch).
+         * Do not stretch horizontally by more than %maxwiden. */
+    pixGetDimensions(pix2, &w, &h, NULL);
+    hscale = (l_float32)h / (1.2941f * (l_float32)w);
+    if (hscale > 1.0 && maxwiden > 1.0) {
+        hscale = L_MIN(hscale, maxwiden);
+        pix3 = pixScale(pix2, hscale, 1.0);
+        if (first_time == TRUE) {
+            lept_stderr("Widening page by factor %5.3f\n", hscale);
+            first_time = FALSE;
+        }
+    } else {
+        pix3 = pixClone(pix2);
+    }
+    pixDestroy(&pix1);
+    pixDestroy(&pix2);
+
+    if (pcropbox)
+        *pcropbox = box2;
+    else
+        boxDestroy(&box2);
+    if (pixa1) {
+       pixaAddPix(pixa1, pix3, L_COPY);
+       lept_stderr("Writing debug file: %s\n", debugfile);
+       pixaConvertToPdf(pixa1, 0, 1.0, L_DEFAULT_ENCODE, 0, NULL, debugfile);
+       pixaDestroy(&pixa1);
+    }
+    return pix3;
+}
+
+
+/*!
+ * \brief   pixCleanImage()
+ *
+ * \param[in]    pixs        full resolution (any type or depth)
+ * \param[in]    contrast    vary contrast: 1 = lightest; 10 = darkest;
+ *                           suggest 1 unless light features are being lost
+ * \param[in]    rotation    cw by 90 degrees: {0,1,2,3} represent
+ *                           0, 90, 180 and 270 degree cw rotations
+ * \param[in]    scale       1 (no scaling) or 2 (2x upscaling)
+ * \param[in]    opensize    opening size of structuring element for noise
+ *                           removal: {0 or 1 to skip; 2, 3 for opening}
+ * \return  cleaned pix, or NULL on error
+ *
+ * <pre>
+ * Notes:
+ *    (1) This deskews, optionally rotates and darkens, cleans background
+ *        to white, binarizes and optionally removes small noise.
+ *    (2) For color and grayscale input, local background normalization is
+ *        done to 200, and a threshold of 180 sets the maximum foreground
+ *        value in the normalized image.
+ *    (3) The %contrast parameter adjusts the binarization to avoid losing
+ *        lighter input pixels.  Contrast is increased as %contrast increases
+ *        from 1 to 10.
+ *    (4) The %scale parameter controls the thresholding to 1 bpp. Two values:
+ *            1 = threshold
+ *            2 = linear interpolated 2x upscaling before threshold.
+ *    (5) The #opensize parameter is the size of a square SEL used with
+ *        opening to remove small speckle noise.  Allowed open sizes are 2,3.
+ *        If this is to be used, try 2 before 3.
+ *    (6) This does the image processing for cleanTo1bppFilesToPdf() and
+ *        prog/cleanpdf.c.
+ * </pre>
+ */
+PIX *
+pixCleanImage(PIX         *pixs,
+              l_int32      contrast,
+              l_int32      rotation,
+              l_int32      scale,
+              l_int32      opensize)
+{
+char  sequence[32];
+PIX  *pix1, *pix2, *pix3, *pix4, *pix5;
+
+    if (!pixs)
+        return (PIX *)ERROR_PTR("pixs not defined", __func__, NULL);
+    if (rotation < 0 || rotation > 3) {
+        L_ERROR("invalid rotation = %d; rotation must be in  {0,1,2,3}\n",
+                __func__, rotation);
+        return NULL;
+    }
+    if (contrast < 1 || contrast > 10) {
+        L_ERROR("invalid contrast = %d; contrast must be in [1...10]\n",
+                __func__, contrast);
+        return NULL;
+    }
+    if (scale != 1 && scale != 2) {
+        L_ERROR("invalid scale = %d; scale must be 1 or 2\n",
+                __func__, opensize);
+        return NULL;
+    }
+    if (opensize > 3) {
+        L_ERROR("invalid opensize = %d; opensize must be <= 3\n",
+                __func__, opensize);
+        return NULL;
+    }
+
+    if (pixGetDepth(pixs) == 1) {
+        if (rotation > 0)
+            pix1 = pixRotateOrth(pixs, rotation);
+        else
+            pix1 = pixClone(pixs);
+        pix2 = pixFindSkewAndDeskew(pix1, 2, NULL, NULL);
+        if (scale == 2)
+            pix4 = pixExpandBinaryReplicate(pix2, 2, 2);
+        else  /* scale == 1 */
+            pix4 = pixClone(pix2);
+    } else {
+        pix1 = pixConvertTo8MinMax(pixs);
+        if (rotation > 0)
+            pix2 = pixRotateOrth(pix1, rotation);
+        else
+            pix2 = pixClone(pix1);
+        pix3 = pixFindSkewAndDeskew(pix2, 2, NULL, NULL);
+        pix4 = pixBackgroundNormTo1MinMax(pix3, contrast, scale);
+        pixDestroy(&pix3);
+    }
+
+    if (opensize == 2 || opensize == 3) {
+        snprintf(sequence, sizeof(sequence), "o%d.%d", opensize, opensize);
+        pix5 = pixMorphSequence(pix4, sequence, 0);
+    } else {
+        pix5 = pixClone(pix4);
+    }
+
+    pixDestroy(&pix1);
+    pixDestroy(&pix2);
+    pixDestroy(&pix4);
+    return pix5;
+}
+
+
 /*!
  * \brief   pixFindPageForeground()
  *
- * \param[in]    pixs       full resolution (any type or depth
+ * \param[in]    pixs       full resolution (any type or depth)
  * \param[in]    threshold  for binarization; typically about 128
  * \param[in]    mindist    min distance of text from border to allow
  *                          cleaning near border; at 2x reduction, this
@@ -602,8 +879,7 @@ BOXA    *ba1, *ba2;
         /* Binarize, downscale by 0.5, remove the noise to generate a seed,
          * and do a seedfill back from the seed into those 8-connected
          * components of the binarized image for which there was at least
-         * one seed pixel.  Also clear out any components that are within
-         * 10 pixels of the edge at 2x reduction. */
+         * one seed pixel. */
     flag = (showmorph) ? 100 : 0;
     pixb = pixConvertTo1(pixs, threshold);
     pixb2 = pixScale(pixb, 0.5, 0.5);
@@ -615,7 +891,6 @@ BOXA    *ba1, *ba2;
     pixOr(pixseed, pixseed, pix1);
     pixDestroy(&pix1);
     pixsf = pixSeedfillBinary(NULL, pixseed, pixb2, 8);
-    pixSetOrClearBorder(pixsf, 10, 10, 10, 10, PIX_SET);
     pixm = pixRemoveBorderConnComps(pixsf, 8);
 
         /* Now, where is the main block of text?  We want to remove noise near

@@ -797,7 +797,7 @@ FUN(PDFAnnotation_update)(JNIEnv *env, jobject self)
 }
 
 JNIEXPORT jboolean JNICALL
-FUN(PDFAnnotation_isOpen)(JNIEnv *env, jobject self)
+FUN(PDFAnnotation_getIsOpen)(JNIEnv *env, jobject self)
 {
 	fz_context *ctx = get_context(env);
 	pdf_annot *annot = from_PDFAnnotation(env, self);
@@ -1638,4 +1638,37 @@ FUN(PDFAnnotation_getHiddenForEditing)(JNIEnv *env, jobject self)
 		jni_rethrow(env, ctx);
 
 	return hidden;
+}
+
+JNIEXPORT jboolean JNICALL
+FUN(PDFAnnotation_applyRedaction)(JNIEnv *env, jobject self, jboolean blackBoxes, jint imageMethod, jint lineArt)
+{
+	fz_context *ctx = get_context(env);
+	pdf_annot *annot = from_PDFAnnotation_safe(env, self);
+	pdf_redact_options opts = { blackBoxes, imageMethod, lineArt };
+	jboolean redacted = JNI_FALSE;
+
+	if (!ctx || !annot) return JNI_FALSE;
+
+	fz_try(ctx)
+		redacted = pdf_apply_redaction(ctx, annot, &opts);
+	fz_catch(ctx)
+		jni_rethrow(env, ctx);
+
+	return redacted;
+}
+
+JNIEXPORT jboolean JNICALL
+FUN(PDFAnnotation_hasRect)(JNIEnv *env, jobject self)
+{
+	fz_context *ctx = get_context(env);
+	pdf_annot *annot = from_PDFAnnotation(env, self);
+	jboolean has = JNI_FALSE;
+
+	fz_try(ctx)
+		has = pdf_annot_has_rect(ctx, annot);
+	fz_catch(ctx)
+		jni_rethrow(env, ctx);
+
+	return has;
 }

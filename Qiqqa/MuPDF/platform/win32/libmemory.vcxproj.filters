@@ -368,6 +368,9 @@
     <Text Include="../../thirdparty/owemdjee/memory/CMakeLists.txt">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/memory/LICENSE">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/memory/README.md">
       <Filter>Misc Files</Filter>
     </Text>
@@ -383,6 +386,9 @@
     <Text Include="../../thirdparty/owemdjee/memory/cmake/get_container_node_sizes.cmake">
       <Filter>Misc Files\cmake</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/memory/doc/Doxyfile">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/memory/doc/adapters_storage.md">
       <Filter>Misc Files\doc</Filter>
     </Text>
@@ -393,6 +399,12 @@
       <Filter>Misc Files\doc</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/memory/doc/external_usage.md">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/memory/doc/footer.html">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/memory/doc/header.html">
       <Filter>Misc Files\doc</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/memory/doc/index.md">
@@ -408,6 +420,9 @@
       <Filter>Misc Files\doc</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/memory/doc/publish-docs.sh">
+      <Filter>Misc Files\doc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/memory/doc/stylesheet.css">
       <Filter>Misc Files\doc</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/memory/doc/tutorial.md">

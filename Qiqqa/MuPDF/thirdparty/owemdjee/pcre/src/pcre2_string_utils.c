@@ -43,7 +43,7 @@ of strings. These are used instead of strcmp() etc because the standard
 functions work only on 8-bit data. */
 
 
-#ifdef HAVE_CONFIG_H
+#if defined(HAVE_CONFIG_H) && !defined(PCRE2_AMALGAMETE)
 #include "config.h"
 #endif
 

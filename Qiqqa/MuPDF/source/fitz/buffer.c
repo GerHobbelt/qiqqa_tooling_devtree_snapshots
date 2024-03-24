@@ -211,7 +211,7 @@ void
 fz_resize_buffer(fz_context *ctx, fz_buffer *buf, size_t size)
 {
 	if (buf->shared)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "cannot resize a buffer with shared storage");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "cannot resize a buffer with shared storage");
 	if (buf->cap != size)
 	{
 		buf->data = (unsigned char*)fz_realloc(ctx, buf->data, size);
@@ -318,8 +318,8 @@ fz_slice_buffer(fz_context *ctx, fz_buffer *buf, int64_t start, int64_t end)
 	if (end < 0)
 		end += size;
 
-	s = fz_clampi(start, 0, size);
-	e = fz_clampi(end, 0, size);
+	s = fz_clamp64(start, 0, size);
+	e = fz_clamp64(end, 0, size);
 
 	if (s == size || e <= s)
 		return fz_new_buffer(ctx, 0);

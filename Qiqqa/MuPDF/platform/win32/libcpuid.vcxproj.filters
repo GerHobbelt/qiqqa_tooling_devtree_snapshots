@@ -27,41 +27,50 @@
     <Filter Include="Misc Files\cmake">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\cpuid_tool">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\libcpuid">
+    <Filter Include="Misc Files\contrib">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tests">
+    <Filter Include="Misc Files\contrib\MSR Driver">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\cpuid_tool">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
+    <Filter Include="Misc Files\libcpuid">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0009}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\contrib">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0012}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\contrib\MSR Driver">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0011}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\contrib\MSR Driver\Kernel">
+    <Filter Include="Misc Files\tests">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0010}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\contrib">
+    <Filter Include="Misc Files\tests\intel">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0011}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\contrib">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0015}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\contrib\MSR Driver">
+    <Filter Include="Resource Files\contrib\MSR Driver">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0014}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\contrib\MSR Driver\Kernel">
+    <Filter Include="Resource Files\contrib\MSR Driver\Kernel">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0013}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\cpuid_tool">
+    <Filter Include="Source Files\contrib">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\contrib\MSR Driver">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\contrib\MSR Driver\Kernel">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0016}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\cpuid_tool">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0019}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files\libcpuid">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0017}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0020}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -95,6 +104,9 @@
     <ClCompile Include="../../thirdparty/owemdjee/libcpuid/libcpuid/recog_amd.c">
       <Filter>Source Files\libcpuid</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libcpuid/libcpuid/recog_centaur.c">
+      <Filter>Source Files\libcpuid</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/libcpuid/libcpuid/recog_intel.c">
       <Filter>Source Files\libcpuid</Filter>
     </ClCompile>
@@ -105,6 +117,9 @@
       <Filter>Header Files\libcpuid</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/libcpuid/libcpuid/asm-bits.h">
+      <Filter>Header Files\libcpuid</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libcpuid/libcpuid/centaur_code_t.h">
       <Filter>Header Files\libcpuid</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/libcpuid/libcpuid/intel_code_t.h">
@@ -131,6 +146,9 @@
     <ClInclude Include="../../thirdparty/owemdjee/libcpuid/libcpuid/recog_amd.h">
       <Filter>Header Files\libcpuid</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libcpuid/libcpuid/recog_centaur.h">
+      <Filter>Header Files\libcpuid</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/libcpuid/libcpuid/recog_intel.h">
       <Filter>Header Files\libcpuid</Filter>
     </ClInclude>
@@ -140,6 +158,9 @@
     <ResourceCompile Include="../../thirdparty/owemdjee/libcpuid/contrib/MSR Driver/Kernel/tmprdr.rc">
       <Filter>Resource Files\contrib\MSR Driver\Kernel</Filter>
     </ResourceCompile>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/AUTHORS">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libcpuid/CMakeLists.txt">
       <Filter>Misc Files</Filter>
     </Text>
@@ -170,11 +191,26 @@
     <Text Include="../../thirdparty/owemdjee/libcpuid/configure.ac">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/contrib/MSR Driver/TmpRdr.sys">
+      <Filter>Misc Files\contrib\MSR Driver</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/contrib/MSR Driver/TmpRdr64.sys">
+      <Filter>Misc Files\contrib\MSR Driver</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libcpuid/cpuid_tool/CMakeLists.txt">
       <Filter>Misc Files\cpuid_tool</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libcpuid/cpuid_tool/Makefile.am">
       <Filter>Misc Files\cpuid_tool</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/cpuid_tool/Makefile.x64">
+      <Filter>Misc Files\cpuid_tool</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/cpuid_tool/cpuid_tool_vc10.vcxproj.filters">
+      <Filter>Misc Files\cpuid_tool</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/libcpuid.dsw">
+      <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libcpuid/libcpuid.pc.in">
       <Filter>Misc Files</Filter>
@@ -188,7 +224,19 @@
     <Text Include="../../thirdparty/owemdjee/libcpuid/libcpuid/Makefile.am">
       <Filter>Misc Files\libcpuid</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/libcpuid/Makefile.x64">
+      <Filter>Misc Files\libcpuid</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/libcpuid/Makefile.x86">
+      <Filter>Misc Files\libcpuid</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libcpuid/libcpuid/check-consistency.py">
+      <Filter>Misc Files\libcpuid</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/libcpuid/exports.def">
+      <Filter>Misc Files\libcpuid</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/libcpuid/libcpuid_vc10.vcxproj.filters">
       <Filter>Misc Files\libcpuid</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libcpuid/tests/CMakeLists.txt">
@@ -199,6 +247,9 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/libcpuid/tests/create_test.py">
       <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libcpuid/tests/intel/README.md">
+      <Filter>Misc Files\tests\intel</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libcpuid/tests/run_tests.py">
       <Filter>Misc Files\tests</Filter>

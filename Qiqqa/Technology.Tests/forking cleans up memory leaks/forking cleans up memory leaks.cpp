@@ -2,11 +2,11 @@
 // # forking cleans up memory leaks
 //
 // Well, not exactly, but the key behaviour this test executable MUST exhibit (on Windows and elsewhere)
-// is that any memory allocations *done in the forked child* will be cleaned up by the OS oncee that child
+// is that any memory allocations *done in the forked child* will be cleaned up by the OS once that child
 // has been terminated.
 //
 // The goal is to show / prove that a production-quality "forever-running" application can be created
-// when we fork() off the work in batches and terminatee those children once they tend to consume
+// when we fork() off the work in batches and terminate those children once they tend to consume
 // too much memory.
 // Think (web)server style applications which perform heavy processing, e.g. PDF rendering, OCR and
 // text extraction.

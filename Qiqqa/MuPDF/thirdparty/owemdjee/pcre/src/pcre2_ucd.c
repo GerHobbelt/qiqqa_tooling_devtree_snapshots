@@ -53,7 +53,7 @@ just one of these tables is actually needed. When compiling the library, some
 headers are needed. */
 
 #ifndef PCRE2_PCRE2TEST
-#ifdef HAVE_CONFIG_H
+#if defined(HAVE_CONFIG_H) && !defined(PCRE2_AMALGAMETE)
 #include "config.h"
 #endif
 #include "pcre2_internal.h"

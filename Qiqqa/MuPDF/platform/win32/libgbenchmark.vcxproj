@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGBENCHMARK;GBENCHMARK_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGBENCHMARK;GBENCHMARK_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/gbenchmark/include;../../scripts/gbenchmark/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGBENCHMARK;GBENCHMARK_STATICLIB;JPEGXL_MAJOR_VERSION=0;JPEGXL_MINOR_VERSION=5;JPEGXL_PATCH_VERSION=0;JPEGXL_LIBRARY_VERSION="0.5.0";JXL_STATIC_DEFINE;JXL_THREADS_STATIC_DEFINE;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/gbenchmark/include;../../scripts/gbenchmark/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGBENCHMARK;GBENCHMARK_STATICLIB;JPEGXL_MAJOR_VERSION=0;JPEGXL_MINOR_VERSION=5;JPEGXL_PATCH_VERSION=0;JPEGXL_LIBRARY_VERSION="0.5.0";JXL_STATIC_DEFINE;JXL_THREADS_STATIC_DEFINE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGBENCHMARK;GBENCHMARK_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGBENCHMARK;GBENCHMARK_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/gbenchmark/include;../../scripts/gbenchmark/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/gbenchmark/include;../../scripts/gbenchmark/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGBENCHMARK;GBENCHMARK_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGBENCHMARK;GBENCHMARK_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/gbenchmark/include;../../scripts/gbenchmark/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGBENCHMARK;GBENCHMARK_STATICLIB;JPEGXL_MAJOR_VERSION=0;JPEGXL_MINOR_VERSION=5;JPEGXL_PATCH_VERSION=0;JPEGXL_LIBRARY_VERSION="0.5.0";JXL_STATIC_DEFINE;JXL_THREADS_STATIC_DEFINE;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/gbenchmark/include;../../scripts/gbenchmark/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGBENCHMARK;GBENCHMARK_STATICLIB;JPEGXL_MAJOR_VERSION=0;JPEGXL_MINOR_VERSION=5;JPEGXL_PATCH_VERSION=0;JPEGXL_LIBRARY_VERSION="0.5.0";JXL_STATIC_DEFINE;JXL_THREADS_STATIC_DEFINE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGBENCHMARK;GBENCHMARK_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGBENCHMARK;GBENCHMARK_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/gbenchmark/include;../../scripts/gbenchmark/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/gbenchmark/include;../../scripts/gbenchmark/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGBENCHMARK;GBENCHMARK_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGBENCHMARK;GBENCHMARK_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/gbenchmark/include;../../scripts/gbenchmark/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGBENCHMARK;GBENCHMARK_STATICLIB;JPEGXL_MAJOR_VERSION=0;JPEGXL_MINOR_VERSION=5;JPEGXL_PATCH_VERSION=0;JPEGXL_LIBRARY_VERSION="0.5.0";JXL_STATIC_DEFINE;JXL_THREADS_STATIC_DEFINE;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/gbenchmark/include;../../scripts/gbenchmark/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGBENCHMARK;GBENCHMARK_STATICLIB;JPEGXL_MAJOR_VERSION=0;JPEGXL_MINOR_VERSION=5;JPEGXL_PATCH_VERSION=0;JPEGXL_LIBRARY_VERSION="0.5.0";JXL_STATIC_DEFINE;JXL_THREADS_STATIC_DEFINE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGBENCHMARK;GBENCHMARK_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGBENCHMARK;GBENCHMARK_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/gbenchmark/include;../../scripts/gbenchmark/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/gbenchmark/include;../../scripts/gbenchmark/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGBENCHMARK;GBENCHMARK_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGBENCHMARK;GBENCHMARK_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/gbenchmark/include;../../scripts/gbenchmark/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGBENCHMARK;GBENCHMARK_STATICLIB;JPEGXL_MAJOR_VERSION=0;JPEGXL_MINOR_VERSION=5;JPEGXL_PATCH_VERSION=0;JPEGXL_LIBRARY_VERSION="0.5.0";JXL_STATIC_DEFINE;JXL_THREADS_STATIC_DEFINE;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/gbenchmark/include;../../scripts/gbenchmark/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGBENCHMARK;GBENCHMARK_STATICLIB;JPEGXL_MAJOR_VERSION=0;JPEGXL_MINOR_VERSION=5;JPEGXL_PATCH_VERSION=0;JPEGXL_LIBRARY_VERSION="0.5.0";JXL_STATIC_DEFINE;JXL_THREADS_STATIC_DEFINE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGBENCHMARK;GBENCHMARK_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBGBENCHMARK;GBENCHMARK_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/gbenchmark/include;../../scripts/gbenchmark/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/gbenchmark/include;../../scripts/gbenchmark/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -228,12 +228,6 @@
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ItemGroup>
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/bindings/python/google_benchmark/benchmark.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/cmake/gnu_posix_regex.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/cmake/posix_regex.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/cmake/std_regex.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/cmake/steady_clock.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/cmake/thread_safety_attributes.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/src/benchmark.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/src/benchmark_api_internal.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/src/benchmark_main.cc" />
@@ -255,48 +249,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/src/string_util.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/src/sysinfo.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/src/timers.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/args_product_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/basic_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/benchmark_gtest.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/benchmark_name_gtest.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/benchmark_random_interleaving_gtest.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/benchmark_setup_teardown_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/benchmark_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/clobber_memory_assembly_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/commandlineflags_gtest.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/complexity_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/cxx03_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/diagnostics_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/display_aggregates_only_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/donotoptimize_assembly_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/donotoptimize_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/filter_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/fixture_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/internal_threading_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/link_main_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/map_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/memory_manager_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/monolithic_main.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/multiple_ranges_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/options_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/output_test_helper.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/perf_counters_gtest.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/perf_counters_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/register_benchmark_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/repetitions_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/report_aggregates_only_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/reporter_output_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/skip_with_error_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/spec_arg_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/spec_arg_verbosity_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/state_assembly_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/statistics_gtest.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/string_util_gtest.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/templated_fixture_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/time_unit_gtest.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/user_counters_tabular_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/user_counters_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/gbenchmark/test/user_counters_thousands_test.cc" />
     <ClInclude Include="../../thirdparty/owemdjee/gbenchmark/include/benchmark/benchmark.h" />
     <ClInclude Include="../../thirdparty/owemdjee/gbenchmark/include/benchmark/export.h" />
     <ClInclude Include="../../thirdparty/owemdjee/gbenchmark/src/arraysize.h" />
@@ -320,30 +272,18 @@
     <ClInclude Include="../../thirdparty/owemdjee/gbenchmark/src/thread_manager.h" />
     <ClInclude Include="../../thirdparty/owemdjee/gbenchmark/src/thread_timer.h" />
     <ClInclude Include="../../thirdparty/owemdjee/gbenchmark/src/timers.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/gbenchmark/test/monolithic_examples.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/gbenchmark/test/output_test.h" />
+    <Text Include="../../thirdparty/owemdjee/gbenchmark/AUTHORS" />
     <Text Include="../../thirdparty/owemdjee/gbenchmark/BUILD.bazel" />
     <Text Include="../../thirdparty/owemdjee/gbenchmark/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/gbenchmark/CONTRIBUTING.md" />
     <Text Include="../../thirdparty/owemdjee/gbenchmark/CONTRIBUTORS" />
+    <Text Include="../../thirdparty/owemdjee/gbenchmark/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/gbenchmark/README.md" />
-    <Text Include="../../thirdparty/owemdjee/gbenchmark/bindings/python/google_benchmark/__init__.py" />
-    <Text Include="../../thirdparty/owemdjee/gbenchmark/bindings/python/google_benchmark/example.py" />
-    <Text Include="../../thirdparty/owemdjee/gbenchmark/bindings/python/requirements.txt" />
-    <Text Include="../../thirdparty/owemdjee/gbenchmark/cmake/AddCXXCompilerFlag.cmake" />
-    <Text Include="../../thirdparty/owemdjee/gbenchmark/cmake/CXXFeatureCheck.cmake" />
-    <Text Include="../../thirdparty/owemdjee/gbenchmark/cmake/Config.cmake.in" />
-    <Text Include="../../thirdparty/owemdjee/gbenchmark/cmake/GetGitVersion.cmake" />
-    <Text Include="../../thirdparty/owemdjee/gbenchmark/cmake/GoogleTest.cmake" />
-    <Text Include="../../thirdparty/owemdjee/gbenchmark/cmake/GoogleTest.cmake.in" />
-    <Text Include="../../thirdparty/owemdjee/gbenchmark/cmake/Modules/FindLLVMAr.cmake" />
-    <Text Include="../../thirdparty/owemdjee/gbenchmark/cmake/Modules/FindLLVMNm.cmake" />
-    <Text Include="../../thirdparty/owemdjee/gbenchmark/cmake/Modules/FindLLVMRanLib.cmake" />
-    <Text Include="../../thirdparty/owemdjee/gbenchmark/cmake/Modules/FindPFM.cmake" />
-    <Text Include="../../thirdparty/owemdjee/gbenchmark/cmake/benchmark.pc.in" />
-    <Text Include="../../thirdparty/owemdjee/gbenchmark/cmake/llvm-toolchain.cmake" />
-    <Text Include="../../thirdparty/owemdjee/gbenchmark/cmake/split_list.cmake" />
+    <Text Include="../../thirdparty/owemdjee/gbenchmark/_config.yml" />
+    <Text Include="../../thirdparty/owemdjee/gbenchmark/appveyor.yml" />
+    <Text Include="../../thirdparty/owemdjee/gbenchmark/bazel/benchmark_deps.bzl" />
     <Text Include="../../thirdparty/owemdjee/gbenchmark/docs/AssemblyTests.md" />
+    <Text Include="../../thirdparty/owemdjee/gbenchmark/docs/_config.yml" />
     <Text Include="../../thirdparty/owemdjee/gbenchmark/docs/dependencies.md" />
     <Text Include="../../thirdparty/owemdjee/gbenchmark/docs/index.md" />
     <Text Include="../../thirdparty/owemdjee/gbenchmark/docs/perf_counters.md" />
@@ -357,8 +297,6 @@
     <Text Include="../../thirdparty/owemdjee/gbenchmark/requirements.txt" />
     <Text Include="../../thirdparty/owemdjee/gbenchmark/setup.py" />
     <Text Include="../../thirdparty/owemdjee/gbenchmark/src/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/gbenchmark/test/AssemblyTests.cmake" />
-    <Text Include="../../thirdparty/owemdjee/gbenchmark/test/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/gbenchmark/tools/BUILD.bazel" />
     <Text Include="../../thirdparty/owemdjee/gbenchmark/tools/compare.py" />
     <Text Include="../../thirdparty/owemdjee/gbenchmark/tools/gbench/Inputs/test1_run1.json" />

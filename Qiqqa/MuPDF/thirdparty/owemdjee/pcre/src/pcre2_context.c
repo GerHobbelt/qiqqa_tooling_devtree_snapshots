@@ -39,12 +39,18 @@ POSSIBILITY OF SUCH DAMAGE.
 */
 
 
-#ifdef HAVE_CONFIG_H
+#if defined(HAVE_CONFIG_H) && !defined(PCRE2_AMALGAMETE)
 #include "config.h"
 #endif
 
 #include "pcre2_internal.h"
 
+#if !defined(pcre2_compile_context_create)
+#error SUPPORT_PCRE2_8 or SUPPORT_PCRE2_16 or SUPPORT_PCRE2_32 must be defined
+#endif
+#if !defined(PCRE2_CODE_UNIT_WIDTH)
+#error PCRE2_CODE_UNIT_WIDTH must be defined
+#endif
 
 
 /*************************************************
@@ -139,7 +145,9 @@ const pcre2_compile_context PRIV(default_compile_context) = {
   BSR_DEFAULT,                               /* Backslash R default */
   NEWLINE_DEFAULT,                           /* Newline convention */
   PARENS_NEST_LIMIT,                         /* As it says */
-  0 };                                       /* Extra options */
+  0,                                         /* Extra options */
+  MAX_VARLOOKBEHIND                          /* As it says */
+  };
 
 /* The create function copies the default into the new memory, but must
 override the default memory handling functions if a gcontext was provided. */
@@ -367,6 +375,13 @@ switch(newline)
   default:
   return PCRE2_ERROR_BADDATA;
   }
+}
+
+PCRE2_EXP_DEFN int PCRE2_CALL_CONVENTION
+pcre2_set_max_varlookbehind(pcre2_compile_context *ccontext, uint32_t limit)
+{
+ccontext->max_varlookbehind = limit;
+return 0;
 }
 
 PCRE2_EXP_DEFN int PCRE2_CALL_CONVENTION

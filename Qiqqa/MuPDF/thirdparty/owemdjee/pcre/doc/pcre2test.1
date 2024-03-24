@@ -1,4 +1,4 @@
-.TH PCRE2TEST 1 "04 February 2023" "PCRE 10.43"
+.TH PCRE2TEST 1 "11 August" "PCRE 10.43"
 .SH NAME
 pcre2test - a program for testing Perl-compatible regular expressions.
 .SH SYNOPSIS
@@ -111,14 +111,14 @@ the default). If the 8-bit library has not been built, this option causes an
 error.
 .TP 10
 \fB-16\fP
-If the 16-bit library has been built, this option causes it to be used. If only
-the 16-bit library has been built, this is the default. If the 16-bit library
+If the 16-bit library has been built, this option causes it to be used. If the
+8-bit library has not been built, this is the default. If the 16-bit library
 has not been built, this option causes an error.
 .TP 10
 \fB-32\fP
-If the 32-bit library has been built, this option causes it to be used. If only
-the 32-bit library has been built, this is the default. If the 32-bit library
-has not been built, this option causes an error.
+If the 32-bit library has been built, this option causes it to be used. If no
+other library has been built, this is the default. If the 32-bit library has
+not been built, this option causes an error.
 .TP 10
 \fB-ac\fP
 Behave as if each pattern has the \fBauto_callout\fP modifier, that is, insert
@@ -462,8 +462,8 @@ followed by a backslash, for example,
 .sp
   /abc/\e
 .sp
-then a backslash is added to the end of the pattern. This is done to provide a
-way of testing the error condition that arises if a pattern finishes with a
+a backslash is added to the end of the pattern. This is done to provide a way
+of testing the error condition that arises if a pattern finishes with a
 backslash, because
 .sp
   /abc\e/
@@ -586,6 +586,7 @@ for a description of the effects of these options.
       ascii_bsd                 set PCRE2_EXTRA_ASCII_BSD
       ascii_bss                 set PCRE2_EXTRA_ASCII_BSS
       ascii_bsw                 set PCRE2_EXTRA_ASCII_BSW
+      ascii_digit               set PCRE2_EXTRA_ASCII_DIGIT
       ascii_posix               set PCRE2_EXTRA_ASCII_POSIX
       auto_callout              set PCRE2_AUTO_CALLOUT
       bad_escape_is_literal     set PCRE2_EXTRA_BAD_ESCAPE_IS_LITERAL
@@ -651,10 +652,12 @@ heavily used in the test files.
       jitfast                   use JIT fast path
       jitverify                 verify JIT use
       locale=<name>             use this locale
-      max_pattern_length=<n>    set the maximum pattern length
+      max_pattern_length=<n>    set maximum pattern length
+      max_varlookbehind=<n>     set maximum variable lookbehind length
       memory                    show memory used
       newline=<type>            set newline type
       null_context              compile with a NULL context
+      null_pattern              pass pattern as NULL
       parens_nest_limit=<n>     set maximum parentheses depth
       posix                     use the POSIX API
       posix_nosub               use the POSIX API with REG_NOSUB
@@ -750,6 +753,15 @@ testing that \fBpcre2_compile()\fP behaves correctly in this case (it uses
 default values).
 .
 .
+.SS "Passing a NULL pattern"
+.rs
+.sp
+The \fBnull_pattern\fP modifier is for testing the behaviour of
+\fBpcre2_compile()\fP when the pattern argument is NULL. The length value
+passed is the default PCRE2_ZERO_TERMINATED unless \fBuse_length\fP is set.
+Any length other than zero causes an error.
+.
+.
 .SS "Specifying pattern characters in hexadecimal"
 .rs
 .sp
@@ -787,6 +799,17 @@ If \fBhex\fP or \fBuse_length\fP is used with the POSIX wrapper API (see
 "Using the POSIX wrapper API"
 .\"
 below), the REG_PEND extension is used to pass the pattern's length.
+.
+.
+.SS "Specifying a maximum for variable lookbehinds"
+.rs
+.sp
+Variable lookbehind assertions are supported only if, for each one, there is a
+maximum length (in characters) that it can match. There is a limit on this,
+whose default can be set at build time, with an ultimate default of 255. The
+\fBmax_varlookbehind\fP modifier uses the \fBpcre2_set_max_varlookbehind()\fP
+function to change the limit. Lookbehinds whose branches each match a fixed
+length are limited to 65535 characters per branch.
 .
 .
 .SS "Specifying wide characters in 16-bit and 32-bit modes"
@@ -2147,6 +2170,6 @@ Cambridge, England.
 .rs
 .sp
 .nf
-Last updated: 04 February 2023
+Last updated: 11 August 2023
 Copyright (c) 1997-2023 University of Cambridge.
 .fi

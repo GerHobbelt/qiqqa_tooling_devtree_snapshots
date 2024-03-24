@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCOPP;COPP_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCOPP;COPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCOPP;COPP_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libcopp/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCOPP;COPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCOPP;COPP_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCOPP;COPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libcopp/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCOPP;COPP_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCOPP;COPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCOPP;COPP_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libcopp/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCOPP;COPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCOPP;COPP_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCOPP;COPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libcopp/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCOPP;COPP_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCOPP;COPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCOPP;COPP_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libcopp/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCOPP;COPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCOPP;COPP_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCOPP;COPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libcopp/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCOPP;COPP_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCOPP;COPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCOPP;COPP_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libcopp/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCOPP;COPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCOPP;COPP_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCOPP;COPP_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libcopp/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -378,12 +378,15 @@
     <ClInclude Include="../../thirdparty/owemdjee/libcopp/test/std/tuple.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libcopp/test/std/utility.h" />
     <Image Include="../../thirdparty/owemdjee/libcopp/docs/sphinx/_static/icon.png" />
+    <MASM Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/jump_arm64_aapcs_pe_armasm.asm" />
     <MASM Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/jump_arm_aapcs_pe_armasm.asm" />
     <MASM Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/jump_i386_ms_pe_masm.asm" />
     <MASM Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/jump_x86_64_ms_pe_masm.asm" />
+    <MASM Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/make_arm64_aapcs_pe_armasm.asm" />
     <MASM Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/make_arm_aapcs_pe_armasm.asm" />
     <MASM Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/make_i386_ms_pe_masm.asm" />
     <MASM Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/make_x86_64_ms_pe_masm.asm" />
+    <MASM Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/ontop_arm64_aapcs_pe_armasm.asm" />
     <MASM Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/ontop_arm_aapcs_pe_armasm.asm" />
     <MASM Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/ontop_i386_ms_pe_masm.asm" />
     <MASM Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/ontop_x86_64_ms_pe_masm.asm" />
@@ -396,6 +399,7 @@
     <Text Include="../../thirdparty/owemdjee/libcopp/BOOST_LICENSE_1_0.txt" />
     <Text Include="../../thirdparty/owemdjee/libcopp/CHANGELOG.md" />
     <Text Include="../../thirdparty/owemdjee/libcopp/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libcopp/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/libcopp/README.rst" />
     <Text Include="../../thirdparty/owemdjee/libcopp/ci/do_ci.ps1" />
     <Text Include="../../thirdparty/owemdjee/libcopp/ci/do_ci.sh" />
@@ -404,6 +408,7 @@
     <Text Include="../../thirdparty/owemdjee/libcopp/cmake_dev.bat" />
     <Text Include="../../thirdparty/owemdjee/libcopp/cmake_dev.ps1" />
     <Text Include="../../thirdparty/owemdjee/libcopp/cmake_dev.sh" />
+    <Text Include="../../thirdparty/owemdjee/libcopp/codecov.yml" />
     <Text Include="../../thirdparty/owemdjee/libcopp/docs/doxygen-index.md" />
     <Text Include="../../thirdparty/owemdjee/libcopp/docs/libcopp.doxyfile.in" />
     <Text Include="../../thirdparty/owemdjee/libcopp/docs/reports/linux_benchmark_report.txt" />
@@ -415,6 +420,8 @@
     <Text Include="../../thirdparty/owemdjee/libcopp/docs/setup-sphinx.bat" />
     <Text Include="../../thirdparty/owemdjee/libcopp/docs/setup-sphinx.ps1" />
     <Text Include="../../thirdparty/owemdjee/libcopp/docs/setup-sphinx.sh" />
+    <Text Include="../../thirdparty/owemdjee/libcopp/docs/sphinx/_static/css/custom.css" />
+    <Text Include="../../thirdparty/owemdjee/libcopp/docs/sphinx/_static/css/highlight.css" />
     <Text Include="../../thirdparty/owemdjee/libcopp/docs/sphinx/_static/js/setup_lineno.js" />
     <Text Include="../../thirdparty/owemdjee/libcopp/docs/sphinx/conf.py" />
     <Text Include="../../thirdparty/owemdjee/libcopp/docs/sphinx/example/index.rst" />
@@ -423,6 +430,7 @@
     <Text Include="../../thirdparty/owemdjee/libcopp/include/include.macro.cmake" />
     <Text Include="../../thirdparty/owemdjee/libcopp/include/libcopp/fcontext/README.txt" />
     <Text Include="../../thirdparty/owemdjee/libcopp/include/libcopp/utils/config/libcopp_build_features.h.in" />
+    <Text Include="../../thirdparty/owemdjee/libcopp/lgtm.yml" />
     <Text Include="../../thirdparty/owemdjee/libcopp/libcopp-config.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/libcopp/project/cmake/FetchDependeny.cmake" />
     <Text Include="../../thirdparty/owemdjee/libcopp/project/cmake/ProjectBuildOption.cmake" />
@@ -441,6 +449,7 @@
     <Text Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/jump_i386_sysv_elf_gas.S" />
     <Text Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/jump_i386_sysv_macho_gas.S" />
     <Text Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/jump_i386_x86_64_sysv_macho_gas.S" />
+    <Text Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/jump_loongarch64_sysv_elf_gas.S" />
     <Text Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/jump_mips32_o32_elf_gas.S" />
     <Text Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/jump_mips64_n64_elf_gas.S" />
     <Text Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/jump_ppc32_ppc64_sysv_macho_gas.S" />
@@ -464,6 +473,7 @@
     <Text Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/make_i386_sysv_elf_gas.S" />
     <Text Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/make_i386_sysv_macho_gas.S" />
     <Text Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/make_i386_x86_64_sysv_macho_gas.S" />
+    <Text Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/make_loongarch64_sysv_elf_gas.S" />
     <Text Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/make_mips32_o32_elf_gas.S" />
     <Text Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/make_mips64_n64_elf_gas.S" />
     <Text Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/make_ppc32_ppc64_sysv_macho_gas.S" />
@@ -487,6 +497,7 @@
     <Text Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/ontop_i386_sysv_elf_gas.S" />
     <Text Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/ontop_i386_sysv_macho_gas.S" />
     <Text Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/ontop_i386_x86_64_sysv_macho_gas.S" />
+    <Text Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/ontop_loongarch64_sysv_elf_gas.S" />
     <Text Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/ontop_mips32_o32_elf_gas.S" />
     <Text Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/ontop_mips64_n64_elf_gas.S" />
     <Text Include="../../thirdparty/owemdjee/libcopp/src/libcopp/fcontext/asm/ontop_ppc32_ppc64_sysv_macho_gas.S" />

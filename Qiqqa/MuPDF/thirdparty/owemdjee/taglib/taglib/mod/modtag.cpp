@@ -23,8 +23,10 @@
  *   http://www.mozilla.org/MPL/                                           *
  ***************************************************************************/
 
-
 #include "modtag.h"
+
+#include <utility>
+
 #include "tstringlist.h"
 #include "tpropertymap.h"
 
@@ -34,24 +36,17 @@ using namespace Mod;
 class Mod::Tag::TagPrivate
 {
 public:
-  TagPrivate()
-  {
-  }
-
   String title;
   String comment;
   String trackerName;
 };
 
 Mod::Tag::Tag() :
-  d(new TagPrivate())
+  d(std::make_unique<TagPrivate>())
 {
 }
 
-Mod::Tag::~Tag()
-{
-  delete d;
-}
+Mod::Tag::~Tag() = default;
 
 String Mod::Tag::title() const
 {
@@ -163,11 +158,11 @@ PropertyMap Mod::Tag::setProperties(const PropertyMap &origProps)
 
   // for each tag that has been set above, remove the first entry in the corresponding
   // value list. The others will be returned as unsupported by this format.
-  for(StringList::ConstIterator it = oneValueSet.begin(); it != oneValueSet.end(); ++it) {
-    if(properties[*it].size() == 1)
-      properties.erase(*it);
+  for(const auto &entry : std::as_const(oneValueSet)) {
+    if(properties[entry].size() == 1)
+      properties.erase(entry);
     else
-      properties[*it].erase( properties[*it].begin() );
+      properties[entry].erase(properties[entry].begin());
   }
   return properties;
 }

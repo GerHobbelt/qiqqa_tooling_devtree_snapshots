@@ -93,6 +93,7 @@
             <arg choice="plain"><option>--xmlout</option></arg>
             <arg choice="plain"><option>--push</option></arg>
             <arg choice="plain"><option>--memory</option></arg>
+            <arg choice="plain"><option>--max-ampl <replaceable class="option">INTEGER</replaceable></option></arg>
             <arg choice="plain"><option>--maxmem <replaceable class="option">NBBYTES</replaceable></option></arg>
             <arg choice="plain"><option>--nowarning</option></arg>
             <arg choice="plain"><option>--noblanks</option></arg>
@@ -339,6 +340,18 @@
         </varlistentry>
 
         <varlistentry>
+            <term><option>--max-ampl <replaceable class="option">INTEGER</replaceable></option></term>
+            <listitem>
+                <para>
+                    Set the maximum amplification factor which protects against
+                    exponential entity expansion ("billion laughs"). The default value
+                    is 5. Documents making heavy use of entity expansion may require a
+                    higher value.
+                </para>
+            </listitem>
+        </varlistentry>
+
+        <varlistentry>
             <term><option>--maxmem <replaceable class="option">NNBYTES</replaceable></option></term>
             <listitem>
                 <para>
@@ -562,7 +575,9 @@
                     result. In case of a nodeset result, each node in the
                     node set is serialized in full in the output. In case
                     of an empty node set the "XPath set is empty" result
-                    will be shown and an error exit code will be returned.
+                    will be shown and exit code 11 will be returned..
+                    This feature is EXPERIMENTAL. Implementation details can
+                    change without futher notice.
                 </para>
             </listitem>
         </varlistentry>
@@ -929,6 +944,13 @@
             <term><errorcode>10</errorcode></term>
             <listitem>
                 <para>XPath evaluation error</para>
+            </listitem>
+        </varlistentry>
+
+        <varlistentry>
+            <term><errorcode>11</errorcode></term>
+            <listitem>
+                <para>XPath result is empty</para>
             </listitem>
         </varlistentry>
 

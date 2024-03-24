@@ -3,7 +3,7 @@ AC_PREREQ(2.63)
 
 m4_define([MAJOR_VERSION], [1])
 m4_define([MINOR_VERSION], [1])
-m4_define([MICRO_VERSION], [37])
+m4_define([MICRO_VERSION], [39])
 
 AC_INIT([libxslt], [MAJOR_VERSION.MINOR_VERSION.MICRO_VERSION])
 AC_CONFIG_SRCDIR([libxslt/xslt.c])
@@ -21,7 +21,7 @@ LIBXSLT_MINOR_VERSION=MINOR_VERSION
 LIBXSLT_MICRO_VERSION=MICRO_VERSION
 LIBEXSLT_MAJOR_VERSION=0
 LIBEXSLT_MINOR_VERSION=8
-LIBEXSLT_MICRO_VERSION=20
+LIBEXSLT_MICRO_VERSION=21
 LIBXML_REQUIRED_VERSION=2.6.27
 
 
@@ -95,7 +95,11 @@ dnl
 AC_MSG_CHECKING([how to pass version script to the linker ($LD)])
 VERSION_SCRIPT_FLAGS=none
 if $LD --help 2>&1 | grep "version-script" >/dev/null 2>/dev/null; then
-    VERSION_SCRIPT_FLAGS=-Wl,--version-script=
+    dnl lld 16 defaults to --no-undefined-version but the version script
+    dnl can contain symbols disabled by configuration options.
+    VERSION_SCRIPT_FLAGS=''
+    AX_APPEND_LINK_FLAGS([-Wl,--undefined-version], [VERSION_SCRIPT_FLAGS])
+    AX_APPEND_FLAG([-Wl,--version-script=], [VERSION_SCRIPT_FLAGS])
 elif $LD --help 2>&1 | grep "M mapfile" >/dev/null 2>/dev/null; then
     VERSION_SCRIPT_FLAGS="-Wl,-M -Wl,"
 fi
@@ -248,15 +252,6 @@ else
     WITH_XSLT_DEBUG=1
 fi
 AC_SUBST(WITH_XSLT_DEBUG)
-
-AC_ARG_WITH(mem_debug, [  --with-mem-debug        Add the memory debugging module (off)])
-if test "$with_mem_debug" = "yes" ; then
-    echo Enabling memory debug support
-    WITH_MEM_DEBUG=1
-else    
-    WITH_MEM_DEBUG=0
-fi
-AC_SUBST(WITH_MEM_DEBUG)
 
 dnl 
 dnl Is debugger support requested
@@ -507,6 +502,7 @@ AC_SUBST(XSLT_LIBS)
 AC_SUBST(XSLT_PRIVATE_LIBS)
 
 LIBXSLT_CFLAGS=""
+LIBEXSLT_CFLAGS=""
 case ${host} in
     *-*-mingw* | *-*-cygwin* | *-*-msvc* )
         # If the host is Windows, and shared libraries are disabled, we
@@ -515,12 +511,14 @@ case ${host} in
         # DLL imports, which obviously aren't present in a static
         # library).
         if test "x$enable_shared" = "xno"; then
-           LIBXSLT_CFLAGS="$LIBXSLT_CFLAGS -DLIBXSLT_STATIC -DLIBEXSLT_STATIC"
+           LIBXSLT_CFLAGS="$LIBXSLT_CFLAGS -DLIBXSLT_STATIC"
+           LIBEXSLT_CFLAGS="$LIBEXSLT_CFLAGS -DLIBEXSLT_STATIC"
            AM_CFLAGS="$AM_CFLAGS -DLIBXSLT_STATIC -DLIBEXSLT_STATIC"
         fi
         ;;
 esac
 AC_SUBST(LIBXSLT_CFLAGS)
+AC_SUBST(LIBEXSLT_CFLAGS)
 
 AC_SUBST(AM_CFLAGS)
 
@@ -561,10 +559,8 @@ tests/fuzz/Makefile
 doc/Makefile
 doc/devhelp/Makefile
 doc/EXSLT/devhelp/Makefile
-xslt-config
 libxslt.spec
 ])
-AC_CONFIG_LINKS([tests/fuzz/xpath.xml:tests/fuzz/xpath.xml])
-AC_CONFIG_LINKS([tests/fuzz/xslt.xml:tests/fuzz/xslt.xml])
+AC_CONFIG_FILES([xslt-config], [chmod +x xslt-config])
 
 AC_OUTPUT

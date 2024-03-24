@@ -32,16 +32,18 @@
 
 #define BUILD_MONOLITHIC 1
 #include "../../thirdparty/tesseract/include/tesseract/capi_training_tools.h"
+#include "../../thirdparty/tesseract_ocr_test/testing/monolithic_tests.h"
 #include "../../thirdparty/owemdjee/libwebp/extras/tools.h"
 #include "../../thirdparty/owemdjee/pmt-png-tools/pngtools-monolithic.h"
 #include "../../thirdparty/owemdjee/upskirt-markdown/bin/monolithic_examples.h"
 #include "../../thirdparty/owemdjee/libxml2/include/libxml/monolithic_examples.h"
+#include "../../thirdparty/owemdjee/libxslt/examples/monolithic_examples.h"
 #include "../../thirdparty/owemdjee/QuickJS/monolithic_examples.h"
 #include "../../thirdparty/owemdjee/brotli/c/include/monolithic_examples.h"
 #include "../../thirdparty/owemdjee/jpeg-xl/lib/include/monolithic_examples.h"
 #include "../../thirdparty/owemdjee/sqlite/monolithic_examples.h"
 #include "../../thirdparty/owemdjee/crow/include/crow/monolithic_examples.h"
-#include "../../thirdparty/owemdjee/libjpeg-turbo/monolithic_examples.h"
+#include "../../thirdparty/owemdjee/libjpeg-turbo/src/monolithic_examples.h"
 #include "../../thirdparty/owemdjee/pcre/src/monolithic_examples.h"
 #include "../../thirdparty/owemdjee/bibutils/src/bin/monolithic_examples.h"
 #include "../../thirdparty/owemdjee/libzopfli/src/zopfli/monolithic_examples.h"
@@ -51,16 +53,29 @@
 #include "../../thirdparty/owemdjee/BLAKE3/c/monolithic_examples.h"
 #include "../../thirdparty/owemdjee/libarchive/contrib/monolithic_examples.h"
 #include "../../thirdparty/owemdjee/tesslinesplit/monolithic_examples.h"
+#include "../../thirdparty/owemdjee/uchardet/src/tools/monolithic_examples.h"
 #include "../../thirdparty/owemdjee/tvision/include/tvision/monolithic_examples.h"
+//#include "../../thirdparty/owemdjee/cpp-terminal/examples/monolithic_examples.h"
+#include "../../thirdparty/owemdjee/libbf/monolithic_examples.h"
+#include "../../thirdparty/owemdjee/libcsv2/include/monolithic_examples.h"
+#include "../../thirdparty/owemdjee/nanosvg/example/monolithic_examples.h"
+#include "../../thirdparty/owemdjee/libgif/gif_lib.h"
 #include "../../thirdparty/jbig2dec/monolithic_examples.h"
+#include "../../thirdparty/lcms2/include/monolithic_examples.h"
 #include "../../thirdparty/leptonica/prog/monolithic_examples.h"
+#include "../../thirdparty/owemdjee/filesystem/examples/monolithic_examples.h"
+#include "../../thirdparty/owemdjee/glob/standalone/source/monolithic_examples.h"
+#include "../../thirdparty/owemdjee/xsimd/examples/monolithic_examples.h"
+#include "../../thirdparty/owemdjee/dirent/examples/monolithic_examples.h"
 #include "../../source/fitz/tessocr.h"
+#include "../../thirdparty/gumbo-parser/src/gumbo.h"
 #undef BUILD_MONOLITHIC
 
 #include "../../scripts/MuPDFLib/versions-api.h"
 
 #include <string.h>
 #include <stdio.h>
+#include <limits.h>
 
 #ifdef _MSC_VER
 #define main main_utf8
@@ -102,7 +117,9 @@ static struct tool_spec {
 	{ {.fa = pdfrecolor_main }, "recolor", "change colorspace of pdf document" },
 	{ {.fa = pdfsign_main }, "sign", "manipulate PDF digital signatures" },
 	{ {.fa = pdftrim_main }, "trim", "trim PDF page contents" },
+	{ {.fa = pdfbake_main }, "bake", "bake PDF form into static content" },
 	{ {.fa = pdftagged_main }, "tagged", "extract Tagged PDF content" },
+	{ {.fa = mutextextract_main }, "extextract", "Generates a .docx file from mudraw XML output" },
 #endif
 #endif
 #if FZ_ENABLE_JS
@@ -128,10 +145,10 @@ static struct tool_spec {
 #if defined(MUTOOL_EX)
 	// DO NOT use tesseract_main() for this as that one does not set up the mupdf/fitz+leptonica+jpeg environments the way we need & expect in monolithic build mode.
 	{ {.fa = tesseract_tool_main }, "tesseract", "OCR given image or PDF" },
-	//{ {.fa = tesseract_main }, "tesseract", "OCR given image or PDF" },
-#endif
+	{ {.fa = tesseract_basic_example_main }, "tess_basic_example", "tesseract::basic_example demo app" },
+	{ {.fa = tesseract_get_page_gradient_main }, "tess_get_page_gradient", "tesseract::get_page_gradient tool" },
+	{ {.fa = tesseract_svpaint_main }, "tess_svpaint_demo", "tesseract SVPaint demo app" },
 
-#if defined(MUTOOL_EX)
 	{ {.fa = tesseract_ambiguous_words_main }, "tess_ambiguous_words", "OCR training helper utility" },
 	{ {.fa = tesseract_classifier_tester_main }, "tess_classifier_tester", "OCR training helper utility" },
 	{ {.fa = tesseract_cn_training_main }, "tess_cn_training", "OCR training helper utility" },
@@ -153,11 +170,18 @@ static struct tool_spec {
 
 	{ {.fa = tesslinesplit_kraken_main }, "tesslinesplit_kraken", "OCR tesseract linesplit (Kraken) helper utility" },
 	{ {.fa = tesslinesplit_ocular_main }, "tesslinesplit_ocular", "OCR tesseract line split (Ocular) helper utility" },
+
+	{ {.fa = tesseract_test_issue_845_main }, "tess_test_issue_845", "tesseract test issue #845 utility" },
+	{ {.fa = tesseract_test_issue_ML_1bba6c_main }, "tess_test_issue_ML_1", "tesseract test issue ML-1bba6c utility" },
+
+	{ {.fa = tesseract_basicAPI_test_main }, "tess_test_basicAPI", "tesseract test basicAPI" },
 #endif
 
 	{ {.fa = curl_main }, "curl", "access/fetch a given URI" },
 
 #if defined(MUTOOL_EX)
+	{ {.fa = curl_schematable_tool_main }, "curl_schematable", "regenerate curl schematable C code" },
+
 	{ {.fa = mujs_example_main }, "js", "basic REPL for MuJS JavaScript interpreter" },
 	{ {.fa = mujs_prettyprint_main }, "jspretty", "prettyprint (reformat) MuJS JavaScript source files" },
 #endif
@@ -171,6 +195,32 @@ static struct tool_spec {
 	{ {.fa = qiqqa_fingerprint0_main }, "qiqqa_fingerprint0", "calculate the classic Qiqqa fingerprint hash for a file" },
 	{ {.fa = qiqqa_fingerprint1_main }, "qiqqa_fingerprint1", "calculate the new v2 Qiqqa fingerprint hash for a file" },
 	{ {.fa = qiqqa_documentid62_main }, "qiqqa_docid62", "calculate the new v2 Qiqqa fingerprint hash-based positive non-zero 64bit document id for a file" },
+
+#if defined(MUTOOL_EX)
+	{ {.fa = qiqqa_chop_shop_main }, "chop_shop", "qiqqa::chop_shop tool" },
+	{ {.fa = qiqqa_content_importer_main }, "content_import", "qiqqa::content_import tool" },
+	{ {.fa = qiqqa_content_importer_main }, "content_importer", "qiqqa::content_importer tool" },
+	{ {.fa = qiqqa_content_processor_main }, "content_proc", "qiqqa::content_proc tool" },
+	{ {.fa = qiqqa_content_processor_main }, "content_processor", "qiqqa::content_processor tool" },
+	{ {.fa = qiqqa_convert_legacy_annot_blobs_main }, "cvt_annot_blob", "qiqqa::cvt_annot_blob tool" },
+	{ {.fa = qiqqa_convert_legacy_autotags_main }, "cvt_autotags", "qiqqa::cvt_autotags tool" },
+	{ {.fa = qiqqa_convert_legacy_configuration_main }, "cvt_configfile", "qiqqa::cvt_configfile tool" },
+	{ {.fa = qiqqa_convert_legacy_expedition_main }, "cvt_expedition", "qiqqa::cvt_expedition tool" },
+	{ {.fa = qiqqa_db_exporter_main }, "db_export", "qiqqa::db_export tool" },
+	{ {.fa = qiqqa_db_fts_indexer_main }, "db_fts_indexer", "qiqqa::db_fts_indexer tool" },
+	{ {.fa = qiqqa_db_fts_search_main }, "db_fts_search", "qiqqa::db_fts_search tool" },
+	{ {.fa = qiqqa_db_importer_main }, "db_import", "qiqqa::db_import tool" },
+	{ {.fa = qiqqa_db_pappy_main }, "db_pappy", "qiqqa::db_pappy tool" },
+	{ {.fa = qiqqa_doc_scrutinizer_main }, "doc_scrutinizer", "qiqqa::doc_scrutinizer tool" },
+	{ {.fa = qiqqa_ingest_main }, "ingest", "qiqqa::ingest tool" },
+	{ {.fa = qiqqa_meta_exporter_main }, "meta_exporter", "qiqqa::meta_exporter tool" },
+	{ {.fa = qiqqa_meta_importer_main }, "meta_import", "qiqqa::meta_import tool" },
+	{ {.fa = qiqqa_ocr_bezoar_main }, "ocr_bezoar", "qiqqa::ocr_bezoar tool" },
+	{ {.fa = qiqqa_pdf_hound_main }, "pdf_hound", "qiqqa::pdf_hound tool" },
+	{ {.fa = qiqqa_safe_file_copier_main }, "safe_file_copier", "qiqqa::safe_file_copier tool" },
+	{ {.fa = qiqqa_snarfl_main }, "snarfl", "qiqqa::snarfl tool" },
+	{ {.fa = qiqqa_web_api_server_main }, "web_api_server", "qiqqa::web_api_server tool" },
+#endif
 
 	{ {.fa = sqlite_main }, "sqlite", "SQLite3 tool" },
 #if defined(MUTOOL_EX)
@@ -279,7 +329,7 @@ static struct tool_spec {
 	{ {.fa = lept_comparepixa_main }, "lept_comparepixa", "leptonica comparepixa test/tool" },
 	{ {.fa = lept_comparetest_main }, "lept_comparetest", "leptonica comparetest test/tool" },
 	{ {.fa = lept_compfilter_reg_main }, "lept_compfilter", "leptonica compfilter_reg test/tool" },
-	{ {.fa = lept_concatpdf_main }, "lept_concatpdf", "leptonica concatpdf test/tool" },
+	{ {.fa = lept_compresspdf_main }, "lept_compresspdf", "leptonica compresspdf test/tool" },
 	{ {.fa = lept_conncomp_reg_main }, "lept_conncomp", "leptonica conncomp_reg test/tool" },
 	{ {.fa = lept_contrasttest_main }, "lept_contrasttest", "leptonica contrasttest test/tool" },
 	{ {.fa = lept_conversion_reg_main }, "lept_conversion", "leptonica conversion_reg test/tool" },
@@ -295,6 +345,7 @@ static struct tool_spec {
 	{ {.fa = lept_cornertest_main }, "lept_cornertest", "leptonica cornertest test/tool" },
 	{ {.fa = lept_corrupttest_main }, "lept_corrupttest", "leptonica corrupttest test/tool" },
 	{ {.fa = lept_crop_reg_main }, "lept_crop", "leptonica crop_reg test/tool" },
+	{ {.fa = lept_croppdf_main }, "lept_croppdf", "leptonica croppdf test/tool" },
 	{ {.fa = lept_croptext_main }, "lept_croptext", "leptonica croptext test/tool" },
 	{ {.fa = lept_custom_log_plot_test_main }, "lept_custom_log_plot_test", "leptonica custom log+plot output test" },
 	{ {.fa = lept_deskew_it_main }, "lept_deskew_it", "leptonica deskew_it test/tool" },
@@ -519,7 +570,7 @@ static struct tool_spec {
 #endif
 
 #if defined(MUTOOL_EX)
-	//{ {.fa = jpeginfo_main }, "jpeginfo", "jpeginfo tool" },
+	{ {.fa = jpeginfo_main }, "jpeginfo", "jpeginfo tool" },
 #endif
 
 #if defined(MUTOOL_EX)
@@ -528,6 +579,8 @@ static struct tool_spec {
 	{ {.fa = jpegturbo_wrjpegcom_main }, "wrjpegcom", "wrjpegcom tool" },
 	{ {.fa = jpegturbo_djpeg_main }, "djpeg", "djpeg tool" },
 	{ {.fa = jpegturbo_cjpeg_main }, "cjpeg", "cjpeg tool" },
+	{ {.f = tj_test_intrinsic_bitcount_main }, "test_intrinsic_bitcount", "turbojpeg intrinsic_bitcount test tool" },
+	
 #endif
 
 #if defined(MUTOOL_EX)
@@ -553,6 +606,23 @@ static struct tool_spec {
 #endif
 
 #if defined(MUTOOL_EX)
+	{ {.fa = gif2rgb_main }, "gif2rgb", "libgif's gif2rgb tool" },
+	{ {.fa = gifbg_main }, "gifbg", "libgif's gifbg tool" },
+	{ {.fa = gifbuild_main }, "gifbuild", "libgif's gifbuild tool" },
+	{ {.fa = gifclrmp_main }, "gifclrmp", "libgif's gifclrmp tool" },
+	{ {.fa = gifcolor_main }, "gifcolor", "libgif's gifcolor tool" },
+	{ {.fa = gifecho_main }, "gifecho", "libgif's gifecho tool" },
+	{ {.fa = giffilter_main }, "giffilter", "libgif's giffilter tool" },
+	{ {.fa = giffix_main }, "giffix", "libgif's giffix tool" },
+	{ {.fa = gifhisto_main }, "gifhisto", "libgif's gifhisto tool" },
+	{ {.fa = gifinto_main }, "gifinto", "libgif's gifinto tool" },
+	{ {.fa = gifsponge_main }, "gifsponge", "libgif's gifsponge tool" },
+	{ {.fa = giftext_main }, "giftext", "libgif's giftext tool" },
+	{ {.fa = giftool_main }, "giftool", "libgif's giftool tool" },
+	{ {.fa = gifwedge_main }, "gifwedge", "libgif's gifwedge tool" },
+#endif
+
+#if defined(MUTOOL_EX)
 	{ {.fa = pngcrush_main }, "pngcrush", "pngcrush tool" },
 	{ {.fa = pngmeta_main }, "pngmeta", "pngmeta tool" },
 	{ {.fa = pngzop_zlib_to_idat_main }, "pngzop_zlib_to_idat", "pngzop_zlib_to_idat tool" },
@@ -570,14 +640,31 @@ static struct tool_spec {
 #endif
 
 #if defined(MUTOOL_EX)
+	{ {.f = nanosvg_example1_main }, "nanosvg_example1", "nanosvg example1 demo" },
+	{ {.f = nanosvg_example2_main }, "nanosvg_example2", "nanosvg example2 demo" },
+#endif
+
+#if defined(MUTOOL_EX)
 	{ {.fa = qjs_main }, "qjs", "qjs (QuickJS) tool" },
 	{ {.fa = qjsc_main }, "qjsc", "qjsc (QuickJS Compiler) tool" },
 #endif
+
 #if defined(MUTOOL_EX)
+	{ {.fa = qjs_main }, "qjs", "qjs (QuickJS) tool" },
+	{ {.fa = qjsc_main }, "qjsc", "qjsc (QuickJS Compiler) tool" },
+#endif
+
+#if defined(MUTOOL_EX)
+	{ {.fa = pthw32_all_tests_main }, "pthw32_all_tests", "pthred-win32 test runner tool" },
+#endif
+	
+#if defined(MUTOOL_EX)
+	{ {.fa = qjsd_main }, "qjsd", "qjsd (Execute compiled QuickJS function / binary code blob) tool" },
 	{ {.fa = qjscompress_main }, "qjscompress", "qjscompress tool" },
 	{ {.fa = qjs_unicode_gen_main }, "qjs_unicode_gen", "qjs_unicode_gen tool" },
 	{ {.fa = qjs_test262_main }, "qjs_test262", "qjs_test262 conformance test tool" },
 	{ {.fa = qjs_sample_app_main }, "qjs_sample_app", "quickjs_sample_app tool" },
+	{ {.fa = qjs_benchmark_main }, "qjs_benchmark", "quickjs benchmark tool" },
 #endif
 
 #if defined(MUTOOL_EX)
@@ -612,6 +699,11 @@ static struct tool_spec {
 
 #if defined(MUTOOL_EX)
 	{ {.fa = brotli_main }, "brotli", "brotli tool" },
+#endif
+
+#if defined(MUTOOL_EX)
+	{ {.fa = xsimd_benchmark_main }, "xsimd_benchmark", "xsimd benchmark tool" },
+	{ {.f = xsimd_sample_mandelbrot_main }, "xsimd_sample_mandelbrot", "xsimd xsimd mandelbrot example" },
 #endif
 
 #if defined(MUTOOL_EX)
@@ -684,6 +776,10 @@ static struct tool_spec {
 #endif
 
 #if defined(MUTOOL_EX)
+	{ {.fa = uchardet_tool_main }, "uchardet", "uchardet tool" },
+#endif
+
+#if defined(MUTOOL_EX)
 	{ {.fa = arch_bsdcat_main }, "bsdcat", "bsdcat tool" },
 #if 0   // TODO: properly port the shar example (when we feel the need) to Win32/64 and then remove this condition right here...
 	{ {.fa = arch_shar_main }, "shar", "shar tool" },
@@ -710,6 +806,163 @@ static struct tool_spec {
 	{ {.f = tvision_geninc_main }, "tv_geninc", "Turbo Vision geninc demo/test/tool" },
 #endif
 
+#if defined(MUTOOL_EX)
+	{ {.fa = gumbo_benchmark_main }, "gumbo_benchmark", "gumbo benchmark demo/test/tool" },
+	{ {.fa = gumbo_clean_text_main }, "gumbo_clean_text", "gumbo clean_text demo/test/tool" },
+	{ {.fa = gumbo_find_links_main }, "gumbo_find_links", "gumbo find_links demo/test/tool" },
+	{ {.fa = gumbo_get_title_main }, "gumbo_get_title", "gumbo get_title demo/test/tool" },
+	{ {.fa = gumbo_positions_of_class_main }, "gumbo_positions_of_class", "gumbo positions_of_class demo/test/tool" },
+	{ {.fa = gumbo_prettyprint_main }, "gumbo_prettyprint", "gumbo prettyprint demo/test/tool" },
+	{ {.fa = gumbo_serialize_main }, "gumbo_serialize", "gumbo serialize demo/test/tool" },
+	{ {.fa = gumbo_print_main }, "gumbo_print", "gumbo print demo/test/tool" },
+#endif
+
+#if 0 
+#if defined(MUTOOL_EX)
+	{ {.f = cppterminal_args_example_main }, "cppterm_args", "cpp-terminal args demo" },
+	{ {.f = cppterminal_attach_console_example_main }, "cppterm_attach_console", "cpp-terminal attach_console demo" },
+	{ {.f = cppterminal_attach_console_minimal_example_main }, "cppterm_attach_console_minimal", "cpp-terminal attach_console_minimal demo" },
+	{ {.f = cppterminal_cin_cooked_example_main }, "cppterm_cin_cooked", "cpp-terminal cin_cooked demo" },
+	{ {.f = cppterminal_cin_raw_example_main }, "cppterm_cin_raw", "cpp-terminal cin_raw demo" },
+	{ {.f = cppterminal_colors_example_main }, "cppterm_colors", "cpp-terminal colors demo" },
+	{ {.f = cppterminal_cout_example_main }, "cppterm_cout", "cpp-terminal cout demo" },
+	{ {.f = cppterminal_events_example_main }, "cppterm_events", "cpp-terminal events demo" },
+	{ {.f = cppterminal_keys_example_main }, "cppterm_keys", "cpp-terminal keys demo" },
+	{ {.fa = cppterminal_kilo_example_main }, "cppterm_kilo", "cpp-terminal kilo demo" },
+	{ {.f = cppterminal_menu_example_main }, "cppterm_menu", "cpp-terminal menu demo" },
+	{ {.f = cppterminal_menu_window_example_main }, "cppterm_menu_window", "cpp-terminal menu_window demo" },
+	{ {.f = cppterminal_minimal_example_main }, "cppterm_minimal", "cpp-terminal minimal demo" },
+	{ {.f = cppterminal_prompt_immediate_example_main }, "cppterm_prompt_immediate", "cpp-terminal prompt_immediate demo" },
+	{ {.f = cppterminal_prompt_multiline_example_main }, "cppterm_prompt_multiline", "cpp-terminal prompt_multiline demo" },
+	{ {.f = cppterminal_prompt_not_immediate_example_main }, "cppterm_prompt_not_immediate", "cpp-terminal prompt_not_immediate demo" },
+	{ {.f = cppterminal_prompt_simple_example_main }, "cppterm_prompt_simple", "cpp-terminal prompt_simple demo" },
+	{ {.f = cppterminal_slow_events_example_main }, "cppterm_slow_events", "cpp-terminal slow_events demo" },
+	{ {.f = cppterminal_styles_example_main }, "cppterm_styles", "cpp-terminal styles demo" },
+	{ {.f = cppterminal_utf8_example_main }, "cppterm_utf8", "cpp-terminal utf8 demo" },
+#endif
+#endif
+
+#if defined(MUTOOL_EX)
+	{ {.fa = libbf_bench_main }, "bf_bench", "libbf benchmark tool" },
+	{ {.fa = libbf_test_main }, "bf_test", "libbf test tool" },
+	{ {.fa = libbf_tinypi_main }, "bf_tinypi", "libbf tiny PI demo" },
+#endif
+
+#if defined(MUTOOL_EX)
+	{ {.fa = fs_dir_main }, "dir", "fs::dir tool" },
+	{ {.fa = fs_du_main }, "du", "fs::du tool" },
+#endif
+
+#if defined(MUTOOL_EX)
+	{ {.fa = glob_standalone_main }, "glob", "fs::glob tool" },
+#endif
+
+#if defined(MUTOOL_EX)
+	{ {.fa = dirent_cat_main }, "dirent_cat", "dirent:cat example" },
+	{ {.fa = dirent_dir_main }, "dirent_dir", "dirent:dir example" },
+	{ {.fa = dirent_du_main }, "dirent_du", "dirent:du example" },
+	{ {.fa = dirent_example_lookup_main }, "dirent_example_lookup", "dirent:example_lookup example" },
+	{ {.fa = dirent_find_main }, "dirent_find", "dirent:find example" },
+	{ {.fa = dirent_ls_main }, "dirent_ls", "dirent:ls example" },
+	{ {.fa = dirent_scandir_main }, "dirent_scandir", "dirent:scandir example" },
+	{ {.fa = dirent_updatedb_main }, "dirent_updatedb", "dirent:updatedb example" },
+
+	{ {.f = dirent_compile_test_main }, "dirent_compile_test", "dirent: compile test" },
+	{ {.f = dirent_cpp_test_main }, "dirent_cpp_test", "dirent: cpp test" },
+	{ {.f = dirent_dirent_test_main }, "dirent_dirent_test", "dirent: dirent test" },
+	{ {.f = dirent_scandir_test_main }, "dirent_scandir_test", "dirent: scandir test" },
+	{ {.f = dirent_strverscmp_test_main }, "dirent_strverscmp_test", "dirent: strverscmp test" },
+	{ {.f = dirent_telldir_test_main }, "dirent_telldir_test", "dirent: telldir test" },
+	{ {.f = dirent_unicode_test_main }, "dirent_unicode_test", "dirent: unicode test" },
+	{ {.f = dirent_utf8_test_main }, "dirent_utf8_test", "dirent: utf8 test" },
+#endif
+
+#if defined(MUTOOL_EX)
+	{ {.f = crow_example_basic_main }, "crow_basic", "crow example: basic" },
+	{ {.f = crow_example_catch_all_main }, "crow_catch_all", "crow example: catch_all" },
+	{ {.f = crow_example_chat_main }, "crow_chat", "crow example: chat" },
+	{ {.f = crow_example_compression_main }, "crow_compression", "crow example: compression" },
+	{ {.f = crow_example_json_map_main }, "crow_json_map", "crow example: json_map" },
+	{ {.f = crow_example_static_file_main }, "crow_static_file", "crow example: static_file" },
+	{ {.f = crow_example_vs_main }, "crow_vs", "crow example: vs" },
+	{ {.f = crow_example_with_all_main }, "crow_with_all", "crow example: with_all" },
+	{ {.f = crow_hello_world_main }, "crow_hello_world", "crow example: hello_world" },
+	{ {.f = crow_example_ssl_main }, "crow_ssl", "crow example: ssl" },
+	{ {.f = crow_example_ws_main }, "crow_ws", "crow example: ws" },
+	{ {.f = crow_mustache_main }, "crow_mustache", "crow example: mustache" },
+	{ {.f = crow_example_blueprint_main }, "crow_blueprint", "crow example: blueprint" },
+	{ {.f = crow_example_middleware_main }, "crow_middleware", "crow example: middleware" },
+	{ {.f = crow_test_multi_file_main }, "crow_multi_file", "crow example/test: multi_file" },
+	{ {.f = crow_test_external_definition_main }, "crow_external_definition", "crow example/test: external_definition" },
+	{ {.f = crow_example_session_main }, "crow_session", "crow example: session" },
+	{ {.f = crow_example_file_upload_main }, "crow_file_upload", "crow example: file_upload" },
+#endif
+
+#if defined(MUTOOL_EX)
+	{ {.fa = csv2_bench_main }, "csv2_bench", "libcsv2 benchmark tool" },
+	{ {.fa = csv2_csv_count_main }, "csv_count", "libcsv2 csv_count row count tool" },
+	{ {.fa = csv2_fieldcount_main }, "csv_fieldcount", "libcsv2 fieldcount tool" },
+#endif
+
+#if defined(MUTOOL_EX)
+	{ {.f = lcms2_demo_cmyk_main }, "lcms2_demo_cmyk", "lcms2 demo_cmyk demo/tool" },
+	{ {.f = lcms2_fast_float_testbed_main }, "lcms2_fast_float_testbed", "lcms2 fast_float_testbed demo/tool" },
+	{ {.f = lcms2_threaded_testbed_main }, "lcms2_threaded_testbed", "lcms2 threaded_testbed demo/tool" },
+	{ {.f = lcms2_alpha_test_main }, "lcms2_alpha_test", "lcms2 alpha_test demo/tool" },
+	{ {.fa = lcms2_test_main }, "lcms2_test", "lcms2 test demo/tool" },
+	{ {.fa = lcms2_jpgicc_util_main }, "lcms2_jpgicc_util", "lcms2 jpgicc_util demo/tool" },
+	{ {.fa = lcms2_linkicc_util_main }, "lcms2_linkicc_util", "lcms2 linkicc_util demo/tool" },
+	{ {.fa = lcms2_psicc_util_main }, "lcms2_psicc_util", "lcms2 psicc_util demo/tool" },
+	//{ {.fa = lcms2_itufax_example_main }, "lcms2_itufax_example", "lcms2 itufax_example demo/tool" },
+	//{ {.f = lcms2_mkcmy_example_main }, "lcms2_mkcmy_example", "lcms2 mkcmy_example demo/tool" },
+	//{ {.fa = lcms2_mkgrayer_example_main }, "lcms2_mkgrayer_example", "lcms2 mkgrayer_example demo/tool" },
+	{ {.fa = lcms2_mktiff8_example_main }, "lcms2_mktiff8_example", "lcms2 mktiff8_example demo/tool" },
+	{ {.fa = lcms2_roundtrip_example_main }, "lcms2_roundtrip_example", "lcms2 roundtrip_example demo/tool" },
+	{ {.fa = lcms2_vericc_example_main }, "lcms2_vericc_example", "lcms2 vericc_example demo/tool" },
+	{ {.fa = lcms2_wtpt_example_main }, "lcms2_wtpt_example", "lcms2 wtpt_example demo/tool" },
+	{ {.fa = lcms2_tiffdiff_util_main }, "lcms2_tiffdiff_util", "lcms2 tiffdiff_util demo/tool" },
+	{ {.fa = lcms2_tificc_util_main }, "lcms2_tificc_util", "lcms2 tificc_util demo/tool" },
+	{ {.fa = lcms2_transicc_util_main }, "lcms2_transicc_util", "lcms2 transicc_util demo/tool" },
+#endif
+
+#if defined(MUTOOL_EX)
+	{ {.fa = xml_gio_bread_example_main }, "xml_gio_bread_example", "libxml gio_bread_example demo/tool" },
+	{ {.fa = xml_nanoftp_main }, "xml_nanoftp", "libxml nanoftp demo/tool" },
+	{ {.fa = xml_nanohttp_main }, "xml_nanohttp", "libxml nanohttp demo/tool" },
+	{ {.fa = xml_runsuite_tests_main }, "xml_runsuite_tests", "libxml runsuite_tests demo/tool" },
+	{ {.fa = xml_runtest_main }, "xml_runtest", "libxml runtest demo/tool" },
+	{ {.fa = xml_runxmlconfig_main }, "xml_runxmlconfig", "libxml runxmlconfig demo/tool" },
+	{ {.fa = xml_schematron_main }, "xml_schematron", "libxml schematron demo/tool" },
+	{ {.fa = xml_testapi_main }, "xml_testapi", "libxml testapi demo/tool" },
+	{ {.fa = xml_testC14N_main }, "xml_testC14N", "libxml testC14N demo/tool" },
+	{ {.f = xml_testdict_main }, "xml_testdict", "libxml testdict demo/tool" },
+	{ {.fa = xml_testhtml_main }, "xml_testhtml", "libxml testhtml demo/tool" },
+	{ {.fa = xml_testlimits_main }, "xml_testlimits", "libxml testlimits demo/tool" },
+	{ {.fa = xml_testmodule_main }, "xml_testmodule", "libxml testmodule demo/tool" },
+	{ {.fa = xml_testreader_main }, "xml_testreader", "libxml testreader demo/tool" },
+	{ {.fa = xml_testrecurse_main }, "xml_testrecurse", "libxml testrecurse demo/tool" },
+	{ {.fa = xml_testregexp_main }, "xml_testregexp", "libxml testregexp demo/tool" },
+	{ {.fa = xml_testrelax_main }, "xml_testrelax", "libxml testrelax demo/tool" },
+	{ {.fa = xml_testSAX_main }, "xml_testSAX", "libxml testSAX demo/tool" },
+	{ {.fa = xml_testschemas_main }, "xml_testschemas", "libxml testschemas demo/tool" },
+	{ {.fa = xml_testURI_main }, "xml_testURI", "libxml testURI demo/tool" },
+	{ {.fa = xml_testXPath_main }, "xml_testXPath", "libxml testXPath demo/tool" },
+	{ {.fa = xml_xmlcatalog_main }, "xmlcatalog", "libxml xmlcatalog demo/tool" },
+	{ {.fa = xml_xmllint_main }, "xmllint", "libxml xmllint demo/tool" },
+	{ {.fa = xml_test_xmlreader_main }, "xml_test_xmlreader", "libxml test_xmlreader demo/tool" },
+
+	{ {.f = xml_testthreads_main }, "xml_testthreads", "libxml testthreads demo/tool" },
+	// { {.f = xml_trionan_main }, "xml_trionan", "libxml trionan demo/tool" },
+	{ {.f = xml_testchar_main }, "xml_testchar", "libxml testchar demo/tool" },
+#endif
+
+#if defined(MUTOOL_EX)
+	{ {.f = xslt_icu_sort_sample_main }, "xslt_icu_sort_sample", "libxslt icu_sort_sample demo" },
+	{ {.fa = xslt_runtest_main }, "xslt_runtest", "libxslt runtest demo/tool" },
+	{ {.f = xslt_test_threads_main }, "xslt_test_threads", "libxslt test_threads demo/tool" },
+	{ {.fa = xsltproc_main }, "xsltproc", "libxslt xsltproc tool" },
+#endif
+
 	{ {.fa = report_version }, "version", "report version of this build / tools" },
 };
 
@@ -722,6 +975,132 @@ namematch(const char *end, const char *start, const char *match)
     const char* p = end - len;
     return ((p == start) && (strncmp(p, match, len) == 0));
 }
+
+static int
+namematch_partial(const char *end, const char *start, const char *match)
+{
+	if (!start)
+		return 0;
+	int len = (int)strlen(match);
+	int w = (int)(end - start);
+	if (w >= len)
+		return 0;
+
+	// viability factor: 
+	// 0 = no match at all
+	// >0 = partial match. Smaller value means better ~ partial has been found closer to the start of the name and is a bigger part of the entire name.
+	int best_match_score = 0;
+	for (int i = 0; i <= len - w; i++)
+	{
+		if (strnicmp(start, match + i, w) == 0)
+		{
+			// higher score is worse.
+			// higher: more distant from command start/prefix --> score: 1 + i
+			// higher: smaller part of entire command --> 1.0 - (w / len)    == (len - w) / len
+			//
+			// calculated in integer arithmetic (fixed point values: decimal point is at bit 4, i.e. factor 16)
+			int score = (1 + i) + 16 * (len - w);
+			// ROUND-UP while dividing so we'll be sure never to hit zero as a score value:
+			score = (score + len - 1) / len;
+			if (best_match_score == 0 || score < best_match_score)
+				best_match_score = score;
+		}
+	}
+
+	return best_match_score;
+}
+
+// Calculate a metric similar to an edit distance. Better is closer to zero.
+// Returned value is always greater than 1(one).
+//
+// BTW: w applies to s1.
+static int str_approx_match(const char* s1, const char* s2, int w)
+{
+	int score = 2; // just a value for when w == 0
+	for (; w > 0 && *s1 && *s2; w--)
+	{
+		if (tolower(*s1) == tolower(*s2))
+		{
+			// match for this char. Do not worsen the score.
+			score++;
+			s1++;
+			s2++;
+			continue;
+		}
+
+		// edit-dist like check: can we match next char, or can next char match us?
+		int sc1 = 0;
+		int sc2 = 0;
+		if (tolower(*s1) == tolower(s2[1]))
+		{
+			sc1 = str_approx_match(s1 + 1, s2 + 2, w - 1);
+		}
+		if (tolower(s1[1]) == tolower(*s2))
+		{
+			sc2 = 1 + str_approx_match(s1 + 2, s2 + 1, w - 2);
+		}
+		// if skip, pick the best score.
+		// no skip? Then this is worse: ignore char.
+		int scbest = 1 + str_approx_match(s1 + 1, s2 + 1, w - 1);
+		if (sc1 > 0 && sc1 < scbest)
+		{
+			scbest = sc1;
+		}
+		if (sc2 > 0 && sc2 < scbest)
+		{
+			scbest = sc2;
+		}
+		w = 0;
+		score += scbest;
+		break;
+	}
+
+	// did we process the entire snippet or did we hit the EOS wall?
+	score += 3 * w;
+	return score;
+}
+
+static int
+namematch_partial_approx(const char* end, const char* start, const char* match)
+{
+	if (!start)
+		return 0;
+	int len = (int)strlen(match);
+	int w = (int)(end - start);
+	if (w >= len)
+		return 0;
+
+	// viability factor: 
+	// 0 = no match at all
+	// >0 = partial match. Smaller value means better ~ partial has been found closer to the start of the name and is a bigger part of the entire name.
+	int best_match_score = 0;
+	for (int i = 0; i <= len - w; i++)
+	{
+		int approx = str_approx_match(start, match + i, w);
+		if (approx < 3 + 2 * w)
+		{
+			// same score calculus as above, but with the added factor that this one is an INEXACT MATCH:
+			// higher score is worse.
+			// higher: more deviation / less near to current snippet --> score: approx
+			// i.e. score is a factor of the cost per character, 1 for optimal.
+			//
+			// ~~higher: more distant from command start/prefix --> score: 1 + i~~
+			// higher: smaller part of entire command --> 1.0 - (w / len)    == (len - w) / len
+			//
+			// calculated in integer arithmetic (fixed point values: decimal point is at bit 4, i.e. factor 16)
+			int score = 121 + 16 * (len - w) * approx;
+			// ROUND-UP while dividing so we'll be sure never to hit zero as a score value:
+			score = (score + len - 1) / len;
+			if (score > 81)
+				continue;
+			if (best_match_score == 0 || score < best_match_score)
+				best_match_score = score;
+		}
+	}
+
+	return best_match_score;
+}
+
 
 static int
 report_version(int argc, const char** argv)
@@ -866,7 +1245,7 @@ static void mu_drop_context(void)
         ASSERT_AND_CONTINUE(fz_has_global_context());
         ctx = fz_get_global_context();
 
-		ocr_clear_leptonica_mem(ctx);
+		fz_clear_leptonica_mem(ctx);
 
         fz_drop_context_locks(ctx);
     }
@@ -885,52 +1264,100 @@ static void mu_drop_context(void)
     }
 }
 
+static void usage_mutool_options(void)
+{
+	fz_info(ctx, "\n\
+mutool-options:\n\
+\n\
+-t     measure time elapsed and report at exit\n\
+-d     report heap memory leakage for invoked tool\n\
+-z     report total heap leakage at exit\n\
+-v     print tool version number and exit\n\
+-h     print usage help and exit\n\
+\n");
+}
+
+/* Print usage */
+static void usage(void)
+{
+	fz_info(ctx, "mutool version %s\n", FZ_VERSION);
+	fz_info(ctx, "usage: mutool [mutool-options] <command> [command-options]\n");
+	usage_mutool_options();
+	fz_info(ctx, "\n\
+Commands:\n\n");
+
+	size_t max_tool_name_len = 0;
+	for (int i = 0; i < (int)nelem(tools); i++)
+		max_tool_name_len = fz_maxi(max_tool_name_len, strlen(tools[i].name));
+	const char* leaderdots = " . . . . . . . . . . . . . . . . . . . . . . . . . . .";
+	for (int i = 0; i < (int)nelem(tools); i++) {
+		const char* name = tools[i].name;
+		size_t name_len = strlen(tools[i].name);
+		size_t lead = (max_tool_name_len - name_len - 4) & ~1; // print even number of leaderdots characters
+		// ^^^ unsigned arithmetic so negative numbers are *huge* positive numbers instead!
+		if (lead > max_tool_name_len)
+			lead = 0;
+		size_t width = 1 + max_tool_name_len - name_len - lead;
+		fz_info(ctx, "\t%s%.*s%.*s -- %s", name, (int)width, "", (int)lead, leaderdots, tools[i].desc);
+	}
+}
+
 static int run_tool(struct tool_spec *spec, int argc, const char **argv, int time_the_run, int show_heap_leakage, const char *app_argv0)
 {
 	void* snapshot = fz_TakeHeapSnapshot();
 	char* exe_path = NULL;
-	const char** argarr = fz_malloc(ctx, (argc + 2) * sizeof(argarr[0]));
+	const char** argarr = (const char**)fz_malloc(ctx, (argc + 2) * sizeof(argarr[0]));
 
-		// do NOT damage the original argv[] array any further: plugging in arbitrary strings in there
-		// would cause memory corruption later on as we'll attempt to free() the elements at the end.
-		//
-		// So we make a local copy of the argv[] set and feed that one to the destination tool...
-		switch (spec->keep_path)
-		{
-		default:
-			argarr[0] = spec->name;
-			break;
+	// do NOT damage the original argv[] array any further: plugging in arbitrary strings in there
+	// would cause memory corruption later on as we'll attempt to free() the elements at the end.
+	//
+	// So we make a local copy of the argv[] set and feed that one to the destination tool...
+	switch (spec->keep_path)
+	{
+	default:
+		argarr[0] = spec->name;
+		break;
 
-		case 1:
-			const char *xp = app_argv0;
-			const char* pe = fz_basename(xp);
-			int plen = (pe - xp);
-			exe_path = fz_asprintf(ctx, "%.*s%s%s", plen, xp, spec->name,
+	case 1:
+		const char *xp = app_argv0;
+		const char* pe = fz_basename(xp);
+		int plen = (pe - xp);
+		exe_path = fz_asprintf(ctx, "%.*s%s%s", plen, xp, spec->name,
 #if defined(_WIN32)
-				".exe"
+			".exe"
 #else
-				""
+			""
 #endif
-				);
-			argarr[0] = exe_path;
-			break;
+			);
+		argarr[0] = exe_path;
+		break;
 
-		case 2:
-			argarr[0] = app_argv0;
-			break;
-		}
+	case 2:
+		argarr[0] = app_argv0;
+		break;
+	}
 
-		if (argc > 1)
-			memcpy(argarr + 1, argv + 1, (argc - 1) * sizeof(argarr[0]));
-		argarr[argc] = NULL;
+	if (argc > 1)
+		memcpy(argarr + 1, argv + 1, (argc - 1) * sizeof(argarr[0]));
+	argarr[argc] = NULL;
+	argarr[argc + 1] = NULL;
 
-		argv = argarr;
+	argv = argarr;
+
+	fflush(stdout);
+	fflush(stderr);
 
 	nanotimer_data_t timer;
 	nanotimer(&timer);
 	nanotimer_start(&timer);
 	int rv = spec->func.fa(argc, argv);
 	double dt = nanotimer_get_elapsed_ms(&timer);
+
+	fz_free(ctx, exe_path);
+	fz_free(ctx, argarr);
+
+	fflush(stdout);
+	fflush(stderr);
 
 	if (show_heap_leakage)
 	{
@@ -942,9 +1369,122 @@ static int run_tool(struct tool_spec *spec, int argc, const char **argv, int tim
 		fz_info(ctx, "### Elapsed time: %f milliseconds\n", dt);
 	}
 
-	fz_free(ctx, exe_path);
-	fz_free(ctx, argarr);
+	fz_ReleaseHeapSnapshot(snapshot);
 	return rv;
+}
+
+struct found_t
+{
+	int found;
+	int exit_code;
+};
+
+static struct found_t find_and_exec_tool(const char *start, const char *end, int argc, const char **argv, const char *argv0, int time_the_run, int show_heap_leakage)
+{
+	char buf[64];
+
+	for (int i = 0; i < (int)nelem(tools); i++)
+	{
+		// test for variants: mupdf<NAME>, pdf<NAME>, mu<NAME> and <NAME>:
+		strcpy(buf, "mupdf");
+		strcat(buf, tools[i].name);
+		assert(strlen(buf) < sizeof(buf));
+		if (namematch(end, start, buf) || namematch(end, start, buf + 2))
+		{
+			struct found_t rv = {
+				TRUE,
+				run_tool(&tools[i], argc, argv, time_the_run, show_heap_leakage, argv0)
+			};
+			return rv;
+		}
+		strcpy(buf, "mu");
+		strcat(buf, tools[i].name);
+		assert(strlen(buf) < sizeof(buf));
+		if (namematch(end, start, buf) || namematch(end, start, buf + 2))
+		{
+			struct found_t rv = {
+				TRUE,
+				run_tool(&tools[i], argc, argv, time_the_run, show_heap_leakage, argv0)
+			};
+			return rv;
+		}
+	}
+	
+	struct found_t rv = {
+		FALSE,
+		-1
+	};
+	return rv;
+}
+
+struct approx_score_elem_t
+{
+	int score;
+	int index;
+};
+
+static struct found_t find_approx_and_exec_tool(const char *start, const char *end, int argc, const char **argv, const char *argv0, int time_the_run, int show_heap_leakage, struct approx_score_elem_t ambuous_name_set[])
+{
+	// When we get here, we know we only MAY have partial matches. Hence we first match against each of the known commands,
+	// while calculating a distance metric (viability) for each.
+	// Then we check if we have a single (unique) match and iff we do, we execute that command.
+	// Otherwise, we report failure and return the viability score array for the caller to process further, probably 
+	// using it to print a hint list for the user.
+	int match_count = 0;
+	int last_match_index = -1;
+	for (int i = 0; i < (int)nelem(tools); i++)
+	{
+		int viability = namematch_partial(end, start, tools[i].name);
+		ambuous_name_set[i].score = viability;
+		if (viability > 0) 
+		{
+			match_count++;
+			last_match_index = i;
+		}
+	}
+
+	// Do we have a unique match after all?
+	if (match_count == 1)
+	{
+		fz_info(ctx, "Execute %s (approximate-matched by the '%.*s' command):\n", tools[last_match_index].name, (int)(end - start), start);
+
+		struct found_t rv = {
+			TRUE,
+			run_tool(&tools[last_match_index], argc, argv, time_the_run, show_heap_leakage, argv0)
+		};
+		return rv;
+	}
+
+	for (int i = 0; i < (int)nelem(tools); i++)
+	{
+		int viability = namematch_partial_approx(end, start, tools[i].name);
+		if (viability > 0 && (ambuous_name_set[i].score == 0 || viability < ambuous_name_set[i].score))
+		{
+			ambuous_name_set[i].score = viability;
+		}
+		if (viability > 0)
+		{
+			match_count++;
+			last_match_index = i;
+		}
+	}
+
+	struct found_t rv = {
+		FALSE,
+		-1
+	};
+	return rv;
+}
+
+static int x_index_compare_elems(const struct approx_score_elem_t *a, const struct approx_score_elem_t *b)
+{
+	int as = a->score;
+	int bs = b->score;
+	if (as == 0)
+		as = INT_MAX - 2;
+	if (bs == 0)
+		bs = INT_MAX - 2;
+	return as - bs;
 }
 
 #ifdef GPERF
@@ -970,10 +1510,6 @@ int mutool_main(int argc, const char** argv)
 #endif
 #endif
 {
-    const char *start, *end;
-    char buf[64];
-    int i;
-
     // reset global vars: this tool MAY be re-invoked via bulktest or others and should RESET completely between runs:
     //ctx = NULL;
     //mutool_is_toplevel_ctx = 0;
@@ -1013,9 +1549,7 @@ int mutool_main(int argc, const char** argv)
 		// register a mupdf-aligned default heap memory manager for jpeg/jpeg-turbo
 		fz_set_default_jpeg_sys_mem_mgr();
 
-		ocr_set_leptonica_mem(ctx);
-
-		ocr_set_leptonica_stderr_handler(ctx);
+		fz_set_leptonica_mem(ctx);
 	}
 
 	atexit(mu_drop_context);
@@ -1030,20 +1564,55 @@ int mutool_main(int argc, const char** argv)
 	int time_the_run = 0;
 	int show_heap_leakage = 0;
 
-	for (; argc > argstart; argstart++)
+	fz_getopt_reset();
+
+	// WARNING:
+	// This works *assuming* fz_getopt() DOES NOT re-order argv[] so as to find
+	// and process all '-xyz' options and leave a set of non-ption argv[] arguments
+	// at the tail end of the argv[] array: GNU getopt() has that behaviour, but
+	// that is undesirable right here: we *only* want to see and parse mutool
+	// options, which *precede* the mutool *command*, which itself may be followed
+	// by an arbitrary number of command-specific '-xyz' options: we MUST NOT
+	// parse those in here!
+	int c;
+	while ((c = fz_getopt(argc, argv, "tdzvh")) != EOF)
 	{
-		const char* arg = argv[argstart];
-		if (!strcmp(arg, "-t"))
+		switch (c)
+		{
+		case 't':
 			time_the_run = 1;
-		else if (!strcmp(arg, "-d"))
-			show_heap_leakage = 1;
-		else if (!strcmp(arg, "-z"))
-			fz_TurnHeapLeakReportingAtProgramExitOn();
-		else
 			break;
+		case 'd':
+			show_heap_leakage = 1;
+			break;
+		case 'z':
+			fz_TurnHeapLeakReportingAtProgramExitOn();
+			break;
+		case 'v':
+			fz_info(ctx, "mutool version %s\n", FZ_VERSION);
+			return EXIT_SUCCESS;
+		case 'h':
+			usage();
+			return EXIT_SUCCESS;
+		default:
+			fz_error(ctx, "Unsupported mutool option %c (%s).\n", c, argv[fz_optind]);
+			usage_mutool_options();
+			return EXIT_FAILURE;
+		}
 	}
 
-    /* Check argv[0] */
+	argstart = fz_optind;
+
+	// array of numbers which flag which commands are viable in the approximate-match case: non-zero values indicate "nearness" / partial-match.
+	struct approx_score_elem_t ambuous_name_set[nelem(tools)] = {0};
+	for (int i = 0; i < (int)nelem(tools); i++)
+	{
+		ambuous_name_set[i].index = i;
+	}
+
+	const char *start, *end;
+
+	/* Check argv[0] */
 
     if (argc > 0)
     {
@@ -1051,88 +1620,63 @@ int mutool_main(int argc, const char** argv)
         end = start + strlen(start);
         if ((end-4 >= start) && (end[-4] == '.') && (end[-3] == 'e') && (end[-2] == 'x') && (end[-1] == 'e'))
             end = end-4;
-        for (i = 0; i < (int)nelem(tools); i++)
-        {
-            // test for variants: mupdf<NAME>, pdf<NAME>, mu<NAME> and <NAME>:
-            strcpy(buf, "mupdf");
-            strcat(buf, tools[i].name);
-            assert(strlen(buf) < sizeof(buf));
-			if (namematch(end, start, buf) || namematch(end, start, buf + 2))
-			{
-				argstart--;
-				return run_tool(&tools[i], argc - argstart, argv + argstart, time_the_run, show_heap_leakage, argv[0]);
-			}
-            strcpy(buf, "mu");
-            strcat(buf, tools[i].name);
-            assert(strlen(buf) < sizeof(buf));
-            if (namematch(end, start, buf) || namematch(end, start, buf + 2))
-			{
-				argstart--;
-				return run_tool(&tools[i], argc - argstart, argv + argstart, time_the_run, show_heap_leakage, argv[0]);
-			}
-        }
+		struct found_t rv = find_and_exec_tool(start, end, argc - argstart + 1, argv + argstart - 1, argv[0], time_the_run, show_heap_leakage);
+		if (rv.found)
+			return rv.exit_code;
     }
 
     /* Check argv[1] */
 
     if (argc > argstart)
     {
-        for (i = 0; i < (int)nelem(tools); i++)
-        {
-            start = argv[argstart];
-            end = start + strlen(start);
-            // test for variants: mupdf<NAME>, pdf<NAME>, mu<NAME> and <NAME>:
-            strcpy(buf, "mupdf");
-            strcat(buf, tools[i].name);
-            assert(strlen(buf) < sizeof(buf));
-            if (namematch(end, start, buf) || namematch(end, start, buf + 2))
-			{
-				return run_tool(&tools[i], argc - argstart, argv + argstart, time_the_run, show_heap_leakage, argv[0]);
-			}
-            strcpy(buf, "mu");
-            strcat(buf, tools[i].name);
-            assert(strlen(buf) < sizeof(buf));
-            if (namematch(end, start, buf) || namematch(end, start, buf + 2))
-			{
-				return run_tool(&tools[i], argc - argstart, argv + argstart, time_the_run, show_heap_leakage, argv[0]);
-			}
+		start = argv[argstart];
+		end = start + strlen(start);
+		struct found_t rv = find_and_exec_tool(start, end, argc - argstart, argv + argstart, argv[0], time_the_run, show_heap_leakage);
+		if (rv.found)
+			return rv.exit_code;
+
+		rv = find_approx_and_exec_tool(start, end, argc - argstart, argv + argstart, argv[0], time_the_run, show_heap_leakage, ambuous_name_set);
+		if (rv.found)
+			return rv.exit_code;
+	}
+	else
+	{
+		// only attempt to approximate-match basename(argv[0]) when there's no actual command given!
+		start = fz_basename(argv[0]);
+		end = start + strlen(start);
+		if ((end-4 >= start) && (end[-4] == '.') && (end[-3] == 'e') && (end[-2] == 'x') && (end[-1] == 'e'))
+			end = end-4;
+		struct found_t rv = find_approx_and_exec_tool(start, end, argc - argstart + 1, argv + argstart - 1, argv[0], time_the_run, show_heap_leakage, ambuous_name_set);
+		if (rv.found)
+			return rv.exit_code;
+	}
+
+	qsort(ambuous_name_set, nelem(tools), sizeof(ambuous_name_set[0]), x_index_compare_elems);
+
+	// Now, ambuous_name_set[] elements are sorted in SCORE order: best-to-worst.
+	//
+	// List these as suggestions to the user, iff there are any suggestions like that:
+	if (ambuous_name_set[0].score > 0)
+	{
+		fz_error(ctx, "mutool: ambiguous / unrecognized command '%s'. Did you mean to invoke one of these:\n", argv[argstart]);
+		for (int i = 0; i < (int)nelem(tools); i++)
+		{
+			struct approx_score_elem_t *p = &ambuous_name_set[i];
+			if (p->score == 0)
+				break;
+
+			fz_info(ctx, "    %s\n", tools[p->index].name);
 		}
-        if (!strcmp(argv[argstart], "-v"))
-        {
-            fz_info(ctx, "mutool version %s", FZ_VERSION);
-            return EXIT_SUCCESS;
-        }
-        fz_error(ctx, "mutool: unrecognized command '%s'\n", argv[argstart]);
-    }
+		return EXIT_FAILURE;
+	}
 
-    /* Print usage */
+	if (argc > argstart)
+	{
+		fz_error(ctx, "mutool: unrecognized command '%s'. Run '%s -h' to see generic usage help.\n", argv[argstart], fz_basename(argv[0]));
+		return EXIT_FAILURE;
+	}
 
-	fz_info(ctx, "mutool version %s\n", FZ_VERSION);
-    fz_info(ctx, "usage: mutool [mutool-options] <command> [command-options]\n");
-	fz_info(ctx, "\n\
-mutool-options:\n\
-\n\
--t     measure time elapsed and report at exit\n\
--d     report heap memory leakage for invoked tool\n\
--z     report total heap leakage at exit\n\
-\n\
-Commands:\n\n");
-
-    size_t max_tool_name_len = 0;
-    for (i = 0; i < (int)nelem(tools); i++)
-        max_tool_name_len = fz_maxi(max_tool_name_len, strlen(tools[i].name));
-    const char* leaderdots = " . . . . . . . . . . . . . . . . . . . . . . . . . . .";
-    for (i = 0; i < (int)nelem(tools); i++) {
-        const char* name = tools[i].name;
-        size_t name_len = strlen(tools[i].name);
-        size_t lead = (max_tool_name_len - name_len - 4) & ~1; // print even number of leaderdots characters
-        // ^^^ unsigned arithmetic so negative numbers are *huge* positive numbers instead!
-        if (lead > max_tool_name_len)
-            lead = 0;
-        size_t width = 1 + max_tool_name_len - name_len - lead;
-        fz_info(ctx, "\t%s%.*s%.*s -- %s", name, (int)width, "", (int)lead, leaderdots, tools[i].desc);
-    }
-
+	fz_error(ctx, "mutool: no command given.  You must specify a command, or run '%s -h' to see generic usage help.\n", fz_basename(argv[0]));
     return EXIT_FAILURE;
 }
 
@@ -1141,11 +1685,12 @@ Commands:\n\n");
 #ifdef _MSC_VER
 int wmain(int argc, const wchar_t *wargv[])
 {
-    const char **argv = fz_argv_from_wargv(argc, wargv);
+	fz_context* ctx = fz_get_global_context();
+	const char **argv = fz_argv_from_wargv(ctx, argc, wargv);
     if (!argv)
         return EXIT_FAILURE;
     int ret = main(argc, argv);
-    fz_free_argv(argc, argv);
+    fz_free_argv(ctx, argc, argv);
     return ret;
 }
 #endif

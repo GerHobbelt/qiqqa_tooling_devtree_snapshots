@@ -18,56 +18,158 @@
     <Filter Include="Header Files\src">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0003}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\src\lib">
+    <Filter Include="Header Files\src\blake3">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0002}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\src\valgrind">
+    <Filter Include="Header Files\src\lib">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\src\xxhash">
+    <Filter Include="Header Files\src\thread">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\build-aux">
+    <Filter Include="Header Files\src\util">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\cmake">
+    <Filter Include="Header Files\src\valgrind">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\doc">
+    <Filter Include="Header Files\src\xxhash">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\doc\man">
+    <Filter Include="Misc Files\build-aux">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0009}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\scripts">
+    <Filter Include="Misc Files\cmake">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0010}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\src">
+    <Filter Include="Misc Files\doc">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0011}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test">
+    <Filter Include="Misc Files\doc\canned-man">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0012}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\src">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0014}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\src\internal">
+    <Filter Include="Misc Files\doc\man">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0013}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\src\lib">
+    <Filter Include="Misc Files\m4">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0014}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\scripts">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0015}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\src\tool">
+    <Filter Include="Misc Files\src">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0016}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\src\xxhash">
+    <Filter Include="Misc Files\src\blake3">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0017}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\test">
+    <Filter Include="Misc Files\test">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\emitter-examples">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0019}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\test-errors">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\test-errors\0002">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0020}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\test-errors\0003">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\test-errors\0004">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\test-errors\0005">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\test-errors\0006">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\test-errors\0007">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\test-errors\0008">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\test-errors\0009">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\test-errors\0010">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0029}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\test-errors\0011">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0030}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0032}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\blake3">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0031}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\internal">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0033}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\lib">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0034}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\thread">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0035}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\tool">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0036}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\util">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0037}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\xxhash">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0038}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0039}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3.c">
+      <Filter>Source Files\src\blake3</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_avx2.c">
+      <Filter>Source Files\src\blake3</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_avx512.c">
+      <Filter>Source Files\src\blake3</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_backend.c">
+      <Filter>Source Files\src\blake3</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_be_cpusimd.c">
+      <Filter>Source Files\src\blake3</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_host_state.c">
+      <Filter>Source Files\src\blake3</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_neon.c">
+      <Filter>Source Files\src\blake3</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_portable.c">
+      <Filter>Source Files\src\blake3</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_sse2.c">
+      <Filter>Source Files\src\blake3</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_sse41.c">
+      <Filter>Source Files\src\blake3</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/blake3/fy-blake3.c">
+      <Filter>Source Files\src\blake3</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/internal/fy-b3sum.c">
+      <Filter>Source Files\src\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/internal/fy-thread.c">
+      <Filter>Source Files\src\internal</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/internal/libfyaml-parser.c">
       <Filter>Source Files\src\internal</Filter>
     </ClCompile>
@@ -78,9 +180,6 @@
       <Filter>Source Files\src\lib</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-composer.c">
-      <Filter>Source Files\src\lib</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-ctype.c">
       <Filter>Source Files\src\lib</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-diag.c">
@@ -119,17 +218,26 @@
     <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-types.c">
       <Filter>Source Files\src\lib</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-utf8.c">
-      <Filter>Source Files\src\lib</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-utils.c">
-      <Filter>Source Files\src\lib</Filter>
-    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-walk.c">
       <Filter>Source Files\src\lib</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/thread/fy-thread.c">
+      <Filter>Source Files\src\thread</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/tool/fy-tool.c">
       <Filter>Source Files\src\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/util/fy-blob.c">
+      <Filter>Source Files\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/util/fy-ctype.c">
+      <Filter>Source Files\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/util/fy-utf8.c">
+      <Filter>Source Files\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/util/fy-utils.c">
+      <Filter>Source Files\src\util</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/libfyaml/src/xxhash/xxhash.c">
       <Filter>Source Files\src\xxhash</Filter>
@@ -143,6 +251,9 @@
     <ClCompile Include="../../thirdparty/owemdjee/libfyaml/test/libfyaml-test-meta.c">
       <Filter>Source Files\test</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/libfyaml/test/libfyaml-test-private-id.c">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/libfyaml/test/libfyaml-test-private.c">
       <Filter>Source Files\test</Filter>
     </ClCompile>
@@ -152,6 +263,15 @@
     <ClInclude Include="../../thirdparty/owemdjee/libfyaml/include/libfyaml.h">
       <Filter>Header Files\include</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3.h">
+      <Filter>Header Files\src\blake3</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_impl.h">
+      <Filter>Header Files\src\blake3</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_internal.h">
+      <Filter>Header Files\src\blake3</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-accel.h">
       <Filter>Header Files\src\lib</Filter>
     </ClInclude>
@@ -159,9 +279,6 @@
       <Filter>Header Files\src\lib</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-composer.h">
-      <Filter>Header Files\src\lib</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-ctype.h">
       <Filter>Header Files\src\lib</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-diag.h">
@@ -191,9 +308,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-input.h">
       <Filter>Header Files\src\lib</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-list.h">
-      <Filter>Header Files\src\lib</Filter>
-    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-parse.h">
       <Filter>Header Files\src\lib</Filter>
     </ClInclude>
@@ -203,20 +317,44 @@
     <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-token.h">
       <Filter>Header Files\src\lib</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-typelist.h">
-      <Filter>Header Files\src\lib</Filter>
-    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-types.h">
-      <Filter>Header Files\src\lib</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-utf8.h">
-      <Filter>Header Files\src\lib</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-utils.h">
       <Filter>Header Files\src\lib</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/lib/fy-walk.h">
       <Filter>Header Files\src\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/thread/fy-thread.h">
+      <Filter>Header Files\src\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/util/fy-align.h">
+      <Filter>Header Files\src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/util/fy-bit64.h">
+      <Filter>Header Files\src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/util/fy-blob.h">
+      <Filter>Header Files\src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/util/fy-ctype.h">
+      <Filter>Header Files\src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/util/fy-endian.h">
+      <Filter>Header Files\src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/util/fy-id.h">
+      <Filter>Header Files\src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/util/fy-list.h">
+      <Filter>Header Files\src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/util/fy-typelist.h">
+      <Filter>Header Files\src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/util/fy-utf8.h">
+      <Filter>Header Files\src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/util/fy-utils.h">
+      <Filter>Header Files\src\util</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/valgrind/fy-valgrind.h">
       <Filter>Header Files\src\valgrind</Filter>
@@ -224,7 +362,16 @@
     <ClInclude Include="../../thirdparty/owemdjee/libfyaml/src/xxhash/xxhash.h">
       <Filter>Header Files\src\xxhash</Filter>
     </ClInclude>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/AUTHORS">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libfyaml/CMakeLists.txt">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/Dockerfile.centos">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/LICENSE">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libfyaml/Makefile.am">
@@ -251,6 +398,9 @@
     <Text Include="../../thirdparty/owemdjee/libfyaml/doc/Makefile.am">
       <Filter>Misc Files\doc</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/doc/canned-man/fy-tool.1">
+      <Filter>Misc Files\doc\canned-man</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libfyaml/doc/conf.py">
       <Filter>Misc Files\doc</Filter>
     </Text>
@@ -268,6 +418,39 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/libfyaml/libfyaml.pc.in">
       <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/m4/ax_check_compile_flag.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/m4/ax_check_define.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/m4/ax_check_enable_debug.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/m4/ax_check_flag.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/m4/ax_cxx_compile_stdcxx.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/m4/ax_cxx_compile_stdcxx_11.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/m4/ax_define_dir.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/m4/ax_is_release.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/m4/ax_pthread.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/m4/ax_tls.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/m4/shave.m4">
+      <Filter>Misc Files\m4</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libfyaml/scripts/get-gpg-key-id-by-email.sh">
       <Filter>Misc Files\scripts</Filter>
@@ -317,8 +500,605 @@
     <Text Include="../../thirdparty/owemdjee/libfyaml/src/Makefile.am">
       <Filter>Misc Files\src</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_avx2_x86-64_unix.S">
+      <Filter>Misc Files\src\blake3</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_avx512_x86-64_unix.S">
+      <Filter>Misc Files\src\blake3</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_sse2_x86-64_unix.S">
+      <Filter>Misc Files\src\blake3</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/src/blake3/blake3_sse41_x86-64_unix.S">
+      <Filter>Misc Files\src\blake3</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libfyaml/test/Makefile.am">
       <Filter>Misc Files\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/anchors-1.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/anchors-2.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/anchors-3.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/anchors-4.1.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/anchors-4.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/anchors-on-empty-scalars.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/anchors-on-empty-scalars1.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/anchors-on-empty-scalars2.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/anchors-on-empty-scalars3.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/anchors-on-empty-scalars4.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/anchors.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/array.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/block.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/block2.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/block3.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/block4.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/block6.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/block7.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/blocked.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/blockind.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/c1.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/c10.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/c11.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/c12.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/c13.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/c2.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/c3.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/c4.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/c5.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/c6.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/c7.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/c8.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/c9.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/compact1.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/compactblockmap.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/complexkey.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/complexkey2.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/complexkey3.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/complexkey4.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/complexkey5.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/complexkey6.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/complexkey7.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/complexkey8.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/complexkey9.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/docstartend.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/dqscalar.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/dqzero.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/emoji.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/emptydoc.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/emptykey.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/emptystream.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/flow.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/flow1.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/flow2.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/fold-tricky.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/fold.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/fold2.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/fold3.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/fold4.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/fold5.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/folded-endbreaks.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/folded.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/folded2.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/folding.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/global-tag.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/invoice.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/json.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/keyflow.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/keykey.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/keykey2.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/line.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/literal-endbreaks.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/literal.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/literal1.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/literal2.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/literal3.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/literal4.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/mapping.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/mergekeyspec.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/multi-document.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/multiline-quoted-key.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/multiline-simple-key.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/nodeprop.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/nodeprop2.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/numbers-flow.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/numbers.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/plain-scalars-with-commas.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/plainlines.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/plainscalar.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/quoted.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/quotedbackslash.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scalar-multiline.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scalar-singlequoted.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scalar-space.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scalar-space1.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scalars.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scalars2.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scanner-c-1.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scanner-c-10.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scanner-c-11.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scanner-c-12.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scanner-c-13.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scanner-c-2.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scanner-c-3.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scanner-c-4.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scanner-c-5.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scanner-c-6.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scanner-c-7.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scanner-c-8-2.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scanner-c-8.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/scanner-c-9.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/seq.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/seq1.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/seq2.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/seq3.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/seq4.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/seq5.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/seq6.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/sets.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simple.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simple1.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simple2.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simpleanchor.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simpleanchor1.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simpleanchor2.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simpleanchor3.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simpleanchor4.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simplefolded.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simplekey.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simplekey1.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simplekey2.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simplekey3.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simplekey4.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simplekey5.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simpleliteral.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simpleseq.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/simpleseq1.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/singlepairimp.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/singlepairimp2.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/sqscalar.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/sqscalarspace.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/strings.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/t.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/t1.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/t2.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/t3.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/t4.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/t5.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/tabsmix.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/tagdirective.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/tagesc.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/tags-1.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/tags.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/test.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/test1.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/test2.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/u.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/u1.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/u2.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/u3.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/utf8-simple.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/utf8.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/v.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/v1.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/v2.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/version.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/weirdplain.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/ws0.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/ws1.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/ws2.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/ws3.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/y.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/yaml-version.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/yy.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/emitter-examples/zeroexplicit.yaml">
+      <Filter>Misc Files\test\emitter-examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0002/in.yaml">
+      <Filter>Misc Files\test\test-errors\0002</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0002/test.error">
+      <Filter>Misc Files\test\test-errors\0002</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0003/in.yaml">
+      <Filter>Misc Files\test\test-errors\0003</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0003/test.error">
+      <Filter>Misc Files\test\test-errors\0003</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0004/in.yaml">
+      <Filter>Misc Files\test\test-errors\0004</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0004/test.error">
+      <Filter>Misc Files\test\test-errors\0004</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0005/in.yaml">
+      <Filter>Misc Files\test\test-errors\0005</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0005/test.error">
+      <Filter>Misc Files\test\test-errors\0005</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0006/in.yaml">
+      <Filter>Misc Files\test\test-errors\0006</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0006/test.error">
+      <Filter>Misc Files\test\test-errors\0006</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0007/in.yaml">
+      <Filter>Misc Files\test\test-errors\0007</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0007/test.error">
+      <Filter>Misc Files\test\test-errors\0007</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0008/in.yaml">
+      <Filter>Misc Files\test\test-errors\0008</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0008/test.error">
+      <Filter>Misc Files\test\test-errors\0008</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0009/in.yaml">
+      <Filter>Misc Files\test\test-errors\0009</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0009/test.error">
+      <Filter>Misc Files\test\test-errors\0009</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0010/in.yaml">
+      <Filter>Misc Files\test\test-errors\0010</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0010/test.error">
+      <Filter>Misc Files\test\test-errors\0010</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0011/in.yaml">
+      <Filter>Misc Files\test\test-errors\0011</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libfyaml/test/test-errors/0011/test.error">
+      <Filter>Misc Files\test\test-errors\0011</Filter>
     </Text>
   </ItemGroup>
 </Project>

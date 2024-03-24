@@ -103,14 +103,14 @@ static clock_t g_time = 0;
 #  define DEBUG 0
 #endif
 #define DEBUGOUTPUT(...) if (DEBUG) DISPLAY(__VA_ARGS__);
-#define END_PROCESS(error, ...)                                             \
-{                                                                         \
+#define END_PROCESS(error, ...)                                           \
+do {                                                                      \
     DEBUGOUTPUT("Error defined at %s, line %i : \n", __FILE__, __LINE__); \
     DISPLAYLEVEL(1, "Error %i : ", error);                                \
     DISPLAYLEVEL(1, __VA_ARGS__);                                         \
     DISPLAYLEVEL(1, "\n");                                                \
     exit(error);                                                          \
-}
+} while (0)
 
 #define LZ4_isError(errcode) (errcode==0)
 
@@ -554,7 +554,7 @@ static int BMK_benchMem(const void* srcBuffer, size_t srcSize,
             }
             markNb = (markNb+1) % NB_MARKS;
             ratio  = (double)totalRSize / (double)cSize;
-            DISPLAYLEVEL(2, "%2s-%-17.17s :%10u ->%10u (%5.3f),%6.1f MB/s ,%6.1f MB/s\r",
+            DISPLAYLEVEL(2, "%2s-%-17.17s :%10u ->%10u (%5.3f),%6.1f MB/s, %6.1f MB/s\r",
                     marks[markNb], displayName,
                     (U32)totalRSize, (U32)cSize, ratio,
                     ((double)totalRSize / fastestC) * 1000,

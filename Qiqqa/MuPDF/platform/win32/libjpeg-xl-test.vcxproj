@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJPEG_XL;JPEG_XL_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJPEG_XL;JPEG_XL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../scripts/libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../thirdparty/owemdjee/jpeg-xl;../../thirdparty/owemdjee/jpeg-xl/third_party/highway;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/brotli/c/include;../../thirdparty/libpng;../../thirdparty/lcms2/include;../../thirdparty/owemdjee/OpenEXR/OpenEXR/IlmImf;../../thirdparty/owemdjee/jpeg-xl/third_party/lodepng;../../thirdparty/owemdjee/opencv/include/opencv2;../../thirdparty/owemdjee/opencv/modules/highgui/include/opencv2;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/opencv/modules/imgproc/include;../../thirdparty/owemdjee/opencv/modules/imgcodecs/include;../../scripts/OpenCV;../../thirdparty/owemdjee/libjpeg-turbo;../../scripts/libjpeg-turbo;../../scripts/libgflags/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJPEG_XL;JPEG_XL_STATICLIB;NO_OPENCV;JPEGXL_VERSION_FROM_GIT;JXL_STATIC_DEFINE;JXL_THREADS_STATIC_DEFINE;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../thirdparty/owemdjee/jpeg-xl;../../thirdparty/owemdjee/jpeg-xl/third_party/highway;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/brotli/c/include;../../thirdparty/libpng;../../thirdparty/lcms2/include;../../thirdparty/owemdjee/OpenEXR/OpenEXR/IlmImf;../../thirdparty/owemdjee/jpeg-xl/third_party/lodepng;../../thirdparty/owemdjee/opencv/include/opencv2;../../thirdparty/owemdjee/opencv/modules/highgui/include/opencv2;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/opencv/modules/imgproc/include;../../thirdparty/owemdjee/opencv/modules/imgcodecs/include;../../scripts/OpenCV;../../thirdparty/owemdjee/libjpeg-turbo/src;../../scripts/libjpeg-turbo;../../scripts/libgflags/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJPEG_XL;JPEG_XL_STATICLIB;NO_OPENCV;JPEGXL_VERSION_FROM_GIT;JXL_STATIC_DEFINE;JXL_THREADS_STATIC_DEFINE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJPEG_XL;JPEG_XL_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJPEG_XL;JPEG_XL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../scripts/libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../thirdparty/owemdjee/jpeg-xl;../../thirdparty/owemdjee/jpeg-xl/third_party/highway;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/brotli/c/include;../../thirdparty/libpng;../../thirdparty/lcms2/include;../../thirdparty/owemdjee/OpenEXR/OpenEXR/IlmImf;../../thirdparty/owemdjee/jpeg-xl/third_party/lodepng;../../thirdparty/owemdjee/opencv/include/opencv2;../../thirdparty/owemdjee/opencv/modules/highgui/include/opencv2;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/opencv/modules/imgproc/include;../../thirdparty/owemdjee/opencv/modules/imgcodecs/include;../../scripts/OpenCV;../../thirdparty/owemdjee/libjpeg-turbo;../../scripts/libjpeg-turbo;../../scripts/libgflags/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../thirdparty/owemdjee/jpeg-xl;../../thirdparty/owemdjee/jpeg-xl/third_party/highway;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/brotli/c/include;../../thirdparty/libpng;../../thirdparty/lcms2/include;../../thirdparty/owemdjee/OpenEXR/OpenEXR/IlmImf;../../thirdparty/owemdjee/jpeg-xl/third_party/lodepng;../../thirdparty/owemdjee/opencv/include/opencv2;../../thirdparty/owemdjee/opencv/modules/highgui/include/opencv2;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/opencv/modules/imgproc/include;../../thirdparty/owemdjee/opencv/modules/imgcodecs/include;../../scripts/OpenCV;../../thirdparty/owemdjee/libjpeg-turbo/src;../../scripts/libjpeg-turbo;../../scripts/libgflags/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJPEG_XL;JPEG_XL_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJPEG_XL;JPEG_XL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../scripts/libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../thirdparty/owemdjee/jpeg-xl;../../thirdparty/owemdjee/jpeg-xl/third_party/highway;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/brotli/c/include;../../thirdparty/libpng;../../thirdparty/lcms2/include;../../thirdparty/owemdjee/OpenEXR/OpenEXR/IlmImf;../../thirdparty/owemdjee/jpeg-xl/third_party/lodepng;../../thirdparty/owemdjee/opencv/include/opencv2;../../thirdparty/owemdjee/opencv/modules/highgui/include/opencv2;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/opencv/modules/imgproc/include;../../thirdparty/owemdjee/opencv/modules/imgcodecs/include;../../scripts/OpenCV;../../thirdparty/owemdjee/libjpeg-turbo;../../scripts/libjpeg-turbo;../../scripts/libgflags/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJPEG_XL;JPEG_XL_STATICLIB;NO_OPENCV;JPEGXL_VERSION_FROM_GIT;JXL_STATIC_DEFINE;JXL_THREADS_STATIC_DEFINE;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../thirdparty/owemdjee/jpeg-xl;../../thirdparty/owemdjee/jpeg-xl/third_party/highway;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/brotli/c/include;../../thirdparty/libpng;../../thirdparty/lcms2/include;../../thirdparty/owemdjee/OpenEXR/OpenEXR/IlmImf;../../thirdparty/owemdjee/jpeg-xl/third_party/lodepng;../../thirdparty/owemdjee/opencv/include/opencv2;../../thirdparty/owemdjee/opencv/modules/highgui/include/opencv2;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/opencv/modules/imgproc/include;../../thirdparty/owemdjee/opencv/modules/imgcodecs/include;../../scripts/OpenCV;../../thirdparty/owemdjee/libjpeg-turbo/src;../../scripts/libjpeg-turbo;../../scripts/libgflags/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJPEG_XL;JPEG_XL_STATICLIB;NO_OPENCV;JPEGXL_VERSION_FROM_GIT;JXL_STATIC_DEFINE;JXL_THREADS_STATIC_DEFINE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJPEG_XL;JPEG_XL_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJPEG_XL;JPEG_XL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../scripts/libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../thirdparty/owemdjee/jpeg-xl;../../thirdparty/owemdjee/jpeg-xl/third_party/highway;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/brotli/c/include;../../thirdparty/libpng;../../thirdparty/lcms2/include;../../thirdparty/owemdjee/OpenEXR/OpenEXR/IlmImf;../../thirdparty/owemdjee/jpeg-xl/third_party/lodepng;../../thirdparty/owemdjee/opencv/include/opencv2;../../thirdparty/owemdjee/opencv/modules/highgui/include/opencv2;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/opencv/modules/imgproc/include;../../thirdparty/owemdjee/opencv/modules/imgcodecs/include;../../scripts/OpenCV;../../thirdparty/owemdjee/libjpeg-turbo;../../scripts/libjpeg-turbo;../../scripts/libgflags/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../thirdparty/owemdjee/jpeg-xl;../../thirdparty/owemdjee/jpeg-xl/third_party/highway;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/brotli/c/include;../../thirdparty/libpng;../../thirdparty/lcms2/include;../../thirdparty/owemdjee/OpenEXR/OpenEXR/IlmImf;../../thirdparty/owemdjee/jpeg-xl/third_party/lodepng;../../thirdparty/owemdjee/opencv/include/opencv2;../../thirdparty/owemdjee/opencv/modules/highgui/include/opencv2;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/opencv/modules/imgproc/include;../../thirdparty/owemdjee/opencv/modules/imgcodecs/include;../../scripts/OpenCV;../../thirdparty/owemdjee/libjpeg-turbo/src;../../scripts/libjpeg-turbo;../../scripts/libgflags/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJPEG_XL;JPEG_XL_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJPEG_XL;JPEG_XL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../scripts/libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../thirdparty/owemdjee/jpeg-xl;../../thirdparty/owemdjee/jpeg-xl/third_party/highway;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/brotli/c/include;../../thirdparty/libpng;../../thirdparty/lcms2/include;../../thirdparty/owemdjee/OpenEXR/OpenEXR/IlmImf;../../thirdparty/owemdjee/jpeg-xl/third_party/lodepng;../../thirdparty/owemdjee/opencv/include/opencv2;../../thirdparty/owemdjee/opencv/modules/highgui/include/opencv2;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/opencv/modules/imgproc/include;../../thirdparty/owemdjee/opencv/modules/imgcodecs/include;../../scripts/OpenCV;../../thirdparty/owemdjee/libjpeg-turbo;../../scripts/libjpeg-turbo;../../scripts/libgflags/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJPEG_XL;JPEG_XL_STATICLIB;NO_OPENCV;JPEGXL_VERSION_FROM_GIT;JXL_STATIC_DEFINE;JXL_THREADS_STATIC_DEFINE;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../thirdparty/owemdjee/jpeg-xl;../../thirdparty/owemdjee/jpeg-xl/third_party/highway;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/brotli/c/include;../../thirdparty/libpng;../../thirdparty/lcms2/include;../../thirdparty/owemdjee/OpenEXR/OpenEXR/IlmImf;../../thirdparty/owemdjee/jpeg-xl/third_party/lodepng;../../thirdparty/owemdjee/opencv/include/opencv2;../../thirdparty/owemdjee/opencv/modules/highgui/include/opencv2;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/opencv/modules/imgproc/include;../../thirdparty/owemdjee/opencv/modules/imgcodecs/include;../../scripts/OpenCV;../../thirdparty/owemdjee/libjpeg-turbo/src;../../scripts/libjpeg-turbo;../../scripts/libgflags/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJPEG_XL;JPEG_XL_STATICLIB;NO_OPENCV;JPEGXL_VERSION_FROM_GIT;JXL_STATIC_DEFINE;JXL_THREADS_STATIC_DEFINE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJPEG_XL;JPEG_XL_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJPEG_XL;JPEG_XL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../scripts/libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../thirdparty/owemdjee/jpeg-xl;../../thirdparty/owemdjee/jpeg-xl/third_party/highway;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/brotli/c/include;../../thirdparty/libpng;../../thirdparty/lcms2/include;../../thirdparty/owemdjee/OpenEXR/OpenEXR/IlmImf;../../thirdparty/owemdjee/jpeg-xl/third_party/lodepng;../../thirdparty/owemdjee/opencv/include/opencv2;../../thirdparty/owemdjee/opencv/modules/highgui/include/opencv2;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/opencv/modules/imgproc/include;../../thirdparty/owemdjee/opencv/modules/imgcodecs/include;../../scripts/OpenCV;../../thirdparty/owemdjee/libjpeg-turbo;../../scripts/libjpeg-turbo;../../scripts/libgflags/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../thirdparty/owemdjee/jpeg-xl;../../thirdparty/owemdjee/jpeg-xl/third_party/highway;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/brotli/c/include;../../thirdparty/libpng;../../thirdparty/lcms2/include;../../thirdparty/owemdjee/OpenEXR/OpenEXR/IlmImf;../../thirdparty/owemdjee/jpeg-xl/third_party/lodepng;../../thirdparty/owemdjee/opencv/include/opencv2;../../thirdparty/owemdjee/opencv/modules/highgui/include/opencv2;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/opencv/modules/imgproc/include;../../thirdparty/owemdjee/opencv/modules/imgcodecs/include;../../scripts/OpenCV;../../thirdparty/owemdjee/libjpeg-turbo/src;../../scripts/libjpeg-turbo;../../scripts/libgflags/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJPEG_XL;JPEG_XL_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJPEG_XL;JPEG_XL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../scripts/libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../thirdparty/owemdjee/jpeg-xl;../../thirdparty/owemdjee/jpeg-xl/third_party/highway;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/brotli/c/include;../../thirdparty/libpng;../../thirdparty/lcms2/include;../../thirdparty/owemdjee/OpenEXR/OpenEXR/IlmImf;../../thirdparty/owemdjee/jpeg-xl/third_party/lodepng;../../thirdparty/owemdjee/opencv/include/opencv2;../../thirdparty/owemdjee/opencv/modules/highgui/include/opencv2;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/opencv/modules/imgproc/include;../../thirdparty/owemdjee/opencv/modules/imgcodecs/include;../../scripts/OpenCV;../../thirdparty/owemdjee/libjpeg-turbo;../../scripts/libjpeg-turbo;../../scripts/libgflags/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJPEG_XL;JPEG_XL_STATICLIB;NO_OPENCV;JPEGXL_VERSION_FROM_GIT;JXL_STATIC_DEFINE;JXL_THREADS_STATIC_DEFINE;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../thirdparty/owemdjee/jpeg-xl;../../thirdparty/owemdjee/jpeg-xl/third_party/highway;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/brotli/c/include;../../thirdparty/libpng;../../thirdparty/lcms2/include;../../thirdparty/owemdjee/OpenEXR/OpenEXR/IlmImf;../../thirdparty/owemdjee/jpeg-xl/third_party/lodepng;../../thirdparty/owemdjee/opencv/include/opencv2;../../thirdparty/owemdjee/opencv/modules/highgui/include/opencv2;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/opencv/modules/imgproc/include;../../thirdparty/owemdjee/opencv/modules/imgcodecs/include;../../scripts/OpenCV;../../thirdparty/owemdjee/libjpeg-turbo/src;../../scripts/libjpeg-turbo;../../scripts/libgflags/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJPEG_XL;JPEG_XL_STATICLIB;NO_OPENCV;JPEGXL_VERSION_FROM_GIT;JXL_STATIC_DEFINE;JXL_THREADS_STATIC_DEFINE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJPEG_XL;JPEG_XL_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBJPEG_XL;JPEG_XL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../scripts/libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../thirdparty/owemdjee/jpeg-xl;../../thirdparty/owemdjee/jpeg-xl/third_party/highway;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/brotli/c/include;../../thirdparty/libpng;../../thirdparty/lcms2/include;../../thirdparty/owemdjee/OpenEXR/OpenEXR/IlmImf;../../thirdparty/owemdjee/jpeg-xl/third_party/lodepng;../../thirdparty/owemdjee/opencv/include/opencv2;../../thirdparty/owemdjee/opencv/modules/highgui/include/opencv2;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/opencv/modules/imgproc/include;../../thirdparty/owemdjee/opencv/modules/imgcodecs/include;../../scripts/OpenCV;../../thirdparty/owemdjee/libjpeg-turbo;../../scripts/libjpeg-turbo;../../scripts/libgflags/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../thirdparty/owemdjee/jpeg-xl;../../thirdparty/owemdjee/jpeg-xl/third_party/highway;../../thirdparty/owemdjee/libgif;../../thirdparty/owemdjee/brotli/c/include;../../thirdparty/libpng;../../thirdparty/lcms2/include;../../thirdparty/owemdjee/OpenEXR/OpenEXR/IlmImf;../../thirdparty/owemdjee/jpeg-xl/third_party/lodepng;../../thirdparty/owemdjee/opencv/include/opencv2;../../thirdparty/owemdjee/opencv/modules/highgui/include/opencv2;../../thirdparty/owemdjee/opencv/modules/core/include;../../thirdparty/owemdjee/opencv/modules/imgproc/include;../../thirdparty/owemdjee/opencv/modules/imgcodecs/include;../../scripts/OpenCV;../../thirdparty/owemdjee/libjpeg-turbo/src;../../scripts/libjpeg-turbo;../../scripts/libgflags/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -963,20 +963,17 @@
     <Image Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_alpha.png" />
     <Image Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_cropped.jpg" />
     <Image Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.cmyk.jpg" />
-    <Image Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.g.png" />
-    <Image Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.ga.png" />
     <Image Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.q85_420_non_interleaved.jpg" />
     <Image Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.q85_420_partially_interleaved.jpg" />
     <Image Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.q85_444_non_interleaved.jpg" />
     <Image Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.q85_444_partially_interleaved.jpg" />
-    <Image Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.rgb.png" />
-    <Image Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.rgba.png" />
     <Image Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/grayscale_patches.png" />
     <Image Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/hdr_room.png" />
     <Image Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/jpeg_reconstruction/1x1_exif_xmp.jpg" />
     <Image Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/spline_on_first_frame.png" />
     <Image Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/traffic_light.gif" />
     <ResourceCompile Include="../../thirdparty/owemdjee/jpeg-xl/ImageMagick/ImageMagick.rc" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/AUTHORS" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/BUILD.bazel" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/BUILDING.md" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/BUILDING_Haiku.md" />
@@ -986,6 +983,7 @@
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/CODE_OF_CONDUCT.md" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/CONTRIBUTING.md" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/CONTRIBUTORS" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/README.md" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/SECURITY.md" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/bash_test.sh" />
@@ -995,6 +993,11 @@
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/cmake/FindHWY.cmake" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/cmake/FindLCMS2.cmake" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/debian/changelog" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/debian/jxl.install" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/debian/libjxl-dev.install" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/debian/libjxl-gdk-pixbuf.install" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/debian/libjxl-gimp-plugin.install" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/debian/libjxl.install" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/deps.sh" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/doc/api.txt" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/doc/benchmarking.md" />
@@ -1009,6 +1012,7 @@
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/doc/developing_with_crossroad.md" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/doc/encode_effort.md" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/doc/format_overview.md" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/doc/jxl.svg" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/doc/man/cjxl.txt" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/doc/man/djxl.txt" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/doc/release.md" />
@@ -1023,6 +1027,7 @@
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/doc/sphinx/index.rst" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/doc/sphinx/requirements.txt" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/doc/tables/adobe.md" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/doc/tables/all_tables.pdf" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/doc/tables/all_tables.sh" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/doc/tables/app0.md" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/doc/tables/brn_proto.md" />
@@ -1032,6 +1037,7 @@
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/doc/tables/freq_context.md" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/doc/tables/icc.md" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/doc/tables/is_zero_base.md" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/doc/tables/markdown-pdf.css" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/doc/tables/nonzero_buckets.md" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/doc/tables/num_nonzero_context.md" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/doc/tables/num_nonzeros_base.md" />
@@ -1042,6 +1048,8 @@
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/doc/tables/symbol_order.md" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/doc/vuln_playbook.md" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/doc/xl_overview.md" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/docker/Dockerfile.jpegxl-builder" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/docker/Dockerfile.jpegxl-builder-run-aarch64" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/docker/README.md" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/docker/build.sh" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/docker/scripts/emsdk_install.sh" />
@@ -1056,10 +1064,15 @@
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/experimental/fast_lossless/cross_compile_aarch64.sh" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/compatibility.cmake" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/extras/LICENSE.apngdis" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/extras/README.md" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/jpegli.cmake" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/jpegli/README.md" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/jpegli/jpeg.version" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl.cmake" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/jxl.syms" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/jxl.version" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/jxl_osx.syms" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/libjxl.pc.in" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl/version.h.in" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl_benchmark.cmake" />
@@ -1068,25 +1081,68 @@
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl_profiler.cmake" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl_tests.cmake" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl_threads.cmake" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/jxl_vars.bzl" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/lib/threads/libjxl_threads.pc.in" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/msvc/libjxl.vcxproj.filters" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/plugins/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/plugins/gdk-pixbuf/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/plugins/gdk-pixbuf/README.md" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/plugins/gdk-pixbuf/jxl.thumbnailer" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/plugins/gimp/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/plugins/mime/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/plugins/mime/README.md" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/CONTRIBUTING.md" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/README.md" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/external/pngsuite/PngSuite.LICENSE" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/external/pngsuite/PngSuite.README" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/external/pngsuite/README.md" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/external/raw.pixls/" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/external/raw.pixls/LICENSE.md" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/external/raw.pixls/README.md" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/external/wesaturate/LICENSE.md" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/external/wesaturate/README.md" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/external/wide-gamut-tests/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/external/wide-gamut-tests/README.txt" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/blending/cropped_traffic_light.jxl" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/boxes/square-extended-size-container.jxl" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.ga.depth10.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.ga.depth11.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.ga.depth12.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.ga.depth13.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.ga.depth14.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.ga.depth15.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.ga.depth16.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.ga.depth2.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.ga.depth3.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.ga.depth4.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.ga.depth5.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.ga.depth6.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.ga.depth7.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.ga.depth8.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.ga.depth9.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.rgba.depth10.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.rgba.depth11.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.rgba.depth12.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.rgba.depth13.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.rgba.depth14.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.rgba.depth15.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.rgba.depth16.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.rgba.depth2.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.rgba.depth3.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.rgba.depth4.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.rgba.depth5.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.rgba.depth6.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.rgba.depth7.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.rgba.depth8.pam" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/flower_small.rgba.depth9.pam" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/generate.md" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/non_interleaved_scan.txt" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/flower/partially_interleaved_scan.txt" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/jpeg_reconstruction/1x1_exif_xmp.jxl" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/pq_gradient.jxl" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/spline_on_first_frame.jxl" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/jxl/splines.jxl" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/position_encoding/bike_dots.txt" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/position_encoding/keong_dots.txt" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/testdata/position_encoding/non_square.txt" />
@@ -1128,6 +1184,13 @@
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/flicker_test/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/git_version.cmake" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/hdr/README.md" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/jni/org/jpeg/jpegxl/wrapper/Decoder.java" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/jni/org/jpeg/jpegxl/wrapper/DecoderJni.java" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/jni/org/jpeg/jpegxl/wrapper/DecoderTest.java" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/jni/org/jpeg/jpegxl/wrapper/ImageData.java" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/jni/org/jpeg/jpegxl/wrapper/PixelFormat.java" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/jni/org/jpeg/jpegxl/wrapper/Status.java" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/jni/org/jpeg/jpegxl/wrapper/StreamInfo.java" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/jxl-eval.sh" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/optimizer/simplex_fork.py" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/optimizer/update_jpegli_global_scale.py" />
@@ -1144,7 +1207,11 @@
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/wasm_demo/build_site.py" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/wasm_demo/client_worker.js" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/wasm_demo/jxl_decoder_test.js" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/wasm_demo/manual_decode_demo.html" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/wasm_demo/netlify.toml" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/wasm_demo/netlify/edge-functions/precompressed.ts" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/wasm_demo/one_line_demo.html" />
+    <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/wasm_demo/one_line_demo_with_console.html" />
     <Text Include="../../thirdparty/owemdjee/jpeg-xl/tools/wasm_demo/service_worker.js" />
     <Xml Include="../../thirdparty/owemdjee/jpeg-xl/plugins/mime/image-jxl.xml" />
   </ItemGroup>

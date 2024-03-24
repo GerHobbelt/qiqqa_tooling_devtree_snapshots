@@ -25,7 +25,7 @@
 #include "lcms2mt_fast_float.h"
 #include <stdint.h>
 
-#define REQUIRED_LCMS_VERSION (2130-2000)
+#define REQUIRED_LCMS_VERSION (2160-2000)
 
 // Unused parameter warning suppression
 #define UNUSED_PARAMETER(x) ((void)x)
@@ -134,12 +134,15 @@ cmsINLINE cmsFloat32Number flerp(const cmsFloat32Number LutTable[], cmsFloat32Nu
        cmsFloat32Number rest;
        int cell0, cell1;
 
-       if ((v < 1.0e-9f) || isnan(v)) {
-              return LutTable[0];
+       if (isnan(v))
+           return LutTable[0];
+
+       if (v < 1.0e-9f) {
+              return v;
        }
        else
               if (v >= 1.0) {
-              return LutTable[MAX_NODES_IN_CURVE - 1];
+                    return v;
               }
 
        v *= (MAX_NODES_IN_CURVE - 1);

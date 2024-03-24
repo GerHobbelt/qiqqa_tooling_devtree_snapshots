@@ -23,7 +23,7 @@
 //
 //---------------------------------------------------------------------------------
 //
-// Version 2.15 
+// Version 2.16 alpha 
 //
 
 #ifndef _lcms2mt_H
@@ -76,17 +76,20 @@
 
 #ifndef CMS_USE_CPP_API
 #   ifdef __cplusplus
+#       if __cplusplus >= 201703L
+#            define CMS_NO_REGISTER_KEYWORD 1  
+#       endif
 extern "C" {
 #   endif
 #endif
 
 // Version/release
-// Vanilla LCMS2 uses values from 2000-2120. This is
+// Vanilla LCMS2 uses values from 2000-2160. This is
 // used as an unsigned number. We want any attempt to
 // use OUR numbers with a mainline LCMS to fail, so
 // we have to go under 2000-2100. Let's subtract
 // 2000 from the mainline release.
-#define LCMS_VERSION              (2150 - 2000)
+#define LCMS_VERSION              (2160 - 2000)
 
 // We expect any LCMS2MT release to fall within the
 // following range.
@@ -248,7 +251,7 @@ typedef int                  cmsBool;
 #            define CMSAPI    __declspec(dllexport)
 #        else
 #           define CMSAPI     __declspec(dllimport)
-#       endif
+#        endif
 #     endif
 #  else
 #     define CMSEXPORT
@@ -300,7 +303,7 @@ typedef int                  cmsBool;
 // Base ICC type definitions
 typedef enum {
     cmsSigChromaticityType                  = 0x6368726D,  // 'chrm'
-    cmsSigcicpType                          = 0x63696370,  // 'cicp' 
+    cmsSigcicpType                          = 0x63696370,  // 'cicp'
     cmsSigColorantOrderType                 = 0x636C726F,  // 'clro'
     cmsSigColorantTableType                 = 0x636C7274,  // 'clrt'
     cmsSigCrdInfoType                       = 0x63726469,  // 'crdi'
@@ -335,7 +338,8 @@ typedef enum {
     cmsSigUInt8ArrayType                    = 0x75693038,  // 'ui08'
     cmsSigVcgtType                          = 0x76636774,  // 'vcgt'
     cmsSigViewingConditionsType             = 0x76696577,  // 'view'
-    cmsSigXYZType                           = 0x58595A20   // 'XYZ '
+    cmsSigXYZType                           = 0x58595A20,  // 'XYZ '
+    cmsSigMHC2Type                          = 0x4D484332   // 'MHC2'
 
 
 } cmsTagTypeSignature;
@@ -413,7 +417,8 @@ typedef enum {
     cmsSigVcgtTag                           = 0x76636774,  // 'vcgt'
     cmsSigMetaTag                           = 0x6D657461,  // 'meta'
     cmsSigcicpTag                           = 0x63696370,  // 'cicp'
-    cmsSigArgyllArtsTag                     = 0x61727473   // 'arts'
+    cmsSigArgyllArtsTag                     = 0x61727473,  // 'arts'
+    cmsSigMHC2Tag                           = 0x4D484332   // 'MHC2'
 
 } cmsTagSignature;
 
@@ -959,6 +964,7 @@ typedef void* cmsHTRANSFORM;
 #define TYPE_RGB_DBL          (FLOAT_SH(1)|COLORSPACE_SH(PT_RGB)|CHANNELS_SH(3)|BYTES_SH(0))
 #define TYPE_BGR_DBL          (FLOAT_SH(1)|COLORSPACE_SH(PT_RGB)|CHANNELS_SH(3)|BYTES_SH(0)|DOSWAP_SH(1))
 #define TYPE_CMYK_DBL         (FLOAT_SH(1)|COLORSPACE_SH(PT_CMYK)|CHANNELS_SH(4)|BYTES_SH(0))
+#define TYPE_OKLAB_DBL        (FLOAT_SH(1)|COLORSPACE_SH(PT_MCH3)|CHANNELS_SH(3)|BYTES_SH(0))
 
 // IEEE 754-2008 "half"
 #define TYPE_GRAY_HALF_FLT    (FLOAT_SH(1)|COLORSPACE_SH(PT_GRAY)|CHANNELS_SH(1)|BYTES_SH(2))
@@ -1059,6 +1065,20 @@ typedef struct {
 
 } cmsVideoSignalType;
 
+typedef struct {
+    cmsUInt32Number   CurveEntries;
+    cmsFloat64Number* RedCurve;
+    cmsFloat64Number* GreenCurve;
+    cmsFloat64Number* BlueCurve;
+
+    cmsFloat64Number  MinLuminance;         // ST.2086 min luminance in nits
+    cmsFloat64Number  PeakLuminance;        // ST.2086 peak luminance in nits
+
+    cmsFloat64Number XYZ2XYZmatrix[3][4];
+
+} cmsMHC2Type;
+
+
 
 // Get LittleCMS version (for shared objects) -----------------------------------------------------------------------------
 
@@ -1151,6 +1171,7 @@ CMSAPI cmsFloat64Number  CMSEXPORT cmsCIE94DeltaE(cmsContext ContextID, const cm
 CMSAPI cmsFloat64Number  CMSEXPORT cmsBFDdeltaE(cmsContext ContextID, const cmsCIELab* Lab1, const cmsCIELab* Lab2);
 CMSAPI cmsFloat64Number  CMSEXPORT cmsCMCdeltaE(cmsContext ContextID, const cmsCIELab* Lab1, const cmsCIELab* Lab2, cmsFloat64Number l, cmsFloat64Number c);
 CMSAPI cmsFloat64Number  CMSEXPORT cmsCIE2000DeltaE(cmsContext ContextID, const cmsCIELab* Lab1, const cmsCIELab* Lab2, cmsFloat64Number Kl, cmsFloat64Number Kc, cmsFloat64Number Kh);
+CMSAPI cmsFloat64Number  CMSEXPORT cmsXYZDeltaE(cmsContext ContextID, const cmsCIEXYZ* xyz1, const cmsCIEXYZ* xyz2);
 
 // Temperature <-> Chromaticity (Black body)
 CMSAPI cmsBool           CMSEXPORT cmsWhitePointFromTemp(cmsContext ContextID, cmsCIExyY* WhitePoint, cmsFloat64Number  TempK);
@@ -1227,7 +1248,8 @@ CMSAPI cmsBool           CMSEXPORT cmsIsToneCurveMonotonic(cmsContext ContextID,
 CMSAPI cmsBool           CMSEXPORT cmsIsToneCurveDescending(cmsContext ContextID, const cmsToneCurve* t);
 CMSAPI cmsInt32Number    CMSEXPORT cmsGetToneCurveParametricType(cmsContext ContextID, const cmsToneCurve* t);
 CMSAPI cmsFloat64Number  CMSEXPORT cmsEstimateGamma(cmsContext ContextID, const cmsToneCurve* t, cmsFloat64Number Precision);
-CMSAPI cmsFloat64Number* CMSEXPORT cmsGetToneCurveParams(cmsContext ContextID, const cmsToneCurve* t);
+
+CMSAPI const cmsCurveSegment* CMSEXPORT cmsGetToneCurveSegment(cmsInt32Number n, const cmsToneCurve* t);
 
 // Tone curve tabular estimation
 CMSAPI cmsUInt32Number         CMSEXPORT cmsGetToneCurveEstimatedTableEntries(cmsContext ContextID, const cmsToneCurve* t);
@@ -1619,6 +1641,8 @@ CMSAPI cmsHPROFILE      CMSEXPORT cmsCreateLab4Profile(cmsContext ContextID,
 CMSAPI cmsHPROFILE      CMSEXPORT cmsCreateXYZProfile(cmsContext ContextID);
 
 CMSAPI cmsHPROFILE      CMSEXPORT cmsCreate_sRGBProfile(cmsContext ContextID);
+
+CMSAPI cmsHPROFILE      CMSEXPORT cmsCreate_OkLabProfile(cmsContext ContextID);
 
 CMSAPI cmsHPROFILE      CMSEXPORT cmsCreateBCHSWabstractProfile(cmsContext ContextID,
                                                                 cmsUInt32Number nLUTPoints,

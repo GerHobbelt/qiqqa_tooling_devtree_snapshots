@@ -24,71 +24,24 @@
 
 #include "mupdf/helpers/system-header-files.h"
 
-#ifdef _WIN32
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#ifdef _WIN32
 #include <windows.h>
+#endif
 
-
-char *
-fz_utf8_from_wchar(const wchar_t *s)
-{
-	const wchar_t *src = s;
-	char *d;
-	char *dst;
-	int len = 1;
-
-	while (*src)
-	{
-		len += fz_runelen(*src++);
-	}
-
-	d = Memento_label(malloc(len), "utf8_from_wchar");
-	if (d != NULL)
-	{
-		dst = d;
-		src = s;
-		while (*src)
-		{
-			dst += fz_runetochar(dst, *src++);
-		}
-		*dst = 0;
-	}
-	return d;
-}
-
-wchar_t *
-fz_wchar_from_utf8(const char *s)
-{
-	wchar_t *d, *r;
-	int c;
-	r = d = malloc((strlen(s) + 1) * sizeof(wchar_t));
-	if (!r)
-		return NULL;
-	while (*s) {
-		s += fz_chartorune_unsafe(&c, s);
-		/* Truncating c to a wchar_t can be problematic if c
-		 * is 0x10000. */
-		if (c >= 0x10000)
-			c = FZ_REPLACEMENT_CHARACTER;
-		*d++ = c;
-	}
-	*d = 0;
-	return r;
-}
 
 /*
 Return NULL on (out of memory) error.
 */
 char **
-fz_argv_from_wargv(int argc, const wchar_t **wargv)
+fz_argv_from_wargv(fz_context* ctx, int argc, const wchar_t **wargv)
 {
 	char **argv;
 	int i;
 
-	argv = Memento_label(calloc(argc, sizeof(char *)), "fz_argv");
+	argv = Memento_label(fz_calloc(ctx, argc, sizeof(char *)), "fz_argv");
 	if (argv == NULL)
 	{
 		fz_error(NULL, "Out of memory while processing command line args!");
@@ -97,10 +50,11 @@ fz_argv_from_wargv(int argc, const wchar_t **wargv)
 
 	for (i = 0; i < argc; i++)
 	{
-		argv[i] = Memento_label(fz_utf8_from_wchar(wargv[i]), "fz_arg");
+		argv[i] = Memento_label(fz_utf8_from_wchar(ctx, wargv[i]), "fz_arg");
 		if (argv[i] == NULL)
 		{
 			fz_error(NULL, "Out of memory while processing command line args!");
+			fz_free_argv(ctx, argc, argv);
 			return NULL;
 		}
 	}
@@ -109,12 +63,10 @@ fz_argv_from_wargv(int argc, const wchar_t **wargv)
 }
 
 void
-fz_free_argv(int argc, const char** argv)
+fz_free_argv(fz_context* ctx, int argc, const char** argv)
 {
 	int i;
 	for (i = 0; i < argc; i++)
-		free((void *)argv[i]);
-	free((void *)argv);
+		fz_free(ctx, (void *)argv[i]);
+	fz_free(ctx, (void *)argv);
 }
-
-#endif /* _WIN32 */

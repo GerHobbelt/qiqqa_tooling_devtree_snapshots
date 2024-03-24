@@ -459,8 +459,8 @@ Error:
 static
 cmsBool  SaveOneChromaticity(cmsContext ContextID, cmsFloat64Number x, cmsFloat64Number y, cmsIOHANDLER* io)
 {
-    if (!_cmsWriteUInt32Number(ContextID, io, (cmsUInt32Number) _cmsDoubleTo15Fixed16(ContextID, x))) return FALSE;
-    if (!_cmsWriteUInt32Number(ContextID, io, (cmsUInt32Number) _cmsDoubleTo15Fixed16(ContextID, y))) return FALSE;
+    if (!_cmsWriteUInt32Number(ContextID, io, (cmsUInt32Number) _cmsDoubleTo15Fixed16(x))) return FALSE;
+    if (!_cmsWriteUInt32Number(ContextID, io, (cmsUInt32Number) _cmsDoubleTo15Fixed16(y))) return FALSE;
 
     return TRUE;
 }
@@ -1191,7 +1191,7 @@ void *Type_Curve_Read(cmsContext ContextID, struct _cms_typehandler_struct* self
                    cmsFloat64Number SingleGamma;
 
                    if (!_cmsReadUInt16Number(ContextID, io, &SingleGammaFixed)) return NULL;
-                   SingleGamma = _cms8Fixed8toDouble(ContextID, SingleGammaFixed);
+                   SingleGamma = _cms8Fixed8toDouble(SingleGammaFixed);
 
                    *nItems = 1;
                    return cmsBuildParametricToneCurve(ContextID, 1, &SingleGamma);
@@ -1226,7 +1226,7 @@ cmsBool  Type_Curve_Write(cmsContext ContextID, struct _cms_typehandler_struct* 
     if (Curve ->nSegments == 1 && Curve ->Segments[0].Type == 1) {
 
             // Single gamma, preserve number
-            cmsUInt16Number SingleGammaFixed = _cmsDoubleTo8Fixed8(ContextID, Curve ->Segments[0].Params[0]);
+            cmsUInt16Number SingleGammaFixed = _cmsDoubleTo8Fixed8(Curve ->Segments[0].Params[0]);
 
             if (!_cmsWriteUInt32Number(ContextID, io, 1)) return FALSE;
             if (!_cmsWriteUInt16Number(ContextID, io, SingleGammaFixed)) return FALSE;
@@ -1584,8 +1584,6 @@ void *Type_MLU_Read(cmsContext ContextID, struct _cms_typehandler_struct* self, 
     if (SizeOfTag == 0)
     {
         Block = NULL;
-        NumOfWchar = 0;
-
     }
     else
     {
@@ -1995,7 +1993,7 @@ cmsBool  Type_LUT8_Write(cmsContext ContextID, struct _cms_typehandler_struct* s
     if (clut == NULL)
         clutPoints = 0;
     else {
-        // Lut8 only allows same CLUT points in all dimensions        
+        // Lut8 only allows same CLUT points in all dimensions
         clutPoints = clut->Params->nSamples[0];
         for (i = 1; i < cmsPipelineInputChannels(ContextID, NewLUT); i++) {
             if (clut->Params->nSamples[i] != clutPoints) {
@@ -2004,7 +2002,7 @@ cmsBool  Type_LUT8_Write(cmsContext ContextID, struct _cms_typehandler_struct* s
             }
         }
     }
-        
+
     if (!_cmsWriteUInt8Number(ContextID, io, (cmsUInt8Number)cmsPipelineInputChannels(ContextID, NewLUT))) return FALSE;
     if (!_cmsWriteUInt8Number(ContextID, io, (cmsUInt8Number)cmsPipelineOutputChannels(ContextID, NewLUT))) return FALSE;
     if (!_cmsWriteUInt8Number(ContextID, io, (cmsUInt8Number) clutPoints)) return FALSE;
@@ -2013,7 +2011,7 @@ cmsBool  Type_LUT8_Write(cmsContext ContextID, struct _cms_typehandler_struct* s
     if (MatMPE != NULL) {
         for (i = 0; i < 9; i++)
         {
-	        if (!_cmsWrite15Fixed16Number(ContextID, io, MatMPE -> Double[i])) return FALSE;
+            if (!_cmsWrite15Fixed16Number(ContextID, io, MatMPE->Double[i])) return FALSE;
         }
     }
     else {
@@ -2130,7 +2128,7 @@ cmsBool Write16bitTables(cmsContext ContextID, cmsIOHANDLER* io, _cmsStageToneCu
     cmsUInt32Number nEntries;
 
     _cmsAssert(Tables != NULL);
-   
+
     for (i=0; i < Tables ->nCurves; i++) {
 
         nEntries = Tables->TheCurves[i]->nEntries;
@@ -2287,7 +2285,7 @@ cmsBool Type_LUT16_Write(cmsContext ContextID, struct _cms_typehandler_struct* s
     if (clut == NULL)
         clutPoints = 0;
     else {
-        // Lut16 only allows same CLUT points in all dimensions        
+        // Lut16 only allows same CLUT points in all dimensions
         clutPoints = clut->Params->nSamples[0];
         for (i = 1; i < InputChannels; i++) {
             if (clut->Params->nSamples[i] != clutPoints) {
@@ -2305,9 +2303,9 @@ cmsBool Type_LUT16_Write(cmsContext ContextID, struct _cms_typehandler_struct* s
     if (MatMPE != NULL) {
         for (i = 0; i < 9; i++)
         {
-	        if (!_cmsWrite15Fixed16Number(ContextID, io, MatMPE -> Double[i])) return FALSE;
+            if (!_cmsWrite15Fixed16Number(ContextID, io, MatMPE->Double[i])) return FALSE;
         }
-      
+
     }
     else {
         if (!_cmsWrite15Fixed16Number(ContextID, io, 1)) return FALSE;
@@ -2662,20 +2660,20 @@ cmsBool  WriteMatrix(cmsContext ContextID, struct _cms_typehandler_struct* self,
     // Write the Matrix
     for (i = 0; i < n; i++)
     {
-		if (!_cmsWrite15Fixed16Number(ContextID, io, m->Double[i])) return FALSE;
+        if (!_cmsWrite15Fixed16Number(ContextID, io, m->Double[i])) return FALSE;
     }
 
     if (m->Offset != NULL) {
 
         for (i = 0; i < mpe->OutputChannels; i++)
         {
-			if (!_cmsWrite15Fixed16Number(ContextID, io, m->Offset[i])) return FALSE;
+            if (!_cmsWrite15Fixed16Number(ContextID, io, m->Offset[i])) return FALSE;
         }
     }
     else {
         for (i = 0; i < mpe->OutputChannels; i++)
         {
-			if (!_cmsWrite15Fixed16Number(ContextID, io, 0)) return FALSE;
+            if (!_cmsWrite15Fixed16Number(ContextID, io, 0)) return FALSE;
         }
     }
 
@@ -2703,8 +2701,8 @@ cmsBool WriteSetOfCurves(cmsContext ContextID, struct _cms_typehandler_struct* s
         // If this is a table-based curve, use curve type even on V4
         CurrentType = Type;
 
-        if ((Curves[i] ->nSegments == 0)||
-            ((Curves[i]->nSegments == 2) && (Curves[i] ->Segments[1].Type == 0)) )
+        if ((Curves[i] ->nSegments == 0) ||                                         // 16 bits tabulated
+            ((Curves[i]->nSegments == 3) && (Curves[i] ->Segments[1].Type == 0)) )  // Floating-point tabulated
             CurrentType = cmsSigCurveType;
         else
         if (Curves[i] ->Segments[0].Type < 0)
@@ -3652,7 +3650,7 @@ void *Type_UcrBg_Read(cmsContext ContextID, struct _cms_typehandler_struct* self
 
     if (SignedSizeOfTag < (cmsInt32Number)(CountUcr * sizeof(cmsUInt16Number))) goto error;
     if (!_cmsReadUInt16Array(ContextID, io, CountUcr, n ->Ucr->Table16)) goto error;
-  
+
     SignedSizeOfTag -= CountUcr * sizeof(cmsUInt16Number);
 
     // Second curve is Black generation
@@ -4126,8 +4124,8 @@ cmsToneCurve* ReadSegmentedCurve(cmsContext ContextID, struct _cms_typehandler_s
                cmsUInt16Number Type;
                cmsUInt32Number ParamsByType[] = { 4, 5, 5 };
 
-                if (!_cmsReadUInt16Number(ContextID, io, &Type)) goto Error;
-                if (!_cmsReadUInt16Number(ContextID, io, NULL)) goto Error;
+               if (!_cmsReadUInt16Number(ContextID, io, &Type)) goto Error;
+               if (!_cmsReadUInt16Number(ContextID, io, NULL)) goto Error;
 
                Segments[i].Type = Type + 6;
                if (Type > 2) goto Error;
@@ -4150,7 +4148,7 @@ cmsToneCurve* ReadSegmentedCurve(cmsContext ContextID, struct _cms_typehandler_s
                // The first point is implicit in the last stage, we allocate an extra note to be populated latter on
                Count++;
                Segments[i].nGridPoints = Count;
-               Segments[i].SampledPoints = (cmsFloat32Number*) _cmsCalloc(ContextID, Count, sizeof(cmsFloat32Number));
+               Segments[i].SampledPoints = (cmsFloat32Number*)_cmsCalloc(ContextID, Count, sizeof(cmsFloat32Number));
                if (Segments[i].SampledPoints == NULL) goto Error;
 
                Segments[i].SampledPoints[0] = 0;
@@ -4179,7 +4177,7 @@ cmsToneCurve* ReadSegmentedCurve(cmsContext ContextID, struct _cms_typehandler_s
      }
      _cmsFree(ContextID, Segments);
 
-     // Explore for missing implicit points 
+     // Explore for missing implicit points
      for (i = 0; i < nSegments; i++) {
 
          // If sampled curve, fix it
@@ -4486,10 +4484,10 @@ void *Type_MPEclut_Read(cmsContext ContextID, struct _cms_typehandler_struct* se
     if (!_cmsReadUInt16Number(ContextID, io, &InputChans)) return NULL;
     if (!_cmsReadUInt16Number(ContextID, io, &OutputChans)) return NULL;
 
-    if (InputChans == 0) goto Error;
-    if (OutputChans == 0) goto Error;
+    if (InputChans == 0 || InputChans >= cmsMAXCHANNELS) goto Error;
+    if (OutputChans == 0 || OutputChans >= cmsMAXCHANNELS) goto Error;
 
-    if (io ->Read(ContextID, io,Dimensions8, sizeof(cmsUInt8Number), 16) != 16)
+    if (io ->Read(ContextID, io, Dimensions8, sizeof(cmsUInt8Number), 16) != 16)
         goto Error;
 
     // Copy MAX_INPUT_DIMENSIONS at most. Expand to cmsUInt32Number
@@ -4508,7 +4506,7 @@ void *Type_MPEclut_Read(cmsContext ContextID, struct _cms_typehandler_struct* se
     clut = (_cmsStageCLutData*) mpe ->Data;
     for (i=0; i < clut ->nEntries; i++) {
 
-        if (!_cmsReadFloat32Number(ContextID, io, &clut ->Tab.TFloat[i])) goto Error;
+        if (!_cmsReadFloat32Number(ContextID, io, &clut->Tab.TFloat[i])) goto Error;
     }
 
     *nItems = 1;
@@ -5109,7 +5107,7 @@ cmsBool ReadOneElem(cmsContext ContextID, cmsIOHANDLER* io,  _cmsDICelem* e, cms
 
 
 static
-cmsBool ReadOffsetArray(cmsContext ContextID, cmsIOHANDLER* io,  _cmsDICarray* a, 
+cmsBool ReadOffsetArray(cmsContext ContextID, cmsIOHANDLER* io,  _cmsDICarray* a,
                         cmsUInt32Number Count, cmsUInt32Number Length, cmsUInt32Number BaseOffset,
                         cmsInt32Number* SignedSizeOfTagPtr)
 {
@@ -5279,10 +5277,12 @@ cmsBool WriteOneMLUC(cmsContext ContextID, struct _cms_typehandler_struct* self,
     }
 
     Before = io ->Tell(ContextID, io);
-    e ->Offsets[i] = Before - BaseOffset;
+    if (e->Offsets != NULL)
+        e ->Offsets[i] = Before - BaseOffset;
 
     if (!Type_MLU_Write(ContextID, self, io, (void*) mlu, 1)) return FALSE;
 
+    if (e->Sizes != NULL)
     e ->Sizes[i] = io ->Tell(ContextID, io) - Before;
     return TRUE;
 }
@@ -5310,12 +5310,11 @@ void *Type_Dictionary_Read(cmsContext ContextID, struct _cms_typehandler_struct*
     SignedSizeOfTag -= sizeof(cmsUInt32Number);
     if (SignedSizeOfTag < 0) goto Error;
     if (!_cmsReadUInt32Number(ContextID, io, &Count)) return NULL;
-    
+
     // Get rec length
     SignedSizeOfTag -= sizeof(cmsUInt32Number);
     if (SignedSizeOfTag < 0) goto Error;
     if (!_cmsReadUInt32Number(ContextID, io, &Length)) return NULL;
-    
 
     // Check for valid lengths
     if (Length != 16 && Length != 24 && Length != 32) {
@@ -5476,7 +5475,7 @@ void* Type_VideoSignal_Read(cmsContext ContextID, struct _cms_typehandler_struct
 {
     cmsVideoSignalType* cicp = NULL;
 
-    if (SizeOfTag != 8) return NULL; 
+    if (SizeOfTag != 8) return NULL;
 
     if (!_cmsReadUInt32Number(ContextID, io, NULL)) return NULL;
 
@@ -5528,6 +5527,216 @@ void Type_VideoSignal_Free(cmsContext ContextID, struct _cms_typehandler_struct*
     _cmsFree(ContextID, Ptr);
 }
 
+
+// ********************************************************************************
+// Microsoft's MHC2 Type support 
+// ********************************************************************************
+
+static
+void SetIdentity(cmsFloat64Number XYZ2XYZmatrix[3][4])
+{
+    XYZ2XYZmatrix[0][0] = 1.0; XYZ2XYZmatrix[0][1] = 0.0; XYZ2XYZmatrix[0][2] = 0.0; XYZ2XYZmatrix[0][3] = 0.0;
+    XYZ2XYZmatrix[1][0] = 0.0; XYZ2XYZmatrix[1][1] = 1.0; XYZ2XYZmatrix[1][2] = 0.0; XYZ2XYZmatrix[1][3] = 0.0;
+    XYZ2XYZmatrix[2][0] = 0.0; XYZ2XYZmatrix[2][1] = 0.0; XYZ2XYZmatrix[2][2] = 1.0; XYZ2XYZmatrix[2][3] = 0.0;
+}
+
+static
+cmsBool CloseEnough(cmsFloat64Number a, cmsFloat64Number b)
+{
+    return fabs(b - a) < (1.0 / 65535.0);
+}
+
+cmsBool IsIdentity(cmsFloat64Number XYZ2XYZmatrix[3][4])
+{
+    cmsFloat64Number Identity[3][4];
+    int i, j;
+
+    SetIdentity(Identity);
+
+    for (i = 0; i < 3; i++)
+        for (j = 0; j < 4; j++)
+            if (!CloseEnough(XYZ2XYZmatrix[i][j], Identity[i][j])) return FALSE;
+
+    return TRUE;
+}
+
+static
+void Type_MHC2_Free(cmsContext ContextID, struct _cms_typehandler_struct* self, void* Ptr)
+{
+    cmsMHC2Type* mhc2 = (cmsMHC2Type*)Ptr;
+
+    if (mhc2->RedCurve != NULL) _cmsFree(ContextID, mhc2->RedCurve);
+    if (mhc2->GreenCurve != NULL) _cmsFree(ContextID, mhc2->GreenCurve);
+    if (mhc2->BlueCurve != NULL) _cmsFree(ContextID, mhc2->BlueCurve);
+
+    _cmsFree(ContextID, Ptr);
+}
+
+void* Type_MHC2_Dup(cmsContext ContextID, struct _cms_typehandler_struct* self, const void* Ptr, cmsUInt32Number n)
+{
+    cmsMHC2Type* mhc2 = _cmsDupMem(ContextID, Ptr, sizeof(cmsMHC2Type));
+
+    mhc2->RedCurve = _cmsDupMem(ContextID,   mhc2->RedCurve, mhc2->CurveEntries*sizeof(cmsFloat64Number));
+    mhc2->GreenCurve = _cmsDupMem(ContextID, mhc2->GreenCurve, mhc2->CurveEntries * sizeof(cmsFloat64Number));
+    mhc2->BlueCurve = _cmsDupMem(ContextID,  mhc2->BlueCurve, mhc2->CurveEntries * sizeof(cmsFloat64Number));
+
+    if (mhc2->RedCurve == NULL ||
+        mhc2->GreenCurve == NULL ||
+        mhc2->BlueCurve == NULL) {
+
+        Type_MHC2_Free(ContextID, self, mhc2);
+        return NULL;
+    }
+
+    return mhc2;
+
+    cmsUNUSED_PARAMETER(n);
+}
+
+
+static
+cmsBool WriteDoubles(cmsContext ContextID, cmsIOHANDLER* io, cmsUInt32Number n, cmsFloat64Number* Values)
+{
+    cmsUInt32Number i;
+    
+    for (i = 0; i < n; i++) {
+
+        if (!_cmsWrite15Fixed16Number(ContextID, io, *Values++)) return FALSE;
+    }
+
+    return TRUE;
+}
+
+static
+cmsBool Type_MHC2_Write(cmsContext ContextID, struct _cms_typehandler_struct* self, cmsIOHANDLER* io, void* Ptr, cmsUInt32Number nItems)
+{
+    cmsMHC2Type* mhc2 = (cmsMHC2Type*)Ptr;
+    cmsUInt32Number BaseOffset = io->Tell(ContextID, io) - sizeof(_cmsTagBase);
+    cmsUInt32Number TablesOffsetPos;
+    cmsUInt32Number MatrixOffset;
+    cmsUInt32Number OffsetRedTable, OffsetGreenTable, OffsetBlueTable;
+
+    if (!_cmsWriteUInt32Number(ContextID, io, 0)) return FALSE;
+    if (!_cmsWriteUInt32Number(ContextID, io, mhc2->CurveEntries)) return FALSE;
+
+    if (!_cmsWrite15Fixed16Number(ContextID, io, mhc2->MinLuminance)) return FALSE;
+    if (!_cmsWrite15Fixed16Number(ContextID, io, mhc2->PeakLuminance)) return FALSE;
+
+    TablesOffsetPos = io->Tell(ContextID, io);
+
+    if (!_cmsWriteUInt32Number(ContextID, io, 0)) return FALSE;    // Matrix
+    if (!_cmsWriteUInt32Number(ContextID, io, 0)) return FALSE;    // Curve R
+    if (!_cmsWriteUInt32Number(ContextID, io, 0)) return FALSE;    // Curve G
+    if (!_cmsWriteUInt32Number(ContextID, io, 0)) return FALSE;    // Curve B
+
+
+    if (IsIdentity(mhc2->XYZ2XYZmatrix))
+    {
+        MatrixOffset = 0;
+    }
+    else
+    {
+        MatrixOffset = io->Tell(ContextID, io) - BaseOffset;
+        if (!WriteDoubles(ContextID, io, 3 * 4, &mhc2->XYZ2XYZmatrix[0][0])) return FALSE;
+    }
+
+    OffsetRedTable = io->Tell(ContextID, io) - BaseOffset;
+    if (!WriteDoubles(ContextID, io, mhc2->CurveEntries, mhc2->RedCurve)) return FALSE;
+    OffsetGreenTable = io->Tell(ContextID, io) - BaseOffset;
+    if (!WriteDoubles(ContextID, io, mhc2->CurveEntries, mhc2->GreenCurve)) return FALSE;
+    OffsetBlueTable = io->Tell(ContextID, io) - BaseOffset;
+    if (!WriteDoubles(ContextID, io, mhc2->CurveEntries, mhc2->BlueCurve)) return FALSE;
+
+    if (!io->Seek(ContextID, io, TablesOffsetPos)) return FALSE;
+
+    if (!_cmsWriteUInt32Number(ContextID, io, MatrixOffset)) return FALSE;
+    if (!_cmsWriteUInt32Number(ContextID, io, OffsetRedTable)) return FALSE;
+    if (!_cmsWriteUInt32Number(ContextID, io, OffsetGreenTable)) return FALSE;
+    if (!_cmsWriteUInt32Number(ContextID, io, OffsetBlueTable)) return FALSE;
+
+    return TRUE;
+
+    cmsUNUSED_PARAMETER(self);
+    cmsUNUSED_PARAMETER(nItems);
+}
+
+
+static
+cmsBool ReadDoublesAt(cmsContext ContextID, cmsIOHANDLER* io, cmsUInt32Number At, cmsUInt32Number n, cmsFloat64Number* Values)
+{
+    cmsUInt32Number CurrentPos = io->Tell(ContextID, io);
+    cmsUInt32Number i;
+
+    if (!io->Seek(ContextID, io, At)) return FALSE;
+
+    for (i = 0; i < n; i++) {
+
+        if (!_cmsRead15Fixed16Number(ContextID, io, Values++)) return FALSE;
+    }
+
+    if (!io->Seek(ContextID, io, CurrentPos)) return FALSE;
+
+    return TRUE;
+}
+
+static
+void* Type_MHC2_Read(cmsContext ContextID, struct _cms_typehandler_struct* self, cmsIOHANDLER* io, cmsUInt32Number* nItems, cmsUInt32Number SizeOfTag)
+{
+    cmsMHC2Type* mhc2 = NULL;
+
+    cmsUInt32Number BaseOffset = io->Tell(ContextID, io) - sizeof(_cmsTagBase);
+    cmsUInt32Number MatrixOffset;
+    cmsUInt32Number OffsetRedTable, OffsetGreenTable, OffsetBlueTable;
+    
+    if (!_cmsReadUInt32Number(ContextID, io, NULL)) return NULL;
+
+    mhc2 = (cmsMHC2Type*)_cmsCalloc(ContextID, 1, sizeof(cmsMHC2Type));
+    if (mhc2 == NULL) return NULL;
+
+    if (!_cmsReadUInt32Number(ContextID, io, &mhc2->CurveEntries)) goto Error;
+
+    if (mhc2->CurveEntries > 4096) goto Error;
+
+    mhc2->RedCurve = (cmsFloat64Number*)_cmsCalloc(ContextID, mhc2->CurveEntries, sizeof(cmsFloat64Number));
+    mhc2->GreenCurve = (cmsFloat64Number*)_cmsCalloc(ContextID, mhc2->CurveEntries, sizeof(cmsFloat64Number));
+    mhc2->BlueCurve = (cmsFloat64Number*)_cmsCalloc(ContextID, mhc2->CurveEntries, sizeof(cmsFloat64Number));
+
+    if (mhc2->RedCurve == NULL ||
+        mhc2->GreenCurve == NULL ||
+        mhc2->BlueCurve == NULL)  goto Error;
+
+    if (!_cmsRead15Fixed16Number(ContextID, io, &mhc2->MinLuminance)) goto Error;
+    if (!_cmsRead15Fixed16Number(ContextID, io, &mhc2->PeakLuminance)) goto Error;
+
+    if (!_cmsReadUInt32Number(ContextID, io, &MatrixOffset)) goto Error;
+    if (!_cmsReadUInt32Number(ContextID, io, &OffsetRedTable)) goto Error;
+    if (!_cmsReadUInt32Number(ContextID, io, &OffsetGreenTable)) goto Error;
+    if (!_cmsReadUInt32Number(ContextID, io, &OffsetBlueTable)) goto Error;
+
+    if (MatrixOffset == 0) 
+        SetIdentity(mhc2->XYZ2XYZmatrix);            
+    else
+    {
+        if (!ReadDoublesAt(ContextID, io, BaseOffset + MatrixOffset, 3*4, &mhc2->XYZ2XYZmatrix[0][0])) goto Error;
+    }
+
+    if (!ReadDoublesAt(ContextID, io, BaseOffset + OffsetRedTable, mhc2->CurveEntries, mhc2->RedCurve)) goto Error;
+    if (!ReadDoublesAt(ContextID, io, BaseOffset + OffsetGreenTable, mhc2->CurveEntries, mhc2->GreenCurve)) goto Error;
+    if (!ReadDoublesAt(ContextID, io, BaseOffset + OffsetBlueTable, mhc2->CurveEntries, mhc2->BlueCurve)) goto Error;
+    
+    // Success
+    *nItems = 1;
+    return mhc2;
+
+Error:
+    Type_MHC2_Free(ContextID, self, mhc2);
+    return NULL;
+
+    cmsUNUSED_PARAMETER(SizeOfTag);
+}
+
+
+
 // ********************************************************************************
 // Type support main routines
 // ********************************************************************************
@@ -5566,8 +5775,9 @@ static _cmsTagTypeLinkedList SupportedTagTypes[] = {
 {TYPE_HANDLER(cmsMonacoBrokenCurveType,        Curve),               (_cmsTagTypeLinkedList*) &SupportedTagTypes[28] },
 {TYPE_HANDLER(cmsSigProfileSequenceIdType,     ProfileSequenceId),   (_cmsTagTypeLinkedList*) &SupportedTagTypes[29] },
 {TYPE_HANDLER(cmsSigDictType,                  Dictionary),          (_cmsTagTypeLinkedList*) &SupportedTagTypes[30] },
-{TYPE_HANDLER(cmsSigcicpType,                  VideoSignal),        (_cmsTagTypeLinkedList*) &SupportedTagTypes[31] },
-{TYPE_HANDLER(cmsSigVcgtType,                  vcgt),                NULL }
+{TYPE_HANDLER(cmsSigcicpType,                  VideoSignal),         (_cmsTagTypeLinkedList*) &SupportedTagTypes[31] },
+{TYPE_HANDLER(cmsSigVcgtType,                  vcgt),                (_cmsTagTypeLinkedList*) &SupportedTagTypes[32] },
+{TYPE_HANDLER(cmsSigMHC2Type,                  MHC2),                NULL }
 };
 
 
@@ -5763,7 +5973,8 @@ static _cmsTagLinkedList SupportedTags[] = {
     { cmsSigProfileDescriptionMLTag,{ 1, 1, { cmsSigMultiLocalizedUnicodeType}, NULL}, &SupportedTags[63]},
     { cmsSigcicpTag,                { 1, 1, { cmsSigcicpType},               NULL },   &SupportedTags[64]},
 
-    { cmsSigArgyllArtsTag,          { 9, 1, { cmsSigS15Fixed16ArrayType},    NULL}, NULL}
+    { cmsSigArgyllArtsTag,          { 9, 1, { cmsSigS15Fixed16ArrayType},    NULL}, &SupportedTags[65]},
+    { cmsSigMHC2Tag,                { 1, 1, { cmsSigMHC2Type },              NULL}, NULL}
 
 };
 

@@ -52,14 +52,12 @@ int main(int argc, const char** argv)
 	// register a mupdf-aligned default heap memory manager for jpeg/jpeg-turbo
 	fz_set_default_jpeg_sys_mem_mgr();
 
-	ocr_set_leptonica_mem(ctx);
-
-	ocr_set_leptonica_stderr_handler(ctx);
+	fz_set_leptonica_mem(ctx);
 
 	//fz_info(ctx, "usage: tesseract <command> [options]");
 	int rv = tesseract_main(argc, argv);
 
-	ocr_clear_leptonica_mem(ctx);
+	fz_clear_leptonica_mem(ctx);
 
 	fz_drop_context(ctx);
 
@@ -71,11 +69,12 @@ int main(int argc, const char** argv)
 
 int wmain(int argc, const wchar_t *wargv[])
 {
-	const char **argv = fz_argv_from_wargv(argc, wargv);
+	fz_context* ctx = fz_get_global_context();
+	const char **argv = fz_argv_from_wargv(ctx, argc, wargv);
 	if (!argv)
 		return EXIT_FAILURE;
 	int ret = main(argc, argv);
-	fz_free_argv(argc, argv);
+	fz_free_argv(ctx, argc, argv);
 	return ret;
 }
 

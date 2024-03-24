@@ -41,6 +41,9 @@
     <ClInclude Include="../../thirdparty/owemdjee/wyhash/old_versions/wyhash_final2.h">
       <Filter>Header Files\old_versions</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/wyhash/old_versions/wyhash_final4.h">
+      <Filter>Header Files\old_versions</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/wyhash/old_versions/wyhash_gamma.h">
       <Filter>Header Files\old_versions</Filter>
     </ClInclude>
@@ -68,7 +71,16 @@
     <ClInclude Include="../../thirdparty/owemdjee/wyhash/wyhash32.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <Text Include="../../thirdparty/owemdjee/wyhash/LICENSE">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wyhash/Modern Non-Cryptographic Hash Function and Pseudorandom Number Generator.pdf">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/wyhash/README.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/wyhash/makefile">
       <Filter>Misc Files</Filter>
     </Text>
   </ItemGroup>

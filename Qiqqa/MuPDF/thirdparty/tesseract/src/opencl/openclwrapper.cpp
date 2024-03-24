@@ -174,8 +174,8 @@ static ds_status initDSProfile(ds_profile **p, const char *version) {
   clGetPlatformIDs(0, nullptr, &numPlatforms);
 
   if (numPlatforms > 0) {
-    platforms.reserve(numPlatforms);
-    clGetPlatformIDs(numPlatforms, &platforms[0], nullptr);
+    platforms.resize(numPlatforms);
+    clGetPlatformIDs(numPlatforms, platforms.data(), nullptr);
   }
 
   numDevices = 0;
@@ -186,12 +186,11 @@ static ds_status initDSProfile(ds_profile **p, const char *version) {
   }
 
   if (numDevices > 0) {
-    devices.reserve(numDevices);
+    devices.resize(numDevices);
   }
 
   profile->numDevices = numDevices + 1; // +1 to numDevices to include the native CPU
-  profile->devices.reserve(profile->numDevices);
-  memset(&profile->devices[0], 0, profile->numDevices * sizeof(ds_device));
+  profile->devices.resize(profile->numDevices);
 
   next = 0;
   for (i = 0; i < numPlatforms; i++) {
@@ -645,11 +644,11 @@ static Image mapOutputCLBuffer(const KernelEnv &rEnv, cl_mem clbuffer, Image pix
   if (!pixd) {
     if (memcopy) {
       if ((pixd = pixCreateTemplate(pixs)) == nullptr)
-        tprintf("ERROR: pixd not made.\n");
+        tprintError("pixd not made.\n");
     } else {
       if ((pixd = pixCreateHeader(pixGetWidth(pixs), pixGetHeight(pixs), pixGetDepth(pixs))) ==
           nullptr)
-        tprintf("ERROR: pixd not made.\n");
+        tprintError("pixd not made.\n");
     }
   }
   l_uint32 *pValues =
@@ -1002,7 +1001,7 @@ int OpenclDevice::CompileKernelFile(GPUEnv *gpuInfo, const char *buildOption) {
                               nullptr, nullptr);
   }
   if (clStatus != CL_SUCCESS) {
-    tprintf("ERROR: BuildProgram error!\n");
+    tprintError("BuildProgram error!\n");
     size_t length;
     if (!gpuInfo->mnIsUserCreated) {
       clStatus = clGetProgramBuildInfo(gpuInfo->mpArryPrograms[idx], gpuInfo->mpArryDevsID[0],
@@ -1012,7 +1011,7 @@ int OpenclDevice::CompileKernelFile(GPUEnv *gpuInfo, const char *buildOption) {
                                        CL_PROGRAM_BUILD_LOG, 0, nullptr, &length);
     }
     if (clStatus != CL_SUCCESS) {
-      tprintf("ERROR: opencl create build log fail.\n");
+      tprintError("opencl create build log fail.\n");
       return 0;
     }
     std::vector<char> buildLog(length);
@@ -1024,7 +1023,7 @@ int OpenclDevice::CompileKernelFile(GPUEnv *gpuInfo, const char *buildOption) {
                                        CL_PROGRAM_BUILD_LOG, length, &buildLog[0], &length);
     }
     if (clStatus != CL_SUCCESS) {
-      tprintf("ERROR: opencl program build info fail.\n");
+      tprintError("opencl program build info fail.\n");
       return 0;
     }
 

@@ -1,25 +1,25 @@
 #include <tesseract/baseapi.h>
 #include <leptonica/allheaders.h>
+
+#include "monolithic_examples.h"
+
+
+#if defined(BUILD_MONOLITHIC)
+#define main     tessdoc_example_osd_main
+#endif
+
 int main()
 {
-    const char* inputfile = "/tesseract/testing/devatest-rotated-270.png";
+    const char* inputfile = "devatest-rotated-270.png";
     PIX *image = pixRead(inputfile);
     tesseract::TessBaseAPI *api = new tesseract::TessBaseAPI();
-    api->Init(NULL, "osd");
-// Get OSD - old example code
-    tesseract::Orientation orientation;
-    tesseract::WritingDirection direction;
-    tesseract::TextlineOrder order;
-    float deskew_angle;
-    api->SetPageSegMode(tesseract::PSM_AUTO_OSD);
+    if (api->InitSimple(NULL, "osd")) {
+		fprintf(stderr, "Could not initialize tesseract.\n");
+		return 1;
+	}
+	api->SetPageSegMode(tesseract::PSM_OSD_ONLY);
     api->SetImage(image);
-    api->Recognize(0);
-    tesseract::PageIterator* it =  api->AnalyseLayout();
-    it->Orientation(&orientation, &direction, &order, &deskew_angle);
-    printf("Orientation: %d;\nWritingDirection: %d\nTextlineOrder: %d\n" \
-    "Deskew angle: %.4f\n",
-    orientation, direction, order, deskew_angle);
-//Get OSD - new code
+        
     int orient_deg;
     float orient_conf;
     const char* script_name;
@@ -29,8 +29,11 @@ int main()
     " Script: %s\n Script confidence: %.2f\n",
     orient_deg, orient_conf,
     script_name, script_conf);
+    
     // Destroy used object and release memory
     api->End();
+    delete api;
     pixDestroy(&image);
+    
     return 0;
 }

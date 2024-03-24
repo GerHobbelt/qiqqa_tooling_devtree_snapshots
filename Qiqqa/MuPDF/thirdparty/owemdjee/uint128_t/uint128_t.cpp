@@ -4,9 +4,6 @@
 #include <cctype>
 #include <sstream>
 
-const uint128_t uint128_0(0);
-const uint128_t uint128_1(1);
-
 uint128_t::uint128_t(const std::string & s, uint8_t base) {
     init(s.c_str(), s.size(), base);
 }
@@ -113,7 +110,7 @@ void uint128_t::_init_oct(const char *s, std::size_t len){
 }
 
 void uint128_t::_init_bin(const char *s, std::size_t len){
-    // 2**128 = 0x100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+    // 2**128 = 0b100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
     static const std::size_t MAX_LEN = 128;
 
     LOWER = UPPER = 0;
@@ -424,7 +421,7 @@ void uint128_t::export_bits(std::vector<uint8_t> &ret) const {
     ConvertToVector(ret, const_cast<const uint64_t&>(LOWER));
 }
 
-std::pair <uint128_t, uint128_t> uint128_t::divmod(const uint128_t & lhs, const uint128_t & rhs) const{
+std::pair <uint128_t, uint128_t> uint128_t::divmod(const uint128_t & lhs, const uint128_t & rhs){
     // Save some calculations /////////////////////
     if (rhs == uint128_0){
         throw std::domain_error("Error: division or modulus by 0");
@@ -437,6 +434,23 @@ std::pair <uint128_t, uint128_t> uint128_t::divmod(const uint128_t & lhs, const 
     }
     else if ((lhs == uint128_0) || (lhs < rhs)){
         return std::pair <uint128_t, uint128_t> (uint128_0, lhs);
+    }
+
+    // right shift shortcuts
+    if(rhs.upper() == 0) {
+        switch(rhs.lower()) {
+            case 2:  return std::pair <uint128_t, uint128_t> (lhs >> 1, lhs & 0b1);
+            case 4:  return std::pair <uint128_t, uint128_t> (lhs >> 2, lhs & 0b11);
+            case 8:  return std::pair <uint128_t, uint128_t> (lhs >> 3, lhs & 0b111);
+            case 16: return std::pair <uint128_t, uint128_t> (lhs >> 4, lhs & 0b1111);
+        }
+    }
+
+    // 64-bit shortcut
+    if (lhs.upper() == 0 && rhs.upper() == 0){
+        return std::pair <uint128_t, uint128_t> (
+                lhs.lower() / rhs.lower(),
+                lhs.lower() % rhs.lower());
     }
 
     std::pair <uint128_t, uint128_t> qr (uint128_0, uint128_0);

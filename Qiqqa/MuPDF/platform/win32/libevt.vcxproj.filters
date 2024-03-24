@@ -36,53 +36,62 @@
     <Filter Include="Misc Files\common">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\dpkg">
+    <Filter Include="Misc Files\documentation">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0009}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\evttools">
+    <Filter Include="Misc Files\dpkg">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0010}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\include">
+    <Filter Include="Misc Files\evttools">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0011}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\include\libevt">
+    <Filter Include="Misc Files\include">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0012}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\libevt">
+    <Filter Include="Misc Files\include\libevt">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0013}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\manuals">
+    <Filter Include="Misc Files\libevt">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0014}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\msvscpp">
+    <Filter Include="Misc Files\m4">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0015}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\po">
+    <Filter Include="Misc Files\manuals">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0016}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\pyevt">
+    <Filter Include="Misc Files\msvscpp">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0017}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\pyevt-python2">
+    <Filter Include="Misc Files\po">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\pyevt-python3">
+    <Filter Include="Misc Files\pyevt">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0019}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\tests">
+    <Filter Include="Misc Files\pyevt-python2">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0020}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\evttools">
+    <Filter Include="Misc Files\pyevt-python3">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\libevt">
+    <Filter Include="Misc Files\tests">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\pyevt">
+    <Filter Include="Misc Files\tests\data">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\tests">
+    <Filter Include="Source Files\evttools">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libevt">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pyevt">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tests">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -590,6 +599,12 @@
     <ClInclude Include="../../thirdparty/owemdjee/libevt/tests/evt_test_unused.h">
       <Filter>Header Files\tests</Filter>
     </ClInclude>
+    <Text Include="../../thirdparty/owemdjee/libevt/AUTHORS">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/COPYING.LESSER">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libevt/ChangeLog">
       <Filter>Misc Files</Filter>
     </Text>
@@ -600,6 +615,12 @@
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libevt/README">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/acinclude.m4">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/appveyor.yml">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libevt/autogen.ps1">
@@ -620,8 +641,26 @@
     <Text Include="../../thirdparty/owemdjee/libevt/configure.ac">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/documentation/Windows Event Log (EVT) format.asciidoc">
+      <Filter>Misc Files\documentation</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libevt/dpkg/changelog.in">
       <Filter>Misc Files\dpkg</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/dpkg/libevt-dev.install">
+      <Filter>Misc Files\dpkg</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/dpkg/libevt-python3.install">
+      <Filter>Misc Files\dpkg</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/dpkg/libevt-tools.install">
+      <Filter>Misc Files\dpkg</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/dpkg/libevt.install">
+      <Filter>Misc Files\dpkg</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/dtfabric.yaml">
+      <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libevt/evttools/Makefile.am">
       <Filter>Misc Files\evttools</Filter>
@@ -641,6 +680,12 @@
     <Text Include="../../thirdparty/owemdjee/libevt/include/libevt/types.h.in">
       <Filter>Misc Files\include\libevt</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/libevt.ini">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/libevt.nuspec">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libevt/libevt.pc.in">
       <Filter>Misc Files</Filter>
     </Text>
@@ -656,7 +701,94 @@
     <Text Include="../../thirdparty/owemdjee/libevt/libevt/libevt_definitions.h.in">
       <Filter>Misc Files\libevt</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/common.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libbfio.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libcdata.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libcdirectory.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libcerror.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libcfile.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libclocale.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libcnotify.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libcpath.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libcsplit.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libcthreads.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libexe.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libfcache.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libfdata.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libfdatetime.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libfguid.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libfvalue.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libfwevt.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libfwnt.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libregf.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libuna.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/libwrc.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/pthread.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/python.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/tests.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/m4/types.m4">
+      <Filter>Misc Files\m4</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libevt/manuals/Makefile.am">
+      <Filter>Misc Files\manuals</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/manuals/evtexport.1">
+      <Filter>Misc Files\manuals</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/manuals/evtinfo.1">
+      <Filter>Misc Files\manuals</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/manuals/libevt.3">
       <Filter>Misc Files\manuals</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libevt/msvscpp/Makefile.am">
@@ -680,10 +812,16 @@
     <Text Include="../../thirdparty/owemdjee/libevt/pyevt/Makefile.am">
       <Filter>Misc Files\pyevt</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/pyproject.toml">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libevt/runtests.ps1">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libevt/runtests.sh">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/setup.cfg.in">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libevt/setup.py">
@@ -695,6 +833,9 @@
     <Text Include="../../thirdparty/owemdjee/libevt/synclibs.sh">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/synctestdata.ps1">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libevt/synctestdata.sh">
       <Filter>Misc Files</Filter>
     </Text>
@@ -704,6 +845,18 @@
     <Text Include="../../thirdparty/owemdjee/libevt/tests/build.sh">
       <Filter>Misc Files\tests</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/tests/data/end_of_file_record.1">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/tests/data/event_record.1">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/tests/data/file_header.1">
+      <Filter>Misc Files\tests\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/tests/lsan.suppressions">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libevt/tests/pkgbuild.sh">
       <Filter>Misc Files\tests</Filter>
     </Text>
@@ -711,6 +864,9 @@
       <Filter>Misc Files\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libevt/tests/pyevt_test_support.py">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/tests/runtests.py">
       <Filter>Misc Files\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libevt/tests/runtests.sh">
@@ -743,8 +899,14 @@
     <Text Include="../../thirdparty/owemdjee/libevt/tests/test_runner.sh">
       <Filter>Misc Files\tests</Filter>
     </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/tests/test_tools.ps1">
+      <Filter>Misc Files\tests</Filter>
+    </Text>
     <Text Include="../../thirdparty/owemdjee/libevt/tests/test_tools.sh">
       <Filter>Misc Files\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libevt/tox.ini">
+      <Filter>Misc Files</Filter>
     </Text>
   </ItemGroup>
 </Project>

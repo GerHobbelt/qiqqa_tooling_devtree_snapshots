@@ -12,14 +12,10 @@
 
 #include <string>
 
-#if defined( FMT_MODULE_TEST ) && defined(__STDC_VERSION__) && (__STDC_VERSION__ > 201710L)
-import fmt;
-#else
-#  include "fmt/os.h"
-#  include "fmt/core.h"
-#  include "fmt/std.h"
-#  include "fmt/ostream.h"
-#endif  // FMG_MODULE_TEST
+#include "fmt/os.h"
+#include "fmt/base.h"
+#include "fmt/std.h"
+#include "fmt/ostream.h"
 
 #include "gmock/gmock.h"
 
@@ -85,7 +81,7 @@ class output_redirect {
   void restore();
 
  public:
-  explicit output_redirect(FILE* file);
+  explicit output_redirect(FILE* file, bool flush = true);
   ~output_redirect() noexcept;
 
   output_redirect(const output_redirect&) = delete;

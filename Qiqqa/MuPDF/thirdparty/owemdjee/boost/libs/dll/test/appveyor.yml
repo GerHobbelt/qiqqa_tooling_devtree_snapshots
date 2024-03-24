@@ -2,7 +2,7 @@
 # subject to the Boost Software License, Version 1.0. (See accompanying
 # file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 #
-# Copyright Antony Polukhin, 2016-2023.
+# Copyright Antony Polukhin, 2016-2024.
 
 #
 # See https://svn.boost.org/trac/boost/wiki/TravisCoverals for description of this file
@@ -32,9 +32,6 @@ skip_tags: true
 
 environment:
   matrix:
-    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
-      TOOLSET: msvc-9.0,msvc-10.0,msvc-11.0,msvc-12.0
-      ADDRMD: 32
     - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
       TOOLSET: msvc-14.1
       CXXSTD: 14,17
@@ -61,19 +58,19 @@ environment:
     #- APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
     #  ADDPATH: C:\cygwin\bin;
     #  TOOLSET: gcc
-    #  CXXSTD: 03,11,14,1z
+    #  CXXSTD: 11,14,1z
     #- APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
     #  ADDPATH: C:\cygwin64\bin;
     #  TOOLSET: gcc
-    #  CXXSTD: 03,11,14,1z
+    #  CXXSTD: 11,14,1z
     - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
       ADDPATH: C:\mingw\bin;
       TOOLSET: gcc
-      CXXSTD: 03,11,14,1z
+      CXXSTD: 11,14,1z
     - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
       ADDPATH: C:\mingw-w64\x86_64-7.2.0-posix-seh-rt_v5-rev1\mingw64\bin;
       TOOLSET: gcc
-      CXXSTD: 03,11,14,1z
+      CXXSTD: 11,14,1z
 
 before_build:
     - set BOOST_BRANCH=develop

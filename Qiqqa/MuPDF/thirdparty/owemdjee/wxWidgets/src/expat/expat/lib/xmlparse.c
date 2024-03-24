@@ -704,7 +704,7 @@ struct XML_ParserStruct {
   XML_Bool m_useForeignDTD;
   enum XML_ParamEntityParsing m_paramEntityParsing;
 #endif
-  unsigned long m_hash_secret_salt;
+  uint64_t m_hash_secret_salt;
 #ifdef XML_DTD
   ACCOUNTING m_accounting;
   ENTITY_STATS m_entity_stats;
@@ -1817,7 +1817,7 @@ XML_SetParamEntityParsing(XML_Parser parser,
 }
 
 int XMLCALL
-XML_SetHashSalt(XML_Parser parser, unsigned long hash_salt) {
+XML_SetHashSalt(XML_Parser parser, uint64_t hash_salt) {
   if (parser == NULL)
     return 0;
   if (parser->m_parentParser)

@@ -34,6 +34,7 @@ extern "C" {
 int pdf_lookup_page_number(fz_context *ctx, pdf_document *doc, pdf_obj *pageobj);
 int pdf_count_pages(fz_context *ctx, pdf_document *doc);
 pdf_obj *pdf_lookup_page_obj(fz_context *ctx, pdf_document *doc, int needle);
+pdf_obj *pdf_lookup_page_loc(fz_context *ctx, pdf_document *doc, int needle, pdf_obj **parentp, int *indexp);
 
 /*
 	Cache the page tree for fast forward/reverse page lookups.
@@ -53,14 +54,6 @@ void pdf_drop_page_tree(fz_context *ctx, pdf_document *doc);
 
 void pdf_drop_page_tree_internal(fz_context *ctx, pdf_document *doc);
 
-
-/*
-	Find the page number of a named destination.
-
-	For use with looking up the destination page of a fragment
-	identifier in hyperlinks: foo.pdf#bar or foo.pdf#page=5.
-*/
-int pdf_lookup_anchor(fz_context *ctx, pdf_document *doc, const char *name, float *xp, float *yp);
 
 /*
 	Make page self sufficient.
@@ -86,9 +79,13 @@ int pdf_page_has_transparency(fz_context *ctx, pdf_page *page);
 
 void pdf_page_obj_transform(fz_context *ctx, pdf_obj *pageobj, fz_rect *page_mediabox, fz_matrix *page_ctm);
 void pdf_page_transform(fz_context *ctx, pdf_page *page, fz_rect *mediabox, fz_matrix *ctm);
+void pdf_page_obj_transform_box(fz_context *ctx, pdf_obj *pageobj, fz_rect *page_mediabox, fz_matrix *page_ctm, fz_box_type box);
+void pdf_page_transform_box(fz_context *ctx, pdf_page *page, fz_rect *mediabox, fz_matrix *ctm, fz_box_type box);
 pdf_obj *pdf_page_resources(fz_context *ctx, pdf_page *page);
 pdf_obj *pdf_page_contents(fz_context *ctx, pdf_page *page);
 pdf_obj *pdf_page_group(fz_context *ctx, pdf_page *page);
+
+void pdf_set_page_box(fz_context *ctx, pdf_page *page, fz_box_type box, fz_rect rect);
 
 /*
 	Get the separation details for a page.
@@ -109,7 +106,7 @@ fz_link *pdf_load_links(fz_context *ctx, pdf_page *page);
 	exists (visible area after cropping), otherwise the media box will
 	be used (possibly including printing marks).
 */
-fz_rect pdf_bound_page(fz_context *ctx, pdf_page *page);
+fz_rect pdf_bound_page(fz_context *ctx, pdf_page *page, fz_box_type box);
 
 /*
 	Interpret a loaded page and render it on a device.
@@ -160,21 +157,47 @@ void pdf_run_page_annots_with_usage(fz_context *ctx, pdf_page *page, fz_device *
 void pdf_filter_page_contents(fz_context *ctx, pdf_document *doc, pdf_page *page, pdf_filter_options *options);
 void pdf_filter_annot_contents(fz_context *ctx, pdf_document *doc, pdf_annot *annot, pdf_filter_options *options);
 
-fz_pixmap *pdf_new_pixmap_from_page_contents_with_usage(fz_context *ctx, pdf_page *page, fz_matrix ctm, fz_colorspace *cs, int alpha, const char *usage);
-fz_pixmap *pdf_new_pixmap_from_page_with_usage(fz_context *ctx, pdf_page *page, fz_matrix ctm, fz_colorspace *cs, int alpha, const char *usage);
-fz_pixmap *pdf_new_pixmap_from_page_contents_with_separations_and_usage(fz_context *ctx, pdf_page *page, fz_matrix ctm, fz_colorspace *cs, fz_separations *seps, int alpha, const char *usage);
-fz_pixmap *pdf_new_pixmap_from_page_with_separations_and_usage(fz_context *ctx, pdf_page *page, fz_matrix ctm, fz_colorspace *cs, fz_separations *seps, int alpha, const char *usage);
+fz_pixmap *pdf_new_pixmap_from_page_contents_with_usage(fz_context *ctx, pdf_page *page, fz_matrix ctm, fz_colorspace *cs, int alpha, const char *usage, fz_box_type box);
+fz_pixmap *pdf_new_pixmap_from_page_with_usage(fz_context *ctx, pdf_page *page, fz_matrix ctm, fz_colorspace *cs, int alpha, const char *usage, fz_box_type box);
+fz_pixmap *pdf_new_pixmap_from_page_contents_with_separations_and_usage(fz_context *ctx, pdf_page *page, fz_matrix ctm, fz_colorspace *cs, fz_separations *seps, int alpha, const char *usage, fz_box_type box);
+fz_pixmap *pdf_new_pixmap_from_page_with_separations_and_usage(fz_context *ctx, pdf_page *page, fz_matrix ctm, fz_colorspace *cs, fz_separations *seps, int alpha, const char *usage, fz_box_type box);
 
 enum {
+	/* Do not change images at all */
 	PDF_REDACT_IMAGE_NONE,
+
+	/* If the image intrudes across the redaction region (even if clipped),
+	 * remove it. */
 	PDF_REDACT_IMAGE_REMOVE,
+
+	/* If the image intrudes across the redaction region (even if clipped),
+	 * replace the bit that intrudes with black pixels. */
 	PDF_REDACT_IMAGE_PIXELS,
+
+	/* If the image, when clipped, intrudes across the redaction
+	 * region, remove it completely. Note: clipped is a rough estimate
+	 * based on the bbox of clipping paths.
+	 *
+	 * Essentially this says "remove any image that has visible parts
+	 * that extend into the redaction region".
+	 *
+	 * This method can effectively 'leak' invisible information during
+	 * the redaction phase, so should be used with caution.
+	 */
+	PDF_REDACT_IMAGE_REMOVE_UNLESS_INVISIBLE
+};
+
+enum {
+	PDF_REDACT_LINE_ART_NONE,
+	PDF_REDACT_LINE_ART_REMOVE_IF_COVERED,
+	PDF_REDACT_LINE_ART_REMOVE_IF_TOUCHED
 };
 
 typedef struct
 {
 	int black_boxes;
 	int image_method;
+	int line_art;
 } pdf_redact_options;
 
 int pdf_redact_page(fz_context *ctx, pdf_document *doc, pdf_page *page, pdf_redact_options *opts);

@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOSQUERY;OSQUERY_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOSQUERY;OSQUERY_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOSQUERY;OSQUERY_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/osquery;../../scripts/boost/include;../../thirdparty/owemdjee/boost;../../thirdparty/owemdjee/boost/libs/algorithm/include;../../thirdparty/owemdjee/boost/libs/any/include;../../thirdparty/owemdjee/boost/libs/array/include;../../thirdparty/owemdjee/boost/libs/asio/include;../../thirdparty/owemdjee/boost/libs/assert/include;../../thirdparty/owemdjee/boost/libs/atomic/include;../../thirdparty/owemdjee/boost/libs/bind/include;../../thirdparty/owemdjee/boost/libs/chrono/include;../../thirdparty/owemdjee/boost/libs/concept_check/include;../../thirdparty/owemdjee/boost/libs/config/include;../../thirdparty/owemdjee/boost/libs/container/include;../../thirdparty/owemdjee/boost/libs/container_hash/include;../../thirdparty/owemdjee/boost/libs/core/include;../../thirdparty/owemdjee/boost/libs/crc/include;../../thirdparty/owemdjee/boost/libs/date_time/include;../../thirdparty/owemdjee/boost/libs/detail/include;../../thirdparty/owemdjee/boost/libs/dll/include;../../thirdparty/owemdjee/boost/libs/fiber/include;../../thirdparty/owemdjee/boost/libs/filesystem/include;../../thirdparty/owemdjee/boost/libs/function/include;../../thirdparty/owemdjee/boost/libs/fusion/include;../../thirdparty/owemdjee/boost/libs/integer/include;../../thirdparty/owemdjee/boost/libs/io/include;../../thirdparty/owemdjee/boost/libs/iterator/include;../../thirdparty/owemdjee/boost/libs/lexical_cast/include;../../thirdparty/owemdjee/boost/libs/locale/include;../../thirdparty/owemdjee/boost/libs/lockfree/include;../../thirdparty/owemdjee/boost/libs/log/include;../../thirdparty/owemdjee/boost/libs/logic/include;../../thirdparty/owemdjee/boost/libs/move/include;../../thirdparty/owemdjee/boost/libs/mp11/include;../../thirdparty/owemdjee/boost/libs/mp11/include/;../../thirdparty/owemdjee/boost/libs/mpl/include;../../thirdparty/owemdjee/boost/libs/multiprecision/include;../../thirdparty/owemdjee/boost/libs/numeric/conversion/include;../../thirdparty/owemdjee/boost/libs/optional/include;../../thirdparty/owemdjee/boost/libs/parameter/include;../../thirdparty/owemdjee/boost/libs/phoenix/include;../../thirdparty/owemdjee/boost/libs/predef/include;../../thirdparty/owemdjee/boost/libs/preprocessor/include;../../thirdparty/owemdjee/boost/libs/program_options/include;../../thirdparty/owemdjee/boost/libs/proto/include;../../thirdparty/owemdjee/boost/libs/range/include;../../thirdparty/owemdjee/boost/libs/ratio/include;../../thirdparty/owemdjee/boost/libs/regex/include;../../thirdparty/owemdjee/boost/libs/smart_ptr/include;../../thirdparty/owemdjee/boost/libs/static_assert/include;../../thirdparty/owemdjee/boost/libs/system/include;../../thirdparty/owemdjee/boost/libs/test/include;../../thirdparty/owemdjee/boost/libs/thread/include;../../thirdparty/owemdjee/boost/libs/throw_exception/include;../../thirdparty/owemdjee/boost/libs/type_index/include;../../thirdparty/owemdjee/boost/libs/type_traits/include;../../thirdparty/owemdjee/boost/libs/typeof/include;../../thirdparty/owemdjee/boost/libs/utility/include;../../thirdparty/owemdjee/boost/libs/uuid/include;../../thirdparty/owemdjee/boost/libs/winapi/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOSQUERY;OSQUERY_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOSQUERY;OSQUERY_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOSQUERY;OSQUERY_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/osquery;../../scripts/boost/include;../../thirdparty/owemdjee/boost;../../thirdparty/owemdjee/boost/libs/algorithm/include;../../thirdparty/owemdjee/boost/libs/any/include;../../thirdparty/owemdjee/boost/libs/array/include;../../thirdparty/owemdjee/boost/libs/asio/include;../../thirdparty/owemdjee/boost/libs/assert/include;../../thirdparty/owemdjee/boost/libs/atomic/include;../../thirdparty/owemdjee/boost/libs/bind/include;../../thirdparty/owemdjee/boost/libs/chrono/include;../../thirdparty/owemdjee/boost/libs/concept_check/include;../../thirdparty/owemdjee/boost/libs/config/include;../../thirdparty/owemdjee/boost/libs/container/include;../../thirdparty/owemdjee/boost/libs/container_hash/include;../../thirdparty/owemdjee/boost/libs/core/include;../../thirdparty/owemdjee/boost/libs/crc/include;../../thirdparty/owemdjee/boost/libs/date_time/include;../../thirdparty/owemdjee/boost/libs/detail/include;../../thirdparty/owemdjee/boost/libs/dll/include;../../thirdparty/owemdjee/boost/libs/fiber/include;../../thirdparty/owemdjee/boost/libs/filesystem/include;../../thirdparty/owemdjee/boost/libs/function/include;../../thirdparty/owemdjee/boost/libs/fusion/include;../../thirdparty/owemdjee/boost/libs/integer/include;../../thirdparty/owemdjee/boost/libs/io/include;../../thirdparty/owemdjee/boost/libs/iterator/include;../../thirdparty/owemdjee/boost/libs/lexical_cast/include;../../thirdparty/owemdjee/boost/libs/locale/include;../../thirdparty/owemdjee/boost/libs/lockfree/include;../../thirdparty/owemdjee/boost/libs/log/include;../../thirdparty/owemdjee/boost/libs/logic/include;../../thirdparty/owemdjee/boost/libs/move/include;../../thirdparty/owemdjee/boost/libs/mp11/include;../../thirdparty/owemdjee/boost/libs/mp11/include/;../../thirdparty/owemdjee/boost/libs/mpl/include;../../thirdparty/owemdjee/boost/libs/multiprecision/include;../../thirdparty/owemdjee/boost/libs/numeric/conversion/include;../../thirdparty/owemdjee/boost/libs/optional/include;../../thirdparty/owemdjee/boost/libs/parameter/include;../../thirdparty/owemdjee/boost/libs/phoenix/include;../../thirdparty/owemdjee/boost/libs/predef/include;../../thirdparty/owemdjee/boost/libs/preprocessor/include;../../thirdparty/owemdjee/boost/libs/program_options/include;../../thirdparty/owemdjee/boost/libs/proto/include;../../thirdparty/owemdjee/boost/libs/range/include;../../thirdparty/owemdjee/boost/libs/ratio/include;../../thirdparty/owemdjee/boost/libs/regex/include;../../thirdparty/owemdjee/boost/libs/smart_ptr/include;../../thirdparty/owemdjee/boost/libs/static_assert/include;../../thirdparty/owemdjee/boost/libs/system/include;../../thirdparty/owemdjee/boost/libs/test/include;../../thirdparty/owemdjee/boost/libs/thread/include;../../thirdparty/owemdjee/boost/libs/throw_exception/include;../../thirdparty/owemdjee/boost/libs/type_index/include;../../thirdparty/owemdjee/boost/libs/type_traits/include;../../thirdparty/owemdjee/boost/libs/typeof/include;../../thirdparty/owemdjee/boost/libs/utility/include;../../thirdparty/owemdjee/boost/libs/uuid/include;../../thirdparty/owemdjee/boost/libs/winapi/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOSQUERY;OSQUERY_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOSQUERY;OSQUERY_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOSQUERY;OSQUERY_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/osquery;../../scripts/boost/include;../../thirdparty/owemdjee/boost;../../thirdparty/owemdjee/boost/libs/algorithm/include;../../thirdparty/owemdjee/boost/libs/any/include;../../thirdparty/owemdjee/boost/libs/array/include;../../thirdparty/owemdjee/boost/libs/asio/include;../../thirdparty/owemdjee/boost/libs/assert/include;../../thirdparty/owemdjee/boost/libs/atomic/include;../../thirdparty/owemdjee/boost/libs/bind/include;../../thirdparty/owemdjee/boost/libs/chrono/include;../../thirdparty/owemdjee/boost/libs/concept_check/include;../../thirdparty/owemdjee/boost/libs/config/include;../../thirdparty/owemdjee/boost/libs/container/include;../../thirdparty/owemdjee/boost/libs/container_hash/include;../../thirdparty/owemdjee/boost/libs/core/include;../../thirdparty/owemdjee/boost/libs/crc/include;../../thirdparty/owemdjee/boost/libs/date_time/include;../../thirdparty/owemdjee/boost/libs/detail/include;../../thirdparty/owemdjee/boost/libs/dll/include;../../thirdparty/owemdjee/boost/libs/fiber/include;../../thirdparty/owemdjee/boost/libs/filesystem/include;../../thirdparty/owemdjee/boost/libs/function/include;../../thirdparty/owemdjee/boost/libs/fusion/include;../../thirdparty/owemdjee/boost/libs/integer/include;../../thirdparty/owemdjee/boost/libs/io/include;../../thirdparty/owemdjee/boost/libs/iterator/include;../../thirdparty/owemdjee/boost/libs/lexical_cast/include;../../thirdparty/owemdjee/boost/libs/locale/include;../../thirdparty/owemdjee/boost/libs/lockfree/include;../../thirdparty/owemdjee/boost/libs/log/include;../../thirdparty/owemdjee/boost/libs/logic/include;../../thirdparty/owemdjee/boost/libs/move/include;../../thirdparty/owemdjee/boost/libs/mp11/include;../../thirdparty/owemdjee/boost/libs/mp11/include/;../../thirdparty/owemdjee/boost/libs/mpl/include;../../thirdparty/owemdjee/boost/libs/multiprecision/include;../../thirdparty/owemdjee/boost/libs/numeric/conversion/include;../../thirdparty/owemdjee/boost/libs/optional/include;../../thirdparty/owemdjee/boost/libs/parameter/include;../../thirdparty/owemdjee/boost/libs/phoenix/include;../../thirdparty/owemdjee/boost/libs/predef/include;../../thirdparty/owemdjee/boost/libs/preprocessor/include;../../thirdparty/owemdjee/boost/libs/program_options/include;../../thirdparty/owemdjee/boost/libs/proto/include;../../thirdparty/owemdjee/boost/libs/range/include;../../thirdparty/owemdjee/boost/libs/ratio/include;../../thirdparty/owemdjee/boost/libs/regex/include;../../thirdparty/owemdjee/boost/libs/smart_ptr/include;../../thirdparty/owemdjee/boost/libs/static_assert/include;../../thirdparty/owemdjee/boost/libs/system/include;../../thirdparty/owemdjee/boost/libs/test/include;../../thirdparty/owemdjee/boost/libs/thread/include;../../thirdparty/owemdjee/boost/libs/throw_exception/include;../../thirdparty/owemdjee/boost/libs/type_index/include;../../thirdparty/owemdjee/boost/libs/type_traits/include;../../thirdparty/owemdjee/boost/libs/typeof/include;../../thirdparty/owemdjee/boost/libs/utility/include;../../thirdparty/owemdjee/boost/libs/uuid/include;../../thirdparty/owemdjee/boost/libs/winapi/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOSQUERY;OSQUERY_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOSQUERY;OSQUERY_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOSQUERY;OSQUERY_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/osquery;../../scripts/boost/include;../../thirdparty/owemdjee/boost;../../thirdparty/owemdjee/boost/libs/algorithm/include;../../thirdparty/owemdjee/boost/libs/any/include;../../thirdparty/owemdjee/boost/libs/array/include;../../thirdparty/owemdjee/boost/libs/asio/include;../../thirdparty/owemdjee/boost/libs/assert/include;../../thirdparty/owemdjee/boost/libs/atomic/include;../../thirdparty/owemdjee/boost/libs/bind/include;../../thirdparty/owemdjee/boost/libs/chrono/include;../../thirdparty/owemdjee/boost/libs/concept_check/include;../../thirdparty/owemdjee/boost/libs/config/include;../../thirdparty/owemdjee/boost/libs/container/include;../../thirdparty/owemdjee/boost/libs/container_hash/include;../../thirdparty/owemdjee/boost/libs/core/include;../../thirdparty/owemdjee/boost/libs/crc/include;../../thirdparty/owemdjee/boost/libs/date_time/include;../../thirdparty/owemdjee/boost/libs/detail/include;../../thirdparty/owemdjee/boost/libs/dll/include;../../thirdparty/owemdjee/boost/libs/fiber/include;../../thirdparty/owemdjee/boost/libs/filesystem/include;../../thirdparty/owemdjee/boost/libs/function/include;../../thirdparty/owemdjee/boost/libs/fusion/include;../../thirdparty/owemdjee/boost/libs/integer/include;../../thirdparty/owemdjee/boost/libs/io/include;../../thirdparty/owemdjee/boost/libs/iterator/include;../../thirdparty/owemdjee/boost/libs/lexical_cast/include;../../thirdparty/owemdjee/boost/libs/locale/include;../../thirdparty/owemdjee/boost/libs/lockfree/include;../../thirdparty/owemdjee/boost/libs/log/include;../../thirdparty/owemdjee/boost/libs/logic/include;../../thirdparty/owemdjee/boost/libs/move/include;../../thirdparty/owemdjee/boost/libs/mp11/include;../../thirdparty/owemdjee/boost/libs/mp11/include/;../../thirdparty/owemdjee/boost/libs/mpl/include;../../thirdparty/owemdjee/boost/libs/multiprecision/include;../../thirdparty/owemdjee/boost/libs/numeric/conversion/include;../../thirdparty/owemdjee/boost/libs/optional/include;../../thirdparty/owemdjee/boost/libs/parameter/include;../../thirdparty/owemdjee/boost/libs/phoenix/include;../../thirdparty/owemdjee/boost/libs/predef/include;../../thirdparty/owemdjee/boost/libs/preprocessor/include;../../thirdparty/owemdjee/boost/libs/program_options/include;../../thirdparty/owemdjee/boost/libs/proto/include;../../thirdparty/owemdjee/boost/libs/range/include;../../thirdparty/owemdjee/boost/libs/ratio/include;../../thirdparty/owemdjee/boost/libs/regex/include;../../thirdparty/owemdjee/boost/libs/smart_ptr/include;../../thirdparty/owemdjee/boost/libs/static_assert/include;../../thirdparty/owemdjee/boost/libs/system/include;../../thirdparty/owemdjee/boost/libs/test/include;../../thirdparty/owemdjee/boost/libs/thread/include;../../thirdparty/owemdjee/boost/libs/throw_exception/include;../../thirdparty/owemdjee/boost/libs/type_index/include;../../thirdparty/owemdjee/boost/libs/type_traits/include;../../thirdparty/owemdjee/boost/libs/typeof/include;../../thirdparty/owemdjee/boost/libs/utility/include;../../thirdparty/owemdjee/boost/libs/uuid/include;../../thirdparty/owemdjee/boost/libs/winapi/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOSQUERY;OSQUERY_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOSQUERY;OSQUERY_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOSQUERY;OSQUERY_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/osquery;../../scripts/boost/include;../../thirdparty/owemdjee/boost;../../thirdparty/owemdjee/boost/libs/algorithm/include;../../thirdparty/owemdjee/boost/libs/any/include;../../thirdparty/owemdjee/boost/libs/array/include;../../thirdparty/owemdjee/boost/libs/asio/include;../../thirdparty/owemdjee/boost/libs/assert/include;../../thirdparty/owemdjee/boost/libs/atomic/include;../../thirdparty/owemdjee/boost/libs/bind/include;../../thirdparty/owemdjee/boost/libs/chrono/include;../../thirdparty/owemdjee/boost/libs/concept_check/include;../../thirdparty/owemdjee/boost/libs/config/include;../../thirdparty/owemdjee/boost/libs/container/include;../../thirdparty/owemdjee/boost/libs/container_hash/include;../../thirdparty/owemdjee/boost/libs/core/include;../../thirdparty/owemdjee/boost/libs/crc/include;../../thirdparty/owemdjee/boost/libs/date_time/include;../../thirdparty/owemdjee/boost/libs/detail/include;../../thirdparty/owemdjee/boost/libs/dll/include;../../thirdparty/owemdjee/boost/libs/fiber/include;../../thirdparty/owemdjee/boost/libs/filesystem/include;../../thirdparty/owemdjee/boost/libs/function/include;../../thirdparty/owemdjee/boost/libs/fusion/include;../../thirdparty/owemdjee/boost/libs/integer/include;../../thirdparty/owemdjee/boost/libs/io/include;../../thirdparty/owemdjee/boost/libs/iterator/include;../../thirdparty/owemdjee/boost/libs/lexical_cast/include;../../thirdparty/owemdjee/boost/libs/locale/include;../../thirdparty/owemdjee/boost/libs/lockfree/include;../../thirdparty/owemdjee/boost/libs/log/include;../../thirdparty/owemdjee/boost/libs/logic/include;../../thirdparty/owemdjee/boost/libs/move/include;../../thirdparty/owemdjee/boost/libs/mp11/include;../../thirdparty/owemdjee/boost/libs/mp11/include/;../../thirdparty/owemdjee/boost/libs/mpl/include;../../thirdparty/owemdjee/boost/libs/multiprecision/include;../../thirdparty/owemdjee/boost/libs/numeric/conversion/include;../../thirdparty/owemdjee/boost/libs/optional/include;../../thirdparty/owemdjee/boost/libs/parameter/include;../../thirdparty/owemdjee/boost/libs/phoenix/include;../../thirdparty/owemdjee/boost/libs/predef/include;../../thirdparty/owemdjee/boost/libs/preprocessor/include;../../thirdparty/owemdjee/boost/libs/program_options/include;../../thirdparty/owemdjee/boost/libs/proto/include;../../thirdparty/owemdjee/boost/libs/range/include;../../thirdparty/owemdjee/boost/libs/ratio/include;../../thirdparty/owemdjee/boost/libs/regex/include;../../thirdparty/owemdjee/boost/libs/smart_ptr/include;../../thirdparty/owemdjee/boost/libs/static_assert/include;../../thirdparty/owemdjee/boost/libs/system/include;../../thirdparty/owemdjee/boost/libs/test/include;../../thirdparty/owemdjee/boost/libs/thread/include;../../thirdparty/owemdjee/boost/libs/throw_exception/include;../../thirdparty/owemdjee/boost/libs/type_index/include;../../thirdparty/owemdjee/boost/libs/type_traits/include;../../thirdparty/owemdjee/boost/libs/typeof/include;../../thirdparty/owemdjee/boost/libs/utility/include;../../thirdparty/owemdjee/boost/libs/uuid/include;../../thirdparty/owemdjee/boost/libs/winapi/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOSQUERY;OSQUERY_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOSQUERY;OSQUERY_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOSQUERY;OSQUERY_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/osquery;../../scripts/boost/include;../../thirdparty/owemdjee/boost;../../thirdparty/owemdjee/boost/libs/algorithm/include;../../thirdparty/owemdjee/boost/libs/any/include;../../thirdparty/owemdjee/boost/libs/array/include;../../thirdparty/owemdjee/boost/libs/asio/include;../../thirdparty/owemdjee/boost/libs/assert/include;../../thirdparty/owemdjee/boost/libs/atomic/include;../../thirdparty/owemdjee/boost/libs/bind/include;../../thirdparty/owemdjee/boost/libs/chrono/include;../../thirdparty/owemdjee/boost/libs/concept_check/include;../../thirdparty/owemdjee/boost/libs/config/include;../../thirdparty/owemdjee/boost/libs/container/include;../../thirdparty/owemdjee/boost/libs/container_hash/include;../../thirdparty/owemdjee/boost/libs/core/include;../../thirdparty/owemdjee/boost/libs/crc/include;../../thirdparty/owemdjee/boost/libs/date_time/include;../../thirdparty/owemdjee/boost/libs/detail/include;../../thirdparty/owemdjee/boost/libs/dll/include;../../thirdparty/owemdjee/boost/libs/fiber/include;../../thirdparty/owemdjee/boost/libs/filesystem/include;../../thirdparty/owemdjee/boost/libs/function/include;../../thirdparty/owemdjee/boost/libs/fusion/include;../../thirdparty/owemdjee/boost/libs/integer/include;../../thirdparty/owemdjee/boost/libs/io/include;../../thirdparty/owemdjee/boost/libs/iterator/include;../../thirdparty/owemdjee/boost/libs/lexical_cast/include;../../thirdparty/owemdjee/boost/libs/locale/include;../../thirdparty/owemdjee/boost/libs/lockfree/include;../../thirdparty/owemdjee/boost/libs/log/include;../../thirdparty/owemdjee/boost/libs/logic/include;../../thirdparty/owemdjee/boost/libs/move/include;../../thirdparty/owemdjee/boost/libs/mp11/include;../../thirdparty/owemdjee/boost/libs/mp11/include/;../../thirdparty/owemdjee/boost/libs/mpl/include;../../thirdparty/owemdjee/boost/libs/multiprecision/include;../../thirdparty/owemdjee/boost/libs/numeric/conversion/include;../../thirdparty/owemdjee/boost/libs/optional/include;../../thirdparty/owemdjee/boost/libs/parameter/include;../../thirdparty/owemdjee/boost/libs/phoenix/include;../../thirdparty/owemdjee/boost/libs/predef/include;../../thirdparty/owemdjee/boost/libs/preprocessor/include;../../thirdparty/owemdjee/boost/libs/program_options/include;../../thirdparty/owemdjee/boost/libs/proto/include;../../thirdparty/owemdjee/boost/libs/range/include;../../thirdparty/owemdjee/boost/libs/ratio/include;../../thirdparty/owemdjee/boost/libs/regex/include;../../thirdparty/owemdjee/boost/libs/smart_ptr/include;../../thirdparty/owemdjee/boost/libs/static_assert/include;../../thirdparty/owemdjee/boost/libs/system/include;../../thirdparty/owemdjee/boost/libs/test/include;../../thirdparty/owemdjee/boost/libs/thread/include;../../thirdparty/owemdjee/boost/libs/throw_exception/include;../../thirdparty/owemdjee/boost/libs/type_index/include;../../thirdparty/owemdjee/boost/libs/type_traits/include;../../thirdparty/owemdjee/boost/libs/typeof/include;../../thirdparty/owemdjee/boost/libs/utility/include;../../thirdparty/owemdjee/boost/libs/uuid/include;../../thirdparty/owemdjee/boost/libs/winapi/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOSQUERY;OSQUERY_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOSQUERY;OSQUERY_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOSQUERY;OSQUERY_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/osquery;../../scripts/boost/include;../../thirdparty/owemdjee/boost;../../thirdparty/owemdjee/boost/libs/algorithm/include;../../thirdparty/owemdjee/boost/libs/any/include;../../thirdparty/owemdjee/boost/libs/array/include;../../thirdparty/owemdjee/boost/libs/asio/include;../../thirdparty/owemdjee/boost/libs/assert/include;../../thirdparty/owemdjee/boost/libs/atomic/include;../../thirdparty/owemdjee/boost/libs/bind/include;../../thirdparty/owemdjee/boost/libs/chrono/include;../../thirdparty/owemdjee/boost/libs/concept_check/include;../../thirdparty/owemdjee/boost/libs/config/include;../../thirdparty/owemdjee/boost/libs/container/include;../../thirdparty/owemdjee/boost/libs/container_hash/include;../../thirdparty/owemdjee/boost/libs/core/include;../../thirdparty/owemdjee/boost/libs/crc/include;../../thirdparty/owemdjee/boost/libs/date_time/include;../../thirdparty/owemdjee/boost/libs/detail/include;../../thirdparty/owemdjee/boost/libs/dll/include;../../thirdparty/owemdjee/boost/libs/fiber/include;../../thirdparty/owemdjee/boost/libs/filesystem/include;../../thirdparty/owemdjee/boost/libs/function/include;../../thirdparty/owemdjee/boost/libs/fusion/include;../../thirdparty/owemdjee/boost/libs/integer/include;../../thirdparty/owemdjee/boost/libs/io/include;../../thirdparty/owemdjee/boost/libs/iterator/include;../../thirdparty/owemdjee/boost/libs/lexical_cast/include;../../thirdparty/owemdjee/boost/libs/locale/include;../../thirdparty/owemdjee/boost/libs/lockfree/include;../../thirdparty/owemdjee/boost/libs/log/include;../../thirdparty/owemdjee/boost/libs/logic/include;../../thirdparty/owemdjee/boost/libs/move/include;../../thirdparty/owemdjee/boost/libs/mp11/include;../../thirdparty/owemdjee/boost/libs/mp11/include/;../../thirdparty/owemdjee/boost/libs/mpl/include;../../thirdparty/owemdjee/boost/libs/multiprecision/include;../../thirdparty/owemdjee/boost/libs/numeric/conversion/include;../../thirdparty/owemdjee/boost/libs/optional/include;../../thirdparty/owemdjee/boost/libs/parameter/include;../../thirdparty/owemdjee/boost/libs/phoenix/include;../../thirdparty/owemdjee/boost/libs/predef/include;../../thirdparty/owemdjee/boost/libs/preprocessor/include;../../thirdparty/owemdjee/boost/libs/program_options/include;../../thirdparty/owemdjee/boost/libs/proto/include;../../thirdparty/owemdjee/boost/libs/range/include;../../thirdparty/owemdjee/boost/libs/ratio/include;../../thirdparty/owemdjee/boost/libs/regex/include;../../thirdparty/owemdjee/boost/libs/smart_ptr/include;../../thirdparty/owemdjee/boost/libs/static_assert/include;../../thirdparty/owemdjee/boost/libs/system/include;../../thirdparty/owemdjee/boost/libs/test/include;../../thirdparty/owemdjee/boost/libs/thread/include;../../thirdparty/owemdjee/boost/libs/throw_exception/include;../../thirdparty/owemdjee/boost/libs/type_index/include;../../thirdparty/owemdjee/boost/libs/type_traits/include;../../thirdparty/owemdjee/boost/libs/typeof/include;../../thirdparty/owemdjee/boost/libs/utility/include;../../thirdparty/owemdjee/boost/libs/uuid/include;../../thirdparty/owemdjee/boost/libs/winapi/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOSQUERY;OSQUERY_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOSQUERY;OSQUERY_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBOSQUERY;OSQUERY_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/osquery;../../scripts/boost/include;../../thirdparty/owemdjee/boost;../../thirdparty/owemdjee/boost/libs/algorithm/include;../../thirdparty/owemdjee/boost/libs/any/include;../../thirdparty/owemdjee/boost/libs/array/include;../../thirdparty/owemdjee/boost/libs/asio/include;../../thirdparty/owemdjee/boost/libs/assert/include;../../thirdparty/owemdjee/boost/libs/atomic/include;../../thirdparty/owemdjee/boost/libs/bind/include;../../thirdparty/owemdjee/boost/libs/chrono/include;../../thirdparty/owemdjee/boost/libs/concept_check/include;../../thirdparty/owemdjee/boost/libs/config/include;../../thirdparty/owemdjee/boost/libs/container/include;../../thirdparty/owemdjee/boost/libs/container_hash/include;../../thirdparty/owemdjee/boost/libs/core/include;../../thirdparty/owemdjee/boost/libs/crc/include;../../thirdparty/owemdjee/boost/libs/date_time/include;../../thirdparty/owemdjee/boost/libs/detail/include;../../thirdparty/owemdjee/boost/libs/dll/include;../../thirdparty/owemdjee/boost/libs/fiber/include;../../thirdparty/owemdjee/boost/libs/filesystem/include;../../thirdparty/owemdjee/boost/libs/function/include;../../thirdparty/owemdjee/boost/libs/fusion/include;../../thirdparty/owemdjee/boost/libs/integer/include;../../thirdparty/owemdjee/boost/libs/io/include;../../thirdparty/owemdjee/boost/libs/iterator/include;../../thirdparty/owemdjee/boost/libs/lexical_cast/include;../../thirdparty/owemdjee/boost/libs/locale/include;../../thirdparty/owemdjee/boost/libs/lockfree/include;../../thirdparty/owemdjee/boost/libs/log/include;../../thirdparty/owemdjee/boost/libs/logic/include;../../thirdparty/owemdjee/boost/libs/move/include;../../thirdparty/owemdjee/boost/libs/mp11/include;../../thirdparty/owemdjee/boost/libs/mp11/include/;../../thirdparty/owemdjee/boost/libs/mpl/include;../../thirdparty/owemdjee/boost/libs/multiprecision/include;../../thirdparty/owemdjee/boost/libs/numeric/conversion/include;../../thirdparty/owemdjee/boost/libs/optional/include;../../thirdparty/owemdjee/boost/libs/parameter/include;../../thirdparty/owemdjee/boost/libs/phoenix/include;../../thirdparty/owemdjee/boost/libs/predef/include;../../thirdparty/owemdjee/boost/libs/preprocessor/include;../../thirdparty/owemdjee/boost/libs/program_options/include;../../thirdparty/owemdjee/boost/libs/proto/include;../../thirdparty/owemdjee/boost/libs/range/include;../../thirdparty/owemdjee/boost/libs/ratio/include;../../thirdparty/owemdjee/boost/libs/regex/include;../../thirdparty/owemdjee/boost/libs/smart_ptr/include;../../thirdparty/owemdjee/boost/libs/static_assert/include;../../thirdparty/owemdjee/boost/libs/system/include;../../thirdparty/owemdjee/boost/libs/test/include;../../thirdparty/owemdjee/boost/libs/thread/include;../../thirdparty/owemdjee/boost/libs/throw_exception/include;../../thirdparty/owemdjee/boost/libs/type_index/include;../../thirdparty/owemdjee/boost/libs/type_traits/include;../../thirdparty/owemdjee/boost/libs/typeof/include;../../thirdparty/owemdjee/boost/libs/utility/include;../../thirdparty/owemdjee/boost/libs/uuid/include;../../thirdparty/owemdjee/boost/libs/winapi/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -230,6 +230,7 @@
   <ItemGroup>
     <ClCompile Include="../../thirdparty/owemdjee/osquery/external/examples/config_plugin/main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/external/examples/read_only_table/main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/osquery/external/examples/string_batch/main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/external/examples/writable_table/main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/carver/carver.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/carver/carver_utils.cpp" />
@@ -333,6 +334,13 @@
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/events/tests/linux/syslog_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/events/tests/mockedosquerydatabase.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/events/tests/windows/usn_journal_reader_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/events/windows/etw/etw_controller.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/events/windows/etw/etw_kernel_session.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/events/windows/etw/etw_post_processing_pipeline.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/events/windows/etw/etw_provider_config.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/events/windows/etw/etw_publisher.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/events/windows/etw/etw_publisher_processes.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/events/windows/etw/etw_user_session.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/events/windows/evtsubscription.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/events/windows/ntfs_event_publisher.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/events/windows/usn_journal_reader.cpp" />
@@ -341,6 +349,10 @@
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/events/windows/windowseventlogpublisher.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/experimental/events_stream/events_stream.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/experimental/events_stream/events_stream_registry.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/experimental/experiments/linuxevents/src/bpfprocesseventstable.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/experimental/experiments/linuxevents/src/linuxevents.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/experimental/experiments/linuxevents/src/linuxeventsservice.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/experimental/experiments/loader/src/loader.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/extensions/extensions.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/extensions/impl_thrift.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/extensions/interface.cpp" />
@@ -369,6 +381,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/filesystem/tests/posix/xattrs.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/filesystem/windows/fileops.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/hashing/hashing.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/hashing/tests/hashing.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/logger/benchmarks/logger_benchmarks.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/logger/logger.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/logger/tests/logger.cpp" />
@@ -477,8 +490,10 @@
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/events/tests/linux/process_events_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/events/tests/linux/seccomp_events_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/events/tests/linux/selinux_events_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/events/tests/windows/etw_process_events_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/events/tests/windows/powershell_events_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/events/tests/windows/windows_events_tests.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/events/windows/etw_process_events.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/events/windows/ntfs_journal_events.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/events/windows/powershell_events.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/events/windows/windows_events.cpp" />
@@ -516,6 +531,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/darwin/asl.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/darwin/asl_utils.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/darwin/block_devices.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/darwin/cpu_info.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/darwin/cpu_time.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/darwin/crashes.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/darwin/cups_destinations.cpp" />
@@ -537,7 +553,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/darwin/mounts.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/darwin/nfs_shares.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/darwin/nvram.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/darwin/os_version.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/darwin/password_policy.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/darwin/pci_devices.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/darwin/preferences.cpp" />
@@ -545,6 +560,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/darwin/processes.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/darwin/quicklook_cache.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/darwin/sandboxes.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/darwin/secureboot.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/darwin/sharing_preferences.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/darwin/sip_config.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/darwin/smbios_tables.cpp" />
@@ -574,6 +590,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/linux/groups.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/linux/intel_me.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/linux/kernel_info.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/linux/kernel_keys.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/linux/kernel_modules.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/linux/md_tables.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/linux/memory_info.cpp" />
@@ -709,6 +726,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/windows/windows_crashes.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/windows/windows_eventlog.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/windows/windows_optional_features.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/windows/windows_search.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/windows/windows_security_center.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/windows/windows_security_products.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/osquery/tables/system/windows/windows_update_history.cpp" />
@@ -901,6 +919,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/chocolatey_packages.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/chrome_extension_content_scripts.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/chrome_extensions.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/connected_displays.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/connectivity.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/cpu_info.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/cpu_time.cpp" />
@@ -945,6 +964,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/etc_hosts.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/etc_protocols.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/etc_services.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/etw_process_events.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/event_taps.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/example.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/extended_attributes.cpp" />
@@ -972,6 +992,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/iptables.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/kernel_extensions.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/kernel_info.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/kernel_keys.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/kernel_modules.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/kernel_panics.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/keychain_acls.cpp" />
@@ -1107,6 +1128,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/windows_eventlog.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/windows_events.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/windows_firewall_rules.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/windows_search.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/windows_security_products.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/windows_update_history.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/wmi_bios_info.cpp" />
@@ -1205,6 +1227,16 @@
     <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/events/tests/linux/bpf/utils.h" />
     <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/events/tests/mockedosquerydatabase.h" />
     <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/events/types.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/events/windows/etw/etw_concurrent_queue.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/events/windows/etw/etw_controller.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/events/windows/etw/etw_data_event.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/events/windows/etw/etw_kernel_session.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/events/windows/etw/etw_krabs.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/events/windows/etw/etw_post_processing_pipeline.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/events/windows/etw/etw_provider_config.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/events/windows/etw/etw_publisher.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/events/windows/etw/etw_publisher_processes.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/events/windows/etw/etw_user_session.h" />
     <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/events/windows/evtsubscription.h" />
     <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/events/windows/ntfs_event_publisher.h" />
     <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/events/windows/usn_journal_reader.h" />
@@ -1213,6 +1245,10 @@
     <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/events/windows/windowseventlogpublisher.h" />
     <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/experimental/events_stream/events_stream.h" />
     <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/experimental/events_stream/events_stream_registry.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/experimental/experiments/linuxevents/include/osquery/experiments/linuxevents.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/experimental/experiments/linuxevents/src/bpfprocesseventstable.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/experimental/experiments/linuxevents/src/linuxeventsservice.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/experimental/experiments/loader/include/osquery/experiments/loader.h" />
     <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/extensions/extensions.h" />
     <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/extensions/interface.h" />
     <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/extensions/thrift/gen/Extension.h" />
@@ -1267,6 +1303,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/tables/events/linux/seccomp_events.h" />
     <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/tables/events/linux/selinux_events.h" />
     <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/tables/events/linux/socket_events.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/tables/events/windows/etw_process_events.h" />
     <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/tables/events/windows/ntfs_journal_events.h" />
     <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/tables/events/windows/powershell_events.h" />
     <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/tables/events/windows/windows_events.h" />
@@ -1336,6 +1373,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/utils/conversions/tryto.h" />
     <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/utils/conversions/windows/strings.h" />
     <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/utils/conversions/windows/windows_time.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/utils/darwin/iokit_helpers.h" />
     <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/utils/darwin/plist.h" />
     <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/utils/debug/debug_only.h" />
     <ClInclude Include="../../thirdparty/owemdjee/osquery/osquery/utils/enum_class_hash.h" />
@@ -1429,6 +1467,10 @@
     <Text Include="../../thirdparty/owemdjee/osquery/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/osquery/CODE_OF_CONDUCT.md" />
     <Text Include="../../thirdparty/owemdjee/osquery/CONTRIBUTING.md" />
+    <Text Include="../../thirdparty/owemdjee/osquery/Doxyfile" />
+    <Text Include="../../thirdparty/owemdjee/osquery/LICENSE" />
+    <Text Include="../../thirdparty/owemdjee/osquery/LICENSE-Apache-2.0" />
+    <Text Include="../../thirdparty/owemdjee/osquery/LICENSE-GPL-2.0" />
     <Text Include="../../thirdparty/owemdjee/osquery/README.md" />
     <Text Include="../../thirdparty/owemdjee/osquery/SECURITY.md" />
     <Text Include="../../thirdparty/owemdjee/osquery/SUPPORT.md" />
@@ -1442,13 +1484,16 @@
     <Text Include="../../thirdparty/owemdjee/osquery/docs/README.md" />
     <Text Include="../../thirdparty/owemdjee/osquery/docs/doxygen/DOXYGEN-LICENSE.txt" />
     <Text Include="../../thirdparty/owemdjee/osquery/docs/doxygen/mainpage.md" />
+    <Text Include="../../thirdparty/owemdjee/osquery/docs/doxygen/osquery.css" />
     <Text Include="../../thirdparty/owemdjee/osquery/docs/requirements.txt" />
+    <Text Include="../../thirdparty/owemdjee/osquery/docs/static/docs/security_assessment_2016_01_25.pdf" />
     <Text Include="../../thirdparty/owemdjee/osquery/docs/wiki/deployment/anomaly-detection.md" />
     <Text Include="../../thirdparty/owemdjee/osquery/docs/wiki/deployment/aws-logging.md" />
     <Text Include="../../thirdparty/owemdjee/osquery/docs/wiki/deployment/configuration.md" />
     <Text Include="../../thirdparty/owemdjee/osquery/docs/wiki/deployment/debugging.md" />
     <Text Include="../../thirdparty/owemdjee/osquery/docs/wiki/deployment/dependency-security.md" />
     <Text Include="../../thirdparty/owemdjee/osquery/docs/wiki/deployment/extensions.md" />
+    <Text Include="../../thirdparty/owemdjee/osquery/docs/wiki/deployment/file-carving.md" />
     <Text Include="../../thirdparty/owemdjee/osquery/docs/wiki/deployment/file-integrity-monitoring.md" />
     <Text Include="../../thirdparty/owemdjee/osquery/docs/wiki/deployment/log-aggregation.md" />
     <Text Include="../../thirdparty/owemdjee/osquery/docs/wiki/deployment/logging.md" />
@@ -1476,10 +1521,12 @@
     <Text Include="../../thirdparty/owemdjee/osquery/docs/wiki/introduction/sql.md" />
     <Text Include="../../thirdparty/owemdjee/osquery/docs/wiki/introduction/using-osqueryd.md" />
     <Text Include="../../thirdparty/owemdjee/osquery/docs/wiki/introduction/using-osqueryi.md" />
+    <Text Include="../../thirdparty/owemdjee/osquery/docs/wiki/theme/osquery.css" />
     <Text Include="../../thirdparty/owemdjee/osquery/external/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/osquery/external/cmake/cmakelibs.cmake" />
     <Text Include="../../thirdparty/owemdjee/osquery/external/examples/config_plugin/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/osquery/external/examples/read_only_table/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/osquery/external/examples/string_batch/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/osquery/external/examples/writable_table/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/osquery/libraries/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/osquery/libraries/cmake/README.md" />
@@ -1487,6 +1534,7 @@
     <Text Include="../../thirdparty/owemdjee/osquery/libraries/cmake/formula/modules/utils.cmake" />
     <Text Include="../../thirdparty/owemdjee/osquery/libraries/cmake/formula/openssl/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/osquery/libraries/third_party_libraries_manifest.json" />
+    <Text Include="../../thirdparty/owemdjee/osquery/mkdocs.yml" />
     <Text Include="../../thirdparty/owemdjee/osquery/osquery/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/osquery/osquery/carver/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/osquery/osquery/carver/tests/CMakeLists.txt" />
@@ -1509,6 +1557,12 @@
     <Text Include="../../thirdparty/owemdjee/osquery/osquery/experimental/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/osquery/osquery/experimental/README.md" />
     <Text Include="../../thirdparty/owemdjee/osquery/osquery/experimental/events_stream/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/osquery/osquery/experimental/experiments/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/osquery/osquery/experimental/experiments/linuxevents/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/osquery/osquery/experimental/experiments/linuxevents/README.md" />
+    <Text Include="../../thirdparty/owemdjee/osquery/osquery/experimental/experiments/linuxevents/libraries/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/osquery/osquery/experimental/experiments/linuxevents/libraries/linuxevents/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/osquery/osquery/experimental/experiments/loader/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/osquery/osquery/extensions/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/osquery/osquery/extensions/tests/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/osquery/osquery/extensions/thrift/CMakeLists.txt" />
@@ -1699,7 +1753,9 @@
     <Text Include="../../thirdparty/owemdjee/osquery/tests/integration/tables/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/analysis/profile.py" />
+    <Text Include="../../thirdparty/owemdjee/osquery/tools/ci/Makefile" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/ci/README.md" />
+    <Text Include="../../thirdparty/owemdjee/osquery/tools/ci/osquery-ubuntu18.04-toolchain.dockerfile" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/ci/scripts/check_copyright_headers.py" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/ci/scripts/cve/osquery/__init__.py" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/ci/scripts/cve/osquery/github_api.py" />
@@ -1727,7 +1783,11 @@
     <Text Include="../../thirdparty/owemdjee/osquery/tools/codegen/templates/typed_row.h.in" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/codegen/templite.py" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/deployment/getfiles.py" />
+    <Text Include="../../thirdparty/owemdjee/osquery/tools/deployment/linux_packaging/deb/osquery.initd" />
+    <Text Include="../../thirdparty/owemdjee/osquery/tools/deployment/linux_packaging/osqueryd.sysconfig" />
+    <Text Include="../../thirdparty/owemdjee/osquery/tools/deployment/linux_packaging/rpm/osquery.initd" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/deployment/macos_packaging/Info.plist.in" />
+    <Text Include="../../thirdparty/owemdjee/osquery/tools/deployment/macos_packaging/osquery.entitlements" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/deployment/macos_packaging/pkg/io.osquery.agent.conf" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/deployment/macos_packaging/pkg/productbuild.sh" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/deployment/make_windows_package.ps1" />
@@ -1737,6 +1797,7 @@
     <Text Include="../../thirdparty/owemdjee/osquery/tools/deployment/windows_packaging/chocolatey/tools/chocolateyinstall.ps1" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/deployment/windows_packaging/chocolatey/tools/chocolateyuninstall.ps1" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/deployment/windows_packaging/manage-osqueryd.ps1" />
+    <Text Include="../../thirdparty/owemdjee/osquery/tools/deployment/windows_packaging/osquery.flags" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/deployment/windows_packaging/osquery_utils.ps1" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/docker/README.md" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/docker/build.sh" />
@@ -1746,10 +1807,14 @@
     <Text Include="../../thirdparty/owemdjee/osquery/tools/formatting/git-clang-format.py" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/osquery.manifest.in" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/tests/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/osquery/tools/tests/configs/rpm/rpm-sqlite/rpmdb.sqlite-wal" />
+    <Text Include="../../thirdparty/owemdjee/osquery/tools/tests/configs/test.badconfig" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/tests/configs/test.config" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/tests/configs/test.config.d/extra_options.conf" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/tests/configs/test.config.d/osquery.conf" />
+    <Text Include="../../thirdparty/owemdjee/osquery/tools/tests/configs/test_client.key" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/tests/configs/test_enroll_secret.txt" />
+    <Text Include="../../thirdparty/owemdjee/osquery/tools/tests/configs/test_hashing.bin" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/tests/configs/test_hosts.txt" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/tests/configs/test_hosts_ics.txt" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/tests/configs/test_inline_pack.conf" />
@@ -1761,9 +1826,14 @@
     <Text Include="../../thirdparty/owemdjee/osquery/tools/tests/configs/test_pack.conf" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/tests/configs/test_parse_items.conf" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/tests/configs/test_protocols.txt" />
+    <Text Include="../../thirdparty/owemdjee/osquery/tools/tests/configs/test_server.key" />
+    <Text Include="../../thirdparty/owemdjee/osquery/tools/tests/configs/test_server_ca.key" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/tests/configs/test_xattrs.txt" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/tests/configs/view_test.conf" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/tests/configs/view_test2.conf" />
+    <Text Include="../../thirdparty/owemdjee/osquery/tools/tests/configs/windows/prefetch/7ZFM.EXE-44040917.pf" />
+    <Text Include="../../thirdparty/owemdjee/osquery/tools/tests/configs/windows/prefetch/MSPAINT.EXE-512C7E1E.pf" />
+    <Text Include="../../thirdparty/owemdjee/osquery/tools/tests/configs/windows/prefetch/OSQUERYD.EXE-50A45F4A.pf" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/tests/test_additional.py" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/tests/test_base.py" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/tests/test_docker_container_fs_changes_table.py" />
@@ -1778,7 +1848,10 @@
     <Text Include="../../thirdparty/owemdjee/osquery/tools/tests/utils.py" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/tests/winexpect.py" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/vsinstall.json" />
+    <Text Include="../../thirdparty/owemdjee/osquery/tools/wel/MSG00001.bin" />
+    <Text Include="../../thirdparty/owemdjee/osquery/tools/wel/osquery.man" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/wel/osquery.rc.in" />
+    <Text Include="../../thirdparty/owemdjee/osquery/tools/wel/osqueryTEMP.BIN" />
     <Text Include="../../thirdparty/owemdjee/osquery/tools/windows_resources.rc.in" />
     <Xml Include="../../thirdparty/owemdjee/osquery/docs/doxygen/DoxygenLayout.xml" />
     <Xml Include="../../thirdparty/owemdjee/osquery/osquery/tables/events/tests/windows/data/windows_events/input/Application/1.xml" />

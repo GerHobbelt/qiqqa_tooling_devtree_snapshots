@@ -39,7 +39,7 @@
 
 #ifdef USE_ARES
 #  if defined(CURL_STATICLIB) && !defined(CARES_STATICLIB) && \
-     (defined(WIN32) || defined(WIN64))
+  defined(_WIN32)
 #    define CARES_STATICLIB
 #  endif
 #  include <ares.h>
@@ -132,7 +132,7 @@ char *curl_version(void)
 #ifdef USE_SSL
   char ssl_version[200];
 #endif
-#ifdef HAVE_LIBZ
+#if defined(HAVE_ZLIB) && !defined(HAVE_ZLIB_NG)
   char z_version[40];
 #endif
 #ifdef HAVE_LIBZ_NG
@@ -192,12 +192,12 @@ char *curl_version(void)
   Curl_ssl_version(ssl_version, sizeof(ssl_version));
   src[i++] = ssl_version;
 #endif
-#ifdef HAVE_LIBZ
+#if defined(HAVE_ZLIB) && !defined(HAVE_ZLIB_NG)
   msnprintf(z_version, sizeof(z_version), "zlib/%s", zlibVersion());
   src[i++] = z_version;
 #endif
 #ifdef HAVE_LIBZ_NG
-  msnprintf(zng_version, sizeof(zng_version), "zlib-ng/%s", zng_zlibVersion());
+  msnprintf(zng_version, sizeof(zng_version), "zlib-ng/%s", zlibng_version());
   src[i++] = zng_version;
 #endif
 #ifdef HAVE_BROTLI
@@ -222,8 +222,18 @@ char *curl_version(void)
 #endif
 
 #ifdef USE_LIBPSL
-  msnprintf(psl_version, sizeof(psl_version), "libpsl/%s", psl_get_version());
-  src[i++] = psl_version;
+  {
+#if defined(PSL_VERSION_MAJOR) && (PSL_VERSION_MAJOR > 0 ||     \
+                                   PSL_VERSION_MINOR >= 11)
+    int num = psl_check_version_number(0);
+    msnprintf(psl_version, sizeof(psl_version), "libpsl/%d.%d.%d",
+              num >> 16, (num >> 8) & 0xff, num & 0xff);
+#else
+    msnprintf(psl_version, sizeof(psl_version), "libpsl/%s",
+              psl_get_version());
+#endif
+    src[i++] = psl_version;
+  }
 #endif
 
 #ifdef USE_SSH
@@ -311,7 +321,7 @@ char *curl_version(void)
    protocol line has its own #if line to make things easier on the eye.
  */
 
-static const char * const protocols[] = {
+static const char * const supported_protocols[] = {
 #ifndef CURL_DISABLE_DICT
   "dict",
 #endif
@@ -425,7 +435,8 @@ static int idn_present(curl_version_info_data *info)
 #define idn_present     NULL
 #endif
 
-#if defined(USE_SSL) && !defined(CURL_DISABLE_PROXY)
+#if defined(USE_SSL) && !defined(CURL_DISABLE_PROXY) && \
+  !defined(CURL_DISABLE_HTTP)
 static int https_proxy_present(curl_version_info_data *info)
 {
   (void) info;
@@ -470,13 +481,14 @@ static const struct feat features_table[] = {
 #ifndef CURL_DISABLE_HSTS
   FEATURE("HSTS",        NULL,                CURL_VERSION_HSTS),
 #endif
-#if defined(USE_NGHTTP2) || defined(USE_HYPER)
+#if defined(USE_NGHTTP2)
   FEATURE("HTTP2",       NULL,                CURL_VERSION_HTTP2),
 #endif
 #if defined(ENABLE_QUIC)
   FEATURE("HTTP3",       NULL,                CURL_VERSION_HTTP3),
 #endif
-#if defined(USE_SSL) && !defined(CURL_DISABLE_PROXY)
+#if defined(USE_SSL) && !defined(CURL_DISABLE_PROXY) && \
+  !defined(CURL_DISABLE_HTTP)
   FEATURE("HTTPS-proxy", https_proxy_present, CURL_VERSION_HTTPS_PROXY),
 #endif
 #if defined(USE_LIBIDN2) || defined(USE_WIN32_IDN)
@@ -492,7 +504,7 @@ static const struct feat features_table[] = {
     ( (SIZEOF_OFF_T > 4) || defined(USE_WIN32_LARGE_FILES) )
   FEATURE("Largefile",   NULL,                CURL_VERSION_LARGEFILE),
 #endif
-#ifdef HAVE_LIBZ
+#if HAVE_LIBZ || HAVE_LIBZ_NG
   FEATURE("libz",        NULL,                CURL_VERSION_LIBZ),
 #endif
 #ifdef CURL_WITH_MULTI_SSL
@@ -526,7 +538,7 @@ static const struct feat features_table[] = {
 #ifdef CURLDEBUG
   FEATURE("TrackMemory", NULL,                CURL_VERSION_CURLDEBUG),
 #endif
-#if ( defined(WIN32) || defined(WIN64) || defined(_WIN32) || defined(_WIN64) ) && defined(UNICODE) && defined(_UNICODE)
+#if defined(_WIN32) && defined(UNICODE) && defined(_UNICODE)
   FEATURE("Unicode",     NULL,                CURL_VERSION_UNICODE),
 #endif
 #ifdef USE_UNIX_SOCKETS
@@ -551,7 +563,7 @@ static curl_version_info_data version_info = {
   NULL, /* ssl_version */
   0,    /* ssl_version_num, this is kept at zero */
   NULL, /* zlib_version */
-  protocols,
+  supported_protocols,
   NULL, /* c-ares version */
   0,    /* c-ares version numerical */
   NULL, /* libidn version */
@@ -609,8 +621,12 @@ curl_version_info_data *curl_version_info(CURLversion stamp)
   version_info.ssl_version = ssl_buffer;
 #endif
 
-#ifdef HAVE_LIBZ
+#if defined(HAVE_ZLIB) && !defined(HAVE_ZLIB_NG)
   version_info.libz_version = zlibVersion();
+  /* libz left NULL if non-existing */
+#endif
+#ifdef HAVE_LIBZ_NG
+  version_info.libz_version = zlibng_version();
   /* libz left NULL if non-existing */
 #endif
 #ifdef USE_ARES

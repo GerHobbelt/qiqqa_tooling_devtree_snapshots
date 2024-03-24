@@ -37,25 +37,18 @@
  *    and concatenate them into a single pdf file of images.
  *
  *    Syntax:
- *       cleanpdf basedir threshold resolution
- *                darken rotation opensize title outfile
+ *       cleanpdf basedir resolution contrast rotation opensize title fileout
  *
  *    A typical command is:
- *        cleanpdf . 180 300 0 0 0 none <name-of-output-pdf-file>
+ *        cleanpdf . 300 0 0 0 none <name-of-output-pdf-file>
  *
  *    The %basedir is a directory where the input pdf files are located.
  *    The program will operate on every file in this directory with
  *    the ".pdf" extension.  Use "." if the files are in the current directory.
  *
- *    The input binarization %threshold should be somewhere in the
- *    range [130 - 190], and not exceed 190.  This has no effect on
- *    1 bpp input images.  For grayscale and rgb images, the resulting
- *    binarization is relatively insensitive to the value, because
- *    internally we use a pixel mapping that is adapted to the local
- *    background before thresholding to binarize the image.  However,
- *    using a lower threshold value will somewhat weaken the foreground,
- *    and this can be compensated by using a larger value of the
- *    %darken parameter (see below).
+ *    We use adaptive thresholding.  After background normalization, the
+ *    a global threshold of about 180 is effective, and the resulting
+ *    binarization is relatively insensitive to the value.
  *
  *    The output %resolution parameter can take on two values:
  *       300  (binarize at the same resolution as the gray or color input,
@@ -66,10 +59,11 @@
  *    At 300 ppi, an 8.5 x 11 page would have 2550 x 3300 pixels.
  *    You can also input 0 for the default output resolution of 300 ppi.
  *
- *    The %darken parameter adjusts the binarization to avoid losing input
- *    details that are too light.  It takes on 10 values from 0 to 9, where
- *    0 is the lightest and is the default.  The contrast is increased
- *    as %darken increases.
+ *    The %contrast parameter adjusts the binarization to avoid losing input
+ *    details that are too light.  It takes on 10 values from 1 to 10, where
+ *    1 is the lightest value and it removes noise.  Use of 0 will default
+ *    to 1.  Suggested value is 1 unless important details are lost on
+ *    binarization.
  *
  *    The %rotation parameter is an integer that specifies the rotation
  *    to be applied to each image:
@@ -89,10 +83,32 @@
  *    The %title is the title given to the pdf.  Use %title == "none"
  *    to omit the title.
  *
- *    The pdf output is written to %outfile.  It is advisable (but not
+ *    The pdf output is written to %fileout.  It is advisable (but not
  *    required) to have a '.pdf' extension.
  *
  *    Whenever possible, the images will be deskewed.
+ *
+ *    As the first step in processing, images are saved in the ./image
+ *    directory as RGB at 300 ppi in ppm format.  Each image is about 26MB.
+ *    Delete those images after use.
+ *
+ *    Some pdf files have oversize media boxes.  PDF is a
+ *    resolution-independent format for storing data that can be imaged.
+ *    Usually the data is stored in fonts, which are a description of the
+ *    shape that can be rendered at different image resolutions.  We deal
+ *    here with images that are made up of a fixed number of pixels, and
+ *    thus are not resolution independent.  It is necessary for image
+ *    specification to include data for the renderer that says how big
+ *    (in inches) to display or print the image.  That is done with /MediaBox,
+ *    whose 3rd and 4th parameters are the width and height of the output
+ *    image in printer points.  (1 printer point = 1/72 inch).  To prevent
+ *    pdf files with incorrect use of /MediaBox from forcing the renderer
+ *    to make oversize images, we find the median media box width and height.
+ *    If the larger of the two is significantly bigger than 792 printer
+ *    points, corresponding to 11 inches, we compensate with a resolution
+ *    below 300 ppi that will make the largest image dimension about
+ *    3300 pixels.  If no media box is found, it is necessary to render
+ *    a test image using a small resolution and find the size of the image.
  *
  *    Notes on using filenames with internal spaces.
  *    * The file-handling functions in leptonica do not support filenames
@@ -134,44 +150,32 @@
 #include "monolithic_examples.h"
 
 
-    /* Special version */
-static PIX *pixConvertTo8Special(PIX *pix);
-
-
 #if defined(BUILD_MONOLITHIC)
 #define main   lept_cleanpdf_main
 #endif
 
+
 l_int32 main(int    argc,
              const char **argv)
 {
-char     buf[256], sequence[32];
-const char    *basedir, *title;
-char * fname, * tail, * basename, * imagedir;
-const char    *outfile;
-const char * firstpath;
-l_int32  thresh, res, rotation, darken, opensize, i, n, ret;
-PIX     *pixs, *pix1, *pix2, *pix3, *pix4, *pix5;
+char     buf[256];
+const char    *basedir, *fname, *tail, *basename, *imagedir, *firstfile, *title;
+const char    *fileout;
+l_int32  i, n, res, contrast, rotation, opensize, render_res, ret;
 SARRAY  *sa;
 
-    if (argc != 9)
+    if (argc != 8)
         return ERROR_INT(
-            "\n  Syntax: cleanpdf basedir threshold resolution "
-            "darken rotation opensize title outfile",
+            "\n  Syntax: cleanpdf basedir resolution "
+            "contrast rotation opensize title fileout",
             __func__, 1);
     basedir = argv[1];
-    thresh = atoi(argv[2]);
-    res = atoi(argv[3]);
-    darken = atoi(argv[4]);
-    rotation = atoi(argv[5]);
-    opensize = atoi(argv[6]);
-    title = argv[7];
-    outfile = argv[8];
-    if (thresh > 190) {
-        L_WARNING("threshold = %d is too large; reducing to 190\n",
-                __func__, thresh);
-        thresh = 190;
-    }
+    res = atoi(argv[2]);
+    contrast = atoi(argv[3]);
+    rotation = atoi(argv[4]);
+    opensize = atoi(argv[5]);
+    title = argv[6];
+    fileout = argv[7];
     if (res == 0)
         res = 300;
     if (res != 300 && res != 600) {
@@ -179,9 +183,10 @@ SARRAY  *sa;
                 __func__, res);
         return 1;
     }
-    if (darken < 0 || darken > 9) {
-        L_ERROR("invalid darken = %d; darken must be in {0,...,9}\n",
-                __func__, darken);
+    if (contrast == 0) contrast = 1;
+    if (contrast < 1 || contrast > 10) {
+        L_ERROR("invalid contrast = %d; contrast must be in {1,...,10}\n",
+                __func__, contrast);
         return 1;
     }
     if (rotation < 0 || rotation > 3) {
@@ -196,14 +201,41 @@ SARRAY  *sa;
     }
     setLeptDebugOK(1);
 
-        /* Get the names of the pdf files */
+        /* Set up a directory for temp images */
+    imagedir = stringJoin(basedir, "/image");
+  #ifndef _WIN32
+    mkdir(imagedir, 0777);
+  #else
+    _mkdir(imagedir);
+  #endif  /* _WIN32 */
+
+        /* Get the names of the input pdf files */
     if ((sa = getSortedPathnamesInDirectory(basedir, "pdf", 0, 0)) == NULL)
         return ERROR_INT("files not found", __func__, 1);
     sarrayWriteStderr(sa);
     n = sarrayGetCount(sa);
 
+        /* Figure out the resolution to use with the image renderer.
+           This first checks the media box sizes, which give the output
+           image size in printer points (1/72 inch).  The largest expected
+           output image has a max dimension of about 11 inches, corresponding
+           to 792 points.  At a resolution of 300 ppi, the max image size
+           is then 3300.  For robustness, use the median of media box sizes.
+           If the max dimension of this median is significantly larger than
+           792, reduce the input resolution to the renderer. Specifically:
+            * Calculate the median of the MediaBox widths and heights.
+            * If the max exceeds 850, reduce the resolution so that the max
+              dimension of the rendered image is 3300.  The new resolution
+              input to the renderer is reduced from 300 by the factor:
+                            (792 / medmax)
+           If the media boxes are not found, render a page using a small
+           given resolution (72) and use the max dimension to find the
+           resolution that will produce a 3300 pixel size output.  */
+    firstfile = sarrayGetString(sa, 0, L_NOCOPY);
+    getPdfRendererResolution(firstfile, imagedir, &render_res);
+
         /* Rasterize: use either
-         *     pdftoppm -r 300 fname outroot  (-r 300 renders output at 300 ppi)
+         *     pdftoppm -r res fname outroot  (-r res renders output at res ppi)
          * or
          *     pdfimages -j fname outroot   (-j outputs jpeg if input is dct)
          * Use of pdftoppm:
@@ -217,19 +249,13 @@ SARRAY  *sa;
          *    This only works when all pages are pdf wrappers around images.
          *    In some cases, it scrambles the order of the output pages
          *    and inserts extra images. */
-    imagedir = stringJoin(basedir, "/image");
-  #ifndef _WIN32
-    mkdir(imagedir, 0777);
-  #else
-    _mkdir(imagedir);
-  #endif  /* _WIN32 */
     for (i = 0; i < n; i++) {
         fname = sarrayGetString(sa, i, L_NOCOPY);
         splitPathAtDirectory(fname, NULL, &tail);
         splitPathAtExtension(tail, &basename, NULL);
   #if USE_PDFTOPPM
-        snprintf(buf, sizeof(buf), "pdftoppm -r 300 %s %s/%s",
-                 fname, imagedir, basename);
+        snprintf(buf, sizeof(buf), "pdftoppm -r %d %s %s/%s",
+                 render_res, fname, imagedir, basename);
   #else
         snprintf(buf, sizeof(buf), "pdfimages -j %s %s/%s",
                  fname, imagedir, basename);
@@ -243,109 +269,11 @@ SARRAY  *sa;
 
         /* Clean, deskew and compress */
     sa = getSortedPathnamesInDirectory(imagedir, NULL, 0, 0);
+    lept_free(imagedir);
     sarrayWriteStderr(sa);
-    n = sarrayGetCount(sa);
-    firstpath = NULL;
-    for (i = 0; i < n; i++) {
-        PIX *pix6;
-        fname = sarrayGetString(sa, i, L_NOCOPY);
-        pixs = pixRead(fname);
-        pix1 = pixConvertTo8Special(pixs);
-        if (rotation > 0)
-            pix2 = pixRotateOrth(pix1, rotation);
-        else
-            pix2 = pixClone(pix1);
-        pix3 = pixFindSkewAndDeskew(pix2, 2, NULL, NULL);
-        pix4 = pixBackgroundNormSimple(pix3, NULL, NULL);
-        if (darken == 0)
-            pixGammaTRC(pix4, pix4, 2.0, 50, 220);
-        else if (darken == 1)
-            pixGammaTRC(pix4, pix4, 1.8, 60, 215);
-        else if (darken == 2)
-            pixGammaTRC(pix4, pix4, 1.6, 70, 215);
-        else if (darken == 3)
-            pixGammaTRC(pix4, pix4, 1.4, 80, 210);
-        else if (darken == 4)
-            pixGammaTRC(pix4, pix4, 1.2, 90, 210);
-        else if (darken == 5)
-            pixGammaTRC(pix4, pix4, 1.0, 100, 210);
-        else if (darken == 6)
-            pixGammaTRC(pix4, pix4, 0.85, 110, 205);
-        else if (darken == 7)
-            pixGammaTRC(pix4, pix4, 0.7, 120, 205);
-        else if (darken == 8)
-            pixGammaTRC(pix4, pix4, 0.6, 130, 200);
-        else  /* darken == 9 */
-            pixGammaTRC(pix4, pix4, 0.5, 140, 195);
-        if (res == 300)
-            pix5 = pixThresholdToBinary(pix4, thresh);
-        else  /* res == 600 */
-            pix5 = pixScaleGray2xLIThresh(pix4, thresh);
-        if (opensize == 2 || opensize == 3) {
-            snprintf(sequence, sizeof(sequence), "o%d.%d", opensize, opensize);
-            pix6 = pixMorphSequence(pix5, sequence, 0);
-        } else {
-            pix6 = pixClone(pix5);
-        }
-        splitPathAtDirectory(fname, NULL, &tail);
-        splitPathAtExtension(tail, &basename, NULL);
-        snprintf(buf, sizeof(buf), "%s/%s.tif", imagedir, basename);
-        lept_stderr("%s\n", buf);
-        pixWrite(buf, pix6, IFF_TIFF_G4);
-        if (i == 0)  /* save full path to first image */
-            firstpath = stringNew(buf);
-        pixDestroy(&pixs);
-        pixDestroy(&pix1);
-        pixDestroy(&pix2);
-        pixDestroy(&pix3);
-        pixDestroy(&pix4);
-        pixDestroy(&pix5);
-        pixDestroy(&pix6);
-        lept_free(tail);
-        lept_free(basename);
-    }
+    lept_stderr("cleaning ...\n");
+    cleanTo1bppFilesToPdf(sa, res, contrast, rotation, opensize,
+                          title, fileout);
     sarrayDestroy(&sa);
-
-        /* Generate the pdf.  Compute the actual input resolution from
-         * the pixel dimensions of the first image.  This will cause each
-         * page to be printed to cover an 8.5 x 11 inch sheet of paper. */
-    lept_stderr("Write output to %s\n", outfile);
-    pix1 = pixRead(firstpath);
-    pixInferResolution(pix1, 11.0, &res);
-    pixDestroy(&pix1);
-    lept_free(firstpath);
-    if (strcmp(title, "none") == 0)
-        title = NULL;
-    convertFilesToPdf(imagedir, "tif", res, 1.0, L_G4_ENCODE,
-                      0, title, outfile);
     return 0;
-}
-
-
-    /* A special version of pixConvertTo8() that returns an image without
-     * a colormap and uses pixConvertRGBToGrayMinMax() to strongly
-     * render color into black. */
-static PIX *
-pixConvertTo8Special(PIX  *pixs)
-{
-    l_int32 d = pixGetDepth(pixs);
-    if (d == 1) {
-        return pixConvert1To8(NULL, pixs, 255, 0);
-    } else if (d == 2) {
-        return pixConvert2To8(pixs, 0, 85, 170, 255, FALSE);
-    } else if (d == 4) {
-        return pixConvert4To8(pixs, FALSE);
-    } else if (d == 8) {
-        if (pixGetColormap(pixs) != NULL)
-            return pixRemoveColormap(pixs, REMOVE_CMAP_TO_GRAYSCALE);
-        else
-            return pixCopy(NULL, pixs);
-    } else if (d == 16) {
-        return pixConvert16To8(pixs, L_MS_BYTE);
-    } else if (d == 32) {
-        return pixConvertRGBToGrayMinMax(pixs, L_CHOOSE_MIN);
-    }
-
-    L_ERROR("Invalid depth d = %d\n", "pixConvertSpecialTo8", d);
-    return NULL;
 }

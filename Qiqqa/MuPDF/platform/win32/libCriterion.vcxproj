@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRITERION;CRITERION_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRITERION;CRITERION_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRITERION;CRITERION_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/Criterion/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRITERION;CRITERION_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRITERION;CRITERION_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRITERION;CRITERION_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/Criterion/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRITERION;CRITERION_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRITERION;CRITERION_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRITERION;CRITERION_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/Criterion/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRITERION;CRITERION_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRITERION;CRITERION_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRITERION;CRITERION_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/Criterion/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRITERION;CRITERION_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRITERION;CRITERION_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRITERION;CRITERION_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/Criterion/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRITERION;CRITERION_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRITERION;CRITERION_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRITERION;CRITERION_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/Criterion/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRITERION;CRITERION_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRITERION;CRITERION_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRITERION;CRITERION_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/Criterion/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRITERION;CRITERION_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRITERION;CRITERION_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRITERION;CRITERION_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/Criterion/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -310,6 +310,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/Criterion/src/string/fmt.c" />
     <ClCompile Include="../../thirdparty/owemdjee/Criterion/src/string/i18n.c" />
     <ClCompile Include="../../thirdparty/owemdjee/Criterion/src/string/xxd.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/Criterion/test/full/bug463.c" />
     <ClCompile Include="../../thirdparty/owemdjee/Criterion/test/full/exception.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/Criterion/test/full/exit.c" />
     <ClCompile Include="../../thirdparty/owemdjee/Criterion/test/full/exit.cc" />
@@ -325,6 +326,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/Criterion/test/full/with-time.c" />
     <ClCompile Include="../../thirdparty/owemdjee/Criterion/test/unit/alloc.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/Criterion/test/unit/asprintf.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/Criterion/test/unit/escape.c" />
     <ClCompile Include="../../thirdparty/owemdjee/Criterion/test/unit/ordered-set.c" />
     <ClCompile Include="../../thirdparty/owemdjee/Criterion/test/unit/path.c" />
     <ClCompile Include="../../thirdparty/owemdjee/Criterion/test/unit/redirect.cc" />
@@ -421,8 +423,10 @@
     <ClInclude Include="../../thirdparty/owemdjee/Criterion/src/string/xxd.h" />
     <Image Include="../../thirdparty/owemdjee/Criterion/doc/criterion-title.png" />
     <Image Include="../../thirdparty/owemdjee/Criterion/doc/screencast.gif" />
+    <Text Include="../../thirdparty/owemdjee/Criterion/AUTHORS" />
     <Text Include="../../thirdparty/owemdjee/Criterion/CONTRIBUTING.md" />
     <Text Include="../../thirdparty/owemdjee/Criterion/ChangeLog" />
+    <Text Include="../../thirdparty/owemdjee/Criterion/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/Criterion/README.md" />
     <Text Include="../../thirdparty/owemdjee/Criterion/ci/isdir.py" />
     <Text Include="../../thirdparty/owemdjee/Criterion/dev/FindCriterion.cmake" />
@@ -435,6 +439,10 @@
     <Text Include="../../thirdparty/owemdjee/Criterion/dev/cmake/cmake/FindCriterion.cmake" />
     <Text Include="../../thirdparty/owemdjee/Criterion/dev/cmake/src/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/Criterion/dev/cmake/test/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/Criterion/dev/criterion.gdb" />
+    <Text Include="../../thirdparty/owemdjee/Criterion/doc/Doxyfile" />
+    <Text Include="../../thirdparty/owemdjee/Criterion/doc/_static/style.css" />
+    <Text Include="../../thirdparty/owemdjee/Criterion/doc/_templates/page.html" />
     <Text Include="../../thirdparty/owemdjee/Criterion/doc/assert.rst" />
     <Text Include="../../thirdparty/owemdjee/Criterion/doc/assert_old.rst" />
     <Text Include="../../thirdparty/owemdjee/Criterion/doc/conf.py" />
@@ -454,7 +462,11 @@
     <Text Include="../../thirdparty/owemdjee/Criterion/doc/theories.rst" />
     <Text Include="../../thirdparty/owemdjee/Criterion/meson_options.txt" />
     <Text Include="../../thirdparty/owemdjee/Criterion/po/POTFILES.in" />
+    <Text Include="../../thirdparty/owemdjee/Criterion/po/de.po" />
+    <Text Include="../../thirdparty/owemdjee/Criterion/po/fr.po" />
     <Text Include="../../thirdparty/owemdjee/Criterion/src/config.h.in" />
+    <Text Include="../../thirdparty/owemdjee/Criterion/src/protocol/Makefile" />
+    <Text Include="../../thirdparty/owemdjee/Criterion/src/protocol/criterion.options" />
     <Text Include="../../thirdparty/owemdjee/Criterion/src/protocol/gen-pb.py" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >

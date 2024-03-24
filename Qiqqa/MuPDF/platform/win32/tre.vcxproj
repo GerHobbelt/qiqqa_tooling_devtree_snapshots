@@ -26,46 +26,46 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>false</UseOfMfc>
     <UseDebugLibraries>true</UseDebugLibraries>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>false</UseOfMfc>
     <UseDebugLibraries>true</UseDebugLibraries>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <ImportGroup Label="PropertySheets" >
+  <ImportGroup Label="PropertySheets">
     <Import Project="$(SolutionDir)\common-project.props" Label="SolutionWideSettings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
+    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props" Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Import Project="$(SolutionDir)\common-project-Release-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
+    <Import Project="$(SolutionDir)\common-project-Release-Win32.props" Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
+    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props" Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <Import Project="$(SolutionDir)\common-project-Release-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
+    <Import Project="$(SolutionDir)\common-project-Release-Win64.props" Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
   </ImportGroup>
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
@@ -79,7 +79,7 @@
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
-<ItemDefinitionGroup>
+  <ItemDefinitionGroup>
     <ClCompile>
       <Optimization>Custom</Optimization>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -113,10 +113,10 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
-</ItemDefinitionGroup>
-<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TRE;TRE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TRE;TRE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TRE;TRE_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/tre;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/tre/tests;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TRE;TRE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TRE;TRE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TRE;TRE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/tre;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/tre/tests;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TRE;TRE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TRE;TRE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TRE;TRE_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/tre;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/tre/tests;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TRE;TRE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TRE;TRE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TRE;TRE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/tre;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/tre/tests;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TRE;TRE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TRE;TRE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TRE;TRE_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/tre;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/tre/tests;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TRE;TRE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TRE;TRE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TRE;TRE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/tre;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/tre/tests;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TRE;TRE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TRE;TRE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TRE;TRE_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/tre;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/tre/tests;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TRE;TRE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TRE;TRE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_TRE;TRE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/tre;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/tre/tests;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -228,63 +228,102 @@
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ItemGroup>
-    <ClCompile Include="../../thirdparty/owemdjee/tre/lib/regcomp.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/tre/lib/regerror.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/tre/lib/regexec.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/tre/lib/tre-ast.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/tre/lib/tre-compile.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/tre/lib/tre-filter.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/tre/lib/tre-match-approx.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/tre/lib/tre-match-backtrack.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/tre/lib/tre-match-parallel.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/tre/lib/tre-mem.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/tre/lib/tre-parse.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/tre/lib/tre-stack.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/tre/lib/xmalloc.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/tre/python/tre-python.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/tre/src/agrep.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/tre/tests/bench.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/tre/tests/randtest.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/tre/tests/retest.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/tre/tests/test-str-source.c" />
-    <ClInclude Include="../../thirdparty/owemdjee/tre/include/tre/tre-config.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/tre/include/tre/tre.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/tre/lib/regex.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/tre/lib/tre-ast.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/tre/lib/tre-compile.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/tre/lib/tre-filter.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/tre/lib/tre-internal.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/tre/lib/tre-match-utils.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/tre/lib/tre-mem.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/tre/lib/tre-parse.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/tre/lib/tre-stack.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/tre/lib/tre.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/tre/lib/xmalloc.h" />
+    <ProjectReference Include="libgetopt.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518110e57b1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libmupdf_default_handlers.vcxproj">
+      <Project>{5f615f91-dff8-4f05-bf48-1222b7d86519}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libmupdf_minimal_core.vcxproj">
+      <Project>{6f1ee8ba-ccb7-4f76-b9da-337c41dd6fc0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libsystem_override.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8318-7518ff7ef82f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libtre.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff371d1a}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/tre/tests/monolithic-main.c" />
+    <ClInclude Include="../../thirdparty/owemdjee/tre/contrib/ps3/config.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tre/contrib/ps3/tre-config.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tre/local_includes/regex.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tre/local_includes/tre.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/tre/tests/monolithic_examples.h" />
     <ClInclude Include="../../thirdparty/owemdjee/tre/win32/config.h" />
     <ClInclude Include="../../thirdparty/owemdjee/tre/win32/tre-config.h" />
+    <Text Include="../../thirdparty/owemdjee/tre/AUTHORS" />
     <Text Include="../../thirdparty/owemdjee/tre/ChangeLog.old" />
+    <Text Include="../../thirdparty/owemdjee/tre/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/tre/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/tre/NEWS" />
     <Text Include="../../thirdparty/owemdjee/tre/README.md" />
+    <Text Include="../../thirdparty/owemdjee/tre/README_waf.txt" />
     <Text Include="../../thirdparty/owemdjee/tre/TODO" />
+    <Text Include="../../thirdparty/owemdjee/tre/Tools/waf/build_variants.py" />
+    <Text Include="../../thirdparty/owemdjee/tre/Tools/waf/intltool.py" />
+    <Text Include="../../thirdparty/owemdjee/tre/Tools/waf/lib_unit_tests.py" />
+    <Text Include="../../thirdparty/owemdjee/tre/Tools/waf/python_unit_tests.py" />
     <Text Include="../../thirdparty/owemdjee/tre/configure.ac" />
+    <Text Include="../../thirdparty/owemdjee/tre/contrib/README.txt" />
+    <Text Include="../../thirdparty/owemdjee/tre/contrib/ps3/Makefile" />
     <Text Include="../../thirdparty/owemdjee/tre/doc/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/tre/doc/agrep.1.in" />
-    <Text Include="../../thirdparty/owemdjee/tre/lib/Makefile.am" />
-    <Text Include="../../thirdparty/owemdjee/tre/lib/README" />
-    <Text Include="../../thirdparty/owemdjee/tre/lib/tre-config.h.in" />
+    <Text Include="../../thirdparty/owemdjee/tre/doc/default.css" />
+    <Text Include="../../thirdparty/owemdjee/tre/doc/tre-api.html" />
+    <Text Include="../../thirdparty/owemdjee/tre/doc/tre-syntax.html" />
+    <Text Include="../../thirdparty/owemdjee/tre/local_includes/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/tre/local_includes/tre-config.h.in" />
     <Text Include="../../thirdparty/owemdjee/tre/m4/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/tre/m4/ac_libtool_tags.m4" />
+    <Text Include="../../thirdparty/owemdjee/tre/m4/ax_check_funcs_comp.m4" />
+    <Text Include="../../thirdparty/owemdjee/tre/m4/ax_check_sign.m4" />
+    <Text Include="../../thirdparty/owemdjee/tre/m4/ax_decl_wchar_max.m4" />
+    <Text Include="../../thirdparty/owemdjee/tre/m4/vl_prog_cc_warnings.m4" />
     <Text Include="../../thirdparty/owemdjee/tre/po/POTFILES.in" />
-    <Text Include="../../thirdparty/owemdjee/tre/python/example.py" />
-    <Text Include="../../thirdparty/owemdjee/tre/python/setup.py" />
-    <Text Include="../../thirdparty/owemdjee/tre/python/setup.py.in" />
-    <Text Include="../../thirdparty/owemdjee/tre/src/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/tre/po/fi.po" />
+    <Text Include="../../thirdparty/owemdjee/tre/po/sv.po" />
+    <Text Include="../../thirdparty/owemdjee/tre/po/zh_CN.po" />
     <Text Include="../../thirdparty/owemdjee/tre/tests/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/tre/tests/agrep/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/agrep/basic.args" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/agrep/basic.input" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/agrep/delimiters.args" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/agrep/delimiters.input" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/agrep/exitstatus.args" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/agrep/exitstatus.input" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/agrep/records.args" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/agrep/records.input" />
     <Text Include="../../thirdparty/owemdjee/tre/tests/agrep/run-tests.sh" />
     <Text Include="../../thirdparty/owemdjee/tre/tests/build-on-hosts.sh" />
     <Text Include="../../thirdparty/owemdjee/tre/tests/build-run.sh" />
     <Text Include="../../thirdparty/owemdjee/tre/tests/build-tests.sh" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/data/retest/expected/nls_ap_nc_sb_ri/foo.txt" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/data/retest/expected/nls_ap_nc_sb_ti/foo.txt" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/data/retest/expected/nls_ap_wc_mb_ri/foo.txt" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/data/retest/expected/nls_ap_wc_mb_ti/foo.txt" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/data/retest/expected/nls_ap_wc_sb_ri/foo.txt" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/data/retest/expected/nls_ap_wc_sb_ti/foo.txt" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/data/retest/expected/nls_ex_nc_sb_ri/foo.txt" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/data/retest/expected/nls_ex_nc_sb_ti/foo.txt" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/data/retest/expected/nls_ex_wc_mb_ri/foo.txt" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/data/retest/expected/nls_ex_wc_mb_ti/foo.txt" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/data/retest/expected/nls_ex_wc_sb_ri/foo.txt" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/data/retest/expected/nls_ex_wc_sb_ti/foo.txt" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/data/retest/expected/sls_ap_nc_sb_ri/foo.txt" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/data/retest/expected/sls_ap_nc_sb_ti/foo.txt" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/data/retest/expected/sls_ap_wc_mb_ri/foo.txt" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/data/retest/expected/sls_ap_wc_mb_ti/foo.txt" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/data/retest/expected/sls_ap_wc_sb_ri/foo.txt" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/data/retest/expected/sls_ap_wc_sb_ti/foo.txt" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/data/retest/expected/sls_ex_nc_sb_ri/foo.txt" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/data/retest/expected/sls_ex_nc_sb_ti/foo.txt" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/data/retest/expected/sls_ex_wc_mb_ri/foo.txt" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/data/retest/expected/sls_ex_wc_mb_ti/foo.txt" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/data/retest/expected/sls_ex_wc_sb_ri/foo.txt" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/data/retest/expected/sls_ex_wc_sb_ti/foo.txt" />
+    <Text Include="../../thirdparty/owemdjee/tre/tests/data/strtest/expected/foo.txt" />
     <Text Include="../../thirdparty/owemdjee/tre/tre.pc.in" />
     <Text Include="../../thirdparty/owemdjee/tre/tre.spec.in" />
     <Text Include="../../thirdparty/owemdjee/tre/utils/Makefile.am" />
@@ -293,10 +332,13 @@
     <Text Include="../../thirdparty/owemdjee/tre/utils/build-rpm.sh" />
     <Text Include="../../thirdparty/owemdjee/tre/utils/build-sources.sh" />
     <Text Include="../../thirdparty/owemdjee/tre/utils/replace-vars.sh" />
+    <Text Include="../../thirdparty/owemdjee/tre/vcbuild/tre.vcxproj.filters" />
+    <Text Include="../../thirdparty/owemdjee/tre/win32/retest.vcxproj.filters" />
     <Text Include="../../thirdparty/owemdjee/tre/win32/tre-config.h.in" />
+    <Text Include="../../thirdparty/owemdjee/tre/win32/tre.def" />
+    <Text Include="../../thirdparty/owemdjee/tre/win32/tre.vcxproj.filters" />
   </ItemGroup>
-  <ImportGroup Label="PropertySheets" >
+  <ImportGroup Label="PropertySheets">
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />
   </ImportGroup>
 </Project>
-  

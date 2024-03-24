@@ -21,14 +21,17 @@
     <Filter Include="Misc Files\cmake\templates">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0003}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\src">
+    <Filter Include="Misc Files\m4">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
+    <Filter Include="Misc Files\src">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\src">
+    <Filter Include="Resource Files">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -330,6 +333,12 @@
       <Filter>Source Files\src</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/leptonica/src/partition.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/leptonica/src/pdfapp.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/leptonica/src/pdfappstub.c">
       <Filter>Source Files\src</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/leptonica/src/pdfio1.c">
@@ -680,6 +689,9 @@
     <Text Include="../../thirdparty/leptonica/CMakeLists.txt">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/leptonica/Doxyfile">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/leptonica/Makefile.am">
       <Filter>Misc Files</Filter>
     </Text>
@@ -718,6 +730,9 @@
     </Text>
     <Text Include="../../thirdparty/leptonica/lok.lua">
       <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/leptonica/m4/ax_split_version.m4">
+      <Filter>Misc Files\m4</Filter>
     </Text>
     <Text Include="../../thirdparty/leptonica/run_cmake.sh">
       <Filter>Misc Files</Filter>
@@ -762,6 +777,9 @@
       <Filter>Misc Files\src</Filter>
     </Text>
     <Text Include="../../thirdparty/leptonica/style-guide.txt">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/leptonica/version-notes.html">
       <Filter>Misc Files</Filter>
     </Text>
   </ItemGroup>

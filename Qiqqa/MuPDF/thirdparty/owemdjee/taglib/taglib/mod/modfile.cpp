@@ -23,12 +23,12 @@
  *   http://www.mozilla.org/MPL/                                           *
  ***************************************************************************/
 
-
 #include "modfile.h"
+
 #include "tstringlist.h"
 #include "tdebug.h"
-#include "modfileprivate.h"
 #include "tpropertymap.h"
+#include "modfileprivate.h"
 
 using namespace TagLib;
 using namespace Mod;
@@ -48,7 +48,7 @@ public:
 Mod::File::File(FileName file, bool readProperties,
                 AudioProperties::ReadStyle propertiesStyle) :
   Mod::FileBase(file),
-  d(new FilePrivate(propertiesStyle))
+  d(std::make_unique<FilePrivate>(propertiesStyle))
 {
   if(isOpen())
     read(readProperties);
@@ -57,16 +57,13 @@ Mod::File::File(FileName file, bool readProperties,
 Mod::File::File(IOStream *stream, bool readProperties,
                 AudioProperties::ReadStyle propertiesStyle) :
   Mod::FileBase(stream),
-  d(new FilePrivate(propertiesStyle))
+  d(std::make_unique<FilePrivate>(propertiesStyle))
 {
   if(isOpen())
     read(readProperties);
 }
 
-Mod::File::~File()
-{
-  delete d;
-}
+Mod::File::~File() = default;
 
 Mod::Tag *Mod::File::tag() const
 {

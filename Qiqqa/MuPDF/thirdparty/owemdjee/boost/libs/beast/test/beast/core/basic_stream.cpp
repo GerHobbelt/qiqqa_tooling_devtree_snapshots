@@ -13,6 +13,7 @@
 #include "stream_tests.hpp"
 
 #include <boost/beast/_experimental/unit_test/suite.hpp>
+#include <boost/beast/core/bind_handler.hpp>
 #include <boost/beast/core/flat_buffer.hpp>
 #include <boost/beast/core/stream_traits.hpp>
 #include <boost/beast/core/string.hpp>
@@ -1298,7 +1299,7 @@ public:
                 resolve_results.begin()->endpoint(),
                 net::use_awaitable))>);
 
-        auto comparison_function = [](error_code&, net::ip::tcp::endpoint) { return true; };
+        auto comparison_function = [](error_code const&, net::ip::tcp::endpoint) { return true; };
 
         static_assert(std::is_same_v<
             net::awaitable<net::ip::tcp::resolver::results_type::const_iterator>, decltype(

@@ -38,6 +38,9 @@
     <Filter Include="Header Files\include\tvision\internal">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Misc Files\project">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="../../thirdparty/owemdjee/tvision/include/pch.h">
@@ -139,6 +142,9 @@
     <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/dispbuff.h">
       <Filter>Header Files\include\tvision\internal</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/errredir.h">
+      <Filter>Header Files\include\tvision\internal</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/events.h">
       <Filter>Header Files\include\tvision\internal</Filter>
     </ClInclude>
@@ -157,6 +163,9 @@
     <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/linuxcon.h">
       <Filter>Header Files\include\tvision\internal</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/mutex.h">
+      <Filter>Header Files\include\tvision\internal</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/ncurdisp.h">
       <Filter>Header Files\include\tvision\internal</Filter>
     </ClInclude>
@@ -167,9 +176,6 @@
       <Filter>Header Files\include\tvision\internal</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/platform.h">
-      <Filter>Header Files\include\tvision\internal</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/scrlife.h">
       <Filter>Header Files\include\tvision\internal</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/sighandl.h">
@@ -188,6 +194,9 @@
       <Filter>Header Files\include\tvision\internal</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/terminal.h">
+      <Filter>Header Files\include\tvision\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/unixclip.h">
       <Filter>Header Files\include\tvision\internal</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/tvision/include/tvision/internal/unixcon.h">
@@ -273,6 +282,15 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/tvision/README.md">
       <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/tvision/parts.f32">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/tvision/phonenum.f32">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/tvision/project/makefile">
+      <Filter>Misc Files\project</Filter>
     </Text>
   </ItemGroup>
 </Project>

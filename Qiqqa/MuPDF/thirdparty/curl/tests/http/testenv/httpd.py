@@ -47,7 +47,8 @@ class Httpd:
         'authn_core', 'authn_file',
         'authz_user', 'authz_core', 'authz_host',
         'auth_basic', 'auth_digest',
-        'env', 'filter', 'headers', 'mime',
+        'alias', 'env', 'filter', 'headers', 'mime', 'setenvif',
+        'socache_shmcb',
         'rewrite', 'http2', 'ssl', 'proxy', 'proxy_http', 'proxy_connect',
         'mpm_event',
     ]
@@ -242,14 +243,16 @@ class Httpd:
                 f'PidFile httpd.pid',
                 f'ErrorLog {self._error_log}',
                 f'LogLevel {self._get_log_level()}',
+                f'StartServers 4',
                 f'H2MinWorkers 16',
-                f'H2MaxWorkers 128',
+                f'H2MaxWorkers 256',
                 f'H2Direct on',
                 f'Listen {self.env.http_port}',
                 f'Listen {self.env.https_port}',
                 f'Listen {self.env.proxy_port}',
                 f'Listen {self.env.proxys_port}',
                 f'TypesConfig "{self._conf_dir}/mime.types',
+                f'SSLSessionCache "shmcb:ssl_gcache_data(32000)"',
             ]
             if 'base' in self._extra_configs:
                 conf.extend(self._extra_configs['base'])
@@ -303,6 +306,7 @@ class Httpd:
                 f'    ServerName {proxy_domain}',
                 f'    Protocols h2c http/1.1',
                 f'    ProxyRequests On',
+                f'    H2ProxyRequests On',
                 f'    ProxyVia On',
                 f'    AllowCONNECT {self.env.http_port} {self.env.https_port}',
             ])
@@ -319,6 +323,7 @@ class Httpd:
                 f'    SSLCertificateFile {proxy_creds.cert_file}',
                 f'    SSLCertificateKeyFile {proxy_creds.pkey_file}',
                 f'    ProxyRequests On',
+                f'    H2ProxyRequests On',
                 f'    ProxyVia On',
                 f'    AllowCONNECT {self.env.http_port} {self.env.https_port}',
             ])
@@ -367,6 +372,10 @@ class Httpd:
         lines = []
         if Httpd.MOD_CURLTEST is not None:
             lines.extend([
+                f'    Redirect 301 /curltest/echo301 /curltest/echo',
+                f'    Redirect 302 /curltest/echo302 /curltest/echo',
+                f'    Redirect 303 /curltest/echo303 /curltest/echo',
+                f'    Redirect 307 /curltest/echo307 /curltest/echo',
                 f'    <Location /curltest/echo>',
                 f'      SetHandler curltest-echo',
                 f'    </Location>',
@@ -376,6 +385,15 @@ class Httpd:
                 f'    <Location /curltest/tweak>',
                 f'      SetHandler curltest-tweak',
                 f'    </Location>',
+                f'    Redirect 302 /tweak /curltest/tweak',
+                f'    <Location /curltest/1_1>',
+                f'      SetHandler curltest-1_1-required',
+                f'    </Location>',
+                f'    <Location /curltest/shutdown_unclean>',
+                f'      SetHandler curltest-tweak',
+                f'      SetEnv force-response-1.0 1',
+                f'    </Location>',
+                f'    SetEnvIf Request_URI "/shutdown_unclean" ssl-unclean=1',
             ])
         if self._auth_digest:
             lines.extend([

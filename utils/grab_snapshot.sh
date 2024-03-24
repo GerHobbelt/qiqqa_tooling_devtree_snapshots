@@ -11,68 +11,211 @@ mkdir -p Qiqqa/MuPDF
 
 cat > utils/tmp.lst  <<EOF
 
+# 1D-RGB-color-gradient
+# 2D-color-gradient-or-Procedural-texture
 # A-MNS_TemplateMatching
-# abseil-cpp
-# adaptiveqf
-# annoy
+# ADE-graph-management
+# AFLplusplus
 # ApprovalTestsCpp
-# arangodb
-# archive-hocr-tools
-argparse
-# arrayfire
-asio
-# asyncplusplus
-# asynqro
-# b2xtranslator
-# basez
+# ArborX
 # BBHash
 # BCF-cuckoo-index
+# BaseMatrixOps
+# Bi-Sent2Vec
+# BitFunnel
+# BlingFire
+# BoxFort
+# CHM-lib
+# CImg
+# CLBlast
+# CLBlast-database
+# CLTune
+# CRFpp
+# CRFsuite-extended
+# CRoaring
+# CTCWordBeamSearch
+# CTPL-Thread-Pool
+# CacheLib
+# Capture2Text
+# Clipper2
+# ColorSpace
+# CppNumericalSolvers
+# Criterion
+# CryptSync
+# CurvatureFilter
+# CxImage
+# Cysboard
+# DBoW2
+# DCF-cuckoo-index
+# DGM-CRF
+# DiskANN
+# ECMA262
+# EigenRand
+# EtwExplorer
+# Extensible-Storage-Engine
+# FFmpeg
+# FIt-SNE
+# FastGlobbing
+# FreeFileSync
+# GMM-HMM-kMeans
+# GMMreg
+# GQ-gumbo-css-selectors
+# GSL
+# GoldFish-CBOR
+# GraphicsMagick
+# HDiffPatch
+# ITK
+# IconFontCppHeaders
+# IdGenerator
+# ImageMagick
+# Imath
+# Ipopt
+# JabRef-Browser-Extension
+# JabRef-abbreviations
+# JamSpell
+# LBFGS-Lite
+# LDCF-hash
+# LLhttp-parser
+# LSWMS
+# LeptonicaDocsSite
+# LightGBM
+# LightLDA
+# Lightning.NET
+# MITIE-nlp
+# MNN
+# MariGold.OpenXHTML
+# MicroPather
+# NSIS-OBSInstallerUtils
+# NSISDotNetChecker
+# NSISFileCheck
+# NSISMultiUser
+# NanoLog
+# NiuTrans.NMT
+# OfficeIMO
+# Open-XML-SDK
+# OpenBLAS
+# OpenCL-CTS
+OpenCL-Headers
+# OpenCL-SDK
+# OpenColorIO
+# OpenEXR
+# OpenFST
+# OpenFST-utils
+# OptimizationTemplateLibrary
+# PEGTL
+# PGM-index
+# Paddle-Lite
+# PaddleClas
+# PaddleDetection
+# PaddleNLP
+# PaddleOCR
+# PaddlePaddle
+# PhotonLibOS
+# Pillow
+# PlatformFolders
+# QCBOR
+# RE-flex
+# RNGSobol
+# RRD
+# RRPN
+# RapidFuzz
+# RuntimeCompiledCPlusPlus
+# RxCpp
+# SQLiteCpp
+# SQLiteHistograms
+# ScriptX
+# Sealighter
+# ShapeCrawler
+# Sherwood
+# Signals
+# SilkETW
+# SipHash
+# Sophus
+# StarSpace
+# SymSpell
+# TelemetrySourcerer
+# ThreadPool
+# TraceETW
+# UIforETW
+# URI-Encode-C
+# URL-Detector
+# UnofficialLeptDocs
+# VQMT
+# VSNASM
+# VTK
+# Verify
+# VisualScriptEngine
+# Win32_read_directory_changes
+# Win32_read_directory_changes_IOCP
+# WinHttpPAL
+# Windows10EtwEvents
+# XMP-Toolkit-SDK
+# Xoshiro-cpp
+# YACLib
+# ZLMediaKit
+# abseil-cpp
+# adaptiveqf
+# agg
+# aho-corasick
+# aho_corasick
+# annoy
+# arangodb
+# archive-hocr-tools
+# armadillo
+# arrayfire
+# asyncplusplus
+# asynqro
+# autodiff
+# avro
+# awesome-c
+# b2xtranslator
+# basez
+bbe
 # bebop
-# bhtsne--Barnes-Hut-t-SNE
+bhtsne--Barnes-Hut-t-SNE
 # bibtex-robust-decoder
 # bibtool
-bibutils
+# binary_search
 # binlog
-# bitsery
-BLAKE3
-# BlingFire
+bitsery
+# blaze
+# blitsort
 # bolt
-boost
 # boost-url
 # boringssl
-# BoxFort
 # breakpad
-brotli
 # c-blosc2
-# CacheLib
+# cachelot
 # caches
 # caffe
 # cairo
 # cairo-demos
 # calibre
-# Capture2Text
+# capnproto
+# capture-thread
 # catboost
 # cctz
 # ccv-nnc
+# cdc-file-transfer
 # cef-pdf
 # cereal
 # ceres-solver
-# CHM-lib
-# CImg
+# cfgpath
+# chibi-scheme
+# chromium-snss-parse
 # citation-abbreviations
 # citation-journals
 # citation-styles
 # citeproc-js
 # civetweb
+# cjose
 # clBLAS
-# CLBlast
-# CLBlast-database
+# cld1-language-detect
 # cld2-language-detect
-cli11
-clipp
-# CLTune
+# cld3-language-detect
 # cmph-hasher
-# ColorSpace
+# color-util
+# colormap-shaders
 # comdb2-bdb
 # compact_enc_det
 # completesearch
@@ -80,126 +223,154 @@ clipp
 # concurrentqueue
 # coost
 # cpp-btree
+# cpp-httplib
 # cpp-ipc
-# cpp-terminal
+# cpp-netlib
+cpp-terminal
+# cpp_rest_sdk
+# cppdap
 # cppflow
 # cppjieba
 # cpplocate
 # cpptoml
 # cppzmq
-# cpp_rest_sdk
-# cpuinfo
+cpuinfo
 # cpython
 # cqf
 # cr
+# crc32c
 # createprocess-windows
-# CRFpp
 # crfsuite
-# CRFsuite-extended
-# Criterion
-# CRoaring
-crow
-cryptopp
-# CryptSync
+# crumsort
 # csv-parser
+# csvquote
 # csync2
-# CTCWordBeamSearch
-# CTPL-Thread-Pool
 # ctsa
 # cuckoo-index
 # cuckoofilter
 # curl-impersonate
 # curl-www
-# CxImage
+# cvmatio
 # cxxopts
 # cxxtest
-# cxxtest_catch_2_gtest
-# Cysboard
+cxxtest_catch_2_gtest
+# datamash
 # date
 # datetimepp
 # dateutils
-# DBoW2
-# DCF-cuckoo-index
-# debugbreak
-# delegate
+# dbscan
+debugbreak
+# decision-tree
+delegate
 # density
 # densityxx
-# DGM-CRF
+# detect-character-encoding
 # diffutils
-dirent
-# djvulibre
-dlfcn-win32
+djvulibre
 # dlib
+# doctest
 # docxBox
 # doh
 # doxa
+# doxygen-awesome-css
 # drogon
 # dtl-diff-template-library
 # dtoa-benchmark
+# duckdb
 # dynet
+# easyexif
 # easyloggingpp
 # ecal
-# ECMA262
+# edit-distance
 # efsw
 # emphf-hash
+# enca
 # enkiTS-TaskScheduler
-# EtwExplorer
+# ensmallen
 # eventpp
 # everything-curl
+# ex-leptonica-freetype-harfbuzz
 # exiv2
 # expected-lite
-# Extensible-Storage-Engine
+exprtk
+# eytzinger
 # faiss
+# falconn
+# farmhash
+# farver-OKlab
 # fast-lzma2
 # fastBPE
-# fastfilter_cpp
 # fastPRNG
 # fastText
 # fast_float
 # fast_pfor
+# fastapprox
+# fastfilter_cpp
+# fastgron
 # fatal
+# faup
+# ffht
 # fftw3
-# file
+# fifo_map
+# figtree
+file
 # filecopyex3
-# filesystem
+filesystem
+# flat.hpp
 # flat_hash_map
+# flinng
+# flip
 # fluent-bit
+# fluxsort
 # fmem
 # fmemopen_windows
-fmt
 # fmtlog
+fnmatch
 # folly
-# FreeFileSync
+fontconfig
+# fontview
+# fpng
 # fribidi
 # friso
 # frozen
 # fswatch
-gbenchmark
+# fxt
+# g3log
+gcem
 # gdbm
+# gegl
+# gencolormap
+# genieclust
+getopt
 # gettext
-gflags
-# gibbs-lda
+gibbs-lda
+glfw
 # glib2
-glob
-glog
-# GMM-HMM-kMeans
-# GMMreg
-# GoldFish-CBOR
+# glyph_name
+# gmic
+# gmic-community
+# gmt
+# gnuplot
+# gnuplot-palettes
+# gnuplot_i
 # google-diff-match-patch
 # google-marl
-googletest
-gperf-hash
-# GraphicsMagick
+# gram_savitzky_golay
+# graph-coloring
 # graphit
 # grok-jpeg2000
+# groonga
 # gtn
+# guetzli
+# guile
 # gumbo-libxml
-# gumbo-query
+gumbo-query
 # h2o-server
+# h5cpp
 # harbour-core
-# HDiffPatch
+# hdbscan
+# hdbscan-cpp
 # hedley
-highway
 # highwayhash
 # hikyuu
 # hmm-scalable
@@ -212,6 +383,7 @@ highway
 # hopscotch-map
 # horsejs
 # hsluv-c
+# hsluv-color-gradient
 # html2openxml
 # htmlstreamparser
 # http-parser
@@ -220,53 +392,63 @@ highway
 # hunspell-hyphen
 # hyperscan
 # hypertextcpp
+# iODBC
 # iceberghashtable
 # iceoryx
-# id3-tagparser
-# IdGenerator
-# ImageMagick
+id3-tagparser
+# ifopt
+imagedistance
 # indicators
 # infoware
-# iODBC
 # ion-c
 # ipa-dict
 # iresearch
-# JabRef-abbreviations
-# JabRef-Browser-Extension
-# JamSpell
+# itcl
+# itpp
+# ivf-hnsw
 # jasper
+# javascript-serialization-benchmark
 # jbig2enc
 # jemalloc
 # jerryscript
-jpeg-xl
+# jimtcl
 # jq
 # json
 # json-jansson
 # jsoncons
+# jsoncpp
+# jtc
 # kahypar
+# kalman-cpp
+# kann
 # kfr
 # kgraph
+# kiwi
+# klib
 # koan
 # krabsETW
 # lapack
 # lda
 # lda-3-variants
-# lda-bigartm
 # lda-Familia
-# LDCF-hash
-# LeptonicaDocsSite
+# lda-bigartm
+# leptonica-hillshade
 # lerc
+# lexbor
+# libCRCpp
+# libCZMQ
 # libaco
+# libahocorasick
 # libalg
 # libaom
-libarchive
-# libassert
+libassert
 # libavif
-libbf
 # libbloom
+# libbloomfilters
 # libcbor
 # libchaos
 # libchardet
+# libchopshop
 # libclip
 # libclipboard
 # libcmime
@@ -274,25 +456,24 @@ libbf
 # libconfig
 # libcopp
 # libcppjieba
-libcpr
 # libcpuid
-# libCRCpp
 # libcsp
-# libcsv2
+libcsv2
+# libcuckoo
 # libcyaml
-# libCZMQ
 # libde265
 # libdeflate
 # libdi-dependency-injection
+libdiagnostics
+# libdip
 # libdist
 # libdivide
 # libdivsufsort
 # libdtm
-# libeigen
-libeternaltimestamp
+libeigen
 # libevent
 # libevt
-# libexpat
+libexpat
 # libfann
 # libffi
 # libfolia
@@ -300,39 +481,54 @@ libeternaltimestamp
 # libfyaml
 # libgateY
 # libgd
-libgif
+# libgnurx
 # libgrape-lite
 # libharry
 # libheif
 # libheif-alt
+libhog
 # libicns
-libiconv
+# libics
 # libidn2
 # libimagequant
-libjpeg-turbo
-libjxl
+# libinsane
+# libirwls
+# libkra
+# liblbfgs
 # liblinear
 # libmdbx
 # libmetalink
 # libmio
 # libmlpp
 # libmobi
+# libmodbus
 # libngt-ann
+# libnop
+# liboauth2
 # libocca
+libparameters
+libpathutils
+# libpillowfight
 # libpinyin
+# libpipeline
 # libpmemobj-cpp
 # libpopcnt
 # libprecog
+# libprecog-data
+# libprecog-manuals
+# libpsd
 # libpsl
 # libq
-libqrencode
 # libquill
 # libraqm
 # librs232
 # librsync
 # libscanf
+# libserialport
 # libshmcache
 # libsigcplusplus
+# libsiridb
+# libsl3
 # libsmile
 # libsptag
 # libsql
@@ -343,52 +539,57 @@ libqrencode
 # libtextcat
 # libtuv
 # libucl
+# libunibreak
 # libunifex
+# libusb
 # libuv
 # libvips
 # libvrb
-# libwarc
-libwebp
+libwarc
 # libwebsocketpp
 # libwebsockets
 # libwil
-# libwildmatch
-libxml2
-libxslt
-# libyaml
+libwildmatch
+# libxcam
+# libxo
+libyaml
 # libyaml-examples
 # libzip
 # libzmq
-libzopfli
-lib_nas_lockfile
-# LightGBM
-# LightLDA
-# Lightning.NET
 # ligra-graph
-linenoise
 # line_detector
+# linecook
 # lizard
 # lmdb
 # lmdb-safe
 # lmdb-store
 # lmdb.spreads.net
 # lmdbxx
+# lnav
 # localmemcache
+# loguru
+# loki
+# lol
+# lolremez
+# lru_cache
 # lrucache11
-lz4
+# lshbox
 # lzbench
 # lzham_codec
 # mace
 # magic_enum
+# magsac
 # mammut
 # manticore-columnar
 # manticore-plugins
 # manticoresearch
 # many-stop-words
 # marian
-# MariGold.OpenXHTML
 # math-atlas
+# mathtoolbox
+# matplotplusplus
 # mcmc
+# mecab
 # memory
 # merror
 # mesh-allocator
@@ -401,105 +602,116 @@ lz4
 # mimalloc
 # mime-mega
 # mimetic
+# minifb
+# miniscript
+# minizip-ng
 # mipp
-# MITIE-nlp
+# mitlm
 # mlpack
 # mmc
 # mmkv
-# MNN
+# modbus-esp8266
 # monolith
 # morton_filter
+# mosquitto
+# mozjpeg
+# mrpt
 # ms_cpp_client_telemetry
 # multiverso
 # mxnet
 # mydumper
 # mysql-connector-cpp
+# n2-kNN
 # nameof
+# nano-signal-slot
 # nanodbc
 # nanoflann
-# NanoLog
 # nanomsg-nng
-nanosvg
 # nativefiledialog-extended
 # ncnn
+# netdata
+# netpbm
 # neutralinoJS
 # neutralinoJS-CLI
+# newlisp
 # nghttp3
+# ngrams-weighted
 # ngtcp2
-# NiuTrans.NMT
+# nlopt
 # nmslib
 # notcurses
 # npoi
 # nsis
 # nsis-nscurl
-# NSIS-OBSInstallerUtils
 # nsis-stdutils
-# NSISDotNetChecker
-# NSISFileCheck
-# NSISMultiUser
 # nsync
+# numero
 # nuspell
 # ocreval
-# OfficeIMO
 # ogdf
+# oidn-OpenImageDenoise
 # oiio
 # olena
+# omaha
 # oneTBB
+# online-hnsw
 # onnxruntime
-# Open-XML-SDK
-# OpenBLAS
-# OpenCL-CTS
-# OpenCL-Headers
-# OpenCL-SDK
-# opencv
-# opencv_contrib
-# OpenFST
-# OpenFST-utils
+opencv
+opencv_contrib
+# opencv_extra
+# openlibm
 # openpbs
 # openssl
 # opentelemetry-cpp
+# opentelemetry-cpp-contrib
 # openvino
 # oppat
-# OptimizationTemplateLibrary
+# optim
+# osqp
+# osqp-cpp
+# osqp-eigen
 # osquery
 # otl
+# owl
 # p7zip
-# PaddlePaddle
+# pHash
 # pagerank
 # palanteer
 # palmtree
 # pango
 # papis-zotero
 # parallel-hashmap
+# paramonte
 # pcg-c-random
 # pcg-cpp-random
 # pcm
-pcre
 # pdf2htmlEX
 # pdfgrep
 # pdfium
+# pdiff
+# pecos
 # pelikan
 # pevents
-# PGM-index
-# pHash
+# pg_similarity
 # phash-gpl
 # phf-hash
 # photino.native
-# PhotonLibOS
 # picoc
 # picohttpparser
+# pikchr
 # pinyin
 # pipes
 # pisa
+# pisa_formatter
 # pixman
-# PlatformFolders
-plf_nanotimer
 # pmdk
 # pmdk-tests
 # pmemkv
 # pmemkv-bench
-pmt-png-tools
+# poco
 # podofo
+# poisson_blend
+# polatory
 # poppler
 # portable-memory-mapping
 # portable-snippets
@@ -509,223 +721,246 @@ pmt-png-tools
 # probminhash
 # promise-cpp
 # promise-hpp
+# protobuf
 # proxygen
 # prvhash
-pthread-win32
+# psd_sdk
 # pthreadpool
 # pybind11
 # pyclustering
+# pyglass
+# pylene
 # pytorch
 # pytorch_cpp_demo
-# QCBOR
 # qlever
+# qoi
 # qpdf
-QuickJS
-QuickJS-C++-Wrapper
-QuickJS-C++-Wrapper2
+# qs_parse
+# quadsort
+# quill-logging
+# radamsa
+# radon-tf
 # randen
 # random
+# random-forest
 # rapidJSON
+# rapidxml
 # rapidyaml
 # rclone
-# re2
+re2
+# reckless
 # recycle
 # refl-cpp
-replxx
 # restc-cpp
 # result-cpp
 # resumable-assert
+# rgf
 # robin-hood-hashing
 # robin-map
 # rotate_detection
 # rsync
-# RuntimeCompiledCPlusPlus
-# RxCpp
+# safeclib
 # safestringlib
 # salieri
+# sbcl
 # scantailor
+# scilab
 # scintilla
-# ScriptX
+# scws-chinese-word-segmentation
 # sdhash
-# Sealighter
+# sdsl-lite
+# semimap
+# sent2vec
 # sentence-tokenizer
 # sentencepiece
+# sequential-line-search
 # shadesmar
-# ShapeCrawler
 # sharedhashfile
 # shmdata
 # shoco
-# Signals
-# SilkETW
+# sile-typesetter
 # simd-imgproc
+# simdjson
 # sioyek
+# siridb-server
+# sist2
+# slot_map
 # smhasher
 # snap
 # snappy
 # snmalloc
 # snowball
+# somoclu
 # sparsehash
-# spdlog
+spdlog
 # spdlog_setup
-splitmerge
+# spdlog_sqlite_sink
+# spdmon
+# spline
+# splinter
 # spookyhash
 # spy-build-sysinfo
+# sqawk
 # sqlcipher
 # sqlean
 # sqleet
-sqlite
-sqlite-amalgamation
 # sqlite-fts5-snowball
 # sqlite-stats
 # sqlite3-compression-encryption-vfs
 # sqlite3pp
-# SQLiteCpp
-# SQLiteHistograms
-# sqliteodbc
 # sqlite_fts_tokenizer_chinese_simple
 # sqlite_wrapper
 # sqlite_zstd_vfs
+# sqliteodbc
+# sqlplot-tools
 # sqlpp11
 # squash
 # ssdeep
 # ssimulacra2
 # stan
 # stan-math
-# StarSpace
 # stateline
 # statsite
 # stdext-path
+# stlcache
 # stopwords
 # stringi
+# strtk
 # stx-error-handling
 # subprocess
 # subprocess-cpp
 # subprocess_h
 # sumatrapdf
-svg-charter
 # swig
-# SymSpell
+# sync-module.sh
 # tabulate
-taglib
+# tao-json
 # taolog
 # taskflow
-# tcpshm
+# tclap
+# tclclockmod
 # tcp_pubsub
+# tcpshm
+# tee-win32
+# telegram-bot-api
+# telegram-td
+# tempo
 # tensorflow
 # tensorflow-docs
 # tensorflow-io
 # tensorflow-text
+# tensorstore
+# termcolor
 # tesseract-gImgRdrGui
-tesslinesplit
+text-wrangler
 # textflowcpp
 # thread-pool
 # thread-pool-c
 # thread-pool-cpp
-# ThreadPool
+# thrift
 # thunderSVM
 # ticpp
-tidy-html5
 # tink
 # tinn
 # tiny-process-library
 # tinycbor
 # tinycolormap
-tinyexpr
+# tinydir
 # tinygettext
 # tlx
 # tlx-btree
+# tmap
 # toml11
 # tomlpp
-# TraceETW
 # tracelogging-for-ETW
 # transwarp
-# tre
+# tray
+tre
+# treelite
 # tsf
-tvision
 # twain_library
 # txiki.js
 # typesense
+u8_to_std_string
 # uberlog
-# uchardet
+uchardet
 # ucto
 # uctodata
 # ucx
 # ugrep
-# UIforETW
-uint128_t
+# unblending
 # unicode-cldr
-# unicode-icu
+# unicode-cldr-data
+unicode-icu
+# unicode-icu-data
+# unicode-icu-demos
 # universal-numbers
 # unixODBC
-# UnofficialLeptDocs
+# uno-solver
 # unpaper
 # unqlite
 # upscaledb
-upskirt-markdown
 # url
+# url-parser
 # userver
-# utfcpp
+utf8proc
+utfcpp
 # variadic_table
-vcopy
+# vcpkg
 # velocypack
-# Verify
-# VisualScriptEngine
+# visible-url-detector
+# vizzu
+# vmaf
 # vmem
 # vmemcache
-# VQMT
-# VSNASM
 # vtm
 # vxl
+# waifu2x-ncnn-vulkan
 # warc2text
 # warp-ctc
 # warpLDA
+wcwidth9
 # websocket-sharp
 # webview
 # wget
 # wget2
 # wil-Win32-Interface-Library
+# win-iconv
 # win32-dpi
-# Win32_read_directory_changes
-# Win32_read_directory_changes_IOCP
-# Windows10EtwEvents
 # winflexbison
-# WinHttpPAL
 # word2vec
 # word2vec-GloVe
 # wordfreq
 # wordfrequency
-wxCharts
 # wxCurl
 # wxDatabase
 # wxExamples
-wxFormBuilder
 # wxMEdit
-# wxPdfDocument
 # wxPDFView
+# wxPdfDocument
 # wxSQLite3
 # wxVisualScriptEngine
 # wxWebViewChromium
-wxWidgets
 # wyhash
 # xgboost
 # xlnt
-# xml-pugixml
-# XMP-Toolkit-SDK
+xml-pugixml
 # xnnpack
 # xor-and-binary-fuse-filter
-# Xoshiro-cpp
 # xpdf
-# xsimd
+# xsg
+xsimd
 # xsldbg
 # xtensor
 # xtensor-blas
 # xtensor-io
 # xtl
 # xxHash
-# YACLib
 # yaml-cpp
 # yaml-test-suite
 # yara-pattern-matcher
+# yasl
+# yggdrasil-decision-forests
 # you-token-to-me
 # yyjson
 # zfp-compressed-arrays
@@ -746,10 +981,71 @@ wxWidgets
 # zotero-word-for-windows-integration
 # zotero-zotfile
 # zpp_bits
-zstd
 # zsv
 # zsync2
 # zxing-cpp
+BLAKE3
+QuickJS
+QuickJS-C++-Wrapper
+QuickJS-C++-Wrapper2
+argparse
+asio
+bibutils
+boost
+brotli
+cli11
+clipp
+crow
+cryptopp
+dirent
+dlfcn-win32
+fmt
+gbenchmark
+gflags
+glob
+glog
+googletest
+gperf-hash
+highway
+jpeg-xl
+lib_nas_lockfile
+libarchive
+libbf
+libcpr
+libeternaltimestamp
+libgif
+libiconv
+libjpeg-turbo
+libjxl
+libqrencode
+libwebp
+libxml2
+libxslt
+libzopfli
+linenoise
+lz4
+nanosvg
+pcre
+plf_nanotimer
+pmt-png-tools
+pthread-win32
+replxx
+splitmerge
+sqlite
+sqlite-amalgamation
+svg-charter
+taglib
+tesslinesplit
+tidy-html5
+tinyexpr
+tvision
+uint128_t
+upskirt-markdown
+vcopy
+wxCharts
+wxFormBuilder
+wxWidgets
+zstd
 
 __docs
 __docs_src
@@ -774,7 +1070,10 @@ robocopy Z:\lib\tooling\qiqqa\MuPDF\thirdparty\owemdjee Qiqqa/MuPDF/thirdparty/o
 
 EOF
 
-for f in   langdata_LSTM tessconfigs tessdata tessdata_best tessdata_contrib tessdata_fast tessdoc tesseract_docs tesseract_langdata tesseract_ocr_test tesstrain    ; do
+for f in   langdata_LSTM tessconfigs tessdata tessdata_best tessdata_contrib tessdata_fast tessdoc tesseract_docs tesseract_langdata tesseract_ocr_test tesstrain \
+			curl extract freeglut freetype gumbo-parser harfbuzz jbig2dec jpeginfo lcms2 leptonica libjpeg libpng libtiff monolithic_tmplt mujs openjpeg          \
+			tesseract tesseract_api_docs tesseract_docs zlib                                                                                                      \
+; do
 
 	echo "$f..."
 	echo "set F=$f" >> utils/tmp.bat  
@@ -865,6 +1164,10 @@ for f in $( find ../ -type d -name '.deps' ) ; do
 	rm -rf "$f"                    2> /dev/null
 done
 
+for f in $( find ../ -type d -name 'tmp' ) ; do
+	rm -rf "$f"                    2> /dev/null
+done
+
 find ../.. -name dirlist.txt           -delete
 find ../.. -name 'db*.sql'             -delete
 find ../   -name '.gitignore*' -type f -delete
@@ -873,8 +1176,10 @@ find ../.. -name '*.log'       -type f -a ! -name 'gperf.log' -a ! -name 'run.lo
 find       -name '.dirstamp'   -type f -delete
 
 # plus some last-minute compensations, filling up the potholes left by the bulk /XF & /XD rejections:
-for f in 															\
-	/z/lib/tooling/qiqqa/MuPDF/platform/win32/*fuzz*proj*			\
+for f in 															                                       \
+	/z/lib/tooling/qiqqa/MuPDF/platform/win32/*fuzz*proj*			                                       \
+    /z/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/libeigen/Eigen/src/Core/Fuzzy*                          \
+	/z/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/libeigen/Eigen/src/SparseCore/SparseFuzzy*              \
 ; do
 	DSTFILE="$( echo "$f" | sed -E -e 's/^.*[^q]+qiqqa\//..\/..\/Qiqqa\//' )"
 	echo "$f --> $DSTFILE"

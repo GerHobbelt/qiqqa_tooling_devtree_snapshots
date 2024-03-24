@@ -56,11 +56,11 @@ const double kMinAlignedGutter = 0.25;
 // Constant add-on for minimum gutter for ragged tabs.
 const double kMinRaggedGutter = 1.5;
 
-double_VAR(textord_tabvector_vertical_gap_fraction, 0.5,
+DOUBLE_VAR(textord_tabvector_vertical_gap_fraction, 0.5,
            "max fraction of mean blob width allowed for vertical gaps in "
            "vertical text");
 
-double_VAR(textord_tabvector_vertical_box_ratio, 0.5,
+DOUBLE_VAR(textord_tabvector_vertical_box_ratio, 0.5,
            "Fraction of box matches required to declare a line vertical");
 
 FZ_HEAPDBG_TRACKER_SECTION_END_MARKER(_)
@@ -86,12 +86,12 @@ bool TabConstraint::CompatibleConstraints(TabConstraint_LIST *list1, TabConstrai
   int y_min = -INT32_MAX;
   int y_max = INT32_MAX;
   if (textord_debug_tabfind > 3) {
-    tprintf("Testing constraint compatibility\n");
+    tprintDebug("Testing constraint compatibility\n");
   }
   GetConstraints(list1, &y_min, &y_max);
   GetConstraints(list2, &y_min, &y_max);
   if (textord_debug_tabfind > 3) {
-    tprintf("Resulting range = [{},{}]\n", y_min, y_max);
+    tprintDebug("Resulting range = [{},{}]\n", y_min, y_max);
   }
   return y_max >= y_min;
 }
@@ -104,7 +104,7 @@ void TabConstraint::MergeConstraints(TabConstraint_LIST *list1, TabConstraint_LI
   }
   TabConstraint_IT it(list2);
   if (textord_debug_tabfind > 3) {
-    tprintf("Merging constraints\n");
+    tprintDebug("Merging constraints\n");
   }
   // The vectors of all constraints on list2 are now going to be on list1.
   for (it.mark_cycle_pt(); !it.cycled_list(); it.forward()) {
@@ -161,7 +161,7 @@ void TabConstraint::GetConstraints(TabConstraint_LIST *constraints, int *y_min, 
   for (it.mark_cycle_pt(); !it.cycled_list(); it.forward()) {
     TabConstraint *constraint = it.data();
     if (textord_debug_tabfind > 3) {
-      tprintf("Constraint is [{},{}]", constraint->y_min_, constraint->y_max_);
+      tprintDebug("Constraint is [{},{}]", constraint->y_min_, constraint->y_max_);
       constraint->vector_->Print(" for");
     }
     *y_min = std::max(*y_min, constraint->y_min_);
@@ -366,17 +366,17 @@ void TabVector::MergeSimilarTabVectors(const ICOORD &vertical, TabVector_LIST *v
       if (v2->SimilarTo(vertical, *v1, grid)) {
         // Merge into the forward one, in case the combined vector now
         // overlaps one in between.
-        if (textord_debug_tabfind) {
+        if (textord_debug_tabfind > 0) {
           v2->Print("Merging");
           v1->Print("by deleting");
         }
         v2->MergeWith(vertical, it1.extract());
-        if (textord_debug_tabfind) {
+        if (textord_debug_tabfind > 0) {
           v2->Print("Producing");
         }
         ICOORD merged_vector = v2->endpt();
         merged_vector -= v2->startpt();
-        if (textord_debug_tabfind && abs(merged_vector.x()) > 100) {
+        if (textord_debug_tabfind > 0 && abs(merged_vector.x()) > 100) {
           v2->Print("Garbage result of merge?");
         }
         break;
@@ -522,7 +522,7 @@ static const char *const kAlignmentNames[] = {"Left Aligned",  "Left Ragged",  "
 
 // Print basic information about this tab vector.
 void TabVector::Print(const char *prefix) {
-  tprintf(
+  tprintDebug(
       "{} {} ({},{})->({},{}) w={} s={}, sort key={}, boxes={},"
       " partners={}\n",
       prefix, kAlignmentNames[alignment_], startpt_.x(), startpt_.y(), endpt_.x(), endpt_.y(),
@@ -536,70 +536,34 @@ void TabVector::Debug(const char *prefix) {
   for (it.mark_cycle_pt(); !it.cycled_list(); it.forward()) {
     BLOBNBOX *bbox = it.data();
     const TBOX &box = bbox->bounding_box();
-    tprintf("Box at ({},{})->({},{})\n", box.left(), box.bottom(), box.right(), box.top());
+    tprintDebug("Box at ({},{})->({},{})\n", box.left(), box.bottom(), box.right(), box.top());
   }
 }
 
 #if !GRAPHICS_DISABLED
 
 // Draw this tabvector in place in the given window.
-void TabVector::Display(ScrollView *tab_win) {
+void TabVector::Display(ScrollViewReference tab_win) {
   if (textord_debug_printable) {
-    tab_win->Pen(ScrollView::BLUE);
+    tab_win->Pen(Diagnostics::BLUE);
   } else if (alignment_ == TA_LEFT_ALIGNED) {
-    tab_win->Pen(ScrollView::LIME_GREEN);
+    tab_win->Pen(Diagnostics::LIME_GREEN);
   } else if (alignment_ == TA_LEFT_RAGGED) {
-    tab_win->Pen(ScrollView::DARK_GREEN);
+    tab_win->Pen(Diagnostics::DARK_GREEN);
   } else if (alignment_ == TA_RIGHT_ALIGNED) {
-    tab_win->Pen(ScrollView::PINK);
+    tab_win->Pen(Diagnostics::PINK);
   } else if (alignment_ == TA_RIGHT_RAGGED) {
-    tab_win->Pen(ScrollView::CORAL);
+    tab_win->Pen(Diagnostics::CORAL);
   } else {
-    tab_win->Pen(ScrollView::WHITE);
+    tab_win->Pen(Diagnostics::WHITE);
   }
   tab_win->Line(startpt_.x(), startpt_.y(), endpt_.x(), endpt_.y());
-  tab_win->Pen(ScrollView::GREY);
+  tab_win->Pen(Diagnostics::GREY);
   tab_win->Line(startpt_.x(), startpt_.y(), startpt_.x(), extended_ymin_);
   tab_win->Line(endpt_.x(), extended_ymax_, endpt_.x(), endpt_.y());
   auto score_string = std::to_string(percent_score_);
   tab_win->TextAttributes("Times", 50, false, false, false);
   tab_win->Text(startpt_.x(), startpt_.y(), score_string.c_str());
-}
-
-// Draw this tabvector in place in the given window.
-void TabVector::Display(Image &pix, uint32_t* data, int wpl, int w, int h) {
-  if (textord_debug_printable) {
-    //tab_win->Pen(ScrollView::BLUE);
-  }
-  else if (alignment_ == TA_LEFT_ALIGNED) {
-    //tab_win->Pen(ScrollView::LIME_GREEN);
-  }
-  else if (alignment_ == TA_LEFT_RAGGED) {
-    //tab_win->Pen(ScrollView::DARK_GREEN);
-  }
-  else if (alignment_ == TA_RIGHT_ALIGNED) {
-    //tab_win->Pen(ScrollView::PINK);
-  }
-  else if (alignment_ == TA_RIGHT_RAGGED) {
-    //tab_win->Pen(ScrollView::CORAL);
-  }
-  else {
-    //tab_win->Pen(ScrollView::WHITE);
-  }
-  auto x1 = startpt_.x();
-  auto y1 = startpt_.y();
-  auto x2 = endpt_.x();
-  auto y2 = endpt_.y();
-  //tab_win->Line(startpt_.x(), startpt_.y(), endpt_.x(), endpt_.y());
-  //tab_win->Pen(ScrollView::GREY);
-#if 0
-  tab_win->Line(startpt_.x(), startpt_.y(), startpt_.x(), extended_ymin_);
-  tab_win->Line(endpt_.x(), extended_ymax_, endpt_.x(), endpt_.y());
-#endif
-  auto score_string = std::to_string(percent_score_);
-  //tab_win->TextAttributes("Times", 50, false, false, false);
-  auto txt = score_string.c_str();
-  //tab_win->Text(startpt_.x(), startpt_.y(), score_string.c_str());
 }
 
 #endif
@@ -664,7 +628,7 @@ void TabVector::Evaluate(const ICOORD &vertical, TabFind *finder) {
     int mid_y = (box.top() + box.bottom()) / 2;
     if (TabFind::WithinTestRegion(2, XAtY(box.bottom()), box.bottom())) {
       if (!debug) {
-        tprintf("After already deleting {} boxes, ", num_deleted_boxes);
+        tprintDebug("After already deleting {} boxes, ", num_deleted_boxes);
         Print("Starting evaluation");
       }
       debug = true;
@@ -679,7 +643,7 @@ void TabVector::Evaluate(const ICOORD &vertical, TabFind *finder) {
     finder->GutterWidthAndNeighbourGap(tab_x, mean_height, max_gutter, left, bbox, &gutter_width,
                                        &neighbour_gap);
     if (debug) {
-      tprintf("Box ({},{})->({},{}) has gutter {}, ndist {}\n", box.left(), box.bottom(),
+      tprintDebug("Box ({},{})->({},{}) has gutter {}, ndist {}\n", box.left(), box.bottom(),
               box.right(), box.top(), gutter_width, neighbour_gap);
     }
     // Now we can make the test.
@@ -698,7 +662,7 @@ void TabVector::Evaluate(const ICOORD &vertical, TabFind *finder) {
           good_length += vertical_gap;
         }
         if (debug) {
-          tprintf("Box and prev good, gap={}, target {}, goodlength={}\n", vertical_gap,
+          tprintDebug("Box and prev good, gap={}, target {}, goodlength={}\n", vertical_gap,
                   kMaxFillinMultiple * std::min(size1, size2), good_length);
         }
       } else {
@@ -712,7 +676,7 @@ void TabVector::Evaluate(const ICOORD &vertical, TabFind *finder) {
     } else {
       // Get rid of boxes that are not good.
       if (debug) {
-        tprintf("Bad Box ({},{})->({},{}) with gutter {}, ndist {}\n", box.left(), box.bottom(),
+        tprintDebug("Bad Box ({},{})->({},{}) with gutter {}, ndist {}\n", box.left(), box.bottom(),
                 box.right(), box.top(), gutter_width, neighbour_gap);
       }
       it.extract();
@@ -760,7 +724,7 @@ void TabVector::Evaluate(const ICOORD &vertical, TabFind *finder) {
       } else {
         // Get rid of boxes that are not good.
         if (debug) {
-          tprintf("Bad Box ({},{})->({},{}) with gutter {}, mean gutter {}\n", box.left(),
+          tprintDebug("Bad Box ({},{})->({},{}) with gutter {}, mean gutter {}\n", box.left(),
                   box.bottom(), box.right(), box.top(), gutter_width, median_gutter);
         }
         it.extract();
@@ -798,13 +762,13 @@ void TabVector::Evaluate(const ICOORD &vertical, TabFind *finder) {
                                            max_gutter_width, &required_shift);
     if (gutter_width < min_gutter_width) {
       if (debug) {
-        tprintf("Rejecting bad tab Vector with {} gutter vs {} min\n", gutter_width,
+        tprintDebug("Rejecting bad tab Vector with {} gutter vs {} min\n", gutter_width,
                 min_gutter_width);
       }
       boxes_.shallow_clear();
       percent_score_ = 0;
     } else if (debug) {
-      tprintf("Final gutter {}, vs limit of {}, required shift = {}\n", gutter_width,
+      tprintDebug("Final gutter {}, vs limit of {}, required shift = {}\n", gutter_width,
               min_gutter_width, required_shift);
     }
   } else {
@@ -975,7 +939,7 @@ TabVector *TabVector::VerticalTextlinePartner() {
   bool is_vertical =
       (gaps.get_total() > 0 && num_matched >= min_box_match && gaps.median() <= max_gap);
   if (textord_debug_tabfind > 1) {
-    tprintf(
+    tprintDebug(
         "gaps={}, matched={}, unmatched={}, min_match={} "
         "median gap={}, width={} max_gap={} Vertical={}\n",
         gaps.get_total(), num_matched, num_unmatched, min_box_match, gaps.median(), avg_width,

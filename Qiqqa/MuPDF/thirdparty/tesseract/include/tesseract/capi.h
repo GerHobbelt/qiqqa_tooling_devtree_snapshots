@@ -34,7 +34,7 @@ extern "C" {
 #endif
 
 #if defined(_WIN32)
-// :-(( Can't include just minwindef.h or windeef.h here as then we'll be treated to this error:
+// :-(( Can't include just minwindef.h or windef.h here as then we'll be treated to this error:
 // winnt.h(169,1): fatal error C1189: #error:  "No Target Architecture"
 //
 // The next thing you know will happen then is us getting loads of collisions due to windows.h
@@ -236,7 +236,7 @@ TESS_API BOOL TessBaseAPIDumpVariablesToFile(const TessBaseAPI *handle,
 
 TESS_API int TessBaseAPIInit1(TessBaseAPI *handle, const char *datapath,
                               const char *language, TessOcrEngineMode oem,
-                              const char **configs, int configs_size);
+                              const char **configs, size_t configs_size);
 TESS_API int TessBaseAPIInit2(TessBaseAPI *handle, const char *datapath,
                               const char *language, TessOcrEngineMode oem);
 TESS_API int TessBaseAPIInit3(TessBaseAPI *handle, const char *datapath,
@@ -244,14 +244,14 @@ TESS_API int TessBaseAPIInit3(TessBaseAPI *handle, const char *datapath,
 
 TESS_API int TessBaseAPIInit4(TessBaseAPI *handle, const char *datapath,
                               const char *language, TessOcrEngineMode mode,
-                              const char **configs, int configs_size, char **vars_vec,
-                              char **vars_values, size_t vars_vec_size,
+                              const char **configs, size_t configs_size, const char **vars_vec,
+                              const char **vars_values, size_t vars_vec_size,
                               BOOL set_only_non_debug_params);
 
 TESS_API int TessBaseAPIInit5(TessBaseAPI *handle, const char *data, int data_size,
                               const char *language, TessOcrEngineMode mode,
-                              const char **configs, int configs_size, char **vars_vec,
-                              char **vars_values, size_t vars_vec_size,
+                              const char **configs, size_t configs_size, const char **vars_vec,
+                              const char **vars_values, size_t vars_vec_size,
                               BOOL set_only_non_debug_params);
 
 TESS_API const char *TessBaseAPIGetInitLanguagesAsString(
@@ -291,6 +291,7 @@ TESS_API void TessBaseAPISetRectangle(TessBaseAPI *handle, int left, int top,
                                       int width, int height);
 
 TESS_API struct Pix *TessBaseAPIGetThresholdedImage(TessBaseAPI *handle);
+TESS_API float TessBaseAPIGetGradient(TessBaseAPI *handle);
 TESS_API struct Boxa *TessBaseAPIGetRegions(TessBaseAPI *handle,
                                             struct Pixa **pixa);
 TESS_API struct Boxa *TessBaseAPIGetTextlines(TessBaseAPI *handle,
@@ -345,8 +346,7 @@ TESS_API char *TessBaseAPIGetTsvText(TessBaseAPI *handle, int page_number);
 
 TESS_API char *TessBaseAPIGetBoxText(TessBaseAPI *handle, int page_number);
 TESS_API char *TessBaseAPIGetLSTMBoxText(TessBaseAPI *handle, int page_number);
-TESS_API char *TessBaseAPIGetWordStrBoxText(TessBaseAPI *handle,
-                                            int page_number);
+TESS_API char *TessBaseAPIGetWordStrBoxText(TessBaseAPI *handle, int page_number);
 
 TESS_API char *TessBaseAPIGetUNLVText(TessBaseAPI *handle);
 TESS_API int TessBaseAPIMeanTextConf(TessBaseAPI *handle);

@@ -32,6 +32,7 @@
 #include "mupdf/fitz/link.h"
 #include "mupdf/fitz/outline.h"
 #include "mupdf/fitz/separation.h"
+#include "mupdf/fitz/archive.h"
 
 #if FZ_ENABLE_RENDER_CORE 
 
@@ -43,10 +44,22 @@ typedef struct fz_document_handler fz_document_handler;
 typedef struct fz_page fz_page;
 typedef intptr_t fz_bookmark;
 
+typedef enum
+{
+	FZ_MEDIA_BOX,
+	FZ_CROP_BOX,
+	FZ_BLEED_BOX,
+	FZ_TRIM_BOX,
+	FZ_ART_BOX,
+	FZ_UNKNOWN_BOX
+} fz_box_type;
+
+fz_box_type fz_box_type_from_string(const char *name);
+const char *fz_string_from_box_type(fz_box_type box);
+
 #ifdef __cplusplus
 }
 #endif
-
 
 /**
 	Simple constructor for fz_locations.
@@ -206,14 +219,14 @@ typedef fz_page *(fz_document_load_page_fn)(fz_context *ctx, fz_document *doc, i
 	Type for a function to get the page label of a page in the document.
 	See fz_page_label for more information.
 */
-typedef void (fz_document_page_label_fn)(fz_context *ctx, fz_document *doc, int chapter, int page, char *buf, int size);
+typedef void (fz_document_page_label_fn)(fz_context *ctx, fz_document *doc, int chapter, int page, char *buf, size_t size);
 
 /**
 	Type for a function to query
 	a document's metadata. See fz_lookup_metadata for more
 	information.
 */
-typedef int (fz_document_lookup_metadata_fn)(fz_context *ctx, fz_document *doc, const char *key, char *buf, int size);
+typedef int (fz_document_lookup_metadata_fn)(fz_context *ctx, fz_document *doc, const char *key, char *buf, size_t size);
 
 /**
 	Type for a function to set
@@ -231,6 +244,11 @@ typedef fz_colorspace *(fz_document_output_intent_fn)(fz_context *ctx, fz_docume
 	Write document accelerator data
 */
 typedef void (fz_document_output_accelerator_fn)(fz_context *ctx, fz_document *doc, fz_output *out);
+
+/**
+	Send document structure to device
+*/
+typedef void (fz_document_run_structure_fn)(fz_context *ctx, fz_document *doc, fz_device *dev, fz_cookie *cookie);
 
 /**
 	Type for a function to make
@@ -256,7 +274,7 @@ typedef void (fz_page_drop_page_fn)(fz_context *ctx, fz_page *page);
 	bounding box of a page. See fz_bound_page for more
 	information.
 */
-typedef fz_rect (fz_page_bound_page_fn)(fz_context *ctx, fz_page *page);
+typedef fz_rect (fz_page_bound_page_fn)(fz_context *ctx, fz_page *page, fz_box_type box);
 
 /**
 	Type for a function to run the
@@ -304,50 +322,22 @@ typedef fz_link *(fz_page_create_link_fn)(fz_context *ctx, fz_page *page, fz_rec
 typedef void (fz_page_delete_link_fn)(fz_context *ctx, fz_page *page, fz_link *link);
 
 /**
-	Function type to open a document from a file.
-
-	filename: file to open
-
-	Pointer to opened document. Throws exception in case of error.
-*/
-typedef fz_document *(fz_document_open_fn)(fz_context *ctx, const char *filename);
-
-/**
 	Function type to open a
 	document from a file.
 
 	stream: fz_stream to read document data from. Must be
 	seekable for formats that require it.
 
-	Pointer to opened document. Throws exception in case of error.
-*/
-typedef fz_document *(fz_document_open_with_stream_fn)(fz_context *ctx, fz_stream *stream);
+	accel: fz_stream to read accelerator data from. May be
+	NULL. May be ignored.
 
-/**
-	Function type to open a document from a
-	file, with accelerator data.
-
-	filename: file to open
-
-	accel: accelerator file
+	dir: 'Directory context' in which the document is loaded;
+	associated content from (like images for an html stream
+	will be loaded from this). Maybe NULL. May be ignored.
 
 	Pointer to opened document. Throws exception in case of error.
 */
-typedef fz_document *(fz_document_open_accel_fn)(fz_context *ctx, const char *filename, const char *accel);
-
-/**
-	Function type to open a document from a file,
-	with accelerator data.
-
-	stream: fz_stream to read document data from. Must be
-	seekable for formats that require it.
-
-	accel: fz_stream to read accelerator data from. Must be
-	seekable for formats that require it.
-
-	Pointer to opened document. Throws exception in case of error.
-*/
-typedef fz_document *(fz_document_open_accel_with_stream_fn)(fz_context *ctx, fz_stream *stream, fz_stream *accel);
+typedef fz_document *(fz_document_open_fn)(fz_context *ctx, fz_stream *stream, fz_stream *accel, fz_archive *dir);
 
 /**
 	Recognize a document type from
@@ -365,13 +355,16 @@ typedef int (fz_document_recognize_fn)(fz_context *ctx, const char *magic);
 /**
 	Recognize a document type from stream contents.
 
-	stream: stream contents to recognise.
+	stream: stream contents to recognise (may be NULL if document is
+	a directory).
+
+	dir: directory context from which stream is loaded.
 
 	Returns a number between 0 (not recognized) and 100
 	(fully recognized) based on how certain the recognizer
 	is that this is of the required type.
 */
-typedef int (fz_document_recognize_content_fn)(fz_context *ctx, fz_stream *stream);
+typedef int (fz_document_recognize_content_fn)(fz_context *ctx, fz_stream *stream, fz_archive *dir);
 
 /**
 	Type for a function to be called when processing an already opened page.
@@ -415,12 +408,28 @@ const fz_document_handler *fz_recognize_document_content(fz_context *ctx, const 
 	Given a magic find a document handler that can handle a
 	document of this type.
 
-	stream: the file stream to sample.
+	stream: the file stream to sample. May be NULL if the document is
+	a directory.
 
 	magic: Can be a filename extension (including initial period) or
 	a mimetype.
 */
 const fz_document_handler *fz_recognize_document_stream_content(fz_context *ctx, fz_stream *stream, const char *magic);
+
+/**
+	Given a magic find a document handler that can handle a
+	document of this type.
+
+	stream: the file stream to sample. May be NULL if the document is
+	a directory.
+
+	dir: an fz_archive representing the directory from which the
+	stream was opened (or NULL).
+
+	magic: Can be a filename extension (including initial period) or
+	a mimetype.
+*/
+const fz_document_handler *fz_recognize_document_stream_and_dir_content(fz_context *ctx, fz_stream *stream, fz_archive *dir, const char *magic);
 
 /**
 	Open a document file and read its basic structure so pages and
@@ -452,8 +461,29 @@ fz_document *fz_open_accelerated_document(fz_context *ctx, const char *filename,
 
 	magic: a string used to detect document type; either a file name
 	or mime-type.
+
+	stream: a stream representing the contents of the document file.
+
+	NOTE: The caller retains ownership of 'stream' - the document will take its
+	own reference if required.
 */
 fz_document *fz_open_document_with_stream(fz_context *ctx, const char *magic, fz_stream *stream);
+
+/**
+	Open a document using the specified stream object rather than
+	opening a file on disk.
+
+	magic: a string used to detect document type; either a file name
+	or mime-type.
+
+	stream: a stream representing the contents of the document file.
+
+	dir: a 'directory context' for those filetypes that need it.
+
+	NOTE: The caller retains ownership of 'stream' and 'dir' - the document will
+	take its own references if required.
+*/
+fz_document *fz_open_document_with_stream_and_dir(fz_context *ctx, const char *magic, fz_stream *stream, fz_archive *dir);
 
 /**
 	Open a document using a buffer rather than opening a file on disk.
@@ -466,8 +496,33 @@ fz_document *fz_open_document_with_buffer(fz_context *ctx, const char *magic, fz
 
 	magic: a string used to detect document type; either a file name
 	or mime-type.
+
+	stream: a stream of the document contents.
+
+	accel: NULL, or a stream of the 'accelerator' contents for this document.
+
+	NOTE: The caller retains ownership of 'stream' and 'accel' - the document will
+	take its own references if required.
 */
 fz_document *fz_open_accelerated_document_with_stream(fz_context *ctx, const char *magic, fz_stream *stream, fz_stream *accel);
+
+/**
+	Open a document using the specified stream object rather than
+	opening a file on disk.
+
+	magic: a string used to detect document type; either a file name
+	or mime-type.
+
+	stream: a stream of the document contents.
+
+	accel: NULL, or a stream of the 'accelerator' contents for this document.
+
+	dir: NULL, or the 'directory context' for the stream contents.
+
+	NOTE: The caller retains ownership of 'stream', 'accel' and 'dir' - the document will
+	take its own references if required.
+*/
+fz_document *fz_open_accelerated_document_with_stream_and_dir(fz_context *ctx, const char *magic, fz_stream *stream, fz_stream *accel, fz_archive *dir);
 
 /**
 	Query if the document supports the saving of accelerator data.
@@ -618,6 +673,23 @@ char *fz_format_remote_link_uri(fz_context *ctx, fz_document *doc, const char *f
 fz_location fz_resolve_link(fz_context *ctx, fz_document *doc, const char *uri, float *xp, float *yp);
 
 /**
+	Run the document structure through a device.
+
+	doc: Document in question.
+
+	dev: Device obtained from fz_new_*_device.
+
+	cookie: Communication mechanism between caller and library.
+	Intended for multi-threaded applications, while
+	single-threaded applications set cookie to NULL. The
+	caller may abort an ongoing rendering of a page. Cookie also
+	communicates progress information back to the caller. The
+	fields inside cookie are continually updated while the page is
+	rendering.
+*/
+void fz_run_document_structure(fz_context *ctx, fz_document *doc, fz_device *dev, fz_cookie *cookie);
+
+/**
 	Function to get the location for the last page in the document.
 	Using this can be far more efficient in some cases than calling
 	fz_count_pages and using the page number.
@@ -714,6 +786,7 @@ fz_page *fz_new_page_of_size(fz_context *ctx, int size, fz_document *doc);
 	Determine the size of a page at 72 dpi.
 */
 fz_rect fz_bound_page(fz_context *ctx, fz_page *page);
+fz_rect fz_bound_page_box(fz_context *ctx, fz_page *page, fz_box_type box);
 
 /**
 	Run a page through a device.
@@ -984,6 +1057,7 @@ struct fz_document
 	fz_document_set_metadata_fn *set_metadata;
 	fz_document_output_intent_fn *get_output_intent;
 	fz_document_output_accelerator_fn *output_accelerator;
+	fz_document_run_structure_fn *run_structure;
 	int did_layout;
 	int is_reflowable;
 
@@ -1001,11 +1075,8 @@ struct fz_document_handler
 {
 	fz_document_recognize_fn *recognize;
 	fz_document_open_fn *open;
-	fz_document_open_with_stream_fn *open_with_stream;
 	const char **extensions;
 	const char **mimetypes;
-	fz_document_open_accel_fn *open_accel;
-	fz_document_open_accel_with_stream_fn *open_accel_with_stream;
 	fz_document_recognize_content_fn *recognize_content;
 };
 

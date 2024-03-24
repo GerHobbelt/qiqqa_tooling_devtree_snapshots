@@ -56,8 +56,13 @@ usage(const char *prog, int rc) {
   exit(rc);
 }
 
+
+#if defined(BUILD_MONOLITHIC)
+#define main    expat_benchmark_main
+#endif
+
 int
-main(int argc, char *argv[]) {
+main(int argc, const char **argv) {
   XML_Parser parser;
   char *XMLBuf, *XMLBufEnd, *XMLBufPtr;
   FILE *fd;

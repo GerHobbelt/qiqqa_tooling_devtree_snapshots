@@ -221,7 +221,7 @@ pdf_new_string(fz_context *ctx, const char *str, size_t len)
 	unsigned int l = (unsigned int)len;
 
 	if ((size_t)l != len)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "Overflow in pdf string");
+		fz_throw(ctx, FZ_ERROR_LIMIT, "Overflow in pdf string");
 
 	obj = Memento_label(fz_malloc(ctx, offsetof(pdf_obj_string, buf) + len + 1), "pdf_obj(string)");
 	obj->super.refs = 1;
@@ -362,6 +362,12 @@ int pdf_to_bool(fz_context *ctx, pdf_obj *obj)
 	return obj == PDF_TRUE;
 }
 
+int pdf_to_bool_default(fz_context *ctx, pdf_obj *obj, int def)
+{
+	RESOLVE(obj);
+	return obj == PDF_TRUE ? 1 : obj == PDF_FALSE ? 0 : def;
+}
+
 int pdf_to_int(fz_context *ctx, pdf_obj *obj)
 {
 	RESOLVE(obj);
@@ -372,6 +378,18 @@ int pdf_to_int(fz_context *ctx, pdf_obj *obj)
 	if (obj->kind == PDF_REAL)
 		return (int)(NUM(obj)->u.f + 0.5f); /* No roundf in MSVC */
 	return 0;
+}
+
+int pdf_to_int_default(fz_context *ctx, pdf_obj *obj, int def)
+{
+	RESOLVE(obj);
+	if (obj < PDF_LIMIT)
+		return def;
+	if (obj->kind == PDF_INT)
+		return (int)NUM(obj)->u.i;
+	if (obj->kind == PDF_REAL)
+		return (int)(NUM(obj)->u.f + 0.5f); /* No roundf in MSVC */
+	return def;
 }
 
 int64_t pdf_to_int64(fz_context *ctx, pdf_obj *obj)
@@ -396,6 +414,18 @@ float pdf_to_real(fz_context *ctx, pdf_obj *obj)
 	if (obj->kind == PDF_INT)
 		return NUM(obj)->u.i;
 	return 0;
+}
+
+float pdf_to_real_default(fz_context *ctx, pdf_obj *obj, float def)
+{
+	RESOLVE(obj);
+	if (obj < PDF_LIMIT)
+		return def;
+	if (obj->kind == PDF_REAL)
+		return NUM(obj)->u.f;
+	if (obj->kind == PDF_INT)
+		return NUM(obj)->u.i;
+	return def;
 }
 
 const char *pdf_to_name(fz_context *ctx, pdf_obj *obj)
@@ -628,19 +658,12 @@ do_objcmp(fz_context *ctx, pdf_obj *a, pdf_obj *b, int check_streams)
 		return 0;
 
 	case PDF_STRING:
-		if (STRING(a)->len < STRING(b)->len)
-		{
-			if (memcmp(STRING(a)->buf, STRING(b)->buf, STRING(a)->len) <= 0)
-				return -1;
-			return 1;
-		}
-		if (STRING(a)->len > STRING(b)->len)
-		{
-			if (memcmp(STRING(a)->buf, STRING(b)->buf, STRING(b)->len) >= 0)
-				return 1;
+		i = strcmp(pdf_to_text_string(ctx, a, NULL), pdf_to_text_string(ctx, b, NULL));
+		if (i < 0)
 			return -1;
-		}
-		return memcmp(STRING(a)->buf, STRING(b)->buf, STRING(a)->len);
+		if (i > 0)
+			return 1;
+		return 0;
 
 	case PDF_NAME:
 		return strcmp(NAME(a)->n, NAME(b)->n);
@@ -814,6 +837,9 @@ pdf_new_array(fz_context *ctx, pdf_document *doc, int initialcap)
 	pdf_obj_array *obj;
 	int i;
 
+	if (doc == NULL)
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "cannot create array without a document");
+
 	obj = Memento_label(fz_malloc(ctx, sizeof(pdf_obj_array)), "pdf_obj(array)");
 	obj->super.refs = 1;
 	obj->super.kind = PDF_ARRAY;
@@ -862,7 +888,7 @@ pdf_copy_array(fz_context *ctx, pdf_obj *obj)
 
 	RESOLVE(obj);
 	if (!OBJ_IS_ARRAY(obj))
-		fz_throw(ctx, FZ_ERROR_GENERIC, "not an array (%s)", pdf_objkindstr(obj));
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "not an array (%s)", pdf_objkindstr(obj));
 
 	doc = ARRAY(obj)->doc;
 
@@ -1045,7 +1071,7 @@ do_begin_operation(fz_context *ctx, pdf_document *doc, const char *operation_)
 void pdf_begin_operation(fz_context *ctx, pdf_document *doc, const char *operation)
 {
 	if (operation == NULL)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "All operations must be named");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "All operations must be named");
 
 	do_begin_operation(ctx, doc, operation);
 }
@@ -1091,6 +1117,84 @@ dump_changes(fz_context *ctx, pdf_document *doc, pdf_journal_entry *entry)
 }
 #endif
 
+/* We build up journal entries as being a list of changes (framents) that
+ * happen all together as part of a single step. When we reach pdf_end_operation
+ * we have all the changes that have happened during this operation in a list
+ * that basically boils down to being:
+ *
+ *     change object x from being A to the value in the xref.
+ *     change object y from being B to the value in the xref.
+ *     change object z from being C to the value in the xref.
+ *     etc.
+ *
+ * The idea is that we can undo, or redo by stepping through that list.
+ * Every object can only be mentioned once in a fragment (otherwise we
+ * get very confused when undoing and redoing).
+ *
+ * When we come to glue 2 entries together (as happens when we end a
+ * nested or implicit operation), we need to be sure that the 2 entries
+ * don't both mention the same object.
+ *
+ * Imagine we've edited a text field from being empty to containing
+ * 'he' by typing each char at a time:
+ *
+ *     Entry 1:
+ *        change object x from being ''.
+ *     Entry 2 (implicit):
+ *        change object x from being 'h'.
+ *
+ * with current xref entry for x being 'he'.
+ *
+ * When we come to combine the two, we can't simply go to:
+ *
+ *     change object x from being ''.
+ *     change object x from being 'h'.
+ *
+ * If we 'undo' that, however, because we run forwards through the list for
+ * both undo and redo, we get it wrong.
+ *
+ * First we replace 'he' by ''.
+ * Then we replace '' by 'h'.
+ *
+ * i.e. leaving us only partly undone.
+ *
+ * Either we need to run in different directions for undo and redo, or we need to
+ * resolve the changes down to a single change for each object. Given that we don't
+ * really want more than one change for each object in each changeset (needless memory
+ * etc), let's resolve the changesets.
+ **/
+static void resolve_undo(fz_context *ctx, pdf_journal_entry *entry)
+{
+	pdf_journal_fragment *start, *current;
+	pdf_journal_fragment *tail = NULL;
+
+	/* Slightly nasty that this is n^2, but any alternative involves
+	 * sorting. Shouldn't be huge lists anyway. */
+	for (start = entry->head; start; start = start->next)
+	{
+		pdf_journal_fragment *next;
+		tail = start;
+
+		for (current = start->next; current; current = next)
+		{
+			next = current->next;
+
+			if (start->obj_num == current->obj_num)
+			{
+				pdf_drop_obj(ctx, current->inactive);
+				fz_drop_buffer(ctx, current->stream);
+				/* start->newobj should not change */
+				/* Now drop current */
+				if (next)
+					next->prev = current->prev;
+				current->prev->next = next;
+				fz_free(ctx, current);
+			}
+		}
+	}
+	entry->tail = tail;
+}
+
 /* Call this to end an operation. */
 void pdf_end_operation(fz_context *ctx, pdf_document *doc)
 {
@@ -1127,6 +1231,8 @@ void pdf_end_operation(fz_context *ctx, pdf_document *doc)
 				entry->prev->tail->next = entry->head;
 				entry->head->prev = entry->prev->tail;
 				entry->prev->tail = entry->tail;
+				/* And resolve any clashing objects */
+				resolve_undo(ctx, entry->prev);
 			}
 #ifdef PDF_DEBUG_JOURNAL
 			fz_write_printf(ctx, fz_stddbg(ctx), "Ending! (->%d) \"%s\" <= \"%s\"\n", doc->journal->nesting,
@@ -1209,6 +1315,8 @@ void pdf_end_operation(fz_context *ctx, pdf_document *doc)
 		entry->tail = NULL;
 		fz_free(ctx, entry->title);
 		fz_free(ctx, entry);
+		/* And resolve any clashing objects */
+		resolve_undo(ctx, doc->journal->current);
 	}
 	doc->journal->pending = NULL;
 	doc->journal->pending_tail = NULL;
@@ -1230,7 +1338,7 @@ int pdf_undoredo_state(fz_context *ctx, pdf_document *doc, int *steps)
 	}
 
 	if (doc->journal->pending != NULL || doc->journal->nesting > 0)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "Can't undo/redo during an operation");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "Can't undo/redo during an operation");
 
 	i = 0;
 	c = 0;
@@ -1274,7 +1382,7 @@ const char *pdf_undoredo_step(fz_context *ctx, pdf_document *doc, int step)
 		return NULL;
 
 	if (doc->journal->pending != NULL || doc->journal->nesting > 0)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "Can't undo/redo during an operation");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "Can't undo/redo during an operation");
 
 	for (entry = doc->journal->head; step > 0 && entry != NULL; step--, entry = entry->next);
 
@@ -1293,7 +1401,7 @@ swap_fragments(fz_context *ctx, pdf_document *doc, pdf_journal_entry *entry)
 	entry->changed_since_last_dumped = 1;
 #endif
 	if (doc->local_xref_nesting != 0)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "Can't undo/redo within an operation");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "Can't undo/redo within an operation");
 
 	pdf_drop_local_xref_and_resources(ctx, doc);
 
@@ -1325,7 +1433,7 @@ void pdf_abandon_operation(fz_context *ctx, pdf_document *doc)
 		return;
 
 	if (doc->journal->nesting == 0)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "Can't abandon a non-existent operation!");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "Can't abandon a non-existent operation!");
 
 	doc->journal->nesting--;
 
@@ -1364,14 +1472,14 @@ void pdf_undo(fz_context *ctx, pdf_document *doc)
 		return;
 
 	if (doc->journal == NULL)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "Cannot undo on unjournaled PDF");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "Cannot undo on unjournaled PDF");
 
 	if (doc->journal->nesting != 0)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "Can't undo during an operation!");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "Can't undo during an operation!");
 
 	entry = doc->journal->current;
 	if (entry == NULL)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "Already at start of history");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "Already at start of history");
 
 #ifdef PDF_DEBUG_JOURNAL
 	fz_write_printf(ctx, fz_stddbg(ctx), "Undo!\n");
@@ -1392,10 +1500,10 @@ void pdf_redo(fz_context *ctx, pdf_document *doc)
 		return;
 
 	if (doc->journal == NULL)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "Cannot redo on unjournaled PDF");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "Cannot redo on unjournaled PDF");
 
 	if (doc->journal->nesting != 0)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "Can't redo during an operation!");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "Can't redo during an operation!");
 
 #ifdef PDF_DEBUG_JOURNAL
 	fz_write_printf(ctx, fz_stddbg(ctx), "Redo!\n");
@@ -1404,16 +1512,17 @@ void pdf_redo(fz_context *ctx, pdf_document *doc)
 	entry = doc->journal->current;
 	if (entry == NULL)
 	{
-		/* Move to the start of a non-empty list */
-		/* We know doc->journal->head is non NULL by construction. */
+		/* If journal->current is null then everything has been undone. */
+		/* Go to the first change in journal->head if it exists. */
 		entry = doc->journal->head;
 	}
 	else
 	{
 		entry = entry->next;
-		if (entry == NULL)
-			fz_throw(ctx, FZ_ERROR_GENERIC, "Already at end of history");
 	}
+
+	if (entry == NULL)
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "Already at end of history");
 
 	doc->journal->current = entry;
 
@@ -1526,7 +1635,7 @@ pdf_add_journal_fragment(fz_context *ctx, pdf_document *doc, int parent, pdf_obj
 	/* We must be in an operation. */
 	assert(entry != NULL);
 	if (entry == NULL)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "Can't add a journal fragment absent an operation");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "Can't add a journal fragment absent an operation");
 
 	/* This should never happen, as we should always be appending to the end of
 	 * the pending list. */
@@ -1578,10 +1687,10 @@ void pdf_deserialise_journal(fz_context *ctx, pdf_document *doc, fz_stream *stm)
 		return;
 
 	if (doc->journal)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "Can't load a journal over another one");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "Can't load a journal over another one");
 
 	if (fz_skip_string(ctx, stm, "%!MuPDF-Journal-"))
-		fz_throw(ctx, FZ_ERROR_GENERIC, "Bad journal format");
+		fz_throw(ctx, FZ_ERROR_FORMAT, "Bad journal format");
 
 	fz_var(obj);
 	fz_var(digests_match);
@@ -1598,15 +1707,15 @@ void pdf_deserialise_journal(fz_context *ctx, pdf_document *doc, fz_stream *stm)
 			(void)fz_read_byte(ctx, stm);
 		}
 		if (version != 100)
-			fz_throw(ctx, FZ_ERROR_GENERIC, "Bad journal format");
+			fz_throw(ctx, FZ_ERROR_FORMAT, "Bad journal format");
 
 		fz_skip_space(ctx, stm);
 		if (fz_skip_string(ctx, stm, "journal\n"))
-			fz_throw(ctx, FZ_ERROR_GENERIC, "Bad journal format");
+			fz_throw(ctx, FZ_ERROR_FORMAT, "Bad journal format");
 
 		tok = pdf_lex(ctx, stm, &doc->lexbuf.base);
 		if (tok != PDF_TOK_OPEN_DICT)
-			fz_throw(ctx, FZ_ERROR_GENERIC, "Bad journal format");
+			fz_throw(ctx, FZ_ERROR_FORMAT, "Bad journal format");
 		obj = pdf_parse_dict(ctx, doc, stm, &doc->lexbuf.base);
 
 		nis = pdf_dict_get_int(ctx, obj, PDF_NAME(NumSections));
@@ -1616,7 +1725,7 @@ void pdf_deserialise_journal(fz_context *ctx, pdf_document *doc, fz_stream *stm)
 
 		fingerprint_obj = pdf_dict_get(ctx, obj, PDF_NAME(Fingerprint));
 		if (pdf_to_str_len(ctx, fingerprint_obj) != 16)
-			fz_throw(ctx, FZ_ERROR_GENERIC, "Bad journal fingerprint");
+			fz_throw(ctx, FZ_ERROR_FORMAT, "Bad journal fingerprint");
 
 		digests_match = (memcmp(pdf_to_str_buf(ctx, fingerprint_obj), digest, 16) == 0);
 
@@ -1651,7 +1760,7 @@ void pdf_deserialise_journal(fz_context *ctx, pdf_document *doc, fz_stream *stm)
 			char *title;
 
 			if (tok != PDF_TOK_STRING)
-				fz_throw(ctx, FZ_ERROR_GENERIC, "Bad string in journal");
+				fz_throw(ctx, FZ_ERROR_FORMAT, "Bad string in journal");
 			title = fz_malloc(ctx, doc->lexbuf.base.len+1);
 			memcpy(title, doc->lexbuf.base.buffer, doc->lexbuf.base.len);
 			title[doc->lexbuf.base.len] = 0;
@@ -1663,7 +1772,7 @@ void pdf_deserialise_journal(fz_context *ctx, pdf_document *doc, fz_stream *stm)
 			break;
 
 		if (doc->journal->current == NULL)
-			fz_throw(ctx, FZ_ERROR_GENERIC, "Badly formed journal");
+			fz_throw(ctx, FZ_ERROR_FORMAT, "Badly formed journal");
 
 		/* Read the object/stream for the next fragment. */
 		obj = pdf_parse_journal_obj(ctx, doc, stm, &num, &buffer, &newobj);
@@ -1733,8 +1842,10 @@ static void prepare_object_for_alteration(fz_context *ctx, pdf_obj *obj, pdf_obj
 		return;
 	}
 
+	assert(doc != NULL);
+
 	/* Do we need to drop the page & reverse page maps? */
-	if (doc && (doc->rev_page_map || doc->fwd_page_map))
+	if (doc->rev_page_map || doc->fwd_page_map)
 	{
 		if (doc->non_structural_change)
 		{
@@ -1760,7 +1871,7 @@ static void prepare_object_for_alteration(fz_context *ctx, pdf_obj *obj, pdf_obj
 	{
 		val_doc = pdf_get_bound_document(ctx, val);
 		if (val_doc && val_doc != doc)
-			fz_throw(ctx, FZ_ERROR_GENERIC, "container and item belong to different documents");
+			fz_throw(ctx, FZ_ERROR_ARGUMENT, "container and item belong to different documents");
 	}
 
 	/*
@@ -1777,7 +1888,7 @@ static void prepare_object_for_alteration(fz_context *ctx, pdf_obj *obj, pdf_obj
 		return;
 
 	if (doc->journal && doc->journal->nesting == 0)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "Can't alter an object other than in an operation");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "Can't alter an object other than in an operation");
 
 	if (doc->local_xref)
 	{
@@ -1797,15 +1908,20 @@ static void prepare_object_for_alteration(fz_context *ctx, pdf_obj *obj, pdf_obj
 		}
 	}
 
-	/* Find the journal entry to which we will add this object, if there is one. */
-	entry = doc->journal ? doc->journal->current : NULL;
-
-	/* We are about to add a fragment. Everything after this in the
-	 * history must be thrown away. */
-	if (entry)
+	entry = NULL;
+	if (doc->journal)
 	{
-		discard_journal_entries(ctx, &entry->next);
+		/* We are about to add a fragment. Everything after 'current' in the
+		 * history must be thrown away. If current is NULL, then *everything*
+		 * must be thrown away. */
+		discard_journal_entries(ctx, doc->journal->current ? &doc->journal->current->next : &doc->journal->head);
 
+		/* We should be collating into a pending block. */
+		entry = doc->journal->pending;
+		assert(entry);
+
+		/* If we've already stashed a value for this object in this fragment,
+		 * we don't need to stash another one. It'll only confuse us later. */
 		for (frag = entry->head; frag != NULL; frag = frag->next)
 			if (frag->obj_num == parent)
 			{
@@ -1820,9 +1936,12 @@ static void prepare_object_for_alteration(fz_context *ctx, pdf_obj *obj, pdf_obj
 	*/
 	was_empty = pdf_xref_ensure_incremental_object(ctx, doc, parent);
 
+	/* If we're not journalling, or we've already stashed an 'old' value for this
+	 * object, just exit now. */
 	if (entry == NULL)
 		return;
 
+	/* Load the 'old' value and store it in a fragment. */
 	orig = pdf_load_object(ctx, doc, parent);
 
 	fz_var(copy);
@@ -1861,14 +1980,14 @@ pdf_array_put(fz_context *ctx, pdf_obj *obj, int i, pdf_obj *item)
 {
 	RESOLVE(obj);
 	if (!OBJ_IS_ARRAY(obj))
-		fz_throw(ctx, FZ_ERROR_GENERIC, "not an array (%s)", pdf_objkindstr(obj));
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "not an array (%s)", pdf_objkindstr(obj));
 	if (i == ARRAY(obj)->len)
 	{
 		pdf_array_push(ctx, obj, item);
 		return;
 	}
 	if (i < 0 || i > ARRAY(obj)->len)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "index out of bounds");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "index out of bounds");
 	prepare_object_for_alteration(ctx, obj, item);
 	pdf_drop_obj(ctx, ARRAY(obj)->items[i]);
 	ARRAY(obj)->items[i] = pdf_keep_obj(ctx, item);
@@ -1890,7 +2009,7 @@ pdf_array_push(fz_context *ctx, pdf_obj *obj, pdf_obj *item)
 {
 	RESOLVE(obj);
 	if (!OBJ_IS_ARRAY(obj))
-		fz_throw(ctx, FZ_ERROR_GENERIC, "not an array (%s)", pdf_objkindstr(obj));
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "not an array (%s)", pdf_objkindstr(obj));
 	prepare_object_for_alteration(ctx, obj, item);
 	if (ARRAY(obj)->len + 1 > ARRAY(obj)->cap)
 		pdf_array_grow(ctx, ARRAY(obj));
@@ -1914,9 +2033,9 @@ pdf_array_insert(fz_context *ctx, pdf_obj *obj, pdf_obj *item, int i)
 {
 	RESOLVE(obj);
 	if (!OBJ_IS_ARRAY(obj))
-		fz_throw(ctx, FZ_ERROR_GENERIC, "not an array (%s)", pdf_objkindstr(obj));
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "not an array (%s)", pdf_objkindstr(obj));
 	if (i < 0 || i > ARRAY(obj)->len)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "index out of bounds");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "index out of bounds");
 	prepare_object_for_alteration(ctx, obj, item);
 	if (ARRAY(obj)->len + 1 > ARRAY(obj)->cap)
 		pdf_array_grow(ctx, ARRAY(obj));
@@ -1941,9 +2060,9 @@ pdf_array_delete(fz_context *ctx, pdf_obj *obj, int i)
 {
 	RESOLVE(obj);
 	if (!OBJ_IS_ARRAY(obj))
-		fz_throw(ctx, FZ_ERROR_GENERIC, "not an array (%s)", pdf_objkindstr(obj));
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "not an array (%s)", pdf_objkindstr(obj));
 	if (i < 0 || i >= ARRAY(obj)->len)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "index out of bounds");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "index out of bounds");
 	prepare_object_for_alteration(ctx, obj, NULL);
 	pdf_drop_obj(ctx, ARRAY(obj)->items[i]);
 	ARRAY(obj)->items[i] = 0;
@@ -2058,6 +2177,9 @@ pdf_new_dict(fz_context *ctx, pdf_document *doc, int initialcap)
 	pdf_obj_dict *obj;
 	int i;
 
+	if (doc == NULL)
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "cannot create dictionary without a document");
+
 	obj = Memento_label(fz_malloc(ctx, sizeof(pdf_obj_dict)), "pdf_obj(dict)");
 	obj->super.refs = 1;
 	obj->super.kind = PDF_DICT;
@@ -2111,7 +2233,7 @@ pdf_copy_dict(fz_context *ctx, pdf_obj *obj)
 
 	RESOLVE(obj);
 	if (!OBJ_IS_DICT(obj))
-		fz_throw(ctx, FZ_ERROR_GENERIC, "not a dict (%s)", pdf_objkindstr(obj));
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "not a dict (%s)", pdf_objkindstr(obj));
 
 	doc = DICT(obj)->doc;
 	n = pdf_dict_len(ctx, obj);
@@ -2164,9 +2286,9 @@ pdf_dict_put_val_null(fz_context *ctx, pdf_obj *obj, int idx)
 {
 	RESOLVE(obj);
 	if (!OBJ_IS_DICT(obj))
-		fz_throw(ctx, FZ_ERROR_GENERIC, "not a dict (%s)", pdf_objkindstr(obj));
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "not a dict (%s)", pdf_objkindstr(obj));
 	if (idx < 0 || idx >= DICT(obj)->len)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "index out of bounds");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "index out of bounds");
 
 	prepare_object_for_alteration(ctx, obj, NULL);
 	pdf_drop_obj(ctx, DICT(obj)->items[idx].v);
@@ -2304,7 +2426,7 @@ pdf_dict_getp(fz_context *ctx, pdf_obj *obj, const char *keys)
 	if (!OBJ_IS_DICT(obj))
 		return NULL;
 	if (strlen(keys)+1 > 256)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "path too long");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "path too long");
 
 	strcpy(buf, keys);
 
@@ -2429,9 +2551,9 @@ pdf_dict_get_put(fz_context *ctx, pdf_obj *obj, pdf_obj *key, pdf_obj *val, pdf_
 
 	RESOLVE(obj);
 	if (!OBJ_IS_DICT(obj))
-		fz_throw(ctx, FZ_ERROR_GENERIC, "not a dict (%s)", pdf_objkindstr(obj));
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "not a dict (%s)", pdf_objkindstr(obj));
 	if (!OBJ_IS_NAME(key))
-		fz_throw(ctx, FZ_ERROR_GENERIC, "key is not a name (%s)", pdf_objkindstr(obj));
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "key is not a name (%s)", pdf_objkindstr(obj));
 
 	if (DICT(obj)->len > 100 && !(obj->flags & PDF_FLAGS_SORTED))
 		pdf_sort_dict(ctx, obj);
@@ -2507,7 +2629,7 @@ pdf_dict_puts(fz_context *ctx, pdf_obj *obj, const char *key, pdf_obj *val)
 
 	RESOLVE(obj);
 	if (!OBJ_IS_DICT(obj))
-		fz_throw(ctx, FZ_ERROR_GENERIC, "not a dict (%s)", pdf_objkindstr(obj));
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "not a dict (%s)", pdf_objkindstr(obj));
 
 	keyobj = pdf_new_name(ctx, key);
 
@@ -2526,7 +2648,7 @@ pdf_dict_puts_drop(fz_context *ctx, pdf_obj *obj, const char *key, pdf_obj *val)
 
 	RESOLVE(obj);
 	if (!OBJ_IS_DICT(obj))
-		fz_throw(ctx, FZ_ERROR_GENERIC, "not a dict (%s)", pdf_objkindstr(obj));
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "not a dict (%s)", pdf_objkindstr(obj));
 
 	keyobj = pdf_new_name(ctx, key);
 
@@ -2555,9 +2677,9 @@ pdf_dict_putp(fz_context *ctx, pdf_obj *obj, const char *keys, pdf_obj *val)
 
 	RESOLVE(obj);
 	if (!OBJ_IS_DICT(obj))
-		fz_throw(ctx, FZ_ERROR_GENERIC, "not a dict (%s)", pdf_objkindstr(obj));
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "not a dict (%s)", pdf_objkindstr(obj));
 	if (strlen(keys)+1 > 256)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "buffer overflow in pdf_dict_putp");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "path too long");
 
 	doc = DICT(obj)->doc;
 	strcpy(buf, keys);
@@ -2579,7 +2701,7 @@ pdf_dict_putp(fz_context *ctx, pdf_obj *obj, const char *keys, pdf_obj *val)
 		{
 			/* Not the last key in the key path. Create subdict if not already there. */
 			cobj = pdf_dict_gets(ctx, obj, k);
-			if (cobj == NULL)
+			if (!pdf_is_dict(ctx, cobj))
 			{
 				cobj = pdf_new_dict(ctx, doc, 1);
 				fz_try(ctx)
@@ -2621,13 +2743,10 @@ pdf_dict_vputl(fz_context *ctx, pdf_obj *obj, pdf_obj *val, va_list keys)
 	pdf_obj *key;
 	pdf_obj *next_key;
 	pdf_obj *next_obj;
-	pdf_document *doc;
 
 	RESOLVE(obj);
 	if (!OBJ_IS_DICT(obj))
-		fz_throw(ctx, FZ_ERROR_GENERIC, "not a dict (%s)", pdf_objkindstr(obj));
-
-	doc = DICT(obj)->doc;
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "not a dict (%s)", pdf_objkindstr(obj));
 
 	key = va_arg(keys, pdf_obj *);
 	if (key == NULL)
@@ -2649,8 +2768,7 @@ new_obj:
 	/* We have to create entries */
 	do
 	{
-		next_obj = pdf_new_dict(ctx, doc, 1);
-		pdf_dict_put_drop(ctx, obj, key, next_obj);
+		next_obj = pdf_dict_put_dict(ctx, obj, key, 1);
 		obj = next_obj;
 		key = next_key;
 	}
@@ -2698,9 +2816,9 @@ pdf_dict_dels(fz_context *ctx, pdf_obj *obj, const char *key)
 
 	RESOLVE(obj);
 	if (!OBJ_IS_DICT(obj))
-		fz_throw(ctx, FZ_ERROR_GENERIC, "not a dict (%s)", pdf_objkindstr(obj));
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "not a dict (%s)", pdf_objkindstr(obj));
 	if (!key)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "key is null");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "key is null");
 
 	prepare_object_for_alteration(ctx, obj, NULL);
 	i = pdf_dict_finds(ctx, obj, key);
@@ -2718,7 +2836,7 @@ void
 pdf_dict_del(fz_context *ctx, pdf_obj *obj, pdf_obj *key)
 {
 	if (!OBJ_IS_NAME(key))
-		fz_throw(ctx, FZ_ERROR_GENERIC, "key is not a name (%s)", pdf_objkindstr(key));
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "key is not a name (%s)", pdf_objkindstr(key));
 
 	if (key < PDF_LIMIT)
 		pdf_dict_dels(ctx, obj, PDF_NAME_LIST[(intptr_t)key]);
@@ -3071,6 +3189,42 @@ pdf_drop_obj(fz_context *ctx, pdf_obj *obj)
 				fz_free(ctx, obj);
 		}
 	}
+}
+
+pdf_obj *
+pdf_drop_singleton_obj(fz_context *ctx, pdf_obj *obj)
+{
+	int drop;
+
+	/* If an object is < PDF_LIMIT, then it's a 'common' name or
+	 * true or false. No point in dropping these as it
+	 * won't save any memory. */
+	if (obj < PDF_LIMIT)
+		return obj;
+
+	/* See if it's a singleton object. We can only drop if
+	 * it's a singleton object. If not, just exit leaving
+	 * everything unchanged. */
+	fz_lock(ctx, FZ_LOCK_ALLOC);
+	drop = (obj->refs == 1);
+	fz_unlock(ctx, FZ_LOCK_ALLOC);
+	if (!drop)
+		return obj;
+
+	/* So drop the object! */
+	if (obj->kind == PDF_ARRAY)
+		pdf_drop_array(ctx, obj);
+	else if (obj->kind == PDF_DICT)
+		pdf_drop_dict(ctx, obj);
+	else if (obj->kind == PDF_STRING)
+	{
+		fz_free(ctx, STRING(obj)->text);
+		fz_free(ctx, obj);
+	}
+	else
+		fz_free(ctx, obj);
+
+	return NULL;
 }
 
 /**
@@ -3878,9 +4032,17 @@ pdf_sprint_encrypted_obj(fz_context* ctx, char* buf, size_t cap, size_t* len, pd
 	fmt.crypt = crypt;
 	fmt.num = num;
 	fmt.gen = gen;
-	fmt_obj(ctx, &fmt, obj);
 
-	fmt_putc(ctx, &fmt, 0);
+	fz_try(ctx)
+	{
+		fmt_obj(ctx, &fmt, obj);
+		fmt_putc(ctx, &fmt, 0);
+	}
+	fz_catch(ctx)
+	{
+		fz_free(ctx, fmt.ptr);
+		fz_rethrow(ctx);
+	}
 
 	return *len = fmt.len-1, fmt.ptr;
 }
@@ -4807,7 +4969,7 @@ pdf_dict_get_inheritable(fz_context *ctx, pdf_obj *node, pdf_obj *key)
 			return val;
 		node = pdf_dict_get(ctx, node, PDF_NAME(Parent));
 		if (node == slow)
-			fz_throw(ctx, FZ_ERROR_GENERIC, "cycle in resources");
+			fz_throw(ctx, FZ_ERROR_FORMAT, "cycle in resources");
 		if (--halfbeat == 0)
 		{
 			slow = pdf_dict_get(ctx, slow, PDF_NAME(Parent));
@@ -4831,7 +4993,7 @@ pdf_dict_getp_inheritable(fz_context *ctx, pdf_obj *node, const char *path)
 			return val;
 		node = pdf_dict_get(ctx, node, PDF_NAME(Parent));
 		if (node == slow)
-			fz_throw(ctx, FZ_ERROR_GENERIC, "cycle in resources");
+			fz_throw(ctx, FZ_ERROR_FORMAT, "cycle in resources");
 		if (--halfbeat == 0)
 		{
 			slow = pdf_dict_get(ctx, slow, PDF_NAME(Parent));
@@ -4841,6 +5003,31 @@ pdf_dict_getp_inheritable(fz_context *ctx, pdf_obj *node, const char *path)
 
 	return NULL;
 }
+
+pdf_obj *
+pdf_dict_gets_inheritable(fz_context *ctx, pdf_obj *node, const char *key)
+{
+	pdf_obj *slow = node;
+	int halfbeat = 11; /* Don't start moving slow pointer for a while. */
+
+	while (node)
+	{
+		pdf_obj *val = pdf_dict_gets(ctx, node, key);
+		if (val)
+			return val;
+		node = pdf_dict_get(ctx, node, PDF_NAME(Parent));
+		if (node == slow)
+			fz_throw(ctx, FZ_ERROR_FORMAT, "cycle in resources");
+		if (--halfbeat == 0)
+		{
+			slow = pdf_dict_get(ctx, slow, PDF_NAME(Parent));
+			halfbeat = 2;
+		}
+	}
+
+	return NULL;
+}
+
 
 void pdf_dict_put_bool(fz_context *ctx, pdf_obj *dict, pdf_obj *key, int x)
 {
@@ -4855,6 +5042,11 @@ void pdf_dict_put_int(fz_context *ctx, pdf_obj *dict, pdf_obj *key, int64_t x)
 void pdf_dict_put_real(fz_context *ctx, pdf_obj *dict, pdf_obj *key, double x)
 {
 	pdf_dict_put_drop(ctx, dict, key, pdf_new_real(ctx, x));
+}
+
+void pdf_dict_put_indirect(fz_context *ctx, pdf_obj *dict, pdf_obj *key, int num, int gen)
+{
+	pdf_dict_put_drop(ctx, dict, key, pdf_new_indirect(ctx, pdf_get_bound_document(ctx, dict), num, gen));
 }
 
 void pdf_dict_put_name(fz_context *ctx, pdf_obj *dict, pdf_obj *key, const char *x)
@@ -4874,17 +5066,17 @@ void pdf_dict_put_text_string(fz_context *ctx, pdf_obj *dict, pdf_obj *key, cons
 
 void pdf_dict_put_rect(fz_context *ctx, pdf_obj *dict, pdf_obj *key, fz_rect x)
 {
-	pdf_dict_put_drop(ctx, dict, key, pdf_new_rect(ctx, NULL, x));
+	pdf_dict_put_drop(ctx, dict, key, pdf_new_rect(ctx, pdf_get_bound_document(ctx, dict), x));
 }
 
 void pdf_dict_put_matrix(fz_context *ctx, pdf_obj *dict, pdf_obj *key, fz_matrix x)
 {
-	pdf_dict_put_drop(ctx, dict, key, pdf_new_matrix(ctx, NULL, x));
+	pdf_dict_put_drop(ctx, dict, key, pdf_new_matrix(ctx, pdf_get_bound_document(ctx, dict), x));
 }
 
 void pdf_dict_put_date(fz_context *ctx, pdf_obj *dict, pdf_obj *key, int64_t time)
 {
-	pdf_dict_put_drop(ctx, dict, key, pdf_new_date(ctx, NULL, time));
+	pdf_dict_put_drop(ctx, dict, key, pdf_new_date(ctx, pdf_get_bound_document(ctx, dict), time));
 }
 
 pdf_obj *pdf_dict_put_array(fz_context *ctx, pdf_obj *dict, pdf_obj *key, int initial)
@@ -4952,14 +5144,68 @@ pdf_obj *pdf_array_push_dict(fz_context *ctx, pdf_obj *array, int initial)
 	return obj;
 }
 
+void pdf_array_put_bool(fz_context *ctx, pdf_obj *array, int i, int x)
+{
+	pdf_array_put(ctx, array, i, x ? PDF_TRUE : PDF_FALSE);
+}
+
+void pdf_array_put_int(fz_context *ctx, pdf_obj *array, int i, int64_t x)
+{
+	pdf_array_put_drop(ctx, array, i, pdf_new_int(ctx, x));
+}
+
+void pdf_array_put_real(fz_context *ctx, pdf_obj *array, int i, double x)
+{
+	pdf_array_put_drop(ctx, array, i, pdf_new_real(ctx, x));
+}
+
+void pdf_array_put_name(fz_context *ctx, pdf_obj *array, int i, const char *x)
+{
+	pdf_array_put_drop(ctx, array, i, pdf_new_name(ctx, x));
+}
+
+void pdf_array_put_string(fz_context *ctx, pdf_obj *array, int i, const char *x, size_t n)
+{
+	pdf_array_put_drop(ctx, array, i, pdf_new_string(ctx, x, n));
+}
+
+void pdf_array_put_text_string(fz_context *ctx, pdf_obj *array, int i, const char *x)
+{
+	pdf_array_put_drop(ctx, array, i, pdf_new_text_string(ctx, x));
+}
+
+pdf_obj *pdf_array_put_array(fz_context *ctx, pdf_obj *array, int i, int initial)
+{
+	pdf_obj *obj = pdf_new_array(ctx, pdf_get_bound_document(ctx, array), initial);
+	pdf_array_put_drop(ctx, array, i, obj);
+	return obj;
+}
+
+pdf_obj *pdf_array_put_dict(fz_context *ctx, pdf_obj *array, int i, int initial)
+{
+	pdf_obj *obj = pdf_new_dict(ctx, pdf_get_bound_document(ctx, array), initial);
+	pdf_array_put_drop(ctx, array, i, obj);
+	return obj;
+}
+
 int pdf_dict_get_bool(fz_context *ctx, pdf_obj *dict, pdf_obj *key)
 {
 	return pdf_to_bool(ctx, pdf_dict_get(ctx, dict, key));
 }
 
+int pdf_dict_get_bool_default(fz_context *ctx, pdf_obj *dict, pdf_obj *key, int def)
+{
+	return pdf_to_bool_default(ctx, pdf_dict_get(ctx, dict, key), def);
+}
+
 int pdf_dict_get_int(fz_context *ctx, pdf_obj *dict, pdf_obj *key)
 {
 	return pdf_to_int(ctx, pdf_dict_get(ctx, dict, key));
+}
+
+int pdf_dict_get_int_default(fz_context *ctx, pdf_obj *dict, pdf_obj *key, int def)
+{
+	return pdf_to_int_default(ctx, pdf_dict_get(ctx, dict, key), def);
 }
 
 int64_t pdf_dict_get_int64(fz_context *ctx, pdf_obj *dict, pdf_obj *key)
@@ -4970,6 +5216,11 @@ int64_t pdf_dict_get_int64(fz_context *ctx, pdf_obj *dict, pdf_obj *key)
 float pdf_dict_get_real(fz_context *ctx, pdf_obj *dict, pdf_obj *key)
 {
 	return pdf_to_real(ctx, pdf_dict_get(ctx, dict, key));
+}
+
+float pdf_dict_get_real_default(fz_context *ctx, pdf_obj *dict, pdf_obj *key, float def)
+{
+	return pdf_to_real_default(ctx, pdf_dict_get(ctx, dict, key), def);
 }
 
 const char *pdf_dict_get_name(fz_context *ctx, pdf_obj *dict, pdf_obj *key)
@@ -4995,6 +5246,56 @@ fz_rect pdf_dict_get_rect(fz_context *ctx, pdf_obj *dict, pdf_obj *key)
 fz_matrix pdf_dict_get_matrix(fz_context *ctx, pdf_obj *dict, pdf_obj *key)
 {
 	return pdf_to_matrix(ctx, pdf_dict_get(ctx, dict, key));
+}
+
+int pdf_dict_get_inheritable_bool(fz_context *ctx, pdf_obj *dict, pdf_obj *key)
+{
+	return pdf_to_bool(ctx, pdf_dict_get_inheritable(ctx, dict, key));
+}
+
+int pdf_dict_get_inheritable_int(fz_context *ctx, pdf_obj *dict, pdf_obj *key)
+{
+	return pdf_to_int(ctx, pdf_dict_get_inheritable(ctx, dict, key));
+}
+
+int64_t pdf_dict_get_inheritable_int64(fz_context *ctx, pdf_obj *dict, pdf_obj *key)
+{
+	return pdf_to_int64(ctx, pdf_dict_get_inheritable(ctx, dict, key));
+}
+
+float pdf_dict_get_inheritable_real(fz_context *ctx, pdf_obj *dict, pdf_obj *key)
+{
+	return pdf_to_real(ctx, pdf_dict_get_inheritable(ctx, dict, key));
+}
+
+const char *pdf_dict_get_inheritable_name(fz_context *ctx, pdf_obj *dict, pdf_obj *key)
+{
+	return pdf_to_name(ctx, pdf_dict_get_inheritable(ctx, dict, key));
+}
+
+const char *pdf_dict_get_inheritable_string(fz_context *ctx, pdf_obj *dict, pdf_obj *key, size_t *sizep)
+{
+	return pdf_to_string(ctx, pdf_dict_get_inheritable(ctx, dict, key), sizep);
+}
+
+const char *pdf_dict_get_inheritable_text_string(fz_context *ctx, pdf_obj *dict, pdf_obj *key)
+{
+	return pdf_to_text_string(ctx, pdf_dict_get_inheritable(ctx, dict, key), NULL);
+}
+
+fz_rect pdf_dict_get_inheritable_rect(fz_context *ctx, pdf_obj *dict, pdf_obj *key)
+{
+	return pdf_to_rect(ctx, pdf_dict_get_inheritable(ctx, dict, key));
+}
+
+fz_matrix pdf_dict_get_inheritable_matrix(fz_context *ctx, pdf_obj *dict, pdf_obj *key)
+{
+	return pdf_to_matrix(ctx, pdf_dict_get_inheritable(ctx, dict, key));
+}
+
+int64_t pdf_dict_get_inheritable_date(fz_context *ctx, pdf_obj *dict, pdf_obj *key)
+{
+	return pdf_to_date(ctx, pdf_dict_get_inheritable(ctx, dict, key));
 }
 
 int64_t pdf_dict_get_date(fz_context *ctx, pdf_obj *dict, pdf_obj *key)

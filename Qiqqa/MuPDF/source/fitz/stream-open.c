@@ -122,7 +122,7 @@ static int next_file(fz_context *ctx, fz_stream *stm, size_t n)
 	{
 		fz_copy_ephemeral_errno(ctx);
 		ASSERT(fz_ctx_get_system_errormsg(ctx) != NULL);
-		fz_throw(ctx, FZ_ERROR_GENERIC, "read error: %s", fz_ctx_pop_system_errormsg(ctx));
+		fz_throw(ctx, FZ_ERROR_SYSTEM, "read error: %s", fz_ctx_pop_system_errormsg(ctx));
 	}
 	stm->rp = state->buffer;
 	stm->wp = state->buffer + n;
@@ -145,7 +145,7 @@ static void seek_file(fz_context *ctx, fz_stream *stm, int64_t offset, int whenc
 	{
 		fz_copy_ephemeral_errno(ctx);
 		ASSERT(fz_ctx_get_system_errormsg(ctx) != NULL);
-		fz_throw(ctx, FZ_ERROR_GENERIC, "cannot seek: %s", fz_ctx_pop_system_errormsg(ctx));
+		fz_throw(ctx, FZ_ERROR_SYSTEM, "cannot seek: %s", fz_ctx_pop_system_errormsg(ctx));
 	}
 #ifdef _WIN32
 	stm->pos = _ftelli64(state->file);
@@ -213,7 +213,17 @@ fz_open_file(fz_context *ctx, const char *name)
 	FILE *file;
 	file = fz_fopen_utf8(ctx, name, "rb");
 	if (file == NULL)
-		fz_throw(ctx, FZ_ERROR_GENERIC, "cannot open %s: %s", name, fz_ctx_pop_system_errormsg(ctx));
+		fz_throw(ctx, FZ_ERROR_SYSTEM, "cannot open %s: %s", name, fz_ctx_pop_system_errormsg(ctx));
+	return fz_open_file_ptr(ctx, file);
+}
+
+fz_stream *
+fz_try_open_file(fz_context *ctx, const char *name)
+{
+	FILE *file;
+	file = fz_fopen_utf8(ctx, name, "rb");
+	if (file == NULL)
+		return NULL;
 	return fz_open_file_ptr(ctx, file);
 }
 
@@ -226,7 +236,7 @@ fz_open_file_w(fz_context *ctx, const wchar_t *name)
 	{
 		fz_copy_ephemeral_errno(ctx);
 		ASSERT(fz_ctx_get_system_errormsg(ctx) != NULL);
-		fz_throw(ctx, FZ_ERROR_GENERIC, "cannot open file %ls: %s", name, fz_ctx_pop_system_errormsg(ctx));
+		fz_throw(ctx, FZ_ERROR_SYSTEM, "cannot open file %ls: %s", name, fz_ctx_pop_system_errormsg(ctx));
 	}
 	return fz_open_file_ptr(ctx, file);
 }
@@ -269,6 +279,9 @@ fz_stream *
 fz_open_buffer(fz_context *ctx, fz_buffer *buf)
 {
 	fz_stream *stm;
+
+	if (buf == NULL)
+		return NULL;
 
 	fz_keep_buffer(ctx, buf);
 	stm = fz_new_stream(ctx, buf, next_buffer, drop_buffer);

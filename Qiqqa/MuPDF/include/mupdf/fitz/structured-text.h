@@ -32,6 +32,7 @@
 #include "mupdf/fitz/output.h"
 #include "mupdf/fitz/device.h"
 #include "mupdf/fitz/pool.h"
+#include "mupdf/fitz/link.h"
 
 #if FZ_ENABLE_RENDER_CORE 
 
@@ -159,6 +160,7 @@ enum
 	FZ_STEXT_NO_TEXT_AS_PATH = 1024,
 	FZ_STEXT_EXTERNAL_STYLES = 2048,
 	FZ_STEXT_RESOLUTION = 4096,
+	FZ_STEXT_USE_CID_FOR_UNKNOWN_UNICODE = 8192,
 };
 
 /**
@@ -211,7 +213,8 @@ struct fz_stext_line
 */
 struct fz_stext_char
 {
-	int c;
+	int c; /* unicode character value */
+	int bidi; /* even for LTR, odd for RTL */
 	int color; /* sRGB hex color */
 	fz_point origin;
 	fz_quad quad;
@@ -228,7 +231,7 @@ typedef void fz_process_stext_referenced_image_f(fz_context* ctx, fz_output* out
 typedef void fz_process_stext_styles_f(fz_context* ctx, fz_output* out, fz_stext_block* block, int pagenum, int object_index, const fz_stext_options* options);
 
 /**
-	Options for creating a pixmap and draw device.
+	Options for creating structured text.
 */
 struct fz_stext_options
 {
@@ -260,6 +263,7 @@ void fz_drop_stext_page(fz_context *ctx, fz_stext_page *page);
 /**
 	Output structured text to a file in HTML (visual) format.
 */
+void fz_print_stext_page_as_html_with_links(fz_context *ctx, fz_output *out, fz_stext_page *page, int id, fz_matrix ctm, const fz_stext_options* options, fz_link *first_link, fz_navigation *navigation);
 void fz_print_stext_page_as_html(fz_context *ctx, fz_output *out, fz_stext_page *page, int id, fz_matrix ctm, const fz_stext_options* options);
 void fz_print_stext_header_as_html(fz_context *ctx, fz_output *out);
 void fz_print_stext_trailer_as_html(fz_context *ctx, fz_output *out);

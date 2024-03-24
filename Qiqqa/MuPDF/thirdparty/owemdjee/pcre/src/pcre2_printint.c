@@ -39,7 +39,7 @@ POSSIBILITY OF SUCH DAMAGE.
 */
 
 
-#ifdef HAVE_CONFIG_H
+#if defined(HAVE_CONFIG_H) && !defined(PCRE2_AMALGAMETE)
 #include "config.h"
 #endif
 
@@ -356,7 +356,7 @@ Arguments:
 Returns:          nothing
 */
 
-static void
+void
 pcre2_printint(pcre2_code *re, FILE *f, BOOL print_lengths)
 {
 PCRE2_SPTR codestart, nametable, code;
@@ -450,9 +450,21 @@ for(;;)
     case OP_SCRIPT_RUN:
     case OP_COND:
     case OP_SCOND:
-    case OP_REVERSE:
     if (print_lengths) fprintf(f, "%3d ", GET(code, 1));
       else fprintf(f, "    ");
+    fprintf(f, "%s", OP_names[*code]);
+    break;
+
+    case OP_REVERSE:
+    if (print_lengths) fprintf(f, "%3d ", GET2(code, 1));
+      else fprintf(f, "    ");
+    fprintf(f, "%s", OP_names[*code]);
+    break;
+
+    case OP_VREVERSE:
+    if (print_lengths) fprintf(f, "%3d %d ", GET2(code, 1),
+      GET2(code, 1 + IMM2_SIZE));
+    else fprintf(f, "    ");
     fprintf(f, "%s", OP_names[*code]);
     break;
 
@@ -791,6 +803,10 @@ for(;;)
 
               case PT_PXPUNCT:
               fprintf(f, "[:%spunct:]", notch);
+              break;
+
+              case PT_PXXDIGIT:
+              fprintf(f, "[:%sxdigit:]", notch);
               break;
 
               default:

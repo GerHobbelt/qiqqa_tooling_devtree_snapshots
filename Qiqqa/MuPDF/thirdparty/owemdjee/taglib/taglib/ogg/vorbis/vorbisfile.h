@@ -29,7 +29,6 @@
 #include "taglib_export.h"
 #include "oggfile.h"
 #include "xiphcomment.h"
-
 #include "vorbisproperties.h"
 
 namespace TagLib {
@@ -39,6 +38,8 @@ namespace TagLib {
  * documentation.  The typedef below will make this work with the current code.
  * In the next BIC version of TagLib this will be really moved into the Ogg
  * namespace.
+ * Kept for source compatibility, the typedef in vorbisproperties.h was not
+ * correct in TagLib 1.
  */
 
 #ifdef DOXYGEN
@@ -86,40 +87,43 @@ namespace TagLib {
       /*!
        * Destroys this instance of the File.
        */
-      virtual ~File();
+      ~File() override;
+
+      File(const File &) = delete;
+      File &operator=(const File &) = delete;
 
       /*!
        * Returns the XiphComment for this file.  XiphComment implements the tag
        * interface, so this serves as the reimplementation of
        * TagLib::File::tag().
        */
-      virtual Ogg::XiphComment *tag() const;
+      Ogg::XiphComment *tag() const override;
 
 
       /*!
        * Implements the unified property interface -- export function.
        * This forwards directly to XiphComment::properties().
        */
-      PropertyMap properties() const;
+      PropertyMap properties() const override;
 
       /*!
        * Implements the unified tag dictionary interface -- import function.
        * Like properties(), this is a forwarder to the file's XiphComment.
        */
-      PropertyMap setProperties(const PropertyMap &);
+      PropertyMap setProperties(const PropertyMap &) override;
 
       /*!
        * Returns the Vorbis::Properties for this file.  If no audio properties
        * were read then this will return a null pointer.
        */
-      virtual Properties *audioProperties() const;
+      Properties *audioProperties() const override;
 
       /*!
        * Save the file.
        *
        * This returns true if the save was successful.
        */
-      virtual bool save();
+      bool save() override;
 
       /*!
        * Check if the given \a stream can be opened as an Ogg Vorbis file.
@@ -130,13 +134,10 @@ namespace TagLib {
       static bool isSupported(IOStream *stream);
 
     private:
-      File(const File &);
-      File &operator=(const File &);
-
       void read(bool readProperties);
 
       class FilePrivate;
-      FilePrivate *d;
+      std::unique_ptr<FilePrivate> d;
     };
   }  // namespace Vorbis
 
@@ -144,12 +145,18 @@ namespace TagLib {
  * To keep compatibility with the current version put Vorbis in the Ogg namespace
  * only in the docs and provide a typedef to make it work.  In the next BIC
  * version this will be removed and it will only exist in the Ogg namespace.
+ * Kept for source compatibility, the typedef in vorbisproperties.h was not
+ * correct in TagLib 1.
  */
 
 #ifdef DOXYGEN
   }
 #else
-  namespace Ogg { namespace Vorbis { typedef TagLib::Vorbis::File File; } }
+  namespace Ogg {
+    namespace Vorbis {
+      using File = TagLib::Vorbis::File;
+    }
+  }
 #endif
 
 }  // namespace TagLib

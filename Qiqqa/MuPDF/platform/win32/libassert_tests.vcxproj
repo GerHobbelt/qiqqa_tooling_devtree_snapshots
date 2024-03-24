@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBASSERT_TESTS;ASSERT_TESTS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBASSERT_TESTS;ASSERT_TESTS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libassert/include;../../thirdparty/owemdjee/libassert/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBASSERT_TESTS;ASSERT_TESTS_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libassert/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBASSERT_TESTS;ASSERT_TESTS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBASSERT_TESTS;ASSERT_TESTS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBASSERT_TESTS;ASSERT_TESTS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libassert/include;../../thirdparty/owemdjee/libassert/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libassert/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBASSERT_TESTS;ASSERT_TESTS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBASSERT_TESTS;ASSERT_TESTS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libassert/include;../../thirdparty/owemdjee/libassert/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBASSERT_TESTS;ASSERT_TESTS_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libassert/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBASSERT_TESTS;ASSERT_TESTS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBASSERT_TESTS;ASSERT_TESTS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBASSERT_TESTS;ASSERT_TESTS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libassert/include;../../thirdparty/owemdjee/libassert/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libassert/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBASSERT_TESTS;ASSERT_TESTS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBASSERT_TESTS;ASSERT_TESTS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libassert/include;../../thirdparty/owemdjee/libassert/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBASSERT_TESTS;ASSERT_TESTS_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libassert/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBASSERT_TESTS;ASSERT_TESTS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBASSERT_TESTS;ASSERT_TESTS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBASSERT_TESTS;ASSERT_TESTS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libassert/include;../../thirdparty/owemdjee/libassert/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libassert/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBASSERT_TESTS;ASSERT_TESTS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBASSERT_TESTS;ASSERT_TESTS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libassert/include;../../thirdparty/owemdjee/libassert/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBASSERT_TESTS;ASSERT_TESTS_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libassert/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBASSERT_TESTS;ASSERT_TESTS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBASSERT_TESTS;ASSERT_TESTS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBASSERT_TESTS;ASSERT_TESTS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/libassert/include;../../thirdparty/owemdjee/libassert/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libassert/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -228,15 +228,17 @@
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ItemGroup>
-    <ClCompile Include="../../thirdparty/owemdjee/libassert/tests/cmake_client/main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libassert/tests/add_subdirectory-integration/asi_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libassert/tests/basic/basic_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libassert/tests/demo/bar.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libassert/tests/demo/baz/baz_demo.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libassert/tests/demo/demo.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libassert/tests/demo/foo.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libassert/tests/fetchcontent-integration/fci_main.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libassert/tests/findpackage-integration/fpi_main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libassert/tests/integration/a.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libassert/tests/integration/integration.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libassert/tests/integration/x/b.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/libassert/tests/unit/basic_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libassert/tests/unit/constexpr_contexts.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libassert/tests/unit/disambiguation.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libassert/tests/unit/literals.cpp" />
@@ -260,22 +262,24 @@
     <Text Include="../../thirdparty/owemdjee/libassert/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libassert/CMakePresets.json" />
     <Text Include="../../thirdparty/owemdjee/libassert/Changelog.md" />
+    <Text Include="../../thirdparty/owemdjee/libassert/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/libassert/README.md" />
+    <Text Include="../../thirdparty/owemdjee/libassert/SECURITY.md" />
     <Text Include="../../thirdparty/owemdjee/libassert/cmake/assert-config.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/libassert/lint.sh" />
-    <Text Include="../../thirdparty/owemdjee/libassert/tests/cmake.sh" />
-    <Text Include="../../thirdparty/owemdjee/libassert/tests/cmake_client/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/libassert/tests/dump_msvc_env.ps1" />
-    <Text Include="../../thirdparty/owemdjee/libassert/tests/generate_outputs.py" />
+    <Text Include="../../thirdparty/owemdjee/libassert/sonar-project.properties" />
+    <Text Include="../../thirdparty/owemdjee/libassert/tests/add_subdirectory-integration/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libassert/tests/fetchcontent-integration/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libassert/tests/findpackage-integration/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libassert/tests/integration/expected/clang.txt" />
-    <Text Include="../../thirdparty/owemdjee/libassert/tests/integration/expected/clang_windows.txt" />
-    <Text Include="../../thirdparty/owemdjee/libassert/tests/integration/expected/gcc.txt" />
-    <Text Include="../../thirdparty/owemdjee/libassert/tests/integration/expected/gcc_windows.txt" />
+    <Text Include="../../thirdparty/owemdjee/libassert/tests/integration/expected/clang.windows.txt" />
+    <Text Include="../../thirdparty/owemdjee/libassert/tests/integration/expected/gnu.txt" />
+    <Text Include="../../thirdparty/owemdjee/libassert/tests/integration/expected/gnu.windows.txt" />
     <Text Include="../../thirdparty/owemdjee/libassert/tests/integration/expected/msvc.txt" />
-    <Text Include="../../thirdparty/owemdjee/libassert/tests/integration_diff.py" />
     <Text Include="../../thirdparty/owemdjee/libassert/tests/pyutils/__init__.py" />
     <Text Include="../../thirdparty/owemdjee/libassert/tests/pyutils/utils.py" />
     <Text Include="../../thirdparty/owemdjee/libassert/tests/run-tests.py" />
+    <Text Include="../../thirdparty/owemdjee/libassert/tests/unit/test_files/test_program._cpp" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

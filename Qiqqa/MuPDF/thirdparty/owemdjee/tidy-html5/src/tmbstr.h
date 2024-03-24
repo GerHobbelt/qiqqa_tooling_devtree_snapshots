@@ -9,6 +9,7 @@
 */
 
 #include "tidyplatform.h"
+#include "forward.h"			// TY_() macro
 
 #ifdef __cplusplus
 extern "C"

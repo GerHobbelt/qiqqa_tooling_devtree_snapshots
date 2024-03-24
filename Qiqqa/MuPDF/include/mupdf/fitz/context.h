@@ -69,6 +69,7 @@ typedef struct fz_store fz_store;
 typedef struct fz_glyph_cache fz_glyph_cache;
 typedef struct fz_document_handler_context fz_document_handler_context;
 typedef struct fz_secondary_outputs fz_secondary_outputs;
+typedef struct fz_archive_handler_context fz_archive_handler_context;
 typedef struct fz_output fz_output;
 typedef struct fz_context fz_context;
 typedef struct fz_cookie fz_cookie;
@@ -193,6 +194,7 @@ int fz_caught(fz_context *ctx);
 	This assumes no intervening use of fz_try/fz_catch.
 */
 void fz_rethrow_if(fz_context *ctx, int errcode);
+void fz_rethrow_unless(fz_context *ctx, int errcode);
 
 /**
 	Format an error message, and log it to the registered
@@ -218,45 +220,69 @@ void fz_end_throw_on_repair(fz_context *ctx);
 #if FZ_VERBOSE_EXCEPTIONS
 
 #define fz_vthrow(CTX, ERRCODE, FMT, VA) fz_vthrowFL(CTX, __FILE__, __LINE__, ERRCODE, FMT, VA)
-#define fz_throw(CTX, ERRCODE, FMT, ...) fz_throwFL(CTX, __FILE__, __LINE__, ERRCODE, FMT, __VA_ARGS__)
+#define fz_throw(CTX, ERRCODE, ...) fz_throwFL(CTX, __FILE__, __LINE__, ERRCODE, __VA_ARGS__)
 #define fz_rethrow(CTX) fz_rethrowFL(CTX, __FILE__, __LINE__)
 #define fz_morph_error(CTX, FROM, TO) fz_morph_errorFL(CTX, __FILE__, __LINE__, FROM, TO)
 #define fz_vwarn(CTX, FMT, VA) fz_vwarnFL(CTX, __FILE__, __LINE__, FMT, VA)
-#define fz_warn(CTX, FMT, ...) fz_warnFL(CTX, __FILE__, __LINE__, FMT, __VA_ARGS__)
+#define fz_warn(CTX, ...) fz_warnFL(CTX, __FILE__, __LINE__, __VA_ARGS__)
 #define fz_rethrow_if(CTX, ERRCODE) fz_rethrow_ifFL(CTX, __FILE__, __LINE__, ERRCODE)
-#define fz_log_error_printf(CTX, FMT, ...) fz_log_error_printfFL(CTX, __FILE__, __LINE__, __VA_ARGS__)
-#define fz_vlog_error_printf(CTX, FMT, VA) fz_log_error_printfFL(CTX, __FILE__, __LINE__, VA)
+#define fz_rethrow_unless(CTX, ERRCODE) fz_rethrow_unlessFL(CTX, __FILE__, __LINE__, ERRCODE)
+#define fz_log_error_printf(CTX, ...) fz_log_error_printfFL(CTX, __FILE__, __LINE__, __VA_ARGS__)
+#define fz_vlog_error_printf(CTX, FMT, VA) fz_log_error_printfFL(CTX, __FILE__, __LINE__, FMT, VA)
 #define fz_log_error(CTX, STR) fz_log_error_printfFL(CTX, __FILE__, __LINE__, STR)
-
-FZ_NORETURN void fz_vthrowFL(fz_context *ctx, const char *file, int line, int errcode, const char *, va_list ap);
-FZ_NORETURN void fz_throwFL(fz_context *ctx, const char *file, int line, int errcode, const char *, ...) FZ_PRINTFLIKE(5,6);
+#define fz_do_catch(CTX) fz_do_catchFL(CTX, __FILE__, __LINE__)
+FZ_NORETURN void fz_vthrowFL(fz_context *ctx, const char *file, int line, int errcode, const char *fmt, va_list ap);
+FZ_NORETURN void fz_throwFL(fz_context *ctx, const char *file, int line, int errcode, const char *fmt, ...) FZ_PRINTFLIKE(5,6);
 FZ_NORETURN void fz_rethrowFL(fz_context *ctx, const char *file, int line);
 void fz_morph_errorFL(fz_context *ctx, const char *file, int line, int fromcode, int tocode);
 void fz_vwarnFL(fz_context *ctx, const char *file, int line, const char *fmt, va_list ap);
 void fz_warnFL(fz_context *ctx, const char *file, int line, const char *fmt, ...) FZ_PRINTFLIKE(4,5);
 void fz_rethrow_ifFL(fz_context *ctx, const char *file, int line, int errcode);
+void fz_rethrow_unlessFL(fz_context *ctx, const char *file, int line, int errcode);
 void fz_log_error_printfFL(fz_context *ctx, const char *file, int line, const char *fmt, ...) FZ_PRINTFLIKE(4,5);
 void fz_vlog_error_printfFL(fz_context *ctx, const char *file, int line, const char *fmt, va_list ap);
 void fz_log_errorFL(fz_context *ctx, const char *file, int line, const char *str);
-
+int fz_do_catchFL(fz_context *ctx, const char *file, int line);
 #endif
 
-enum
-{
-    FZ_ERROR_NONE = 0,
-    FZ_ERROR_MEMORY = 1,
-    FZ_ERROR_GENERIC = 2,
-    FZ_ERROR_SYNTAX = 3,
-    FZ_ERROR_MINOR = 4,
-    FZ_ERROR_TRYLATER = 5,
-    FZ_ERROR_ABORT = 6,
-    FZ_ERROR_REPAIRED = 7,
-    FZ_ERROR_NOT_A_PDF = 8,
-    FZ_ERROR_COUNT,
+/* Report an error to the registered error callback. */
+void fz_report_error(fz_context *ctx);
 
-	FZ_ERROR_C_RTL_SERIES       = 0x10000000,	/// marks the error value is actually an `errno` error value stored in the context error state
+/*
+ * Swallow an error and ignore it completely.
+ * This should only be called to signal that you've handled a TRYLATER or ABORT error,
+ */
+void fz_ignore_error(fz_context *ctx);
+
+/* Convert an error into another runtime exception.
+ * For use when converting an exception from Fitz to a language binding exception.
+ */
+const char *fz_convert_error(fz_context *ctx, int *code);
+
+enum fz_error_type
+{
+	FZ_ERROR_NONE,
+	FZ_ERROR_GENERIC,
+
+	FZ_ERROR_SYSTEM, // fatal out of memory or syscall error
+	FZ_ERROR_LIBRARY, // unclassified error from third-party library
+	FZ_ERROR_ARGUMENT, // invalid or out-of-range arguments to functions
+	FZ_ERROR_LIMIT, // failed because of resource or other hard limits
+	FZ_ERROR_UNSUPPORTED, // tried to use an unsupported feature
+	FZ_ERROR_FORMAT, // syntax or format errors that are unrecoverable
+	FZ_ERROR_SYNTAX, // syntax errors that should be diagnosed and ignored
+
+	// for internal use only
+	FZ_ERROR_TRYLATER, // try-later progressive loading signal
+	FZ_ERROR_ABORT, // user requested abort signal
+	FZ_ERROR_REPAIRED, // internal flag used when repairing a PDF to avoid cycles
+    FZ_ERROR_NOT_A_PDF,
+	
+	FZ_ERROR_COUNT,
+
+	FZ_ERROR_C_RTL_SERIES       = 0x10000000,	/// marks the error value as actually an `errno` error value stored in the context error state
 	FZ_ERROR_C_RTL_SERIES_MASK  = 0x0FFFFFFF,	/// the mask for the part of the integer value where the actual `errno` value is stored.
-	FZ_ERROR_SYS_SERIES         = 0x80000000,	/// marks the error value is actually a system error value stored in the context error state; e.g. a Win32 system error as may be produced by Win32 API `GetLastError()` (see also <winerror.h> ), stored in the context error state.
+	FZ_ERROR_SYS_SERIES         = 0x80000000,	/// marks the error value as actually a system error value stored in the context error state; e.g. a Win32 system error as may be produced by Win32 API `GetLastError()` (see also <winerror.h> ), stored in the context error state.
 	FZ_ERROR_SYS_SERIES_MASK    = 0x7FFFFFFF,	/// the mask for the part of the integer value where the actual `sys_errno` value is stored.
 };
 
@@ -939,7 +965,7 @@ void fz_var_imp(void *);
 fz_jmp_buf *fz_push_try(fz_context *ctx);
 int fz_do_try(fz_context *ctx);
 int fz_do_always(fz_context *ctx);
-int fz_do_catch(fz_context *ctx);
+int (fz_do_catch)(fz_context *ctx);
 
 #ifndef FZ_JMPBUF_ALIGN
 #define FZ_JMPBUF_ALIGN 32
@@ -1025,6 +1051,7 @@ struct fz_context
 
     /* TODO: should these be unshared? */
     fz_document_handler_context *handler;
+	fz_archive_handler_context *archive;
     fz_style_context *style;
     fz_tuning_context *tuning;
 

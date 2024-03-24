@@ -4,9 +4,11 @@
 #include "platform.h"
 #include "tidy.h"
 
-#ifdef WIN32
+#if defined(WIN32) || defined(_WIN32) || defined(WIN64)
 # include <winsock.h>
+# ifndef ECONNREFUSED
 # define ECONNREFUSED WSAECONNREFUSED
+# endif
 #else
 # include <sys/socket.h>
 # include <netdb.h>

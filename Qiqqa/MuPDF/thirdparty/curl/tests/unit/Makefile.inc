@@ -34,7 +34,7 @@ UNITPROGS = unit1300          unit1302 unit1303 unit1304 unit1305 unit1307 \
  unit1330 unit1394 unit1395 unit1396 unit1397 unit1398 \
  unit1399 \
  unit1600 unit1601 unit1602 unit1603 unit1604 unit1605 unit1606 unit1607 \
- unit1608 unit1609 unit1610 unit1611 unit1612 unit1614 \
+ unit1608 unit1609 unit1610 unit1611 unit1612 unit1614 unit1615 \
  unit1620 unit1621 \
  unit1650 unit1651 unit1652 unit1653 unit1654 unit1655 \
  unit1660 unit1661 \
@@ -62,9 +62,6 @@ unit1323_SOURCES = unit1323.c $(UNITFILES)
 unit1330_SOURCES = unit1330.c $(UNITFILES)
 
 unit1394_SOURCES = unit1394.c $(UNITFILES)
-unit1394_LDADD = $(top_builddir)/lib/libcurl.la @LIBCURL_LIBS@
-unit1394_LDFLAGS = $(top_builddir)/src/libcurltool.la
-unit1394_LIBS =
 
 unit1395_SOURCES = unit1395.c $(UNITFILES)
 
@@ -104,10 +101,11 @@ unit1612_SOURCES = unit1612.c $(UNITFILES)
 
 unit1614_SOURCES = unit1614.c $(UNITFILES)
 
+unit1615_SOURCES = unit1615.c $(UNITFILES)
+
 unit1620_SOURCES = unit1620.c $(UNITFILES)
 
 unit1621_SOURCES = unit1621.c $(UNITFILES)
-unit1621_LDADD = $(top_builddir)/src/libcurltool.la $(top_builddir)/lib/libcurl.la @NSS_LIBS@
 
 unit1650_SOURCES = unit1650.c $(UNITFILES)
 

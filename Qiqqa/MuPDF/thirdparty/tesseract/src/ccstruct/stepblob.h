@@ -24,7 +24,7 @@
 #include "elst.h"       // for ELIST_ITERATOR, ELISTIZEH, ELIST_LINK
 #include "points.h"     // for FCOORD, ICOORD (ptr only)
 #include "rect.h"       // for TBOX
-#include "scrollview.h" // for ScrollView, ScrollView::Color
+#include "scrollview.h" // for ScrollView, Diagnostics::Color
 
 #include <cstdint> // for int32_t, int16_t
 
@@ -78,7 +78,7 @@ public:
   int32_t count_transitions( // count maxima
       int32_t threshold);    // size threshold
 
-  void move(const ICOORD vec);         // repostion blob by vector
+  void move(const ICOORD vec);         // reposition blob by vector
   void rotate(const FCOORD &rotation); // Rotate by given vector.
 
   // Adds sub-pixel resolution EdgeOffsets for the outlines using greyscale
@@ -97,9 +97,9 @@ public:
 
 #if !GRAPHICS_DISABLED
   void plot(                           // draw one
-      ScrollView *window,              // window to draw in
-      ScrollView::Color blob_colour,   // for outer bits
-      ScrollView::Color child_colour); // for holes
+      ScrollViewReference &window,              // window to draw in
+      Diagnostics::Color blob_colour,   // for outer bits
+      Diagnostics::Color child_colour); // for holes
 #endif // !GRAPHICS_DISABLED
 
   void plot(Image& pix, std::vector<uint32_t>& cmap, int& cmap_offset, bool noise);
@@ -108,8 +108,8 @@ public:
   // Draws the blob in the given colour, and child_colour, normalized
   // using the given denorm, making use of sub-pixel accurate information
   // if available.
-  void plot_normed(const DENORM &denorm, ScrollView::Color blob_colour,
-                   ScrollView::Color child_colour, ScrollView *window);
+  void plot_normed(const DENORM &denorm, Diagnostics::Color blob_colour,
+                   Diagnostics::Color child_colour, ScrollViewReference &window);
 #endif // !GRAPHICS_DISABLED
 
   C_BLOB &operator=(const C_BLOB &source) {

@@ -1,4 +1,4 @@
-# Copyright 2021-2022 Andrey Semashev
+# Copyright 2021-2024 Andrey Semashev
 #
 # Distributed under the Boost Software License, Version 1.0.
 # (See accompanying file LICENSE_1_0.txt or copy at http://boost.org/LICENSE_1_0.txt)
@@ -35,88 +35,60 @@ jobs:
       matrix:
         include:
           # Linux, gcc
-          - toolset: gcc-4.4
-            cxxstd: "98,0x"
-            os: ubuntu-latest
-            container: ubuntu:16.04
-            install:
-              - g++-4.4
-            sources:
-              - "ppa:ubuntu-toolchain-r/test"
-          - toolset: gcc-4.6
-            cxxstd: "03,0x"
-            os: ubuntu-latest
-            container: ubuntu:16.04
-            install:
-              - g++-4.6
-            sources:
-              - "ppa:ubuntu-toolchain-r/test"
-          - toolset: gcc-4.7
-            cxxstd: "03,11"
-            os: ubuntu-latest
-            container: ubuntu:16.04
-            install:
-              - g++-4.7
-          - toolset: gcc-4.8
-            cxxstd: "03,11"
-            os: ubuntu-latest
-            container: ubuntu:18.04
-            install:
-              - g++-4.8
-          - toolset: gcc-4.9
-            cxxstd: "03,11"
-            os: ubuntu-latest
-            container: ubuntu:16.04
-            install:
-              - g++-4.9
-            extra_tests: 1
           - toolset: gcc-5
-            cxxstd: "03,11,14,1z"
+            cxxstd: "11,14,1z"
             os: ubuntu-latest
             container: ubuntu:16.04
             install:
               - g++-5
+            extra_tests: 1
           - toolset: gcc-6
-            cxxstd: "03,11,14,1z"
+            cxxstd: "11,14,1z"
             os: ubuntu-latest
             container: ubuntu:18.04
             install:
               - g++-6
           - toolset: gcc-7
-            cxxstd: "03,11,14,17"
+            cxxstd: "11,14,17"
             os: ubuntu-latest
             container: ubuntu:18.04
             install:
               - g++-7
           - toolset: gcc-8
-            cxxstd: "03,11,14,17,2a"
+            cxxstd: "11,14,17,2a"
             os: ubuntu-latest
             container: ubuntu:18.04
             install:
               - g++-8
           - toolset: gcc-9
-            cxxstd: "03,11,14,17,2a"
+            cxxstd: "11,14,17,2a"
             os: ubuntu-20.04
             install:
               - g++-9
           - toolset: gcc-10
-            cxxstd: "03,11,14,17,20"
+            cxxstd: "11,14,17,20"
             os: ubuntu-20.04
             install:
               - g++-10
           - toolset: gcc-11
-            cxxstd: "03,11,14,17,20,23"
+            cxxstd: "11,14,17,20,23"
             os: ubuntu-22.04
             install:
               - g++-11
           - toolset: gcc-12
-            cxxstd: "03,11,14,17,20,23"
+            cxxstd: "11,14,17,20,23"
             os: ubuntu-22.04
             install:
               - g++-12
+          - toolset: gcc-13
+            cxxstd: "11,14,17,20,23"
+            os: ubuntu-latest
+            container: ubuntu:23.04
+            install:
+              - g++-13
           - name: UBSAN
             toolset: gcc-11
-            cxxstd: "03,11,14,17,20,23"
+            cxxstd: "11,14,17,20,23"
             ubsan: 1
             build_variant: debug
             os: ubuntu-22.04
@@ -126,63 +98,63 @@ jobs:
           # Linux, clang
           - toolset: clang
             compiler: clang++-3.5
-            cxxstd: "03,11"
+            cxxstd: "11"
             os: ubuntu-latest
             container: ubuntu:16.04
             install:
               - clang-3.5
           - toolset: clang
             compiler: clang++-3.6
-            cxxstd: "03,11,14"
+            cxxstd: "11,14"
             os: ubuntu-latest
             container: ubuntu:16.04
             install:
               - clang-3.6
           - toolset: clang
             compiler: clang++-3.7
-            cxxstd: "03,11,14"
+            cxxstd: "11,14"
             os: ubuntu-latest
             container: ubuntu:16.04
             install:
               - clang-3.7
           - toolset: clang
             compiler: clang++-3.8
-            cxxstd: "03,11,14"
+            cxxstd: "11,14"
             os: ubuntu-latest
             container: ubuntu:16.04
             install:
               - clang-3.8
           - toolset: clang
             compiler: clang++-3.9
-            cxxstd: "03,11,14"
+            cxxstd: "11,14"
             os: ubuntu-latest
             container: ubuntu:18.04
             install:
               - clang-3.9
           - toolset: clang
             compiler: clang++-4.0
-            cxxstd: "03,11,14"
+            cxxstd: "11,14"
             os: ubuntu-latest
             container: ubuntu:18.04
             install:
               - clang-4.0
           - toolset: clang
             compiler: clang++-5.0
-            cxxstd: "03,11,14,1z"
+            cxxstd: "11,14,1z"
             os: ubuntu-latest
             container: ubuntu:18.04
             install:
               - clang-5.0
           - toolset: clang
             compiler: clang++-6.0
-            cxxstd: "03,11,14,17"
+            cxxstd: "11,14,17"
             os: ubuntu-latest
             container: ubuntu:18.04
             install:
               - clang-6.0
           - toolset: clang
             compiler: clang++-7
-            cxxstd: "03,11,14,17"
+            cxxstd: "11,14,17"
             os: ubuntu-latest
             container: ubuntu:18.04
             install:
@@ -190,7 +162,7 @@ jobs:
           # Note: clang-8 does not fully support C++20, so it is not compatible with libstdc++-8 in this mode
           - toolset: clang
             compiler: clang++-8
-            cxxstd: "03,11,14,17,2a"
+            cxxstd: "11,14,17,2a"
             os: ubuntu-latest
             container: ubuntu:18.04
             install:
@@ -199,49 +171,59 @@ jobs:
             gcc_toolchain: 7
           - toolset: clang
             compiler: clang++-9
-            cxxstd: "03,11,14,17,2a"
+            cxxstd: "11,14,17,2a"
             os: ubuntu-20.04
             install:
               - clang-9
           - toolset: clang
             compiler: clang++-10
-            cxxstd: "03,11,14,17,20"
+            cxxstd: "11,14,17,20"
             os: ubuntu-20.04
             install:
               - clang-10
           - toolset: clang
             compiler: clang++-11
-            cxxstd: "03,11,14,17,20"
+            cxxstd: "11,14,17,20"
             os: ubuntu-22.04
             install:
               - clang-11
+              - g++-11
+            gcc_toolchain: 11
           - toolset: clang
             compiler: clang++-12
-            cxxstd: "03,11,14,17,20,2b"
+            cxxstd: "11,14,17,20,2b"
             os: ubuntu-22.04
             install:
               - clang-12
+              - g++-11
+            gcc_toolchain: 11
           - toolset: clang
             compiler: clang++-13
-            cxxstd: "03,11,14,17,20,2b"
+            cxxstd: "11,14,17,20,2b"
             os: ubuntu-22.04
             install:
               - clang-13
+              - g++-11
+            gcc_toolchain: 11
           - toolset: clang
             compiler: clang++-14
-            cxxstd: "03,11,14,17,20,2b"
+            cxxstd: "11,14,17,20,2b"
             os: ubuntu-22.04
             install:
               - clang-14
+              - g++-11
+            gcc_toolchain: 11
           - toolset: clang
             compiler: clang++-15
-            cxxstd: "03,11,14,17,20,2b"
+            cxxstd: "11,14,17,20,2b"
             os: ubuntu-22.04
             install:
               - clang-15
+              - g++-11
+            gcc_toolchain: 11
           - toolset: clang
             compiler: clang++-16
-            cxxstd: "03,11,14,17,20,2b"
+            cxxstd: "11,14,17,20,2b"
             os: ubuntu-22.04
             install:
               - clang-16
@@ -250,15 +232,25 @@ jobs:
             source_keys:
               - "https://apt.llvm.org/llvm-snapshot.gpg.key"
           - toolset: clang
-            compiler: clang++-16
-            cxxstd: "03,11,14,17,20,2b"
+            compiler: clang++-17
+            cxxstd: "11,14,17,20,23"
             os: ubuntu-22.04
             install:
-              - clang-16
-              - libc++-16-dev
-              - libc++abi-16-dev
+              - clang-17
             sources:
-              - "deb http://apt.llvm.org/jammy/ llvm-toolchain-jammy-16 main"
+              - "deb http://apt.llvm.org/jammy/ llvm-toolchain-jammy-17 main"
+            source_keys:
+              - "https://apt.llvm.org/llvm-snapshot.gpg.key"
+          - toolset: clang
+            compiler: clang++-17
+            cxxstd: "11,14,17,20,23"
+            os: ubuntu-22.04
+            install:
+              - clang-17
+              - libc++-17-dev
+              - libc++abi-17-dev
+            sources:
+              - "deb http://apt.llvm.org/jammy/ llvm-toolchain-jammy-17 main"
             source_keys:
               - "https://apt.llvm.org/llvm-snapshot.gpg.key"
             cxxflags: -stdlib=libc++
@@ -266,7 +258,7 @@ jobs:
           - name: UBSAN
             toolset: clang
             compiler: clang++-15
-            cxxstd: "03,11,14,17,20,2b"
+            cxxstd: "11,14,17,20,2b"
             cxxflags: -stdlib=libc++
             linkflags: "-stdlib=libc++ -lubsan"
             ubsan: 1
@@ -278,14 +270,14 @@ jobs:
               - libc++abi-15-dev
 
           - toolset: clang
-            cxxstd: "03,11,14,17,2a"
+            cxxstd: "11,14,17,2a"
             os: macos-11
 
           - name: CMake tests
             cmake_tests: 1
             os: ubuntu-20.04
 
-    timeout-minutes: 120
+    timeout-minutes: 60
     runs-on: ${{matrix.os}}
     container: ${{matrix.container}}
 
@@ -313,8 +305,6 @@ jobs:
                 fi
             fi
             git config --global pack.threads 0
-
-      - uses: actions/checkout@v3
 
       - name: Install packages
         if: matrix.install
@@ -430,11 +420,25 @@ jobs:
             then
                 DEPINST_ARGS+=("--git_args" "--jobs $GIT_FETCH_JOBS")
             fi
+            mkdir -p snapshot
+            cd snapshot
+            echo "Downloading library snapshot: https://github.com/${GITHUB_REPOSITORY}/archive/${GITHUB_SHA}.tar.gz"
+            curl -L --retry "$NET_RETRY_COUNT" -o "${LIBRARY}-${GITHUB_SHA}.tar.gz" "https://github.com/${GITHUB_REPOSITORY}/archive/${GITHUB_SHA}.tar.gz"
+            tar -xf "${LIBRARY}-${GITHUB_SHA}.tar.gz"
+            if [ ! -d "${LIBRARY}-${GITHUB_SHA}" ]
+            then
+                echo "Library snapshot does not contain the library directory ${LIBRARY}-${GITHUB_SHA}:"
+                ls -la
+                exit 1
+            fi
+            rm -f "${LIBRARY}-${GITHUB_SHA}.tar.gz"
             cd ..
             git clone -b "$BOOST_BRANCH" --depth 1 "https://github.com/boostorg/boost.git" "boost-root"
             cd boost-root
-            mkdir -p libs/$LIBRARY
-            cp -r $GITHUB_WORKSPACE/* libs/$LIBRARY
+            mkdir -p libs
+            rm -rf "libs/$LIBRARY"
+            mv -f "../snapshot/${LIBRARY}-${GITHUB_SHA}" "libs/$LIBRARY"
+            rm -rf "../snapshot"
             git submodule update --init tools/boostdep
             if [ -n "${{matrix.extra_tests}}" ]
             then
@@ -460,7 +464,7 @@ jobs:
       - name: Run tests
         if: matrix.cmake_tests == ''
         run: |
-            cd ../boost-root
+            cd boost-root
             if [ -z "${{matrix.extra_tests}}" ]
             then
                 export BOOST_LOG_TEST_WITHOUT_SELF_CONTAINED_HEADER_TESTS=1
@@ -496,7 +500,7 @@ jobs:
       - name: Run CMake tests
         if: matrix.cmake_tests
         run: |
-            cd ../boost-root
+            cd boost-root
             mkdir __build_static__ && cd __build_static__
             cmake ../libs/$LIBRARY/test/test_cmake
             cmake --build . --target boost_${LIBRARY}_cmake_self_test -j $BUILD_JOBS
@@ -506,3 +510,106 @@ jobs:
             cmake -DBUILD_SHARED_LIBS=On ../libs/$LIBRARY/test/test_cmake
             cmake --build . --target boost_${LIBRARY}_cmake_self_test -j $BUILD_JOBS
             cmake --build . --target boost_${LIBRARY}_setup_cmake_self_test -j $BUILD_JOBS
+
+  windows:
+    defaults:
+      run:
+        shell: cmd
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - toolset: msvc-14.0
+            cxxstd: "14"
+            os: windows-2019
+            extra_tests: 1
+          - toolset: msvc-14.2
+            cxxstd: "14,17,20,latest"
+            os: windows-2019
+          - toolset: msvc-14.3
+            cxxstd: "14,17,20,latest"
+            os: windows-2022
+          - toolset: clang-win
+            cxxstd: "14,17,latest"
+            os: windows-2022
+          - toolset: gcc
+            cxxstd: "11-gnu,14-gnu,17-gnu,2a-gnu"
+            os: windows-2019
+
+          - name: CMake tests
+            cmake_tests: 1
+            os: windows-2022
+
+    timeout-minutes: 60
+    runs-on: ${{matrix.os}}
+
+    steps:
+      - name: Setup Boost
+        run: |
+            echo GITHUB_REPOSITORY: %GITHUB_REPOSITORY%
+            for /f %%i in ("%GITHUB_REPOSITORY%") do set LIBRARY=%%~nxi
+            echo LIBRARY: %LIBRARY%
+            echo LIBRARY=%LIBRARY%>>%GITHUB_ENV%
+            echo GITHUB_BASE_REF: %GITHUB_BASE_REF%
+            echo GITHUB_REF: %GITHUB_REF%
+            if "%GITHUB_BASE_REF%" == "" set GITHUB_BASE_REF=%GITHUB_REF%
+            set BOOST_BRANCH=develop
+            for /f %%i in ("%GITHUB_BASE_REF%") do if "%%~nxi" == "master" set BOOST_BRANCH=master
+            echo BOOST_BRANCH: %BOOST_BRANCH%
+            mkdir snapshot
+            cd snapshot
+            echo Downloading library snapshot: https://github.com/%GITHUB_REPOSITORY%/archive/%GITHUB_SHA%.zip
+            curl -L --retry %NET_RETRY_COUNT% -o "%LIBRARY%-%GITHUB_SHA%.zip" "https://github.com/%GITHUB_REPOSITORY%/archive/%GITHUB_SHA%.zip"
+            tar -xf "%LIBRARY%-%GITHUB_SHA%.zip"
+            if not exist "%LIBRARY%-%GITHUB_SHA%\" (
+                echo Library snapshot does not contain the library directory %LIBRARY%-%GITHUB_SHA%:
+                dir
+                exit /b 1
+            )
+            del /f "%LIBRARY%-%GITHUB_SHA%.zip"
+            cd ..
+            git clone -b %BOOST_BRANCH% --depth 1 https://github.com/boostorg/boost.git boost-root
+            cd boost-root
+            if not exist "libs\" mkdir libs
+            if exist "libs\%LIBRARY%\" rmdir /s /q "libs\%LIBRARY%"
+            move /Y "..\snapshot\%LIBRARY%-%GITHUB_SHA%" "libs\%LIBRARY%"
+            rmdir /s /q "..\snapshot"
+            git submodule update --init tools/boostdep
+            if not "${{matrix.extra_tests}}" == "" set DEPINST_ARG_INCLUDE_EXAMPLES="--include=example"
+            python tools/boostdep/depinst/depinst.py %DEPINST_ARG_INCLUDE_EXAMPLES% --git_args "--jobs %GIT_FETCH_JOBS%" %LIBRARY%
+            if "${{matrix.cmake_tests}}" == "" (
+                cmd /c bootstrap
+                b2 -d0 headers
+            )
+
+      - name: Run tests
+        if: matrix.cmake_tests == ''
+        run: |
+            cd boost-root
+            set "B2_ARGS=-j %NUMBER_OF_PROCESSORS% toolset=${{matrix.toolset}} embed-manifest-via=linker"
+            if not "${{matrix.cxxstd}}" == "" set "B2_ARGS=%B2_ARGS% ^"cxxstd=${{matrix.cxxstd}}^""
+            if not "${{matrix.build_variant}}" == "" ( set "B2_ARGS=%B2_ARGS% variant=${{matrix.build_variant}}" ) else ( set "B2_ARGS=%B2_ARGS% variant=%DEFAULT_BUILD_VARIANT%" )
+            if not "${{matrix.cxxflags}}" == "" set "B2_ARGS=%B2_ARGS% ^"cxxflags=${{matrix.cxxflags}}^""
+            if not "${{matrix.linkflags}}" == "" set "B2_ARGS=%B2_ARGS% ^"linkflags=${{matrix.linkflags}}^""
+            if "${{matrix.extra_tests}}" == "" (
+                set BOOST_LOG_TEST_WITHOUT_SELF_CONTAINED_HEADER_TESTS=1
+                set BOOST_LOG_TEST_WITHOUT_EXAMPLES=1
+            )
+            b2 %B2_ARGS% libs/%LIBRARY%/test
+
+      - name: Run CMake tests
+        if: matrix.cmake_tests
+        run: |
+            cd boost-root
+            mkdir __build_static__
+            cd __build_static__
+            cmake ../libs/%LIBRARY%/test/test_cmake
+            cmake --build . --target boost_%LIBRARY%_cmake_self_test -j %NUMBER_OF_PROCESSORS%
+            cmake --build . --target boost_%LIBRARY%_setup_cmake_self_test -j %NUMBER_OF_PROCESSORS%
+            cd ..
+            mkdir __build_shared__
+            cd __build_shared__
+            cmake -DBUILD_SHARED_LIBS=On ../libs/%LIBRARY%/test/test_cmake
+            cmake --build . --target boost_%LIBRARY%_cmake_self_test -j %NUMBER_OF_PROCESSORS%
+            cmake --build . --target boost_%LIBRARY%_setup_cmake_self_test -j %NUMBER_OF_PROCESSORS%

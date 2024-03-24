@@ -1,45 +1,45 @@
 # tesstrain
 
-> Training workflow for Tesseract 4 as a Makefile for dependency tracking and building the required software from source.
+> Training workflow for Tesseract 5 as a Makefile for dependency tracking.
 
 ## Install
 
-### leptonica, tesseract
+### Auxiliaries
 
-You will need a recent version (>= 4.0.0beta1) of tesseract built with the
+You will need at least GNU `make` (minimal version 4.2), `wget`, `find`, `bash`, `unzip` and `bc`.
+
+### Leptonica, Tesseract
+
+You will need a recent version (>= 5.3) of tesseract built with the
 training tools and matching leptonica bindings.
-[Build](https://github.com/tesseract-ocr/tesseract/wiki/Compiling)
-[instructions](https://github.com/tesseract-ocr/tesseract/wiki/Compiling-%E2%80%93-GitInstallation)
-and more can be found in the [Tesseract project
-wiki](https://github.com/tesseract-ocr/tesseract/wiki/).
+[Build](https://tesseract-ocr.github.io/tessdoc/Compiling)
+[instructions](https://tesseract-ocr.github.io/tessdoc/Compiling-%E2%80%93-GitInstallation)
+and more can be found in the [Tesseract User Manual](https://tesseract-ocr.github.io/tessdoc/).
 
-Alternatively, you can build leptonica and tesseract within this project and install it to a subdirectory `./usr` in the repo:
+#### Windows
 
-```sh
-  make leptonica tesseract
-```
-
-Tesseract will be built from the git repository, which requires CMake,
-autotools (including autotools-archive) and some additional libraries for the
-training tools. See the [installation notes in the tesseract
-repository](https://github.com/tesseract-ocr/tesseract/blob/master/INSTALL.GIT.md).
+  1. Install the latest tesseract (e.g. from https://digi.bib.uni-mannheim.de/tesseract/), make sure that tesseract is added to your PATH.
+  2. Install [Python 3](https://www.python.org/downloads/)
+  3. Install [Git SCM to Windows](https://gitforwindows.org/) - it provides a lot of linux utilities on Windows (e.g. `find`, `unzip`, `rm`) and put `C:\Program Files\Git\usr\bin` to the begining of your PATH variable (temporarely you can do it in `cmd` with `set PATH=C:\Program Files\Git\usr\bin;%PATH%` - unfornatelly there are several Windows tools with the same name as on linux (`find`, `sort`) with different behaviour/functionality and there is need to avoid them during training.
+  4. Install winget/[Windows Package Manager](https://github.com/microsoft/winget-cli/releases/) and then run `winget install GnuWin32.Make` and `winget install wget` to install missing tools.
+  5. Download [Bc and dc calculator in Windows](https://embedeo.org/ws/command_line/bc_dc_calculator_windows/) and unzip bc.exe somewhere to your path (e.g. in my case `unzip -j bc-1.07.1-win32-embedeo-02.zip "bc-1.07.1-win32-embedeo-02/bin/bc.exe" -d "c:\Program Files\Tools"`)
 
 ### Python
 
 You need a recent version of Python 3.x. For image processing the Python library `Pillow` is used.
 If you don't have a global installation, please use the provided requirements file `pip install -r requirements.txt`.
 
-<!-- radical-stroke will be fetched as requirement to proto-model, kba Wed Jan 30 10:58:10 CET 2019
 
-### language data
+### Language data
 
-Tesseract expects some configuration data (a file `fadical-stroke.txt`). To fetch it:
+Tesseract expects some configuration data (a file `radical-stroke.txt` and `*.unicharset` for all scripts) in `DATA_DIR`.
+To fetch them:
 
-``` sh
-  make langdata
-```
+    make tesseract-langdata
 
--->
+(This step is only needed once and already included implicitly in the `training` target,
+but you might want to run explicitly it in advance.)
+
 
 ## Choose model name
 
@@ -75,57 +75,72 @@ script](https://github.com/OCR-D/ocrd-train/issues/7#issuecomment-419714852).
 
 ## Train
 
-```
- make training MODEL_NAME=name-of-the-resulting-model
-```
+Run
+
+    make training MODEL_NAME=name-of-the-resulting-model
 
 which is basically a shortcut for
 
-```
-   make unicharset lists proto-model training
-```
+    make unicharset lists proto-model tesseract-langdata training
 
 Run `make help` to see all the possible targets and variables:
 
 <!-- BEGIN-EVAL -w '```' '```' -- make help -->
+
 ```
 
   Targets
 
     unicharset       Create unicharset
+    charfreq         Show character histogram
     lists            Create lists of lstmf filenames for training and eval
     training         Start training
     traineddata      Create best and fast .traineddata files from each .checkpoint file
     proto-model      Build the proto model
-    leptonica        Build leptonica
-    tesseract        Build tesseract
-    tesseract-langs  Download tesseract-langs
+    tesseract-langdata  Download stock unicharsets
+    clean-box        Clean generated .box files
+    clean-lstmf      Clean generated .lstmf files
+    clean-output     Clean generated output files
     clean            Clean all generated files
 
   Variables
 
+    TESSDATA           Path to the .traineddata directory with traineddata suitable for training 
+                       (for example from tesseract-ocr/tessdata_best). Default: /home/kba/monorepo/tesstrain/usr/share/tessdata
     MODEL_NAME         Name of the model to be built. Default: foo
+    DATA_DIR           Data directory for output files, proto model, start model, etc. Default: data
+    OUTPUT_DIR         Output directory for generated files. Default: data/foo
+    GROUND_TRUTH_DIR   Ground truth directory. Default: data/foo-ground-truth
+    WORDLIST_FILE      Optional Wordlist file for Dictionary dawg. Default: data/foo/foo.wordlist
+    NUMBERS_FILE       Optional Numbers file for number patterns dawg. Default: data/foo/foo.numbers
+    PUNC_FILE          Optional Punc file for Punctuation dawg. Default: data/foo/foo.punc
     START_MODEL        Name of the model to continue from. Default: ''
     PROTO_MODEL        Name of the proto model. Default: 'data/foo/foo.traineddata'
-    CORES              No of cores to use for compiling leptonica/tesseract. Default: 4
-    LEPTONICA_VERSION  Leptonica version. Default: 1.78.0
-    TESSERACT_VERSION  Tesseract commit. Default: 4.1.0
-    TESSDATA_REPO      Tesseract model repo to use. Default: _best
-    TESSDATA           Path to the .traineddata directory to start finetuning from. Default: ./usr/share/tessdata
-    GROUND_TRUTH_DIR   Ground truth directory. Default: data/MODEL_NAME-ground-truth
-    OUTPUT_DIR         Output directory for generated files. Default: data/MODEL_NAME
+    TESSDATA_REPO      Tesseract model repo to use (_fast or _best). Default: _best
     MAX_ITERATIONS     Max iterations. Default: 10000
-    LEARNING_RATE      Learning rate. Default: 0.0001 with START_MODEL, otherwise 0.002
-    NET_SPEC           Network specification. Default: [1,36,0,1 Ct3,3,16 Mp3,3 Lfys48 Lfx96 Lrx96 Lfx256 O1c\#\#\#]
-    FINETUNE_TYPE      Finetune Training Type - Impact, Plus, Layer or blank. Default: ''
+    EPOCHS             Set max iterations based on the number of lines for the training. Default: none
+    DEBUG_INTERVAL     Debug Interval. Default:  0
+    LEARNING_RATE      Learning rate. Default: 0.002
+    NET_SPEC           Network specification. Default: [1,36,0,1 Ct3,3,16 Mp3,3 Lfys48 Lfx96 Lrx96 Lfx192 O1c###]
     LANG_TYPE          Language Type - Indic, RTL or blank. Default: ''
-    PSM                Page segmentation mode. Default: 6
+    PSM                Page segmentation mode. Default: 13
     RANDOM_SEED        Random seed for shuffling of the training data. Default: 0
     RATIO_TRAIN        Ratio of train / eval training data. Default: 0.90
-    TARGET_ERROR_RATE  Stop training if the character error rate (CER in percent) gets below this value. Default: 0.01
+    TARGET_ERROR_RATE  Default Target Error Rate. Default: 0.01
 ```
 
 <!-- END-EVAL -->
+
+### Change directory assumptions
+
+To override the default path name requirements, just set the respective variables in the above list:
+
+    make training MODEL_NAME=name-of-the-resulting-model DATA_DIR=/data GROUND_TRUTH_DIR=/data/GT
+
+If you want to use shell variables to override the make variables (for example because
+you are running tesstrain from a script or other makefile), then you can use the `-e` flag:
+
+    MODEL_NAME=name-of-the-resulting-model DATA_DIR=/data GROUND_TRUTH_DIR=/data/GT make -e training
 
 ### Make model files (traineddata)
 
@@ -162,13 +177,15 @@ Training and Evaluation CER can be plotted using matplotlib. A couple of scripts
 as a starting point in `plot` subdirectory for plotting of different training scenarios. The training
 log is expected to be saved in `plot/TESSTRAIN.LOG`.
 
-As an example, use the training data provided in 
+As an example, use the training data provided in
 [ocrd-testset.zip](./ocrd-testset.zip) to do training and generate the plots.
 Plotting can be done while training is running also to depict the training status till then.
+
 ```
 unzip ocrd-testset.zip -d data/ocrd-ground-truth
 nohup make training MODEL_NAME=ocrd START_MODEL=frk TESSDATA=~/tessdata_best MAX_ITERATIONS=10000 > plot/TESSTRAIN.LOG &
 ```
+
 ```
 cd ./plot
 ./plot_cer.sh 

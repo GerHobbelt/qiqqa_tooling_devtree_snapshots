@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLITE_FTS_TOKENIZER_CHINESE_SIMPLE;SQLITE_FTS_TOKENIZER_CHINESE_SIMPLE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLITE_FTS_TOKENIZER_CHINESE_SIMPLE;SQLITE_FTS_TOKENIZER_CHINESE_SIMPLE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLITE_FTS_TOKENIZER_CHINESE_SIMPLE;SQLITE_FTS_TOKENIZER_CHINESE_SIMPLE_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLITE_FTS_TOKENIZER_CHINESE_SIMPLE;SQLITE_FTS_TOKENIZER_CHINESE_SIMPLE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLITE_FTS_TOKENIZER_CHINESE_SIMPLE;SQLITE_FTS_TOKENIZER_CHINESE_SIMPLE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLITE_FTS_TOKENIZER_CHINESE_SIMPLE;SQLITE_FTS_TOKENIZER_CHINESE_SIMPLE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLITE_FTS_TOKENIZER_CHINESE_SIMPLE;SQLITE_FTS_TOKENIZER_CHINESE_SIMPLE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLITE_FTS_TOKENIZER_CHINESE_SIMPLE;SQLITE_FTS_TOKENIZER_CHINESE_SIMPLE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLITE_FTS_TOKENIZER_CHINESE_SIMPLE;SQLITE_FTS_TOKENIZER_CHINESE_SIMPLE_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLITE_FTS_TOKENIZER_CHINESE_SIMPLE;SQLITE_FTS_TOKENIZER_CHINESE_SIMPLE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLITE_FTS_TOKENIZER_CHINESE_SIMPLE;SQLITE_FTS_TOKENIZER_CHINESE_SIMPLE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLITE_FTS_TOKENIZER_CHINESE_SIMPLE;SQLITE_FTS_TOKENIZER_CHINESE_SIMPLE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLITE_FTS_TOKENIZER_CHINESE_SIMPLE;SQLITE_FTS_TOKENIZER_CHINESE_SIMPLE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLITE_FTS_TOKENIZER_CHINESE_SIMPLE;SQLITE_FTS_TOKENIZER_CHINESE_SIMPLE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLITE_FTS_TOKENIZER_CHINESE_SIMPLE;SQLITE_FTS_TOKENIZER_CHINESE_SIMPLE_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLITE_FTS_TOKENIZER_CHINESE_SIMPLE;SQLITE_FTS_TOKENIZER_CHINESE_SIMPLE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLITE_FTS_TOKENIZER_CHINESE_SIMPLE;SQLITE_FTS_TOKENIZER_CHINESE_SIMPLE_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLITE_FTS_TOKENIZER_CHINESE_SIMPLE;SQLITE_FTS_TOKENIZER_CHINESE_SIMPLE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLITE_FTS_TOKENIZER_CHINESE_SIMPLE;SQLITE_FTS_TOKENIZER_CHINESE_SIMPLE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLITE_FTS_TOKENIZER_CHINESE_SIMPLE;SQLITE_FTS_TOKENIZER_CHINESE_SIMPLE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLITE_FTS_TOKENIZER_CHINESE_SIMPLE;SQLITE_FTS_TOKENIZER_CHINESE_SIMPLE_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLITE_FTS_TOKENIZER_CHINESE_SIMPLE;SQLITE_FTS_TOKENIZER_CHINESE_SIMPLE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLITE_FTS_TOKENIZER_CHINESE_SIMPLE;SQLITE_FTS_TOKENIZER_CHINESE_SIMPLE_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBSQLITE_FTS_TOKENIZER_CHINESE_SIMPLE;SQLITE_FTS_TOKENIZER_CHINESE_SIMPLE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -244,6 +244,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/sqlite_fts_tokenizer_chinese_simple/src/simple_highlight.h" />
     <ClInclude Include="../../thirdparty/owemdjee/sqlite_fts_tokenizer_chinese_simple/src/simple_tokenizer.h" />
     <Text Include="../../thirdparty/owemdjee/sqlite_fts_tokenizer_chinese_simple/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/sqlite_fts_tokenizer_chinese_simple/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/sqlite_fts_tokenizer_chinese_simple/README.md" />
     <Text Include="../../thirdparty/owemdjee/sqlite_fts_tokenizer_chinese_simple/build-ios.sh" />
     <Text Include="../../thirdparty/owemdjee/sqlite_fts_tokenizer_chinese_simple/build.bat" />
@@ -253,9 +254,13 @@
     <Text Include="../../thirdparty/owemdjee/sqlite_fts_tokenizer_chinese_simple/contrib/pinyin.txt" />
     <Text Include="../../thirdparty/owemdjee/sqlite_fts_tokenizer_chinese_simple/contrib/sqlite3/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/sqlite_fts_tokenizer_chinese_simple/contrib/sqlite3/FindReadline.cmake" />
+    <Text Include="../../thirdparty/owemdjee/sqlite_fts_tokenizer_chinese_simple/contrib/sqlite3/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/sqlite_fts_tokenizer_chinese_simple/contrib/sqlite3/README.md" />
     <Text Include="../../thirdparty/owemdjee/sqlite_fts_tokenizer_chinese_simple/contrib/sqlite3/sqlite3_config.h.in" />
+    <Text Include="../../thirdparty/owemdjee/sqlite_fts_tokenizer_chinese_simple/example-jieba.sql" />
+    <Text Include="../../thirdparty/owemdjee/sqlite_fts_tokenizer_chinese_simple/example.sql" />
     <Text Include="../../thirdparty/owemdjee/sqlite_fts_tokenizer_chinese_simple/examples/cpp/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/sqlite_fts_tokenizer_chinese_simple/examples/go/go.sum" />
     <Text Include="../../thirdparty/owemdjee/sqlite_fts_tokenizer_chinese_simple/examples/go/run.sh" />
     <Text Include="../../thirdparty/owemdjee/sqlite_fts_tokenizer_chinese_simple/examples/node/README.md" />
     <Text Include="../../thirdparty/owemdjee/sqlite_fts_tokenizer_chinese_simple/examples/node/better-sqlite3.js" />

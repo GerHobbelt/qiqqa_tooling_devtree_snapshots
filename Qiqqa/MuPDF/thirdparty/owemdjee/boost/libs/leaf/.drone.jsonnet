@@ -44,7 +44,7 @@ local linux_pipeline(name, image, environment, packages = "", sources = [], arch
     ]
 };
 
-local macos_pipeline(name, environment, xcode_version = "12.2", osx_version = "catalina", arch = "amd64") =
+local macos_pipeline(name, environment, xcode_version = "14.1", osx_version = "monterey", arch = "arm64") =
 {
     name: name,
     kind: "pipeline",
@@ -96,14 +96,6 @@ local windows_pipeline(name, image, environment, arch = "amd64") =
 };
 
 [
-    linux_pipeline(
-        "Linux 14.04 GCC 4.9",
-        "cppalliance/droneubuntu1404:1",
-        { TOOLSET: 'gcc', COMPILER: 'g++-4.9', CXXSTD: '11' },
-        "g++-4.9",
-        [ "ppa:ubuntu-toolchain-r/test" ],
-    ),
-
     linux_pipeline(
         "Linux 16.04 GCC 5*",
         "cppalliance/droneubuntu1604:1",
@@ -213,13 +205,13 @@ local windows_pipeline(name, image, environment, arch = "amd64") =
     ),
 
     macos_pipeline(
-        "MacOS 10.15 Xcode 12.2 UBSAN",
-        { TOOLSET: 'clang', COMPILER: 'clang++', CXXSTD: '11,14,1z' } + ubsan,
+        "MacOS 12.5.1 Xcode 14.1 UBSAN",
+        { TOOLSET: 'clang', COMPILER: 'clang++', CXXSTD: '14,17,20' } + ubsan,
     ),
 
     macos_pipeline(
-        "MacOS 10.15 Xcode 12.2 ASAN",
-        { TOOLSET: 'clang', COMPILER: 'clang++', CXXSTD: '11,14,1z' } + asan,
+        "MacOS 12.5.1 Xcode 14.1 ASAN",
+        { TOOLSET: 'clang', COMPILER: 'clang++', CXXSTD: '14,17,20' } + asan,
     ),
 
     windows_pipeline(

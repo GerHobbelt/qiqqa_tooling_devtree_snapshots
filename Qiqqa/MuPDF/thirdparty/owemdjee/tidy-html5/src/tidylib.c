@@ -1046,12 +1046,28 @@ uint TIDY_CALL       tidyErrorCount( TidyDoc tdoc )
         count = impl->errors;
     return count;
 }
+uint TIDY_CALL       tidyMutedErrorCount( TidyDoc tdoc )
+{
+    TidyDocImpl* impl = tidyDocToImpl( tdoc );
+    uint count = 0xFFFFFFFF;
+    if ( impl )
+        count = impl->mutedErrorCount;
+    return count;
+}
 uint TIDY_CALL       tidyWarningCount( TidyDoc tdoc )
 {
     TidyDocImpl* impl = tidyDocToImpl( tdoc );
     uint count = 0xFFFFFFFF;
     if ( impl )
         count = impl->warnings;
+    return count;
+}
+uint TIDY_CALL       tidyMutedWarningCount( TidyDoc tdoc )
+{
+    TidyDocImpl* impl = tidyDocToImpl( tdoc );
+    uint count = 0xFFFFFFFF;
+    if ( impl )
+        count = impl->mutedWarningCount;
     return count;
 }
 uint TIDY_CALL       tidyAccessWarningCount( TidyDoc tdoc )
@@ -1804,7 +1820,7 @@ static void TY_(CheckHTML5)( TidyDocImpl* doc, Node* node )
 
         node = next ? next : TY_(pop)(stack);
     }
-    TY_(freeStack)(stack);
+    TY_(freeStack)(stack, doc);
 }
 /*****************************************************************************
  *  END HTML5 STUFF
@@ -1935,7 +1951,7 @@ static void TY_(CheckHTMLTagsAttribsVersions)( TidyDocImpl* doc, Node* node )
 
         node = next ? next : TY_(pop)(stack);
     }
-    TY_(freeStack)(stack);
+    TY_(freeStack)(stack, doc);
 }
 
 
@@ -2091,7 +2107,7 @@ void dbg_show_all_nodes( TidyDocImpl* doc, Node *node, int indent )
             }
 
         }
-        TY_(freeStack)(stack);
+        TY_(freeStack)(stack, doc);
     }
 }
 #endif
@@ -2651,7 +2667,7 @@ uint TIDY_CALL tidyErrorCodeFromKey(ctmbstr code)
     return TY_(tidyErrorCodeFromKey)( code );
 }
 
-TidyIterator TIDY_CALL getErrorCodeList()
+TidyIterator TIDY_CALL getErrorCodeList( void )
 {
     return TY_(getErrorCodeList)();
 }
@@ -2677,7 +2693,7 @@ Bool TIDY_CALL tidySetLanguage( ctmbstr languageCode )
     return result;
 }
 
-ctmbstr TIDY_CALL tidyGetLanguage()
+ctmbstr TIDY_CALL tidyGetLanguage( void )
 {
     return TY_(tidyGetLanguage)();
 }
@@ -2702,7 +2718,7 @@ ctmbstr TIDY_CALL tidyDefaultString( uint messageType )
     return TY_(tidyDefaultString)( messageType );
 }
 
-TidyIterator TIDY_CALL getStringKeyList()
+TidyIterator TIDY_CALL getStringKeyList( void )
 {
     return TY_(getStringKeyList)();
 }
@@ -2712,7 +2728,7 @@ uint TIDY_CALL getNextStringKey( TidyIterator* iter )
     return TY_(getNextStringKey)( iter );
 }
 
-TidyIterator TIDY_CALL getWindowsLanguageList()
+TidyIterator TIDY_CALL getWindowsLanguageList( void )
 {
     return TY_(getWindowsLanguageList)();
 }
@@ -2742,7 +2758,7 @@ ctmbstr TIDY_CALL TidyLangPosixName( const tidyLocaleMapItem *item )
 }
 
 
-TidyIterator TIDY_CALL getInstalledLanguageList()
+TidyIterator TIDY_CALL getInstalledLanguageList( void )
 {
     return TY_(getInstalledLanguageList)();
 }

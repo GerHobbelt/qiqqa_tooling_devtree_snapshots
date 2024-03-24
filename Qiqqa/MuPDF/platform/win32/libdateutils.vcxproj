@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATEUTILS;DATEUTILS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATEUTILS;DATEUTILS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/dateutils/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATEUTILS;DATEUTILS_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/dateutils/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATEUTILS;DATEUTILS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATEUTILS;DATEUTILS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATEUTILS;DATEUTILS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/dateutils/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/dateutils/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATEUTILS;DATEUTILS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATEUTILS;DATEUTILS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/dateutils/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATEUTILS;DATEUTILS_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/dateutils/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATEUTILS;DATEUTILS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATEUTILS;DATEUTILS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATEUTILS;DATEUTILS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/dateutils/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/dateutils/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATEUTILS;DATEUTILS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATEUTILS;DATEUTILS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/dateutils/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATEUTILS;DATEUTILS_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/dateutils/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATEUTILS;DATEUTILS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATEUTILS;DATEUTILS_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATEUTILS;DATEUTILS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/dateutils/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/dateutils/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATEUTILS;DATEUTILS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATEUTILS;DATEUTILS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/dateutils/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATEUTILS;DATEUTILS_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/dateutils/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATEUTILS;DATEUTILS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATEUTILS;DATEUTILS_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATEUTILS;DATEUTILS_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;../../thirdparty/owemdjee/dateutils/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/dateutils/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -320,20 +320,48 @@
     <ClInclude Include="../../thirdparty/owemdjee/dateutils/src/dt-io-zone.h" />
     <ClInclude Include="../../thirdparty/owemdjee/dateutils/src/dt-io.h" />
     <ClInclude Include="../../thirdparty/owemdjee/dateutils/src/prchunk.h" />
+    <Text Include="../../thirdparty/owemdjee/dateutils/GNUmakefile" />
+    <Text Include="../../thirdparty/owemdjee/dateutils/INSTALL" />
+    <Text Include="../../thirdparty/owemdjee/dateutils/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/dateutils/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/dateutils/README.md" />
     <Text Include="../../thirdparty/owemdjee/dateutils/build-aux/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/dateutils/build-aux/yuck-coru.c.m4" />
+    <Text Include="../../thirdparty/owemdjee/dateutils/build-aux/yuck-coru.h.m4" />
+    <Text Include="../../thirdparty/owemdjee/dateutils/build-aux/yuck-scmver.m4" />
     <Text Include="../../thirdparty/owemdjee/dateutils/build-aux/yuck.am" />
+    <Text Include="../../thirdparty/owemdjee/dateutils/build-aux/yuck.m4" />
+    <Text Include="../../thirdparty/owemdjee/dateutils/build-aux/yuck.man.m4" />
+    <Text Include="../../thirdparty/owemdjee/dateutils/build-aux/yuck.mk" />
     <Text Include="../../thirdparty/owemdjee/dateutils/configure.ac" />
     <Text Include="../../thirdparty/owemdjee/dateutils/contrib/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/dateutils/data/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/dateutils/info/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/dateutils/info/dateutils.man" />
+    <Text Include="../../thirdparty/owemdjee/dateutils/info/dateutils.texi" />
+    <Text Include="../../thirdparty/owemdjee/dateutils/info/format-ddiff.texi" />
+    <Text Include="../../thirdparty/owemdjee/dateutils/info/format.texi" />
     <Text Include="../../thirdparty/owemdjee/dateutils/info/genh2m.sh" />
     <Text Include="../../thirdparty/owemdjee/dateutils/info/gentexi.sh" />
+    <Text Include="../../thirdparty/owemdjee/dateutils/info/locale.texi" />
     <Text Include="../../thirdparty/owemdjee/dateutils/info/texi2h2m.sh" />
+    <Text Include="../../thirdparty/owemdjee/dateutils/info/units.texi" />
+    <Text Include="../../thirdparty/owemdjee/dateutils/info/zone.texi" />
     <Text Include="../../thirdparty/owemdjee/dateutils/lib/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/dateutils/lib/fmt-special.gperf" />
+    <Text Include="../../thirdparty/owemdjee/dateutils/lib/iata.tzminfo" />
+    <Text Include="../../thirdparty/owemdjee/dateutils/lib/icao.tzminfo" />
+    <Text Include="../../thirdparty/owemdjee/dateutils/lib/leap-seconds.def" />
+    <Text Include="../../thirdparty/owemdjee/dateutils/lib/mic.tzminfo" />
     <Text Include="../../thirdparty/owemdjee/dateutils/lib/version.c.in" />
+    <Text Include="../../thirdparty/owemdjee/dateutils/m4/ax_zoneinfo.m4" />
+    <Text Include="../../thirdparty/owemdjee/dateutils/m4/clitosis.m4" />
+    <Text Include="../../thirdparty/owemdjee/dateutils/m4/sxe-compiler.m4" />
+    <Text Include="../../thirdparty/owemdjee/dateutils/m4/sxe-libtool.m4" />
+    <Text Include="../../thirdparty/owemdjee/dateutils/m4/sxe-linker.m4" />
+    <Text Include="../../thirdparty/owemdjee/dateutils/m4/sxe-matlab.m4" />
+    <Text Include="../../thirdparty/owemdjee/dateutils/m4/sxe-mmap.m4" />
+    <Text Include="../../thirdparty/owemdjee/dateutils/m4/yuck.m4" />
     <Text Include="../../thirdparty/owemdjee/dateutils/src/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/dateutils/src/dexpr-parser.y" />
     <Text Include="../../thirdparty/owemdjee/dateutils/src/dexpr-scanner.l" />

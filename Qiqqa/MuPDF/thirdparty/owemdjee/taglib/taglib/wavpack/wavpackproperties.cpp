@@ -27,11 +27,13 @@
  *   http://www.mozilla.org/MPL/                                           *
  ***************************************************************************/
 
-#include <stdint.h>
-#include <tstring.h>
-#include <tdebug.h>
-
 #include "wavpackproperties.h"
+
+#include <cstdint>
+#include <array>
+
+#include "tstring.h"
+#include "tdebug.h"
 #include "wavpackfile.h"
 
 // Implementation of this class is based on the information at:
@@ -42,58 +44,28 @@ using namespace TagLib;
 class WavPack::Properties::PropertiesPrivate
 {
 public:
-  PropertiesPrivate() :
-    length(0),
-    bitrate(0),
-    sampleRate(0),
-    channels(0),
-    version(0),
-    bitsPerSample(0),
-    lossless(false),
-    sampleFrames(0) {}
-
-  int length;
-  int bitrate;
-  int sampleRate;
-  int channels;
-  int version;
-  int bitsPerSample;
-  bool lossless;
-  unsigned int sampleFrames;
+  int length { 0 };
+  int bitrate { 0 };
+  int sampleRate { 0 };
+  int channels { 0 };
+  int version { 0 };
+  int bitsPerSample { 0 };
+  bool lossless { false };
+  unsigned int sampleFrames { 0 };
 };
 
 ////////////////////////////////////////////////////////////////////////////////
 // public members
 ////////////////////////////////////////////////////////////////////////////////
 
-WavPack::Properties::Properties(const ByteVector &, long, ReadStyle style) :
+WavPack::Properties::Properties(File *file, offset_t streamLength, ReadStyle style) :
   AudioProperties(style),
-  d(new PropertiesPrivate())
-{
-  debug("WavPack::Properties::Properties() -- This constructor is no longer used.");
-}
-
-WavPack::Properties::Properties(File *file, long streamLength, ReadStyle style) :
-  AudioProperties(style),
-  d(new PropertiesPrivate())
+  d(std::make_unique<PropertiesPrivate>())
 {
   read(file, streamLength);
 }
 
-WavPack::Properties::~Properties()
-{
-  delete d;
-}
-
-int WavPack::Properties::length() const
-{
-  return lengthInSeconds();
-}
-
-int WavPack::Properties::lengthInSeconds() const
-{
-  return d->length / 1000;
-}
+WavPack::Properties::~Properties() = default;
 
 int WavPack::Properties::lengthInMilliseconds() const
 {
@@ -165,9 +137,10 @@ unsigned int WavPack::Properties::sampleFrames() const
 
 namespace
 {
-  const unsigned int sampleRates[] = {
-     6000,  8000,  9600, 11025, 12000, 16000,  22050, 24000,
-    32000, 44100, 48000, 64000, 88200, 96000, 192000,     0 };
+  constexpr std::array sampleRates {
+    6000U, 8000U, 9600U, 11025U, 12000U, 16000U, 22050U, 24000U,
+    32000U, 44100U, 48000U, 64000U, 88200U, 96000U, 192000U, 0U
+  };
 
   /*!
    * Given a WavPack \a block (complete, but not including the 32-byte header),
@@ -184,7 +157,7 @@ namespace
     int index = 0;
 
     while(index + 1 < blockSize) {
-      const unsigned char metaId = static_cast<unsigned char>(block[index]);
+      const auto metaId = static_cast<unsigned char>(block[index]);
       int metaBc = static_cast<unsigned char>(block[index + 1]) << 1;
       index += 2;
 
@@ -218,7 +191,7 @@ namespace
       // if we got DSD block, return the specified rate shift amount
 
       if(id == ID_DSD_BLOCK && (metaId & ID_UNIQUE) == ID_DSD_BLOCK && metaBc > 0) {
-        const unsigned char rateShift = static_cast<unsigned char>(block[index]);
+        const auto rateShift = static_cast<unsigned char>(block[index]);
         if(rateShift <= 31)
           return rateShift;
       }
@@ -257,9 +230,9 @@ namespace
 
 }  // namespace
 
-void WavPack::Properties::read(File *file, long streamLength)
+void WavPack::Properties::read(File *file, offset_t streamLength)
 {
-  long offset = 0;
+  offset_t offset = 0;
 
   while(true) {
     file->seek(offset);
@@ -339,9 +312,9 @@ void WavPack::Properties::read(File *file, long streamLength)
   }
 }
 
-unsigned int WavPack::Properties::seekFinalIndex(File *file, long streamLength)
+unsigned int WavPack::Properties::seekFinalIndex(File *file, offset_t streamLength)
 {
-  long offset = streamLength;
+  offset_t offset = streamLength;
 
   while (offset >= 32) {
     offset = file->rfind("wvpk", offset - 4);

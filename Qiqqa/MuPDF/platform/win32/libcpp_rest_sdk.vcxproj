@@ -116,7 +116,7 @@
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPP_REST_SDK;CPP_REST_SDK_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPP_REST_SDK;CPP_REST_SDK_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -126,14 +126,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPP_REST_SDK;CPP_REST_SDK_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPP_REST_SDK;CPP_REST_SDK_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPP_REST_SDK;CPP_REST_SDK_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPP_REST_SDK;CPP_REST_SDK_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPP_REST_SDK;CPP_REST_SDK_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPP_REST_SDK;CPP_REST_SDK_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -152,15 +152,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPP_REST_SDK;CPP_REST_SDK_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPP_REST_SDK;CPP_REST_SDK_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPP_REST_SDK;CPP_REST_SDK_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPP_REST_SDK;CPP_REST_SDK_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -171,7 +171,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPP_REST_SDK;CPP_REST_SDK_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPP_REST_SDK;CPP_REST_SDK_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -181,14 +181,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPP_REST_SDK;CPP_REST_SDK_STATICLIB;_CRT_SECURE_NO_WARNINGS;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPP_REST_SDK;CPP_REST_SDK_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPP_REST_SDK;CPP_REST_SDK_STATICLIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPP_REST_SDK;CPP_REST_SDK_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPP_REST_SDK;CPP_REST_SDK_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPP_REST_SDK;CPP_REST_SDK_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
@@ -207,15 +207,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPP_REST_SDK;CPP_REST_SDK_STATICLIB;_CRT_SECURE_NO_WARNINGS;_CRTDBG_MAP_ALLOC;WIN64;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPP_REST_SDK;CPP_REST_SDK_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPP_REST_SDK;CPP_REST_SDK_STATICLIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCPP_REST_SDK;CPP_REST_SDK_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -584,6 +584,7 @@
     <ResourceCompile Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/src/utilities/Resource.rc" />
     <ResourceCompile Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/tests/functional/misc/atl_headers/header_test.rc" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Build_android/configure.sh" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Build_android/openssl/Makefile" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Build_iOS/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Build_iOS/README.md" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Build_iOS/configure.sh" />
@@ -599,21 +600,48 @@
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/cmake/cpprest_find_zlib.cmake" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/cmake/cpprestsdk-config-version.in.cmake" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/cmake/cpprestsdk-config.in.cmake" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/public_apis_doxyfile" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/BingRequest/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/BlackJack/BlackJack_Client/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/BlackJack/BlackJack_Server/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/BlackJack/BlackJack_UIClient/App.xaml" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/BlackJack/BlackJack_UIClient/CardShape.xaml" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/BlackJack/BlackJack_UIClient/Common/StandardStyles.xaml" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/BlackJack/BlackJack_UIClient/Package.appxmanifest" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/BlackJack/BlackJack_UIClient/Package.uwp.appxmanifest" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/BlackJack/BlackJack_UIClient/Player.xaml" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/BlackJack/BlackJack_UIClient/PlayingTable.xaml" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/BlackJack/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/CasaLens/AppCode.html" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/CasaLens/CasaLens141/AppCode.html" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/CasaLens/CasaLens141/css/default.css" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/CasaLens/CasaLens141/js/default.js" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/CasaLens/ReadMe.txt" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/CasaLens/css/default.css" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/CasaLens/js/default.js" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/FacebookDemo/App.xaml" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/FacebookDemo/Common/StandardStyles.xaml" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/FacebookDemo/MainPage.xaml" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/FacebookDemo/Package.appxmanifest" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/FacebookDemo/Package.uwp.appxmanifest" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/OAuth2Live/App.xaml" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/OAuth2Live/Common/StandardStyles.xaml" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/OAuth2Live/MainPage.xaml" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/OAuth2Live/Package.appxmanifest" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/OAuth2Live/Package.uwp.appxmanifest" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/Oauth1Client/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/Oauth2Client/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/SearchFile/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/WindowsLiveAuth/App.xaml" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/WindowsLiveAuth/Common/StandardStyles.xaml" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/WindowsLiveAuth/MainPage.xaml" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/samples/WindowsLiveAuth/Package.appxmanifest" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/src/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/tests/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/tests/common/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/tests/common/TestRunner/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/tests/common/TestRunner/test_runner.manifest" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/tests/common/UnitTestpp/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/tests/common/UnitTestpp/ThirdPartyNotices.txt" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/tests/common/utilities/CMakeLists.txt" />
@@ -631,7 +659,11 @@
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/Release/tests/functional/websockets/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/SECURITY.md" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/ThirdPartyNotices.txt" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/azure-devops/build-ubuntu-apt.yml" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/azure-devops/build-ubuntu-vcpkg.yml" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/azure-devops/build-windows.yml" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/azure-devops/vcpkg-windows.txt" />
+    <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/azure-pipelines.yml" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/changelog.md" />
     <Text Include="../../thirdparty/owemdjee/cpp_rest_sdk/license.txt" />
   </ItemGroup>

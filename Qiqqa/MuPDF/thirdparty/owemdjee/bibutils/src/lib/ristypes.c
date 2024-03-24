@@ -1411,6 +1411,83 @@ static const lookups pamphlet[] = {
 	{ " ",  "GENRE:BIBUTILS|pamphlet", ALWAYS, LEVEL_MAIN },
 };
 
+static const lookups webpage[] = {
+	{ "A1", "AUTHOR",       PERSON,  LEVEL_MAIN },   /* Deprecated? */
+	{ "A2", "AUTHOR",       PERSON,  LEVEL_HOST },   /* 'Secondary' Author */
+	{ "A3", "EDITOR",       PERSON,  LEVEL_SERIES }, /* 'Tertiary' Author - Series editor */
+	{ "A4", "AUTHOR",       PERSON,  LEVEL_SERIES }, /* 'Subsidiary' Author */
+	{ "AB", "ABSTRACT",     SIMPLE,  LEVEL_MAIN },   /* Abstract */
+	{ "AD", "AUTHORADDRESS",SIMPLE,  LEVEL_MAIN },   /* Author Address */
+	{ "AU", "AUTHOR",       PERSON,  LEVEL_MAIN },   /* Author */
+	{ "BT", "TITLE",        SIMPLE,  LEVEL_MAIN },   /* Book Title - Deprecated? */
+	{ "C1", "NOTES",        NOTES,   LEVEL_MAIN },   /* 'Custom' - put in "notes" */
+	{ "C2", "NOTES",        NOTES,   LEVEL_MAIN },   /* 'Custom' - put in "notes" */
+	{ "C3", "NOTES",        NOTES,   LEVEL_MAIN },   /* 'Custom' - put in "notes" */
+	{ "C4", "NOTES",        NOTES,   LEVEL_MAIN },   /* 'Custom' - put in "notes" */
+	{ "C5", "NOTES",        NOTES,   LEVEL_MAIN },   /* 'Custom' - put in "notes" */
+	{ "C6", "NOTES",        NOTES,   LEVEL_MAIN },   /* 'Custom' - put in "notes" */
+	{ "C7", "NOTES",        NOTES,   LEVEL_MAIN },   /* 'Custom' - put in "notes" */
+	{ "C8", "NOTES",        NOTES,   LEVEL_MAIN },   /* 'Custom' - put in "notes" */
+	{ "CA", "CAPTION",      SIMPLE,  LEVEL_MAIN },   /* Caption */
+	{ "CN", "CALLNUMBER",   SIMPLE,  LEVEL_MAIN },   /* Call Number */
+	{ "CP", "ISSUE",        SIMPLE,  LEVEL_MAIN },   /* Deprecated? */
+	{ "CT", "ADDRESS",      SIMPLE,  LEVEL_MAIN },   /* Deprecated? */
+	{ "CY", "ADDRESS",      SIMPLE,  LEVEL_MAIN },   /* Place Published */
+	{ "DA", "YEAR",         DATE,    LEVEL_MAIN },   /* Date */
+	{ "DB", "DATABASE",     SIMPLE,  LEVEL_MAIN },   /* Database */
+	{ "DI", "DOI",          DOI,     LEVEL_MAIN },   /* Deprecated? */
+	{ "DO", "DOI",          DOI,     LEVEL_MAIN },   /* DOI */
+	{ "DP", "DATABASEPROV", SIMPLE,  LEVEL_MAIN },   /* Database Provider */
+	{ "ED", "EDITOR",       PERSON,  LEVEL_MAIN },   /* Deprecated? */
+	{ "EP", "PAGEEND",      SIMPLE,  LEVEL_MAIN },   /* End Page */
+	{ "ET", "EDITION",      SIMPLE,  LEVEL_MAIN },   /* Edition */
+	{ "ID", "REFNUM",       SIMPLE,  LEVEL_MAIN },   /* Deprecated? */
+	{ "IS", "ISSUE",        SIMPLE,  LEVEL_MAIN },   /* Number */
+	{ "J1", "TITLE",        SIMPLE,  LEVEL_HOST },   /* Deprecated? */
+	{ "J2", "TITLE",        SIMPLE,  LEVEL_HOST },   /* Alternate Title, abbreviated book or journal */
+	{ "JA", "TITLE",        SIMPLE,  LEVEL_HOST },   /* Deprecated? */
+	{ "JF", "TITLE",        SIMPLE,  LEVEL_HOST },   /* Deprecated? */
+	{ "JO", "TITLE",        SIMPLE,  LEVEL_HOST },   /* Deprecated? */
+	{ "KW", "KEYWORD",      SIMPLE,  LEVEL_MAIN },   /* Keywords */
+	{ "L1", "FILEATTACH",   LINKEDFILE,  LEVEL_MAIN },   /* File Attachment (local, not URL) */
+	{ "L4", "FIGATTACH",    LINKEDFILE,  LEVEL_MAIN },   /* Figure Attachment (local, not URL) */
+	{ "LA", "LANGUAGE",     SIMPLE,  LEVEL_MAIN },   /* Language */
+	{ "LB", "LABEL",        SIMPLE,  LEVEL_MAIN },   /* Label */
+	{ "M1", "NOTES",        NOTES,   LEVEL_MAIN },   /* Misc or Deprecated? */
+	{ "M2", "NOTES",        NOTES,   LEVEL_MAIN },   /* Misc or Deprecated? */
+	{ "M3", "NOTES",        NOTES,   LEVEL_MAIN },   /* Misc or Type of Work? */
+	{ "N1", "NOTES",        NOTES,   LEVEL_MAIN },   /* Notes */
+	{ "N2", "ABSTRACT",     SIMPLE,  LEVEL_MAIN },   /* Deprecated? */
+	{ "NV", "NUMVOLUMES",   SIMPLE,  LEVEL_MAIN },   /* Number of Volumes */
+	{ "OP", "ORIGPUB",      SIMPLE,  LEVEL_MAIN },   /* Original Publication */
+	{ "PB", "PUBLISHER",    SIMPLE,  LEVEL_MAIN },   /* Publisher */
+	{ "PY", "YEAR",         DATE,    LEVEL_MAIN },   /* Year */
+	{ "RI", "REVIEWEDITEM", SIMPLE,  LEVEL_MAIN },   /* Reviewed Item */
+	{ "RN", "NOTES",        SIMPLE,  LEVEL_MAIN },   /* Research Notes */
+	{ "RP", "REPRINTSTATUS",SIMPLE,  LEVEL_MAIN },   /* Reprint Edition */
+	{ "SE", "SECTION",      SIMPLE,  LEVEL_MAIN },   /* Section */
+	{ "SN", "SERIALNUMBER", SERIALNO,LEVEL_MAIN },   /* ISBN/ISSN */
+	{ "SP", "PAGESTART",    SIMPLE,  LEVEL_MAIN },   /* Start Page */
+	{ "ST", "SHORTTITLE",   SIMPLE,  LEVEL_MAIN },   /* Short Title */
+	{ "T1", "TITLE",        TITLE,   LEVEL_MAIN },   /* Deprecated? */
+	{ "T2", "SHORTTITLE",   SIMPLE,  LEVEL_HOST },   /* 'Secondary' Title */
+	{ "T3", "TITLE",        SIMPLE,  LEVEL_SERIES }, /* 'Tertiary' Title */
+	{ "TI", "TITLE",        TITLE,   LEVEL_MAIN },   /* Title */
+	{ "TT", "TRANSTITLE",   TITLE,   LEVEL_MAIN },   /* Translated Title */
+	{ "U1", "NOTES",        NOTES,   LEVEL_MAIN },   /* 'User' - Deprecated? */
+	{ "U2", "NOTES",        NOTES,   LEVEL_MAIN },   /* 'User' - Deprecated? */
+	{ "U3", "NOTES",        NOTES,   LEVEL_MAIN },   /* 'User' - Deprecated? */
+	{ "U4", "NOTES",        NOTES,   LEVEL_MAIN },   /* 'User' - Deprecated? */
+	{ "U5", "NOTES",        NOTES,   LEVEL_MAIN },   /* 'User' - Deprecated? */
+	{ "UR", "URL",          SIMPLE,  LEVEL_MAIN },   /* URL */
+	{ "VL", "VOLUME",       SIMPLE,  LEVEL_MAIN },   /* Volume */
+	{ "VO", "VOLUME",       SIMPLE,  LEVEL_MAIN },   /* Deprecated? */
+	{ "Y1", "YEAR",         DATE,    LEVEL_MAIN },   /* Deprecated */
+	{ "Y2", "MONTH",        SIMPLE,  LEVEL_MAIN },   /* Access Date */
+	{ " ",  "RESOURCE|webpage", ALWAYS, LEVEL_MAIN },
+	{ " ",  "GENRE|webpage",              ALWAYS, LEVEL_MAIN },
+};
+
 static const lookups map[] = {
 	{ "A1", "AUTHOR",       PERSON,  LEVEL_MAIN },   /* Deprecated? */
 	{ "A2", "AUTHOR",       PERSON,  LEVEL_HOST },   /* 'Secondary' Author */
@@ -1581,6 +1658,7 @@ const variants ris_all[] = {
 	REFTYPE( "PCOMM", communication ),
 	REFTYPE( "PAMP", pamphlet ),
 	REFTYPE( "ELEC", electric ),
+	REFTYPE( "ONLN", webpage ),
 	REFTYPE( "THES", thesis ),
 	REFTYPE( "RPRT", report ),
 	REFTYPE( "ABST", abstract ),
