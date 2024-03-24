@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03fd328}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{42f0fc98-34f6-4567-b3cf-de13e74a89ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{b1798409-2031-413d-9df7-70b0202ddd98}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files\include">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\opencv2">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\opencv2\dnn">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\opencv2\dnn\utils">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\misc">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\misc\caffe">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\misc\onnx">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\misc\python">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\misc\tensorflow">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0009}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\misc\tflite">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0010}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\perf">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0011}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\cmake">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0013}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\cmake\hooks">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0014}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\misc">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0015}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\misc\objc">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0016}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\misc\plugin">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\misc\plugin\openvino">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\misc\python">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0020}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\misc\python\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0019}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\misc">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\misc\caffe">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\misc\onnx">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\misc\tensorflow">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\perf">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/misc/caffe/opencv-caffe.pb.cc">
+      <Filter>Source Files\misc\caffe</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/misc/onnx/opencv-onnx.pb.cc">
+      <Filter>Source Files\misc\onnx</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/misc/tensorflow/attr_value.pb.cc">
+      <Filter>Source Files\misc\tensorflow</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/misc/tensorflow/function.pb.cc">
+      <Filter>Source Files\misc\tensorflow</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/misc/tensorflow/graph.pb.cc">
+      <Filter>Source Files\misc\tensorflow</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/misc/tensorflow/op_def.pb.cc">
+      <Filter>Source Files\misc\tensorflow</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/misc/tensorflow/tensor.pb.cc">
+      <Filter>Source Files\misc\tensorflow</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/misc/tensorflow/tensor_shape.pb.cc">
+      <Filter>Source Files\misc\tensorflow</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/misc/tensorflow/types.pb.cc">
+      <Filter>Source Files\misc\tensorflow</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/misc/tensorflow/versions.pb.cc">
+      <Filter>Source Files\misc\tensorflow</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/perf/perf_caffe.cpp">
+      <Filter>Source Files\perf</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/perf/perf_common.cpp">
+      <Filter>Source Files\perf</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/perf/perf_convolution.cpp">
+      <Filter>Source Files\perf</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/perf/perf_convolution1d.cpp">
+      <Filter>Source Files\perf</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/perf/perf_convolution3d.cpp">
+      <Filter>Source Files\perf</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/perf/perf_einsum.cpp">
+      <Filter>Source Files\perf</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/perf/perf_gemm.cpp">
+      <Filter>Source Files\perf</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/perf/perf_layer.cpp">
+      <Filter>Source Files\perf</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/perf/perf_main.cpp">
+      <Filter>Source Files\perf</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/perf/perf_net.cpp">
+      <Filter>Source Files\perf</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/perf/perf_recurrent.cpp">
+      <Filter>Source Files\perf</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/npy_blob.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_backends.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_caffe_importer.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_common.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_darknet_importer.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_googlenet.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_graph_simplifier.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_ie_models.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_int8_layers.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_layers.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_main.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_misc.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_model.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_nms.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_onnx_conformance.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_onnx_importer.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_tf_importer.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_tflite_importer.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_torch_importer.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/include/opencv2/dnn.hpp">
+      <Filter>Header Files\include\opencv2</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/include/opencv2/dnn/all_layers.hpp">
+      <Filter>Header Files\include\opencv2\dnn</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/include/opencv2/dnn/dict.hpp">
+      <Filter>Header Files\include\opencv2\dnn</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/include/opencv2/dnn/dnn.hpp">
+      <Filter>Header Files\include\opencv2\dnn</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/include/opencv2/dnn/dnn.inl.hpp">
+      <Filter>Header Files\include\opencv2\dnn</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/include/opencv2/dnn/layer.details.hpp">
+      <Filter>Header Files\include\opencv2\dnn</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/include/opencv2/dnn/layer.hpp">
+      <Filter>Header Files\include\opencv2\dnn</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/include/opencv2/dnn/layer_reg.private.hpp">
+      <Filter>Header Files\include\opencv2\dnn</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/include/opencv2/dnn/shape_utils.hpp">
+      <Filter>Header Files\include\opencv2\dnn</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/include/opencv2/dnn/utils/debug_utils.hpp">
+      <Filter>Header Files\include\opencv2\dnn\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/include/opencv2/dnn/utils/inference_engine.hpp">
+      <Filter>Header Files\include\opencv2\dnn\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/include/opencv2/dnn/version.hpp">
+      <Filter>Header Files\include\opencv2\dnn</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/misc/caffe/opencv-caffe.pb.h">
+      <Filter>Header Files\misc\caffe</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/misc/onnx/opencv-onnx.pb.h">
+      <Filter>Header Files\misc\onnx</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/misc/python/pyopencv_dnn.hpp">
+      <Filter>Header Files\misc\python</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/misc/tensorflow/attr_value.pb.h">
+      <Filter>Header Files\misc\tensorflow</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/misc/tensorflow/function.pb.h">
+      <Filter>Header Files\misc\tensorflow</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/misc/tensorflow/graph.pb.h">
+      <Filter>Header Files\misc\tensorflow</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/misc/tensorflow/op_def.pb.h">
+      <Filter>Header Files\misc\tensorflow</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/misc/tensorflow/tensor.pb.h">
+      <Filter>Header Files\misc\tensorflow</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/misc/tensorflow/tensor_shape.pb.h">
+      <Filter>Header Files\misc\tensorflow</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/misc/tensorflow/types.pb.h">
+      <Filter>Header Files\misc\tensorflow</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/misc/tensorflow/versions.pb.h">
+      <Filter>Header Files\misc\tensorflow</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/misc/tflite/schema_generated.h">
+      <Filter>Header Files\misc\tflite</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/perf/perf_precomp.hpp">
+      <Filter>Header Files\perf</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/npy_blob.hpp">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_common.hpp">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_common.impl.hpp">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_onnx_conformance_layer_filter__cuda_denylist.inl.hpp">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_onnx_conformance_layer_filter__halide_denylist.inl.hpp">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_onnx_conformance_layer_filter__openvino.inl.hpp">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_onnx_conformance_layer_filter__vulkan_denylist.inl.hpp">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_onnx_conformance_layer_filter_opencv_all_denylist.inl.hpp">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_onnx_conformance_layer_filter_opencv_cpu_denylist.inl.hpp">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_onnx_conformance_layer_filter_opencv_denylist.inl.hpp">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_onnx_conformance_layer_filter_opencv_ocl_fp16_denylist.inl.hpp">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_onnx_conformance_layer_filter_opencv_ocl_fp32_denylist.inl.hpp">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_onnx_conformance_layer_parser_denylist.inl.hpp">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/test_precomp.hpp">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
+    <Text Include="../../thirdparty/owemdjee/opencv/modules/dnn/CMakeLists.txt">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/opencv/modules/dnn/cmake/hooks/INIT_MODULE_SOURCES_opencv_dnn.cmake">
+      <Filter>Misc Files\cmake\hooks</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/opencv/modules/dnn/cmake/init.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/opencv/modules/dnn/cmake/plugin.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/opencv/modules/dnn/misc/face_detector_accuracy.py">
+      <Filter>Misc Files\misc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/opencv/modules/dnn/misc/objc/gen_dict.json">
+      <Filter>Misc Files\misc\objc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/opencv/modules/dnn/misc/plugin/openvino/CMakeLists.txt">
+      <Filter>Misc Files\misc\plugin\openvino</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/opencv/modules/dnn/misc/python/test/test_dnn.py">
+      <Filter>Misc Files\misc\python\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/opencv/modules/dnn/misc/quantize_face_detector.py">
+      <Filter>Misc Files\misc</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/cityscapes_semsegm_test_enet.py">
+      <Filter>Misc Files\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/imagenet_cls_test_alexnet.py">
+      <Filter>Misc Files\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/imagenet_cls_test_googlenet.py">
+      <Filter>Misc Files\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/imagenet_cls_test_inception.py">
+      <Filter>Misc Files\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/opencv/modules/dnn/test/pascal_semsegm_test_fcn.py">
+      <Filter>Misc Files\test</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,124 @@
+#include <iostream>
+#include <algorithm>
+#include <cctype>
+#ifdef _MSC_VER
+#include <malloc.h>
+#endif
+
+#include "warc.hh"
+#include "constants.hh"
+
+namespace warc { inline namespace v1 {
+
+static const char CR = 0x0d;
+static const char LF = 0x0a;
+
+// when we read data from the warc file to a string always read until
+// CRLF chars found
+std::istream& operator>> (std::istream& is, std::string& str)
+{
+	std::istream::sentry s(is);
+	if (s) {
+		is >> std::noskipws;
+		while(is.good()){
+			char c = is.get();
+			if (c == CR && is.get() == LF)
+				break;
+			str += c;
+		}
+	}
+	return is;
+}
+
+// parse a WARCField from the istream
+std::istream& operator>> (std::istream& is, WARCField& field)
+{
+	std::istream::sentry s(is);
+	if (s) {
+		std::string line;
+		is >> line;
+		if (line.empty()){
+			is.setstate(std::ios_base::failbit);
+			return is;
+		}
+		auto p = std::find(line.begin(), line.end(), ':');
+		std::move(line.begin(), p, std::back_inserter(field.name));
+		// XXX throw an exception or invalid the stream?
+		if (!is_warc_field_name(field.name))
+			throw "Unexpected field";
+		p++; // skip ":"
+		// remove white space after ":" char if exits
+		while (isspace(*p))
+			p++;
+		std::move(p, line.end(), std::back_inserter(field.value));
+	}
+	return is;
+}
+
+/// parse the new WARCRecord from the istream
+std::istream& operator>>(std::istream& is, WARCRecord& record)
+{
+	std::istream::sentry s(is);
+	if (s) {
+		// istream_iterator reuse the WARCRecord object. Let's
+		// recycle it
+		record.fields.clear();
+		record.version.clear();
+		record.content.clear();
+		// get the record version
+		std::string version;
+		is >> version;
+		record.version = version;
+		// read the header data
+		while(is.good()) {
+			WARCField field;
+			is >> field;
+			// empty line (end of the header)
+			if (is.fail())
+				break;
+			record.fields.push_back(std::move(field));
+		}
+		// reset fail bit
+		is.clear();
+		// get the content length.
+		auto it = find(record.fields.begin(), record.fields.end(), CONTENT_LENGTH);
+		if (it != record.fields.end()){
+			const auto length = stoul(it->value);
+			// https://stackoverflow.com/questions/5246900/enabling-vlas-variable-length-arrays-in-ms-visual-c
+			// https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/malloca?view=msvc-170
+#if 0
+			char buffer[length];
+#else
+			char *buffer = (char *)_malloca(length);
+#endif
+			if (is.read(buffer, length))
+				record.content = std::string(buffer, length);
+
+			_freea(buffer);
+		}
+		// skip CR and LF until next record;
+		is.ignore(4);
+	}
+	return is;
+}
+
+std::ostream& operator<<(std::ostream& os, const WARCRecord& record)
+{
+	std::ostream::sentry s(os);
+	if (s) {
+		for (auto field : record.fields)
+			os << field << std::endl;
+		os << std::endl << "content: " << std::endl << record.content << std::endl;
+	}
+	return os;
+};
+
+std::ostream& operator<<(std::ostream& os, const WARCField& field)
+{
+	std::ostream::sentry s(os);
+	if (s)
+		os << field.name << ": " << field.value;
+	return os;
+};
+
+} };

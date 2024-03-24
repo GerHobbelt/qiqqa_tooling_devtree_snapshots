@@ -1,0 +1,4 @@
+
+also-ignore:
+	version.rc
+	

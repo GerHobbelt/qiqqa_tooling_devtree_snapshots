@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03fd328}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{42f0fc98-34f6-4567-b3cf-de13e74a89ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{b1798409-2031-413d-9df7-70b0202ddd98}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files\include">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\opencv2">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\opencv2\sfm">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\cmake">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\samples">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\samples\data">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\samples\data\images">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\tutorials">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0009}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\tutorials\sfm_import_reconstruction">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0010}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\tutorials\sfm_installation">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0011}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\tutorials\sfm_scene reconstruction">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\tutorials\sfm_trajectory_estimation">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0013}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0014}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\doc">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0016}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\doc\pics">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0015}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\samples">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0019}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\samples\data">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\samples\data\images">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\samples">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0020}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/samples/import_reconstruction.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/samples/match_reconstruct.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/samples/recon2v.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/samples/scene_reconstruction.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/samples/trajectory_reconstruction.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/test/scene.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/test/test_common.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/test/test_conditioning.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/test/test_fundamental.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/test/test_main.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/test/test_numeric.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/test/test_projection.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/test/test_reconstruct.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/test/test_robust.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/test/test_simple_pipeline.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/test/test_triangulation.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/include/opencv2/sfm.hpp">
+      <Filter>Header Files\include\opencv2</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/include/opencv2/sfm/conditioning.hpp">
+      <Filter>Header Files\include\opencv2\sfm</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/include/opencv2/sfm/fundamental.hpp">
+      <Filter>Header Files\include\opencv2\sfm</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/include/opencv2/sfm/io.hpp">
+      <Filter>Header Files\include\opencv2\sfm</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/include/opencv2/sfm/numeric.hpp">
+      <Filter>Header Files\include\opencv2\sfm</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/include/opencv2/sfm/projection.hpp">
+      <Filter>Header Files\include\opencv2\sfm</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/include/opencv2/sfm/reconstruct.hpp">
+      <Filter>Header Files\include\opencv2\sfm</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/include/opencv2/sfm/robust.hpp">
+      <Filter>Header Files\include\opencv2\sfm</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/include/opencv2/sfm/simple_pipeline.hpp">
+      <Filter>Header Files\include\opencv2\sfm</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/include/opencv2/sfm/triangulation.hpp">
+      <Filter>Header Files\include\opencv2\sfm</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/test/scene.h">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/test/test_precomp.hpp">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
+    <Image Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/doc/pics/desktop_trajectory.png">
+      <Filter>Resource Files\doc\pics</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/doc/pics/import_sagrada_familia.png">
+      <Filter>Resource Files\doc\pics</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/doc/pics/sagrada_familia_input.jpg">
+      <Filter>Resource Files\doc\pics</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/doc/pics/sagrada_familia_reconstruction.jpg">
+      <Filter>Resource Files\doc\pics</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/doc/pics/temple_input.jpg">
+      <Filter>Resource Files\doc\pics</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/doc/pics/temple_reconstruction.jpg">
+      <Filter>Resource Files\doc\pics</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/samples/data/images/resized_IMG_2889.jpg">
+      <Filter>Resource Files\samples\data\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/samples/data/images/resized_IMG_2890.jpg">
+      <Filter>Resource Files\samples\data\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/samples/data/images/resized_IMG_2891.jpg">
+      <Filter>Resource Files\samples\data\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/samples/data/images/resized_IMG_2892.jpg">
+      <Filter>Resource Files\samples\data\images</Filter>
+    </Image>
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/CMakeLists.txt">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/README.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/cmake/FindGflags.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/cmake/FindGlog.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/samples/data/backyard_tracks.txt">
+      <Filter>Misc Files\samples\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/samples/data/desktop_tracks.txt">
+      <Filter>Misc Files\samples\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/samples/data/images/dataset_files.txt">
+      <Filter>Misc Files\samples\data\images</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/samples/data/recon2v_checkerboards.txt">
+      <Filter>Misc Files\samples\data</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/tutorials/sfm_import_reconstruction/sfm_import_reconstruction.markdown">
+      <Filter>Misc Files\tutorials\sfm_import_reconstruction</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/tutorials/sfm_installation/sfm_installation.markdown">
+      <Filter>Misc Files\tutorials\sfm_installation</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/tutorials/sfm_scene reconstruction/sfm_scene_reconstruction.markdown">
+      <Filter>Misc Files\tutorials\sfm_scene reconstruction</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/tutorials/sfm_trajectory_estimation/sfm_trajectory_estimation.markdown">
+      <Filter>Misc Files\tutorials\sfm_trajectory_estimation</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/opencv_contrib/modules/sfm/tutorials/table_of_content_sfm.markdown">
+      <Filter>Misc Files\tutorials</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

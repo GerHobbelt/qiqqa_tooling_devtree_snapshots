@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03fd328}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{42f0fc98-34f6-4567-b3cf-de13e74a89ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{b1798409-2031-413d-9df7-70b0202ddd98}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files\src">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\pkg-config">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\browser">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/AttributeSelector.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/BinarySelector.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/Document.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/Node.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/Node.cpp.BASE.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/Node.cpp.LOCAL.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/Node.cpp.REMOTE.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/NodeMutationCollection.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/Parser.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/Selection.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/Selector.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/Serializer.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/SpecialTraits.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/TextSelector.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/TreeMap.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/UnarySelector.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/Util.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClInclude Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/AttributeSelector.hpp">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/BinarySelector.hpp">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/Document.hpp">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/Node.hpp">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/NodeMutationCollection.hpp">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/Parser.hpp">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/Selection.hpp">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/Selector.hpp">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/Serializer.hpp">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/SpecialTraits.hpp">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/StrRefHash.hpp">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/TextSelector.hpp">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/TreeMap.hpp">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/TreeMap.hpp.BASE.hpp">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/TreeMap.hpp.LOCAL.hpp">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/TreeMap.hpp.REMOTE.hpp">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/UnarySelector.hpp">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/src/Util.hpp">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <Text Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/AUTHORS">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/CMakeLists.txt">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/LICENSE">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/README.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/pkg-config/GQ.pc.in">
+      <Filter>Misc Files\pkg-config</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/test/README.TESTS.txt">
+      <Filter>Misc Files\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/test/browser/LICENSE.JQUERY.txt">
+      <Filter>Misc Files\test\browser</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/test/browser/MatchingTest.html">
+      <Filter>Misc Files\test\browser</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/test/browser/ParsingTest.html">
+      <Filter>Misc Files\test\browser</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/GQ-gumbo-css-selectors/test/browser/jquery-1.11.3.js">
+      <Filter>Misc Files\test\browser</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

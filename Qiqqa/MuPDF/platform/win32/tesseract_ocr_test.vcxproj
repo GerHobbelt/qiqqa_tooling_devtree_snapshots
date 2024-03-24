@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3644E12D-D934-41FD-BF7E-83745AAF4BC1}</ProjectGuid>
+    <RootNamespace>tesseract_ocr_test</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project.props" Label="SolutionWideSettings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.28307.799</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+<ItemDefinitionGroup>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <BrowseInformation>false</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <DisableSpecificWarnings>4018;4100;4127;4180;4206;4244;4267;5105;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <SDLCheck>false</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <ConformanceMode>true</ConformanceMode>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableUnitySupport>true</EnableUnitySupport>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+</ItemDefinitionGroup>
+<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../thirdparty/mujs;../../thirdparty/lcms2/include;../../scripts/freetype;../../scripts/libjpeg-turbo;../../thirdparty/jbig2dec;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/openjpeg/src/lib/openjp2;../../thirdparty/zlib;../../thirdparty/freetype/include;../../thirdparty/freetype/include/freetype;../../thirdparty/gumbo-parser/src;../../thirdparty/gumbo-parser/visualc/include;../../include/mupdf;../../scripts/leptonica/include;../../thirdparty/tesseract/include;../../thirdparty/tesseract/src/api;../../thirdparty/tesseract/src/arch;../../thirdparty/tesseract/src/ccmain;../../thirdparty/tesseract/src/ccstruct;../../thirdparty/tesseract/src/ccutil;../../thirdparty/tesseract/src/classify;../../thirdparty/tesseract/src/dict;../../thirdparty/tesseract/src/lstm;../../thirdparty/tesseract/src/textord;../../thirdparty/tesseract/src/viewer;../../thirdparty/tesseract/src/wordrec;../../thirdparty/tesseract/src/cutil;../../scripts/tesseract;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/fmt/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;HAVE_TESSERACT_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>ws2_32.lib;Normaliz.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
+      <MapExports>true</MapExports>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../thirdparty/mujs;../../thirdparty/lcms2/include;../../scripts/freetype;../../scripts/libjpeg-turbo;../../thirdparty/jbig2dec;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/openjpeg/src/lib/openjp2;../../thirdparty/zlib;../../thirdparty/freetype/include;../../thirdparty/freetype/include/freetype;../../thirdparty/gumbo-parser/src;../../thirdparty/gumbo-parser/visualc/include;../../include/mupdf;../../scripts/leptonica/include;../../thirdparty/tesseract/include;../../thirdparty/tesseract/src/api;../../thirdparty/tesseract/src/arch;../../thirdparty/tesseract/src/ccmain;../../thirdparty/tesseract/src/ccstruct;../../thirdparty/tesseract/src/ccutil;../../thirdparty/tesseract/src/classify;../../thirdparty/tesseract/src/dict;../../thirdparty/tesseract/src/lstm;../../thirdparty/tesseract/src/textord;../../thirdparty/tesseract/src/viewer;../../thirdparty/tesseract/src/wordrec;../../thirdparty/tesseract/src/cutil;../../scripts/tesseract;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/fmt/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../thirdparty/mujs;../../thirdparty/lcms2/include;../../scripts/freetype;../../scripts/libjpeg-turbo;../../thirdparty/jbig2dec;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/openjpeg/src/lib/openjp2;../../thirdparty/zlib;../../thirdparty/freetype/include;../../thirdparty/freetype/include/freetype;../../thirdparty/gumbo-parser/src;../../thirdparty/gumbo-parser/visualc/include;../../include/mupdf;../../scripts/leptonica/include;../../thirdparty/tesseract/include;../../thirdparty/tesseract/src/api;../../thirdparty/tesseract/src/arch;../../thirdparty/tesseract/src/ccmain;../../thirdparty/tesseract/src/ccstruct;../../thirdparty/tesseract/src/ccutil;../../thirdparty/tesseract/src/classify;../../thirdparty/tesseract/src/dict;../../thirdparty/tesseract/src/lstm;../../thirdparty/tesseract/src/textord;../../thirdparty/tesseract/src/viewer;../../thirdparty/tesseract/src/wordrec;../../thirdparty/tesseract/src/cutil;../../scripts/tesseract;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/fmt/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;HAVE_TESSERACT_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <TargetMachine>MachineX64</TargetMachine>
+      <AdditionalDependencies>ws2_32.lib;Normaliz.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
+      <MapExports>true</MapExports>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../thirdparty/mujs;../../thirdparty/lcms2/include;../../scripts/freetype;../../scripts/libjpeg-turbo;../../thirdparty/jbig2dec;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/openjpeg/src/lib/openjp2;../../thirdparty/zlib;../../thirdparty/freetype/include;../../thirdparty/freetype/include/freetype;../../thirdparty/gumbo-parser/src;../../thirdparty/gumbo-parser/visualc/include;../../include/mupdf;../../scripts/leptonica/include;../../thirdparty/tesseract/include;../../thirdparty/tesseract/src/api;../../thirdparty/tesseract/src/arch;../../thirdparty/tesseract/src/ccmain;../../thirdparty/tesseract/src/ccstruct;../../thirdparty/tesseract/src/ccutil;../../thirdparty/tesseract/src/classify;../../thirdparty/tesseract/src/dict;../../thirdparty/tesseract/src/lstm;../../thirdparty/tesseract/src/textord;../../thirdparty/tesseract/src/viewer;../../thirdparty/tesseract/src/wordrec;../../thirdparty/tesseract/src/cutil;../../scripts/tesseract;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/fmt/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../thirdparty/mujs;../../thirdparty/lcms2/include;../../scripts/freetype;../../scripts/libjpeg-turbo;../../thirdparty/jbig2dec;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/openjpeg/src/lib/openjp2;../../thirdparty/zlib;../../thirdparty/freetype/include;../../thirdparty/freetype/include/freetype;../../thirdparty/gumbo-parser/src;../../thirdparty/gumbo-parser/visualc/include;../../include/mupdf;../../scripts/leptonica/include;../../thirdparty/tesseract/include;../../thirdparty/tesseract/src/api;../../thirdparty/tesseract/src/arch;../../thirdparty/tesseract/src/ccmain;../../thirdparty/tesseract/src/ccstruct;../../thirdparty/tesseract/src/ccutil;../../thirdparty/tesseract/src/classify;../../thirdparty/tesseract/src/dict;../../thirdparty/tesseract/src/lstm;../../thirdparty/tesseract/src/textord;../../thirdparty/tesseract/src/viewer;../../thirdparty/tesseract/src/wordrec;../../thirdparty/tesseract/src/cutil;../../scripts/tesseract;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/fmt/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;HAVE_TESSERACT_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>ws2_32.lib;Normaliz.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
+      <MapExports>true</MapExports>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../thirdparty/mujs;../../thirdparty/lcms2/include;../../scripts/freetype;../../scripts/libjpeg-turbo;../../thirdparty/jbig2dec;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/openjpeg/src/lib/openjp2;../../thirdparty/zlib;../../thirdparty/freetype/include;../../thirdparty/freetype/include/freetype;../../thirdparty/gumbo-parser/src;../../thirdparty/gumbo-parser/visualc/include;../../include/mupdf;../../scripts/leptonica/include;../../thirdparty/tesseract/include;../../thirdparty/tesseract/src/api;../../thirdparty/tesseract/src/arch;../../thirdparty/tesseract/src/ccmain;../../thirdparty/tesseract/src/ccstruct;../../thirdparty/tesseract/src/ccutil;../../thirdparty/tesseract/src/classify;../../thirdparty/tesseract/src/dict;../../thirdparty/tesseract/src/lstm;../../thirdparty/tesseract/src/textord;../../thirdparty/tesseract/src/viewer;../../thirdparty/tesseract/src/wordrec;../../thirdparty/tesseract/src/cutil;../../scripts/tesseract;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/fmt/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../thirdparty/mujs;../../thirdparty/lcms2/include;../../scripts/freetype;../../scripts/libjpeg-turbo;../../thirdparty/jbig2dec;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/openjpeg/src/lib/openjp2;../../thirdparty/zlib;../../thirdparty/freetype/include;../../thirdparty/freetype/include/freetype;../../thirdparty/gumbo-parser/src;../../thirdparty/gumbo-parser/visualc/include;../../include/mupdf;../../scripts/leptonica/include;../../thirdparty/tesseract/include;../../thirdparty/tesseract/src/api;../../thirdparty/tesseract/src/arch;../../thirdparty/tesseract/src/ccmain;../../thirdparty/tesseract/src/ccstruct;../../thirdparty/tesseract/src/ccutil;../../thirdparty/tesseract/src/classify;../../thirdparty/tesseract/src/dict;../../thirdparty/tesseract/src/lstm;../../thirdparty/tesseract/src/textord;../../thirdparty/tesseract/src/viewer;../../thirdparty/tesseract/src/wordrec;../../thirdparty/tesseract/src/cutil;../../scripts/tesseract;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/fmt/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;HAVE_TESSERACT_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <TargetMachine>MachineX64</TargetMachine>
+      <AdditionalDependencies>ws2_32.lib;Normaliz.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
+      <MapExports>true</MapExports>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../thirdparty/mujs;../../thirdparty/lcms2/include;../../scripts/freetype;../../scripts/libjpeg-turbo;../../thirdparty/jbig2dec;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/openjpeg/src/lib/openjp2;../../thirdparty/zlib;../../thirdparty/freetype/include;../../thirdparty/freetype/include/freetype;../../thirdparty/gumbo-parser/src;../../thirdparty/gumbo-parser/visualc/include;../../include/mupdf;../../scripts/leptonica/include;../../thirdparty/tesseract/include;../../thirdparty/tesseract/src/api;../../thirdparty/tesseract/src/arch;../../thirdparty/tesseract/src/ccmain;../../thirdparty/tesseract/src/ccstruct;../../thirdparty/tesseract/src/ccutil;../../thirdparty/tesseract/src/classify;../../thirdparty/tesseract/src/dict;../../thirdparty/tesseract/src/lstm;../../thirdparty/tesseract/src/textord;../../thirdparty/tesseract/src/viewer;../../thirdparty/tesseract/src/wordrec;../../thirdparty/tesseract/src/cutil;../../scripts/tesseract;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/fmt/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/tesseract_ocr_test/testing/basicapitest.cpp" />
+    <ClInclude Include="../../thirdparty/tesseract_ocr_test/testing/monolithic_tests.h" />
+    <Image Include="../../thirdparty/tesseract_ocr_test/testing/devatest-rotated-270.png" />
+    <Image Include="../../thirdparty/tesseract_ocr_test/testing/devatest.png" />
+    <Image Include="../../thirdparty/tesseract_ocr_test/testing/hebrew-nikud-genesis-1-2.png" />
+    <Image Include="../../thirdparty/tesseract_ocr_test/testing/hebrew.png" />
+    <Image Include="../../thirdparty/tesseract_ocr_test/testing/hebtypo.jpg" />
+    <Image Include="../../thirdparty/tesseract_ocr_test/testing/phototest-rotated-180.png" />
+    <Image Include="../../thirdparty/tesseract_ocr_test/testing/phototest-rotated-L.png" />
+    <Image Include="../../thirdparty/tesseract_ocr_test/testing/phototest-rotated-R.png" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/README.md" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/langtests/README.md" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/langtests/counttestset.sh" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/langtests/deva_setup.sh" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/langtests/deva_test.sh" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/langtests/frk_setup.sh" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/langtests/frk_test.sh" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/langtests/reports/Devanagari-2019-03-09.summary" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/langtests/reports/Devanagari.summary" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/langtests/reports/Fraktur-2019-03-09.summary" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/langtests/reports/Fraktur.summary" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/langtests/reports/frk-2019-03-09.summary" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/langtests/reports/frk.summary" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/langtests/reports/san-2019-03-09.summary" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/langtests/reports/san.summary" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/langtests/runlangtests.sh" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/langtests/runtestset.sh" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/README.md" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/ara.unicharset" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/ara.wordlist" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/chi_sim.unicharset" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/chi_tra.unicharset" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/deu.Arial_Unicode_MS.exp0.lstmf" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/deu/deu.traineddata" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/deu/deu.unicharset" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/eng.Arial.exp0.lstmf" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/eng.Arial_Unicode_MS.exp0.lstmf" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/eng.params_model" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/eng.unicharset" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/eng/eng.traineddata" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/eng/eng.unicharset" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/fra.Arial_Unicode_MS.exp0.lstmf" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/fra/fra.traineddata" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/fra/fra.unicharset" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/jpn.unicharset" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/kan.Arial_Unicode_MS.exp0.lstmf" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/kan.unicharset" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/kan/kan.traineddata" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/kan/kan.unicharset" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/kor.Arial_Unicode_MS.exp0.lstmf" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/kor.unicharset" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/kor/kor.traineddata" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/kor/kor.unicharset" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/mar.unicharset" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/por.unicharset" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/scanftest.txt" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testdata/trivial.unicharset" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/12.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/136.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/256.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/324.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/410.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/432.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/433.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/540.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/692.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/779.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/793.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/8071_093.3B.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/8071_093.3B.txt" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/8071_093.3B.uzn" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/808.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/8087_054.3B.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/8087_054.3B.txt" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/8087_054.3B.uzn" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/8087_054.3G.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/815.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/HelloGoogle.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/README.md" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/arabic.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/deslant.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/eng.Arial.exp0.tr" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/eng.unicharset" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/eng.wordlist.clean.freq" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/eng.xheights" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/eng_beam.unicharset" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/eurotext.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/eurotext.txt" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/hin_beam.unicharset" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/phototest.gold.txt" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/phototest.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/phototest.txt" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/phototest_2.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/phototestrot.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/raaj.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/segmodeimg.odt" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/segmodeimg.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/trainingital.box" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/trainingital.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/trainingitalline.box" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/trainingitalline.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/trainingtimes.box" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/trainingtimes.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/trainingtimesline.box" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/trainingtimesline.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/testing/viet.tif" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/unlvtests/README.md" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/unlvtests/counttestset.sh" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/unlvtests/reorgdata.sh" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/unlvtests/reports/1995.bus.3B.sum" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/unlvtests/reports/1995.doe3.3B.sum" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/unlvtests/reports/1995.mag.3B.sum" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/unlvtests/reports/1995.news.3B.sum" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/unlvtests/reports/2.03.summary" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/unlvtests/reports/2.04.summary" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/unlvtests/reports/4_best_int_spa.summary" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/unlvtests/reports/4_best_spa.summary" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/unlvtests/reports/4_fast_eng.summary" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/unlvtests/reports/4_fast_spa.summary" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/unlvtests/runalltests.sh" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/unlvtests/runalltests_spa.sh" />
+    <Text Include="../../thirdparty/tesseract_ocr_test/unlvtests/runtestset.sh" />
+  </ItemGroup>
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />
+  </ImportGroup>
+</Project>
+  

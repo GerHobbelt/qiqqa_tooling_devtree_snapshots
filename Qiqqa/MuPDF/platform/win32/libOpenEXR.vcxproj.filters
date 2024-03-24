@@ -1,0 +1,2829 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03fd328}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{42f0fc98-34f6-4567-b3cf-de13e74a89ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{b1798409-2031-413d-9df7-70b0202ddd98}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files\Contrib">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Contrib\DtexToExr">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\bin">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\bin\exrenvmap">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\bin\exrmakepreview">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\bin\exrmaketiled">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\bin\exrmultiview">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\examples">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0009}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\lib">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0011}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\lib\Iex">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0010}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\lib\IlmThread">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\lib\OpenEXR">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0013}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\lib\OpenEXRCore">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0014}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\lib\OpenEXRUtil">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0015}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\test\IexTest">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0016}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\test\OpenEXRCoreTest">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\test\OpenEXRFuzzTest">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0019}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\test\OpenEXRTest">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0020}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\test\OpenEXRUtilTest">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\ASWF">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\ASWF\charter">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\ASWF\proposal">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\Contrib">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\Contrib\DtexToExr">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\Contrib\DtexToExr\m4">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\Contrib\NuGet">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\cmake">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0029}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\docs">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0030}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\share">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0034}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\share\ci">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0033}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\share\ci\scripts">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0032}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\share\ci\scripts\linux">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0031}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\share\util">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0035}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0037}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\bin">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0036}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\bin\exr2aces">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0038}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\bin\exrcheck">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0039}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\bin\exrenvmap">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0040}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\bin\exrheader">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0041}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\bin\exrinfo">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0042}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\bin\exrmakepreview">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0043}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\bin\exrmaketiled">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0044}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\bin\exrmultipart">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0045}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\bin\exrmultiview">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0046}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\bin\exrstdattr">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0047}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\examples">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0048}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\lib">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0049}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\lib\Iex">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0050}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\lib\IlmThread">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0051}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\lib\OpenEXR">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0052}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\lib\OpenEXRCore">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0053}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\lib\OpenEXRUtil">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0054}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0055}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\test\IexTest">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0056}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\test\OpenEXRCoreTest">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0057}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\test\OpenEXRFuzzTest">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0058}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\test\OpenEXRTest">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0059}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\test\OpenEXRUtilTest">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0060}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\test\bin">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0061}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\wrappers">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0063}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\wrappers\python">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0062}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\wrappers\python\tests">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0064}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\website">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0065}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\website\bin">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0066}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\website\scripts">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0067}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\website\src">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0068}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\website\src\reader">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0069}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\website\src\writer">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0070}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0071}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\ASWF">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0073}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\ASWF\images">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0072}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\website">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0075}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\website\images">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0074}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Contrib">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0077}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Contrib\DtexToExr">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0076}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0080}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\bin">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\bin\exr2aces">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0078}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\bin\exrcheck">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0081}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\bin\exrenvmap">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0082}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\bin\exrheader">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0083}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\bin\exrinfo">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0084}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\bin\exrmakepreview">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0085}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\bin\exrmaketiled">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0086}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\bin\exrmultipart">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0087}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\bin\exrmultiview">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0088}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\bin\exrstdattr">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0089}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\examples">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0090}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\lib">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0092}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\lib\Iex">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0091}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\lib\IlmThread">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0093}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\lib\OpenEXR">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0094}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\lib\OpenEXRCore">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0095}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\lib\OpenEXRUtil">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0096}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\test">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0098}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\test\IexTest">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0097}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\test\OpenEXRCoreTest">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0099}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\test\OpenEXRFuzzTest">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0100}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\test\OpenEXRTest">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0101}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\test\OpenEXRUtilTest">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0102}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\wrappers">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0104}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\wrappers\python">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0103}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\website">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0106}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\website\src">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0105}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\website\src\reader">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0107}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\website\src\writer">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0108}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/Contrib/DtexToExr/DtexToExr.cpp">
+      <Filter>Source Files\Contrib\DtexToExr</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/Contrib/DtexToExr/PxDeepUtils.cpp">
+      <Filter>Source Files\Contrib\DtexToExr</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exr2aces/main.cpp">
+      <Filter>Source Files\src\bin\exr2aces</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrcheck/main.cpp">
+      <Filter>Source Files\src\bin\exrcheck</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrenvmap/EnvmapImage.cpp">
+      <Filter>Source Files\src\bin\exrenvmap</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrenvmap/blurImage.cpp">
+      <Filter>Source Files\src\bin\exrenvmap</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrenvmap/main.cpp">
+      <Filter>Source Files\src\bin\exrenvmap</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrenvmap/makeCubeMap.cpp">
+      <Filter>Source Files\src\bin\exrenvmap</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrenvmap/makeLatLongMap.cpp">
+      <Filter>Source Files\src\bin\exrenvmap</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrenvmap/readInputImage.cpp">
+      <Filter>Source Files\src\bin\exrenvmap</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrenvmap/resizeImage.cpp">
+      <Filter>Source Files\src\bin\exrenvmap</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrheader/main.cpp">
+      <Filter>Source Files\src\bin\exrheader</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrinfo/main.c">
+      <Filter>Source Files\src\bin\exrinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrmakepreview/main.cpp">
+      <Filter>Source Files\src\bin\exrmakepreview</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrmakepreview/makePreview.cpp">
+      <Filter>Source Files\src\bin\exrmakepreview</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrmaketiled/Image.cpp">
+      <Filter>Source Files\src\bin\exrmaketiled</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrmaketiled/main.cpp">
+      <Filter>Source Files\src\bin\exrmaketiled</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrmaketiled/makeTiled.cpp">
+      <Filter>Source Files\src\bin\exrmaketiled</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrmultipart/exrmultipart.cpp">
+      <Filter>Source Files\src\bin\exrmultipart</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrmultiview/Image.cpp">
+      <Filter>Source Files\src\bin\exrmultiview</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrmultiview/main.cpp">
+      <Filter>Source Files\src\bin\exrmultiview</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrmultiview/makeMultiView.cpp">
+      <Filter>Source Files\src\bin\exrmultiview</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrstdattr/main.cpp">
+      <Filter>Source Files\src\bin\exrstdattr</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/examples/deepExamples.cpp">
+      <Filter>Source Files\src\examples</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/examples/deepTiledExamples.cpp">
+      <Filter>Source Files\src\examples</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/examples/drawImage.cpp">
+      <Filter>Source Files\src\examples</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/examples/generalInterfaceExamples.cpp">
+      <Filter>Source Files\src\examples</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/examples/generalInterfaceTiledExamples.cpp">
+      <Filter>Source Files\src\examples</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/examples/lowLevelIoExamples.cpp">
+      <Filter>Source Files\src\examples</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/examples/main.cpp">
+      <Filter>Source Files\src\examples</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/examples/multipartExamples.cpp">
+      <Filter>Source Files\src\examples</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/examples/previewImageExamples.cpp">
+      <Filter>Source Files\src\examples</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/examples/rgbaInterfaceExamples.cpp">
+      <Filter>Source Files\src\examples</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/examples/rgbaInterfaceTiledExamples.cpp">
+      <Filter>Source Files\src\examples</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/Iex/IexBaseExc.cpp">
+      <Filter>Source Files\src\lib\Iex</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/Iex/IexMathFloatExc.cpp">
+      <Filter>Source Files\src\lib\Iex</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/Iex/IexMathFpu.cpp">
+      <Filter>Source Files\src\lib\Iex</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/Iex/IexThrowErrnoExc.cpp">
+      <Filter>Source Files\src\lib\Iex</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/IlmThread/IlmThread.cpp">
+      <Filter>Source Files\src\lib\IlmThread</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/IlmThread/IlmThreadPool.cpp">
+      <Filter>Source Files\src\lib\IlmThread</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/IlmThread/IlmThreadSemaphore.cpp">
+      <Filter>Source Files\src\lib\IlmThread</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/IlmThread/IlmThreadSemaphoreOSX.cpp">
+      <Filter>Source Files\src\lib\IlmThread</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/IlmThread/IlmThreadSemaphorePosix.cpp">
+      <Filter>Source Files\src\lib\IlmThread</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/IlmThread/IlmThreadSemaphorePosixCompat.cpp">
+      <Filter>Source Files\src\lib\IlmThread</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/IlmThread/IlmThreadSemaphoreWin32.cpp">
+      <Filter>Source Files\src\lib\IlmThread</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfAcesFile.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfAttribute.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfB44Compressor.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfBoxAttribute.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfCRgbaFile.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfChannelList.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfChannelListAttribute.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfChromaticities.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfChromaticitiesAttribute.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfCompositeDeepScanLine.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfCompressionAttribute.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfCompressor.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfConvert.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfDeepCompositing.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfDeepFrameBuffer.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfDeepImageStateAttribute.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfDeepScanLineInputFile.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfDeepScanLineInputPart.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfDeepScanLineOutputFile.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfDeepScanLineOutputPart.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfDeepTiledInputFile.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfDeepTiledInputPart.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfDeepTiledOutputFile.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfDeepTiledOutputPart.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfDoubleAttribute.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfDwaCompressor.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfEnvmap.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfEnvmapAttribute.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfFastHuf.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfFloatAttribute.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfFloatVectorAttribute.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfFrameBuffer.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfFramesPerSecond.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfGenericInputFile.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfGenericOutputFile.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfHeader.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfHuf.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfIDManifest.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfIDManifestAttribute.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfIO.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfInputFile.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfInputPart.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfInputPartData.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfIntAttribute.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfKeyCode.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfKeyCodeAttribute.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfLineOrderAttribute.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfLut.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfMatrixAttribute.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfMisc.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfMultiPartInputFile.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfMultiPartOutputFile.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfMultiView.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfOpaqueAttribute.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfOutputFile.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfOutputPart.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfOutputPartData.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfPartType.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfPizCompressor.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfPreviewImage.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfPreviewImageAttribute.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfPxr24Compressor.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfRational.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfRationalAttribute.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfRgbaFile.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfRgbaYca.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfRle.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfRleCompressor.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfScanLineInputFile.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfStandardAttributes.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfStdIO.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfStringAttribute.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfStringVectorAttribute.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfSystemSpecific.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfTestFile.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfThreading.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfTileDescriptionAttribute.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfTileOffsets.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfTiledInputFile.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfTiledInputPart.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfTiledMisc.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfTiledOutputFile.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfTiledOutputPart.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfTiledRgbaFile.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfTimeCode.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfTimeCodeAttribute.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfVecAttribute.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfVersion.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfWav.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfZip.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfZipCompressor.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/b44ExpLogTable.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/dwaLookups.cpp">
+      <Filter>Source Files\src\lib\OpenEXR</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/attributes.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/base.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/channel_list.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/chunk.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/coding.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/compression.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/context.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/debug.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/decoding.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/encoding.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/float_vector.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_b44.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_b44_table.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_dwa.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_huf.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_piz.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_pxr24.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_rle.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_structs.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_zip.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/memory.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/opaque.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/pack.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/parse_header.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/part.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/part_attr.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/preview.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/std_attr.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/string.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/string_vector.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/unpack.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/validation.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/write_header.c">
+      <Filter>Source Files\src\lib\OpenEXRCore</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfCheckFile.cpp">
+      <Filter>Source Files\src\lib\OpenEXRUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfDeepImage.cpp">
+      <Filter>Source Files\src\lib\OpenEXRUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfDeepImageChannel.cpp">
+      <Filter>Source Files\src\lib\OpenEXRUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfDeepImageIO.cpp">
+      <Filter>Source Files\src\lib\OpenEXRUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfDeepImageLevel.cpp">
+      <Filter>Source Files\src\lib\OpenEXRUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfFlatImage.cpp">
+      <Filter>Source Files\src\lib\OpenEXRUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfFlatImageChannel.cpp">
+      <Filter>Source Files\src\lib\OpenEXRUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfFlatImageIO.cpp">
+      <Filter>Source Files\src\lib\OpenEXRUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfFlatImageLevel.cpp">
+      <Filter>Source Files\src\lib\OpenEXRUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfImage.cpp">
+      <Filter>Source Files\src\lib\OpenEXRUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfImageChannel.cpp">
+      <Filter>Source Files\src\lib\OpenEXRUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfImageDataWindow.cpp">
+      <Filter>Source Files\src\lib\OpenEXRUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfImageIO.cpp">
+      <Filter>Source Files\src\lib\OpenEXRUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfImageLevel.cpp">
+      <Filter>Source Files\src\lib\OpenEXRUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfSampleCountChannel.cpp">
+      <Filter>Source Files\src\lib\OpenEXRUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/IexTest/main.cpp">
+      <Filter>Source Files\src\test\IexTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/IexTest/mathFuncs.cpp">
+      <Filter>Source Files\src\test\IexTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/IexTest/testBaseExc.cpp">
+      <Filter>Source Files\src\test\IexTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/IexTest/testMathExc.cpp">
+      <Filter>Source Files\src\test\IexTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRCoreTest/base_units.cpp">
+      <Filter>Source Files\src\test\OpenEXRCoreTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRCoreTest/buffer.cpp">
+      <Filter>Source Files\src\test\OpenEXRCoreTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRCoreTest/compression.cpp">
+      <Filter>Source Files\src\test\OpenEXRCoreTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRCoreTest/deep.cpp">
+      <Filter>Source Files\src\test\OpenEXRCoreTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRCoreTest/general_attr.cpp">
+      <Filter>Source Files\src\test\OpenEXRCoreTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRCoreTest/main.cpp">
+      <Filter>Source Files\src\test\OpenEXRCoreTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRCoreTest/performance.cpp">
+      <Filter>Source Files\src\test\OpenEXRCoreTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRCoreTest/read.cpp">
+      <Filter>Source Files\src\test\OpenEXRCoreTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRCoreTest/write.cpp">
+      <Filter>Source Files\src\test\OpenEXRCoreTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRFuzzTest/main.cpp">
+      <Filter>Source Files\src\test\OpenEXRFuzzTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRFuzzTest/testFuzzDeepScanLines.cpp">
+      <Filter>Source Files\src\test\OpenEXRFuzzTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRFuzzTest/testFuzzDeepTiles.cpp">
+      <Filter>Source Files\src\test\OpenEXRFuzzTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRFuzzTest/testFuzzScanLines.cpp">
+      <Filter>Source Files\src\test\OpenEXRFuzzTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRFuzzTest/testFuzzTiles.cpp">
+      <Filter>Source Files\src\test\OpenEXRFuzzTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/compareB44.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/compareDwa.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/compareFloat.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/main.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/random.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testAttributes.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testB44ExpLogTable.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testBackwardCompatibility.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testBadTypeAttributes.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testChannels.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testCompositeDeepScanLine.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testCompression.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testConversion.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testCopyDeepScanLine.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testCopyDeepTiled.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testCopyMultiPartFile.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testCopyPixels.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testCpuId.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testCustomAttributes.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testDeepScanLineBasic.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testDeepScanLineHuge.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testDeepScanLineMultipleRead.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testDeepTiledBasic.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testDwaCompressorSimd.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testDwaLookups.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testExistingStreams.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testFutureProofing.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testHeader.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testHuf.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testIDManifest.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testInputPart.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testIsComplete.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testLargeDataWindowOffsets.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testLineOrder.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testLut.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testMagic.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testMalformedImages.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testMultiPartApi.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testMultiPartFileMixingBasic.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testMultiPartSharedAttributes.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testMultiPartThreading.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testMultiScanlinePartThreading.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testMultiTiledPartThreading.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testMultiView.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testNativeFormat.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testOptimized.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testOptimizedInterleavePatterns.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testPartHelper.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testPreviewImage.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testRgba.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testRgbaThreading.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testRle.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testSampleImages.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testScanLineApi.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testSharedFrameBuffer.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testStandardAttributes.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testTiledCompression.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testTiledCopyPixels.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testTiledLineOrder.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testTiledRgba.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testTiledYa.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testWav.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testXdr.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testYca.cpp">
+      <Filter>Source Files\src\test\OpenEXRTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRUtilTest/main.cpp">
+      <Filter>Source Files\src\test\OpenEXRUtilTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRUtilTest/testDeepImage.cpp">
+      <Filter>Source Files\src\test\OpenEXRUtilTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRUtilTest/testFlatImage.cpp">
+      <Filter>Source Files\src\test\OpenEXRUtilTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRUtilTest/testIO.cpp">
+      <Filter>Source Files\src\test\OpenEXRUtilTest</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/src/wrappers/python/OpenEXR.cpp">
+      <Filter>Source Files\src\wrappers\python</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/C_IStream.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/C_IStream_clear.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/C_IStream_read.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/C_IStream_seekg.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/C_IStream_tellg.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/IStream.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/MemoryMappedIStream.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/MemoryMappedIStream_constructor.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/MemoryMappedIStream_destructor.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/MemoryMappedIStream_isMemoryMapped.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/MemoryMappedIStream_read.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/MemoryMappedIStream_readMemoryMapped.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/all.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/gamma.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/makePreviewImage.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/mergeOverlappingSamples.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/readDeepScanLineFile.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/readDeepTiledFile.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/readGZ1.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/readGZ2.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/readHeader.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/readRgba1.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/readRgba2.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/readRgbaFILE.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/readTiled1.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/readTiledRgba1.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/reader/reader.cpp">
+      <Filter>Source Files\website\src\reader</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/splitVolumeSample.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/writeDeepScanLineFile.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/writeDeepTiledFile.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/writeGZ1.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/writeGZ2.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/writeRgba1.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/writeRgba2.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/writeRgba3.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/writeRgbaMT.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/writeRgbaWithPreview1.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/writeRgbaWithPreview2.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/writeTiled1.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/writeTiledRgbaMIP1.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/writeTiledRgbaMIP2.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/writeTiledRgbaONE1.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/writeTiledRgbaONE2.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/writeTiledRgbaRIP1.cpp">
+      <Filter>Source Files\website\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/OpenEXR/website/src/writer/writer.cpp">
+      <Filter>Source Files\website\src\writer</Filter>
+    </ClCompile>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/Contrib/DtexToExr/PxBaseDeepHelper.h">
+      <Filter>Header Files\Contrib\DtexToExr</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/Contrib/DtexToExr/PxDeepOutPixel.h">
+      <Filter>Header Files\Contrib\DtexToExr</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/Contrib/DtexToExr/PxDeepOutRow.h">
+      <Filter>Header Files\Contrib\DtexToExr</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/Contrib/DtexToExr/PxDeepUtils.h">
+      <Filter>Header Files\Contrib\DtexToExr</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/Contrib/DtexToExr/PxFourChanDeepRgba.h">
+      <Filter>Header Files\Contrib\DtexToExr</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/Contrib/DtexToExr/PxOneChanDeepAlpha.h">
+      <Filter>Header Files\Contrib\DtexToExr</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/Contrib/DtexToExr/PxOneChanDeepOpacity.h">
+      <Filter>Header Files\Contrib\DtexToExr</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrenvmap/EnvmapImage.h">
+      <Filter>Header Files\src\bin\exrenvmap</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrenvmap/blurImage.h">
+      <Filter>Header Files\src\bin\exrenvmap</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrenvmap/makeCubeMap.h">
+      <Filter>Header Files\src\bin\exrenvmap</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrenvmap/makeLatLongMap.h">
+      <Filter>Header Files\src\bin\exrenvmap</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrenvmap/namespaceAlias.h">
+      <Filter>Header Files\src\bin\exrenvmap</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrenvmap/readInputImage.h">
+      <Filter>Header Files\src\bin\exrenvmap</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrenvmap/resizeImage.h">
+      <Filter>Header Files\src\bin\exrenvmap</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrmakepreview/makePreview.h">
+      <Filter>Header Files\src\bin\exrmakepreview</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrmaketiled/Image.h">
+      <Filter>Header Files\src\bin\exrmaketiled</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrmaketiled/makeTiled.h">
+      <Filter>Header Files\src\bin\exrmaketiled</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrmaketiled/namespaceAlias.h">
+      <Filter>Header Files\src\bin\exrmaketiled</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrmultiview/Image.h">
+      <Filter>Header Files\src\bin\exrmultiview</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrmultiview/makeMultiView.h">
+      <Filter>Header Files\src\bin\exrmultiview</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrmultiview/namespaceAlias.h">
+      <Filter>Header Files\src\bin\exrmultiview</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/examples/deepExamples.h">
+      <Filter>Header Files\src\examples</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/examples/deepTiledExamples.h">
+      <Filter>Header Files\src\examples</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/examples/drawImage.h">
+      <Filter>Header Files\src\examples</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/examples/generalInterfaceExamples.h">
+      <Filter>Header Files\src\examples</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/examples/generalInterfaceTiledExamples.h">
+      <Filter>Header Files\src\examples</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/examples/lowLevelIoExamples.h">
+      <Filter>Header Files\src\examples</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/examples/multipartExamples.h">
+      <Filter>Header Files\src\examples</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/examples/namespaceAlias.h">
+      <Filter>Header Files\src\examples</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/examples/previewImageExamples.h">
+      <Filter>Header Files\src\examples</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/examples/rgbaInterfaceExamples.h">
+      <Filter>Header Files\src\examples</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/examples/rgbaInterfaceTiledExamples.h">
+      <Filter>Header Files\src\examples</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/Iex/Iex.h">
+      <Filter>Header Files\src\lib\Iex</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/Iex/IexBaseExc.h">
+      <Filter>Header Files\src\lib\Iex</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/Iex/IexErrnoExc.h">
+      <Filter>Header Files\src\lib\Iex</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/Iex/IexExport.h">
+      <Filter>Header Files\src\lib\Iex</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/Iex/IexForward.h">
+      <Filter>Header Files\src\lib\Iex</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/Iex/IexMacros.h">
+      <Filter>Header Files\src\lib\Iex</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/Iex/IexMathExc.h">
+      <Filter>Header Files\src\lib\Iex</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/Iex/IexMathFloatExc.h">
+      <Filter>Header Files\src\lib\Iex</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/Iex/IexMathFpu.h">
+      <Filter>Header Files\src\lib\Iex</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/Iex/IexMathIeeeExc.h">
+      <Filter>Header Files\src\lib\Iex</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/Iex/IexNamespace.h">
+      <Filter>Header Files\src\lib\Iex</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/Iex/IexThrowErrnoExc.h">
+      <Filter>Header Files\src\lib\Iex</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/IlmThread/IlmThread.h">
+      <Filter>Header Files\src\lib\IlmThread</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/IlmThread/IlmThreadExport.h">
+      <Filter>Header Files\src\lib\IlmThread</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/IlmThread/IlmThreadForward.h">
+      <Filter>Header Files\src\lib\IlmThread</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/IlmThread/IlmThreadMutex.h">
+      <Filter>Header Files\src\lib\IlmThread</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/IlmThread/IlmThreadNamespace.h">
+      <Filter>Header Files\src\lib\IlmThread</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/IlmThread/IlmThreadPool.h">
+      <Filter>Header Files\src\lib\IlmThread</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/IlmThread/IlmThreadSemaphore.h">
+      <Filter>Header Files\src\lib\IlmThread</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfAcesFile.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfArray.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfAttribute.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfAutoArray.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfB44Compressor.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfBoxAttribute.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfCRgbaFile.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfChannelList.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfChannelListAttribute.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfCheckedArithmetic.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfChromaticities.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfChromaticitiesAttribute.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfCompositeDeepScanLine.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfCompression.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfCompressionAttribute.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfCompressor.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfConvert.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfDeepCompositing.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfDeepFrameBuffer.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfDeepImageState.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfDeepImageStateAttribute.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfDeepScanLineInputFile.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfDeepScanLineInputPart.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfDeepScanLineOutputFile.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfDeepScanLineOutputPart.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfDeepTiledInputFile.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfDeepTiledInputPart.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfDeepTiledOutputFile.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfDeepTiledOutputPart.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfDoubleAttribute.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfDwaCompressor.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfDwaCompressorSimd.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfEnvmap.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfEnvmapAttribute.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfExport.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfFastHuf.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfFloatAttribute.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfFloatVectorAttribute.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfForward.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfFrameBuffer.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfFramesPerSecond.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfGenericInputFile.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfGenericOutputFile.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfHeader.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfHuf.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfIDManifest.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfIDManifestAttribute.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfIO.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfInputFile.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfInputPart.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfInputPartData.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfInputStreamMutex.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfInt64.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfIntAttribute.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfKeyCode.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfKeyCodeAttribute.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfLineOrder.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfLineOrderAttribute.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfLut.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfMatrixAttribute.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfMisc.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfMultiPartInputFile.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfMultiPartOutputFile.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfMultiView.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfName.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfNamespace.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfOpaqueAttribute.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfOptimizedPixelReading.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfOutputFile.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfOutputPart.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfOutputPartData.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfOutputStreamMutex.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfPartHelper.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfPartType.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfPixelType.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfPizCompressor.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfPreviewImage.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfPreviewImageAttribute.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfPxr24Compressor.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfRational.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfRationalAttribute.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfRgba.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfRgbaFile.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfRgbaYca.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfRle.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfRleCompressor.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfScanLineInputFile.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfSimd.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfStandardAttributes.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfStdIO.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfStringAttribute.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfStringVectorAttribute.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfSystemSpecific.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfTestFile.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfThreading.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfTileDescription.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfTileDescriptionAttribute.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfTileOffsets.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfTiledInputFile.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfTiledInputPart.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfTiledMisc.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfTiledOutputFile.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfTiledOutputPart.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfTiledRgbaFile.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfTimeCode.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfTimeCodeAttribute.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfVecAttribute.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfVersion.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfWav.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfXdr.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfZip.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/ImfZipCompressor.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/b44ExpLogTable.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/dwaLookups.h">
+      <Filter>Header Files\src\lib\OpenEXR</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/backward_compatibility.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_attr.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_channel_list.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_coding.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_compress.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_constants.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_cpuid.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_decompress.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_dwa_channeldata.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_dwa_classifier.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_dwa_compressor.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_dwa_decoder.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_dwa_encoder.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_dwa_helpers.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_dwa_simd.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_file.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_float_vector.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_huf.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_memory.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_opaque.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_posix_file_impl.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_preview.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_string.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_string_vector.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_structs.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_util.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_win32_file_impl.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/internal_xdr.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/openexr.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/openexr_attr.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/openexr_base.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/openexr_chunkio.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/openexr_coding.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/openexr_compression.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/openexr_config.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/openexr_context.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/openexr_debug.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/openexr_decode.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/openexr_encode.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/openexr_errors.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/openexr_part.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/openexr_std_attr.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/openexr_version.h">
+      <Filter>Header Files\src\lib\OpenEXRCore</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfCheckFile.h">
+      <Filter>Header Files\src\lib\OpenEXRUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfDeepImage.h">
+      <Filter>Header Files\src\lib\OpenEXRUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfDeepImageChannel.h">
+      <Filter>Header Files\src\lib\OpenEXRUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfDeepImageIO.h">
+      <Filter>Header Files\src\lib\OpenEXRUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfDeepImageLevel.h">
+      <Filter>Header Files\src\lib\OpenEXRUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfFlatImage.h">
+      <Filter>Header Files\src\lib\OpenEXRUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfFlatImageChannel.h">
+      <Filter>Header Files\src\lib\OpenEXRUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfFlatImageIO.h">
+      <Filter>Header Files\src\lib\OpenEXRUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfFlatImageLevel.h">
+      <Filter>Header Files\src\lib\OpenEXRUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfImage.h">
+      <Filter>Header Files\src\lib\OpenEXRUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfImageChannel.h">
+      <Filter>Header Files\src\lib\OpenEXRUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfImageChannelRenaming.h">
+      <Filter>Header Files\src\lib\OpenEXRUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfImageDataWindow.h">
+      <Filter>Header Files\src\lib\OpenEXRUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfImageIO.h">
+      <Filter>Header Files\src\lib\OpenEXRUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfImageLevel.h">
+      <Filter>Header Files\src\lib\OpenEXRUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfSampleCountChannel.h">
+      <Filter>Header Files\src\lib\OpenEXRUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/ImfUtilExport.h">
+      <Filter>Header Files\src\lib\OpenEXRUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/IexTest/mathFuncs.h">
+      <Filter>Header Files\src\test\IexTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/IexTest/testBaseExc.h">
+      <Filter>Header Files\src\test\IexTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/IexTest/testMathExc.h">
+      <Filter>Header Files\src\test\IexTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRCoreTest/base_units.h">
+      <Filter>Header Files\src\test\OpenEXRCoreTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRCoreTest/buffer.h">
+      <Filter>Header Files\src\test\OpenEXRCoreTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRCoreTest/compression.h">
+      <Filter>Header Files\src\test\OpenEXRCoreTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRCoreTest/deep.h">
+      <Filter>Header Files\src\test\OpenEXRCoreTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRCoreTest/general_attr.h">
+      <Filter>Header Files\src\test\OpenEXRCoreTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRCoreTest/read.h">
+      <Filter>Header Files\src\test\OpenEXRCoreTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRCoreTest/test_value.h">
+      <Filter>Header Files\src\test\OpenEXRCoreTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRCoreTest/write.h">
+      <Filter>Header Files\src\test\OpenEXRCoreTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRFuzzTest/testFuzzDeepScanLines.h">
+      <Filter>Header Files\src\test\OpenEXRFuzzTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRFuzzTest/testFuzzDeepTiles.h">
+      <Filter>Header Files\src\test\OpenEXRFuzzTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRFuzzTest/testFuzzScanLines.h">
+      <Filter>Header Files\src\test\OpenEXRFuzzTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRFuzzTest/testFuzzTiles.h">
+      <Filter>Header Files\src\test\OpenEXRFuzzTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/TestUtilFStream.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/bswap_32.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/compareB44.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/compareDwa.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/compareFloat.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/random.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testAttributes.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testB44ExpLogTable.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testBackwardCompatibility.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testBadTypeAttributes.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testChannels.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testCompositeDeepScanLine.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testCompression.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testConversion.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testCopyDeepScanLine.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testCopyDeepTiled.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testCopyMultiPartFile.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testCopyPixels.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testCpuId.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testCustomAttributes.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testDeepScanLineBasic.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testDeepScanLineHuge.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testDeepScanLineMultipleRead.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testDeepTiledBasic.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testDwaCompressorSimd.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testDwaLookups.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testExistingStreams.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testFutureProofing.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testHeader.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testHuf.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testIDManifest.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testInputPart.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testIsComplete.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testLargeDataWindowOffsets.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testLineOrder.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testLut.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testMagic.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testMalformedImages.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testMultiPartApi.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testMultiPartFileMixingBasic.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testMultiPartSharedAttributes.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testMultiPartThreading.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testMultiScanlinePartThreading.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testMultiTiledPartThreading.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testMultiView.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testNativeFormat.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testOptimized.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testOptimizedInterleavePatterns.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testPartHelper.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testPreviewImage.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testRgba.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testRgbaThreading.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testRle.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testSampleImages.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testScanLineApi.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testSharedFrameBuffer.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testStandardAttributes.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testTiledCompression.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testTiledCopyPixels.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testTiledLineOrder.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testTiledRgba.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testTiledYa.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testWav.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testXdr.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/testYca.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/tmpDir.h">
+      <Filter>Header Files\src\test\OpenEXRTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRUtilTest/testDeepImage.h">
+      <Filter>Header Files\src\test\OpenEXRUtilTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRUtilTest/testFlatImage.h">
+      <Filter>Header Files\src\test\OpenEXRUtilTest</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRUtilTest/testIO.h">
+      <Filter>Header Files\src\test\OpenEXRUtilTest</Filter>
+    </ClInclude>
+    <Image Include="../../thirdparty/owemdjee/OpenEXR/ASWF/images/aswf.png">
+      <Filter>Resource Files\ASWF\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/OpenEXR/ASWF/images/openexr-logo.jpg">
+      <Filter>Resource Files\ASWF\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/OpenEXR/website/images/InterpretingDeepPixels1.png">
+      <Filter>Resource Files\website\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/OpenEXR/website/images/InterpretingDeepPixels2.png">
+      <Filter>Resource Files\website\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/OpenEXR/website/images/InterpretingDeepPixels3.png">
+      <Filter>Resource Files\website\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/OpenEXR/website/images/OpenEXR_Reel_2020.png">
+      <Filter>Resource Files\website\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/OpenEXR/website/images/cubeMap.big.png">
+      <Filter>Resource Files\website\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/OpenEXR/website/images/cubeMap.png">
+      <Filter>Resource Files\website\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/OpenEXR/website/images/drawing.png">
+      <Filter>Resource Files\website\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/OpenEXR/website/images/envcube.png">
+      <Filter>Resource Files\website\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/OpenEXR/website/images/latlong.png">
+      <Filter>Resource Files\website\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/OpenEXR/website/images/latlongMap.big.png">
+      <Filter>Resource Files\website\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/OpenEXR/website/images/latlongMap.png">
+      <Filter>Resource Files\website\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/OpenEXR/website/images/news.png">
+      <Filter>Resource Files\website\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/OpenEXR/website/images/openexr-fav.ico">
+      <Filter>Resource Files\website\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/OpenEXR/website/images/openexr-horizontal-color.png">
+      <Filter>Resource Files\website\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/OpenEXR/website/images/openexr-logo.jpg">
+      <Filter>Resource Files\website\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/OpenEXR/website/images/openexr-stacked-color.png">
+      <Filter>Resource Files\website\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/OpenEXR/website/images/screenwin.big.png">
+      <Filter>Resource Files\website\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/OpenEXR/website/images/screenwin.png">
+      <Filter>Resource Files\website\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/OpenEXR/website/images/tiles.big.png">
+      <Filter>Resource Files\website\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/OpenEXR/website/images/tiles.png">
+      <Filter>Resource Files\website\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/OpenEXR/website/images/twosamples.png">
+      <Filter>Resource Files\website\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/OpenEXR/website/images/windowExample1.big.png">
+      <Filter>Resource Files\website\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/OpenEXR/website/images/windowExample1.png">
+      <Filter>Resource Files\website\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/OpenEXR/website/images/windowExample1.small.png">
+      <Filter>Resource Files\website\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/OpenEXR/website/images/windowExample2.big.png">
+      <Filter>Resource Files\website\images</Filter>
+    </Image>
+    <Image Include="../../thirdparty/owemdjee/OpenEXR/website/images/windowExample2.png">
+      <Filter>Resource Files\website\images</Filter>
+    </Image>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/ASWF/charter/OpenEXR-Technical-Charter.md">
+      <Filter>Misc Files\ASWF\charter</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/ASWF/proposal/OpenEXR-Adoption-Proposal.md">
+      <Filter>Misc Files\ASWF\proposal</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/BUILD.bazel">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/CHANGES.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/CMakeLists.txt">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/CODE_OF_CONDUCT.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/CONTRIBUTING.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/CONTRIBUTORS.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/Contrib/DtexToExr/AUTHORS">
+      <Filter>Misc Files\Contrib\DtexToExr</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/Contrib/DtexToExr/ChangeLog">
+      <Filter>Misc Files\Contrib\DtexToExr</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/Contrib/DtexToExr/README">
+      <Filter>Misc Files\Contrib\DtexToExr</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/Contrib/DtexToExr/configure.ac">
+      <Filter>Misc Files\Contrib\DtexToExr</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/Contrib/DtexToExr/m4/compilelinkrun.m4">
+      <Filter>Misc Files\Contrib\DtexToExr\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/Contrib/DtexToExr/m4/path.pkgconfig.m4">
+      <Filter>Misc Files\Contrib\DtexToExr\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/Contrib/DtexToExr/m4/threads.m4">
+      <Filter>Misc Files\Contrib\DtexToExr\m4</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/Contrib/NuGet/OpenEXR-msvc-x64-build.nuget.bat">
+      <Filter>Misc Files\Contrib\NuGet</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/Contrib/NuGet/OpenEXR-msvc-x64.nuspec">
+      <Filter>Misc Files\Contrib\NuGet</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/Contrib/NuGet/OpenEXR-msvc-x64.targets">
+      <Filter>Misc Files\Contrib\NuGet</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/Contrib/NuGet/OpenEXR-msvc-x86-build.nuget.bat">
+      <Filter>Misc Files\Contrib\NuGet</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/Contrib/NuGet/OpenEXR-msvc-x86.nuspec">
+      <Filter>Misc Files\Contrib\NuGet</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/Contrib/NuGet/OpenEXR-msvc-x86.targets">
+      <Filter>Misc Files\Contrib\NuGet</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/GOVERNANCE.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/LICENSE.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/MODULE.bazel">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/README.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/SECURITY.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/WORKSPACE.bazel">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/cmake/CMakeLists.txt">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/cmake/FindPythonPackage.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/cmake/FindSphinx.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/cmake/IexConfig.h.in">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/cmake/IexConfigInternal.h.in">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/cmake/IlmThreadConfig.h.in">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/cmake/JoinPaths.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/cmake/LibraryDefine.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/cmake/OpenEXR.pc.in">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/cmake/OpenEXRConfig.cmake.in">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/cmake/OpenEXRConfig.h.in">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/cmake/OpenEXRConfigInternal.h.in">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/cmake/OpenEXRLibraryDefine.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/cmake/OpenEXRSetup.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/cmake/SampleCTestScript.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/cmake/Toolchain-Linux-VFX_Platform15.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/cmake/Toolchain-mingw.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/cmake/clang-format.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/docs/CMakeLists.txt">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/share/ci/scripts/linux/install_valgrind.sh">
+      <Filter>Misc Files\share\ci\scripts\linux</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/share/ci/scripts/linux/log_valgrind.sh">
+      <Filter>Misc Files\share\ci\scripts\linux</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/share/ci/scripts/linux/run_gcov.sh">
+      <Filter>Misc Files\share\ci\scripts\linux</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/share/ci/scripts/linux/validate_openexr_libs.sh">
+      <Filter>Misc Files\share\ci\scripts\linux</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/share/util/abi_checker.sh">
+      <Filter>Misc Files\share\util</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/share/util/clang_coverage.sh">
+      <Filter>Misc Files\share\util</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/share/util/reformat.sh">
+      <Filter>Misc Files\share\util</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/sonar-project.properties">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/bin/CMakeLists.txt">
+      <Filter>Misc Files\src\bin</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exr2aces/CMakeLists.txt">
+      <Filter>Misc Files\src\bin\exr2aces</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrcheck/CMakeLists.txt">
+      <Filter>Misc Files\src\bin\exrcheck</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrenvmap/CMakeLists.txt">
+      <Filter>Misc Files\src\bin\exrenvmap</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrheader/CMakeLists.txt">
+      <Filter>Misc Files\src\bin\exrheader</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrinfo/CMakeLists.txt">
+      <Filter>Misc Files\src\bin\exrinfo</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrmakepreview/CMakeLists.txt">
+      <Filter>Misc Files\src\bin\exrmakepreview</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrmaketiled/CMakeLists.txt">
+      <Filter>Misc Files\src\bin\exrmaketiled</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrmultipart/CMakeLists.txt">
+      <Filter>Misc Files\src\bin\exrmultipart</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrmultiview/CMakeLists.txt">
+      <Filter>Misc Files\src\bin\exrmultiview</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/bin/exrstdattr/CMakeLists.txt">
+      <Filter>Misc Files\src\bin\exrstdattr</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/examples/BUILD.bazel">
+      <Filter>Misc Files\src\examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/examples/CMakeLists.txt">
+      <Filter>Misc Files\src\examples</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/lib/CMakeLists.txt">
+      <Filter>Misc Files\src\lib</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/lib/Iex/CMakeLists.txt">
+      <Filter>Misc Files\src\lib\Iex</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/lib/IlmThread/CMakeLists.txt">
+      <Filter>Misc Files\src\lib\IlmThread</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXR/CMakeLists.txt">
+      <Filter>Misc Files\src\lib\OpenEXR</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRCore/CMakeLists.txt">
+      <Filter>Misc Files\src\lib\OpenEXRCore</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/CMakeLists.txt">
+      <Filter>Misc Files\src\lib\OpenEXRUtil</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/lib/OpenEXRUtil/README">
+      <Filter>Misc Files\src\lib\OpenEXRUtil</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/CMakeLists.txt">
+      <Filter>Misc Files\src\test</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/IexTest/CMakeLists.txt">
+      <Filter>Misc Files\src\test\IexTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRCoreTest/CMakeLists.txt">
+      <Filter>Misc Files\src\test\OpenEXRCoreTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRFuzzTest/CMakeLists.txt">
+      <Filter>Misc Files\src\test\OpenEXRFuzzTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/CMakeLists.txt">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/comp_b44.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/comp_b44_piz.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/comp_bad_bounds_piz.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/comp_bad_neg_bounds_pxr24.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/comp_bad_pos_bounds_piz.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/comp_bad_pos_bounds_pxr24.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/comp_dwaa_piz.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/comp_dwaa_v1.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/comp_dwaa_v2.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/comp_dwab_piz.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/comp_dwab_v1.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/comp_dwab_v2.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/comp_early_eof_piz.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/comp_invalid_unknown.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/comp_none.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/comp_piz.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/comp_rle.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/comp_short_decode_piz.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/comp_zip.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/comp_zips.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/invalid.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/invalid_shared_attrs_multipart.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/lineOrder_decreasing.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/lineOrder_increasing.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/scanline_with_deepscanline_type.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/scanline_with_deeptiled_type.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/scanline_with_tiledimage_type.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/test_native1.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/test_native2.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/tiled.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/tiled_with_deepscanline_type.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/tiled_with_deeptile_type.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/tiled_with_scanlineimage_type.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/v1.7.test.1.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/v1.7.test.interleaved.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/v1.7.test.planar.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRTest/v1.7.test.tiled.exr">
+      <Filter>Misc Files\src\test\OpenEXRTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/OpenEXRUtilTest/CMakeLists.txt">
+      <Filter>Misc Files\src\test\OpenEXRUtilTest</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/bin/CMakeLists.txt">
+      <Filter>Misc Files\src\test\bin</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/bin/test_exr2aces.py">
+      <Filter>Misc Files\src\test\bin</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/bin/test_exrcheck.py">
+      <Filter>Misc Files\src\test\bin</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/bin/test_exrenvmap.py">
+      <Filter>Misc Files\src\test\bin</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/bin/test_exrheader.py">
+      <Filter>Misc Files\src\test\bin</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/bin/test_exrinfo.py">
+      <Filter>Misc Files\src\test\bin</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/bin/test_exrmakepreview.py">
+      <Filter>Misc Files\src\test\bin</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/bin/test_exrmaketiled.py">
+      <Filter>Misc Files\src\test\bin</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/bin/test_exrmultipart.py">
+      <Filter>Misc Files\src\test\bin</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/bin/test_exrmultiview.py">
+      <Filter>Misc Files\src\test\bin</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/test/bin/test_exrstdattr.py">
+      <Filter>Misc Files\src\test\bin</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/wrappers/python/CMakeLists.txt">
+      <Filter>Misc Files\src\wrappers\python</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/wrappers/python/Imath.py">
+      <Filter>Misc Files\src\wrappers\python</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/wrappers/python/setup.py">
+      <Filter>Misc Files\src\wrappers\python</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/wrappers/python/tests/test_minimal.py">
+      <Filter>Misc Files\src\wrappers\python\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/src/wrappers/python/tests/test_unittest.py">
+      <Filter>Misc Files\src\wrappers\python\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/API.rst">
+      <Filter>Misc Files\website</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/CMakeLists.txt">
+      <Filter>Misc Files\website</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/Doxyfile.in">
+      <Filter>Misc Files\website</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/HelloWorld.rst">
+      <Filter>Misc Files\website</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/InterpretingDeepPixels.rst">
+      <Filter>Misc Files\website</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/MultiViewOpenEXR.rst">
+      <Filter>Misc Files\website</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/OpenEXRCoreAPI.rst">
+      <Filter>Misc Files\website</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/OpenEXRFileLayout.rst">
+      <Filter>Misc Files\website</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/PortingGuide.rst">
+      <Filter>Misc Files\website</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/ReadingAndWritingImageFiles.rst">
+      <Filter>Misc Files\website</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/StandardAttributes.rst">
+      <Filter>Misc Files\website</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/SymbolVisibility.rst">
+      <Filter>Misc Files\website</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/TechnicalIntroduction.rst">
+      <Filter>Misc Files\website</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/TheoryDeepPixels.rst">
+      <Filter>Misc Files\website</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/about.rst">
+      <Filter>Misc Files\website</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/bin/exr2aces.rst">
+      <Filter>Misc Files\website\bin</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/bin/exrcheck.rst">
+      <Filter>Misc Files\website\bin</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/bin/exrenvmap.rst">
+      <Filter>Misc Files\website\bin</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/bin/exrheader.rst">
+      <Filter>Misc Files\website\bin</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/bin/exrinfo.rst">
+      <Filter>Misc Files\website\bin</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/bin/exrmakepreview.rst">
+      <Filter>Misc Files\website\bin</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/bin/exrmaketiled.rst">
+      <Filter>Misc Files\website\bin</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/bin/exrmultipart.rst">
+      <Filter>Misc Files\website\bin</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/bin/exrmultiview.rst">
+      <Filter>Misc Files\website\bin</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/bin/exrstdattr.rst">
+      <Filter>Misc Files\website\bin</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/concepts.rst">
+      <Filter>Misc Files\website</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/conf.py">
+      <Filter>Misc Files\website</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/index.rst">
+      <Filter>Misc Files\website</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/install.rst">
+      <Filter>Misc Files\website</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/license.rst">
+      <Filter>Misc Files\website</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/news.rst">
+      <Filter>Misc Files\website</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/requirements.txt">
+      <Filter>Misc Files\website</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/scripts/test_images.py">
+      <Filter>Misc Files\website\scripts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/src/CMakeLists.txt">
+      <Filter>Misc Files\website\src</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/src/reader/CMakeLists.txt">
+      <Filter>Misc Files\website\src\reader</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/src/reader/build.sh">
+      <Filter>Misc Files\website\src\reader</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/src/writer/CMakeLists.txt">
+      <Filter>Misc Files\website\src\writer</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/src/writer/build.sh">
+      <Filter>Misc Files\website\src\writer</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/test_images.txt">
+      <Filter>Misc Files\website</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/toc_redirect.rst">
+      <Filter>Misc Files\website</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/OpenEXR/website/tools.rst">
+      <Filter>Misc Files\website</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
